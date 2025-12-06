@@ -1,138 +1,323 @@
 .class public final Lqw7;
-.super Lsgf;
+.super Luoi;
 .source "SourceFile"
-
-# interfaces
-.implements Lzi6;
 
 
 # instance fields
-.field public X:I
+.field public final a:Lggg;
 
-.field public final synthetic Y:Lrw7;
-
-.field public final synthetic Z:Low7;
+.field public final b:Lkc3;
 
 
 # direct methods
-.method public constructor <init>(Lrw7;Low7;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lggg;Lew7;)V
     .locals 0
 
-    iput-object p1, p0, Lqw7;->Y:Lrw7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lqw7;->Z:Low7;
+    iput-object p1, p0, Lqw7;->a:Lggg;
 
-    const/4 p1, 0x2
+    iget-object p1, p2, Lew7;->b:Lkc3;
 
-    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lqw7;->b:Lkc3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lq54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lqw7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lqw7;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lqw7;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lqw7;
-
-    iget-object v0, p0, Lqw7;->Y:Lrw7;
-
-    iget-object v1, p0, Lqw7;->Z:Low7;
-
-    invoke-direct {p1, v0, v1, p2}, Lqw7;-><init>(Lrw7;Low7;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final A()S
     .locals 5
 
-    iget v0, p0, Lqw7;->X:I
+    iget-object v0, p0, Lqw7;->a:Lggg;
 
-    const/4 v1, 0x1
+    invoke-virtual {v0}, Lggg;->B()Ljava/lang/String;
 
-    if-eqz v0, :cond_1
+    move-result-object v1
 
-    if-ne v0, v1, :cond_0
+    const/4 v2, 0x0
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    :try_start_0
+    invoke-static {v1}, Llni;->c(Ljava/lang/String;)Lkpg;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_1
+
+    iget v3, v3, Lkpg;->a:I
+
+    const v4, 0xffff
+
+    invoke-static {v3, v4}, Ljava/lang/Integer;->compareUnsigned(II)I
+
+    move-result v4
+
+    if-lez v4, :cond_0
 
     goto :goto_0
 
     :cond_0
+    int-to-short v3, v3
+
+    new-instance v4, Lupg;
+
+    invoke-direct {v4, v3}, Lupg;-><init>(S)V
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    move-object v4, v2
+
+    :goto_1
+    if-eqz v4, :cond_2
+
+    iget-short v0, v4, Lupg;->a:S
+
+    return v0
+
+    :cond_2
+    invoke-static {v1}, Lcnf;->g(Ljava/lang/String;)V
+
+    throw v2
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "Failed to parse type \'UShort\' for input \'"
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x27
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x6
+
+    invoke-static {v0, v1, v3, v2, v4}, Lggg;->G(Lggg;Ljava/lang/String;ILjava/lang/String;I)V
+
+    throw v2
+.end method
+
+.method public final e(Lree;)I
+    .locals 1
+
     new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const-string v0, "unsupported"
 
     invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p1
+.end method
 
-    :cond_1
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+.method public final k()I
+    .locals 5
 
-    iget-object p1, p0, Lqw7;->Y:Lrw7;
+    iget-object v0, p0, Lqw7;->a:Lggg;
 
-    check-cast p1, Ltw7;
+    invoke-virtual {v0}, Lggg;->B()Ljava/lang/String;
 
-    iget-object p1, p1, Ltw7;->a:Lhx7;
-
-    iput v1, p0, Lqw7;->X:I
-
-    sget-object v0, Lmv4;->a:Lsm4;
-
-    sget-object v0, Lkotlinx/coroutines/internal/MainDispatcherLoader;->dispatcher:Lce8;
-
-    invoke-virtual {v0}, Lce8;->getImmediate()Lce8;
-
-    move-result-object v0
-
-    new-instance v1, Llfb;
+    move-result-object v1
 
     const/4 v2, 0x0
 
-    sget-object v3, Lhw7;->o:Lhw7;
+    :try_start_0
+    invoke-static {v1}, Llni;->c(Ljava/lang/String;)Lkpg;
 
-    iget-object v4, p0, Lqw7;->Z:Low7;
+    move-result-object v3
 
-    invoke-direct {v1, p1, v3, v4, v2}, Llfb;-><init>(Lhx7;Lhw7;Lzi6;Lkotlin/coroutines/Continuation;)V
+    if-eqz v3, :cond_0
 
-    invoke-static {v0, v1, p0}, Ltki;->h(Li54;Lzi6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget v0, v3, Lkpg;->a:I
 
-    move-result-object p1
+    return v0
 
-    sget-object v0, Lr54;->a:Lr54;
+    :cond_0
+    invoke-static {v1}, Lcnf;->g(Ljava/lang/String;)V
 
-    if-ne p1, v0, :cond_2
+    throw v2
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "Failed to parse type \'UInt\' for input \'"
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x27
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x6
+
+    invoke-static {v0, v1, v3, v2, v4}, Lggg;->G(Lggg;Ljava/lang/String;ILjava/lang/String;I)V
+
+    throw v2
+.end method
+
+.method public final n()Lkc3;
+    .locals 1
+
+    iget-object v0, p0, Lqw7;->b:Lkc3;
 
     return-object v0
+.end method
+
+.method public final t()J
+    .locals 5
+
+    iget-object v0, p0, Lqw7;->a:Lggg;
+
+    invoke-virtual {v0}, Lggg;->B()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    :try_start_0
+    invoke-static {v1}, Llni;->d(Ljava/lang/String;)Lppg;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    iget-wide v0, v3, Lppg;->a:J
+
+    return-wide v0
+
+    :cond_0
+    invoke-static {v1}, Lcnf;->g(Ljava/lang/String;)V
+
+    throw v2
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "Failed to parse type \'ULong\' for input \'"
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x27
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x6
+
+    invoke-static {v0, v1, v3, v2, v4}, Lggg;->G(Lggg;Ljava/lang/String;ILjava/lang/String;I)V
+
+    throw v2
+.end method
+
+.method public final z()B
+    .locals 5
+
+    iget-object v0, p0, Lqw7;->a:Lggg;
+
+    invoke-virtual {v0}, Lggg;->B()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    :try_start_0
+    invoke-static {v1}, Llni;->c(Ljava/lang/String;)Lkpg;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_1
+
+    iget v3, v3, Lkpg;->a:I
+
+    const/16 v4, 0xff
+
+    invoke-static {v3, v4}, Ljava/lang/Integer;->compareUnsigned(II)I
+
+    move-result v4
+
+    if-lez v4, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    int-to-byte v3, v3
+
+    new-instance v4, Lfpg;
+
+    invoke-direct {v4, v3}, Lfpg;-><init>(B)V
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    move-object v4, v2
+
+    :goto_1
+    if-eqz v4, :cond_2
+
+    iget-byte v0, v4, Lfpg;->a:B
+
+    return v0
 
     :cond_2
-    :goto_0
-    sget-object p1, Lccg;->a:Lccg;
+    invoke-static {v1}, Lcnf;->g(Ljava/lang/String;)V
 
-    return-object p1
+    throw v2
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "Failed to parse type \'UByte\' for input \'"
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x27
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x6
+
+    invoke-static {v0, v1, v3, v2, v4}, Lggg;->G(Lggg;Ljava/lang/String;ILjava/lang/String;I)V
+
+    throw v2
 .end method

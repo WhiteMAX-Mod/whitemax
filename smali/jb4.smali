@@ -4,32 +4,20 @@
 
 
 # virtual methods
-.method public abstract A()Z
+.method public abstract a(J)J
 .end method
 
-.method public abstract C()J
+.method public abstract b(Lkb4;J)Z
 .end method
 
-.method public abstract D(J)J
+.method public abstract c(J)Lwg7;
 .end method
 
-.method public abstract E(JJ)J
+.method public abstract clear()V
 .end method
 
-.method public abstract b(J)J
+.method public abstract d(J)J
 .end method
 
-.method public abstract g(JJ)J
-.end method
-
-.method public abstract i(JJ)J
-.end method
-
-.method public abstract j(JJ)J
-.end method
-
-.method public abstract k(J)Lwwc;
-.end method
-
-.method public abstract u(JJ)J
+.method public abstract e(J)V
 .end method

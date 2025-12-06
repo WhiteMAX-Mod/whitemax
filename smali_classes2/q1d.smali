@@ -1,84 +1,48 @@
-.class public final Lq1d;
-.super Lvpe;
-.source "SourceFile"
+.class public abstract Lq1d;
+.super Ljava/lang/Object;
 
 
-# virtual methods
-.method public final bridge synthetic A(Ly18;)V
-    .locals 0
+# static fields
+.field public static menu_attach_photo:I = 0x7f0f0000
 
-    check-cast p1, Lo1d;
+.field public static menu_attach_video:I = 0x7f0f0001
 
-    invoke-virtual {p0, p1}, Lq1d;->G(Lo1d;)V
+.field public static menu_calls_selected_actions:I = 0x7f0f0002
 
-    return-void
-.end method
+.field public static menu_channel_profile:I = 0x7f0f0003
 
-.method public final G(Lo1d;)V
-    .locals 5
+.field public static menu_channel_settings:I = 0x7f0f0004
 
-    iget-boolean v0, p1, Lo1d;->Z:Z
+.field public static menu_chat:I = 0x7f0f0005
 
-    iget-object v1, p0, Lq7d;->a:Landroid/view/View;
+.field public static menu_chat_profile:I = 0x7f0f0006
 
-    if-eqz v0, :cond_0
+.field public static menu_chat_selected_actions:I = 0x7f0f0007
 
-    move-object v0, v1
+.field public static menu_constructor:I = 0x7f0f0008
 
-    check-cast v0, Lp1d;
+.field public static menu_contact_profile:I = 0x7f0f0009
 
-    sget-object v2, Lqoa;->a:Lqoa;
+.field public static menu_contacts_selected_actions:I = 0x7f0f000a
 
-    invoke-virtual {v0, v2}, Lp1d;->setAvatarShape(Lroa;)V
+.field public static menu_empty:I = 0x7f0f000b
 
-    :cond_0
-    iget-object v0, p1, Lo1d;->c:Ljava/lang/String;
+.field public static menu_folder_page:I = 0x7f0f000c
 
-    move-object v2, v1
+.field public static menu_left_chat_profile:I = 0x7f0f000d
 
-    check-cast v2, Lp1d;
+.field public static menu_local_photo:I = 0x7f0f000e
 
-    invoke-virtual {v2, v0}, Lp1d;->setAvatar(Ljava/lang/String;)V
+.field public static menu_local_video:I = 0x7f0f000f
 
-    iget-object v0, p1, Lo1d;->o:Ljava/lang/CharSequence;
+.field public static menu_location:I = 0x7f0f0010
 
-    move-object v2, v1
+.field public static menu_location_layer:I = 0x7f0f0011
 
-    check-cast v2, Lp1d;
+.field public static menu_profile:I = 0x7f0f0012
 
-    iget-wide v3, p0, Lq7d;->X:J
+.field public static menu_search:I = 0x7f0f0013
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+.field public static menu_sticker_set:I = 0x7f0f0014
 
-    move-result-object v3
-
-    invoke-static {v0, v3}, Ljii;->a(Ljava/lang/CharSequence;Ljava/lang/Long;)Ltc0;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Lp1d;->setAbbreviation(Ltc0;)V
-
-    iget-object v0, p1, Lo1d;->b:Ljava/lang/CharSequence;
-
-    move-object v2, v1
-
-    check-cast v2, Lp1d;
-
-    invoke-virtual {v2, v0}, Lp1d;->setName(Ljava/lang/CharSequence;)V
-
-    iget-boolean v0, p1, Lo1d;->Y:Z
-
-    move-object v2, v1
-
-    check-cast v2, Lp1d;
-
-    invoke-virtual {v2, v0}, Lp1d;->setVerified(Z)V
-
-    iget-boolean p1, p1, Lo1d;->X:Z
-
-    check-cast v1, Lp1d;
-
-    invoke-virtual {v1, p1}, Lp1d;->setOnline(Z)V
-
-    return-void
-.end method
+.field public static menu_tam_crop_image:I = 0x7f0f0015

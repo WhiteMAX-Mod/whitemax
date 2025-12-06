@@ -1,31 +1,47 @@
-.class public final Llh4;
+.class public interface abstract Llh4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lvsb;
+# virtual methods
+.method public abstract A()S
+.end method
 
-.field public final b:Z
+.method public abstract B()F
+.end method
 
-.field public final c:J
+.method public abstract C()D
+.end method
 
-.field public final d:J
+.method public abstract b()Z
+.end method
 
+.method public abstract c()C
+.end method
 
-# direct methods
-.method public constructor <init>(Lvsb;ZJJ)V
-    .locals 0
+.method public abstract d(Lzy7;)Ljava/lang/Object;
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract k()I
+.end method
 
-    iput-object p1, p0, Llh4;->a:Lvsb;
+.method public abstract o(Lree;)Llh4;
+.end method
 
-    iput-boolean p2, p0, Llh4;->b:Z
+.method public abstract q()Ljava/lang/String;
+.end method
 
-    iput-wide p3, p0, Llh4;->c:J
+.method public abstract r(Lree;)Lyl3;
+.end method
 
-    iput-wide p5, p0, Llh4;->d:J
+.method public abstract s(Lree;)I
+.end method
 
-    return-void
+.method public abstract t()J
+.end method
+
+.method public abstract v()Z
+.end method
+
+.method public abstract z()B
 .end method

@@ -3,8 +3,8 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgo3;
-.implements Lo14;
+.implements Lqq3;
+.implements Lg44;
 
 
 # annotations
@@ -21,20 +21,20 @@
     d2 = {
         "Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;",
         "Lone/me/sdk/arch/Widget;",
-        "Lgo3;",
+        "Lqq3;",
         "",
-        "Lo14;",
+        "Lg44;",
         "Landroid/os/Bundle;",
         "args",
         "<init>",
         "(Landroid/os/Bundle;)V",
         "",
         "id",
-        "Lq4c;",
+        "Ldfc;",
         "type",
-        "Lp4c;",
+        "Lcfc;",
         "flow",
-        "(JLq4c;Lp4c;)V",
+        "(JLdfc;Lcfc;)V",
         "profile-edit_release"
     }
     k = 0x1
@@ -48,36 +48,34 @@
 
 
 # static fields
-.field public static final synthetic t0:[Ltr7;
+.field public static final synthetic t0:[Lyy7;
 
 
 # instance fields
-.field public final X:Liu7;
+.field public final X:Lfb6;
 
-.field public final Y:Lqjh;
+.field public final Y:Lbbd;
 
-.field public final Z:Lh0d;
+.field public final Z:Lbbd;
 
-.field public final a:Lqs;
+.field public final a:Lhs;
 
-.field public final b:Lqs;
+.field public final b:Lhs;
 
-.field public final c:Lw9c;
+.field public final c:Lka5;
 
-.field public final o:Lgi7;
+.field public final d:Leo7;
 
-.field public final q0:Lh0d;
+.field public final o:Lk18;
 
-.field public final r0:Lh0d;
-
-.field public final s0:Lh0d;
+.field public final s0:Lbbd;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 10
+    .locals 9
 
-    new-instance v0, Leec;
+    new-instance v0, Ltoc;
 
     const-class v1, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
 
@@ -87,53 +85,45 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Lz7d;->a:La8d;
+    sget-object v2, Lvid;->a:Lwid;
 
     const-string v3, "idType"
 
     const-string v5, "getIdType()Lone/me/profileedit/deeplink/ProfileEditDeepLinkRoutes$Type;"
 
-    invoke-static {v2, v1, v3, v5, v4}, Li57;->d(La8d;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Leec;
+    invoke-static {v2, v1, v3, v5, v4}, Lho7;->d(Lwid;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Ltoc;
 
     move-result-object v2
 
-    new-instance v3, Leec;
+    new-instance v3, Ltoc;
 
     const-string v5, "shortLinkMoreButton"
 
     const-string v6, "getShortLinkMoreButton()Landroid/widget/ImageView;"
 
-    invoke-direct {v3, v1, v5, v6, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v3, v1, v5, v6, v4}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v5, Leec;
+    new-instance v5, Ltoc;
 
     const-string v6, "toolbar"
 
     const-string v7, "getToolbar()Lone/me/sdk/uikit/common/toolbar/OneMeToolbar;"
 
-    invoke-direct {v5, v1, v6, v7, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v5, v1, v6, v7, v4}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v6, Leec;
+    new-instance v6, Ltoc;
 
     const-string v7, "button"
 
     const-string v8, "getButton()Lone/me/sdk/uikit/common/button/OneMeButton;"
 
-    invoke-direct {v6, v1, v7, v8, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v6, v1, v7, v8, v4}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v7, Leec;
+    const/4 v1, 0x5
 
-    const-string v8, "recycler"
-
-    const-string v9, "getRecycler()Landroidx/recyclerview/widget/RecyclerView;"
-
-    invoke-direct {v7, v1, v8, v9, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    const/4 v1, 0x6
-
-    new-array v1, v1, [Ltr7;
+    new-array v1, v1, [Lyy7;
 
     aput-object v0, v1, v4
 
@@ -153,55 +143,51 @@
 
     aput-object v6, v1, v0
 
-    const/4 v0, 0x5
-
-    aput-object v7, v1, v0
-
-    sput-object v1, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->t0:[Ltr7;
+    sput-object v1, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->t0:[Lyy7;
 
     return-void
 .end method
 
-.method public constructor <init>(JLq4c;Lp4c;)V
+.method public constructor <init>(JLdfc;Lcfc;)V
     .locals 1
 
-    .line 30
+    .line 29
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
 
-    .line 31
-    new-instance p2, Ltcb;
+    .line 30
+    new-instance p2, Limb;
 
     const-string v0, "entity:id"
 
-    invoke-direct {p2, v0, p1}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p2, v0, p1}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 32
-    new-instance p1, Ltcb;
+    .line 31
+    new-instance p1, Limb;
 
     const-string v0, "entity:id_type"
 
-    invoke-direct {p1, v0, p3}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p1, v0, p3}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 33
-    new-instance p3, Ltcb;
+    .line 32
+    new-instance p3, Limb;
 
     const-string v0, "entity:flow_type"
 
-    invoke-direct {p3, v0, p4}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p3, v0, p4}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    .line 33
+    filled-new-array {p2, p1, p3}, [Limb;
+
+    move-result-object p1
 
     .line 34
-    filled-new-array {p2, p1, p3}, [Ltcb;
+    invoke-static {p1}, Lgwi;->b([Limb;)Landroid/os/Bundle;
 
     move-result-object p1
 
     .line 35
-    invoke-static {p1}, Leli;->b([Ltcb;)Landroid/os/Bundle;
-
-    move-result-object p1
-
-    .line 36
     invoke-direct {p0, p1}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;-><init>(Landroid/os/Bundle;)V
 
     return-void
@@ -217,217 +203,208 @@
     const/4 v2, 0x0
 
     .line 1
-    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILki4;)V
+    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILtk4;)V
 
     .line 2
-    new-instance v0, Lqs;
+    new-instance v0, Lhs;
 
-    const-class v1, Lp4c;
+    const-class v1, Lcfc;
 
     const-string v3, "entity:flow_type"
 
-    invoke-direct {v0, v1, v3}, Lqs;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v3}, Lhs;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 3
-    iput-object v0, p0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->a:Lqs;
+    iput-object v0, p0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->a:Lhs;
 
     .line 4
-    new-instance v0, Lqs;
+    new-instance v0, Lhs;
 
-    const-class v1, Lq4c;
+    const-class v1, Ldfc;
 
     const-string v3, "entity:id_type"
 
-    invoke-direct {v0, v1, v3}, Lqs;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v3}, Lhs;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 5
-    iput-object v0, p0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->b:Lqs;
+    iput-object v0, p0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->b:Lhs;
 
     .line 6
-    new-instance v0, Lw9c;
+    new-instance v0, Lka5;
 
-    new-instance v1, Lb6b;
+    new-instance v1, Lffb;
 
-    const/16 v3, 0xe
+    const/16 v3, 0x10
 
-    invoke-direct {v1, v3, p0}, Lb6b;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v3, p0}, Lffb;-><init>(ILjava/lang/Object;)V
 
     const/4 v3, 0x6
 
-    invoke-direct {v0, v1, v2, v3}, Lw9c;-><init>(Lji6;Lji6;I)V
+    invoke-direct {v0, v1, v2, v3}, Lka5;-><init>(Lcm6;Lcm6;I)V
 
-    iput-object v0, p0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->c:Lw9c;
+    iput-object v0, p0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->c:Lka5;
 
     .line 7
-    sget-object v0, Lgi7;->f:Lgi7;
+    sget-object v0, Leo7;->f:Leo7;
 
-    iput-object v0, p0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->o:Lgi7;
+    iput-object v0, p0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->d:Leo7;
 
     .line 8
-    new-instance v0, Ltna;
+    new-instance v0, Ll3b;
 
-    const/16 v1, 0xc
+    const/16 v1, 0x8
 
-    invoke-direct {v0, p1, v1, p0}, Ltna;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v0, p1, v1, p0}, Ll3b;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     .line 9
-    new-instance p1, Lyn8;
+    new-instance p1, Liv8;
 
-    const/16 v1, 0x1c
+    const/16 v1, 0x1d
 
-    invoke-direct {p1, v1, v0}, Lyn8;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, v1, v0}, Liv8;-><init>(ILjava/lang/Object;)V
 
-    const-class v0, Lt72;
+    const-class v0, Lu82;
 
-    invoke-virtual {p0, v0, p1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lji6;)Liu7;
+    invoke-virtual {p0, v0, p1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lcm6;)Lk18;
 
     move-result-object p1
 
     .line 10
-    iput-object p1, p0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->X:Liu7;
+    iput-object p1, p0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->o:Lk18;
 
     .line 11
-    new-instance p1, Lqjh;
+    new-instance p1, Lfb6;
 
-    sget-object v0, Ll4c;->a:Ll4c;
+    sget-object v0, Lyec;->a:Lyec;
 
     .line 12
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
 
     move-result-object v0
+
+    const/16 v1, 0x38
 
     .line 13
-    const-class v1, Leva;
-
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Leva;
+    check-cast v0, Lg4b;
 
     .line 14
-    invoke-virtual {v0}, Leva;->a()Ljava/util/concurrent/ExecutorService;
+    invoke-virtual {v0}, Lg4b;->a()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v0
 
-    const/4 v1, 0x6
+    const/4 v1, 0x5
 
-    invoke-direct {p1, v0, p0, v1}, Lqjh;-><init>(Ljava/util/concurrent/ExecutorService;Ljava/lang/Object;I)V
+    invoke-direct {p1, v0, p0, v1}, Lfb6;-><init>(Ljava/util/concurrent/ExecutorService;Ljava/lang/Object;I)V
 
-    iput-object p1, p0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->Y:Lqjh;
+    iput-object p1, p0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->X:Lfb6;
 
     .line 15
-    sget p1, Lrza;->v0:I
+    sget p1, Lr8b;->v0:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lh0d;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lbbd;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->Z:Lh0d;
+    iput-object p1, p0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->Y:Lbbd;
 
     .line 16
-    sget p1, Lrza;->x0:I
+    sget p1, Lr8b;->w0:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lh0d;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lbbd;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->q0:Lh0d;
+    iput-object p1, p0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->Z:Lbbd;
 
     .line 17
-    sget p1, Lrza;->D0:I
+    sget p1, Lr8b;->C0:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lh0d;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lbbd;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->r0:Lh0d;
+    iput-object p1, p0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->s0:Lbbd;
 
     .line 18
-    sget p1, Lrza;->w0:I
-
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lh0d;
+    invoke-virtual {p0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->A0()Lu82;
 
     move-result-object p1
-
-    iput-object p1, p0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->s0:Lh0d;
 
     .line 19
-    invoke-virtual {p0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->F0()Lt72;
-
-    move-result-object p1
+    iget-object p1, p1, Lu82;->d:Lhbd;
 
     .line 20
-    iget-object p1, p1, Lt72;->o:Ln0d;
+    new-instance v0, Ld53;
+
+    const/16 v1, 0xc
+
+    invoke-direct {v0, p1, v1}, Ld53;-><init>(Lx26;I)V
 
     .line 21
-    new-instance v0, Lx23;
+    new-instance p1, Lrcc;
 
-    const/16 v1, 0xa
-
-    invoke-direct {v0, p1, v1}, Lx23;-><init>(Lty5;I)V
+    invoke-direct {p1, v2, p0}, Lrcc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;)V
 
     .line 22
-    new-instance p1, Lc2c;
-
-    invoke-direct {p1, v2, p0}, Lc2c;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;)V
-
-    .line 23
-    new-instance v1, Lb16;
+    new-instance v1, Lg56;
 
     const/4 v3, 0x1
 
-    invoke-direct {v1, v0, p1, v3}, Lb16;-><init>(Lty5;Lzi6;I)V
+    invoke-direct {v1, v0, p1, v3}, Lg56;-><init>(Lx26;Lsm6;I)V
+
+    .line 23
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Lv38;
+
+    move-result-object p1
+
+    invoke-static {v1, p1}, Lgw0;->w(Lx26;Lf84;)Lx9f;
 
     .line 24
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Lrw7;
+    invoke-virtual {p0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->A0()Lu82;
 
     move-result-object p1
-
-    invoke-static {v1, p1}, Ltq;->v(Lty5;Lq54;)Lcye;
 
     .line 25
-    invoke-virtual {p0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->F0()Lt72;
-
-    move-result-object p1
+    iget-object p1, p1, Lu82;->Z:Lci5;
 
     .line 26
-    iget-object p1, p1, Lt72;->q0:Lxe5;
+    new-instance v0, Lscc;
+
+    invoke-direct {v0, v2, p0}, Lscc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;)V
 
     .line 27
-    new-instance v0, Ld2c;
-
-    invoke-direct {v0, v2, p0}, Ld2c;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;)V
-
-    .line 28
-    new-instance v1, Lb16;
+    new-instance v1, Lg56;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Lb16;-><init>(Lty5;Lzi6;I)V
+    invoke-direct {v1, p1, v0, v2}, Lg56;-><init>(Lx26;Lsm6;I)V
 
-    .line 29
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Lrw7;
+    .line 28
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Lv38;
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Ltq;->v(Lty5;Lq54;)Lcye;
+    invoke-static {v1, p1}, Lgw0;->w(Lx26;Lf84;)Lx9f;
 
     return-void
 .end method
 
-.method public static final C0(Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;)Lone/me/sdk/uikit/common/button/OneMeButton;
+.method public static final y0(Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;)Lone/me/sdk/uikit/common/button/OneMeButton;
     .locals 3
 
-    iget-object v0, p0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->r0:Lh0d;
+    iget-object v0, p0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->s0:Lbbd;
 
-    sget-object v1, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->t0:[Ltr7;
+    sget-object v1, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->t0:[Lyy7;
 
     const/4 v2, 0x4
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0, p0, v1}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
+    invoke-interface {v0, p0, v1}, Lbbd;->D(Ljava/lang/Object;Lyy7;)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -438,100 +415,60 @@
 
 
 # virtual methods
-.method public final D0()Lp4c;
-    .locals 2
+.method public final A0()Lu82;
+    .locals 1
 
-    sget-object v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->t0:[Ltr7;
+    iget-object v0, p0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->o:Lk18;
 
-    const/4 v1, 0x0
-
-    aget-object v0, v0, v1
-
-    iget-object v0, p0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->a:Lqs;
-
-    invoke-virtual {v0, p0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lp4c;
+    check-cast v0, Lu82;
 
     return-object v0
 .end method
 
-.method public final E0()Lu6b;
-    .locals 2
-
-    sget-object v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->t0:[Ltr7;
-
-    const/4 v1, 0x3
-
-    aget-object v0, v0, v1
-
-    iget-object v1, p0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->q0:Lh0d;
-
-    invoke-interface {v1, p0, v0}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lu6b;
-
-    return-object v0
-.end method
-
-.method public final F(ILandroid/os/Bundle;)V
+.method public final C(ILandroid/os/Bundle;)V
     .locals 0
 
-    invoke-virtual {p0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->F0()Lt72;
+    invoke-virtual {p0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->A0()Lu82;
 
     move-result-object p2
 
-    iget-object p2, p2, Lt72;->b:Lh72;
+    iget-object p2, p2, Lu82;->b:Li82;
 
-    invoke-virtual {p2, p1}, Lh72;->i(I)V
+    invoke-virtual {p2, p1}, Li82;->i(I)V
 
     return-void
-.end method
-
-.method public final F0()Lt72;
-    .locals 1
-
-    iget-object v0, p0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->X:Liu7;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lt72;
-
-    return-object v0
 .end method
 
 .method public final g(ILandroid/os/Bundle;)V
     .locals 0
 
-    invoke-virtual {p0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->F0()Lt72;
+    invoke-virtual {p0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->A0()Lu82;
 
     move-result-object p2
 
-    iget-object p2, p2, Lt72;->b:Lh72;
+    iget-object p2, p2, Lu82;->b:Li82;
 
-    invoke-virtual {p2, p1}, Lh72;->h(I)V
+    invoke-virtual {p2, p1}, Li82;->h(I)V
 
     return-void
 .end method
 
-.method public final getInsetsConfig()Lgi7;
+.method public final getInsetsConfig()Leo7;
     .locals 1
 
-    iget-object v0, p0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->o:Lgi7;
+    iget-object v0, p0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->d:Leo7;
 
     return-object v0
 .end method
 
-.method public final getScreenDelegate()Lzpd;
+.method public final getScreenDelegate()Lk1e;
     .locals 1
 
-    iget-object v0, p0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->c:Lw9c;
+    iget-object v0, p0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->c:Lka5;
 
     return-object v0
 .end method
@@ -539,9 +476,9 @@
 .method public final handleBack()Z
     .locals 1
 
-    invoke-static {p0}, Lici;->b(Ll24;)V
+    invoke-static {p0}, Lapi;->c(Lc54;)V
 
-    invoke-super {p0}, Ll24;->handleBack()Z
+    invoke-super {p0}, Lc54;->handleBack()Z
 
     move-result v0
 
@@ -549,433 +486,457 @@
 .end method
 
 .method public final onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 11
+    .locals 17
 
-    invoke-virtual {p1}, Landroid/view/LayoutInflater;->getContext()Landroid/content/Context;
+    move-object/from16 v0, p0
 
-    move-result-object p1
+    invoke-virtual/range {p1 .. p1}, Landroid/view/LayoutInflater;->getContext()Landroid/content/Context;
 
-    new-instance p2, Landroid/view/ViewGroup$LayoutParams;
+    move-result-object v1
 
-    const/4 p3, -0x1
+    new-instance v2, Landroid/view/ViewGroup$LayoutParams;
 
-    invoke-direct {p2, p3, p3}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+    const/4 v3, -0x1
 
-    new-instance v0, Landroid/widget/FrameLayout;
+    invoke-direct {v2, v3, v3}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    invoke-direct {v0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+    new-instance v4, Landroid/widget/LinearLayout;
 
-    invoke-virtual {v0, p2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-direct {v4, v1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    new-instance p1, Landroidx/recyclerview/widget/RecyclerView;
+    invoke-virtual {v4, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    const/4 v1, 0x1
 
-    move-result-object p2
+    invoke-virtual {v4, v1}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    const/4 v1, 0x0
+    new-instance v2, Lyfb;
 
-    invoke-direct {p1, p2, v1}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    sget p2, Lrza;->w0:I
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->setId(I)V
-
-    new-instance p2, Landroid/widget/FrameLayout$LayoutParams;
-
-    const/16 v2, 0x30
-
-    invoke-direct {p2, p3, p3, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
-
-    const/16 v3, 0x10
-
-    int-to-float v3, v3
-
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v4, v3
-
-    invoke-static {v4}, Lfhi;->b(F)I
-
-    move-result v4
-
-    iput v4, p2, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    new-instance p2, Landroidx/recyclerview/widget/LinearLayoutManager;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    invoke-direct {p2}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>()V
-
-    invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
-
-    iget-object p2, p0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->Y:Lqjh;
-
-    invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lt6d;)V
-
-    invoke-virtual {p1, v1}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Ly6d;)V
-
-    const/4 p2, 0x0
-
-    invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->setClipChildren(Z)V
-
-    new-instance v6, Ln19;
-
-    const/16 v4, 0x18
-
-    invoke-direct {v6, v4, p0}, Ln19;-><init>(ILjava/lang/Object;)V
-
-    new-instance v4, Lpxd;
-
-    sget-object v10, Ll05;->s0:Lk82;
-
-    invoke-virtual {v10, p1}, Lk82;->n(Landroid/view/View;)Lv5b;
+    invoke-virtual {v4}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v5
 
-    const/4 v8, 0x0
+    const/4 v6, 0x6
 
-    const/16 v9, 0x1c
+    invoke-direct {v2, v5, v6}, Lyfb;-><init>(Landroid/content/Context;I)V
 
-    const/4 v7, 0x0
+    sget v5, Lr8b;->w0:I
 
-    invoke-direct/range {v4 .. v9}, Lpxd;-><init>(Lv5b;Lnxd;Ll;Lrfd;I)V
+    invoke-virtual {v2, v5}, Landroid/view/View;->setId(I)V
 
-    invoke-virtual {p1, v4}, Landroidx/recyclerview/widget/RecyclerView;->j(Lz6d;)V
+    new-instance v5, Liqb;
 
-    new-instance v4, Lbh8;
+    const/16 v6, 0xa
 
-    const/4 v5, 0x0
+    invoke-direct {v5, v6, v0}, Liqb;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {v4, v5}, Lbh8;-><init>(I)V
+    invoke-virtual {v0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->z0()Lcfc;
 
-    invoke-virtual {p1, v4}, Landroidx/recyclerview/widget/RecyclerView;->j(Lz6d;)V
+    move-result-object v6
 
-    invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    invoke-virtual {v6}, Ljava/lang/Enum;->ordinal()I
 
-    new-instance p1, Lu6b;
+    move-result v6
 
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    if-eqz v6, :cond_1
 
-    move-result-object v4
+    if-ne v6, v1, :cond_0
 
-    const/4 v5, 0x6
+    new-instance v6, Lhfb;
 
-    invoke-direct {p1, v4, v5}, Lu6b;-><init>(Landroid/content/Context;I)V
-
-    sget v4, Lrza;->x0:I
-
-    invoke-virtual {p1, v4}, Landroid/view/View;->setId(I)V
-
-    new-instance v4, Lanb;
-
-    const/4 v5, 0x7
-
-    invoke-direct {v4, v5, p0}, Lanb;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->D0()Lp4c;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v5
-
-    const/4 v6, 0x1
-
-    if-eqz v5, :cond_1
-
-    if-ne v5, v6, :cond_0
-
-    new-instance v5, Ld6b;
-
-    new-instance v7, Lb2c;
+    new-instance v7, Lqcc;
 
     const/4 v8, 0x1
 
-    invoke-direct {v7, v4, v8}, Lb2c;-><init>(Lanb;I)V
+    invoke-direct {v7, v5, v8}, Lqcc;-><init>(Liqb;I)V
 
-    invoke-direct {v5, v7}, Ld6b;-><init>(Lli6;)V
+    invoke-direct {v6, v7}, Lhfb;-><init>(Lem6;)V
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    new-instance v1, Lkotlin/NoWhenBranchMatchedException;
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    invoke-direct {v1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    throw p1
+    throw v1
 
     :cond_1
-    new-instance v5, Lc6b;
+    new-instance v6, Lgfb;
 
-    new-instance v7, Lb2c;
+    new-instance v7, Lqcc;
 
     const/4 v8, 0x0
 
-    invoke-direct {v7, v4, v8}, Lb2c;-><init>(Lanb;I)V
+    invoke-direct {v7, v5, v8}, Lqcc;-><init>(Liqb;I)V
 
-    invoke-direct {v5, v7}, Lc6b;-><init>(Lli6;)V
+    invoke-direct {v6, v7}, Lgfb;-><init>(Lem6;)V
 
     :goto_0
-    invoke-virtual {p1, v5}, Lu6b;->setLeftActions(Li6b;)V
+    invoke-virtual {v2, v6}, Lyfb;->setLeftActions(Lmfb;)V
 
-    sget-object v4, Lf6b;->a:Lf6b;
+    sget-object v5, Ljfb;->a:Ljfb;
 
-    invoke-virtual {p1, v4}, Lu6b;->setRightActions(Lk6b;)V
+    invoke-virtual {v2, v5}, Lyfb;->setRightActions(Lofb;)V
 
-    sget-object v4, Lm6b;->a:Lm6b;
+    sget-object v5, Lqfb;->a:Lqfb;
 
-    invoke-virtual {p1, v4}, Lu6b;->setForm(Lm6b;)V
+    invoke-virtual {v2, v5}, Lyfb;->setForm(Lqfb;)V
 
-    new-instance v4, Landroid/widget/FrameLayout$LayoutParams;
+    new-instance v5, Landroid/widget/LinearLayout$LayoutParams;
 
-    const/4 v5, -0x2
+    const/4 v6, -0x2
 
-    invoke-direct {v4, p3, v5, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
+    invoke-direct {v5, v3, v6}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    invoke-virtual {p1, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v2, v5}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-virtual {v10, p1}, Lk82;->n(Landroid/view/View;)Lv5b;
+    sget-object v5, La93;->s0:Lv1a;
 
-    move-result-object v2
+    invoke-virtual {v5, v2}, Lv1a;->y(Landroid/view/View;)Lyeb;
 
-    invoke-interface {v2}, Lv5b;->b()Lff0;
+    move-result-object v7
 
-    move-result-object v2
+    invoke-interface {v7}, Lyeb;->b()Lbf0;
 
-    iget v2, v2, Lff0;->k:I
+    move-result-object v7
 
-    invoke-virtual {p1, v2}, Landroid/view/View;->setBackgroundColor(I)V
+    iget v7, v7, Lbf0;->k:I
 
-    invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    invoke-virtual {v2, v7}, Landroid/view/View;->setBackgroundColor(I)V
 
-    new-instance p1, Lone/me/sdk/uikit/common/button/OneMeButton;
+    invoke-virtual {v4, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    new-instance v2, Landroidx/recyclerview/widget/RecyclerView;
 
-    move-result-object v2
+    invoke-virtual {v4}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-direct {p1, v2, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    move-result-object v7
 
-    sget v2, Lrza;->D0:I
+    const/4 v8, 0x0
 
-    invoke-virtual {p1, v2}, Landroid/view/View;->setId(I)V
+    invoke-direct {v2, v7, v8}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget-object v2, Lkqa;->c:Lkqa;
+    new-instance v7, Landroid/widget/LinearLayout$LayoutParams;
 
-    invoke-virtual {p1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Lkqa;)V
+    const/4 v9, 0x0
 
-    sget-object v2, Ljqa;->a:Ljqa;
+    invoke-direct {v7, v3, v9}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    invoke-virtual {p1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Ljqa;)V
+    const/16 v10, 0x10
 
-    sget-object v2, Lhqa;->c:Lhqa;
+    int-to-float v10, v10
 
-    invoke-virtual {p1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Lhqa;)V
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
 
-    new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
+    move-result-object v11
 
-    const/16 v4, 0x50
+    invoke-virtual {v11}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    invoke-direct {v2, p3, v5, v4}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
+    move-result-object v11
 
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+    iget v11, v11, Landroid/util/DisplayMetrics;->density:F
 
-    move-result-object p3
+    mul-float/2addr v11, v10
 
-    invoke-virtual {p3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-static {v11}, Lkti;->d(F)I
 
-    move-result-object p3
+    move-result v11
 
-    iget p3, p3, Landroid/util/DisplayMetrics;->density:F
+    iput v11, v7, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
 
-    mul-float/2addr p3, v3
+    const/high16 v11, 0x3f800000    # 1.0f
 
-    invoke-static {p3}, Lfhi;->b(F)I
+    iput v11, v7, Landroid/widget/LinearLayout$LayoutParams;->weight:F
 
-    move-result p3
+    invoke-virtual {v2, v7}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+    new-instance v7, Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    move-result-object v4
+    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-direct {v7}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>()V
 
-    move-result-object v4
+    invoke-virtual {v2, v7}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
 
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+    iget-object v7, v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->X:Lfb6;
 
-    mul-float/2addr v3, v4
+    invoke-virtual {v2, v7}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lphd;)V
 
-    invoke-static {v3}, Lfhi;->b(F)I
+    invoke-virtual {v2, v8}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Luhd;)V
+
+    invoke-virtual {v2, v9}, Landroid/view/ViewGroup;->setClipChildren(Z)V
+
+    new-instance v13, Lxu9;
+
+    const/16 v7, 0x11
+
+    invoke-direct {v13, v7, v0}, Lxu9;-><init>(ILjava/lang/Object;)V
+
+    new-instance v11, Ld9e;
+
+    invoke-virtual {v5, v2}, Lv1a;->y(Landroid/view/View;)Lyeb;
+
+    move-result-object v12
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0x1c
+
+    const/4 v14, 0x0
+
+    invoke-direct/range {v11 .. v16}, Ld9e;-><init>(Lyeb;Lb9e;Lem6;La7c;I)V
+
+    invoke-virtual {v2, v11}, Landroidx/recyclerview/widget/RecyclerView;->j(Lvhd;)V
+
+    new-instance v5, Lvo8;
+
+    const/4 v7, 0x0
+
+    invoke-direct {v5, v7}, Lvo8;-><init>(I)V
+
+    invoke-virtual {v2, v5}, Landroidx/recyclerview/widget/RecyclerView;->j(Lvhd;)V
+
+    invoke-virtual {v4, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    new-instance v2, Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    invoke-virtual {v4}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v5
+
+    invoke-direct {v2, v5, v8}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    sget v5, Lr8b;->C0:I
+
+    invoke-virtual {v2, v5}, Landroid/view/View;->setId(I)V
+
+    sget-object v5, Ljza;->c:Ljza;
+
+    invoke-virtual {v2, v5}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Ljza;)V
+
+    sget-object v5, Liza;->a:Liza;
+
+    invoke-virtual {v2, v5}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Liza;)V
+
+    sget-object v5, Lgza;->c:Lgza;
+
+    invoke-virtual {v2, v5}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Lgza;)V
+
+    new-instance v5, Landroid/widget/LinearLayout$LayoutParams;
+
+    invoke-direct {v5, v3, v6}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v3, v10
+
+    invoke-static {v3}, Lkti;->d(F)I
 
     move-result v3
 
-    const/16 v4, 0xc
+    const/16 v6, 0xc
 
-    int-to-float v4, v4
+    int-to-float v6, v6
 
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
 
-    move-result-object v5
+    move-result-object v7
 
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual {v7}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-result-object v5
+    move-result-object v7
 
-    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
+    iget v7, v7, Landroid/util/DisplayMetrics;->density:F
 
-    mul-float/2addr v4, v5
+    mul-float/2addr v7, v6
 
-    invoke-static {v4}, Lfhi;->b(F)I
+    invoke-static {v7}, Lkti;->d(F)I
 
-    move-result v4
+    move-result v7
 
-    invoke-virtual {v2, p3, p2, v3, v4}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
 
-    invoke-virtual {p1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    move-result-object v9
 
-    invoke-virtual {p0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->D0()Lp4c;
+    invoke-virtual {v9}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-result-object p2
+    move-result-object v9
 
-    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
+    iget v9, v9, Landroid/util/DisplayMetrics;->density:F
 
-    move-result p2
+    mul-float/2addr v10, v9
 
-    if-eqz p2, :cond_3
+    invoke-static {v10}, Lkti;->d(F)I
 
-    if-ne p2, v6, :cond_2
+    move-result v9
 
-    sget p2, Luza;->B1:I
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+
+    move-result-object v10
+
+    invoke-virtual {v10}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v10
+
+    iget v10, v10, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v6, v10
+
+    invoke-static {v6}, Lkti;->d(F)I
+
+    move-result v6
+
+    invoke-virtual {v5, v3, v7, v9, v6}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
+
+    invoke-virtual {v2, v5}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    invoke-virtual {v0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->z0()Lcfc;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    if-ne v3, v1, :cond_2
+
+    sget v1, Lu8b;->B1:I
 
     goto :goto_1
 
     :cond_2
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    new-instance v1, Lkotlin/NoWhenBranchMatchedException;
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    invoke-direct {v1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    throw p1
+    throw v1
 
     :cond_3
-    sget p2, Luza;->A1:I
+    sget v1, Lu8b;->A1:I
 
     :goto_1
-    invoke-virtual {p1, p2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
+    invoke-virtual {v2, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
 
-    new-instance p2, Loeb;
+    new-instance v1, Lpcc;
 
-    const/4 p3, 0x3
+    const/4 v3, 0x0
 
-    invoke-direct {p2, p3, p0}, Loeb;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v3, v0}, Lpcc;-><init>(ILjava/lang/Object;)V
 
-    invoke-static {p1, p2}, Leyi;->e(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    invoke-static {v2, v1}, Lf8j;->e(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
-    invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    invoke-virtual {v4, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    new-instance p1, Lo3;
+    new-instance v1, Ls3;
 
-    const/16 p2, 0x1b
+    const/16 v2, 0x19
 
-    invoke-direct {p1, p0, v1, p2}, Lo3;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
+    invoke-direct {v1, v0, v8, v2}, Ls3;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
 
-    invoke-static {p1, v0}, Lqdi;->d(Lbj6;Landroid/view/View;)V
+    invoke-static {v1, v4}, Ltqi;->c(Lum6;Landroid/view/View;)V
 
-    return-object v0
+    return-object v4
 .end method
 
 .method public final onViewCreated(Landroid/view/View;)V
     .locals 4
 
-    invoke-virtual {p0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->E0()Lu6b;
+    invoke-virtual {p0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->A0()Lu82;
 
     move-result-object p1
 
-    new-instance v0, Lhk6;
+    iget-object p1, p1, Lu82;->X:Lhbd;
 
-    const/16 v1, 0x14
+    new-instance v0, Ld53;
 
-    invoke-direct {v0, p1, v1, p0}, Lhk6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    const/16 v1, 0xc
 
-    invoke-static {p1, v0}, Lh7b;->a(Landroid/view/View;Ljava/lang/Runnable;)Lh7b;
+    invoke-direct {v0, p1, v1}, Ld53;-><init>(Lx26;I)V
 
-    invoke-virtual {p0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->F0()Lt72;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lt72;->Y:Ln0d;
-
-    new-instance v0, Lx23;
-
-    const/16 v1, 0xa
-
-    invoke-direct {v0, p1, v1}, Lx23;-><init>(Lty5;I)V
-
-    new-instance p1, Lf2c;
+    new-instance p1, Lucc;
 
     const/4 v1, 0x0
 
-    invoke-direct {p1, v1, p0}, Lf2c;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;)V
+    invoke-direct {p1, v1, p0}, Lucc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;)V
 
-    new-instance v2, Lb16;
+    new-instance v2, Lg56;
 
     const/4 v3, 0x1
 
-    invoke-direct {v2, v0, p1, v3}, Lb16;-><init>(Lty5;Lzi6;I)V
+    invoke-direct {v2, v0, p1, v3}, Lg56;-><init>(Lx26;Lsm6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
-
-    move-result-object p1
-
-    invoke-static {v2, p1}, Ltq;->v(Lty5;Lq54;)Lcye;
-
-    invoke-virtual {p0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->F0()Lt72;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lv38;
 
     move-result-object p1
 
-    iget-object p1, p1, Lt72;->Z:Lxe5;
+    invoke-static {v2, p1}, Lgw0;->w(Lx26;Lf84;)Lx9f;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lfx7;
+    invoke-virtual {p0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->A0()Lu82;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lu82;->Y:Lci5;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj48;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lfx7;->x()Lhx7;
+    invoke-interface {v0}, Lj48;->p()Ll48;
 
     move-result-object v0
 
-    sget-object v2, Lhw7;->o:Lhw7;
+    sget-object v2, Ll38;->d:Ll38;
 
-    invoke-static {p1, v0, v2}, Lc8;->c(Lty5;Lhx7;Lhw7;)Lfu1;
+    invoke-static {p1, v0, v2}, Law0;->a(Lx26;Ll48;Ll38;)Lsu1;
 
     move-result-object p1
 
-    new-instance v0, Le2c;
+    new-instance v0, Ltcc;
 
-    invoke-direct {v0, v1, p0}, Le2c;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;)V
+    invoke-direct {v0, v1, p0}, Ltcc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;)V
 
-    new-instance v1, Lb16;
+    new-instance v1, Lg56;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Lb16;-><init>(Lty5;Lzi6;I)V
+    invoke-direct {v1, p1, v0, v2}, Lg56;-><init>(Lx26;Lsm6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lv38;
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Ltq;->v(Lty5;Lq54;)Lcye;
+    invoke-static {v1, p1}, Lgw0;->w(Lx26;Lf84;)Lx9f;
 
     return-void
+.end method
+
+.method public final z0()Lcfc;
+    .locals 2
+
+    sget-object v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->t0:[Lyy7;
+
+    const/4 v1, 0x0
+
+    aget-object v0, v0, v1
+
+    iget-object v0, p0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->a:Lhs;
+
+    invoke-virtual {v0, p0}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcfc;
+
+    return-object v0
 .end method

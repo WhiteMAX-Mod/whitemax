@@ -3,143 +3,93 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic b:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
-
-
 # instance fields
-.field public final a:[Lop4;
+.field public final a:F
 
-.field private volatile synthetic notCompletedCount$volatile:I
+.field public final b:F
+
+.field public final c:F
+
+.field public final d:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Landroid/window/BackEvent;)V
+    .locals 4
 
-    const-class v0, Lte0;
+    sget-object v0, Lkl;->a:Lkl;
 
-    const-string v1, "notCompletedCount$volatile"
+    invoke-virtual {v0, p1}, Lkl;->d(Landroid/window/BackEvent;)F
 
-    invoke-static {v0, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+    move-result v1
 
-    move-result-object v0
+    invoke-virtual {v0, p1}, Lkl;->e(Landroid/window/BackEvent;)F
 
-    sput-object v0, Lte0;->b:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+    move-result v2
 
-    return-void
-.end method
+    invoke-virtual {v0, p1}, Lkl;->b(Landroid/window/BackEvent;)F
 
-.method public constructor <init>([Lop4;)V
-    .locals 0
+    move-result v3
+
+    invoke-virtual {v0, p1}, Lkl;->c(Landroid/window/BackEvent;)I
+
+    move-result p1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lte0;->a:[Lop4;
+    iput v1, p0, Lte0;->a:F
 
-    array-length p1, p1
+    iput v2, p0, Lte0;->b:F
 
-    iput p1, p0, Lte0;->notCompletedCount$volatile:I
+    iput v3, p0, Lte0;->c:F
+
+    iput p1, p0, Lte0;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 8
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    new-instance v0, Lo32;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {p1}, Lj1i;->g(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const-string v1, "BackEventCompat{touchX="
 
-    move-result-object p1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const/4 v1, 0x1
+    iget v1, p0, Lte0;->a:F
 
-    invoke-direct {v0, v1, p1}, Lo32;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lo32;->o()V
+    const-string v1, ", touchY="
 
-    iget-object p1, p0, Lte0;->a:[Lop4;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    array-length v2, p1
+    iget v1, p0, Lte0;->b:F
 
-    new-array v3, v2, [Lre0;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    const/4 v4, 0x0
+    const-string v1, ", progress="
 
-    move v5, v4
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_0
-    if-ge v5, v2, :cond_0
+    iget v1, p0, Lte0;->c:F
 
-    aget-object v6, p1, v5
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    move-object v7, v6
+    const-string v1, ", swipeEdge="
 
-    check-cast v7, Llo7;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v7}, Llo7;->start()Z
+    iget v1, p0, Lte0;->d:I
 
-    new-instance v7, Lre0;
+    const/16 v2, 0x7d
 
-    invoke-direct {v7, p0, v0}, Lre0;-><init>(Lte0;Lo32;)V
+    invoke-static {v0, v1, v2}, Lxc0;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
 
-    invoke-static {v6, v1, v7}, Ldbi;->h(Ljn7;ZLwn7;)Lyv4;
+    move-result-object v0
 
-    move-result-object v6
-
-    iput-object v6, v7, Lre0;->c:Lyv4;
-
-    aput-object v7, v3, v5
-
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Lse0;
-
-    invoke-direct {p1, v3}, Lse0;-><init>([Lre0;)V
-
-    :goto_1
-    if-ge v4, v2, :cond_1
-
-    aget-object v1, v3, v4
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v5, Lre0;->X:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    invoke-virtual {v5, v1, p1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->set(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    sget-object v1, Lo32;->o:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    instance-of v1, v1, Lfaa;
-
-    if-nez v1, :cond_2
-
-    invoke-virtual {p1}, Lse0;->a()V
-
-    goto :goto_2
-
-    :cond_2
-    invoke-static {v0, p1}, Lhni;->c(Ln32;Ld32;)V
-
-    :goto_2
-    invoke-virtual {v0}, Lo32;->n()Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

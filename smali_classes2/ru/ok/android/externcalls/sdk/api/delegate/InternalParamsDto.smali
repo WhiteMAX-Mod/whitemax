@@ -278,7 +278,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/api/delegate/InternalParamsDto;->platform:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -291,7 +291,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/api/delegate/InternalParamsDto;->sdkVersion:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -304,7 +304,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/api/delegate/InternalParamsDto;->clientAppKey:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -317,7 +317,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/api/delegate/InternalParamsDto;->deviceId:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -339,7 +339,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/api/delegate/InternalParamsDto;->domainId:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -431,7 +431,7 @@
 
     iget-object v2, p0, Lru/ok/android/externcalls/sdk/api/delegate/InternalParamsDto;->sdkVersion:Ljava/lang/String;
 
-    invoke-static {v0, v1, v2}, Lu15;->d(IILjava/lang/String;)I
+    invoke-static {v0, v1, v2}, Lu45;->e(IILjava/lang/String;)I
 
     move-result v0
 
@@ -475,7 +475,7 @@
 
     iget v2, p0, Lru/ok/android/externcalls/sdk/api/delegate/InternalParamsDto;->protocolVersion:I
 
-    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+    invoke-static {v2, v0, v1}, Lxrf;->k(III)I
 
     move-result v0
 
@@ -599,7 +599,7 @@
 
     const-string v9, "InternalParamsDto(platform="
 
-    invoke-static {v9, v0, v7, v1, v8}, Ley1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v9, v0, v7, v1, v8}, Lwy1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -607,7 +607,7 @@
 
     const-string v7, ", protocolVersion="
 
-    invoke-static {v0, v2, v1, v3, v7}, Li57;->q(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2, v1, v3, v7}, Lho7;->r(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -623,7 +623,7 @@
 
     const-string v1, ")"
 
-    invoke-static {v0, v6, v1}, Ldy1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v6, v1}, Laz1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

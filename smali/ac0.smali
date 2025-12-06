@@ -4,44 +4,40 @@
 
 
 # instance fields
-.field public final a:Lwff;
+.field public final a:Ljava/lang/String;
 
-.field public final b:Ljava/util/List;
+.field public final b:[B
+
+.field public final c:Ll9c;
 
 
 # direct methods
-.method public constructor <init>(Lwff;Ljava/util/List;)V
+.method public constructor <init>(Ljava/lang/String;[BLl9c;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p1, :cond_1
+    iput-object p1, p0, Lac0;->a:Ljava/lang/String;
 
-    iput-object p1, p0, Lac0;->a:Lwff;
+    iput-object p2, p0, Lac0;->b:[B
 
-    if-eqz p2, :cond_0
-
-    iput-object p2, p0, Lac0;->b:Ljava/util/List;
+    iput-object p3, p0, Lac0;->c:Ll9c;
 
     return-void
+.end method
 
-    :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
+.method public static a()Lka5;
+    .locals 2
 
-    const-string p2, "Null outConfigs"
+    new-instance v0, Lka5;
 
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    throw p1
+    sget-object v1, Ll9c;->a:Ll9c;
 
-    :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
+    iput-object v1, v0, Lka5;->c:Ljava/lang/Object;
 
-    const-string p2, "Null surfaceEdge"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-object v0
 .end method
 
 
@@ -64,21 +60,31 @@
 
     check-cast p1, Lac0;
 
-    iget-object v1, p0, Lac0;->a:Lwff;
+    iget-object v1, p0, Lac0;->a:Ljava/lang/String;
 
-    iget-object v3, p1, Lac0;->a:Lwff;
+    iget-object v3, p1, Lac0;->a:Ljava/lang/String;
 
-    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lac0;->b:Ljava/util/List;
+    iget-object v1, p0, Lac0;->b:[B
 
-    iget-object p1, p1, Lac0;->b:Ljava/util/List;
+    iget-object v3, p1, Lac0;->b:[B
 
-    invoke-interface {v1, p1}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Ljava/util/Arrays;->equals([B[B)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, p0, Lac0;->c:Ll9c;
+
+    iget-object p1, p1, Lac0;->c:Ll9c;
+
+    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -91,11 +97,11 @@
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 3
 
-    iget-object v0, p0, Lac0;->a:Lwff;
+    iget-object v0, p0, Lac0;->a:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
@@ -105,9 +111,19 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v1, p0, Lac0;->b:Ljava/util/List;
+    iget-object v2, p0, Lac0;->b:[B
 
-    invoke-interface {v1}, Ljava/util/List;->hashCode()I
+    invoke-static {v2}, Ljava/util/Arrays;->hashCode([B)I
+
+    move-result v2
+
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v1, p0, Lac0;->c:Ll9c;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
@@ -117,27 +133,47 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 4
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lac0;->b:[B
 
-    const-string v1, "In{surfaceEdge="
+    if-nez v0, :cond_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v0, ""
 
-    iget-object v1, p0, Lac0;->a:Lwff;
+    goto :goto_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :cond_0
+    const/4 v1, 0x2
 
-    const-string v1, ", outConfigs="
+    invoke-static {v0, v1}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    iget-object v1, p0, Lac0;->b:Ljava/util/List;
+    :goto_0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v2, "}"
+    const-string v2, "TransportContext("
 
-    invoke-static {v0, v1, v2}, Ldy1;->j(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, p0, Lac0;->a:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Lac0;->c:Ll9c;
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, ")"
+
+    invoke-static {v1, v0, v2}, Lho7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

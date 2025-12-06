@@ -78,7 +78,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lki4;)V
+.method public synthetic constructor <init>(Ltk4;)V
     .locals 0
 
     .line 1

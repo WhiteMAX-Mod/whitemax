@@ -1,171 +1,133 @@
-.class public final Lhoe;
-.super Ljava/lang/Object;
+.class public final enum Lhoe;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lh42;
+# static fields
+.field public static final enum X:Lhoe;
 
-.field public final b:Lk9a;
+.field public static final enum Y:Lhoe;
 
-.field public final c:Ljh6;
+.field public static final synthetic Z:[Lhoe;
 
-.field public final d:Lxea;
+.field public static final enum a:Lhoe;
 
-.field public final e:Lrs6;
+.field public static final enum b:Lhoe;
 
-.field public final f:Li66;
+.field public static final enum c:Lhoe;
 
-.field public final g:Lu1f;
+.field public static final enum d:Lhoe;
 
-.field public final h:Lnri;
-
-.field public final i:Lbua;
-
-.field public final j:Ldu;
-
-.field public final k:Lyt1;
-
-.field public final l:Lvq2;
-
-.field public final m:Lv3;
-
-.field public final n:Lv48;
-
-.field public final o:Lyoh;
-
-.field public final p:Lfqf;
-
-.field public final q:Lyt1;
+.field public static final enum o:Lhoe;
 
 
 # direct methods
-.method public constructor <init>(Lfwc;Lli1;Lgf1;)V
-    .locals 11
+.method static constructor <clinit>()V
+    .locals 9
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lhoe;
 
-    new-instance v0, Lh42;
+    const-string v1, "ACTION"
 
-    invoke-direct {v0, p1}, Lh42;-><init>(Lfwc;)V
+    const/4 v2, 0x0
 
-    iput-object v0, p0, Lhoe;->a:Lh42;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    new-instance v1, Lk9a;
+    sput-object v0, Lhoe;->a:Lhoe;
 
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+    new-instance v1, Lhoe;
 
-    iput-object v1, p0, Lhoe;->b:Lk9a;
+    const-string v2, "SIMPLE"
 
-    new-instance v1, Ljh6;
+    const/4 v3, 0x1
 
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object v1, p0, Lhoe;->c:Ljh6;
+    sput-object v1, Lhoe;->b:Lhoe;
 
-    new-instance v2, Lxea;
+    new-instance v2, Lhoe;
 
-    const/4 v3, 0x7
+    const-string v3, "SIMPLE_WITH_THEMED_ICON"
 
-    invoke-direct {v2, v3}, Lxea;-><init>(I)V
+    const/4 v4, 0x2
 
-    iput-object v2, p0, Lhoe;->d:Lxea;
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    new-instance v6, Lvq2;
+    sput-object v2, Lhoe;->c:Lhoe;
 
-    invoke-direct {v6, p1}, Lvq2;-><init>(Lfwc;)V
+    new-instance v3, Lhoe;
 
-    new-instance v2, Lrs6;
+    const-string v4, "NEGATIVE"
 
-    const/16 v3, 0x19
+    const/4 v5, 0x3
 
-    invoke-direct {v2, v3, p1}, Lrs6;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object v2, p0, Lhoe;->e:Lrs6;
+    sput-object v3, Lhoe;->d:Lhoe;
 
-    new-instance v3, Li66;
+    new-instance v4, Lhoe;
 
-    invoke-direct {v3, p2, p3, v0, v2}, Li66;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    const-string v5, "DISABLE"
 
-    iput-object v3, p0, Lhoe;->f:Li66;
+    const/4 v6, 0x4
 
-    new-instance v7, Lu1f;
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/16 p2, 0x17
+    sput-object v4, Lhoe;->o:Lhoe;
 
-    const/4 p3, 0x0
+    new-instance v5, Lhoe;
 
-    invoke-direct {v7, p1, v3, p3, p2}, Lu1f;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+    const-string v6, "SIMPLE_TEXT_ONLY"
 
-    iput-object v7, p0, Lhoe;->g:Lu1f;
+    const/4 v7, 0x5
 
-    new-instance p2, Lnri;
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
+    sput-object v5, Lhoe;->X:Lhoe;
 
-    iput-object p2, p0, Lhoe;->h:Lnri;
+    new-instance v6, Lhoe;
 
-    new-instance v8, Lbua;
+    const-string v7, "PROMO"
 
-    invoke-direct {v8, p1, p2}, Lbua;-><init>(Lfwc;Lnri;)V
+    const/4 v8, 0x6
 
-    iput-object v8, p0, Lhoe;->i:Lbua;
+    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    new-instance v9, Ldu;
+    sput-object v6, Lhoe;->Y:Lhoe;
 
-    invoke-direct {v9, p1, p2}, Ldu;-><init>(Lfwc;Lnri;)V
+    filled-new-array/range {v0 .. v6}, [Lhoe;
 
-    iput-object v9, p0, Lhoe;->j:Ldu;
+    move-result-object v0
 
-    new-instance v10, Lyt1;
-
-    invoke-direct {v10, p1, p2}, Lyt1;-><init>(Lfwc;Lnri;)V
-
-    iput-object v10, p0, Lhoe;->k:Lyt1;
-
-    new-instance p3, Lvq2;
-
-    invoke-direct {p3, p1}, Lvq2;-><init>(Lfwc;)V
-
-    iput-object p3, p0, Lhoe;->l:Lvq2;
-
-    new-instance v4, Lv3;
-
-    move-object v5, p1
-
-    invoke-direct/range {v4 .. v10}, Lv3;-><init>(Lfwc;Lvq2;Lu1f;Lbua;Ldu;Lyt1;)V
-
-    iput-object v4, p0, Lhoe;->m:Lv3;
-
-    new-instance p1, Lv48;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object v5, p1, Lv48;->a:Ljava/lang/Object;
-
-    iput-object v6, p1, Lv48;->b:Ljava/lang/Object;
-
-    iput-object v3, p1, Lv48;->c:Ljava/lang/Object;
-
-    iput-object p1, p0, Lhoe;->n:Lv48;
-
-    new-instance p1, Lyoh;
-
-    invoke-direct {p1, v5, p2, v4}, Lyoh;-><init>(Lfwc;Lnri;Lv3;)V
-
-    iput-object p1, p0, Lhoe;->o:Lyoh;
-
-    new-instance p1, Lfqf;
-
-    invoke-direct {p1, v5, v1, v6}, Lfqf;-><init>(Lfwc;Ljh6;Lvq2;)V
-
-    iput-object p1, p0, Lhoe;->p:Lfqf;
-
-    new-instance p1, Lyt1;
-
-    invoke-direct {p1, v5}, Lyt1;-><init>(Lfwc;)V
-
-    iput-object p1, p0, Lhoe;->q:Lyt1;
+    sput-object v0, Lhoe;->Z:[Lhoe;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lhoe;
+    .locals 1
+
+    const-class v0, Lhoe;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lhoe;
+
+    return-object p0
+.end method
+
+.method public static values()[Lhoe;
+    .locals 1
+
+    sget-object v0, Lhoe;->Z:[Lhoe;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lhoe;
+
+    return-object v0
 .end method

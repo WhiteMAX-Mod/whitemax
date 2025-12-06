@@ -1,58 +1,55 @@
 .class public final Lw20;
-.super Landroid/content/BroadcastReceiver;
+.super Landroid/database/ContentObserver;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lri5;
+.field public final a:Landroid/content/ContentResolver;
 
-.field public final b:Lkjf;
+.field public final b:Landroid/net/Uri;
 
-.field public final synthetic c:Lfh6;
+.field public final synthetic c:Lx20;
 
 
 # direct methods
-.method public constructor <init>(Lfh6;Lkjf;Lri5;)V
+.method public constructor <init>(Lx20;Landroid/os/Handler;Landroid/content/ContentResolver;Landroid/net/Uri;)V
     .locals 0
 
-    iput-object p1, p0, Lw20;->c:Lfh6;
+    iput-object p1, p0, Lw20;->c:Lx20;
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    iput-object p2, p0, Lw20;->b:Lkjf;
+    iput-object p3, p0, Lw20;->a:Landroid/content/ContentResolver;
 
-    iput-object p3, p0, Lw20;->a:Lri5;
+    iput-object p4, p0, Lw20;->b:Landroid/net/Uri;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 0
+.method public final onChange(Z)V
+    .locals 3
 
-    const-string p1, "android.media.AUDIO_BECOMING_NOISY"
+    iget-object p1, p0, Lw20;->c:Lx20;
 
-    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+    iget-object v0, p1, Lx20;->b:Ljava/lang/Object;
 
-    move-result-object p2
+    check-cast v0, Landroid/content/Context;
 
-    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget-object v1, p1, Lx20;->j:Ljava/lang/Object;
 
-    move-result p1
+    check-cast v1, Lk20;
 
-    if-eqz p1, :cond_0
+    iget-object v2, p1, Lx20;->i:Ljava/lang/Object;
 
-    new-instance p1, Lk3;
+    check-cast v2, Lao6;
 
-    const/16 p2, 0xc
+    invoke-static {v0, v1, v2}, Lu20;->b(Landroid/content/Context;Lk20;Lao6;)Lu20;
 
-    invoke-direct {p1, p2, p0}, Lk3;-><init>(ILjava/lang/Object;)V
+    move-result-object v0
 
-    iget-object p2, p0, Lw20;->b:Lkjf;
+    invoke-virtual {p1, v0}, Lx20;->a(Lu20;)V
 
-    invoke-virtual {p2, p1}, Lkjf;->d(Ljava/lang/Runnable;)Z
-
-    :cond_0
     return-void
 .end method

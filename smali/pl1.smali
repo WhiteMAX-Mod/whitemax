@@ -1,35 +1,70 @@
-.class public abstract synthetic Lpl1;
+.class public final Lpl1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnLayoutChangeListener;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/calls/ui/ui/call/CallScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lone/me/calls/ui/ui/call/CallScreen;I)V
+    .locals 0
 
-    invoke-static {}, Lshg;->values()[Lshg;
+    iput p2, p0, Lpl1;->a:I
 
-    move-result-object v0
+    iput-object p1, p0, Lpl1;->b:Lone/me/calls/ui/ui/call/CallScreen;
 
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    sput-object v0, Lpl1;->$EnumSwitchMapping$0:[I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
+    .locals 0
+
+    iget p2, p0, Lpl1;->a:I
+
+    iget-object p3, p0, Lpl1;->b:Lone/me/calls/ui/ui/call/CallScreen;
+
+    packed-switch p2, :pswitch_data_0
+
+    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+
+    sget-object p1, Lone/me/calls/ui/ui/call/CallScreen;->N0:Lrha;
+
+    invoke-virtual {p3}, Lone/me/calls/ui/ui/call/CallScreen;->G0()Li1c;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Li1c;->c()V
+
+    return-void
+
+    :pswitch_0
+    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+
+    sget-object p1, Lone/me/calls/ui/ui/call/CallScreen;->N0:Lrha;
+
+    invoke-virtual {p3}, Lone/me/calls/ui/ui/call/CallScreen;->G0()Li1c;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Li1c;->c()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

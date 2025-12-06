@@ -16,8 +16,6 @@
 
 .field public static final F:I
 
-.field public static final G:I
-
 .field public static final a:I
 
 .field public static final b:I
@@ -75,137 +73,133 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lyoc;->audio_record__action_view:I
+    sget v0, Liyc;->chat__background:I
 
     sput v0, Lm1b;->a:I
 
-    sget v0, Lyoc;->audio_record__action_view_background:I
+    sget v0, Liyc;->chat__bottom_container:I
 
     sput v0, Lm1b;->b:I
 
-    sget v0, Lyoc;->audio_record__action_view_bg_container:I
+    sget v0, Liyc;->chat__bottom_container_chat_status_button:I
 
     sput v0, Lm1b;->c:I
 
-    sget v0, Lyoc;->audio_record__action_view_container:I
+    sget v0, Liyc;->chat__bottom_container_search:I
 
     sput v0, Lm1b;->d:I
 
-    sget v0, Lyoc;->audio_record__audio_hand_free_record_view:I
+    sget v0, Liyc;->chat__bottom_container_search_down_button:I
 
     sput v0, Lm1b;->e:I
 
-    sget v0, Lyoc;->audio_record__audio_record_root:I
+    sget v0, Liyc;->chat__bottom_container_search_separator:I
 
     sput v0, Lm1b;->f:I
 
-    sget v0, Lyoc;->audio_record__cancel_view:I
+    sget v0, Liyc;->chat__bottom_container_search_up_button:I
 
     sput v0, Lm1b;->g:I
 
-    sget v0, Lyoc;->audio_record__dot_view:I
+    sget v0, Liyc;->chat__main_container:I
 
     sput v0, Lm1b;->h:I
 
-    sget v0, Lyoc;->audio_record__duration_view:I
+    sget v0, Liyc;->chat__media_bar_container:I
 
     sput v0, Lm1b;->i:I
 
-    sget v0, Lyoc;->audio_record__hand_free_dot_view:I
+    sget v0, Liyc;->chat__media_keyboard:I
 
     sput v0, Lm1b;->j:I
 
-    sget v0, Lyoc;->audio_record__hand_free_duration_view:I
+    sget v0, Liyc;->chat__messages_container:I
 
     sput v0, Lm1b;->k:I
 
-    sget v0, Lyoc;->audio_record__lock_view:I
+    sget v0, Liyc;->chat__pinbars_container:I
 
     sput v0, Lm1b;->l:I
 
-    sget v0, Lyoc;->audio_record__pause_recording_button:I
+    sget v0, Liyc;->chat__search_view:I
 
     sput v0, Lm1b;->m:I
 
-    sget v0, Lyoc;->audio_record__play_pause_listening_button:I
+    sget v0, Liyc;->chat__suggestion_container:I
 
     sput v0, Lm1b;->n:I
 
-    sget v0, Lyoc;->audio_record__play_recording_button:I
+    sget v0, Liyc;->chat__toolbar:I
 
     sput v0, Lm1b;->o:I
 
-    sget v0, Lyoc;->audio_record__recording_panel:I
+    sget v0, Liyc;->chat__video_msg_container:I
 
     sput v0, Lm1b;->p:I
 
-    sget v0, Lyoc;->audio_record__remove_button:I
+    sget v0, Liyc;->chat_screen__action_cancel:I
 
     sput v0, Lm1b;->q:I
 
-    sget v0, Lyoc;->audio_record__swipe_remove_button:I
+    sget v0, Liyc;->chat_screen__error_restricted_send_message_action:I
 
     sput v0, Lm1b;->r:I
 
-    sget v0, Lyoc;->audio_record__wave_container:I
+    sget v0, Liyc;->chat_screen__error_restricted_send_message_cancel:I
 
     sput v0, Lm1b;->s:I
 
-    sget v0, Lyoc;->audio_record__wave_view:I
+    sget v0, Liyc;->chat_screen__leave_chat_confirm:I
 
     sput v0, Lm1b;->t:I
 
-    sget v0, Lyoc;->writebar__add_link_bottom_sheet_button_add:I
+    sget v0, Liyc;->chat_screen__remove_chat_confirm:I
 
     sput v0, Lm1b;->u:I
 
-    sget v0, Lyoc;->writebar__add_link_bottom_sheet_input:I
+    sget v0, Liyc;->chat_screen__video_msg_placeholder:I
 
     sput v0, Lm1b;->v:I
 
-    sget v0, Lyoc;->writebar__container:I
+    sget v0, Liyc;->chat_screen__video_msg_preview:I
 
     sput v0, Lm1b;->w:I
 
-    sget v0, Lyoc;->writebar__record_controls:I
+    sget v0, Liyc;->chat_screen__video_msg_progress:I
 
     sput v0, Lm1b;->x:I
 
-    sget v0, Lyoc;->writebar__root:I
+    sget v0, Liyc;->chat_screen__video_msg_root_container:I
 
     sput v0, Lm1b;->y:I
 
-    sget v0, Lyoc;->writebar__suggestion_close_button:I
+    sget v0, Liyc;->chat_screen__video_msg_switch_camera_btn:I
 
     sput v0, Lm1b;->z:I
 
-    sget v0, Lyoc;->writebar__suggestion_close_panel:I
+    sget v0, Liyc;->chat_screen__video_msg_timer:I
 
     sput v0, Lm1b;->A:I
 
-    sget v0, Lyoc;->writebar__suggestion_item:I
+    sget v0, Liyc;->chat_screen__video_msg_torch_btn:I
 
     sput v0, Lm1b;->B:I
 
-    sget v0, Lyoc;->writebar__suggestion_not_found:I
+    sget v0, Liyc;->chat_screen__video_msg_video_view:I
 
     sput v0, Lm1b;->C:I
 
-    sget v0, Lyoc;->writebar__suggestion_popup_drag_layout:I
+    sget v0, Liyc;->media_bar__emoji_keyboard_container:I
 
     sput v0, Lm1b;->D:I
 
-    sget v0, Lyoc;->writebar__suggestion_popup_layout_content:I
+    sget v0, Liyc;->media_bar__media_type_picker_button:I
 
     sput v0, Lm1b;->E:I
 
-    sget v0, Lyoc;->writebar__suggestion_popup_layout_list:I
+    sget v0, Liyc;->media_bar__select_album_container:I
 
     sput v0, Lm1b;->F:I
-
-    sget v0, Lyoc;->writebar__suggestion_title:I
-
-    sput v0, Lm1b;->G:I
 
     return-void
 .end method

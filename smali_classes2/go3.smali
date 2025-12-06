@@ -1,20 +1,64 @@
-.class public interface abstract Lgo3;
+.class public final Lgo3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lio3;
+
+
+# static fields
+.field public static final a:Lgo3;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lgo3;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lgo3;->a:Lgo3;
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public K(Landroid/os/Bundle;)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    return-void
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lgo3;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
 .end method
 
-.method public M()V
-    .locals 0
+.method public final hashCode()I
+    .locals 1
 
-    return-void
+    const v0, 0x385d4ca9
+
+    return v0
 .end method
 
-.method public abstract g(ILandroid/os/Bundle;)V
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "UserSettings"
+
+    return-object v0
 .end method

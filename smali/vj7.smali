@@ -1,175 +1,106 @@
 .class public final Lvj7;
-.super Lsgf;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
-
-# interfaces
-.implements Lzi6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lji6;
+.field public final synthetic b:Landroid/widget/TextView;
+
+.field public final synthetic c:I
+
+.field public final synthetic d:Landroid/widget/TextView;
+
+.field public final synthetic e:Lxj7;
 
 
 # direct methods
-.method public constructor <init>(Lji6;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lxj7;ILandroid/widget/TextView;ILandroid/widget/TextView;)V
     .locals 0
 
-    iput-object p1, p0, Lvj7;->Y:Lji6;
+    iput-object p1, p0, Lvj7;->e:Lxj7;
 
-    const/4 p1, 0x2
+    iput p2, p0, Lvj7;->a:I
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Lvj7;->b:Landroid/widget/TextView;
+
+    iput p4, p0, Lvj7;->c:I
+
+    iput-object p5, p0, Lvj7;->d:Landroid/widget/TextView;
+
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 3
 
-    check-cast p1, Lq54;
+    iget p1, p0, Lvj7;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lvj7;->e:Lxj7;
 
-    invoke-virtual {p0, p1, p2}, Lvj7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lvj7;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lvj7;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lvj7;
-
-    iget-object v1, p0, Lvj7;->Y:Lji6;
-
-    invoke-direct {v0, v1, p2}, Lvj7;-><init>(Lji6;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lvj7;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lvj7;->X:Ljava/lang/Object;
-
-    check-cast p1, Lq54;
-
-    invoke-interface {p1}, Lq54;->getCoroutineContext()Li54;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lvj7;->Y:Lji6;
-
-    :try_start_0
-    new-instance v1, Lvtf;
-
-    invoke-direct {v1}, Lvtf;-><init>()V
-
-    invoke-static {p1}, Ldbi;->f(Li54;)Ljn7;
-
-    move-result-object p1
-
-    const/4 v2, 0x1
-
-    invoke-static {p1, v2, v1}, Ldbi;->h(Ljn7;ZLwn7;)Lyv4;
-
-    move-result-object p1
-
-    iput-object p1, v1, Lvtf;->c:Lyv4;
-
-    sget-object p1, Lvtf;->o:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
-
-    :cond_0
-    invoke-virtual {p1, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->get(Ljava/lang/Object;)I
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    const/4 p1, 0x2
-
-    if-eq v2, p1, :cond_3
-
-    const/4 p1, 0x3
-
-    if-ne v2, p1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-static {v2}, Lvtf;->f(I)V
+    iput p1, v0, Lxj7;->n:I
 
     const/4 p1, 0x0
 
-    throw p1
+    iput-object p1, v0, Lxj7;->l:Landroid/animation/AnimatorSet;
 
-    :cond_2
-    const/4 v3, 0x0
+    iget-object v1, p0, Lvj7;->b:Landroid/widget/TextView;
 
-    invoke-virtual {p1, v1, v2, v3}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->compareAndSet(Ljava/lang/Object;II)Z
+    if-eqz v1, :cond_0
 
-    move-result v2
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 v2, 0x4
 
-    if-eqz v2, :cond_0
+    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    :cond_3
-    :goto_0
-    :try_start_1
-    invoke-interface {v0}, Lji6;->invoke()Ljava/lang/Object;
+    iget v1, p0, Lvj7;->c:I
 
-    move-result-object p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    const/4 v2, 0x1
 
-    :try_start_2
-    invoke-virtual {v1}, Lvtf;->e()V
+    if-ne v1, v2, :cond_0
 
-    return-object p1
+    iget-object v0, v0, Lxj7;->r:Landroidx/appcompat/widget/AppCompatTextView;
 
-    :catch_0
-    move-exception p1
+    if-eqz v0, :cond_0
 
-    goto :goto_1
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    :catchall_0
-    move-exception p1
+    :cond_0
+    iget-object p1, p0, Lvj7;->d:Landroid/widget/TextView;
 
-    invoke-virtual {v1}, Lvtf;->e()V
+    if-eqz p1, :cond_1
 
-    throw p1
-    :try_end_2
-    .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
+    const/4 v0, 0x0
 
-    :goto_1
-    new-instance v0, Ljava/util/concurrent/CancellationException;
+    invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationY(F)V
 
-    const-string v1, "Blocking call was interrupted due to parent cancellation"
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
-    invoke-virtual {v0, p1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    :cond_1
+    return-void
+.end method
 
-    move-result-object p1
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 1
 
-    throw p1
+    iget-object p1, p0, Lvj7;->d:Landroid/widget/TextView;
+
+    if-eqz p1, :cond_0
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+
+    :cond_0
+    return-void
 .end method

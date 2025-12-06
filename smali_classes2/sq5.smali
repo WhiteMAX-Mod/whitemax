@@ -1,238 +1,270 @@
 .class public final Lsq5;
-.super Ljava/lang/Object;
+.super Landroid/webkit/WebViewClient;
 .source "SourceFile"
-
-# interfaces
-.implements Lnc4;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic a:Lone/me/webview/FaqWebViewWidget;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Lone/me/webview/FaqWebViewWidget;)V
     .locals 0
 
-    iput p1, p0, Lsq5;->a:I
+    iput-object p1, p0, Lsq5;->a:Lone/me/webview/FaqWebViewWidget;
 
-    iput-object p2, p0, Lsq5;->b:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method private final e()V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final f(Lr0;)V
-    .locals 0
+    invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lr0;)V
-    .locals 3
+.method public final shouldOverrideUrlLoading(Landroid/webkit/WebView;Landroid/webkit/WebResourceRequest;)Z
+    .locals 6
 
-    iget v0, p0, Lsq5;->a:I
+    iget-object p1, p0, Lsq5;->a:Lone/me/webview/FaqWebViewWidget;
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lsq5;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljed;
-
-    invoke-virtual {p1}, Lr0;->f()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, v0, Ljed;->h:Lr0;
-
-    if-ne p1, v1, :cond_1
+    iget-object v0, p1, Lone/me/webview/FaqWebViewWidget;->d:Lk18;
 
     const/4 v1, 0x0
 
-    iget-object p1, p1, Lr0;->a:Ljava/util/Map;
+    if-eqz p2, :cond_a
 
-    const/4 v2, 0x0
+    invoke-interface {p2}, Landroid/webkit/WebResourceRequest;->getUrl()Landroid/net/Uri;
 
-    invoke-virtual {v0, v2, v1, p1}, Lr0;->l(Ljava/lang/Object;ZLjava/util/Map;)Z
+    move-result-object p2
+
+    if-nez p2, :cond_0
+
+    goto/16 :goto_3
+
+    :cond_0
+    invoke-virtual {p2}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x1
+
+    if-eqz v2, :cond_1
+
+    const-string v5, "mailto"
+
+    invoke-static {v2, v5, v1}, Lvmf;->s(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+
+    move-result v2
+
+    if-ne v2, v4, :cond_1
+
+    sget-object p2, Lone/me/webview/FaqWebViewWidget;->Z:Lv17;
+
+    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lv38;
+
+    move-result-object p2
+
+    new-instance v0, Luq5;
+
+    invoke-direct {v0, p1, v3}, Luq5;-><init>(Lone/me/webview/FaqWebViewWidget;Lkotlin/coroutines/Continuation;)V
+
+    sget-object v1, Li84;->b:Li84;
+
+    invoke-static {p2, v3, v1, v0, v4}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
+
+    move-result-object p2
+
+    iget-object v0, p1, Lone/me/webview/FaqWebViewWidget;->c:Lt9f;
+
+    sget-object v1, Lone/me/webview/FaqWebViewWidget;->s0:[Lyy7;
+
+    aget-object v1, v1, v4
+
+    invoke-virtual {v0, p1, v1, p2}, Lt9f;->O(Ljava/lang/Object;Lyy7;Ljava/lang/Object;)V
+
+    return v4
+
+    :cond_1
+    invoke-virtual {p2}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_2
+
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lj98;
+
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v5, "max"
+
+    invoke-static {v2, v5, v1}, Lvmf;->s(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+
+    move-result v2
+
+    if-ne v2, v4, :cond_2
+
+    invoke-static {p1, p2}, Lone/me/webview/FaqWebViewWidget;->y0(Lone/me/webview/FaqWebViewWidget;Landroid/net/Uri;)V
+
+    return v4
+
+    :cond_2
+    sget-object v2, Lone/me/webview/FaqWebViewWidget;->Z:Lv17;
+
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lj98;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v0, "https"
+
+    filled-new-array {v0}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p2}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+
+    move-result-object v2
+
+    if-nez v2, :cond_3
+
+    goto/16 :goto_3
+
+    :cond_3
+    aget-object v0, v0, v1
+
+    invoke-static {v2, v0, v1}, Ldnf;->r(Ljava/lang/String;Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_a
+
+    invoke-virtual {p2}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/webkit/MimeTypeMap;->getFileExtensionFromUrl(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_a
+
+    invoke-static {v0}, Lvmf;->F(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_4
 
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {p1}, Lr0;->h()Z
+    :cond_4
+    move-object v0, v3
 
-    :cond_1
     :goto_0
-    return-void
+    if-eqz v0, :cond_a
 
-    :pswitch_0
-    iget-object v0, p0, Lsq5;->b:Ljava/lang/Object;
+    sget-object v2, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
 
-    check-cast v0, Lo32;
+    invoke-virtual {v0, v2}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
 
-    invoke-virtual {v0}, Lo32;->isCancelled()Z
+    move-result-object v0
 
-    move-result v1
+    invoke-static {}, Landroid/webkit/MimeTypeMap;->getSingleton()Landroid/webkit/MimeTypeMap;
 
-    if-nez v1, :cond_3
+    move-result-object v5
 
-    invoke-virtual {p1}, Lr0;->h()Z
+    invoke-virtual {v5, v0}, Landroid/webkit/MimeTypeMap;->getMimeTypeFromExtension(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result v1
+    move-result-object v0
 
-    if-nez v1, :cond_2
+    if-eqz v0, :cond_a
+
+    invoke-static {v0}, Lvmf;->F(Ljava/lang/CharSequence;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_5
+
+    move-object v3, v0
+
+    :cond_5
+    if-eqz v3, :cond_a
+
+    invoke-virtual {v3, v2}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+
+    move-result-object v0
+
+    sget-object v2, Lone/me/webview/FaqWebViewWidget;->t0:Ljava/util/List;
+
+    invoke-interface {v2, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_a
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-nez v2, :cond_6
 
     goto :goto_1
 
-    :cond_2
-    invoke-virtual {p1}, Lr0;->e()Ljava/lang/Object;
+    :cond_6
+    const-string v2, "image/"
 
-    move-result-object p1
+    invoke-static {v0, v2, v4}, Ldnf;->r(Ljava/lang/String;Ljava/lang/String;Z)Z
 
-    invoke-virtual {v0, p1}, Lo32;->resumeWith(Ljava/lang/Object;)V
+    move-result v2
 
-    :cond_3
+    if-eqz v2, :cond_7
+
+    const-string v2, "djvu"
+
+    invoke-static {v0, v2, v4}, Lvmf;->s(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+
+    move-result v2
+
+    if-nez v2, :cond_7
+
+    goto :goto_3
+
+    :cond_7
     :goto_1
-    return-void
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    move-result v2
 
-.method public final b(Lr0;)V
-    .locals 2
+    if-nez v2, :cond_8
 
-    iget v0, p0, Lsq5;->a:I
+    goto :goto_2
 
-    packed-switch v0, :pswitch_data_0
+    :cond_8
+    const-string v2, "video/"
 
-    iget-object v0, p0, Lsq5;->b:Ljava/lang/Object;
+    invoke-static {v0, v2, v4}, Ldnf;->r(Ljava/lang/String;Ljava/lang/String;Z)Z
 
-    check-cast v0, Ljed;
+    move-result v0
 
-    iget-object v1, v0, Ljed;->h:Lr0;
+    if-eqz v0, :cond_9
 
-    if-ne p1, v1, :cond_0
+    goto :goto_3
 
-    invoke-virtual {p1}, Lr0;->d()F
+    :cond_9
+    :goto_2
+    invoke-static {p1, p2}, Lone/me/webview/FaqWebViewWidget;->y0(Lone/me/webview/FaqWebViewWidget;Landroid/net/Uri;)V
 
-    move-result p1
+    return v4
 
-    invoke-virtual {v0, p1}, Lr0;->k(F)Z
-
-    :cond_0
-    :pswitch_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final c(Lr0;)V
-    .locals 2
-
-    iget v0, p0, Lsq5;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p1, p0, Lsq5;->b:Ljava/lang/Object;
-
-    check-cast p1, Ljed;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lsq5;->b:Ljava/lang/Object;
-
-    check-cast v0, Lo32;
-
-    invoke-virtual {v0}, Lo32;->r()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {p1}, Lr0;->c()Ljava/lang/Throwable;
-
-    move-result-object p1
-
-    if-nez p1, :cond_0
-
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v1, "fail"
-
-    invoke-direct {p1, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    :cond_0
-    new-instance v1, Lbed;
-
-    invoke-direct {v1, p1}, Lbed;-><init>(Ljava/lang/Throwable;)V
-
-    invoke-virtual {v0, v1}, Lo32;->resumeWith(Ljava/lang/Object;)V
-
-    :cond_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final d()V
-    .locals 2
-
-    iget v0, p0, Lsq5;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lsq5;->b:Ljava/lang/Object;
-
-    check-cast v0, Lo32;
-
-    invoke-virtual {v0}, Lo32;->r()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lo32;->h(Ljava/lang/Throwable;)Z
-
-    :cond_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_a
+    :goto_3
+    return v1
 .end method

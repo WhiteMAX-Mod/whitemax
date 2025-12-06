@@ -1,5 +1,5 @@
 .class public final Lt0;
-.super Lqj0;
+.super Loj0;
 .source "SourceFile"
 
 
@@ -28,14 +28,16 @@
 
 
 # virtual methods
-.method public final b(Lr0;)V
+.method public final a(Lpe4;)V
     .locals 4
 
-    invoke-virtual {p1}, Lr0;->h()Z
+    check-cast p1, Lr0;
+
+    invoke-virtual {p1}, Lr0;->g()Z
 
     move-result v0
 
-    invoke-virtual {p1}, Lr0;->d()F
+    invoke-virtual {p1}, Lr0;->c()F
 
     move-result v1
 
@@ -43,7 +45,7 @@
 
     iget-object v3, p0, Lt0;->c:Lv0;
 
-    invoke-virtual {v3, v2, p1}, Lv0;->g(Ljava/lang/String;Lr0;)Z
+    invoke-virtual {v3, v2, p1}, Lv0;->g(Ljava/lang/String;Lpe4;)Z
 
     move-result v2
 
@@ -55,20 +57,20 @@
 
     invoke-virtual {v3, v0, v1}, Lv0;->h(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-virtual {p1}, Lr0;->a()Z
+    invoke-interface {p1}, Lpe4;->close()Z
 
     return-void
 
     :cond_0
     if-nez v0, :cond_2
 
-    iget-object p1, v3, Lv0;->h:Lnn6;
+    iget-object p1, v3, Lv0;->h:Lgr6;
 
-    iget-object v0, p1, Lnn6;->e:Lkm5;
+    iget-object v0, p1, Lgr6;->e:Lup5;
 
     const/4 v2, 0x3
 
-    invoke-virtual {v0, v2}, Lkm5;->c(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0, v2}, Lup5;->c(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
@@ -77,25 +79,27 @@
     goto :goto_0
 
     :cond_1
-    iget v2, v0, Lkm5;->A0:I
+    iget v2, v0, Lup5;->B0:I
 
     add-int/lit8 v2, v2, 0x1
 
-    iput v2, v0, Lkm5;->A0:I
+    iput v2, v0, Lup5;->B0:I
 
-    invoke-virtual {p1, v1}, Lnn6;->l(F)V
+    invoke-virtual {p1, v1}, Lgr6;->l(F)V
 
-    invoke-virtual {v0}, Lkm5;->a()V
+    invoke-virtual {v0}, Lup5;->a()V
 
     :cond_2
     :goto_0
     return-void
 .end method
 
-.method public final e(Lr0;)V
+.method public final e(Lpe4;)V
     .locals 4
 
-    invoke-virtual {p1}, Lr0;->c()Ljava/lang/Throwable;
+    check-cast p1, Lr0;
+
+    invoke-virtual {p1}, Lr0;->b()Ljava/lang/Throwable;
 
     move-result-object v0
 
@@ -105,7 +109,7 @@
 
     iget-object v3, p0, Lt0;->a:Ljava/lang/String;
 
-    invoke-virtual {v2, v3, p1, v0, v1}, Lv0;->k(Ljava/lang/String;Lr0;Ljava/lang/Throwable;Z)V
+    invoke-virtual {v2, v3, p1, v0, v1}, Lv0;->k(Ljava/lang/String;Lpe4;Ljava/lang/Throwable;Z)V
 
     return-void
 .end method
@@ -113,17 +117,17 @@
 .method public final f(Lr0;)V
     .locals 8
 
-    invoke-virtual {p1}, Lr0;->h()Z
+    invoke-virtual {p1}, Lr0;->g()Z
 
     move-result v5
 
-    instance-of v7, p1, Ljed;
+    instance-of v7, p1, Lqpd;
 
-    invoke-virtual {p1}, Lr0;->d()F
+    invoke-virtual {p1}, Lr0;->c()F
 
     move-result v4
 
-    invoke-virtual {p1}, Lr0;->e()Ljava/lang/Object;
+    invoke-interface {p1}, Lpe4;->d()Ljava/lang/Object;
 
     move-result-object v3
 
@@ -137,7 +141,7 @@
 
     move-object v2, p1
 
-    invoke-virtual/range {v0 .. v7}, Lv0;->l(Ljava/lang/String;Lr0;Ljava/lang/Object;FZZZ)V
+    invoke-virtual/range {v0 .. v7}, Lv0;->l(Ljava/lang/String;Lpe4;Ljava/lang/Object;FZZZ)V
 
     return-void
 
@@ -154,7 +158,7 @@
 
     iget-object v3, p0, Lt0;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v3, v2, p1, v1}, Lv0;->k(Ljava/lang/String;Lr0;Ljava/lang/Throwable;Z)V
+    invoke-virtual {v0, v3, v2, p1, v1}, Lv0;->k(Ljava/lang/String;Lpe4;Ljava/lang/Throwable;Z)V
 
     :cond_1
     return-void

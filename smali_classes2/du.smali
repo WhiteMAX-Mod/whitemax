@@ -1,305 +1,99 @@
 .class public final Ldu;
-.super Ljava/lang/Object;
+.super Ll0g;
 .source "SourceFile"
-
-# interfaces
-.implements Lorg/webrtc/audio/JavaAudioDeviceModule$AudioRecordStateCallback;
-.implements Lorg/webrtc/audio/JavaAudioDeviceModule$AudioRecordErrorCallback;
-.implements Lorg/webrtc/audio/JavaAudioDeviceModule$AudioTrackStateCallback;
-.implements Lorg/webrtc/audio/JavaAudioDeviceModule$AudioTrackErrorCallback;
 
 
 # instance fields
-.field public final a:Lfwc;
+.field public c:Z
+
+.field public d:J
 
 
 # direct methods
-.method public constructor <init>(Lfwc;)V
+.method public constructor <init>(Ltm9;)V
     .locals 0
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ldu;->a:Lfwc;
+    invoke-direct {p0, p1}, Ll0g;-><init>(Ltm9;)V
 
     return-void
-.end method
-
-.method public constructor <init>(Lfwc;Lnri;)V
-    .locals 0
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    iput-object p1, p0, Ldu;->a:Lfwc;
-
-    return-void
-.end method
-
-.method public static a(Lorg/json/JSONObject;)Lg21;
-    .locals 4
-
-    const-string v0, "initiatorId"
-
-    invoke-virtual {p0, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    :try_start_0
-    invoke-static {v0}, Lhi1;->a(Ljava/lang/String;)Lhi1;
-
-    move-result-object v0
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-object v0, v1
-
-    :goto_0
-    if-nez v0, :cond_0
-
-    return-object v1
-
-    :cond_0
-    const-string v2, "movieId"
-
-    invoke-virtual {p0, v2}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-virtual {p0, v2}, Lorg/json/JSONObject;->optLong(Ljava/lang/String;)J
-
-    move-result-wide v1
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    :cond_1
-    new-instance p0, Lg21;
-
-    invoke-direct {p0, v0, v1}, Lg21;-><init>(Lhi1;Ljava/lang/Long;)V
-
-    return-object p0
 .end method
 
 
 # virtual methods
-.method public onWebRtcAudioRecordError(Ljava/lang/String;)V
+.method public final d(Ltm9;Ljava/lang/String;)V
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const-string v1, "Audio record error: "
+    const-string v0, "success"
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    if-nez v0, :cond_1
 
-    move-result-object p1
+    const-string v0, "updateTime"
 
-    const-string v0, "AudioRecordCallback"
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iget-object v1, p0, Ldu;->a:Lfwc;
+    move-result p2
 
-    invoke-interface {v1, v0, p1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    if-nez p2, :cond_0
+
+    invoke-virtual {p1}, Ltm9;->v()V
+
+    return-void
+
+    :cond_0
+    const-wide/16 v0, 0x0
+
+    invoke-static {p1, v0, v1}, Lefi;->l(Ltm9;J)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Ldu;->d:J
+
+    return-void
+
+    :cond_1
+    invoke-static {p1}, Lefi;->g(Ltm9;)Z
+
+    move-result p1
+
+    iput-boolean p1, p0, Ldu;->c:Z
 
     return-void
 .end method
 
-.method public onWebRtcAudioRecordInitError(Ljava/lang/String;)V
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-boolean v0, p0, Ldu;->c:Z
 
-    const-string v1, "Audio record init error: "
+    iget-wide v1, p0, Ldu;->d:J
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v4, "Response{success="
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object p1
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v0, "AudioRecordCallback"
+    const-string v0, ", updateTime="
 
-    iget-object v1, p0, Ldu;->a:Lfwc;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {v1, v0, p1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v3, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    const-string v0, "}"
 
-.method public onWebRtcAudioRecordStart()V
-    .locals 3
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v0, "AudioRecordCallback"
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const-string v1, "Audio record did start"
+    move-result-object v0
 
-    iget-object v2, p0, Ldu;->a:Lfwc;
-
-    invoke-interface {v2, v0, v1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public onWebRtcAudioRecordStartError(Lorg/webrtc/audio/JavaAudioDeviceModule$AudioRecordStartErrorCode;Ljava/lang/String;)V
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Audio record start error: ["
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p1, "] "
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string p2, "AudioRecordCallback"
-
-    iget-object v0, p0, Ldu;->a:Lfwc;
-
-    invoke-interface {v0, p2, p1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public onWebRtcAudioRecordStop()V
-    .locals 3
-
-    const-string v0, "AudioRecordCallback"
-
-    const-string v1, "Audio record did stop"
-
-    iget-object v2, p0, Ldu;->a:Lfwc;
-
-    invoke-interface {v2, v0, v1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public onWebRtcAudioTrackError(Ljava/lang/String;)V
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Audio track error: "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "AudioRecordCallback"
-
-    iget-object v1, p0, Ldu;->a:Lfwc;
-
-    invoke-interface {v1, v0, p1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public onWebRtcAudioTrackInitError(Ljava/lang/String;)V
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Audio track init error: "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "AudioRecordCallback"
-
-    iget-object v1, p0, Ldu;->a:Lfwc;
-
-    invoke-interface {v1, v0, p1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public onWebRtcAudioTrackStart()V
-    .locals 3
-
-    const-string v0, "AudioRecordCallback"
-
-    const-string v1, "Audio track did start"
-
-    iget-object v2, p0, Ldu;->a:Lfwc;
-
-    invoke-interface {v2, v0, v1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public onWebRtcAudioTrackStartError(Lorg/webrtc/audio/JavaAudioDeviceModule$AudioTrackStartErrorCode;Ljava/lang/String;)V
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Audio track start error: ["
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p1, "] "
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string p2, "AudioRecordCallback"
-
-    iget-object v0, p0, Ldu;->a:Lfwc;
-
-    invoke-interface {v0, p2, p1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public onWebRtcAudioTrackStop()V
-    .locals 3
-
-    const-string v0, "AudioRecordCallback"
-
-    const-string v1, "Audio track did stop"
-
-    iget-object v2, p0, Ldu;->a:Lfwc;
-
-    invoke-interface {v2, v0, v1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
+    return-object v0
 .end method

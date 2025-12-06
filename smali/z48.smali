@@ -3,68 +3,68 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lfla;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lz48;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final a:Lcqe;
+.field public a:I
 
-.field public b:Z
+.field public b:I
+
+.field public c:Z
 
 
 # direct methods
-.method public constructor <init>(Ll4i;Lcqe;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lf18;
 
-    const/4 p1, 0x0
+    const/4 v1, 0x1
 
-    iput-boolean p1, p0, Lz48;->b:Z
+    invoke-direct {v0, v1}, Lf18;-><init>(I)V
 
-    iput-object p2, p0, Lz48;->a:Lcqe;
+    sput-object v0, Lz48;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)V
-    .locals 2
-
-    iget-object v0, p0, Lz48;->a:Lcqe;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    check-cast p1, Ljava/lang/Void;
-
-    iget-object p1, v0, Lcqe;->b:Ljava/lang/Object;
-
-    check-cast p1, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;
-
-    iget v0, p1, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->K0:I
-
-    iget-object v1, p1, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->L0:Landroid/content/Intent;
-
-    invoke-virtual {p1, v0, v1}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
-
-    invoke-virtual {p1}, Landroid/app/Activity;->finish()V
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lz48;->b:Z
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final describeContents()I
     .locals 1
 
-    iget-object v0, p0, Lz48;->a:Lcqe;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    return v0
+.end method
 
-    move-result-object v0
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    return-object v0
+    iget p2, p0, Lz48;->a:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget p2, p0, Lz48;->b:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-boolean p2, p0, Lz48;->c:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    return-void
 .end method

@@ -1,17 +1,29 @@
-.class public interface abstract Lihg;
+.class public final Lihg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract b(Ljhg;)V
-.end method
+# instance fields
+.field public final a:Landroid/util/SparseArray;
 
-.method public abstract d(Ljhg;)V
-.end method
+.field public b:I
 
-.method public abstract h(Ljhg;)V
-.end method
 
-.method public abstract o(Ljhg;)V
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Landroid/util/SparseArray;
+
+    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object v0, p0, Lihg;->a:Landroid/util/SparseArray;
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lihg;->b:I
+
+    return-void
 .end method

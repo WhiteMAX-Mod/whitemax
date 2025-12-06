@@ -1,74 +1,43 @@
-.class public final synthetic Lreg;
+.class public final Lreg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lr6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lbwf;
 
-.field public final synthetic b:Lweg;
+.field public final b:Lbwf;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lweg;I)V
-    .locals 0
-
-    iput p2, p0, Lreg;->a:I
-
-    iput-object p1, p0, Lreg;->b:Lweg;
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    new-instance v0, Leeg;
 
+    const/4 v1, 0x1
 
-# virtual methods
-.method public final run()V
-    .locals 4
+    invoke-direct {v0, p1, v1}, Leeg;-><init>(Landroid/content/Context;I)V
 
-    iget v0, p0, Lreg;->a:I
+    new-instance p1, Lbwf;
 
-    const-string v1, "veg"
+    invoke-direct {p1, v0}, Lbwf;-><init>(Lcm6;)V
 
-    iget-object v2, p0, Lreg;->b:Lweg;
+    iput-object p1, p0, Lreg;->a:Lbwf;
 
-    packed-switch v0, :pswitch_data_0
+    new-instance p1, Lm2;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const/16 v0, 0xe
 
-    const-string v3, "removeUploadFromRepository: finished for data="
+    invoke-direct {p1, v0, p0}, Lm2;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    new-instance v0, Lbwf;
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, p1}, Lbwf;-><init>(Lcm6;)V
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    iput-object v0, p0, Lreg;->b:Lbwf;
 
     return-void
-
-    :pswitch_0
-    const-string v0, "getUploadFromRepository: upload not found in cache,  uploadData=%s"
-
-    filled-new-array {v2}, [Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-static {v1, v0, v2}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

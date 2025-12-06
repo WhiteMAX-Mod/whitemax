@@ -1,98 +1,63 @@
-.class public final synthetic Lpk2;
-.super Ljava/lang/Object;
+.class public final Lpk2;
+.super Lq44;
 .source "SourceFile"
-
-# interfaces
-.implements Lji6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Lf10;
 
-.field public final synthetic b:Lqk2;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lyk2;
+
+.field public d:Lyk2;
+
+.field public o:Ljava/lang/String;
+
+.field public s0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lqk2;I)V
+.method public constructor <init>(Lyk2;Lq44;)V
     .locals 0
 
-    iput p2, p0, Lpk2;->a:I
+    iput-object p1, p0, Lpk2;->Z:Lyk2;
 
-    iput-object p1, p0, Lpk2;->b:Lqk2;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    iget v0, p0, Lpk2;->a:I
+    iput-object p1, p0, Lpk2;->Y:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lpk2;->s0:I
 
-    iget-object v0, p0, Lpk2;->b:Lqk2;
+    const/high16 v0, -0x80000000
 
-    sget-object v1, Ll05;->s0:Lk82;
+    or-int/2addr p1, v0
 
-    invoke-virtual {v1, v0}, Lk82;->n(Landroid/view/View;)Lv5b;
+    iput p1, p0, Lpk2;->s0:I
 
-    move-result-object v0
+    const-wide/16 v4, 0x0
 
-    invoke-interface {v0}, Lv5b;->b()Lff0;
+    const/4 v6, 0x0
 
-    move-result-object v0
+    iget-object v0, p0, Lpk2;->Z:Lyk2;
 
-    iget-object v0, v0, Lff0;->a:Lef0;
+    const/4 v1, 0x0
 
-    iget v0, v0, Lef0;->h:I
+    const-wide/16 v2, 0x0
 
-    new-instance v1, Landroid/graphics/drawable/ColorDrawable;
+    move-object v7, p0
 
-    invoke-direct {v1, v0}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
+    invoke-virtual/range {v0 .. v7}, Lyk2;->w(Ljava/lang/String;JJLf10;Lq44;)Ljava/lang/Object;
 
-    return-object v1
+    move-result-object p1
 
-    :pswitch_0
-    sget v0, Lpjd;->W:I
-
-    sget-object v1, Ll05;->s0:Lk82;
-
-    iget-object v2, p0, Lpk2;->b:Lqk2;
-
-    invoke-virtual {v1, v2}, Lk82;->n(Landroid/view/View;)Lv5b;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lv5b;->getIcon()Ld77;
-
-    move-result-object v1
-
-    iget v1, v1, Ld77;->h:I
-
-    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-static {v2, v0}, La14;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-static {v0, v1}, Lbdb;->k(Landroid/graphics/drawable/Drawable;I)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

@@ -1,21 +1,23 @@
-.class public final Lhb8;
-.super Ldq;
+.class public interface abstract Lhb8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Lhb8;
+.field public static final L:Llcj;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    new-instance v0, Lhb8;
+    new-instance v0, Llcj;
 
-    invoke-direct {v0}, Ldq;-><init>()V
+    const/16 v1, 0x16
 
-    sput-object v0, Lhb8;->a:Lhb8;
+    invoke-direct {v0, v1}, Llcj;-><init>(I)V
+
+    sput-object v0, Lhb8;->L:Llcj;
 
     return-void
 .end method

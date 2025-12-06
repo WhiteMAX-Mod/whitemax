@@ -1,117 +1,193 @@
-.class public final synthetic Lb83;
-.super Ljava/lang/Object;
+.class public final Lb83;
+.super Ld2;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/chats/search/views/ClearRecentSearchBottomSheet;
+.field public final a:Lxx7;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/chats/search/views/ClearRecentSearchBottomSheet;I)V
-    .locals 0
+.method public constructor <init>(Lxx7;)V
+    .locals 1
 
-    iput p2, p0, Lb83;->a:I
+    new-instance v0, Ljava/util/HashMap;
 
-    iput-object p1, p0, Lb83;->b:Lone/me/chats/search/views/ClearRecentSearchBottomSheet;
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lb83;->a:Lxx7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 5
+.method public final B()Ljava/lang/String;
+    .locals 1
 
-    iget p1, p0, Lb83;->a:I
+    iget-object v0, p0, Lb83;->a:Lxx7;
 
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, p0, Lb83;->b:Lone/me/chats/search/views/ClearRecentSearchBottomSheet;
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->I0(Z)V
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lb83;->b:Lone/me/chats/search/views/ClearRecentSearchBottomSheet;
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->I0(Z)V
-
-    invoke-virtual {p1}, Ll24;->getTargetController()Ll24;
-
-    move-result-object p1
-
-    instance-of v1, p1, La83;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_0
-
-    check-cast p1, La83;
-
-    goto :goto_0
-
-    :cond_0
-    move-object p1, v2
-
-    :goto_0
-    if-eqz p1, :cond_2
-
-    check-cast p1, Lone/me/chats/search/ChatsListSearchScreen;
-
-    invoke-virtual {p1}, Lone/me/chats/search/ChatsListSearchScreen;->D0()La13;
-
-    move-result-object p1
-
-    iget-object v1, p1, La13;->S0:Lcye;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Lo0;->isActive()Z
-
-    move-result v1
-
-    if-ne v1, v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    iget-object v0, p1, Lxzg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    iget-object v1, p1, La13;->P0:Lk54;
-
-    new-instance v3, Le03;
-
-    invoke-direct {v3, p1, v2}, Le03;-><init>(La13;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v4, 0x2
-
-    invoke-static {v0, v1, v2, v3, v4}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
+    invoke-interface {v0}, Lxx7;->B()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p1, La13;->S0:Lcye;
+    return-object v0
+.end method
 
-    :cond_2
-    :goto_1
+.method public final R()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lb83;->a:Lxx7;
+
+    invoke-interface {v0}, Lxx7;->R()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final W()Z
+    .locals 1
+
+    iget-object v0, p0, Lb83;->a:Lxx7;
+
+    invoke-interface {v0}, Lxx7;->W()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final a0()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lb83;->a:Lxx7;
+
+    invoke-interface {v0}, Lxx7;->a0()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final close()V
+    .locals 1
+
+    iget-object v0, p0, Lb83;->a:Lxx7;
+
+    invoke-interface {v0}, Ljava/io/Closeable;->close()V
+
     return-void
+.end method
 
-    nop
+.method public final hasNext()Z
+    .locals 1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object v0, p0, Lb83;->a:Lxx7;
+
+    invoke-interface {v0}, Lxx7;->hasNext()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final n()V
+    .locals 1
+
+    iget-object v0, p0, Lb83;->a:Lxx7;
+
+    invoke-interface {v0}, Lxx7;->n()V
+
+    return-void
+.end method
+
+.method public final name()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lb83;->a:Lxx7;
+
+    invoke-interface {v0}, Lxx7;->name()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final p()V
+    .locals 1
+
+    iget-object v0, p0, Lb83;->a:Lxx7;
+
+    invoke-interface {v0}, Lxx7;->p()V
+
+    return-void
+.end method
+
+.method public final peek()I
+    .locals 1
+
+    iget-object v0, p0, Lb83;->a:Lxx7;
+
+    invoke-interface {v0}, Lxx7;->peek()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final q()V
+    .locals 1
+
+    iget-object v0, p0, Lb83;->a:Lxx7;
+
+    invoke-interface {v0}, Lxx7;->q()V
+
+    return-void
+.end method
+
+.method public final r()V
+    .locals 1
+
+    iget-object v0, p0, Lb83;->a:Lxx7;
+
+    invoke-interface {v0}, Lxx7;->r()V
+
+    return-void
+.end method
+
+.method public final t()J
+    .locals 2
+
+    iget-object v0, p0, Lb83;->a:Lxx7;
+
+    invoke-interface {v0}, Lxx7;->t()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final v()V
+    .locals 1
+
+    iget-object v0, p0, Lb83;->a:Lxx7;
+
+    invoke-interface {v0}, Lxx7;->v()V
+
+    return-void
+.end method
+
+.method public final x()I
+    .locals 1
+
+    iget-object v0, p0, Lb83;->a:Lxx7;
+
+    invoke-interface {v0}, Lxx7;->x()I
+
+    move-result v0
+
+    return v0
 .end method

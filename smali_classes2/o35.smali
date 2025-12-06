@@ -1,71 +1,145 @@
 .class public final Lo35;
-.super Lpr1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Ld35;
+
+.field public final b:Ld35;
+
+
 # direct methods
-.method public constructor <init>(Lqi1;Lgi1;Lfwc;Liwc;Lef1;Lavf;)V
-    .locals 12
+.method public constructor <init>(Ld35;Ld35;)V
+    .locals 0
 
-    new-instance v2, Lw0a;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v2}, Lw0a;-><init>()V
+    iput-object p1, p0, Lo35;->a:Ld35;
 
-    const/4 v9, 0x0
-
-    const/4 v10, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move-object v3, p2
-
-    move-object v4, p3
-
-    move-object/from16 v5, p4
-
-    move-object/from16 v8, p5
-
-    move-object/from16 v11, p6
-
-    invoke-direct/range {v0 .. v11}, Lpr1;-><init>(Lqi1;Lw0a;Lgi1;Lfwc;Liwc;Lrw5;Lsje;Lef1;Lhl8;Lwpd;Lavf;)V
+    iput-object p2, p0, Lo35;->b:Ld35;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final A()Ljava/lang/String;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    const-string v0, "DummyCallTopology"
+    const/4 v0, 0x1
 
-    return-object v0
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lo35;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lo35;
+
+    iget-object v1, p0, Lo35;->a:Ld35;
+
+    iget-object v3, p1, Lo35;->a:Ld35;
+
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lo35;->b:Ld35;
+
+    iget-object p1, p1, Lo35;->b:Ld35;
+
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public final R(Lggb;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final t()Ljava/lang/Runnable;
-    .locals 1
+.method public final hashCode()I
+    .locals 3
 
     const/4 v0, 0x0
 
-    return-object v0
+    iget-object v1, p0, Lo35;->a:Ld35;
+
+    if-nez v1, :cond_0
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ld35;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v2, p0, Lo35;->b:Ld35;
+
+    if-nez v2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v2}, Ld35;->hashCode()I
+
+    move-result v0
+
+    :goto_1
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final v()Lrzf;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    sget-object v0, Lrzf;->a:Lrzf;
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "DraftsNews(chats="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lo35;->a:Ld35;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", users="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lo35;->b:Ld35;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

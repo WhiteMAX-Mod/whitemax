@@ -1,59 +1,101 @@
 .class public final Lsb6;
-.super Ly14;
+.super Landroidx/recyclerview/widget/RecyclerView;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Ltb6;
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Ltb6;
-
-.field public o:Z
-
-.field public q0:I
+.field public final U1:Lfb6;
 
 
 # direct methods
-.method public constructor <init>(Ltb6;Ly14;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Ljava/util/concurrent/Executor;)V
+    .locals 3
 
-    iput-object p1, p0, Lsb6;->Z:Ltb6;
+    const/4 v0, 0x0
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, v0}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    new-instance v1, Lfb6;
+
+    invoke-direct {v1, p2}, Lfb6;-><init>(Ljava/util/concurrent/Executor;)V
+
+    iput-object v1, p0, Lsb6;->U1:Lfb6;
+
+    new-instance p2, Lrb6;
+
+    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
+
+    new-instance v2, Lone/me/chats/list/folderwidget/section/FolderWidgetLayoutManager;
+
+    invoke-direct {v2, p1}, Lone/me/chats/list/folderwidget/section/FolderWidgetLayoutManager;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {p0, v2}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
+
+    invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Luhd;)V
+
+    invoke-virtual {p0, p2}, Landroidx/recyclerview/widget/RecyclerView;->l(Laid;)V
+
+    invoke-virtual {p0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lphd;)V
+
+    new-instance p1, Lm01;
+
+    const/16 p2, 0x8
+
+    int-to-float p2, p2
+
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p2, v0
+
+    invoke-static {p2}, Lkti;->d(F)I
+
+    move-result p2
+
+    const/4 v0, 0x6
+
+    int-to-float v0, v0
+
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v1
+
+    invoke-static {v0}, Lkti;->d(F)I
+
+    move-result v0
+
+    const/4 v1, 0x4
+
+    invoke-direct {p1, p2, v0, v1}, Lm01;-><init>(III)V
+
+    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->j(Lvhd;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final setListener(Lqb6;)V
+    .locals 1
 
-    iput-object p1, p0, Lsb6;->Y:Ljava/lang/Object;
+    iget-object v0, p0, Lsb6;->U1:Lfb6;
 
-    iget p1, p0, Lsb6;->q0:I
+    iput-object p1, v0, Lfb6;->X:Ljava/lang/Object;
 
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lsb6;->q0:I
-
-    const-wide/16 v1, 0x0
-
-    const/4 v5, 0x0
-
-    iget-object v0, p0, Lsb6;->Z:Ltb6;
-
-    const/4 v4, 0x0
-
-    move-object v3, p0
-
-    invoke-virtual/range {v0 .. v5}, Ltb6;->b(JLy14;Ljava/util/List;Z)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

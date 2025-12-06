@@ -1,144 +1,88 @@
 .class public final Lcib;
-.super Lsgf;
+.super Lcda;
 .source "SourceFile"
-
-# interfaces
-.implements Lbj6;
 
 
 # instance fields
-.field public final synthetic X:I
-
-.field public synthetic Y:Landroidx/appcompat/widget/AppCompatImageView;
-
-.field public synthetic Z:Lv5b;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
 
-    iput p3, p0, Lcib;->X:I
+    sget-object v0, Lqqg;->a:Lqqg;
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, v0}, Lcda;-><init>(Ljava/lang/Object;)V
+
+    iput-object p1, p0, Lcib;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    iget v0, p0, Lcib;->X:I
+    const/4 v0, 0x1
 
-    check-cast p1, Landroidx/appcompat/widget/AppCompatImageView;
+    if-ne p0, p1, :cond_0
 
-    check-cast p2, Lv5b;
+    return v0
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lcib;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, p3, v2}, Lcib;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lcib;->Y:Landroidx/appcompat/widget/AppCompatImageView;
-
-    iput-object p2, v0, Lcib;->Z:Lv5b;
-
-    sget-object p1, Lccg;->a:Lccg;
-
-    invoke-virtual {v0, p1}, Lcib;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_0
-    new-instance v0, Lcib;
-
-    const/4 v1, 0x3
+    :cond_0
+    instance-of v1, p1, Lcib;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, p3, v2}, Lcib;-><init>(ILkotlin/coroutines/Continuation;I)V
+    if-nez v1, :cond_1
 
-    iput-object p1, v0, Lcib;->Y:Landroidx/appcompat/widget/AppCompatImageView;
+    return v2
 
-    iput-object p2, v0, Lcib;->Z:Lv5b;
+    :cond_1
+    check-cast p1, Lcib;
 
-    sget-object p1, Lccg;->a:Lccg;
+    iget-object v1, p0, Lcib;->b:Ljava/lang/String;
 
-    invoke-virtual {v0, p1}, Lcib;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p1, p1, Lcib;->b:Ljava/lang/String;
 
-    return-object p1
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    nop
+    move-result p1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final hashCode()I
     .locals 1
 
-    iget v0, p0, Lcib;->X:I
+    iget-object v0, p0, Lcib;->b:Ljava/lang/String;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    move-result v0
 
-    iget-object p1, p0, Lcib;->Y:Landroidx/appcompat/widget/AppCompatImageView;
+    return v0
+.end method
 
-    iget-object v0, p0, Lcib;->Z:Lv5b;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    invoke-interface {v0}, Lv5b;->getIcon()Ld77;
+    const-string v0, "OpenExternalLink(url="
 
-    move-result-object v0
+    const-string v1, ")"
 
-    iget v0, v0, Ld77;->j:I
+    iget-object v2, p0, Lcib;->b:Ljava/lang/String;
 
-    invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
-
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
-
-    :pswitch_0
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lcib;->Y:Landroidx/appcompat/widget/AppCompatImageView;
-
-    iget-object v0, p0, Lcib;->Z:Lv5b;
-
-    invoke-interface {v0}, Lv5b;->b()Lff0;
+    invoke-static {v0, v2, v1}, Lho7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v0, v0, Lff0;->a:Lef0;
-
-    iget v0, v0, Lef0;->n:I
-
-    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setColorFilter(I)V
-
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

@@ -3,48 +3,126 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ltha;
+.implements Lr9i;
 
 
 # static fields
-.field public static final a:Ll9i;
+.field public static final b:[F
+
+.field public static final c:[F
+
+
+# instance fields
+.field public final a:Lr9i;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Ll9i;
+    const/16 v0, 0x8
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    new-array v1, v0, [F
 
-    sput-object v0, Ll9i;->a:Ll9i;
+    fill-array-data v1, :array_0
 
-    new-instance v0, Ltwh;
+    sput-object v1, Ll9i;->b:[F
 
-    const/4 v1, 0x1
+    new-array v0, v0, [F
 
-    invoke-direct {v0, v1}, Ltwh;-><init>(I)V
+    fill-array-data v0, :array_1
 
-    const-class v1, Lmxh;
+    sput-object v0, Ll9i;->c:[F
 
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+    return-void
+
+    nop
+
+    :array_0
+    .array-data 4
+        -0x40800000    # -1.0f
+        -0x40800000    # -1.0f
+        0x3f800000    # 1.0f
+        -0x40800000    # -1.0f
+        -0x40800000    # -1.0f
+        0x3f800000    # 1.0f
+        0x3f800000    # 1.0f
+        0x3f800000    # 1.0f
+    .end array-data
+
+    :array_1
+    .array-data 4
+        0x0
+        0x0
+        0x3f800000    # 1.0f
+        0x0
+        0x0
+        0x3f800000    # 1.0f
+        0x3f800000    # 1.0f
+        0x3f800000    # 1.0f
+    .end array-data
+.end method
+
+.method public constructor <init>(II)V
+    .locals 4
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/16 v0, 0x1f02
+
+    invoke-static {v0}, Landroid/opengl/GLES20;->glGetString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
+    sget-object v1, Ll9i;->b:[F
+
+    sget-object v2, Ll9i;->c:[F
+
+    if-eqz v0, :cond_0
+
+    const-string v3, "3."
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Lrbd;
+
+    invoke-direct {v0, p1, p2, v1, v2}, Lrbd;-><init>(II[F[F)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Ls9f;
+
+    invoke-direct {v0, p1, p2, v1, v2}, Ls9f;-><init>(II[F[F)V
+
+    :goto_0
+    iput-object v0, p0, Ll9i;->a:Lr9i;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final a()V
+    .locals 1
 
-    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget-object v0, p0, Ll9i;->a:Lr9i;
 
-    move-result-object p1
+    invoke-interface {v0}, Lr9i;->a()V
 
-    throw p1
+    return-void
+.end method
+
+.method public final b()V
+    .locals 1
+
+    iget-object v0, p0, Ll9i;->a:Lr9i;
+
+    invoke-interface {v0}, Lr9i;->b()V
+
+    return-void
 .end method

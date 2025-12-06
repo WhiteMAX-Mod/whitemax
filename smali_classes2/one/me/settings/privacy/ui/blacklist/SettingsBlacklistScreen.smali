@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgo3;
+.implements Lqq3;
 
 
 # annotations
@@ -20,7 +20,7 @@
     d2 = {
         "Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;",
         "Lone/me/sdk/arch/Widget;",
-        "Lgo3;",
+        "Lqq3;",
         "<init>",
         "()V",
         "settings-privacy_release"
@@ -36,28 +36,28 @@
 
 
 # static fields
-.field public static final synthetic Z:[Ltr7;
+.field public static final synthetic Y:[Lyy7;
 
 
 # instance fields
-.field public final X:Lh0d;
+.field public final X:Lb0i;
 
-.field public final Y:Li76;
+.field public final a:Lka5;
 
-.field public final a:Lw9c;
+.field public final b:Leo7;
 
-.field public final b:Lgi7;
+.field public final c:Lk18;
 
-.field public final c:Liu7;
+.field public final d:Lbbd;
 
-.field public final o:Lh0d;
+.field public final o:Lbbd;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 6
 
-    new-instance v0, Leec;
+    new-instance v0, Ltoc;
 
     const-class v1, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;
 
@@ -67,21 +67,21 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Lz7d;->a:La8d;
+    sget-object v2, Lvid;->a:Lwid;
 
     const-string v3, "emptyState"
 
     const-string v5, "getEmptyState()Lone/me/sdk/uikit/common/emptyview/OneMeEmptyView;"
 
-    invoke-static {v2, v1, v3, v5, v4}, Li57;->d(La8d;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Leec;
+    invoke-static {v2, v1, v3, v5, v4}, Lho7;->d(Lwid;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Ltoc;
 
     move-result-object v1
 
     const/4 v2, 0x2
 
-    new-array v2, v2, [Ltr7;
+    new-array v2, v2, [Lyy7;
 
     aput-object v0, v2, v4
 
@@ -89,7 +89,7 @@
 
     aput-object v1, v2, v0
 
-    sput-object v2, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->Z:[Ltr7;
+    sput-object v2, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->Y:[Lyy7;
 
     return-void
 .end method
@@ -103,115 +103,99 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {p0, v2, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILki4;)V
+    invoke-direct {p0, v2, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILtk4;)V
 
-    new-instance v0, Lw9c;
+    new-instance v0, Lka5;
 
-    sget-object v1, Lupd;->o1:Lupd;
+    sget-object v1, Lf1e;->p1:Lf1e;
 
-    invoke-direct {v0, v1}, Lw9c;-><init>(Lupd;)V
+    invoke-direct {v0, v1}, Lka5;-><init>(Lf1e;)V
 
-    iput-object v0, p0, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->a:Lw9c;
+    iput-object v0, p0, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->a:Lka5;
 
-    sget-object v0, Lgi7;->f:Lgi7;
+    sget-object v0, Leo7;->f:Leo7;
 
-    iput-object v0, p0, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->b:Lgi7;
+    iput-object v0, p0, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->b:Leo7;
 
-    new-instance v0, Lx3e;
+    new-instance v0, Lefd;
 
-    const/4 v1, 0x7
+    const/16 v1, 0x13
 
-    invoke-direct {v0, v1}, Lx3e;-><init>(I)V
+    invoke-direct {v0, v1}, Lefd;-><init>(I)V
 
-    new-instance v1, Lj4c;
+    new-instance v1, Lvdc;
 
-    const/16 v2, 0xf
+    const/16 v2, 0x10
 
-    invoke-direct {v1, v2, v0}, Lj4c;-><init>(ILji6;)V
+    invoke-direct {v1, v2, v0}, Lvdc;-><init>(ILjava/lang/Object;)V
 
-    const-class v0, Lwbe;
+    const-class v0, Llne;
 
-    invoke-virtual {p0, v0, v1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lji6;)Liu7;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->c:Liu7;
-
-    sget v0, Lk2b;->b:I
-
-    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lh0d;
+    invoke-virtual {p0, v0, v1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lcm6;)Lk18;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->o:Lh0d;
+    iput-object v0, p0, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->c:Lk18;
 
-    sget v0, Lk2b;->a:I
+    sget v0, Lkbb;->b:I
 
-    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lh0d;
+    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lbbd;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->X:Lh0d;
+    iput-object v0, p0, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->d:Lbbd;
 
-    new-instance v0, Li76;
+    sget v0, Lkbb;->a:I
 
-    new-instance v1, Lp95;
+    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lbbd;
 
-    const/16 v2, 0x1d
+    move-result-object v0
 
-    invoke-direct {v1, v2, p0}, Lp95;-><init>(ILjava/lang/Object;)V
+    iput-object v0, p0, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->o:Lbbd;
 
-    sget-object v2, Loee;->a:Loee;
+    new-instance v0, Lb0i;
 
-    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lr5;
+    new-instance v1, Ls6b;
 
-    move-result-object v2
+    invoke-direct {v1, p0}, Ls6b;-><init>(Ljava/lang/Object;)V
 
-    const-class v3, Leva;
+    sget-object v2, Lbqe;->a:Lbqe;
 
-    invoke-virtual {v2, v3}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Leva;
-
-    invoke-virtual {v2}, Leva;->a()Ljava/util/concurrent/ExecutorService;
+    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lw5;
 
     move-result-object v2
 
-    const/16 v3, 0x9
+    const/16 v3, 0x38
 
-    invoke-direct {v0, v1, v2, v3}, Li76;-><init>(Ljava/lang/Object;Ljava/util/concurrent/ExecutorService;I)V
+    invoke-virtual {v2, v3}, Lw5;->c(I)Ljava/lang/Object;
 
-    iput-object v0, p0, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->Y:Li76;
+    move-result-object v2
+
+    check-cast v2, Lg4b;
+
+    invoke-virtual {v2}, Lg4b;->a()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v2
+
+    const/16 v3, 0xb
+
+    invoke-direct {v0, v1, v2, v3}, Lb0i;-><init>(Ljava/lang/Object;Ljava/util/concurrent/ExecutorService;I)V
+
+    iput-object v0, p0, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->X:Lb0i;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final C0()Lwbe;
-    .locals 1
-
-    iget-object v0, p0, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->c:Liu7;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lwbe;
-
-    return-object v0
-.end method
-
 .method public final g(ILandroid/os/Bundle;)V
     .locals 4
 
-    sget v0, Lk2b;->d:I
+    sget v0, Lkbb;->d:I
 
     if-ne p1, v0, :cond_0
 
-    invoke-virtual {p0}, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->C0()Lwbe;
+    invoke-virtual {p0}, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->y0()Llne;
 
     move-result-object p1
 
@@ -225,46 +209,46 @@
 
     move-result-wide v0
 
-    iget-object p2, p1, Lwbe;->q0:Liu7;
+    iget-object p2, p1, Llne;->Z:Lk18;
 
-    invoke-interface {p2}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lulf;
-
-    check-cast p2, Lqta;
-
-    invoke-virtual {p2}, Lqta;->b()Lk54;
+    invoke-interface {p2}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object p2
 
-    new-instance v2, Lvbe;
+    check-cast p2, Llzf;
+
+    check-cast p2, Lq2b;
+
+    invoke-virtual {p2}, Lq2b;->b()Lz74;
+
+    move-result-object p2
+
+    new-instance v2, Lkne;
 
     const/4 v3, 0x0
 
-    invoke-direct {v2, p1, v0, v1, v3}, Lvbe;-><init>(Lwbe;JLkotlin/coroutines/Continuation;)V
+    invoke-direct {v2, p1, v0, v1, v3}, Lkne;-><init>(Llne;JLkotlin/coroutines/Continuation;)V
 
     const/4 v0, 0x2
 
-    invoke-static {p1, p2, v2, v0}, Lxzg;->m(Lxzg;Li54;Lzi6;I)Lcye;
+    invoke-static {p1, p2, v2, v0}, Lxfh;->o(Lxfh;Lx74;Lsm6;I)Lx9f;
 
     :cond_0
     return-void
 .end method
 
-.method public final getInsetsConfig()Lgi7;
+.method public final getInsetsConfig()Leo7;
     .locals 1
 
-    iget-object v0, p0, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->b:Lgi7;
+    iget-object v0, p0, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->b:Leo7;
 
     return-object v0
 .end method
 
-.method public final getScreenDelegate()Lzpd;
+.method public final getScreenDelegate()Lk1e;
     .locals 1
 
-    iget-object v0, p0, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->a:Lw9c;
+    iget-object v0, p0, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->a:Lka5;
 
     return-object v0
 .end method
@@ -292,7 +276,7 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    new-instance p2, Lu6b;
+    new-instance p2, Lyfb;
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -300,9 +284,9 @@
 
     const/4 v2, 0x6
 
-    invoke-direct {p2, v1, v2}, Lu6b;-><init>(Landroid/content/Context;I)V
+    invoke-direct {p2, v1, v2}, Lyfb;-><init>(Landroid/content/Context;I)V
 
-    sget v1, Lk2b;->c:I
+    sget v1, Lkbb;->c:I
 
     invoke-virtual {p2, v1}, Landroid/view/View;->setId(I)V
 
@@ -314,41 +298,39 @@
 
     invoke-virtual {p2, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    sget v1, Ln2b;->e:I
+    sget v1, Lnbb;->e:I
 
-    invoke-virtual {p2, v1}, Lu6b;->setTitle(I)V
+    invoke-virtual {p2, v1}, Lyfb;->setTitle(I)V
 
-    sget-object v1, Lm6b;->a:Lm6b;
+    sget-object v1, Lqfb;->a:Lqfb;
 
-    invoke-virtual {p2, v1}, Lu6b;->setForm(Lm6b;)V
+    invoke-virtual {p2, v1}, Lyfb;->setForm(Lqfb;)V
 
-    new-instance v1, Lc6b;
+    new-instance v1, Lgfb;
 
-    new-instance v2, Lanb;
+    new-instance v2, Liqb;
 
-    const/16 v3, 0x19
+    const/16 v3, 0x1c
 
-    invoke-direct {v2, v3, p0}, Lanb;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v2, v3, p0}, Liqb;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {v1, v2}, Lc6b;-><init>(Lli6;)V
+    invoke-direct {v1, v2}, Lgfb;-><init>(Lem6;)V
 
-    invoke-virtual {p2, v1}, Lu6b;->setLeftActions(Li6b;)V
+    invoke-virtual {p2, v1}, Lyfb;->setLeftActions(Lmfb;)V
 
     invoke-virtual {v0, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    new-instance p2, Lwua;
+    new-instance p2, Lx3b;
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    const/4 v2, 0x0
+    invoke-direct {p2, v1}, Lx3b;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p2, v1, v2}, Lwua;-><init>(Landroid/content/Context;I)V
+    sget v1, Lkbb;->a:I
 
-    sget v1, Lk2b;->a:I
-
-    invoke-virtual {p2, v1}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
+    invoke-virtual {p2, v1}, Landroid/view/View;->setId(I)V
 
     new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
 
@@ -356,29 +338,29 @@
 
     invoke-virtual {p2, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    sget v1, Lpjd;->n0:I
+    sget v1, Lyud;->o0:I
 
-    invoke-virtual {p2, v1}, Lwua;->setIcon(I)V
+    invoke-virtual {p2, v1}, Lx3b;->setIcon(I)V
 
-    sget v1, Ln2b;->d:I
+    sget v1, Lnbb;->d:I
 
-    new-instance v2, Lorf;
+    new-instance v2, Ln5g;
 
-    invoke-direct {v2, v1}, Lorf;-><init>(I)V
+    invoke-direct {v2, v1}, Ln5g;-><init>(I)V
 
-    invoke-virtual {p2, v2}, Lwua;->setTitle(Ltrf;)V
+    invoke-virtual {p2, v2}, Lx3b;->setTitle(Ls5g;)V
 
-    sget-object v1, Ll05;->s0:Lk82;
+    sget-object v1, La93;->s0:Lv1a;
 
-    invoke-virtual {v1, p2}, Lk82;->n(Landroid/view/View;)Lv5b;
+    invoke-virtual {v1, p2}, Lv1a;->y(Landroid/view/View;)Lyeb;
 
     move-result-object v1
 
-    invoke-virtual {p2, v1}, Lwua;->onThemeChanged(Lv5b;)V
+    invoke-virtual {p2, v1}, Lx3b;->onThemeChanged(Lyeb;)V
 
     invoke-virtual {v0, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    new-instance p2, Lzc5;
+    new-instance p2, Lyf5;
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -386,9 +368,9 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {p2, v1, v2}, Lzc5;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p2, v1, v2}, Lyf5;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget v1, Lk2b;->b:I
+    sget v1, Lkbb;->b:I
 
     invoke-virtual {p2, v1}, Landroid/view/View;->setId(I)V
 
@@ -404,31 +386,31 @@
 
     invoke-direct {p3}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>()V
 
-    invoke-virtual {p2, p3}, Lzc5;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
+    invoke-virtual {p2, p3}, Lyf5;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
 
-    iget-object p3, p0, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->Y:Li76;
+    iget-object p3, p0, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->X:Lb0i;
 
-    invoke-virtual {p2, p3}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->setAdapter(Lt6d;)V
+    invoke-virtual {p2, p3}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->setAdapter(Lphd;)V
 
     invoke-virtual {p2, p1}, Landroidx/recyclerview/widget/RecyclerView;->setHasFixedSize(Z)V
 
-    invoke-virtual {p0}, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->C0()Lwbe;
+    invoke-virtual {p0}, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->y0()Llne;
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lzc5;->setPager(Ltc5;)V
+    invoke-virtual {p2, p1}, Lyf5;->setPager(Lsf5;)V
 
     invoke-virtual {v0, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    new-instance p1, Ln;
+    new-instance p1, Lm;
 
     const/4 p2, 0x3
 
-    const/16 p3, 0xf
+    const/16 p3, 0x10
 
-    invoke-direct {p1, p2, v2, p3}, Ln;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {p1, p2, v2, p3}, Lm;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-static {p1, v0}, Lqdi;->d(Lbj6;Landroid/view/View;)V
+    invoke-static {p1, v0}, Ltqi;->c(Lum6;Landroid/view/View;)V
 
     return-object v0
 .end method
@@ -436,25 +418,25 @@
 .method public final onDestroyView(Landroid/view/View;)V
     .locals 2
 
-    sget-object v0, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->Z:[Ltr7;
+    sget-object v0, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->Y:[Lyy7;
 
     const/4 v1, 0x0
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->o:Lh0d;
+    iget-object v1, p0, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->d:Lbbd;
 
-    invoke-interface {v1, p0, v0}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
+    invoke-interface {v1, p0, v0}, Lbbd;->D(Ljava/lang/Object;Lyy7;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lzc5;
+    check-cast v0, Lyf5;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->setAdapter(Lt6d;)V
+    invoke-virtual {v0, v1}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->setAdapter(Lphd;)V
 
-    invoke-super {p0, p1}, Ll24;->onDestroyView(Landroid/view/View;)V
+    invoke-super {p0, p1}, Lc54;->onDestroyView(Landroid/view/View;)V
 
     return-void
 .end method
@@ -464,77 +446,91 @@
 
     invoke-super {p0, p1}, Lone/me/sdk/arch/Widget;->onViewCreated(Landroid/view/View;)V
 
-    invoke-virtual {p0}, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->C0()Lwbe;
+    invoke-virtual {p0}, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->y0()Llne;
 
     move-result-object p1
 
-    iget-object p1, p1, Lwbe;->s0:Ln0d;
+    iget-object p1, p1, Llne;->t0:Lhbd;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lfx7;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lfx7;->x()Lhx7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj48;
 
     move-result-object v0
 
-    sget-object v1, Lhw7;->o:Lhw7;
+    invoke-interface {v0}, Lj48;->p()Ll48;
 
-    invoke-static {p1, v0, v1}, Lc8;->c(Lty5;Lhx7;Lhw7;)Lfu1;
+    move-result-object v0
+
+    sget-object v1, Ll38;->d:Ll38;
+
+    invoke-static {p1, v0, v1}, Law0;->a(Lx26;Ll48;Ll38;)Lsu1;
 
     move-result-object p1
 
-    new-instance v0, Lpbe;
+    new-instance v0, Lene;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v2, p0}, Lpbe;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;)V
+    invoke-direct {v0, v2, p0}, Lene;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;)V
 
-    new-instance v3, Lb16;
+    new-instance v3, Lg56;
 
     const/4 v4, 0x1
 
-    invoke-direct {v3, p1, v0, v4}, Lb16;-><init>(Lty5;Lzi6;I)V
+    invoke-direct {v3, p1, v0, v4}, Lg56;-><init>(Lx26;Lsm6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
-
-    move-result-object p1
-
-    invoke-static {v3, p1}, Ltq;->v(Lty5;Lq54;)Lcye;
-
-    invoke-virtual {p0}, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->C0()Lwbe;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lv38;
 
     move-result-object p1
 
-    iget-object p1, p1, Lwbe;->w0:Lxe5;
+    invoke-static {v3, p1}, Lgw0;->w(Lx26;Lf84;)Lx9f;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lfx7;
+    invoke-virtual {p0}, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->y0()Llne;
+
+    move-result-object p1
+
+    iget-object p1, p1, Llne;->x0:Lci5;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj48;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lfx7;->x()Lhx7;
+    invoke-interface {v0}, Lj48;->p()Ll48;
 
     move-result-object v0
 
-    invoke-static {p1, v0, v1}, Lc8;->c(Lty5;Lhx7;Lhw7;)Lfu1;
+    invoke-static {p1, v0, v1}, Law0;->a(Lx26;Ll48;Ll38;)Lsu1;
 
     move-result-object p1
 
-    new-instance v0, Lqbe;
+    new-instance v0, Lfne;
 
-    invoke-direct {v0, v2, p0}, Lqbe;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;)V
+    invoke-direct {v0, v2, p0}, Lfne;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;)V
 
-    new-instance v1, Lb16;
+    new-instance v1, Lg56;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Lb16;-><init>(Lty5;Lzi6;I)V
+    invoke-direct {v1, p1, v0, v2}, Lg56;-><init>(Lx26;Lsm6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lv38;
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Ltq;->v(Lty5;Lq54;)Lcye;
+    invoke-static {v1, p1}, Lgw0;->w(Lx26;Lf84;)Lx9f;
 
     return-void
+.end method
+
+.method public final y0()Llne;
+    .locals 1
+
+    iget-object v0, p0, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->c:Lk18;
+
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Llne;
+
+    return-object v0
 .end method

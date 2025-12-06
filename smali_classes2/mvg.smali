@@ -1,124 +1,51 @@
 .class public final Lmvg;
-.super Lsgf;
+.super Lq44;
 .source "SourceFile"
-
-# interfaces
-.implements Lzi6;
 
 
 # instance fields
-.field public synthetic X:J
+.field public final synthetic X:Lrvg;
 
-.field public final synthetic Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+.field public Y:I
+
+.field public d:Lrvg;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
+.method public constructor <init>(Lrvg;Lq44;)V
     .locals 0
 
-    iput-object p2, p0, Lmvg;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    iput-object p1, p0, Lmvg;->X:Lrvg;
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    check-cast p1, Lu35;
-
-    iget-wide v0, p1, Lu35;->a:J
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    new-instance p1, Lu35;
-
-    invoke-direct {p1, v0, v1}, Lu35;-><init>(J)V
-
-    invoke-virtual {p0, p1, p2}, Lmvg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lmvg;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lmvg;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lmvg;
-
-    iget-object v1, p0, Lmvg;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
-
-    invoke-direct {v0, p2, v1}, Lmvg;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
-
-    check-cast p1, Lu35;
-
-    iget-wide p1, p1, Lu35;->a:J
-
-    iput-wide p1, v0, Lmvg;->X:J
-
-    return-object v0
-.end method
-
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    .locals 1
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    iput-object p1, p0, Lmvg;->o:Ljava/lang/Object;
 
-    iget-wide v0, p0, Lmvg;->X:J
+    iget p1, p0, Lmvg;->Y:I
 
-    sget-object p1, Lone/me/chatscreen/videomsg/VideoMessageWidget;->G0:[Ltr7;
+    const/high16 v0, -0x80000000
 
-    iget-object p1, p0, Lmvg;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    or-int/2addr p1, v0
 
-    invoke-virtual {p1}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->J0()Lvvg;
+    iput p1, p0, Lmvg;->Y:I
 
-    move-result-object v2
+    iget-object p1, p0, Lmvg;->X:Lrvg;
 
-    invoke-interface {v2}, Lvvg;->getDuration()J
+    const/4 v0, 0x0
 
-    move-result-wide v2
-
-    iget-object p1, p1, Lone/me/chatscreen/videomsg/VideoMessageWidget;->z0:Lrcd;
-
-    invoke-virtual {p1}, Lrcd;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Lrvg;->f(Lga7;Lq44;)Ljava/io/Serializable;
 
     move-result-object p1
-
-    check-cast p1, Lwtg;
-
-    invoke-static {v0, v1}, Lu35;->f(J)J
-
-    move-result-wide v0
-
-    long-to-float v0, v0
-
-    long-to-float v1, v2
-
-    div-float/2addr v0, v1
-
-    const/4 v1, 0x0
-
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    invoke-static {v0, v1, v2}, Llwi;->b(FFF)F
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Lwtg;->setProgress(F)V
-
-    sget-object p1, Lccg;->a:Lccg;
 
     return-object p1
 .end method

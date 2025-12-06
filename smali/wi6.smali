@@ -2,5 +2,7 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lej6;
+
+# virtual methods
+.method public abstract b(Ljava/lang/String;Landroid/os/Bundle;)V
+.end method

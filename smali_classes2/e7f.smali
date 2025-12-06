@@ -1,185 +1,141 @@
-.class public final Le7f;
-.super Ljava/lang/Object;
+.class public final enum Le7f;
+.super Ljava/lang/Enum;
 .source "SourceFile"
-
-# interfaces
-.implements Lvf4;
 
 
 # static fields
-.field public static final a:Le7f;
+.field public static final enum X:Le7f;
 
-.field public static final b:Lf7f;
+.field public static final synthetic Y:[Le7f;
+
+.field public static final synthetic Z:Lzg5;
+
+.field public static final enum b:Le7f;
+
+.field public static final enum c:Le7f;
+
+.field public static final enum d:Le7f;
+
+.field public static final enum o:Le7f;
+
+
+# instance fields
+.field public final a:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 9
 
     new-instance v0, Le7f;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "DIALOG_USER_ID"
 
-    sput-object v0, Le7f;->a:Le7f;
+    const/4 v2, 0x0
 
-    sget-object v0, Lf7f;->b:Lf7f;
+    const/4 v3, 0x1
 
-    sput-object v0, Le7f;->b:Lf7f;
+    invoke-direct {v0, v1, v2, v3}, Le7f;-><init>(Ljava/lang/String;II)V
+
+    sput-object v0, Le7f;->b:Le7f;
+
+    new-instance v1, Le7f;
+
+    const-string v2, "DIALOG_BOT_ID"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v1, v2, v3, v4}, Le7f;-><init>(Ljava/lang/String;II)V
+
+    sput-object v1, Le7f;->c:Le7f;
+
+    new-instance v2, Le7f;
+
+    const-string v3, "CHAT_ID"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v2, v3, v4, v5}, Le7f;-><init>(Ljava/lang/String;II)V
+
+    sput-object v2, Le7f;->d:Le7f;
+
+    new-instance v3, Le7f;
+
+    const-string v4, "CHANNEL_ID"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v3, v4, v5, v6}, Le7f;-><init>(Ljava/lang/String;II)V
+
+    new-instance v4, Le7f;
+
+    const-string v5, "FOLDER_ID"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v4, v5, v6, v7}, Le7f;-><init>(Ljava/lang/String;II)V
+
+    sput-object v4, Le7f;->o:Le7f;
+
+    new-instance v5, Le7f;
+
+    const-string v6, "WEBAPP_ID"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v5, v6, v7, v8}, Le7f;-><init>(Ljava/lang/String;II)V
+
+    sput-object v5, Le7f;->X:Le7f;
+
+    filled-new-array/range {v0 .. v5}, [Le7f;
+
+    move-result-object v0
+
+    sput-object v0, Le7f;->Y:[Le7f;
+
+    new-instance v1, Lzg5;
+
+    invoke-direct {v1, v0}, Lzg5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Le7f;->Z:Lzg5;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
-# virtual methods
-.method public final a()Ldg4;
-    .locals 1
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sget-object v0, Le7f;->b:Lf7f;
+    iput p3, p0, Le7f;->a:I
 
-    return-object v0
+    return-void
 .end method
 
-.method public final b(Ljava/lang/String;Lyf4;Landroid/os/Bundle;)Lgg4;
-    .locals 12
+.method public static valueOf(Ljava/lang/String;)Le7f;
+    .locals 1
 
-    sget-object v0, Le7f;->b:Lf7f;
+    const-class v0, Le7f;
 
-    iget-object v0, v0, Ldg4;->a:Ljava/util/LinkedHashSet;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+    move-result-object p0
 
-    move-result v0
+    check-cast p0, Le7f;
 
-    if-nez v0, :cond_0
+    return-object p0
+.end method
 
-    const/4 p1, 0x0
+.method public static values()[Le7f;
+    .locals 1
 
-    return-object p1
+    sget-object v0, Le7f;->Y:[Le7f;
 
-    :cond_0
-    const-string v0, "set_id"
-
-    invoke-static {v0, p3}, Llyi;->c(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Long;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    check-cast v0, [Le7f;
 
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    goto :goto_0
-
-    :cond_1
-    const-wide/16 v0, -0x1
-
-    :goto_0
-    sget-object v2, Lf7f;->b:Lf7f;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v2, Lf7f;->c:Lyf4;
-
-    invoke-virtual {p2, v2}, Lyf4;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    new-instance v0, Lvye;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1}, Lvye;-><init>(I)V
-
-    :goto_1
-    move-object v10, v0
-
-    goto :goto_2
-
-    :cond_2
-    sget-object v2, Lf7f;->d:Lyf4;
-
-    invoke-virtual {p2, v2}, Lyf4;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    new-instance v0, Lvye;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1}, Lvye;-><init>(I)V
-
-    goto :goto_1
-
-    :cond_3
-    sget-object v2, Lf7f;->e:Lyf4;
-
-    invoke-virtual {p2, v2}, Lyf4;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_4
-
-    new-instance v0, Lvye;
-
-    const/4 v1, 0x5
-
-    invoke-direct {v0, v1}, Lvye;-><init>(I)V
-
-    goto :goto_1
-
-    :cond_4
-    sget-object v2, Lf7f;->f:Lyf4;
-
-    invoke-virtual {p2, v2}, Lyf4;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_5
-
-    new-instance v2, Li91;
-
-    const/16 v3, 0x9
-
-    invoke-direct {v2, v0, v1, v3}, Li91;-><init>(JI)V
-
-    move-object v10, v2
-
-    :goto_2
-    new-instance v4, Lgg4;
-
-    const/4 v9, 0x0
-
-    const/16 v11, 0x10
-
-    const/4 v8, 0x1
-
-    move-object v5, p1
-
-    move-object v6, p2
-
-    move-object v7, p3
-
-    invoke-direct/range {v4 .. v11}, Lgg4;-><init>(Ljava/lang/String;Lyf4;Landroid/os/Bundle;ILeg4;Lfg4;I)V
-
-    return-object v4
-
-    :cond_5
-    move-object v6, p2
-
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "invalid route "
-
-    invoke-static {p2, v6}, Ldy1;->h(Ljava/lang/String;Lyf4;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-object v0
 .end method

@@ -1,59 +1,92 @@
-.class public final Lpfa;
-.super Ly14;
+.class public final synthetic Lpfa;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lhn;
 
 
 # instance fields
-.field public X:J
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Ltfa;
-
-.field public o:Lla2;
-
-.field public q0:I
+.field public final synthetic a:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
 
 
 # direct methods
-.method public constructor <init>(Ltfa;Ly14;)V
+.method public synthetic constructor <init>(Lone/me/login/neuroavatars/NeuroAvatarsScreen;)V
     .locals 0
 
-    iput-object p1, p0, Lpfa;->Z:Ltfa;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lpfa;->a:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final c0(Lin;I)V
+    .locals 3
 
-    iput-object p1, p0, Lpfa;->Y:Ljava/lang/Object;
+    sget-object p1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->K0:[Lyy7;
 
-    iget p1, p0, Lpfa;->q0:I
+    iget-object p1, p0, Lpfa;->a:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
 
-    const/high16 v0, -0x80000000
+    invoke-virtual {p1}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->y0()Lin;
 
-    or-int/2addr p1, v0
+    move-result-object v0
 
-    iput p1, p0, Lpfa;->q0:I
+    invoke-virtual {v0}, Lin;->getTotalScrollRange()I
 
-    const-wide/16 v2, 0x0
+    move-result v0
 
-    const-wide/16 v4, 0x0
+    iget-object v1, p1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->w0:Lyq5;
 
-    iget-object v0, p0, Lpfa;->Z:Ltfa;
+    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
 
-    const/4 v1, 0x0
+    move-result p2
 
-    move-object v6, p0
+    int-to-float p2, p2
 
-    invoke-virtual/range {v0 .. v6}, Ltfa;->C(Lla2;JJLy14;)Ljava/lang/Object;
+    int-to-float v0, v0
+
+    div-float/2addr p2, v0
+
+    invoke-virtual {v1, p2}, Lgk8;->getInterpolation(F)F
+
+    move-result p2
+
+    iget-object v0, p1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->Y:Lbbd;
+
+    sget-object v1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->K0:[Lyy7;
+
+    const/4 v2, 0x2
+
+    aget-object v2, v1, v2
+
+    invoke-interface {v0, p1, v2}, Lbbd;->D(Ljava/lang/Object;Lyy7;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/ViewGroup;
+
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    sub-float/2addr v2, p2
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setAlpha(F)V
+
+    iget-object v0, p1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->s0:Lbbd;
+
+    const/4 v2, 0x4
+
+    aget-object v1, v1, v2
+
+    invoke-interface {v0, p1, v1}, Lbbd;->D(Ljava/lang/Object;Lyy7;)Ljava/lang/Object;
 
     move-result-object p1
 
-    return-object p1
+    check-cast p1, Lyfb;
+
+    invoke-virtual {p1, p2}, Lyfb;->setTitleAlpha(F)V
+
+    return-void
 .end method

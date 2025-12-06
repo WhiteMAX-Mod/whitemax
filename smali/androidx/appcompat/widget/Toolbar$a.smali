@@ -1,5 +1,5 @@
 .class public Landroidx/appcompat/widget/Toolbar$a;
-.super Lg0;
+.super Lf0;
 .source "SourceFile"
 
 
@@ -29,7 +29,7 @@
 # instance fields
 .field public c:I
 
-.field public o:Z
+.field public d:Z
 
 
 # direct methods
@@ -60,7 +60,7 @@
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1, p2}, Lg0;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+    invoke-direct {p0, p1, p2}, Lf0;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
     .line 3
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -84,7 +84,7 @@
     const/4 p1, 0x0
 
     :goto_0
-    iput-boolean p1, p0, Landroidx/appcompat/widget/Toolbar$a;->o:Z
+    iput-boolean p1, p0, Landroidx/appcompat/widget/Toolbar$a;->d:Z
 
     return-void
 .end method
@@ -94,13 +94,13 @@
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    invoke-super {p0, p1, p2}, Lg0;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-super {p0, p1, p2}, Lf0;->writeToParcel(Landroid/os/Parcel;I)V
 
     iget p2, p0, Landroidx/appcompat/widget/Toolbar$a;->c:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget-boolean p2, p0, Landroidx/appcompat/widget/Toolbar$a;->o:Z
+    iget-boolean p2, p0, Landroidx/appcompat/widget/Toolbar$a;->d:Z
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 

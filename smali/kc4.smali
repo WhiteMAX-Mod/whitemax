@@ -1,100 +1,105 @@
 .class public final Lkc4;
-.super Ljava/lang/Object;
+.super Lwq8;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic J0:I
+
+
 # instance fields
-.field public a:Landroid/net/Uri;
-
-.field public b:J
-
-.field public c:I
-
-.field public d:[B
-
-.field public e:Ljava/util/Map;
-
-.field public f:J
-
-.field public g:J
-
-.field public h:Ljava/lang/String;
-
-.field public i:I
+.field public I0:Ljc4;
 
 
 # virtual methods
-.method public a()Llc4;
-    .locals 14
+.method public final f(Landroid/graphics/Canvas;)V
+    .locals 1
 
-    iget-object v0, p0, Lkc4;->a:Landroid/net/Uri;
+    iget-object v0, p0, Lkc4;->I0:Ljc4;
+
+    iget-object v0, v0, Ljc4;->r:Landroid/graphics/RectF;
+
+    invoke-virtual {v0}, Landroid/graphics/RectF;->isEmpty()Z
+
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    new-instance v1, Llc4;
+    invoke-super {p0, p1}, Lwq8;->f(Landroid/graphics/Canvas;)V
 
-    iget-object v2, p0, Lkc4;->a:Landroid/net/Uri;
-
-    iget-wide v3, p0, Lkc4;->b:J
-
-    iget v5, p0, Lkc4;->c:I
-
-    iget-object v6, p0, Lkc4;->d:[B
-
-    iget-object v7, p0, Lkc4;->e:Ljava/util/Map;
-
-    iget-wide v8, p0, Lkc4;->f:J
-
-    iget-wide v10, p0, Lkc4;->g:J
-
-    iget-object v12, p0, Lkc4;->h:Ljava/lang/String;
-
-    iget v13, p0, Lkc4;->i:I
-
-    invoke-direct/range {v1 .. v13}, Llc4;-><init>(Landroid/net/Uri;JI[BLjava/util/Map;JJLjava/lang/String;I)V
-
-    return-object v1
+    return-void
 
     :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    const-string v1, "The uri must be set."
+    iget-object v0, p0, Lkc4;->I0:Ljc4;
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget-object v0, v0, Ljc4;->r:Landroid/graphics/RectF;
 
-    throw v0
+    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->clipOutRect(Landroid/graphics/RectF;)Z
+
+    invoke-super {p0, p1}, Lwq8;->f(Landroid/graphics/Canvas;)V
+
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
+
+    return-void
 .end method
 
-.method public b()Lmc4;
-    .locals 15
+.method public final mutate()Landroid/graphics/drawable/Drawable;
+    .locals 2
 
-    iget-object v0, p0, Lkc4;->a:Landroid/net/Uri;
+    new-instance v0, Ljc4;
 
-    const-string v1, "The uri must be set."
+    iget-object v1, p0, Lkc4;->I0:Ljc4;
 
-    invoke-static {v0, v1}, Lsgi;->k(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljc4;-><init>(Ljc4;)V
 
-    new-instance v2, Lmc4;
+    iput-object v0, p0, Lkc4;->I0:Ljc4;
 
-    iget-object v3, p0, Lkc4;->a:Landroid/net/Uri;
+    return-object p0
+.end method
 
-    iget-wide v4, p0, Lkc4;->b:J
+.method public final q(FFFF)V
+    .locals 2
 
-    iget v6, p0, Lkc4;->c:I
+    iget-object v0, p0, Lkc4;->I0:Ljc4;
 
-    iget-object v7, p0, Lkc4;->d:[B
+    iget-object v0, v0, Ljc4;->r:Landroid/graphics/RectF;
 
-    iget-object v8, p0, Lkc4;->e:Ljava/util/Map;
+    iget v1, v0, Landroid/graphics/RectF;->left:F
 
-    iget-wide v9, p0, Lkc4;->f:J
+    cmpl-float v1, p1, v1
 
-    iget-wide v11, p0, Lkc4;->g:J
+    if-nez v1, :cond_1
 
-    iget-object v13, p0, Lkc4;->h:Ljava/lang/String;
+    iget v1, v0, Landroid/graphics/RectF;->top:F
 
-    iget v14, p0, Lkc4;->i:I
+    cmpl-float v1, p2, v1
 
-    invoke-direct/range {v2 .. v14}, Lmc4;-><init>(Landroid/net/Uri;JI[BLjava/util/Map;JJLjava/lang/String;I)V
+    if-nez v1, :cond_1
 
-    return-object v2
+    iget v1, v0, Landroid/graphics/RectF;->right:F
+
+    cmpl-float v1, p3, v1
+
+    if-nez v1, :cond_1
+
+    iget v1, v0, Landroid/graphics/RectF;->bottom:F
+
+    cmpl-float v1, p4, v1
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+
+    :cond_1
+    :goto_0
+    invoke-virtual {v0, p1, p2, p3, p4}, Landroid/graphics/RectF;->set(FFFF)V
+
+    invoke-virtual {p0}, Lwq8;->invalidateSelf()V
+
+    return-void
 .end method

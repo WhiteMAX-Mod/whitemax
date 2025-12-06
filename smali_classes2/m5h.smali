@@ -1,108 +1,75 @@
-.class public final Lm5h;
+.class public abstract synthetic Lm5h;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/Callable;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lr6h;
-
-.field public final synthetic c:Ln5h;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ln5h;Lr6h;I)V
-    .locals 0
-
-    iput p3, p0, Lm5h;->a:I
-
-    iput-object p1, p0, Lm5h;->c:Ln5h;
-
-    iput-object p2, p0, Lm5h;->b:Lr6h;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final call()Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 3
 
-    iget v0, p0, Lm5h;->a:I
+    invoke-static {}, Lv8h;->values()[Lv8h;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v0
 
-    iget-object v0, p0, Lm5h;->c:Ln5h;
+    array-length v0, v0
 
-    iget-object v1, v0, Ln5h;->a:Lfgd;
+    new-array v0, v0, [I
 
-    invoke-virtual {v1}, Lfgd;->c()V
+    const/4 v1, 0x1
 
     :try_start_0
-    iget-object v0, v0, Ln5h;->c:Lrj4;
-
-    iget-object v2, p0, Lm5h;->b:Lr6h;
-
-    invoke-virtual {v0, v2}, Lud5;->C(Ljava/lang/Object;)I
-
-    invoke-virtual {v1}, Lfgd;->q()V
+    aput v1, v0, v1
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {v1}, Lfgd;->k()V
-
-    sget-object v0, Lccg;->a:Lccg;
-
-    return-object v0
-
-    :catchall_0
-    move-exception v0
-
-    invoke-virtual {v1}, Lfgd;->k()V
-
-    throw v0
-
-    :pswitch_0
-    iget-object v0, p0, Lm5h;->c:Ln5h;
-
-    iget-object v1, v0, Ln5h;->a:Lfgd;
-
-    invoke-virtual {v1}, Lfgd;->c()V
+    :catch_0
+    const/4 v1, 0x2
 
     :try_start_1
-    iget-object v0, v0, Ln5h;->b:Lymg;
-
-    iget-object v2, p0, Lm5h;->b:Lr6h;
-
-    invoke-virtual {v0, v2}, Lvd5;->D(Ljava/lang/Object;)V
-
-    invoke-virtual {v1}, Lfgd;->q()V
+    aput v1, v0, v1
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    invoke-virtual {v1}, Lfgd;->k()V
+    :catch_1
+    const/4 v1, 0x3
 
-    sget-object v0, Lccg;->a:Lccg;
+    :try_start_2
+    aput v1, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    return-object v0
+    :catch_2
+    const/4 v1, 0x0
 
-    :catchall_1
-    move-exception v0
+    const/4 v2, 0x4
 
-    invoke-virtual {v1}, Lfgd;->k()V
+    :try_start_3
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    throw v0
+    :catch_3
+    const/4 v1, 0x5
 
-    nop
+    :try_start_4
+    aput v1, v0, v2
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :catch_4
+    const/4 v2, 0x6
+
+    :try_start_5
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+
+    :catch_5
+    sput-object v0, Lm5h;->$EnumSwitchMapping$0:[I
+
+    return-void
 .end method

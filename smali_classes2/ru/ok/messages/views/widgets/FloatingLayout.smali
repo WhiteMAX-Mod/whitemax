@@ -114,7 +114,7 @@
     throw p1
 .end method
 
-.method public setListener(Lqy5;)V
+.method public setListener(Lu26;)V
     .locals 0
 
     return-void

@@ -39,7 +39,7 @@
         "()F",
         "()I",
         "size",
-        "Lccg;",
+        "Lqqg;",
         "get",
         "(Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer$FrameSize;)V",
         "I",
@@ -80,7 +80,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer$FrameSize;-><init>(IIIILki4;)V
+    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer$FrameSize;-><init>(IIIILtk4;)V
 
     return-void
 .end method
@@ -103,7 +103,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(IIIILki4;)V
+.method public synthetic constructor <init>(IIIILtk4;)V
     .locals 1
 
     and-int/lit8 p5, p4, 0x1

@@ -35,7 +35,7 @@
         "(Lone/me/sdk/richvector/internal/element/Shape;)V",
         "Lone/me/sdk/richvector/internal/element/GroupElement;",
         "element",
-        "Lccg;",
+        "Lqqg;",
         "addGroup",
         "(Lone/me/sdk/richvector/internal/element/GroupElement;)V",
         "Lone/me/sdk/richvector/internal/element/PathElement;",
@@ -91,7 +91,7 @@
         "groupElements",
         "pathElements",
         "Companion",
-        "dhe",
+        "wse",
         "rich-vector_release"
     }
     k = 0x1
@@ -105,7 +105,7 @@
 
 
 # static fields
-.field public static final Companion:Ldhe;
+.field public static final Companion:Lwse;
 
 .field private static final EMPTY:Lone/me/sdk/richvector/internal/element/Shape;
 
@@ -134,11 +134,11 @@
 .method static constructor <clinit>()V
     .locals 11
 
-    new-instance v0, Ldhe;
+    new-instance v0, Lwse;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lone/me/sdk/richvector/internal/element/Shape;->Companion:Ldhe;
+    sput-object v0, Lone/me/sdk/richvector/internal/element/Shape;->Companion:Lwse;
 
     new-instance v1, Lone/me/sdk/richvector/internal/element/Shape;
 
@@ -160,7 +160,7 @@
 
     const/4 v8, 0x0
 
-    invoke-direct/range {v1 .. v10}, Lone/me/sdk/richvector/internal/element/Shape;-><init>(Ljava/lang/String;FFIFFLone/me/sdk/richvector/internal/element/ElementHolder;ILki4;)V
+    invoke-direct/range {v1 .. v10}, Lone/me/sdk/richvector/internal/element/Shape;-><init>(Ljava/lang/String;FFIFFLone/me/sdk/richvector/internal/element/ElementHolder;ILtk4;)V
 
     sput-object v1, Lone/me/sdk/richvector/internal/element/Shape;->EMPTY:Lone/me/sdk/richvector/internal/element/Shape;
 
@@ -211,7 +211,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;FFIFFLone/me/sdk/richvector/internal/element/ElementHolder;ILki4;)V
+.method public synthetic constructor <init>(Ljava/lang/String;FFIFFLone/me/sdk/richvector/internal/element/ElementHolder;ILtk4;)V
     .locals 9
 
     and-int/lit8 v0, p8, 0x40
@@ -359,7 +359,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lob3;->d(Ljava/util/List;)I
+    invoke-static {v0}, Lve3;->i(Ljava/util/List;)I
 
     move-result v1
 
@@ -368,7 +368,7 @@
     const/4 v2, 0x0
 
     :goto_0
-    invoke-static {v2, v0}, Lnb3;->E(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v2, v0}, Lue3;->J(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -554,7 +554,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lob3;->d(Ljava/util/List;)I
+    invoke-static {v0}, Lve3;->i(Ljava/util/List;)I
 
     move-result v1
 
@@ -565,7 +565,7 @@
     move v3, v2
 
     :goto_0
-    invoke-static {v3, v0}, Lnb3;->E(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v3, v0}, Lue3;->J(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -587,7 +587,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lob3;->d(Ljava/util/List;)I
+    invoke-static {v0}, Lve3;->i(Ljava/util/List;)I
 
     move-result v1
 
@@ -596,7 +596,7 @@
     move v3, v2
 
     :goto_1
-    invoke-static {v3, v0}, Lnb3;->E(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v3, v0}, Lue3;->J(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -618,14 +618,14 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lob3;->d(Ljava/util/List;)I
+    invoke-static {v0}, Lve3;->i(Ljava/util/List;)I
 
     move-result v1
 
     if-ltz v1, :cond_5
 
     :goto_2
-    invoke-static {v2, v0}, Lnb3;->E(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v2, v0}, Lue3;->J(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -763,7 +763,7 @@
 
     const-string v0, ")"
 
-    invoke-static {v11, v10, v0}, Ldy1;->j(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v11, v10, v0}, Laz1;->j(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

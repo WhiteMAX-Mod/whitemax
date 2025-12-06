@@ -4,212 +4,204 @@
 
 
 # instance fields
-.field public final a:Lbw1;
+.field public final a:Landroid/os/Bundle;
 
-.field public final b:Liu7;
+.field public final b:Ljava/util/List;
 
-.field public final c:Liu7;
+.field public final c:Ljava/util/LinkedHashMap;
+
+.field public final d:Landroid/graphics/Point;
 
 
 # direct methods
-.method public constructor <init>(Lbw1;Liu7;Liu7;)V
+.method public constructor <init>(Landroid/os/Bundle;Lo98;Ljava/util/LinkedHashMap;Landroid/graphics/Point;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lk51;->a:Lbw1;
+    iput-object p1, p0, Lk51;->a:Landroid/os/Bundle;
 
-    iput-object p2, p0, Lk51;->b:Liu7;
+    iput-object p2, p0, Lk51;->b:Ljava/util/List;
 
-    iput-object p3, p0, Lk51;->c:Liu7;
+    iput-object p3, p0, Lk51;->c:Ljava/util/LinkedHashMap;
+
+    iput-object p4, p0, Lk51;->d:Landroid/graphics/Point;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lwq1;Lsye;Lgv1;Lfx0;)Lj51;
-    .locals 11
-
-    invoke-virtual {p0}, Lk51;->c()J
-
-    move-result-wide v3
-
-    new-instance v2, Lorg/json/JSONObject;
-
-    invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
-
-    const-string v0, "is_video"
-
-    iget-boolean v1, p2, Lsye;->b:Z
-
-    invoke-virtual {v2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
-
-    new-instance v9, Lj51;
-
-    iget-object v0, p0, Lk51;->a:Lbw1;
-
-    invoke-static {v0}, Lbw1;->a(Lbw1;)Lru/ok/android/externcalls/sdk/ConversationFactory;
-
-    move-result-object v10
-
-    new-instance v0, Lh51;
-
-    move-object v6, p0
-
-    move-object v1, p1
-
-    move-object v5, p2
-
-    move-object v7, p3
-
-    move-object v8, p4
-
-    invoke-direct/range {v0 .. v8}, Lh51;-><init>(Lwq1;Lorg/json/JSONObject;JLsye;Lk51;Lgv1;Lfx0;)V
-
-    invoke-virtual {v10, v0}, Lru/ok/android/externcalls/sdk/ConversationFactory;->call(Lli6;)Lru/ok/android/externcalls/sdk/Conversation;
-
-    move-result-object p1
-
-    const/4 p2, 0x1
-
-    const/4 p3, 0x0
-
-    invoke-direct {v9, p1, v1, p2, p3}, Lj51;-><init>(Lru/ok/android/externcalls/sdk/Conversation;Lmmi;ZZ)V
-
-    return-object v9
-.end method
-
-.method public final b(Luq1;Lsye;Lgv1;Lfx0;)Lj51;
-    .locals 11
-
-    invoke-virtual {p0}, Lk51;->c()J
-
-    move-result-wide v2
-
-    new-instance v1, Lorg/json/JSONObject;
-
-    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
-
-    const-string v0, "chat_id"
-
-    iget-wide v4, p1, Luq1;->b:J
-
-    invoke-virtual {v1, v0, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
-
-    const-string v0, "is_video"
-
-    iget-boolean v4, p2, Lsye;->b:Z
-
-    invoke-virtual {v1, v0, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
-
-    new-instance v9, Lj51;
-
-    iget-object v0, p0, Lk51;->a:Lbw1;
-
-    invoke-static {v0}, Lbw1;->a(Lbw1;)Lru/ok/android/externcalls/sdk/ConversationFactory;
-
-    move-result-object v10
-
-    new-instance v0, Lg51;
-
-    const/4 v8, 0x0
-
-    move-object v5, p0
-
-    move-object v4, p2
-
-    move-object v6, p3
-
-    move-object v7, p4
-
-    invoke-direct/range {v0 .. v8}, Lg51;-><init>(Ljava/lang/Object;JLsye;Lk51;Lgv1;Lfx0;I)V
-
-    invoke-virtual {v10, v0}, Lru/ok/android/externcalls/sdk/ConversationFactory;->createConfRoom(Lli6;)Lru/ok/android/externcalls/sdk/Conversation;
-
-    move-result-object p2
-
-    const/4 p3, 0x1
-
-    const/4 p4, 0x0
-
-    invoke-direct {v9, p2, p1, p3, p4}, Lj51;-><init>(Lru/ok/android/externcalls/sdk/Conversation;Lmmi;ZZ)V
-
-    return-object v9
-.end method
-
-.method public final c()J
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    iget-object v0, p0, Lk51;->c:Liu7;
+    if-ne p0, p1, :cond_0
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    goto :goto_1
 
-    move-result-object v0
+    :cond_0
+    instance-of v0, p1, Lk51;
 
-    check-cast v0, Lms1;
+    if-nez v0, :cond_1
 
-    iget-object v0, v0, Lms1;->a:Liu7;
+    goto :goto_0
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    :cond_1
+    check-cast p1, Lk51;
 
-    move-result-object v0
+    iget-object v0, p0, Lk51;->a:Landroid/os/Bundle;
 
-    check-cast v0, Ly83;
+    iget-object v1, p1, Lk51;->a:Landroid/os/Bundle;
 
-    check-cast v0, Lntd;
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0}, Lntd;->s()J
+    move-result v0
 
-    move-result-wide v0
+    if-nez v0, :cond_2
 
-    return-wide v0
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lk51;->b:Ljava/util/List;
+
+    iget-object v1, p1, Lk51;->b:Ljava/util/List;
+
+    invoke-static {v0, v1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Lk51;->c:Ljava/util/LinkedHashMap;
+
+    iget-object v1, p1, Lk51;->c:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget-object v0, p0, Lk51;->d:Landroid/graphics/Point;
+
+    iget-object p1, p1, Lk51;->d:Landroid/graphics/Point;
+
+    invoke-static {v0, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_5
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public final d(Ljava/lang/String;ZLsye;Lgv1;Lfx0;)Lj51;
-    .locals 11
+.method public final hashCode()I
+    .locals 3
 
-    invoke-virtual {p0}, Lk51;->c()J
+    iget-object v0, p0, Lk51;->a:Landroid/os/Bundle;
 
-    move-result-wide v2
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    new-instance v9, Lj51;
+    move-result v0
 
-    iget-object v0, p0, Lk51;->a:Lbw1;
+    const/16 v1, 0x1f
 
-    invoke-static {v0}, Lbw1;->a(Lbw1;)Lru/ok/android/externcalls/sdk/ConversationFactory;
+    mul-int/2addr v0, v1
 
-    move-result-object v10
+    iget-object v2, p0, Lk51;->b:Ljava/util/List;
 
-    new-instance v0, Lg51;
+    invoke-static {v2, v0, v1}, Lxrf;->l(Ljava/util/List;II)I
 
-    const/4 v8, 0x1
+    move-result v0
 
-    move-object v5, p0
+    iget-object v2, p0, Lk51;->c:Ljava/util/LinkedHashMap;
 
-    move-object v1, p1
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
-    move-object v4, p3
+    move-result v2
 
-    move-object v6, p4
+    add-int/2addr v2, v0
 
-    move-object/from16 v7, p5
+    mul-int/2addr v2, v1
 
-    invoke-direct/range {v0 .. v8}, Lg51;-><init>(Ljava/lang/Object;JLsye;Lk51;Lgv1;Lfx0;I)V
+    iget-object v0, p0, Lk51;->d:Landroid/graphics/Point;
 
-    invoke-virtual {v10, v0}, Lru/ok/android/externcalls/sdk/ConversationFactory;->joinByLink(Lli6;)Lru/ok/android/externcalls/sdk/Conversation;
+    if-nez v0, :cond_0
 
-    move-result-object p3
+    const/4 v0, 0x0
 
-    new-instance v0, Lvq1;
+    goto :goto_0
 
-    invoke-direct {v0, p1, p2}, Lvq1;-><init>(Ljava/lang/String;Z)V
+    :cond_0
+    invoke-virtual {v0}, Landroid/graphics/Point;->hashCode()I
 
-    xor-int/lit8 p1, p2, 0x1
+    move-result v0
 
-    const/4 p2, 0x0
+    :goto_0
+    add-int/2addr v2, v0
 
-    invoke-direct {v9, p3, v0, p1, p2}, Lj51;-><init>(Lru/ok/android/externcalls/sdk/Conversation;Lmmi;ZZ)V
+    return v2
+.end method
 
-    return-object v9
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "CallContextMenuInfo(bundle="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lk51;->a:Landroid/os/Bundle;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", actions="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lk51;->b:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", statParam="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lk51;->c:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", anchor="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lk51;->d:Landroid/graphics/Point;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

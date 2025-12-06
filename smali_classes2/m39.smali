@@ -1,74 +1,193 @@
-.class public final synthetic Lm39;
-.super Ljava/lang/Object;
+.class public final Lm39;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lone/me/mediapicker/MediaPickerScreen;
 
-.field public final synthetic b:Lo39;
-
-.field public final synthetic c:Lm3g;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lo39;Lm3g;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/mediapicker/MediaPickerScreen;)V
     .locals 0
 
-    iput p3, p0, Lm39;->a:I
+    iput-object p2, p0, Lm39;->X:Lone/me/mediapicker/MediaPickerScreen;
 
-    iput-object p1, p0, Lm39;->b:Lo39;
+    const/4 p2, 0x2
 
-    iput-object p2, p0, Lm39;->c:Lm3g;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lm39;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lm39;
+
+    sget-object p2, Lqqg;->a:Lqqg;
+
+    invoke-virtual {p1, p2}, Lm39;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget v0, p0, Lm39;->a:I
+    new-instance v0, Lm39;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, p0, Lm39;->X:Lone/me/mediapicker/MediaPickerScreen;
 
-    iget-object v0, p0, Lm39;->b:Lo39;
+    invoke-direct {v0, p2, v1}, Lm39;-><init>(Lkotlin/coroutines/Continuation;Lone/me/mediapicker/MediaPickerScreen;)V
 
-    iget-object v1, p0, Lm39;->c:Lm3g;
+    iput-object p1, v0, Lm39;->o:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Lo39;->e(Lm3g;)V
+    return-object v0
+.end method
 
-    return-void
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    :pswitch_0
-    iget-object v0, p0, Lm39;->b:Lo39;
+    iget-object v0, p0, Lm39;->X:Lone/me/mediapicker/MediaPickerScreen;
 
-    iget-object v1, p0, Lm39;->c:Lm3g;
+    iget-object v1, v0, Lone/me/mediapicker/MediaPickerScreen;->v0:Lhs;
 
-    invoke-virtual {v0, v1}, Lo39;->i(Lm3g;)V
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    return-void
+    iget-object p1, p0, Lm39;->o:Ljava/lang/Object;
 
-    :pswitch_1
-    iget-object v0, p0, Lm39;->b:Lo39;
+    check-cast p1, Lwae;
 
-    iget-object v1, p0, Lm39;->c:Lm3g;
+    instance-of v2, p1, Lvae;
 
-    invoke-virtual {v0, v1}, Lo39;->i(Lm3g;)V
+    const/4 v3, 0x5
 
-    return-void
+    if-eqz v2, :cond_0
 
-    nop
+    sget-object p1, Lone/me/mediapicker/MediaPickerScreen;->B0:[Lyy7;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {v0}, Lone/me/mediapicker/MediaPickerScreen;->A0()Lyfb;
+
+    move-result-object p1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p1, v2}, Lyfb;->setDropdownRotationProgress(F)V
+
+    sget-object p1, Lone/me/mediapicker/MediaPickerScreen;->B0:[Lyy7;
+
+    aget-object v2, p1, v3
+
+    const/4 v2, 0x0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v0, v2}, Lhs;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
+
+    iget-object v1, v0, Lone/me/mediapicker/MediaPickerScreen;->u0:Lsn0;
+
+    const/4 v2, 0x4
+
+    aget-object v2, p1, v2
+
+    invoke-virtual {v1}, Lsn0;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lf82;
+
+    const/16 v2, 0x8
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object v0, v0, Lone/me/mediapicker/MediaPickerScreen;->y0:Lsn0;
+
+    aget-object p1, p1, v2
+
+    invoke-virtual {v0}, Lsn0;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v2, p1, Ltae;
+
+    if-eqz v2, :cond_2
+
+    sget-object v2, Lone/me/mediapicker/MediaPickerScreen;->B0:[Lyy7;
+
+    aget-object v4, v2, v3
+
+    invoke-virtual {v1, v0}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/Number;
+
+    invoke-virtual {v4}, Ljava/lang/Number;->intValue()I
+
+    move-result v4
+
+    if-lez v4, :cond_1
+
+    check-cast p1, Ltae;
+
+    iget p1, p1, Ltae;->a:I
+
+    int-to-float p1, p1
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v1, v0}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Number;
+
+    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    div-float/2addr p1, v1
+
+    goto :goto_0
+
+    :cond_1
+    const/high16 p1, 0x43340000    # 180.0f
+
+    :goto_0
+    invoke-virtual {v0}, Lone/me/mediapicker/MediaPickerScreen;->A0()Lyfb;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lyfb;->setDropdownRotationProgress(F)V
+
+    :cond_2
+    :goto_1
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

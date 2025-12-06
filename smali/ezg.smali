@@ -1,68 +1,154 @@
-.class public final Lezg;
-.super Ljava/lang/Object;
+.class public abstract Lezg;
+.super Ldzg;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/OnReceiveContentListener;
 
 
 # instance fields
-.field public final a:Lzma;
+.field public a:[Lxob;
+
+.field public b:Ljava/lang/String;
+
+.field public c:I
 
 
 # direct methods
-.method public constructor <init>(Lzma;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lezg;->a:Lzma;
+    const/4 v0, 0x0
+
+    .line 2
+    iput-object v0, p0, Lezg;->a:[Lxob;
+
+    const/4 v0, 0x0
+
+    .line 3
+    iput v0, p0, Lezg;->c:I
+
+    return-void
+.end method
+
+.method public constructor <init>(Lezg;)V
+    .locals 1
+
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    .line 5
+    iput-object v0, p0, Lezg;->a:[Lxob;
+
+    const/4 v0, 0x0
+
+    .line 6
+    iput v0, p0, Lezg;->c:I
+
+    .line 7
+    iget-object v0, p1, Lezg;->b:Ljava/lang/String;
+
+    iput-object v0, p0, Lezg;->b:Ljava/lang/String;
+
+    .line 8
+    iget-object p1, p1, Lezg;->a:[Lxob;
+
+    invoke-static {p1}, Lve3;->g([Lxob;)[Lxob;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lezg;->a:[Lxob;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onReceiveContent(Landroid/view/View;Landroid/view/ContentInfo;)Landroid/view/ContentInfo;
-    .locals 2
+.method public getPathData()[Lxob;
+    .locals 1
 
-    new-instance v0, Lq04;
+    iget-object v0, p0, Lezg;->a:[Lxob;
 
-    new-instance v1, Lrs6;
+    return-object v0
+.end method
 
-    invoke-direct {v1, p2}, Lrs6;-><init>(Landroid/view/ContentInfo;)V
+.method public getPathName()Ljava/lang/String;
+    .locals 1
 
-    invoke-direct {v0, v1}, Lq04;-><init>(Lp04;)V
+    iget-object v0, p0, Lezg;->b:Ljava/lang/String;
 
-    iget-object v1, p0, Lezg;->a:Lzma;
+    return-object v0
+.end method
 
-    invoke-interface {v1, p1, v0}, Lzma;->a(Landroid/view/View;Lq04;)Lq04;
+.method public setPathData([Lxob;)V
+    .locals 6
+
+    iget-object v0, p0, Lezg;->a:[Lxob;
+
+    invoke-static {v0, p1}, Lve3;->b([Lxob;[Lxob;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-static {p1}, Lve3;->g([Lxob;)[Lxob;
 
     move-result-object p1
 
-    if-nez p1, :cond_0
+    iput-object p1, p0, Lezg;->a:[Lxob;
 
-    const/4 p1, 0x0
-
-    return-object p1
+    return-void
 
     :cond_0
-    if-ne p1, v0, :cond_1
+    iget-object v0, p0, Lezg;->a:[Lxob;
 
-    return-object p2
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_0
+    array-length v3, p1
+
+    if-ge v2, v3, :cond_2
+
+    aget-object v3, v0, v2
+
+    aget-object v4, p1, v2
+
+    iget-char v4, v4, Lxob;->a:C
+
+    iput-char v4, v3, Lxob;->a:C
+
+    move v3, v1
+
+    :goto_1
+    aget-object v4, p1, v2
+
+    iget-object v4, v4, Lxob;->b:[F
+
+    array-length v5, v4
+
+    if-ge v3, v5, :cond_1
+
+    aget-object v5, v0, v2
+
+    iget-object v5, v5, Lxob;->b:[F
+
+    aget v4, v4, v3
+
+    aput v4, v5, v3
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_1
 
     :cond_1
-    iget-object p1, p1, Lq04;->a:Lp04;
+    add-int/lit8 v2, v2, 0x1
 
-    invoke-interface {p1}, Lp04;->g()Landroid/view/ContentInfo;
+    goto :goto_0
 
-    move-result-object p1
-
-    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-static {p1}, Ly20;->k(Ljava/lang/Object;)Landroid/view/ContentInfo;
-
-    move-result-object p1
-
-    return-object p1
+    :cond_2
+    return-void
 .end method

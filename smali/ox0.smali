@@ -1,261 +1,119 @@
 .class public final Lox0;
-.super Ljava/io/FilterInputStream;
+.super Lg9c;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:J
-
-.field public b:J
+# static fields
+.field public static final c:Lox0;
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/InputStream;)V
+.method static constructor <clinit>()V
     .locals 2
 
-    invoke-direct {p0, p1}, Ljava/io/FilterInputStream;-><init>(Ljava/io/InputStream;)V
+    new-instance v0, Lox0;
 
-    const-wide/16 v0, -0x1
+    sget-object v1, Ltx0;->a:Ltx0;
 
-    iput-wide v0, p0, Lox0;->b:J
+    invoke-direct {v0, v1}, Lg9c;-><init>(Lzy7;)V
 
-    const-wide/32 v0, 0x100001
-
-    iput-wide v0, p0, Lox0;->a:J
+    sput-object v0, Lox0;->c:Lox0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final available()I
-    .locals 4
+.method public final h(Ljava/lang/Object;)I
+    .locals 0
 
-    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
+    check-cast p1, [B
 
-    invoke-virtual {v0}, Ljava/io/InputStream;->available()I
+    array-length p1, p1
 
-    move-result v0
-
-    int-to-long v0, v0
-
-    iget-wide v2, p0, Lox0;->a:J
-
-    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v0
-
-    long-to-int v0, v0
-
-    return v0
-.end method
-
-.method public final declared-synchronized mark(I)V
-    .locals 2
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
-
-    invoke-virtual {v0, p1}, Ljava/io/InputStream;->mark(I)V
-
-    iget-wide v0, p0, Lox0;->a:J
-
-    iput-wide v0, p0, Lox0;->b:J
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public final read()I
-    .locals 5
-
-    .line 1
-    iget-wide v0, p0, Lox0;->a:J
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    const/4 v1, -0x1
-
-    if-nez v0, :cond_0
-
-    return v1
-
-    .line 2
-    :cond_0
-    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
-
-    move-result v0
-
-    if-eq v0, v1, :cond_1
-
-    .line 3
-    iget-wide v1, p0, Lox0;->a:J
-
-    const-wide/16 v3, 0x1
-
-    sub-long/2addr v1, v3
-
-    iput-wide v1, p0, Lox0;->a:J
-
-    :cond_1
-    return v0
-.end method
-
-.method public final read([BII)I
-    .locals 6
-
-    .line 4
-    iget-wide v0, p0, Lox0;->a:J
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v2, v0, v2
-
-    const/4 v3, -0x1
-
-    if-nez v2, :cond_0
-
-    return v3
-
-    :cond_0
-    int-to-long v4, p3
-
-    .line 5
-    invoke-static {v4, v5, v0, v1}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v0
-
-    long-to-int p3, v0
-
-    .line 6
-    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
-
-    invoke-virtual {v0, p1, p2, p3}, Ljava/io/InputStream;->read([BII)I
-
-    move-result p1
-
-    if-eq p1, v3, :cond_1
-
-    .line 7
-    iget-wide p2, p0, Lox0;->a:J
-
-    int-to-long v0, p1
-
-    sub-long/2addr p2, v0
-
-    iput-wide p2, p0, Lox0;->a:J
-
-    :cond_1
     return p1
 .end method
 
-.method public final declared-synchronized reset()V
-    .locals 4
+.method public final j(Lyl3;ILjava/lang/Object;)V
+    .locals 2
 
-    monitor-enter p0
+    check-cast p3, Lnx0;
 
-    :try_start_0
-    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
+    iget-object v0, p0, Lg9c;->b:Lf9c;
 
-    invoke-virtual {v0}, Ljava/io/InputStream;->markSupported()Z
+    invoke-interface {p1, v0, p2}, Lyl3;->i(Lf9c;I)B
 
-    move-result v0
+    move-result p1
 
-    if-eqz v0, :cond_1
+    invoke-static {p3}, Le9c;->c(Le9c;)V
 
-    iget-wide v0, p0, Lox0;->b:J
+    iget-object p2, p3, Lnx0;->a:[B
 
-    const-wide/16 v2, -0x1
+    iget v0, p3, Lnx0;->b:I
 
-    cmp-long v0, v0, v2
+    add-int/lit8 v1, v0, 0x1
 
-    if-eqz v0, :cond_0
+    iput v1, p3, Lnx0;->b:I
 
-    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->reset()V
-
-    iget-wide v0, p0, Lox0;->b:J
-
-    iput-wide v0, p0, Lox0;->a:J
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
+    aput-byte p1, p2, v0
 
     return-void
+.end method
 
-    :catchall_0
-    move-exception v0
+.method public final k(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    check-cast p1, [B
+
+    new-instance v0, Lnx0;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, v0, Lnx0;->a:[B
+
+    array-length p1, p1
+
+    iput p1, v0, Lnx0;->b:I
+
+    const/16 p1, 0xa
+
+    invoke-virtual {v0, p1}, Lnx0;->b(I)V
+
+    return-object v0
+.end method
+
+.method public final n()Ljava/lang/Object;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    new-array v0, v0, [B
+
+    return-object v0
+.end method
+
+.method public final o(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;I)V
+    .locals 3
+
+    check-cast p2, [B
+
+    const/4 v0, 0x0
+
+    :goto_0
+    if-ge v0, p3, :cond_0
+
+    aget-byte v1, p2, v0
+
+    iget-object v2, p0, Lg9c;->b:Lf9c;
+
+    invoke-virtual {p1, v2, v0}, Lkotlinx/serialization/json/internal/b;->g(Lree;I)V
+
+    invoke-virtual {p1, v1}, Lkotlinx/serialization/json/internal/b;->d(B)V
+
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
     :cond_0
-    :try_start_1
-    new-instance v0, Ljava/io/IOException;
-
-    const-string v1, "Mark not set"
-
-    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    new-instance v0, Ljava/io/IOException;
-
-    const-string v1, "Mark not supported"
-
-    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :goto_0
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public final skip(J)J
-    .locals 2
-
-    iget-wide v0, p0, Lox0;->a:J
-
-    invoke-static {p1, p2, v0, v1}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide p1
-
-    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
-
-    invoke-virtual {v0, p1, p2}, Ljava/io/InputStream;->skip(J)J
-
-    move-result-wide p1
-
-    iget-wide v0, p0, Lox0;->a:J
-
-    sub-long/2addr v0, p1
-
-    iput-wide v0, p0, Lox0;->a:J
-
-    return-wide p1
+    return-void
 .end method

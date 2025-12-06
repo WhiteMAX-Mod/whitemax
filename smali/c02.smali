@@ -2,115 +2,26 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ld02;
-
-.field public final synthetic c:Landroid/hardware/camera2/CameraCaptureSession;
-
 
 # direct methods
-.method public synthetic constructor <init>(Ld02;Landroid/hardware/camera2/CameraCaptureSession;I)V
-    .locals 0
+.method public static a(Landroid/content/Context;Ljava/lang/Object;Ljava/util/LinkedHashSet;)Ls7c;
+    .locals 1
 
-    iput p3, p0, Lc02;->a:I
+    :try_start_0
+    new-instance v0, Ls7c;
 
-    iput-object p1, p0, Lc02;->b:Ld02;
+    invoke-direct {v0, p0, p1, p2}, Ls7c;-><init>(Landroid/content/Context;Ljava/lang/Object;Ljava/util/LinkedHashSet;)V
+    :try_end_0
+    .catch Landroidx/camera/core/CameraUnavailableException; {:try_start_0 .. :try_end_0} :catch_0
 
-    iput-object p2, p0, Lc02;->c:Landroid/hardware/camera2/CameraCaptureSession;
+    return-object v0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    :catch_0
+    move-exception p0
 
-    return-void
-.end method
+    new-instance p1, Landroidx/camera/core/InitializationException;
 
+    invoke-direct {p1, p0}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
 
-# virtual methods
-.method public final run()V
-    .locals 2
-
-    iget v0, p0, Lc02;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lc02;->c:Landroid/hardware/camera2/CameraCaptureSession;
-
-    iget-object v1, p0, Lc02;->b:Ld02;
-
-    iget-object v1, v1, Ld02;->a:Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
-
-    invoke-virtual {v1, v0}, Landroid/hardware/camera2/CameraCaptureSession$StateCallback;->onConfigureFailed(Landroid/hardware/camera2/CameraCaptureSession;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lc02;->c:Landroid/hardware/camera2/CameraCaptureSession;
-
-    iget-object v1, p0, Lc02;->b:Ld02;
-
-    iget-object v1, v1, Ld02;->a:Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
-
-    invoke-virtual {v1, v0}, Landroid/hardware/camera2/CameraCaptureSession$StateCallback;->onReady(Landroid/hardware/camera2/CameraCaptureSession;)V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lc02;->c:Landroid/hardware/camera2/CameraCaptureSession;
-
-    iget-object v1, p0, Lc02;->b:Ld02;
-
-    iget-object v1, v1, Ld02;->a:Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
-
-    invoke-virtual {v1, v0}, Landroid/hardware/camera2/CameraCaptureSession$StateCallback;->onConfigured(Landroid/hardware/camera2/CameraCaptureSession;)V
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lc02;->c:Landroid/hardware/camera2/CameraCaptureSession;
-
-    iget-object v1, p0, Lc02;->b:Ld02;
-
-    iget-object v1, v1, Ld02;->a:Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
-
-    invoke-virtual {v1, v0}, Landroid/hardware/camera2/CameraCaptureSession$StateCallback;->onCaptureQueueEmpty(Landroid/hardware/camera2/CameraCaptureSession;)V
-
-    return-void
-
-    :pswitch_3
-    iget-object v0, p0, Lc02;->c:Landroid/hardware/camera2/CameraCaptureSession;
-
-    iget-object v1, p0, Lc02;->b:Ld02;
-
-    iget-object v1, v1, Ld02;->a:Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
-
-    invoke-virtual {v1, v0}, Landroid/hardware/camera2/CameraCaptureSession$StateCallback;->onClosed(Landroid/hardware/camera2/CameraCaptureSession;)V
-
-    return-void
-
-    :pswitch_4
-    iget-object v0, p0, Lc02;->c:Landroid/hardware/camera2/CameraCaptureSession;
-
-    iget-object v1, p0, Lc02;->b:Ld02;
-
-    iget-object v1, v1, Ld02;->a:Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
-
-    invoke-virtual {v1, v0}, Landroid/hardware/camera2/CameraCaptureSession$StateCallback;->onActive(Landroid/hardware/camera2/CameraCaptureSession;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

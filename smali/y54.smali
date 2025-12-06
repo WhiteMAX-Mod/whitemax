@@ -1,111 +1,216 @@
 .class public final Ly54;
-.super Lgk7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic b:I
+# static fields
+.field public static final d:Ly54;
 
-.field public final synthetic c:Ljava/lang/Object;
+
+# instance fields
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:Z
 
 
 # direct methods
-.method public synthetic constructor <init>([Ljava/lang/String;Ljava/lang/Object;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p3, p0, Ly54;->b:I
+    new-instance v0, Ly54;
 
-    iput-object p2, p0, Ly54;->c:Ljava/lang/Object;
+    invoke-direct {v0}, Ly54;-><init>()V
 
-    invoke-direct {p0, p1}, Lgk7;-><init>([Ljava/lang/String;)V
+    sput-object v0, Ly54;->d:Ly54;
 
     return-void
 .end method
 
+.method public synthetic constructor <init>()V
+    .locals 2
 
-# virtual methods
-.method public final a(Ljava/util/Set;)V
-    .locals 3
-
-    iget p1, p0, Ly54;->b:I
-
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, p0, Ly54;->c:Ljava/lang/Object;
-
-    check-cast p1, Llia;
-
-    sget-object v0, Lh1i;->a:Ljava/lang/Object;
-
-    invoke-virtual {p1, v0}, Llia;->d(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_0
-    invoke-static {}, Los;->c()Los;
-
-    move-result-object p1
-
-    iget-object v0, p0, Ly54;->c:Ljava/lang/Object;
-
-    check-cast v0, Lchd;
-
-    iget-object v0, v0, Lchd;->u:Lbhd;
-
-    iget-object v1, p1, Los;->e:Lpn4;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
-
-    move-result-object v1
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v2
-
-    if-ne v1, v2, :cond_0
+    const/4 v0, 0x0
 
     const/4 v1, 0x1
 
-    goto :goto_0
+    .line 1
+    invoke-direct {p0, v0, v0, v1}, Ly54;-><init>(IIZ)V
+
+    return-void
+.end method
+
+.method public constructor <init>(IIZ)V
+    .locals 0
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    iput p1, p0, Ly54;->a:I
+
+    .line 4
+    iput p2, p0, Ly54;->b:I
+
+    .line 5
+    iput-boolean p3, p0, Ly54;->c:Z
+
+    return-void
+.end method
+
+.method public static a(Ly54;IIZI)Ly54;
+    .locals 1
+
+    and-int/lit8 v0, p4, 0x1
+
+    if-eqz v0, :cond_0
+
+    iget p1, p0, Ly54;->a:I
 
     :cond_0
-    const/4 v1, 0x0
+    and-int/lit8 v0, p4, 0x2
 
-    :goto_0
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lbhd;->run()V
-
-    goto :goto_1
+    iget p2, p0, Ly54;->b:I
 
     :cond_1
-    invoke-virtual {p1, v0}, Los;->d(Ljava/lang/Runnable;)V
+    and-int/lit8 p4, p4, 0x4
 
-    :goto_1
-    return-void
+    if-eqz p4, :cond_2
 
-    :pswitch_1
-    iget-object p1, p0, Ly54;->c:Ljava/lang/Object;
+    iget-boolean p3, p0, Ly54;->c:Z
 
-    check-cast p1, Lmv0;
+    :cond_2
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v0, Lccg;->a:Lccg;
+    new-instance p0, Ly54;
 
-    invoke-interface {p1, v0}, Lo1e;->g(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {p0, p1, p2, p3}, Ly54;-><init>(IIZ)V
 
-    return-void
+    return-object p0
+.end method
 
-    nop
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+# virtual methods
+.method public final b()I
+    .locals 2
+
+    iget v0, p0, Ly54;->a:I
+
+    iget v1, p0, Ly54;->b:I
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ly54;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ly54;
+
+    iget v1, p0, Ly54;->a:I
+
+    iget v3, p1, Ly54;->a:I
+
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    iget v1, p0, Ly54;->b:I
+
+    iget v3, p1, Ly54;->b:I
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-boolean v1, p0, Ly54;->c:Z
+
+    iget-boolean p1, p1, Ly54;->c:Z
+
+    if-eq v1, p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget v0, p0, Ly54;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Ly54;->b:I
+
+    invoke-static {v2, v0, v1}, Lxrf;->k(III)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Ly54;->c:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", inset="
+
+    const-string v1, ", isVisible="
+
+    const-string v2, "ControlState(heightView="
+
+    iget v3, p0, Ly54;->a:I
+
+    iget v4, p0, Ly54;->b:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Lwy1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Ly54;->c:Z
+
+    invoke-static {v0, v2, v1}, Laz1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,165 +1,48 @@
 .class public final Lf81;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lbw1;
+.super Lq44;
 
 
 # instance fields
-.field public final a:Lrla;
+.field public final synthetic X:Lpg0;
 
-.field public final b:Lwif;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Liu7;Liu7;Liu7;Lrla;Liu7;Liu7;Liu7;Liu7;)V
-    .locals 9
+.method public constructor <init>(Lpg0;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lf81;->X:Lpg0;
 
-    iput-object p4, p0, Lf81;->a:Lrla;
-
-    new-instance v0, La81;
-
-    move-object v1, p0
-
-    move-object v2, p1
-
-    move-object v7, p2
-
-    move-object v3, p3
-
-    move-object v8, p5
-
-    move-object v4, p6
-
-    move-object/from16 v5, p7
-
-    move-object/from16 v6, p8
-
-    invoke-direct/range {v0 .. v8}, La81;-><init>(Lf81;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;)V
-
-    new-instance p1, Lwif;
-
-    invoke-direct {p1, v0}, Lwif;-><init>(Lji6;)V
-
-    iput-object p1, p0, Lf81;->b:Lwif;
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static b(Lorg/json/JSONObject;)Lci1;
-    .locals 4
 
-    new-instance v0, Lci1;
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-direct {v0}, Lci1;-><init>()V
+    iput-object p1, p0, Lf81;->d:Ljava/lang/Object;
 
-    const-string v1, "mab"
+    iget p1, p0, Lf81;->o:I
 
-    invoke-virtual {p0, v1}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+    const/high16 v0, -0x80000000
 
-    move-result v2
+    or-int/2addr p1, v0
 
-    const/4 v3, 0x0
+    iput p1, p0, Lf81;->o:I
 
-    if-eqz v2, :cond_0
+    iget-object p1, p0, Lf81;->X:Lpg0;
 
-    invoke-virtual {p0, v1}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+    const/4 v0, 0x0
 
-    move-result v1
+    invoke-virtual {p1, v0, p0}, Lpg0;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object p1
 
-    move-result-object v1
-
-    goto :goto_0
-
-    :cond_0
-    move-object v1, v3
-
-    :goto_0
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
-
-    move-result v1
-
-    mul-int/lit16 v1, v1, 0x3e8
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    goto :goto_1
-
-    :cond_1
-    move-object v1, v3
-
-    :goto_1
-    iput-object v1, v0, Lci1;->d:Ljava/lang/Integer;
-
-    const-string v1, "nl"
-
-    invoke-static {p0, v1}, Lgai;->c(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lci1;->a:Ljava/lang/Boolean;
-
-    const-string v1, "dlb"
-
-    invoke-static {p0, v1}, Lgai;->c(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lci1;->c:Ljava/lang/Boolean;
-
-    const-string v1, "df"
-
-    invoke-static {p0, v1}, Lgai;->c(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lci1;->b:Ljava/lang/Boolean;
-
-    const-string v1, "dsb"
-
-    invoke-virtual {p0, v1}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    invoke-virtual {p0, v1}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
-
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    goto :goto_2
-
-    :cond_2
-    move-object p0, v3
-
-    :goto_2
-    if-eqz p0, :cond_3
-
-    invoke-virtual {p0}, Ljava/lang/Number;->intValue()I
-
-    move-result p0
-
-    mul-int/lit16 p0, p0, 0x3e8
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    :cond_3
-    iput-object v3, v0, Lci1;->e:Ljava/lang/Integer;
-
-    return-object v0
+    return-object p1
 .end method

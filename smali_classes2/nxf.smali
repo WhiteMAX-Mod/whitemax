@@ -1,185 +1,118 @@
-.class public final enum Lnxf;
-.super Ljava/lang/Enum;
+.class public final Lnxf;
+.super Ldtf;
 .source "SourceFile"
 
-
-# static fields
-.field public static final enum X:Lnxf;
-
-.field public static final enum Y:Lnxf;
-
-.field public static final synthetic Z:[Lnxf;
-
-.field public static final enum b:Lnxf;
-
-.field public static final enum c:Lnxf;
-
-.field public static final enum o:Lnxf;
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public final a:S
+.field public final synthetic X:Lvxf;
+
+.field public final synthetic Y:Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
+
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 13
-
-    new-instance v0, Lnxf;
-
-    const/4 v1, 0x0
-
-    const/16 v2, 0x17
-
-    const-string v3, "secp256r1"
-
-    invoke-direct {v0, v3, v1, v2}, Lnxf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Lnxf;->b:Lnxf;
-
-    new-instance v1, Lnxf;
-
-    const/4 v2, 0x1
-
-    const/16 v3, 0x18
-
-    const-string v4, "secp384r1"
-
-    invoke-direct {v1, v4, v2, v3}, Lnxf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Lnxf;->c:Lnxf;
-
-    new-instance v2, Lnxf;
-
-    const/4 v3, 0x2
-
-    const/16 v4, 0x19
-
-    const-string v5, "secp521r1"
-
-    invoke-direct {v2, v5, v3, v4}, Lnxf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Lnxf;->o:Lnxf;
-
-    new-instance v3, Lnxf;
-
-    const/4 v4, 0x3
-
-    const/16 v5, 0x1d
-
-    const-string v6, "x25519"
-
-    invoke-direct {v3, v6, v4, v5}, Lnxf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v3, Lnxf;->X:Lnxf;
-
-    new-instance v4, Lnxf;
-
-    const/4 v5, 0x4
-
-    const/16 v6, 0x1e
-
-    const-string v7, "x448"
-
-    invoke-direct {v4, v7, v5, v6}, Lnxf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v4, Lnxf;->Y:Lnxf;
-
-    new-instance v5, Lnxf;
-
-    const/4 v6, 0x5
-
-    const/16 v7, 0x100
-
-    const-string v8, "ffdhe2048"
-
-    invoke-direct {v5, v8, v6, v7}, Lnxf;-><init>(Ljava/lang/String;II)V
-
-    new-instance v6, Lnxf;
-
-    const/4 v7, 0x6
-
-    const/16 v8, 0x101
-
-    const-string v9, "ffdhe3072"
-
-    invoke-direct {v6, v9, v7, v8}, Lnxf;-><init>(Ljava/lang/String;II)V
-
-    new-instance v7, Lnxf;
-
-    const/4 v8, 0x7
-
-    const/16 v9, 0x102
-
-    const-string v10, "ffdhe4096"
-
-    invoke-direct {v7, v10, v8, v9}, Lnxf;-><init>(Ljava/lang/String;II)V
-
-    new-instance v8, Lnxf;
-
-    const/16 v9, 0x8
-
-    const/16 v10, 0x103
-
-    const-string v11, "ffdhe6144"
-
-    invoke-direct {v8, v11, v9, v10}, Lnxf;-><init>(Ljava/lang/String;II)V
-
-    new-instance v9, Lnxf;
-
-    const/16 v10, 0x9
-
-    const/16 v11, 0x104
-
-    const-string v12, "ffdhe8192"
-
-    invoke-direct {v9, v12, v10, v11}, Lnxf;-><init>(Ljava/lang/String;II)V
-
-    filled-new-array/range {v0 .. v9}, [Lnxf;
-
-    move-result-object v0
-
-    sput-object v0, Lnxf;->Z:[Lnxf;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public constructor <init>(Lvxf;Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p1, p0, Lnxf;->X:Lvxf;
 
-    int-to-short p1, p3
+    iput-object p2, p0, Lnxf;->Y:Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
 
-    iput-short p1, p0, Lnxf;->a:S
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lnxf;
-    .locals 1
 
-    const-class v0, Lnxf;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p1, Lf84;
 
-    move-result-object p0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast p0, Lnxf;
+    invoke-virtual {p0, p1, p2}, Lnxf;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-object p0
+    move-result-object p1
+
+    check-cast p1, Lnxf;
+
+    sget-object p2, Lqqg;->a:Lqqg;
+
+    invoke-virtual {p1, p2}, Lnxf;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public static values()[Lnxf;
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    sget-object v0, Lnxf;->Z:[Lnxf;
+    new-instance p1, Lnxf;
 
-    invoke-virtual {v0}, [Lnxf;->clone()Ljava/lang/Object;
+    iget-object v0, p0, Lnxf;->X:Lvxf;
 
-    move-result-object v0
+    iget-object v1, p0, Lnxf;->Y:Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
 
-    check-cast v0, [Lnxf;
+    invoke-direct {p1, v0, v1, p2}, Lnxf;-><init>(Lvxf;Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lnxf;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iput v1, p0, Lnxf;->o:I
+
+    iget-object p1, p0, Lnxf;->X:Lvxf;
+
+    iget-object v0, p0, Lnxf;->Y:Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
+
+    invoke-virtual {p1, v0, p0}, Lvxf;->f(Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;Lq44;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lg84;->a:Lg84;
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

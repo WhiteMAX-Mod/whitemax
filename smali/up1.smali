@@ -1,29 +1,23 @@
-.class public interface abstract Lup1;
-.super Ljava/lang/Object;
+.class public final Lup1;
+.super Li3;
 .source "SourceFile"
 
 
-# virtual methods
-.method public d()V
-    .locals 0
+# static fields
+.field public static final c:Lup1;
 
-    return-void
-.end method
 
-.method public i()V
-    .locals 0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-    return-void
-.end method
+    new-instance v0, Lup1;
 
-.method public k()V
-    .locals 0
+    const/16 v1, 0xb
 
-    return-void
-.end method
+    invoke-direct {v0, v1}, Li3;-><init>(I)V
 
-.method public onCallAccepted()V
-    .locals 0
+    sput-object v0, Lup1;->c:Lup1;
 
     return-void
 .end method

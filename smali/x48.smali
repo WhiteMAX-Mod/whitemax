@@ -1,8 +1,13 @@
-.class public interface abstract Lx48;
+.class public final Lx48;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract b()V
-.end method
+# instance fields
+.field public a:I
+
+.field public b:Z
+
+.field public c:Z
+
+.field public d:Z

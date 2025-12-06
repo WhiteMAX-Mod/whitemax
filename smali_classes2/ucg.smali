@@ -2,92 +2,166 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lvcg;
-
 
 # instance fields
-.field public final a:J
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public constructor <init>(IIII)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lucg;->a:J
+    iput p1, p0, Lucg;->a:I
+
+    iput p2, p0, Lucg;->b:I
+
+    iput p3, p0, Lucg;->c:I
+
+    iput p4, p0, Lucg;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
-    .locals 2
-
-    iget-wide v0, p0, Lucg;->a:J
-
-    return-wide v0
-.end method
-
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
+    .locals 2
 
     if-ne p0, p1, :cond_0
 
-    return v0
+    goto :goto_1
 
     :cond_0
-    instance-of v1, p1, Lucg;
+    instance-of v0, p1, Lucg;
 
-    const/4 v2, 0x0
+    if-nez v0, :cond_1
 
-    if-nez v1, :cond_1
-
-    return v2
+    goto :goto_0
 
     :cond_1
     check-cast p1, Lucg;
 
-    iget-wide v3, p0, Lucg;->a:J
+    iget v0, p0, Lucg;->a:I
 
-    iget-wide v5, p1, Lucg;->a:J
+    iget v1, p1, Lucg;->a:I
 
-    cmp-long p1, v3, v5
+    if-eq v0, v1, :cond_2
 
-    if-eqz p1, :cond_2
-
-    return v2
+    goto :goto_0
 
     :cond_2
-    return v0
+    iget v0, p0, Lucg;->b:I
+
+    iget v1, p1, Lucg;->b:I
+
+    if-eq v0, v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget v0, p0, Lucg;->c:I
+
+    iget v1, p1, Lucg;->c:I
+
+    if-eq v0, v1, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget v0, p0, Lucg;->d:I
+
+    iget p1, p1, Lucg;->d:I
+
+    if-eq v0, p1, :cond_5
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_5
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 3
 
-    iget-wide v0, p0, Lucg;->a:J
+    iget v0, p0, Lucg;->a:I
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
-    return v0
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lucg;->b:I
+
+    invoke-static {v2, v0, v1}, Lxrf;->k(III)I
+
+    move-result v0
+
+    const v2, -0x33000001    # -1.3421772E8f
+
+    invoke-static {v2, v0, v1}, Lxrf;->k(III)I
+
+    move-result v0
+
+    iget v2, p0, Lucg;->c:I
+
+    invoke-static {v2, v0, v1}, Lxrf;->k(III)I
+
+    move-result v0
+
+    iget v1, p0, Lucg;->d:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 4
+    .locals 5
 
-    const-string v0, "MarkAsUnreadEvent(mark="
+    const-string v0, ", neutralFade="
 
-    const-string v1, ")"
+    const-string v1, ", primary=-855638017, themed="
 
-    iget-wide v2, p0, Lucg;->a:J
+    const-string v2, "TopbarBackgroundDefaultColors(neutral="
 
-    invoke-static {v2, v3, v0, v1}, Lrtg;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget v3, p0, Lucg;->a:I
+
+    iget v4, p0, Lucg;->b:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Lwy1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", topbar="
+
+    const-string v2, ")"
+
+    iget v3, p0, Lucg;->c:I
+
+    iget v4, p0, Lucg;->d:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lxc0;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

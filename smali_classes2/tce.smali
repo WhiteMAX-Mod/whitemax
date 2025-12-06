@@ -1,252 +1,85 @@
-.class public interface abstract Ltce;
+.class public final Ltce;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ly18;
-
 
 # static fields
-.field public static final U:Lfce;
+.field public static final a:Lvsb;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 7
 
-    sget-object v0, Lfce;->a:Lfce;
-
-    sput-object v0, Ltce;->U:Lfce;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public abstract a()Ltrf;
-.end method
-
-.method public abstract b()Lice;
-.end method
-
-.method public abstract c()Ltrf;
-.end method
-
-.method public abstract d()Lqce;
-.end method
-
-.method public abstract e()Lsu7;
-.end method
-
-.method public abstract getTitle()Ltrf;
-.end method
-
-.method public getType()Lsce;
-    .locals 1
-
-    sget-object v0, Lsce;->b:Lsce;
-
-    return-object v0
-.end method
-
-.method public h(Ly18;)Z
-    .locals 4
-
-    invoke-interface {p0}, Ly18;->getItemId()J
-
-    move-result-wide v0
-
-    invoke-interface {p1}, Ly18;->getItemId()J
-
-    move-result-wide v2
-
-    cmp-long p1, v0, v2
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public k(Ly18;)Ljava/lang/Object;
-    .locals 6
-
-    instance-of v0, p1, Ldde;
+    new-instance v0, Limb;
 
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_0
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    check-cast p1, Ldde;
+    move-result-object v1
 
-    goto :goto_0
+    sget-object v2, Lsce;->a:Lsce;
 
-    :cond_0
-    move-object p1, v1
+    invoke-direct {v0, v1, v2}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    :goto_0
-    if-nez p1, :cond_1
+    new-instance v1, Limb;
 
-    return-object v1
+    const/4 v2, 0x1
 
-    :cond_1
-    new-instance v0, Lrce;
-
-    const/16 v1, 0x9
-
-    invoke-direct {v0, v1}, Lrdi;-><init>(I)V
-
-    iget-object v1, v0, Lrdi;->b:Ljava/lang/Object;
-
-    check-cast v1, Ljava/util/BitSet;
-
-    invoke-interface {p0}, Ltce;->t()I
-
-    move-result v2
-
-    iget v3, p1, Ldde;->b:I
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x1
-
-    if-eq v2, v3, :cond_2
-
-    move v2, v5
-
-    goto :goto_1
-
-    :cond_2
-    move v2, v4
-
-    :goto_1
-    invoke-virtual {v1, v4, v2}, Ljava/util/BitSet;->set(IZ)V
-
-    invoke-interface {p0}, Ltce;->getTitle()Ltrf;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    iget-object v3, p1, Ldde;->c:Ltrf;
+    sget-object v3, Lsce;->b:Lsce;
 
-    invoke-static {v2, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-direct {v1, v2, v3}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    move-result v2
+    new-instance v2, Limb;
 
-    xor-int/2addr v2, v5
+    const/4 v3, 0x2
 
-    invoke-virtual {v1, v5, v2}, Ljava/util/BitSet;->set(IZ)V
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-interface {p0}, Ltce;->getType()Lsce;
+    move-result-object v3
 
-    move-result-object v2
+    sget-object v4, Lsce;->c:Lsce;
 
-    iget-object v3, p1, Ldde;->o:Lsce;
+    invoke-direct {v2, v3, v4}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    if-eq v2, v3, :cond_3
+    new-instance v3, Limb;
 
-    move v4, v5
+    const/4 v4, 0x3
 
-    :cond_3
-    const/4 v2, 0x2
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-virtual {v1, v2, v4}, Ljava/util/BitSet;->set(IZ)V
+    move-result-object v4
 
-    invoke-interface {p0}, Ltce;->a()Ltrf;
+    sget-object v5, Lsce;->d:Lsce;
 
-    move-result-object v2
+    invoke-direct {v3, v4, v5}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    iget-object v3, p1, Ldde;->X:Ltrf;
+    new-instance v4, Limb;
 
-    invoke-static {v2, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const/4 v5, 0x4
 
-    move-result v2
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    xor-int/2addr v2, v5
+    move-result-object v5
 
-    const/4 v3, 0x3
+    sget-object v6, Lsce;->o:Lsce;
 
-    invoke-virtual {v1, v3, v2}, Ljava/util/BitSet;->set(IZ)V
+    invoke-direct {v4, v5, v6}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    invoke-interface {p0}, Ltce;->d()Lqce;
+    filled-new-array {v0, v1, v2, v3, v4}, [Limb;
 
-    move-result-object v2
+    move-result-object v0
 
-    iget-object v3, p1, Ldde;->Z:Lqce;
+    invoke-static {v0}, Lbbj;->b([Limb;)Lvsb;
 
-    invoke-static {v2, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object v0
 
-    move-result v2
+    sput-object v0, Ltce;->a:Lvsb;
 
-    xor-int/2addr v2, v5
-
-    const/4 v3, 0x4
-
-    invoke-virtual {v1, v3, v2}, Ljava/util/BitSet;->set(IZ)V
-
-    invoke-interface {p0}, Ltce;->b()Lice;
-
-    move-result-object v2
-
-    iget-object v3, p1, Ldde;->q0:Lice;
-
-    invoke-static {v2, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    xor-int/2addr v2, v5
-
-    const/4 v3, 0x5
-
-    invoke-virtual {v1, v3, v2}, Ljava/util/BitSet;->set(IZ)V
-
-    invoke-interface {p0}, Ltce;->c()Ltrf;
-
-    move-result-object v2
-
-    iget-object v3, p1, Ldde;->r0:Ltrf;
-
-    invoke-static {v2, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    xor-int/2addr v2, v5
-
-    const/4 v3, 0x6
-
-    invoke-virtual {v1, v3, v2}, Ljava/util/BitSet;->set(IZ)V
-
-    invoke-interface {p0}, Ltce;->e()Lsu7;
-
-    move-result-object v2
-
-    iget-object p1, p1, Ldde;->Y:Lsu7;
-
-    invoke-static {v2, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    xor-int/2addr p1, v5
-
-    const/4 v2, 0x7
-
-    invoke-virtual {v1, v2, p1}, Ljava/util/BitSet;->set(IZ)V
-
-    return-object v0
-.end method
-
-.method public m()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public abstract t()I
+    return-void
 .end method

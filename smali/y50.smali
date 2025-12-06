@@ -9,20 +9,20 @@
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lir4;
+.field public final synthetic b:La60;
 
-.field public final synthetic c:Le60;
+.field public final synthetic c:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lir4;Le60;I)V
+.method public synthetic constructor <init>(La60;ZI)V
     .locals 0
 
     iput p3, p0, Ly50;->a:I
 
-    iput-object p1, p0, Ly50;->b:Lir4;
+    iput-object p1, p0, Ly50;->b:La60;
 
-    iput-object p2, p0, Ly50;->c:Le60;
+    iput-boolean p2, p0, Ly50;->c:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,63 +36,115 @@
 
     iget v0, p0, Ly50;->a:I
 
-    iget-object v1, p0, Ly50;->c:Le60;
-
-    iget-object v2, p0, Ly50;->b:Lir4;
-
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, v2, Lir4;->c:Ljava/lang/Object;
+    iget-object v0, p0, Ly50;->b:La60;
 
-    check-cast v0, Lri5;
+    iget v1, v0, La60;->g:I
 
-    sget-object v2, Lnig;->a:Ljava/lang/String;
+    invoke-static {v1}, Laz1;->v(I)I
 
-    iget-object v0, v0, Lri5;->a:Lxi5;
+    move-result v1
 
-    iget-object v0, v0, Lxi5;->C0:Leh4;
+    const/4 v2, 0x2
 
-    invoke-virtual {v0}, Leh4;->H()Lnd;
+    if-eqz v1, :cond_1
 
-    move-result-object v2
+    const/4 v3, 0x1
 
-    new-instance v3, Lyg4;
+    if-eq v1, v3, :cond_1
 
-    const/4 v4, 0x0
+    if-eq v1, v2, :cond_0
 
-    invoke-direct {v3, v2, v1, v4}, Lyg4;-><init>(Lnd;Le60;I)V
+    goto :goto_0
 
-    const/16 v1, 0x408
+    :cond_0
+    new-instance v0, Ljava/lang/AssertionError;
 
-    invoke-virtual {v0, v2, v1, v3}, Leh4;->I(Lnd;ILu28;)V
+    const-string v1, "AudioSource is released"
 
+    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v0
+
+    :cond_1
+    iget-boolean v1, v0, La60;->r:Z
+
+    iget-boolean v3, p0, Ly50;->c:Z
+
+    if-ne v1, v3, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iput-boolean v3, v0, La60;->r:Z
+
+    iget v1, v0, La60;->g:I
+
+    if-ne v1, v2, :cond_3
+
+    invoke-virtual {v0}, La60;->a()V
+
+    :cond_3
+    :goto_0
     return-void
 
     :pswitch_0
-    iget-object v0, v2, Lir4;->c:Ljava/lang/Object;
+    iget-object v0, p0, Ly50;->b:La60;
 
-    check-cast v0, Lri5;
+    iget v1, v0, La60;->g:I
 
-    sget-object v2, Lnig;->a:Ljava/lang/String;
+    invoke-static {v1}, Laz1;->v(I)I
 
-    iget-object v0, v0, Lri5;->a:Lxi5;
+    move-result v1
 
-    iget-object v0, v0, Lxi5;->C0:Leh4;
+    const/4 v2, 0x2
 
-    invoke-virtual {v0}, Leh4;->H()Lnd;
+    if-eqz v1, :cond_5
 
-    move-result-object v2
+    if-eq v1, v2, :cond_4
 
-    new-instance v3, Lyg4;
+    goto :goto_1
 
-    const/4 v4, 0x1
+    :cond_4
+    new-instance v0, Ljava/lang/AssertionError;
 
-    invoke-direct {v3, v2, v1, v4}, Lyg4;-><init>(Lnd;Le60;I)V
+    const-string v1, "AudioSource is released"
 
-    const/16 v1, 0x407
+    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, v2, v1, v3}, Leh4;->I(Lnd;ILu28;)V
+    throw v0
 
+    :cond_5
+    iget-object v1, v0, La60;->b:Ljava/util/concurrent/atomic/AtomicReference;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v3}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+
+    iget-object v1, v0, La60;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    invoke-virtual {v0, v2}, La60;->d(I)V
+
+    iget-object v1, v0, La60;->a:Lqee;
+
+    new-instance v2, Ly50;
+
+    const/4 v3, 0x1
+
+    iget-boolean v4, p0, Ly50;->c:Z
+
+    invoke-direct {v2, v0, v4, v3}, Ly50;-><init>(La60;ZI)V
+
+    invoke-virtual {v1, v2}, Lqee;->execute(Ljava/lang/Runnable;)V
+
+    invoke-virtual {v0}, La60;->f()V
+
+    :goto_1
     return-void
 
     nop

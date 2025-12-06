@@ -1,340 +1,242 @@
-.class public abstract Ll2;
+.class public final Ll2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Map;
-.implements Lir7;
+.implements Lxi3;
+
+
+# instance fields
+.field public final a:J
+
+.field public final b:Ln2;
+
+
+# direct methods
+.method public constructor <init>(JLn2;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Ll2;->a:J
+
+    iput-object p3, p0, Ll2;->b:Ln2;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final clear()V
-    .locals 2
+.method public final a(Lxi3;)J
+    .locals 4
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    instance-of v0, p1, Ll2;
 
-    const-string v1, "Operation is not supported for read-only collection"
+    if-eqz v0, :cond_0
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    move-object v0, p1
+
+    check-cast v0, Ll2;
+
+    iget-object v1, v0, Ll2;->b:Ln2;
+
+    iget-object v2, p0, Ll2;->b:Ln2;
+
+    invoke-static {v2, v1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-wide v0, v0, Ll2;->a:J
+
+    iget-object p1, v2, Ln2;->b:Ljava/lang/Object;
+
+    check-cast p1, Ly65;
+
+    iget-wide v2, p0, Ll2;->a:J
+
+    invoke-static {v2, v3, v0, v1, p1}, Lbsi;->e(JJLy65;)J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x0
+
+    invoke-static {v2, v3, v2, v3}, Ls65;->k(JJ)J
+
+    move-result-wide v2
+
+    invoke-static {v0, v1, v2, v3}, Ls65;->l(JJ)J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Subtracting or comparing time marks from different time sources is not possible: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, " and "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
 
-.method public final containsValue(Ljava/lang/Object;)Z
-    .locals 3
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 4
 
-    invoke-virtual {p0}, Ll2;->entrySet()Ljava/util/Set;
+    check-cast p1, Lxi3;
 
-    move-result-object v0
+    invoke-virtual {p0, p1}, Ll2;->a(Lxi3;)J
 
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+    move-result-wide v0
 
-    move-result v1
+    const-wide/16 v2, 0x0
 
-    const/4 v2, 0x0
+    invoke-static {v0, v1, v2, v3}, Ls65;->d(JJ)I
 
-    if-eqz v1, :cond_0
+    move-result p1
 
-    return v2
+    return p1
+.end method
 
-    :cond_0
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    move-result-object v0
+    instance-of v0, p1, Ll2;
 
-    :cond_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    if-eqz v0, :cond_0
 
-    move-result v1
+    move-object v0, p1
 
-    if-eqz v1, :cond_2
+    check-cast v0, Ll2;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object v0, v0, Ll2;->b:Ln2;
 
-    move-result-object v1
+    iget-object v1, p0, Ll2;->b:Ln2;
 
-    check-cast v1, Ljava/util/Map$Entry;
+    invoke-static {v1, v0}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    move-result v0
 
-    move-result-object v1
+    if-eqz v0, :cond_0
 
-    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    check-cast p1, Lxi3;
 
-    move-result v1
+    invoke-virtual {p0, p1}, Ll2;->a(Lxi3;)J
 
-    if-eqz v1, :cond_1
+    move-result-wide v0
+
+    sget p1, Ls65;->d:I
+
+    const-wide/16 v2, 0x0
+
+    invoke-static {v0, v1, v2, v3}, Ls65;->e(JJ)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
 
     const/4 p1, 0x1
 
     return p1
 
-    :cond_2
-    return v2
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
-.method public final entrySet()Ljava/util/Set;
+.method public final hashCode()I
     .locals 3
 
-    move-object v0, p0
+    sget v0, Ls65;->d:I
 
-    check-cast v0, Lvib;
+    const-wide/16 v0, 0x0
 
-    new-instance v1, Lcjb;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v0, v2}, Lcjb;-><init>(Lvib;I)V
-
-    return-object v1
-.end method
-
-.method public equals(Ljava/lang/Object;)Z
-    .locals 6
-
-    const/4 v0, 0x1
-
-    if-ne p1, p0, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ljava/util/Map;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    move-object v1, p0
-
-    check-cast v1, Lvib;
-
-    check-cast p1, Ljava/util/Map;
-
-    invoke-interface {p1}, Ljava/util/Map;->size()I
-
-    move-result v3
-
-    iget v4, v1, Lvib;->b:I
-
-    if-eq v4, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_3
-
-    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    return v0
-
-    :cond_3
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :cond_4
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_7
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/util/Map$Entry;
-
-    if-nez v3, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v4
-
-    invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v4}, Lvib;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    invoke-static {v3, v5}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    if-nez v5, :cond_4
-
-    invoke-virtual {v1, v4}, Lvib;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_4
-
-    :goto_0
-    return v2
-
-    :cond_7
-    return v0
-.end method
-
-.method public hashCode()I
-    .locals 1
-
-    invoke-virtual {p0}, Ll2;->entrySet()Ljava/util/Set;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
-    return v0
-.end method
+    mul-int/lit8 v0, v0, 0x25
 
-.method public final isEmpty()Z
-    .locals 1
+    iget-wide v1, p0, Ll2;->a:J
 
-    move-object v0, p0
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
 
-    check-cast v0, Lvib;
+    move-result v1
 
-    iget v0, v0, Lvib;->b:I
+    add-int/2addr v1, v0
 
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final keySet()Ljava/util/Set;
-    .locals 3
-
-    move-object v0, p0
-
-    check-cast v0, Lvib;
-
-    new-instance v1, Lcjb;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, v0, v2}, Lcjb;-><init>(Lvib;I)V
-
-    return-object v1
-.end method
-
-.method public final put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string p2, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final putAll(Ljava/util/Map;)V
-    .locals 1
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final remove(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final size()I
-    .locals 1
-
-    move-object v0, p0
-
-    check-cast v0, Lvib;
-
-    iget v0, v0, Lvib;->b:I
-
-    return v0
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 6
+    .locals 4
 
-    invoke-virtual {p0}, Ll2;->entrySet()Ljava/util/Set;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    const-string v1, "LongTimeMark("
 
-    new-instance v4, Lj0;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const/4 v1, 0x1
+    iget-wide v1, p0, Ll2;->a:J
 
-    invoke-direct {v4, v1, p0}, Lj0;-><init>(ILjava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const/16 v5, 0x18
+    iget-object v1, p0, Ll2;->b:Ln2;
 
-    const-string v1, ", "
+    iget-object v2, v1, Ln2;->b:Ljava/lang/Object;
 
-    const-string v2, "{"
+    check-cast v2, Ly65;
 
-    const-string v3, "}"
+    invoke-static {v2}, Lw9j;->f(Ly65;)Ljava/lang/String;
 
-    invoke-static/range {v0 .. v5}, Lnb3;->I(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lli6;I)Ljava/lang/String;
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, " + "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-wide/16 v2, 0x0
+
+    invoke-static {v2, v3}, Ls65;->n(J)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, ", "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x29
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-.end method
-
-.method public final values()Ljava/util/Collection;
-    .locals 2
-
-    move-object v0, p0
-
-    check-cast v0, Lvib;
-
-    new-instance v1, Lejb;
-
-    invoke-direct {v1, v0}, Lejb;-><init>(Lvib;)V
-
-    return-object v1
 .end method

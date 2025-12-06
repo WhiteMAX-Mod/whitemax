@@ -1,70 +1,56 @@
-.class public final Lild;
-.super Lsgf;
+.class public final synthetic Lild;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lorg/webrtc/RenderSynchronizer;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lorg/webrtc/RenderSynchronizer;I)V
+    .locals 0
+
+    iput p2, p0, Lild;->a:I
+
+    iput-object p1, p0, Lild;->b:Lorg/webrtc/RenderSynchronizer;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget v0, p0, Lild;->a:I
 
-    invoke-virtual {p0, p1, p2}, Lild;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
+    iget-object v0, p0, Lild;->b:Lorg/webrtc/RenderSynchronizer;
 
-    check-cast p1, Lild;
+    invoke-static {v0}, Lorg/webrtc/RenderSynchronizer;->c(Lorg/webrtc/RenderSynchronizer;)V
 
-    sget-object p2, Lccg;->a:Lccg;
+    return-void
 
-    invoke-virtual {p1, p2}, Lild;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    :pswitch_0
+    iget-object v0, p0, Lild;->b:Lorg/webrtc/RenderSynchronizer;
 
-    return-object p2
-.end method
+    invoke-static {v0}, Lorg/webrtc/RenderSynchronizer;->a(Lorg/webrtc/RenderSynchronizer;)V
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    return-void
 
-    new-instance v0, Lild;
+    nop
 
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lild;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lild;->X:Ljava/lang/Object;
-
-    check-cast p1, Lccg;
-
-    sget-object p1, Lsee;->c:Lsee;
-
-    invoke-virtual {p1}, Lrdi;->q0()Lag4;
-
-    move-result-object p1
-
-    const-string v0, ":settings/privacy"
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, v1}, Lag4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

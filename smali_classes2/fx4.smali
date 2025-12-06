@@ -1,84 +1,129 @@
 .class public final Lfx4;
-.super Lsgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic X:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+.field public final a:Landroid/content/Intent;
+
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Landroid/content/Intent;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lfx4;->X:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lfx4;->a:Landroid/content/Intent;
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lfx4;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p1, Lq54;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lfx4;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    instance-of v1, p1, Lfx4;
 
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
     check-cast p1, Lfx4;
 
-    sget-object p2, Lccg;->a:Lccg;
+    iget-object v1, p0, Lfx4;->a:Landroid/content/Intent;
 
-    invoke-virtual {p1, p2}, Lfx4;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v3, p1, Lfx4;->a:Landroid/content/Intent;
 
-    move-result-object p1
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    return-object p1
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lfx4;->b:Ljava/lang/String;
+
+    iget-object p1, p1, Lfx4;->b:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
-    new-instance p1, Lfx4;
+    iget-object v0, p0, Lfx4;->a:Landroid/content/Intent;
 
-    iget-object v0, p0, Lfx4;->X:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    invoke-direct {p1, v0, p2}, Lfx4;-><init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Lkotlin/coroutines/Continuation;)V
+    move-result v0
 
-    return-object p1
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lfx4;->b:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lfx4;->X:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    const-string v1, "DirectionsIntentHolder(intent="
 
-    iget-object v0, p1, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->Z:Lwif;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
+    iget-object v1, p0, Lfx4;->a:Landroid/content/Intent;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", tag="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lfx4;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lnb9;
-
-    iget-wide v1, p1, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->b:J
-
-    invoke-virtual {v0, v1, v2}, Lnb9;->n(J)Lpb9;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

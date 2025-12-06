@@ -1,104 +1,39 @@
 .class public final Lz63;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Lki4;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final b:Lz63;
 
-.field public final synthetic b:La73;
+.field public static final c:Lgi4;
 
 
 # direct methods
-.method public synthetic constructor <init>(La73;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput p2, p0, Lz63;->a:I
+    new-instance v0, Lz63;
 
-    iput-object p1, p0, Lz63;->b:La73;
+    invoke-direct {v0}, Lki4;-><init>()V
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    sput-object v0, Lz63;->b:Lz63;
 
-    return-void
-.end method
+    const/4 v1, 0x0
 
+    new-array v1, v1, [Ljava/lang/String;
 
-# virtual methods
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 1
+    const/4 v2, 0x0
 
-    iget v0, p0, Lz63;->a:I
+    const/16 v3, 0xe
 
-    packed-switch v0, :pswitch_data_0
+    const-string v4, ":chats-search"
 
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
+    invoke-static {v0, v4, v1, v2, v3}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
 
-    return-void
+    move-result-object v0
 
-    :pswitch_0
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
-
-    iget-object p1, p0, Lz63;->b:La73;
-
-    invoke-virtual {p1}, La73;->B()V
-
-    iget-object v0, p1, La73;->t0:Lre;
-
-    if-eqz v0, :cond_0
-
-    iget-object p1, p1, Lmmf;->b:Ljava/lang/Object;
-
-    check-cast p1, Lve7;
-
-    invoke-virtual {v0, p1}, Lre;->a(Landroid/graphics/drawable/Drawable;)V
-
-    :cond_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 2
-
-    iget v0, p0, Lz63;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationRepeat(Landroid/animation/Animator;)V
+    sput-object v0, Lz63;->c:Lgi4;
 
     return-void
-
-    :pswitch_0
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationRepeat(Landroid/animation/Animator;)V
-
-    iget-object p1, p0, Lz63;->b:La73;
-
-    iget v0, p1, La73;->q0:I
-
-    add-int/lit8 v0, v0, 0x4
-
-    iget-object v1, p1, La73;->Z:Le73;
-
-    iget-object v1, v1, Lvk0;->c:[I
-
-    array-length v1, v1
-
-    rem-int/2addr v0, v1
-
-    iput v0, p1, La73;->q0:I
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

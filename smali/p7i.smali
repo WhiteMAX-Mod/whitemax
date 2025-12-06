@@ -2,247 +2,195 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ltha;
 
+# instance fields
+.field public final a:I
 
-# static fields
-.field public static final a:Lp7i;
+.field public final b:Lxu9;
 
-.field public static final b:Lbr5;
+.field public final c:Z
 
-.field public static final c:Lbr5;
+.field public final d:Z
 
-.field public static final d:Lbr5;
+.field public e:F
 
-.field public static final e:Lbr5;
+.field public f:F
 
-.field public static final f:Lbr5;
+.field public g:Z
 
-.field public static final g:Lbr5;
+.field public h:F
 
-.field public static final h:Lbr5;
+.field public i:F
+
+.field public j:F
+
+.field public k:I
+
+.field public final l:Landroid/view/GestureDetector;
+
+.field public m:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Landroid/content/Context;Lxu9;)V
+    .locals 2
 
-    new-instance v0, Lp7i;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lp7i;->a:Lp7i;
-
-    new-instance v0, Ltwh;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ltwh;-><init>(I)V
-
-    const-class v1, Lmxh;
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+    invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
 
     move-result-object v0
 
-    new-instance v2, Lbr5;
+    invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
 
-    invoke-static {v0}, Ldy1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+    move-result v0
 
-    move-result-object v0
+    mul-int/lit8 v0, v0, 0x2
 
-    const-string v3, "durationMs"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v2, v3, v0}, Lbr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+    iput v0, p0, Lp7i;->a:I
 
-    sput-object v2, Lp7i;->b:Lbr5;
+    iput-object p2, p0, Lp7i;->b:Lxu9;
 
-    new-instance v0, Ltwh;
+    const/4 p2, 0x1
 
-    const/4 v2, 0x2
+    iput-boolean p2, p0, Lp7i;->c:Z
 
-    invoke-direct {v0, v2}, Ltwh;-><init>(I)V
+    iput-boolean p2, p0, Lp7i;->d:Z
 
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+    new-instance p2, Landroid/view/GestureDetector;
 
-    move-result-object v0
+    new-instance v0, Lkx0;
 
-    new-instance v2, Lbr5;
+    const/16 v1, 0xf
 
-    invoke-static {v0}, Ldy1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+    invoke-direct {v0, v1, p0}, Lkx0;-><init>(ILjava/lang/Object;)V
 
-    move-result-object v0
+    invoke-direct {p2, p1, v0}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
 
-    const-string v3, "imageSource"
-
-    invoke-direct {v2, v3, v0}, Lbr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lp7i;->c:Lbr5;
-
-    new-instance v0, Ltwh;
-
-    const/4 v2, 0x3
-
-    invoke-direct {v0, v2}, Ltwh;-><init>(I)V
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Lbr5;
-
-    invoke-static {v0}, Ldy1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "imageFormat"
-
-    invoke-direct {v2, v3, v0}, Lbr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lp7i;->d:Lbr5;
-
-    new-instance v0, Ltwh;
-
-    const/4 v2, 0x4
-
-    invoke-direct {v0, v2}, Ltwh;-><init>(I)V
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Lbr5;
-
-    invoke-static {v0}, Ldy1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "imageByteSize"
-
-    invoke-direct {v2, v3, v0}, Lbr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lp7i;->e:Lbr5;
-
-    new-instance v0, Ltwh;
-
-    const/4 v2, 0x5
-
-    invoke-direct {v0, v2}, Ltwh;-><init>(I)V
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Lbr5;
-
-    invoke-static {v0}, Ldy1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "imageWidth"
-
-    invoke-direct {v2, v3, v0}, Lbr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lp7i;->f:Lbr5;
-
-    new-instance v0, Ltwh;
-
-    const/4 v2, 0x6
-
-    invoke-direct {v0, v2}, Ltwh;-><init>(I)V
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Lbr5;
-
-    invoke-static {v0}, Ldy1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "imageHeight"
-
-    invoke-direct {v2, v3, v0}, Lbr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lp7i;->g:Lbr5;
-
-    new-instance v0, Ltwh;
-
-    const/4 v2, 0x7
-
-    invoke-direct {v0, v2}, Ltwh;-><init>(I)V
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v1, Lbr5;
-
-    invoke-static {v0}, Ldy1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v2, "rotationDegrees"
-
-    invoke-direct {v1, v2, v0}, Lbr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v1, Lp7i;->h:Lbr5;
+    iput-object p2, p0, Lp7i;->l:Landroid/view/GestureDetector;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 2
+.method public final a()F
+    .locals 5
 
-    check-cast p1, Laii;
+    invoke-virtual {p0}, Lp7i;->b()Z
 
-    check-cast p2, Luha;
+    move-result v0
 
-    sget-object v0, Lp7i;->b:Lbr5;
+    const/high16 v1, 0x3f800000    # 1.0f
 
-    iget-object v1, p1, Laii;->a:Ljava/lang/Long;
+    if-eqz v0, :cond_5
 
-    invoke-interface {p2, v0, v1}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
+    iget-boolean v0, p0, Lp7i;->m:Z
 
-    sget-object v0, Lp7i;->c:Lbr5;
+    const/4 v2, 0x1
 
-    iget-object v1, p1, Laii;->b:Lxhi;
+    if-eqz v0, :cond_0
 
-    invoke-interface {p2, v0, v1}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
+    iget v3, p0, Lp7i;->e:F
 
-    sget-object v0, Lp7i;->d:Lbr5;
+    iget v4, p0, Lp7i;->f:F
 
-    iget-object v1, p1, Laii;->c:Lkhi;
+    cmpg-float v3, v3, v4
 
-    invoke-interface {p2, v0, v1}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
+    if-ltz v3, :cond_1
 
-    sget-object v0, Lp7i;->e:Lbr5;
+    :cond_0
+    if-nez v0, :cond_2
 
-    iget-object v1, p1, Laii;->d:Ljava/lang/Integer;
+    iget v0, p0, Lp7i;->e:F
 
-    invoke-interface {p2, v0, v1}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
+    iget v3, p0, Lp7i;->f:F
 
-    sget-object v0, Lp7i;->f:Lbr5;
+    cmpl-float v0, v0, v3
 
-    iget-object v1, p1, Laii;->e:Ljava/lang/Integer;
+    if-lez v0, :cond_2
 
-    invoke-interface {p2, v0, v1}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
+    :cond_1
+    move v0, v2
 
-    sget-object v0, Lp7i;->g:Lbr5;
+    goto :goto_0
 
-    iget-object v1, p1, Laii;->f:Ljava/lang/Integer;
+    :cond_2
+    const/4 v0, 0x0
 
-    invoke-interface {p2, v0, v1}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
+    :goto_0
+    int-to-float v2, v2
 
-    sget-object v0, Lp7i;->h:Lbr5;
+    iget v3, p0, Lp7i;->e:F
 
-    iget-object p1, p1, Laii;->g:Ljava/lang/Integer;
+    iget v4, p0, Lp7i;->f:F
 
-    invoke-interface {p2, v0, p1}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
+    div-float/2addr v3, v4
 
-    return-void
+    sub-float/2addr v2, v3
+
+    invoke-static {v2}, Ljava/lang/Math;->abs(F)F
+
+    move-result v2
+
+    const/high16 v3, 0x3f000000    # 0.5f
+
+    mul-float/2addr v2, v3
+
+    iget v3, p0, Lp7i;->f:F
+
+    iget v4, p0, Lp7i;->a:I
+
+    int-to-float v4, v4
+
+    cmpg-float v3, v3, v4
+
+    if-gtz v3, :cond_3
+
+    return v1
+
+    :cond_3
+    if-eqz v0, :cond_4
+
+    add-float/2addr v2, v1
+
+    return v2
+
+    :cond_4
+    sub-float/2addr v1, v2
+
+    return v1
+
+    :cond_5
+    iget v0, p0, Lp7i;->f:F
+
+    const/4 v2, 0x0
+
+    cmpl-float v2, v0, v2
+
+    if-lez v2, :cond_6
+
+    iget v1, p0, Lp7i;->e:F
+
+    div-float/2addr v1, v0
+
+    :cond_6
+    return v1
+.end method
+
+.method public final b()Z
+    .locals 1
+
+    iget v0, p0, Lp7i;->k:I
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
 .end method

@@ -1,128 +1,85 @@
-.class public final Ljk;
-.super Lsgf;
+.class public final enum Ljk;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lzi6;
 
+# static fields
+.field public static final enum a:Ljk;
 
-# instance fields
-.field public final synthetic X:Llk;
+.field public static final enum b:Ljk;
+
+.field public static final enum c:Ljk;
+
+.field public static final synthetic d:[Ljk;
 
 
 # direct methods
-.method public constructor <init>(Llk;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p1, p0, Ljk;->X:Llk;
+    new-instance v0, Ljk;
 
-    const/4 p1, 0x2
+    const-string v1, "EMPTY"
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ljk;->a:Ljk;
+
+    new-instance v1, Ljk;
+
+    const-string v2, "STATIC"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Ljk;->b:Ljk;
+
+    new-instance v2, Ljk;
+
+    const-string v3, "RLOTTIE"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Ljk;->c:Ljk;
+
+    filled-new-array {v0, v1, v2}, [Ljk;
+
+    move-result-object v0
+
+    sput-object v0, Ljk;->d:[Ljk;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lq54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ljk;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ljk;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Ljk;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public static valueOf(Ljava/lang/String;)Ljk;
     .locals 1
 
-    new-instance p1, Ljk;
+    const-class v0, Ljk;
 
-    iget-object v0, p0, Ljk;->X:Llk;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-direct {p1, v0, p2}, Ljk;-><init>(Llk;Lkotlin/coroutines/Continuation;)V
+    move-result-object p0
 
-    return-object p1
+    check-cast p0, Ljk;
+
+    return-object p0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public static values()[Ljk;
+    .locals 1
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    sget-object v0, Ljk;->d:[Ljk;
 
-    iget-object p1, p0, Ljk;->X:Llk;
-
-    iget-object v0, p1, Llk;->f:Liu7;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lxv2;
+    check-cast v0, [Ljk;
 
-    check-cast v0, Llh2;
-
-    iget-object v1, v0, Llh2;->A:Lih2;
-
-    const/4 v2, -0x1
-
-    invoke-virtual {v1, v2}, Led8;->i(I)V
-
-    iget-object v0, v0, Llh2;->C:Lkh2;
-
-    invoke-virtual {v0, v2}, Led8;->i(I)V
-
-    iget-object v0, p1, Llk;->d:Liu7;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lvwb;
-
-    invoke-virtual {v0}, Lvwb;->a()V
-
-    iget-object v0, p1, Llk;->e:Liu7;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ld33;
-
-    check-cast v0, Ld43;
-
-    invoke-virtual {v0}, Ld43;->M()Lsd2;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lsd2;->M()V
-
-    iget-object p1, p1, Llk;->g:Liu7;
-
-    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lgj0;
-
-    sget-object v0, Lux2;->a:Lux2;
-
-    invoke-virtual {p1, v0}, Lgj0;->a(Lvx2;)V
-
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
+    return-object v0
 .end method

@@ -1,125 +1,194 @@
 .class public final Lg20;
-.super Ljava/lang/Object;
+.super Lhz;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final c:Ldv5;
 
-.field public final b:Z
+.field public final d:Ltw0;
+
+.field public e:Lrx;
+
+.field public volatile f:J
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Z)V
+.method public constructor <init>(Lw10;Ldv5;Ltw0;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lhz;-><init>(Lw10;)V
 
-    iput-object p1, p0, Lg20;->a:Ljava/lang/String;
+    iput-object p2, p0, Lg20;->c:Ldv5;
 
-    iput-boolean p2, p0, Lg20;->b:Z
+    iput-object p3, p0, Lg20;->d:Ltw0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final b()Lvqa;
+    .locals 24
 
-    const/4 v0, 0x1
+    move-object/from16 v0, p0
 
-    if-ne p0, p1, :cond_0
+    invoke-super {v0}, Lhz;->b()Lvqa;
 
-    return v0
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    return-object v1
 
     :cond_0
-    instance-of v1, p1, Lg20;
+    iget-object v1, v0, Lg20;->e:Lrx;
 
-    const/4 v2, 0x0
+    if-eqz v1, :cond_1
 
-    if-nez v1, :cond_1
-
-    return v2
+    return-object v1
 
     :cond_1
-    check-cast p1, Lg20;
+    new-instance v1, Lrx;
 
-    iget-object v1, p0, Lg20;->a:Ljava/lang/String;
+    invoke-direct {v1}, Lrx;-><init>()V
 
-    iget-object v3, p1, Lg20;->a:Ljava/lang/String;
+    iput-object v1, v0, Lg20;->e:Lrx;
 
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object v1, v0, Lg20;->d:Ltw0;
 
-    move-result v1
+    invoke-virtual {v1, v0}, Ltw0;->d(Ljava/lang/Object;)V
 
-    if-nez v1, :cond_2
+    iget-object v1, v0, Lhz;->a:Lw10;
 
-    return v2
+    iget-object v5, v1, Lw10;->r:Ljava/lang/String;
 
-    :cond_2
-    iget-boolean v1, p0, Lg20;->b:Z
+    iget-object v2, v1, Lw10;->e:Lw00;
 
-    iget-boolean p1, p1, Lg20;->b:Z
+    iget-wide v8, v2, Lw00;->a:J
 
-    if-eq v1, p1, :cond_3
+    iget-object v14, v2, Lw00;->b:Ljava/lang/String;
 
-    return v2
+    invoke-virtual {v1}, Lw10;->a()Ljava/lang/String;
 
-    :cond_3
-    return v0
+    move-result-object v23
+
+    new-instance v2, Lm2g;
+
+    const-wide/16 v3, 0x0
+
+    const-wide/16 v6, 0x0
+
+    const-wide/16 v10, 0x0
+
+    const-wide/16 v12, 0x0
+
+    const/4 v15, 0x1
+
+    const/16 v16, 0x0
+
+    const-wide/16 v17, 0x0
+
+    const-string v19, ""
+
+    const/16 v20, 0x0
+
+    const/16 v21, 0x0
+
+    const/16 v22, 0x0
+
+    invoke-direct/range {v2 .. v23}, Lm2g;-><init>(JLjava/lang/String;JJJJLjava/lang/String;ZZJLjava/lang/String;IZZLjava/lang/String;)V
+
+    iget-wide v3, v2, Lm2g;->o:J
+
+    iput-wide v3, v0, Lg20;->f:J
+
+    iget-object v1, v0, Lg20;->c:Ldv5;
+
+    invoke-virtual {v1, v2}, Ldv5;->a(Lm2g;)Ld53;
+
+    iget-object v1, v0, Lg20;->e:Lrx;
+
+    return-object v1
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public onEvent(Lp05;)V
+    .locals 4
+    .annotation runtime Lvnf;
+    .end annotation
 
-    iget-object v0, p0, Lg20;->a:Ljava/lang/String;
+    .line 4
+    iget-wide v0, p0, Lg20;->f:J
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    iget-wide v2, p1, Lsj0;->a:J
 
-    move-result v0
+    cmp-long v0, v0, v2
 
-    mul-int/lit8 v0, v0, 0x1f
+    if-nez v0, :cond_0
 
-    iget-boolean v1, p0, Lg20;->b:Z
+    .line 5
+    iget-object v0, p0, Lg20;->e:Lrx;
 
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    new-instance v1, Ljava/io/File;
 
-    move-result v1
+    iget-object p1, p1, Lp05;->c:Ljava/lang/String;
 
-    add-int/2addr v1, v0
+    invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    return v1
+    invoke-virtual {v0, v1}, Lrx;->f(Ljava/lang/Object;)V
+
+    .line 6
+    iget-object p1, p0, Lg20;->e:Lrx;
+
+    invoke-virtual {p1}, Lrx;->b()V
+
+    .line 7
+    :try_start_0
+    iget-object p1, p0, Lg20;->d:Ltw0;
+
+    invoke-virtual {p1, p0}, Ltw0;->f(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
+    :cond_0
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public onEvent(Lr05;)V
+    .locals 4
+    .annotation runtime Lvnf;
+    .end annotation
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 1
+    iget-wide v0, p0, Lg20;->f:J
 
-    const-string v1, "PreviewCacheKey(attachId="
+    iget-wide v2, p1, Lsj0;->a:J
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    cmp-long p1, v0, v2
 
-    iget-object v1, p0, Lg20;->a:Ljava/lang/String;
+    if-nez p1, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 2
+    iget-object p1, p0, Lg20;->e:Lrx;
 
-    const-string v1, ", blurred="
+    new-instance v0, Ljava/lang/Exception;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, "DownloadErrorEvent"
 
-    iget-boolean v1, p0, Lg20;->b:Z
+    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, p1, v0}, Lhz;->a(Lrx;Ljava/lang/Throwable;)V
 
-    const-string v1, ")"
+    .line 3
+    :try_start_0
+    iget-object p1, p0, Lg20;->d:Ltw0;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p0}, Ltw0;->f(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :catchall_0
+    :cond_0
+    return-void
 .end method

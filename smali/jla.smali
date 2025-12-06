@@ -1,47 +1,29 @@
-.class public final Ljla;
-.super Lr55;
+.class public abstract Ljla;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final u0:Lsh8;
-
-.field public final v0:F
-
-
 # direct methods
-.method public constructor <init>(Lsh8;F)V
+.method public static a(Landroid/app/Notification$BigPictureStyle;Landroid/graphics/drawable/Icon;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ljla;->u0:Lsh8;
-
-    iput p2, p0, Ljla;->v0:F
+    invoke-virtual {p0, p1}, Landroid/app/Notification$BigPictureStyle;->bigPicture(Landroid/graphics/drawable/Icon;)Landroid/app/Notification$BigPictureStyle;
 
     return-void
 .end method
 
+.method public static b(Landroid/app/Notification$BigPictureStyle;Ljava/lang/CharSequence;)V
+    .locals 0
 
-# virtual methods
-.method public final c()Z
-    .locals 1
+    invoke-virtual {p0, p1}, Landroid/app/Notification$BigPictureStyle;->setContentDescription(Ljava/lang/CharSequence;)Landroid/app/Notification$BigPictureStyle;
 
-    const/4 v0, 0x1
-
-    return v0
+    return-void
 .end method
 
-.method public final e(FFFLnhe;)V
-    .locals 1
+.method public static c(Landroid/app/Notification$BigPictureStyle;Z)V
+    .locals 0
 
-    iget v0, p0, Ljla;->v0:F
-
-    sub-float/2addr p2, v0
-
-    iget-object v0, p0, Ljla;->u0:Lsh8;
-
-    invoke-virtual {v0, p1, p2, p3, p4}, Lsh8;->e(FFFLnhe;)V
+    invoke-virtual {p0, p1}, Landroid/app/Notification$BigPictureStyle;->showBigPictureWhenCollapsed(Z)Landroid/app/Notification$BigPictureStyle;
 
     return-void
 .end method

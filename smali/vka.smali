@@ -1,37 +1,15 @@
-.class public final Lvka;
-.super Lg3;
+.class public abstract Lvka;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:J
-
-
 # direct methods
-.method public constructor <init>(Lyha;J)V
+.method public static a(Landroid/app/NotificationChannel;)Z
     .locals 0
 
-    invoke-direct {p0, p1}, Lg3;-><init>(Luka;)V
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->canBubble()Z
 
-    iput-wide p2, p0, Lvka;->b:J
+    move-result p0
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final o(Lela;)V
-    .locals 3
-
-    new-instance v0, Lyia;
-
-    iget-wide v1, p0, Lvka;->b:J
-
-    invoke-direct {v0, p1, v1, v2}, Lyia;-><init>(Lela;J)V
-
-    iget-object p1, p0, Lg3;->a:Luka;
-
-    invoke-interface {p1, v0}, Luka;->a(Lela;)V
-
-    return-void
+    return p0
 .end method

@@ -2,129 +2,168 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lty5;
-
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:[Lty5;
-
-.field public final synthetic c:Lsgf;
+.field public final a:Landroid/util/SparseBooleanArray;
 
 
 # direct methods
-.method public constructor <init>([Lty5;Lfj6;)V
-    .locals 1
+.method public constructor <init>(Landroid/util/SparseBooleanArray;)V
+    .locals 0
 
-    const/4 v0, 0x0
-
-    iput v0, p0, Lz16;->a:I
-
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-object p1, p0, Lz16;->b:[Lty5;
-
-    check-cast p2, Lsgf;
-
-    iput-object p2, p0, Lz16;->c:Lsgf;
-
-    return-void
-.end method
-
-.method public constructor <init>([Lty5;Lgj6;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lz16;->a:I
-
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 4
-    iput-object p1, p0, Lz16;->b:[Lty5;
-
-    check-cast p2, Lsgf;
-
-    iput-object p2, p0, Lz16;->c:Lsgf;
+    iput-object p1, p0, Lz16;->a:Landroid/util/SparseBooleanArray;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 4
+.method public final a(I)I
+    .locals 2
 
-    iget v0, p0, Lz16;->a:I
+    iget-object v0, p0, Lz16;->a:Landroid/util/SparseBooleanArray;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Landroid/util/SparseBooleanArray;->size()I
 
-    sget-object v0, Ls24;->Z:Ls24;
+    move-result v1
 
-    new-instance v1, Ly16;
+    invoke-static {p1, v1}, Lfsi;->c(II)V
+
+    invoke-virtual {v0, p1}, Landroid/util/SparseBooleanArray;->keyAt(I)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lz16;
 
     const/4 v2, 0x0
 
-    iget-object v3, p0, Lz16;->c:Lsgf;
+    if-nez v1, :cond_1
 
-    invoke-direct {v1, v2, v3}, Ly16;-><init>(Lkotlin/coroutines/Continuation;Lgj6;)V
+    return v2
 
-    iget-object v2, p0, Lz16;->b:[Lty5;
+    :cond_1
+    check-cast p1, Lz16;
 
-    invoke-static {p1, v0, v1, p2, v2}, Lsui;->a(Lvy5;Lji6;Lbj6;Lkotlin/coroutines/Continuation;[Lty5;)Ljava/lang/Object;
+    sget v1, Lxxg;->a:I
 
-    move-result-object p1
+    const/16 v3, 0x18
 
-    sget-object p2, Lr54;->a:Lr54;
+    iget-object v4, p0, Lz16;->a:Landroid/util/SparseBooleanArray;
 
-    if-ne p1, p2, :cond_0
+    if-ge v1, v3, :cond_5
+
+    invoke-virtual {v4}, Landroid/util/SparseBooleanArray;->size()I
+
+    move-result v1
+
+    iget-object v3, p1, Lz16;->a:Landroid/util/SparseBooleanArray;
+
+    invoke-virtual {v3}, Landroid/util/SparseBooleanArray;->size()I
+
+    move-result v3
+
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    move v1, v2
+
+    :goto_0
+    invoke-virtual {v4}, Landroid/util/SparseBooleanArray;->size()I
+
+    move-result v3
+
+    if-ge v1, v3, :cond_4
+
+    invoke-virtual {p0, v1}, Lz16;->a(I)I
+
+    move-result v3
+
+    invoke-virtual {p1, v1}, Lz16;->a(I)I
+
+    move-result v5
+
+    if-eq v3, v5, :cond_3
+
+    return v2
+
+    :cond_3
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_4
+    return v0
+
+    :cond_5
+    iget-object p1, p1, Lz16;->a:Landroid/util/SparseBooleanArray;
+
+    invoke-virtual {v4, p1}, Landroid/util/SparseBooleanArray;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    sget v0, Lxxg;->a:I
+
+    const/16 v1, 0x18
+
+    iget-object v2, p0, Lz16;->a:Landroid/util/SparseBooleanArray;
+
+    if-ge v0, v1, :cond_1
+
+    invoke-virtual {v2}, Landroid/util/SparseBooleanArray;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    :goto_0
+    invoke-virtual {v2}, Landroid/util/SparseBooleanArray;->size()I
+
+    move-result v3
+
+    if-ge v1, v3, :cond_0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    invoke-virtual {p0, v1}, Lz16;->a(I)I
+
+    move-result v3
+
+    add-int/2addr v0, v3
+
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
     :cond_0
-    sget-object p1, Lccg;->a:Lccg;
-
-    :goto_0
-    return-object p1
-
-    :pswitch_0
-    sget-object v0, Ls24;->Z:Ls24;
-
-    new-instance v1, Ly16;
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Lz16;->c:Lsgf;
-
-    invoke-direct {v1, v2, v3}, Ly16;-><init>(Lkotlin/coroutines/Continuation;Lfj6;)V
-
-    iget-object v2, p0, Lz16;->b:[Lty5;
-
-    invoke-static {p1, v0, v1, p2, v2}, Lsui;->a(Lvy5;Lji6;Lbj6;Lkotlin/coroutines/Continuation;[Lty5;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lr54;->a:Lr54;
-
-    if-ne p1, p2, :cond_1
-
-    goto :goto_1
+    return v0
 
     :cond_1
-    sget-object p1, Lccg;->a:Lccg;
+    invoke-virtual {v2}, Landroid/util/SparseBooleanArray;->hashCode()I
 
-    :goto_1
-    return-object p1
+    move-result v0
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method

@@ -1,191 +1,135 @@
-.class public abstract Ltci;
+.class public final Ltci;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lhdi;
+
+
+# instance fields
+.field public final a:I
+
 
 # direct methods
-.method public static final a(I)Lu45;
-    .locals 4
+.method public constructor <init>(I)V
+    .locals 0
 
-    if-eqz p0, :cond_5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_4
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_3
-
-    const/4 v0, 0x3
-
-    if-eq p0, v0, :cond_2
-
-    const/4 v0, 0x4
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x5
-
-    sget-object v1, Lu45;->Y:Lu45;
-
-    if-eq p0, v0, :cond_0
-
-    const-string v0, "unknown font size mode "
-
-    invoke-static {p0, v0}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    new-instance v3, Ljava/lang/IllegalStateException;
-
-    invoke-static {p0, v0}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v3, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    const-string p0, "OneMeDynamicFont"
-
-    invoke-static {p0, v2, v3}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_0
-    return-object v1
-
-    :cond_1
-    sget-object p0, Lu45;->X:Lu45;
-
-    return-object p0
-
-    :cond_2
-    sget-object p0, Lu45;->o:Lu45;
-
-    return-object p0
-
-    :cond_3
-    sget-object p0, Lu45;->c:Lu45;
-
-    return-object p0
-
-    :cond_4
-    sget-object p0, Lu45;->b:Lu45;
-
-    return-object p0
-
-    :cond_5
-    sget-object p0, Lu45;->a:Lu45;
-
-    return-object p0
-.end method
-
-.method public static final b(JJJ)V
-    .locals 4
-
-    or-long v0, p2, p4
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-ltz v0, :cond_0
-
-    cmp-long v0, p2, p0
-
-    if-gtz v0, :cond_0
-
-    sub-long v0, p0, p2
-
-    cmp-long v0, v0, p4
-
-    if-ltz v0, :cond_0
+    iput p1, p0, Ltci;->a:I
 
     return-void
-
-    :cond_0
-    new-instance v0, Ljava/lang/ArrayIndexOutOfBoundsException;
-
-    const-string v1, "size="
-
-    const-string v2, " offset="
-
-    invoke-static {p0, p1, v1, v2}, Ldy1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p2, p3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string p1, " byteCount="
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p4, p5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw v0
 .end method
 
 
 # virtual methods
-.method public c(Landroid/view/View;I)I
-    .locals 0
+.method public final annotationType()Ljava/lang/Class;
+    .locals 1
 
+    const-class v0, Lhdi;
+
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    instance-of v0, p1, Lhdi;
+
+    if-nez v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    check-cast p1, Lhdi;
+
+    check-cast p1, Ltci;
+
+    iget v0, p1, Ltci;->a:I
+
+    iget v1, p0, Ltci;->a:I
+
+    if-ne v1, v0, :cond_2
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object p1, Lfdi;->a:Lfdi;
+
+    invoke-virtual {p1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_2
+    :goto_1
     const/4 p1, 0x0
 
     return p1
 .end method
 
-.method public d(Landroid/view/View;I)I
-    .locals 0
+.method public final hashCode()I
+    .locals 3
 
-    const/4 p1, 0x0
+    iget v0, p0, Ltci;->a:I
 
-    return p1
+    const v1, 0xde0d66
+
+    xor-int/2addr v0, v1
+
+    sget-object v1, Lfdi;->a:Lfdi;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    const v2, 0x79ad669e
+
+    xor-int/2addr v1, v2
+
+    add-int/2addr v0, v1
+
+    return v0
 .end method
 
-.method public e(I)I
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    return p1
-.end method
+    new-instance v0, Ljava/lang/StringBuilder;
 
-.method public f(Landroid/view/View;)I
-    .locals 0
+    const-string v1, "@com.google.firebase.encoders.proto.Protobuf(tag="
 
-    const/4 p1, 0x0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return p1
-.end method
+    iget v1, p0, Ltci;->a:I
 
-.method public g(Landroid/view/View;)I
-    .locals 0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const/4 p1, 0x0
+    const-string v1, "intEncoding="
 
-    return p1
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public h(Landroid/view/View;I)V
-    .locals 0
+    sget-object v1, Lfdi;->a:Lfdi;
 
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-.method public i(I)V
-    .locals 0
+    const/16 v1, 0x29
 
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-.method public abstract j(Landroid/view/View;II)V
-.end method
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-.method public abstract k(Landroid/view/View;FF)V
-.end method
+    move-result-object v0
 
-.method public abstract l(Landroid/view/View;I)Z
+    return-object v0
 .end method

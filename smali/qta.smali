@@ -1,188 +1,268 @@
 .class public final Lqta;
-.super Ljava/lang/Object;
+.super Ljava/util/concurrent/atomic/AtomicLong;
 .source "SourceFile"
 
 # interfaces
-.implements Lulf;
+.implements Lvta;
+.implements Lpy4;
+.implements Lrta;
 
 
 # instance fields
-.field public final a:Liu7;
+.field public final X:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public final b:Ljava/lang/Object;
+.field public final a:Lvta;
 
-.field public final c:Ljava/lang/Object;
+.field public final b:J
 
-.field public final d:Ljava/lang/Object;
+.field public final c:Ljava/util/concurrent/TimeUnit;
 
-.field public final e:Ljava/lang/Object;
+.field public final d:Lh0e;
 
-.field public final f:Ljava/lang/Object;
+.field public final o:Ln42;
 
 
 # direct methods
-.method public constructor <init>(Liu7;)V
-    .locals 2
+.method public constructor <init>(Lvta;JLh0e;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    iput-object p1, p0, Lqta;->a:Liu7;
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
 
-    new-instance p1, Lpta;
+    iput-object p1, p0, Lqta;->a:Lvta;
 
-    const/4 v0, 0x0
+    iput-wide p2, p0, Lqta;->b:J
 
-    invoke-direct {p1, p0, v0}, Lpta;-><init>(Lqta;I)V
+    iput-object v0, p0, Lqta;->c:Ljava/util/concurrent/TimeUnit;
 
-    const/4 v0, 0x2
+    iput-object p4, p0, Lqta;->d:Lh0e;
 
-    invoke-static {v0, p1}, Lrci;->b(ILji6;)Liu7;
+    new-instance p1, Ln42;
 
-    move-result-object p1
+    const/4 p2, 0x2
 
-    iput-object p1, p0, Lqta;->b:Ljava/lang/Object;
+    invoke-direct {p1, p2}, Ln42;-><init>(I)V
 
-    new-instance p1, Lpta;
+    iput-object p1, p0, Lqta;->o:Ln42;
 
-    const/4 v1, 0x1
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-direct {p1, p0, v1}, Lpta;-><init>(Lqta;I)V
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    invoke-static {v0, p1}, Lrci;->b(ILji6;)Liu7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lqta;->c:Ljava/lang/Object;
-
-    new-instance p1, Lpta;
-
-    const/4 v1, 0x2
-
-    invoke-direct {p1, p0, v1}, Lpta;-><init>(Lqta;I)V
-
-    invoke-static {v0, p1}, Lrci;->b(ILji6;)Liu7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lqta;->d:Ljava/lang/Object;
-
-    new-instance p1, Luna;
-
-    const/16 v1, 0xf
-
-    invoke-direct {p1, v1}, Luna;-><init>(I)V
-
-    invoke-static {v0, p1}, Lrci;->b(ILji6;)Liu7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lqta;->e:Ljava/lang/Object;
-
-    new-instance p1, Lpta;
-
-    const/4 v1, 0x3
-
-    invoke-direct {p1, p0, v1}, Lpta;-><init>(Lqta;I)V
-
-    invoke-static {v0, p1}, Lrci;->b(ILji6;)Liu7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lqta;->f:Ljava/lang/Object;
-
-    new-instance p1, Lpta;
-
-    const/4 v1, 0x4
-
-    invoke-direct {p1, p0, v1}, Lpta;-><init>(Lqta;I)V
-
-    invoke-static {v0, p1}, Lrci;->b(ILji6;)Liu7;
+    iput-object p1, p0, Lqta;->X:Ljava/util/concurrent/atomic/AtomicReference;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lk54;
-    .locals 1
+.method public final a(J)V
+    .locals 2
 
-    iget-object v0, p0, Lqta;->b:Ljava/lang/Object;
+    const-wide v0, 0x7fffffffffffffffL
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2, v0, v1}, Ljava/util/concurrent/atomic/AtomicLong;->compareAndSet(JJ)Z
 
-    move-result-object v0
+    move-result p1
 
-    check-cast v0, Lk54;
+    if-eqz p1, :cond_0
 
-    return-object v0
+    iget-object p1, p0, Lqta;->X:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-static {p1}, Lty4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    new-instance p1, Ljava/util/concurrent/TimeoutException;
+
+    iget-wide v0, p0, Lqta;->b:J
+
+    iget-object p2, p0, Lqta;->c:Ljava/util/concurrent/TimeUnit;
+
+    invoke-static {v0, v1, p2}, Lbj5;->c(JLjava/util/concurrent/TimeUnit;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/util/concurrent/TimeoutException;-><init>(Ljava/lang/String;)V
+
+    iget-object p2, p0, Lqta;->a:Lvta;
+
+    invoke-interface {p2, p1}, Lvta;->onError(Ljava/lang/Throwable;)V
+
+    iget-object p1, p0, Lqta;->d:Lh0e;
+
+    invoke-interface {p1}, Lpy4;->dispose()V
+
+    :cond_0
+    return-void
 .end method
 
-.method public final b()Lk54;
-    .locals 1
+.method public final b()V
+    .locals 4
 
-    iget-object v0, p0, Lqta;->c:Ljava/lang/Object;
+    const-wide v0, 0x7fffffffffffffffL
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicLong;->getAndSet(J)J
 
-    move-result-object v0
+    move-result-wide v2
 
-    check-cast v0, Lk54;
+    cmp-long v0, v2, v0
 
-    return-object v0
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lqta;->o:Ln42;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v0}, Lty4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    iget-object v0, p0, Lqta;->a:Lvta;
+
+    invoke-interface {v0}, Lvta;->b()V
+
+    iget-object v0, p0, Lqta;->d:Lh0e;
+
+    invoke-interface {v0}, Lpy4;->dispose()V
+
+    :cond_0
+    return-void
 .end method
 
-.method public final c()Lce8;
+.method public final c(Lpy4;)V
     .locals 1
 
-    iget-object v0, p0, Lqta;->e:Ljava/lang/Object;
+    iget-object v0, p0, Lqta;->X:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-static {v0, p1}, Lty4;->h(Ljava/util/concurrent/atomic/AtomicReference;Lpy4;)Z
 
-    move-result-object v0
-
-    check-cast v0, Lce8;
-
-    return-object v0
+    return-void
 .end method
 
-.method public final d()Lk54;
+.method public final dispose()V
     .locals 1
 
-    iget-object v0, p0, Lqta;->d:Ljava/lang/Object;
+    iget-object v0, p0, Lqta;->X:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-static {v0}, Lty4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
 
-    move-result-object v0
+    iget-object v0, p0, Lqta;->d:Lh0e;
 
-    check-cast v0, Lk54;
+    invoke-interface {v0}, Lpy4;->dispose()V
 
-    return-object v0
+    return-void
 .end method
 
-.method public final e()Leva;
+.method public final e()Z
     .locals 1
 
-    iget-object v0, p0, Lqta;->a:Liu7;
+    iget-object v0, p0, Lqta;->X:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Leva;
+    check-cast v0, Lpy4;
 
-    return-object v0
+    invoke-static {v0}, Lty4;->c(Lpy4;)Z
+
+    move-result v0
+
+    return v0
 .end method
 
-.method public final f()Lk54;
-    .locals 1
+.method public final f(Ljava/lang/Object;)V
+    .locals 5
 
-    iget-object v0, p0, Lqta;->f:Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    move-result-wide v0
 
-    move-result-object v0
+    const-wide v2, 0x7fffffffffffffffL
 
-    check-cast v0, Lk54;
+    cmp-long v2, v0, v2
 
-    return-object v0
+    if-eqz v2, :cond_1
+
+    const-wide/16 v2, 0x1
+
+    add-long/2addr v2, v0
+
+    invoke-virtual {p0, v0, v1, v2, v3}, Ljava/util/concurrent/atomic/AtomicLong;->compareAndSet(JJ)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lqta;->o:Ln42;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lpy4;
+
+    invoke-interface {v1}, Lpy4;->dispose()V
+
+    iget-object v1, p0, Lqta;->a:Lvta;
+
+    invoke-interface {v1, p1}, Lvta;->f(Ljava/lang/Object;)V
+
+    new-instance p1, Ln76;
+
+    invoke-direct {p1, v2, v3, p0}, Ln76;-><init>(JLrta;)V
+
+    iget-wide v1, p0, Lqta;->b:J
+
+    iget-object v3, p0, Lqta;->c:Ljava/util/concurrent/TimeUnit;
+
+    iget-object v4, p0, Lqta;->d:Lh0e;
+
+    invoke-virtual {v4, p1, v1, v2, v3}, Lh0e;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lpy4;
+
+    move-result-object p1
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v0, p1}, Lty4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lpy4;)Z
+
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 4
+
+    const-wide v0, 0x7fffffffffffffffL
+
+    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicLong;->getAndSet(J)J
+
+    move-result-wide v2
+
+    cmp-long v0, v2, v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lqta;->o:Ln42;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v0}, Lty4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    iget-object v0, p0, Lqta;->a:Lvta;
+
+    invoke-interface {v0, p1}, Lvta;->onError(Ljava/lang/Throwable;)V
+
+    iget-object p1, p0, Lqta;->d:Lh0e;
+
+    invoke-interface {p1}, Lpy4;->dispose()V
+
+    return-void
+
+    :cond_0
+    invoke-static {p1}, Lt8j;->a(Ljava/lang/Throwable;)V
+
+    return-void
 .end method

@@ -1,26 +1,116 @@
-.class public interface abstract Lk28;
+.class public final synthetic Lk28;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lmi4;
+
+
+# instance fields
+.field public final synthetic a:J
+
+.field public final synthetic b:J
+
+.field public final synthetic c:Lcf8;
+
+.field public final synthetic d:F
+
+.field public final synthetic o:Ljava/lang/Long;
+
+
+# direct methods
+.method public synthetic constructor <init>(JJLcf8;FLjava/lang/Long;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lk28;->a:J
+
+    iput-wide p3, p0, Lk28;->b:J
+
+    iput-object p5, p0, Lk28;->c:Lcf8;
+
+    iput p6, p0, Lk28;->d:F
+
+    iput-object p7, p0, Lk28;->o:Ljava/lang/Long;
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public abstract a()V
-.end method
+.method public final a()Ljava/lang/Object;
+    .locals 8
 
-.method public abstract b(Ljava/lang/Long;)V
-.end method
+    new-instance v0, Landroidx/fragment/app/FragmentWrapperWidget;
 
-.method public abstract c()V
-.end method
+    iget-wide v1, p0, Lk28;->a:J
 
-.method public abstract d()Lty5;
-.end method
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-.method public abstract e()V
-.end method
+    move-result-object v1
 
-.method public abstract release()V
-.end method
+    new-instance v2, Limb;
 
-.method public abstract seekTo(J)V
+    const-string v3, "ru.ok.tamtam.extra.CHAT_ID"
+
+    invoke-direct {v2, v3, v1}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    iget-wide v3, p0, Lk28;->b:J
+
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    new-instance v3, Limb;
+
+    const-string v4, "ru.ok.tamtam.extra.MESSAGE_ID"
+
+    invoke-direct {v3, v4, v1}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    new-instance v1, Limb;
+
+    const-string v4, "ru.ok.tamtam.extra.LOCATION"
+
+    iget-object v5, p0, Lk28;->c:Lcf8;
+
+    invoke-direct {v1, v4, v5}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    iget v4, p0, Lk28;->d:F
+
+    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v4
+
+    new-instance v5, Limb;
+
+    const-string v6, "ru.ok.tamtam.extra.ZOOM"
+
+    invoke-direct {v5, v6, v4}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    new-instance v4, Limb;
+
+    const-string v6, "ru.ok.tamtam.extra.CONTACT_ID"
+
+    iget-object v7, p0, Lk28;->o:Ljava/lang/Long;
+
+    invoke-direct {v4, v6, v7}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array {v2, v3, v1, v5, v4}, [Limb;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lgwi;->b([Limb;)Landroid/os/Bundle;
+
+    move-result-object v1
+
+    const v2, 0x7a3a1dca
+
+    const-class v3, Lru/ok/messages/location/FrgLocationMap;
+
+    const-string v4, "ru.ok.messages.location.FrgLocationMap"
+
+    invoke-direct {v0, v2, v3, v4, v1}, Landroidx/fragment/app/FragmentWrapperWidget;-><init>(ILjava/lang/Class;Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-object v0
 .end method

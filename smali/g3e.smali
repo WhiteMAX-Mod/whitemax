@@ -1,29 +1,27 @@
 .class public final Lg3e;
-.super Ljzi;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lg3e;
+# instance fields
+.field public a:F
 
-.field public static final c:Lg3e;
+.field public b:I
+
+.field public c:I
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(IFI)V
+    .locals 0
 
-    new-instance v0, Lg3e;
+    iput p2, p0, Lg3e;->a:F
 
-    invoke-direct {v0}, Ljzi;-><init>()V
+    iput p1, p0, Lg3e;->b:I
 
-    sput-object v0, Lg3e;->b:Lg3e;
+    iput p3, p0, Lg3e;->c:I
 
-    new-instance v0, Lg3e;
-
-    invoke-direct {v0}, Ljzi;-><init>()V
-
-    sput-object v0, Lg3e;->c:Lg3e;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

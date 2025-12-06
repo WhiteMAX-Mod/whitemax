@@ -1,90 +1,76 @@
-.class public final Ldii;
-.super Ljava/lang/Object;
+.class public abstract Ldii;
+.super Lqhi;
 .source "SourceFile"
 
 # interfaces
-.implements Ltha;
+.implements Ljava/util/Set;
 
 
-# static fields
-.field public static final a:Ldii;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, Ldii;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ldii;->a:Ldii;
-
-    new-instance v0, Lr8i;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lr8i;-><init>(I)V
-
-    const-class v1, Lm9i;
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x5
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
-
-    return-void
-.end method
+# instance fields
+.field public transient b:Lzhi;
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    if-ne p1, p0, :cond_0
 
-    move-result-object p1
+    const/4 p1, 0x1
 
-    throw p1
+    return p1
+
+    :cond_0
+    if-ne p0, p1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    instance-of v0, p1, Ljava/util/Set;
+
+    if-eqz v0, :cond_2
+
+    check-cast p1, Ljava/util/Set;
+
+    :try_start_0
+    invoke-interface {p0}, Ljava/util/Set;->size()I
+
+    move-result v0
+
+    invoke-interface {p1}, Ljava/util/Set;->size()I
+
+    move-result v1
+
+    if-ne v0, v1, :cond_2
+
+    invoke-interface {p0, p1}, Ljava/util/Set;->containsAll(Ljava/util/Collection;)Z
+
+    move-result p1
+    :try_end_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
+
+    if-eqz p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x1
+
+    goto :goto_1
+
+    :catch_0
+    :cond_2
+    const/4 p1, 0x0
+
+    :goto_1
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    invoke-static {p0}, Lbvi;->c(Ljava/util/Set;)I
+
+    move-result v0
+
+    return v0
 .end method

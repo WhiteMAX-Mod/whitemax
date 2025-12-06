@@ -1,64 +1,30 @@
-.class public final Lq3d;
+.class public abstract Lq3d;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Ls3d;
 
 
 # static fields
-.field public static final a:Lq3d;
+.field public static oneme_action_share_qr_code_error:I = 0x7f1307ba
 
+.field public static oneme_contact_not_found_bottom_sheet_negative_button:I = 0x7f130825
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public static oneme_contact_not_found_bottom_sheet_subtitle:I = 0x7f130827
 
-    new-instance v0, Lq3d;
+.field public static oneme_contact_not_found_bottom_sheet_title:I = 0x7f130828
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_found_contact_is_self_error:I = 0x7f130859
 
-    sput-object v0, Lq3d;->a:Lq3d;
+.field public static oneme_invite_actions_header:I = 0x7f130865
 
-    return-void
-.end method
+.field public static oneme_invite_by_link_action:I = 0x7f130866
 
+.field public static oneme_invite_by_phone_action:I = 0x7f130867
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.field public static oneme_invite_by_phone_continue_button:I = 0x7f130868
 
-    const/4 v0, 0x1
+.field public static oneme_invite_by_phone_description:I = 0x7f130869
 
-    if-ne p0, p1, :cond_0
+.field public static oneme_invite_by_phone_hint_default:I = 0x7f13086a
 
-    return v0
+.field public static oneme_invite_by_phone_title:I = 0x7f13086b
 
-    :cond_0
-    instance-of p1, p1, Lq3d;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x3f572bba
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "RequestPermission"
-
-    return-object v0
-.end method
+.field public static oneme_invite_friends_to_max_bottom_sheet_title:I = 0x7f13086c

@@ -1,64 +1,69 @@
 .class public final Lt3e;
-.super Ljava/lang/Object;
+.super Lfgb;
 .source "SourceFile"
+
+# interfaces
+.implements Lqda;
 
 
 # instance fields
-.field public a:Z
-
-.field public b:I
-
-.field public c:I
-
-.field public d:I
+.field public c:Z
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final onOverScrolled(IIZZ)V
+    .locals 1
 
-    iget-boolean v0, p0, Lt3e;->a:Z
+    if-gtz p2, :cond_0
 
-    if-eqz v0, :cond_0
+    if-eqz p4, :cond_0
 
-    const-string v0, "ss"
+    const/4 v0, 0x1
 
-    return-object v0
+    goto :goto_0
 
     :cond_0
-    new-instance v0, Ljava/lang/StringBuilder;
+    const/4 v0, 0x0
 
-    const-string v1, "sz="
+    :goto_0
+    iput-boolean v0, p0, Lt3e;->c:Z
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/view/View;->onOverScrolled(IIZZ)V
 
-    iget v1, p0, Lt3e;->b:I
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+.method public final onTouchEvent(Landroid/view/MotionEvent;)Z
+    .locals 3
 
-    const-string v1, "x"
+    invoke-super {p0, p1}, Lfgb;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v0
 
-    iget v1, p0, Lt3e;->c:I
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result v1
 
-    const-string v1, ":fit="
+    const/4 v2, 0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eq v1, v2, :cond_1
 
-    iget v1, p0, Lt3e;->d:I
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
-    invoke-static {v1}, Labd;->b(I)Ljava/lang/String;
+    move-result p1
 
-    move-result-object v1
+    if-nez p1, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_0
+    return v0
 
-    move-result-object v0
+    :cond_1
+    :goto_0
+    const/4 p1, 0x0
 
-    return-object v0
+    iput-boolean p1, p0, Lt3e;->c:Z
+
+    return v0
 .end method

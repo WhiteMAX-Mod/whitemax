@@ -1,152 +1,129 @@
-.class public final synthetic Lndg;
-.super Ljava/lang/Object;
+.class public final enum Lndg;
+.super Ljava/lang/Enum;
 .source "SourceFile"
-
-# interfaces
-.implements Lhn6;
 
 
 # static fields
-.field public static final a:Lndg;
+.field public static final synthetic X:[Lndg;
 
-.field private static final descriptor:Lb3e;
+.field public static final enum b:Lndg;
+
+.field public static final enum c:Lndg;
+
+.field public static final enum d:Lndg;
+
+.field public static final enum o:Lndg;
+
+
+# instance fields
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 8
 
     new-instance v0, Lndg;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lndg;->a:Lndg;
-
-    new-instance v1, Levb;
-
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.unsupported.UnsupportedRequest"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v0, v3}, Levb;-><init>(Ljava/lang/String;Lhn6;I)V
-
-    const-string v0, "requestId"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Levb;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Lndg;->descriptor:Lb3e;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Ld9;)Ljava/lang/Object;
-    .locals 8
-
-    sget-object v0, Lndg;->descriptor:Lb3e;
-
-    invoke-virtual {p1, v0}, Ld9;->k(Lb3e;)Ld9;
-
-    move-result-object p1
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    move v4, v1
-
-    move v5, v2
-
-    :goto_0
-    if-eqz v4, :cond_2
-
-    invoke-virtual {p1, v0}, Ld9;->q(Lb3e;)I
-
-    move-result v6
-
-    const/4 v7, -0x1
-
-    if-eq v6, v7, :cond_1
-
-    if-nez v6, :cond_0
-
-    invoke-virtual {p1, v0, v2}, Ld9;->w(Lb3e;I)Ljava/lang/String;
-
-    move-result-object v3
-
-    move v5, v1
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
-
-    invoke-direct {p1, v6}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
-
-    throw p1
-
-    :cond_1
-    move v4, v2
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p1, v0}, Ld9;->z(Lb3e;)V
-
-    new-instance p1, Lpdg;
-
-    invoke-direct {p1, v5, v3}, Lpdg;-><init>(ILjava/lang/String;)V
-
-    return-object p1
-.end method
-
-.method public final b(Lo24;Ljava/lang/Object;)V
-    .locals 2
-
-    check-cast p2, Lpdg;
-
-    sget-object v0, Lndg;->descriptor:Lb3e;
-
-    invoke-virtual {p1, v0}, Lo24;->b(Lb3e;)Lo24;
-
-    move-result-object p1
-
-    iget-object p2, p2, Lpdg;->a:Ljava/lang/String;
-
     const/4 v1, 0x0
 
-    invoke-virtual {p1, v0, v1, p2}, Lo24;->l(Lb3e;ILjava/lang/String;)V
+    const-string v2, "no_connection_timeout"
 
-    invoke-virtual {p1}, Lo24;->m()V
+    const-string v3, "NO_CONNECTION_TIMEOUT"
+
+    invoke-direct {v0, v3, v1, v2}, Lndg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lndg;->b:Lndg;
+
+    new-instance v1, Lndg;
+
+    const/4 v2, 0x1
+
+    const-string v3, "no_data_timeout"
+
+    const-string v4, "NO_DATA_TIMEOUT"
+
+    invoke-direct {v1, v4, v2, v3}, Lndg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v1, Lndg;->c:Lndg;
+
+    new-instance v2, Lndg;
+
+    const/4 v3, 0x2
+
+    const-string v4, "connection_failed"
+
+    const-string v5, "CONNECTION_FAILED"
+
+    invoke-direct {v2, v5, v3, v4}, Lndg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    new-instance v3, Lndg;
+
+    const/4 v4, 0x3
+
+    const-string v5, "success_audio"
+
+    const-string v6, "SUCCESS_AUDIO"
+
+    invoke-direct {v3, v6, v4, v5}, Lndg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v3, Lndg;->d:Lndg;
+
+    new-instance v4, Lndg;
+
+    const/4 v5, 0x4
+
+    const-string v6, "success_connection"
+
+    const-string v7, "SUCCESS_CONNECTION"
+
+    invoke-direct {v4, v7, v5, v6}, Lndg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v4, Lndg;->o:Lndg;
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Lndg;
+
+    move-result-object v0
+
+    sput-object v0, Lndg;->X:[Lndg;
 
     return-void
 .end method
 
-.method public final c()[Lur7;
-    .locals 3
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    new-array v0, v0, [Lur7;
+    iput-object p3, p0, Lndg;->a:Ljava/lang/String;
 
-    sget-object v1, Lvaf;->a:Lvaf;
-
-    const/4 v2, 0x0
-
-    aput-object v1, v0, v2
-
-    return-object v0
+    return-void
 .end method
 
-.method public final d()Lb3e;
+.method public static valueOf(Ljava/lang/String;)Lndg;
     .locals 1
 
-    sget-object v0, Lndg;->descriptor:Lb3e;
+    const-class v0, Lndg;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lndg;
+
+    return-object p0
+.end method
+
+.method public static values()[Lndg;
+    .locals 1
+
+    sget-object v0, Lndg;->X:[Lndg;
+
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lndg;
 
     return-object v0
 .end method

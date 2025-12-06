@@ -1,149 +1,55 @@
-.class public abstract Lpd0;
-.super Le5a;
+.class public final Lpd0;
+.super Lq44;
 .source "SourceFile"
 
 
+# instance fields
+.field public X:Lk;
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lvd0;
+
+.field public d:Lvd0;
+
+.field public o:Ljava/lang/Object;
+
+.field public s0:I
+
+
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Lvd0;Lq44;)V
     .locals 0
 
-    packed-switch p1, :pswitch_data_0
+    iput-object p1, p0, Lpd0;->Z:Lvd0;
 
-    :pswitch_0
-    sget-object p1, Lccg;->a:Lccg;
-
-    invoke-direct {p0, p1}, Le5a;-><init>(Ljava/lang/Object;)V
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
 
-    :pswitch_1
-    sget-object p1, Lccg;->a:Lccg;
 
-    invoke-direct {p0, p1}, Le5a;-><init>(Ljava/lang/Object;)V
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    return-void
+    iput-object p1, p0, Lpd0;->Y:Ljava/lang/Object;
 
-    :pswitch_2
-    sget-object p1, Lccg;->a:Lccg;
+    iget p1, p0, Lpd0;->s0:I
 
-    invoke-direct {p0, p1}, Le5a;-><init>(Ljava/lang/Object;)V
+    const/high16 v0, -0x80000000
 
-    return-void
+    or-int/2addr p1, v0
 
-    :pswitch_3
-    sget-object p1, Lccg;->a:Lccg;
+    iput p1, p0, Lpd0;->s0:I
 
-    invoke-direct {p0, p1}, Le5a;-><init>(Ljava/lang/Object;)V
+    iget-object p1, p0, Lpd0;->Z:Lvd0;
 
-    return-void
+    const/4 v0, 0x0
 
-    :pswitch_4
-    sget-object p1, Lccg;->a:Lccg;
+    invoke-static {p1, v0, v0, v0, p0}, Lvd0;->t(Lvd0;Landroid/net/Uri;Ljava/lang/String;Lk;Lq44;)Ljava/lang/Object;
 
-    invoke-direct {p0, p1}, Le5a;-><init>(Ljava/lang/Object;)V
+    move-result-object p1
 
-    return-void
-
-    :pswitch_5
-    sget-object p1, Lccg;->a:Lccg;
-
-    invoke-direct {p0, p1}, Le5a;-><init>(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_6
-    sget-object p1, Lccg;->a:Lccg;
-
-    invoke-direct {p0, p1}, Le5a;-><init>(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_7
-    sget-object p1, Lccg;->a:Lccg;
-
-    invoke-direct {p0, p1}, Le5a;-><init>(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_8
-    sget-object p1, Lccg;->a:Lccg;
-
-    invoke-direct {p0, p1}, Le5a;-><init>(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_9
-    sget-object p1, Lccg;->a:Lccg;
-
-    invoke-direct {p0, p1}, Le5a;-><init>(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_a
-    sget-object p1, Lccg;->a:Lccg;
-
-    invoke-direct {p0, p1}, Le5a;-><init>(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_b
-    sget-object p1, Lccg;->a:Lccg;
-
-    invoke-direct {p0, p1}, Le5a;-><init>(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_c
-    sget-object p1, Lccg;->a:Lccg;
-
-    invoke-direct {p0, p1}, Le5a;-><init>(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_d
-    sget-object p1, Lccg;->a:Lccg;
-
-    invoke-direct {p0, p1}, Le5a;-><init>(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_e
-    sget-object p1, Lccg;->a:Lccg;
-
-    invoke-direct {p0, p1}, Le5a;-><init>(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_f
-    sget-object p1, Lccg;->a:Lccg;
-
-    invoke-direct {p0, p1}, Le5a;-><init>(Ljava/lang/Object;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_f
-        :pswitch_e
-        :pswitch_0
-        :pswitch_d
-        :pswitch_0
-        :pswitch_c
-        :pswitch_0
-        :pswitch_b
-        :pswitch_a
-        :pswitch_0
-        :pswitch_0
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-    .end packed-switch
+    return-object p1
 .end method

@@ -1,162 +1,80 @@
 .class public final Lali;
-.super Ly6i;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbai;
+.implements Lpqa;
 
 
-# instance fields
-.field public final synthetic c:I
+# static fields
+.field public static final a:Lali;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILj7i;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p1, p0, Lali;->c:I
+    new-instance v0, Lali;
 
-    invoke-direct {p0, p2}, Ly6i;-><init>(Lj7i;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lali;->a:Lali;
+
+    new-instance v0, Ltci;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Ltci;-><init>(I)V
+
+    const-class v1, Lhdi;
+
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x4
+
+    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public bridge synthetic c()Lj7i;
-    .locals 1
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    iget v0, p0, Lali;->c:I
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p1
 
-    invoke-super {p0}, Ly6i;->c()Lj7i;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    invoke-virtual {p0}, Lali;->g()Lb7i;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public bridge synthetic d()Lo3i;
-    .locals 1
-
-    iget v0, p0, Lali;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Ly6i;->d()Lo3i;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    invoke-virtual {p0}, Lali;->g()Lb7i;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public f()V
-    .locals 3
-
-    iget v0, p0, Lali;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Ly6i;->f()V
-
-    return-void
-
-    :pswitch_0
-    invoke-super {p0}, Ly6i;->f()V
-
-    iget-object v0, p0, Ly6i;->b:Lj7i;
-
-    move-object v1, v0
-
-    check-cast v1, Lb7i;
-
-    iget-object v1, v1, Lb7i;->zzb:Lh6i;
-
-    sget-object v2, Lh6i;->c:Lh6i;
-
-    if-eq v1, v2, :cond_0
-
-    check-cast v0, Lb7i;
-
-    iget-object v1, v0, Lb7i;->zzb:Lh6i;
-
-    invoke-virtual {v1}, Lh6i;->b()Lh6i;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lb7i;->zzb:Lh6i;
-
-    :cond_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public g()Lb7i;
-    .locals 1
-
-    iget-object v0, p0, Ly6i;->b:Lj7i;
-
-    check-cast v0, Lb7i;
-
-    invoke-virtual {v0}, Lj7i;->k()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Ly6i;->b:Lj7i;
-
-    check-cast v0, Lb7i;
-
-    return-object v0
-
-    :cond_0
-    iget-object v0, p0, Ly6i;->b:Lj7i;
-
-    check-cast v0, Lb7i;
-
-    iget-object v0, v0, Lb7i;->zzb:Lh6i;
-
-    invoke-virtual {v0}, Lh6i;->d()V
-
-    invoke-super {p0}, Ly6i;->c()Lj7i;
-
-    move-result-object v0
-
-    check-cast v0, Lb7i;
-
-    return-object v0
+    throw p1
 .end method

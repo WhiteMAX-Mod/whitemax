@@ -1,159 +1,228 @@
 .class public final Ly48;
-.super Lo0a;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final l:Ll4i;
+.field public a:Z
 
-.field public m:Lfx7;
+.field public b:I
 
-.field public n:Lz48;
+.field public c:I
 
+.field public d:I
 
-# direct methods
-.method public constructor <init>(Ll4i;)V
-    .locals 1
+.field public e:I
 
-    invoke-direct {p0}, Lh38;-><init>()V
+.field public f:I
 
-    iput-object p1, p0, Ly48;->l:Ll4i;
+.field public g:I
 
-    iget-object v0, p1, Ll4i;->a:Ly48;
+.field public h:I
 
-    if-nez v0, :cond_0
+.field public i:I
 
-    iput-object p0, p1, Ll4i;->a:Ly48;
+.field public j:I
 
-    return-void
+.field public k:Ljava/util/List;
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "There is already a listener registered"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
+.field public l:Z
 
 
 # virtual methods
-.method public final g()V
-    .locals 2
+.method public final a(Landroid/view/View;)V
+    .locals 7
 
-    iget-object v0, p0, Ly48;->l:Ll4i;
+    iget-object v0, p0, Ly48;->k:Ljava/util/List;
 
-    const/4 v1, 0x1
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    iput-boolean v1, v0, Ll4i;->b:Z
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, v0, Ll4i;->d:Z
-
-    iput-boolean v1, v0, Ll4i;->c:Z
-
-    iget-object v1, v0, Ll4i;->i:Ljava/util/concurrent/Semaphore;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/Semaphore;->drainPermits()I
-
-    invoke-virtual {v0}, Ll4i;->a()V
-
-    new-instance v1, Lzx;
-
-    invoke-direct {v1, v0}, Lzx;-><init>(Ll4i;)V
-
-    iput-object v1, v0, Ll4i;->g:Lzx;
-
-    invoke-virtual {v0}, Ll4i;->b()V
-
-    return-void
-.end method
-
-.method public final h()V
-    .locals 2
-
-    iget-object v0, p0, Ly48;->l:Ll4i;
+    move-result v0
 
     const/4 v1, 0x0
 
-    iput-boolean v1, v0, Ll4i;->b:Z
+    const v2, 0x7fffffff
 
-    return-void
-.end method
+    const/4 v3, 0x0
 
-.method public final j(Lfla;)V
-    .locals 0
+    :goto_0
+    if-ge v3, v0, :cond_4
 
-    invoke-super {p0, p1}, Lh38;->j(Lfla;)V
+    iget-object v4, p0, Ly48;->k:Ljava/util/List;
 
-    const/4 p1, 0x0
+    invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    iput-object p1, p0, Ly48;->m:Lfx7;
+    move-result-object v4
 
-    iput-object p1, p0, Ly48;->n:Lz48;
+    check-cast v4, Lmid;
 
-    return-void
-.end method
+    iget-object v4, v4, Lmid;->a:Landroid/view/View;
 
-.method public final l()V
-    .locals 2
+    invoke-virtual {v4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    iget-object v0, p0, Ly48;->m:Lfx7;
+    move-result-object v5
 
-    iget-object v1, p0, Ly48;->n:Lz48;
+    check-cast v5, Lxhd;
 
-    if-eqz v0, :cond_0
+    if-eq v4, p1, :cond_3
 
-    if-eqz v1, :cond_0
+    iget-object v6, v5, Lxhd;->a:Lmid;
 
-    invoke-super {p0, v1}, Lh38;->j(Lfla;)V
+    invoke-virtual {v6}, Lmid;->q()Z
 
-    invoke-virtual {p0, v0, v1}, Lh38;->e(Lfx7;Lfla;)V
+    move-result v6
+
+    if-eqz v6, :cond_0
+
+    goto :goto_1
 
     :cond_0
+    iget-object v5, v5, Lxhd;->a:Lmid;
+
+    invoke-virtual {v5}, Lmid;->h()I
+
+    move-result v5
+
+    iget v6, p0, Ly48;->d:I
+
+    sub-int/2addr v5, v6
+
+    iget v6, p0, Ly48;->e:I
+
+    mul-int/2addr v5, v6
+
+    if-gez v5, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    if-ge v5, v2, :cond_3
+
+    move-object v1, v4
+
+    if-nez v5, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    move v2, v5
+
+    :cond_3
+    :goto_1
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_4
+    :goto_2
+    if-nez v1, :cond_5
+
+    const/4 p1, -0x1
+
+    iput p1, p0, Ly48;->d:I
+
+    return-void
+
+    :cond_5
+    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object p1
+
+    check-cast p1, Lxhd;
+
+    iget-object p1, p1, Lxhd;->a:Lmid;
+
+    invoke-virtual {p1}, Lmid;->h()I
+
+    move-result p1
+
+    iput p1, p0, Ly48;->d:I
+
     return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final b(Ldid;)Landroid/view/View;
+    .locals 4
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Ly48;->k:Ljava/util/List;
 
-    const/16 v1, 0x40
+    if-eqz v0, :cond_3
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    const-string v1, "LoaderInfo{"
+    move-result p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v0, 0x0
 
-    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+    :goto_0
+    if-ge v0, p1, :cond_2
 
-    move-result v1
+    iget-object v1, p0, Ly48;->k:Ljava/util/List;
 
-    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast v1, Lmid;
 
-    const-string v1, " #0 : "
+    iget-object v1, v1, Lmid;->a:Landroid/view/View;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    iget-object v1, p0, Ly48;->l:Ll4i;
+    move-result-object v2
 
-    invoke-static {v0, v1}, Ljyi;->a(Ljava/lang/StringBuilder;Ljava/lang/Object;)V
+    check-cast v2, Lxhd;
 
-    const-string v1, "}}"
+    iget-object v3, v2, Lxhd;->a:Lmid;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3}, Lmid;->q()Z
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result v3
 
-    move-result-object v0
+    if-eqz v3, :cond_0
 
-    return-object v0
+    goto :goto_1
+
+    :cond_0
+    iget v3, p0, Ly48;->d:I
+
+    iget-object v2, v2, Lxhd;->a:Lmid;
+
+    invoke-virtual {v2}, Lmid;->h()I
+
+    move-result v2
+
+    if-ne v3, v2, :cond_1
+
+    invoke-virtual {p0, v1}, Ly48;->a(Landroid/view/View;)V
+
+    return-object v1
+
+    :cond_1
+    :goto_1
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_3
+    iget v0, p0, Ly48;->d:I
+
+    invoke-virtual {p1, v0}, Ldid;->d(I)Landroid/view/View;
+
+    move-result-object p1
+
+    iget v0, p0, Ly48;->d:I
+
+    iget v1, p0, Ly48;->e:I
+
+    add-int/2addr v0, v1
+
+    iput v0, p0, Ly48;->d:I
+
+    return-object p1
 .end method

@@ -2,238 +2,280 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lxld;
-
 
 # instance fields
-.field public final a:Lxld;
+.field public final a:Lje0;
 
-.field public b:Z
+.field public final b:Lsfg;
 
-.field public final synthetic c:Lk93;
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:J
+
+.field public f:I
+
+.field public g:I
+
+.field public h:I
+
+.field public i:I
+
+.field public j:I
+
+.field public k:I
+
+.field public l:J
+
+.field public m:[J
+
+.field public n:[I
 
 
 # direct methods
-.method public constructor <init>(Lk93;Lxld;)V
-    .locals 0
+.method public constructor <init>(ILje0;Lsfg;)V
+    .locals 11
+
+    iget v0, p2, Lje0;->d:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Li93;->c:Lk93;
+    iput-object p2, p0, Li93;->a:Lje0;
 
-    iput-object p2, p0, Li93;->a:Lxld;
+    invoke-virtual {p2}, Lje0;->a()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x1
+
+    if-eq v1, v3, :cond_1
+
+    if-ne v1, v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v3, 0x0
+
+    :cond_1
+    :goto_0
+    invoke-static {v3}, Lhsi;->b(Z)V
+
+    if-ne v1, v2, :cond_2
+
+    const/high16 v3, 0x63640000
+
+    goto :goto_1
+
+    :cond_2
+    const/high16 v3, 0x62770000
+
+    :goto_1
+    div-int/lit8 v4, p1, 0xa
+
+    rem-int/lit8 p1, p1, 0xa
+
+    add-int/lit8 p1, p1, 0x30
+
+    shl-int/lit8 p1, p1, 0x8
+
+    add-int/lit8 v4, v4, 0x30
+
+    or-int/2addr p1, v4
+
+    or-int/2addr v3, p1
+
+    iput v3, p0, Li93;->c:I
+
+    int-to-long v4, v0
+
+    iget v3, p2, Lje0;->b:I
+
+    int-to-long v6, v3
+
+    const-wide/32 v8, 0xf4240
+
+    mul-long/2addr v6, v8
+
+    iget p2, p2, Lje0;->c:I
+
+    int-to-long v8, p2
+
+    sget-object p2, Lzxg;->a:Ljava/lang/String;
+
+    sget-object v10, Ljava/math/RoundingMode;->DOWN:Ljava/math/RoundingMode;
+
+    invoke-static/range {v4 .. v10}, Lzxg;->e0(JJJLjava/math/RoundingMode;)J
+
+    move-result-wide v3
+
+    iput-wide v3, p0, Li93;->e:J
+
+    iput-object p3, p0, Li93;->b:Lsfg;
+
+    if-ne v1, v2, :cond_3
+
+    const/high16 p2, 0x62640000
+
+    or-int/2addr p1, p2
+
+    goto :goto_2
+
+    :cond_3
+    const/4 p1, -0x1
+
+    :goto_2
+    iput p1, p0, Li93;->d:I
+
+    const-wide/16 p1, -0x1
+
+    iput-wide p1, p0, Li93;->l:J
+
+    const/16 p1, 0x200
+
+    new-array p2, p1, [J
+
+    iput-object p2, p0, Li93;->m:[J
+
+    new-array p1, p1, [I
+
+    iput-object p1, p0, Li93;->n:[I
+
+    iput v0, p0, Li93;->f:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 1
+.method public final a(I)Lm9e;
+    .locals 7
 
-    iget-object v0, p0, Li93;->a:Lxld;
+    new-instance v0, Lm9e;
 
-    invoke-interface {v0}, Lxld;->b()V
+    iget-object v1, p0, Li93;->n:[I
 
-    return-void
+    aget v1, v1, p1
+
+    int-to-long v1, v1
+
+    iget-wide v3, p0, Li93;->e:J
+
+    const/4 v5, 0x1
+
+    int-to-long v5, v5
+
+    mul-long/2addr v3, v5
+
+    iget v5, p0, Li93;->f:I
+
+    int-to-long v5, v5
+
+    div-long/2addr v3, v5
+
+    mul-long/2addr v3, v1
+
+    iget-object v1, p0, Li93;->m:[J
+
+    aget-wide v5, v1, p1
+
+    invoke-direct {v0, v3, v4, v5, v6}, Lm9e;-><init>(JJ)V
+
+    return-object v0
 .end method
 
-.method public final e()Z
-    .locals 1
+.method public final b(J)Lg9e;
+    .locals 5
 
-    iget-object v0, p0, Li93;->c:Lk93;
-
-    invoke-virtual {v0}, Lk93;->a()Z
-
-    move-result v0
+    iget v0, p0, Li93;->k:I
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Li93;->a:Lxld;
+    new-instance p1, Lg9e;
 
-    invoke-interface {v0}, Lxld;->e()Z
+    new-instance p2, Lm9e;
 
-    move-result v0
+    const-wide/16 v0, 0x0
 
-    if-eqz v0, :cond_0
+    iget-wide v2, p0, Li93;->l:J
 
-    const/4 v0, 0x1
+    invoke-direct {p2, v0, v1, v2, v3}, Lm9e;-><init>(JJ)V
 
-    return v0
+    invoke-direct {p1, p2, p2}, Lg9e;-><init>(Lm9e;Lm9e;)V
 
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final h(J)I
-    .locals 1
-
-    iget-object v0, p0, Li93;->c:Lk93;
-
-    invoke-virtual {v0}, Lk93;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 p1, -0x3
-
-    return p1
+    return-object p1
 
     :cond_0
-    iget-object v0, p0, Li93;->a:Lxld;
+    iget-wide v0, p0, Li93;->e:J
 
-    invoke-interface {v0, p1, p2}, Lxld;->h(J)I
+    const/4 v2, 0x1
 
-    move-result p1
+    int-to-long v3, v2
 
-    return p1
-.end method
+    mul-long/2addr v0, v3
 
-.method public final q(Lu1f;Lhf4;I)I
-    .locals 11
+    iget v3, p0, Li93;->f:I
 
-    iget-object v0, p0, Li93;->c:Lk93;
+    int-to-long v3, v3
 
-    invoke-virtual {v0}, Lk93;->a()Z
+    div-long/2addr v0, v3
 
-    move-result v1
+    div-long/2addr p1, v0
 
-    const/4 v2, -0x3
+    long-to-int p1, p1
 
-    if-eqz v1, :cond_0
+    iget-object p2, p0, Li93;->n:[I
 
-    return v2
+    invoke-static {p2, p1, v2, v2}, Lzxg;->d([IIZZ)I
 
-    :cond_0
-    iget-boolean v1, p0, Li93;->b:Z
+    move-result p2
 
-    const/4 v3, 0x4
+    iget-object v0, p0, Li93;->n:[I
 
-    const/4 v4, -0x4
+    aget v0, v0, p2
 
-    if-eqz v1, :cond_1
+    if-ne v0, p1, :cond_1
 
-    iput v3, p2, Lvy;->b:I
+    new-instance p1, Lg9e;
 
-    return v4
-
-    :cond_1
-    invoke-virtual {v0}, Lk93;->l()J
-
-    move-result-wide v5
-
-    iget-object v1, p0, Li93;->a:Lxld;
-
-    invoke-interface {v1, p1, p2, p3}, Lxld;->q(Lu1f;Lhf4;I)I
-
-    move-result p3
-
-    const/4 v1, -0x5
-
-    const-wide/high16 v7, -0x8000000000000000L
-
-    if-ne p3, v1, :cond_6
-
-    iget-object p2, p1, Lu1f;->c:Ljava/lang/Object;
-
-    check-cast p2, Lmb6;
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget p3, p2, Lmb6;->J:I
-
-    iget v2, p2, Lmb6;->I:I
-
-    if-nez v2, :cond_3
-
-    if-eqz p3, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    return v1
-
-    :cond_3
-    :goto_0
-    iget-wide v3, v0, Lk93;->X:J
-
-    const-wide/16 v5, 0x0
-
-    cmp-long v3, v3, v5
-
-    const/4 v4, 0x0
-
-    if-eqz v3, :cond_4
-
-    move v2, v4
-
-    :cond_4
-    iget-wide v5, v0, Lk93;->Y:J
-
-    cmp-long v0, v5, v7
-
-    if-eqz v0, :cond_5
-
-    move p3, v4
-
-    :cond_5
-    invoke-virtual {p2}, Lmb6;->a()Ljb6;
+    invoke-virtual {p0, p2}, Li93;->a(I)Lm9e;
 
     move-result-object p2
 
-    iput v2, p2, Ljb6;->H:I
+    invoke-direct {p1, p2, p2}, Lg9e;-><init>(Lm9e;Lm9e;)V
 
-    iput p3, p2, Ljb6;->I:I
+    return-object p1
 
-    new-instance p3, Lmb6;
+    :cond_1
+    invoke-virtual {p0, p2}, Li93;->a(I)Lm9e;
 
-    invoke-direct {p3, p2}, Lmb6;-><init>(Ljb6;)V
+    move-result-object p1
 
-    iput-object p3, p1, Lu1f;->c:Ljava/lang/Object;
+    add-int/2addr p2, v2
 
-    return v1
+    iget-object v0, p0, Li93;->m:[J
 
-    :cond_6
-    iget-wide v0, v0, Lk93;->Y:J
+    array-length v0, v0
 
-    cmp-long p1, v0, v7
+    if-ge p2, v0, :cond_2
 
-    if-eqz p1, :cond_9
+    new-instance v0, Lg9e;
 
-    if-ne p3, v4, :cond_7
+    invoke-virtual {p0, p2}, Li93;->a(I)Lm9e;
 
-    iget-wide v9, p2, Lhf4;->Z:J
+    move-result-object p2
 
-    cmp-long p1, v9, v0
+    invoke-direct {v0, p1, p2}, Lg9e;-><init>(Lm9e;Lm9e;)V
 
-    if-gez p1, :cond_8
+    return-object v0
 
-    :cond_7
-    if-ne p3, v2, :cond_9
+    :cond_2
+    new-instance p2, Lg9e;
 
-    cmp-long p1, v5, v7
+    invoke-direct {p2, p1, p1}, Lg9e;-><init>(Lm9e;Lm9e;)V
 
-    if-nez p1, :cond_9
-
-    iget-boolean p1, p2, Lhf4;->Y:Z
-
-    if-nez p1, :cond_9
-
-    :cond_8
-    invoke-virtual {p2}, Lhf4;->w()V
-
-    iput v3, p2, Lvy;->b:I
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Li93;->b:Z
-
-    return v4
-
-    :cond_9
-    return p3
+    return-object p2
 .end method

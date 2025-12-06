@@ -1,113 +1,103 @@
-.class public final enum Lhmg;
-.super Ljava/lang/Enum;
+.class public final Lhmg;
+.super Lki4;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic X:[Lhmg;
+.field public static final b:Lhmg;
 
-.field public static final synthetic Y:Lzd5;
+.field public static final c:Lgi4;
 
-.field public static final enum b:Lhmg;
+.field public static final d:Lgi4;
 
-.field public static final enum c:Lhmg;
+.field public static final e:Lgi4;
 
-.field public static final enum o:Lhmg;
+.field public static final f:Lgi4;
 
-
-# instance fields
-.field public final a:Llhc;
+.field public static final g:Lgi4;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 7
 
     new-instance v0, Lhmg;
 
-    const/4 v1, 0x0
-
-    sget-object v2, Llhc;->Z:Llhc;
-
-    const-string v3, "WITHOUT_COMPRESS"
-
-    invoke-direct {v0, v3, v1, v2}, Lhmg;-><init>(Ljava/lang/String;ILlhc;)V
+    invoke-direct {v0}, Lki4;-><init>()V
 
     sput-object v0, Lhmg;->b:Lhmg;
 
-    new-instance v1, Lhmg;
+    const-string v1, "state"
 
-    const/4 v2, 0x1
+    filled-new-array {v1}, [Ljava/lang/String;
 
-    sget-object v3, Llhc;->q0:Llhc;
+    move-result-object v1
 
-    const-string v4, "OPTIMAL"
+    const-string v2, ":settings/privacy/onboarding-twofa"
 
-    invoke-direct {v1, v4, v2, v3}, Lhmg;-><init>(Ljava/lang/String;ILlhc;)V
+    const/4 v3, 0x0
 
-    sput-object v1, Lhmg;->c:Lhmg;
+    const/16 v4, 0xe
 
-    new-instance v2, Lhmg;
+    invoke-static {v0, v2, v1, v3, v4}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
 
-    const/4 v3, 0x2
+    move-result-object v1
 
-    sget-object v4, Llhc;->r0:Llhc;
+    sput-object v1, Lhmg;->c:Lgi4;
 
-    const-string v5, "MAXIMUM"
+    const-string v1, "src"
 
-    invoke-direct {v2, v5, v3, v4}, Lhmg;-><init>(Ljava/lang/String;ILlhc;)V
+    const-string v2, "track_id"
 
-    sput-object v2, Lhmg;->o:Lhmg;
+    filled-new-array {v2, v1}, [Ljava/lang/String;
 
-    filled-new-array {v0, v1, v2}, [Lhmg;
+    move-result-object v1
 
-    move-result-object v0
+    const-string v5, ":settings/privacy/creation-twofa"
 
-    sput-object v0, Lhmg;->X:[Lhmg;
+    invoke-static {v0, v5, v1, v3, v4}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
 
-    new-instance v1, Lzd5;
+    move-result-object v1
 
-    invoke-direct {v1, v0}, Lzd5;-><init>([Ljava/lang/Enum;)V
+    sput-object v1, Lhmg;->d:Lgi4;
 
-    sput-object v1, Lhmg;->Y:Lzd5;
+    const/4 v1, 0x0
 
-    return-void
-.end method
+    new-array v5, v1, [Ljava/lang/String;
 
-.method public constructor <init>(Ljava/lang/String;ILlhc;)V
-    .locals 0
+    const-string v6, ":settings/privacy/profile-deletion"
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-static {v0, v6, v5, v3, v4}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
 
-    iput-object p3, p0, Lhmg;->a:Llhc;
+    move-result-object v5
 
-    return-void
-.end method
+    sput-object v5, Lhmg;->e:Lgi4;
 
-.method public static valueOf(Ljava/lang/String;)Lhmg;
-    .locals 1
+    const-string v5, ":twofa/password/check"
 
-    const-class v0, Lhmg;
+    new-array v1, v1, [Ljava/lang/String;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-static {v0, v5, v1, v3, v4}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
 
-    move-result-object p0
+    move-result-object v1
 
-    check-cast p0, Lhmg;
+    sput-object v1, Lhmg;->f:Lgi4;
 
-    return-object p0
-.end method
+    const-string v1, "phone"
 
-.method public static values()[Lhmg;
-    .locals 1
+    filled-new-array {v2, v1}, [Ljava/lang/String;
 
-    sget-object v0, Lhmg;->X:[Lhmg;
+    move-result-object v1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    const/4 v2, 0x2
+
+    const-string v4, ":twofa/auth/password/check"
+
+    invoke-static {v0, v4, v1, v3, v2}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
 
     move-result-object v0
 
-    check-cast v0, [Lhmg;
+    sput-object v0, Lhmg;->g:Lgi4;
 
-    return-object v0
+    return-void
 .end method

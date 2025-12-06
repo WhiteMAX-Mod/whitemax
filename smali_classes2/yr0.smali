@@ -1,176 +1,232 @@
-.class public final Lyr0;
+.class public abstract Lyr0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final c:Lyr0;
+.field public static final a:[I
 
+.field public static final b:[I
 
-# instance fields
-.field public a:Z
+.field public static final c:[I
 
-.field public b:Z
+.field public static final d:[I
+
+.field public static final e:[I
+
+.field public static final f:[I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 4
 
-    new-instance v0, Lyr0;
+    const/4 v0, 0x3
 
-    const/4 v1, 0x0
+    const/4 v1, 0x6
 
-    invoke-direct {v0, v1, v1}, Lyr0;-><init>(ZZ)V
+    const/4 v2, 0x1
 
-    sput-object v0, Lyr0;->c:Lyr0;
+    const/4 v3, 0x2
+
+    filled-new-array {v2, v3, v0, v1}, [I
+
+    move-result-object v0
+
+    sput-object v0, Lyr0;->a:[I
+
+    const v0, 0xac44
+
+    const/16 v1, 0x7d00
+
+    const v2, 0xbb80
+
+    filled-new-array {v2, v0, v1}, [I
+
+    move-result-object v0
+
+    sput-object v0, Lyr0;->b:[I
+
+    const/16 v0, 0x5622
+
+    const/16 v1, 0x3e80
+
+    const/16 v2, 0x5dc0
+
+    filled-new-array {v2, v0, v1}, [I
+
+    move-result-object v0
+
+    sput-object v0, Lyr0;->c:[I
+
+    const/16 v0, 0x8
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_0
+
+    sput-object v0, Lyr0;->d:[I
+
+    const/16 v0, 0x13
+
+    new-array v1, v0, [I
+
+    fill-array-data v1, :array_1
+
+    sput-object v1, Lyr0;->e:[I
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_2
+
+    sput-object v0, Lyr0;->f:[I
 
     return-void
+
+    :array_0
+    .array-data 4
+        0x2
+        0x1
+        0x2
+        0x3
+        0x3
+        0x4
+        0x4
+        0x5
+    .end array-data
+
+    :array_1
+    .array-data 4
+        0x20
+        0x28
+        0x30
+        0x38
+        0x40
+        0x50
+        0x60
+        0x70
+        0x80
+        0xa0
+        0xc0
+        0xe0
+        0x100
+        0x140
+        0x180
+        0x1c0
+        0x200
+        0x240
+        0x280
+    .end array-data
+
+    :array_2
+    .array-data 4
+        0x45
+        0x57
+        0x68
+        0x79
+        0x8b
+        0xae
+        0xd0
+        0xf3
+        0x116
+        0x15c
+        0x1a1
+        0x1e7
+        0x22d
+        0x2b8
+        0x343
+        0x3cf
+        0x45a
+        0x4e5
+        0x571
+    .end array-data
 .end method
 
-.method public constructor <init>(Lp95;I)V
-    .locals 1
+.method public static a(II)I
+    .locals 2
 
-    packed-switch p2, :pswitch_data_0
+    div-int/lit8 v0, p1, 0x2
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    if-ltz p0, :cond_3
 
-    .line 3
-    const-class p2, Landroidx/camera/camera2/internal/compat/quirk/ImageCaptureFailWithAutoFlashQuirk;
+    const/4 v1, 0x3
 
-    .line 4
-    invoke-virtual {p1, p2}, Lp95;->t(Ljava/lang/Class;)Z
+    if-ge p0, v1, :cond_3
 
-    move-result p1
+    if-ltz p1, :cond_3
 
-    iput-boolean p1, p0, Lyr0;->a:Z
+    const/16 v1, 0x13
 
-    .line 5
-    const-class p1, Landroidx/camera/camera2/internal/compat/quirk/CrashWhenTakingPhotoWithAutoFlashAEModeQuirk;
-
-    .line 6
-    sget-object p2, Lws4;->a:Lp95;
-
-    invoke-virtual {p2, p1}, Lp95;->C(Ljava/lang/Class;)Lgjc;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
+    if-lt v0, v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    sget-object v1, Lyr0;->b:[I
 
-    .line 7
-    :goto_0
-    iput-boolean p1, p0, Lyr0;->b:Z
+    aget p0, v1, p0
 
-    return-void
+    const v1, 0xac44
 
-    .line 8
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    if-ne p0, v1, :cond_1
 
-    .line 9
-    const-class p2, Landroidx/camera/camera2/internal/compat/quirk/CaptureIntentPreviewQuirk;
+    sget-object p0, Lyr0;->f:[I
 
-    invoke-virtual {p1, p2}, Lp95;->D(Ljava/lang/Class;)Ljava/util/ArrayList;
+    aget p0, p0, v0
 
-    move-result-object p2
+    rem-int/lit8 p1, p1, 0x2
 
-    invoke-virtual {p2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    add-int/2addr p1, p0
 
-    move-result-object p2
+    mul-int/lit8 p1, p1, 0x2
+
+    return p1
 
     :cond_1
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
+    sget-object p1, Lyr0;->e:[I
 
-    move-result v0
+    aget p1, p1, v0
 
-    if-eqz v0, :cond_2
+    const/16 v0, 0x7d00
 
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    if-ne p0, v0, :cond_2
 
-    move-result-object v0
+    mul-int/lit8 p1, p1, 0x6
 
-    check-cast v0, Landroidx/camera/camera2/internal/compat/quirk/CaptureIntentPreviewQuirk;
-
-    .line 10
-    invoke-interface {v0}, Landroidx/camera/camera2/internal/compat/quirk/CaptureIntentPreviewQuirk;->d()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 p2, 0x1
-
-    goto :goto_1
+    return p1
 
     :cond_2
-    const/4 p2, 0x0
+    mul-int/lit8 p1, p1, 0x4
 
-    .line 11
-    :goto_1
-    iput-boolean p2, p0, Lyr0;->a:Z
-
-    .line 12
-    const-class p2, Landroidx/camera/camera2/internal/compat/quirk/ImageCaptureFailedForVideoSnapshotQuirk;
-
-    invoke-virtual {p1, p2}, Lp95;->t(Ljava/lang/Class;)Z
-
-    move-result p1
-
-    iput-boolean p1, p0, Lyr0;->b:Z
-
-    return-void
-
-    .line 13
-    :pswitch_1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 p2, 0x0
-
-    .line 14
-    iput-boolean p2, p0, Lyr0;->b:Z
-
-    .line 15
-    const-class v0, Landroidx/camera/camera2/internal/compat/quirk/AutoFlashUnderExposedQuirk;
-
-    invoke-virtual {p1, v0}, Lp95;->C(Ljava/lang/Class;)Lgjc;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_3
-
-    const/4 p2, 0x1
+    return p1
 
     :cond_3
-    iput-boolean p2, p0, Lyr0;->a:Z
+    :goto_0
+    const/4 p0, -0x1
 
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x4
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return p0
 .end method
 
-.method public synthetic constructor <init>(ZZ)V
-    .locals 0
+.method public static final d(Lesg;)V
+    .locals 2
 
-    .line 1
-    iput-boolean p1, p0, Lyr0;->a:Z
+    new-instance v0, La4e;
 
-    iput-boolean p2, p0, Lyr0;->b:Z
+    const/16 v1, 0x15
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1}, La4e;-><init>(I)V
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p0, v1, v0}, Lesg;->c(ILio7;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public abstract b(Ljava/lang/Object;)F
+.end method
+
+.method public abstract c(Ljava/lang/Object;F)V
 .end method

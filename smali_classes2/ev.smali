@@ -1,75 +1,121 @@
 .class public final Lev;
-.super Luj0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic b:I
+.field public volatile a:J
+
+.field public volatile b:Lqu1;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    .line 1
-    iput p1, p0, Lev;->b:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Luj0;-><init>()V
+    const-wide/16 v0, -0x1
 
-    return-void
-.end method
+    iput-wide v0, p0, Lev;->a:J
 
-.method public synthetic constructor <init>(JI)V
-    .locals 0
+    const/4 v0, 0x0
 
-    .line 2
-    iput p3, p0, Lev;->b:I
-
-    invoke-direct {p0, p1, p2}, Luj0;-><init>(J)V
+    iput-object v0, p0, Lev;->b:Lqu1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public toString()Ljava/lang/String;
+.method public final declared-synchronized a()V
     .locals 1
 
-    iget v0, p0, Lev;->b:I
+    monitor-enter p0
 
-    sparse-switch v0, :sswitch_data_0
+    :try_start_0
+    invoke-virtual {p0}, Lev;->b()V
 
-    invoke-super {p0}, Luj0;->toString()Ljava/lang/String;
+    iget-object v0, p0, Lev;->b:Lqu1;
+
+    invoke-static {v0}, Lbwd;->b(Lpy4;)V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lev;->b:Lqu1;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public final declared-synchronized b()V
+    .locals 2
+
+    monitor-enter p0
+
+    const-wide/16 v0, -0x1
+
+    :try_start_0
+    iput-wide v0, p0, Lev;->a:J
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "LoadOperation{operationTime="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lev;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", disposable="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lev;->b:Lqu1;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", onComplete=null}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-
-    :sswitch_0
-    const-string v0, "PhonesSortEvent"
-
-    return-object v0
-
-    :sswitch_1
-    const-string v0, "ContactSortEvent"
-
-    return-object v0
-
-    :sswitch_2
-    const-string v0, "AudioRecordLimitEvent{}"
-
-    return-object v0
-
-    :sswitch_3
-    const-string v0, "AssetsUpdateEvent{chatId=0}"
-
-    return-object v0
-
-    :sswitch_data_0
-    .sparse-switch
-        0x0 -> :sswitch_3
-        0x1 -> :sswitch_2
-        0x2 -> :sswitch_1
-        0x8 -> :sswitch_0
-    .end sparse-switch
 .end method

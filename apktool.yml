@@ -1,5 +1,5 @@
 version: 2.12.0
-apkFileName: max.apk
+apkFileName: original.apk
 usesFramework:
   ids:
   - 1
@@ -9,8 +9,8 @@ sdkInfo:
 packageInfo:
   forcedPackageId: 127
 versionInfo:
-  versionCode: 6432
-  versionName: 25.13.2
+  versionCode: 6468
+  versionName: 25.19.0
 doNotCompress:
 - arsc
 - mp3
@@ -105,14 +105,10 @@ doNotCompress:
 - META-INF/kotlinx_coroutines_reactive.version
 - META-INF/kotlinx_coroutines_rx3.version
 - META-INF/kotlinx_coroutines_test.version
-- META-INF/services/gq7
 - META-INF/services/ru.ok.android.onelog.OneLogAppender
-- META-INF/services/y0g
+- META-INF/services/teg
+- META-INF/services/xw7
 - assets/dexopt/baseline.prof
 - assets/dexopt/baseline.profm
-- assets/mlkit_barcode_models/barcode_ssd_mobilenet_v1_dmp25_quant.tflite
-- assets/mlkit_barcode_models/oned_auto_regressor_mobile.tflite
-- assets/mlkit_barcode_models/oned_feature_extractor_mobile.tflite
 - okhttp3/internal/publicsuffix/publicsuffixes.gz
-- tech/kwik/agent15/version.properties
 - tech/kwik/core/version.properties

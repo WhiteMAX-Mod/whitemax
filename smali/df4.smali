@@ -4,17 +4,8 @@
 
 
 # virtual methods
-.method public abstract b()Lz52;
+.method public abstract getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 .end method
 
-.method public abstract c()Ljava/lang/Object;
-.end method
-
-.method public abstract d(Lscf;)V
-.end method
-
-.method public abstract flush()V
-.end method
-
-.method public abstract release()V
+.method public abstract getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 .end method

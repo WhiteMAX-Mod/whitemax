@@ -1,48 +1,180 @@
-.class public final Ltc6;
-.super Ly14;
+.class public final synthetic Ltc6;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lem6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lv23;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lone/me/folders/pickerfolders/FoldersPickerScreen;
 
 
 # direct methods
-.method public constructor <init>(Lv23;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lone/me/folders/pickerfolders/FoldersPickerScreen;I)V
     .locals 0
 
-    iput-object p1, p0, Ltc6;->Y:Lv23;
+    iput p2, p0, Ltc6;->a:I
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ltc6;->b:Lone/me/folders/pickerfolders/FoldersPickerScreen;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    iput-object p1, p0, Ltc6;->o:Ljava/lang/Object;
+    iget v0, p0, Ltc6;->a:I
 
-    iget p1, p0, Ltc6;->X:I
+    const/4 v1, 0x1
 
-    const/high16 v0, -0x80000000
+    sget-object v2, Lexg;->a:Lexg;
 
-    or-int/2addr p1, v0
+    const/4 v3, 0x0
 
-    iput p1, p0, Ltc6;->X:I
+    iget-object v4, p0, Ltc6;->b:Lone/me/folders/pickerfolders/FoldersPickerScreen;
 
-    iget-object p1, p0, Ltc6;->Y:Lv23;
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v0, 0x0
+    check-cast p1, Ljava/lang/Integer;
 
-    invoke-virtual {p1, v0, p0}, Lv23;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    iget-object v0, v4, Lone/me/folders/pickerfolders/FoldersPickerScreen;->d:Lb0i;
+
+    invoke-virtual {v0}, Ll98;->j()I
+
+    move-result v5
+
+    if-le v5, p1, :cond_1
+
+    if-ltz p1, :cond_1
+
+    invoke-virtual {v0, p1}, Ll98;->C(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lt98;
+
+    check-cast p1, Lfxg;
+
+    iget-object v0, p1, Lfxg;->a:Lf86;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, v0, Lf86;->a:Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p1, p1, Lfxg;->b:Lexg;
+
+    if-eq p1, v2, :cond_2
+
+    invoke-virtual {v4}, Lone/me/folders/pickerfolders/FoldersPickerScreen;->y0()Lgd6;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lgd6;->w0:Ltcf;
+
+    invoke-virtual {p1}, Ltcf;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/util/Set;
+
+    invoke-interface {p1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    move v1, v3
+
+    :cond_2
+    :goto_1
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
     return-object p1
+
+    :pswitch_0
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    iget-object v0, v4, Lone/me/folders/pickerfolders/FoldersPickerScreen;->d:Lb0i;
+
+    invoke-virtual {v0}, Ll98;->j()I
+
+    move-result v4
+
+    if-lt v4, p1, :cond_3
+
+    if-ltz p1, :cond_3
+
+    invoke-virtual {v0, p1}, Ll98;->C(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lt98;
+
+    check-cast p1, Lfxg;
+
+    iget-object p1, p1, Lfxg;->b:Lexg;
+
+    if-eq p1, v2, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    move v1, v3
+
+    :goto_2
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_1
+    check-cast p1, Landroid/view/View;
+
+    sget-object p1, Lone/me/folders/pickerfolders/FoldersPickerScreen;->Z:[Lyy7;
+
+    invoke-virtual {v4}, Lc54;->getOnBackPressedDispatcher()Ljva;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_4
+
+    invoke-virtual {p1}, Ljva;->d()V
+
+    :cond_4
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

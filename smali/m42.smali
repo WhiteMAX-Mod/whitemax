@@ -1,63 +1,23 @@
-.class public final Lm42;
-.super Lpz1;
+.class public abstract Lm42;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:Lkotlinx/coroutines/internal/Symbol;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p1, p0, Lm42;->a:I
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "RESUME_TOKEN"
 
-    return-void
-.end method
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
 
-.method private final e(I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final f(ILwz1;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final g(ILnri;)V
-    .locals 0
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public a(I)V
-    .locals 0
-
-    iget p1, p0, Lm42;->a:I
-
-    return-void
-.end method
-
-.method public b(ILwz1;)V
-    .locals 0
-
-    iget p1, p0, Lm42;->a:I
-
-    return-void
-.end method
-
-.method public c(ILnri;)V
-    .locals 0
-
-    iget p1, p0, Lm42;->a:I
+    sput-object v0, Lm42;->a:Lkotlinx/coroutines/internal/Symbol;
 
     return-void
 .end method

@@ -1,10 +1,3 @@
 .class public abstract Ls5;
-.super Lmuh;
+.super Lipi;
 .source "SourceFile"
-
-# interfaces
-.implements Lh67;
-
-
-# static fields
-.field public static final synthetic d:I

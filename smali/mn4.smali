@@ -1,91 +1,185 @@
-.class public final synthetic Lmn4;
+.class public abstract Lmn4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lvr3;
 
+# static fields
+.field public static final a:Lme7;
 
-# instance fields
-.field public final synthetic a:Lnn4;
+.field public static final b:Lme7;
 
-.field public final synthetic b:Lggf;
+.field public static final c:Lme7;
 
-.field public final synthetic c:Landroid/graphics/SurfaceTexture;
+.field public static final d:Lme7;
 
-.field public final synthetic d:Landroid/view/Surface;
+.field public static final e:Lme7;
+
+.field public static final f:Lme7;
+
+.field public static final g:Lme7;
+
+.field public static final h:Lme7;
+
+.field public static final i:Lme7;
+
+.field public static final j:Lme7;
+
+.field public static final k:Lme7;
+
+.field public static final l:Lme7;
+
+.field public static final m:Lme7;
+
+.field public static final n:Lme7;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lnn4;Lggf;Landroid/graphics/SurfaceTexture;Landroid/view/Surface;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 15
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lme7;
 
-    iput-object p1, p0, Lmn4;->a:Lnn4;
+    const-string v1, "JPEG"
 
-    iput-object p2, p0, Lmn4;->b:Lggf;
+    const-string v2, "jpeg"
 
-    iput-object p3, p0, Lmn4;->c:Landroid/graphics/SurfaceTexture;
+    invoke-direct {v0, v1, v2}, Lme7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    iput-object p4, p0, Lmn4;->d:Landroid/view/Surface;
+    sput-object v0, Lmn4;->a:Lme7;
+
+    new-instance v1, Lme7;
+
+    const-string v2, "PNG"
+
+    const-string v3, "png"
+
+    invoke-direct {v1, v2, v3}, Lme7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v1, Lmn4;->b:Lme7;
+
+    new-instance v2, Lme7;
+
+    const-string v3, "GIF"
+
+    const-string v4, "gif"
+
+    invoke-direct {v2, v3, v4}, Lme7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v2, Lmn4;->c:Lme7;
+
+    new-instance v3, Lme7;
+
+    const-string v4, "BMP"
+
+    const-string v5, "bmp"
+
+    invoke-direct {v3, v4, v5}, Lme7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v3, Lmn4;->d:Lme7;
+
+    new-instance v4, Lme7;
+
+    const-string v5, "ICO"
+
+    const-string v6, "ico"
+
+    invoke-direct {v4, v5, v6}, Lme7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v4, Lmn4;->e:Lme7;
+
+    new-instance v5, Lme7;
+
+    const-string v6, "WEBP_SIMPLE"
+
+    const-string v7, "webp"
+
+    invoke-direct {v5, v6, v7}, Lme7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v5, Lmn4;->f:Lme7;
+
+    new-instance v6, Lme7;
+
+    const-string v8, "WEBP_LOSSLESS"
+
+    invoke-direct {v6, v8, v7}, Lme7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v6, Lmn4;->g:Lme7;
+
+    move-object v8, v7
+
+    new-instance v7, Lme7;
+
+    const-string v9, "WEBP_EXTENDED"
+
+    invoke-direct {v7, v9, v8}, Lme7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v7, Lmn4;->h:Lme7;
+
+    move-object v9, v8
+
+    new-instance v8, Lme7;
+
+    const-string v10, "WEBP_EXTENDED_WITH_ALPHA"
+
+    invoke-direct {v8, v10, v9}, Lme7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v8, Lmn4;->i:Lme7;
+
+    move-object v10, v9
+
+    new-instance v9, Lme7;
+
+    const-string v11, "WEBP_ANIMATED"
+
+    invoke-direct {v9, v11, v10}, Lme7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v9, Lmn4;->j:Lme7;
+
+    new-instance v10, Lme7;
+
+    const-string v11, "HEIF"
+
+    const-string v12, "heif"
+
+    invoke-direct {v10, v11, v12}, Lme7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v10, Lmn4;->k:Lme7;
+
+    new-instance v11, Lme7;
+
+    const-string v12, "DNG"
+
+    const-string v13, "dng"
+
+    invoke-direct {v11, v12, v13}, Lme7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v11, Lmn4;->l:Lme7;
+
+    new-instance v11, Lme7;
+
+    const-string v12, "BINARY_XML"
+
+    const-string v13, "xml"
+
+    invoke-direct {v11, v12, v13}, Lme7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v11, Lmn4;->m:Lme7;
+
+    new-instance v12, Lme7;
+
+    const-string v13, "AVIF"
+
+    const-string v14, "avif"
+
+    invoke-direct {v12, v13, v14}, Lme7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v12, Lmn4;->n:Lme7;
+
+    filled-new-array/range {v0 .. v12}, [Lme7;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lve3;->j([Ljava/lang/Object;)Ljava/util/List;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 5
-
-    iget-object v0, p0, Lmn4;->a:Lnn4;
-
-    iget-object v1, p0, Lmn4;->b:Lggf;
-
-    iget-object v2, p0, Lmn4;->c:Landroid/graphics/SurfaceTexture;
-
-    iget-object v3, p0, Lmn4;->d:Landroid/view/Surface;
-
-    check-cast p1, Lbc0;
-
-    iget-object p1, v1, Lggf;->a:Ljava/lang/Object;
-
-    monitor-enter p1
-
-    const/4 v4, 0x0
-
-    :try_start_0
-    iput-object v4, v1, Lggf;->n:Lfgf;
-
-    iput-object v4, v1, Lggf;->o:Ljava/util/concurrent/Executor;
-
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v2, v4}, Landroid/graphics/SurfaceTexture;->setOnFrameAvailableListener(Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;)V
-
-    invoke-virtual {v2}, Landroid/graphics/SurfaceTexture;->release()V
-
-    invoke-virtual {v3}, Landroid/view/Surface;->release()V
-
-    iget p1, v0, Lnn4;->r0:I
-
-    add-int/lit8 p1, p1, -0x1
-
-    iput p1, v0, Lnn4;->r0:I
-
-    invoke-virtual {v0}, Lnn4;->b()V
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
 .end method

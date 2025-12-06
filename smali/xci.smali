@@ -1,339 +1,385 @@
-.class public abstract Lxci;
-.super Ljava/lang/Object;
+.class public final Lxci;
+.super Ly1a;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic b:Lfud;
+
+
 # direct methods
-.method public static final a(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+.method public constructor <init>(Lfud;Landroid/os/Looper;)V
     .locals 1
 
-    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    iput-object p1, p0, Lxci;->b:Lfud;
 
-    move-result-object v0
+    const/4 p1, 0x5
 
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0, p1, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public static final b(Landroid/view/ViewGroup;Landroid/view/View;Ljava/lang/Integer;)V
-    .locals 1
-
-    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v0
-
-    if-nez v0, :cond_1
-
-    if-eqz p2, :cond_0
-
-    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
-
-    move-result p2
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p2, -0x1
-
-    :goto_0
-    invoke-virtual {p0, p1, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public static synthetic c(Landroid/view/View;Landroid/view/ViewGroup;)V
-    .locals 1
-
-    const/4 v0, -0x1
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-static {p1, p0, v0}, Lxci;->b(Landroid/view/ViewGroup;Landroid/view/View;Ljava/lang/Integer;)V
-
-    return-void
-.end method
-
-.method public static final i(Landroid/view/ViewGroup;)Landroid/view/ViewGroup;
-    .locals 2
-
-    invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v0
-
-    instance-of v1, v0, Landroid/view/ViewGroup;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Landroid/view/ViewGroup;
-
-    goto :goto_0
-
-    :cond_0
     const/4 v0, 0x0
 
-    :goto_0
-    if-eqz v0, :cond_2
+    invoke-direct {p0, p2, p1, v0}, Ly1a;-><init>(Landroid/os/Looper;IZ)V
 
-    invoke-static {v0}, Lxci;->i(Landroid/view/ViewGroup;)Landroid/view/ViewGroup;
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    move-result-object v0
-
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    return-object v0
-
-    :cond_2
-    :goto_1
-    return-object p0
-.end method
-
-.method public static j(Llcf;ILrr3;)V
-    .locals 6
-
-    invoke-interface {p0, p1}, Llcf;->h(I)J
-
-    move-result-wide v1
-
-    invoke-interface {p0, v1, v2}, Llcf;->m(J)Ljava/util/List;
-
-    move-result-object v5
-
-    invoke-interface {v5}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-interface {p0}, Llcf;->s()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, -0x1
-
-    if-eq p1, v0, :cond_2
-
-    add-int/lit8 v0, p1, 0x1
-
-    invoke-interface {p0, v0}, Llcf;->h(I)J
-
-    move-result-wide v3
-
-    invoke-interface {p0, p1}, Llcf;->h(I)J
-
-    move-result-wide p0
-
-    sub-long/2addr v3, p0
-
-    const-wide/16 p0, 0x0
-
-    cmp-long p0, v3, p0
-
-    if-lez p0, :cond_1
-
-    new-instance v0, Lc94;
-
-    invoke-direct/range {v0 .. v5}, Lc94;-><init>(JJLjava/util/List;)V
-
-    invoke-interface {p2, v0}, Lrr3;->accept(Ljava/lang/Object;)V
-
-    :cond_1
-    :goto_0
-    return-void
-
-    :cond_2
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw p0
-.end method
-
-.method public static m(Llcf;Lxcf;Lrr3;)V
-    .locals 12
-
-    iget-wide v0, p1, Lxcf;->b:J
-
-    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long v4, v0, v2
-
-    const/4 v5, 0x0
-
-    if-nez v4, :cond_0
-
-    move v4, v5
-
-    goto :goto_0
-
-    :cond_0
-    invoke-interface {p0, v0, v1}, Llcf;->f(J)I
-
-    move-result v4
-
-    const/4 v6, -0x1
-
-    if-ne v4, v6, :cond_1
-
-    invoke-interface {p0}, Llcf;->s()I
-
-    move-result v4
-
-    :cond_1
-    if-lez v4, :cond_2
-
-    add-int/lit8 v6, v4, -0x1
-
-    invoke-interface {p0, v6}, Llcf;->h(I)J
-
-    move-result-wide v6
-
-    cmp-long v6, v6, v0
-
-    if-nez v6, :cond_2
-
-    add-int/lit8 v4, v4, -0x1
-
-    :cond_2
-    :goto_0
-    cmp-long v2, v0, v2
-
-    if-eqz v2, :cond_3
-
-    invoke-interface {p0}, Llcf;->s()I
-
-    move-result v2
-
-    if-ge v4, v2, :cond_3
-
-    invoke-interface {p0, v0, v1}, Llcf;->m(J)Ljava/util/List;
-
-    move-result-object v11
-
-    invoke-interface {p0, v4}, Llcf;->h(I)J
-
-    move-result-wide v2
-
-    invoke-interface {v11}, Ljava/util/List;->isEmpty()Z
-
-    move-result v6
-
-    if-nez v6, :cond_3
-
-    iget-wide v7, p1, Lxcf;->b:J
-
-    cmp-long v6, v7, v2
-
-    if-gez v6, :cond_3
-
-    new-instance v6, Lc94;
-
-    sub-long v9, v2, v7
-
-    invoke-direct/range {v6 .. v11}, Lc94;-><init>(JJLjava/util/List;)V
-
-    invoke-interface {p2, v6}, Lrr3;->accept(Ljava/lang/Object;)V
-
-    const/4 v2, 0x1
-
-    goto :goto_1
-
-    :cond_3
-    move v2, v5
-
-    :goto_1
-    move v3, v4
-
-    :goto_2
-    invoke-interface {p0}, Llcf;->s()I
-
-    move-result v6
-
-    if-ge v3, v6, :cond_4
-
-    invoke-static {p0, v3, p2}, Lxci;->j(Llcf;ILrr3;)V
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_2
-
-    :cond_4
-    iget-boolean p1, p1, Lxcf;->a:Z
-
-    if-eqz p1, :cond_7
-
-    if-eqz v2, :cond_5
-
-    add-int/lit8 v4, v4, -0x1
-
-    :cond_5
-    :goto_3
-    if-ge v5, v4, :cond_6
-
-    invoke-static {p0, v5, p2}, Lxci;->j(Llcf;ILrr3;)V
-
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_3
-
-    :cond_6
-    if-eqz v2, :cond_7
-
-    new-instance v6, Lc94;
-
-    invoke-interface {p0, v0, v1}, Llcf;->m(J)Ljava/util/List;
-
-    move-result-object v11
-
-    invoke-interface {p0, v4}, Llcf;->h(I)J
-
-    move-result-wide v7
-
-    invoke-interface {p0, v4}, Llcf;->h(I)J
-
-    move-result-wide p0
-
-    sub-long v9, v0, p0
-
-    invoke-direct/range {v6 .. v11}, Lc94;-><init>(JJLjava/util/List;)V
-
-    invoke-interface {p2, v6}, Lrr3;->accept(Ljava/lang/Object;)V
-
-    :cond_7
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract d(Lx1;Lg1;Lg1;)Z
-.end method
+.method public final handleMessage(Landroid/os/Message;)V
+    .locals 8
 
-.method public abstract e(Lx1;Ljava/lang/Object;Ljava/lang/Object;)Z
-.end method
+    iget-object v0, p0, Lxci;->b:Lfud;
 
-.method public abstract f(Lx1;Lv1;Lv1;)Z
-.end method
+    if-eqz p1, :cond_e
 
-.method public abstract g(Lx1;)Lg1;
-.end method
+    iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-.method public abstract h(Lx1;)Lv1;
-.end method
+    instance-of v2, v1, Landroid/content/Intent;
 
-.method public abstract k(Lv1;Lv1;)V
-.end method
+    if-eqz v2, :cond_e
 
-.method public abstract l(Lv1;Ljava/lang/Thread;)V
+    check-cast v1, Landroid/content/Intent;
+
+    new-instance v2, Lsgi;
+
+    invoke-direct {v2}, Lsgi;-><init>()V
+
+    invoke-virtual {v1, v2}, Landroid/content/Intent;->setExtrasClassLoader(Ljava/lang/ClassLoader;)V
+
+    const-string v2, "google.messenger"
+
+    invoke-virtual {v1, v2}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const-string v2, "google.messenger"
+
+    invoke-virtual {v1, v2}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
+
+    move-result-object v1
+
+    instance-of v2, v1, Lmii;
+
+    if-eqz v2, :cond_0
+
+    move-object v2, v1
+
+    check-cast v2, Lmii;
+
+    iput-object v2, v0, Lfud;->g:Lmii;
+
+    :cond_0
+    instance-of v2, v1, Landroid/os/Messenger;
+
+    if-eqz v2, :cond_1
+
+    check-cast v1, Landroid/os/Messenger;
+
+    iput-object v1, v0, Lfud;->f:Landroid/os/Messenger;
+
+    :cond_1
+    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    check-cast p1, Landroid/content/Intent;
+
+    invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "com.google.android.c2dm.intent.REGISTRATION"
+
+    invoke-static {v1, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    const/4 v3, 0x3
+
+    if-nez v2, :cond_2
+
+    const-string p1, "Rpc"
+
+    invoke-static {p1, v3}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_d
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "Unexpected response action: "
+
+    const-string v1, "Rpc"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :cond_2
+    const-string v1, "registration_id"
+
+    invoke-virtual {p1, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    if-nez v1, :cond_3
+
+    const-string v1, "unregistered"
+
+    invoke-virtual {p1, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    :cond_3
+    const/4 v2, 0x2
+
+    const/4 v4, 0x1
+
+    if-nez v1, :cond_b
+
+    const-string v1, "error"
+
+    invoke-virtual {p1, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    if-nez v1, :cond_4
+
+    invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "Unexpected response, no error or registration id "
+
+    const-string v1, "Rpc"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v1, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :cond_4
+    const-string v5, "Rpc"
+
+    invoke-static {v5, v3}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_5
+
+    const-string v5, "Received InstanceID error "
+
+    invoke-virtual {v5, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    const-string v6, "Rpc"
+
+    invoke-static {v6, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_5
+    const-string v5, "|"
+
+    invoke-virtual {v1, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_9
+
+    const-string v5, "\\|"
+
+    invoke-virtual {v1, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v5
+
+    array-length v6, v5
+
+    if-le v6, v2, :cond_8
+
+    aget-object v6, v5, v4
+
+    const-string v7, "ID"
+
+    invoke-static {v6, v7}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    aget-object v1, v5, v2
+
+    aget-object v2, v5, v3
+
+    const-string v3, ":"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_7
+
+    invoke-virtual {v2, v4}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    :cond_7
+    const-string v3, "error"
+
+    invoke-virtual {p1, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+
+    move-result-object p1
+
+    invoke-virtual {v0, v1, p1}, Lfud;->b(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-void
+
+    :cond_8
+    :goto_0
+    const-string p1, "Unexpected structured response "
+
+    invoke-virtual {p1, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "Rpc"
+
+    invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :cond_9
+    iget-object v5, v0, Lfud;->a:Lz0f;
+
+    monitor-enter v5
+
+    const/4 v1, 0x0
+
+    :goto_1
+    :try_start_0
+    iget-object v2, v0, Lfud;->a:Lz0f;
+
+    iget v3, v2, Lz0f;->c:I
+
+    if-ge v1, v3, :cond_a
+
+    invoke-virtual {v2, v1}, Lz0f;->f(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/String;
+
+    invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v2, v3}, Lfud;->b(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_a
+    monitor-exit v5
+
+    return-void
+
+    :goto_2
+    monitor-exit v5
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+
+    :cond_b
+    sget-object v5, Lfud;->j:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v5, v1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/util/regex/Matcher;->matches()Z
+
+    move-result v6
+
+    if-nez v6, :cond_c
+
+    const-string p1, "Rpc"
+
+    invoke-static {p1, v3}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_d
+
+    const-string p1, "Unexpected response string: "
+
+    invoke-virtual {p1, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "Rpc"
+
+    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :cond_c
+    invoke-virtual {v5, v4}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v5, v2}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    if-eqz v1, :cond_d
+
+    invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+
+    move-result-object p1
+
+    const-string v3, "registration_id"
+
+    invoke-virtual {p1, v3, v2}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1, p1}, Lfud;->b(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    :cond_d
+    return-void
+
+    :cond_e
+    const-string p1, "Rpc"
+
+    const-string v0, "Dropping invalid message"
+
+    invoke-static {p1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
 .end method

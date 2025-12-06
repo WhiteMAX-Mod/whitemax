@@ -1,39 +1,70 @@
 .class public final Lb5e;
-.super Lq5e;
+.super Lu08;
 .source "SourceFile"
+
+# interfaces
+.implements Lem6;
 
 
 # instance fields
-.field public final g:J
+.field public final synthetic a:I
 
-.field public final h:Ljava/lang/String;
-
-.field public final i:Ljava/lang/Object;
+.field public final synthetic b:Lha8;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/util/List;J)V
+.method public synthetic constructor <init>(Lha8;I)V
     .locals 0
 
-    invoke-direct {p0, p5, p6}, Lq5e;-><init>(J)V
+    iput p2, p0, Lb5e;->a:I
 
-    iput-wide p1, p0, Lb5e;->g:J
+    iput-object p1, p0, Lb5e;->b:Lha8;
 
-    iput-object p3, p0, Lb5e;->h:Ljava/lang/String;
+    const/4 p1, 0x1
 
-    iput-object p4, p0, Lb5e;->i:Ljava/lang/Object;
+    invoke-direct {p0, p1}, Lu08;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lr5e;
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    new-instance v0, Lc5e;
+    iget v0, p0, Lb5e;->a:I
 
-    invoke-direct {v0, p0}, Lc5e;-><init>(Lb5e;)V
+    packed-switch v0, :pswitch_data_0
 
-    return-object v0
+    check-cast p1, Ljava/lang/Throwable;
+
+    iget-object p1, p0, Lb5e;->b:Lha8;
+
+    const/4 v0, 0x0
+
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Future;->cancel(Z)Z
+
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Ljava/lang/Throwable;
+
+    iget-object p1, p0, Lb5e;->b:Lha8;
+
+    const/4 v0, 0x0
+
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Future;->cancel(Z)Z
+
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

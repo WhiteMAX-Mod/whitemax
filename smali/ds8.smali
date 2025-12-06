@@ -1,98 +1,21 @@
 .class public final Lds8;
-.super Ljava/lang/Object;
+.super Lc3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Ljava/lang/String;
-
-
-# instance fields
-.field public final a:Landroid/net/Uri;
-
-
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public final f(Lbs8;)V
     .locals 2
 
-    sget-object v0, Lnig;->a:Ljava/lang/String;
-
-    const/16 v0, 0x24
+    new-instance v0, Lcs8;
 
     const/4 v1, 0x0
 
-    invoke-static {v1, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+    invoke-direct {v0, v1, p1}, Lcs8;-><init>(ILjava/lang/Object;)V
 
-    move-result-object v0
+    iget-object p1, p0, Lc3;->a:Lor8;
 
-    sput-object v0, Lds8;->b:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Litb;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iget-object p1, p1, Litb;->b:Ljava/lang/Object;
-
-    check-cast p1, Landroid/net/Uri;
-
-    iput-object p1, p0, Lds8;->a:Landroid/net/Uri;
+    invoke-virtual {p1, v0}, Lor8;->e(Lbs8;)V
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lds8;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lds8;
-
-    iget-object v1, p0, Lds8;->a:Landroid/net/Uri;
-
-    iget-object p1, p1, Lds8;->a:Landroid/net/Uri;
-
-    invoke-virtual {v1, p1}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lds8;->a:Landroid/net/Uri;
-
-    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    return v0
 .end method

@@ -1,40 +1,53 @@
-.class public abstract Ltof;
+.class public interface abstract Ltof;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# virtual methods
+.method public o(I[BI)Lhof;
+    .locals 6
 
-# instance fields
-.field public submissionTime:J
+    invoke-static {}, Lwg7;->i()Ltg7;
 
-.field public taskContext:Lxof;
+    move-result-object p1
 
+    new-instance v5, Lu4e;
 
-# direct methods
-.method public constructor <init>(JLxof;)V
+    const/16 v0, 0x15
+
+    invoke-direct {v5, v0, p1}, Lu4e;-><init>(ILjava/lang/Object;)V
+
+    const/4 v2, 0x0
+
+    sget-object v4, Lsof;->c:Lsof;
+
+    move-object v0, p0
+
+    move-object v1, p2
+
+    move v3, p3
+
+    invoke-interface/range {v0 .. v5}, Ltof;->r([BIILsof;Lfu3;)V
+
+    new-instance p2, Llb4;
+
+    invoke-virtual {p1}, Ltg7;->i()Lzjd;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Llb4;-><init>(Lzjd;)V
+
+    return-object p2
+.end method
+
+.method public abstract r([BIILsof;Lfu3;)V
+.end method
+
+.method public reset()V
     .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Ltof;->submissionTime:J
-
-    iput-object p3, p0, Ltof;->taskContext:Lxof;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final getMode$kotlinx_coroutines_core()I
-    .locals 1
-
-    iget-object v0, p0, Ltof;->taskContext:Lxof;
-
-    check-cast v0, Lkx5;
-
-    iget v0, v0, Lkx5;->b:I
-
-    return v0
+.method public abstract u()I
 .end method

@@ -1,100 +1,76 @@
-.class public final Lw3b;
-.super Ljava/lang/Object;
+.class public Lw3b;
+.super Landroid/widget/EditText;
 .source "SourceFile"
 
-# interfaces
-.implements La4b;
 
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lw3b;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public static final a:Lw3b;
+# instance fields
+.field public final a:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Landroid/content/Context;I)V
     .locals 2
 
-    new-instance v0, Lw3b;
+    const p2, 0x101006e
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    sput-object v0, Lw3b;->a:Lw3b;
+    const/4 v1, 0x0
 
-    new-instance v0, Lvk8;
+    invoke-direct {p0, p1, v1, p2, v0}, Landroid/widget/EditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    const/16 v1, 0x1d
+    sget-object p2, La93;->s0:Lv1a;
 
-    invoke-direct {v0, v1}, Lvk8;-><init>(I)V
+    invoke-virtual {p2, p1}, Lv1a;->x(Landroid/content/Context;)La93;
 
-    sput-object v0, Lw3b;->CREATOR:Landroid/os/Parcelable$Creator;
+    move-result-object p1
+
+    invoke-virtual {p1}, La93;->k()Lyeb;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Lt2i;->c(Landroid/widget/TextView;Lyeb;)V
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lw3b;->a:Z
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setClickable(Z)V
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setLongClickable(Z)V
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setFocusable(Z)V
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setFocusableInTouchMode(Z)V
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setCursorVisible(Z)V
+
+    const p1, 0x20001
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setInputType(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public final getDefaultEditable()Z
     .locals 1
 
-    const/4 v0, 0x0
+    iget-boolean v0, p0, Lw3b;->a:Z
 
     return v0
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
+.method public final setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
     .locals 1
 
-    const/4 v0, 0x1
+    iget-boolean v0, p0, Lw3b;->a:Z
 
-    if-ne p0, p1, :cond_0
+    if-eqz v0, :cond_0
 
-    return v0
+    invoke-super {p0, p1, p2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
 
     :cond_0
-    instance-of p1, p1, Lw3b;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x61724f48
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Chevron"
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    const/4 p2, 0x1
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
     return-void
 .end method

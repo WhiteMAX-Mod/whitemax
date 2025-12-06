@@ -7,20 +7,20 @@
 
 
 # instance fields
-.field public final a:Lw8e;
+.field public final a:Like;
 
-.field public final b:Ll28;
+.field public final b:Lha8;
 
 
 # direct methods
-.method public constructor <init>(Lw8e;Ll28;)V
+.method public constructor <init>(Like;Lha8;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll1;->a:Lw8e;
+    iput-object p1, p0, Ll1;->a:Like;
 
-    iput-object p2, p0, Ll1;->b:Ll28;
+    iput-object p2, p0, Ll1;->b:Lha8;
 
     return-void
 .end method
@@ -30,7 +30,7 @@
 .method public final run()V
     .locals 3
 
-    iget-object v0, p0, Ll1;->a:Lw8e;
+    iget-object v0, p0, Ll1;->a:Like;
 
     iget-object v0, v0, Ly1;->a:Ljava/lang/Object;
 
@@ -39,23 +39,23 @@
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Ll1;->b:Ll28;
+    iget-object v0, p0, Ll1;->b:Lha8;
 
-    invoke-static {v0}, Ly1;->f(Ll28;)Ljava/lang/Object;
+    invoke-static {v0}, Ly1;->f(Lha8;)Ljava/lang/Object;
 
     move-result-object v0
 
-    sget-object v1, Ly1;->Y:Lzci;
+    sget-object v1, Ly1;->X:Lyoi;
 
-    iget-object v2, p0, Ll1;->a:Lw8e;
+    iget-object v2, p0, Ll1;->a:Like;
 
-    invoke-virtual {v1, v2, p0, v0}, Lzci;->b(Ly1;Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2, p0, v0}, Lyoi;->b(Ly1;Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Ll1;->a:Lw8e;
+    iget-object v0, p0, Ll1;->a:Like;
 
     invoke-static {v0}, Ly1;->b(Ly1;)V
 

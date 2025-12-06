@@ -1,33 +1,19 @@
 .class public final Ldx6;
-.super Lhx6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Ldx6;
+# instance fields
+.field public final a:[I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>([I)V
+    .locals 0
 
-    new-instance v0, Ldx6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget v1, Llsa;->p:I
-
-    new-instance v2, Lorf;
-
-    invoke-direct {v2, v1}, Lorf;-><init>(I)V
-
-    sget v1, Ldkd;->N:I
-
-    new-instance v3, Lorf;
-
-    invoke-direct {v3, v1}, Lorf;-><init>(I)V
-
-    invoke-direct {v0, v2, v3}, Lhx6;-><init>(Lorf;Lorf;)V
-
-    sput-object v0, Ldx6;->c:Ldx6;
+    iput-object p1, p0, Ldx6;->a:[I
 
     return-void
 .end method
@@ -35,7 +21,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -44,30 +30,61 @@
     return v0
 
     :cond_0
-    instance-of p1, p1, Ldx6;
+    instance-of v1, p1, Ldx6;
 
-    if-nez p1, :cond_1
+    const/4 v2, 0x0
 
-    const/4 p1, 0x0
+    if-nez v1, :cond_1
 
-    return p1
+    return v2
 
     :cond_1
+    check-cast p1, Ldx6;
+
+    iget-object v1, p0, Ldx6;->a:[I
+
+    iget-object p1, p1, Ldx6;->a:[I
+
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
     return v0
 .end method
 
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x52663c62
+    iget-object v0, p0, Ldx6;->a:[I
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
+
+    move-result v0
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 1
+    .locals 3
 
-    const-string v0, "AwaitingNetwork"
+    iget-object v0, p0, Ldx6;->a:[I
+
+    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "GradientsComplexColors(overlayFloatingGradient="
+
+    const-string v2, ")"
+
+    invoke-static {v1, v0, v2}, Lho7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

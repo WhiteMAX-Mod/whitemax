@@ -1,43 +1,98 @@
-.class public abstract synthetic Ly96;
-.super Ljava/lang/Object;
+.class public final Ly96;
+.super Ldtf;
 .source "SourceFile"
 
+# interfaces
+.implements Lsm6;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final synthetic o:Lca6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lca6;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-static {}, Lk43;->values()[Lk43;
+    iput-object p1, p0, Ly96;->o:Lca6;
 
-    move-result-object v0
+    const/4 p1, 0x2
 
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    const/4 v2, 0x2
-
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    sput-object v0, Ly96;->$EnumSwitchMapping$0:[I
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lf84;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Ly96;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Ly96;
+
+    sget-object p2, Lqqg;->a:Lqqg;
+
+    invoke-virtual {p1, p2}, Ly96;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Ly96;
+
+    iget-object v0, p0, Ly96;->o:Lca6;
+
+    invoke-direct {p1, v0, p2}, Ly96;-><init>(Lca6;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ly96;->o:Lca6;
+
+    iget-object p1, p1, Lca6;->t0:Lk18;
+
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lccb;
+
+    sget v0, Lmvd;->Y1:I
+
+    new-instance v1, Ln5g;
+
+    invoke-direct {v1, v0}, Ln5g;-><init>(I)V
+
+    invoke-virtual {p1, v1}, Lccb;->g(Ls5g;)V
+
+    sget v0, Lmvd;->X1:I
+
+    new-instance v1, Ln5g;
+
+    invoke-direct {v1, v0}, Ln5g;-><init>(I)V
+
+    invoke-virtual {p1, v1}, Lccb;->a(Ls5g;)V
+
+    invoke-virtual {p1}, Lccb;->i()Lbcb;
+
+    move-result-object p1
+
+    return-object p1
 .end method

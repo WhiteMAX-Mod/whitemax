@@ -1,33 +1,19 @@
-.class public final Lmh8;
-.super Lxzg;
+.class public abstract Lmh8;
+.super Loh8;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Lxe5;
-
-.field public final c:Lxe5;
+.field public final c:Ls5g;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Ls5g;Lru/ok/tamtam/errors/TamErrorException;)V
+    .locals 0
 
-    invoke-direct {p0}, Lxzg;-><init>()V
+    invoke-direct {p0, p2}, Loh8;-><init>(Ljava/lang/Throwable;)V
 
-    new-instance v0, Lxe5;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lxe5;-><init>(I)V
-
-    iput-object v0, p0, Lmh8;->b:Lxe5;
-
-    new-instance v0, Lxe5;
-
-    invoke-direct {v0, v1}, Lxe5;-><init>(I)V
-
-    iput-object v0, p0, Lmh8;->c:Lxe5;
+    iput-object p1, p0, Lmh8;->c:Ls5g;
 
     return-void
 .end method

@@ -2,42 +2,21 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final c:Ltc0;
+# interfaces
+.implements Lvc0;
 
 
 # instance fields
-.field public final a:J
-
-.field public final b:Ljava/lang/CharSequence;
+.field public final a:Landroid/content/Intent;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Ltc0;
-
-    const-wide/16 v1, 0x0
-
-    const-string v3, ""
-
-    invoke-direct {v0, v3, v1, v2}, Ltc0;-><init>(Ljava/lang/CharSequence;J)V
-
-    sput-object v0, Ltc0;->c:Ltc0;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/CharSequence;J)V
+.method public constructor <init>(Landroid/content/Intent;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p2, p0, Ltc0;->a:J
-
-    iput-object p1, p0, Ltc0;->b:Ljava/lang/CharSequence;
+    iput-object p1, p0, Ltc0;->a:Landroid/content/Intent;
 
     return-void
 .end method
@@ -45,7 +24,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -65,73 +44,44 @@
     :cond_1
     check-cast p1, Ltc0;
 
-    iget-wide v3, p0, Ltc0;->a:J
+    iget-object v1, p0, Ltc0;->a:Landroid/content/Intent;
 
-    iget-wide v5, p1, Ltc0;->a:J
+    iget-object p1, p1, Ltc0;->a:Landroid/content/Intent;
 
-    cmp-long v1, v3, v5
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz v1, :cond_2
+    move-result p1
+
+    if-nez p1, :cond_2
 
     return v2
 
     :cond_2
-    iget-object v1, p0, Ltc0;->b:Ljava/lang/CharSequence;
-
-    iget-object p1, p1, Ltc0;->b:Ljava/lang/CharSequence;
-
-    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 1
 
-    iget-wide v0, p0, Ltc0;->a:J
+    iget-object v0, p0, Ltc0;->a:Landroid/content/Intent;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Ltc0;->b:Ljava/lang/CharSequence;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "AvatarAbbreviationModel(sourceId="
+    const-string v1, "CameraScreenIntentReady(intent="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-wide v1, p0, Ltc0;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", abbreviation="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ltc0;->b:Ljava/lang/CharSequence;
+    iget-object v1, p0, Ltc0;->a:Landroid/content/Intent;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

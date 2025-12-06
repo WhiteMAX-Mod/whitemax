@@ -1,80 +1,58 @@
 .class public final Ld26;
-.super Lsgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic X:Lh38;
+.field public final a:Lukd;
 
-.field public final synthetic Y:Lfla;
+.field public final b:Lc26;
 
 
 # direct methods
-.method public constructor <init>(Lh38;Lfla;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Ld26;->X:Lh38;
-
-    iput-object p2, p0, Ld26;->Y:Lfla;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lq54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ld26;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ld26;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Ld26;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public constructor <init>(Lrf9;Lw5c;)V
     .locals 2
 
-    new-instance p1, Ld26;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p0, Ld26;->X:Lh38;
+    iget v0, p2, Lw5c;->d:I
 
-    iget-object v1, p0, Ld26;->Y:Lfla;
+    if-lez v0, :cond_0
 
-    invoke-direct {p1, v0, v1, p2}, Ld26;-><init>(Lh38;Lfla;Lkotlin/coroutines/Continuation;)V
+    const/4 v0, 0x1
 
-    return-object p1
-.end method
+    goto :goto_0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    :cond_0
+    const/4 v0, 0x0
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    :goto_0
+    if-eqz v0, :cond_1
 
-    iget-object p1, p0, Ld26;->X:Lh38;
+    new-instance v0, Lc26;
 
-    iget-object v0, p0, Ld26;->Y:Lfla;
+    invoke-static {}, Lwha;->n()Lwha;
 
-    invoke-virtual {p1, v0}, Lh38;->j(Lfla;)V
+    move-result-object v1
 
-    sget-object p1, Lccg;->a:Lccg;
+    invoke-direct {v0, p1, p2, v1}, Ldr6;-><init>(Lrf9;Lw5c;Lwha;)V
 
-    return-object p1
+    iput-object v0, p0, Ld26;->b:Lc26;
+
+    new-instance p1, Lukd;
+
+    const/16 p2, 0x11
+
+    invoke-direct {p1, p2, p0}, Lukd;-><init>(ILjava/lang/Object;)V
+
+    iput-object p1, p0, Ld26;->a:Lukd;
+
+    return-void
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw p1
 .end method

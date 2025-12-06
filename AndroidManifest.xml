@@ -128,14 +128,14 @@
                 <category android:name="android.intent.category.BROWSABLE"/>
                 <data android:pathPattern="/..*"/>
                 <data android:scheme="http"/>
-                <data android:scheme="https"/>
+                <data android:scheme="@string/web_scheme"/>
                 <data android:host="@string/app_host"/>
             </intent-filter>
             <intent-filter android:label="max">
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
-                <data android:scheme="max"/>
+                <data android:scheme="@string/app_scheme"/>
                 <data android:host="@string/app_host"/>
             </intent-filter>
             <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts"/>
@@ -148,14 +148,14 @@
         <provider android:authorities="ru.oneme.app.provider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
             <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths"/>
         </provider>
+        <meta-data android:name="com.google.mlkit.vision.DEPENDENCIES" android:value="barcode"/>
         <provider android:authorities="ru.oneme.app.firebaseinitprovider" android:directBootAware="true" android:enabled="false" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
         <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyDJbuC3fODS_aR7jcOkoP6qWIsQen9XARI"/>
         <receiver android:name="one.me.android.calls.CallNotifierBroadcastReceiver"/>
         <activity android:name="one.me.android.calls.CallNotifierFixActivity" android:showOnLockScreen="true" android:theme="@style/CallNotifierFixActivityTheme" android:turnScreenOn="true"/>
         <service android:name="ru.ok.tamtam.android.services.NotificationTamService"/>
+        <provider android:authorities="ru.oneme.app.notifications" android:exported="false" android:grantUriPermissions="true" android:name="one.me.android.notifications.NotificationsImagesProvider"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:name="ru.ok.messages.media.mediabar.ActLocalMedias" android:screenOrientation="portrait" android:theme="@style/Theme.Transparent.WhiteMenuOverflow.NoCaps.Portrait" android:windowSoftInputMode="stateUnchanged|adjustResize"/>
-        <activity android:exported="false" android:name="ru.ok.messages.views.ActAvatarCrop" android:screenOrientation="portrait" android:theme="@style/TamTamTheme.Base"/>
-        <activity android:exported="false" android:name="ru.ok.messages.settings.ActSettings" android:screenOrientation="portrait" android:theme="@style/Theme.Transparent"/>
         <activity android:exported="false" android:launchMode="singleTop" android:name="ru.ok.messages.media.crop.ActTamCropImage" android:screenOrientation="portrait" android:theme="@style/TamTamTheme.Base"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:launchMode="singleTop" android:name="ru.ok.messages.media.trim.ActTrimVideo" android:screenOrientation="portrait" android:theme="@style/TamTamTheme.Base"/>
         <activity android:exported="false" android:name="ru.ok.messages.location.ActLocationMap" android:screenOrientation="portrait" android:theme="@style/TamTamTheme.Base" android:windowSoftInputMode="stateHidden"/>
@@ -168,7 +168,6 @@
             </intent-filter>
         </receiver>
         <receiver android:name="ru.ok.messages.TimeChangeReceiver"/>
-        <provider android:authorities="ru.oneme.app.notifications" android:exported="false" android:grantUriPermissions="true" android:name="ru.ok.messages.NotificationsImagesProvider"/>
         <service android:directBootAware="false" android:enabled="@bool/enable_system_foreground_service_default" android:exported="false" android:foregroundServiceType="dataSync|mediaPlayback|location|camera|microphone" android:name="androidx.work.impl.foreground.SystemForegroundService"/>
         <meta-data android:name="android.max_aspect" android:value="2.5"/>
         <meta-data android:name="fontProviderRequests" android:value="Noto Color Emoji Compat"/>
@@ -178,7 +177,7 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
         </service>
-        <service android:exported="true" android:foregroundServiceType="mediaPlayback" android:name="one.me.android.media.service.OneMeMediaSessionService">
+        <service android:exported="false" android:foregroundServiceType="mediaPlayback" android:name="one.me.android.media.service.OneMeMediaSessionService">
             <intent-filter>
                 <action android:name="androidx.media3.session.MediaSessionService"/>
             </intent-filter>
@@ -198,7 +197,6 @@
             <meta-data android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
             <meta-data android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
         </service>
-        <provider android:authorities="ru.oneme.app.mlkitinitprovider" android:exported="false" android:initOrder="99" android:name="com.google.mlkit.common.internal.MlKitInitProvider"/>
         <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
         <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:visibleToInstantApps="true"/>
         <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lfwc;
+.implements Ly6d;
 
 
 # annotations
@@ -13,15 +13,15 @@
     }
     d2 = {
         "Lru/ok/android/externcalls/sdk/factory/internal/RTCLogWrapper;",
-        "Lfwc;",
+        "Ly6d;",
         "Lkotlin/Function0;",
         "logger",
         "<init>",
-        "(Lji6;)V",
+        "(Lcm6;)V",
         "",
         "tag",
         "msg",
-        "Lccg;",
+        "Lqqg;",
         "log",
         "(Ljava/lang/String;Ljava/lang/String;)V",
         "",
@@ -29,7 +29,7 @@
         "logException",
         "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V",
         "reportException",
-        "Lji6;",
+        "Lcm6;",
         "calls-sdk_release"
     }
     k = 0x1
@@ -43,29 +43,29 @@
 
 
 # instance fields
-.field private final logger:Lji6;
+.field private final logger:Lcm6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lji6;"
+            "Lcm6;"
         }
     .end annotation
 .end field
 
 
 # direct methods
-.method public constructor <init>(Lji6;)V
+.method public constructor <init>(Lcm6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lji6;",
+            "Lcm6;",
             ")V"
         }
     .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/factory/internal/RTCLogWrapper;->logger:Lji6;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/factory/internal/RTCLogWrapper;->logger:Lcm6;
 
     return-void
 .end method
@@ -75,17 +75,17 @@
 .method public log(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/factory/internal/RTCLogWrapper;->logger:Lji6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/factory/internal/RTCLogWrapper;->logger:Lcm6;
 
-    invoke-interface {v0}, Lji6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lcm6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lfwc;
+    check-cast v0, Ly6d;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1, p2}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, p1, p2}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -94,17 +94,17 @@
 .method public logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/factory/internal/RTCLogWrapper;->logger:Lji6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/factory/internal/RTCLogWrapper;->logger:Lcm6;
 
-    invoke-interface {v0}, Lji6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lcm6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lfwc;
+    check-cast v0, Ly6d;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1, p2, p3}, Lfwc;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1, p2, p3}, Ly6d;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_0
     return-void
@@ -113,17 +113,17 @@
 .method public reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/factory/internal/RTCLogWrapper;->logger:Lji6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/factory/internal/RTCLogWrapper;->logger:Lcm6;
 
-    invoke-interface {v0}, Lji6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lcm6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lfwc;
+    check-cast v0, Ly6d;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1, p2, p3}, Lfwc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1, p2, p3}, Ly6d;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_0
     return-void

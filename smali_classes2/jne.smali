@@ -1,145 +1,119 @@
 .class public final Ljne;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Ldtf;
 .source "SourceFile"
+
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:J
 
-.field public final synthetic b:Lmne;
+.field public final synthetic o:Llne;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lmne;I)V
+.method public constructor <init>(Llne;JLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Ljne;->a:I
+    iput-object p1, p0, Ljne;->o:Llne;
 
-    iput-object p1, p0, Ljne;->b:Lmne;
+    iput-wide p2, p0, Ljne;->X:J
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget p1, p0, Ljne;->a:I
+    check-cast p1, Lf84;
 
-    packed-switch p1, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object p1, p0, Ljne;->b:Lmne;
+    invoke-virtual {p0, p1, p2}, Ljne;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget v0, p1, Lmne;->c1:F
+    move-result-object p1
 
-    iget v1, p1, Lmne;->i1:F
+    check-cast p1, Ljne;
 
-    sub-float/2addr v0, v1
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    iget v1, p1, Lmne;->a1:F
+    invoke-virtual {p1, p2}, Ljne;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    mul-float/2addr v0, v1
-
-    iget v1, p1, Lmne;->d1:F
-
-    div-float/2addr v0, v1
-
-    iget v1, p1, Lmne;->b:F
-
-    add-float/2addr v0, v1
-
-    iput v0, p1, Lmne;->o:F
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p1, Lmne;->f1:Z
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p1, Lmne;->m1:Z
-
-    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    :pswitch_0
-    const/4 p1, 0x0
-
-    iget-object v0, p0, Ljne;->b:Lmne;
-
-    iput-boolean p1, v0, Lmne;->f1:Z
-
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p2
 .end method
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 2
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    iget p1, p0, Ljne;->a:I
+    new-instance p1, Ljne;
 
-    packed-switch p1, :pswitch_data_0
+    iget-object v0, p0, Ljne;->o:Llne;
 
-    iget-object p1, p0, Ljne;->b:Lmne;
+    iget-wide v1, p0, Ljne;->X:J
 
-    iget v0, p1, Lmne;->c1:F
+    invoke-direct {p1, v0, v1, v2, p2}, Ljne;-><init>(Llne;JLkotlin/coroutines/Continuation;)V
 
-    iget v1, p1, Lmne;->i1:F
+    return-object p1
+.end method
 
-    sub-float/2addr v0, v1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    iget v1, p1, Lmne;->a1:F
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    mul-float/2addr v0, v1
+    iget-object p1, p0, Ljne;->o:Llne;
 
-    iget v1, p1, Lmne;->d1:F
+    iget-object v0, p1, Llne;->o:Lk18;
 
-    div-float/2addr v0, v1
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
-    iget v1, p1, Lmne;->b:F
+    move-result-object v0
 
-    add-float/2addr v0, v1
+    check-cast v0, Lw63;
 
-    iput v0, p1, Lmne;->o:F
+    iget-wide v1, p0, Ljne;->X:J
 
-    const/4 v0, 0x0
+    invoke-virtual {v0, v1, v2}, Lw63;->n(J)Lpb2;
 
-    iput-boolean v0, p1, Lmne;->f1:Z
+    move-result-object v0
 
-    const/4 v0, 0x1
+    if-eqz v0, :cond_0
 
-    iput-boolean v0, p1, Lmne;->m1:Z
+    iget-object p1, p1, Llne;->x0:Lci5;
 
-    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+    sget-object v1, Lgqe;->c:Lgqe;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-wide v2, v0, Lpb2;->a:J
 
-    return-void
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :pswitch_0
-    const/4 p1, 0x0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Ljne;->b:Lmne;
+    const-string v1, ":profile?id="
 
-    iput-boolean p1, v0, Lmne;->f1:Z
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-string v1, "&type=local_chat&is_opened_from_dialog=false"
 
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0, p1}, Lxc0;->l(Ljava/lang/String;Lci5;)V
+
+    :cond_0
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

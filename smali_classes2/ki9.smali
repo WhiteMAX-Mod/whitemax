@@ -1,119 +1,179 @@
-.class public final Lki9;
-.super Lsgf;
+.class public final synthetic Lki9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Lcm6;
 
 
 # instance fields
-.field public synthetic X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+.field public final synthetic b:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+.method public synthetic constructor <init>(Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;I)V
     .locals 0
 
-    iput-object p2, p0, Lki9;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    iput p2, p0, Lki9;->a:I
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lki9;->b:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
 
-    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 9
 
-    check-cast p1, Ljava/lang/Number;
+    iget v0, p0, Lki9;->a:I
 
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+    iget-object v1, p0, Lki9;->b:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
 
-    move-result p1
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->d1:[Lyy7;
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1, p2}, Lki9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lki9;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lki9;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lki9;
-
-    iget-object v1, p0, Lki9;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    invoke-direct {v0, p2, v1}, Lki9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    move-result p1
-
-    iput p1, v0, Lki9;->X:I
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    iget p1, p0, Lki9;->X:I
-
-    sget-object v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->J0:[Ltr7;
-
-    iget-object v0, p0, Lki9;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->N0()Llef;
+    invoke-virtual {v1}, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->S0()Lhf9;
 
     move-result-object v0
 
-    iget-object v0, v0, Llef;->H0:Lx0f;
+    invoke-virtual {v0}, Lhf9;->z()Z
 
-    :cond_0
-    invoke-virtual {v0}, Lx0f;->getValue()Ljava/lang/Object;
+    move-result v0
 
-    move-result-object v1
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-object v2, v1
+    move-result-object v0
 
-    check-cast v2, Ljava/lang/Number;
+    return-object v0
 
-    invoke-virtual {v2}, Ljava/lang/Number;->intValue()I
+    :pswitch_0
+    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->d1:[Lyy7;
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    new-instance v2, Lhf9;
 
-    move-result-object v2
+    iget-object v0, v1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->L0:Lhs;
 
-    invoke-virtual {v0, v1, v2}, Lx0f;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sget-object v3, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->d1:[Lyy7;
 
-    move-result v1
+    const/4 v4, 0x6
+
+    aget-object v4, v3, v4
+
+    invoke-virtual {v0, v1}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v4
+
+    iget-object v0, v1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->M0:Lhs;
+
+    const/4 v6, 0x7
+
+    aget-object v6, v3, v6
+
+    invoke-virtual {v0, v1}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v6
+
+    iget-object v0, v1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->N0:Lhs;
+
+    const/16 v8, 0x8
+
+    aget-object v3, v3, v8
+
+    invoke-virtual {v0, v1}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v0
+
+    move-wide v3, v4
+
+    move-wide v5, v6
+
+    move-wide v7, v0
+
+    invoke-direct/range {v2 .. v8}, Lhf9;-><init>(JJJ)V
+
+    return-object v2
+
+    :pswitch_1
+    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->d1:[Lyy7;
+
+    iget-object v0, v1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->O0:Lhs;
+
+    sget-object v2, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->d1:[Lyy7;
+
+    const/16 v3, 0x9
+
+    aget-object v4, v2, v3
+
+    invoke-virtual {v0, v1}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/Boolean;
+
+    invoke-virtual {v4}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v4
+
+    if-nez v4, :cond_1
+
+    aget-object v2, v2, v3
+
+    sget-object v2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-virtual {v0, v1, v2}, Lhs;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
+
+    invoke-virtual {v1}, Lc54;->getTargetController()Lc54;
+
+    move-result-object v0
+
+    instance-of v1, v0, Lg44;
 
     if-eqz v1, :cond_0
 
-    sget-object p1, Lccg;->a:Lccg;
+    check-cast v0, Lg44;
 
-    return-object p1
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Lg44;->onDismiss()V
+
+    :cond_1
+    sget-object v0, Lqqg;->a:Lqqg;
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,136 +1,234 @@
 .class public final Lrx8;
-.super Landroid/os/AsyncTask;
+.super Landroid/os/ResultReceiver;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
 
-.field public final b:Landroid/content/Context;
-
-.field public final synthetic c:Lsx8;
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lsx8;ILandroid/content/Context;)V
+.method public synthetic constructor <init>(Landroid/os/Handler;Ljava/lang/Object;I)V
     .locals 0
 
-    iput-object p1, p0, Lrx8;->c:Lsx8;
+    .line 1
+    iput p3, p0, Lrx8;->a:I
 
-    invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
+    iput-object p2, p0, Lrx8;->b:Ljava/lang/Object;
 
-    iput p2, p0, Lrx8;->a:I
+    invoke-direct {p0, p1}, Landroid/os/ResultReceiver;-><init>(Landroid/os/Handler;)V
 
-    iput-object p3, p0, Lrx8;->b:Landroid/content/Context;
+    return-void
+.end method
+
+.method public constructor <init>(Ltx8;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lrx8;->a:I
+
+    const/4 v0, 0x0
+
+    .line 2
+    invoke-direct {p0, v0}, Landroid/os/ResultReceiver;-><init>(Landroid/os/Handler;)V
+
+    .line 3
+    new-instance v0, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lrx8;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    check-cast p1, [Ljava/lang/Void;
-
-    sget-object p1, Lsx8;->D0:Landroid/util/SparseArray;
+.method public final onReceiveResult(ILandroid/os/Bundle;)V
+    .locals 5
 
     iget v0, p0, Lrx8;->a:I
 
-    invoke-virtual {p1, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    move-result-object p1
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Landroid/graphics/drawable/Drawable$ConstantState;
+    iget-object p1, p0, Lrx8;->b:Ljava/lang/Object;
 
-    if-nez p1, :cond_0
+    check-cast p1, Ln2g;
 
-    iget-object p1, p0, Lrx8;->b:Landroid/content/Context;
-
-    invoke-static {p1, v0}, Lofi;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return-object p1
-.end method
-
-.method public final onCancelled(Ljava/lang/Object;)V
-    .locals 2
-
-    check-cast p1, Landroid/graphics/drawable/Drawable;
-
-    if-eqz p1, :cond_0
-
-    sget-object v0, Lsx8;->D0:Landroid/util/SparseArray;
-
-    iget v1, p0, Lrx8;->a:I
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
-
-    move-result-object p1
-
-    invoke-virtual {v0, v1, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    :cond_0
-    iget-object p1, p0, Lrx8;->c:Lsx8;
-
-    const/4 v0, 0x0
-
-    iput-object v0, p1, Lsx8;->s0:Lrx8;
+    invoke-virtual {p1, v1}, Ln2g;->d(Ljava/lang/Object;)V
 
     return-void
-.end method
 
-.method public final onPostExecute(Ljava/lang/Object;)V
-    .locals 5
+    :pswitch_0
+    iget-object v0, p0, Lrx8;->b:Ljava/lang/Object;
 
-    check-cast p1, Landroid/graphics/drawable/Drawable;
+    check-cast v0, Lhke;
 
-    const/4 v0, 0x0
+    new-instance v1, Lyie;
 
-    iget v1, p0, Lrx8;->a:I
+    if-nez p2, :cond_0
 
-    iget-object v2, p0, Lrx8;->c:Lsx8;
+    sget-object p2, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
 
-    if-eqz p1, :cond_0
+    :cond_0
+    invoke-direct {v1, p1, p2}, Lyie;-><init>(ILandroid/os/Bundle;)V
 
-    sget-object v3, Lsx8;->D0:Landroid/util/SparseArray;
+    invoke-virtual {v0, v1}, Lx1;->k(Ljava/lang/Object;)Z
 
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
+    return-void
 
-    move-result-object v4
+    :pswitch_1
+    iget-object p1, p0, Lrx8;->b:Ljava/lang/Object;
 
-    invoke-virtual {v3, v1, v4}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    check-cast p1, Ljava/lang/ref/WeakReference;
 
-    iput-object v0, v2, Lsx8;->s0:Lrx8;
+    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ltx8;
+
+    if-eqz p1, :cond_4
+
+    if-nez p2, :cond_1
+
+    goto :goto_2
+
+    :cond_1
+    iget-object v0, p1, Ltx8;->b:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v2, p1, Ltx8;->e:Lg79;
+
+    const-string v3, "android.support.v4.media.session.EXTRA_BINDER"
+
+    invoke-virtual {p2, v3}, Landroid/os/Bundle;->getBinder(Ljava/lang/String;)Landroid/os/IBinder;
+
+    move-result-object v3
+
+    sget v4, La79;->d:I
+
+    if-nez v3, :cond_2
 
     goto :goto_0
 
-    :cond_0
-    sget-object v3, Lsx8;->D0:Landroid/util/SparseArray;
+    :cond_2
+    const-string v1, "android.support.v4.media.session.IMediaSession"
 
-    invoke-virtual {v3, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+    invoke-interface {v3, v1}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v1
 
-    check-cast v1, Landroid/graphics/drawable/Drawable$ConstantState;
+    if-eqz v1, :cond_3
 
-    if-eqz v1, :cond_1
+    instance-of v4, v1, Ldb7;
 
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable()Landroid/graphics/drawable/Drawable;
+    if-eqz v4, :cond_3
 
-    move-result-object p1
+    check-cast v1, Ldb7;
 
-    :cond_1
-    iput-object v0, v2, Lsx8;->s0:Lrx8;
+    goto :goto_0
+
+    :cond_3
+    new-instance v1, Lbb7;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    iput-object v3, v1, Lbb7;->c:Landroid/os/IBinder;
 
     :goto_0
-    invoke-virtual {v2, p1}, Lsx8;->setRemoteIndicatorDrawableInternal(Landroid/graphics/drawable/Drawable;)V
+    iget-object v3, v2, Lg79;->a:Ljava/lang/Object;
 
+    monitor-enter v3
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :try_start_1
+    iput-object v1, v2, Lg79;->c:Ldb7;
+
+    monitor-exit v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_2
+
+    :try_start_2
+    iget-object v1, p1, Ltx8;->e:Lg79;
+
+    invoke-static {p2}, Lrmb;->d(Landroid/os/Bundle;)Lg0h;
+
+    move-result-object p2
+
+    iget-object v2, v1, Lg79;->a:Ljava/lang/Object;
+
+    monitor-enter v2
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    :try_start_3
+    iput-object p2, v1, Lg79;->d:Lg0h;
+
+    monitor-exit v2
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    :try_start_4
+    invoke-virtual {p1}, Ltx8;->a()V
+
+    monitor-exit v0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception p1
+
+    :try_start_5
+    monitor-exit v2
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+
+    :try_start_6
+    throw p1
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_0
+
+    :catchall_2
+    move-exception p1
+
+    :try_start_7
+    monitor-exit v3
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_2
+
+    :try_start_8
+    throw p1
+
+    :goto_1
+    monitor-exit v0
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_0
+
+    throw p1
+
+    :cond_4
+    :goto_2
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,42 +1,70 @@
-.class public abstract Ljwi;
+.class public final Ljwi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpqa;
+
+
+# static fields
+.field public static final a:Ljwi;
+
 
 # direct methods
-.method public static a(Li54;Li54;)Li54;
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    sget-object v0, Lea5;->a:Lea5;
+    new-instance v0, Ljwi;
 
-    if-ne p1, v0, :cond_0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    return-object p0
+    sput-object v0, Ljwi;->a:Ljwi;
 
-    :cond_0
-    sget-object v0, Lpc3;->c:Lpc3;
+    new-instance v0, Lmli;
 
-    invoke-interface {p1, p0, v0}, Li54;->fold(Ljava/lang/Object;Lzi6;)Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    move-result-object p0
+    invoke-direct {v0, v1}, Lmli;-><init>(I)V
 
-    check-cast p0, Li54;
+    const-class v1, Lemi;
 
-    return-object p0
-.end method
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-.method public static final b(Lzcg;)V
-    .locals 2
+    move-result-object v0
 
-    new-instance v0, Lfpa;
+    const/4 v2, 0x2
 
-    const/16 v1, 0x1b
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    invoke-direct {v0, v1}, Lfpa;-><init>(I)V
+    move-result-object v0
 
-    const-class v1, Lvf4;
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    invoke-virtual {p0, v1, v0}, Lzcg;->c(Ljava/lang/Class;Lji7;)V
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

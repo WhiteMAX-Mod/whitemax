@@ -1,80 +1,49 @@
 .class public final Lfuf;
-.super Lsgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lzi6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Llrd;
 
-.field public final synthetic Y:Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;
+.field public final b:Lai;
+
+.field public final c:Lcrd;
+
+.field public final d:Lcrd;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;)V
-    .locals 0
-
-    iput-object p2, p0, Lfuf;->Y:Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;
-
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lfuf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lfuf;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lfuf;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
     .locals 2
 
-    new-instance v0, Lfuf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v1, p0, Lfuf;->Y:Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;
+    iput-object p1, p0, Lfuf;->a:Llrd;
 
-    invoke-direct {v0, p2, v1}, Lfuf;-><init>(Lkotlin/coroutines/Continuation;Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;)V
+    new-instance v0, Lai;
 
-    iput-object p1, v0, Lfuf;->X:Ljava/lang/Object;
+    const/16 v1, 0x1b
 
-    return-object v0
-.end method
+    invoke-direct {v0, p1, v1}, Lai;-><init>(Llrd;I)V
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    iput-object v0, p0, Lfuf;->b:Lai;
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    new-instance v0, Lcrd;
 
-    iget-object p1, p0, Lfuf;->X:Ljava/lang/Object;
+    const/16 v1, 0xb
 
-    check-cast p1, Ljava/util/List;
+    invoke-direct {v0, p1, v1}, Lcrd;-><init>(Llrd;I)V
 
-    iget-object v0, p0, Lfuf;->Y:Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;
+    iput-object v0, p0, Lfuf;->c:Lcrd;
 
-    iget-object v0, v0, Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;->o:Lqjh;
+    new-instance v0, Lcrd;
 
-    invoke-virtual {v0, p1}, Lr18;->E(Ljava/util/List;)V
+    const/16 v1, 0xc
 
-    sget-object p1, Lccg;->a:Lccg;
+    invoke-direct {v0, p1, v1}, Lcrd;-><init>(Llrd;I)V
 
-    return-object p1
+    iput-object v0, p0, Lfuf;->d:Lcrd;
+
+    return-void
 .end method

@@ -1,148 +1,119 @@
 .class public final Lpv;
-.super Ljava/lang/Object;
+.super Lrv;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/nio/channels/CompletionHandler;
-
-
-# static fields
-.field public static final b:Lpv;
-
-.field public static final c:Lpv;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:J
+
+.field public final b:Z
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lpv;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lpv;-><init>(I)V
-
-    sput-object v0, Lpv;->b:Lpv;
-
-    new-instance v0, Lpv;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lpv;-><init>(I)V
-
-    sput-object v0, Lpv;->c:Lpv;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(JZ)V
     .locals 0
 
-    iput p1, p0, Lpv;->a:I
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lpv;->a:J
+
+    iput-boolean p3, p0, Lpv;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final completed(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Lpv;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Ljava/lang/Void;
-
-    check-cast p2, Ln32;
-
-    sget-object p1, Lccg;->a:Lccg;
-
-    invoke-interface {p2, p1}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_0
-    check-cast p2, Ln32;
-
-    invoke-interface {p2, p1}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final failed(Ljava/lang/Throwable;Ljava/lang/Object;)V
-    .locals 1
-
-    iget v0, p0, Lpv;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p2, Ln32;
-
-    instance-of v0, p1, Ljava/nio/channels/AsynchronousCloseException;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p2}, Ln32;->isCancelled()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Lbed;
-
-    invoke-direct {v0, p1}, Lbed;-><init>(Ljava/lang/Throwable;)V
-
-    invoke-interface {p2, v0}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
-
-    :goto_0
-    return-void
-
-    :pswitch_0
-    check-cast p2, Ln32;
-
-    instance-of v0, p1, Ljava/nio/channels/AsynchronousCloseException;
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p2}, Ln32;->isCancelled()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
+    if-ne p0, p1, :cond_0
 
     goto :goto_1
 
+    :cond_0
+    instance-of v0, p1, Lpv;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
     :cond_1
-    new-instance v0, Lbed;
+    check-cast p1, Lpv;
 
-    invoke-direct {v0, p1}, Lbed;-><init>(Ljava/lang/Throwable;)V
+    iget-wide v0, p0, Lpv;->a:J
 
-    invoke-interface {p2, v0}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
+    iget-wide v2, p1, Lpv;->a:J
 
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-boolean v0, p0, Lpv;->b:Z
+
+    iget-boolean p1, p1, Lpv;->b:Z
+
+    if-eq v0, p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
     :goto_1
-    return-void
+    const/4 p1, 0x1
 
-    nop
+    return p1
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lpv;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lpv;->b:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "LoadingNext(time="
+
+    const-string v1, ", isRemoteCaused="
+
+    iget-wide v2, p0, Lpv;->a:J
+
+    iget-boolean v4, p0, Lpv;->b:Z
+
+    invoke-static {v2, v3, v0, v1, v4}, Lxc0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

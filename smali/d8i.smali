@@ -1,80 +1,68 @@
-.class public final Ld8i;
+.class public final synthetic Ld8i;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ltha;
+.implements Lcom/my/tracker/core/utils/BiConsumer;
 
 
-# static fields
-.field public static final a:Ld8i;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Landroid/app/Activity;
+
+.field public final synthetic c:Lcom/my/tracker/core/utils/TimePoint;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Landroid/app/Activity;Lcom/my/tracker/core/utils/TimePoint;I)V
+    .locals 0
 
-    new-instance v0, Ld8i;
+    iput p3, p0, Ld8i;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ld8i;->b:Landroid/app/Activity;
 
-    sput-object v0, Ld8i;->a:Ld8i;
+    iput-object p2, p0, Ld8i;->c:Lcom/my/tracker/core/utils/TimePoint;
 
-    new-instance v0, Ltwh;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ltwh;-><init>(I)V
-
-    const-class v1, Lmxh;
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final accept(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 2
 
-    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget v0, p0, Ld8i;->a:I
 
-    move-result-object p1
+    check-cast p1, Lcom/my/tracker/core/EngineCore;
 
-    throw p1
+    check-cast p2, Lcom/my/tracker/core/handlers/MyTrackerActivityHandler;
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Ld8i;->b:Landroid/app/Activity;
+
+    iget-object v1, p0, Ld8i;->c:Lcom/my/tracker/core/utils/TimePoint;
+
+    invoke-static {v0, v1, p1, p2}, Lcom/my/tracker/core/o/a;->e(Landroid/app/Activity;Lcom/my/tracker/core/utils/TimePoint;Lcom/my/tracker/core/EngineCore;Lcom/my/tracker/core/handlers/MyTrackerActivityHandler;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Ld8i;->b:Landroid/app/Activity;
+
+    iget-object v1, p0, Ld8i;->c:Lcom/my/tracker/core/utils/TimePoint;
+
+    invoke-static {v0, v1, p1, p2}, Lcom/my/tracker/core/o/a;->c(Landroid/app/Activity;Lcom/my/tracker/core/utils/TimePoint;Lcom/my/tracker/core/EngineCore;Lcom/my/tracker/core/handlers/MyTrackerActivityHandler;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

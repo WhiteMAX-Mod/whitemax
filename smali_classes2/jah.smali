@@ -1,92 +1,122 @@
 .class public final Ljah;
-.super Lmah;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lem6;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public synthetic constructor <init>(Lone/me/chatscreen/videomsg/VideoMessageWidget;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Ljah;->a:I
 
-    iput-wide p1, p0, Ljah;->a:J
+    iput-object p1, p0, Ljah;->b:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
-    .locals 2
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    iget-wide v0, p0, Ljah;->a:J
+    iget v0, p0, Ljah;->a:I
 
-    return-wide v0
-.end method
+    sget-object v1, Lqqg;->a:Lqqg;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    const/16 v2, 0x8
 
-    const/4 v0, 0x1
+    const/4 v3, 0x1
 
-    if-ne p0, p1, :cond_0
+    iget-object v4, p0, Ljah;->b:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-    return v0
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    instance-of v1, p1, Ljah;
+    check-cast p1, Landroid/widget/ImageView;
 
-    const/4 v2, 0x0
+    sget v0, Lm1b;->B:I
 
-    if-nez v1, :cond_1
+    invoke-virtual {p1, v0}, Landroid/view/View;->setId(I)V
 
-    return v2
+    const/4 v0, 0x0
 
-    :cond_1
-    check-cast p1, Ljah;
+    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
-    iget-wide v3, p0, Ljah;->a:J
+    new-instance v0, Liah;
 
-    iget-wide v5, p1, Ljah;->a:J
+    invoke-direct {v0, v4, v3}, Liah;-><init>(Lone/me/chatscreen/videomsg/VideoMessageWidget;I)V
 
-    cmp-long p1, v3, v5
+    invoke-static {p1, v0}, Lf8j;->e(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
-    if-eqz p1, :cond_2
+    invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    return v2
+    return-object v1
 
-    :cond_2
-    return v0
-.end method
+    :pswitch_0
+    check-cast p1, Landroid/widget/ImageView;
 
-.method public final hashCode()I
-    .locals 2
+    sget v0, Lm1b;->z:I
 
-    iget-wide v0, p0, Ljah;->a:J
+    invoke-virtual {p1, v0}, Landroid/view/View;->setId(I)V
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    sget v0, Lyud;->h:I
 
-    move-result v0
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    return v0
-.end method
+    sget-object v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->H0:[Lyy7;
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "Cancelled(requestId="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Ljah;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lrtg;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v4}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    return-object v0
+    const-string v5, "camera"
+
+    invoke-virtual {v0, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/hardware/camera2/CameraManager;
+
+    invoke-virtual {v0}, Landroid/hardware/camera2/CameraManager;->getCameraIdList()[Ljava/lang/String;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    const/4 v5, 0x0
+
+    if-le v0, v3, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move v3, v5
+
+    :goto_0
+    invoke-virtual {p1, v3}, Landroid/view/View;->setEnabled(Z)V
+
+    new-instance v0, Liah;
+
+    invoke-direct {v0, v4, v5}, Liah;-><init>(Lone/me/chatscreen/videomsg/VideoMessageWidget;I)V
+
+    invoke-static {p1, v0}, Lf8j;->e(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+
+    invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
+
+    return-object v1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

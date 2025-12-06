@@ -1,167 +1,114 @@
-.class public final synthetic Lko3;
-.super Ljava/lang/Object;
+.class public final Lko3;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lmo3;
 
-.field public final synthetic b:Lru/ok/messages/views/dialogs/ConfirmationDialog;
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/messages/views/dialogs/ConfirmationDialog;I)V
+.method public constructor <init>(Lmo3;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lko3;->a:I
+    iput-object p1, p0, Lko3;->X:Lmo3;
 
-    iput-object p1, p0, Lko3;->b:Lru/ok/messages/views/dialogs/ConfirmationDialog;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget p1, p0, Lko3;->a:I
+    check-cast p1, Lf84;
 
-    packed-switch p1, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object p1, p0, Lko3;->b:Lru/ok/messages/views/dialogs/ConfirmationDialog;
+    invoke-virtual {p0, p1, p2}, Lko3;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p1}, Lru/ok/messages/views/dialogs/ConfirmationDialog;->G0()V
+    move-result-object p1
 
-    return-void
+    check-cast p1, Lko3;
 
-    :pswitch_0
-    iget-object p1, p0, Lko3;->b:Lru/ok/messages/views/dialogs/ConfirmationDialog;
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    iget-object p2, p1, Landroidx/fragment/app/a;->Y:Landroid/os/Bundle;
+    invoke-virtual {p1, p2}, Lko3;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v0, "oneme:share:data"
+    move-result-object p1
 
-    if-eqz p2, :cond_0
+    return-object p1
+.end method
 
-    invoke-virtual {p2, v0}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    move-result-object p2
+    new-instance p1, Lko3;
+
+    iget-object v0, p0, Lko3;->X:Lmo3;
+
+    invoke-direct {p1, v0, p2}, Lko3;-><init>(Lmo3;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lko3;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    const/4 p2, 0x0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    :goto_0
-    invoke-virtual {p1}, Landroidx/fragment/app/a;->G()Landroidx/fragment/app/c;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    move-result-object v1
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    new-instance v2, Ltcb;
-
-    const-string v3, "POSITIVE"
-
-    sget-object v4, Lmo3;->a:Lmo3;
-
-    invoke-direct {v2, v3, v4}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v2}, [Ltcb;
-
-    move-result-object v2
-
-    invoke-static {v2}, Leli;->b([Ltcb;)Landroid/os/Bundle;
-
-    move-result-object v2
-
-    const-string v3, "ConfirmationDialog:request_key"
-
-    invoke-virtual {v1, v3, v2}, Landroidx/fragment/app/c;->c0(Ljava/lang/String;Landroid/os/Bundle;)V
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p1, v1}, Landroidx/fragment/app/a;->I(Z)Landroidx/fragment/app/a;
-
-    move-result-object v2
-
-    const/4 v3, -0x1
-
-    if-eqz v2, :cond_2
-
-    instance-of v4, v2, Llo3;
-
-    if-eqz v4, :cond_1
-
-    check-cast v2, Llo3;
-
-    invoke-interface {v2, p2}, Llo3;->y(Landroid/os/Bundle;)V
-
-    goto :goto_1
+    throw p1
 
     :cond_1
-    new-instance v4, Landroid/content/Intent;
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    invoke-direct {v4}, Landroid/content/Intent;-><init>()V
+    iget-object p1, p0, Lko3;->X:Lmo3;
 
-    invoke-virtual {v4, v0, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
+    iget-object p1, p1, Lmo3;->a:Ljve;
 
-    invoke-virtual {p1}, Landroidx/fragment/app/a;->J()I
+    iput v1, p0, Lko3;->o:I
 
-    move-result p2
+    sget-object v0, Lfo3;->a:Lfo3;
 
-    invoke-virtual {v2, p2, v3, v4}, Landroidx/fragment/app/a;->S(IILandroid/content/Intent;)V
+    invoke-virtual {p1, v0, p0}, Ljve;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    goto :goto_1
+    move-result-object p1
+
+    sget-object v0, Lg84;->a:Lg84;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
 
     :cond_2
-    invoke-virtual {p1}, Landroidx/fragment/app/a;->C()Landroidx/fragment/app/b;
+    :goto_0
+    sget-object p1, Lqqg;->a:Lqqg;
 
-    move-result-object v2
-
-    instance-of v4, v2, Llo3;
-
-    if-eqz v4, :cond_3
-
-    check-cast v2, Llo3;
-
-    invoke-interface {v2, p2}, Llo3;->y(Landroid/os/Bundle;)V
-
-    goto :goto_1
-
-    :cond_3
-    instance-of v4, v2, Lh6;
-
-    if-eqz v4, :cond_4
-
-    new-instance v4, Landroid/content/Intent;
-
-    invoke-direct {v4}, Landroid/content/Intent;-><init>()V
-
-    invoke-virtual {v4, v0, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
-
-    check-cast v2, Lh6;
-
-    invoke-virtual {p1}, Landroidx/fragment/app/a;->J()I
-
-    move-result p2
-
-    invoke-virtual {v2, p2, v3, v4}, Lh6;->onActivityResult(IILandroid/content/Intent;)V
-
-    :cond_4
-    :goto_1
-    iput-boolean v1, p1, Lru/ok/messages/views/dialogs/ConfirmationDialog;->x1:Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgjc;
+.implements Lcuc;
 
 
 # static fields
@@ -11,7 +11,7 @@
 
 
 # instance fields
-.field public final a:Ln02;
+.field public final a:Li12;
 
 
 # direct methods
@@ -45,12 +45,12 @@
     return-void
 .end method
 
-.method public constructor <init>(Ln02;)V
+.method public constructor <init>(Li12;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroidx/camera/camera2/internal/compat/quirk/TorchFlashRequiredFor3aUpdateQuirk;->a:Ln02;
+    iput-object p1, p0, Landroidx/camera/camera2/internal/compat/quirk/TorchFlashRequiredFor3aUpdateQuirk;->a:Li12;
 
     return-void
 .end method

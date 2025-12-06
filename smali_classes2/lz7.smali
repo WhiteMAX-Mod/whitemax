@@ -1,71 +1,124 @@
 .class public final Llz7;
-.super Ly14;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public X:Lvy5;
-
-.field public Y:Landroid/net/Uri;
-
-.field public Z:Lpb9;
-
-.field public o:Lc08;
-
-.field public q0:Lla2;
-
-.field public r0:J
-
-.field public synthetic s0:Ljava/lang/Object;
-
-.field public final synthetic t0:Lc08;
-
-.field public u0:I
+.field public final a:Ljava/io/Serializable;
 
 
 # direct methods
-.method public constructor <init>(Lc08;Ly14;)V
+.method public constructor <init>()V
+    .locals 1
+
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 5
+    new-instance v0, Ljava/util/LinkedHashMap;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+
+    iput-object v0, p0, Llz7;->a:Ljava/io/Serializable;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Llz7;->t0:Lc08;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Llz7;->a:Ljava/io/Serializable;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljz7;)V
+    .locals 0
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    iget-object p1, p1, Ljz7;->a:Ljava/util/ArrayList;
+
+    iput-object p1, p0, Llz7;->a:Ljava/io/Serializable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
+.method public a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 2
 
-    iput-object p1, p0, Llz7;->s0:Ljava/lang/Object;
+    iget-object v0, p0, Llz7;->a:Ljava/io/Serializable;
 
-    iget p1, p0, Llz7;->u0:I
+    check-cast v0, Ljava/util/LinkedHashMap;
 
-    const/high16 v0, -0x80000000
+    invoke-virtual {v0, p1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    or-int/2addr p1, v0
+    move-result-object v1
 
-    iput p1, p0, Llz7;->u0:I
+    check-cast v1, Ljava/util/List;
 
-    const-wide/16 v5, 0x0
+    if-nez v1, :cond_0
 
-    const-wide/16 v7, 0x0
+    new-instance v1, Ljava/util/ArrayList;
 
-    iget-object v0, p0, Llz7;->t0:Lc08;
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
+    invoke-interface {v1, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public b()I
+    .locals 3
+
+    iget-object v0, p0, Llz7;->a:Ljava/io/Serializable;
+
+    check-cast v0, Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->values()Ljava/util/Collection;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
 
     const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    const-wide/16 v3, 0x0
+    move-result v2
 
-    move-object v9, p0
+    if-eqz v2, :cond_0
 
-    invoke-virtual/range {v0 .. v9}, Lc08;->b(Lvy5;Landroid/net/Uri;JJJLy14;)Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v2
 
-    return-object p1
+    check-cast v2, Ljava/util/List;
+
+    invoke-interface {v2}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    add-int/2addr v1, v2
+
+    goto :goto_0
+
+    :cond_0
+    return v1
 .end method

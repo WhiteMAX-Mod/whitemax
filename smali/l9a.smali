@@ -1,49 +1,56 @@
-.class public final Ll9a;
-.super Lq24;
+.class public final synthetic Ll9a;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lum6;
 
 
 # instance fields
-.field public final o:Z
+.field public final synthetic a:Ln9a;
+
+.field public final synthetic b:Lm9a;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(Ln9a;Lm9a;)V
+    .locals 0
 
-    invoke-direct {p0}, Lq24;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Ll9a;->a:Ln9a;
 
-    iput-boolean v0, p0, Ll9a;->o:Z
+    iput-object p2, p0, Ll9a;->b:Lm9a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Lq24;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    new-instance v0, Ll9a;
+    check-cast p1, Ljava/lang/Throwable;
 
-    invoke-direct {v0}, Ll9a;-><init>()V
+    check-cast p2, Lqqg;
 
-    return-object v0
-.end method
+    check-cast p3, Lx74;
 
-.method public final e()Z
-    .locals 1
+    sget-object p1, Ln9a;->h:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    iget-boolean v0, p0, Ll9a;->o:Z
+    iget-object p2, p0, Ll9a;->b:Lm9a;
 
-    return v0
-.end method
+    iget-object p3, p2, Lm9a;->b:Ljava/lang/Object;
 
-.method public final g(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZLo24;)V
-    .locals 0
+    iget-object v0, p0, Ll9a;->a:Ln9a;
 
-    invoke-virtual {p5}, Lo24;->n()V
+    invoke-virtual {p1, v0, p3}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    return-void
+    iget-object p1, p2, Lm9a;->b:Ljava/lang/Object;
+
+    invoke-virtual {v0, p1}, Ln9a;->g(Ljava/lang/Object;)V
+
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

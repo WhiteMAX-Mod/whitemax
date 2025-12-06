@@ -1,153 +1,59 @@
 .class public final Lbnd;
-.super Ljava/util/concurrent/atomic/AtomicInteger;
+.super Lvfi;
 .source "SourceFile"
-
-# interfaces
-.implements Luhc;
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final synthetic a:[B
 
-.field public final b:Lecf;
+.field public final synthetic b:Lua9;
+
+.field public final synthetic c:I
 
 
 # direct methods
-.method public constructor <init>(Lecf;Ljava/lang/Object;)V
+.method public constructor <init>([BLua9;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lbnd;->b:Lecf;
+    iput-object p1, p0, Lbnd;->a:[B
 
-    iput-object p2, p0, Lbnd;->a:Ljava/lang/Object;
+    iput-object p2, p0, Lbnd;->b:Lua9;
+
+    iput p3, p0, Lbnd;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final cancel()V
-    .locals 1
+.method public final b()J
+    .locals 2
 
-    const/4 v0, 0x2
+    iget v0, p0, Lbnd;->c:I
 
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
+    int-to-long v0, v0
 
-    return-void
+    return-wide v0
 .end method
 
-.method public final clear()V
+.method public final c()Lua9;
     .locals 1
 
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
-
-    return-void
-.end method
-
-.method public final i(J)V
-    .locals 1
-
-    invoke-static {p1, p2}, Ljcf;->e(J)Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    const/4 p2, 0x1
-
-    invoke-virtual {p0, p1, p2}, Ljava/util/concurrent/atomic/AtomicInteger;->compareAndSet(II)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    iget-object p1, p0, Lbnd;->a:Ljava/lang/Object;
-
-    iget-object p2, p0, Lbnd;->b:Lecf;
-
-    invoke-interface {p2, p1}, Lecf;->d(Ljava/lang/Object;)V
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result p1
-
-    const/4 v0, 0x2
-
-    if-eq p1, v0, :cond_1
-
-    invoke-interface {p2}, Lecf;->b()V
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method public final isEmpty()Z
-    .locals 1
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final offer(Ljava/lang/Object;)Z
-    .locals 1
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Should not be called!"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final poll()Ljava/lang/Object;
-    .locals 1
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
-
-    iget-object v0, p0, Lbnd;->a:Ljava/lang/Object;
-
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
+    iget-object v0, p0, Lbnd;->b:Lua9;
 
     return-object v0
 .end method
 
-.method public final q(I)I
-    .locals 0
+.method public final i(Lvv0;)V
+    .locals 2
 
-    const/4 p1, 0x1
+    iget-object v0, p0, Lbnd;->a:[B
 
-    return p1
+    iget v1, p0, Lbnd;->c:I
+
+    invoke-interface {p1, v1, v0}, Lvv0;->E(I[B)Lvv0;
+
+    return-void
 .end method

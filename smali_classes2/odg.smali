@@ -1,19 +1,63 @@
 .class public final Lodg;
-.super Ljava/lang/Object;
+.super Lpdg;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final serializer()Lur7;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lur7;"
-        }
-    .end annotation
+# instance fields
+.field public final synthetic b:I
 
-    sget-object v0, Lndg;->a:Lndg;
+.field public final c:J
 
-    return-object v0
+
+# direct methods
+.method public constructor <init>(JI)V
+    .locals 0
+
+    iput p3, p0, Lodg;->b:I
+
+    packed-switch p3, :pswitch_data_0
+
+    sget-object p3, Lndg;->b:Lndg;
+
+    invoke-direct {p0, p3}, Lpdg;-><init>(Lndg;)V
+
+    iput-wide p1, p0, Lodg;->c:J
+
+    return-void
+
+    :pswitch_0
+    sget-object p3, Lndg;->o:Lndg;
+
+    invoke-direct {p0, p3}, Lpdg;-><init>(Lndg;)V
+
+    iput-wide p1, p0, Lodg;->c:J
+
+    return-void
+
+    :pswitch_1
+    sget-object p3, Lndg;->d:Lndg;
+
+    invoke-direct {p0, p3}, Lpdg;-><init>(Lndg;)V
+
+    iput-wide p1, p0, Lodg;->c:J
+
+    return-void
+
+    :pswitch_2
+    sget-object p3, Lndg;->c:Lndg;
+
+    invoke-direct {p0, p3}, Lpdg;-><init>(Lndg;)V
+
+    iput-wide p1, p0, Lodg;->c:J
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

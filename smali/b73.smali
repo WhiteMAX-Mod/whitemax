@@ -1,282 +1,69 @@
 .class public final Lb73;
-.super Ljava/lang/Object;
+.super Lth0;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:I
+.field public final a:Ljava/lang/String;
 
-.field public b:I
+.field public final b:Lcm6;
 
-.field public c:[I
+.field public final c:Lo00;
 
-.field public d:I
+.field public final d:Ld92;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method public constructor <init>(Ljava/lang/String;Lcm6;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v0, 0x8
+    iput-object p1, p0, Lb73;->a:Ljava/lang/String;
 
-    invoke-static {v0}, Ljava/lang/Integer;->bitCount(I)I
+    iput-object p2, p0, Lb73;->b:Lcm6;
 
-    move-result v1
+    new-instance p1, Lo00;
 
-    const/4 v2, 0x1
+    const/16 p2, 0xc
 
-    if-eq v1, v2, :cond_0
+    invoke-direct {p1, p2}, Lo00;-><init>(I)V
 
-    const/4 v0, 0x7
+    iput-object p1, p0, Lb73;->c:Lo00;
 
-    invoke-static {v0}, Ljava/lang/Integer;->highestOneBit(I)I
+    new-instance p1, Ld92;
 
-    move-result v0
+    const/16 p2, 0xa
 
-    shl-int/2addr v0, v2
+    invoke-direct {p1, p2, p0}, Ld92;-><init>(ILjava/lang/Object;)V
 
-    :cond_0
-    add-int/lit8 v1, v0, -0x1
-
-    iput v1, p0, Lb73;->d:I
-
-    new-array v0, v0, [I
-
-    iput-object v0, p0, Lb73;->c:[I
+    iput-object p1, p0, Lb73;->d:Ld92;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(I)V
-    .locals 6
+.method public final a()Ljava/util/Comparator;
+    .locals 1
 
-    iget-object v0, p0, Lb73;->c:[I
+    iget-object v0, p0, Lb73;->c:Lo00;
 
-    iget v1, p0, Lb73;->b:I
-
-    aput p1, v0, v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    iget p1, p0, Lb73;->d:I
-
-    and-int/2addr p1, v1
-
-    iput p1, p0, Lb73;->b:I
-
-    iget v1, p0, Lb73;->a:I
-
-    if-ne p1, v1, :cond_1
-
-    array-length p1, v0
-
-    sub-int v2, p1, v1
-
-    shl-int/lit8 v3, p1, 0x1
-
-    if-ltz v3, :cond_0
-
-    new-array v4, v3, [I
-
-    const/4 v5, 0x0
-
-    invoke-static {v5, v1, p1, v0, v4}, Ljt;->n(III[I[I)V
-
-    iget-object v0, p0, Lb73;->c:[I
-
-    iget v1, p0, Lb73;->a:I
-
-    invoke-static {v2, v5, v1, v0, v4}, Ljt;->n(III[I[I)V
-
-    iput-object v4, p0, Lb73;->c:[I
-
-    iput v5, p0, Lb73;->a:I
-
-    iput p1, p0, Lb73;->b:I
-
-    add-int/lit8 v3, v3, -0x1
-
-    iput v3, p0, Lb73;->d:I
-
-    return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    const-string v0, "Max array capacity exceeded"
-
-    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    return-void
+    return-object v0
 .end method
 
-.method public b(II)V
-    .locals 5
+.method public final b()Lem6;
+    .locals 1
 
-    if-ltz p1, :cond_3
+    iget-object v0, p0, Lb73;->d:Ld92;
 
-    if-ltz p2, :cond_2
-
-    iget v0, p0, Lb73;->d:I
-
-    mul-int/lit8 v1, v0, 0x2
-
-    iget-object v2, p0, Lb73;->c:[I
-
-    const/4 v3, 0x4
-
-    if-nez v2, :cond_0
-
-    new-array v0, v3, [I
-
-    iput-object v0, p0, Lb73;->c:[I
-
-    const/4 v2, -0x1
-
-    invoke-static {v0, v2}, Ljava/util/Arrays;->fill([II)V
-
-    goto :goto_0
-
-    :cond_0
-    array-length v4, v2
-
-    if-lt v1, v4, :cond_1
-
-    mul-int/2addr v0, v3
-
-    new-array v0, v0, [I
-
-    iput-object v0, p0, Lb73;->c:[I
-
-    array-length v3, v2
-
-    const/4 v4, 0x0
-
-    invoke-static {v2, v4, v0, v4, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    :cond_1
-    :goto_0
-    iget-object v0, p0, Lb73;->c:[I
-
-    aput p1, v0, v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    aput p2, v0, v1
-
-    iget p1, p0, Lb73;->d:I
-
-    add-int/lit8 p1, p1, 0x1
-
-    iput p1, p0, Lb73;->d:I
-
-    return-void
-
-    :cond_2
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "Pixel distance must be non-negative"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_3
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "Layout positions must be non-negative"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-object v0
 .end method
 
-.method public c(Landroidx/recyclerview/widget/RecyclerView;Z)V
-    .locals 4
+.method public final c()Lcm6;
+    .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lb73;->b:Lcm6;
 
-    iput v0, p0, Lb73;->d:I
-
-    iget-object v0, p0, Lb73;->c:[I
-
-    if-eqz v0, :cond_0
-
-    const/4 v1, -0x1
-
-    invoke-static {v0, v1}, Ljava/util/Arrays;->fill([II)V
-
-    :cond_0
-    iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView;->z0:Landroidx/recyclerview/widget/a;
-
-    iget-object v1, p1, Landroidx/recyclerview/widget/RecyclerView;->y0:Lt6d;
-
-    if-eqz v1, :cond_3
-
-    if-eqz v0, :cond_3
-
-    iget-boolean v1, v0, Landroidx/recyclerview/widget/a;->i:Z
-
-    if-eqz v1, :cond_3
-
-    if-eqz p2, :cond_1
-
-    iget-object v1, p1, Landroidx/recyclerview/widget/RecyclerView;->q0:Ld9;
-
-    invoke-virtual {v1}, Ld9;->G()Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    iget-object v1, p1, Landroidx/recyclerview/widget/RecyclerView;->y0:Lt6d;
-
-    invoke-virtual {v1}, Lt6d;->j()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1, p0}, Landroidx/recyclerview/widget/a;->j(ILb73;)V
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->X()Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    iget v1, p0, Lb73;->a:I
-
-    iget v2, p0, Lb73;->b:I
-
-    iget-object v3, p1, Landroidx/recyclerview/widget/RecyclerView;->q1:Lm7d;
-
-    invoke-virtual {v0, v1, v2, v3, p0}, Landroidx/recyclerview/widget/a;->i(IILm7d;Lb73;)V
-
-    :cond_2
-    :goto_0
-    iget v1, p0, Lb73;->d:I
-
-    iget v2, v0, Landroidx/recyclerview/widget/a;->j:I
-
-    if-le v1, v2, :cond_3
-
-    iput v1, v0, Landroidx/recyclerview/widget/a;->j:I
-
-    iput-boolean p2, v0, Landroidx/recyclerview/widget/a;->k:Z
-
-    iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView;->c:Lh7d;
-
-    invoke-virtual {p1}, Lh7d;->l()V
-
-    :cond_3
-    return-void
+    return-object v0
 .end method

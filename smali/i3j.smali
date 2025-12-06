@@ -1,5 +1,5 @@
 .class public final Li3j;
-.super Lf4;
+.super Ll4;
 .source "SourceFile"
 
 
@@ -16,34 +16,22 @@
 
 
 # instance fields
-.field public final a:D
+.field public a:D
 
-.field public final b:D
+.field public b:D
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lgti;
+    new-instance v0, Lobh;
 
-    const/16 v1, 0x11
+    const/16 v1, 0x19
 
-    invoke-direct {v0, v1}, Lgti;-><init>(I)V
+    invoke-direct {v0, v1}, Lobh;-><init>(I)V
 
     sput-object v0, Li3j;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(DD)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Li3j;->a:D
-
-    iput-wide p3, p0, Li3j;->b:D
 
     return-void
 .end method
@@ -55,29 +43,29 @@
 
     const/16 p2, 0x4f45
 
-    invoke-static {p1, p2}, Llyi;->t(Landroid/os/Parcel;I)I
+    invoke-static {p1, p2}, La9j;->k(Landroid/os/Parcel;I)I
 
     move-result p2
 
-    const/4 v0, 0x1
+    iget-wide v0, p0, Li3j;->a:D
 
-    const/16 v1, 0x8
+    const/4 v2, 0x2
 
-    invoke-static {p1, v0, v1}, Llyi;->v(Landroid/os/Parcel;II)V
+    const/16 v3, 0x8
 
-    iget-wide v2, p0, Li3j;->a:D
-
-    invoke-virtual {p1, v2, v3}, Landroid/os/Parcel;->writeDouble(D)V
-
-    const/4 v0, 0x2
-
-    invoke-static {p1, v0, v1}, Llyi;->v(Landroid/os/Parcel;II)V
-
-    iget-wide v0, p0, Li3j;->b:D
+    invoke-static {p1, v2, v3}, La9j;->m(Landroid/os/Parcel;II)V
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    invoke-static {p1, p2}, Llyi;->u(Landroid/os/Parcel;I)V
+    iget-wide v0, p0, Li3j;->b:D
+
+    const/4 v2, 0x3
+
+    invoke-static {p1, v2, v3}, La9j;->m(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
+
+    invoke-static {p1, p2}, La9j;->l(Landroid/os/Parcel;I)V
 
     return-void
 .end method

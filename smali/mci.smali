@@ -1,70 +1,102 @@
-.class public final Lmci;
+.class public abstract Lmci;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ltha;
 
+# instance fields
+.field public a:Ljava/lang/Boolean;
 
-# static fields
-.field public static final a:Lmci;
+.field public b:Z
+
+.field public final synthetic c:Lcom/google/android/gms/common/internal/a;
+
+.field public final d:I
+
+.field public final e:Landroid/os/Bundle;
+
+.field public final synthetic f:Lcom/google/android/gms/common/internal/a;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lcom/google/android/gms/common/internal/a;ILandroid/os/Bundle;)V
+    .locals 1
 
-    new-instance v0, Lmci;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lmci;->f:Lcom/google/android/gms/common/internal/a;
 
-    sput-object v0, Lmci;->a:Lmci;
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    new-instance v0, Ltwh;
+    iput-object p1, p0, Lmci;->c:Lcom/google/android/gms/common/internal/a;
 
-    const/4 v1, 0x3
+    iput-object v0, p0, Lmci;->a:Ljava/lang/Boolean;
 
-    invoke-direct {v0, v1}, Ltwh;-><init>(I)V
+    const/4 p1, 0x0
 
-    const-class v1, Lmxh;
+    iput-boolean p1, p0, Lmci;->b:Z
 
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+    iput p2, p0, Lmci;->d:I
 
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x5
-
-    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
+    iput-object p3, p0, Lmci;->e:Landroid/os/Bundle;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public abstract a(Les3;)V
+.end method
 
-    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+.method public abstract b()Z
+.end method
 
-    move-result-object p1
+.method public final c()V
+    .locals 2
 
-    throw p1
+    monitor-enter p0
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    iput-object v0, p0, Lmci;->a:Ljava/lang/Boolean;
+
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    iget-object v0, p0, Lmci;->c:Lcom/google/android/gms/common/internal/a;
+
+    iget-object v0, v0, Lcom/google/android/gms/common/internal/a;->u0:Ljava/util/ArrayList;
+
+    monitor-enter v0
+
+    :try_start_1
+    iget-object v1, p0, Lmci;->c:Lcom/google/android/gms/common/internal/a;
+
+    iget-object v1, v1, Lcom/google/android/gms/common/internal/a;->u0:Ljava/util/ArrayList;
+
+    invoke-virtual {v1, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+
+    :catchall_1
+    move-exception v0
+
+    :try_start_2
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    throw v0
 .end method

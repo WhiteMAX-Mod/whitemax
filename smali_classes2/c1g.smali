@@ -1,167 +1,131 @@
-.class public final Lc1g;
+.class public final synthetic Lc1g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/Comparator;
 
-# static fields
-.field public static final a:Lc1g;
 
-.field public static volatile b:Lb1g;
+# instance fields
+.field public final synthetic a:Ljava/lang/Iterable;
+
+.field public final synthetic b:Ltm6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Ljava/util/List;Ltm6;)V
+    .locals 0
 
-    new-instance v0, Lc1g;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lc1g;->a:Ljava/lang/Iterable;
 
-    sput-object v0, Lc1g;->a:Lc1g;
-
-    sget-object v0, Llga;->Y:Llga;
-
-    sput-object v0, Lc1g;->b:Lb1g;
+    iput-object p2, p0, Lc1g;->b:Ltm6;
 
     return-void
 .end method
 
-.method public static varargs a(Ljava/lang/String;J[Ltcb;)V
+
+# virtual methods
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 9
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+    iget-object v0, p0, Lc1g;->b:Ltm6;
 
-    sget-object v1, Lnbg;->$EnumSwitchMapping$0:[I
+    iget-object v1, p0, Lc1g;->a:Ljava/lang/Iterable;
 
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    move-result v0
+    move-result-object v1
 
-    aget v0, v1, v0
+    const/4 v2, -0x1
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v3, 0x0
 
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+    move v5, v2
 
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    move v6, v5
 
-    throw p0
-
-    :pswitch_0
-    const-string v0, "d"
+    move v4, v3
 
     :goto_0
-    move-object v7, v0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    goto :goto_1
+    move-result v7
 
-    :pswitch_1
-    const-string v0, "h"
+    if-eqz v7, :cond_3
 
-    goto :goto_0
+    :try_start_0
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    :pswitch_2
-    const-string v0, "min"
+    move-result-object v7
 
-    goto :goto_0
+    check-cast v7, Ljava/lang/Long;
 
-    :pswitch_3
-    const-string v0, "s"
-
-    goto :goto_0
-
-    :pswitch_4
-    const-string v0, "ms"
-
-    goto :goto_0
-
-    :pswitch_5
-    const-string v0, "us"
-
-    goto :goto_0
-
-    :pswitch_6
-    const-string v0, "ns"
-
-    goto :goto_0
-
-    :goto_1
-    array-length v0, p3
-
-    invoke-static {p3, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, [Ltcb;
-
-    invoke-static {p3}, Lzg8;->j([Ltcb;)Ljava/util/Map;
+    invoke-interface {v0, p1}, Ltm6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v8
 
-    sget-object p3, Lc1g;->b:Lb1g;
+    invoke-virtual {v7, v8}, Ljava/lang/Long;->equals(Ljava/lang/Object;)Z
 
-    sget-object v0, Llga;->Y:Llga;
+    move-result v8
 
-    invoke-virtual {p3, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    if-eqz v8, :cond_0
 
-    move-result v0
+    move v5, v4
 
-    if-eqz v0, :cond_0
-
-    return-void
+    goto :goto_1
 
     :cond_0
-    sget-object v0, Lxea;->X:Lxea;
+    invoke-interface {v0, p2}, Ltm6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p3, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    move-result-object v8
 
-    move-result p3
+    invoke-virtual {v7, v8}, Ljava/lang/Long;->equals(Ljava/lang/Object;)Z
 
-    if-eqz p3, :cond_1
+    move-result v7
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-void
+    if-eqz v7, :cond_1
+
+    move v6, v4
 
     :cond_1
-    new-instance v1, Logb;
+    :goto_1
+    if-eq v5, v2, :cond_2
 
-    sget-wide v2, Laxb;->a:J
+    if-eq v6, v2, :cond_2
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
+    goto :goto_2
 
-    move-result-wide v4
+    :cond_2
+    add-int/lit8 v4, v4, 0x1
 
-    add-long/2addr v4, v2
+    goto :goto_0
 
-    sget-wide v2, Laxb;->b:J
+    :catchall_0
+    move-exception p1
 
-    sub-long v2, v4, v2
+    new-instance p2, Ljava/lang/RuntimeException;
 
-    move-object v4, p0
+    invoke-direct {p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
-    move-wide v5, p1
+    throw p2
 
-    invoke-direct/range {v1 .. v8}, Logb;-><init>(JLjava/lang/String;JLjava/lang/String;Ljava/util/Map;)V
+    :cond_3
+    :goto_2
+    if-ge v5, v6, :cond_4
 
-    new-instance p0, Lzje;
+    return v2
 
-    const/16 p1, 0x15
+    :cond_4
+    if-ne v5, v6, :cond_5
 
-    invoke-direct {p0, p1, v1}, Lzje;-><init>(ILjava/lang/Object;)V
+    return v3
 
-    invoke-static {p0}, Lf1g;->a(Ljava/lang/Runnable;)V
+    :cond_5
+    const/4 p1, 0x1
 
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return p1
 .end method

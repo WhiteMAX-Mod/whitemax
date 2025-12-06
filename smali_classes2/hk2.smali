@@ -1,152 +1,100 @@
 .class public final Lhk2;
-.super Lmk2;
+.super Ldtf;
 .source "SourceFile"
+
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public final b:Ljava/lang/Long;
+.field public final synthetic X:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
 
-.field public final c:J
-
-.field public final d:Z
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Long;JZ)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;)V
     .locals 0
 
-    invoke-direct {p0}, Lmk2;-><init>()V
+    iput-object p2, p0, Lhk2;->X:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
 
-    iput-object p1, p0, Lhk2;->b:Ljava/lang/Long;
+    const/4 p2, 0x2
 
-    iput-wide p2, p0, Lhk2;->c:J
-
-    iput-boolean p4, p0, Lhk2;->d:Z
+    invoke-direct {p0, p2, p1}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    goto :goto_1
+    invoke-virtual {p0, p1, p2}, Lhk2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v0, p1, Lhk2;
+    move-result-object p1
 
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
     check-cast p1, Lhk2;
 
-    iget-object v0, p0, Lhk2;->b:Ljava/lang/Long;
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    iget-object v1, p1, Lhk2;->b:Ljava/lang/Long;
+    invoke-virtual {p1, p2}, Lhk2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-wide v0, p0, Lhk2;->c:J
-
-    iget-wide v2, p1, Lhk2;->c:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-boolean v0, p0, Lhk2;->d:Z
-
-    iget-boolean p1, p1, Lhk2;->d:Z
-
-    if-eq v0, p1, :cond_4
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_4
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 4
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object v0, p0, Lhk2;->b:Ljava/lang/Long;
+    new-instance v0, Lhk2;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    iget-object v1, p0, Lhk2;->X:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
 
-    move-result v0
+    invoke-direct {v0, p2, v1}, Lhk2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;)V
 
-    const/16 v1, 0x1f
+    iput-object p1, v0, Lhk2;->o:Ljava/lang/Object;
 
-    mul-int/2addr v0, v1
-
-    iget-wide v2, p0, Lhk2;->c:J
-
-    invoke-static {v0, v1, v2, v3}, Lrtg;->c(IIJ)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Lhk2;->d:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-object v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    const-string v1, "ShareAttach(attachId="
+    iget-object p1, p0, Lhk2;->o:Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    check-cast p1, Ljava/lang/Number;
 
-    iget-object v1, p0, Lhk2;->b:Ljava/lang/Long;
+    invoke-virtual {p1}, Ljava/lang/Number;->floatValue()F
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result p1
 
-    const-string v1, ", messageId="
+    iget-object v0, p0, Lhk2;->X:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, v0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->D0:Ljava/lang/Object;
 
-    iget-wide v1, p0, Lhk2;->c:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isForwardAttach="
-
-    const-string v2, ")"
-
-    iget-boolean v3, p0, Lhk2;->d:Z
-
-    invoke-static {v0, v1, v3, v2}, Li57;->k(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Lr00;
+
+    const/16 v1, 0x64
+
+    int-to-float v1, v1
+
+    mul-float/2addr p1, v1
+
+    invoke-static {p1}, Lkti;->d(F)I
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setLevel(I)Z
+
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

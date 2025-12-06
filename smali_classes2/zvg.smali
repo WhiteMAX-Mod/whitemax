@@ -1,101 +1,45 @@
-.class public final Lzvg;
-.super Lmei;
+.class public abstract Lzvg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic e:I
+# static fields
+.field public static final a:Llwf;
 
-.field public final synthetic f:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
+.field public static final b:Luaj;
+
+.field public static final c:Lbwf;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p2, p0, Lzvg;->e:I
+    new-instance v0, Llwf;
 
-    iput-object p1, p0, Lzvg;->f:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lzvg;->a:Llwf;
 
-    return-void
-.end method
+    new-instance v0, Luaj;
 
+    const/4 v1, 0x1
 
-# virtual methods
-.method public final e()V
-    .locals 3
+    invoke-direct {v0, v1}, Luaj;-><init>(I)V
 
-    iget v0, p0, Lzvg;->e:I
+    sput-object v0, Lzvg;->b:Luaj;
 
-    packed-switch v0, :pswitch_data_0
+    new-instance v0, Lq8g;
 
-    iget-object v0, p0, Lzvg;->f:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
+    const/4 v1, 0x5
 
-    iget-object v1, v0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->c:Lru/ok/messages/video/widgets/VideoFramePreview;
+    invoke-direct {v0, v1}, Lq8g;-><init>(I)V
 
-    const/4 v2, 0x4
+    new-instance v1, Lbwf;
 
-    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-direct {v1, v0}, Lbwf;-><init>(Lcm6;)V
 
-    iget-object v1, v0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->c:Lru/ok/messages/video/widgets/VideoFramePreview;
-
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setAlpha(F)V
-
-    const/4 v1, 0x0
-
-    iput-object v1, v0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->v0:Lir4;
+    sput-object v1, Lzvg;->c:Lbwf;
 
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lzvg;->f:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
-
-    const/4 v1, 0x0
-
-    iput-object v1, v0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->u0:Lir4;
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public f()V
-    .locals 3
-
-    iget v0, p0, Lzvg;->e:I
-
-    packed-switch v0, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lzvg;->f:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
-
-    iget-object v1, v0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->c:Lru/ok/messages/video/widgets/VideoFramePreview;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v0, v0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->c:Lru/ok/messages/video/widgets/VideoFramePreview;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

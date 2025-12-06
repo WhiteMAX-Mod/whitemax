@@ -1,118 +1,46 @@
-.class public final Lvzc;
-.super Lsgf;
-.source "SourceFile"
-
-# interfaces
-.implements Lzi6;
+.class public abstract Lvzc;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public X:I
+# static fields
+.field public static oneme_section_avatar:I = 0x7f0a077a
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public static oneme_section_description:I = 0x7f0a077b
 
-.field public final synthetic Z:Lru/ok/onechat/reactions/ReactionsViewModel;
+.field public static oneme_section_end_arrow:I = 0x7f0a077c
 
+.field public static oneme_section_end_checkbox:I = 0x7f0a077d
 
-# direct methods
-.method public constructor <init>(Lru/ok/onechat/reactions/ReactionsViewModel;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.field public static oneme_section_end_container:I = 0x7f0a077e
 
-    iput-object p1, p0, Lvzc;->Z:Lru/ok/onechat/reactions/ReactionsViewModel;
+.field public static oneme_section_end_custom_icon:I = 0x7f0a077f
 
-    const/4 p1, 0x2
+.field public static oneme_section_end_text:I = 0x7f0a0780
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+.field public static oneme_section_name_viewtype:I = 0x7f0a0781
 
-    return-void
-.end method
+.field public static oneme_section_start_icon:I = 0x7f0a0782
 
+.field public static oneme_section_title:I = 0x7f0a0783
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.field public static oneme_section_upper_text:I = 0x7f0a0784
 
-    check-cast p1, Lwzc;
+.field public static oneme_settings_itemcontent_container:I = 0x7f0a078d
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+.field public static oneme_settings_itemcontent_counter:I = 0x7f0a078e
 
-    invoke-virtual {p0, p1, p2}, Lvzc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.field public static oneme_settings_itemcontent_end_custom_icon:I = 0x7f0a078f
 
-    move-result-object p1
+.field public static oneme_settings_itemcontent_end_icon:I = 0x7f0a0790
 
-    check-cast p1, Lvzc;
+.field public static oneme_settings_itemcontent_end_radio:I = 0x7f0a0791
 
-    sget-object p2, Lccg;->a:Lccg;
+.field public static oneme_settings_itemcontent_end_switch:I = 0x7f0a0792
 
-    invoke-virtual {p1, p2}, Lvzc;->n(Ljava/lang/Object;)Ljava/lang/Object;
+.field public static oneme_settings_itemcontent_end_text:I = 0x7f0a0793
 
-    move-result-object p1
+.field public static oneme_settings_sectionname_iconview:I = 0x7f0a0804
 
-    return-object p1
-.end method
+.field public static oneme_settings_sectionname_textview:I = 0x7f0a0805
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lvzc;
-
-    iget-object v1, p0, Lvzc;->Z:Lru/ok/onechat/reactions/ReactionsViewModel;
-
-    invoke-direct {v0, v1, p2}, Lvzc;-><init>(Lru/ok/onechat/reactions/ReactionsViewModel;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lvzc;->Y:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lvzc;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lvzc;->Y:Ljava/lang/Object;
-
-    check-cast p1, Lwzc;
-
-    iput v1, p0, Lvzc;->X:I
-
-    iget-object v0, p0, Lvzc;->Z:Lru/ok/onechat/reactions/ReactionsViewModel;
-
-    invoke-static {v0, p1, p0}, Lru/ok/onechat/reactions/ReactionsViewModel;->e(Lru/ok/onechat/reactions/ReactionsViewModel;Lwzc;Ly14;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lr54;->a:Lr54;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
-.end method
+.field public static oneme_settingslist_rv:I = 0x7f0a0855

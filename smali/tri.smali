@@ -1,191 +1,99 @@
 .class public final Ltri;
-.super Lwii;
+.super Li3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic b:I
-
-.field public final synthetic c:Ljava/lang/Object;
+.field public final c:Lo1a;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method public constructor <init>(Lo1a;)V
+    .locals 1
 
-    iput p1, p0, Ltri;->b:I
+    const/16 v0, 0x8
 
-    iput-object p2, p0, Ltri;->c:Ljava/lang/Object;
+    invoke-direct {p0, v0}, Li3;-><init>(I)V
 
-    invoke-direct {p0}, Lwii;-><init>()V
+    iput-object p1, p0, Ltri;->c:Lo1a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public final d0(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 5
 
-    iget v0, p0, Ltri;->b:I
+    check-cast p1, Loi0;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Ltri;->c:Lo1a;
 
-    iget-object v0, p0, Ltri;->c:Ljava/lang/Object;
-
-    check-cast v0, Lqwi;
-
-    iget-object v0, v0, Lqwi;->b:Ljava/lang/Object;
-
-    check-cast v0, Lezi;
-
-    iget-object v1, v0, Lezi;->b:Lo7f;
-
-    const-string v2, "unlinkToDeath"
-
-    const/4 v3, 0x0
-
-    new-array v4, v3, [Ljava/lang/Object;
-
-    invoke-virtual {v1, v2, v4}, Lo7f;->b(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v1, v0, Lezi;->m:Lw8i;
-
-    invoke-interface {v1}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
+    invoke-virtual {v0}, Lo1a;->b()Landroid/content/Context;
 
     move-result-object v1
 
-    iget-object v2, v0, Lezi;->j:Loli;
+    const/4 v2, 0x1
 
-    invoke-interface {v1, v2, v3}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
+    invoke-static {}, Lzei;->c()Z
 
-    const/4 v1, 0x0
+    move-result v3
 
-    iput-object v1, v0, Lezi;->m:Lw8i;
+    if-eq v2, v3, :cond_0
 
-    iput-boolean v3, v0, Lezi;->g:Z
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Ltri;->c:Ljava/lang/Object;
-
-    check-cast v0, Lezi;
-
-    iget-object v0, v0, Lezi;->f:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Ltri;->c:Ljava/lang/Object;
-
-    check-cast v1, Lezi;
-
-    iget-object v1, v1, Lezi;->k:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    if-lez v1, :cond_0
-
-    iget-object v1, p0, Ltri;->c:Ljava/lang/Object;
-
-    check-cast v1, Lezi;
-
-    iget-object v1, v1, Lezi;->k:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
-
-    move-result v1
-
-    if-lez v1, :cond_0
-
-    iget-object v1, p0, Ltri;->c:Ljava/lang/Object;
-
-    check-cast v1, Lezi;
-
-    iget-object v1, v1, Lezi;->b:Lo7f;
-
-    const-string v3, "Leaving the connection open for other ongoing calls."
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    invoke-virtual {v1, v3, v2}, Lo7f;->b(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    monitor-exit v0
+    const-string v2, "play-services-mlkit-barcode-scanning"
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v1
+    :cond_0
+    const-string v2, "barcode-scanning"
+
+    :goto_0
+    invoke-static {v2}, Lkcj;->d(Ljava/lang/String;)Lfcj;
+
+    move-result-object v2
+
+    sget-object v3, Lg3j;->Z:Lcji;
+
+    const-string v3, "com.google.mlkit.dynamite.barcode"
+
+    invoke-static {v1, v3}, Ld85;->a(Landroid/content/Context;Ljava/lang/String;)I
+
+    move-result v3
+
+    if-lez v3, :cond_1
 
     goto :goto_1
 
-    :cond_0
-    iget-object v1, p0, Ltri;->c:Ljava/lang/Object;
-
-    check-cast v1, Lezi;
-
-    iget-object v3, v1, Lezi;->m:Lw8i;
-
-    if-eqz v3, :cond_1
-
-    iget-object v1, v1, Lezi;->b:Lo7f;
-
-    const-string v3, "Unbind from service."
-
-    new-array v4, v2, [Ljava/lang/Object;
-
-    invoke-virtual {v1, v3, v4}, Lo7f;->b(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v1, p0, Ltri;->c:Ljava/lang/Object;
-
-    check-cast v1, Lezi;
-
-    iget-object v3, v1, Lezi;->a:Landroid/content/Context;
-
-    iget-object v1, v1, Lezi;->l:Lqwi;
-
-    invoke-virtual {v3, v1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
-
-    iget-object v1, p0, Ltri;->c:Ljava/lang/Object;
-
-    check-cast v1, Lezi;
-
-    iput-boolean v2, v1, Lezi;->g:Z
-
-    const/4 v2, 0x0
-
-    iput-object v2, v1, Lezi;->m:Lw8i;
-
-    iput-object v2, v1, Lezi;->l:Lqwi;
-
     :cond_1
-    iget-object v1, p0, Ltri;->c:Ljava/lang/Object;
+    sget-object v3, Luv6;->b:Luv6;
 
-    check-cast v1, Lezi;
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v1}, Lezi;->c()V
+    invoke-static {v1}, Luv6;->a(Landroid/content/Context;)I
 
-    monitor-exit v0
+    move-result v3
 
-    :goto_0
-    return-void
+    const v4, 0xc306c20
+
+    if-lt v3, v4, :cond_2
 
     :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    new-instance v3, Lg3j;
 
-    throw v1
+    invoke-direct {v3, v1, p1, v2}, Lg3j;-><init>(Landroid/content/Context;Loi0;Lfcj;)V
 
-    nop
+    goto :goto_2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_2
+    new-instance v3, Lwe;
+
+    invoke-direct {v3, v1, p1, v2}, Lwe;-><init>(Landroid/content/Context;Loi0;Lfcj;)V
+
+    :goto_2
+    new-instance v1, Lfyi;
+
+    invoke-direct {v1, v0, p1, v3, v2}, Lfyi;-><init>(Lo1a;Loi0;Li0j;Lfcj;)V
+
+    return-object v1
 .end method

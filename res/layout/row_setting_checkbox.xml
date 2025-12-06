@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="end|center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/font_small" android:gravity="end" android:id="@id/row_checkbox_setting__tv_value" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/huge_horizontal_margin" />
-    <androidx.appcompat.widget.SwitchCompat android:id="@id/row_checkbox_setting__cb_check" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="0.0dip" />
-</LinearLayout>

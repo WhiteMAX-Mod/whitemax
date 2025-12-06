@@ -1,22 +1,19 @@
-.class public final synthetic La3h;
-.super Ljava/lang/Object;
+.class public final La3h;
+.super Landroid/widget/FrameLayout;
 .source "SourceFile"
-
-# interfaces
-.implements Lvs1;
 
 
 # instance fields
-.field public final synthetic a:Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;
+.field public a:Lz2h;
 
 
-# direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;)V
-    .locals 0
+# virtual methods
+.method public final setPlayer(Lghb;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, La3h;->a:Lz2h;
 
-    iput-object p1, p0, La3h;->a:Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;
+    invoke-virtual {v0, p1}, Lz2h;->setPlayer(Lghb;)V
 
     return-void
 .end method

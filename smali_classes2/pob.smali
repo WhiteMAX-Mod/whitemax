@@ -1,212 +1,645 @@
-.class public final synthetic Lpob;
+.class public final Lpob;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lji6;
+.implements Lorg/webrtc/VideoEncoderFactory$VideoEncoderSelector;
+.implements Lns8;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lnob;
 
-.field public final synthetic b:Lone/me/chats/picker/contacts/PickerContactsListWidget;
+.field public final b:Lm81;
+
+.field public final c:Ly6d;
+
+.field public d:Lorg/webrtc/VideoCodecInfo;
+
+.field public e:Lorg/webrtc/VideoCodecInfo;
+
+.field public f:Lp6d;
+
+.field public g:Z
+
+.field public final h:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/chats/picker/contacts/PickerContactsListWidget;I)V
-    .locals 0
-
-    iput p2, p0, Lpob;->a:I
-
-    iput-object p1, p0, Lpob;->b:Lone/me/chats/picker/contacts/PickerContactsListWidget;
+.method public constructor <init>(Lnob;Lm81;Ly6d;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lpob;->a:Lnob;
+
+    iput-object p2, p0, Lpob;->b:Lm81;
+
+    iput-object p3, p0, Lpob;->c:Ly6d;
+
+    new-instance p1, Lp6d;
+
+    new-instance p2, Lps8;
+
+    const-wide/16 v0, 0x0
+
+    invoke-direct {p2, v0, v1, v0, v1}, Lps8;-><init>(DD)V
+
+    const/4 p3, 0x0
+
+    const/4 v0, 0x1
+
+    invoke-direct {p1, v0, p2, p3}, Lp6d;-><init>(ILps8;Z)V
+
+    iput-object p1, p0, Lpob;->f:Lp6d;
+
+    iput-boolean v0, p0, Lpob;->g:Z
+
+    new-instance p1, Ljava/lang/Object;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lpob;->h:Ljava/lang/Object;
 
     return-void
 .end method
 
+.method public static b([Lorg/webrtc/VideoCodecInfo;Ljava/lang/String;)Lorg/webrtc/VideoCodecInfo;
+    .locals 4
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 8
-
-    iget v0, p0, Lpob;->a:I
+    array-length v0, p0
 
     const/4 v1, 0x0
 
-    iget-object v2, p0, Lpob;->b:Lone/me/chats/picker/contacts/PickerContactsListWidget;
+    :goto_0
+    if-ge v1, v0, :cond_1
 
-    packed-switch v0, :pswitch_data_0
+    aget-object v2, p0, v1
 
-    sget-object v0, Lone/me/chats/picker/contacts/PickerContactsListWidget;->x0:[Ltr7;
+    iget-object v3, v2, Lorg/webrtc/VideoCodecInfo;->name:Ljava/lang/String;
 
-    new-instance v0, Landroidx/recyclerview/widget/RecyclerView;
+    invoke-static {v3, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    move-result v3
 
-    move-result-object v3
+    if-eqz v3, :cond_0
 
-    const/4 v4, 0x0
+    return-object v2
 
-    invoke-direct {v0, v3, v4}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
 
-    sget v3, Ljsa;->d0:I
+    goto :goto_0
 
-    invoke-virtual {v0, v3}, Landroid/view/View;->setId(I)V
+    :cond_1
+    const/4 p0, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setClipChildren(Z)V
+    return-object p0
+.end method
 
-    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setClipToPadding(Z)V
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setClipToOutline(Z)V
+# virtual methods
+.method public final a()Lorg/webrtc/VideoCodecInfo;
+    .locals 10
 
-    invoke-virtual {v0, v4}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Ly6d;)V
+    iget-object v0, p0, Lpob;->e:Lorg/webrtc/VideoCodecInfo;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    goto/16 :goto_1
+
+    :cond_0
+    iget-object v0, p0, Lpob;->f:Lp6d;
+
+    iget v2, v0, Lp6d;->a:I
+
+    sget-object v3, Loob;->$EnumSwitchMapping$0:[I
+
+    invoke-static {v2}, Laz1;->v(I)I
+
+    move-result v2
+
+    aget v2, v3, v2
 
     const/4 v3, 0x1
 
-    invoke-virtual {v0, v3}, Landroidx/recyclerview/widget/RecyclerView;->setHasFixedSize(Z)V
+    if-ne v2, v3, :cond_1
 
-    new-instance v4, Landroidx/recyclerview/widget/LinearLayoutManager;
+    iget-object v0, p0, Lpob;->e:Lorg/webrtc/VideoCodecInfo;
 
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    goto :goto_0
 
-    invoke-direct {v4, v3, v1}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(IZ)V
+    :cond_1
+    iget-boolean v0, v0, Lp6d;->c:Z
 
-    invoke-virtual {v0, v4}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
+    if-eqz v0, :cond_3
 
-    iget-object v1, v2, Lone/me/chats/picker/contacts/PickerContactsListWidget;->r0:Lnj3;
+    iget-object v0, p0, Lpob;->a:Lnob;
 
-    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lt6d;)V
+    iget-object v0, v0, Lnob;->e:Lbwf;
 
-    new-instance v1, Loob;
+    invoke-virtual {v0}, Lbwf;->getValue()Ljava/lang/Object;
 
-    invoke-direct {v1, v2, v3}, Loob;-><init>(Lone/me/chats/picker/contacts/PickerContactsListWidget;I)V
+    move-result-object v0
 
-    new-instance v4, Lc53;
+    check-cast v0, Lorg/webrtc/VideoEncoderFactory;
 
-    new-instance v5, Lz86;
+    invoke-interface {v0}, Lorg/webrtc/VideoEncoderFactory;->getSupportedCodecs()[Lorg/webrtc/VideoCodecInfo;
 
-    invoke-direct {v5, v0, v3}, Lz86;-><init>(Landroidx/recyclerview/widget/RecyclerView;I)V
+    move-result-object v0
 
-    new-instance v3, Loob;
+    const-string v2, "VP9"
 
-    const/4 v6, 0x2
-
-    invoke-direct {v3, v2, v6}, Loob;-><init>(Lone/me/chats/picker/contacts/PickerContactsListWidget;I)V
-
-    new-instance v6, Ld8a;
-
-    const/16 v7, 0x15
-
-    invoke-direct {v6, v7}, Ld8a;-><init>(I)V
-
-    invoke-direct {v4, v5, v3, v6, v1}, Lc53;-><init>(Lji6;Lli6;Lli6;Lli6;)V
-
-    invoke-virtual {v0, v4}, Landroidx/recyclerview/widget/RecyclerView;->j(Lz6d;)V
-
-    invoke-virtual {v2, v0}, Lone/me/chats/picker/contacts/PickerContactsListWidget;->C0(Landroidx/recyclerview/widget/RecyclerView;)V
-
-    invoke-static {v0}, Lgxi;->b(Landroidx/recyclerview/widget/RecyclerView;)Ltyf;
-
-    move-result-object v1
-
-    iput-object v1, v2, Lone/me/chats/picker/contacts/PickerContactsListWidget;->u0:Ltyf;
-
-    return-object v0
-
-    :pswitch_0
-    sget-object v0, Lone/me/chats/picker/contacts/PickerContactsListWidget;->x0:[Ltr7;
-
-    new-instance v0, Lwua;
-
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    invoke-static {v0, v2}, Lpob;->b([Lorg/webrtc/VideoCodecInfo;Ljava/lang/String;)Lorg/webrtc/VideoCodecInfo;
 
     move-result-object v2
 
-    invoke-direct {v0, v2, v1}, Lwua;-><init>(Landroid/content/Context;I)V
+    if-nez v2, :cond_2
 
-    sget v1, Lpjd;->M0:I
+    const-string v2, "VP8"
 
-    invoke-virtual {v0, v1}, Lwua;->setIcon(I)V
+    invoke-static {v0, v2}, Lpob;->b([Lorg/webrtc/VideoCodecInfo;Ljava/lang/String;)Lorg/webrtc/VideoCodecInfo;
 
-    sget v1, Lrjd;->d:I
+    move-result-object v0
 
-    new-instance v2, Lorf;
+    if-nez v0, :cond_4
 
-    invoke-direct {v2, v1}, Lorf;-><init>(I)V
+    iget-object v0, p0, Lpob;->a:Lnob;
 
-    invoke-virtual {v0, v2}, Lwua;->setTitle(Ltrf;)V
+    iget-object v0, v0, Lnob;->f:Lbwf;
 
-    sget v1, Lrjd;->c:I
+    invoke-virtual {v0}, Lbwf;->getValue()Ljava/lang/Object;
 
-    new-instance v2, Lorf;
+    move-result-object v0
 
-    invoke-direct {v2, v1}, Lorf;-><init>(I)V
+    check-cast v0, Lorg/webrtc/VideoEncoderFactory;
 
-    invoke-virtual {v0, v2}, Lwua;->setSubtitle(Ltrf;)V
+    invoke-interface {v0}, Lorg/webrtc/VideoEncoderFactory;->getSupportedCodecs()[Lorg/webrtc/VideoCodecInfo;
 
+    move-result-object v0
+
+    const-string v2, "VP8"
+
+    invoke-static {v0, v2}, Lpob;->b([Lorg/webrtc/VideoCodecInfo;Ljava/lang/String;)Lorg/webrtc/VideoCodecInfo;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_2
+    move-object v0, v2
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Lpob;->a:Lnob;
+
+    iget-object v0, v0, Lnob;->f:Lbwf;
+
+    invoke-virtual {v0}, Lbwf;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lorg/webrtc/VideoEncoderFactory;
+
+    invoke-interface {v0}, Lorg/webrtc/VideoEncoderFactory;->getSupportedCodecs()[Lorg/webrtc/VideoCodecInfo;
+
+    move-result-object v0
+
+    const-string v2, "VP8"
+
+    invoke-static {v0, v2}, Lpob;->b([Lorg/webrtc/VideoCodecInfo;Ljava/lang/String;)Lorg/webrtc/VideoCodecInfo;
+
+    move-result-object v0
+
+    if-nez v0, :cond_4
+
+    iget-object v2, p0, Lpob;->c:Ly6d;
+
+    const-string v4, "PatchedVideoEncoderFactoryCodecSelector"
+
+    const-string v5, "Software VP8 encoder not found"
+
+    invoke-interface {v2, v4, v5}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_4
+    :goto_0
+    iget-object v2, p0, Lpob;->d:Lorg/webrtc/VideoCodecInfo;
+
+    invoke-static {v0, v2}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_5
+
+    :goto_1
+    return-object v1
+
+    :cond_5
+    iget-object v2, p0, Lpob;->d:Lorg/webrtc/VideoCodecInfo;
+
+    if-eqz v2, :cond_6
+
+    iget-object v2, v2, Lorg/webrtc/VideoCodecInfo;->name:Ljava/lang/String;
+
+    goto :goto_2
+
+    :cond_6
+    move-object v2, v1
+
+    :goto_2
+    if-nez v2, :cond_7
+
+    const-string v2, ""
+
+    :cond_7
+    if-eqz v0, :cond_8
+
+    iget-object v4, v0, Lorg/webrtc/VideoCodecInfo;->name:Ljava/lang/String;
+
+    goto :goto_3
+
+    :cond_8
+    move-object v4, v1
+
+    :goto_3
+    if-nez v4, :cond_9
+
+    const-string v4, ""
+
+    :cond_9
+    iget-object v5, p0, Lpob;->c:Ly6d;
+
+    const-string v6, "Selected encoder \""
+
+    const-string v7, "\" differs from current one \""
+
+    const-string v8, "\". Let us suggest an update"
+
+    invoke-static {v6, v4, v7, v2, v8}, Lwy1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    const-string v7, "PatchedVideoEncoderFactoryCodecSelector"
+
+    invoke-interface {v5, v7, v6}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v5, p0, Lpob;->h:Ljava/lang/Object;
+
+    monitor-enter v5
+
+    :try_start_0
+    iget-boolean v6, p0, Lpob;->g:Z
+
+    if-eqz v6, :cond_a
+
+    move-object v3, v1
+
+    goto :goto_4
+
+    :cond_a
+    iput-boolean v3, p0, Lpob;->g:Z
+
+    iget-object v3, p0, Lpob;->f:Lp6d;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :goto_4
+    monitor-exit v5
+
+    if-eqz v3, :cond_e
+
+    iget-object v3, p0, Lpob;->b:Lm81;
+
+    new-instance v5, Lorg/json/JSONObject;
+
+    invoke-direct {v5}, Lorg/json/JSONObject;-><init>()V
+
+    iget-object v6, p0, Lpob;->f:Lp6d;
+
+    iget-object v6, v6, Lp6d;->b:Lps8;
+
+    iget-wide v6, v6, Lps8;->a:D
+
+    const-string v8, "rtt"
+
+    invoke-virtual {v5, v8, v6, v7}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
+
+    move-result-object v5
+
+    iget-object v6, p0, Lpob;->f:Lp6d;
+
+    iget-object v6, v6, Lp6d;->b:Lps8;
+
+    iget-wide v6, v6, Lps8;->b:D
+
+    const/16 v8, 0x64
+
+    int-to-double v8, v8
+
+    mul-double/2addr v6, v8
+
+    invoke-static {v6, v7}, Lkti;->c(D)I
+
+    move-result v6
+
+    const-string v7, "loss"
+
+    invoke-virtual {v5, v7, v6}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
+
+    move-result-object v5
+
+    iget-object v6, p0, Lpob;->f:Lp6d;
+
+    iget v6, v6, Lp6d;->a:I
+
+    const/4 v7, 0x1
+
+    if-eq v6, v7, :cond_d
+
+    const/4 v7, 0x2
+
+    if-eq v6, v7, :cond_c
+
+    const/4 v7, 0x3
+
+    if-ne v6, v7, :cond_b
+
+    const-string v6, "bad_2"
+
+    goto :goto_5
+
+    :cond_b
+    const/4 v0, 0x0
+
+    throw v0
+
+    :cond_c
+    const-string v6, "bad_1"
+
+    goto :goto_5
+
+    :cond_d
+    const-string v6, "good"
+
+    :goto_5
+    const-string v7, "network_quality"
+
+    invoke-virtual {v5, v7, v6}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    move-result-object v5
+
+    const-string v6, "codec_old"
+
+    invoke-virtual {v5, v6, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    move-result-object v2
+
+    const-string v5, "codec_new"
+
+    invoke-virtual {v2, v5, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lru/ok/android/externcalls/analytics/events/EventItemValue$StringValue;->constructor-impl(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lru/ok/android/externcalls/analytics/events/EventItemValue$StringValue;->box-impl(Ljava/lang/String;)Lru/ok/android/externcalls/analytics/events/EventItemValue$StringValue;
+
+    move-result-object v2
+
+    const-string v4, "video_encoder_changed_by_network_adapter"
+
+    const/4 v5, 0x4
+
+    invoke-static {v3, v4, v2, v1, v5}, Lm81;->a(Lm81;Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;I)V
+
+    :cond_e
     return-object v0
 
-    :pswitch_1
-    sget-object v0, Lone/me/chats/picker/contacts/PickerContactsListWidget;->x0:[Ltr7;
+    :catchall_0
+    move-exception v0
 
-    new-instance v0, Lxob;
+    monitor-exit v5
 
-    sget-object v3, Llx2;->a:Llx2;
+    throw v0
+.end method
 
-    invoke-virtual {v3}, Lscout/Component;->getAccessor()Lr5;
+.method public final n(Los8;)V
+    .locals 4
 
-    move-result-object v4
+    iget-object v0, p0, Lpob;->c:Ly6d;
 
-    const-class v5, Llv3;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v5}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    const-string v2, "Network condition did change. New condition is "
 
-    move-result-object v4
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    check-cast v4, Llv3;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v5
-
-    const-class v6, Lulf;
-
-    invoke-virtual {v5, v6}, Lr5;->d(Ljava/lang/Class;)Lwif;
-
-    move-result-object v5
-
-    invoke-virtual {v3}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v3
-
-    const-class v6, Lbwd;
-
-    invoke-virtual {v3, v6}, Lr5;->d(Ljava/lang/Class;)Lwif;
-
-    move-result-object v3
-
-    iget-object v6, v2, Lone/me/chats/picker/contacts/PickerContactsListWidget;->a:Lqs;
-
-    sget-object v7, Lone/me/chats/picker/contacts/PickerContactsListWidget;->x0:[Ltr7;
-
-    aget-object v1, v7, v1
-
-    invoke-virtual {v6, v2}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    check-cast v1, Lrf2;
+    const-string v2, "PatchedVideoEncoderFactoryCodecSelector"
 
-    invoke-direct {v0, v4, v5, v3, v1}, Lxob;-><init>(Llv3;Liu7;Liu7;Lrf2;)V
+    invoke-interface {v0, v2, v1}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lpob;->h:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    new-instance v1, Lp6d;
+
+    iget v2, p1, Los8;->a:I
+
+    iget-object v3, p1, Los8;->b:Lps8;
+
+    iget-boolean p1, p1, Los8;->d:Z
+
+    invoke-direct {v1, v2, v3, p1}, Lp6d;-><init>(ILps8;Z)V
+
+    iput-object v1, p0, Lpob;->f:Lp6d;
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lpob;->g:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit v0
+
+    throw p1
+.end method
+
+.method public final onAvailableBitrate(I)Lorg/webrtc/VideoCodecInfo;
+    .locals 0
+
+    invoke-virtual {p0}, Lpob;->a()Lorg/webrtc/VideoCodecInfo;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final onCurrentEncoder(Lorg/webrtc/VideoCodecInfo;)V
+    .locals 5
+
+    iget-object v0, p0, Lpob;->e:Lorg/webrtc/VideoCodecInfo;
+
+    const-string v1, "PatchedVideoEncoderFactoryCodecSelector"
+
+    iget-object v2, p0, Lpob;->c:Ly6d;
+
+    if-nez v0, :cond_0
+
+    if-eqz p1, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v3, "Encoder  "
+
+    invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v3, " was selected as default"
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {v2, v1, v0}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    iput-object p1, p0, Lpob;->e:Lorg/webrtc/VideoCodecInfo;
+
+    :cond_0
+    iput-object p1, p0, Lpob;->d:Lorg/webrtc/VideoCodecInfo;
+
+    iget-object v0, p0, Lpob;->f:Lp6d;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "Codec selected: "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p1, " for condition "
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-interface {v2, v1, p1}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final onEncoderBroken()Lorg/webrtc/VideoCodecInfo;
+    .locals 7
+
+    iget-object v0, p0, Lpob;->d:Lorg/webrtc/VideoCodecInfo;
+
+    iget-object v1, p0, Lpob;->e:Lorg/webrtc/VideoCodecInfo;
+
+    invoke-static {v0, v1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    const-string v2, "PatchedVideoEncoderFactoryCodecSelector"
+
+    const-string v3, " was broken. reset"
+
+    iget-object v4, p0, Lpob;->c:Ly6d;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lpob;->e:Lorg/webrtc/VideoCodecInfo;
+
+    if-eqz v0, :cond_0
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    const-string v6, "Default encoder "
+
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {v4, v2, v0}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
+    iput-object v1, p0, Lpob;->e:Lorg/webrtc/VideoCodecInfo;
+
+    :cond_1
+    iget-object v0, p0, Lpob;->d:Lorg/webrtc/VideoCodecInfo;
+
+    if-eqz v0, :cond_2
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    const-string v6, "Current encoder "
+
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {v4, v2, v0}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_2
+    iput-object v1, p0, Lpob;->d:Lorg/webrtc/VideoCodecInfo;
+
+    invoke-virtual {p0}, Lpob;->a()Lorg/webrtc/VideoCodecInfo;
+
+    move-result-object v0
 
     return-object v0
+.end method
 
-    nop
+.method public final onResolutionChange(II)Lorg/webrtc/VideoCodecInfo;
+    .locals 0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {p0}, Lpob;->a()Lorg/webrtc/VideoCodecInfo;
+
+    move-result-object p1
+
+    return-object p1
 .end method

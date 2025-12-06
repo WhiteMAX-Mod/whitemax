@@ -1,209 +1,249 @@
-.class public interface abstract Lmhg;
+.class public final Lmhg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Liof;
-.implements Laa7;
+.implements Ljava/util/Iterator;
+.implements Lmy7;
 
 
-# static fields
-.field public static final f0:Lz90;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final g0:Lz90;
+.field public b:Ljava/util/Iterator;
 
-.field public static final h0:Lz90;
-
-.field public static final i0:Lz90;
-
-.field public static final j0:Lz90;
-
-.field public static final k0:Lz90;
-
-.field public static final l0:Lz90;
-
-.field public static final m0:Lz90;
-
-.field public static final n0:Lz90;
-
-.field public static final o0:Lz90;
-
-.field public static final p0:Lz90;
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lf2;)V
+    .locals 1
 
-    new-instance v0, Lz90;
+    const/4 v0, 0x1
 
-    const-string v1, "camerax.core.useCase.defaultSessionConfig"
+    iput v0, p0, Lmhg;->a:I
 
-    const-class v2, Lr6e;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v3, 0x0
+    .line 2
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    sput-object v0, Lmhg;->f0:Lz90;
+    iput-object v0, p0, Lmhg;->c:Ljava/lang/Object;
 
-    new-instance v0, Lz90;
+    .line 3
+    iput-object p1, p0, Lmhg;->b:Ljava/util/Iterator;
 
-    const-string v1, "camerax.core.useCase.defaultCaptureConfig"
+    return-void
+.end method
 
-    const-class v2, Lg42;
+.method public constructor <init>(Lnhg;)V
+    .locals 1
 
-    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    const/4 v0, 0x0
 
-    sput-object v0, Lmhg;->g0:Lz90;
+    iput v0, p0, Lmhg;->a:I
 
-    new-instance v0, Lz90;
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "camerax.core.useCase.sessionConfigUnpacker"
+    .line 5
+    iput-object p1, p0, Lmhg;->c:Ljava/lang/Object;
 
-    const-class v2, Lkz1;
+    .line 6
+    iget-object p1, p1, Lnhg;->a:Lzde;
 
-    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    .line 7
+    invoke-interface {p1}, Lzde;->iterator()Ljava/util/Iterator;
 
-    sput-object v0, Lmhg;->h0:Lz90;
+    move-result-object p1
 
-    new-instance v0, Lz90;
-
-    const-string v1, "camerax.core.useCase.captureConfigUnpacker"
-
-    const-class v2, Loy1;
-
-    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lmhg;->i0:Lz90;
-
-    new-instance v0, Lz90;
-
-    const-string v1, "camerax.core.useCase.surfaceOccupancyPriority"
-
-    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lmhg;->j0:Lz90;
-
-    new-instance v0, Lz90;
-
-    const-string v1, "camerax.core.useCase.targetFrameRate"
-
-    const-class v4, Landroid/util/Range;
-
-    invoke-direct {v0, v1, v4, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lmhg;->k0:Lz90;
-
-    new-instance v0, Lz90;
-
-    const-string v1, "camerax.core.useCase.zslDisabled"
-
-    sget-object v4, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
-
-    invoke-direct {v0, v1, v4, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lmhg;->l0:Lz90;
-
-    new-instance v0, Lz90;
-
-    const-string v1, "camerax.core.useCase.highResolutionDisabled"
-
-    invoke-direct {v0, v1, v4, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lmhg;->m0:Lz90;
-
-    new-instance v0, Lz90;
-
-    const-string v1, "camerax.core.useCase.captureType"
-
-    const-class v4, Lohg;
-
-    invoke-direct {v0, v1, v4, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lmhg;->n0:Lz90;
-
-    new-instance v0, Lz90;
-
-    const-string v1, "camerax.core.useCase.previewStabilizationMode"
-
-    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lmhg;->o0:Lz90;
-
-    new-instance v0, Lz90;
-
-    const-string v1, "camerax.core.useCase.videoStabilizationMode"
-
-    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lmhg;->p0:Lz90;
+    iput-object p1, p0, Lmhg;->b:Ljava/util/Iterator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public A()I
-    .locals 2
-
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    sget-object v1, Lmhg;->p0:Lz90;
-
-    invoke-interface {p0, v1, v0}, Lk0d;->d(Lz90;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public F()I
-    .locals 2
-
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    sget-object v1, Lmhg;->o0:Lz90;
-
-    invoke-interface {p0, v1, v0}, Lk0d;->d(Lz90;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public y()Lohg;
+.method public final hasNext()Z
     .locals 1
 
-    sget-object v0, Lmhg;->n0:Lz90;
+    iget v0, p0, Lmhg;->a:I
 
-    invoke-interface {p0, v0}, Lk0d;->g(Lz90;)Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lmhg;->b:Ljava/util/Iterator;
+
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    return v0
+
+    :pswitch_0
+    iget-object v0, p0, Lmhg;->b:Ljava/util/Iterator;
+
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final next()Ljava/lang/Object;
+    .locals 5
+
+    iget v0, p0, Lmhg;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lmhg;->b:Ljava/util/Iterator;
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lohg;
+    iget-object v1, p0, Lmhg;->c:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/ArrayList;
+
+    move-object v2, v0
+
+    check-cast v2, Landroid/view/View;
+
+    instance-of v3, v2, Landroid/view/ViewGroup;
+
+    const/4 v4, 0x0
+
+    if-eqz v3, :cond_0
+
+    check-cast v2, Landroid/view/ViewGroup;
+
+    goto :goto_0
+
+    :cond_0
+    move-object v2, v4
+
+    :goto_0
+    if-eqz v2, :cond_1
+
+    new-instance v4, Lf2;
+
+    const/16 v3, 0x9
+
+    invoke-direct {v4, v3, v2}, Lf2;-><init>(ILjava/lang/Object;)V
+
+    :cond_1
+    if-eqz v4, :cond_2
+
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lmhg;->b:Ljava/util/Iterator;
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iput-object v4, p0, Lmhg;->b:Ljava/util/Iterator;
+
+    goto :goto_2
+
+    :cond_2
+    :goto_1
+    iget-object v2, p0, Lmhg;->b:Ljava/util/Iterator;
+
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    invoke-static {v1}, Lue3;->P(Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/Iterator;
+
+    iput-object v2, p0, Lmhg;->b:Ljava/util/Iterator;
+
+    invoke-static {v1}, Laf3;->x(Ljava/util/ArrayList;)V
+
+    goto :goto_1
+
+    :cond_3
+    :goto_2
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lmhg;->c:Ljava/lang/Object;
+
+    check-cast v0, Lnhg;
+
+    iget-object v0, v0, Lnhg;->b:Lem6;
+
+    iget-object v1, p0, Lmhg;->b:Ljava/util/Iterator;
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Lem6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
 
     return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final remove()V
+    .locals 2
+
+    iget v0, p0, Lmhg;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Operation is not supported for read-only collection"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Operation is not supported for read-only collection"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

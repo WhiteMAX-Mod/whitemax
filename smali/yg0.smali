@@ -2,272 +2,1147 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lyg0;",
-            ">;"
-        }
-    .end annotation
-.end field
-
 
 # instance fields
-.field public A0:I
+.field public final a:Lxg0;
 
-.field public B0:Ljava/lang/Integer;
+.field public final b:Lxg0;
 
-.field public C0:Ljava/lang/Boolean;
+.field public final c:F
 
-.field public D0:Ljava/lang/Integer;
+.field public final d:F
 
-.field public E0:Ljava/lang/Integer;
+.field public final e:F
 
-.field public F0:Ljava/lang/Integer;
+.field public final f:F
 
-.field public G0:Ljava/lang/Integer;
+.field public final g:F
 
-.field public H0:Ljava/lang/Integer;
+.field public final h:F
 
-.field public I0:Ljava/lang/Integer;
+.field public final i:I
 
-.field public J0:Ljava/lang/Integer;
+.field public final j:I
 
-.field public K0:Ljava/lang/Integer;
-
-.field public L0:Ljava/lang/Integer;
-
-.field public M0:Ljava/lang/Boolean;
-
-.field public X:Ljava/lang/Integer;
-
-.field public Y:Ljava/lang/Integer;
-
-.field public Z:Ljava/lang/Integer;
-
-.field public a:I
-
-.field public b:Ljava/lang/Integer;
-
-.field public c:Ljava/lang/Integer;
-
-.field public o:Ljava/lang/Integer;
-
-.field public q0:Ljava/lang/Integer;
-
-.field public r0:I
-
-.field public s0:Ljava/lang/String;
-
-.field public t0:I
-
-.field public u0:I
-
-.field public v0:I
-
-.field public w0:Ljava/util/Locale;
-
-.field public x0:Ljava/lang/CharSequence;
-
-.field public y0:Ljava/lang/CharSequence;
-
-.field public z0:I
+.field public final k:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 11
 
-    new-instance v0, Lh8;
+    sget v3, Lwg0;->y0:I
 
-    const/4 v1, 0x7
-
-    invoke-direct {v0, v1}, Lh8;-><init>(I)V
-
-    sput-object v0, Lyg0;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
+    sget v0, Lwg0;->x0:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v0, 0xff
+    new-instance v1, Lxg0;
 
-    iput v0, p0, Lyg0;->r0:I
+    invoke-direct {v1}, Lxg0;-><init>()V
 
-    const/4 v0, -0x2
+    iput-object v1, p0, Lyg0;->b:Lxg0;
 
-    iput v0, p0, Lyg0;->t0:I
+    new-instance v6, Lxg0;
 
-    iput v0, p0, Lyg0;->u0:I
+    invoke-direct {v6}, Lxg0;-><init>()V
 
-    iput v0, p0, Lyg0;->v0:I
+    iget v1, v6, Lxg0;->a:I
 
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    const/4 v7, 0x1
 
-    iput-object v0, p0, Lyg0;->C0:Ljava/lang/Boolean;
+    const/4 v8, 0x0
 
-    return-void
-.end method
+    if-eqz v1, :cond_4
 
+    const-string v2, "badge"
 
-# virtual methods
-.method public final describeContents()I
-    .locals 1
+    :try_start_0
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    const/4 v0, 0x0
+    move-result-object v4
 
-    return v0
-.end method
+    invoke-virtual {v4, v1}, Landroid/content/res/Resources;->getXml(I)Landroid/content/res/XmlResourceParser;
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 1
+    move-result-object v4
 
-    iget p2, p0, Lyg0;->a:I
+    :cond_0
+    invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    move-result v5
 
-    iget-object p2, p0, Lyg0;->b:Ljava/lang/Integer;
+    const/4 v9, 0x2
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
+    if-eq v5, v9, :cond_1
 
-    iget-object p2, p0, Lyg0;->c:Ljava/lang/Integer;
+    if-ne v5, v7, :cond_0
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
+    :cond_1
+    if-ne v5, v9, :cond_3
 
-    iget-object p2, p0, Lyg0;->o:Ljava/lang/Integer;
+    invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
+    move-result-object v5
 
-    iget-object p2, p0, Lyg0;->X:Ljava/lang/Integer;
+    invoke-static {v5, v2}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
+    move-result v5
 
-    iget-object p2, p0, Lyg0;->Y:Ljava/lang/Integer;
+    if-eqz v5, :cond_2
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
+    invoke-static {v4}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
 
-    iget-object p2, p0, Lyg0;->Z:Ljava/lang/Integer;
+    move-result-object v1
+    :try_end_0
+    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
+    invoke-interface {v1}, Landroid/util/AttributeSet;->getStyleAttribute()I
 
-    iget-object p2, p0, Lyg0;->q0:Ljava/lang/Integer;
+    move-result v2
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
+    goto :goto_2
 
-    iget p2, p0, Lyg0;->r0:I
+    :catch_0
+    move-exception v0
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    :goto_0
+    move-object p1, v0
 
-    iget-object p2, p0, Lyg0;->s0:Ljava/lang/String;
+    goto :goto_1
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    iget p2, p0, Lyg0;->t0:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget p2, p0, Lyg0;->u0:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget p2, p0, Lyg0;->v0:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-object p2, p0, Lyg0;->x0:Ljava/lang/CharSequence;
-
-    const/4 v0, 0x0
-
-    if-eqz p2, :cond_0
-
-    invoke-interface {p2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    move-result-object p2
+    :catch_1
+    move-exception v0
 
     goto :goto_0
 
-    :cond_0
-    move-object p2, v0
+    :cond_2
+    :try_start_1
+    new-instance p1, Lorg/xmlpull/v1/XmlPullParserException;
 
-    :goto_0
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object p2, p0, Lyg0;->y0:Ljava/lang/CharSequence;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    if-eqz p2, :cond_1
+    const-string v3, "Must have a <"
 
-    invoke-interface {p2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, "> start tag"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    :cond_1
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lorg/xmlpull/v1/XmlPullParserException;-><init>(Ljava/lang/String;)V
 
-    iget p2, p0, Lyg0;->z0:I
+    throw p1
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    :cond_3
+    new-instance p1, Lorg/xmlpull/v1/XmlPullParserException;
 
-    iget-object p2, p0, Lyg0;->B0:Ljava/lang/Integer;
+    const-string v0, "No start tag found"
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
+    invoke-direct {p1, v0}, Lorg/xmlpull/v1/XmlPullParserException;-><init>(Ljava/lang/String;)V
 
-    iget-object p2, p0, Lyg0;->D0:Ljava/lang/Integer;
+    throw p1
+    :try_end_1
+    .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
+    :goto_1
+    new-instance v0, Landroid/content/res/Resources$NotFoundException;
 
-    iget-object p2, p0, Lyg0;->E0:Ljava/lang/Integer;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
+    const-string v3, "Can\'t load badge resource ID #0x"
 
-    iget-object p2, p0, Lyg0;->F0:Ljava/lang/Integer;
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
+    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
-    iget-object p2, p0, Lyg0;->G0:Ljava/lang/Integer;
+    move-result-object v1
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p2, p0, Lyg0;->H0:Ljava/lang/Integer;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
+    move-result-object v1
 
-    iget-object p2, p0, Lyg0;->I0:Ljava/lang/Integer;
+    invoke-direct {v0, v1}, Landroid/content/res/Resources$NotFoundException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
+    invoke-virtual {v0, p1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
-    iget-object p2, p0, Lyg0;->L0:Ljava/lang/Integer;
+    throw v0
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
+    :cond_4
+    const/4 v1, 0x0
 
-    iget-object p2, p0, Lyg0;->J0:Ljava/lang/Integer;
+    move v2, v8
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
+    :goto_2
+    if-nez v2, :cond_5
 
-    iget-object p2, p0, Lyg0;->K0:Ljava/lang/Integer;
+    move v4, v0
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
+    goto :goto_3
 
-    iget-object p2, p0, Lyg0;->C0:Ljava/lang/Boolean;
+    :cond_5
+    move v4, v2
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
+    :goto_3
+    sget-object v2, Lz5d;->Badge:[I
 
-    iget-object p2, p0, Lyg0;->w0:Ljava/util/Locale;
+    new-array v5, v8, [I
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
+    move-object v0, p1
 
-    iget-object p2, p0, Lyg0;->M0:Ljava/lang/Boolean;
+    invoke-static/range {v0 .. v5}, Ld7g;->d(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroid/content/res/TypedArray;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeSerializable(Ljava/io/Serializable;)V
+    move-result-object p1
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v2, Lz5d;->Badge_badgeRadius:I
+
+    const/4 v3, -0x1
+
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    iput v2, p0, Lyg0;->c:F
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    sget v4, Ldwc;->mtrl_badge_horizontal_edge_offset:I
+
+    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v2
+
+    iput v2, p0, Lyg0;->i:I
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    sget v4, Ldwc;->mtrl_badge_text_horizontal_edge_offset:I
+
+    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v2
+
+    iput v2, p0, Lyg0;->j:I
+
+    sget v2, Lz5d;->Badge_badgeWithTextRadius:I
+
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    iput v2, p0, Lyg0;->d:F
+
+    sget v2, Lz5d;->Badge_badgeWidth:I
+
+    sget v4, Ldwc;->m3_badge_size:I
+
+    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result v4
+
+    invoke-virtual {p1, v2, v4}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result v2
+
+    iput v2, p0, Lyg0;->e:F
+
+    sget v2, Lz5d;->Badge_badgeWithTextWidth:I
+
+    sget v4, Ldwc;->m3_badge_with_text_size:I
+
+    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result v4
+
+    invoke-virtual {p1, v2, v4}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result v2
+
+    iput v2, p0, Lyg0;->g:F
+
+    sget v2, Lz5d;->Badge_badgeHeight:I
+
+    sget v4, Ldwc;->m3_badge_size:I
+
+    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result v4
+
+    invoke-virtual {p1, v2, v4}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result v2
+
+    iput v2, p0, Lyg0;->f:F
+
+    sget v2, Lz5d;->Badge_badgeWithTextHeight:I
+
+    sget v4, Ldwc;->m3_badge_with_text_size:I
+
+    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result v4
+
+    invoke-virtual {p1, v2, v4}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    move-result v2
+
+    iput v2, p0, Lyg0;->h:F
+
+    sget v2, Lz5d;->Badge_offsetAlignmentMode:I
+
+    invoke-virtual {p1, v2, v7}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    move-result v2
+
+    iput v2, p0, Lyg0;->k:I
+
+    iget-object v2, p0, Lyg0;->b:Lxg0;
+
+    iget v4, v6, Lxg0;->s0:I
+
+    const/4 v5, -0x2
+
+    if-ne v4, v5, :cond_6
+
+    const/16 v4, 0xff
+
+    :cond_6
+    iput v4, v2, Lxg0;->s0:I
+
+    iget v4, v6, Lxg0;->u0:I
+
+    if-eq v4, v5, :cond_7
+
+    iput v4, v2, Lxg0;->u0:I
+
+    goto :goto_4
+
+    :cond_7
+    sget v2, Lz5d;->Badge_number:I
+
+    invoke-virtual {p1, v2}, Landroid/content/res/TypedArray;->hasValue(I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_8
+
+    iget-object v2, p0, Lyg0;->b:Lxg0;
+
+    sget v3, Lz5d;->Badge_number:I
+
+    invoke-virtual {p1, v3, v8}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    move-result v3
+
+    iput v3, v2, Lxg0;->u0:I
+
+    goto :goto_4
+
+    :cond_8
+    iget-object v2, p0, Lyg0;->b:Lxg0;
+
+    iput v3, v2, Lxg0;->u0:I
+
+    :goto_4
+    iget-object v2, v6, Lxg0;->t0:Ljava/lang/String;
+
+    if-eqz v2, :cond_9
+
+    iget-object v3, p0, Lyg0;->b:Lxg0;
+
+    iput-object v2, v3, Lxg0;->t0:Ljava/lang/String;
+
+    goto :goto_5
+
+    :cond_9
+    sget v2, Lz5d;->Badge_badgeText:I
+
+    invoke-virtual {p1, v2}, Landroid/content/res/TypedArray;->hasValue(I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_a
+
+    iget-object v2, p0, Lyg0;->b:Lxg0;
+
+    sget v3, Lz5d;->Badge_badgeText:I
+
+    invoke-virtual {p1, v3}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    iput-object v3, v2, Lxg0;->t0:Ljava/lang/String;
+
+    :cond_a
+    :goto_5
+    iget-object v2, p0, Lyg0;->b:Lxg0;
+
+    iget-object v3, v6, Lxg0;->y0:Ljava/lang/CharSequence;
+
+    iput-object v3, v2, Lxg0;->y0:Ljava/lang/CharSequence;
+
+    iget-object v3, v6, Lxg0;->z0:Ljava/lang/CharSequence;
+
+    if-nez v3, :cond_b
+
+    sget v3, Ls2d;->mtrl_badge_numberless_content_description:I
+
+    invoke-virtual {v0, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    :cond_b
+    iput-object v3, v2, Lxg0;->z0:Ljava/lang/CharSequence;
+
+    iget-object v2, p0, Lyg0;->b:Lxg0;
+
+    iget v3, v6, Lxg0;->A0:I
+
+    if-nez v3, :cond_c
+
+    sget v3, Li2d;->mtrl_badge_content_description:I
+
+    :cond_c
+    iput v3, v2, Lxg0;->A0:I
+
+    iget v3, v6, Lxg0;->B0:I
+
+    if-nez v3, :cond_d
+
+    sget v3, Ls2d;->mtrl_exceed_max_badge_number_content_description:I
+
+    :cond_d
+    iput v3, v2, Lxg0;->B0:I
+
+    iget-object v3, v6, Lxg0;->D0:Ljava/lang/Boolean;
+
+    if-eqz v3, :cond_f
+
+    invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_e
+
+    goto :goto_6
+
+    :cond_e
+    move v3, v8
+
+    goto :goto_7
+
+    :cond_f
+    :goto_6
+    move v3, v7
+
+    :goto_7
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v3
+
+    iput-object v3, v2, Lxg0;->D0:Ljava/lang/Boolean;
+
+    iget-object v2, p0, Lyg0;->b:Lxg0;
+
+    iget v3, v6, Lxg0;->v0:I
+
+    if-ne v3, v5, :cond_10
+
+    sget v3, Lz5d;->Badge_maxCharacterCount:I
+
+    invoke-virtual {p1, v3, v5}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    move-result v3
+
+    :cond_10
+    iput v3, v2, Lxg0;->v0:I
+
+    iget-object v2, p0, Lyg0;->b:Lxg0;
+
+    iget v3, v6, Lxg0;->w0:I
+
+    if-ne v3, v5, :cond_11
+
+    sget v3, Lz5d;->Badge_maxNumber:I
+
+    invoke-virtual {p1, v3, v5}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    move-result v3
+
+    :cond_11
+    iput v3, v2, Lxg0;->w0:I
+
+    iget-object v2, p0, Lyg0;->b:Lxg0;
+
+    iget-object v3, v6, Lxg0;->o:Ljava/lang/Integer;
+
+    if-nez v3, :cond_12
+
+    sget v3, Lz5d;->Badge_badgeShapeAppearance:I
+
+    sget v4, Lm5d;->ShapeAppearance_M3_Sys_Shape_Corner_Full:I
+
+    invoke-virtual {p1, v3, v4}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result v3
+
+    goto :goto_8
+
+    :cond_12
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v3
+
+    :goto_8
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    iput-object v3, v2, Lxg0;->o:Ljava/lang/Integer;
+
+    iget-object v2, p0, Lyg0;->b:Lxg0;
+
+    iget-object v3, v6, Lxg0;->X:Ljava/lang/Integer;
+
+    if-nez v3, :cond_13
+
+    sget v3, Lz5d;->Badge_badgeShapeAppearanceOverlay:I
+
+    invoke-virtual {p1, v3, v8}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result v3
+
+    goto :goto_9
+
+    :cond_13
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v3
+
+    :goto_9
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    iput-object v3, v2, Lxg0;->X:Ljava/lang/Integer;
+
+    iget-object v2, p0, Lyg0;->b:Lxg0;
+
+    iget-object v3, v6, Lxg0;->Y:Ljava/lang/Integer;
+
+    if-nez v3, :cond_14
+
+    sget v3, Lz5d;->Badge_badgeWithTextShapeAppearance:I
+
+    sget v4, Lm5d;->ShapeAppearance_M3_Sys_Shape_Corner_Full:I
+
+    invoke-virtual {p1, v3, v4}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result v3
+
+    goto :goto_a
+
+    :cond_14
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v3
+
+    :goto_a
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    iput-object v3, v2, Lxg0;->Y:Ljava/lang/Integer;
+
+    iget-object v2, p0, Lyg0;->b:Lxg0;
+
+    iget-object v3, v6, Lxg0;->Z:Ljava/lang/Integer;
+
+    if-nez v3, :cond_15
+
+    sget v3, Lz5d;->Badge_badgeWithTextShapeAppearanceOverlay:I
+
+    invoke-virtual {p1, v3, v8}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result v3
+
+    goto :goto_b
+
+    :cond_15
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v3
+
+    :goto_b
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    iput-object v3, v2, Lxg0;->Z:Ljava/lang/Integer;
+
+    iget-object v2, p0, Lyg0;->b:Lxg0;
+
+    iget-object v3, v6, Lxg0;->b:Ljava/lang/Integer;
+
+    if-nez v3, :cond_16
+
+    sget v3, Lz5d;->Badge_backgroundColor:I
+
+    invoke-static {v0, p1, v3}, Lgti;->c(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/ColorStateList;->getDefaultColor()I
+
+    move-result v3
+
+    goto :goto_c
+
+    :cond_16
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v3
+
+    :goto_c
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    iput-object v3, v2, Lxg0;->b:Ljava/lang/Integer;
+
+    iget-object v2, p0, Lyg0;->b:Lxg0;
+
+    iget-object v3, v6, Lxg0;->d:Ljava/lang/Integer;
+
+    if-nez v3, :cond_17
+
+    sget v3, Lz5d;->Badge_badgeTextAppearance:I
+
+    sget v4, Lm5d;->TextAppearance_MaterialComponents_Badge:I
+
+    invoke-virtual {p1, v3, v4}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result v3
+
+    goto :goto_d
+
+    :cond_17
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v3
+
+    :goto_d
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    iput-object v3, v2, Lxg0;->d:Ljava/lang/Integer;
+
+    iget-object v2, v6, Lxg0;->c:Ljava/lang/Integer;
+
+    if-eqz v2, :cond_18
+
+    iget-object v0, p0, Lyg0;->b:Lxg0;
+
+    iput-object v2, v0, Lxg0;->c:Ljava/lang/Integer;
+
+    goto/16 :goto_f
+
+    :cond_18
+    sget v2, Lz5d;->Badge_badgeTextColor:I
+
+    invoke-virtual {p1, v2}, Landroid/content/res/TypedArray;->hasValue(I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_19
+
+    iget-object v2, p0, Lyg0;->b:Lxg0;
+
+    sget v3, Lz5d;->Badge_badgeTextColor:I
+
+    invoke-static {v0, p1, v3}, Lgti;->c(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/ColorStateList;->getDefaultColor()I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    iput-object v0, v2, Lxg0;->c:Ljava/lang/Integer;
+
+    goto/16 :goto_f
+
+    :cond_19
+    iget-object v2, p0, Lyg0;->b:Lxg0;
+
+    iget-object v2, v2, Lxg0;->d:Ljava/lang/Integer;
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    sget-object v3, Lz5d;->TextAppearance:[I
+
+    invoke-virtual {v0, v2, v3}, Landroid/content/Context;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
+
+    move-result-object v3
+
+    sget v4, Lz5d;->TextAppearance_android_textSize:I
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v3, v4, v5}, Landroid/content/res/TypedArray;->getDimension(IF)F
+
+    sget v4, Lz5d;->TextAppearance_android_textColor:I
+
+    invoke-static {v0, v3, v4}, Lgti;->c(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+
+    move-result-object v4
+
+    sget v9, Lz5d;->TextAppearance_android_textColorHint:I
+
+    invoke-static {v0, v3, v9}, Lgti;->c(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+
+    sget v9, Lz5d;->TextAppearance_android_textColorLink:I
+
+    invoke-static {v0, v3, v9}, Lgti;->c(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+
+    sget v9, Lz5d;->TextAppearance_android_textStyle:I
+
+    invoke-virtual {v3, v9, v8}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    sget v9, Lz5d;->TextAppearance_android_typeface:I
+
+    invoke-virtual {v3, v9, v7}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    sget v7, Lz5d;->TextAppearance_fontFamily:I
+
+    sget v9, Lz5d;->TextAppearance_android_fontFamily:I
+
+    invoke-virtual {v3, v7}, Landroid/content/res/TypedArray;->hasValue(I)Z
+
+    move-result v10
+
+    if-eqz v10, :cond_1a
+
+    goto :goto_e
+
+    :cond_1a
+    move v7, v9
+
+    :goto_e
+    invoke-virtual {v3, v7, v8}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    invoke-virtual {v3, v7}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
+
+    sget v7, Lz5d;->TextAppearance_textAllCaps:I
+
+    invoke-virtual {v3, v7, v8}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+
+    sget v7, Lz5d;->TextAppearance_android_shadowColor:I
+
+    invoke-static {v0, v3, v7}, Lgti;->c(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+
+    sget v7, Lz5d;->TextAppearance_android_shadowDx:I
+
+    invoke-virtual {v3, v7, v5}, Landroid/content/res/TypedArray;->getFloat(IF)F
+
+    sget v7, Lz5d;->TextAppearance_android_shadowDy:I
+
+    invoke-virtual {v3, v7, v5}, Landroid/content/res/TypedArray;->getFloat(IF)F
+
+    sget v7, Lz5d;->TextAppearance_android_shadowRadius:I
+
+    invoke-virtual {v3, v7, v5}, Landroid/content/res/TypedArray;->getFloat(IF)F
+
+    invoke-virtual {v3}, Landroid/content/res/TypedArray;->recycle()V
+
+    sget-object v3, Lz5d;->MaterialTextAppearance:[I
+
+    invoke-virtual {v0, v2, v3}, Landroid/content/Context;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
+
+    move-result-object v0
+
+    sget v2, Lz5d;->MaterialTextAppearance_android_letterSpacing:I
+
+    invoke-virtual {v0, v2}, Landroid/content/res/TypedArray;->hasValue(I)Z
+
+    sget v2, Lz5d;->MaterialTextAppearance_android_letterSpacing:I
+
+    invoke-virtual {v0, v2, v5}, Landroid/content/res/TypedArray;->getFloat(IF)F
+
+    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
+
+    iget-object v0, p0, Lyg0;->b:Lxg0;
+
+    invoke-virtual {v4}, Landroid/content/res/ColorStateList;->getDefaultColor()I
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    iput-object v2, v0, Lxg0;->c:Ljava/lang/Integer;
+
+    :goto_f
+    iget-object v0, p0, Lyg0;->b:Lxg0;
+
+    iget-object v2, v6, Lxg0;->C0:Ljava/lang/Integer;
+
+    if-nez v2, :cond_1b
+
+    sget v2, Lz5d;->Badge_badgeGravity:I
+
+    const v3, 0x800035
+
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    move-result v2
+
+    goto :goto_10
+
+    :cond_1b
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    :goto_10
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    iput-object v2, v0, Lxg0;->C0:Ljava/lang/Integer;
+
+    iget-object v0, p0, Lyg0;->b:Lxg0;
+
+    iget-object v2, v6, Lxg0;->E0:Ljava/lang/Integer;
+
+    if-nez v2, :cond_1c
+
+    sget v2, Lz5d;->Badge_badgeWidePadding:I
+
+    sget v3, Ldwc;->mtrl_badge_long_text_horizontal_padding:I
+
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v3
+
+    invoke-virtual {p1, v2, v3}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+
+    move-result v2
+
+    goto :goto_11
+
+    :cond_1c
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    :goto_11
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    iput-object v2, v0, Lxg0;->E0:Ljava/lang/Integer;
+
+    iget-object v0, p0, Lyg0;->b:Lxg0;
+
+    iget-object v2, v6, Lxg0;->F0:Ljava/lang/Integer;
+
+    if-nez v2, :cond_1d
+
+    sget v2, Lz5d;->Badge_badgeVerticalPadding:I
+
+    sget v3, Ldwc;->m3_badge_with_text_vertical_padding:I
+
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v1
+
+    invoke-virtual {p1, v2, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+
+    move-result v1
+
+    goto :goto_12
+
+    :cond_1d
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    :goto_12
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lxg0;->F0:Ljava/lang/Integer;
+
+    iget-object v0, p0, Lyg0;->b:Lxg0;
+
+    iget-object v1, v6, Lxg0;->G0:Ljava/lang/Integer;
+
+    if-nez v1, :cond_1e
+
+    sget v1, Lz5d;->Badge_horizontalOffset:I
+
+    invoke-virtual {p1, v1, v8}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
+
+    move-result v1
+
+    goto :goto_13
+
+    :cond_1e
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    :goto_13
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lxg0;->G0:Ljava/lang/Integer;
+
+    iget-object v0, p0, Lyg0;->b:Lxg0;
+
+    iget-object v1, v6, Lxg0;->H0:Ljava/lang/Integer;
+
+    if-nez v1, :cond_1f
+
+    sget v1, Lz5d;->Badge_verticalOffset:I
+
+    invoke-virtual {p1, v1, v8}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
+
+    move-result v1
+
+    goto :goto_14
+
+    :cond_1f
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    :goto_14
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lxg0;->H0:Ljava/lang/Integer;
+
+    iget-object v0, p0, Lyg0;->b:Lxg0;
+
+    iget-object v1, v6, Lxg0;->I0:Ljava/lang/Integer;
+
+    if-nez v1, :cond_20
+
+    sget v1, Lz5d;->Badge_horizontalOffsetWithText:I
+
+    iget-object v2, v0, Lxg0;->G0:Ljava/lang/Integer;
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
+
+    move-result v1
+
+    goto :goto_15
+
+    :cond_20
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    :goto_15
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lxg0;->I0:Ljava/lang/Integer;
+
+    iget-object v0, p0, Lyg0;->b:Lxg0;
+
+    iget-object v1, v6, Lxg0;->J0:Ljava/lang/Integer;
+
+    if-nez v1, :cond_21
+
+    sget v1, Lz5d;->Badge_verticalOffsetWithText:I
+
+    iget-object v2, v0, Lxg0;->H0:Ljava/lang/Integer;
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
+
+    move-result v1
+
+    goto :goto_16
+
+    :cond_21
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    :goto_16
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lxg0;->J0:Ljava/lang/Integer;
+
+    iget-object v0, p0, Lyg0;->b:Lxg0;
+
+    iget-object v1, v6, Lxg0;->M0:Ljava/lang/Integer;
+
+    if-nez v1, :cond_22
+
+    sget v1, Lz5d;->Badge_largeFontVerticalOffsetAdjustment:I
+
+    invoke-virtual {p1, v1, v8}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
+
+    move-result v1
+
+    goto :goto_17
+
+    :cond_22
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    :goto_17
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lxg0;->M0:Ljava/lang/Integer;
+
+    iget-object v0, p0, Lyg0;->b:Lxg0;
+
+    iget-object v1, v6, Lxg0;->K0:Ljava/lang/Integer;
+
+    if-nez v1, :cond_23
+
+    move v1, v8
+
+    goto :goto_18
+
+    :cond_23
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    :goto_18
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lxg0;->K0:Ljava/lang/Integer;
+
+    iget-object v0, p0, Lyg0;->b:Lxg0;
+
+    iget-object v1, v6, Lxg0;->L0:Ljava/lang/Integer;
+
+    if-nez v1, :cond_24
+
+    move v1, v8
+
+    goto :goto_19
+
+    :cond_24
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    :goto_19
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lxg0;->L0:Ljava/lang/Integer;
+
+    iget-object v0, p0, Lyg0;->b:Lxg0;
+
+    iget-object v1, v6, Lxg0;->N0:Ljava/lang/Boolean;
+
+    if-nez v1, :cond_25
+
+    sget v1, Lz5d;->Badge_autoAdjustToWithinGrandparentBounds:I
+
+    invoke-virtual {p1, v1, v8}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+
+    move-result v1
+
+    goto :goto_1a
+
+    :cond_25
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v1
+
+    :goto_1a
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lxg0;->N0:Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
+
+    iget-object p1, v6, Lxg0;->x0:Ljava/util/Locale;
+
+    if-nez p1, :cond_26
+
+    iget-object p1, p0, Lyg0;->b:Lxg0;
+
+    sget-object v0, Ljava/util/Locale$Category;->FORMAT:Ljava/util/Locale$Category;
+
+    invoke-static {v0}, Ljava/util/Locale;->getDefault(Ljava/util/Locale$Category;)Ljava/util/Locale;
+
+    move-result-object v0
+
+    iput-object v0, p1, Lxg0;->x0:Ljava/util/Locale;
+
+    goto :goto_1b
+
+    :cond_26
+    iget-object v0, p0, Lyg0;->b:Lxg0;
+
+    iput-object p1, v0, Lxg0;->x0:Ljava/util/Locale;
+
+    :goto_1b
+    iput-object v6, p0, Lyg0;->a:Lxg0;
 
     return-void
 .end method

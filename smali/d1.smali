@@ -12,7 +12,7 @@
     .locals 1
 
     .line 1
-    const/4 v0, 0x4
+    const/4 v0, 0x6
 
     iput v0, p0, Ld1;->a:I
 
@@ -28,6 +28,17 @@
     iput p2, p0, Ld1;->a:I
 
     invoke-direct {p0, p1}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;I)V
+    .locals 0
+
+    .line 3
+    iput p3, p0, Ld1;->a:I
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method

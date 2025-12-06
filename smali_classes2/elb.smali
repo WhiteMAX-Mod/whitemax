@@ -1,174 +1,125 @@
-.class public final synthetic Lelb;
+.class public final Lelb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lji6;
+.implements Landroid/os/Handler$Callback;
+
+
+# static fields
+.field public static final c:Ljava/util/concurrent/ExecutorService;
+
+.field public static final d:Ljava/lang/ThreadLocal;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/util/concurrent/ExecutorService;
 
-.field public final synthetic b:Liu7;
-
-.field public final synthetic c:Landroid/content/Context;
+.field public final b:Lb7d;
 
 
 # direct methods
-.method public synthetic constructor <init>(Liu7;Landroid/content/Context;I)V
+.method static constructor <clinit>()V
+    .locals 3
+
+    invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    sput-object v0, Lelb;->c:Ljava/util/concurrent/ExecutorService;
+
+    new-instance v1, Ljava/lang/ThreadLocal;
+
+    invoke-direct {v1}, Ljava/lang/ThreadLocal;-><init>()V
+
+    sput-object v1, Lelb;->d:Ljava/lang/ThreadLocal;
+
+    new-instance v1, Lmc;
+
+    const/16 v2, 0xc
+
+    invoke-direct {v1, v2}, Lmc;-><init>(I)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lb7d;)V
     .locals 0
 
-    iput p3, p0, Lelb;->a:I
-
-    iput-object p1, p0, Lelb;->b:Liu7;
-
-    iput-object p2, p0, Lelb;->c:Landroid/content/Context;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lelb;->b:Lb7d;
+
+    sget-object p1, Lelb;->c:Ljava/util/concurrent/ExecutorService;
+
+    iput-object p1, p0, Lelb;->a:Ljava/util/concurrent/ExecutorService;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final handleMessage(Landroid/os/Message;)Z
     .locals 5
 
-    iget v0, p0, Lelb;->a:I
+    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p1, Lw9i;
 
-    iget-object v0, p0, Lelb;->b:Liu7;
+    iget-boolean v0, p1, Lw9i;->c:Z
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    move-result-object v0
-
-    check-cast v0, Lqs4;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, p0, Lelb;->c:Landroid/content/Context;
-
-    invoke-static {v0}, Lqs4;->i(Landroid/content/Context;)Landroid/util/Size;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
-
-    move-result v1
-
-    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
-
-    move-result v0
-
-    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    :goto_0
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lelb;->b:Liu7;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lqs4;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, p0, Lelb;->c:Landroid/content/Context;
-
-    invoke-static {v0}, Lqs4;->i(Landroid/content/Context;)Landroid/util/Size;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
-
-    move-result v1
-
-    int-to-double v1, v1
-
-    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
-
-    move-result v0
-
-    int-to-double v3, v0
-
-    invoke-static {v1, v2, v3, v4}, Ljava/lang/Math;->min(DD)D
-
-    move-result-wide v0
-
-    const/high16 v2, 0x40400000    # 3.0f
-
-    float-to-double v2, v2
-
-    div-double/2addr v0, v2
-
-    const/high16 v2, 0x40000000    # 2.0f
-
-    float-to-double v2, v2
-
-    mul-double/2addr v0, v2
-
-    double-to-int v0, v0
-
-    const/16 v1, 0x190
-
-    if-ge v0, v1, :cond_0
-
-    move v0, v1
-
-    :cond_0
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1
-    iget-object v0, p0, Lelb;->b:Liu7;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lqs4;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, p0, Lelb;->c:Landroid/content/Context;
-
-    invoke-static {v0}, Lqs4;->i(Landroid/content/Context;)Landroid/util/Size;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
-
-    move-result v1
-
-    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
-
-    move-result v0
-
-    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
-    nop
+    :cond_0
+    iget v0, p1, Lw9i;->d:I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    add-int/2addr v0, v1
+
+    iput v0, p1, Lw9i;->d:I
+
+    iget-object v0, p0, Lelb;->b:Lb7d;
+
+    sget-object v2, Lhcf;->u0:Lhcf;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "rtc.long.executor.task."
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v4, p1, Lw9i;->d:I
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    iget-object v4, p1, Lw9i;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v2, v3, v4}, Lb7d;->log(Lhcf;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget p1, p1, Lw9i;->d:I
+
+    const/4 v0, 0x4
+
+    if-lt p1, v0, :cond_1
+
+    :goto_0
+    return v1
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "No task duration check thread"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

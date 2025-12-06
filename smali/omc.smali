@@ -1,422 +1,243 @@
-.class public abstract Lomc;
+.class public final Lomc;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static ic_audiotrack_dark:I = 0x7f08054e
+# instance fields
+.field public final a:I
 
-.field public static ic_audiotrack_light:I = 0x7f08054f
+.field public final b:I
 
-.field public static ic_checked_checkbox:I = 0x7f0805a2
+.field public final c:J
 
-.field public static ic_dialog_close_dark:I = 0x7f0805d8
+.field public final d:J
 
-.field public static ic_dialog_close_light:I = 0x7f0805d9
 
-.field public static ic_group_collapse_00:I = 0x7f080622
+# direct methods
+.method public constructor <init>(IIJJ)V
+    .locals 0
 
-.field public static ic_group_collapse_01:I = 0x7f080623
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static ic_group_collapse_02:I = 0x7f080624
+    iput p1, p0, Lomc;->a:I
 
-.field public static ic_group_collapse_03:I = 0x7f080625
+    iput p2, p0, Lomc;->b:I
 
-.field public static ic_group_collapse_04:I = 0x7f080626
+    iput-wide p3, p0, Lomc;->c:J
 
-.field public static ic_group_collapse_05:I = 0x7f080627
+    iput-wide p5, p0, Lomc;->d:J
 
-.field public static ic_group_collapse_06:I = 0x7f080628
+    return-void
+.end method
 
-.field public static ic_group_collapse_07:I = 0x7f080629
+.method public static a(Ljava/io/File;)Lomc;
+    .locals 9
 
-.field public static ic_group_collapse_08:I = 0x7f08062a
+    new-instance v1, Ljava/io/DataInputStream;
 
-.field public static ic_group_collapse_09:I = 0x7f08062b
+    new-instance v0, Ljava/io/FileInputStream;
 
-.field public static ic_group_collapse_10:I = 0x7f08062c
+    invoke-direct {v0, p0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-.field public static ic_group_collapse_11:I = 0x7f08062d
+    invoke-direct {v1, v0}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
 
-.field public static ic_group_collapse_12:I = 0x7f08062e
+    :try_start_0
+    new-instance v2, Lomc;
 
-.field public static ic_group_collapse_13:I = 0x7f08062f
+    invoke-virtual {v1}, Ljava/io/DataInputStream;->readInt()I
 
-.field public static ic_group_collapse_14:I = 0x7f080630
+    move-result v3
 
-.field public static ic_group_collapse_15:I = 0x7f080631
+    invoke-virtual {v1}, Ljava/io/DataInputStream;->readInt()I
 
-.field public static ic_group_expand_00:I = 0x7f080632
+    move-result v4
 
-.field public static ic_group_expand_01:I = 0x7f080633
+    invoke-virtual {v1}, Ljava/io/DataInputStream;->readLong()J
 
-.field public static ic_group_expand_02:I = 0x7f080634
+    move-result-wide v5
 
-.field public static ic_group_expand_03:I = 0x7f080635
+    invoke-virtual {v1}, Ljava/io/DataInputStream;->readLong()J
 
-.field public static ic_group_expand_04:I = 0x7f080636
+    move-result-wide v7
 
-.field public static ic_group_expand_05:I = 0x7f080637
+    invoke-direct/range {v2 .. v8}, Lomc;-><init>(IIJJ)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-.field public static ic_group_expand_06:I = 0x7f080638
+    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
 
-.field public static ic_group_expand_07:I = 0x7f080639
+    return-object v2
 
-.field public static ic_group_expand_08:I = 0x7f08063a
+    :catchall_0
+    move-exception v0
 
-.field public static ic_group_expand_09:I = 0x7f08063b
+    move-object p0, v0
 
-.field public static ic_group_expand_10:I = 0x7f08063c
+    :try_start_1
+    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-.field public static ic_group_expand_11:I = 0x7f08063d
+    goto :goto_0
 
-.field public static ic_group_expand_12:I = 0x7f08063e
+    :catchall_1
+    move-exception v0
 
-.field public static ic_group_expand_13:I = 0x7f08063f
+    invoke-virtual {p0, v0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
-.field public static ic_group_expand_14:I = 0x7f080640
+    :goto_0
+    throw p0
+.end method
 
-.field public static ic_group_expand_15:I = 0x7f080641
 
-.field public static ic_media_pause_dark:I = 0x7f080684
+# virtual methods
+.method public final b(Ljava/io/File;)V
+    .locals 3
 
-.field public static ic_media_pause_light:I = 0x7f080685
+    invoke-virtual {p1}, Ljava/io/File;->delete()Z
 
-.field public static ic_media_play_dark:I = 0x7f080686
+    new-instance v0, Ljava/io/DataOutputStream;
 
-.field public static ic_media_play_light:I = 0x7f080687
+    new-instance v1, Ljava/io/FileOutputStream;
 
-.field public static ic_media_stop_dark:I = 0x7f080688
+    invoke-direct {v1, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-.field public static ic_media_stop_light:I = 0x7f080689
+    invoke-direct {v0, v1}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-.field public static ic_mr_button_connected_00_dark:I = 0x7f0806b0
+    :try_start_0
+    iget p1, p0, Lomc;->a:I
 
-.field public static ic_mr_button_connected_00_light:I = 0x7f0806b1
+    invoke-virtual {v0, p1}, Ljava/io/DataOutputStream;->writeInt(I)V
 
-.field public static ic_mr_button_connected_01_dark:I = 0x7f0806b2
+    iget p1, p0, Lomc;->b:I
 
-.field public static ic_mr_button_connected_01_light:I = 0x7f0806b3
+    invoke-virtual {v0, p1}, Ljava/io/DataOutputStream;->writeInt(I)V
 
-.field public static ic_mr_button_connected_02_dark:I = 0x7f0806b4
+    iget-wide v1, p0, Lomc;->c:J
 
-.field public static ic_mr_button_connected_02_light:I = 0x7f0806b5
+    invoke-virtual {v0, v1, v2}, Ljava/io/DataOutputStream;->writeLong(J)V
 
-.field public static ic_mr_button_connected_03_dark:I = 0x7f0806b6
+    iget-wide v1, p0, Lomc;->d:J
 
-.field public static ic_mr_button_connected_03_light:I = 0x7f0806b7
+    invoke-virtual {v0, v1, v2}, Ljava/io/DataOutputStream;->writeLong(J)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-.field public static ic_mr_button_connected_04_dark:I = 0x7f0806b8
+    invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
 
-.field public static ic_mr_button_connected_04_light:I = 0x7f0806b9
+    return-void
 
-.field public static ic_mr_button_connected_05_dark:I = 0x7f0806ba
+    :catchall_0
+    move-exception p1
 
-.field public static ic_mr_button_connected_05_light:I = 0x7f0806bb
+    :try_start_1
+    invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-.field public static ic_mr_button_connected_06_dark:I = 0x7f0806bc
+    goto :goto_0
 
-.field public static ic_mr_button_connected_06_light:I = 0x7f0806bd
+    :catchall_1
+    move-exception v0
 
-.field public static ic_mr_button_connected_07_dark:I = 0x7f0806be
+    invoke-virtual {p1, v0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
-.field public static ic_mr_button_connected_07_light:I = 0x7f0806bf
+    :goto_0
+    throw p1
+.end method
 
-.field public static ic_mr_button_connected_08_dark:I = 0x7f0806c0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
 
-.field public static ic_mr_button_connected_08_light:I = 0x7f0806c1
+    const/4 v0, 0x1
 
-.field public static ic_mr_button_connected_09_dark:I = 0x7f0806c2
+    if-ne p0, p1, :cond_0
 
-.field public static ic_mr_button_connected_09_light:I = 0x7f0806c3
+    return v0
 
-.field public static ic_mr_button_connected_10_dark:I = 0x7f0806c4
+    :cond_0
+    const/4 v1, 0x0
 
-.field public static ic_mr_button_connected_10_light:I = 0x7f0806c5
+    if-eqz p1, :cond_2
 
-.field public static ic_mr_button_connected_11_dark:I = 0x7f0806c6
+    instance-of v2, p1, Lomc;
 
-.field public static ic_mr_button_connected_11_light:I = 0x7f0806c7
+    if-nez v2, :cond_1
 
-.field public static ic_mr_button_connected_12_dark:I = 0x7f0806c8
+    goto :goto_0
 
-.field public static ic_mr_button_connected_12_light:I = 0x7f0806c9
+    :cond_1
+    check-cast p1, Lomc;
 
-.field public static ic_mr_button_connected_13_dark:I = 0x7f0806ca
+    iget v2, p0, Lomc;->b:I
 
-.field public static ic_mr_button_connected_13_light:I = 0x7f0806cb
+    iget v3, p1, Lomc;->b:I
 
-.field public static ic_mr_button_connected_14_dark:I = 0x7f0806cc
+    if-ne v2, v3, :cond_2
 
-.field public static ic_mr_button_connected_14_light:I = 0x7f0806cd
+    iget-wide v2, p0, Lomc;->c:J
 
-.field public static ic_mr_button_connected_15_dark:I = 0x7f0806ce
+    iget-wide v4, p1, Lomc;->c:J
 
-.field public static ic_mr_button_connected_15_light:I = 0x7f0806cf
+    cmp-long v2, v2, v4
 
-.field public static ic_mr_button_connected_16_dark:I = 0x7f0806d0
+    if-nez v2, :cond_2
 
-.field public static ic_mr_button_connected_16_light:I = 0x7f0806d1
+    iget v2, p0, Lomc;->a:I
 
-.field public static ic_mr_button_connected_17_dark:I = 0x7f0806d2
+    iget v3, p1, Lomc;->a:I
 
-.field public static ic_mr_button_connected_17_light:I = 0x7f0806d3
+    if-ne v2, v3, :cond_2
 
-.field public static ic_mr_button_connected_18_dark:I = 0x7f0806d4
+    iget-wide v2, p0, Lomc;->d:J
 
-.field public static ic_mr_button_connected_18_light:I = 0x7f0806d5
+    iget-wide v4, p1, Lomc;->d:J
 
-.field public static ic_mr_button_connected_19_dark:I = 0x7f0806d6
+    cmp-long p1, v2, v4
 
-.field public static ic_mr_button_connected_19_light:I = 0x7f0806d7
+    if-nez p1, :cond_2
 
-.field public static ic_mr_button_connected_20_dark:I = 0x7f0806d8
+    return v0
 
-.field public static ic_mr_button_connected_20_light:I = 0x7f0806d9
+    :cond_2
+    :goto_0
+    return v1
+.end method
 
-.field public static ic_mr_button_connected_21_dark:I = 0x7f0806da
+.method public final hashCode()I
+    .locals 5
 
-.field public static ic_mr_button_connected_21_light:I = 0x7f0806db
+    iget v0, p0, Lomc;->b:I
 
-.field public static ic_mr_button_connected_22_dark:I = 0x7f0806dc
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-.field public static ic_mr_button_connected_22_light:I = 0x7f0806dd
+    move-result-object v0
 
-.field public static ic_mr_button_connected_23_dark:I = 0x7f0806de
+    iget-wide v1, p0, Lomc;->c:J
 
-.field public static ic_mr_button_connected_23_light:I = 0x7f0806df
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-.field public static ic_mr_button_connected_24_dark:I = 0x7f0806e0
+    move-result-object v1
 
-.field public static ic_mr_button_connected_24_light:I = 0x7f0806e1
+    iget v2, p0, Lomc;->a:I
 
-.field public static ic_mr_button_connected_25_dark:I = 0x7f0806e2
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-.field public static ic_mr_button_connected_25_light:I = 0x7f0806e3
+    move-result-object v2
 
-.field public static ic_mr_button_connected_26_dark:I = 0x7f0806e4
+    iget-wide v3, p0, Lomc;->d:J
 
-.field public static ic_mr_button_connected_26_light:I = 0x7f0806e5
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-.field public static ic_mr_button_connected_27_dark:I = 0x7f0806e6
+    move-result-object v3
 
-.field public static ic_mr_button_connected_27_light:I = 0x7f0806e7
+    filled-new-array {v0, v1, v2, v3}, [Ljava/lang/Object;
 
-.field public static ic_mr_button_connected_28_dark:I = 0x7f0806e8
+    move-result-object v0
 
-.field public static ic_mr_button_connected_28_light:I = 0x7f0806e9
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
-.field public static ic_mr_button_connected_29_dark:I = 0x7f0806ea
+    move-result v0
 
-.field public static ic_mr_button_connected_29_light:I = 0x7f0806eb
-
-.field public static ic_mr_button_connected_30_dark:I = 0x7f0806ec
-
-.field public static ic_mr_button_connected_30_light:I = 0x7f0806ed
-
-.field public static ic_mr_button_connecting_00_dark:I = 0x7f0806ee
-
-.field public static ic_mr_button_connecting_00_light:I = 0x7f0806ef
-
-.field public static ic_mr_button_connecting_01_dark:I = 0x7f0806f0
-
-.field public static ic_mr_button_connecting_01_light:I = 0x7f0806f1
-
-.field public static ic_mr_button_connecting_02_dark:I = 0x7f0806f2
-
-.field public static ic_mr_button_connecting_02_light:I = 0x7f0806f3
-
-.field public static ic_mr_button_connecting_03_dark:I = 0x7f0806f4
-
-.field public static ic_mr_button_connecting_03_light:I = 0x7f0806f5
-
-.field public static ic_mr_button_connecting_04_dark:I = 0x7f0806f6
-
-.field public static ic_mr_button_connecting_04_light:I = 0x7f0806f7
-
-.field public static ic_mr_button_connecting_05_dark:I = 0x7f0806f8
-
-.field public static ic_mr_button_connecting_05_light:I = 0x7f0806f9
-
-.field public static ic_mr_button_connecting_06_dark:I = 0x7f0806fa
-
-.field public static ic_mr_button_connecting_06_light:I = 0x7f0806fb
-
-.field public static ic_mr_button_connecting_07_dark:I = 0x7f0806fc
-
-.field public static ic_mr_button_connecting_07_light:I = 0x7f0806fd
-
-.field public static ic_mr_button_connecting_08_dark:I = 0x7f0806fe
-
-.field public static ic_mr_button_connecting_08_light:I = 0x7f0806ff
-
-.field public static ic_mr_button_connecting_09_dark:I = 0x7f080700
-
-.field public static ic_mr_button_connecting_09_light:I = 0x7f080701
-
-.field public static ic_mr_button_connecting_10_dark:I = 0x7f080702
-
-.field public static ic_mr_button_connecting_10_light:I = 0x7f080703
-
-.field public static ic_mr_button_connecting_11_dark:I = 0x7f080704
-
-.field public static ic_mr_button_connecting_11_light:I = 0x7f080705
-
-.field public static ic_mr_button_connecting_12_dark:I = 0x7f080706
-
-.field public static ic_mr_button_connecting_12_light:I = 0x7f080707
-
-.field public static ic_mr_button_connecting_13_dark:I = 0x7f080708
-
-.field public static ic_mr_button_connecting_13_light:I = 0x7f080709
-
-.field public static ic_mr_button_connecting_14_dark:I = 0x7f08070a
-
-.field public static ic_mr_button_connecting_14_light:I = 0x7f08070b
-
-.field public static ic_mr_button_connecting_15_dark:I = 0x7f08070c
-
-.field public static ic_mr_button_connecting_15_light:I = 0x7f08070d
-
-.field public static ic_mr_button_connecting_16_dark:I = 0x7f08070e
-
-.field public static ic_mr_button_connecting_16_light:I = 0x7f08070f
-
-.field public static ic_mr_button_connecting_17_dark:I = 0x7f080710
-
-.field public static ic_mr_button_connecting_17_light:I = 0x7f080711
-
-.field public static ic_mr_button_connecting_18_dark:I = 0x7f080712
-
-.field public static ic_mr_button_connecting_18_light:I = 0x7f080713
-
-.field public static ic_mr_button_connecting_19_dark:I = 0x7f080714
-
-.field public static ic_mr_button_connecting_19_light:I = 0x7f080715
-
-.field public static ic_mr_button_connecting_20_dark:I = 0x7f080716
-
-.field public static ic_mr_button_connecting_20_light:I = 0x7f080717
-
-.field public static ic_mr_button_connecting_21_dark:I = 0x7f080718
-
-.field public static ic_mr_button_connecting_21_light:I = 0x7f080719
-
-.field public static ic_mr_button_connecting_22_dark:I = 0x7f08071a
-
-.field public static ic_mr_button_connecting_22_light:I = 0x7f08071b
-
-.field public static ic_mr_button_connecting_23_dark:I = 0x7f08071c
-
-.field public static ic_mr_button_connecting_23_light:I = 0x7f08071d
-
-.field public static ic_mr_button_connecting_24_dark:I = 0x7f08071e
-
-.field public static ic_mr_button_connecting_24_light:I = 0x7f08071f
-
-.field public static ic_mr_button_connecting_25_dark:I = 0x7f080720
-
-.field public static ic_mr_button_connecting_25_light:I = 0x7f080721
-
-.field public static ic_mr_button_connecting_26_dark:I = 0x7f080722
-
-.field public static ic_mr_button_connecting_26_light:I = 0x7f080723
-
-.field public static ic_mr_button_connecting_27_dark:I = 0x7f080724
-
-.field public static ic_mr_button_connecting_27_light:I = 0x7f080725
-
-.field public static ic_mr_button_connecting_28_dark:I = 0x7f080726
-
-.field public static ic_mr_button_connecting_28_light:I = 0x7f080727
-
-.field public static ic_mr_button_connecting_29_dark:I = 0x7f080728
-
-.field public static ic_mr_button_connecting_29_light:I = 0x7f080729
-
-.field public static ic_mr_button_connecting_30_dark:I = 0x7f08072a
-
-.field public static ic_mr_button_connecting_30_light:I = 0x7f08072b
-
-.field public static ic_mr_button_disabled_dark:I = 0x7f08072c
-
-.field public static ic_mr_button_disabled_light:I = 0x7f08072d
-
-.field public static ic_mr_button_disconnected_dark:I = 0x7f08072e
-
-.field public static ic_mr_button_disconnected_light:I = 0x7f08072f
-
-.field public static ic_mr_button_grey:I = 0x7f080730
-
-.field public static ic_unchecked_checkbox:I = 0x7f0807e0
-
-.field public static ic_vol_mute:I = 0x7f08080b
-
-.field public static ic_vol_type_speaker_dark:I = 0x7f08080c
-
-.field public static ic_vol_type_speaker_group_dark:I = 0x7f08080d
-
-.field public static ic_vol_type_speaker_group_light:I = 0x7f08080e
-
-.field public static ic_vol_type_speaker_light:I = 0x7f08080f
-
-.field public static ic_vol_type_tv_dark:I = 0x7f080810
-
-.field public static ic_vol_type_tv_light:I = 0x7f080811
-
-.field public static ic_vol_unmute:I = 0x7f080812
-
-.field public static mr_button_connected_dark:I = 0x7f0808c1
-
-.field public static mr_button_connected_light:I = 0x7f0808c2
-
-.field public static mr_button_connecting_dark:I = 0x7f0808c3
-
-.field public static mr_button_connecting_light:I = 0x7f0808c4
-
-.field public static mr_button_dark:I = 0x7f0808c5
-
-.field public static mr_button_dark_static:I = 0x7f0808c6
-
-.field public static mr_button_light:I = 0x7f0808c7
-
-.field public static mr_button_light_static:I = 0x7f0808c8
-
-.field public static mr_cast_checkbox:I = 0x7f0808c9
-
-.field public static mr_cast_group_seekbar_track:I = 0x7f0808ca
-
-.field public static mr_cast_mute_button:I = 0x7f0808cb
-
-.field public static mr_cast_route_seekbar_track:I = 0x7f0808cc
-
-.field public static mr_cast_stop:I = 0x7f0808cd
-
-.field public static mr_cast_thumb:I = 0x7f0808ce
-
-.field public static mr_dialog_close_dark:I = 0x7f0808cf
-
-.field public static mr_dialog_close_light:I = 0x7f0808d0
-
-.field public static mr_dialog_material_background_dark:I = 0x7f0808d1
-
-.field public static mr_dialog_material_background_light:I = 0x7f0808d2
-
-.field public static mr_group_collapse:I = 0x7f0808d3
-
-.field public static mr_group_expand:I = 0x7f0808d4
-
-.field public static mr_media_pause_dark:I = 0x7f0808d5
-
-.field public static mr_media_pause_light:I = 0x7f0808d6
-
-.field public static mr_media_play_dark:I = 0x7f0808d7
-
-.field public static mr_media_play_light:I = 0x7f0808d8
-
-.field public static mr_media_stop_dark:I = 0x7f0808d9
-
-.field public static mr_media_stop_light:I = 0x7f0808da
-
-.field public static mr_vol_type_audiotrack_dark:I = 0x7f0808db
-
-.field public static mr_vol_type_audiotrack_light:I = 0x7f0808dc
+    return v0
+.end method

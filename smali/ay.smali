@@ -1,158 +1,104 @@
-.class public final Lay;
-.super Ljava/lang/Thread;
+.class public final synthetic Lay;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lcrf;
 
 
 # instance fields
 .field public final synthetic a:I
 
+.field public final synthetic b:I
+
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/String;)V
-    .locals 1
+.method public synthetic constructor <init>(II)V
+    .locals 0
 
-    .line 1
-    const/4 v0, 0x0
+    iput p2, p0, Lay;->a:I
 
-    iput v0, p0, Lay;->a:I
+    iput p1, p0, Lay;->b:I
 
-    invoke-direct {p0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/Runnable;)V
-    .locals 1
-
-    .line 2
-    const/4 v0, 0x1
-
-    iput v0, p0, Lay;->a:I
-
-    invoke-direct {p0, p2, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/ThreadGroup;Ljava/lang/String;)V
-    .locals 1
-
-    .line 3
-    const/4 v0, 0x2
-
-    iput v0, p0, Lay;->a:I
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/ThreadGroup;Ljava/lang/String;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
+.method public final get()Ljava/lang/Object;
     .locals 3
 
     iget v0, p0, Lay;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    :pswitch_0
-    invoke-super {p0}, Ljava/lang/Thread;->run()V
+    new-instance v0, Landroid/os/HandlerThread;
 
-    return-void
+    const-string v1, "ExoPlayer:MediaCodecQueueingThread:"
 
-    :pswitch_1
-    const/16 v0, 0x13
+    iget v2, p0, Lay;->b:I
 
-    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
-
-    monitor-enter p0
-
-    :goto_0
-    :try_start_0
-    invoke-virtual {p0}, Ljava/lang/Object;->wait()V
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
-    :catch_0
-    :try_start_1
-    monitor-exit p0
-
-    return-void
-
-    :goto_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-
-    :catch_1
-    :cond_0
-    :goto_2
-    :pswitch_2
-    :try_start_2
-    const-class v0, Ley;
-
-    monitor-enter v0
-    :try_end_2
-    .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_1
-
-    :try_start_3
-    sget-object v1, Ley;->j:Ley;
-
-    invoke-static {}, Lugi;->a()Ley;
+    invoke-static {v2, v1}, Ldy;->u(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    sget-object v2, Ley;->j:Ley;
+    invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
-    if-ne v1, v2, :cond_1
+    return-object v0
 
-    const/4 v1, 0x0
+    :pswitch_0
+    new-instance v0, Landroid/os/HandlerThread;
 
-    sput-object v1, Ley;->j:Ley;
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    const-string v1, "ExoPlayer:MediaCodecQueueingThread:"
 
-    :try_start_4
-    monitor-exit v0
+    iget v2, p0, Lay;->b:I
 
-    return-void
+    invoke-static {v2, v1}, Lcy;->b(ILjava/lang/String;)Ljava/lang/String;
 
-    :catchall_1
-    move-exception v1
+    move-result-object v1
 
-    goto :goto_3
+    invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
-    :cond_1
-    monitor-exit v0
+    return-object v0
 
-    if-eqz v1, :cond_0
+    :pswitch_1
+    new-instance v0, Landroid/os/HandlerThread;
 
-    invoke-virtual {v1}, Ley;->k()V
+    const-string v1, "ExoPlayer:MediaCodecAsyncAdapter:"
 
-    goto :goto_2
+    iget v2, p0, Lay;->b:I
 
-    :goto_3
-    monitor-exit v0
+    invoke-static {v2, v1}, Ldy;->u(ILjava/lang/String;)Ljava/lang/String;
 
-    throw v1
-    :try_end_4
-    .catch Ljava/lang/InterruptedException; {:try_start_4 .. :try_end_4} :catch_1
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+
+    return-object v0
+
+    :pswitch_2
+    new-instance v0, Landroid/os/HandlerThread;
+
+    const-string v1, "ExoPlayer:MediaCodecAsyncAdapter:"
+
+    iget v2, p0, Lay;->b:I
+
+    invoke-static {v2, v1}, Lcy;->b(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+
+    return-object v0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_2
-        :pswitch_0
         :pswitch_1
+        :pswitch_0
     .end packed-switch
 .end method

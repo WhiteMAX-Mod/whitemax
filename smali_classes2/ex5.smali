@@ -1,59 +1,162 @@
-.class public abstract synthetic Lex5;
+.class public final Lex5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public final a:Lvy;
+
+.field public final b:Lcx5;
+
+.field public final c:Lbx5;
+
+.field public final d:Ljava/util/concurrent/atomic/AtomicReference;
+
+.field public final e:Ljava/lang/Object;
+
+.field public final f:Z
+
+.field public g:Lz74;
+
+.field public final h:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lvy;Lcx5;Lbx5;)V
+    .locals 0
 
-    invoke-static {}, Lzw5;->values()[Lzw5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    iput-object p1, p0, Lex5;->a:Lvy;
 
-    array-length v0, v0
+    iput-object p2, p0, Lex5;->b:Lcx5;
 
-    new-array v0, v0, [I
+    iput-object p3, p0, Lex5;->c:Lbx5;
 
-    const/4 v1, 0x1
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
 
-    const/4 v2, 0x0
+    const/4 p2, 0x0
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
 
-    :catch_0
-    const/4 v2, 0x2
+    iput-object p1, p0, Lex5;->d:Ljava/util/concurrent/atomic/AtomicReference;
 
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    new-instance p1, Ljava/lang/Object;
 
-    :catch_1
-    const/4 v1, 0x3
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    :try_start_2
-    aput v1, v0, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    iput-object p1, p0, Lex5;->e:Ljava/lang/Object;
 
-    :catch_2
-    const/4 v2, 0x4
+    const/4 p1, 0x0
 
-    :try_start_3
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    iput-boolean p1, p0, Lex5;->f:Z
 
-    :catch_3
-    sput-object v0, Lex5;->$EnumSwitchMapping$0:[I
+    new-instance p1, Le44;
+
+    const/16 p2, 0xf
+
+    invoke-direct {p1, p2, p0}, Le44;-><init>(ILjava/lang/Object;)V
+
+    const/4 p2, 0x2
+
+    invoke-static {p2, p1}, Lipi;->b(ILcm6;)Lk18;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lex5;->h:Ljava/lang/Object;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lc9a;)V
+    .locals 3
+
+    iget-object v0, p0, Lex5;->e:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lex5;->b:Lcx5;
+
+    if-eqz v1, :cond_0
+
+    const-string v2, "schedule update"
+
+    invoke-interface {v1, v2}, Lcx5;->log(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_0
+    :goto_0
+    iget-object v1, p0, Lex5;->d:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v1, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lex5;->g:Lz74;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-nez p1, :cond_1
+
+    :try_start_1
+    iget-object p1, p0, Lex5;->c:Lbx5;
+
+    invoke-interface {p1}, Lbx5;->a()Lz74;
+
+    move-result-object p1
+
+    const-string v1, "file-prefs"
+
+    const/4 v2, 0x1
+
+    invoke-virtual {p1, v2, v1}, Lz74;->limitedParallelism(ILjava/lang/String;)Lz74;
+
+    move-result-object p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    goto :goto_1
+
+    :catchall_1
+    const/4 p1, 0x0
+
+    :goto_1
+    :try_start_2
+    iput-object p1, p0, Lex5;->g:Lz74;
+
+    :cond_1
+    iget-object p1, p0, Lex5;->g:Lz74;
+
+    if-eqz p1, :cond_2
+
+    sget-object v1, Lbd5;->a:Lbd5;
+
+    iget-object v2, p0, Lex5;->h:Ljava/lang/Object;
+
+    invoke-interface {v2}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ldx5;
+
+    invoke-virtual {p1, v1, v2}, Lz74;->dispatch(Lx74;Ljava/lang/Runnable;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    :cond_2
+    monitor-exit v0
+
+    return-void
+
+    :goto_2
+    monitor-exit v0
+
+    throw p1
 .end method

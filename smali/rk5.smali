@@ -1,24 +1,13 @@
-.class public final Lrk5;
+.class public abstract Lrk5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Luk5;
-
-
-# static fields
-.field public static final a:Lrk5;
-
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public static a(Landroid/media/MediaMetadataRetriever;Landroid/media/MediaDataSource;)V
+    .locals 0
 
-    new-instance v0, Lrk5;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lrk5;->a:Lrk5;
+    invoke-virtual {p0, p1}, Landroid/media/MediaMetadataRetriever;->setDataSource(Landroid/media/MediaDataSource;)V
 
     return-void
 .end method

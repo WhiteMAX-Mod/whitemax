@@ -1,110 +1,68 @@
-.class public final Lzag;
-.super Lyag;
+.class public final synthetic Lzag;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/function/Predicate;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/util/List;
+
+
+# direct methods
+.method public synthetic constructor <init>(ILjava/util/List;)V
+    .locals 0
+
+    iput p1, p0, Lzag;->a:I
+
+    iput-object p2, p0, Lzag;->b:Ljava/util/List;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final U0(Ljava/lang/Object;)Landroid/graphics/Typeface;
-    .locals 3
+.method public final test(Ljava/lang/Object;)Z
+    .locals 1
 
-    const/4 v0, -0x1
+    iget v0, p0, Lzag;->a:I
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
-
-    :try_start_0
-    iget-object v1, p0, Lyag;->c:Ljava/lang/Class;
-
-    const/4 v2, 0x1
-
-    invoke-static {v1, v2}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-static {v1, v2, p1}, Ljava/lang/reflect/Array;->set(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    iget-object p1, p0, Lyag;->r0:Ljava/lang/reflect/Method;
-
-    const-string v2, "sans-serif"
-
-    filled-new-array {v1, v2, v0, v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v1, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/graphics/Typeface;
-    :try_end_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object p1
-
-    :catch_0
-    move-exception p1
-
-    goto :goto_0
-
-    :catch_1
-    move-exception p1
-
-    :goto_0
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
-.end method
-
-.method public final Y0(Ljava/lang/Class;)Ljava/lang/reflect/Method;
-    .locals 3
-
-    const/4 v0, 0x1
-
-    invoke-static {p1, v0}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
-
-    move-result-object p1
+    check-cast p1, Lrn5;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p1
 
-    const-class v1, Ljava/lang/String;
+    iget-object v0, p0, Lzag;->b:Ljava/util/List;
 
-    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+    invoke-interface {v0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
-    filled-new-array {p1, v1, v2, v2}, [Ljava/lang/Class;
+    move-result p1
 
-    move-result-object p1
+    return p1
 
-    const-class v1, Landroid/graphics/Typeface;
+    :pswitch_0
+    iget-object v0, p0, Lzag;->b:Ljava/util/List;
 
-    const-string v2, "createFromFamiliesWithDefault"
+    check-cast p1, Lobg;
 
-    invoke-virtual {v1, v2, p1}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    invoke-interface {v0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
-    move-result-object p1
+    move-result p1
 
-    invoke-virtual {p1, v0}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    return p1
 
-    return-object p1
-.end method
+    nop
 
-.method public final i0(Landroid/content/Context;Landroid/graphics/Typeface;I)Landroid/graphics/Typeface;
-    .locals 0
-
-    const/4 p1, 0x0
-
-    invoke-static {p2, p3, p1}, Landroid/graphics/Typeface;->create(Landroid/graphics/Typeface;IZ)Landroid/graphics/Typeface;
-
-    move-result-object p1
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -3,32 +3,9 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Closeable;
-.implements Ly97;
-.implements Lcom/facebook/fresco/middleware/HasExtraData;
+.implements Lky7;
 
 
 # virtual methods
-.method public abstract close()V
-.end method
-
-.method public abstract getHeight()I
-.end method
-
-.method public abstract getImageInfo()Ly97;
-.end method
-
-.method public abstract getQualityInfo()Lohc;
-.end method
-
-.method public abstract getSizeInBytes()I
-.end method
-
-.method public abstract getWidth()I
-.end method
-
-.method public abstract isClosed()Z
-.end method
-
-.method public abstract isStateful()Z
+.method public abstract a()Ljava/lang/Class;
 .end method

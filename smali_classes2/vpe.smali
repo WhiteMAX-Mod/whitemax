@@ -1,34 +1,86 @@
-.class public abstract Lvpe;
-.super Lq7d;
+.class public final Lvpe;
+.super Lid0;
 .source "SourceFile"
 
 
+# instance fields
+.field public final b:J
+
+
+# direct methods
+.method public constructor <init>(J)V
+    .locals 1
+
+    const/16 v0, 0x13
+
+    invoke-direct {p0, v0}, Lid0;-><init>(I)V
+
+    iput-wide p1, p0, Lvpe;->b:J
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract A(Ly18;)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lvpe;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lvpe;
+
+    iget-wide v3, p0, Lvpe;->b:J
+
+    iget-wide v5, p1, Lvpe;->b:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public B(Ly18;Ljava/lang/Object;)V
-    .locals 0
+.method public final hashCode()I
+    .locals 2
 
-    invoke-virtual {p0, p1}, Lvpe;->A(Ly18;)V
+    iget-wide v0, p0, Lvpe;->b:J
 
-    return-void
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
 .end method
 
-.method public C()V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    return-void
-.end method
+    const-string v0, "ProfileAvatars(id="
 
-.method public D()V
-    .locals 0
+    const-string v1, ")"
 
-    return-void
-.end method
+    iget-wide v2, p0, Lvpe;->b:J
 
-.method public F()V
-    .locals 0
+    invoke-static {v2, v3, v0, v1}, La9h;->d(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    return-void
+    move-result-object v0
+
+    return-object v0
 .end method

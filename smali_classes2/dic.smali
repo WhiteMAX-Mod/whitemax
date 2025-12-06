@@ -1,401 +1,171 @@
-.class public final Ldic;
-.super Lmmf;
+.class public final synthetic Ldic;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lcm6;
 
 
 # instance fields
-.field public final X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic o:I
+.field public final synthetic b:Leic;
 
 
 # direct methods
-.method public constructor <init>(Lcic;Lcic;Lq98;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Ldic;->o:I
-
-    .line 7
-    iput-object p1, p0, Ldic;->X:Ljava/lang/Object;
-
-    .line 8
-    invoke-direct {p0, p2, p3}, Lmmf;-><init>(Lcic;Lq98;)V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lcic;Lmmf;I)V
+.method public synthetic constructor <init>(Leic;I)V
     .locals 0
 
-    .line 1
-    iput p3, p0, Ldic;->o:I
+    iput p2, p0, Ldic;->a:I
 
-    iput-object p1, p0, Ldic;->X:Ljava/lang/Object;
+    iput-object p1, p0, Ldic;->b:Leic;
 
-    invoke-direct {p0, p2}, Lmmf;-><init>(Lmmf;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-.method public constructor <init>(Llg6;)V
-    .locals 8
-
-    const/4 v0, 0x3
-
-    iput v0, p0, Ldic;->o:I
-
-    const/16 v0, 0x20
-
-    const/16 v1, 0x400
-
-    .line 2
-    filled-new-array {v0, v0, v1}, [I
-
-    move-result-object v0
-
-    .line 3
-    invoke-direct {p0, p1}, Lmmf;-><init>(Lmmf;)V
-
-    .line 4
-    invoke-static {}, Lhvb;->values()[Lhvb;
-
-    move-result-object p1
-
-    array-length p1, p1
-
-    new-array p1, p1, [Lt25;
-
-    iput-object p1, p0, Ldic;->X:Ljava/lang/Object;
-
-    .line 5
-    invoke-static {}, Lhvb;->values()[Lhvb;
-
-    move-result-object p1
-
-    array-length v1, p1
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_0
-
-    aget-object v3, p1, v2
-
-    .line 6
-    iget-object v4, p0, Ldic;->X:Ljava/lang/Object;
-
-    check-cast v4, [Lt25;
-
-    invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v5
-
-    new-instance v6, Lt25;
-
-    invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v3
-
-    aget v3, v0, v3
-
-    const/4 v7, 0x0
-
-    invoke-direct {v6, v3, v7}, Lt25;-><init>(II)V
-
-    aput-object v6, v4, v5
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final f(Lfic;Lfj;)V
-    .locals 7
+.method public final invoke()Ljava/lang/Object;
+    .locals 8
 
-    iget v0, p0, Ldic;->o:I
+    iget v0, p0, Ldic;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p1}, Lfic;->n()Lhvb;
+    iget-object v0, p0, Ldic;->b:Leic;
+
+    iget-object v0, v0, Leic;->o:Lone/me/profile/screens/invite/ProfileInviteScreen;
+
+    invoke-virtual {v0}, Lone/me/profile/screens/invite/ProfileInviteScreen;->y0()Lqic;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lqic;->F0:Lci5;
+
+    new-instance v1, Lvhc;
+
+    new-instance v2, Lb44;
+
+    sget v3, Lv8b;->M:I
+
+    sget v4, Lx8b;->U0:I
+
+    move v5, v4
+
+    new-instance v4, Ln5g;
+
+    invoke-direct {v4, v5}, Ln5g;-><init>(I)V
+
+    sget v5, Lw9b;->V:I
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    sget v6, Lyud;->I1:I
+
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    sget v7, Lw9b;->Q:I
+
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v7
+
+    invoke-direct/range {v2 .. v7}, Lb44;-><init>(ILs5g;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V
+
+    invoke-static {v2}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Lvhc;-><init>(Ljava/util/List;)V
+
+    invoke-static {v0, v1}, Lxfh;->r(Lci5;Ljava/lang/Object;)V
+
+    sget-object v0, Lqqg;->a:Lqqg;
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Ldic;->b:Leic;
+
+    iget-object v0, v0, Leic;->o:Lone/me/profile/screens/invite/ProfileInviteScreen;
+
+    invoke-virtual {v0}, Lone/me/profile/screens/invite/ProfileInviteScreen;->y0()Lqic;
+
+    move-result-object v0
+
+    iget-object v1, v0, Lqic;->F0:Lci5;
+
+    invoke-virtual {v0}, Lqic;->v()Ljava/lang/String;
+
+    move-result-object v2
+
+    if-nez v2, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    new-instance v3, Lthc;
+
+    invoke-direct {v3, v2}, Lthc;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v1, v3}, Lxfh;->r(Lci5;Ljava/lang/Object;)V
+
+    invoke-static {}, Lxb3;->b()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    new-instance v2, Lwhc;
+
+    invoke-virtual {v0}, Lqic;->u()Lpb2;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Ldic;->X:Ljava/lang/Object;
+    invoke-virtual {v0}, Lpb2;->f0()Z
 
-    check-cast v0, [Lt25;
+    move-result v0
 
-    invoke-virtual {p1}, Lfic;->n()Lhvb;
+    const/4 v3, 0x1
 
-    move-result-object v1
+    if-ne v0, v3, :cond_1
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    aget-object v0, v0, v1
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p1}, Lfic;->m()Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    iget v4, v0, Lt25;->b:I
-
-    int-to-long v4, v4
-
-    rem-long/2addr v2, v4
-
-    long-to-int v2, v2
-
-    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v3
-
-    iget-object v0, v0, Lt25;->c:[J
-
-    aget-wide v5, v0, v2
-
-    cmp-long v3, v3, v5
-
-    if-lez v3, :cond_0
-
-    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v3
-
-    aput-wide v3, v0, v2
+    sget v0, Lx8b;->b1:I
 
     goto :goto_0
 
-    :cond_0
-    const-string p2, "duplicate packet"
-
-    invoke-virtual {p0, p1, p2}, Lmmf;->F(Lfic;Ljava/lang/String;)V
-
-    goto :goto_1
-
     :cond_1
+    sget v0, Lx8b;->a1:I
+
     :goto_0
-    invoke-virtual {p0, p1, p2}, Lmmf;->Y(Lfic;Lfj;)V
+    new-instance v3, Ln5g;
 
-    :goto_1
-    return-void
+    invoke-direct {v3, v0}, Ln5g;-><init>(I)V
 
-    :pswitch_0
-    invoke-virtual {p0, p1, p2}, Lmmf;->Y(Lfic;Lfj;)V
+    sget v0, Lyud;->t:I
 
-    iget-object p1, p0, Ldic;->X:Ljava/lang/Object;
+    invoke-direct {v2, v0, v3}, Lwhc;-><init>(ILn5g;)V
 
-    check-cast p1, Lcic;
+    iget-object v0, v1, Lci5;->b:Ljve;
 
-    iget-object p1, p1, Lcic;->K0:Lc2e;
-
-    invoke-virtual {p1}, Lc2e;->k()V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Ldic;->X:Ljava/lang/Object;
-
-    check-cast v0, Lcic;
-
-    iget v0, v0, Lcic;->z0:I
-
-    invoke-static {v0}, Laab;->a(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    iget-object p2, p0, Ldic;->X:Ljava/lang/Object;
-
-    check-cast p2, Lcic;
-
-    iget p2, p2, Lcic;->z0:I
-
-    if-eqz p2, :cond_4
-
-    const/4 v0, 0x4
-
-    if-ne p2, v0, :cond_3
-
-    iget-object p2, p0, Ldic;->X:Ljava/lang/Object;
-
-    check-cast p2, Lcic;
-
-    iget-object v0, p1, Lfic;->c:Ljava/util/ArrayList;
-
-    invoke-interface {v0}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
-
-    move-result-object v0
-
-    new-instance v1, Lpc8;
-
-    const/16 v2, 0x9
-
-    invoke-direct {v1, v2}, Lpc8;-><init>(I)V
-
-    invoke-interface {v0, v1}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/stream/Stream;->findAny()Ljava/util/Optional;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/Optional;->isPresent()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const/4 p1, 0x5
-
-    iput p1, p2, Lcic;->z0:I
-
-    goto :goto_2
+    invoke-virtual {v0, v2}, Ljve;->h(Ljava/lang/Object;)Z
 
     :cond_2
-    iget-object v0, p2, Lcic;->A0:Lxdc;
+    :goto_1
+    sget-object v0, Lqqg;->a:Lqqg;
 
-    iget v1, v0, Lxdc;->b:I
-
-    add-int/lit8 v1, v1, 0x1
-
-    iput v1, v0, Lxdc;->b:I
-
-    iget v2, v0, Lxdc;->a:I
-
-    if-ne v1, v2, :cond_6
-
-    iget-object v1, p2, Lcic;->B0:Lwo3;
-
-    invoke-virtual {p1}, Lfic;->l()Lic5;
-
-    move-result-object p1
-
-    sget-object v2, Lc2e;->A:Lb93;
-
-    iget-object p2, p2, Lcic;->K0:Lc2e;
-
-    invoke-virtual {p2, v1, p1, v2}, Lc2e;->f(Leic;Lic5;Ljava/util/function/Consumer;)V
-
-    iget p1, v0, Lxdc;->a:I
-
-    mul-int/lit8 p1, p1, 0x2
-
-    iput p1, v0, Lxdc;->a:I
-
-    goto :goto_2
-
-    :cond_3
-    const-string p2, "in draining state"
-
-    invoke-virtual {p0, p1, p2}, Lmmf;->F(Lfic;Ljava/lang/String;)V
-
-    goto :goto_2
-
-    :cond_4
-    const/4 p1, 0x0
-
-    throw p1
-
-    :cond_5
-    invoke-virtual {p0, p1, p2}, Lmmf;->Y(Lfic;Lfj;)V
-
-    :cond_6
-    :goto_2
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Ldic;->X:Ljava/lang/Object;
-
-    check-cast v0, Lcic;
-
-    invoke-virtual {p1}, Lfic;->k()[B
-
-    move-result-object v1
-
-    iget-object v2, v0, Lcic;->P0:Lfp3;
-
-    iget-object v2, v2, Lfp3;->e:Lave;
-
-    invoke-virtual {v2}, Lgp3;->b()Ljava/util/List;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
-
-    move-result-object v2
-
-    new-instance v3, Ldp3;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v3, v4, v1}, Ldp3;-><init>(I[B)V
-
-    invoke-interface {v2, v3}, Ljava/util/stream/Stream;->anyMatch(Ljava/util/function/Predicate;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_7
-
-    invoke-virtual {p0, p1, p2}, Lmmf;->Y(Lfic;Lfj;)V
-
-    goto :goto_3
-
-    :cond_7
-    iget-object p2, v0, Lcic;->c:Lq98;
-
-    invoke-static {v1}, Lami;->a([B)Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Dropping packet because dcid "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, " is not an active connection ID."
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {p2, v0}, Lq98;->error(Ljava/lang/String;)V
-
-    const-string p2, "with unknown destination connection ID"
-
-    invoke-virtual {p0, p1, p2}, Lmmf;->F(Lfic;Ljava/lang/String;)V
-
-    :goto_3
-    return-void
-
-    nop
+    return-object v0
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

@@ -1,115 +1,36 @@
-.class public final Lo3d;
-.super Lsgf;
-.source "SourceFile"
-
-# interfaces
-.implements Lzi6;
+.class public abstract Lo3d;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final synthetic X:Lwif;
+# static fields
+.field public static oneme_fodlers_delete_folder_bottom_sheet_title:I = 0x7f130843
 
-.field public final synthetic Y:Lg4d;
+.field public static oneme_folder_list_recommended_folders_section_title:I = 0x7f130844
 
+.field public static oneme_folder_list_toolbar_title:I = 0x7f130845
 
-# direct methods
-.method public constructor <init>(Lwif;Lg4d;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.field public static oneme_folders_delete_folder_bottom_sheet_delete_button:I = 0x7f130846
 
-    iput-object p1, p0, Lo3d;->X:Lwif;
+.field public static oneme_folders_delete_folder_bottom_sheet_description:I = 0x7f130847
 
-    iput-object p2, p0, Lo3d;->Y:Lg4d;
+.field public static oneme_folders_edit_add_chats_button:I = 0x7f130848
 
-    const/4 p1, 0x2
+.field public static oneme_folders_edit_create_button:I = 0x7f130849
 
-    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+.field public static oneme_folders_edit_delete_button:I = 0x7f13084a
 
-    return-void
-.end method
+.field public static oneme_folders_edit_name_hint:I = 0x7f13084b
 
+.field public static oneme_folders_edit_toolbar_title_creation:I = 0x7f13084c
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.field public static oneme_folders_edit_toolbar_title_edit:I = 0x7f13084d
 
-    check-cast p1, Ljava/lang/Number;
+.field public static oneme_folders_list_create_folder:I = 0x7f13084e
 
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+.field public static oneme_folders_list_menu_action_change:I = 0x7f13084f
 
-    move-result-wide v0
+.field public static oneme_folders_list_menu_action_delete_folder:I = 0x7f130850
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+.field public static oneme_folders_picker_empty_title:I = 0x7f130851
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1, p2}, Lo3d;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lo3d;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lo3d;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lo3d;
-
-    iget-object v0, p0, Lo3d;->X:Lwif;
-
-    iget-object v1, p0, Lo3d;->Y:Lg4d;
-
-    invoke-direct {p1, v0, v1, p2}, Lo3d;-><init>(Lwif;Lg4d;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lo3d;->X:Lwif;
-
-    invoke-virtual {p1}, Lwif;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lc70;
-
-    if-eqz p1, :cond_0
-
-    iget-object v0, p0, Lo3d;->Y:Lg4d;
-
-    invoke-virtual {v0}, Lg4d;->z()Lc5d;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lc5d;->a()I
-
-    move-result v0
-
-    iget-object v1, p1, Lc70;->e:Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance v2, Lz60;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, p1, v0, v3}, Lz60;-><init>(Lc70;ILkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x3
-
-    invoke-static {v1, v3, v3, v2, p1}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
-
-    :cond_0
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
-.end method
+.field public static oneme_folders_picker_toolbar_title:I = 0x7f130852

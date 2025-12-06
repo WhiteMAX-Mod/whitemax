@@ -3,4 +3,4 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvq7;
+.implements Lxx7;

@@ -1,49 +1,52 @@
-.class public final Lakf;
-.super Ly14;
+.class public final synthetic Lakf;
+.super Ly8;
 .source "SourceFile"
 
+# interfaces
+.implements Lum6;
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic Y:Ljkf;
-
-.field public Z:I
-
-.field public o:Ljkf;
+# static fields
+.field public static final Z:Lakf;
 
 
 # direct methods
-.method public constructor <init>(Ljkf;Ly14;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p1, p0, Lakf;->Y:Ljkf;
+    new-instance v0, Lakf;
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
+
+    const/4 v2, 0x4
+
+    const/4 v3, 0x3
+
+    const-class v4, Limb;
+
+    invoke-direct {v0, v3, v4, v1, v2}, Ly8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
+
+    sput-object v0, Lakf;->Z:Lakf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iput-object p1, p0, Lakf;->X:Ljava/lang/Object;
+    check-cast p1, Lsff;
 
-    iget p1, p0, Lakf;->Z:I
+    check-cast p2, Ljava/lang/Boolean;
 
-    const/high16 v0, -0x80000000
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    or-int/2addr p1, v0
+    sget-object p3, Lhkf;->A0:[Lyy7;
 
-    iput p1, p0, Lakf;->Z:I
+    new-instance p3, Limb;
 
-    iget-object p1, p0, Lakf;->Y:Ljkf;
+    invoke-direct {p3, p1, p2}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    invoke-virtual {p1, p0}, Ljkf;->w(Ly14;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object p3
 .end method

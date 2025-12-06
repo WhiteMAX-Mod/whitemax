@@ -2,49 +2,56 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lone;
-
 
 # instance fields
-.field public final synthetic a:Lrne;
+.field public final a:Lbwf;
 
-.field public final synthetic b:Lzje;
+.field public final b:Lbwf;
 
-.field public final synthetic c:Lrne;
+.field public final c:Lbwf;
 
 
 # direct methods
-.method public constructor <init>(Lrne;Lzje;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Losh;->c:Lrne;
+    new-instance v0, Lq8g;
 
-    iput-object p2, p0, Losh;->b:Lzje;
+    const/16 v1, 0x19
 
-    iput-object p1, p0, Losh;->a:Lrne;
+    invoke-direct {v0, v1}, Lq8g;-><init>(I)V
 
-    return-void
-.end method
+    new-instance v1, Lbwf;
 
+    invoke-direct {v1, v0}, Lbwf;-><init>(Lcm6;)V
 
-# virtual methods
-.method public final onResponse(Lorg/json/JSONObject;)V
-    .locals 1
+    iput-object v1, p0, Losh;->a:Lbwf;
 
-    iget-object p1, p0, Losh;->c:Lrne;
+    new-instance v0, Lq8g;
 
-    iget-object p1, p1, Lrne;->c:Landroid/os/Handler;
+    const/16 v1, 0x1a
 
-    iget-object v0, p0, Losh;->b:Lzje;
+    invoke-direct {v0, v1}, Lq8g;-><init>(I)V
 
-    invoke-virtual {p1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+    new-instance v1, Lbwf;
 
-    iget-object p1, p0, Losh;->a:Lrne;
+    invoke-direct {v1, v0}, Lbwf;-><init>(Lcm6;)V
 
-    invoke-virtual {p1}, Lrne;->g()V
+    iput-object v1, p0, Losh;->b:Lbwf;
+
+    new-instance v0, Lq8g;
+
+    const/16 v1, 0x1b
+
+    invoke-direct {v0, v1}, Lq8g;-><init>(I)V
+
+    new-instance v1, Lbwf;
+
+    invoke-direct {v1, v0}, Lbwf;-><init>(Lcm6;)V
+
+    iput-object v1, p0, Losh;->c:Lbwf;
 
     return-void
 .end method

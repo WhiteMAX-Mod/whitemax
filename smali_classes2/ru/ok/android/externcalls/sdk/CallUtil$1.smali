@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgwc;
+.implements Lz6d;
 
 
 # annotations

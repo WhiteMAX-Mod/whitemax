@@ -2,38 +2,45 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lff0;
+
 
 # instance fields
-.field public final a:Lqai;
-
-.field public final b:Ljava/lang/Integer;
-
-.field public final c:Lvvi;
+.field public final synthetic a:Lxv6;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lm75;)V
-    .locals 1
+.method public constructor <init>(Lxv6;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p1, Lm75;->a:Ljava/lang/Object;
+    iput-object p1, p0, Lvai;->a:Lxv6;
 
-    check-cast v0, Lqai;
+    return-void
+.end method
 
-    iput-object v0, p0, Lvai;->a:Lqai;
 
-    iget-object v0, p1, Lm75;->b:Ljava/lang/Object;
+# virtual methods
+.method public final a(Z)V
+    .locals 2
 
-    check-cast v0, Ljava/lang/Integer;
+    iget-object v0, p0, Lvai;->a:Lxv6;
 
-    iput-object v0, p0, Lvai;->b:Ljava/lang/Integer;
+    iget-object v0, v0, Lxv6;->w0:Ly1a;
 
-    iget-object p1, p1, Lm75;->c:Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    check-cast p1, Lvvi;
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    iput-object p1, p0, Lvai;->c:Lvvi;
+    move-result-object p1
+
+    invoke-virtual {v0, v1, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     return-void
 .end method

@@ -1,31 +1,94 @@
-.class public abstract Ljn0;
+.class public final Ljn0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Li9e;
 
-# static fields
-.field public static final synthetic a:I
+
+# instance fields
+.field public final X:J
+
+.field public final a:Lmn0;
+
+.field public final b:J
+
+.field public final c:J
+
+.field public final d:J
+
+.field public final o:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lmn0;JJJJJ)V
+    .locals 0
 
-    new-instance v0, Ljava/math/BigInteger;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "16a09e667f3bcc908b2fb1366ea957d3e3adec17512775099da2f590b0667322a"
+    iput-object p1, p0, Ljn0;->a:Lmn0;
 
-    const/16 v2, 0x10
+    iput-wide p2, p0, Ljn0;->b:J
 
-    invoke-direct {v0, v1, v2}, Ljava/math/BigInteger;-><init>(Ljava/lang/String;I)V
+    iput-wide p4, p0, Ljn0;->c:J
 
-    const-wide/high16 v0, 0x4024000000000000L    # 10.0
+    iput-wide p6, p0, Ljn0;->d:J
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->log(D)D
+    iput-wide p8, p0, Ljn0;->o:J
 
-    const-wide/high16 v0, 0x4000000000000000L    # 2.0
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->log(D)D
+    iput-wide p10, p0, Ljn0;->X:J
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final c()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final e(J)Lg9e;
+    .locals 13
+
+    iget-object v0, p0, Ljn0;->a:Lmn0;
+
+    invoke-interface {v0, p1, p2}, Lmn0;->a(J)J
+
+    move-result-wide v1
+
+    iget-wide v9, p0, Ljn0;->o:J
+
+    iget-wide v11, p0, Ljn0;->X:J
+
+    const-wide/16 v3, 0x0
+
+    iget-wide v5, p0, Ljn0;->c:J
+
+    iget-wide v7, p0, Ljn0;->d:J
+
+    invoke-static/range {v1 .. v12}, Lkn0;->b(JJJJJJ)J
+
+    move-result-wide v0
+
+    new-instance v2, Lg9e;
+
+    new-instance v3, Lm9e;
+
+    invoke-direct {v3, p1, p2, v0, v1}, Lm9e;-><init>(JJ)V
+
+    invoke-direct {v2, v3, v3}, Lg9e;-><init>(Lm9e;Lm9e;)V
+
+    return-object v2
+.end method
+
+.method public final f()J
+    .locals 2
+
+    iget-wide v0, p0, Ljn0;->b:J
+
+    return-wide v0
 .end method

@@ -1,47 +1,54 @@
 .class public final Lxra;
-.super Ljava/lang/Object;
+.super Le2f;
 .source "SourceFile"
+
+# interfaces
+.implements Lon6;
 
 
 # instance fields
-.field public final a:Liu7;
-
-.field public final b:Lwif;
-
-.field public final c:Lwif;
+.field public final a:Lora;
 
 
 # direct methods
-.method public constructor <init>(Liu7;)V
-    .locals 1
+.method public constructor <init>(Lora;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxra;->a:Liu7;
+    iput-object p1, p0, Lxra;->a:Lora;
 
-    new-instance p1, Luna;
+    return-void
+.end method
 
-    const/16 v0, 0xe
 
-    invoke-direct {p1, v0}, Luna;-><init>(I)V
+# virtual methods
+.method public final b()Lvqa;
+    .locals 3
 
-    new-instance v0, Lwif;
+    new-instance v0, Lura;
 
-    invoke-direct {v0, p1}, Lwif;-><init>(Lji6;)V
+    iget-object v1, p0, Lxra;->a:Lora;
 
-    iput-object v0, p0, Lxra;->b:Lwif;
+    const/4 v2, 0x1
 
-    new-instance p1, Lpo7;
+    invoke-direct {v0, v1, v2}, Lura;-><init>(Lk3;Z)V
 
-    const/16 v0, 0x17
+    return-object v0
+.end method
 
-    invoke-direct {p1, v0, p0}, Lpo7;-><init>(ILjava/lang/Object;)V
+.method public final l(Lv2f;)V
+    .locals 2
 
-    new-instance v0, Lwif;
+    new-instance v0, Lvra;
 
-    invoke-direct {v0, p1}, Lwif;-><init>(Lji6;)V
+    const/4 v1, 0x1
 
-    iput-object v0, p0, Lxra;->c:Lwif;
+    invoke-direct {v0, v1, p1}, Lvra;-><init>(ILjava/lang/Object;)V
+
+    iget-object p1, p0, Lxra;->a:Lora;
+
+    invoke-virtual {p1, v0}, Lvqa;->a(Lvta;)V
 
     return-void
 .end method

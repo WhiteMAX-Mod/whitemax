@@ -1,177 +1,64 @@
-.class public final enum Lm77;
-.super Ljava/lang/Enum;
+.class public final Lm77;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lp77;
 
 
 # static fields
-.field public static final synthetic X:[Lm77;
-
-.field public static final enum b:Lm77;
-
-.field public static final enum c:Lm77;
-
-.field public static final enum o:Lm77;
-
-
-# instance fields
-.field public final a:Ljava/util/List;
+.field public static final a:Lm77;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 1
 
     new-instance v0, Lm77;
 
-    const-wide v1, 0x4060e00000000000L    # 135.0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v1, v2}, Ljava/lang/Math;->toRadians(D)D
-
-    move-result-wide v1
-
-    invoke-static {v1, v2}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v1
-
-    const-wide v2, 0x4066800000000000L    # 180.0
-
-    invoke-static {v2, v3}, Ljava/lang/Math;->toRadians(D)D
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v2
-
-    const-wide v3, 0x406c200000000000L    # 225.0
-
-    invoke-static {v3, v4}, Ljava/lang/Math;->toRadians(D)D
-
-    move-result-wide v3
-
-    invoke-static {v3, v4}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v3
-
-    filled-new-array {v1, v2, v3}, [Ljava/lang/Double;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lob3;->e([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    const-string v3, "LEFT"
-
-    invoke-direct {v0, v2, v3, v1}, Lm77;-><init>(ILjava/lang/String;Ljava/util/List;)V
-
-    sput-object v0, Lm77;->b:Lm77;
-
-    new-instance v1, Lm77;
-
-    const-wide v2, 0x4046800000000000L    # 45.0
-
-    invoke-static {v2, v3}, Ljava/lang/Math;->toRadians(D)D
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v2
-
-    const-wide/16 v3, 0x0
-
-    invoke-static {v3, v4}, Ljava/lang/Math;->toRadians(D)D
-
-    move-result-wide v3
-
-    invoke-static {v3, v4}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v3
-
-    const-wide v4, 0x4073b00000000000L    # 315.0
-
-    invoke-static {v4, v5}, Ljava/lang/Math;->toRadians(D)D
-
-    move-result-wide v4
-
-    invoke-static {v4, v5}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v4
-
-    filled-new-array {v2, v3, v4}, [Ljava/lang/Double;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lob3;->e([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v2
-
-    const/4 v3, 0x1
-
-    const-string v4, "RIGHT"
-
-    invoke-direct {v1, v3, v4, v2}, Lm77;-><init>(ILjava/lang/String;Ljava/util/List;)V
-
-    sput-object v1, Lm77;->c:Lm77;
-
-    new-instance v2, Lm77;
-
-    const/4 v3, 0x2
-
-    sget-object v4, Lka5;->a:Lka5;
-
-    const-string v5, "CENTER"
-
-    invoke-direct {v2, v3, v5, v4}, Lm77;-><init>(ILjava/lang/String;Ljava/util/List;)V
-
-    sput-object v2, Lm77;->o:Lm77;
-
-    filled-new-array {v0, v1, v2}, [Lm77;
-
-    move-result-object v0
-
-    sput-object v0, Lm77;->X:[Lm77;
+    sput-object v0, Lm77;->a:Lm77;
 
     return-void
 .end method
 
-.method public constructor <init>(ILjava/lang/String;Ljava/util/List;)V
-    .locals 0
 
-    invoke-direct {p0, p2, p1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput-object p3, p0, Lm77;->a:Ljava/util/List;
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lm77;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    const-class v0, Lm77;
+    const/4 v0, 0x1
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p0
+    return v0
 
-    check-cast p0, Lm77;
+    :cond_0
+    instance-of p1, p1, Lm77;
 
-    return-object p0
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
 .end method
 
-.method public static values()[Lm77;
+.method public final hashCode()I
     .locals 1
 
-    sget-object v0, Lm77;->X:[Lm77;
+    const v0, 0x22541bda
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    return v0
+.end method
 
-    move-result-object v0
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    check-cast v0, [Lm77;
+    const-string v0, "Close"
 
     return-object v0
 .end method

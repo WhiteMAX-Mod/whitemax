@@ -1,30 +1,34 @@
 .class public final Lboa;
-.super Lsgf;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Lsm6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic X:Lone/me/android/notifications/NotificationsImagesProvider;
 
-.field public final synthetic Y:Lvua;
+.field public final synthetic Y:Landroid/net/Uri;
 
-.field public final synthetic Z:Lone/me/android/OneMeApplication;
+.field public final synthetic Z:Lc1f;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lvua;Lone/me/android/OneMeApplication;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lone/me/android/notifications/NotificationsImagesProvider;Landroid/net/Uri;Lc1f;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lboa;->Y:Lvua;
+    iput-object p1, p0, Lboa;->X:Lone/me/android/notifications/NotificationsImagesProvider;
 
-    iput-object p2, p0, Lboa;->Z:Lone/me/android/OneMeApplication;
+    iput-object p2, p0, Lboa;->Y:Landroid/net/Uri;
+
+    iput-object p3, p0, Lboa;->Z:Lc1f;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p4}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -34,17 +38,17 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lq54;
+    check-cast p1, Lf84;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p0, p1, p2}, Lboa;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1, p2}, Lboa;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
     check-cast p1, Lboa;
 
-    sget-object p2, Lccg;->a:Lccg;
+    sget-object p2, Lqqg;->a:Lqqg;
 
     invoke-virtual {p1, p2}, Lboa;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -53,24 +57,26 @@
     return-object p1
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
     new-instance p1, Lboa;
 
-    iget-object v0, p0, Lboa;->Y:Lvua;
+    iget-object v0, p0, Lboa;->Y:Landroid/net/Uri;
 
-    iget-object v1, p0, Lboa;->Z:Lone/me/android/OneMeApplication;
+    iget-object v1, p0, Lboa;->Z:Lc1f;
 
-    invoke-direct {p1, v0, v1, p2}, Lboa;-><init>(Lvua;Lone/me/android/OneMeApplication;Lkotlin/coroutines/Continuation;)V
+    iget-object v2, p0, Lboa;->X:Lone/me/android/notifications/NotificationsImagesProvider;
+
+    invoke-direct {p1, v2, v0, v1, p2}, Lboa;-><init>(Lone/me/android/notifications/NotificationsImagesProvider;Landroid/net/Uri;Lc1f;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
+    .locals 4
 
-    iget v0, p0, Lboa;->X:I
+    iget v0, p0, Lboa;->o:I
 
     const/4 v1, 0x1
 
@@ -78,9 +84,7 @@
 
     if-ne v0, v1, :cond_0
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    sget-object p1, Lccg;->a:Lccg;
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
     return-object p1
 
@@ -94,35 +98,36 @@
     throw p1
 
     :cond_1
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    new-instance v2, Loh9;
+    iput v1, p0, Lboa;->o:I
 
-    sget-object v4, Lone/me/android/OneMeApplication;->r0:Lwna;
+    sget-object p1, Lone/me/android/notifications/NotificationsImagesProvider;->a:Landroid/content/UriMatcher;
 
-    const/4 v8, 0x0
+    new-instance p1, Lyna;
 
-    const/4 v9, 0x6
+    const/4 v0, 0x0
 
-    const/4 v3, 0x1
+    iget-object v1, p0, Lboa;->X:Lone/me/android/notifications/NotificationsImagesProvider;
 
-    const-class v5, Lwna;
+    iget-object v2, p0, Lboa;->Y:Landroid/net/Uri;
 
-    const-string v6, "isChromaAndDynamicFontApplicableFor"
+    iget-object v3, p0, Lboa;->Z:Lc1f;
 
-    const-string v7, "isChromaAndDynamicFontApplicableFor(Landroid/app/Activity;)Z"
+    invoke-direct {p1, v1, v2, v3, v0}, Lyna;-><init>(Lone/me/android/notifications/NotificationsImagesProvider;Landroid/net/Uri;Lc1f;Lkotlin/coroutines/Continuation;)V
 
-    invoke-direct/range {v2 .. v9}, Loh9;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    const-wide/16 v0, 0xbb8
 
-    iput v1, p0, Lboa;->X:I
+    invoke-static {v0, v1, p1, p0}, Lyei;->g(JLsm6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    iget-object p1, p0, Lboa;->Y:Lvua;
+    move-result-object p1
 
-    iget-object v0, p0, Lboa;->Z:Lone/me/android/OneMeApplication;
+    sget-object v0, Lg84;->a:Lg84;
 
-    invoke-virtual {p1, v0, v2, p0}, Lvua;->a(Landroid/content/Context;Loh9;Ly14;)V
+    if-ne p1, v0, :cond_2
 
-    sget-object p1, Lr54;->a:Lr54;
+    return-object v0
 
+    :cond_2
     return-object p1
 .end method

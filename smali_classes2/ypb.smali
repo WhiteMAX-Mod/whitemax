@@ -1,48 +1,63 @@
 .class public final Lypb;
-.super Ly14;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final a:Z
 
-.field public final synthetic Y:Lkw8;
+.field public final b:Z
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/lang/Integer;
+
+.field public final f:Z
+
+.field public final g:Z
+
+.field public final h:Z
+
+.field public final i:Z
+
+.field public final j:Z
+
+.field public final k:Z
+
+.field public final l:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lkw8;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(ZZLjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;ZZZZZZLjava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lypb;->Y:Lkw8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-boolean p1, p0, Lypb;->a:Z
+
+    iput-boolean p2, p0, Lypb;->b:Z
+
+    iput-object p3, p0, Lypb;->c:Ljava/lang/String;
+
+    iput-object p4, p0, Lypb;->d:Ljava/lang/String;
+
+    iput-object p5, p0, Lypb;->e:Ljava/lang/Integer;
+
+    iput-boolean p6, p0, Lypb;->f:Z
+
+    iput-boolean p7, p0, Lypb;->g:Z
+
+    iput-boolean p8, p0, Lypb;->h:Z
+
+    iput-boolean p9, p0, Lypb;->i:Z
+
+    iput-boolean p10, p0, Lypb;->j:Z
+
+    iput-boolean p11, p0, Lypb;->k:Z
+
+    iput-object p12, p0, Lypb;->l:Ljava/lang/String;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lypb;->o:Ljava/lang/Object;
-
-    iget p1, p0, Lypb;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lypb;->X:I
-
-    iget-object p1, p0, Lypb;->Y:Lkw8;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lkw8;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

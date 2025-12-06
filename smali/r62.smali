@@ -1,56 +1,95 @@
-.class public final synthetic Lr62;
+.class public final Lr62;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lnog;
+
+# static fields
+.field public static final c:Lo00;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lhb4;
 
-.field public final synthetic b:Lwq6;
+.field public final b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lwq6;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p2, p0, Lr62;->a:I
+    new-instance v0, Lo00;
 
-    iput-object p1, p0, Lr62;->b:Lwq6;
+    const/4 v1, 0x7
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1}, Lo00;-><init>(I)V
+
+    sput-object v0, Lr62;->c:Lo00;
 
     return-void
 .end method
 
+.method public constructor <init>(Landroid/text/SpannableStringBuilder;Landroid/text/Layout$Alignment;FIFIZII)V
+    .locals 21
 
-# virtual methods
-.method public final run()V
-    .locals 1
+    move-object/from16 v0, p0
 
-    iget v0, p0, Lr62;->a:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz p7, :cond_0
 
-    iget-object v0, p0, Lr62;->b:Lwq6;
+    move/from16 v17, p8
 
-    invoke-interface {v0}, Lwq6;->c()V
+    goto :goto_0
+
+    :cond_0
+    const/high16 v1, -0x1000000
+
+    move/from16 v17, v1
+
+    :goto_0
+    new-instance v2, Lhb4;
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v8, 0x0
+
+    const/high16 v12, -0x80000000
+
+    const v13, -0x800001
+
+    const v14, -0x800001
+
+    const/16 v19, 0x0
+
+    const/16 v20, 0x0
+
+    move v15, v13
+
+    move/from16 v18, v12
+
+    move-object/from16 v3, p1
+
+    move-object/from16 v4, p2
+
+    move/from16 v7, p3
+
+    move/from16 v9, p4
+
+    move/from16 v10, p5
+
+    move/from16 v11, p6
+
+    move/from16 v16, p7
+
+    invoke-direct/range {v2 .. v20}, Lhb4;-><init>(Ljava/lang/CharSequence;Landroid/text/Layout$Alignment;Landroid/text/Layout$Alignment;Landroid/graphics/Bitmap;FIIFIIFFFZIIFI)V
+
+    iput-object v2, v0, Lr62;->a:Lhb4;
+
+    move/from16 v1, p9
+
+    iput v1, v0, Lr62;->b:I
 
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lr62;->b:Lwq6;
-
-    invoke-interface {v0}, Lwq6;->flush()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

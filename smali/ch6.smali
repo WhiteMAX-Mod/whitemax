@@ -1,78 +1,511 @@
-.class public final Lch6;
-.super Ljava/lang/Object;
+.class public Lch6;
+.super Landroid/graphics/drawable/Drawable;
 .source "SourceFile"
 
 # interfaces
-.implements Lji7;
+.implements Landroid/graphics/drawable/Drawable$Callback;
+.implements Lygg;
+.implements Lxgg;
+.implements Lw35;
+
+
+# static fields
+.field public static final d:Landroid/graphics/Matrix;
 
 
 # instance fields
-.field public final synthetic a:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public a:Landroid/graphics/drawable/Drawable;
+
+.field public final b:Lx35;
+
+.field public c:Lygg;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/atomic/AtomicBoolean;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Landroid/graphics/Matrix;
 
-    iput-object p1, p0, Lch6;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
+
+    sput-object v0, Lch6;->d:Landroid/graphics/Matrix;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/graphics/drawable/Drawable;)V
+    .locals 1
+
+    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
+
+    new-instance v0, Lx35;
+
+    invoke-direct {v0}, Lx35;-><init>()V
+
+    iput-object v0, p0, Lch6;->b:Lx35;
+
+    iput-object p1, p0, Lch6;->a:Landroid/graphics/drawable/Drawable;
+
+    invoke-static {p1, p0, p0}, Lmee;->d(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable$Callback;Lygg;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lr5;)Ljava/lang/Object;
-    .locals 9
+.method public d(Landroid/graphics/Matrix;)V
+    .locals 0
 
-    const-class v0, Lpxb;
+    invoke-virtual {p0, p1}, Lch6;->n(Landroid/graphics/Matrix;)V
 
-    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+    return-void
+.end method
+
+.method public draw(Landroid/graphics/Canvas;)V
+    .locals 1
+
+    iget-object v0, p0, Lch6;->a:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final e(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lch6;->o(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
-    new-instance v0, Ls58;
+    return-object p1
+.end method
 
-    new-instance v1, La91;
+.method public final g(Landroid/graphics/RectF;)V
+    .locals 1
 
-    const/4 v7, 0x0
+    iget-object v0, p0, Lch6;->c:Lygg;
 
-    const/16 v8, 0x11
+    if-eqz v0, :cond_0
 
-    const/4 v2, 0x0
+    invoke-interface {v0, p1}, Lygg;->g(Landroid/graphics/RectF;)V
 
-    iget-object v3, p0, Lch6;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+    return-void
 
-    const-class v4, Ljava/util/concurrent/atomic/AtomicBoolean;
+    :cond_0
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
-    const-string v5, "get"
+    move-result-object v0
 
-    const-string v6, "get()Z"
+    invoke-virtual {p1, v0}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
 
-    invoke-direct/range {v1 .. v8}, La91;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    return-void
+.end method
 
-    new-instance v2, Ltt1;
+.method public final getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
+    .locals 1
 
-    const/4 v4, 0x4
+    iget-object v0, p0, Lch6;->a:Landroid/graphics/drawable/Drawable;
 
-    invoke-direct {v2, v3, v4, p1}, Ltt1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    if-nez v0, :cond_0
 
-    sget v4, Lzjd;->t0:I
+    invoke-super {p0}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
 
-    move-object v3, v2
-
-    move-object v2, v1
-
-    new-instance v1, Lsrf;
-
-    const-string p1, "Fresco Debug"
-
-    invoke-direct {v1, p1}, Lsrf;-><init>(Ljava/lang/CharSequence;)V
-
-    const/16 v5, 0x10
-
-    invoke-direct/range {v0 .. v5}, Ls58;-><init>(Ltrf;Lji6;Lli6;II)V
+    move-result-object v0
 
     return-object v0
+
+    :cond_0
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getCurrent()Landroid/graphics/drawable/Drawable;
+    .locals 1
+
+    iget-object v0, p0, Lch6;->a:Landroid/graphics/drawable/Drawable;
+
+    return-object v0
+.end method
+
+.method public getIntrinsicHeight()I
+    .locals 1
+
+    iget-object v0, p0, Lch6;->a:Landroid/graphics/drawable/Drawable;
+
+    if-nez v0, :cond_0
+
+    invoke-super {p0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getIntrinsicWidth()I
+    .locals 1
+
+    iget-object v0, p0, Lch6;->a:Landroid/graphics/drawable/Drawable;
+
+    if-nez v0, :cond_0
+
+    invoke-super {p0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final getOpacity()I
+    .locals 1
+
+    iget-object v0, p0, Lch6;->a:Landroid/graphics/drawable/Drawable;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_0
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getOpacity()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final getPadding(Landroid/graphics/Rect;)Z
+    .locals 1
+
+    iget-object v0, p0, Lch6;->a:Landroid/graphics/drawable/Drawable;
+
+    if-nez v0, :cond_0
+
+    invoke-super {p0, p1}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    return-void
+.end method
+
+.method public final isStateful()Z
+    .locals 1
+
+    iget-object v0, p0, Lch6;->a:Landroid/graphics/drawable/Drawable;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_0
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->isStateful()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final j()Landroid/graphics/drawable/Drawable;
+    .locals 1
+
+    iget-object v0, p0, Lch6;->a:Landroid/graphics/drawable/Drawable;
+
+    return-object v0
+.end method
+
+.method public final l(Lygg;)V
+    .locals 0
+
+    iput-object p1, p0, Lch6;->c:Lygg;
+
+    return-void
+.end method
+
+.method public final mutate()Landroid/graphics/drawable/Drawable;
+    .locals 1
+
+    iget-object v0, p0, Lch6;->a:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    :cond_0
+    return-object p0
+.end method
+
+.method public final n(Landroid/graphics/Matrix;)V
+    .locals 1
+
+    iget-object v0, p0, Lch6;->c:Lygg;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0, p1}, Lygg;->d(Landroid/graphics/Matrix;)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p1}, Landroid/graphics/Matrix;->reset()V
+
+    return-void
+.end method
+
+.method public o(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    .locals 2
+
+    iget-object v0, p0, Lch6;->a:Landroid/graphics/drawable/Drawable;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1, v1}, Lmee;->d(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable$Callback;Lygg;)V
+
+    invoke-static {p1, v1, v1}, Lmee;->d(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable$Callback;Lygg;)V
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v1, p0, Lch6;->b:Lx35;
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1, p1}, Lx35;->b(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_1
+    :goto_0
+    invoke-static {p1, p0}, Lmee;->a(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+
+    invoke-static {p1, p0, p0}, Lmee;->d(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable$Callback;Lygg;)V
+
+    iput-object p1, p0, Lch6;->a:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    return-object v0
+.end method
+
+.method public onBoundsChange(Landroid/graphics/Rect;)V
+    .locals 1
+
+    iget-object v0, p0, Lch6;->a:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onLevelChange(I)Z
+    .locals 1
+
+    iget-object v0, p0, Lch6;->a:Landroid/graphics/drawable/Drawable;
+
+    if-nez v0, :cond_0
+
+    invoke-super {p0, p1}, Landroid/graphics/drawable/Drawable;->onLevelChange(I)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setLevel(I)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final onStateChange([I)Z
+    .locals 1
+
+    iget-object v0, p0, Lch6;->a:Landroid/graphics/drawable/Drawable;
+
+    if-nez v0, :cond_0
+
+    invoke-super {p0, p1}, Landroid/graphics/drawable/Drawable;->onStateChange([I)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final scheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
+    .locals 0
+
+    invoke-virtual {p0, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->scheduleSelf(Ljava/lang/Runnable;J)V
+
+    return-void
+.end method
+
+.method public final setAlpha(I)V
+    .locals 1
+
+    iget-object v0, p0, Lch6;->b:Lx35;
+
+    iput p1, v0, Lx35;->a:I
+
+    iget-object v0, p0, Lch6;->a:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final setColorFilter(Landroid/graphics/ColorFilter;)V
+    .locals 2
+
+    iget-object v0, p0, Lch6;->b:Lx35;
+
+    iput-object p1, v0, Lx35;->e:Ljava/lang/Object;
+
+    if-eqz p1, :cond_0
+
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    iput-boolean v1, v0, Lx35;->d:Z
+
+    iget-object v0, p0, Lch6;->a:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final setDither(Z)V
+    .locals 1
+
+    iget-object v0, p0, Lch6;->b:Lx35;
+
+    iput p1, v0, Lx35;->b:I
+
+    iget-object v0, p0, Lch6;->a:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setDither(Z)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final setFilterBitmap(Z)V
+    .locals 1
+
+    iget-object v0, p0, Lch6;->b:Lx35;
+
+    iput p1, v0, Lx35;->c:I
+
+    iget-object v0, p0, Lch6;->a:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setFilterBitmap(Z)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final setHotspot(FF)V
+    .locals 1
+
+    iget-object v0, p0, Lch6;->a:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1, p2}, Landroid/graphics/drawable/Drawable;->setHotspot(FF)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setVisible(ZZ)Z
+    .locals 2
+
+    invoke-super {p0, p1, p2}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
+
+    move-result v0
+
+    iget-object v1, p0, Lch6;->a:Landroid/graphics/drawable/Drawable;
+
+    if-nez v1, :cond_0
+
+    return v0
+
+    :cond_0
+    invoke-virtual {v1, p1, p2}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final unscheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
+    .locals 0
+
+    invoke-virtual {p0, p2}, Landroid/graphics/drawable/Drawable;->unscheduleSelf(Ljava/lang/Runnable;)V
+
+    return-void
 .end method

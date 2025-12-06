@@ -1,115 +1,53 @@
 .class public final Ldmh;
-.super Ljava/lang/IllegalStateException;
+.super Lq44;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final Y:Ljava/lang/String;
+.field public final synthetic Y:Ltmh;
 
-.field public final Z:Ljava/lang/String;
+.field public Z:I
 
-.field public final a:Z
+.field public d:Ltmh;
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:I
-
-.field public final o:I
+.field public o:Llo0;
 
 
 # direct methods
-.method public constructor <init>(ZLjava/lang/String;IIILjava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Ltmh;Lq44;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
+    iput-object p1, p0, Ldmh;->Y:Ltmh;
 
-    iput-boolean p1, p0, Ldmh;->a:Z
-
-    iput-object p2, p0, Ldmh;->b:Ljava/lang/String;
-
-    iput p3, p0, Ldmh;->c:I
-
-    iput p4, p0, Ldmh;->o:I
-
-    iput p5, p0, Ldmh;->X:I
-
-    iput-object p6, p0, Ldmh;->Y:Ljava/lang/String;
-
-    iput-object p7, p0, Ldmh;->Z:Ljava/lang/String;
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getMessage()Ljava/lang/String;
-    .locals 5
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iput-object p1, p0, Ldmh;->X:Ljava/lang/Object;
 
-    const-string v1, "Current state. \n                |hasTarget:"
+    iget p1, p0, Ldmh;->Z:I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/high16 v0, -0x80000000
 
-    iget-boolean v1, p0, Ldmh;->a:Z
+    or-int/2addr p1, v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    iput p1, p0, Ldmh;->Z:I
 
-    const-string v1, ", \n                |targetInstanceId:"
+    iget-object p1, p0, Ldmh;->Y:Ltmh;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v0, 0x0
 
-    iget-object v1, p0, Ldmh;->b:Ljava/lang/String;
+    invoke-static {p1, v0, p0}, Ltmh;->a(Ltmh;Llo0;Lq44;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    const-string v1, ", \n                |backstackSize:"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", \n                |childRoutersSize:"
-
-    const-string v2, ", \n                |childBackStackSize:"
-
-    iget v3, p0, Ldmh;->c:I
-
-    iget v4, p0, Ldmh;->o:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    iget v1, p0, Ldmh;->X:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, "\n                |topControllerName:"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ldmh;->Y:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\n                |childTopControllerName:"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ldmh;->Z:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\n                |"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Labf;->k(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

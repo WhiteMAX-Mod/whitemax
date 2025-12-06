@@ -1,110 +1,53 @@
 .class public final Loni;
-.super Ljava/lang/Object;
+.super Lmci;
 .source "SourceFile"
 
-# interfaces
-.implements Ltha;
 
-
-# static fields
-.field public static final a:Loni;
+# instance fields
+.field public final synthetic g:Lcom/google/android/gms/common/internal/a;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lcom/google/android/gms/common/internal/a;I)V
+    .locals 1
 
-    new-instance v0, Loni;
+    iput-object p1, p0, Loni;->g:Lcom/google/android/gms/common/internal/a;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    sput-object v0, Loni;->a:Loni;
-
-    new-instance v0, Lr8i;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lr8i;-><init>(I)V
-
-    const-class v1, Lm9i;
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x5
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x6
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x7
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
+    invoke-direct {p0, p1, p2, v0}, Lmci;-><init>(Lcom/google/android/gms/common/internal/a;ILandroid/os/Bundle;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final a(Les3;)V
+    .locals 1
 
-    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget-object v0, p0, Loni;->g:Lcom/google/android/gms/common/internal/a;
 
-    move-result-object p1
+    iget-object v0, v0, Lcom/google/android/gms/common/internal/a;->s0:Luj0;
 
-    throw p1
+    invoke-interface {v0, p1}, Luj0;->y(Les3;)V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    return-void
+.end method
+
+.method public final b()Z
+    .locals 2
+
+    iget-object v0, p0, Loni;->g:Lcom/google/android/gms/common/internal/a;
+
+    iget-object v0, v0, Lcom/google/android/gms/common/internal/a;->s0:Luj0;
+
+    sget-object v1, Les3;->o:Les3;
+
+    invoke-interface {v0, v1}, Luj0;->y(Les3;)V
+
+    const/4 v0, 0x1
+
+    return v0
 .end method

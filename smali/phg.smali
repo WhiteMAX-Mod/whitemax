@@ -1,26 +1,25 @@
-.class public interface abstract Lphg;
+.class public abstract Lphg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lnhg;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public static a(Landroid/animation/Animator;)J
+    .locals 2
 
-    new-instance v0, Lnhg;
+    invoke-virtual {p0}, Landroid/animation/Animator;->getTotalDuration()J
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result-wide v0
 
-    sput-object v0, Lphg;->a:Lnhg;
-
-    return-void
+    return-wide v0
 .end method
 
+.method public static b(Landroid/animation/Animator;J)V
+    .locals 0
 
-# virtual methods
-.method public abstract a(Lohg;I)Lpk3;
+    check-cast p0, Landroid/animation/AnimatorSet;
+
+    invoke-virtual {p0, p1, p2}, Landroid/animation/AnimatorSet;->setCurrentPlayTime(J)V
+
+    return-void
 .end method

@@ -1,148 +1,189 @@
 .class public final Lzf4;
-.super Ljava/lang/Object;
+.super Lq1g;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Ljava/lang/String;
-
-.field public final b:Ljava/util/ArrayList;
+# static fields
+.field public static final e0:Lzf4;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 41
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lzf4;
 
-    const-string v0, ""
+    new-instance v1, Lsf3;
 
-    iput-object v0, p0, Lzf4;->a:Ljava/lang/String;
+    const-wide v2, 0xff697cffL
 
-    new-instance v0, Ljava/util/ArrayList;
+    long-to-int v2, v2
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    const-wide v3, 0xffffffffL
 
-    iput-object v0, p0, Lzf4;->b:Ljava/util/ArrayList;
+    long-to-int v3, v3
 
-    return-void
-.end method
+    const-wide v4, 0xff000000L
 
+    long-to-int v5, v4
 
-# virtual methods
-.method public final a()Landroid/net/Uri;
-    .locals 1
+    const-wide v6, 0xff333344L
 
-    invoke-virtual {p0}, Lzf4;->b()Ljava/lang/String;
+    long-to-int v8, v6
 
-    move-result-object v0
+    const-wide v6, 0xff5b5b69L
 
-    invoke-static {v0}, Lmyi;->a(Ljava/lang/String;)Landroid/net/Uri;
+    long-to-int v13, v6
 
-    move-result-object v0
+    const-wide v6, 0xfff5f5f5L
 
-    return-object v0
-.end method
+    long-to-int v15, v6
 
-.method public final b()Ljava/lang/String;
-    .locals 3
+    const-wide v6, 0xffff3f3fL
 
-    iget-object v0, p0, Lzf4;->a:Ljava/lang/String;
+    long-to-int v4, v6
 
-    const-string v1, ":"
+    const-wide v6, 0xfffbc03dL
 
-    const/4 v2, 0x0
+    long-to-int v6, v6
 
-    invoke-static {v0, v1, v2}, Lhbf;->w(Ljava/lang/String;Ljava/lang/String;Z)Z
+    const-wide v9, 0xffecececL
 
-    move-result v0
+    long-to-int v7, v9
 
-    if-eqz v0, :cond_1
+    const-wide v9, 0xfff2f2f2L
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    long-to-int v9, v9
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    const-wide v10, 0xffe2e6ffL
 
-    iget-object v1, p0, Lzf4;->a:Ljava/lang/String;
+    long-to-int v10, v10
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-wide v11, 0xffd3d9fbL
 
-    const/16 v1, 0x3f
+    long-to-int v11, v11
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    move-object/from16 v40, v0
 
-    iget-object v1, p0, Lzf4;->b:Ljava/util/ArrayList;
+    move-object v12, v1
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    const-wide v0, 0xffe8e8e8L
 
-    move-result-object v1
+    long-to-int v0, v0
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    move/from16 v28, v0
 
-    move-result v2
+    const-wide v0, 0xffbdbfcdL
 
-    if-eqz v2, :cond_0
+    long-to-int v0, v0
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move/from16 v29, v0
 
-    move-result-object v2
+    const-wide v0, 0xff84848eL
 
-    check-cast v2, Ljava/lang/String;
+    long-to-int v0, v0
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move/from16 v30, v0
 
-    const/16 v2, 0x26
+    const-wide v0, 0xff10bc07L
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    long-to-int v0, v0
 
-    goto :goto_0
+    move/from16 v32, v0
 
-    :cond_0
-    invoke-static {v0}, Lzaf;->E(Ljava/lang/CharSequence;)I
+    const-wide v0, 0xff9da4afL
 
-    move-result v1
+    long-to-int v0, v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->deleteCharAt(I)Ljava/lang/StringBuilder;
+    move/from16 v33, v0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-wide v0, 0xff5b5b68L
 
-    move-result-object v0
+    long-to-int v0, v0
 
-    return-object v0
+    move/from16 v37, v0
 
-    :cond_1
-    new-instance v0, Lone/me/deeplink/InvalidDeeplinkNamingException;
+    const-wide v0, 0xff474757L
 
-    iget-object v1, p0, Lzf4;->a:Ljava/lang/String;
+    long-to-int v0, v0
 
-    invoke-direct {v0, v1}, Lone/me/deeplink/InvalidDeeplinkNamingException;-><init>(Ljava/lang/String;)V
+    const/16 v39, 0x3e0
 
-    throw v0
-.end method
+    move/from16 v16, v4
 
-.method public final c(Ljava/lang/Object;Ljava/lang/String;)V
-    .locals 1
+    move v4, v3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    move/from16 v17, v6
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    move v6, v2
 
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move/from16 v18, v7
 
-    const-string p2, "="
+    move v7, v3
 
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move/from16 v20, v9
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move v9, v3
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move/from16 v21, v10
 
-    move-result-object p1
+    move v10, v8
 
-    iget-object p2, p0, Lzf4;->b:Ljava/util/ArrayList;
+    move/from16 v22, v11
 
-    invoke-virtual {p2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move v11, v3
+
+    move-object v1, v12
+
+    move v12, v3
+
+    move v14, v13
+
+    move/from16 v19, v3
+
+    move/from16 v23, v8
+
+    move/from16 v24, v2
+
+    move/from16 v25, v15
+
+    move/from16 v26, v18
+
+    move/from16 v27, v13
+
+    move/from16 v31, v3
+
+    move/from16 v34, v3
+
+    move/from16 v35, v3
+
+    move/from16 v36, v8
+
+    move/from16 v38, v0
+
+    invoke-direct/range {v1 .. v39}, Lsf3;-><init>(IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII)V
+
+    sget-object v7, Llcj;->Y:Lyt0;
+
+    sget-object v8, Llcj;->X:Lyt0;
+
+    const/4 v4, 0x1
+
+    const-string v5, "DAY"
+
+    move-object v6, v1
+
+    const-string v1, "TamTam Light"
+
+    const-string v2, "TamTam Team"
+
+    const/4 v3, 0x0
+
+    move-object/from16 v0, v40
+
+    invoke-direct/range {v0 .. v8}, Lq1g;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;Lsf3;Lyt0;Lyt0;)V
+
+    sput-object v0, Lzf4;->e0:Lzf4;
 
     return-void
 .end method

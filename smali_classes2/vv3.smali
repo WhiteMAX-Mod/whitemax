@@ -1,208 +1,121 @@
-.class public final synthetic Lvv3;
-.super Ljava/lang/Object;
+.class public final enum Lvv3;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lli6;
 
+# static fields
+.field public static final enum X:Lvv3;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final synthetic Y:[Lvv3;
 
-.field public final synthetic b:Ljw3;
+.field public static final enum a:Lvv3;
 
-.field public final synthetic c:J
+.field public static final enum b:Lvv3;
+
+.field public static final enum c:Lvv3;
+
+.field public static final enum d:Lvv3;
+
+.field public static final enum o:Lvv3;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljw3;JI)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 8
 
-    iput p4, p0, Lvv3;->a:I
+    new-instance v0, Lvv3;
 
-    iput-object p1, p0, Lvv3;->b:Ljw3;
+    const-string v1, "OFFICIAL"
 
-    iput-wide p2, p0, Lvv3;->c:J
+    const/4 v2, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lvv3;->a:Lvv3;
+
+    new-instance v1, Lvv3;
+
+    const-string v2, "BOT"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lvv3;->b:Lvv3;
+
+    new-instance v2, Lvv3;
+
+    const-string v3, "SERVICE_ACCOUNT"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lvv3;->c:Lvv3;
+
+    new-instance v3, Lvv3;
+
+    const-string v4, "HAS_WEBAPP"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lvv3;->d:Lvv3;
+
+    new-instance v4, Lvv3;
+
+    const-string v5, "RESTRICTED"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lvv3;->o:Lvv3;
+
+    new-instance v5, Lvv3;
+
+    const-string v6, "NO_FORWARD"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v5, Lvv3;->X:Lvv3;
+
+    filled-new-array/range {v0 .. v5}, [Lvv3;
+
+    move-result-object v0
+
+    sput-object v0, Lvv3;->Y:[Lvv3;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lvv3;
+    .locals 1
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    const-class v0, Lvv3;
 
-    iget v0, p0, Lvv3;->a:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    check-cast p1, Le3b;
+    move-result-object p0
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p0, Lvv3;
 
-    sget-object v0, Lwv3;->$EnumSwitchMapping$1:[I
+    return-object p0
+.end method
 
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+.method public static values()[Lvv3;
+    .locals 1
 
-    move-result p1
+    sget-object v0, Lvv3;->Y:[Lvv3;
 
-    aget p1, v0, p1
+    invoke-virtual {v0}, [Lvv3;->clone()Ljava/lang/Object;
 
-    const/4 v0, 0x1
+    move-result-object v0
 
-    if-ne p1, v0, :cond_0
+    check-cast v0, [Lvv3;
 
-    iget-object p1, p0, Lvv3;->b:Ljw3;
-
-    iget-object v0, p1, Lxzg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    iget-object v1, p1, Ljw3;->c:Lulf;
-
-    check-cast v1, Lqta;
-
-    invoke-virtual {v1}, Lqta;->b()Lk54;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Ljw3;->r()Ll54;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lp0;->plus(Li54;)Li54;
-
-    move-result-object v1
-
-    new-instance v2, Lyv3;
-
-    iget-wide v3, p0, Lvv3;->c:J
-
-    const/4 v5, 0x0
-
-    invoke-direct {v2, p1, v3, v4, v5}, Lyv3;-><init>(Ljw3;JLkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x2
-
-    invoke-static {v0, v1, v5, v2, p1}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
-
-    :cond_0
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
-
-    :pswitch_0
-    sget-object v0, Lwv3;->$EnumSwitchMapping$1:[I
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p1
-
-    aget p1, v0, p1
-
-    const/4 v0, 0x1
-
-    if-ne p1, v0, :cond_1
-
-    iget-object p1, p0, Lvv3;->b:Ljw3;
-
-    iget-object v0, p1, Lxzg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    iget-object v1, p1, Ljw3;->c:Lulf;
-
-    check-cast v1, Lqta;
-
-    invoke-virtual {v1}, Lqta;->b()Lk54;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Ljw3;->r()Ll54;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lp0;->plus(Li54;)Li54;
-
-    move-result-object v1
-
-    new-instance v2, Lzv3;
-
-    iget-wide v3, p0, Lvv3;->c:J
-
-    const/4 v5, 0x0
-
-    invoke-direct {v2, p1, v3, v4, v5}, Lzv3;-><init>(Ljw3;JLkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x2
-
-    invoke-static {v0, v1, v5, v2, p1}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
-
-    :cond_1
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
-
-    :pswitch_1
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    const/4 v0, 0x1
-
-    if-eq p1, v0, :cond_2
-
-    const/4 v0, 0x2
-
-    if-eq p1, v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object p1, p0, Lvv3;->b:Ljw3;
-
-    iget-object v0, p1, Lxzg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    iget-object v1, p1, Ljw3;->c:Lulf;
-
-    check-cast v1, Lqta;
-
-    invoke-virtual {v1}, Lqta;->b()Lk54;
-
-    move-result-object v1
-
-    sget-object v2, Lu9a;->a:Lu9a;
-
-    invoke-virtual {v1, v2}, Lp0;->plus(Li54;)Li54;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Ljw3;->r()Ll54;
-
-    move-result-object v2
-
-    invoke-interface {v1, v2}, Li54;->plus(Li54;)Li54;
-
-    move-result-object v1
-
-    new-instance v2, Liw3;
-
-    const/4 v3, 0x0
-
-    iget-wide v4, p0, Lvv3;->c:J
-
-    invoke-direct {v2, p1, v4, v5, v3}, Liw3;-><init>(Ljw3;JLkotlin/coroutines/Continuation;)V
-
-    sget-object p1, Lt54;->c:Lt54;
-
-    invoke-static {v0, v1, p1, v2}, Ltki;->c(Lq54;Li54;Lt54;Lzi6;)Lcye;
-
-    :goto_0
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

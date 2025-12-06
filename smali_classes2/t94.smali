@@ -1,172 +1,61 @@
 .class public final Lt94;
-.super Ljava/lang/Object;
+.super Lv94;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/concurrent/ThreadFactory;
 
 
 # static fields
-.field public static final X:Landroid/util/SparseIntArray;
-
-
-# instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:Ljava/lang/String;
-
-.field public final o:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public static final a:Lt94;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 1
 
-    new-instance v0, Landroid/util/SparseIntArray;
+    new-instance v0, Lt94;
 
-    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lt94;->X:Landroid/util/SparseIntArray;
-
-    const/4 v1, 0x1
-
-    const/16 v2, 0xa
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
-
-    const/4 v1, 0x2
-
-    const/16 v3, 0x10
-
-    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
-
-    const/4 v1, 0x3
-
-    const/16 v4, 0xd
-
-    invoke-virtual {v0, v1, v4}, Landroid/util/SparseIntArray;->put(II)V
-
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
-
-    const/4 v1, 0x5
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
-
-    const/4 v1, 0x6
-
-    const/4 v3, -0x2
-
-    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
-
-    const/4 v1, 0x7
-
-    const/4 v3, -0x4
-
-    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
-
-    const/16 v1, 0x8
-
-    const/4 v3, -0x6
-
-    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
-
-    const/16 v1, 0x9
-
-    const/4 v3, -0x5
-
-    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
-
-    const/4 v1, -0x8
-
-    invoke-virtual {v0, v2, v1}, Landroid/util/SparseIntArray;->put(II)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 3
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    iput-object v0, p0, Lt94;->o:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    const/16 v0, 0x9
-
-    iput v0, p0, Lt94;->a:I
-
-    sget-object v2, Lt94;->X:Landroid/util/SparseIntArray;
-
-    invoke-virtual {v2, v0, v1}, Landroid/util/SparseIntArray;->get(II)I
-
-    move-result v0
-
-    iput v0, p0, Lt94;->b:I
-
-    iput-object p1, p0, Lt94;->c:Ljava/lang/String;
+    sput-object v0, Lt94;->a:Lt94;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    new-instance v0, Lqx1;
+    const/4 v0, 0x1
 
-    const/16 v1, 0x14
+    if-ne p0, p1, :cond_0
 
-    invoke-direct {v0, p0, v1, p1}, Lqx1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    return v0
 
-    new-instance p1, Ljava/lang/Thread;
+    :cond_0
+    instance-of p1, p1, Lt94;
 
-    invoke-direct {p1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+    if-nez p1, :cond_1
 
-    :try_start_0
-    iget v0, p0, Lt94;->a:I
+    const/4 p1, 0x0
 
-    invoke-virtual {p1, v0}, Ljava/lang/Thread;->setPriority(I)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    return p1
 
-    :catchall_0
-    new-instance v0, Ljava/lang/StringBuilder;
+    :cond_1
+    return v0
+.end method
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+.method public final hashCode()I
+    .locals 1
 
-    iget-object v1, p0, Lt94;->c:Ljava/lang/String;
+    const v0, 0x7e4d4462
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return v0
+.end method
 
-    const-string v1, "-"
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v0, "NoInternetConnection"
 
-    iget-object v1, p0, Lt94;->o:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
-
-    return-object p1
+    return-object v0
 .end method

@@ -1,98 +1,141 @@
-.class public final Lvc6;
-.super Lsgf;
+.class public final synthetic Lvc6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Lcm6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lone/me/chats/forward/ForwardPickerScreen;
+.field public final synthetic b:Landroidx/recyclerview/widget/RecyclerView;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/forward/ForwardPickerScreen;)V
+.method public synthetic constructor <init>(Landroidx/recyclerview/widget/RecyclerView;I)V
     .locals 0
 
-    iput-object p2, p0, Lvc6;->Y:Lone/me/chats/forward/ForwardPickerScreen;
+    iput p2, p0, Lvc6;->a:I
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lvc6;->b:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget v0, p0, Lvc6;->a:I
 
-    invoke-virtual {p0, p1, p2}, Lvc6;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Lvc6;->b:Landroidx/recyclerview/widget/RecyclerView;
 
-    move-result-object p1
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Lvc6;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lvc6;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lvc6;
-
-    iget-object v1, p0, Lvc6;->Y:Lone/me/chats/forward/ForwardPickerScreen;
-
-    invoke-direct {v0, p2, v1}, Lvc6;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/forward/ForwardPickerScreen;)V
-
-    iput-object p1, v0, Lvc6;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lvc6;->X:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object p1, Lone/me/chats/forward/ForwardPickerScreen;->H0:[Ltr7;
-
-    iget-object p1, p0, Lvc6;->Y:Lone/me/chats/forward/ForwardPickerScreen;
-
-    invoke-virtual {p1}, Lone/me/chats/forward/ForwardPickerScreen;->Q0()Lqjc;
+    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lone/me/chats/picker/AbstractPickerScreen;->M0()Lmnb;
+    instance-of v2, v0, Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    move-result-object p1
+    if-eqz v2, :cond_0
 
-    iget-object p1, p1, Lmnb;->c:Lkpb;
+    check-cast v0, Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    check-cast p1, Lhc6;
+    goto :goto_0
 
-    invoke-virtual {p1}, Lhc6;->g()Landroid/graphics/drawable/Drawable;
+    :cond_0
+    const/4 v0, 0x0
 
-    move-result-object p1
+    :goto_0
+    const/4 v2, -0x1
 
-    invoke-virtual {v0, p1}, Lqjc;->setStartIconDrawable(Landroid/graphics/drawable/Drawable;)V
+    if-eqz v0, :cond_1
 
-    sget-object p1, Lccg;->a:Lccg;
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/LinearLayoutManager;->X0()I
 
-    return-object p1
+    move-result v3
+
+    goto :goto_1
+
+    :cond_1
+    move v3, v2
+
+    :goto_1
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/LinearLayoutManager;->Z0()I
+
+    move-result v0
+
+    goto :goto_2
+
+    :cond_2
+    move v0, v2
+
+    :goto_2
+    if-eq v3, v2, :cond_3
+
+    if-eq v0, v2, :cond_3
+
+    sub-int/2addr v0, v3
+
+    invoke-static {v0}, Ljava/lang/Math;->abs(I)I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lphd;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_3
+
+    new-instance v2, Ljava/lang/Object;
+
+    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {v1, v3, v0, v2}, Lphd;->o(IILjava/lang/Object;)V
+
+    :cond_3
+    sget-object v0, Lqqg;->a:Lqqg;
+
+    return-object v0
+
+    :pswitch_0
+    sget-object v0, Lone/me/chats/picker/contacts/PickerContactsListWidget;->y0:[Lyy7;
+
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lkk4;->j(Landroid/content/Context;)Lxcf;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    sget-object v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->Z:[Lyy7;
+
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lkk4;->j(Landroid/content/Context;)Lxcf;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

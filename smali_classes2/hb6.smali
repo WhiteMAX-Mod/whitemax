@@ -4,88 +4,137 @@
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/ConcurrentSkipListSet;
+.field public final a:I
 
-.field public final b:Lgb6;
+.field public final b:I
 
-.field public final c:Ljava/util/ArrayList;
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(III)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/ConcurrentSkipListSet;
+    iput p1, p0, Lhb6;->a:I
 
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentSkipListSet;-><init>()V
+    iput p2, p0, Lhb6;->b:I
 
-    iput-object v0, p0, Lhb6;->a:Ljava/util/concurrent/ConcurrentSkipListSet;
-
-    new-instance v0, Lgb6;
-
-    invoke-direct {v0, p0}, Lgb6;-><init>(Lhb6;)V
-
-    iput-object v0, p0, Lhb6;->b:Lgb6;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lhb6;->c:Ljava/util/ArrayList;
+    iput p3, p0, Lhb6;->c:I
 
     return-void
 .end method
 
-.method public static synthetic b(Lhb6;Ljava/lang/String;Lji6;)Leb6;
-    .locals 1
-
-    sget-object v0, Lka5;->a:Lka5;
-
-    invoke-virtual {p0, p1, v0, p2}, Lhb6;->a(Ljava/lang/String;Ljava/lang/Iterable;Lji6;)Leb6;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 
 # virtual methods
-.method public final a(Ljava/lang/String;Ljava/lang/Iterable;Lji6;)Leb6;
-    .locals 7
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    new-instance v0, Leb6;
+    if-ne p0, p1, :cond_0
 
-    new-instance v1, Lzz1;
+    goto :goto_1
 
-    const/4 v6, 0x6
+    :cond_0
+    instance-of v0, p1, Lhb6;
 
-    move-object v4, p0
+    if-nez v0, :cond_1
 
-    move-object v5, p1
+    goto :goto_0
 
-    move-object v2, p2
+    :cond_1
+    check-cast p1, Lhb6;
 
-    move-object v3, p3
+    iget v0, p0, Lhb6;->a:I
 
-    invoke-direct/range {v1 .. v6}, Lzz1;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    iget v1, p1, Lhb6;->a:I
 
-    invoke-direct {v0, v5, v1}, Leb6;-><init>(Ljava/lang/String;Lzz1;)V
+    if-eq v0, v1, :cond_2
 
-    iget-object p1, v4, Lhb6;->c:Ljava/util/ArrayList;
+    goto :goto_0
 
-    const/4 p2, 0x0
+    :cond_2
+    iget v0, p0, Lhb6;->b:I
 
-    iget-object p3, v0, Leb6;->b:Lfb6;
+    iget v1, p1, Lhb6;->b:I
 
-    invoke-virtual {p1, p2, p3}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
+    if-eq v0, v1, :cond_3
 
-    invoke-static {}, Ljava/util/concurrent/ForkJoinPool;->commonPool()Ljava/util/concurrent/ForkJoinPool;
+    goto :goto_0
 
-    move-result-object p1
+    :cond_3
+    iget v0, p0, Lhb6;->c:I
 
-    invoke-virtual {p1, p3}, Ljava/util/concurrent/ForkJoinPool;->execute(Ljava/util/concurrent/ForkJoinTask;)V
+    iget p1, p1, Lhb6;->c:I
+
+    if-eq v0, p1, :cond_4
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget v0, p0, Lhb6;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lhb6;->b:I
+
+    invoke-static {v2, v0, v1}, Lxrf;->k(III)I
+
+    move-result v0
+
+    iget v1, p0, Lhb6;->c:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", min="
+
+    const-string v1, ", max="
+
+    const-string v2, "WidthConstraints(scrollThresholdItemCount="
+
+    iget v3, p0, Lhb6;->a:I
+
+    iget v4, p0, Lhb6;->b:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Lwy1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ")"
+
+    iget v2, p0, Lhb6;->c:I
+
+    invoke-static {v0, v2, v1}, Lho7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

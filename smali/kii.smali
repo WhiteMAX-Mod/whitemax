@@ -1,80 +1,23 @@
 .class public final Lkii;
-.super Ljava/lang/Object;
+.super Ljava/lang/ref/PhantomReference;
 .source "SourceFile"
 
-# interfaces
-.implements Ltha;
 
+# instance fields
+.field public final a:Ljava/util/Set;
 
-# static fields
-.field public static final a:Lkii;
+.field public final b:Lo6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, Lkii;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lkii;->a:Lkii;
-
-    new-instance v0, Lr8i;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lr8i;-><init>(I)V
-
-    const-class v1, Lm9i;
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public synthetic constructor <init>(Lia3;Ljava/lang/ref/ReferenceQueue;Ljava/util/Set;Lo6;)V
     .locals 0
 
-    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    invoke-direct {p0, p1, p2}, Ljava/lang/ref/PhantomReference;-><init>(Ljava/lang/Object;Ljava/lang/ref/ReferenceQueue;)V
 
-    move-result-object p1
+    iput-object p3, p0, Lkii;->a:Ljava/util/Set;
 
-    throw p1
+    iput-object p4, p0, Lkii;->b:Lo6;
+
+    return-void
 .end method

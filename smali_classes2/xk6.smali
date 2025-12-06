@@ -1,75 +1,106 @@
 .class public final Lxk6;
-.super Lal6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Lxk6;
+.field public static final synthetic f:[Lyy7;
 
-.field public static final b:Lqk6;
 
-.field public static final c:Ljava/util/List;
+# instance fields
+.field public final a:Lx38;
+
+.field public final b:J
+
+.field public final c:Lgf1;
+
+.field public final d:Lgf1;
+
+.field public final e:Lt9f;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 4
 
-    new-instance v0, Lxk6;
+    new-instance v0, Lz8a;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "cameraNotStartedJob"
 
-    sput-object v0, Lxk6;->a:Lxk6;
+    const-string v2, "getCameraNotStartedJob()Lkotlinx/coroutines/Job;"
 
-    new-instance v0, Lqk6;
+    const-class v3, Lxk6;
 
-    sget v1, Lk1b;->a:I
+    invoke-direct {v0, v3, v1, v2}, Lz8a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {v0, v1}, Lqk6;-><init>(I)V
+    sget-object v1, Lvid;->a:Lwid;
 
-    sput-object v0, Lxk6;->b:Lqk6;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v0, Ltk6;->e:Ltk6;
+    const/4 v1, 0x1
 
-    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    new-array v1, v1, [Lyy7;
 
-    move-result-object v0
+    const/4 v2, 0x0
 
-    sput-object v0, Lxk6;->c:Ljava/util/List;
+    aput-object v0, v1, v2
+
+    sput-object v1, Lxk6;->f:[Lyy7;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lx38;JLgf1;Lgf1;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lxk6;->a:Lx38;
+
+    iput-wide p2, p0, Lxk6;->b:J
+
+    iput-object p4, p0, Lxk6;->c:Lgf1;
+
+    iput-object p5, p0, Lxk6;->d:Lgf1;
+
+    invoke-static {}, Lc7j;->c()Lt9f;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lxk6;->e:Lt9f;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Ljava/lang/String;
-    .locals 1
+.method public final a()V
+    .locals 5
 
-    const-string v0, "ru.ok.tamtam.ALL_PHOTO"
+    sget-object v0, Lxk6;->f:[Lyy7;
 
-    return-object v0
-.end method
+    const/4 v1, 0x0
 
-.method public final c()Lf4;
-    .locals 1
+    aget-object v2, v0, v1
 
-    sget-object v0, Lxk6;->b:Lqk6;
+    iget-object v3, p0, Lxk6;->e:Lt9f;
 
-    return-object v0
-.end method
+    invoke-virtual {v3, p0, v2}, Lt9f;->D(Ljava/lang/Object;Lyy7;)Ljava/lang/Object;
 
-.method public final d()Ljava/util/List;
-    .locals 1
+    move-result-object v2
 
-    sget-object v0, Lxk6;->c:Ljava/util/List;
+    check-cast v2, Lqt7;
 
-    return-object v0
-.end method
+    const/4 v4, 0x0
 
-.method public final f()Lqk6;
-    .locals 1
+    if-eqz v2, :cond_0
 
-    sget-object v0, Lxk6;->b:Lqk6;
+    invoke-interface {v2, v4}, Lqt7;->cancel(Ljava/util/concurrent/CancellationException;)V
 
-    return-object v0
+    :cond_0
+    aget-object v0, v0, v1
+
+    invoke-virtual {v3, p0, v0, v4}, Lt9f;->O(Ljava/lang/Object;Lyy7;Ljava/lang/Object;)V
+
+    return-void
 .end method

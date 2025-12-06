@@ -1,208 +1,349 @@
-.class public final synthetic Lg51;
-.super Ljava/lang/Object;
+.class public final Lg51;
+.super Landroidx/constraintlayout/widget/ConstraintLayout;
 .source "SourceFile"
 
 # interfaces
-.implements Lli6;
-
-
-# instance fields
-.field public final synthetic X:Lgv1;
-
-.field public final synthetic Y:Lfx0;
-
-.field public final synthetic Z:Ljava/lang/Object;
-
-.field public final synthetic a:I
-
-.field public final synthetic b:J
-
-.field public final synthetic c:Lsye;
-
-.field public final synthetic o:Lk51;
-
-
-# direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;JLsye;Lk51;Lgv1;Lfx0;I)V
-    .locals 0
-
-    iput p8, p0, Lg51;->a:I
-
-    iput-object p1, p0, Lg51;->Z:Ljava/lang/Object;
-
-    iput-wide p2, p0, Lg51;->b:J
-
-    iput-object p4, p0, Lg51;->c:Lsye;
-
-    iput-object p5, p0, Lg51;->o:Lk51;
-
-    iput-object p6, p0, Lg51;->X:Lgv1;
-
-    iput-object p7, p0, Lg51;->Y:Lfx0;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.implements Ljn1;
+.implements Lhn1;
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a(Z)V
     .locals 2
 
-    iget v0, p0, Lg51;->a:I
+    if-nez p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    goto :goto_1
 
-    iget-object v0, p0, Lg51;->Z:Ljava/lang/Object;
+    :cond_0
+    new-instance v0, Lat;
 
-    check-cast v0, Ljava/lang/String;
+    const/16 v1, 0x8
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;
+    invoke-direct {v0, v1, p0}, Lat;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;->setLink(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;
+    sget-object v1, Lzx0;->o:Lzx0;
 
-    move-result-object p1
-
-    iget-wide v0, p0, Lg51;->b:J
-
-    invoke-static {v0, v1}, Ltdb;->b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    invoke-static {v0, v1}, Llee;->g(Lzde;Lem6;)Loz5;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setMyId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+    new-instance v1, Lnz5;
 
-    move-result-object p1
+    invoke-direct {v1, v0}, Lnz5;-><init>(Loz5;)V
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;
+    :goto_0
+    invoke-virtual {v1}, Lnz5;->hasNext()Z
 
-    iget-object v0, p0, Lg51;->c:Lsye;
+    move-result v0
 
-    iget-boolean v0, v0, Lsye;->b:Z
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setStartWithVideo(Z)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;
-
-    iget-object v0, p0, Lg51;->o:Lk51;
-
-    iget-object v0, v0, Lk51;->b:Liu7;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v1}, Lnz5;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lmw1;
+    check-cast v0, Ljn1;
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setEventListener(Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+    invoke-interface {v0, p1}, Ljn1;->a(Z)V
 
-    move-result-object p1
+    goto :goto_0
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;
+    :cond_1
+    :goto_1
+    return-void
+.end method
 
-    iget-object v0, p0, Lg51;->X:Lgv1;
+.method public final c(Z)V
+    .locals 2
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnPrepared(Lli6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+    new-instance v0, Lat;
 
-    move-result-object p1
+    const/16 v1, 0x8
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;
+    invoke-direct {v0, v1, p0}, Lat;-><init>(ILjava/lang/Object;)V
 
-    iget-object v0, p0, Lg51;->Y:Lfx0;
+    sget-object v1, Lzx0;->X:Lzx0;
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnError(Lli6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;
-
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams$Builder;->build()Lru/ok/android/externcalls/sdk/factory/JoinByLinkParams;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_0
-    iget-object v0, p0, Lg51;->Z:Ljava/lang/Object;
-
-    check-cast v0, Lorg/json/JSONObject;
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
-
-    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+    invoke-static {v0, v1}, Llee;->g(Lzde;Lem6;)Loz5;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;->setPayload(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
+    new-instance v1, Lnz5;
 
-    move-result-object p1
+    invoke-direct {v1, v0}, Lnz5;-><init>(Loz5;)V
 
-    iget-wide v0, p0, Lg51;->b:J
+    :goto_0
+    invoke-virtual {v1}, Lnz5;->hasNext()Z
 
-    invoke-static {v0, v1}, Ltdb;->b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    move-result v0
 
-    move-result-object v0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setMyId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
-
-    iget-object v0, p0, Lg51;->c:Lsye;
-
-    iget-boolean v0, v0, Lsye;->b:Z
-
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setStartWithVideo(Z)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
-
-    iget-object v0, p0, Lg51;->o:Lk51;
-
-    iget-object v0, v0, Lk51;->b:Liu7;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v1}, Lnz5;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lmw1;
+    check-cast v0, Ljn1;
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setEventListener(Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+    invoke-interface {v0, p1}, Ljn1;->c(Z)V
 
-    move-result-object p1
+    goto :goto_0
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
+    :cond_0
+    return-void
+.end method
 
-    iget-object v0, p0, Lg51;->X:Lgv1;
+.method public final d(Landroid/graphics/RectF;Z)V
+    .locals 2
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnPrepared(Lli6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+    new-instance v0, Lat;
 
-    move-result-object p1
+    const/16 v1, 0x8
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
+    invoke-direct {v0, v1, p0}, Lat;-><init>(ILjava/lang/Object;)V
 
-    iget-object v0, p0, Lg51;->Y:Lfx0;
+    sget-object v1, Lzx0;->t0:Lzx0;
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnError(Lli6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+    invoke-static {v0, v1}, Llee;->g(Lzde;Lem6;)Loz5;
 
-    move-result-object p1
+    move-result-object v0
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;
+    new-instance v1, Lnz5;
 
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/factory/CreateConfParams$Builder;->build()Lru/ok/android/externcalls/sdk/factory/CreateConfParams;
+    invoke-direct {v1, v0}, Lnz5;-><init>(Loz5;)V
 
-    move-result-object p1
+    :goto_0
+    invoke-virtual {v1}, Lnz5;->hasNext()Z
 
-    return-object p1
+    move-result v0
 
-    nop
+    if-eqz v0, :cond_0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {v1}, Lnz5;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lhn1;
+
+    invoke-interface {v0, p1, p2}, Lhn1;->d(Landroid/graphics/RectF;Z)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final e(Z)V
+    .locals 2
+
+    new-instance v0, Lat;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1, p0}, Lat;-><init>(ILjava/lang/Object;)V
+
+    sget-object v1, Lzx0;->d:Lzx0;
+
+    invoke-static {v0, v1}, Llee;->g(Lzde;Lem6;)Loz5;
+
+    move-result-object v0
+
+    new-instance v1, Lnz5;
+
+    invoke-direct {v1, v0}, Lnz5;-><init>(Loz5;)V
+
+    :goto_0
+    invoke-virtual {v1}, Lnz5;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v1}, Lnz5;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lhn1;
+
+    invoke-interface {v0, p1}, Lhn1;->e(Z)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final f(Lo98;ZJ)V
+    .locals 2
+
+    new-instance v0, Lat;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1, p0}, Lat;-><init>(ILjava/lang/Object;)V
+
+    sget-object v1, Lzx0;->Y:Lzx0;
+
+    invoke-static {v0, v1}, Llee;->g(Lzde;Lem6;)Loz5;
+
+    move-result-object v0
+
+    new-instance v1, Lnz5;
+
+    invoke-direct {v1, v0}, Lnz5;-><init>(Loz5;)V
+
+    :goto_0
+    invoke-virtual {v1}, Lnz5;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v1}, Lnz5;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lhn1;
+
+    invoke-interface {v0, p1, p2, p3, p4}, Lhn1;->f(Lo98;ZJ)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final g(Lo98;ZJ)V
+    .locals 2
+
+    new-instance v0, Lat;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1, p0}, Lat;-><init>(ILjava/lang/Object;)V
+
+    sget-object v1, Lzx0;->Z:Lzx0;
+
+    invoke-static {v0, v1}, Llee;->g(Lzde;Lem6;)Loz5;
+
+    move-result-object v0
+
+    new-instance v1, Lnz5;
+
+    invoke-direct {v1, v0}, Lnz5;-><init>(Loz5;)V
+
+    :goto_0
+    invoke-virtual {v1}, Lnz5;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v1}, Lnz5;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljn1;
+
+    invoke-interface {v0, p1, p2, p3, p4}, Ljn1;->g(Lo98;ZJ)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public getShouldScaleMainOpponent()Z
+    .locals 2
+
+    new-instance v0, Lat;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1, p0}, Lat;-><init>(ILjava/lang/Object;)V
+
+    sget-object v1, Lzx0;->s0:Lzx0;
+
+    invoke-static {v0, v1}, Llee;->g(Lzde;Lem6;)Loz5;
+
+    move-result-object v0
+
+    new-instance v1, Lnz5;
+
+    invoke-direct {v1, v0}, Lnz5;-><init>(Loz5;)V
+
+    :cond_0
+    invoke-virtual {v1}, Lnz5;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v1}, Lnz5;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lhn1;
+
+    invoke-interface {v0}, Lhn1;->getShouldScaleMainOpponent()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final o(Z)V
+    .locals 2
+
+    if-nez p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    new-instance v0, Lat;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1, p0}, Lat;-><init>(ILjava/lang/Object;)V
+
+    sget-object v1, Lzx0;->c:Lzx0;
+
+    invoke-static {v0, v1}, Llee;->g(Lzde;Lem6;)Loz5;
+
+    move-result-object v0
+
+    new-instance v1, Lnz5;
+
+    invoke-direct {v1, v0}, Lnz5;-><init>(Loz5;)V
+
+    :goto_0
+    invoke-virtual {v1}, Lnz5;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v1}, Lnz5;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lhn1;
+
+    invoke-interface {v0, p1}, Lhn1;->o(Z)V
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    return-void
 .end method

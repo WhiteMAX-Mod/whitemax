@@ -1,79 +1,95 @@
 .class public final Lee6;
-.super Ltb4;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
-.field public final synthetic b:Landroidx/fragment/app/a;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/String;
+
+.field public final synthetic c:Landroid/content/Context;
+
+.field public final synthetic d:Lqt6;
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>(Landroidx/fragment/app/a;)V
+.method public synthetic constructor <init>(Ljava/lang/String;Landroid/content/Context;Lqt6;II)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p5, p0, Lee6;->a:I
 
-    iput-object p1, p0, Lee6;->b:Landroidx/fragment/app/a;
+    iput-object p1, p0, Lee6;->b:Ljava/lang/String;
+
+    iput-object p2, p0, Lee6;->c:Landroid/content/Context;
+
+    iput-object p3, p0, Lee6;->d:Lqt6;
+
+    iput p4, p0, Lee6;->o:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(I)Landroid/view/View;
-    .locals 3
+.method public final call()Ljava/lang/Object;
+    .locals 4
 
-    iget-object v0, p0, Lee6;->b:Landroidx/fragment/app/a;
+    iget v0, p0, Lee6;->a:I
 
-    iget-object v1, v0, Landroidx/fragment/app/a;->R0:Landroid/view/View;
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz v1, :cond_0
+    :try_start_0
+    iget-object v0, p0, Lee6;->b:Ljava/lang/String;
 
-    invoke-virtual {v1, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    iget-object v1, p0, Lee6;->c:Landroid/content/Context;
 
-    move-result-object p1
+    iget-object v2, p0, Lee6;->d:Lqt6;
 
-    return-object p1
+    iget v3, p0, Lee6;->o:I
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-static {v0, v1, v2, v3}, Lge6;->a(Ljava/lang/String;Landroid/content/Context;Lqt6;I)Lfe6;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const-string v2, "Fragment "
+    goto :goto_0
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :catchall_0
+    new-instance v0, Lfe6;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const/4 v1, -0x3
 
-    const-string v0, " does not have a view"
+    invoke-direct {v0, v1}, Lfe6;-><init>(I)V
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :goto_0
+    return-object v0
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :pswitch_0
+    iget-object v0, p0, Lee6;->d:Lqt6;
+
+    iget v1, p0, Lee6;->o:I
+
+    iget-object v2, p0, Lee6;->b:Ljava/lang/String;
+
+    iget-object v3, p0, Lee6;->c:Landroid/content/Context;
+
+    invoke-static {v2, v3, v0, v1}, Lge6;->a(Ljava/lang/String;Landroid/content/Context;Lqt6;I)Lfe6;
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    return-object v0
 
-    throw p1
-.end method
-
-.method public final e()Z
-    .locals 1
-
-    iget-object v0, p0, Lee6;->b:Landroidx/fragment/app/a;
-
-    iget-object v0, v0, Landroidx/fragment/app/a;->R0:Landroid/view/View;
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

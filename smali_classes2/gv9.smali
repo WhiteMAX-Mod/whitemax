@@ -1,115 +1,112 @@
 .class public final Lgv9;
-.super Lcmi;
+.super Ldtf;
 .source "SourceFile"
+
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic X:Lone/me/messages/list/ui/MessagesListWidget;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 1
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+    .locals 0
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    iput-object p2, p0, Lgv9;->X:Lone/me/messages/list/ui/MessagesListWidget;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p2, 0x2
 
-    iput-wide p1, p0, Lgv9;->a:J
+    invoke-direct {p0, p2, p1}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p0, p1, p2}, Lgv9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return v0
+    move-result-object p1
 
-    :cond_0
-    instance-of v1, p1, Lgv9;
-
-    if-nez v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
     check-cast p1, Lgv9;
 
-    iget-wide v1, p0, Lgv9;->a:J
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    iget-wide v3, p1, Lgv9;->a:J
+    invoke-virtual {p1, p2}, Lgv9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    cmp-long p1, v1, v3
-
-    if-eqz p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    sget-object p1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget-wide v0, p0, Lgv9;->a:J
+    new-instance v0, Lgv9;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    iget-object v1, p0, Lgv9;->X:Lone/me/messages/list/ui/MessagesListWidget;
 
-    move-result v0
+    invoke-direct {v0, p2, v1}, Lgv9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
 
-    mul-int/lit8 v0, v0, 0x1f
+    iput-object p1, v0, Lgv9;->o:Ljava/lang/Object;
 
-    sget-object v1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    return-object v0
+.end method
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lgv9;->o:Ljava/lang/Object;
+
+    check-cast p1, Lo3e;
+
+    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->b1:[Lyy7;
+
+    iget-object v0, p0, Lgv9;->X:Lone/me/messages/list/ui/MessagesListWidget;
+
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->E0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroidx/recyclerview/widget/a;->x()I
 
     move-result v1
 
-    add-int/2addr v1, v0
+    if-nez v1, :cond_0
 
-    return v1
-.end method
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->E0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    move-result-object v1
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    new-instance v2, Lhv9;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-direct {v2, v0, p1}, Lhv9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;Lo3e;)V
 
-    const-string v2, "Value(value="
+    invoke-virtual {v1, v2}, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->u1(Lxq9;)V
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    goto :goto_0
 
-    iget-wide v2, p0, Lgv9;->a:J
+    :cond_0
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->E0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
 
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    const-string v2, ", timeUnit="
+    const-string v2, "ScrollButton"
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->w1(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {v0, p1}, Lone/me/messages/list/ui/MessagesListWidget;->z0(Lone/me/messages/list/ui/MessagesListWidget;Lo3e;)V
 
-    const-string v0, ")"
+    :goto_0
+    sget-object p1, Lqqg;->a:Lqqg;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

@@ -1,109 +1,91 @@
-.class public final Lhgb;
+.class public abstract Lhgb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# static fields
+.field public static final a:I
 
-.field public final b:I
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
 
 
 # direct methods
-.method public constructor <init>(II)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Ll0d;->web_app_root_choose_media_bottomsheet_camera:I
 
-    iput p1, p0, Lhgb;->a:I
+    sput v0, Lhgb;->a:I
 
-    iput p2, p0, Lhgb;->b:I
+    sget v0, Ll0d;->web_app_root_choose_media_bottomsheet_file_manager:I
+
+    sput v0, Lhgb;->b:I
+
+    sget v0, Ll0d;->web_app_root_choose_media_bottomsheet_gallery:I
+
+    sput v0, Lhgb;->c:I
+
+    sget v0, Ll0d;->webapp_root_content_container:I
+
+    sput v0, Lhgb;->d:I
+
+    sget v0, Ll0d;->webapp_root_error_container:I
+
+    sput v0, Lhgb;->e:I
+
+    sget v0, Ll0d;->webapp_root_frame:I
+
+    sput v0, Lhgb;->f:I
+
+    sget v0, Ll0d;->webapp_root_progressbar:I
+
+    sput v0, Lhgb;->g:I
+
+    sget v0, Ll0d;->webapp_root_settings_header:I
+
+    sput v0, Lhgb;->h:I
+
+    sget v0, Ll0d;->webapp_root_settings_sections_recycler:I
+
+    sput v0, Lhgb;->i:I
+
+    sget v0, Ll0d;->webapp_root_settings_switcher:I
+
+    sput v0, Lhgb;->j:I
+
+    sget v0, Ll0d;->webapp_root_settings_transition:I
+
+    sput v0, Lhgb;->k:I
+
+    sget v0, Ll0d;->webapp_root_toolbar:I
+
+    sput v0, Lhgb;->l:I
+
+    sget v0, Ll0d;->webapp_root_webview:I
+
+    sput v0, Lhgb;->m:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lhgb;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lhgb;
-
-    iget v1, p0, Lhgb;->a:I
-
-    iget v3, p1, Lhgb;->a:I
-
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget v1, p0, Lhgb;->b:I
-
-    iget p1, p1, Lhgb;->b:I
-
-    if-eq v1, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget v0, p0, Lhgb;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lhgb;->b:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", bitrate="
-
-    const-string v1, ")"
-
-    const-string v2, "Bitrate(dimension="
-
-    iget v3, p0, Lhgb;->a:I
-
-    iget v4, p0, Lhgb;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Ley1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

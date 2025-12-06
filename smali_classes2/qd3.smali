@@ -1,67 +1,72 @@
-.class public abstract synthetic Lqd3;
+.class public final Lqd3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lld3;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lld3;I)V
+    .locals 0
 
-    invoke-static {}, Lk10;->values()[Lk10;
+    iput p2, p0, Lqd3;->a:I
 
-    move-result-object v0
+    iput-object p1, p0, Lqd3;->b:Lld3;
 
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    const/4 v1, 0x1
-
-    :try_start_0
-    aput v1, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    const/4 v1, 0x2
-
-    :try_start_1
-    aput v1, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    const/16 v1, 0x8
-
-    const/4 v2, 0x3
-
-    :try_start_2
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    const/4 v1, 0x4
-
-    :try_start_3
-    aput v1, v0, v2
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    const/4 v2, 0x5
-
-    :try_start_4
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    sput-object v0, Lqd3;->$EnumSwitchMapping$0:[I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 1
+
+    iget v0, p0, Lqd3;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lqd3;->b:Lld3;
+
+    invoke-virtual {v0}, Lld3;->a()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lqd3;->b:Lld3;
+
+    invoke-virtual {v0}, Lld3;->a()V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lqd3;->b:Lld3;
+
+    invoke-virtual {v0}, Lld3;->a()V
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lqd3;->b:Lld3;
+
+    invoke-virtual {v0}, Lld3;->a()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

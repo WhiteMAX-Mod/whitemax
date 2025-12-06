@@ -1,52 +1,114 @@
-.class public final Lbj5;
+.class public abstract Lbj5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:Llj5;
+# static fields
+.field public static final a:Laj5;
 
 
 # direct methods
-.method public constructor <init>(Llj5;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Laj5;
 
-    iput-object p1, p0, Lbj5;->a:Llj5;
+    const-string v1, "No further exceptions"
+
+    invoke-direct {v0, v1}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Lbj5;->a:Laj5;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a()V
+.method public static a(Ljava/lang/String;)Ljava/lang/NullPointerException;
     .locals 2
 
-    iget-object v0, p0, Lbj5;->a:Llj5;
+    new-instance v0, Ljava/lang/NullPointerException;
 
-    iget-boolean v1, v0, Llj5;->M0:Z
+    const-string v1, " Null values are generally not allowed in 3.x operators and sources."
 
-    if-eqz v1, :cond_0
+    invoke-virtual {p0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    iget-object v1, v0, Llj5;->L0:Lnsd;
+    move-result-object p0
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {v0, p0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    goto :goto_0
+    return-object v0
+.end method
+
+.method public static b(Ljava/lang/Object;Ljava/lang/String;)V
+    .locals 0
+
+    if-eqz p0, :cond_0
+
+    return-void
 
     :cond_0
-    iget-boolean v1, v0, Llj5;->b1:Z
+    invoke-static {p1}, Lbj5;->a(Ljava/lang/String;)Ljava/lang/NullPointerException;
 
-    if-eqz v1, :cond_1
+    move-result-object p0
 
-    :goto_0
-    iget-object v0, v0, Llj5;->q0:Lkjf;
+    throw p0
+.end method
 
-    const/4 v1, 0x2
+.method public static c(JLjava/util/concurrent/TimeUnit;)Ljava/lang/String;
+    .locals 2
 
-    invoke-virtual {v0, v1}, Lkjf;->f(I)Z
+    const-string v0, "The source did not signal an event for "
+
+    const-string v1, " "
+
+    invoke-static {p0, p1, v0, v1}, Laz1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p0
+
+    invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, " and has been terminated."
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static d(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    .locals 1
+
+    instance-of v0, p0, Ljava/lang/Error;
+
+    if-nez v0, :cond_1
+
+    instance-of v0, p0, Ljava/lang/RuntimeException;
+
+    if-eqz v0, :cond_0
+
+    check-cast p0, Ljava/lang/RuntimeException;
+
+    return-object p0
+
+    :cond_0
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    return-object v0
 
     :cond_1
-    return-void
+    check-cast p0, Ljava/lang/Error;
+
+    throw p0
 .end method

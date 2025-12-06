@@ -1,61 +1,124 @@
-.class public final Llme;
-.super Lte5;
+.class public final synthetic Llme;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcm6;
 
-# static fields
-.field public static final a:Llme;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ltme;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Ltme;I)V
+    .locals 0
 
-    new-instance v0, Llme;
+    iput p2, p0, Llme;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Llme;->b:Ltme;
 
-    sput-object v0, Llme;->a:Llme;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 7
 
-    const/4 v0, 0x1
+    iget v0, p0, Llme;->a:I
 
-    if-ne p0, p1, :cond_0
+    iget-object v1, p0, Llme;->b:Ltme;
 
-    return v0
+    packed-switch v0, :pswitch_data_0
+
+    sget-object v0, Ltme;->z0:[Lyy7;
+
+    iget-object v0, v1, Ltme;->d:Lk18;
+
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Liz5;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, v0, Liz5;->c:Landroid/content/Context;
+
+    invoke-static {v0}, Liz5;->b(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "ringtones"
+
+    invoke-static {v0, v2}, Liz5;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/io/File;->listFiles()[Ljava/io/File;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    array-length v2, v0
+
+    const/4 v3, 0x0
+
+    :goto_0
+    if-ge v3, v2, :cond_0
+
+    aget-object v4, v0, v3
+
+    iget-object v5, v1, Ltme;->v0:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v4}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6, v4}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
 
     :cond_0
-    instance-of p1, p1, Llme;
+    sget-object v0, Lqqg;->a:Lqqg;
 
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
+    goto :goto_1
 
     :cond_1
-    return v0
-.end method
+    const/4 v0, 0x0
 
-.method public final hashCode()I
-    .locals 1
+    :goto_1
+    return-object v0
 
-    const v0, 0x195d1509
+    :pswitch_0
+    iget-object v0, v1, Ltme;->o:Lk18;
 
-    return v0
-.end method
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    move-result-object v0
 
-    const-string v0, "ShowPlaceholderSurnameEvent"
+    check-cast v0, Landroid/content/Context;
+
+    const-string v1, "audio"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/media/AudioManager;
 
     return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

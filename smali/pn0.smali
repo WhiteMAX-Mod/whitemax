@@ -4,5 +4,11 @@
 
 
 # virtual methods
-.method public abstract a(J)J
+.method public abstract b(Lip5;J)Lnn0;
+.end method
+
+.method public e()V
+    .locals 0
+
+    return-void
 .end method

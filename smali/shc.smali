@@ -2,6 +2,10 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lthc;
-.implements Lvv4;
+
+# virtual methods
+.method public abstract c()V
+.end method
+
+.method public abstract e(ILjava/lang/Object;)V
+.end method

@@ -3,74 +3,90 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lfg4;
+.implements Lgu3;
 
 
 # instance fields
-.field public final synthetic X:J
+.field public final synthetic a:I
 
-.field public final synthetic Y:Ljava/lang/String;
+.field public final synthetic b:Lps5;
 
-.field public final synthetic Z:J
-
-.field public final synthetic a:Landroid/net/Uri;
-
-.field public final synthetic b:J
-
-.field public final synthetic c:J
-
-.field public final synthetic o:Ljava/lang/String;
+.field public final synthetic c:Ljava/util/List;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/net/Uri;JJLjava/lang/String;JLjava/lang/String;J)V
+.method public synthetic constructor <init>(Lps5;Ljava/util/List;I)V
     .locals 0
 
+    iput p3, p0, Lks5;->a:I
+
+    iput-object p1, p0, Lks5;->b:Lps5;
+
+    iput-object p2, p0, Lks5;->c:Ljava/util/List;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lks5;->a:Landroid/net/Uri;
-
-    iput-wide p2, p0, Lks5;->b:J
-
-    iput-wide p4, p0, Lks5;->c:J
-
-    iput-object p6, p0, Lks5;->o:Ljava/lang/String;
-
-    iput-wide p7, p0, Lks5;->X:J
-
-    iput-object p9, p0, Lks5;->Y:Ljava/lang/String;
-
-    iput-wide p10, p0, Lks5;->Z:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 13
+.method public final accept(Ljava/lang/Object;)V
+    .locals 5
 
-    iget-object v0, p0, Lks5;->a:Landroid/net/Uri;
+    iget v0, p0, Lks5;->a:I
 
-    invoke-virtual {v0}, Landroid/net/Uri;->toString()Ljava/lang/String;
+    const-string v1, "ps5"
 
-    move-result-object v10
+    iget-object v2, p0, Lks5;->c:Ljava/util/List;
 
-    new-instance v1, Lone/me/filedownloadwarning/FileDownloadWarningBottomSheet;
+    iget-object v3, p0, Lks5;->b:Lps5;
 
-    iget-wide v2, p0, Lks5;->b:J
+    check-cast p1, Ljava/lang/Throwable;
 
-    iget-wide v4, p0, Lks5;->c:J
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v6, p0, Lks5;->o:Ljava/lang/String;
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
-    iget-wide v7, p0, Lks5;->X:J
+    const-string v4, "onListUpdated: failed to store stickers %s"
 
-    iget-object v9, p0, Lks5;->Y:Ljava/lang/String;
+    filled-new-array {v2}, [Ljava/lang/Object;
 
-    iget-wide v11, p0, Lks5;->Z:J
+    move-result-object v2
 
-    invoke-direct/range {v1 .. v12}, Lone/me/filedownloadwarning/FileDownloadWarningBottomSheet;-><init>(JJLjava/lang/String;JLjava/lang/String;Ljava/lang/String;J)V
+    invoke-static {v0, v4, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    return-object v1
+    move-result-object v0
+
+    invoke-static {v1, v0, p1}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-virtual {v3}, Lps5;->f()V
+
+    return-void
+
+    :pswitch_0
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+
+    const-string v4, "onNotifRemoved: failed to remove stickers %s from cache"
+
+    filled-new-array {v2}, [Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-static {v0, v4, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0, p1}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-virtual {v3}, Lps5;->f()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

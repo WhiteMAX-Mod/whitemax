@@ -3,70 +3,53 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lfla;
+.implements Lqy1;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:J
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic b:Ltu1;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public synthetic constructor <init>(JLtu1;)V
     .locals 0
 
-    iput p1, p0, Ljy1;->a:I
-
-    iput-object p2, p0, Ljy1;->b:Ljava/lang/Object;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Ljy1;->a:J
+
+    iput-object p3, p0, Ljy1;->b:Ltu1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)V
-    .locals 1
+.method public final a(Landroid/hardware/camera2/TotalCaptureResult;)Z
+    .locals 2
 
-    iget v0, p0, Ljy1;->a:I
+    iget-wide v0, p0, Ljy1;->a:J
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {p1, v0, v1}, Lry1;->x(Landroid/hardware/camera2/TotalCaptureResult;J)Z
 
-    iget-object v0, p0, Ljy1;->b:Ljava/lang/Object;
+    move-result p1
 
-    check-cast v0, Lud6;
+    if-eqz p1, :cond_0
 
-    invoke-virtual {v0, p1}, Lh38;->k(Ljava/lang/Object;)V
+    const/4 p1, 0x0
 
-    return-void
+    iget-object v0, p0, Ljy1;->b:Ltu1;
 
-    :pswitch_0
-    iget-object v0, p0, Ljy1;->b:Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Ltu1;->b(Ljava/lang/Object;)Z
 
-    check-cast v0, Le0c;
+    const/4 p1, 0x1
 
-    check-cast v0, Lb0c;
+    return p1
 
-    invoke-virtual {v0, p1}, Lb0c;->g(Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_0
+    const/4 p1, 0x0
 
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Ljy1;->b:Ljava/lang/Object;
-
-    check-cast v0, Lky1;
-
-    invoke-virtual {v0, p1}, Lh38;->k(Ljava/lang/Object;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return p1
 .end method

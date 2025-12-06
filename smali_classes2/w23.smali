@@ -1,48 +1,122 @@
 .class public final Lw23;
-.super Ly14;
+.super Leve;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Lv23;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public w0:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lv23;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Lw23;->Y:Lv23;
+    invoke-direct {p0}, Leve;-><init>()V
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v0, ""
+
+    iput-object v0, p0, Lw23;->w0:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final m(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;Lshg;ZLi40;)V
+    .locals 3
 
-    iput-object p1, p0, Lw23;->o:Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
-    iget p1, p0, Lw23;->X:I
+    move-result-object v0
 
-    const/high16 v0, -0x80000000
+    sget v1, Lk1b;->q:I
 
-    or-int/2addr p1, v0
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    iput p1, p0, Lw23;->X:I
+    move-result-object v0
 
-    iget-object p1, p0, Lw23;->Y:Lv23;
+    iput-object v0, p0, Lw23;->w0:Ljava/lang/String;
 
+    if-eqz p3, :cond_3
+
+    if-nez p5, :cond_3
+
+    invoke-static {p3, v0}, Lvfi;->d(Landroid/view/View;Ljava/lang/String;)Landroid/view/View;
+
+    move-result-object v0
+
+    instance-of v1, v0, Lyfb;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Lyfb;
+
+    goto :goto_0
+
+    :cond_0
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lv23;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :goto_0
+    const/4 v1, 0x1
 
-    move-result-object p1
+    if-eqz v0, :cond_1
 
-    return-object p1
+    invoke-virtual {v0}, Lyfb;->getSearchView()Lfbb;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v2, v1}, Lfbb;->setExpandable(Z)V
+
+    :cond_1
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Lyfb;->g()V
+
+    :cond_2
+    if-eqz v0, :cond_3
+
+    invoke-virtual {v0}, Lyfb;->getSearchView()Lfbb;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_3
+
+    sget v2, Lfbb;->H0:I
+
+    invoke-virtual {v0, v1}, Lfbb;->c(Z)V
+
+    :cond_3
+    invoke-super/range {p0 .. p6}, Leve;->m(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;Lshg;ZLi40;)V
+
+    return-void
+.end method
+
+.method public final o()V
+    .locals 2
+
+    iget-object v0, p0, Lw23;->w0:Ljava/lang/String;
+
+    iget-object v1, p0, Leve;->Y:Lus;
+
+    invoke-virtual {v1, v0, v0}, Lz0f;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public final p(Landroid/view/View;Z)Lbig;
+    .locals 2
+
+    new-instance v0, Lbig;
+
+    invoke-direct {v0}, Lbig;-><init>()V
+
+    new-instance v1, Lv23;
+
+    invoke-direct {v1, p1, p0, p2}, Lv23;-><init>(Landroid/view/View;Lw23;Z)V
+
+    invoke-virtual {v0, v1}, Lbig;->Q(Lrhg;)V
+
+    return-object v0
 .end method

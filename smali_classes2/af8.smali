@@ -1,201 +1,179 @@
-.class public final synthetic Laf8;
-.super Ljava/lang/Object;
+.class public final Laf8;
+.super Lxy;
 .source "SourceFile"
-
-# interfaces
-.implements Lsr3;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:J
 
-.field public final synthetic b:Lgf8;
+.field public final Y:J
 
-.field public final synthetic c:Ljava/lang/String;
+.field public final Z:Ljava/util/List;
+
+.field public final d:Lcf8;
+
+.field public final o:J
+
+.field public final s0:Ljava/lang/String;
+
+.field public final t0:F
+
+.field public final u0:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lgf8;Ljava/lang/String;I)V
-    .locals 0
+.method public constructor <init>(Lcf8;JJJLjava/util/List;Ljava/lang/String;FZZZ)V
+    .locals 1
 
-    iput p3, p0, Laf8;->a:I
+    sget-object v0, Ls00;->y0:Ls00;
 
-    iput-object p1, p0, Laf8;->b:Lgf8;
+    invoke-direct {p0, v0, p12, p13}, Lxy;-><init>(Ls00;ZZ)V
 
-    iput-object p2, p0, Laf8;->c:Ljava/lang/String;
+    iput-object p1, p0, Laf8;->d:Lcf8;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-wide p2, p0, Laf8;->o:J
+
+    iput-wide p4, p0, Laf8;->X:J
+
+    iput-wide p6, p0, Laf8;->Y:J
+
+    iput-object p8, p0, Laf8;->Z:Ljava/util/List;
+
+    iput-object p9, p0, Laf8;->s0:Ljava/lang/String;
+
+    iput-boolean p11, p0, Laf8;->u0:Z
+
+    iput p10, p0, Laf8;->t0:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 10
+.method public final a()Ljava/util/HashMap;
+    .locals 8
 
-    iget v0, p0, Laf8;->a:I
+    invoke-super {p0}, Lxy;->a()Ljava/util/HashMap;
 
-    const-string v1, "gf8"
+    move-result-object v0
 
-    iget-object v2, p0, Laf8;->c:Ljava/lang/String;
+    iget-object v1, p0, Laf8;->d:Lcf8;
 
-    iget-object v3, p0, Laf8;->b:Lgf8;
+    iget-wide v2, v1, Lcf8;->a:D
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
-    check-cast p1, Ljava/lang/Throwable;
+    move-result-object v2
 
-    const-string v0, "searchChats: exception"
+    const-string v3, "latitude"
 
-    invoke-static {v1, v0, p1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v0, v3, Lgf8;->g:Lsf5;
+    iget-wide v2, v1, Lcf8;->b:D
 
-    new-instance v1, Lru/ok/tamtam/search/MainSearchLoaderImpl$NotFoundException;
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
-    invoke-direct {v1, v2, p1}, Lru/ok/tamtam/search/MainSearchLoaderImpl$NotFoundException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-result-object v2
 
-    invoke-interface {v0, v1}, Lsf5;->a(Ljava/lang/Throwable;)V
+    const-string v3, "longitude"
 
-    return-void
+    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    :pswitch_0
-    check-cast p1, Ljava/lang/Throwable;
+    const-wide/16 v2, 0x0
 
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-wide v4, p0, Laf8;->o:J
 
-    const-string v0, "searchChatsAndMessages: exception"
+    cmp-long v2, v4, v2
 
-    invoke-static {v1, v0, p1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    if-lez v2, :cond_0
 
-    iget-object v0, v3, Lgf8;->g:Lsf5;
+    const-string v2, "livePeriod"
 
-    new-instance v1, Lru/ok/tamtam/search/MainSearchLoaderImpl$NotFoundException;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-direct {v1, v2, p1}, Lru/ok/tamtam/search/MainSearchLoaderImpl$NotFoundException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-result-object v3
 
-    invoke-interface {v0, v1}, Lsf5;->a(Ljava/lang/Throwable;)V
+    invoke-virtual {v0, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-void
+    :cond_0
+    iget v2, p0, Laf8;->t0:F
 
-    :pswitch_1
-    check-cast p1, Lfv2;
+    const/4 v3, 0x0
 
-    iget-object v0, v3, Lgf8;->q:Ljava/util/ArrayList;
+    cmpl-float v4, v2, v3
 
-    iget-object v1, p1, Lfv2;->c:Ljava/util/List;
+    if-lez v4, :cond_1
 
-    new-instance v4, Ljava/util/ArrayList;
+    const-string v4, "zoom"
 
-    invoke-interface {v1}, Ljava/util/Collection;->size()I
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    move-result v5
+    move-result-object v2
 
-    invoke-direct {v4, v5}, Ljava/util/ArrayList;-><init>(I)V
+    invoke-virtual {v0, v4, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    :cond_1
+    iget-wide v4, v1, Lcf8;->c:D
+
+    const-wide/16 v6, 0x0
+
+    cmpl-double v2, v4, v6
+
+    if-eqz v2, :cond_2
+
+    const-string v2, "alt"
+
+    invoke-static {v4, v5}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_2
+    iget v2, v1, Lcf8;->d:F
+
+    cmpl-float v4, v2, v3
+
+    if-eqz v4, :cond_3
+
+    const-string v4, "epu"
+
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v4, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_3
+    iget v2, v1, Lcf8;->o:F
+
+    cmpl-float v4, v2, v3
+
+    if-eqz v4, :cond_4
+
+    const-string v4, "hdn"
+
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v4, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_4
+    iget v1, v1, Lcf8;->X:F
+
+    cmpl-float v2, v1, v3
+
+    if-eqz v2, :cond_5
+
+    const-string v2, "spd"
+
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v1
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result v5
-
-    if-eqz v5, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v5
-
-    :try_start_0
-    check-cast v5, Lbf9;
-
-    iget-object v6, v5, Lbf9;->b:Lda9;
-
-    iget-wide v7, v5, Lbf9;->a:J
-
-    iget-object v9, v5, Lbf9;->c:Ljava/lang/String;
-
-    iget-object v5, v5, Lbf9;->o:Ljava/util/List;
-
-    invoke-static {v6, v7, v8, v9, v5}, Lhvd;->c(Lda9;JLjava/lang/String;Ljava/util/List;)Lhvd;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
-
-    :cond_0
-    iget-object v1, v3, Lgf8;->n:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
-
-    invoke-virtual {v0, v4}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
-
-    iget-object v1, p1, Lfv2;->X:Ljava/lang/String;
-
-    if-eqz v1, :cond_1
-
-    const-string v4, "0"
-
-    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    const/4 p1, 0x0
-
-    iput-object p1, v3, Lgf8;->s:Ljava/lang/String;
-
-    goto :goto_1
-
-    :cond_1
-    iget-object p1, p1, Lfv2;->X:Ljava/lang/String;
-
-    iput-object p1, v3, Lgf8;->s:Ljava/lang/String;
-
-    :goto_1
-    iget-object p1, v3, Lgf8;->i:Lxe8;
-
-    if-eqz p1, :cond_2
-
-    iget-object v1, v3, Lgf8;->n:Ljava/util/ArrayList;
-
-    const/4 v4, 0x0
-
-    invoke-interface {p1, v2, v1, v4}, Lxe8;->f(Ljava/lang/String;Ljava/util/List;Z)V
-
-    iget-object p1, v3, Lgf8;->i:Lxe8;
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :cond_2
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_5
+    return-object v0
 .end method

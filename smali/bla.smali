@@ -1,154 +1,61 @@
-.class public final Lbla;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.class public abstract Lbla;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lvv4;
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
-
-    iput p1, p0, Lbla;->a:I
-
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    iput-object p2, p0, Lbla;->b:Ljava/lang/Object;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final g()V
+.method public static a()Landroid/app/Notification$MediaStyle;
     .locals 1
 
-    iget v0, p0, Lbla;->a:I
+    new-instance v0, Landroid/app/Notification$MediaStyle;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0}, Landroid/app/Notification$MediaStyle;-><init>()V
 
-    invoke-static {p0}, Lzv4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p0}, Lzv4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method
 
-.method public final h()Z
-    .locals 2
+.method public static b(Landroid/app/Notification$MediaStyle;[ILandroid/support/v4/media/session/MediaSessionCompat$Token;)Landroid/app/Notification$MediaStyle;
+    .locals 0
 
-    iget v0, p0, Lbla;->a:I
+    if-eqz p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lvv4;
-
-    invoke-static {v0}, Lzv4;->c(Lvv4;)Z
-
-    move-result v0
-
-    return v0
-
-    :pswitch_0
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    sget-object v1, Lzv4;->a:Lzv4;
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
+    invoke-static {p0, p1}, Lbla;->e(Landroid/app/Notification$MediaStyle;[I)V
 
     :cond_0
-    const/4 v0, 0x0
+    if-eqz p2, :cond_1
 
-    :goto_0
-    return v0
+    invoke-virtual {p2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->getToken()Ljava/lang/Object;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result-object p1
+
+    check-cast p1, Landroid/media/session/MediaSession$Token;
+
+    invoke-static {p0, p1}, Lbla;->c(Landroid/app/Notification$MediaStyle;Landroid/media/session/MediaSession$Token;)V
+
+    :cond_1
+    return-object p0
 .end method
 
-.method public final run()V
-    .locals 3
+.method public static c(Landroid/app/Notification$MediaStyle;Landroid/media/session/MediaSession$Token;)V
+    .locals 0
 
-    iget v0, p0, Lbla;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lbla;->b:Ljava/lang/Object;
-
-    check-cast v0, Lsqe;
-
-    const-wide/16 v1, 0x0
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lsqe;->a(Ljava/lang/Object;)V
+    invoke-virtual {p0, p1}, Landroid/app/Notification$MediaStyle;->setMediaSession(Landroid/media/session/MediaSession$Token;)Landroid/app/Notification$MediaStyle;
 
     return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lbla;->b:Ljava/lang/Object;
+.method public static d(Landroid/app/Notification$Builder;Landroid/app/Notification$MediaStyle;)V
+    .locals 0
 
-    check-cast v0, Lela;
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setStyle(Landroid/app/Notification$Style;)Landroid/app/Notification$Builder;
 
-    invoke-virtual {p0}, Lbla;->h()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const-wide/16 v1, 0x0
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lela;->d(Ljava/lang/Object;)V
-
-    sget-object v1, Lfa5;->a:Lfa5;
-
-    invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
-
-    invoke-interface {v0}, Lela;->b()V
-
-    :cond_0
     return-void
+.end method
 
-    nop
+.method public static varargs e(Landroid/app/Notification$MediaStyle;[I)V
+    .locals 0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {p0, p1}, Landroid/app/Notification$MediaStyle;->setShowActionsInCompactView([I)Landroid/app/Notification$MediaStyle;
+
+    return-void
 .end method

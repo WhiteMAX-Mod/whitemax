@@ -1,100 +1,85 @@
-.class public final synthetic Ls0b;
-.super Ljava/lang/Object;
+.class public final enum Ls0b;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field public static final enum a:Ls0b;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final enum b:Ls0b;
 
-.field public final synthetic b:Lt0b;
+.field public static final enum c:Ls0b;
+
+.field public static final synthetic d:[Ls0b;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lt0b;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput p2, p0, Ls0b;->a:I
+    new-instance v0, Ls0b;
 
-    iput-object p1, p0, Ls0b;->b:Lt0b;
+    const-string v1, "DEFAULT"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ls0b;->a:Ls0b;
+
+    new-instance v1, Ls0b;
+
+    const-string v2, "SMALL"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Ls0b;->b:Ls0b;
+
+    new-instance v2, Ls0b;
+
+    const-string v3, "BIG"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Ls0b;->c:Ls0b;
+
+    filled-new-array {v0, v1, v2}, [Ls0b;
+
+    move-result-object v0
+
+    sput-object v0, Ls0b;->d:[Ls0b;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Ls0b;
+    .locals 1
 
-# virtual methods
-.method public final run()V
-    .locals 5
+    const-class v0, Ls0b;
 
-    iget v0, p0, Ls0b;->a:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p0
 
-    iget-object v0, p0, Ls0b;->b:Lt0b;
+    check-cast p0, Ls0b;
 
-    iget-object v1, v0, Lt0b;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+    return-object p0
+.end method
 
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+.method public static values()[Ls0b;
+    .locals 1
 
-    move-result v1
+    sget-object v0, Ls0b;->d:[Ls0b;
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    goto :goto_0
+    move-result-object v0
 
-    :cond_0
-    iget-object v1, v0, Lt0b;->b:Ljava/util/concurrent/ExecutorService;
+    check-cast v0, [Ls0b;
 
-    new-instance v2, Lyi;
-
-    const/16 v3, 0x9
-
-    const/4 v4, 0x0
-
-    invoke-direct {v2, v3, v0, v4}, Lyi;-><init>(ILjava/lang/Object;Z)V
-
-    invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    :goto_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Ls0b;->b:Lt0b;
-
-    iget-object v1, v0, Lt0b;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    iget-object v1, v0, Lt0b;->b:Ljava/util/concurrent/ExecutorService;
-
-    new-instance v2, Lyi;
-
-    const/16 v3, 0x9
-
-    const/4 v4, 0x1
-
-    invoke-direct {v2, v3, v0, v4}, Lyi;-><init>(ILjava/lang/Object;Z)V
-
-    invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    :goto_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

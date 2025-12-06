@@ -1,24 +1,113 @@
-.class public abstract Lvr7;
-.super Ljava/lang/Object;
+.class public final Lvr7;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Lq54;
+.implements Lsm6;
 
 
-# static fields
-.field public static final synthetic a:I
+# instance fields
+.field public final synthetic X:Lwr7;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lwr7;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+    iput-object p1, p0, Lvr7;->X:Lwr7;
 
-    const/4 v1, 0x0
+    const/4 p1, 0x2
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Ljava/util/List;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lvr7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lvr7;
+
+    sget-object p2, Lqqg;->a:Lqqg;
+
+    invoke-virtual {p1, p2}, Lvr7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lvr7;
+
+    iget-object v1, p0, Lvr7;->X:Lwr7;
+
+    invoke-direct {v0, v1, p2}, Lvr7;-><init>(Lwr7;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lvr7;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    iget-object v0, p0, Lvr7;->X:Lwr7;
+
+    iget-object v1, v0, Lwr7;->C0:Ltcf;
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lvr7;->o:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/List;
+
+    invoke-static {p1}, Lue3;->I(Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lx2b;
+
+    const/4 v3, 0x0
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v1}, Ltcf;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lx2b;
+
+    iget-object v4, v4, Lx2b;->a:Ljava/lang/String;
+
+    iget-object v5, v2, Lx2b;->a:Ljava/lang/String;
+
+    invoke-static {v4, v5}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    invoke-virtual {v1, v3, v2}, Ltcf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    :cond_0
+    iget-object v0, v0, Lwr7;->z0:Ltcf;
+
+    invoke-virtual {v0, v3, p1}, Ltcf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

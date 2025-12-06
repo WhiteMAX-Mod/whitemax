@@ -2,9 +2,6 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbk1;
-
 
 # instance fields
 .field public final a:Z
@@ -71,13 +68,13 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    const-string v0, "Close(showSnackbar="
+    const-string v0, "CallPresettingsState(isSaveButtonAvailable="
 
     const-string v1, ")"
 
     iget-boolean v2, p0, Lak1;->a:Z
 
-    invoke-static {v0, v1, v2}, Lzdf;->s(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lxrf;->p(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v0
 

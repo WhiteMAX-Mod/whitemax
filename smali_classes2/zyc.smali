@@ -1,31 +1,30 @@
 .class public abstract Lzyc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
 # static fields
-.field public static a:I
+.field public static media_editor_bottom_background_id:I = 0x7f0a04b0
 
-.field public static b:Landroid/util/Size;
+.field public static media_editor_close_id:I = 0x7f0a04b1
 
+.field public static media_editor_content_id:I = 0x7f0a04b2
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.field public static media_editor_crop_id:I = 0x7f0a04b3
 
-    invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
+.field public static media_editor_done_id:I = 0x7f0a04b4
 
-    const/16 v0, 0x8
+.field public static media_editor_flip_horizontally_id:I = 0x7f0a04b5
 
-    sput v0, Lzyc;->a:I
+.field public static media_editor_reset_id:I = 0x7f0a04b6
 
-    new-instance v0, Landroid/util/Size;
+.field public static media_editor_rotate_id:I = 0x7f0a04b7
 
-    const/16 v1, 0xa0
+.field public static media_picker_album_container_id:I = 0x7f0a04ba
 
-    invoke-direct {v0, v1, v1}, Landroid/util/Size;-><init>(II)V
+.field public static media_picker_container_id:I = 0x7f0a04bb
 
-    sput-object v0, Lzyc;->b:Landroid/util/Size;
+.field public static media_picker_content_id:I = 0x7f0a04bc
 
-    return-void
-.end method
+.field public static media_picker_divider_id:I = 0x7f0a04bd
+
+.field public static media_picker_toolbar_id:I = 0x7f0a04be

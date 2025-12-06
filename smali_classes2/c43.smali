@@ -1,63 +1,157 @@
-.class public final Lc43;
-.super Ly14;
+.class public final synthetic Lc43;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lem6;
 
 
 # instance fields
-.field public X:Ljava/util/Set;
+.field public final synthetic a:I
 
-.field public Y:J
+.field public final synthetic b:Lk53;
 
-.field public Z:I
-
-.field public o:Ld43;
-
-.field public synthetic q0:Ljava/lang/Object;
-
-.field public final synthetic r0:Ld43;
-
-.field public s0:I
+.field public final synthetic c:J
 
 
 # direct methods
-.method public constructor <init>(Ld43;Ly14;)V
+.method public synthetic constructor <init>(Lk53;JI)V
     .locals 0
 
-    iput-object p1, p0, Lc43;->r0:Ld43;
+    iput p4, p0, Lc43;->a:I
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lc43;->b:Lk53;
+
+    iput-wide p2, p0, Lc43;->c:J
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    iput-object p1, p0, Lc43;->q0:Ljava/lang/Object;
+    iget v0, p0, Lc43;->a:I
 
-    iget p1, p0, Lc43;->s0:I
+    const/4 v1, 0x3
 
-    const/high16 v0, -0x80000000
+    const/4 v2, 0x1
 
-    or-int/2addr p1, v0
+    sget-object v3, Lqqg;->a:Lqqg;
 
-    iput p1, p0, Lc43;->s0:I
+    iget-wide v4, p0, Lc43;->c:J
 
-    const/4 v3, 0x0
+    iget-object v6, p0, Lc43;->b:Lk53;
 
-    const/4 v4, 0x0
+    check-cast p1, Lecb;
 
-    iget-object v0, p0, Lc43;->r0:Ld43;
+    packed-switch v0, :pswitch_data_0
 
-    const-wide/16 v1, 0x0
+    sget-object v0, Lecb;->o:Lecb;
 
-    move-object v5, p0
+    if-eq p1, v0, :cond_0
 
-    invoke-virtual/range {v0 .. v5}, Ld43;->U(JLjava/util/Set;ILy14;)Ljava/lang/Object;
+    sget-object p1, Lk53;->d1:[Lyy7;
+
+    iget-object p1, v6, Lk53;->F0:Lk18;
+
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    return-object p1
+    check-cast p1, Lc6i;
+
+    new-instance v0, Lkge;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v4, v5, v1}, Lkge;-><init>(JZ)V
+
+    invoke-virtual {p1, v0}, Lc6i;->b(Lhge;)V
+
+    :cond_0
+    return-object v3
+
+    :pswitch_0
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    if-eq p1, v2, :cond_3
+
+    const/4 v0, 0x2
+
+    if-eq p1, v0, :cond_4
+
+    if-eq p1, v1, :cond_2
+
+    const/4 v0, 0x4
+
+    if-ne p1, v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_2
+    invoke-virtual {v6, v4, v5}, Lk53;->z(J)V
+
+    goto :goto_0
+
+    :cond_3
+    invoke-virtual {v6, v4, v5}, Lk53;->C(J)V
+
+    iget-object p1, v6, Lk53;->Z:Lk18;
+
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lald;
+
+    invoke-static {p1, v4, v5}, Lald;->a(Lald;J)V
+
+    :cond_4
+    :goto_0
+    return-object v3
+
+    :pswitch_1
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p1
+
+    if-eqz p1, :cond_6
+
+    if-eq p1, v2, :cond_6
+
+    if-eq p1, v1, :cond_5
+
+    goto :goto_1
+
+    :cond_5
+    invoke-virtual {v6, v4, v5}, Lk53;->B(J)V
+
+    goto :goto_1
+
+    :cond_6
+    invoke-virtual {v6, v4, v5}, Lk53;->C(J)V
+
+    :goto_1
+    return-object v3
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

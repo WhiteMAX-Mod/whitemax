@@ -2,73 +2,22 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lf75;
-
 
 # instance fields
-.field public a:Ljava/io/File;
+.field public final a:I
 
-.field public b:Ljava/io/FileInputStream;
-
-.field public c:Ljava/nio/channels/FileChannel;
+.field public final b:I
 
 
-# virtual methods
-.method public final a(JLjava/nio/ByteBuffer;)I
-    .locals 1
+# direct methods
+.method public constructor <init>(II)V
+    .locals 0
 
-    iget-object v0, p0, Lg75;->c:Ljava/nio/channels/FileChannel;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0, p3, p1, p2}, Ljava/nio/channels/FileChannel;->read(Ljava/nio/ByteBuffer;J)I
+    iput p1, p0, Lg75;->a:I
 
-    move-result p1
-
-    return p1
-.end method
-
-.method public final close()V
-    .locals 1
-
-    iget-object v0, p0, Lg75;->b:Ljava/io/FileInputStream;
-
-    invoke-virtual {v0}, Ljava/io/FileInputStream;->close()V
+    iput p2, p0, Lg75;->b:I
 
     return-void
-.end method
-
-.method public final isOpen()Z
-    .locals 1
-
-    iget-object v0, p0, Lg75;->c:Ljava/nio/channels/FileChannel;
-
-    invoke-virtual {v0}, Ljava/nio/channels/spi/AbstractInterruptibleChannel;->isOpen()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final read(Ljava/nio/ByteBuffer;)I
-    .locals 1
-
-    iget-object v0, p0, Lg75;->c:Ljava/nio/channels/FileChannel;
-
-    invoke-virtual {v0, p1}, Ljava/nio/channels/FileChannel;->read(Ljava/nio/ByteBuffer;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final write(Ljava/nio/ByteBuffer;)I
-    .locals 1
-
-    iget-object v0, p0, Lg75;->c:Ljava/nio/channels/FileChannel;
-
-    invoke-virtual {v0, p1}, Ljava/nio/channels/FileChannel;->write(Ljava/nio/ByteBuffer;)I
-
-    move-result p1
-
-    return p1
 .end method

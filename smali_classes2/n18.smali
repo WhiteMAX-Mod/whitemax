@@ -1,178 +1,221 @@
-.class public Ln18;
+.class public final Ln18;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Ln18;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Landroid/content/SharedPreferences;
 
 
 # instance fields
-.field public final a:J
-
-.field public final b:J
-
-.field public final c:J
-
-.field public final o:J
+.field public final a:Lbwf;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Landroid/content/Context;Lax5;Lbx5;Lt9f;I)V
+    .locals 6
 
-    new-instance v0, Ldu7;
+    and-int/lit8 p5, p5, 0x10
 
-    const/16 v1, 0x17
+    if-eqz p5, :cond_0
 
-    invoke-direct {v0, v1}, Ldu7;-><init>(I)V
+    const/4 p4, 0x0
 
-    sput-object v0, Ln18;->CREATOR:Landroid/os/Parcelable$Creator;
+    :cond_0
+    move-object v4, p4
 
-    return-void
-.end method
+    const-string p4, "file_prefs"
 
-.method public constructor <init>(JJJJ)V
-    .locals 0
+    const/4 p5, 0x0
 
-    .line 1
+    invoke-virtual {p1, p4, p5}, Landroid/content/Context;->getDir(Ljava/lang/String;I)Ljava/io/File;
+
+    move-result-object v1
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-wide p1, p0, Ln18;->a:J
+    new-instance v0, Lfq;
 
-    .line 3
-    iput-wide p3, p0, Ln18;->b:J
+    const/4 v5, 0x4
 
-    .line 4
-    iput-wide p5, p0, Ln18;->c:J
+    move-object v2, p2
 
-    .line 5
-    iput-wide p7, p0, Ln18;->o:J
+    move-object v3, p3
 
-    return-void
-.end method
+    invoke-direct/range {v0 .. v5}, Lfq;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 2
+    new-instance p1, Lbwf;
 
-    .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p1, v0}, Lbwf;-><init>(Lcm6;)V
 
-    .line 7
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Ln18;->a:J
-
-    .line 8
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Ln18;->b:J
-
-    .line 9
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Ln18;->c:J
-
-    .line 10
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Ln18;->o:J
+    iput-object p1, p0, Ln18;->a:Lbwf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public final a()Lzw5;
     .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Ln18;->a:Lbwf;
 
-    return v0
+    invoke-virtual {v0}, Lbwf;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lzw5;
+
+    return-object v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public final contains(Ljava/lang/String;)Z
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {p0}, Ln18;->a()Lzw5;
 
-    const-string v1, "DeepLinkData{chatId="
+    move-result-object v0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v0, v0, Lzw5;->c:Lc9a;
 
-    iget-wide v1, p0, Ln18;->a:J
+    invoke-virtual {v0, p1}, Lc9a;->b(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    move-result p1
 
-    const-string v1, ", messageServerId="
+    return p1
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final edit()Landroid/content/SharedPreferences$Editor;
+    .locals 1
 
-    iget-wide v1, p0, Ln18;->b:J
+    invoke-virtual {p0}, Ln18;->a()Lzw5;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    const-string v1, ", contactId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ln18;->c:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", stickerSetId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ln18;->o:J
-
-    const/16 v3, 0x7d
-
-    invoke-static {v0, v1, v2, v3}, Laab;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
+    invoke-virtual {v0}, Lzw5;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
+.method public final getAll()Ljava/util/Map;
+    .locals 1
 
-    iget-wide v0, p0, Ln18;->a:J
+    invoke-virtual {p0}, Ln18;->a()Lzw5;
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    move-result-object v0
 
-    iget-wide v0, p0, Ln18;->b:J
+    invoke-virtual {v0}, Lzw5;->getAll()Ljava/util/Map;
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    move-result-object v0
 
-    iget-wide v0, p0, Ln18;->c:J
+    return-object v0
+.end method
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+.method public final getBoolean(Ljava/lang/String;Z)Z
+    .locals 1
 
-    iget-wide v0, p0, Ln18;->o:J
+    invoke-virtual {p0}, Ln18;->a()Lzw5;
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    move-result-object v0
+
+    invoke-virtual {v0, p1, p2}, Lzw5;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final getFloat(Ljava/lang/String;F)F
+    .locals 1
+
+    invoke-virtual {p0}, Ln18;->a()Lzw5;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1, p2}, Lzw5;->getFloat(Ljava/lang/String;F)F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final getInt(Ljava/lang/String;I)I
+    .locals 1
+
+    invoke-virtual {p0}, Ln18;->a()Lzw5;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1, p2}, Lzw5;->getInt(Ljava/lang/String;I)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final getLong(Ljava/lang/String;J)J
+    .locals 1
+
+    invoke-virtual {p0}, Ln18;->a()Lzw5;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1, p2, p3}, Lzw5;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    invoke-virtual {p0}, Ln18;->a()Lzw5;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1, p2}, Lzw5;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final getStringSet(Ljava/lang/String;Ljava/util/Set;)Ljava/util/Set;
+    .locals 1
+
+    invoke-virtual {p0}, Ln18;->a()Lzw5;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1, p2}, Lzw5;->getStringSet(Ljava/lang/String;Ljava/util/Set;)Ljava/util/Set;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final registerOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
+    .locals 1
+
+    invoke-virtual {p0}, Ln18;->a()Lzw5;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lzw5;->registerOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
+
+    return-void
+.end method
+
+.method public final unregisterOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
+    .locals 1
+
+    invoke-virtual {p0}, Ln18;->a()Lzw5;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lzw5;->unregisterOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
 
     return-void
 .end method

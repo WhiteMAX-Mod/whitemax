@@ -2,117 +2,70 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lf22;
+
 
 # instance fields
-.field public final a:Ljava/lang/Object;
-
-.field public b:Lxx5;
-
-.field public c:Z
-
-.field public d:Z
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
-    .locals 1
+.method public constructor <init>(I)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ly28;->a:Ljava/lang/Object;
-
-    new-instance p1, Lxx5;
-
-    const/4 v0, 0x1
-
-    invoke-direct {p1, v0}, Lxx5;-><init>(I)V
-
-    iput-object p1, p0, Ly28;->b:Lxx5;
+    iput p1, p0, Ly28;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lw28;)V
-    .locals 2
+.method public final a(Ljava/util/List;)Ljava/util/List;
+    .locals 4
 
-    const/4 v0, 0x1
+    new-instance v0, Ljava/util/ArrayList;
 
-    iput-boolean v0, p0, Ly28;->d:Z
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iget-boolean v0, p0, Ly28;->c:Z
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Ly28;->c:Z
-
-    iget-object v0, p0, Ly28;->b:Lxx5;
-
-    invoke-virtual {v0}, Lxx5;->e()Lzx5;
-
-    move-result-object v0
-
-    iget-object v1, p0, Ly28;->a:Ljava/lang/Object;
-
-    invoke-interface {p1, v1, v0}, Lw28;->g(Ljava/lang/Object;Lzx5;)V
+    move-result-object p1
 
     :cond_0
-    return-void
-.end method
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    move-result v1
 
-    if-ne p0, p1, :cond_0
+    if-eqz v1, :cond_1
 
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    if-eqz p1, :cond_2
-
-    const-class v0, Ly28;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
-    if-eq v0, v1, :cond_1
+    check-cast v1, Ll22;
+
+    instance-of v2, v1, Ll22;
+
+    const-string v3, "The camera info doesn\'t contain internal implementation."
+
+    invoke-static {v3, v2}, Lz5j;->a(Ljava/lang/String;Z)V
+
+    invoke-interface {v1}, Ll22;->h()I
+
+    move-result v2
+
+    iget v3, p0, Ly28;->b:I
+
+    if-ne v2, v3, :cond_0
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
     :cond_1
-    check-cast p1, Ly28;
-
-    iget-object p1, p1, Ly28;->a:Ljava/lang/Object;
-
-    iget-object v0, p0, Ly28;->a:Ljava/lang/Object;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_2
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Ly28;->a:Ljava/lang/Object;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
+    return-object v0
 .end method

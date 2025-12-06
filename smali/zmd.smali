@@ -2,419 +2,220 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ld0h;
-
 
 # instance fields
-.field public final a:Landroid/app/Application;
+.field public a:Lgy0;
 
-.field public final b:Lc0h;
+.field public final b:Lga7;
 
-.field public final c:Landroid/os/Bundle;
+.field public final c:Ljava/lang/String;
 
-.field public final d:Lhx7;
+.field public final d:Lj17;
 
-.field public final e:Lvn;
+.field public final e:Lvfi;
+
+.field public final f:Ljava/util/Map;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Application;Lymd;Landroid/os/Bundle;)V
-    .locals 1
+.method public constructor <init>(Lga7;Ljava/lang/String;Lj17;Lvfi;Ljava/util/Map;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-interface {p2}, Lymd;->m()Lvn;
+    iput-object p1, p0, Lzmd;->b:Lga7;
 
-    move-result-object v0
+    iput-object p2, p0, Lzmd;->c:Ljava/lang/String;
 
-    iput-object v0, p0, Lzmd;->e:Lvn;
+    iput-object p3, p0, Lzmd;->d:Lj17;
 
-    invoke-interface {p2}, Lfx7;->x()Lhx7;
+    iput-object p4, p0, Lzmd;->e:Lvfi;
 
-    move-result-object p2
-
-    iput-object p2, p0, Lzmd;->d:Lhx7;
-
-    iput-object p3, p0, Lzmd;->c:Landroid/os/Bundle;
-
-    iput-object p1, p0, Lzmd;->a:Landroid/app/Application;
-
-    if-eqz p1, :cond_1
-
-    sget-object p2, Lc0h;->c:Lc0h;
-
-    if-nez p2, :cond_0
-
-    new-instance p2, Lc0h;
-
-    invoke-direct {p2, p1}, Lc0h;-><init>(Landroid/app/Application;)V
-
-    sput-object p2, Lc0h;->c:Lc0h;
-
-    :cond_0
-    sget-object p1, Lc0h;->c:Lc0h;
-
-    goto :goto_0
-
-    :cond_1
-    new-instance p1, Lc0h;
-
-    const/4 p2, 0x0
-
-    invoke-direct {p1, p2}, Lc0h;-><init>(Landroid/app/Application;)V
-
-    :goto_0
-    iput-object p1, p0, Lzmd;->b:Lc0h;
+    iput-object p5, p0, Lzmd;->f:Ljava/util/Map;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Class;)Lyzg;
-    .locals 1
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0, p1, v0}, Lzmd;->d(Ljava/lang/Class;Ljava/lang/String;)Lyzg;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Local and anonymous classes can not be ViewModels"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final b(Ljava/lang/Class;Li0a;)Lyzg;
+.method public final a()Lkw6;
     .locals 3
 
-    sget-object v0, Lftd;->u0:Lftd;
+    new-instance v0, Lkw6;
 
-    iget-object v1, p2, Lk74;->a:Ljava/util/LinkedHashMap;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v1, v0}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance v1, Ljava/util/LinkedHashMap;
 
-    move-result-object v0
+    invoke-direct {v1}, Ljava/util/LinkedHashMap;-><init>()V
 
-    check-cast v0, Ljava/lang/String;
+    iput-object v1, v0, Lkw6;->o:Ljava/lang/Object;
 
-    if-eqz v0, :cond_5
+    iget-object v1, p0, Lzmd;->b:Lga7;
 
-    sget-object v2, Lj1i;->a:Ln9a;
+    iput-object v1, v0, Lkw6;->a:Ljava/lang/Object;
 
-    invoke-virtual {v1, v2}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v1, p0, Lzmd;->c:Ljava/lang/String;
 
-    move-result-object v2
+    iput-object v1, v0, Lkw6;->b:Ljava/lang/Object;
 
-    if-eqz v2, :cond_3
+    iget-object v1, p0, Lzmd;->e:Lvfi;
 
-    sget-object v2, Lj1i;->b:Lp9a;
+    iput-object v1, v0, Lkw6;->d:Ljava/lang/Object;
 
-    invoke-virtual {v1, v2}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v1, p0, Lzmd;->f:Ljava/util/Map;
 
-    move-result-object v2
+    invoke-interface {v1}, Ljava/util/Map;->isEmpty()Z
 
-    if-eqz v2, :cond_3
-
-    sget-object v0, Lc0h;->d:Lye8;
-
-    invoke-virtual {v1, v0}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/app/Application;
-
-    const-class v1, Landroidx/lifecycle/AndroidViewModel;
-
-    invoke-virtual {v1, p1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    if-eqz v0, :cond_0
-
-    sget-object v2, Land;->a:Ljava/util/List;
-
-    invoke-static {p1, v2}, Land;->a(Ljava/lang/Class;Ljava/util/List;)Ljava/lang/reflect/Constructor;
-
-    move-result-object v2
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v2, Land;->b:Ljava/util/List;
-
-    invoke-static {p1, v2}, Land;->a(Ljava/lang/Class;Ljava/util/List;)Ljava/lang/reflect/Constructor;
-
-    move-result-object v2
-
-    :goto_0
-    if-nez v2, :cond_1
-
-    iget-object v0, p0, Lzmd;->b:Lc0h;
-
-    invoke-virtual {v0, p1, p2}, Lc0h;->b(Ljava/lang/Class;Li0a;)Lyzg;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_1
-    if-eqz v1, :cond_2
-
-    if-eqz v0, :cond_2
-
-    invoke-static {p2}, Lj1i;->b(Li0a;)Lsmd;
-
-    move-result-object p2
-
-    filled-new-array {v0, p2}, [Ljava/lang/Object;
-
-    move-result-object p2
-
-    invoke-static {p1, v2, p2}, Land;->b(Ljava/lang/Class;Ljava/lang/reflect/Constructor;[Ljava/lang/Object;)Lyzg;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_2
-    invoke-static {p2}, Lj1i;->b(Li0a;)Lsmd;
-
-    move-result-object p2
-
-    filled-new-array {p2}, [Ljava/lang/Object;
-
-    move-result-object p2
-
-    invoke-static {p1, v2, p2}, Land;->b(Ljava/lang/Class;Ljava/lang/reflect/Constructor;[Ljava/lang/Object;)Lyzg;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_3
-    iget-object p2, p0, Lzmd;->d:Lhx7;
-
-    if-eqz p2, :cond_4
-
-    invoke-virtual {p0, p1, v0}, Lzmd;->d(Ljava/lang/Class;Ljava/lang/String;)Lyzg;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_4
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "SAVED_STATE_REGISTRY_OWNER_KEY andVIEW_MODEL_STORE_OWNER_KEY must be provided in the creation extras tosuccessfully create a ViewModel."
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_5
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "VIEW_MODEL_KEY must always be provided by ViewModelProvider"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final d(Ljava/lang/Class;Ljava/lang/String;)Lyzg;
-    .locals 8
-
-    iget-object v0, p0, Lzmd;->d:Lhx7;
-
-    if-eqz v0, :cond_8
-
-    const-class v1, Landroidx/lifecycle/AndroidViewModel;
-
-    invoke-virtual {v1, p1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
-
-    move-result v1
-
-    iget-object v2, p0, Lzmd;->a:Landroid/app/Application;
-
-    if-eqz v1, :cond_0
+    move-result v2
 
     if-eqz v2, :cond_0
 
-    sget-object v3, Land;->a:Ljava/util/List;
+    new-instance v1, Ljava/util/LinkedHashMap;
 
-    invoke-static {p1, v3}, Land;->a(Ljava/lang/Class;Ljava/util/List;)Ljava/lang/reflect/Constructor;
-
-    move-result-object v3
+    invoke-direct {v1}, Ljava/util/LinkedHashMap;-><init>()V
 
     goto :goto_0
 
     :cond_0
-    sget-object v3, Land;->b:Ljava/util/List;
+    new-instance v2, Ljava/util/LinkedHashMap;
 
-    invoke-static {p1, v3}, Land;->a(Ljava/lang/Class;Ljava/util/List;)Ljava/lang/reflect/Constructor;
+    invoke-direct {v2, v1}, Ljava/util/LinkedHashMap;-><init>(Ljava/util/Map;)V
+
+    move-object v1, v2
+
+    :goto_0
+    iput-object v1, v0, Lkw6;->o:Ljava/lang/Object;
+
+    iget-object v1, p0, Lzmd;->d:Lj17;
+
+    invoke-virtual {v1}, Lj17;->c()Li17;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lkw6;->c:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 6
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Request{method="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lzmd;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", url="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lzmd;->b:Lga7;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lzmd;->d:Lj17;
+
+    invoke-virtual {v1}, Lj17;->size()I
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    const-string v2, ", headers=["
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
 
-    :goto_0
-    if-nez v3, :cond_3
+    add-int/lit8 v4, v2, 0x1
 
-    if-eqz v2, :cond_1
+    if-ltz v2, :cond_1
 
-    iget-object p2, p0, Lzmd;->b:Lc0h;
+    check-cast v3, Limb;
 
-    invoke-virtual {p2, p1}, Lc0h;->a(Ljava/lang/Class;)Lyzg;
+    iget-object v5, v3, Limb;->a:Ljava/lang/Object;
 
-    move-result-object p1
+    check-cast v5, Ljava/lang/String;
 
-    return-object p1
+    iget-object v3, v3, Limb;->b:Ljava/lang/Object;
+
+    check-cast v3, Ljava/lang/String;
+
+    if-lez v2, :cond_0
+
+    const-string v2, ", "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_0
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v2, 0x3a
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move v2, v4
+
+    goto :goto_0
 
     :cond_1
-    sget-object p2, Le0h;->a:Le0h;
+    invoke-static {}, Lve3;->p()V
 
-    if-nez p2, :cond_2
+    const/4 v0, 0x0
 
-    new-instance p2, Le0h;
-
-    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
-
-    sput-object p2, Le0h;->a:Le0h;
+    throw v0
 
     :cond_2
-    sget-object p2, Le0h;->a:Le0h;
+    const/16 v1, 0x5d
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p1}, Lcci;->b(Ljava/lang/Class;)Lyzg;
-
-    move-result-object p1
-
-    return-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     :cond_3
-    iget-object v4, p0, Lzmd;->e:Lvn;
+    iget-object v1, p0, Lzmd;->f:Ljava/util/Map;
 
-    invoke-virtual {v4, p2}, Lvn;->c(Ljava/lang/String;)Landroid/os/Bundle;
+    invoke-interface {v1}, Ljava/util/Map;->isEmpty()Z
 
-    move-result-object v5
+    move-result v2
 
-    sget-object v6, Lsmd;->f:[Ljava/lang/Class;
+    if-nez v2, :cond_4
 
-    iget-object v6, p0, Lzmd;->c:Landroid/os/Bundle;
+    const-string v2, ", tags="
 
-    invoke-static {v5, v6}, Lnyi;->b(Landroid/os/Bundle;Landroid/os/Bundle;)Lsmd;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v5
-
-    new-instance v6, Ltmd;
-
-    invoke-direct {v6, p2, v5}, Ltmd;-><init>(Ljava/lang/String;Lsmd;)V
-
-    iget-boolean v7, v6, Ltmd;->c:Z
-
-    if-nez v7, :cond_7
-
-    const/4 v7, 0x1
-
-    iput-boolean v7, v6, Ltmd;->c:Z
-
-    invoke-virtual {v0, v6}, Lhx7;->a(Lbx7;)V
-
-    iget-object v7, v5, Lsmd;->e:Lxmd;
-
-    invoke-virtual {v4, p2, v7}, Lvn;->f(Ljava/lang/String;Lxmd;)V
-
-    iget-object p2, v0, Lhx7;->d:Lhw7;
-
-    sget-object v7, Lhw7;->b:Lhw7;
-
-    if-eq p2, v7, :cond_5
-
-    sget-object v7, Lhw7;->o:Lhw7;
-
-    invoke-virtual {p2, v7}, Lhw7;->a(Lhw7;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_4
-
-    goto :goto_1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     :cond_4
-    new-instance p2, Lml4;
+    const/16 v1, 0x7d
 
-    const/4 v7, 0x3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-direct {p2, v0, v7, v4}, Lml4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v0, p2}, Lhx7;->a(Lbx7;)V
+    move-result-object v0
 
-    goto :goto_2
-
-    :cond_5
-    :goto_1
-    invoke-virtual {v4}, Lvn;->g()V
-
-    :goto_2
-    if-eqz v1, :cond_6
-
-    if-eqz v2, :cond_6
-
-    filled-new-array {v2, v5}, [Ljava/lang/Object;
-
-    move-result-object p2
-
-    invoke-static {p1, v3, p2}, Land;->b(Ljava/lang/Class;Ljava/lang/reflect/Constructor;[Ljava/lang/Object;)Lyzg;
-
-    move-result-object p1
-
-    goto :goto_3
-
-    :cond_6
-    filled-new-array {v5}, [Ljava/lang/Object;
-
-    move-result-object p2
-
-    invoke-static {p1, v3, p2}, Land;->b(Ljava/lang/Class;Ljava/lang/reflect/Constructor;[Ljava/lang/Object;)Lyzg;
-
-    move-result-object p1
-
-    :goto_3
-    const-string p2, "androidx.lifecycle.savedstate.vm.tag"
-
-    invoke-virtual {p1, p2, v6}, Lyzg;->a(Ljava/lang/String;Ljava/lang/AutoCloseable;)V
-
-    return-object p1
-
-    :cond_7
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "Already attached to lifecycleOwner"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_8
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string p2, "SavedStateViewModelFactory constructed with empty constructor supports only calls to create(modelClass: Class<T>, extras: CreationExtras)."
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-object v0
 .end method

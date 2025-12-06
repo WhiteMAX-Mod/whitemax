@@ -1,55 +1,58 @@
 .class public final Lmbh;
-.super Ly14;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lmt1;
 
 
 # instance fields
-.field public X:Llbh;
-
-.field public Y:Lpah;
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Lvbh;
-
-.field public final synthetic q0:Lvbh;
-
-.field public r0:I
+.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
 
 # direct methods
-.method public constructor <init>(Lvbh;Ly14;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Lmbh;->q0:Lvbh;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+
+    iput-object v0, p0, Lmbh;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final c(Lusd;)V
+    .locals 2
 
-    iput-object p1, p0, Lmbh;->Z:Ljava/lang/Object;
+    iget-object v0, p0, Lmbh;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    iget p1, p0, Lmbh;->r0:I
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
-    const/high16 v0, -0x80000000
+    move-result-object v0
 
-    or-int/2addr p1, v0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    iput p1, p0, Lmbh;->r0:I
+    move-result v1
 
-    iget-object p1, p0, Lmbh;->q0:Lvbh;
+    if-eqz v1, :cond_0
 
-    const/4 v0, 0x0
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-virtual {p1, v0, p0}, Lvbh;->g(Ljava/lang/String;Ly14;)Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object p1
+    check-cast v1, Lmt1;
 
-    return-object p1
+    invoke-interface {v1, p1}, Lmt1;->c(Lusd;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
 .end method

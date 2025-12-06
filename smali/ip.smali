@@ -1,51 +1,23 @@
-.class public final Lip;
-.super Landroid/view/View$BaseSavedState;
+.class public abstract Lip;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lip;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
-# instance fields
-.field public a:Z
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lh8;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1}, Lh8;-><init>(I)V
-
-    sput-object v0, Lip;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public static a(Ljava/lang/String;)Landroid/os/LocaleList;
     .locals 0
 
-    invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-static {p0}, Landroid/os/LocaleList;->forLanguageTags(Ljava/lang/String;)Landroid/os/LocaleList;
 
-    iget-boolean p2, p0, Lip;->a:Z
+    move-result-object p0
 
-    int-to-byte p2, p2
+    return-object p0
+.end method
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
+.method public static b(Landroid/widget/TextView;Landroid/os/LocaleList;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextLocales(Landroid/os/LocaleList;)V
 
     return-void
 .end method

@@ -23,7 +23,7 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0010\u0008\u0086\u0081\u0002\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00000\u0001B\u000f\u0008\u0002\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004R\u0014\u0010\u0002\u001a\u00020\u0003X\u0080\u0004\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0005\u0010\u0006j\u0002\u0008\u0007j\u0002\u0008\u0008j\u0002\u0008\tj\u0002\u0008\nj\u0002\u0008\u000bj\u0002\u0008\u000cj\u0002\u0008\rj\u0002\u0008\u000ej\u0002\u0008\u000fj\u0002\u0008\u0010j\u0002\u0008\u0011j\u0002\u0008\u0012\u00a8\u0006\u0013"
+        "\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0011\u0008\u0086\u0081\u0002\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00000\u0001B\u000f\u0008\u0002\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004R\u0014\u0010\u0002\u001a\u00020\u0003X\u0080\u0004\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0005\u0010\u0006j\u0002\u0008\u0007j\u0002\u0008\u0008j\u0002\u0008\tj\u0002\u0008\nj\u0002\u0008\u000bj\u0002\u0008\u000cj\u0002\u0008\rj\u0002\u0008\u000ej\u0002\u0008\u000fj\u0002\u0008\u0010j\u0002\u0008\u0011j\u0002\u0008\u0012j\u0002\u0008\u0013\u00a8\u0006\u0014"
     }
     d2 = {
         "Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;",
@@ -43,6 +43,7 @@
         "SESSION_ROOMS",
         "VMOJI",
         "CALL_TO_CONTACTS",
+        "SESSION_STATE_UPDATES",
         "AUDIENCE_MODE",
         "ADD_PARTICIPANT",
         "calls-sdk_release"
@@ -58,7 +59,7 @@
 
 
 # static fields
-.field private static final synthetic $ENTRIES:Lyd5;
+.field private static final synthetic $ENTRIES:Lyg5;
 
 .field private static final synthetic $VALUES:[Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;
 
@@ -78,6 +79,8 @@
 
 .field public static final enum SESSION_ROOMS:Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;
 
+.field public static final enum SESSION_STATE_UPDATES:Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;
+
 .field public static final enum VIDEO_TRACKS:Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;
 
 .field public static final enum VMOJI:Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;
@@ -93,7 +96,7 @@
 
 # direct methods
 .method private static final synthetic $values()[Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;
-    .locals 12
+    .locals 13
 
     sget-object v0, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;->SCREEN_TRACK_PRODUCER:Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;
 
@@ -115,11 +118,13 @@
 
     sget-object v9, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;->CALL_TO_CONTACTS:Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;
 
-    sget-object v10, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;->AUDIENCE_MODE:Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;
+    sget-object v10, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;->SESSION_STATE_UPDATES:Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;
 
-    sget-object v11, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;->ADD_PARTICIPANT:Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;
+    sget-object v11, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;->AUDIENCE_MODE:Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;
 
-    filled-new-array/range {v0 .. v11}, [Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;
+    sget-object v12, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;->ADD_PARTICIPANT:Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;
+
+    filled-new-array/range {v0 .. v12}, [Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;
 
     move-result-object v0
 
@@ -233,21 +238,33 @@
 
     new-instance v0, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;
 
+    const-string v1, "SESSION_STATE_UPDATES"
+
+    const/16 v2, 0xe
+
+    invoke-direct {v0, v1, v3, v2}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;-><init>(Ljava/lang/String;II)V
+
+    sput-object v0, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;->SESSION_STATE_UPDATES:Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;
+
+    new-instance v0, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;
+
     const-string v1, "AUDIENCE_MODE"
 
     const/16 v2, 0xb
 
-    invoke-direct {v0, v1, v3, v2}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v0, v1, v2, v2}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;->AUDIENCE_MODE:Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;
 
     new-instance v0, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;
 
-    const-string v1, "ADD_PARTICIPANT"
+    const/16 v1, 0xc
 
-    const/16 v3, 0xf
+    const/16 v2, 0xf
 
-    invoke-direct {v0, v1, v2, v3}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;-><init>(Ljava/lang/String;II)V
+    const-string v3, "ADD_PARTICIPANT"
+
+    invoke-direct {v0, v3, v1, v2}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;->ADD_PARTICIPANT:Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;
 
@@ -257,11 +274,11 @@
 
     sput-object v0, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;->$VALUES:[Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;
 
-    new-instance v1, Lzd5;
+    new-instance v1, Lzg5;
 
-    invoke-direct {v1, v0}, Lzd5;-><init>([Ljava/lang/Enum;)V
+    invoke-direct {v1, v0}, Lzg5;-><init>([Ljava/lang/Enum;)V
 
-    sput-object v1, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;->$ENTRIES:Lyd5;
+    sput-object v1, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;->$ENTRIES:Lyg5;
 
     return-void
 .end method
@@ -281,16 +298,16 @@
     return-void
 .end method
 
-.method public static getEntries()Lyd5;
+.method public static getEntries()Lyg5;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lyd5;"
+            "Lyg5;"
         }
     .end annotation
 
-    sget-object v0, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;->$ENTRIES:Lyd5;
+    sget-object v0, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;->$ENTRIES:Lyg5;
 
     return-object v0
 .end method

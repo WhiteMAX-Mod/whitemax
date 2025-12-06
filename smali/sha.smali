@@ -1,31 +1,49 @@
-.class public abstract Lsha;
-.super Ljava/lang/Object;
+.class public final Lsha;
+.super Lh54;
 .source "SourceFile"
 
 
+# instance fields
+.field public final d:Z
+
+
 # direct methods
-.method public static a(Ljava/lang/Object;Landroid/util/Property;Landroid/graphics/Path;)Landroid/animation/ObjectAnimator;
+.method public constructor <init>()V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            "V:",
-            "Ljava/lang/Object;",
-            ">(TT;",
-            "Landroid/util/Property<",
-            "TT;TV;>;",
-            "Landroid/graphics/Path;",
-            ")",
-            "Landroid/animation/ObjectAnimator;"
-        }
-    .end annotation
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Lh54;-><init>()V
 
-    invoke-static {p0, p1, v0, p2}, Landroid/animation/ObjectAnimator;->ofObject(Ljava/lang/Object;Landroid/util/Property;Landroid/animation/TypeConverter;Landroid/graphics/Path;)Landroid/animation/ObjectAnimator;
+    const/4 v0, 0x1
 
-    move-result-object p0
+    iput-boolean v0, p0, Lsha;->d:Z
 
-    return-object p0
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b()Lh54;
+    .locals 1
+
+    new-instance v0, Lsha;
+
+    invoke-direct {v0}, Lsha;-><init>()V
+
+    return-object v0
+.end method
+
+.method public final e()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lsha;->d:Z
+
+    return v0
+.end method
+
+.method public final g(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZLf54;)V
+    .locals 0
+
+    invoke-virtual {p5}, Lf54;->d()V
+
+    return-void
 .end method

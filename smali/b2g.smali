@@ -2,179 +2,75 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final c:Ljava/lang/String;
-
-.field public static final d:Ljava/lang/String;
+# interfaces
+.implements Lp44;
 
 
 # instance fields
-.field public final a:Lp1g;
+.field public final synthetic a:I
 
-.field public final b:Lec7;
+.field public final synthetic b:Lo2g;
+
+.field public final synthetic c:Lp44;
+
+.field public final synthetic d:Ljava/util/concurrent/Executor;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lo2g;Lp44;Ljava/util/concurrent/Executor;I)V
+    .locals 0
 
-    sget-object v0, Lnig;->a:Ljava/lang/String;
+    iput p4, p0, Lb2g;->a:I
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lb2g;->b:Lo2g;
 
-    const/16 v1, 0x24
+    iput-object p2, p0, Lb2g;->c:Lp44;
 
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lb2g;->c:Ljava/lang/String;
-
-    const/4 v0, 0x1
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lb2g;->d:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lp1g;Ljava/util/List;)V
-    .locals 2
+    iput-object p3, p0, Lb2g;->d:Ljava/util/concurrent/Executor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    invoke-interface {p2}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    invoke-static {p2}, Ljava/util/Collections;->min(Ljava/util/Collection;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    if-ltz v0, :cond_0
-
-    invoke-static {p2}, Ljava/util/Collections;->max(Ljava/util/Collection;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    iget v1, p1, Lp1g;->a:I
-
-    if-ge v0, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
-
-    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
-
-    throw p1
-
-    :cond_1
-    :goto_0
-    iput-object p1, p0, Lb2g;->a:Lp1g;
-
-    invoke-static {p2}, Lec7;->k(Ljava/util/Collection;)Lec7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lb2g;->b:Lec7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a(Lbolts/Task;)Ljava/lang/Object;
     .locals 4
 
-    const/4 v0, 0x1
+    iget v0, p0, Lb2g;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lb2g;->b:Lo2g;
 
-    :cond_0
-    const/4 v1, 0x0
+    iget-object v1, p0, Lb2g;->c:Lp44;
 
-    if-eqz p1, :cond_2
+    iget-object v2, p0, Lb2g;->d:Ljava/util/concurrent/Executor;
 
-    const-class v2, Lb2g;
+    const/4 v3, 0x0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {v0, v1, p1, v2, v3}, Lbolts/Task;->access$100(Lo2g;Lp44;Lbolts/Task;Ljava/util/concurrent/Executor;Ls42;)V
 
-    move-result-object v3
+    return-object v3
 
-    if-eq v2, v3, :cond_1
+    :pswitch_0
+    iget-object v0, p0, Lb2g;->b:Lo2g;
 
-    goto :goto_0
+    iget-object v1, p0, Lb2g;->c:Lp44;
 
-    :cond_1
-    check-cast p1, Lb2g;
+    iget-object v2, p0, Lb2g;->d:Ljava/util/concurrent/Executor;
 
-    iget-object v2, p0, Lb2g;->a:Lp1g;
+    const/4 v3, 0x0
 
-    iget-object v3, p1, Lb2g;->a:Lp1g;
+    invoke-static {v0, v1, p1, v2, v3}, Lbolts/Task;->access$000(Lo2g;Lp44;Lbolts/Task;Ljava/util/concurrent/Executor;Ls42;)V
 
-    invoke-virtual {v2, v3}, Lp1g;->equals(Ljava/lang/Object;)Z
+    return-object v3
 
-    move-result v2
+    nop
 
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lb2g;->b:Lec7;
-
-    iget-object p1, p1, Lb2g;->b:Lec7;
-
-    invoke-virtual {v2, p1}, Lec7;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lb2g;->a:Lp1g;
-
-    invoke-virtual {v0}, Lp1g;->hashCode()I
-
-    move-result v0
-
-    iget-object v1, p0, Lb2g;->b:Lec7;
-
-    invoke-virtual {v1}, Lec7;->hashCode()I
-
-    move-result v1
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    add-int/2addr v1, v0
-
-    return v1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

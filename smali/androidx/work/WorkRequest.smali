@@ -19,19 +19,19 @@
         "",
         "Ljava/util/UUID;",
         "id",
-        "Lhph;",
+        "Lr5i;",
         "workSpec",
         "",
         "",
         "tags",
         "<init>",
-        "(Ljava/util/UUID;Lhph;Ljava/util/Set;)V",
+        "(Ljava/util/UUID;Lr5i;Ljava/util/Set;)V",
         "Ljava/util/UUID;",
         "getId",
         "()Ljava/util/UUID;",
-        "Lhph;",
+        "Lr5i;",
         "getWorkSpec",
-        "()Lhph;",
+        "()Lr5i;",
         "Ljava/util/Set;",
         "getTags",
         "()Ljava/util/Set;",
@@ -40,7 +40,7 @@
         "stringId",
         "Companion",
         "Builder",
-        "dph",
+        "n5i",
         "work-runtime_release"
     }
     k = 0x1
@@ -54,7 +54,7 @@
 
 
 # static fields
-.field public static final Companion:Ldph;
+.field public static final Companion:Ln5i;
 
 .field public static final DEFAULT_BACKOFF_DELAY_MILLIS:J = 0x7530L
 
@@ -88,29 +88,29 @@
     .end annotation
 .end field
 
-.field private final workSpec:Lhph;
+.field private final workSpec:Lr5i;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Ldph;
+    new-instance v0, Ln5i;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Landroidx/work/WorkRequest;->Companion:Ldph;
+    sput-object v0, Landroidx/work/WorkRequest;->Companion:Ln5i;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/util/UUID;Lhph;Ljava/util/Set;)V
+.method public constructor <init>(Ljava/util/UUID;Lr5i;Ljava/util/Set;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/UUID;",
-            "Lhph;",
+            "Lr5i;",
             "Ljava/util/Set<",
             "Ljava/lang/String;",
             ">;)V"
@@ -121,7 +121,7 @@
 
     iput-object p1, p0, Landroidx/work/WorkRequest;->id:Ljava/util/UUID;
 
-    iput-object p2, p0, Landroidx/work/WorkRequest;->workSpec:Lhph;
+    iput-object p2, p0, Landroidx/work/WorkRequest;->workSpec:Lr5i;
 
     iput-object p3, p0, Landroidx/work/WorkRequest;->tags:Ljava/util/Set;
 
@@ -168,10 +168,10 @@
     return-object v0
 .end method
 
-.method public final getWorkSpec()Lhph;
+.method public final getWorkSpec()Lr5i;
     .locals 1
 
-    iget-object v0, p0, Landroidx/work/WorkRequest;->workSpec:Lhph;
+    iget-object v0, p0, Landroidx/work/WorkRequest;->workSpec:Lr5i;
 
     return-object v0
 .end method

@@ -3,146 +3,173 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lela;
-.implements Lvv4;
+.implements Lree;
 
 
-# instance fields
-.field public final a:Lela;
-
-.field public final b:J
-
-.field public final c:Lvod;
-
-.field public o:Lvv4;
+# static fields
+.field public static final a:Lpia;
 
 
 # direct methods
-.method public constructor <init>(Lela;JLvod;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    new-instance v0, Lpia;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lpia;->a:Lela;
-
-    iput-wide p2, p0, Lpia;->b:J
-
-    iput-object p4, p0, Lpia;->c:Lvod;
+    sput-object v0, Lpia;->a:Lpia;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 5
-
-    new-instance v0, Ldt7;
-
-    const/16 v1, 0xa
-
-    invoke-direct {v0, v1, p0}, Ldt7;-><init>(ILjava/lang/Object;)V
-
-    iget-wide v1, p0, Lpia;->b:J
-
-    sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    iget-object v4, p0, Lpia;->c:Lvod;
-
-    invoke-virtual {v4, v0, v1, v2, v3}, Lvod;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lvv4;
-
-    return-void
-.end method
-
-.method public final c(Lvv4;)V
+.method public final a()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lpia;->o:Lvv4;
+    const-string v0, "kotlin.Nothing"
 
-    invoke-static {v0, p1}, Lzv4;->i(Lvv4;Lvv4;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iput-object p1, p0, Lpia;->o:Lvv4;
-
-    iget-object p1, p0, Lpia;->a:Lela;
-
-    invoke-interface {p1, p0}, Lela;->c(Lvv4;)V
-
-    :cond_0
-    return-void
+    return-object v0
 .end method
 
-.method public final d(Ljava/lang/Object;)V
-    .locals 4
-
-    new-instance v0, Lgk6;
-
-    const/16 v1, 0x11
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, p0, p1, v2, v1}, Lgk6;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
-
-    iget-wide v1, p0, Lpia;->b:J
-
-    sget-object p1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    iget-object v3, p0, Lpia;->c:Lvod;
-
-    invoke-virtual {v3, v0, v1, v2, p1}, Lvod;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lvv4;
-
-    return-void
-.end method
-
-.method public final g()V
+.method public final c()Z
     .locals 1
 
-    iget-object v0, p0, Lpia;->o:Lvv4;
-
-    invoke-interface {v0}, Lvv4;->g()V
-
-    iget-object v0, p0, Lpia;->c:Lvod;
-
-    invoke-interface {v0}, Lvv4;->g()V
-
-    return-void
-.end method
-
-.method public final h()Z
-    .locals 1
-
-    iget-object v0, p0, Lpia;->c:Lvod;
-
-    invoke-interface {v0}, Lvv4;->h()Z
-
-    move-result v0
+    const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 4
+.method public final d(Ljava/lang/String;)I
+    .locals 1
 
-    new-instance v0, Lhk6;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const/16 v1, 0x10
+    const-string v0, "Descriptor for type `kotlin.Nothing` does not have elements"
 
-    const/4 v2, 0x0
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v0, p0, p1, v2, v1}, Lhk6;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+    throw p1
+.end method
 
-    const-wide/16 v1, 0x0
+.method public final e()Ls9j;
+    .locals 1
 
-    sget-object p1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    sget-object v0, Lnnf;->e:Lnnf;
 
-    iget-object v3, p0, Lpia;->c:Lvod;
+    return-object v0
+.end method
 
-    invoke-virtual {v3, v0, v1, v2, p1}, Lvod;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lvv4;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 0
 
-    return-void
+    if-ne p0, p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final f()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final g(I)Ljava/lang/String;
+    .locals 1
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Descriptor for type `kotlin.Nothing` does not have elements"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final getAnnotations()Ljava/util/List;
+    .locals 1
+
+    sget-object v0, Lhd5;->a:Lhd5;
+
+    return-object v0
+.end method
+
+.method public final h(I)Ljava/util/List;
+    .locals 1
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Descriptor for type `kotlin.Nothing` does not have elements"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    sget-object v0, Lnnf;->e:Lnnf;
+
+    invoke-virtual {v0}, Ls9j;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    const v1, -0x6c61e840
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final i(I)Lree;
+    .locals 1
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Descriptor for type `kotlin.Nothing` does not have elements"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final isInline()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final j(I)Z
+    .locals 1
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Descriptor for type `kotlin.Nothing` does not have elements"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "NothingSerialDescriptor"
+
+    return-object v0
 .end method

@@ -1,87 +1,90 @@
-.class public final Lma;
-.super Lvpe;
+.class public final synthetic Lma;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final D0:Lq3h;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lq3h;)V
-    .locals 2
+.method public synthetic constructor <init>(Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;I)V
+    .locals 0
 
-    new-instance v0, Lwra;
+    iput p2, p0, Lma;->a:I
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Lma;->b:Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;
 
-    invoke-direct {v0, p1, v1}, Lwra;-><init>(Landroid/content/Context;Z)V
-
-    invoke-direct {p0, v0}, Lq7d;-><init>(Landroid/view/View;)V
-
-    iput-object p2, p0, Lma;->D0:Lq3h;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic A(Ly18;)V
-    .locals 0
+.method public final onClick(Landroid/view/View;)V
+    .locals 1
 
-    check-cast p1, Lxhg;
+    iget p1, p0, Lma;->a:I
 
-    invoke-virtual {p0, p1}, Lma;->G(Lxhg;)V
+    iget-object v0, p0, Lma;->b:Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;
 
-    return-void
-.end method
+    packed-switch p1, :pswitch_data_0
 
-.method public final G(Lxhg;)V
-    .locals 4
+    sget-object p1, Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;->Z:[Lyy7;
 
-    iget-object v0, p0, Lq7d;->a:Landroid/view/View;
+    invoke-virtual {v0}, Lc54;->getRouter()Lytd;
 
-    check-cast v0, Lwra;
+    move-result-object p1
 
-    sget-object v1, Ll05;->s0:Lk82;
-
-    invoke-virtual {v1, v0}, Lk82;->q(Landroid/view/View;)Lewa;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lewa;->c:Lv5b;
-
-    invoke-virtual {v0, v1}, Lwra;->setCustomTheme(Lv5b;)V
-
-    sget-object v1, Ltra;->b:Ltra;
-
-    invoke-virtual {v0, v1}, Lwra;->setCallButtonMode(Ltra;)V
-
-    iget-object v1, p1, Lxhg;->a:Lsrf;
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ltrf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lwra;->setTitle(Ljava/lang/CharSequence;)V
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lwra;->setSubtitle(Ljava/lang/CharSequence;)V
-
-    iget-object v1, p1, Lxhg;->b:Ltc0;
-
-    iget-wide v2, v1, Ltc0;->a:J
-
-    iget-object v1, v1, Ltc0;->b:Ljava/lang/CharSequence;
-
-    iget-object p1, p1, Lxhg;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v3, v1, p1}, Lwra;->f(JLjava/lang/CharSequence;Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lytd;->B(Lc54;)Z
 
     return-void
+
+    :pswitch_0
+    sget-object p1, Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;->Z:[Lyy7;
+
+    iget-object p1, v0, Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;->a:Lk18;
+
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lsa;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Lsa;->t(Z)V
+
+    return-void
+
+    :pswitch_1
+    sget-object p1, Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;->Z:[Lyy7;
+
+    iget-object p1, v0, Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;->a:Lk18;
+
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lsa;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Lsa;->t(Z)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,80 +1,79 @@
 .class public final Ld4i;
-.super Ljava/lang/Object;
+.super Lc4i;
 .source "SourceFile"
-
-# interfaces
-.implements Ltha;
 
 
 # static fields
-.field public static final a:Ld4i;
+.field public static final q:Lg4i;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
-    new-instance v0, Ld4i;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ld4i;->a:Ld4i;
-
-    new-instance v0, Ltwh;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ltwh;-><init>(I)V
-
-    const-class v1, Lmxh;
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+    invoke-static {}, Lw3i;->d()Landroid/view/WindowInsets;
 
     move-result-object v0
 
-    const/4 v2, 0x2
+    const/4 v1, 0x0
 
-    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+    invoke-static {v1, v0}, Lg4i;->h(Landroid/view/View;Landroid/view/WindowInsets;)Lg4i;
 
     move-result-object v0
 
-    const/4 v2, 0x3
+    sput-object v0, Ld4i;->q:Lg4i;
 
-    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
+    return-void
+.end method
 
-    move-result-object v0
+.method public constructor <init>(Lg4i;Landroid/view/WindowInsets;)V
+    .locals 0
 
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
+    invoke-direct {p0, p1, p2}, Lc4i;-><init>(Lg4i;Landroid/view/WindowInsets;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public final d(Landroid/view/View;)V
     .locals 0
 
-    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    return-void
+.end method
+
+.method public f(I)Lco7;
+    .locals 1
+
+    iget-object v0, p0, Lz3i;->c:Landroid/view/WindowInsets;
+
+    invoke-static {p1}, Lf4i;->a(I)I
+
+    move-result p1
+
+    invoke-static {v0, p1}, Lw3i;->c(Landroid/view/WindowInsets;I)Landroid/graphics/Insets;
 
     move-result-object p1
 
-    throw p1
+    invoke-static {p1}, Lco7;->c(Landroid/graphics/Insets;)Lco7;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public o(I)Z
+    .locals 1
+
+    iget-object v0, p0, Lz3i;->c:Landroid/view/WindowInsets;
+
+    invoke-static {p1}, Lf4i;->a(I)I
+
+    move-result p1
+
+    invoke-static {v0, p1}, Lw3i;->h(Landroid/view/WindowInsets;I)Z
+
+    move-result p1
+
+    return p1
 .end method

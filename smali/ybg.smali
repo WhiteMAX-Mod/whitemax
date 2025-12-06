@@ -1,73 +1,44 @@
 .class public final Lybg;
-.super Ljava/lang/Object;
+.super Landroid/view/ViewGroup$MarginLayoutParams;
 .source "SourceFile"
 
-# interfaces
-.implements Lg54;
-.implements Lh54;
 
+# instance fields
+.field public a:I
 
-# static fields
-.field public static final a:Lybg;
+.field public b:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Landroid/view/ViewGroup$LayoutParams;)V
+    .locals 0
 
-    new-instance v0, Lybg;
+    .line 4
+    invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x0
 
-    sput-object v0, Lybg;->a:Lybg;
+    .line 5
+    iput p1, p0, Lybg;->a:I
 
     return-void
 .end method
 
+.method public constructor <init>(Lybg;)V
+    .locals 1
 
-# virtual methods
-.method public final fold(Ljava/lang/Object;Lzi6;)Ljava/lang/Object;
-    .locals 0
+    .line 1
+    invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
 
-    invoke-interface {p2, p1, p0}, Lzi6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    move-result-object p1
+    .line 2
+    iput v0, p0, Lybg;->a:I
 
-    return-object p1
-.end method
+    .line 3
+    iget p1, p1, Lybg;->a:I
 
-.method public final get(Lh54;)Lg54;
-    .locals 0
+    iput p1, p0, Lybg;->a:I
 
-    invoke-static {p0, p1}, Lkwi;->a(Lg54;Lh54;)Lg54;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final getKey()Lh54;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final minusKey(Lh54;)Li54;
-    .locals 0
-
-    invoke-static {p0, p1}, Lkwi;->c(Lg54;Lh54;)Li54;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final plus(Li54;)Li54;
-    .locals 0
-
-    invoke-static {p0, p1}, Ljwi;->a(Li54;Li54;)Li54;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

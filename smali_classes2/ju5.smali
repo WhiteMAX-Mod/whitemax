@@ -2,62 +2,57 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lb91;
+
 
 # instance fields
-.field public final a:J
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
+.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lju5;->a:J
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    iput-object p3, p0, Lju5;->b:Ljava/lang/String;
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
 
-    iput-object p4, p0, Lju5;->c:Ljava/lang/String;
+    iput-object v0, p0, Lju5;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final onFeedback(La91;)V
+    .locals 2
 
-    iget-object v0, p0, Lju5;->b:Ljava/lang/String;
+    iget-object v0, p0, Lju5;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    invoke-static {v0}, Li79;->b(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    xor-int/lit8 v0, v0, 0x1
-
-    const-string v1, "FileUploadInfo{fileId="
-
-    const-string v2, ", token=\'"
-
-    iget-wide v3, p0, Lju5;->a:J
-
-    invoke-static {v3, v4, v1, v2, v0}, Lfd0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    const-string v1, "\', url=\'"
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    const-string v2, "\'}"
+    move-result v1
 
-    iget-object v3, p0, Lju5;->c:Ljava/lang/String;
+    if-eqz v1, :cond_0
 
-    invoke-static {v0, v1, v3, v2}, Lzdf;->t(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v1
 
-    return-object v0
+    check-cast v1, Lb91;
+
+    invoke-interface {v1, p1}, Lb91;->onFeedback(La91;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
 .end method

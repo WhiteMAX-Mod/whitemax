@@ -15,7 +15,7 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000\u001a\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\n\u0008\u0082\u0003\u0018\u00002\u00020\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002R\u000e\u0010\u0003\u001a\u00020\u0004X\u0086T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0086T\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0007\u001a\u0004\u0018\u00010\u0004X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001a\u0010\u0008\u001a\u00020\u00048FX\u0087\u0004\u00a2\u0006\u000c\u0012\u0004\u0008\t\u0010\u0002\u001a\u0004\u0008\n\u0010\u000bR\u0011\u0010\u000c\u001a\u00020\u00048F\u00a2\u0006\u0006\u001a\u0004\u0008\r\u0010\u000bR\u0014\u0010\u000e\u001a\u00020\u0004X\u0086D\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u000f\u0010\u000b\u00a8\u0006\u0010"
+        "\u0000\u001c\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0008\u0008\u0082\u0003\u0018\u00002\u00020\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002R\u000e\u0010\u0003\u001a\u00020\u0004X\u0086T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004X\u0086T\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0086T\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0008\u001a\u0004\u0018\u00010\u0004X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001a\u0010\t\u001a\u00020\u00048FX\u0087\u0004\u00a2\u0006\u000c\u0012\u0004\u0008\n\u0010\u0002\u001a\u0004\u0008\u000b\u0010\u000cR\u0011\u0010\r\u001a\u00020\u00048F\u00a2\u0006\u0006\u001a\u0004\u0008\u000e\u0010\u000c\u00a8\u0006\u000f"
     }
     d2 = {
         "Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$Companion;",
@@ -23,6 +23,7 @@
         "()V",
         "SDK_TYPE_STRING",
         "",
+        "SDK_VERSION_STRING",
         "VERSION_INT",
         "",
         "appVersionString",
@@ -32,8 +33,6 @@
         "()Ljava/lang/String;",
         "platformParam",
         "getPlatformParam",
-        "sdkVersionString",
-        "getSdkVersionString",
         "calls-sdk-analytics_release"
     }
     k = 0x1
@@ -56,7 +55,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lki4;)V
+.method public synthetic constructor <init>(Ltk4;)V
     .locals 0
 
     .line 1
@@ -84,11 +83,11 @@
 
     sget-object v0, Lru/ok/android/commons/app/ApplicationProvider;->a:Landroid/app/Application;
 
-    invoke-static {}, Lxfi;->d()Ljava/lang/String;
+    invoke-static {}, Lmri;->d()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {}, Lxfi;->c()I
+    invoke-static {}, Lmri;->c()I
 
     move-result v1
 
@@ -133,13 +132,13 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lru/ok/android/externcalls/analytics/config/EventMetaParamsConfig;->getAppName()Lji6;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/analytics/config/EventMetaParamsConfig;->getAppName()Lcm6;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lji6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lcm6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -155,16 +154,6 @@
     :cond_1
     :goto_0
     const-string v0, "debug"
-
-    return-object v0
-.end method
-
-.method public final getSdkVersionString()Ljava/lang/String;
-    .locals 1
-
-    invoke-static {}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->access$getSdkVersionString$cp()Ljava/lang/String;
-
-    move-result-object v0
 
     return-object v0
 .end method

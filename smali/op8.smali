@@ -2,128 +2,321 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lo29;
+.implements Lm29;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public X:Lm29;
 
-.field public final b:Z
+.field public Y:J
 
-.field public final c:Z
+.field public final a:Lc99;
+
+.field public final b:J
+
+.field public final c:Lqi4;
+
+.field public d:Lbk0;
+
+.field public o:Lo29;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ZZ)V
+.method public constructor <init>(Lc99;Lqi4;J)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lop8;->a:Ljava/lang/String;
+    iput-object p1, p0, Lop8;->a:Lc99;
 
-    iput-boolean p2, p0, Lop8;->b:Z
+    iput-object p2, p0, Lop8;->c:Lqi4;
 
-    iput-boolean p3, p0, Lop8;->c:Z
+    iput-wide p3, p0, Lop8;->b:J
+
+    const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
+
+    iput-wide p1, p0, Lop8;->Y:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final C(Lm29;J)V
     .locals 2
 
-    if-ne p0, p1, :cond_0
+    iput-object p1, p0, Lop8;->X:Lm29;
+
+    iget-object p1, p0, Lop8;->o:Lo29;
+
+    if-eqz p1, :cond_1
+
+    iget-wide p2, p0, Lop8;->Y:J
+
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long v0, p2, v0
+
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    if-eqz p1, :cond_2
+    iget-wide p2, p0, Lop8;->b:J
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    const-class v1, Lop8;
-
-    if-eq v0, v1, :cond_1
-
-    goto :goto_1
+    :goto_0
+    invoke-interface {p1, p0, p2, p3}, Lo29;->C(Lm29;J)V
 
     :cond_1
-    check-cast p1, Lop8;
+    return-void
+.end method
 
-    iget-object v0, p0, Lop8;->a:Ljava/lang/String;
+.method public final E([Lan5;[Z[Lixd;[ZJ)J
+    .locals 12
 
-    iget-object v1, p1, Lop8;->a:Ljava/lang/String;
+    iget-wide v0, p0, Lop8;->Y:J
 
-    invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long v4, v0, v2
+
+    if-eqz v4, :cond_0
+
+    iget-wide v4, p0, Lop8;->b:J
+
+    cmp-long v4, p5, v4
+
+    if-nez v4, :cond_0
+
+    iput-wide v2, p0, Lop8;->Y:J
+
+    move-wide v10, v0
+
+    goto :goto_0
+
+    :cond_0
+    move-wide/from16 v10, p5
+
+    :goto_0
+    iget-object v5, p0, Lop8;->o:Lo29;
+
+    sget v0, Lxxg;->a:I
+
+    move-object v6, p1
+
+    move-object v7, p2
+
+    move-object v8, p3
+
+    move-object/from16 v9, p4
+
+    invoke-interface/range {v5 .. v11}, Lo29;->E([Lan5;[Z[Lixd;[ZJ)J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final b(Liee;)V
+    .locals 1
+
+    check-cast p1, Lo29;
+
+    iget-object p1, p0, Lop8;->X:Lm29;
+
+    sget v0, Lxxg;->a:I
+
+    invoke-interface {p1, p0}, Lgee;->b(Liee;)V
+
+    return-void
+.end method
+
+.method public final c(Lo29;)V
+    .locals 1
+
+    iget-object p1, p0, Lop8;->X:Lm29;
+
+    sget v0, Lxxg;->a:I
+
+    invoke-interface {p1, p0}, Lm29;->c(Lo29;)V
+
+    return-void
+.end method
+
+.method public final d()J
+    .locals 2
+
+    iget-object v0, p0, Lop8;->o:Lo29;
+
+    sget v1, Lxxg;->a:I
+
+    invoke-interface {v0}, Liee;->d()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final f()V
+    .locals 1
+
+    iget-object v0, p0, Lop8;->o:Lo29;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lo29;->f()V
+
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lop8;->d:Lbk0;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Lbk0;->g()V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final h(J)J
+    .locals 2
+
+    iget-object v0, p0, Lop8;->o:Lo29;
+
+    sget v1, Lxxg;->a:I
+
+    invoke-interface {v0, p1, p2}, Lo29;->h(J)J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final j()Z
+    .locals 1
+
+    iget-object v0, p0, Lop8;->o:Lo29;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Liee;->j()Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Lop8;->b:Z
+    const/4 v0, 0x1
 
-    iget-boolean v1, p1, Lop8;->b:Z
+    return v0
 
-    if-ne v0, v1, :cond_2
+    :cond_0
+    const/4 v0, 0x0
 
-    iget-boolean v0, p0, Lop8;->c:Z
+    return v0
+.end method
 
-    iget-boolean p1, p1, Lop8;->c:Z
+.method public final k()J
+    .locals 2
 
-    if-ne v0, p1, :cond_2
+    iget-object v0, p0, Lop8;->o:Lo29;
 
-    :goto_0
+    sget v1, Lxxg;->a:I
+
+    invoke-interface {v0}, Lo29;->k()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final l()Lmfg;
+    .locals 2
+
+    iget-object v0, p0, Lop8;->o:Lo29;
+
+    sget v1, Lxxg;->a:I
+
+    invoke-interface {v0}, Lo29;->l()Lmfg;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final o()J
+    .locals 2
+
+    iget-object v0, p0, Lop8;->o:Lo29;
+
+    sget v1, Lxxg;->a:I
+
+    invoke-interface {v0}, Liee;->o()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final p(J)V
+    .locals 2
+
+    iget-object v0, p0, Lop8;->o:Lo29;
+
+    sget v1, Lxxg;->a:I
+
+    invoke-interface {v0, p1, p2}, Liee;->p(J)V
+
+    return-void
+.end method
+
+.method public final v(JLj9e;)J
+    .locals 2
+
+    iget-object v0, p0, Lop8;->o:Lo29;
+
+    sget v1, Lxxg;->a:I
+
+    invoke-interface {v0, p1, p2, p3}, Lo29;->v(JLj9e;)J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final y(J)V
+    .locals 2
+
+    iget-object v0, p0, Lop8;->o:Lo29;
+
+    sget v1, Lxxg;->a:I
+
+    invoke-interface {v0, p1, p2}, Lo29;->y(J)V
+
+    return-void
+.end method
+
+.method public final z(J)Z
+    .locals 1
+
+    iget-object v0, p0, Lop8;->o:Lo29;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0, p1, p2}, Liee;->z(J)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
     const/4 p1, 0x1
 
     return p1
 
-    :cond_2
-    :goto_1
+    :cond_0
     const/4 p1, 0x0
 
     return p1
-.end method
-
-.method public final hashCode()I
-    .locals 5
-
-    iget-object v0, p0, Lop8;->a:Ljava/lang/String;
-
-    const/16 v1, 0x1f
-
-    invoke-static {v1, v1, v0}, Lu15;->d(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lop8;->b:Z
-
-    const/16 v3, 0x4d5
-
-    const/16 v4, 0x4cf
-
-    if-eqz v2, :cond_0
-
-    move v2, v4
-
-    goto :goto_0
-
-    :cond_0
-    move v2, v3
-
-    :goto_0
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v1, p0, Lop8;->c:Z
-
-    if-eqz v1, :cond_1
-
-    move v3, v4
-
-    :cond_1
-    add-int/2addr v0, v3
-
-    return v0
 .end method

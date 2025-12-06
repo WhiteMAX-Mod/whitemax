@@ -3,78 +3,98 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ltha;
+.implements Ljava/util/Iterator;
 
 
-# static fields
-.field public static final a:Lrfi;
+# instance fields
+.field public a:Ljava/util/Map$Entry;
+
+.field public final synthetic b:Ljava/util/Iterator;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lmfi;Ljava/util/Iterator;)V
+    .locals 0
 
-    new-instance v0, Lrfi;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lrfi;->a:Lrfi;
-
-    new-instance v0, Lr8i;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lr8i;-><init>(I)V
-
-    const-class v1, Lm9i;
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
+    iput-object p2, p0, Lrfi;->b:Ljava/util/Iterator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final hasNext()Z
+    .locals 1
 
-    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget-object v0, p0, Lrfi;->b:Ljava/util/Iterator;
 
-    move-result-object p1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    throw p1
+    move-result v0
+
+    return v0
+.end method
+
+.method public final next()Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lrfi;->b:Ljava/util/Iterator;
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Map$Entry;
+
+    iput-object v0, p0, Lrfi;->a:Ljava/util/Map$Entry;
+
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final remove()V
+    .locals 2
+
+    iget-object v0, p0, Lrfi;->a:Ljava/util/Map$Entry;
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    const-string v1, "no calls to next() since the last call to remove()"
+
+    invoke-static {v1, v0}, Lrui;->e(Ljava/lang/String;Z)V
+
+    iget-object v0, p0, Lrfi;->a:Ljava/util/Map$Entry;
+
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Collection;
+
+    iget-object v1, p0, Lrfi;->b:Ljava/util/Iterator;
+
+    invoke-interface {v1}, Ljava/util/Iterator;->remove()V
+
+    invoke-interface {v0}, Ljava/util/Collection;->size()I
+
+    invoke-interface {v0}, Ljava/util/Collection;->clear()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lrfi;->a:Ljava/util/Map$Entry;
+
+    return-void
 .end method

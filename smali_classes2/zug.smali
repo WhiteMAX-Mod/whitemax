@@ -1,62 +1,51 @@
 .class public final Lzug;
-.super Ljava/lang/Object;
+.super Lq44;
 .source "SourceFile"
-
-# interfaces
-.implements Lji6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Lzpg;
+.field public final synthetic Y:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
+
+.field public Z:I
+
+.field public d:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
+
+.field public o:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lzpg;I)V
+.method public constructor <init>(Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;Lq44;)V
     .locals 0
 
-    iput p2, p0, Lzug;->a:I
+    iput-object p1, p0, Lzug;->Y:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
 
-    iput-object p1, p0, Lzug;->b:Lzpg;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lzug;->a:I
+    iput-object p1, p0, Lzug;->X:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lzug;->Z:I
 
-    iget-object v0, p0, Lzug;->b:Lzpg;
+    const/high16 v0, -0x80000000
 
-    const/4 v1, 0x0
+    or-int/2addr p1, v0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    iput p1, p0, Lzug;->Z:I
 
-    sget-object v0, Lccg;->a:Lccg;
+    iget-object p1, p0, Lzug;->Y:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
 
-    return-object v0
+    invoke-virtual {p1, p0}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->k(Lq44;)Ljava/lang/Object;
 
-    :pswitch_0
-    iget-object v0, p0, Lzug;->b:Lzpg;
+    move-result-object p1
 
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    sget-object v0, Lccg;->a:Lccg;
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

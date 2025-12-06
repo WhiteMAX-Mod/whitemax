@@ -1,61 +1,90 @@
 .class public final Lc0b;
-.super Lf0b;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lc0b;
+# instance fields
+.field public final a:Lk18;
+
+.field public final b:Lk18;
+
+.field public final c:Lk18;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lk18;Lk18;Lk18;)V
+    .locals 0
 
-    new-instance v0, Lc0b;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lc0b;->a:Lk18;
 
-    sput-object v0, Lc0b;->a:Lc0b;
+    iput-object p2, p0, Lc0b;->b:Lk18;
+
+    iput-object p3, p0, Lc0b;->c:Lk18;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a(Ljava/lang/String;[JLjava/lang/Long;ZLjava/lang/String;Lldb;)Ljava/lang/Object;
+    .locals 4
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lc0b;->a:Lk18;
 
-    if-ne p0, p1, :cond_0
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
-    return v0
+    move-result-object v0
+
+    check-cast v0, Lm1g;
+
+    new-instance v1, Ly1h;
+
+    sget-object v2, Lxhb;->C1:Lxhb;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v1, v2, v3}, Ly1h;-><init>(Lxhb;I)V
+
+    const-string v2, "conversationId"
+
+    invoke-virtual {v1, v2, p1}, Ln2;->x(Ljava/lang/String;Ljava/lang/String;)V
+
+    array-length p1, p2
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    instance-of p1, p1, Lc0b;
+    const-string p1, "calleeIds"
 
-    if-nez p1, :cond_1
+    invoke-virtual {v1, p1, p2}, Ln2;->q(Ljava/lang/String;[J)V
 
-    const/4 p1, 0x0
+    :goto_0
+    if-eqz p3, :cond_1
 
-    return p1
+    iget-object p1, v1, Ln2;->b:Ljava/lang/Object;
+
+    check-cast p1, Lus;
+
+    const-string p2, "chatId"
+
+    invoke-virtual {p1, p2, p3}, Lz0f;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_1
-    return v0
-.end method
+    const-string p1, "isVideo"
 
-.method public final hashCode()I
-    .locals 1
+    invoke-virtual {v1, p1, p4}, Ln2;->i(Ljava/lang/String;Z)V
 
-    const v0, 0x715c406f
+    const-string p1, "internalParams"
 
-    return v0
-.end method
+    invoke-virtual {v1, p1, p5}, Ln2;->x(Ljava/lang/String;Ljava/lang/String;)V
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    invoke-virtual {v0, v1, p6}, Lm1g;->e(Ln2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    const-string v0, "PrimaryStatic"
+    move-result-object p1
 
-    return-object v0
+    return-object p1
 .end method

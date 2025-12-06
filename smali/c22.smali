@@ -1,27 +1,29 @@
 .class public final Lc22;
-.super Ljava/lang/Object;
+.super Landroid/hardware/camera2/CameraDevice$StateCallback;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/util/HashMap;
+# virtual methods
+.method public final onClosed(Landroid/hardware/camera2/CameraDevice;)V
+    .locals 0
 
-.field public final b:Landroid/os/Handler;
+    return-void
+.end method
 
+.method public final onDisconnected(Landroid/hardware/camera2/CameraDevice;)V
+    .locals 0
 
-# direct methods
-.method public constructor <init>(Landroid/os/Handler;)V
-    .locals 1
+    return-void
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public final onError(Landroid/hardware/camera2/CameraDevice;I)V
+    .locals 0
 
-    new-instance v0, Ljava/util/HashMap;
+    return-void
+.end method
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lc22;->a:Ljava/util/HashMap;
-
-    iput-object p1, p0, Lc22;->b:Landroid/os/Handler;
+.method public final onOpened(Landroid/hardware/camera2/CameraDevice;)V
+    .locals 0
 
     return-void
 .end method

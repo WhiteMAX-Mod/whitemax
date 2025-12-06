@@ -10,7 +10,7 @@
 
 .field public c:[F
 
-.field public o:Z
+.field public d:Z
 
 
 # direct methods
@@ -26,13 +26,13 @@
     goto :goto_0
 
     :cond_0
-    sget-object v0, Lmvc;->RoundedRectFrameLayout:[I
+    sget-object v0, Lf6d;->RoundedRectFrameLayout:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    sget p2, Lmvc;->RoundedRectFrameLayout_cornersRadius:I
+    sget p2, Lf6d;->RoundedRectFrameLayout_cornersRadius:I
 
     const/4 v0, -0x1
 
@@ -60,7 +60,7 @@
 
     invoke-super {p0, p1}, Landroid/view/View;->dispatchDraw(Landroid/graphics/Canvas;)V
 
-    iget-boolean v0, p0, Lru/ok/utils/widgets/RoundedRectFrameLayout;->o:Z
+    iget-boolean v0, p0, Lru/ok/utils/widgets/RoundedRectFrameLayout;->d:Z
 
     if-eqz v0, :cond_0
 
@@ -108,7 +108,7 @@
 
     invoke-direct {p3, p4, p4, p1, p2}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    iget-boolean p1, p0, Lru/ok/utils/widgets/RoundedRectFrameLayout;->o:Z
+    iget-boolean p1, p0, Lru/ok/utils/widgets/RoundedRectFrameLayout;->d:Z
 
     if-eqz p1, :cond_2
 
@@ -145,7 +145,7 @@
     return-void
 
     :cond_2
-    new-instance p1, Lmid;
+    new-instance p1, Lutd;
 
     iget-object p2, p0, Lru/ok/utils/widgets/RoundedRectFrameLayout;->c:[F
 
@@ -153,7 +153,7 @@
 
     const/4 p4, 0x0
 
-    invoke-direct {p1, p3, p2, p4}, Lmid;-><init>(Landroid/graphics/Rect;FI)V
+    invoke-direct {p1, p3, p2, p4}, Lutd;-><init>(Landroid/graphics/Rect;FI)V
 
     invoke-virtual {p0, p1}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
@@ -305,7 +305,7 @@
     :cond_2
     xor-int/lit8 p1, v2, 0x1
 
-    iput-boolean p1, p0, Lru/ok/utils/widgets/RoundedRectFrameLayout;->o:Z
+    iput-boolean p1, p0, Lru/ok/utils/widgets/RoundedRectFrameLayout;->d:Z
 
     if-nez v2, :cond_3
 

@@ -1,298 +1,483 @@
-.class public final synthetic Lmq4;
-.super Ljava/lang/Object;
+.class public final Lmq4;
+.super Ldgg;
 .source "SourceFile"
 
-# interfaces
-.implements Lsq4;
-.implements Lqif;
+
+# static fields
+.field public static final synthetic Y0:I
 
 
 # instance fields
-.field public final synthetic X:Ljava/lang/Object;
+.field public final J0:I
 
-.field public final synthetic a:I
+.field public final K0:Z
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final L0:Z
 
-.field public final synthetic c:J
+.field public final M0:Z
 
-.field public final synthetic o:Ljava/lang/Object;
+.field public final N0:Z
+
+.field public final O0:Z
+
+.field public final P0:Z
+
+.field public final Q0:Z
+
+.field public final R0:Z
+
+.field public final S0:Z
+
+.field public final T0:Z
+
+.field public final U0:Z
+
+.field public final V0:Z
+
+.field public final W0:Landroid/util/SparseArray;
+
+.field public final X0:Landroid/util/SparseBooleanArray;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrgg;Ljava/lang/Iterable;Lhc0;J)V
+.method static constructor <clinit>()V
     .locals 1
 
-    .line 2
-    const/4 v0, 0x2
+    new-instance v0, Loq4;
 
-    iput v0, p0, Lmq4;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lmq4;->b:Ljava/lang/Object;
-
-    iput-object p2, p0, Lmq4;->X:Ljava/lang/Object;
-
-    iput-object p3, p0, Lmq4;->o:Ljava/lang/Object;
-
-    iput-wide p4, p0, Lmq4;->c:J
+    invoke-direct {v0}, Loq4;-><init>()V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lrq4;Ljava/lang/Object;JLjava/util/concurrent/TimeUnit;I)V
-    .locals 0
+.method public constructor <init>(Loq4;)V
+    .locals 1
 
-    .line 1
-    iput p6, p0, Lmq4;->a:I
+    invoke-direct {p0, p1}, Ldgg;-><init>(Lbgg;)V
 
-    iput-object p1, p0, Lmq4;->b:Ljava/lang/Object;
+    iget-boolean v0, p1, Loq4;->z:Z
 
-    iput-object p2, p0, Lmq4;->X:Ljava/lang/Object;
+    iput-boolean v0, p0, Lmq4;->K0:Z
 
-    iput-wide p3, p0, Lmq4;->c:J
+    iget-boolean v0, p1, Loq4;->A:Z
 
-    iput-object p5, p0, Lmq4;->o:Ljava/lang/Object;
+    iput-boolean v0, p0, Lmq4;->L0:Z
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-boolean v0, p1, Loq4;->B:Z
+
+    iput-boolean v0, p0, Lmq4;->M0:Z
+
+    iget-boolean v0, p1, Loq4;->C:Z
+
+    iput-boolean v0, p0, Lmq4;->N0:Z
+
+    iget-boolean v0, p1, Loq4;->D:Z
+
+    iput-boolean v0, p0, Lmq4;->O0:Z
+
+    iget-boolean v0, p1, Loq4;->E:Z
+
+    iput-boolean v0, p0, Lmq4;->P0:Z
+
+    iget-boolean v0, p1, Loq4;->F:Z
+
+    iput-boolean v0, p0, Lmq4;->Q0:Z
+
+    iget-boolean v0, p1, Loq4;->G:Z
+
+    iput-boolean v0, p0, Lmq4;->R0:Z
+
+    iget-boolean v0, p1, Loq4;->H:Z
+
+    iput-boolean v0, p0, Lmq4;->S0:Z
+
+    iget v0, p1, Loq4;->I:I
+
+    iput v0, p0, Lmq4;->J0:I
+
+    iget-boolean v0, p1, Loq4;->J:Z
+
+    iput-boolean v0, p0, Lmq4;->T0:Z
+
+    iget-boolean v0, p1, Loq4;->K:Z
+
+    iput-boolean v0, p0, Lmq4;->U0:Z
+
+    iget-boolean v0, p1, Loq4;->L:Z
+
+    iput-boolean v0, p0, Lmq4;->V0:Z
+
+    iget-object v0, p1, Loq4;->M:Landroid/util/SparseArray;
+
+    iput-object v0, p0, Lmq4;->W0:Landroid/util/SparseArray;
+
+    iget-object p1, p1, Loq4;->N:Landroid/util/SparseBooleanArray;
+
+    iput-object p1, p0, Lmq4;->X0:Landroid/util/SparseBooleanArray;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 10
 
-    iget-object v0, p0, Lmq4;->b:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    check-cast v0, Lrgg;
+    if-ne p0, p1, :cond_0
 
-    iget-object v1, p0, Lmq4;->X:Ljava/lang/Object;
-
-    check-cast v1, Ljava/lang/Iterable;
-
-    iget-object v2, p0, Lmq4;->o:Ljava/lang/Object;
-
-    check-cast v2, Lhc0;
-
-    iget-object v3, v0, Lrgg;->c:Lmf5;
-
-    check-cast v3, Lvkd;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v4
-
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v4
-
-    const/4 v5, 0x0
-
-    if-nez v4, :cond_0
-
-    goto :goto_1
+    return v0
 
     :cond_0
-    new-instance v4, Ljava/lang/StringBuilder;
+    const/4 v1, 0x0
 
-    const-string v6, "UPDATE events SET num_attempts = num_attempts + 1 WHERE _id in "
+    if-eqz p1, :cond_a
 
-    invoke-direct {v4, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-class v2, Lmq4;
 
-    invoke-static {v1}, Lvkd;->h0(Ljava/lang/Iterable;)Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v1
+    move-result-object v3
 
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eq v2, v3, :cond_1
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v4, "SELECT COUNT(*), transport_name FROM events WHERE num_attempts >= 16 GROUP BY transport_name"
-
-    invoke-virtual {v3}, Lvkd;->m()Landroid/database/sqlite/SQLiteDatabase;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
-
-    :try_start_0
-    invoke-virtual {v6, v1}, Landroid/database/sqlite/SQLiteDatabase;->compileStatement(Ljava/lang/String;)Landroid/database/sqlite/SQLiteStatement;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/database/sqlite/SQLiteStatement;->execute()V
-
-    invoke-virtual {v6, v4, v5}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :goto_0
-    :try_start_1
-    invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    const/4 v4, 0x0
-
-    invoke-interface {v1, v4}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v4
-
-    const/4 v7, 0x1
-
-    invoke-interface {v1, v7}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v7
-
-    int-to-long v8, v4
-
-    sget-object v4, Lz88;->Y:Lz88;
-
-    invoke-virtual {v3, v8, v9, v4, v7}, Lvkd;->Q(JLz88;Ljava/lang/String;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    goto :goto_0
+    goto/16 :goto_2
 
     :cond_1
-    :try_start_2
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+    check-cast p1, Lmq4;
 
-    const-string v1, "DELETE FROM events WHERE num_attempts >= 16"
+    invoke-super {p0, p1}, Ldgg;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v6, v1}, Landroid/database/sqlite/SQLiteDatabase;->compileStatement(Ljava/lang/String;)Landroid/database/sqlite/SQLiteStatement;
+    move-result v2
 
-    move-result-object v1
+    if-eqz v2, :cond_a
 
-    invoke-virtual {v1}, Landroid/database/sqlite/SQLiteStatement;->execute()V
+    iget-boolean v2, p0, Lmq4;->K0:Z
 
-    invoke-virtual {v6}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    iget-boolean v3, p1, Lmq4;->K0:Z
 
-    invoke-virtual {v6}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
+    if-ne v2, v3, :cond_a
 
-    :goto_1
-    iget-object v0, v0, Lrgg;->g:Lq93;
+    iget-boolean v2, p0, Lmq4;->L0:Z
 
-    invoke-interface {v0}, Lq93;->l()J
+    iget-boolean v3, p1, Lmq4;->L0:Z
 
-    move-result-wide v0
+    if-ne v2, v3, :cond_a
 
-    iget-wide v6, p0, Lmq4;->c:J
+    iget-boolean v2, p0, Lmq4;->M0:Z
 
-    add-long/2addr v0, v6
+    iget-boolean v3, p1, Lmq4;->M0:Z
 
-    new-instance v4, Lrx1;
+    if-ne v2, v3, :cond_a
 
-    const/16 v6, 0xb
+    iget-boolean v2, p0, Lmq4;->N0:Z
 
-    invoke-direct {v4, v0, v1, v2, v6}, Lrx1;-><init>(JLjava/lang/Object;I)V
+    iget-boolean v3, p1, Lmq4;->N0:Z
 
-    invoke-virtual {v3, v4}, Lvkd;->o(Ltkd;)Ljava/lang/Object;
+    if-ne v2, v3, :cond_a
 
-    return-object v5
+    iget-boolean v2, p0, Lmq4;->O0:Z
 
-    :catchall_0
-    move-exception v0
+    iget-boolean v3, p1, Lmq4;->O0:Z
+
+    if-ne v2, v3, :cond_a
+
+    iget-boolean v2, p0, Lmq4;->P0:Z
+
+    iget-boolean v3, p1, Lmq4;->P0:Z
+
+    if-ne v2, v3, :cond_a
+
+    iget-boolean v2, p0, Lmq4;->Q0:Z
+
+    iget-boolean v3, p1, Lmq4;->Q0:Z
+
+    if-ne v2, v3, :cond_a
+
+    iget-boolean v2, p0, Lmq4;->R0:Z
+
+    iget-boolean v3, p1, Lmq4;->R0:Z
+
+    if-ne v2, v3, :cond_a
+
+    iget-boolean v2, p0, Lmq4;->S0:Z
+
+    iget-boolean v3, p1, Lmq4;->S0:Z
+
+    if-ne v2, v3, :cond_a
+
+    iget v2, p0, Lmq4;->J0:I
+
+    iget v3, p1, Lmq4;->J0:I
+
+    if-ne v2, v3, :cond_a
+
+    iget-boolean v2, p0, Lmq4;->T0:Z
+
+    iget-boolean v3, p1, Lmq4;->T0:Z
+
+    if-ne v2, v3, :cond_a
+
+    iget-boolean v2, p0, Lmq4;->U0:Z
+
+    iget-boolean v3, p1, Lmq4;->U0:Z
+
+    if-ne v2, v3, :cond_a
+
+    iget-boolean v2, p0, Lmq4;->V0:Z
+
+    iget-boolean v3, p1, Lmq4;->V0:Z
+
+    if-ne v2, v3, :cond_a
+
+    iget-object v2, p1, Lmq4;->X0:Landroid/util/SparseBooleanArray;
+
+    iget-object v3, p0, Lmq4;->X0:Landroid/util/SparseBooleanArray;
+
+    invoke-virtual {v3}, Landroid/util/SparseBooleanArray;->size()I
+
+    move-result v4
+
+    invoke-virtual {v2}, Landroid/util/SparseBooleanArray;->size()I
+
+    move-result v5
+
+    if-eq v5, v4, :cond_2
+
+    goto/16 :goto_2
+
+    :cond_2
+    move v5, v1
+
+    :goto_0
+    if-ge v5, v4, :cond_4
+
+    invoke-virtual {v3, v5}, Landroid/util/SparseBooleanArray;->keyAt(I)I
+
+    move-result v6
+
+    invoke-virtual {v2, v6}, Landroid/util/SparseBooleanArray;->indexOfKey(I)I
+
+    move-result v6
+
+    if-gez v6, :cond_3
 
     goto :goto_2
 
-    :catchall_1
-    move-exception v0
+    :cond_3
+    add-int/lit8 v5, v5, 0x1
 
-    :try_start_3
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+    goto :goto_0
 
-    throw v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    :cond_4
+    iget-object p1, p1, Lmq4;->W0:Landroid/util/SparseArray;
 
+    iget-object v2, p0, Lmq4;->W0:Landroid/util/SparseArray;
+
+    invoke-virtual {v2}, Landroid/util/SparseArray;->size()I
+
+    move-result v3
+
+    invoke-virtual {p1}, Landroid/util/SparseArray;->size()I
+
+    move-result v4
+
+    if-eq v4, v3, :cond_5
+
+    goto :goto_2
+
+    :cond_5
+    move v4, v1
+
+    :goto_1
+    if-ge v4, v3, :cond_9
+
+    invoke-virtual {v2, v4}, Landroid/util/SparseArray;->keyAt(I)I
+
+    move-result v5
+
+    invoke-virtual {p1, v5}, Landroid/util/SparseArray;->indexOfKey(I)I
+
+    move-result v5
+
+    if-ltz v5, :cond_a
+
+    invoke-virtual {v2, v4}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Ljava/util/Map;
+
+    invoke-virtual {p1, v5}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/util/Map;
+
+    invoke-interface {v6}, Ljava/util/Map;->size()I
+
+    move-result v7
+
+    invoke-interface {v5}, Ljava/util/Map;->size()I
+
+    move-result v8
+
+    if-eq v8, v7, :cond_6
+
+    goto :goto_2
+
+    :cond_6
+    invoke-interface {v6}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object v6
+
+    invoke-interface {v6}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v6
+
+    :cond_7
+    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_8
+
+    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Ljava/util/Map$Entry;
+
+    invoke-interface {v7}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Lmfg;
+
+    invoke-interface {v5, v8}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-eqz v9, :cond_a
+
+    invoke-interface {v7}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v7
+
+    invoke-interface {v5, v8}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v8
+
+    invoke-static {v7, v8}, Lxxg;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-nez v7, :cond_7
+
+    goto :goto_2
+
+    :cond_8
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_1
+
+    :cond_9
+    return v0
+
+    :cond_a
     :goto_2
-    invoke-virtual {v6}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
-
-    throw v0
+    return v1
 .end method
 
-.method public b(Lyxe;)Ljava/util/concurrent/ScheduledFuture;
-    .locals 6
+.method public final hashCode()I
+    .locals 3
 
-    iget v0, p0, Lmq4;->a:I
+    invoke-super {p0}, Ldgg;->hashCode()I
 
-    packed-switch v0, :pswitch_data_0
+    move-result v0
 
-    iget-object v0, p0, Lmq4;->b:Ljava/lang/Object;
+    const/16 v1, 0x1f
 
-    check-cast v0, Lrq4;
+    add-int/2addr v0, v1
 
-    iget-object v1, p0, Lmq4;->X:Ljava/lang/Object;
+    mul-int/2addr v0, v1
 
-    check-cast v1, Ljava/util/concurrent/Callable;
+    iget-boolean v2, p0, Lmq4;->K0:Z
 
-    iget-object v2, p0, Lmq4;->o:Ljava/lang/Object;
+    add-int/2addr v0, v2
 
-    check-cast v2, Ljava/util/concurrent/TimeUnit;
+    mul-int/2addr v0, v1
 
-    iget-object v3, v0, Lrq4;->b:Ljava/util/concurrent/ScheduledExecutorService;
+    iget-boolean v2, p0, Lmq4;->L0:Z
 
-    new-instance v4, Lpv0;
+    add-int/2addr v0, v2
 
-    const/4 v5, 0x1
+    mul-int/2addr v0, v1
 
-    invoke-direct {v4, v0, v1, p1, v5}, Lpv0;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    iget-boolean v2, p0, Lmq4;->M0:Z
 
-    iget-wide v0, p0, Lmq4;->c:J
+    add-int/2addr v0, v2
 
-    invoke-interface {v3, v4, v0, v1, v2}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    mul-int/2addr v0, v1
 
-    move-result-object p1
+    iget-boolean v2, p0, Lmq4;->N0:Z
 
-    return-object p1
+    add-int/2addr v0, v2
 
-    :pswitch_0
-    iget-object v0, p0, Lmq4;->b:Ljava/lang/Object;
+    mul-int/2addr v0, v1
 
-    check-cast v0, Lrq4;
+    iget-boolean v2, p0, Lmq4;->O0:Z
 
-    iget-object v1, p0, Lmq4;->X:Ljava/lang/Object;
+    add-int/2addr v0, v2
 
-    check-cast v1, Ljava/lang/Runnable;
+    mul-int/2addr v0, v1
 
-    iget-object v2, p0, Lmq4;->o:Ljava/lang/Object;
+    iget-boolean v2, p0, Lmq4;->P0:Z
 
-    check-cast v2, Ljava/util/concurrent/TimeUnit;
+    add-int/2addr v0, v2
 
-    iget-object v3, v0, Lrq4;->b:Ljava/util/concurrent/ScheduledExecutorService;
+    mul-int/2addr v0, v1
 
-    new-instance v4, Lpq4;
+    iget-boolean v2, p0, Lmq4;->Q0:Z
 
-    const/4 v5, 0x1
+    add-int/2addr v0, v2
 
-    invoke-direct {v4, v0, v1, p1, v5}, Lpq4;-><init>(Lrq4;Ljava/lang/Runnable;Lyxe;I)V
+    mul-int/2addr v0, v1
 
-    iget-wide v0, p0, Lmq4;->c:J
+    iget-boolean v2, p0, Lmq4;->R0:Z
 
-    invoke-interface {v3, v4, v0, v1, v2}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    add-int/2addr v0, v2
 
-    move-result-object p1
+    mul-int/2addr v0, v1
 
-    return-object p1
+    iget-boolean v2, p0, Lmq4;->S0:Z
 
-    nop
+    add-int/2addr v0, v2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lmq4;->J0:I
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Lmq4;->T0:Z
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Lmq4;->U0:Z
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v1, p0, Lmq4;->V0:Z
+
+    add-int/2addr v0, v1
+
+    return v0
 .end method

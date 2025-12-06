@@ -1,49 +1,126 @@
 .class public final Lcs;
-.super Ly14;
+.super Lh6f;
 .source "SourceFile"
+
+# interfaces
+.implements Lfhd;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:I
 
-.field public final synthetic Y:Lgs;
-
-.field public Z:I
-
-.field public o:Lgs;
+.field public b:Lhx4;
 
 
 # direct methods
-.method public constructor <init>(Lgs;Ly14;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;I)V
+    .locals 2
 
-    iput-object p1, p0, Lcs;->Y:Lgs;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput p2, p0, Lcs;->a:I
+
+    new-instance v0, Lhx4;
+
+    new-instance v1, Ljava/io/File;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+
+    move-result-object p1
+
+    iget-object p1, p1, Landroid/content/pm/ApplicationInfo;->nativeLibraryDir:Ljava/lang/String;
+
+    invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-direct {v0, v1, p2}, Lhx4;-><init>(Ljava/io/File;I)V
+
+    iput-object v0, p0, Lcs;->b:Lhx4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(Landroid/content/Context;)Lh6f;
+    .locals 2
 
-    iput-object p1, p0, Lcs;->X:Ljava/lang/Object;
+    new-instance v0, Lhx4;
 
-    iget p1, p0, Lcs;->Z:I
+    new-instance v1, Ljava/io/File;
 
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lcs;->Z:I
-
-    iget-object p1, p0, Lcs;->Y:Lgs;
-
-    invoke-virtual {p1, p0}, Lgs;->t(Ly14;)Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object p1
 
-    return-object p1
+    iget-object p1, p1, Landroid/content/pm/ApplicationInfo;->nativeLibraryDir:Ljava/lang/String;
+
+    invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    iget p1, p0, Lcs;->a:I
+
+    or-int/lit8 p1, p1, 0x1
+
+    invoke-direct {v0, v1, p1}, Lhx4;-><init>(Ljava/io/File;I)V
+
+    iput-object v0, p0, Lcs;->b:Lhx4;
+
+    return-object p0
+.end method
+
+.method public final b()Ljava/lang/String;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    throw p0
+.end method
+
+.method public final c(Ljava/lang/String;ILandroid/os/StrictMode$ThreadPolicy;)I
+    .locals 1
+
+    iget-object v0, p0, Lcs;->b:Lhx4;
+
+    invoke-virtual {v0, p1, p2, p3}, Lhx4;->c(Ljava/lang/String;ILandroid/os/StrictMode$ThreadPolicy;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final d(I)V
+    .locals 0
+
+    iget-object p1, p0, Lcs;->b:Lhx4;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ApplicationSoSource["
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcs;->b:Lhx4;
+
+    invoke-virtual {v1}, Lhx4;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "]"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

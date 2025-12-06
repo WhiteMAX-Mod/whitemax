@@ -5,7 +5,7 @@
 
 # instance fields
 .field private mNativeContext:J
-    .annotation build Lmw4;
+    .annotation build Lfz4;
     .end annotation
 .end field
 
@@ -13,7 +13,7 @@
 # direct methods
 .method public constructor <init>(J)V
     .locals 0
-    .annotation build Lmw4;
+    .annotation build Lfz4;
     .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -24,57 +24,57 @@
 .end method
 
 .method private native nativeDispose()V
-    .annotation build Lmw4;
+    .annotation build Lfz4;
     .end annotation
 .end method
 
 .method private native nativeFinalize()V
-    .annotation build Lmw4;
+    .annotation build Lfz4;
     .end annotation
 .end method
 
 .method private native nativeGetDisposalMode()I
-    .annotation build Lmw4;
+    .annotation build Lfz4;
     .end annotation
 .end method
 
 .method private native nativeGetDurationMs()I
-    .annotation build Lmw4;
+    .annotation build Lfz4;
     .end annotation
 .end method
 
 .method private native nativeGetHeight()I
-    .annotation build Lmw4;
+    .annotation build Lfz4;
     .end annotation
 .end method
 
 .method private native nativeGetTransparentPixelColor()I
-    .annotation build Lmw4;
+    .annotation build Lfz4;
     .end annotation
 .end method
 
 .method private native nativeGetWidth()I
-    .annotation build Lmw4;
+    .annotation build Lfz4;
     .end annotation
 .end method
 
 .method private native nativeGetXOffset()I
-    .annotation build Lmw4;
+    .annotation build Lfz4;
     .end annotation
 .end method
 
 .method private native nativeGetYOffset()I
-    .annotation build Lmw4;
+    .annotation build Lfz4;
     .end annotation
 .end method
 
 .method private native nativeHasTransparency()Z
-    .annotation build Lmw4;
+    .annotation build Lfz4;
     .end annotation
 .end method
 
 .method private native nativeRenderFrame(IILandroid/graphics/Bitmap;)V
-    .annotation build Lmw4;
+    .annotation build Lfz4;
     .end annotation
 .end method
 

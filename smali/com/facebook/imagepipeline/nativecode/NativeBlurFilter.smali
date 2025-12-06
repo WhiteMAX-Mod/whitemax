@@ -4,7 +4,7 @@
 
 
 # annotations
-.annotation build Lmw4;
+.annotation build Lfz4;
 .end annotation
 
 
@@ -14,7 +14,7 @@
 
     const-string v0, "native-filters"
 
-    invoke-static {v0}, Lp4a;->d(Ljava/lang/String;)Z
+    invoke-static {v0}, Lnca;->b(Ljava/lang/String;)Z
 
     return-void
 .end method
@@ -28,6 +28,6 @@
 .end method
 
 .method private static native nativeIterativeBoxBlur(Landroid/graphics/Bitmap;II)V
-    .annotation build Lmw4;
+    .annotation build Lfz4;
     .end annotation
 .end method

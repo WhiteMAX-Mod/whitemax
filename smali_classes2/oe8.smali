@@ -1,23 +1,8 @@
-.class public final Loe8;
-.super Lrdi;
+.class public interface abstract Loe8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Loe8;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Loe8;
-
-    const/16 v1, 0xb
-
-    invoke-direct {v0, v1}, Lrdi;-><init>(I)V
-
-    sput-object v0, Loe8;->c:Loe8;
-
-    return-void
+# virtual methods
+.method public abstract c()V
 .end method

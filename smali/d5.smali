@@ -1,117 +1,119 @@
-.class public abstract Ld5;
+.class public abstract synthetic Ld5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # direct methods
-.method public static a()Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-    .locals 1
-
-    sget-object v0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_SCROLL_IN_DIRECTION:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-
-    return-object v0
-.end method
-
-.method public static b(Landroid/view/accessibility/AccessibilityNodeInfo;Landroid/graphics/Rect;)V
+.method public static bridge synthetic a(Landroid/media/Spatializer;)I
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->getBoundsInWindow(Landroid/graphics/Rect;)V
+    invoke-virtual {p0}, Landroid/media/Spatializer;->getImmersiveAudioLevel()I
 
-    return-void
+    move-result p0
+
+    return p0
 .end method
 
-.method public static c(Landroid/view/accessibility/AccessibilityNodeInfo;)Ljava/lang/CharSequence;
+.method public static bridge synthetic b(Landroid/media/AudioManager;)Landroid/media/Spatializer;
     .locals 0
 
-    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getContainerTitle()Ljava/lang/CharSequence;
+    invoke-virtual {p0}, Landroid/media/AudioManager;->getSpatializer()Landroid/media/Spatializer;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static d(Landroid/view/accessibility/AccessibilityNodeInfo;)J
-    .locals 2
-
-    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getMinDurationBetweenContentChanges()Ljava/time/Duration;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/time/Duration;->toMillis()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public static e(Landroid/view/accessibility/AccessibilityNodeInfo;)Z
+.method public static bridge synthetic c(Ljava/lang/Object;)Landroid/media/Spatializer;
     .locals 0
 
-    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->hasRequestInitialAccessibilityFocus()Z
+    check-cast p0, Landroid/media/Spatializer;
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic d()Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
+    .locals 1
+
+    sget-object v0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_DRAG_START:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic e(Landroid/media/AudioAttributes$Builder;I)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/media/AudioAttributes$Builder;->setSpatializationBehavior(I)Landroid/media/AudioAttributes$Builder;
+
+    return-void
+.end method
+
+.method public static bridge synthetic f(Landroid/media/AudioAttributes$Builder;Z)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/media/AudioAttributes$Builder;->setIsContentSpatialized(Z)Landroid/media/AudioAttributes$Builder;
+
+    return-void
+.end method
+
+.method public static bridge synthetic g(Landroid/media/Spatializer;Lfv1;Lqq4;)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Landroid/media/Spatializer;->addOnSpatializerStateChangedListener(Ljava/util/concurrent/Executor;Landroid/media/Spatializer$OnSpatializerStateChangedListener;)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic h(Landroid/media/Spatializer;Lqq4;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/media/Spatializer;->removeOnSpatializerStateChangedListener(Landroid/media/Spatializer$OnSpatializerStateChangedListener;)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic i(Landroid/media/Spatializer;)Z
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/media/Spatializer;->isAvailable()Z
 
     move-result p0
 
     return p0
 .end method
 
-.method public static f(Landroid/view/accessibility/AccessibilityNodeInfo;)Z
+.method public static bridge synthetic j(Landroid/media/Spatializer;Landroid/media/AudioAttributes;Landroid/media/AudioFormat;)Z
     .locals 0
 
-    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->isAccessibilityDataSensitive()Z
+    invoke-virtual {p0, p1, p2}, Landroid/media/Spatializer;->canBeSpatialized(Landroid/media/AudioAttributes;Landroid/media/AudioFormat;)Z
 
     move-result p0
 
     return p0
 .end method
 
-.method public static g(Landroid/view/accessibility/AccessibilityNodeInfo;Z)V
-    .locals 0
+.method public static bridge synthetic k()Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
+    .locals 1
 
-    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setAccessibilityDataSensitive(Z)V
+    sget-object v0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_DRAG_DROP:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
 
-    return-void
+    return-object v0
 .end method
 
-.method public static h(Landroid/view/accessibility/AccessibilityNodeInfo;Landroid/graphics/Rect;)V
+.method public static bridge synthetic l(Landroid/media/Spatializer;)Z
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setBoundsInWindow(Landroid/graphics/Rect;)V
+    invoke-virtual {p0}, Landroid/media/Spatializer;->isEnabled()Z
 
-    return-void
+    move-result p0
+
+    return p0
 .end method
 
-.method public static i(Landroid/view/accessibility/AccessibilityNodeInfo;Ljava/lang/CharSequence;)V
-    .locals 0
+.method public static bridge synthetic m()Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
+    .locals 1
 
-    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setContainerTitle(Ljava/lang/CharSequence;)V
+    sget-object v0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_DRAG_CANCEL:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
 
-    return-void
-.end method
-
-.method public static j(Landroid/view/accessibility/AccessibilityNodeInfo;J)V
-    .locals 0
-
-    invoke-static {p1, p2}, Ljava/time/Duration;->ofMillis(J)Ljava/time/Duration;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setMinDurationBetweenContentChanges(Ljava/time/Duration;)V
-
-    return-void
-.end method
-
-.method public static k(Landroid/view/accessibility/AccessibilityNodeInfo;Landroid/view/View;Z)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Landroid/view/accessibility/AccessibilityNodeInfo;->setQueryFromAppProcessEnabled(Landroid/view/View;Z)V
-
-    return-void
-.end method
-
-.method public static l(Landroid/view/accessibility/AccessibilityNodeInfo;Z)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setRequestInitialAccessibilityFocus(Z)V
-
-    return-void
+    return-object v0
 .end method

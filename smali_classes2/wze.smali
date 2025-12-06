@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lxze;
+.implements Lzze;
 
 
 # static fields
@@ -50,7 +50,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x479618e8
+    const v0, -0x63736917
 
     return v0
 .end method
@@ -58,7 +58,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "Success"
+    const-string v0, "Continue"
 
     return-object v0
 .end method

@@ -3,280 +3,444 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lk99;
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.implements Lio7;
 
 
 # instance fields
-.field public final X:I
-
-.field public Y:Lj99;
-
-.field public Z:Lz18;
-
-.field public a:Landroid/content/Context;
-
-.field public b:Landroid/view/LayoutInflater;
-
-.field public c:Lt89;
-
-.field public o:Landroidx/appcompat/view/menu/ExpandedMenuView;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;I)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
+    iput p1, p0, La28;->a:I
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p2, p0, La28;->X:I
-
-    iput-object p1, p0, La28;->a:Landroid/content/Context;
-
-    invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object p1
-
-    iput-object p1, p0, La28;->b:Landroid/view/LayoutInflater;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Lvbf;)Z
-    .locals 6
+.method public final a(Lw5;)Ljava/lang/Object;
+    .locals 21
 
-    invoke-virtual {p1}, Lt89;->hasVisibleItems()Z
+    move-object/from16 v0, p0
 
-    move-result v0
+    move-object/from16 v1, p1
 
-    iget-object v1, p1, Lt89;->a:Landroid/content/Context;
+    iget v2, v0, La28;->a:I
 
-    if-nez v0, :cond_0
+    packed-switch v2, :pswitch_data_0
 
-    const/4 p1, 0x0
+    sget-object v1, Lnq;->a:Lnq;
 
-    return p1
+    return-object v1
 
-    :cond_0
-    new-instance v0, Lu89;
+    :pswitch_0
+    sget-object v2, Lmq;->a:Lmq;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v3, 0x3f
 
-    iput-object p1, v0, Lu89;->a:Lvbf;
+    invoke-virtual {v1, v3}, Lw5;->d(I)Lbwf;
 
-    new-instance v2, Lyc;
+    move-result-object v1
 
-    invoke-direct {v2, v1}, Lyc;-><init>(Landroid/content/Context;)V
+    sput-object v1, Lmq;->b:Lk18;
 
-    new-instance v3, La28;
+    return-object v2
 
-    invoke-virtual {v2}, Lyc;->getContext()Landroid/content/Context;
+    :pswitch_1
+    const/16 v2, 0x8e
+
+    invoke-virtual {v1, v2}, Lw5;->c(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lj98;
+
+    return-object v1
+
+    :pswitch_2
+    new-instance v2, Lhya;
+
+    invoke-direct {v2, v1}, Lhya;-><init>(Lw5;)V
+
+    return-object v2
+
+    :pswitch_3
+    new-instance v2, Llya;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v1, v3}, Llya;-><init>(Lw5;I)V
+
+    return-object v2
+
+    :pswitch_4
+    const/16 v2, 0x2aa
+
+    invoke-virtual {v1, v2}, Lw5;->c(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lui8;
+
+    return-object v1
+
+    :pswitch_5
+    const/16 v2, 0x2a9
+
+    invoke-virtual {v1, v2}, Lw5;->c(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lui8;
+
+    return-object v1
+
+    :pswitch_6
+    const/16 v2, 0x2a8
+
+    invoke-virtual {v1, v2}, Lw5;->c(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqf9;
+
+    return-object v1
+
+    :pswitch_7
+    const/16 v2, 0x2a7
+
+    invoke-virtual {v1, v2}, Lw5;->c(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lui8;
+
+    return-object v1
+
+    :pswitch_8
+    sget-object v1, Ljo5;->a:Ljo5;
+
+    return-object v1
+
+    :pswitch_9
+    sget-object v1, Lp58;->a:Lp58;
+
+    return-object v1
+
+    :pswitch_a
+    sget-object v1, Lzu7;->a:Lzu7;
+
+    return-object v1
+
+    :pswitch_b
+    new-instance v2, Le31;
+
+    const/16 v3, 0x2a2
+
+    invoke-virtual {v1, v3}, Lw5;->d(I)Lbwf;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v2, v1}, Le31;-><init>(I)V
+
+    return-object v2
+
+    :pswitch_c
+    new-instance v1, Lefe;
+
+    sget-object v2, Lru/ok/tamtam/android/prefs/PmsKey;->official-bot-naming-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v3, 0x0
+
+    const-string v4, "\u041e\u0442\u043e\u0431\u0440\u0430\u0436\u0430\u0442\u044c \u043e\u0444\u0438\u0446\u0438\u0430\u043b\u044c\u043d\u044b\u0435 \u0430\u043a\u043a\u0430\u0443\u043d\u0442\u044b \u0431\u043e\u0442\u043e\u0432"
+
+    invoke-direct {v1, v4, v2, v3}, Lefe;-><init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
+
+    return-object v1
+
+    :pswitch_d
+    const/16 v2, 0x30
+
+    invoke-virtual {v1, v2}, Lw5;->d(I)Lbwf;
+
+    move-result-object v1
+
+    new-instance v2, Luya;
+
+    invoke-direct {v2, v1}, Luya;-><init>(Lk18;)V
+
+    return-object v2
+
+    :pswitch_e
+    new-instance v1, Lefe;
+
+    sget-object v2, Lru/ok/tamtam/android/prefs/PmsKey;->new-session-logic:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    invoke-direct {v1, v2}, Lefe;-><init>(Lru/ok/tamtam/android/prefs/PmsKey;)V
+
+    return-object v1
+
+    :pswitch_f
+    const/16 v2, 0x2ab
+
+    invoke-virtual {v1, v2}, Lw5;->c(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lui8;
+
+    return-object v1
+
+    :pswitch_10
+    new-instance v1, Lefe;
+
+    sget-object v2, Lru/ok/tamtam/android/prefs/PmsKey;->analytics-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v3, 0x1
+
+    const-string v4, "\u0410\u043d\u0430\u043b\u0438\u0442\u0438\u043a\u0430"
+
+    invoke-direct {v1, v4, v2, v3}, Lefe;-><init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
+
+    return-object v1
+
+    :pswitch_11
+    sget-object v1, Luba;->a:Luba;
+
+    return-object v1
+
+    :pswitch_12
+    new-instance v2, Loya;
+
+    invoke-direct {v2, v1}, Loya;-><init>(Lw5;)V
+
+    return-object v2
+
+    :pswitch_13
+    new-instance v1, Lyre;
+
+    const/4 v2, 0x6
+
+    invoke-direct {v1, v2}, Lyre;-><init>(I)V
+
+    return-object v1
+
+    :pswitch_14
+    sget-object v1, Lfy9;->a:Lfy9;
+
+    return-object v1
+
+    :pswitch_15
+    new-instance v1, Lz29;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v2}, Lz29;-><init>(I)V
+
+    return-object v1
+
+    :pswitch_16
+    new-instance v2, Lq14;
+
+    const/16 v3, 0x75
+
+    invoke-virtual {v1, v3}, Lw5;->d(I)Lbwf;
+
+    move-result-object v1
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, v1, v3}, Lq14;-><init>(Lk18;I)V
+
+    return-object v2
+
+    :pswitch_17
+    new-instance v1, Lyre;
+
+    const/4 v2, 0x5
+
+    invoke-direct {v1, v2}, Lyre;-><init>(I)V
+
+    return-object v1
+
+    :pswitch_18
+    sget-object v1, Lih8;->a:Lih8;
+
+    return-object v1
+
+    :pswitch_19
+    sget-object v1, Lhf8;->a:Lhf8;
+
+    return-object v1
+
+    :pswitch_1a
+    new-instance v2, Ls78;
+
+    const/16 v3, 0x62
+
+    invoke-virtual {v1, v3}, Lw5;->d(I)Lbwf;
+
+    move-result-object v3
+
+    const/16 v4, 0x61
+
+    invoke-virtual {v1, v4}, Lw5;->d(I)Lbwf;
 
     move-result-object v4
 
-    sget v5, Luqc;->abc_list_menu_item_layout:I
+    const/16 v5, 0x6d
 
-    invoke-direct {v3, v4, v5}, La28;-><init>(Landroid/content/Context;I)V
+    invoke-virtual {v1, v5}, Lw5;->d(I)Lbwf;
 
-    iput-object v3, v0, Lu89;->c:La28;
+    move-result-object v5
 
-    iput-object v0, v3, La28;->Y:Lj99;
+    const/16 v6, 0x8e
 
-    invoke-virtual {p1, v3, v1}, Lt89;->b(Lk99;Landroid/content/Context;)V
+    invoke-virtual {v1, v6}, Lw5;->d(I)Lbwf;
 
-    iget-object v1, v0, Lu89;->c:La28;
+    move-result-object v6
 
-    iget-object v3, v1, La28;->Z:Lz18;
+    const/16 v7, 0x4f
 
-    if-nez v3, :cond_1
+    invoke-virtual {v1, v7}, Lw5;->d(I)Lbwf;
 
-    new-instance v3, Lz18;
+    move-result-object v7
 
-    invoke-direct {v3, v1}, Lz18;-><init>(La28;)V
+    const/16 v8, 0x8f
 
-    iput-object v3, v1, La28;->Z:Lz18;
+    invoke-virtual {v1, v8}, Lw5;->d(I)Lbwf;
 
-    :cond_1
-    iget-object v1, v1, La28;->Z:Lz18;
+    move-result-object v8
 
-    iget-object v3, v2, Lyc;->a:Luc;
+    const/16 v9, 0x8
 
-    iput-object v1, v3, Luc;->q:Landroid/widget/ListAdapter;
+    invoke-virtual {v1, v9}, Lw5;->d(I)Lbwf;
 
-    iput-object v0, v3, Luc;->r:Landroid/content/DialogInterface$OnClickListener;
+    move-result-object v9
 
-    iget-object v1, p1, Lt89;->x0:Landroid/view/View;
+    const/16 v10, 0x90
 
-    if-eqz v1, :cond_2
+    invoke-virtual {v1, v10}, Lw5;->d(I)Lbwf;
 
-    iput-object v1, v3, Luc;->e:Landroid/view/View;
+    move-result-object v10
 
-    goto :goto_0
+    const/16 v11, 0x91
 
-    :cond_2
-    iget-object v1, p1, Lt89;->w0:Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1, v11}, Lw5;->d(I)Lbwf;
 
-    iput-object v1, v3, Luc;->c:Landroid/graphics/drawable/Drawable;
+    move-result-object v11
 
-    iget-object v1, p1, Lt89;->v0:Ljava/lang/CharSequence;
+    const/16 v12, 0x92
 
-    invoke-virtual {v2, v1}, Lyc;->setTitle(Ljava/lang/CharSequence;)Lyc;
+    invoke-virtual {v1, v12}, Lw5;->d(I)Lbwf;
 
-    :goto_0
-    iput-object v0, v3, Luc;->o:Lu89;
+    move-result-object v12
 
-    invoke-virtual {v2}, Lyc;->create()Lzc;
+    const/16 v13, 0x2e
 
-    move-result-object v1
+    invoke-virtual {v1, v13}, Lw5;->d(I)Lbwf;
 
-    iput-object v1, v0, Lu89;->b:Lzc;
+    move-result-object v13
 
-    invoke-virtual {v1, v0}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
+    const/16 v14, 0x3d
 
-    iget-object v1, v0, Lu89;->b:Lzc;
+    invoke-virtual {v1, v14}, Lw5;->d(I)Lbwf;
 
-    invoke-virtual {v1}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+    move-result-object v14
 
-    move-result-object v1
+    const/16 v15, 0x93
 
-    invoke-virtual {v1}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
+    invoke-virtual {v1, v15}, Lw5;->d(I)Lbwf;
 
-    move-result-object v1
+    move-result-object v15
 
-    const/16 v2, 0x3eb
+    const/16 v0, 0x74
 
-    iput v2, v1, Landroid/view/WindowManager$LayoutParams;->type:I
+    invoke-virtual {v1, v0}, Lw5;->d(I)Lbwf;
 
-    iget v2, v1, Landroid/view/WindowManager$LayoutParams;->flags:I
+    move-result-object v16
 
-    const/high16 v3, 0x20000
+    const/16 v0, 0x94
 
-    or-int/2addr v2, v3
+    invoke-virtual {v1, v0}, Lw5;->d(I)Lbwf;
 
-    iput v2, v1, Landroid/view/WindowManager$LayoutParams;->flags:I
+    move-result-object v17
 
-    iget-object v0, v0, Lu89;->b:Lzc;
+    const/16 v0, 0x95
 
-    invoke-virtual {v0}, Landroid/app/Dialog;->show()V
+    invoke-virtual {v1, v0}, Lw5;->d(I)Lbwf;
 
-    iget-object v0, p0, La28;->Y:Lj99;
+    move-result-object v18
 
-    if-eqz v0, :cond_3
+    const/16 v0, 0x1f
 
-    invoke-interface {v0, p1}, Lj99;->P(Lt89;)Z
+    invoke-virtual {v1, v0}, Lw5;->d(I)Lbwf;
 
-    :cond_3
-    const/4 p1, 0x1
+    move-result-object v19
 
-    return p1
-.end method
+    const/16 v0, 0x8d
 
-.method public final c()Z
-    .locals 1
+    invoke-virtual {v1, v0}, Lw5;->d(I)Lbwf;
 
-    const/4 v0, 0x0
+    move-result-object v20
 
-    return v0
-.end method
+    invoke-direct/range {v2 .. v20}, Ls78;-><init>(Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;)V
 
-.method public final d(Lx89;)Z
-    .locals 0
+    return-object v2
 
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final e(Lj99;)V
-    .locals 0
-
-    const/4 p0, 0x0
-
-    throw p0
-.end method
-
-.method public final g(Lx89;)Z
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final h()V
-    .locals 1
-
-    iget-object v0, p0, La28;->Z:Lz18;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lz18;->notifyDataSetChanged()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final j(Landroid/content/Context;Lt89;)V
-    .locals 1
-
-    iget-object v0, p0, La28;->a:Landroid/content/Context;
-
-    if-eqz v0, :cond_0
-
-    iput-object p1, p0, La28;->a:Landroid/content/Context;
-
-    iget-object v0, p0, La28;->b:Landroid/view/LayoutInflater;
-
-    if-nez v0, :cond_0
-
-    invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object p1
-
-    iput-object p1, p0, La28;->b:Landroid/view/LayoutInflater;
-
-    :cond_0
-    iput-object p2, p0, La28;->c:Lt89;
-
-    iget-object p1, p0, La28;->Z:Lz18;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1}, Lz18;->notifyDataSetChanged()V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final l(Lt89;Z)V
-    .locals 1
-
-    iget-object v0, p0, La28;->Y:Lj99;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0, p1, p2}, Lj99;->l(Lt89;Z)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 0
-
-    iget-object p1, p0, La28;->c:Lt89;
-
-    iget-object p2, p0, La28;->Z:Lz18;
-
-    invoke-virtual {p2, p3}, Lz18;->b(I)Lx89;
-
-    move-result-object p2
-
-    const/4 p3, 0x0
-
-    invoke-virtual {p1, p2, p0, p3}, Lt89;->q(Landroid/view/MenuItem;Lk99;I)Z
-
-    return-void
+    :pswitch_1b
+    new-instance v0, Ljbe;
+
+    const/16 v1, 0x16
+
+    invoke-direct {v0, v1}, Ljbe;-><init>(I)V
+
+    return-object v0
+
+    :pswitch_1c
+    new-instance v0, Lz29;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, v1}, Lz29;-><init>(I)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1c
+        :pswitch_1b
+        :pswitch_1a
+        :pswitch_19
+        :pswitch_18
+        :pswitch_17
+        :pswitch_16
+        :pswitch_15
+        :pswitch_14
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

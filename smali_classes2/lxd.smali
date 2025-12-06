@@ -1,67 +1,16 @@
-.class public interface abstract Llxd;
+.class public final Llxd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ltce;
+.implements Lieg;
 
 
 # virtual methods
-.method public a()Ltrf;
+.method public final a()Lnme;
     .locals 1
 
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public b()Lice;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public c()Ltrf;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public d()Lqce;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public e()Lsu7;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public abstract f()I
-.end method
-
-.method public g()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public getType()Lsce;
-    .locals 1
-
-    sget-object v0, Lsce;->b:Lsce;
+    sget-object v0, Lv8d;->a:Lnme;
 
     return-object v0
 .end method

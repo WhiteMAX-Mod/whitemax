@@ -1,130 +1,168 @@
 .class public final Lm08;
-.super Landroid/text/style/URLSpan;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Ln08;
+.field public final a:Z
 
-.field public b:I
+.field public final b:Ljava/lang/String;
 
-.field public final c:Z
-
-.field public final o:Lq7;
+.field public final c:Lorg/webrtc/NativeDoubleArrayConsumer$Consumer;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;IZ)V
+.method public constructor <init>(ZLjava/lang/String;Lorg/webrtc/NativeDoubleArrayConsumer$Consumer;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Landroid/text/style/URLSpan;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x0
+    iput-boolean p1, p0, Lm08;->a:Z
 
-    iput-object p1, p0, Lm08;->a:Ln08;
+    iput-object p2, p0, Lm08;->b:Ljava/lang/String;
 
-    iput p2, p0, Lm08;->b:I
-
-    iput-boolean p3, p0, Lm08;->c:Z
-
-    new-instance p1, Lq7;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lm08;->o:Lq7;
+    iput-object p3, p0, Lm08;->c:Lorg/webrtc/NativeDoubleArrayConsumer$Consumer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 7
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    const/4 v0, 0x1
 
-    move-result-wide v0
+    if-ne p0, p1, :cond_0
 
-    iget-object v2, p0, Lm08;->o:Lq7;
+    return v0
 
-    iget-wide v3, v2, Lq7;->a:J
+    :cond_0
+    instance-of v1, p1, Lm08;
 
-    sub-long v3, v0, v3
+    const/4 v2, 0x0
 
-    const-wide/16 v5, 0x12c
+    if-nez v1, :cond_1
 
-    cmp-long v3, v3, v5
+    return v2
 
-    if-lez v3, :cond_3
+    :cond_1
+    check-cast p1, Lm08;
 
-    iput-wide v0, v2, Lq7;->a:J
+    iget-boolean v1, p0, Lm08;->a:Z
 
-    instance-of v0, p1, Landroid/widget/TextView;
+    iget-boolean v3, p1, Lm08;->a:Z
 
-    if-eqz v0, :cond_0
+    if-eq v1, v3, :cond_2
 
-    move-object v0, p1
+    return v2
 
-    check-cast v0, Landroid/widget/TextView;
+    :cond_2
+    iget-object v1, p0, Lm08;->b:Ljava/lang/String;
 
-    invoke-virtual {v0}, Landroid/widget/TextView;->getLinksClickable()Z
+    iget-object v3, p1, Lm08;->b:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lm08;->c:Lorg/webrtc/NativeDoubleArrayConsumer$Consumer;
+
+    iget-object p1, p1, Lm08;->c:Lorg/webrtc/NativeDoubleArrayConsumer$Consumer;
+
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-boolean v0, p0, Lm08;->a:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v0
 
-    if-nez v0, :cond_0
+    mul-int/lit8 v0, v0, 0x1f
 
-    goto :goto_1
+    iget-object v1, p0, Lm08;->b:Ljava/lang/String;
 
-    :cond_0
-    iget-object v0, p0, Lm08;->a:Ln08;
+    if-nez v1, :cond_0
 
-    if-nez v0, :cond_2
-
-    instance-of v0, p1, Ln08;
-
-    if-eqz v0, :cond_1
-
-    move-object v0, p1
-
-    check-cast v0, Ln08;
+    const/4 v1, 0x0
 
     goto :goto_0
 
-    :cond_1
-    const/4 v0, 0x0
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    :cond_2
+    move-result v1
+
     :goto_0
-    if-eqz v0, :cond_3
+    add-int/2addr v0, v1
 
-    invoke-virtual {p0}, Landroid/text/style/URLSpan;->getURL()Ljava/lang/String;
+    mul-int/lit8 v0, v0, 0x1f
 
-    move-result-object p1
+    iget-object v1, p0, Lm08;->c:Lorg/webrtc/NativeDoubleArrayConsumer$Consumer;
 
-    sget-object v1, Lr08;->a:Lr08;
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    invoke-interface {v0, p1, v1, p0}, Ln08;->b(Ljava/lang/String;Lr08;Landroid/text/style/ClickableSpan;)V
+    move-result v1
 
-    :cond_3
-    :goto_1
-    return-void
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final updateDrawState(Landroid/text/TextPaint;)V
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    iget v0, p1, Landroid/text/TextPaint;->bgColor:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lm08;->b:I
+    const-string v1, "KeywordSpotterParams(isEnabled="
 
-    if-eq v0, v1, :cond_0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setColor(I)V
+    iget-boolean v1, p0, Lm08;->a:Z
 
-    :cond_0
-    iget-boolean v0, p0, Lm08;->c:Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
+    const-string v1, ", filePath="
 
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lm08;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", consumer="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lm08;->c:Lorg/webrtc/NativeDoubleArrayConsumer$Consumer;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

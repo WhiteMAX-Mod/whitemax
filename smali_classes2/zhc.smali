@@ -1,86 +1,98 @@
-.class public final synthetic Lzhc;
-.super Ljava/lang/Object;
+.class public final Lzhc;
+.super Lid0;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/function/Consumer;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lcic;
+.field public final b:Lp5g;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcic;I)V
-    .locals 0
+.method public constructor <init>(Lp5g;)V
+    .locals 1
 
-    iput p2, p0, Lzhc;->a:I
+    const/16 v0, 0xf
 
-    iput-object p1, p0, Lzhc;->b:Lcic;
+    invoke-direct {p0, v0}, Lid0;-><init>(I)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lzhc;->b:Lp5g;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iget v0, p0, Lzhc;->a:I
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    goto :goto_1
 
-    iget-object v0, p0, Lzhc;->b:Lcic;
+    :cond_0
+    instance-of v0, p1, Lzhc;
 
-    check-cast p1, Ljava/lang/Throwable;
+    if-nez v0, :cond_1
 
-    invoke-virtual {v0, p1}, Lcic;->a(Ljava/lang/Throwable;)V
+    goto :goto_0
 
-    return-void
+    :cond_1
+    check-cast p1, Lzhc;
 
-    :pswitch_0
-    iget-object v0, p0, Lzhc;->b:Lcic;
+    iget-object v0, p0, Lzhc;->b:Lp5g;
 
-    check-cast p1, Lp6d;
+    iget-object p1, p1, Lzhc;->b:Lp5g;
 
-    iget v0, v0, Lcic;->Y:I
+    invoke-virtual {v0, p1}, Lp5g;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {p1, v0}, Lp6d;->d(I)V
+    move-result p1
 
-    return-void
+    if-nez p1, :cond_2
 
-    :pswitch_1
-    iget-object v0, p0, Lzhc;->b:Lcic;
+    :goto_0
+    const/4 p1, 0x0
 
-    check-cast p1, Lp6d;
+    return p1
 
-    iget v0, v0, Lcic;->Y:I
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
 
-    invoke-virtual {p1, v0}, Lp6d;->d(I)V
+    return p1
+.end method
 
-    return-void
+.method public final hashCode()I
+    .locals 1
 
-    :pswitch_2
-    iget-object v0, p0, Lzhc;->b:Lcic;
+    iget-object v0, p0, Lzhc;->b:Lp5g;
 
-    check-cast p1, Lp6d;
+    invoke-virtual {v0}, Lp5g;->hashCode()I
 
-    iget v0, v0, Lcic;->Y:I
+    move-result v0
 
-    invoke-virtual {p1, v0}, Lp6d;->d(I)V
+    return v0
+.end method
 
-    return-void
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    nop
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    const-string v1, "ShareLink(link="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lzhc;->b:Lp5g;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

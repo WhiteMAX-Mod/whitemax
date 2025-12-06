@@ -1,53 +1,48 @@
-.class public interface abstract Lg14;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.class public final Lg14;
+.super Lq44;
+
+
+# instance fields
+.field public final synthetic X:La53;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
+
+
+# direct methods
+.method public constructor <init>(La53;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lg14;->X:La53;
+
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract b()Lg14;
-.end method
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-.method public abstract build()Lh14;
-.end method
+    iput-object p1, p0, Lg14;->d:Ljava/lang/Object;
 
-.method public abstract c()Lg14;
-.end method
+    iget p1, p0, Lg14;->o:I
 
-.method public abstract f(Landroid/graphics/Rect;F)Lg14;
-.end method
+    const/high16 v0, -0x80000000
 
-.method public h()Lg14;
-    .locals 0
+    or-int/2addr p1, v0
 
-    return-object p0
-.end method
+    iput p1, p0, Lg14;->o:I
 
-.method public abstract i(Ljava/util/Collection;)Lg14;
-.end method
+    iget-object p1, p0, Lg14;->X:La53;
 
-.method public k(FF)Lg14;
-    .locals 0
+    const/4 v0, 0x0
 
-    return-object p0
-.end method
+    invoke-virtual {p1, v0, p0}, La53;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-.method public abstract m(F)Lg14;
-.end method
+    move-result-object p1
 
-.method public abstract o(Landroid/os/Bundle;)Lg14;
-.end method
-
-.method public s()Lg14;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public abstract t(Landroid/view/View;)Lg14;
-.end method
-
-.method public abstract v()Lg14;
-.end method
-
-.method public abstract w(Ltrf;)Lg14;
+    return-object p1
 .end method

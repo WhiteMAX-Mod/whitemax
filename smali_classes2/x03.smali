@@ -1,99 +1,111 @@
-.class public final Lx03;
-.super Lsgf;
+.class public final synthetic Lx03;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Ljava/util/function/ObjLongConsumer;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:La13;
+.field public final synthetic a:Lusd;
 
 
 # direct methods
-.method public constructor <init>(La13;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lusd;)V
     .locals 0
 
-    iput-object p1, p0, Lx03;->Y:La13;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lx03;->a:Lusd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final accept(Ljava/lang/Object;J)V
+    .locals 10
 
-    check-cast p1, Lg5g;
+    move-object v4, p1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    check-cast v4, Landroid/view/View;
 
-    invoke-virtual {p0, p1, p2}, Lx03;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object p1, p0, Lx03;->a:Lusd;
 
-    move-result-object p1
+    iget-object p1, p1, Lusd;->b:Ljava/lang/Object;
 
-    check-cast p1, Lx03;
+    move-object v1, p1
 
-    sget-object p2, Lccg;->a:Lccg;
+    check-cast v1, Lone/me/chats/list/ChatsListWidget;
 
-    invoke-virtual {p1, p2}, Lx03;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p1, v1, Lone/me/chats/list/ChatsListWidget;->G0:Lt9f;
 
-    return-object p2
-.end method
+    sget-object v0, Lone/me/chats/list/ChatsListWidget;->L0:[Lyy7;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    iget-object v0, v1, Lone/me/chats/list/ChatsListWidget;->c:Lhs;
 
-    new-instance v0, Lx03;
+    sget-object v6, Lone/me/chats/list/ChatsListWidget;->L0:[Lyy7;
 
-    iget-object v1, p0, Lx03;->Y:La13;
+    const/4 v2, 0x0
 
-    invoke-direct {v0, v1, p2}, Lx03;-><init>(La13;Lkotlin/coroutines/Continuation;)V
+    aget-object v2, v6, v2
 
-    iput-object p1, v0, Lx03;->X:Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
-    return-object v0
-.end method
+    move-result-object v0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    check-cast v0, Ljava/lang/Long;
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    if-nez v0, :cond_1
 
-    iget-object p1, p0, Lx03;->X:Ljava/lang/Object;
+    const/4 v7, 0x4
 
-    check-cast p1, Lg5g;
+    aget-object v0, v6, v7
 
-    iget-object v0, p1, Lg5g;->a:Ljava/lang/Object;
+    invoke-virtual {p1, v1, v0}, Lt9f;->D(Ljava/lang/Object;Lyy7;)Ljava/lang/Object;
 
-    check-cast v0, Ljava/lang/String;
+    move-result-object v0
 
-    iget-object v1, p1, Lg5g;->b:Ljava/lang/Object;
+    check-cast v0, Lqt7;
 
-    check-cast v1, Ljava/util/List;
+    const/4 v8, 0x1
 
-    iget-object p1, p1, Lg5g;->c:Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
-    check-cast p1, Ljava/lang/Boolean;
+    invoke-interface {v0}, Lqt7;->isActive()Z
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    move-result v0
 
-    move-result p1
+    if-ne v0, v8, :cond_0
 
-    if-eqz v1, :cond_0
-
-    iget-object v2, p0, Lx03;->Y:La13;
-
-    invoke-virtual {v2, v0, v1, p1}, La13;->f(Ljava/lang/String;Ljava/util/List;Z)V
+    goto :goto_0
 
     :cond_0
-    sget-object p1, Lccg;->a:Lccg;
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lv38;
 
-    return-object p1
+    move-result-object v9
+
+    new-instance v0, Lx53;
+
+    const/4 v5, 0x0
+
+    move-wide v2, p2
+
+    invoke-direct/range {v0 .. v5}, Lx53;-><init>(Lone/me/chats/list/ChatsListWidget;JLandroid/view/View;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p2, 0x0
+
+    sget-object p3, Li84;->b:Li84;
+
+    invoke-static {v9, p2, p3, v0, v8}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
+
+    move-result-object p2
+
+    aget-object p3, v6, v7
+
+    invoke-virtual {p1, v1, p3, p2}, Lt9f;->O(Ljava/lang/Object;Lyy7;Ljava/lang/Object;)V
+
+    :cond_1
+    :goto_0
+    return-void
 .end method

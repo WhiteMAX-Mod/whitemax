@@ -1,102 +1,100 @@
 .class public final Lml7;
-.super Lsgf;
+.super Lfl9;
 .source "SourceFile"
-
-# interfaces
-.implements Lzi6;
 
 
 # instance fields
-.field public X:I
+.field public a:I
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Lfl9;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lml7;->a:I
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lfl9;->cachedSize:I
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final computeSerializedSize()I
+    .locals 2
 
-    check-cast p1, Lq54;
+    iget v0, p0, Lml7;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lml7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lml7;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lml7;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lml7;
-
-    const/4 v0, 0x2
-
-    invoke-direct {p1, v0, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Lml7;->X:I
+    if-eqz v0, :cond_0
 
     const/4 v1, 0x1
 
-    if-eqz v0, :cond_1
+    invoke-static {v1, v0}, Lhd3;->n(II)I
 
-    if-ne v0, v1, :cond_0
+    move-result v0
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final mergeFrom(Lgd3;)Lfl9;
+    .locals 2
+
+    :cond_0
+    :goto_0
+    invoke-virtual {p1}, Lgd3;->s()I
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    const/16 v1, 0x8
+
+    if-eq v0, v1, :cond_1
+
+    invoke-virtual {p1, v0}, Lgd3;->u(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p1}, Lgd3;->p()I
+
+    move-result v0
+
+    iput v0, p0, Lml7;->a:I
 
     goto :goto_0
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    sget p1, Lu35;->o:I
-
-    const/4 p1, 0x2
-
-    sget-object v0, Lz35;->o:Lz35;
-
-    invoke-static {p1, v0}, Ltzi;->d(ILz35;)J
-
-    move-result-wide v2
-
-    iput v1, p0, Lml7;->X:I
-
-    invoke-static {v2, v3, p0}, Lqyi;->c(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lr54;->a:Lr54;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
     :cond_2
-    :goto_0
-    sget-object p1, Lccg;->a:Lccg;
+    :goto_1
+    return-object p0
+.end method
 
-    return-object p1
+.method public final writeTo(Lhd3;)V
+    .locals 2
+
+    iget v0, p0, Lml7;->a:I
+
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p1, v1, v0}, Lhd3;->G(II)V
+
+    :cond_0
+    return-void
 .end method

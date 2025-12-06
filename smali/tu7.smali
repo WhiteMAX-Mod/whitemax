@@ -1,114 +1,116 @@
-.class public final Ltu7;
+.class public abstract Ltu7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/util/TreeSet;
+# static fields
+.field public static final a:Lkotlinx/coroutines/internal/Symbol;
 
-.field public b:J
+.field public static final b:Lkotlinx/coroutines/internal/Symbol;
+
+.field public static final c:Lkotlinx/coroutines/internal/Symbol;
+
+.field public static final d:Lkotlinx/coroutines/internal/Symbol;
+
+.field public static final e:Lkotlinx/coroutines/internal/Symbol;
+
+.field public static final f:Lyc5;
+
+.field public static final g:Lyc5;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-    new-instance v0, Ljava/util/TreeSet;
+    const-string v1, "COMPLETING_ALREADY"
 
-    new-instance v1, Lhz4;
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
 
-    const/4 v2, 0x7
+    sput-object v0, Ltu7;->a:Lkotlinx/coroutines/internal/Symbol;
 
-    invoke-direct {v1, v2}, Lhz4;-><init>(I)V
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-    invoke-direct {v0, v1}, Ljava/util/TreeSet;-><init>(Ljava/util/Comparator;)V
+    const-string v1, "COMPLETING_WAITING_CHILDREN"
 
-    iput-object v0, p0, Ltu7;->a:Ljava/util/TreeSet;
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Ltu7;->b:Lkotlinx/coroutines/internal/Symbol;
+
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+
+    const-string v1, "COMPLETING_RETRY"
+
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Ltu7;->c:Lkotlinx/coroutines/internal/Symbol;
+
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+
+    const-string v1, "TOO_LATE_TO_CANCEL"
+
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Ltu7;->d:Lkotlinx/coroutines/internal/Symbol;
+
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+
+    const-string v1, "SEALED"
+
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Ltu7;->e:Lkotlinx/coroutines/internal/Symbol;
+
+    new-instance v0, Lyc5;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lyc5;-><init>(Z)V
+
+    sput-object v0, Ltu7;->f:Lyc5;
+
+    new-instance v0, Lyc5;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lyc5;-><init>(Z)V
+
+    sput-object v0, Ltu7;->g:Lyc5;
 
     return-void
 .end method
 
+.method public static final a(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-# virtual methods
-.method public final a(Lyx0;J)V
-    .locals 4
+    instance-of v0, p0, Lkj7;
 
-    :goto_0
-    iget-wide v0, p0, Ltu7;->b:J
+    if-eqz v0, :cond_0
 
-    add-long/2addr v0, p2
+    move-object v0, p0
 
-    const-wide/32 v2, 0x6400000
-
-    cmp-long v0, v0, v2
-
-    if-lez v0, :cond_0
-
-    iget-object v0, p0, Ltu7;->a:Ljava/util/TreeSet;
-
-    invoke-virtual {v0}, Ljava/util/TreeSet;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Ltu7;->a:Ljava/util/TreeSet;
-
-    invoke-virtual {v0}, Ljava/util/TreeSet;->first()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lty0;
-
-    move-object v1, p1
-
-    check-cast v1, Lape;
-
-    monitor-enter v1
-
-    :try_start_0
-    invoke-virtual {v1, v0}, Lape;->j(Lty0;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v1
+    check-cast v0, Lkj7;
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-
     :cond_0
-    return-void
-.end method
+    const/4 v0, 0x0
 
-.method public final b(Lape;Ldpe;)V
-    .locals 4
+    :goto_0
+    if-eqz v0, :cond_2
 
-    iget-object v0, p0, Ltu7;->a:Ljava/util/TreeSet;
+    iget-object v0, v0, Lkj7;->a:Ljj7;
 
-    invoke-virtual {v0, p2}, Ljava/util/TreeSet;->add(Ljava/lang/Object;)Z
+    if-nez v0, :cond_1
 
-    iget-wide v0, p0, Ltu7;->b:J
+    goto :goto_1
 
-    iget-wide v2, p2, Lty0;->c:J
+    :cond_1
+    return-object v0
 
-    add-long/2addr v0, v2
-
-    iput-wide v0, p0, Ltu7;->b:J
-
-    const-wide/16 v0, 0x0
-
-    invoke-virtual {p0, p1, v0, v1}, Ltu7;->a(Lyx0;J)V
-
-    return-void
+    :cond_2
+    :goto_1
+    return-object p0
 .end method

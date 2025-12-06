@@ -27,10 +27,6 @@
     <color name="button_material_light">#ffd6d7d7</color>
     <color name="call_notification_answer_color">#ff1d873b</color>
     <color name="call_notification_decline_color">#ffd93025</color>
-    <color name="calls_circle_1">#8020cef5</color>
-    <color name="calls_circle_2">#80ffe8a7</color>
-    <color name="calls_circle_3">#80697cff</color>
-    <color name="calls_circle_4">#80ff7d73</color>
     <color name="cardview_dark_background">#ff424242</color>
     <color name="cardview_light_background">#ffffffff</color>
     <color name="cardview_shadow_end_color">#03000000</color>
@@ -83,7 +79,6 @@
     <color name="gray_66">#ff666666</color>
     <color name="gray_88">#ff888888</color>
     <color name="gray_99">#ff999999</color>
-    <color name="gray_separator">#fff0f0f0</color>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
     <color name="launch_background">@color/white</color>

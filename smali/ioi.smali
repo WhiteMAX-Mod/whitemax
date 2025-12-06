@@ -1,80 +1,191 @@
-.class public final Lioi;
+.class public abstract Lioi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ltha;
-
 
 # static fields
-.field public static final a:Lioi;
+.field public static final a:Lqt5;
+
+.field public static final b:[Lqt5;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 4
 
-    new-instance v0, Lioi;
+    new-instance v0, Lqt5;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "CLIENT_TELEMETRY"
 
-    sput-object v0, Lioi;->a:Lioi;
+    const-wide/16 v2, 0x1
 
-    new-instance v0, Lr8i;
+    invoke-direct {v0, v1, v2, v3}, Lqt5;-><init>(Ljava/lang/String;J)V
 
-    const/4 v1, 0x1
+    sput-object v0, Lioi;->a:Lqt5;
 
-    invoke-direct {v0, v1}, Lr8i;-><init>(I)V
-
-    const-class v1, Lm9i;
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+    filled-new-array {v0}, [Lqt5;
 
     move-result-object v0
 
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
+    sput-object v0, Lioi;->b:[Lqt5;
 
     return-void
 .end method
 
+.method public static final a(Lkotlinx/serialization/json/internal/b;)V
+    .locals 3
 
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+    instance-of v0, p0, Lkotlinx/serialization/json/internal/b;
 
-    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    if-eqz v0, :cond_0
 
-    move-result-object p1
+    move-object v0, p0
 
-    throw p1
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    return-void
+
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "This serializer can be used only with Json format.Expected Encoder to be JsonEncoder, got "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lvid;->a(Ljava/lang/Class;)Lca3;
+
+    move-result-object p0
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public static final b(Llh4;)Lkotlinx/serialization/json/internal/a;
+    .locals 3
+
+    instance-of v0, p0, Lkotlinx/serialization/json/internal/a;
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p0
+
+    check-cast v0, Lkotlinx/serialization/json/internal/a;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    return-object v0
+
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "This serializer can be used only with Json format.Expected Decoder to be JsonDecoder, got "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lvid;->a(Ljava/lang/Class;)Lca3;
+
+    move-result-object p0
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public static final c(Landroid/net/Uri;)Ljava/io/File;
+    .locals 2
+
+    invoke-virtual {p0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "file"
+
+    invoke-static {v0, v1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Landroid/net/Uri;->getPath()Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    new-instance p0, Ljava/io/File;
+
+    invoke-direct {p0, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    return-object p0
+
+    :cond_0
+    const-string v0, "Uri path is null: "
+
+    invoke-static {p0, v0}, Lctd;->i(Landroid/net/Uri;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    const-string v0, "Uri lacks \'file\' scheme: "
+
+    invoke-static {p0, v0}, Lctd;->i(Landroid/net/Uri;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

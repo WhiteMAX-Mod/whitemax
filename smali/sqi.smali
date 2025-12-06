@@ -1,68 +1,70 @@
-.class public final synthetic Lsqi;
+.class public final Lsqi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Callable;
+.implements Lpqa;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lwje;
+# static fields
+.field public static final a:Lsqi;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lwje;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p2, p0, Lsqi;->a:I
+    new-instance v0, Lsqi;
 
-    iput-object p1, p0, Lsqi;->b:Lwje;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lsqi;->a:Lsqi;
+
+    new-instance v0, Lmli;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lmli;-><init>(I)V
+
+    const-class v1, Lemi;
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 1
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    iget v0, p0, Lsqi;->a:I
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p1
 
-    iget-object v0, p0, Lsqi;->b:Lwje;
-
-    invoke-virtual {v0}, Lwje;->a()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lsqi;->b:Lwje;
-
-    invoke-virtual {v0}, Lwje;->a()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1
-    iget-object v0, p0, Lsqi;->b:Lwje;
-
-    invoke-virtual {v0}, Lwje;->a()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

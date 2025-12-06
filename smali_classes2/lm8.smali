@@ -1,64 +1,84 @@
 .class public final Llm8;
-.super Ljava/lang/Object;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Lpm8;
+.implements Lsm6;
 
 
-# static fields
-.field public static final a:Llm8;
+# instance fields
+.field public final synthetic o:Lnm8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lnm8;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Llm8;
+    iput-object p1, p0, Llm8;->o:Lnm8;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
 
-    sput-object v0, Llm8;->a:Llm8;
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lf84;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Llm8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of p1, p1, Llm8;
+    move-result-object p1
 
-    if-nez p1, :cond_1
+    check-cast p1, Llm8;
 
-    const/4 p1, 0x0
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    return p1
+    invoke-virtual {p1, p2}, Llm8;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_1
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    const v0, 0x67fd3a3
+    new-instance p1, Llm8;
 
-    return v0
+    iget-object v0, p0, Llm8;->o:Lnm8;
+
+    invoke-direct {p1, v0, p2}, Llm8;-><init>(Lnm8;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    const-string v0, "ScrollChat"
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    return-object v0
+    iget-object p1, p0, Llm8;->o:Lnm8;
+
+    iget-object p1, p1, Lnm8;->b:Lk18;
+
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljrb;
+
+    const/4 v0, 0x2
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p1, v0, v1}, Ljrb;->f(II)V
+
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

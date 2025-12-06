@@ -43,10 +43,10 @@
         "isOpusDREDEnabledServer",
         "isAudioPipelineOffOnMuteEnabled",
         "isSharedSocketDisabledForICE",
-        "Lfwc;",
+        "Ly6d;",
         "logger",
         "<init>",
-        "(Ljava/lang/String;Ljava/lang/Integer;ZZLjava/lang/String;Ljava/lang/String;Lorg/webrtc/NativeLibraryLoader;ZZZZZZLfwc;)V",
+        "(Ljava/lang/String;Ljava/lang/Integer;ZZLjava/lang/String;Ljava/lang/String;Lorg/webrtc/NativeLibraryLoader;ZZZZZZLy6d;)V",
         "Ljava/lang/String;",
         "getBonusFieldTrials",
         "()Ljava/lang/String;",
@@ -60,9 +60,9 @@
         "Lorg/webrtc/NativeLibraryLoader;",
         "getLibraryLoader",
         "()Lorg/webrtc/NativeLibraryLoader;",
-        "Lfwc;",
+        "Ly6d;",
         "getLogger",
-        "()Lfwc;",
+        "()Ly6d;",
         "Builder",
         "calls-sdk_release"
     }
@@ -97,7 +97,7 @@
 
 .field private final libraryLoader:Lorg/webrtc/NativeLibraryLoader;
 
-.field private final logger:Lfwc;
+.field private final logger:Ly6d;
 
 .field private final rttMultCapMs:Ljava/lang/Integer;
 
@@ -107,7 +107,7 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/Integer;ZZLjava/lang/String;Ljava/lang/String;Lorg/webrtc/NativeLibraryLoader;ZZZZZZLfwc;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/Integer;ZZLjava/lang/String;Ljava/lang/String;Lorg/webrtc/NativeLibraryLoader;ZZZZZZLy6d;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -138,7 +138,7 @@
 
     iput-boolean p13, p0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection;->isSharedSocketDisabledForICE:Z
 
-    iput-object p14, p0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection;->logger:Lfwc;
+    iput-object p14, p0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection;->logger:Ly6d;
 
     return-void
 .end method
@@ -161,10 +161,10 @@
     return-object v0
 .end method
 
-.method public final getLogger()Lfwc;
+.method public final getLogger()Ly6d;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection;->logger:Lfwc;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection;->logger:Ly6d;
 
     return-object v0
 .end method

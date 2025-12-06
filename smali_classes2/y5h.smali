@@ -1,53 +1,78 @@
-.class public final Ly5h;
-.super Ly14;
+.class public final synthetic Ly5h;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public X:Lpo0;
+.field public final synthetic a:I
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lq6h;
-
-.field public o:Lq6h;
-
-.field public q0:I
+.field public final synthetic b:Lb6h;
 
 
 # direct methods
-.method public constructor <init>(Lq6h;Ly14;)V
+.method public synthetic constructor <init>(Lb6h;I)V
     .locals 0
 
-    iput-object p1, p0, Ly5h;->Z:Lq6h;
+    iput p2, p0, Ly5h;->a:I
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ly5h;->b:Lb6h;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 1
 
-    iput-object p1, p0, Ly5h;->Y:Ljava/lang/Object;
+    iget v0, p0, Ly5h;->a:I
 
-    iget p1, p0, Ly5h;->q0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Ly5h;->q0:I
-
-    iget-object p1, p0, Ly5h;->Z:Lq6h;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0, p0}, Lq6h;->a(Lq6h;Lpo0;Ly14;)Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    return-object p1
+    check-cast p1, Ljava/lang/Float;
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    iget-object v0, p0, Ly5h;->b:Lb6h;
+
+    iput p1, v0, Lb6h;->A0:F
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_0
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Float;
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    iget-object v0, p0, Ly5h;->b:Lb6h;
+
+    invoke-virtual {v0, p1}, Lb6h;->setProgressForced(F)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

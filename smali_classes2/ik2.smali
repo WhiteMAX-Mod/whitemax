@@ -1,86 +1,64 @@
-.class public final Lik2;
-.super Lmk2;
+.class public final synthetic Lik2;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/function/UnaryOperator;
 
 
 # instance fields
-.field public final b:Ljava/lang/String;
+.field public final synthetic a:Lsi9;
+
+.field public final synthetic b:Lf10;
+
+.field public final synthetic c:Lw10;
+
+.field public final synthetic d:Lo05;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
+.method public synthetic constructor <init>(Lsi9;Lf10;Lw10;Lo05;)V
     .locals 0
 
-    invoke-direct {p0}, Lmk2;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lik2;->b:Ljava/lang/String;
+    iput-object p1, p0, Lik2;->a:Lsi9;
+
+    iput-object p2, p0, Lik2;->b:Lf10;
+
+    iput-object p3, p0, Lik2;->c:Lw10;
+
+    iput-object p4, p0, Lik2;->d:Lo05;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    const/4 v0, 0x1
+    check-cast p1, Ljk2;
 
-    if-ne p0, p1, :cond_0
+    new-instance v0, Ljk2;
 
-    return v0
+    iget-object p1, p0, Lik2;->a:Lsi9;
 
-    :cond_0
-    instance-of v1, p1, Lik2;
+    iget-wide v1, p1, Lpj0;->a:J
 
-    const/4 v2, 0x0
+    iget-object p1, p0, Lik2;->b:Lf10;
 
-    if-nez v1, :cond_1
+    iget-wide v3, p1, Lf10;->a:J
 
-    return v2
+    iget-object p1, p0, Lik2;->c:Lw10;
 
-    :cond_1
-    check-cast p1, Lik2;
+    iget-object v5, p1, Lw10;->r:Ljava/lang/String;
 
-    iget-object v1, p0, Lik2;->b:Ljava/lang/String;
+    const/4 v7, 0x0
 
-    iget-object p1, p1, Lik2;->b:Ljava/lang/String;
+    iget-object v6, p0, Lik2;->d:Lo05;
 
-    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lik2;->b:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "ShareLink(link="
-
-    const-string v1, ")"
-
-    iget-object v2, p0, Lik2;->b:Ljava/lang/String;
-
-    invoke-static {v0, v2, v1}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    invoke-direct/range {v0 .. v7}, Ljk2;-><init>(JJLjava/lang/String;Lo05;Z)V
 
     return-object v0
 .end method

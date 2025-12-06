@@ -1,8 +1,3 @@
-.class public interface abstract Lcw5;
-.super Ljava/lang/Object;
+.class public final Lcw5;
+.super Lsj0;
 .source "SourceFile"
-
-
-# virtual methods
-.method public abstract c(J)V
-.end method

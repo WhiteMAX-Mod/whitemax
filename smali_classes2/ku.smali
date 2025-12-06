@@ -1,127 +1,99 @@
-.class public final enum Lku;
-.super Ljava/lang/Enum;
+.class public final Lku;
+.super Ll0g;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic X:[Lku;
-
-.field public static final enum b:Lku;
-
-.field public static final enum c:Lku;
-
-.field public static final o:[Lku;
-
-
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public c:Z
+
+.field public d:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
-
-    new-instance v0, Lku;
-
-    const-string v1, "UNKNOWN"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2, v1}, Lku;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lku;->b:Lku;
-
-    new-instance v1, Lku;
-
-    const-string v2, "ADDED"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3, v2}, Lku;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v2, Lku;
-
-    const-string v3, "REMOVED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4, v3}, Lku;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v3, Lku;
-
-    const-string v4, "MOVED"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5, v4}, Lku;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v4, Lku;
-
-    const-string v5, "UPDATED"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6, v5}, Lku;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v4, Lku;->c:Lku;
-
-    new-instance v5, Lku;
-
-    const-string v6, "LIST_UPDATED"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7, v6}, Lku;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    filled-new-array/range {v0 .. v5}, [Lku;
-
-    move-result-object v0
-
-    sput-object v0, Lku;->X:[Lku;
-
-    invoke-static {}, Lku;->values()[Lku;
-
-    move-result-object v0
-
-    sput-object v0, Lku;->o:[Lku;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+.method public constructor <init>(Ltm9;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput-object p3, p0, Lku;->a:Ljava/lang/String;
+    invoke-direct {p0, p1}, Ll0g;-><init>(Ltm9;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lku;
-    .locals 1
 
-    const-class v0, Lku;
+# virtual methods
+.method public final d(Ltm9;Ljava/lang/String;)V
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object p0
+    const-string v0, "success"
 
-    check-cast p0, Lku;
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    return-object p0
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "updateTime"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_0
+
+    invoke-virtual {p1}, Ltm9;->v()V
+
+    return-void
+
+    :cond_0
+    const-wide/16 v0, 0x0
+
+    invoke-static {p1, v0, v1}, Lefi;->l(Ltm9;J)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lku;->d:J
+
+    return-void
+
+    :cond_1
+    invoke-static {p1}, Lefi;->g(Ltm9;)Z
+
+    move-result p1
+
+    iput-boolean p1, p0, Lku;->c:Z
+
+    return-void
 .end method
 
-.method public static values()[Lku;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    sget-object v0, Lku;->X:[Lku;
+    iget-boolean v0, p0, Lku;->c:Z
 
-    invoke-virtual {v0}, [Lku;->clone()Ljava/lang/Object;
+    iget-wide v1, p0, Lku;->d:J
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "Response{success="
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, ", updateTime="
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v0, "}"
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
-
-    check-cast v0, [Lku;
 
     return-object v0
 .end method

@@ -1,118 +1,20 @@
-.class public abstract Lin6;
-.super Liq7;
+.class public final Lin6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public a:I
-
-.field public b:Z
-
-.field public c:Lbr7;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    sget-object v0, Lhq7;->r0:Lhq7;
-
-    iget v0, v0, Lhq7;->b:I
-
-    sget-object v0, Lhq7;->q0:Lhq7;
-
-    iget v0, v0, Lhq7;->b:I
-
-    sget-object v0, Lhq7;->t0:Lhq7;
-
-    iget v0, v0, Lhq7;->b:I
-
-    return-void
-.end method
+# interfaces
+.implements Ldrf;
 
 
 # virtual methods
-.method public final o0(Ljava/math/BigDecimal;)Ljava/lang/String;
-    .locals 4
+.method public final get()Ljava/lang/Object;
+    .locals 2
 
-    const/16 v0, 0x270f
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/16 v1, 0x10
 
-    move-result-object v1
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    sget-object v2, Lhq7;->s0:Lhq7;
-
-    iget v3, p0, Lin6;->a:I
-
-    iget v2, v2, Lhq7;->b:I
-
-    and-int/2addr v2, v3
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {p1}, Ljava/math/BigDecimal;->scale()I
-
-    move-result v2
-
-    const/16 v3, -0x270f
-
-    if-lt v2, v3, :cond_0
-
-    if-gt v2, v0, :cond_0
-
-    invoke-virtual {p1}, Ljava/math/BigDecimal;->toPlainString()Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_0
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    filled-new-array {p1, v1, v1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    const-string v0, "Attempt to write plain `java.math.BigDecimal` (see JsonGenerator.Feature.WRITE_BIGDECIMAL_AS_PLAIN) with illegal scale (%d): needs to be between [-%d, %d]"
-
-    invoke-static {v0, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Liq7;->d(Ljava/lang/String;)V
-
-    const/4 p1, 0x0
-
-    throw p1
-
-    :cond_1
-    invoke-virtual {p1}, Ljava/math/BigDecimal;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final p0(Lhq7;)Z
-    .locals 1
-
-    iget v0, p0, Lin6;->a:I
-
-    iget p1, p1, Lhq7;->b:I
-
-    and-int/2addr p1, v0
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
+    return-object v0
 .end method

@@ -1,8 +1,6 @@
-.class public interface abstract Ls28;
+.class public interface abstract annotation Ls28;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# virtual methods
-.method public abstract c(Lgs6;)V
-.end method
+# interfaces
+.implements Ljava/lang/annotation/Annotation;

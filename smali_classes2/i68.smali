@@ -1,97 +1,141 @@
-.class public final enum Li68;
-.super Ljava/lang/Enum;
+.class public final Li68;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lw68;
 
 
 # static fields
-.field public static final synthetic X:[Li68;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Li68;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public static final enum a:Li68;
 
-.field public static final enum b:Li68;
-
-.field public static final enum c:Li68;
-
-.field public static final enum o:Li68;
+# instance fields
+.field public final a:Landroid/net/Uri;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 2
 
-    new-instance v0, Li68;
+    new-instance v0, Lf18;
 
-    const-string v1, "NOT_SUPPORTED"
+    const/16 v1, 0xb
 
-    const/4 v2, 0x0
+    invoke-direct {v0, v1}, Lf18;-><init>(I)V
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Li68;->a:Li68;
-
-    new-instance v1, Li68;
-
-    const-string v2, "PHOTO"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Li68;->b:Li68;
-
-    new-instance v2, Li68;
-
-    const-string v3, "GIF"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Li68;->c:Li68;
-
-    new-instance v3, Li68;
-
-    const-string v4, "VIDEO"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Li68;->o:Li68;
-
-    filled-new-array {v0, v1, v2, v3}, [Li68;
-
-    move-result-object v0
-
-    sput-object v0, Li68;->X:[Li68;
+    sput-object v0, Li68;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Li68;
-    .locals 1
+.method public constructor <init>(Landroid/net/Uri;)V
+    .locals 0
 
-    const-class v0, Li68;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iput-object p1, p0, Li68;->a:Landroid/net/Uri;
 
-    move-result-object p0
-
-    check-cast p0, Li68;
-
-    return-object p0
+    return-void
 .end method
 
-.method public static values()[Li68;
+
+# virtual methods
+.method public final describeContents()I
     .locals 1
 
-    sget-object v0, Li68;->X:[Li68;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Li68;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Li68;
+
+    iget-object v1, p0, Li68;->a:Landroid/net/Uri;
+
+    iget-object p1, p1, Li68;->a:Landroid/net/Uri;
+
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Li68;->a:Landroid/net/Uri;
+
+    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "OpenBrowser(uri="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Li68;->a:Landroid/net/Uri;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, [Li68;
-
     return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
+
+    iget-object v0, p0, Li68;->a:Landroid/net/Uri;
+
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    return-void
 .end method

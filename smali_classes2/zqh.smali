@@ -1,19 +1,23 @@
-.class public final Lzqh;
-.super Ljava/lang/Object;
+.class public abstract Lzqh;
+.super Ljava/lang/Throwable;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:Lzq3;
+.field public final a:Ljava/lang/String;
+
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Lzq3;)V
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Throwable;-><init>()V
 
-    iput-object p1, p0, Lzqh;->a:Lzq3;
+    iput-object p1, p0, Lzqh;->a:Ljava/lang/String;
+
+    iput p2, p0, Lzqh;->b:I
 
     return-void
 .end method

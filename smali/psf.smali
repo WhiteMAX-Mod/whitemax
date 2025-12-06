@@ -1,365 +1,60 @@
-.class public abstract Lpsf;
+.class public final synthetic Lpsf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/PixelCopy$OnPixelCopyFinishedListener;
 
-# static fields
-.field public static final a:Ljava/util/regex/Pattern;
+
+# instance fields
+.field public final synthetic a:Ljava/util/concurrent/Semaphore;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Ljava/util/concurrent/Semaphore;)V
+    .locals 0
 
-    const-string v0, "#(?i)([\\p{L}0-9_]+)"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Lpsf;->a:Ljava/util/regex/Pattern;
+    iput-object p1, p0, Lpsf;->a:Ljava/util/concurrent/Semaphore;
 
     return-void
 .end method
 
-.method public static a(Landroid/text/Spannable;Lr08;ZI)V
-    .locals 6
 
-    new-instance v5, Lty1;
+# virtual methods
+.method public final onPixelCopyFinished(I)V
+    .locals 3
 
-    const/16 v0, 0xa
+    const-string v0, "SurfaceViewImpl"
 
-    invoke-direct {v5, p0, p1, p3, v0}, Lty1;-><init>(Ljava/lang/Object;Ljava/lang/Object;II)V
+    if-nez p1, :cond_0
 
-    sget-object p3, Lr08;->o:Lr08;
+    const-string p1, "PreviewView.SurfaceViewImplementation.getBitmap() succeeded"
 
-    if-ne p1, p3, :cond_0
-
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p1, p2}, Lpsf;->b(Lr08;Z)Ljava/util/regex/Pattern;
-
-    move-result-object v1
-
-    sget-object v2, Ljfb;->a:Ljava/util/regex/Pattern;
-
-    sget-object v3, Ljfb;->d:Ljava/util/regex/Pattern;
-
-    const/4 v4, 0x0
-
-    invoke-static/range {v0 .. v5}, Lpsf;->c(Ljava/lang/CharSequence;Ljava/util/regex/Pattern;Ljava/util/regex/Pattern;Ljava/util/regex/Pattern;ZLsr3;)V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p1, p2}, Lpsf;->b(Lr08;Z)Ljava/util/regex/Pattern;
-
-    move-result-object v1
-
-    sget-object v2, Ljfb;->a:Ljava/util/regex/Pattern;
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    invoke-static/range {v0 .. v5}, Lpsf;->c(Ljava/lang/CharSequence;Ljava/util/regex/Pattern;Ljava/util/regex/Pattern;Ljava/util/regex/Pattern;ZLsr3;)V
-
-    return-void
-.end method
-
-.method public static b(Lr08;Z)Ljava/util/regex/Pattern;
-    .locals 1
-
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p0
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_3
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_1
-
-    const/4 p1, 0x3
-
-    if-eq p0, p1, :cond_0
-
-    sget-object p0, Losf;->a:Ljava/util/regex/Pattern;
-
-    return-object p0
-
-    :cond_0
-    sget-object p0, Losf;->a:Ljava/util/regex/Pattern;
-
-    return-object p0
-
-    :cond_1
-    if-eqz p1, :cond_2
-
-    sget-object p0, Losf;->e:Ljava/util/regex/Pattern;
-
-    return-object p0
-
-    :cond_2
-    sget-object p0, Losf;->c:Ljava/util/regex/Pattern;
-
-    return-object p0
-
-    :cond_3
-    sget-object p0, Lpsf;->a:Ljava/util/regex/Pattern;
-
-    return-object p0
-.end method
-
-.method public static c(Ljava/lang/CharSequence;Ljava/util/regex/Pattern;Ljava/util/regex/Pattern;Ljava/util/regex/Pattern;ZLsr3;)V
-    .locals 5
-
-    invoke-virtual {p1, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object v0
-
-    :cond_0
-    :goto_0
-    invoke-virtual {v0}, Ljava/util/regex/Matcher;->find()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_b
-
-    invoke-virtual {p2, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object v1
-
-    :cond_1
-    invoke-virtual {v1}, Ljava/util/regex/Matcher;->find()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_4
-
-    invoke-virtual {v0}, Ljava/util/regex/Matcher;->start()I
-
-    move-result v2
-
-    invoke-virtual {v1}, Ljava/util/regex/Matcher;->start()I
-
-    move-result v3
-
-    if-lt v2, v3, :cond_2
-
-    invoke-virtual {v0}, Ljava/util/regex/Matcher;->end()I
-
-    move-result v2
-
-    invoke-virtual {v1}, Ljava/util/regex/Matcher;->end()I
-
-    move-result v3
-
-    if-le v2, v3, :cond_0
-
-    :cond_2
-    invoke-virtual {v0}, Ljava/util/regex/Matcher;->end()I
-
-    move-result v2
-
-    invoke-virtual {v1}, Ljava/util/regex/Matcher;->end()I
-
-    move-result v3
-
-    if-gt v2, v3, :cond_3
-
-    invoke-virtual {v0}, Ljava/util/regex/Matcher;->end()I
-
-    move-result v2
-
-    invoke-virtual {v1}, Ljava/util/regex/Matcher;->start()I
-
-    move-result v3
-
-    if-ge v2, v3, :cond_0
-
-    :cond_3
-    invoke-virtual {v0}, Ljava/util/regex/Matcher;->start()I
-
-    move-result v2
-
-    invoke-virtual {v1}, Ljava/util/regex/Matcher;->end()I
-
-    move-result v3
-
-    if-gt v2, v3, :cond_1
-
-    invoke-virtual {v0}, Ljava/util/regex/Matcher;->end()I
-
-    move-result v2
-
-    invoke-virtual {v1}, Ljava/util/regex/Matcher;->end()I
-
-    move-result v3
-
-    if-lt v2, v3, :cond_1
+    invoke-static {v0, p1}, Lgri;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    :cond_4
-    if-nez p4, :cond_7
+    :cond_0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    sget-object v1, Losf;->a:Ljava/util/regex/Pattern;
+    const-string v2, "PreviewView.SurfaceViewImplementation.getBitmap() failed with error "
 
-    if-eq p1, v1, :cond_5
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    goto :goto_1
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    :cond_5
-    sget-object v1, Losf;->e:Ljava/util/regex/Pattern;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v1, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+    move-result-object p1
 
-    move-result-object v1
+    invoke-static {v0, p1}, Lgri;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_6
-    invoke-virtual {v1}, Ljava/util/regex/Matcher;->find()Z
+    :goto_0
+    iget-object p1, p0, Lpsf;->a:Ljava/util/concurrent/Semaphore;
 
-    move-result v2
+    invoke-virtual {p1}, Ljava/util/concurrent/Semaphore;->release()V
 
-    if-eqz v2, :cond_7
-
-    invoke-virtual {v0}, Ljava/util/regex/Matcher;->start()I
-
-    move-result v2
-
-    invoke-virtual {v1}, Ljava/util/regex/Matcher;->start()I
-
-    move-result v3
-
-    if-lt v2, v3, :cond_7
-
-    invoke-virtual {v0}, Ljava/util/regex/Matcher;->end()I
-
-    move-result v2
-
-    invoke-virtual {v1}, Ljava/util/regex/Matcher;->end()I
-
-    move-result v3
-
-    if-gt v2, v3, :cond_7
-
-    invoke-virtual {v1}, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0}, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_6
-
-    goto/16 :goto_0
-
-    :cond_7
-    :goto_1
-    if-nez p3, :cond_8
-
-    goto :goto_2
-
-    :cond_8
-    invoke-virtual {p3, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object v1
-
-    :cond_9
-    invoke-virtual {v1}, Ljava/util/regex/Matcher;->find()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_a
-
-    invoke-virtual {v0}, Ljava/util/regex/Matcher;->start()I
-
-    move-result v2
-
-    invoke-virtual {v1}, Ljava/util/regex/Matcher;->start()I
-
-    move-result v3
-
-    if-lt v2, v3, :cond_a
-
-    invoke-virtual {v0}, Ljava/util/regex/Matcher;->end()I
-
-    move-result v2
-
-    invoke-virtual {v1}, Ljava/util/regex/Matcher;->end()I
-
-    move-result v3
-
-    if-gt v2, v3, :cond_a
-
-    invoke-virtual {v1}, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0}, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_9
-
-    goto/16 :goto_0
-
-    :cond_a
-    :goto_2
-    :try_start_0
-    new-instance v1, Llsf;
-
-    invoke-virtual {v0}, Ljava/util/regex/Matcher;->start()I
-
-    move-result v2
-
-    invoke-virtual {v0}, Ljava/util/regex/Matcher;->end()I
-
-    move-result v3
-
-    invoke-virtual {v0}, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-direct {v1, v2, v3, v4}, Llsf;-><init>(IILjava/lang/String;)V
-
-    invoke-interface {p5, v1}, Lsr3;->accept(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto/16 :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    const-string v2, "psf"
-
-    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3, v1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto/16 :goto_0
-
-    :cond_b
     return-void
 .end method

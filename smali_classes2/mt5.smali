@@ -1,61 +1,125 @@
 .class public final Lmt5;
-.super Lnt5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lmt5;
+# instance fields
+.field public final a:Llrd;
+
+.field public final b:Lai;
+
+.field public final c:Lbi;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
+    .locals 2
 
-    new-instance v0, Lmt5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lmt5;->a:Llrd;
 
-    sput-object v0, Lmt5;->a:Lmt5;
+    new-instance v0, Lai;
+
+    const/16 v1, 0xa
+
+    invoke-direct {v0, p1, v1}, Lai;-><init>(Llrd;I)V
+
+    iput-object v0, p0, Lmt5;->b:Lai;
+
+    new-instance v0, Lbi;
+
+    const/16 v1, 0x16
+
+    invoke-direct {v0, p1, v1}, Lbi;-><init>(Llrd;I)V
+
+    iput-object v0, p0, Lmt5;->c:Lbi;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a(Ljava/util/List;Lq44;)Ljava/lang/Object;
+    .locals 4
 
-    const/4 v0, 0x1
+    const-string v0, "SELECT * FROM fcm_notifications_history WHERE chat_id IN ("
 
-    if-ne p0, p1, :cond_0
+    invoke-static {v0}, Laz1;->m(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return v0
+    move-result-object v0
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    invoke-static {v0, v1}, Llc4;->a(Ljava/lang/StringBuilder;I)V
+
+    const-string v2, ")"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Ldsd;->c(ILjava/lang/String;)Ldsd;
+
+    move-result-object v0
+
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    const/4 v1, 0x1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Long;
+
+    if-nez v2, :cond_0
+
+    invoke-virtual {v0, v1}, Ldsd;->S(I)V
+
+    goto :goto_1
 
     :cond_0
-    instance-of p1, p1, Lmt5;
+    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
 
-    if-nez p1, :cond_1
+    move-result-wide v2
 
-    const/4 p1, 0x0
+    invoke-virtual {v0, v1, v2, v3}, Ldsd;->k(IJ)V
 
-    return p1
+    :goto_1
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
 
     :cond_1
-    return v0
-.end method
+    new-instance p1, Landroid/os/CancellationSignal;
 
-.method public final hashCode()I
-    .locals 1
+    invoke-direct {p1}, Landroid/os/CancellationSignal;-><init>()V
 
-    const v0, 0x14abf4b9
+    new-instance v1, Lci;
 
-    return v0
-.end method
+    const/16 v2, 0x10
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    invoke-direct {v1, p0, v2, v0}, Lci;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    const-string v0, "Success"
+    iget-object v0, p0, Lmt5;->a:Llrd;
 
-    return-object v0
+    invoke-static {v0, p1, v1, p2}, Lk7j;->a(Llrd;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

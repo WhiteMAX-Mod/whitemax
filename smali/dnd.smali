@@ -2,301 +2,332 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Llj8;
+
+# static fields
+.field public static final d:J
+
+.field public static final e:J
 
 
 # instance fields
-.field public final a:F
+.field public final a:Ldyg;
 
-.field public final b:Landroid/graphics/Matrix;
+.field public b:J
 
-.field public c:Landroid/graphics/Matrix;
+.field public c:I
 
 
 # direct methods
-.method public constructor <init>(F)V
+.method static constructor <clinit>()V
+    .locals 3
+
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->HOURS:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v1, 0x18
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v0
+
+    sput-wide v0, Ldnd;->d:J
+
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v1, 0x1e
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v0
+
+    sput-wide v0, Ldnd;->e:J
+
+    return-void
+.end method
+
+.method public constructor <init>()V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Ldnd;->a:F
+    sget-object v0, Llwf;->a:Llwf;
 
-    new-instance v0, Landroid/graphics/Matrix;
+    if-nez v0, :cond_0
 
-    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
+    sget-object v0, Ldyg;->c:Ljava/util/regex/Pattern;
 
-    iput-object v0, p0, Ldnd;->b:Landroid/graphics/Matrix;
+    new-instance v0, Llwf;
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0, v1, v1}, Landroid/graphics/Matrix;->postScale(FF)Z
+    sput-object v0, Llwf;->a:Llwf;
 
-    invoke-virtual {v0, p1}, Landroid/graphics/Matrix;->postRotate(F)Z
+    :cond_0
+    sget-object v0, Llwf;->a:Llwf;
+
+    sget-object v1, Ldyg;->d:Ldyg;
+
+    if-nez v1, :cond_1
+
+    new-instance v1, Ldyg;
+
+    invoke-direct {v1, v0}, Ldyg;-><init>(Llwf;)V
+
+    sput-object v1, Ldyg;->d:Ldyg;
+
+    :cond_1
+    sget-object v0, Ldyg;->d:Ldyg;
+
+    iput-object v0, p0, Ldnd;->a:Ldyg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Landroid/graphics/Matrix;
-    .locals 2
+.method public final declared-synchronized a()Z
+    .locals 4
 
-    iget-object v0, p0, Ldnd;->c:Landroid/graphics/Matrix;
+    monitor-enter p0
 
-    const-string v1, "configure must be called first"
+    :try_start_0
+    iget v0, p0, Ldnd;->c:I
 
-    invoke-static {v0, v1}, Lsgi;->k(Ljava/lang/Object;Ljava/lang/String;)V
+    if-eqz v0, :cond_1
 
-    return-object v0
-.end method
+    iget-object v0, p0, Ldnd;->a:Ldyg;
 
-.method public final d(II)Z
-    .locals 2
+    iget-object v0, v0, Ldyg;->a:Llwf;
 
-    invoke-virtual {p0, p1, p2}, Ldnd;->e(II)Lbse;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v0
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    iget-object v1, p0, Ldnd;->c:Landroid/graphics/Matrix;
+    move-result-wide v0
 
-    invoke-static {v1}, Lsgi;->j(Ljava/lang/Object;)V
+    iget-wide v2, p0, Ldnd;->b:J
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {v1}, Landroid/graphics/Matrix;->isIdentity()Z
+    cmp-long v0, v0, v2
 
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    iget v1, v0, Lbse;->a:I
-
-    if-ne p1, v1, :cond_0
-
-    iget p1, v0, Lbse;->b:I
-
-    if-ne p2, p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final e(II)Lbse;
-    .locals 12
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x1
-
-    if-lez p1, :cond_0
-
-    move v2, v1
+    if-lez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    move v2, v0
-
-    :goto_0
-    const-string v3, "inputWidth must be positive"
-
-    invoke-static {v3, v2}, Lsgi;->c(Ljava/lang/Object;Z)V
-
-    if-lez p2, :cond_1
-
-    move v2, v1
+    const/4 v0, 0x0
 
     goto :goto_1
 
+    :catchall_0
+    move-exception v0
+
+    goto :goto_2
+
     :cond_1
-    move v2, v0
+    :goto_0
+    const/4 v0, 0x1
 
     :goto_1
-    const-string v3, "inputHeight must be positive"
+    monitor-exit p0
 
-    invoke-static {v3, v2}, Lsgi;->c(Ljava/lang/Object;Z)V
-
-    new-instance v2, Landroid/graphics/Matrix;
-
-    iget-object v3, p0, Ldnd;->b:Landroid/graphics/Matrix;
-
-    invoke-direct {v2, v3}, Landroid/graphics/Matrix;-><init>(Landroid/graphics/Matrix;)V
-
-    iput-object v2, p0, Ldnd;->c:Landroid/graphics/Matrix;
-
-    invoke-virtual {v3}, Landroid/graphics/Matrix;->isIdentity()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    new-instance v0, Lbse;
-
-    invoke-direct {v0, p1, p2}, Lbse;-><init>(II)V
-
-    return-object v0
-
-    :cond_2
-    int-to-float p1, p1
-
-    int-to-float p2, p2
-
-    div-float v2, p1, p2
-
-    iget-object v3, p0, Ldnd;->c:Landroid/graphics/Matrix;
-
-    const/high16 v4, 0x3f800000    # 1.0f
-
-    invoke-virtual {v3, v2, v4}, Landroid/graphics/Matrix;->preScale(FF)Z
-
-    iget-object v3, p0, Ldnd;->c:Landroid/graphics/Matrix;
-
-    div-float v2, v4, v2
-
-    invoke-virtual {v3, v2, v4}, Landroid/graphics/Matrix;->postScale(FF)Z
-
-    const/4 v2, 0x4
-
-    new-array v3, v2, [F
-
-    fill-array-data v3, :array_0
-
-    new-array v5, v2, [F
-
-    fill-array-data v5, :array_1
-
-    new-array v6, v2, [F
-
-    fill-array-data v6, :array_2
-
-    new-array v7, v2, [F
-
-    fill-array-data v7, :array_3
-
-    filled-new-array {v3, v5, v6, v7}, [[F
-
-    move-result-object v3
-
-    const/4 v5, 0x1
-
-    const v6, 0x7f7fffff    # Float.MAX_VALUE
-
-    move v9, v0
-
-    move v7, v6
-
-    move v8, v7
-
-    move v6, v5
+    return v0
 
     :goto_2
-    if-ge v9, v2, :cond_3
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    aget-object v10, v3, v9
+    throw v0
+.end method
 
-    iget-object v11, p0, Ldnd;->c:Landroid/graphics/Matrix;
+.method public final declared-synchronized b(I)V
+    .locals 6
 
-    invoke-virtual {v11, v10}, Landroid/graphics/Matrix;->mapPoints([F)V
+    monitor-enter p0
 
-    aget v11, v10, v0
+    const/16 v0, 0xc8
 
-    invoke-static {v7, v11}, Ljava/lang/Math;->min(FF)F
+    if-lt p1, v0, :cond_0
 
-    move-result v7
+    const/16 v0, 0x12c
 
-    aget v11, v10, v0
+    if-lt p1, v0, :cond_4
 
-    invoke-static {v5, v11}, Ljava/lang/Math;->max(FF)F
+    :cond_0
+    const/16 v0, 0x191
 
-    move-result v5
+    if-eq p1, v0, :cond_4
 
-    aget v11, v10, v1
+    const/16 v0, 0x194
 
-    invoke-static {v8, v11}, Ljava/lang/Math;->min(FF)F
+    if-ne p1, v0, :cond_1
 
-    move-result v8
+    goto :goto_3
 
-    aget v10, v10, v1
+    :cond_1
+    :try_start_0
+    iget v0, p0, Ldnd;->c:I
 
-    invoke-static {v6, v10}, Ljava/lang/Math;->max(FF)F
+    add-int/lit8 v0, v0, 0x1
 
-    move-result v6
+    iput v0, p0, Ldnd;->c:I
 
-    add-int/lit8 v9, v9, 0x1
+    monitor-enter p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    const/16 v0, 0x1ad
+
+    if-eq p1, v0, :cond_3
+
+    const/16 v0, 0x1f4
+
+    if-lt p1, v0, :cond_2
+
+    const/16 v0, 0x258
+
+    if-ge p1, v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    :try_start_1
+    sget-wide v0, Ldnd;->d:J
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :try_start_2
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
 
     goto :goto_2
 
     :cond_3
-    sub-float/2addr v5, v7
+    :goto_0
+    :try_start_3
+    iget p1, p0, Ldnd;->c:I
 
-    const/high16 v0, 0x40000000    # 2.0f
+    int-to-double v0, p1
 
-    div-float/2addr v5, v0
+    const-wide/high16 v2, 0x4000000000000000L    # 2.0
 
-    sub-float/2addr v6, v8
+    invoke-static {v2, v3, v0, v1}, Ljava/lang/Math;->pow(DD)D
 
-    div-float/2addr v6, v0
+    move-result-wide v0
 
-    iget-object v0, p0, Ldnd;->c:Landroid/graphics/Matrix;
+    iget-object p1, p0, Ldnd;->a:Ldyg;
 
-    div-float v1, v4, v5
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    div-float/2addr v4, v6
+    invoke-static {}, Ljava/lang/Math;->random()D
 
-    invoke-virtual {v0, v1, v4}, Landroid/graphics/Matrix;->postScale(FF)Z
+    move-result-wide v2
 
-    new-instance v0, Lbse;
+    const-wide v4, 0x408f400000000000L    # 1000.0
 
-    mul-float/2addr p1, v5
+    mul-double/2addr v2, v4
 
-    invoke-static {p1}, Ljava/lang/Math;->round(F)I
+    double-to-long v2, v2
 
-    move-result p1
+    long-to-double v2, v2
 
-    mul-float/2addr p2, v6
+    add-double/2addr v0, v2
 
-    invoke-static {p2}, Ljava/lang/Math;->round(F)I
+    sget-wide v2, Ldnd;->e:J
 
-    move-result p2
+    long-to-double v2, v2
 
-    invoke-direct {v0, p1, p2}, Lbse;-><init>(II)V
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->min(DD)D
 
-    return-object v0
+    move-result-wide v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    :array_0
-    .array-data 4
-        -0x40800000    # -1.0f
-        -0x40800000    # -1.0f
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
+    double-to-long v0, v0
 
-    :array_1
-    .array-data 4
-        -0x40800000    # -1.0f
-        0x3f800000    # 1.0f
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
+    :try_start_4
+    monitor-exit p0
 
-    :array_2
-    .array-data 4
-        0x3f800000    # 1.0f
-        -0x40800000    # -1.0f
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
+    :goto_1
+    iget-object p1, p0, Ldnd;->a:Ldyg;
 
-    :array_3
-    .array-data 4
-        0x3f800000    # 1.0f
-        0x3f800000    # 1.0f
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
+    iget-object p1, p1, Ldyg;->a:Llwf;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    add-long/2addr v2, v0
+
+    iput-wide v2, p0, Ldnd;->b:J
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_1
+    move-exception p1
+
+    goto :goto_4
+
+    :goto_2
+    :try_start_5
+    monitor-exit p0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
+    :try_start_6
+    throw p1
+
+    :cond_4
+    :goto_3
+    monitor-enter p0
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_1
+
+    const/4 p1, 0x0
+
+    :try_start_7
+    iput p1, p0, Ldnd;->c:I
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_2
+
+    :try_start_8
+    monitor-exit p0
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_1
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_2
+    move-exception p1
+
+    :try_start_9
+    monitor-exit p0
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_2
+
+    :try_start_a
+    throw p1
+
+    :goto_4
+    monitor-exit p0
+    :try_end_a
+    .catchall {:try_start_a .. :try_end_a} :catchall_1
+
+    throw p1
 .end method

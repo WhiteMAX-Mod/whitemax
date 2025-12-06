@@ -15,53 +15,58 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000`\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0003\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u000b\n\u0002\u0018\u0002\n\u0002\u0008\u0006\u0008\u0001\u0018\u0000 12\u00020\u0001:\u00011B/\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\t\u001a\u00020\u0008\u0012\u0006\u0010\u000b\u001a\u00020\n\u00a2\u0006\u0004\u0008\u000c\u0010\rJ!\u0010\u0013\u001a\u00020\u00122\u0006\u0010\u000f\u001a\u00020\u000e2\u0008\u0010\u0011\u001a\u0004\u0018\u00010\u0010H\u0016\u00a2\u0006\u0004\u0008\u0013\u0010\u0014J\u0017\u0010\u0017\u001a\u00020\u00122\u0006\u0010\u0016\u001a\u00020\u0015H\u0016\u00a2\u0006\u0004\u0008\u0017\u0010\u0018J\u0019\u0010\u001a\u001a\u00020\u00122\u0008\u0010\u0019\u001a\u0004\u0018\u00010\u0010H\u0016\u00a2\u0006\u0004\u0008\u001a\u0010\u001bJ\'\u0010\"\u001a\u00020\u00122\u0006\u0010\u001d\u001a\u00020\u001c2\u0006\u0010\u001f\u001a\u00020\u001e2\u0006\u0010!\u001a\u00020 H\u0016\u00a2\u0006\u0004\u0008\"\u0010#J\u0017\u0010$\u001a\u00020\u00122\u0006\u0010\u001d\u001a\u00020\u001cH\u0016\u00a2\u0006\u0004\u0008$\u0010%R\u001a\u0010\u0003\u001a\u00020\u00028\u0016X\u0096\u0004\u00a2\u0006\u000c\n\u0004\u0008\u0003\u0010&\u001a\u0004\u0008\'\u0010(R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0005\u0010)R\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0007\u0010*R\u0014\u0010\t\u001a\u00020\u00088\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\t\u0010+R\u001a\u0010-\u001a\u00020,8\u0016X\u0096\u0004\u00a2\u0006\u000c\n\u0004\u0008-\u0010.\u001a\u0004\u0008/\u00100\u00a8\u00062"
+        "\u0000l\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0003\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u000b\n\u0002\u0018\u0002\n\u0002\u0008\u0006\u0008\u0001\u0018\u0000 62\u00020\u0001:\u00016B/\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\t\u001a\u00020\u0008\u0012\u0006\u0010\u000b\u001a\u00020\n\u00a2\u0006\u0004\u0008\u000c\u0010\rJ!\u0010\u0013\u001a\u00020\u00122\u0006\u0010\u000f\u001a\u00020\u000e2\u0008\u0010\u0011\u001a\u0004\u0018\u00010\u0010H\u0016\u00a2\u0006\u0004\u0008\u0013\u0010\u0014J\u0017\u0010\u0017\u001a\u00020\u00122\u0006\u0010\u0016\u001a\u00020\u0015H\u0016\u00a2\u0006\u0004\u0008\u0017\u0010\u0018J#\u0010\u001c\u001a\u00020\u00122\u0012\u0010\u001b\u001a\u000e\u0012\u0004\u0012\u00020\u001a\u0012\u0004\u0012\u00020\u001a0\u0019H\u0016\u00a2\u0006\u0004\u0008\u001c\u0010\u001dJ\u0019\u0010\u001f\u001a\u00020\u00122\u0008\u0010\u001e\u001a\u0004\u0018\u00010\u0010H\u0016\u00a2\u0006\u0004\u0008\u001f\u0010 J\'\u0010\'\u001a\u00020\u00122\u0006\u0010\"\u001a\u00020!2\u0006\u0010$\u001a\u00020#2\u0006\u0010&\u001a\u00020%H\u0016\u00a2\u0006\u0004\u0008\'\u0010(J\u0017\u0010)\u001a\u00020\u00122\u0006\u0010\"\u001a\u00020!H\u0016\u00a2\u0006\u0004\u0008)\u0010*R\u001a\u0010\u0003\u001a\u00020\u00028\u0016X\u0096\u0004\u00a2\u0006\u000c\n\u0004\u0008\u0003\u0010+\u001a\u0004\u0008,\u0010-R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0005\u0010.R\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0007\u0010/R\u0014\u0010\t\u001a\u00020\u00088\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\t\u00100R\u001a\u00102\u001a\u0002018\u0016X\u0096\u0004\u00a2\u0006\u000c\n\u0004\u00082\u00103\u001a\u0004\u00084\u00105\u00a8\u00067"
     }
     d2 = {
         "Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;",
         "Lru/ok/android/externcalls/sdk/dev/DebugManager;",
-        "Lh01;",
+        "Lk01;",
         "underlyingCall",
         "Lru/ok/android/externcalls/sdk/log/ExtLogger;",
         "stat",
-        "Ly34;",
+        "Lo64;",
         "cidProvider",
-        "Lfwc;",
+        "Ly6d;",
         "log",
         "Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;",
         "signalingProvider",
         "<init>",
-        "(Lh01;Lru/ok/android/externcalls/sdk/log/ExtLogger;Ly34;Lfwc;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;)V",
-        "Ll0f;",
+        "(Lk01;Lru/ok/android/externcalls/sdk/log/ExtLogger;Lo64;Ly6d;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;)V",
+        "Lhcf;",
         "operation",
         "",
         "param",
-        "Lccg;",
+        "Lqqg;",
         "report",
-        "(Ll0f;Ljava/lang/String;)V",
+        "(Lhcf;Ljava/lang/String;)V",
         "",
         "error",
         "reportError",
         "(Ljava/lang/Throwable;)V",
+        "Lkotlin/Function1;",
+        "Lk32;",
+        "updater",
+        "updateCameraToggles",
+        "(Lem6;)V",
         "dumpPath",
         "enableFullAudioDump",
         "(Ljava/lang/String;)V",
-        "Lz1f;",
+        "Ludf;",
         "listener",
         "",
         "period",
         "Ljava/util/concurrent/TimeUnit;",
         "unit",
         "registerStatListener",
-        "(Lz1f;ILjava/util/concurrent/TimeUnit;)V",
+        "(Ludf;ILjava/util/concurrent/TimeUnit;)V",
         "removeStatListener",
-        "(Lz1f;)V",
-        "Lh01;",
+        "(Ludf;)V",
+        "Lk01;",
         "getUnderlyingCall",
-        "()Lh01;",
+        "()Lk01;",
         "Lru/ok/android/externcalls/sdk/log/ExtLogger;",
-        "Ly34;",
-        "Lfwc;",
+        "Lo64;",
+        "Ly6d;",
         "Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;",
         "mediaDumpManager",
         "Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;",
@@ -87,15 +92,15 @@
 
 
 # instance fields
-.field private final cidProvider:Ly34;
+.field private final cidProvider:Lo64;
 
-.field private final log:Lfwc;
+.field private final log:Ly6d;
 
 .field private final mediaDumpManager:Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;
 
 .field private final stat:Lru/ok/android/externcalls/sdk/log/ExtLogger;
 
-.field private final underlyingCall:Lh01;
+.field private final underlyingCall:Lk01;
 
 
 # direct methods
@@ -106,33 +111,33 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl$Companion;-><init>(Lki4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl$Companion;-><init>(Ltk4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->Companion:Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lh01;Lru/ok/android/externcalls/sdk/log/ExtLogger;Ly34;Lfwc;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;)V
+.method public constructor <init>(Lk01;Lru/ok/android/externcalls/sdk/log/ExtLogger;Lo64;Ly6d;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->underlyingCall:Lh01;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->underlyingCall:Lk01;
 
     iput-object p2, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->stat:Lru/ok/android/externcalls/sdk/log/ExtLogger;
 
-    iput-object p3, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->cidProvider:Ly34;
+    iput-object p3, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->cidProvider:Lo64;
 
-    iput-object p4, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->log:Lfwc;
+    iput-object p4, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->log:Ly6d;
 
     new-instance p1, Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->getUnderlyingCall()Lh01;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->getUnderlyingCall()Lk01;
 
     move-result-object p2
 
-    invoke-direct {p1, p2, p5}, Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;-><init>(Lh01;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;)V
+    invoke-direct {p1, p2, p5}, Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;-><init>(Lk01;Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;)V
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->mediaDumpManager:Lru/ok/android/externcalls/sdk/dev/internal/MediaDumpManagerImpl;
 
@@ -144,24 +149,24 @@
 .method public enableFullAudioDump(Ljava/lang/String;)V
     .locals 5
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->getUnderlyingCall()Lh01;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->getUnderlyingCall()Lk01;
 
     move-result-object v0
 
-    iget-object v1, v0, Lh01;->e0:Lvje;
+    iget-object v1, v0, Lk01;->f0:Lrve;
 
     if-nez v1, :cond_0
 
     return-void
 
     :cond_0
-    iget-object v2, v0, Lh01;->c:Ljava/util/concurrent/ExecutorService;
+    iget-object v2, v0, Lk01;->c:Ljava/util/concurrent/ExecutorService;
 
-    new-instance v3, Lgj;
+    new-instance v3, Lcj;
 
     const/4 v4, 0x6
 
-    invoke-direct {v3, v0, v1, p1, v4}, Lgj;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct {v3, v0, v1, p1, v4}, Lcj;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
     invoke-interface {v2, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
@@ -188,48 +193,48 @@
     return-object v0
 .end method
 
-.method public getUnderlyingCall()Lh01;
+.method public getUnderlyingCall()Lk01;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->underlyingCall:Lh01;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->underlyingCall:Lk01;
 
     return-object v0
 .end method
 
-.method public registerStatListener(Lz1f;ILjava/util/concurrent/TimeUnit;)V
+.method public registerStatListener(Ludf;ILjava/util/concurrent/TimeUnit;)V
     .locals 3
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->getUnderlyingCall()Lh01;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->getUnderlyingCall()Lk01;
 
     move-result-object v0
 
-    iget-object v0, v0, Lh01;->N0:Lm47;
+    iget-object v0, v0, Lk01;->M0:Ly87;
 
     int-to-long v1, p2
 
-    iget-object p2, v0, Lm47;->c:Ljava/lang/Object;
+    iget-object p2, v0, Ly87;->c:Ljava/lang/Object;
 
     check-cast p2, Ljava/util/HashMap;
 
-    new-instance v0, Lmth;
+    new-instance v0, Ly9i;
 
-    invoke-direct {v0, v1, v2, p3}, Lmth;-><init>(JLjava/util/concurrent/TimeUnit;)V
+    invoke-direct {v0, v1, v2, p3}, Ly9i;-><init>(JLjava/util/concurrent/TimeUnit;)V
 
     invoke-virtual {p2, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public removeStatListener(Lz1f;)V
+.method public removeStatListener(Ludf;)V
     .locals 1
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->getUnderlyingCall()Lh01;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->getUnderlyingCall()Lk01;
 
     move-result-object v0
 
-    iget-object v0, v0, Lh01;->N0:Lm47;
+    iget-object v0, v0, Lk01;->M0:Ly87;
 
-    iget-object v0, v0, Lm47;->c:Ljava/lang/Object;
+    iget-object v0, v0, Ly87;->c:Ljava/lang/Object;
 
     check-cast v0, Ljava/util/HashMap;
 
@@ -238,18 +243,18 @@
     return-void
 .end method
 
-.method public report(Ll0f;Ljava/lang/String;)V
+.method public report(Lhcf;Ljava/lang/String;)V
     .locals 2
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->stat:Lru/ok/android/externcalls/sdk/log/ExtLogger;
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->cidProvider:Ly34;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->cidProvider:Lo64;
 
-    check-cast v1, Lz34;
+    check-cast v1, Lp64;
 
-    iget-object v1, v1, Lz34;->a:Ljava/lang/String;
+    iget-object v1, v1, Lp64;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, p1, v1, p2}, Lru/ok/android/externcalls/sdk/log/ExtLogger;->logSimple(Ll0f;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, p1, v1, p2}, Lru/ok/android/externcalls/sdk/log/ExtLogger;->logSimple(Lhcf;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -257,13 +262,64 @@
 .method public reportError(Ljava/lang/Throwable;)V
     .locals 3
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->log:Lfwc;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->log:Ly6d;
 
     const-string v1, "DebugManager"
 
     const-string v2, "error"
 
-    invoke-interface {v0, v1, v2, p1}, Lfwc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, v1, v2, p1}, Ly6d;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
+.end method
+
+.method public updateCameraToggles(Lem6;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lem6;",
+            ")V"
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/dev/internal/DebugManagerImpl;->getUnderlyingCall()Lk01;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lk01;->h0:Lf54;
+
+    iget-object v0, v0, Lf54;->h:Ljava/lang/Object;
+
+    check-cast v0, Lrl;
+
+    iget-object v1, v0, Lrl;->b:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_0
+    iget-object v2, v0, Lrl;->c:Ljava/lang/Object;
+
+    check-cast v2, Lk32;
+
+    invoke-interface {p1, v2}, Lem6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lk32;
+
+    iput-object p1, v0, Lrl;->c:Ljava/lang/Object;
+
+    monitor-exit v1
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
 .end method

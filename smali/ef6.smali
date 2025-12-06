@@ -4,11 +4,19 @@
 
 
 # instance fields
-.field public a:I
+.field public A:I
 
-.field public b:Landroidx/fragment/app/a;
+.field public B:I
 
-.field public c:Z
+.field public C:I
+
+.field public D:I
+
+.field public a:Ljava/lang/String;
+
+.field public b:Ljava/lang/String;
+
+.field public c:Ljava/lang/String;
 
 .field public d:I
 
@@ -18,64 +26,88 @@
 
 .field public g:I
 
-.field public h:Lhw7;
+.field public h:Ljava/lang/String;
 
-.field public i:Lhw7;
+.field public i:Lsy9;
+
+.field public j:Ljava/lang/String;
+
+.field public k:Ljava/lang/String;
+
+.field public l:I
+
+.field public m:Ljava/util/List;
+
+.field public n:Lx45;
+
+.field public o:J
+
+.field public p:I
+
+.field public q:I
+
+.field public r:F
+
+.field public s:I
+
+.field public t:F
+
+.field public u:[B
+
+.field public v:I
+
+.field public w:Lff3;
+
+.field public x:I
+
+.field public y:I
+
+.field public z:I
 
 
 # direct methods
-.method public constructor <init>(ILandroidx/fragment/app/a;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 3
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput p1, p0, Lef6;->a:I
+    const/4 v0, -0x1
 
-    .line 3
-    iput-object p2, p0, Lef6;->b:Landroidx/fragment/app/a;
+    iput v0, p0, Lef6;->f:I
 
-    const/4 p1, 0x0
+    iput v0, p0, Lef6;->g:I
 
-    .line 4
-    iput-boolean p1, p0, Lef6;->c:Z
+    iput v0, p0, Lef6;->l:I
 
-    .line 5
-    sget-object p1, Lhw7;->X:Lhw7;
+    const-wide v1, 0x7fffffffffffffffL
 
-    iput-object p1, p0, Lef6;->h:Lhw7;
+    iput-wide v1, p0, Lef6;->o:J
 
-    .line 6
-    iput-object p1, p0, Lef6;->i:Lhw7;
+    iput v0, p0, Lef6;->p:I
 
-    return-void
-.end method
+    iput v0, p0, Lef6;->q:I
 
-.method public constructor <init>(ILandroidx/fragment/app/a;I)V
-    .locals 0
+    const/high16 v1, -0x40800000    # -1.0f
 
-    .line 7
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput v1, p0, Lef6;->r:F
 
-    .line 8
-    iput p1, p0, Lef6;->a:I
+    const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 9
-    iput-object p2, p0, Lef6;->b:Landroidx/fragment/app/a;
+    iput v1, p0, Lef6;->t:F
 
-    const/4 p1, 0x1
+    iput v0, p0, Lef6;->v:I
 
-    .line 10
-    iput-boolean p1, p0, Lef6;->c:Z
+    iput v0, p0, Lef6;->x:I
 
-    .line 11
-    sget-object p1, Lhw7;->X:Lhw7;
+    iput v0, p0, Lef6;->y:I
 
-    iput-object p1, p0, Lef6;->h:Lhw7;
+    iput v0, p0, Lef6;->z:I
 
-    .line 12
-    iput-object p1, p0, Lef6;->i:Lhw7;
+    iput v0, p0, Lef6;->C:I
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lef6;->D:I
 
     return-void
 .end method

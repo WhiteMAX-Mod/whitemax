@@ -1,60 +1,63 @@
-.class public final Lfdi;
-.super Ljava/lang/Object;
+.class public final enum Lfdi;
+.super Ljava/lang/Enum;
 .source "SourceFile"
-
-# interfaces
-.implements Ltha;
 
 
 # static fields
-.field public static final a:Lfdi;
+.field public static final enum a:Lfdi;
+
+.field public static final synthetic b:[Lfdi;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 5
 
     new-instance v0, Lfdi;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "DEFAULT"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lfdi;->a:Lfdi;
 
-    new-instance v0, Ltwh;
+    new-instance v1, Lfdi;
 
-    const/4 v1, 0x1
+    const-string v2, "SIGNED"
 
-    invoke-direct {v0, v1}, Ltwh;-><init>(I)V
+    const/4 v3, 0x1
 
-    const-class v1, Lmxh;
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+    new-instance v2, Lfdi;
 
-    move-result-object v0
+    const-string v3, "FIXED"
 
-    const/4 v2, 0x2
+    const/4 v4, 0x2
 
-    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+    filled-new-array {v0, v1, v2}, [Lfdi;
 
     move-result-object v0
 
-    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
+    sput-object v0, Lfdi;->b:[Lfdi;
 
     return-void
 .end method
 
+.method public static values()[Lfdi;
+    .locals 1
 
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+    sget-object v0, Lfdi;->b:[Lfdi;
 
-    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    invoke-virtual {v0}, [Lfdi;->clone()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v0
 
-    throw p1
+    check-cast v0, [Lfdi;
+
+    return-object v0
 .end method

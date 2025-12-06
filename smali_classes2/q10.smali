@@ -4,20 +4,104 @@
 
 
 # instance fields
-.field public final a:Lq78;
+.field public a:J
 
-.field public final b:J
+.field public b:I
+
+.field public c:I
+
+.field public d:Ljava/lang/String;
+
+.field public e:J
+
+.field public f:Ljava/lang/String;
+
+.field public g:Ljava/lang/String;
+
+.field public h:Ljava/lang/String;
+
+.field public i:Ljava/util/List;
+
+.field public j:I
+
+.field public k:J
+
+.field public l:Ljava/lang/String;
+
+.field public m:Z
+
+.field public n:I
+
+.field public o:Ljava/lang/String;
 
 
-# direct methods
-.method public constructor <init>(Lq78;J)V
-    .locals 0
+# virtual methods
+.method public a()Lr10;
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Lq10;->i:Ljava/util/List;
 
-    iput-object p1, p0, Lq10;->a:Lq78;
+    if-nez v0, :cond_0
 
-    iput-wide p2, p0, Lq10;->b:J
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    return-void
+    iput-object v0, p0, Lq10;->i:Ljava/util/List;
+
+    :cond_0
+    iget v0, p0, Lq10;->j:I
+
+    const/4 v1, 0x1
+
+    if-nez v0, :cond_1
+
+    iput v1, p0, Lq10;->j:I
+
+    :cond_1
+    iget v0, p0, Lq10;->n:I
+
+    if-nez v0, :cond_2
+
+    iput v1, p0, Lq10;->n:I
+
+    :cond_2
+    new-instance v0, Lr10;
+
+    invoke-direct {v0, p0}, Lr10;-><init>(Lq10;)V
+
+    return-object v0
+.end method
+
+.method public b()Ljef;
+    .locals 2
+
+    iget-object v0, p0, Lq10;->i:Ljava/util/List;
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    iput-object v0, p0, Lq10;->i:Ljava/util/List;
+
+    :cond_0
+    iget v0, p0, Lq10;->j:I
+
+    const/4 v1, 0x1
+
+    if-nez v0, :cond_1
+
+    iput v1, p0, Lq10;->j:I
+
+    :cond_1
+    iget v0, p0, Lq10;->n:I
+
+    if-nez v0, :cond_2
+
+    iput v1, p0, Lq10;->n:I
+
+    :cond_2
+    new-instance v0, Ljef;
+
+    invoke-direct {v0, p0}, Ljef;-><init>(Lq10;)V
+
+    return-object v0
 .end method

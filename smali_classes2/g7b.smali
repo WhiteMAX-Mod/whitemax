@@ -1,25 +1,51 @@
-.class public abstract Lg7b;
-.super Ljava/lang/Object;
+.class public final Lg7b;
+.super Lq44;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public X:I
 
-.field public static final b:I
+.field public synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Lh7b;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lh7b;Lq44;)V
+    .locals 0
 
-    sget v0, Lguc;->email_intent_title:I
+    iput-object p1, p0, Lg7b;->o:Lh7b;
 
-    sput v0, Lg7b;->a:I
-
-    sget v0, Lguc;->faq_title:I
-
-    sput v0, Lg7b;->b:I
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iput-object p1, p0, Lg7b;->d:Ljava/lang/Object;
+
+    iget p1, p0, Lg7b;->X:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lg7b;->X:I
+
+    const-wide/16 v0, 0x0
+
+    const/4 p1, 0x0
+
+    iget-object v2, p0, Lg7b;->o:Lh7b;
+
+    invoke-virtual {v2, v0, v1, p1, p0}, Lh7b;->a(J[JLq44;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

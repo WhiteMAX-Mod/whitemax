@@ -1,53 +1,51 @@
-.class public abstract Lg77;
-.super Ljava/lang/Object;
+.class public final Lg77;
+.super Lq44;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic X:Lh77;
+
+.field public Y:I
+
+.field public d:Luid;
+
+.field public synthetic o:Ljava/lang/Object;
+
+
 # direct methods
-.method public static a(Ljava/lang/Object;)I
+.method public constructor <init>(Lh77;Lq44;)V
     .locals 0
 
-    check-cast p0, Landroid/graphics/drawable/Icon;
+    iput-object p1, p0, Lg77;->X:Lh77;
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Icon;->getResId()I
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    move-result p0
-
-    return p0
+    return-void
 .end method
 
-.method public static b(Ljava/lang/Object;)Ljava/lang/String;
-    .locals 0
 
-    check-cast p0, Landroid/graphics/drawable/Icon;
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Icon;->getResPackage()Ljava/lang/String;
+    iput-object p1, p0, Lg77;->o:Ljava/lang/Object;
 
-    move-result-object p0
+    iget p1, p0, Lg77;->Y:I
 
-    return-object p0
-.end method
+    const/high16 v0, -0x80000000
 
-.method public static c(Ljava/lang/Object;)I
-    .locals 0
+    or-int/2addr p1, v0
 
-    check-cast p0, Landroid/graphics/drawable/Icon;
+    iput p1, p0, Lg77;->Y:I
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Icon;->getType()I
+    iget-object p1, p0, Lg77;->X:Lh77;
 
-    move-result p0
+    const/4 v0, 0x0
 
-    return p0
-.end method
+    invoke-static {p1, v0, p0}, Lh77;->a(Lh77;Ljava/lang/String;Lq44;)Ljava/lang/Object;
 
-.method public static d(Ljava/lang/Object;)Landroid/net/Uri;
-    .locals 0
+    move-result-object p1
 
-    check-cast p0, Landroid/graphics/drawable/Icon;
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Icon;->getUri()Landroid/net/Uri;
-
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method

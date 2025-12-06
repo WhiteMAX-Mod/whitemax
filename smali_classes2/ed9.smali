@@ -2,232 +2,121 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljve;
 
-.field public final synthetic b:Lgd9;
+.field public final b:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lgd9;I)V
-    .locals 0
-
-    iput p2, p0, Led9;->a:I
-
-    iput-object p1, p0, Led9;->b:Lgd9;
+.method public constructor <init>(Ltw0;Llzf;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    const/4 v0, 0x0
 
-.method private final a(Landroid/animation/Animator;)V
-    .locals 0
+    const/4 v1, 0x7
 
-    return-void
-.end method
+    invoke-static {v0, v0, v1}, Lkve;->b(III)Ljve;
 
-.method private final b(Landroid/animation/Animator;)V
-    .locals 0
+    move-result-object v0
 
-    return-void
-.end method
+    iput-object v0, p0, Led9;->a:Ljve;
 
-.method private final c(Landroid/animation/Animator;)V
-    .locals 0
+    check-cast p2, Lq2b;
 
-    return-void
-.end method
+    invoke-virtual {p2}, Lq2b;->a()Lz74;
 
-.method private final d(Landroid/animation/Animator;)V
-    .locals 0
+    move-result-object p2
 
-    return-void
-.end method
+    invoke-static {p2}, Ld7j;->a(Lx74;)Lkotlinx/coroutines/internal/ContextScope;
 
-.method private final e(Landroid/animation/Animator;)V
-    .locals 0
+    move-result-object p2
 
-    return-void
-.end method
+    iput-object p2, p0, Led9;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-.method private final f(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final g(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final h(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final i(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final j(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final k(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final l(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final m(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final n(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final o(Landroid/animation/Animator;)V
-    .locals 0
+    invoke-virtual {p1, p0}, Ltw0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
+.method public final onChatMembersUpdateEvent(Lor2;)V
+    .locals 5
+    .annotation runtime Lvnf;
+    .end annotation
 
-    iget p1, p0, Led9;->a:I
+    iget-object v0, p1, Lor2;->b:Ljava/util/List;
 
-    return-void
-.end method
+    iget-object v1, p1, Lor2;->c:Lbr2;
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 1
+    iget-wide v2, p1, Lor2;->d:J
 
-    iget p1, p0, Led9;->a:I
+    iget p1, p1, Lor2;->o:I
 
-    packed-switch p1, :pswitch_data_0
+    invoke-static {p1}, Laz1;->v(I)I
 
-    return-void
+    move-result p1
 
-    :pswitch_0
-    iget-object p1, p0, Led9;->b:Lgd9;
+    if-eqz p1, :cond_1
 
-    iget-object p1, p1, Lgd9;->u0:Landroid/widget/ImageView;
+    const/4 v4, 0x1
 
-    const/high16 v0, 0x3f800000    # 1.0f
+    if-ne p1, v4, :cond_0
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+    new-instance p1, Lyc9;
 
-    return-void
+    invoke-direct {p1, v2, v3, v1, v0}, Lyc9;-><init>(JLbr2;Ljava/util/Collection;)V
 
-    :pswitch_1
-    iget-object p1, p0, Led9;->b:Lgd9;
+    goto :goto_0
 
-    iget-object p1, p1, Lgd9;->u0:Landroid/widget/ImageView;
+    :cond_0
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    const/high16 v0, 0x3f800000    # 1.0f
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+    throw p1
 
-    :pswitch_2
-    return-void
+    :cond_1
+    new-instance p1, Lwc9;
 
-    :pswitch_3
-    iget-object p1, p0, Led9;->b:Lgd9;
+    invoke-direct {p1, v2, v3, v1, v0}, Lwc9;-><init>(JLbr2;Ljava/util/Collection;)V
 
-    iget-object p1, p1, Lgd9;->u0:Landroid/widget/ImageView;
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
-
-    iget p1, p0, Led9;->a:I
-
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 2
-
-    iget p1, p0, Led9;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, p0, Led9;->b:Lgd9;
-
-    iget-object p1, p1, Lgd9;->u0:Landroid/widget/ImageView;
-
-    const/4 v0, 0x4
-
-    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    :pswitch_0
-    return-void
-
-    :pswitch_1
-    iget-object p1, p0, Led9;->b:Lgd9;
-
-    iget-object v0, p1, Lgd9;->u0:Landroid/widget/ImageView;
+    :goto_0
+    new-instance v0, Lbd9;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
+    invoke-direct {v0, p0, p1, v1}, Lbd9;-><init>(Led9;Lzc9;Lkotlin/coroutines/Continuation;)V
 
-    iget-object p1, p1, Lgd9;->u0:Landroid/widget/ImageView;
+    const/4 p1, 0x3
 
-    const/4 v0, 0x0
+    iget-object v2, p0, Led9;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+    invoke-static {v2, v1, v1, v0, p1}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
 
-    :pswitch_2
     return-void
+.end method
 
-    nop
+.method public final onEvent(Lt24;)V
+    .locals 3
+    .annotation runtime Lvnf;
+    .end annotation
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-        :pswitch_0
-    .end packed-switch
+    new-instance v0, Lcd9;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, p1, v1}, Lcd9;-><init>(Led9;Lt24;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x3
+
+    iget-object v2, p0, Led9;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v1, v1, v0, p1}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
+
+    return-void
 .end method

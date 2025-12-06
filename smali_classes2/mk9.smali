@@ -1,197 +1,231 @@
 .class public final Lmk9;
-.super Lrdi;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lqk9;
 
-# static fields
-.field public static final c:Lmk9;
+
+# instance fields
+.field public final a:Landroid/text/Layout;
+
+.field public final b:Landroid/text/Layout;
+
+.field public final c:J
+
+.field public final d:Ljava/lang/CharSequence;
+
+.field public final e:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Landroid/text/Layout;Landroid/text/Layout;JLjava/lang/CharSequence;Ljava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Lmk9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0xb
+    iput-object p1, p0, Lmk9;->a:Landroid/text/Layout;
 
-    invoke-direct {v0, v1}, Lrdi;-><init>(I)V
+    iput-object p2, p0, Lmk9;->b:Landroid/text/Layout;
 
-    sput-object v0, Lmk9;->c:Lmk9;
+    iput-wide p3, p0, Lmk9;->c:J
+
+    iput-object p5, p0, Lmk9;->d:Ljava/lang/CharSequence;
+
+    iput-object p6, p0, Lmk9;->e:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static S0(Ljava/util/List;Z)Lwf4;
-    .locals 6
 
-    const/4 v4, 0x0
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    const/16 v5, 0x3e
+    const/4 v0, 0x1
 
-    const-string v1, ","
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lmk9;
 
     const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    if-nez v1, :cond_1
 
-    move-object v0, p0
+    return v2
 
-    invoke-static/range {v0 .. v5}, Lnb3;->I(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lli6;I)Ljava/lang/String;
+    :cond_1
+    check-cast p1, Lmk9;
 
-    move-result-object p0
+    iget-object v1, p0, Lmk9;->a:Landroid/text/Layout;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v3, p1, Lmk9;->a:Landroid/text/Layout;
 
-    const-string v1, ":chats/forward?messages_ids="
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result v1
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-nez v1, :cond_2
 
-    const-string p0, "&show_ext_sharing="
+    return v2
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_2
+    iget-object v1, p0, Lmk9;->b:Landroid/text/Layout;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    iget-object v3, p1, Lmk9;->b:Landroid/text/Layout;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object p0
+    move-result v1
 
-    new-instance p1, Lwf4;
+    if-nez v1, :cond_3
 
-    invoke-direct {p1, p0}, Lwf4;-><init>(Ljava/lang/String;)V
+    return v2
 
-    return-object p1
+    :cond_3
+    iget-wide v3, p0, Lmk9;->c:J
+
+    iget-wide v5, p1, Lmk9;->c:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lmk9;->d:Ljava/lang/CharSequence;
+
+    iget-object v3, p1, Lmk9;->d:Ljava/lang/CharSequence;
+
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Lmk9;->e:Ljava/lang/String;
+
+    iget-object p1, p1, Lmk9;->e:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_6
+
+    return v2
+
+    :cond_6
+    return v0
 .end method
 
-.method public static T0(Lmk9;JLjava/lang/String;Ljava/lang/Boolean;Ljava/lang/Long;I)Lwf4;
-    .locals 2
+.method public final hashCode()I
+    .locals 5
 
-    and-int/lit8 v0, p6, 0x2
+    iget-object v0, p0, Lmk9;->a:Landroid/text/Layout;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lmk9;->b:Landroid/text/Layout;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-wide v3, p0, Lmk9;->c:J
+
+    invoke-static {v2, v1, v3, v4}, La9h;->a(IIJ)I
+
+    move-result v0
+
+    iget-object v2, p0, Lmk9;->d:Ljava/lang/CharSequence;
+
+    invoke-static {v2, v0, v1}, Lu45;->g(Ljava/lang/CharSequence;II)I
+
+    move-result v0
+
+    iget-object v1, p0, Lmk9;->e:Ljava/lang/String;
+
+    if-nez v1, :cond_0
 
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_0
-
-    move-object p3, v1
+    goto :goto_0
 
     :cond_0
-    and-int/lit8 v0, p6, 0x4
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    if-eqz v0, :cond_1
+    move-result v1
 
-    sget-object p4, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    :goto_0
+    add-int/2addr v0, v1
 
-    :cond_1
-    and-int/lit8 p6, p6, 0x8
-
-    if-eqz p6, :cond_2
-
-    move-object p5, v1
-
-    :cond_2
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance p0, Lzh6;
-
-    invoke-direct/range {p0 .. p5}, Lzh6;-><init>(JLjava/lang/String;Ljava/lang/Boolean;Ljava/lang/Long;)V
-
-    invoke-static {p0}, Lrdi;->D0(Lli6;)Lwf4;
-
-    move-result-object p0
-
-    return-object p0
+    return v0
 .end method
 
-.method public static U0(JJLjava/lang/String;Lqx4;)Lwf4;
-    .locals 2
-
-    invoke-virtual {p5}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p5
-
-    const-string v0, ":dialogs/share-media?msg_id="
-
-    const-string v1, "&attach_id="
-
-    invoke-static {p0, p1, v0, v1}, Ldy1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p0
-
-    const-string p1, "&local_attach_id="
-
-    invoke-static {p2, p3, p1, p4, p0}, Lzb3;->g(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
-
-    const-string p1, "&cause_ordinal="
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance p1, Lwf4;
-
-    invoke-direct {p1, p0}, Lwf4;-><init>(Ljava/lang/String;)V
-
-    return-object p1
-.end method
-
-.method public static V0(JLjava/lang/Long;Ljava/lang/String;Lr4h;)Lwf4;
-    .locals 3
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v1, "Contact(contactTitleLayout="
 
-    iget-object p4, p4, Lr4h;->a:Ljava/lang/String;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const-string v1, ":webapp:root?bot_id="
+    iget-object v1, p0, Lmk9;->a:Landroid/text/Layout;
 
-    const-string v2, "&entry_point="
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-static {v1, p0, p1, v2, p4}, Lrtg;->g(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const-string v1, ", contactNameLayout="
 
-    move-result-object p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lmk9;->b:Landroid/text/Layout;
 
-    new-instance p0, Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string p1, "&chat_id="
+    const-string v1, ", contactId="
 
-    invoke-direct {p0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-wide v1, p0, Lmk9;->c:J
 
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    const-string v1, ", nameForAbbreviation="
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz p3, :cond_0
+    iget-object v1, p0, Lmk9;->d:Ljava/lang/CharSequence;
 
-    const-string p0, "&start_param="
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, p3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    const-string v1, ", url="
 
-    move-result-object p0
+    const-string v2, ")"
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v3, p0, Lmk9;->e:Ljava/lang/String;
 
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v1, v3, v2}, Lctd;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    new-instance p1, Lwf4;
-
-    invoke-direct {p1, p0}, Lwf4;-><init>(Ljava/lang/String;)V
-
-    return-object p1
+    return-object v0
 .end method

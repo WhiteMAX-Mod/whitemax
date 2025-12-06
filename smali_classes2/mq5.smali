@@ -3,56 +3,40 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lo81;
+.implements Lt98;
 
 
-# instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+# static fields
+.field public static final a:Lmq5;
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lmq5;
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
-
-    iput-object v0, p0, Lmq5;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    sput-object v0, Lmq5;->a:Lmq5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onFeedback(Ln81;)V
+.method public final getItemId()J
     .locals 2
 
-    iget-object v0, p0, Lmq5;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    const-wide/high16 v0, -0x8000000000000000L
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    return-wide v0
+.end method
 
-    move-result-object v0
+.method public final m()I
+    .locals 1
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    sget v0, Lw5b;->r:I
 
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lo81;
-
-    invoke-interface {v1, p1}, Lo81;->onFeedback(Ln81;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+    return v0
 .end method

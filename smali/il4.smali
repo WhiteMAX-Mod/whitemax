@@ -1,15 +1,3 @@
 .class public final Lil4;
-.super Ljava/lang/Object;
+.super Ljava/io/IOException;
 .source "SourceFile"
-
-
-# instance fields
-.field public a:Lq7d;
-
-.field public b:I
-
-.field public c:I
-
-.field public d:I
-
-.field public e:I

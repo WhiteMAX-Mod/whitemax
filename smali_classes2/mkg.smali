@@ -1,466 +1,210 @@
 .class public final Lmkg;
-.super Lfic;
+.super Ldtf;
 .source "SourceFile"
 
-
-# static fields
-.field public static final j:Ljava/util/Random;
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public g:[B
+.field public final synthetic X:Ljava/lang/CharSequence;
 
-.field public h:I
+.field public final synthetic Y:Lxkg;
 
-.field public i:Ljava/util/ArrayList;
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/CharSequence;Lxkg;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Ljava/util/Random;
+    iput-object p1, p0, Lmkg;->X:Ljava/lang/CharSequence;
 
-    invoke-direct {v0}, Ljava/util/Random;-><init>()V
+    iput-object p2, p0, Lmkg;->Y:Lxkg;
 
-    sput-object v0, Lmkg;->j:Ljava/util/Random;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcic;Lfj;)I
-    .locals 3
-
-    iget-boolean p2, p1, Lcic;->Y0:Z
-
-    if-nez p2, :cond_1
-
-    iget-object p2, p0, Lmkg;->i:Ljava/util/ArrayList;
-
-    iget-object v0, p1, Lcic;->a:Le8e;
-
-    iget-object v0, v0, Le8e;->b:Ljava/lang/Object;
-
-    check-cast v0, Lkkg;
-
-    invoke-virtual {p2, v0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p2, p1, Lcic;->c:Lq98;
-
-    iget-object p1, p1, Lcic;->a:Le8e;
-
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lmkg;->i:Ljava/util/ArrayList;
-
-    invoke-interface {v0}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
-
-    move-result-object v0
-
-    new-instance v1, Ls8a;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v1, v2}, Ls8a;-><init>(I)V
-
-    invoke-interface {v0, v1}, Ljava/util/stream/Stream;->map(Ljava/util/function/Function;)Ljava/util/stream/Stream;
-
-    move-result-object v0
-
-    const-string v1, ", "
-
-    invoke-static {v1}, Ljava/util/stream/Collectors;->joining(Ljava/lang/CharSequence;)Ljava/util/stream/Collector;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Ljava/util/stream/Stream;->collect(Ljava/util/stream/Collector;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Server doesn\'t support "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, ", but only: "
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-interface {p2, p1}, Lq98;->info(Ljava/lang/String;)V
-
-    new-instance p1, Ltech/kwik/core/impl/VersionNegotiationFailure;
-
-    invoke-direct {p1}, Ltech/kwik/core/impl/VersionNegotiationFailure;-><init>()V
-
-    throw p1
-
-    :cond_1
-    :goto_0
-    iget-object p1, p1, Lcic;->c:Lq98;
-
-    const-string p2, "Ignoring Version Negotiation packet"
-
-    invoke-interface {p1, p2}, Lq98;->debug(Ljava/lang/String;)V
-
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final c()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final h(I)I
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    new-instance p1, Ltech/kwik/core/impl/NotYetImplementedException;
+    check-cast p1, Lf84;
 
-    invoke-direct {p1}, Ltech/kwik/core/impl/NotYetImplementedException;-><init>()V
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    throw p1
-.end method
-
-.method public final i(Llc;)[B
-    .locals 3
-
-    iget-object p1, p0, Lfic;->e:[B
-
-    array-length p1, p1
-
-    add-int/lit8 p1, p1, 0x7
-
-    iget-object v0, p0, Lmkg;->g:[B
-
-    array-length v0, v0
-
-    add-int/2addr p1, v0
-
-    iget-object v0, p0, Lmkg;->i:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    mul-int/lit8 v1, v1, 0x4
-
-    add-int/2addr v1, p1
-
-    invoke-static {v1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+    invoke-virtual {p0, p1, p2}, Lmkg;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    sget-object v1, Lmkg;->j:Ljava/util/Random;
+    check-cast p1, Lmkg;
 
-    const/16 v2, 0x100
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    invoke-virtual {v1, v2}, Ljava/util/Random;->nextInt(I)I
-
-    move-result v1
-
-    int-to-byte v1, v1
-
-    or-int/lit16 v1, v1, 0xc0
-
-    int-to-byte v1, v1
-
-    invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
-
-    iget-object v1, p0, Lfic;->e:[B
-
-    array-length v1, v1
-
-    int-to-byte v1, v1
-
-    invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    iget-object v1, p0, Lfic;->e:[B
-
-    invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
-
-    iget-object v1, p0, Lmkg;->g:[B
-
-    array-length v1, v1
-
-    int-to-byte v1, v1
-
-    invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    iget-object v1, p0, Lmkg;->g:[B
-
-    invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
-
-    new-instance v1, Ljs;
-
-    const/16 v2, 0x8
-
-    invoke-direct {v1, v2, p1}, Ljs;-><init>(ILjava/nio/ByteBuffer;)V
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->forEach(Ljava/util/function/Consumer;)V
-
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->array()[B
+    invoke-virtual {p1, p2}, Lmkg;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final l()Lic5;
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const/4 v0, 0x0
+    new-instance p1, Lmkg;
 
-    return-object v0
+    iget-object v0, p0, Lmkg;->X:Ljava/lang/CharSequence;
+
+    iget-object v1, p0, Lmkg;->Y:Lxkg;
+
+    invoke-direct {p1, v0, v1, p2}, Lmkg;-><init>(Ljava/lang/CharSequence;Lxkg;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
 .end method
 
-.method public final m()Ljava/lang/Long;
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    const/4 v0, 0x0
+    sget-object v0, Lqqg;->a:Lqqg;
+
+    sget-object v1, Lg84;->a:Lg84;
+
+    iget v2, p0, Lmkg;->o:I
+
+    const/4 v3, 0x2
+
+    const/4 v4, 0x1
+
+    if-eqz v2, :cond_2
+
+    if-eq v2, v4, :cond_1
+
+    if-ne v2, v3, :cond_0
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
     return-object v0
-.end method
-
-.method public final n()Lhvb;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final s(Ljava/nio/ByteBuffer;Llc;JLq98;I)V
-    .locals 0
-
-    const-string p2, "Parsing VersionNegotationPacket"
-
-    invoke-interface {p5, p2}, Lq98;->debug(Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
-
-    move-result p2
-
-    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
-
-    move-result p3
-
-    sub-int/2addr p2, p3
-
-    const/16 p3, 0xb
-
-    if-lt p2, p3, :cond_4
-
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
-
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
-
-    move-result p4
-
-    if-nez p4, :cond_3
-
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
-
-    move-result p4
-
-    and-int/lit16 p4, p4, 0xff
-
-    add-int/2addr p3, p4
-
-    if-lt p2, p3, :cond_2
-
-    new-array p4, p4, [B
-
-    iput-object p4, p0, Lfic;->e:[B
-
-    invoke-virtual {p1, p4}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
-
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
-
-    move-result p4
-
-    and-int/lit16 p4, p4, 0xff
-
-    add-int/2addr p3, p4
-
-    if-lt p2, p3, :cond_1
-
-    new-array p2, p4, [B
-
-    iput-object p2, p0, Lmkg;->g:[B
-
-    invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
-
-    const-string p2, "Destination connection id"
-
-    iget-object p3, p0, Lfic;->e:[B
-
-    invoke-interface {p5, p2, p3}, Lq98;->debug(Ljava/lang/String;[B)V
-
-    const-string p2, "Source connection id"
-
-    iget-object p3, p0, Lmkg;->g:[B
-
-    invoke-interface {p5, p2, p3}, Lq98;->debug(Ljava/lang/String;[B)V
-
-    :goto_0
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
-
-    move-result p2
-
-    const/4 p3, 0x4
-
-    if-lt p2, p3, :cond_0
-
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
-
-    move-result p2
-
-    new-instance p3, Lkkg;
-
-    invoke-direct {p3, p2}, Lkkg;-><init>(I)V
-
-    iget-object p2, p0, Lmkg;->i:Ljava/util/ArrayList;
-
-    invoke-virtual {p2, p3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    invoke-static {p3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p2
-
-    const-string p3, "Server supports version "
-
-    invoke-virtual {p3, p2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-interface {p5, p2}, Lq98;->debug(Ljava/lang/String;)V
-
-    goto :goto_0
 
     :cond_0
-    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    return-object v0
+
+    :cond_2
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lmkg;->X:Ljava/lang/CharSequence;
+
+    const/4 v2, 0x0
+
+    if-eqz p1, :cond_8
+
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result p1
 
-    iput p1, p0, Lmkg;->h:I
+    if-nez p1, :cond_3
 
-    return-void
-
-    :cond_1
-    new-instance p1, Ltech/kwik/core/impl/InvalidPacketException;
-
-    invoke-direct {p1}, Ltech/kwik/core/impl/InvalidPacketException;-><init>()V
-
-    throw p1
-
-    :cond_2
-    new-instance p1, Ltech/kwik/core/impl/InvalidPacketException;
-
-    invoke-direct {p1}, Ltech/kwik/core/impl/InvalidPacketException;-><init>()V
-
-    throw p1
+    goto :goto_2
 
     :cond_3
-    new-instance p1, Ltech/kwik/core/impl/ImplementationError;
+    iget-object p1, p0, Lmkg;->Y:Lxkg;
 
-    invoke-direct {p1}, Ltech/kwik/core/impl/ImplementationError;-><init>()V
+    iget-object p1, p1, Lxkg;->z0:Lci5;
 
-    throw p1
+    new-instance v5, Lmmg;
+
+    invoke-direct {v5, v4}, Lmmg;-><init>(Z)V
+
+    invoke-static {p1, v5}, Lxfh;->r(Lci5;Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lmkg;->Y:Lxkg;
+
+    iget-object v5, p1, Lxkg;->d:Lup7;
+
+    if-eqz v5, :cond_4
+
+    iget-object v2, v5, Lup7;->d:Ljava/lang/String;
 
     :cond_4
-    new-instance p1, Ltech/kwik/core/impl/InvalidPacketException;
+    iget-object p1, p1, Lxkg;->b:Lrp7;
 
-    invoke-direct {p1}, Ltech/kwik/core/impl/InvalidPacketException;-><init>()V
+    sget-object v5, Lrp7;->a:Lrp7;
 
-    throw p1
-.end method
+    if-ne p1, v5, :cond_6
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    if-eqz v2, :cond_6
 
-    iget v0, p0, Lmkg;->h:I
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
 
-    if-ltz v0, :cond_0
+    move-result p1
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
+    if-nez p1, :cond_5
 
     goto :goto_0
 
-    :cond_0
-    const-string v0, "."
+    :cond_5
+    iget-object p1, p0, Lmkg;->Y:Lxkg;
 
+    iget-object v3, p0, Lmkg;->X:Ljava/lang/CharSequence;
+
+    iput v4, p0, Lmkg;->o:I
+
+    invoke-static {p1, v3, v2, p0}, Lxkg;->t(Lxkg;Ljava/lang/CharSequence;Ljava/lang/String;Lq44;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v1, :cond_7
+
+    goto :goto_1
+
+    :cond_6
     :goto_0
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    iget-object p1, p0, Lmkg;->Y:Lxkg;
 
-    move-result-object v0
+    iget-object v2, p0, Lmkg;->X:Ljava/lang/CharSequence;
 
-    iget-object v1, p0, Lmkg;->i:Ljava/util/ArrayList;
+    iput v3, p0, Lmkg;->o:I
 
-    invoke-interface {v1}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
+    invoke-static {p1, v2, p0}, Lxkg;->v(Lxkg;Ljava/lang/CharSequence;Lq44;)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object p1
 
-    new-instance v2, Ls8a;
+    if-ne p1, v1, :cond_7
 
-    const/16 v3, 0x14
+    :goto_1
+    return-object v1
 
-    invoke-direct {v2, v3}, Ls8a;-><init>(I)V
+    :cond_7
+    return-object v0
 
-    invoke-interface {v1, v2}, Ljava/util/stream/Stream;->map(Ljava/util/function/Function;)Ljava/util/stream/Stream;
+    :cond_8
+    :goto_2
+    iget-object p1, p0, Lmkg;->Y:Lxkg;
 
-    move-result-object v1
+    iput-object v2, p1, Lxkg;->C0:Lx9f;
 
-    const-string v2, ", "
+    iget-object p1, p0, Lmkg;->Y:Lxkg;
 
-    invoke-static {v2}, Ljava/util/stream/Collectors;->joining(Ljava/lang/CharSequence;)Ljava/util/stream/Collector;
+    iget-object p1, p1, Lxkg;->X:Ljava/lang/String;
 
-    move-result-object v2
+    const-string v1, "Can\'t auth with password because password is empty"
 
-    invoke-interface {v1, v2}, Ljava/util/stream/Stream;->collect(Ljava/util/stream/Collector;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    const-string v2, "Packet V|-|V|"
-
-    const-string v3, "|0  "
-
-    invoke-static {v2, v0, v3, v1}, Lfd0;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    invoke-static {p1, v1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
 .end method

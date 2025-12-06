@@ -1,162 +1,60 @@
-.class public final Lj64;
+.class public final synthetic Lj64;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lhu3;
+
 
 # instance fields
-.field public final a:Ljava/util/List;
+.field public final synthetic a:I
 
-.field public final b:Ljava/util/List;
+.field public final synthetic b:Lru/ok/android/externcalls/sdk/factory/JoinCallParams;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;Ljava/util/List;)V
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/factory/JoinCallParams;I)V
     .locals 0
 
+    iput p2, p0, Lj64;->a:I
+
+    iput-object p1, p0, Lj64;->b:Lru/ok/android/externcalls/sdk/factory/JoinCallParams;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lj64;->a:Ljava/util/List;
-
-    iput-object p2, p0, Lj64;->b:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final accept(Ljava/lang/Object;)V
+    .locals 1
 
-    const/4 v0, 0x1
+    iget v0, p0, Lj64;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lj64;->b:Lru/ok/android/externcalls/sdk/factory/JoinCallParams;
 
-    :cond_0
-    const/4 v1, 0x0
+    check-cast p1, Ljava/lang/Throwable;
 
-    if-eqz p1, :cond_5
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->h(Lru/ok/android/externcalls/sdk/factory/JoinCallParams;Ljava/lang/Throwable;)V
 
-    const-class v2, Lj64;
+    return-void
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :pswitch_0
+    iget-object v0, p0, Lj64;->b:Lru/ok/android/externcalls/sdk/factory/JoinCallParams;
 
-    move-result-object v3
+    check-cast p1, Lru/ok/android/externcalls/sdk/Conversation;
 
-    if-eq v2, v3, :cond_1
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->p(Lru/ok/android/externcalls/sdk/factory/JoinCallParams;Lru/ok/android/externcalls/sdk/Conversation;)V
 
-    goto :goto_1
+    return-void
 
-    :cond_1
-    check-cast p1, Lj64;
+    nop
 
-    iget-object v2, p1, Lj64;->b:Ljava/util/List;
-
-    iget-object p1, p1, Lj64;->a:Ljava/util/List;
-
-    iget-object v3, p0, Lj64;->a:Ljava/util/List;
-
-    if-eqz v3, :cond_2
-
-    invoke-interface {v3, p1}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    goto :goto_0
-
-    :cond_2
-    if-eqz p1, :cond_3
-
-    :goto_0
-    return v1
-
-    :cond_3
-    iget-object p1, p0, Lj64;->b:Ljava/util/List;
-
-    if-eqz p1, :cond_4
-
-    invoke-interface {p1, v2}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_4
-    if-nez v2, :cond_5
-
-    return v0
-
-    :cond_5
-    :goto_1
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lj64;->a:Ljava/util/List;
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v1}, Ljava/util/List;->hashCode()I
-
-    move-result v1
-
-    goto :goto_0
-
-    :cond_0
-    move v1, v0
-
-    :goto_0
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Lj64;->b:Ljava/util/List;
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {v2}, Ljava/util/List;->hashCode()I
-
-    move-result v0
-
-    :cond_1
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "CountryCodeProxiesEntry{countries="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lj64;->a:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", connectionHosts="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lj64;->b:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

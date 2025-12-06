@@ -1,31 +1,82 @@
 .class public final Lb58;
-.super Ljava/lang/Object;
+.super Lrk0;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:J
+.field public h:I
 
-.field public b:F
+.field public i:I
 
-.field public c:J
+.field public j:Z
+
+.field public k:I
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 3
+# virtual methods
+.method public final a()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-super {p0}, Lrk0;->a()V
 
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+    iget v0, p0, Lb58;->k:I
 
-    iput-wide v0, p0, Lb58;->a:J
+    if-ltz v0, :cond_4
 
-    const v2, -0x800001
+    iget v0, p0, Lb58;->h:I
 
-    iput v2, p0, Lb58;->b:F
+    if-nez v0, :cond_3
 
-    iput-wide v0, p0, Lb58;->c:J
+    iget v0, p0, Lrk0;->b:I
 
+    if-lez v0, :cond_1
+
+    iget v0, p0, Lrk0;->g:I
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Rounded corners without gap are not supported in contiguous indeterminate animation."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    :goto_0
+    iget-object v0, p0, Lrk0;->c:[I
+
+    array-length v0, v0
+
+    const/4 v1, 0x3
+
+    if-lt v0, v1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Contiguous indeterminate animation must be used with 3 or more indicator colors."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_3
+    :goto_1
     return-void
+
+    :cond_4
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Stop indicator size must be >= 0."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

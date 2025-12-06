@@ -1,138 +1,159 @@
-.class public abstract Lm37;
+.class public final Lm37;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lyue;
+.implements Lo37;
 
 
 # instance fields
-.field public final a:Lbe6;
+.field public final a:J
 
-.field public b:Z
+.field public final b:J
 
-.field public final synthetic c:Ld9;
+.field public final c:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Ld9;)V
-    .locals 1
+.method public constructor <init>(JJLjava/util/ArrayList;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lm37;->c:Ld9;
+    iput-wide p1, p0, Lm37;->a:J
 
-    new-instance v0, Lbe6;
+    iput-wide p3, p0, Lm37;->b:J
 
-    iget-object p1, p1, Ld9;->e:Ljava/lang/Object;
-
-    check-cast p1, Lsv0;
-
-    invoke-interface {p1}, Lyue;->p()Lvvf;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Lbe6;-><init>(Lvvf;)V
-
-    iput-object v0, p0, Lm37;->a:Lbe6;
+    iput-object p5, p0, Lm37;->c:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b(Lnu0;J)J
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v0, p0, Lm37;->c:Ld9;
+    if-ne p0, p1, :cond_0
 
-    :try_start_0
-    iget-object v1, v0, Ld9;->e:Ljava/lang/Object;
-
-    check-cast v1, Lsv0;
-
-    invoke-interface {v1, p1, p2, p3}, Lyue;->b(Lnu0;J)J
-
-    move-result-wide p1
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-wide p1
-
-    :catch_0
-    move-exception p1
-
-    iget-object p2, v0, Ld9;->d:Ljava/lang/Object;
-
-    check-cast p2, Lw0d;
-
-    invoke-virtual {p2}, Lw0d;->k()V
-
-    invoke-virtual {p0}, Lm37;->m()V
-
-    throw p1
-.end method
-
-.method public final m()V
-    .locals 5
-
-    iget-object v0, p0, Lm37;->c:Ld9;
-
-    iget v1, v0, Ld9;->a:I
-
-    const/4 v2, 0x6
-
-    if-ne v1, v2, :cond_0
-
-    return-void
+    goto :goto_1
 
     :cond_0
-    const/4 v3, 0x5
+    instance-of v0, p1, Lm37;
 
-    if-ne v1, v3, :cond_1
+    if-nez v0, :cond_1
 
-    iget-object v1, p0, Lm37;->a:Lbe6;
-
-    iget-object v3, v1, Lbe6;->e:Lvvf;
-
-    sget-object v4, Lvvf;->d:Luvf;
-
-    iput-object v4, v1, Lbe6;->e:Lvvf;
-
-    invoke-virtual {v3}, Lvvf;->a()Lvvf;
-
-    invoke-virtual {v3}, Lvvf;->b()Lvvf;
-
-    iput v2, v0, Ld9;->a:I
-
-    return-void
+    goto :goto_0
 
     :cond_1
-    new-instance v1, Ljava/lang/IllegalStateException;
+    check-cast p1, Lm37;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    iget-wide v0, p0, Lm37;->a:J
 
-    const-string v3, "state: "
+    iget-wide v2, p1, Lm37;->a:J
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    cmp-long v0, v0, v2
 
-    iget v0, v0, Ld9;->a:I
+    if-eqz v0, :cond_2
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_2
+    iget-wide v0, p0, Lm37;->b:J
+
+    iget-wide v2, p1, Lm37;->b:J
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Lm37;->c:Ljava/util/ArrayList;
+
+    iget-object p1, p1, Lm37;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-wide v0, p0, Lm37;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lm37;->b:J
+
+    invoke-static {v0, v1, v2, v3}, La9h;->a(IIJ)I
+
+    move-result v0
+
+    iget-object v1, p0, Lm37;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "OneToOne(opponentId="
+
+    const-string v1, ", chatId="
+
+    iget-wide v2, p0, Lm37;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Laz1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget-wide v1, p0, Lm37;->b:J
 
-    throw v1
-.end method
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-.method public final p()Lvvf;
-    .locals 1
+    const-string v1, ", messagesIds="
 
-    iget-object v0, p0, Lm37;->a:Lbe6;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lm37;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

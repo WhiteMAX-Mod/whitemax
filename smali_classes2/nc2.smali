@@ -1,84 +1,69 @@
 .class public final Lnc2;
-.super Luj0;
+.super Lcie;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:J
+.field public final i:I
+
+.field public final j:Z
+
+.field public final k:Z
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Lh18;Lnxg;Lpc2;Lso3;)V
+    .locals 6
 
-    invoke-direct {p0}, Luj0;-><init>()V
+    move-object v0, p0
 
-    iput-wide p1, p0, Lnc2;->b:J
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v4, p3
+
+    move-object v3, p4
+
+    move-object v5, p5
+
+    invoke-direct/range {v0 .. v5}, Lcie;-><init>(Landroid/content/Context;Lh18;Lpc2;Lf84;Lso3;)V
+
+    const/4 p1, 0x2
+
+    iput p1, v0, Lnc2;->i:I
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, v0, Lnc2;->j:Z
+
+    iput-boolean p1, v0, Lnc2;->k:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final c()Z
+    .locals 1
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lnc2;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lnc2;
-
-    iget-wide v3, p0, Lnc2;->b:J
-
-    iget-wide v5, p1, Lnc2;->b:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lnc2;->b:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
+    iget-boolean v0, p0, Lnc2;->k:Z
 
     return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public final d()Z
+    .locals 1
 
-    const-string v0, "ChatClearEvent(chatId="
+    iget-boolean v0, p0, Lnc2;->j:Z
 
-    const-string v1, ")"
+    return v0
+.end method
 
-    iget-wide v2, p0, Lnc2;->b:J
+.method public final e()I
+    .locals 1
 
-    invoke-static {v2, v3, v0, v1}, Lrtg;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget v0, p0, Lnc2;->i:I
 
-    move-result-object v0
-
-    return-object v0
+    return v0
 .end method

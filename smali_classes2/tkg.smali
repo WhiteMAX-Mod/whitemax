@@ -1,142 +1,129 @@
 .class public final Ltkg;
-.super Landroid/text/style/ImageSpan;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Lwsf;
+.implements Lsm6;
+
+
+# instance fields
+.field public final synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lxkg;
+
+.field public o:I
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lxkg;)V
+    .locals 0
+
+    iput-object p1, p0, Ltkg;->X:Ljava/lang/Object;
+
+    iput-object p3, p0, Ltkg;->Y:Lxkg;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final draw(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    invoke-virtual {p0}, Landroid/text/style/DynamicDrawableSpan;->getDrawable()Landroid/graphics/drawable/Drawable;
+    check-cast p1, Lf84;
 
-    move-result-object p2
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
-
-    invoke-virtual {p9}, Landroid/graphics/Paint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
-
-    move-result-object p3
-
-    iget p4, p3, Landroid/graphics/Paint$FontMetricsInt;->descent:I
-
-    iget p3, p3, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
-
-    sub-int p3, p4, p3
-
-    add-int/2addr p7, p4
-
-    div-int/lit8 p3, p3, 0x2
-
-    sub-int/2addr p7, p3
-
-    invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object p3
-
-    iget p3, p3, Landroid/graphics/Rect;->bottom:I
-
-    invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object p4
-
-    iget p4, p4, Landroid/graphics/Rect;->top:I
-
-    sub-int/2addr p3, p4
-
-    div-int/lit8 p3, p3, 0x2
-
-    sub-int/2addr p7, p3
-
-    int-to-float p3, p7
-
-    invoke-virtual {p1, p5, p3}, Landroid/graphics/Canvas;->translate(FF)V
-
-    invoke-virtual {p2, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
-
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
-
-    return-void
-.end method
-
-.method public final getSize(Landroid/graphics/Paint;Ljava/lang/CharSequence;IILandroid/graphics/Paint$FontMetricsInt;)I
-    .locals 1
-
-    invoke-virtual {p0}, Landroid/text/style/DynamicDrawableSpan;->getDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object p2
-
-    if-eqz p5, :cond_0
-
-    invoke-virtual {p1}, Landroid/graphics/Paint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
+    invoke-virtual {p0, p1, p2}, Ltkg;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    iget p3, p1, Landroid/graphics/Paint$FontMetricsInt;->descent:I
+    check-cast p1, Ltkg;
 
-    iget p1, p1, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    sub-int/2addr p3, p1
+    invoke-virtual {p1, p2}, Ltkg;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget p4, p2, Landroid/graphics/Rect;->bottom:I
+    move-result-object p1
 
-    iget v0, p2, Landroid/graphics/Rect;->top:I
-
-    sub-int/2addr p4, v0
-
-    div-int/lit8 p3, p3, 0x2
-
-    add-int/2addr p3, p1
-
-    div-int/lit8 p4, p4, 0x2
-
-    sub-int p1, p3, p4
-
-    iput p1, p5, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
-
-    iput p1, p5, Landroid/graphics/Paint$FontMetricsInt;->top:I
-
-    add-int/2addr p3, p4
-
-    iput p3, p5, Landroid/graphics/Paint$FontMetricsInt;->bottom:I
-
-    iput p3, p5, Landroid/graphics/Paint$FontMetricsInt;->descent:I
-
-    :cond_0
-    iget p1, p2, Landroid/graphics/Rect;->right:I
-
-    return p1
+    return-object p1
 .end method
 
-.method public final onThemeChanged(Lv5b;)V
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    invoke-virtual {p0}, Landroid/text/style/DynamicDrawableSpan;->getDrawable()Landroid/graphics/drawable/Drawable;
+    new-instance p1, Ltkg;
 
-    move-result-object v0
+    iget-object v0, p0, Ltkg;->X:Ljava/lang/Object;
 
-    instance-of v1, v0, Lwsf;
+    iget-object v1, p0, Ltkg;->Y:Lxkg;
 
-    if-eqz v1, :cond_0
+    invoke-direct {p1, v0, p2, v1}, Ltkg;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lxkg;)V
 
-    check-cast v0, Lwsf;
+    return-object p1
+.end method
 
-    goto :goto_0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    :cond_0
-    const/4 v0, 0x0
+    iget v0, p0, Ltkg;->o:I
 
-    :goto_0
+    const/4 v1, 0x1
+
     if-eqz v0, :cond_1
 
-    invoke-interface {v0, p1}, Lwsf;->onThemeChanged(Lv5b;)V
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    return-object p1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 
     :cond_1
-    return-void
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ltkg;->X:Ljava/lang/Object;
+
+    check-cast p1, Lf84;
+
+    sget-object p1, Lxkg;->G0:[Lyy7;
+
+    iget-object p1, p0, Ltkg;->Y:Lxkg;
+
+    invoke-virtual {p1}, Lxkg;->x()Lhwa;
+
+    move-result-object p1
+
+    new-instance v0, Lwua;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v2}, Lwua;-><init>(Ljava/lang/String;)V
+
+    iput v1, p0, Ltkg;->o:I
+
+    invoke-virtual {p1, v0, p0}, Lhwa;->F(Ln2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lg84;->a:Lg84;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    return-object p1
 .end method

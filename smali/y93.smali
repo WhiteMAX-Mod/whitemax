@@ -1,249 +1,237 @@
-.class public final Ly93;
-.super Lgi4;
+.class public abstract Ly93;
+.super Lqk0;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Z
+# static fields
+.field public static final z0:I
 
-.field public o:Laph;
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    sget v0, Lm5d;->Widget_MaterialComponents_CircularProgressIndicator:I
+
+    sput v0, Ly93;->z0:I
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final close()V
-    .locals 3
+.method public final a(Landroid/content/Context;)Lrk0;
+    .locals 10
 
-    monitor-enter p0
+    new-instance v0, Lz93;
 
-    :try_start_0
-    iget-object v0, p0, Ly93;->o:Laph;
+    sget v4, Ldvc;->circularProgressIndicatorStyle:I
 
-    if-nez v0, :cond_0
+    sget v5, Ly93;->z0:I
 
-    monitor-exit p0
+    invoke-direct {v0, v4, v5, p1}, Lrk0;-><init>(IILandroid/content/Context;)V
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v2, Ldwc;->mtrl_progress_circular_size_medium:I
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v7
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v2, Ldwc;->mtrl_progress_circular_inset_medium:I
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v8
+
+    sget-object v3, Lz5d;->CircularProgressIndicator:[I
+
+    const/4 v9, 0x0
+
+    new-array v6, v9, [I
+
+    const/4 v2, 0x0
+
+    invoke-static {p1, v2, v4, v5}, Ld7g;->a(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+
+    move-object v1, p1
+
+    invoke-static/range {v1 .. v6}, Ld7g;->b(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)V
+
+    invoke-virtual {v1, v2, v3, v4, v5}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+
+    move-result-object p1
+
+    sget v2, Lz5d;->CircularProgressIndicator_indicatorSize:I
+
+    invoke-static {v1, p1, v2, v7}, Lgti;->d(Landroid/content/Context;Landroid/content/res/TypedArray;II)I
+
+    move-result v2
+
+    iget v3, v0, Lrk0;->a:I
+
+    mul-int/lit8 v3, v3, 0x2
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->max(II)I
+
+    move-result v2
+
+    iput v2, v0, Lz93;->h:I
+
+    sget v2, Lz5d;->CircularProgressIndicator_indicatorInset:I
+
+    invoke-static {v1, p1, v2, v8}, Lgti;->d(Landroid/content/Context;Landroid/content/res/TypedArray;II)I
+
+    move-result v1
+
+    iput v1, v0, Lz93;->i:I
+
+    sget v1, Lz5d;->CircularProgressIndicator_indicatorDirectionCircular:I
+
+    invoke-virtual {p1, v1, v9}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    move-result v1
+
+    iput v1, v0, Lz93;->j:I
+
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
+
+    invoke-virtual {v0}, Lrk0;->a()V
+
+    return-object v0
+.end method
+
+.method public getIndicatorDirection()I
+    .locals 1
+
+    iget-object v0, p0, Lqk0;->a:Lrk0;
+
+    check-cast v0, Lz93;
+
+    iget v0, v0, Lz93;->j:I
+
+    return v0
+.end method
+
+.method public getIndicatorInset()I
+    .locals 1
+
+    iget-object v0, p0, Lqk0;->a:Lrk0;
+
+    check-cast v0, Lz93;
+
+    iget v0, v0, Lz93;->i:I
+
+    return v0
+.end method
+
+.method public getIndicatorSize()I
+    .locals 1
+
+    iget-object v0, p0, Lqk0;->a:Lrk0;
+
+    check-cast v0, Lz93;
+
+    iget v0, v0, Lz93;->h:I
+
+    return v0
+.end method
+
+.method public setIndicatorDirection(I)V
+    .locals 1
+
+    iget-object v0, p0, Lqk0;->a:Lrk0;
+
+    check-cast v0, Lz93;
+
+    iput p1, v0, Lz93;->j:I
+
+    invoke-virtual {p0}, Lqk0;->invalidate()V
 
     return-void
+.end method
 
-    :catchall_0
-    move-exception v0
+.method public setIndicatorInset(I)V
+    .locals 2
 
-    goto :goto_0
+    iget-object v0, p0, Lqk0;->a:Lrk0;
+
+    move-object v1, v0
+
+    check-cast v1, Lz93;
+
+    iget v1, v1, Lz93;->i:I
+
+    if-eq v1, p1, :cond_0
+
+    check-cast v0, Lz93;
+
+    iput p1, v0, Lz93;->i:I
+
+    invoke-virtual {p0}, Lqk0;->invalidate()V
 
     :cond_0
-    const/4 v1, 0x0
+    return-void
+.end method
 
-    iput-object v1, p0, Ly93;->o:Laph;
+.method public setIndicatorSize(I)V
+    .locals 2
 
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {p0}, Lqk0;->getTrackThickness()I
 
-    monitor-enter v0
+    move-result v0
 
-    :try_start_1
-    iget-object v2, v0, Laph;->c:Ljava/lang/Object;
+    mul-int/lit8 v0, v0, 0x2
 
-    check-cast v2, Lda3;
+    invoke-static {p1, v0}, Ljava/lang/Math;->max(II)I
 
-    invoke-static {v2}, Lda3;->P(Lda3;)V
+    move-result p1
 
-    iput-object v1, v0, Laph;->c:Ljava/lang/Object;
+    iget-object v0, p0, Lqk0;->a:Lrk0;
 
-    iget-object v2, v0, Laph;->o:Ljava/lang/Object;
+    move-object v1, v0
 
-    check-cast v2, Ljava/util/ArrayList;
+    check-cast v1, Lz93;
 
-    invoke-static {v2}, Lda3;->Q(Ljava/util/ArrayList;)V
+    iget v1, v1, Lz93;->h:I
 
-    iput-object v1, v0, Laph;->o:Ljava/lang/Object;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    if-eq v1, p1, :cond_0
 
-    monitor-exit v0
+    move-object v1, v0
+
+    check-cast v1, Lz93;
+
+    iput p1, v1, Lz93;->h:I
+
+    check-cast v0, Lz93;
+
+    invoke-virtual {v0}, Lrk0;->a()V
+
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
+
+    invoke-virtual {p0}, Lqk0;->invalidate()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setTrackThickness(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lqk0;->setTrackThickness(I)V
+
+    iget-object p1, p0, Lqk0;->a:Lrk0;
+
+    check-cast p1, Lz93;
+
+    invoke-virtual {p1}, Lrk0;->a()V
 
     return-void
-
-    :catchall_1
-    move-exception v1
-
-    :try_start_2
-    monitor-exit v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    throw v1
-
-    :goto_0
-    :try_start_3
-    monitor-exit p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    throw v0
-.end method
-
-.method public final declared-synchronized getHeight()I
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Ly93;->o:Laph;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, v0, Laph;->a:Ljava/lang/Object;
-
-    check-cast v0, Lcom/facebook/animated/gif/GifImage;
-
-    invoke-virtual {v0}, Lcom/facebook/animated/gif/GifImage;->h()I
-
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :goto_0
-    monitor-exit p0
-
-    return v0
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public final declared-synchronized getSizeInBytes()I
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Ly93;->o:Laph;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, v0, Laph;->a:Ljava/lang/Object;
-
-    check-cast v0, Lcom/facebook/animated/gif/GifImage;
-
-    invoke-virtual {v0}, Lcom/facebook/animated/gif/GifImage;->j()I
-
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :goto_0
-    monitor-exit p0
-
-    return v0
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public final declared-synchronized getWidth()I
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Ly93;->o:Laph;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, v0, Laph;->a:Ljava/lang/Object;
-
-    check-cast v0, Lcom/facebook/animated/gif/GifImage;
-
-    invoke-virtual {v0}, Lcom/facebook/animated/gif/GifImage;->k()I
-
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :goto_0
-    monitor-exit p0
-
-    return v0
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public final declared-synchronized isClosed()Z
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Ly93;->o:Laph;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    monitor-exit p0
-
-    return v0
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public final isStateful()Z
-    .locals 1
-
-    iget-boolean v0, p0, Ly93;->X:Z
-
-    return v0
 .end method

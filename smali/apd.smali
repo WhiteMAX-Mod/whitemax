@@ -1,85 +1,45 @@
-.class public final enum Lapd;
-.super Ljava/lang/Enum;
+.class public abstract Lapd;
+.super Lij0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Lapd;
-
-.field public static final enum b:Lapd;
-
-.field public static final enum c:Lapd;
-
-.field public static final synthetic o:[Lapd;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lkotlin/coroutines/Continuation;)V
+    .locals 1
 
-    new-instance v0, Lapd;
+    invoke-direct {p0, p1}, Lij0;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    const-string v1, "NETWORK_UNMETERED"
+    if-eqz p1, :cond_1
 
-    const/4 v2, 0x0
+    invoke-interface {p1}, Lkotlin/coroutines/Continuation;->getContext()Lx74;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    move-result-object p1
 
-    sput-object v0, Lapd;->a:Lapd;
+    sget-object v0, Lbd5;->a:Lbd5;
 
-    new-instance v1, Lapd;
+    if-ne p1, v0, :cond_0
 
-    const-string v2, "DEVICE_IDLE"
+    return-void
 
-    const/4 v3, 0x1
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const-string v0, "Coroutines with restricted suspension must have EmptyCoroutineContext"
 
-    sput-object v1, Lapd;->b:Lapd;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    new-instance v2, Lapd;
+    throw p1
 
-    const-string v3, "DEVICE_CHARGING"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lapd;->c:Lapd;
-
-    filled-new-array {v0, v1, v2}, [Lapd;
-
-    move-result-object v0
-
-    sput-object v0, Lapd;->o:[Lapd;
-
+    :cond_1
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lapd;
+
+# virtual methods
+.method public final getContext()Lx74;
     .locals 1
 
-    const-class v0, Lapd;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lapd;
-
-    return-object p0
-.end method
-
-.method public static values()[Lapd;
-    .locals 1
-
-    sget-object v0, Lapd;->o:[Lapd;
-
-    invoke-virtual {v0}, [Lapd;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lapd;
+    sget-object v0, Lbd5;->a:Lbd5;
 
     return-object v0
 .end method

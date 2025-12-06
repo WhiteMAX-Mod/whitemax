@@ -1,36 +1,30 @@
 .class public final Lm7h;
-.super Lsgf;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Lsm6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic X:Ljava/io/File;
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final synthetic Y:[B
 
-.field public final synthetic Z:Lc7h;
-
-.field public final synthetic q0:Lx7h;
-
-.field public final synthetic r0:Lg7h;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lc7h;Lg7h;Lx7h;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/io/File;[BLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lm7h;->Z:Lc7h;
+    iput-object p1, p0, Lm7h;->X:Ljava/io/File;
 
-    iput-object p3, p0, Lm7h;->q0:Lx7h;
-
-    iput-object p2, p0, Lm7h;->r0:Lg7h;
+    iput-object p2, p0, Lm7h;->Y:[B
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p4}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -40,175 +34,139 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lvo0;
+    check-cast p1, Lf84;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p0, p1, p2}, Lm7h;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1, p2}, Lm7h;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
     check-cast p1, Lm7h;
 
-    sget-object p2, Lccg;->a:Lccg;
+    sget-object p2, Lqqg;->a:Lqqg;
 
     invoke-virtual {p1, p2}, Lm7h;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
-
-    return-object p1
+    return-object p2
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 4
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
     new-instance v0, Lm7h;
 
-    iget-object v1, p0, Lm7h;->q0:Lx7h;
+    iget-object v1, p0, Lm7h;->X:Ljava/io/File;
 
-    iget-object v2, p0, Lm7h;->r0:Lg7h;
+    iget-object v2, p0, Lm7h;->Y:[B
 
-    iget-object v3, p0, Lm7h;->Z:Lc7h;
+    invoke-direct {v0, v1, v2, p2}, Lm7h;-><init>(Ljava/io/File;[BLkotlin/coroutines/Continuation;)V
 
-    invoke-direct {v0, v3, v2, v1, p2}, Lm7h;-><init>(Lc7h;Lg7h;Lx7h;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lm7h;->Y:Ljava/lang/Object;
+    iput-object p1, v0, Lm7h;->o:Ljava/lang/Object;
 
     return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 12
+    .locals 5
 
-    iget v0, p0, Lm7h;->X:I
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    iget-object v1, p0, Lm7h;->r0:Lg7h;
+    iget-object p1, p0, Lm7h;->o:Ljava/lang/Object;
 
-    const/4 v2, 0x1
+    check-cast p1, Lf84;
 
-    iget-object v3, p0, Lm7h;->q0:Lx7h;
+    iget-object v0, p0, Lm7h;->X:Ljava/io/File;
 
-    if-eqz v0, :cond_1
+    iget-object v1, p0, Lm7h;->Y:[B
 
-    if-ne v0, v2, :cond_0
+    :try_start_0
+    new-instance v2, Ljava/io/FileOutputStream;
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    new-instance v3, Ljava/io/File;
 
-    goto :goto_1
+    const-string v4, "placeholder_videomsg.jpeg"
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-direct {v3, v0, v4}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-direct {v2, v3}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    :try_start_1
+    invoke-virtual {v2, v1}, Ljava/io/FileOutputStream;->write([B)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lm7h;->Y:Ljava/lang/Object;
-
-    check-cast p1, Lvo0;
-
-    iget-boolean v0, p1, Lvo0;->a:Z
-
-    iget-object v4, p0, Lm7h;->Z:Lc7h;
-
-    if-eqz v0, :cond_2
-
-    new-instance v5, Lf7h;
-
-    iget-object v6, v4, Lc7h;->b:Ljava/lang/String;
-
-    sget-object v7, Lx7h;->i:Ljava/util/List;
-
-    iget-boolean v8, p1, Lvo0;->b:Z
-
-    iget-boolean v9, p1, Lvo0;->c:Z
-
-    iget-boolean v10, p1, Lvo0;->d:Z
-
-    iget-object p1, v3, Lx7h;->d:Liu7;
-
-    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lqs4;
-
-    invoke-virtual {p1}, Los4;->a()Ljava/lang/String;
-
-    move-result-object v11
-
-    invoke-direct/range {v5 .. v11}, Lf7h;-><init>(Ljava/lang/String;Ljava/util/List;ZZZLjava/lang/String;)V
-
-    iget-object p1, v3, Lx7h;->a:Lxp7;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Lf7h;->Companion:Le7h;
-
-    invoke-virtual {v0}, Le7h;->serializer()Lur7;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0, v5}, Lxp7;->b(Lur7;Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
+    :try_start_2
+    invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
+    :try_end_2
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
     goto :goto_0
 
-    :cond_2
-    new-instance p1, Lg8h;
+    :catch_0
+    move-exception p1
 
-    iget-object v0, v4, Lc7h;->b:Ljava/lang/String;
+    goto :goto_1
 
-    invoke-direct {p1, v0}, Lg8h;-><init>(Ljava/lang/String;)V
+    :catchall_0
+    move-exception v0
 
-    iget-object v0, v3, Lx7h;->a:Lxp7;
+    :try_start_3
+    throw v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :catchall_1
+    move-exception v1
 
-    sget-object v4, Lg8h;->Companion:Lf8h;
+    :try_start_4
+    invoke-static {v2, v0}, Lr4j;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
-    invoke-virtual {v4}, Lf8h;->serializer()Lur7;
+    throw v1
+    :try_end_4
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_4 .. :try_end_4} :catch_0
+    .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    move-result-object v4
-
-    invoke-virtual {v0, v4, p1}, Lxp7;->b(Lur7;Ljava/lang/Object;)Ljava/lang/String;
+    :catchall_2
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p1
 
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    sget-object v0, Lwqi;->a:Ll6b;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v1, Llg8;->Y:Llg8;
+
+    invoke-virtual {v0, v1}, Ll6b;->b(Llg8;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const-string v2, "Couldn\'t save a video msg placeholder in file"
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v1, p1, v2, v3}, Ll6b;->c(Llg8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
     :goto_0
-    iget-object v0, v3, Lx7h;->g:Lmv0;
-
-    new-instance v4, Lkp7;
-
-    iget-object v5, v1, Lg7h;->a:Ljava/lang/String;
-
-    invoke-direct {v4, v5, p1}, Lkp7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    iput v2, p0, Lm7h;->X:I
-
-    invoke-interface {v0, v4, p0}, Lo1e;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lr54;->a:Lr54;
-
-    if-ne p1, v0, :cond_3
-
-    return-object v0
-
-    :cond_3
-    :goto_1
-    iget-object p1, v1, Lg7h;->a:Ljava/lang/String;
-
-    invoke-static {v3, p1}, Lx7h;->e(Lx7h;Ljava/lang/String;)V
-
-    sget-object p1, Lccg;->a:Lccg;
+    sget-object p1, Lqqg;->a:Lqqg;
 
     return-object p1
+
+    :goto_1
+    throw p1
 .end method

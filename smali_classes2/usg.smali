@@ -3,73 +3,117 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final Companion:Ltsg;
+
+
 # instance fields
-.field public final a:Landroid/util/Range;
-
-.field public final b:Llhc;
-
-.field public final c:Lmb0;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Landroid/util/Range;Llhc;Lmb0;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ltsg;
 
-    iput-object p1, p0, Lusg;->a:Landroid/util/Range;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lusg;->b:Llhc;
-
-    iput-object p3, p0, Lusg;->c:Lmb0;
+    sput-object v0, Lusg;->Companion:Ltsg;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final toString()Ljava/lang/String;
+.method public synthetic constructor <init>(ILjava/lang/String;)V
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    and-int/lit8 v0, p1, 0x1
 
-    const-string v1, "VideoMessageQuality(fps="
+    const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-ne v1, v0, :cond_0
 
-    iget-object v1, p0, Lusg;->a:Landroid/util/Range;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iput-object p2, p0, Lusg;->a:Ljava/lang/String;
 
-    const-string v1, "|color="
+    return-void
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    sget-object p2, Lssg;->a:Lssg;
 
-    sget-object v1, Lv45;->d:Lv45;
+    invoke-virtual {p2}, Lssg;->d()Lree;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object p2
 
-    const-string v1, "|encoder="
+    invoke-static {p1, v1, p2}, Lg5j;->c(IILree;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 p1, 0x0
 
-    iget-object v1, p0, Lusg;->b:Llhc;
+    throw p1
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, "|video="
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Lusg;->c:Lmb0;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lusg;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lusg;
+
+    iget-object v1, p0, Lusg;->a:Ljava/lang/String;
+
+    iget-object p1, p1, Lusg;->a:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lusg;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "UnsupportedRequest(requestId="
 
     const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v2, p0, Lusg;->a:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Lho7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

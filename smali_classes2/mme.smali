@@ -1,87 +1,140 @@
 .class public final Lmme;
-.super Ljava/lang/Object;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Llk9;
+.implements Lsm6;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic X:Ltme;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public constructor <init>(Ltme;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lmme;->X:Ltme;
 
-    iput-wide p1, p0, Lmme;->a:J
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lf84;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lmme;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lmme;
+
+    sget-object p2, Lqqg;->a:Lqqg;
+
+    invoke-virtual {p1, p2}, Lmme;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lmme;
+
+    iget-object v0, p0, Lmme;->X:Ltme;
+
+    invoke-direct {p1, v0, p2}, Lmme;-><init>(Ltme;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    iget v0, p0, Lmme;->o:I
+
+    iget-object v1, p0, Lmme;->X:Ltme;
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x1
+
+    sget-object v4, Lg84;->a:Lg84;
+
+    if-eqz v0, :cond_2
+
+    if-eq v0, v3, :cond_1
+
+    if-ne v0, v2, :cond_0
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    goto :goto_2
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_2
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    new-instance p1, Llme;
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
+    invoke-direct {p1, v1, v0}, Llme;-><init>(Ltme;I)V
 
-    return v0
+    iput v3, p0, Lmme;->o:I
 
-    :cond_0
-    instance-of v1, p1, Lmme;
+    sget-object v0, Lbd5;->a:Lbd5;
 
-    const/4 v2, 0x0
+    invoke-static {v0, p1, p0}, Lvmi;->i(Lx74;Lcm6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    if-nez v1, :cond_1
+    move-result-object p1
 
-    return v2
+    if-ne p1, v4, :cond_3
 
-    :cond_1
-    check-cast p1, Lmme;
+    goto :goto_1
 
-    iget-wide v3, p0, Lmme;->a:J
+    :cond_3
+    :goto_0
+    iput v2, p0, Lmme;->o:I
 
-    iget-wide v5, p1, Lmme;->a:J
+    invoke-static {v1, p0}, Ltme;->t(Ltme;Ldtf;)Ljava/lang/Object;
 
-    cmp-long p1, v3, v5
+    move-result-object p1
 
-    if-eqz p1, :cond_2
+    if-ne p1, v4, :cond_4
 
-    return v2
+    :goto_1
+    return-object v4
 
-    :cond_2
-    return v0
-.end method
+    :cond_4
+    :goto_2
+    sget-object p1, Lqqg;->a:Lqqg;
 
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lmme;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "ShowReply(messageId="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lmme;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lrtg;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

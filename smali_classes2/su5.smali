@@ -1,71 +1,73 @@
 .class public final Lsu5;
-.super Ly14;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lfxf;
-
-.field public Y:Lpeg;
-
-.field public Z:Ljava/nio/channels/AsynchronousFileChannel;
-
-.field public o:Luu5;
-
-.field public q0:Lzi6;
-
-.field public r0:I
-
-.field public s0:I
-
-.field public synthetic t0:Ljava/lang/Object;
-
-.field public final synthetic u0:Luu5;
-
-.field public v0:I
+.field public final a:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Luu5;Ly14;)V
+.method public constructor <init>(Ljava/util/List;)V
     .locals 0
 
-    iput-object p1, p0, Lsu5;->u0:Luu5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lsu5;->a:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final a()Ljava/util/ArrayList;
+    .locals 5
 
-    iput-object p1, p0, Lsu5;->t0:Ljava/lang/Object;
+    new-instance v0, Ljava/util/ArrayList;
 
-    iget p1, p0, Lsu5;->v0:I
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    const/high16 v0, -0x80000000
+    iget-object v1, p0, Lsu5;->a:Ljava/util/List;
 
-    or-int/2addr p1, v0
+    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    iput p1, p0, Lsu5;->v0:I
+    move-result-object v1
 
-    const/4 v3, 0x0
+    :cond_0
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    const/4 v4, 0x0
+    move-result v2
 
-    iget-object v0, p0, Lsu5;->u0:Luu5;
+    if-eqz v2, :cond_1
 
-    const/4 v1, 0x0
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    move-result-object v2
 
-    move-object v5, p0
+    move-object v3, v2
 
-    invoke-virtual/range {v0 .. v5}, Luu5;->d(Lfxf;Lpeg;Ljava/nio/channels/AsynchronousFileChannel;Lzi6;Ly14;)Ljava/lang/Object;
+    check-cast v3, Lqu5;
 
-    move-result-object p1
+    iget v3, v3, Lqu5;->a:I
 
-    return-object p1
+    const/4 v4, 0x3
+
+    if-ne v3, v4, :cond_0
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    const/4 v0, 0x0
+
+    :cond_2
+    return-object v0
 .end method

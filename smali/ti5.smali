@@ -2,106 +2,58 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lkog;
-.implements Lqub;
-
 
 # instance fields
-.field public a:Lkog;
+.field public final a:[Lni5;
 
-.field public b:Lti5;
+.field public final b:[J
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;[J[Lni5;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lti5;->c:Ljava/lang/String;
+
+    iput-object p2, p0, Lti5;->d:Ljava/lang/String;
+
+    iput-object p3, p0, Lti5;->b:[J
+
+    iput-object p4, p0, Lti5;->a:[Lni5;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(ILjava/lang/Object;)V
-    .locals 1
+.method public final a()Ljava/lang/String;
+    .locals 2
 
-    const/4 v0, 0x7
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-eq p1, v0, :cond_3
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const/16 v0, 0x8
+    iget-object v1, p0, Lti5;->c:Ljava/lang/String;
 
-    if-eq p1, v0, :cond_2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/16 v0, 0x2710
+    const-string v1, "/"
 
-    if-eq p1, v0, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    iget-object v1, p0, Lti5;->d:Ljava/lang/String;
 
-    :cond_0
-    if-nez p2, :cond_1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_0
-    return-void
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :cond_1
-    new-instance p1, Ljava/lang/ClassCastException;
+    move-result-object v0
 
-    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
-
-    throw p1
-
-    :cond_2
-    check-cast p2, Lti5;
-
-    iput-object p2, p0, Lti5;->b:Lti5;
-
-    return-void
-
-    :cond_3
-    check-cast p2, Lkog;
-
-    iput-object p2, p0, Lti5;->a:Lkog;
-
-    return-void
-.end method
-
-.method public final b(JJLmb6;Landroid/media/MediaFormat;)V
-    .locals 7
-
-    iget-object v0, p0, Lti5;->a:Lkog;
-
-    if-eqz v0, :cond_0
-
-    move-wide v1, p1
-
-    move-wide v3, p3
-
-    move-object v5, p5
-
-    move-object v6, p6
-
-    invoke-interface/range {v0 .. v6}, Lkog;->b(JJLmb6;Landroid/media/MediaFormat;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final c()V
-    .locals 1
-
-    iget-object v0, p0, Lti5;->b:Lti5;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lti5;->c()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final d()V
-    .locals 1
-
-    iget-object v0, p0, Lti5;->b:Lti5;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lti5;->d()V
-
-    :cond_0
-    return-void
+    return-object v0
 .end method

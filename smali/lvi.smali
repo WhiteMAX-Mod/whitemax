@@ -1,63 +1,50 @@
-.class public abstract Llvi;
+.class public final Llvi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpqa;
+
+
+# static fields
+.field public static final a:Llvi;
+
 
 # direct methods
-.method public static final a(I)I
-    .locals 0
-
-    invoke-static {p0}, Ldy1;->v(I)I
-
-    move-result p0
-
-    packed-switch p0, :pswitch_data_0
-
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-
-    :pswitch_0
-    const/4 p0, 0x3
-
-    return p0
-
-    :pswitch_1
-    const/4 p0, 0x1
-
-    return p0
-
-    :pswitch_2
-    const/4 p0, 0x2
-
-    return p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_2
-        :pswitch_2
-        :pswitch_1
-        :pswitch_1
-        :pswitch_0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public static b(I)Ljava/lang/String;
+.method static constructor <clinit>()V
     .locals 2
 
-    const-string v0, "ProfileEditItemId(value="
+    new-instance v0, Llvi;
 
-    const-string v1, ")"
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p0, v0, v1}, Ley1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    sput-object v0, Llvi;->a:Llvi;
 
-    move-result-object p0
+    new-instance v0, Lmli;
 
-    return-object p0
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lmli;-><init>(I)V
+
+    const-class v1, Lemi;
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

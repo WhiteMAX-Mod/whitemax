@@ -2,62 +2,131 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
+.implements Landroid/view/View$OnAttachStateChangeListener;
+
 
 # instance fields
-.field public final a:Lqj8;
+.field public final a:Landroid/view/View;
 
-.field public final b:Lrse;
+.field public b:Landroid/view/ViewTreeObserver;
 
-.field public final c:F
-
-.field public final d:Lcjf;
-
-.field public e:Z
+.field public final c:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 3
+.method public constructor <init>(Landroid/view/View;Ljava/lang/Runnable;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lmgb;->a:Landroid/view/View;
 
-    if-lez p1, :cond_0
+    invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
-    move v1, v0
+    move-result-object p1
+
+    iput-object p1, p0, Lmgb;->b:Landroid/view/ViewTreeObserver;
+
+    iput-object p2, p0, Lmgb;->c:Ljava/lang/Runnable;
+
+    return-void
+.end method
+
+.method public static a(Landroid/view/View;Ljava/lang/Runnable;)Lmgb;
+    .locals 1
+
+    if-eqz p0, :cond_0
+
+    new-instance v0, Lmgb;
+
+    invoke-direct {v0, p0, p1}, Lmgb;-><init>(Landroid/view/View;Ljava/lang/Runnable;)V
+
+    invoke-virtual {p0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v0}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    return-object v0
+
+    :cond_0
+    new-instance p0, Ljava/lang/NullPointerException;
+
+    const-string p1, "view == null"
+
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+
+# virtual methods
+.method public final b()V
+    .locals 2
+
+    iget-object v0, p0, Lmgb;->b:Landroid/view/ViewTreeObserver;
+
+    invoke-virtual {v0}, Landroid/view/ViewTreeObserver;->isAlive()Z
+
+    move-result v0
+
+    iget-object v1, p0, Lmgb;->a:Landroid/view/View;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lmgb;->b:Landroid/view/ViewTreeObserver;
+
+    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
     goto :goto_0
 
     :cond_0
-    const/4 v1, 0x0
+    invoke-virtual {v1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
     :goto_0
-    invoke-static {v1}, Lsgi;->d(Z)V
+    invoke-virtual {v1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
-    const/high16 v1, 0x3f000000    # 0.5f
+    return-void
+.end method
 
-    iput v1, p0, Lmgb;->c:F
+.method public final onPreDraw()Z
+    .locals 1
 
-    sget-object v1, Lcjf;->a:Lcjf;
+    invoke-virtual {p0}, Lmgb;->b()V
 
-    iput-object v1, p0, Lmgb;->d:Lcjf;
+    iget-object v0, p0, Lmgb;->c:Ljava/lang/Runnable;
 
-    new-instance v1, Lqj8;
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    invoke-direct {v1}, Lqj8;-><init>()V
+    const/4 v0, 0x1
 
-    iput-object v1, p0, Lmgb;->a:Lqj8;
+    return v0
+.end method
 
-    new-instance v1, Lrse;
+.method public final onViewAttachedToWindow(Landroid/view/View;)V
+    .locals 0
 
-    const/4 v2, 0x1
+    invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
-    invoke-direct {v1, p1, v2}, Lrse;-><init>(II)V
+    move-result-object p1
 
-    iput-object v1, p0, Lmgb;->b:Lrse;
+    iput-object p1, p0, Lmgb;->b:Landroid/view/ViewTreeObserver;
 
-    iput-boolean v0, p0, Lmgb;->e:Z
+    return-void
+.end method
+
+.method public final onViewDetachedFromWindow(Landroid/view/View;)V
+    .locals 0
+
+    invoke-virtual {p0}, Lmgb;->b()V
 
     return-void
 .end method

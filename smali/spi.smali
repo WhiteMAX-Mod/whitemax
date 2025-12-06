@@ -1,13 +1,15 @@
-.class public final Lspi;
-.super Ljava/lang/Object;
+.class public final enum Lspi;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 # interfaces
-.implements Ltha;
+.implements Ljava/util/concurrent/Executor;
 
 
 # static fields
-.field public static final a:Lspi;
+.field public static final enum a:Lspi;
+
+.field public static final synthetic b:[Lspi;
 
 
 # direct methods
@@ -16,45 +18,51 @@
 
     new-instance v0, Lspi;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "INSTANCE"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lspi;->a:Lspi;
 
-    new-instance v0, Lr8i;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lr8i;-><init>(I)V
-
-    const-class v1, Lm9i;
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+    filled-new-array {v0}, [Lspi;
 
     move-result-object v0
 
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
+    sput-object v0, Lspi;->b:[Lspi;
 
     return-void
 .end method
 
+.method public static values()[Lspi;
+    .locals 1
+
+    sget-object v0, Lspi;->b:[Lspi;
+
+    invoke-virtual {v0}, [Lspi;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lspi;
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 1
 
-    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    invoke-static {}, Lh08;->J()Lh08;
 
-    move-result-object p1
+    move-result-object v0
 
-    throw p1
+    iget-object v0, v0, Lh08;->b:Ljava/lang/Object;
+
+    check-cast v0, Ly1a;
+
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
 .end method

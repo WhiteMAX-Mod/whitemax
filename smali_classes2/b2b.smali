@@ -1,73 +1,70 @@
-.class public final enum Lb2b;
-.super Ljava/lang/Enum;
+.class public final synthetic Lb2b;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lem6;
 
-# static fields
-.field public static final enum a:Lb2b;
 
-.field public static final enum b:Lb2b;
+# instance fields
+.field public final synthetic a:Lpb2;
 
-.field public static final synthetic c:[Lb2b;
+.field public final synthetic b:I
+
+.field public final synthetic c:Lone/me/messages/list/loader/MessageModel;
+
+.field public final synthetic d:Ljava/util/ArrayList;
+
+.field public final synthetic o:Ld7c;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Lpb2;ILone/me/messages/list/loader/MessageModel;Ljava/util/ArrayList;Ld7c;)V
+    .locals 0
 
-    new-instance v0, Lb2b;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "BUTTON"
+    iput-object p1, p0, Lb2b;->a:Lpb2;
 
-    const/4 v2, 0x0
+    iput p2, p0, Lb2b;->b:I
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p3, p0, Lb2b;->c:Lone/me/messages/list/loader/MessageModel;
 
-    sput-object v0, Lb2b;->a:Lb2b;
+    iput-object p4, p0, Lb2b;->d:Ljava/util/ArrayList;
 
-    new-instance v1, Lb2b;
-
-    const-string v2, "ICON"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lb2b;->b:Lb2b;
-
-    filled-new-array {v0, v1}, [Lb2b;
-
-    move-result-object v0
-
-    sput-object v0, Lb2b;->c:[Lb2b;
+    iput-object p5, p0, Lb2b;->o:Ld7c;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lb2b;
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const-class v0, Lb2b;
+    check-cast p1, Lfo8;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-object v0, p0, Lb2b;->a:Lpb2;
 
-    move-result-object p0
+    iput-object v0, p1, Lfo8;->a:Lpb2;
 
-    check-cast p0, Lb2b;
+    iget v0, p0, Lb2b;->b:I
 
-    return-object p0
-.end method
+    iput v0, p1, Lfo8;->b:I
 
-.method public static values()[Lb2b;
-    .locals 1
+    iget-object v0, p0, Lb2b;->c:Lone/me/messages/list/loader/MessageModel;
 
-    sget-object v0, Lb2b;->c:[Lb2b;
+    iput-object v0, p1, Lfo8;->d:Lone/me/messages/list/loader/MessageModel;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object v0, p0, Lb2b;->d:Ljava/util/ArrayList;
 
-    move-result-object v0
+    iput-object v0, p1, Lfo8;->f:Ljava/lang/Object;
 
-    check-cast v0, [Lb2b;
+    iget-object v0, p0, Lb2b;->o:Ld7c;
 
-    return-object v0
+    iput-object v0, p1, Lfo8;->e:Ld7c;
+
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

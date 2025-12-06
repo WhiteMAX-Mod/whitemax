@@ -2,157 +2,76 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lw68;
+.implements Lu68;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lk68;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 
 # instance fields
-.field public final a:Landroid/content/Context;
-
-.field public final b:Lfwc;
-
-.field public volatile c:Z
-
-.field public volatile d:Z
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lfwc;)V
+.method static constructor <clinit>()V
     .locals 2
+
+    new-instance v0, Lf18;
+
+    const/16 v1, 0xd
+
+    invoke-direct {v0, v1}, Lf18;-><init>(I)V
+
+    sput-object v0, Lk68;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lk68;->a:Landroid/content/Context;
-
-    iput-object p2, p0, Lk68;->b:Lfwc;
-
-    const-string p2, "android.permission.RECORD_AUDIO"
-
-    invoke-static {p1, p2}, Lc8;->b(Landroid/content/Context;Ljava/lang/String;)I
-
-    move-result p2
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x1
-
-    if-nez p2, :cond_0
-
-    move p2, v1
-
-    goto :goto_0
-
-    :cond_0
-    move p2, v0
-
-    :goto_0
-    iput-boolean p2, p0, Lk68;->c:Z
-
-    const-string p2, "android.permission.CAMERA"
-
-    invoke-static {p1, p2}, Lc8;->b(Landroid/content/Context;Ljava/lang/String;)I
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    move v0, v1
-
-    :cond_1
-    iput-boolean v0, p0, Lk68;->d:Z
+    iput-object p1, p0, Lk68;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 10
+.method public final describeContents()I
+    .locals 1
 
-    const-string v0, "android.permission.RECORD_AUDIO"
+    const/4 v0, 0x0
 
-    iget-object v1, p0, Lk68;->a:Landroid/content/Context;
+    return v0
+.end method
 
-    invoke-static {v1, v0}, Lc8;->b(Landroid/content/Context;Ljava/lang/String;)I
+.method public final n()Ljava/lang/String;
+    .locals 1
 
-    move-result v0
+    iget-object v0, p0, Lk68;->a:Ljava/lang/String;
 
-    const/4 v1, 0x1
+    return-object v0
+.end method
 
-    const/4 v2, 0x0
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    if-nez v0, :cond_0
+    iget-object p2, p0, Lk68;->a:Ljava/lang/String;
 
-    move v0, v1
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    goto :goto_0
-
-    :cond_0
-    move v0, v2
-
-    :goto_0
-    const-string v3, "android.permission.CAMERA"
-
-    iget-object v4, p0, Lk68;->a:Landroid/content/Context;
-
-    invoke-static {v4, v3}, Lc8;->b(Landroid/content/Context;Ljava/lang/String;)I
-
-    move-result v3
-
-    if-nez v3, :cond_1
-
-    move v3, v1
-
-    goto :goto_1
-
-    :cond_1
-    move v3, v2
-
-    :goto_1
-    iget-object v4, p0, Lk68;->b:Lfwc;
-
-    iget-boolean v5, p0, Lk68;->c:Z
-
-    iget-boolean v6, p0, Lk68;->d:Z
-
-    const-string v7, ", video: "
-
-    const-string v8, "call permissions state updated, audio: "
-
-    const-string v9, "->"
-
-    invoke-static {v8, v5, v9, v0, v7}, Li57;->o(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    const-string v6, "LocalMediaPermissionProvider"
-
-    invoke-interface {v4, v6, v5}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-boolean v4, p0, Lk68;->c:Z
-
-    if-eq v4, v0, :cond_2
-
-    iput-boolean v0, p0, Lk68;->c:Z
-
-    move v2, v1
-
-    :cond_2
-    iget-boolean v0, p0, Lk68;->d:Z
-
-    if-eq v0, v3, :cond_3
-
-    iput-boolean v3, p0, Lk68;->d:Z
-
-    return v1
-
-    :cond_3
-    return v2
+    return-void
 .end method

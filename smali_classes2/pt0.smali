@@ -1,164 +1,123 @@
-.class public final Lpt0;
+.class public final synthetic Lpt0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:Lqt0;
+.field public final synthetic a:I
 
-.field public final b:Lrt0;
+.field public final synthetic b:F
 
-.field public final c:Lst0;
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lqt0;Lrt0;Lst0;)V
+.method public synthetic constructor <init>(Ljava/lang/Object;FI)V
     .locals 0
 
+    iput p3, p0, Lpt0;->a:I
+
+    iput-object p1, p0, Lpt0;->c:Ljava/lang/Object;
+
+    iput p2, p0, Lpt0;->b:F
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lpt0;->a:Lqt0;
-
-    iput-object p2, p0, Lpt0;->b:Lrt0;
-
-    iput-object p3, p0, Lpt0;->c:Lst0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final run()V
     .locals 4
 
-    const/4 v0, 0x1
+    iget v0, p0, Lpt0;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lpt0;->c:Ljava/lang/Object;
+
+    check-cast v0, Lv32;
+
+    iget-object v0, v0, Lv32;->c:Ljava/lang/Object;
+
+    check-cast v0, Ls2f;
+
+    iget-object v0, v0, Ls2f;->d:Ls4h;
+
+    iget v1, p0, Lpt0;->b:F
+
+    invoke-interface {v0, v1}, Ls4h;->F(F)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lpt0;->c:Ljava/lang/Object;
+
+    check-cast v0, Lh08;
+
+    iget-object v0, v0, Lh08;->b:Ljava/lang/Object;
+
+    check-cast v0, Lf7a;
+
+    iget-object v0, v0, Lf7a;->e:Ls4h;
+
+    iget v1, p0, Lpt0;->b:F
+
+    invoke-interface {v0, v1}, Ls4h;->F(F)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lpt0;->c:Ljava/lang/Object;
+
+    check-cast v0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;
+
+    iget v1, v0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->z0:F
+
+    iget v2, p0, Lpt0;->b:F
+
+    sub-float/2addr v2, v1
+
+    iget v3, v0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->A0:F
+
+    sub-float/2addr v3, v1
+
+    div-float/2addr v2, v3
+
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    cmpl-float v3, v2, v1
+
+    if-lez v3, :cond_0
+
+    move v2, v1
 
     :cond_0
-    instance-of v1, p1, Lpt0;
+    iget v1, v0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->x0:F
 
-    const/4 v2, 0x0
+    iget v3, v0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->w0:F
 
-    if-nez v1, :cond_1
+    sub-float v3, v1, v3
 
-    return v2
+    mul-float/2addr v3, v2
 
-    :cond_1
-    check-cast p1, Lpt0;
+    sub-float/2addr v1, v3
 
-    iget-object v1, p0, Lpt0;->a:Lqt0;
+    iput v1, v0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->v0:F
 
-    iget-object v3, p1, Lpt0;->a:Lqt0;
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    return-void
 
-    move-result v1
+    nop
 
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lpt0;->b:Lrt0;
-
-    iget-object v3, p1, Lpt0;->b:Lrt0;
-
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lpt0;->c:Lst0;
-
-    iget-object p1, p1, Lpt0;->c:Lst0;
-
-    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lpt0;->a:Lqt0;
-
-    invoke-virtual {v0}, Lqt0;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lpt0;->b:Lrt0;
-
-    invoke-virtual {v1}, Lrt0;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Lpt0;->c:Lst0;
-
-    invoke-virtual {v0}, Lst0;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "BubbleBackgroundFocusColors(regular="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lpt0;->a:Lqt0;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", singleMedia="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lpt0;->b:Lrt0;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", transparent="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lpt0;->c:Lst0;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

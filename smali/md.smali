@@ -1,231 +1,113 @@
 .class public final Lmd;
-.super Ljava/lang/Object;
+.super Lwyi;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public final a:Ljavax/net/ssl/X509TrustManager;
 
-.field public final b:Lsvf;
-
-.field public final c:I
-
-.field public final d:Ly19;
-
-.field public final e:J
-
-.field public final f:Lsvf;
-
-.field public final g:I
-
-.field public final h:Ly19;
-
-.field public final i:J
-
-.field public final j:J
+.field public final b:Landroid/net/http/X509TrustManagerExtensions;
 
 
 # direct methods
-.method public constructor <init>(JLsvf;ILy19;JLsvf;ILy19;JJ)V
+.method public constructor <init>(Ljavax/net/ssl/X509TrustManager;Landroid/net/http/X509TrustManagerExtensions;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lmd;->a:J
+    iput-object p1, p0, Lmd;->a:Ljavax/net/ssl/X509TrustManager;
 
-    iput-object p3, p0, Lmd;->b:Lsvf;
-
-    iput p4, p0, Lmd;->c:I
-
-    iput-object p5, p0, Lmd;->d:Ly19;
-
-    iput-wide p6, p0, Lmd;->e:J
-
-    iput-object p8, p0, Lmd;->f:Lsvf;
-
-    iput p9, p0, Lmd;->g:I
-
-    iput-object p10, p0, Lmd;->h:Ly19;
-
-    iput-wide p11, p0, Lmd;->i:J
-
-    iput-wide p13, p0, Lmd;->j:J
+    iput-object p2, p0, Lmd;->b:Landroid/net/http/X509TrustManagerExtensions;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
+.method public final a(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+    .locals 2
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
-    if-ne p0, p1, :cond_0
+    new-array v0, v0, [Ljava/security/cert/X509Certificate;
 
-    return v0
+    invoke-interface {p2, v0}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    :cond_0
-    const/4 v1, 0x0
+    move-result-object p2
 
-    if-eqz p1, :cond_2
+    if-eqz p2, :cond_0
 
-    const-class v2, Lmd;
+    check-cast p2, [Ljava/security/cert/X509Certificate;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :try_start_0
+    iget-object v0, p0, Lmd;->b:Landroid/net/http/X509TrustManagerExtensions;
 
-    move-result-object v3
+    const-string v1, "RSA"
 
-    if-eq v2, v3, :cond_1
+    invoke-virtual {v0, p2, v1, p1}, Landroid/net/http/X509TrustManagerExtensions;->checkServerTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
 
-    goto :goto_0
+    move-result-object p1
+    :try_end_0
+    .catch Ljava/security/cert/CertificateException; {:try_start_0 .. :try_end_0} :catch_0
 
-    :cond_1
-    check-cast p1, Lmd;
+    return-object p1
 
-    iget-wide v2, p0, Lmd;->a:J
+    :catch_0
+    move-exception p1
 
-    iget-wide v4, p1, Lmd;->a:J
+    new-instance p2, Ljavax/net/ssl/SSLPeerUnverifiedException;
 
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_2
-
-    iget v2, p0, Lmd;->c:I
-
-    iget v3, p1, Lmd;->c:I
-
-    if-ne v2, v3, :cond_2
-
-    iget-wide v2, p0, Lmd;->e:J
-
-    iget-wide v4, p1, Lmd;->e:J
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_2
-
-    iget v2, p0, Lmd;->g:I
-
-    iget v3, p1, Lmd;->g:I
-
-    if-ne v2, v3, :cond_2
-
-    iget-wide v2, p0, Lmd;->i:J
-
-    iget-wide v4, p1, Lmd;->i:J
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_2
-
-    iget-wide v2, p0, Lmd;->j:J
-
-    iget-wide v4, p1, Lmd;->j:J
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_2
-
-    iget-object v2, p0, Lmd;->b:Lsvf;
-
-    iget-object v3, p1, Lmd;->b:Lsvf;
-
-    invoke-static {v2, v3}, Ldni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lmd;->d:Ly19;
-
-    iget-object v3, p1, Lmd;->d:Ly19;
-
-    invoke-static {v2, v3}, Ldni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lmd;->f:Lsvf;
-
-    iget-object v3, p1, Lmd;->f:Lsvf;
-
-    invoke-static {v2, v3}, Ldni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lmd;->h:Ly19;
-
-    iget-object p1, p1, Lmd;->h:Ly19;
-
-    invoke-static {v2, p1}, Ldni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 12
-
-    iget-wide v0, p0, Lmd;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    iget v0, p0, Lmd;->c:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    iget-wide v0, p0, Lmd;->e:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v6
-
-    iget v0, p0, Lmd;->g:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v8
-
-    iget-wide v0, p0, Lmd;->i:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v10
-
-    iget-wide v0, p0, Lmd;->j:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v11
-
-    iget-object v3, p0, Lmd;->b:Lsvf;
-
-    iget-object v5, p0, Lmd;->d:Ly19;
-
-    iget-object v7, p0, Lmd;->f:Lsvf;
-
-    iget-object v9, p0, Lmd;->h:Ly19;
-
-    filled-new-array/range {v2 .. v11}, [Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+    invoke-direct {p2, v0}, Ljavax/net/ssl/SSLPeerUnverifiedException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p2, p1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+
+    throw p2
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "null cannot be cast to non-null type kotlin.Array<T>"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    instance-of v0, p1, Lmd;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lmd;
+
+    iget-object p1, p1, Lmd;->a:Ljavax/net/ssl/X509TrustManager;
+
+    iget-object v0, p0, Lmd;->a:Ljavax/net/ssl/X509TrustManager;
+
+    if-ne p1, v0, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lmd;->a:Ljavax/net/ssl/X509TrustManager;
+
+    invoke-static {v0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v0
 

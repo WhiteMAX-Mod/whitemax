@@ -1,64 +1,45 @@
-.class public final synthetic Lns;
-.super Ljava/lang/Object;
+.class public final Lns;
+.super Lk2;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/concurrent/Executor;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final transient X:I
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    iput p1, p0, Lns;->a:I
+    const/16 v0, 0xc
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {v0}, Lwi3;->a(I)Lwi3;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method private final a(Ljava/lang/Runnable;)V
-    .locals 0
+    invoke-direct {p0, v0}, Lk2;-><init>(Ljava/util/Map;)V
+
+    const-string v0, "expectedValuesPerKey"
+
+    const/4 v1, 0x3
+
+    invoke-static {v1, v0}, Lu4j;->a(ILjava/lang/String;)V
+
+    iput v1, p0, Lns;->X:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final execute(Ljava/lang/Runnable;)V
-    .locals 1
+.method public final d()Ljava/util/Collection;
+    .locals 2
 
-    iget v0, p0, Lns;->a:I
+    new-instance v0, Ljava/util/ArrayList;
 
-    packed-switch v0, :pswitch_data_0
+    iget v1, p0, Lns;->X:I
 
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    :pswitch_0
-    return-void
-
-    :pswitch_1
-    invoke-static {}, Los;->c()Los;
-
-    move-result-object v0
-
-    iget-object v0, v0, Los;->e:Lpn4;
-
-    iget-object v0, v0, Lpn4;->f:Ljava/util/concurrent/ExecutorService;
-
-    invoke-interface {v0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

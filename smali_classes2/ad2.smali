@@ -1,80 +1,43 @@
-.class public final synthetic Lad2;
+.class public abstract synthetic Lad2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lr6;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lsd2;
-
-.field public final synthetic c:J
-
-.field public final synthetic d:J
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lsd2;JJI)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p6, p0, Lad2;->a:I
-
-    iput-object p1, p0, Lad2;->b:Lsd2;
-
-    iput-wide p2, p0, Lad2;->c:J
-
-    iput-wide p4, p0, Lad2;->d:J
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 7
-
-    iget v0, p0, Lad2;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v1, p0, Lad2;->b:Lsd2;
-
-    iget-wide v2, p0, Lad2;->c:J
-
-    invoke-virtual {v1, v2, v3}, Lsd2;->A(J)Loe2;
+    invoke-static {}, Lw82;->values()[Lw82;
 
     move-result-object v0
 
-    iget-wide v2, v0, Lrj0;->a:J
+    array-length v0, v0
 
-    iget-object v4, v0, Loe2;->b:Lne2;
+    new-array v0, v0, [I
 
-    iget-wide v5, p0, Lad2;->d:J
+    const/4 v1, 0x1
 
-    invoke-virtual/range {v1 .. v6}, Lsd2;->f0(JLne2;J)V
+    const/4 v2, 0x0
+
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    const/4 v2, 0x2
+
+    :try_start_1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    sput-object v0, Lad2;->$EnumSwitchMapping$0:[I
 
     return-void
-
-    :pswitch_0
-    iget-wide v0, p0, Lad2;->c:J
-
-    iget-wide v2, p0, Lad2;->d:J
-
-    iget-object v4, p0, Lad2;->b:Lsd2;
-
-    invoke-virtual {v4, v0, v1, v2, v3}, Lsd2;->e0(JJ)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

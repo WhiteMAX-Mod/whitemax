@@ -1,134 +1,49 @@
-.class public final Lqdb;
+.class public abstract Lqdb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lorg/webrtc/VideoSink;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final a:Ljava/lang/String;
+.field public static final b:I
 
-.field public b:J
+.field public static final c:I
 
-.field public final synthetic c:Lrdb;
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
 
 
 # direct methods
-.method public constructor <init>(Lrdb;Ljava/lang/String;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lv4d;->oneme_stickers_preview_action_favorite_title:I
 
-    iput-object p1, p0, Lqdb;->c:Lrdb;
+    sput v0, Lqdb;->a:I
 
-    const-wide/16 v0, -0x1
+    sget v0, Lv4d;->oneme_stickers_preview_action_forward_title:I
 
-    iput-wide v0, p0, Lqdb;->b:J
+    sput v0, Lqdb;->b:I
 
-    iput-object p2, p0, Lqdb;->a:Ljava/lang/String;
+    sget v0, Lv4d;->oneme_stickers_preview_action_in_favorite_title:I
 
-    return-void
-.end method
+    sput v0, Lqdb;->c:I
 
+    sget v0, Lv4d;->oneme_stickers_preview_action_send_title:I
 
-# virtual methods
-.method public final onFrame(Lorg/webrtc/VideoFrame;)V
-    .locals 6
+    sput v0, Lqdb;->d:I
 
-    invoke-virtual {p1}, Lorg/webrtc/VideoFrame;->getCompactParticipantId()Ljava/lang/Long;
+    sget v0, Lv4d;->oneme_stickers_preview_snackbar_favorite_added:I
 
-    move-result-object p1
+    sput v0, Lqdb;->e:I
 
-    const-wide/16 v0, -0x1
+    sget v0, Lv4d;->oneme_stickers_preview_snackbar_favorite_removed:I
 
-    if-nez p1, :cond_0
+    sput v0, Lqdb;->f:I
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    :cond_0
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    iget-wide v4, p0, Lqdb;->b:J
-
-    cmp-long v2, v2, v4
-
-    if-eqz v2, :cond_3
-
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    iput-wide v2, p0, Lqdb;->b:J
-
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    cmp-long v0, v2, v0
-
-    if-nez v0, :cond_1
-
-    const/4 p1, 0x0
-
-    :cond_1
-    iget-object v0, p0, Lqdb;->c:Lrdb;
-
-    iget-object v1, v0, Lrdb;->k:Ljava/util/concurrent/ConcurrentHashMap;
-
-    iget-object v2, v0, Lrdb;->l:Ljava/util/concurrent/ConcurrentHashMap;
-
-    iget-object v3, p0, Lqdb;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, v3}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lzs1;
-
-    if-eqz v4, :cond_2
-
-    invoke-virtual {v1, v3, v4}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    invoke-virtual {v2, v4, v3}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    :cond_2
-    if-eqz p1, :cond_3
-
-    iget-object v0, v0, Lhr3;->e:Ljava/lang/Object;
-
-    check-cast v0, Lbua;
-
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v4
-
-    long-to-int p1, v4
-
-    iget-object v0, v0, Lbua;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lzs1;
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {v1, v3, p1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v2, p1, v3}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_3
     return-void
 .end method

@@ -1,25 +1,50 @@
-.class public abstract synthetic Lwtf;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.class public final Lwtf;
+.super Lq44;
 
 
-# static fields
-.field public static final synthetic a:Lzd5;
+# instance fields
+.field public X:Lz26;
+
+.field public final synthetic Y:Lutf;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lutf;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-static {}, Ljava/lang/Thread$State;->values()[Ljava/lang/Thread$State;
+    iput-object p1, p0, Lwtf;->Y:Lutf;
 
-    move-result-object v0
-
-    new-instance v1, Lzd5;
-
-    invoke-direct {v1, v0}, Lzd5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lwtf;->a:Lzd5;
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lwtf;->d:Ljava/lang/Object;
+
+    iget p1, p0, Lwtf;->o:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lwtf;->o:I
+
+    iget-object p1, p0, Lwtf;->Y:Lutf;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lutf;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

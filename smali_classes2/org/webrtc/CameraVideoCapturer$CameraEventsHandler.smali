@@ -21,7 +21,18 @@
 .method public abstract onCameraDisconnected()V
 .end method
 
-.method public abstract onCameraError(Ljava/lang/String;)V
+.method public onCameraError(Ljava/lang/String;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-interface {p0, p1, v0}, Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;->onCameraError(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public abstract onCameraError(Ljava/lang/String;Ljava/lang/Throwable;)V
 .end method
 
 .method public abstract onCameraFreezed(Ljava/lang/String;)V

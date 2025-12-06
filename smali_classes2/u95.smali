@@ -1,23 +1,58 @@
-.class public final Lu95;
+.class public final synthetic Lu95;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:Ljava/util/List;
+.field public final synthetic a:Lorg/webrtc/EglRenderer;
 
-.field public final b:Ljava/util/List;
+.field public final synthetic b:Lorg/webrtc/RendererCommon$GlDrawer;
+
+.field public final synthetic c:Lorg/webrtc/EglRenderer$FrameListener;
+
+.field public final synthetic d:F
+
+.field public final synthetic o:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;Ljava/util/List;)V
+.method public synthetic constructor <init>(Lorg/webrtc/EglRenderer;Lorg/webrtc/RendererCommon$GlDrawer;Lorg/webrtc/EglRenderer$FrameListener;FZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lu95;->a:Ljava/util/List;
+    iput-object p1, p0, Lu95;->a:Lorg/webrtc/EglRenderer;
 
-    iput-object p2, p0, Lu95;->b:Ljava/util/List;
+    iput-object p2, p0, Lu95;->b:Lorg/webrtc/RendererCommon$GlDrawer;
+
+    iput-object p3, p0, Lu95;->c:Lorg/webrtc/EglRenderer$FrameListener;
+
+    iput p4, p0, Lu95;->d:F
+
+    iput-boolean p5, p0, Lu95;->o:Z
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 5
+
+    iget v0, p0, Lu95;->d:F
+
+    iget-boolean v1, p0, Lu95;->o:Z
+
+    iget-object v2, p0, Lu95;->a:Lorg/webrtc/EglRenderer;
+
+    iget-object v3, p0, Lu95;->b:Lorg/webrtc/RendererCommon$GlDrawer;
+
+    iget-object v4, p0, Lu95;->c:Lorg/webrtc/EglRenderer$FrameListener;
+
+    invoke-static {v2, v3, v4, v0, v1}, Lorg/webrtc/EglRenderer;->d(Lorg/webrtc/EglRenderer;Lorg/webrtc/RendererCommon$GlDrawer;Lorg/webrtc/EglRenderer$FrameListener;FZ)V
 
     return-void
 .end method

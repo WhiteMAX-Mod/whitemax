@@ -1,70 +1,35 @@
 .class public final Lm88;
-.super Lpmf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public c:Lda9;
+.field public final a:Lk18;
+
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lpf9;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lpmf;-><init>(Lpf9;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final d(Lpf9;Ljava/lang/String;)V
+.method public constructor <init>(Lk18;)V
     .locals 1
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, "message"
+    iput-object p1, p0, Lm88;->a:Lk18;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    new-instance p1, Lc38;
 
-    move-result p2
+    const/4 v0, 0x2
 
-    if-nez p2, :cond_0
+    invoke-direct {p1, v0}, Lc38;-><init>(I)V
 
-    invoke-virtual {p1}, Lpf9;->y()V
+    const/4 v0, 0x3
 
-    return-void
-
-    :cond_0
-    invoke-static {p1}, Lfki;->c(Lpf9;)Lda9;
+    invoke-static {v0, p1}, Lipi;->b(ILcm6;)Lk18;
 
     move-result-object p1
 
-    iput-object p1, p0, Lm88;->c:Lda9;
+    iput-object p1, p0, Lm88;->b:Ljava/lang/Object;
 
     return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    iget-object v0, p0, Lm88;->c:Lda9;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "{message="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, "}"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

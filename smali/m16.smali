@@ -1,35 +1,35 @@
 .class public final Lm16;
-.super Ly14;
+.super Lcl0;
 .source "SourceFile"
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public Y:I
-
-.field public o:Ly7d;
-
-
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final b()I
     .locals 1
 
-    iput-object p1, p0, Lm16;->X:Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    iget p1, p0, Lm16;->Y:I
+    return v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public final k()I
+    .locals 1
 
-    or-int/2addr p1, v0
+    const/4 v0, 0x0
 
-    iput p1, p0, Lm16;->Y:I
+    return v0
+.end method
 
-    const/4 p1, 0x0
+.method public final m()Ljava/lang/Object;
+    .locals 1
 
-    invoke-static {p1, p0}, Ltq;->C(Lty5;Ly14;)Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    move-result-object p1
+    return-object v0
+.end method
 
-    return-object p1
+.method public final t(JJJLjava/util/List;[Lbw8;)V
+    .locals 0
+
+    return-void
 .end method

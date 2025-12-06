@@ -1,150 +1,119 @@
-.class public abstract Luj8;
-.super Ljava/lang/Object;
+.class public final Luj8;
+.super Lg9c;
 .source "SourceFile"
 
-# interfaces
-.implements Lsk8;
+
+# static fields
+.field public static final c:Luj8;
 
 
 # direct methods
-.method public static e(Ljava/lang/Object;)Lgk8;
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    const-string v0, "item is null"
+    new-instance v0, Luj8;
 
-    invoke-static {p0, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    sget-object v1, Lck8;->a:Lck8;
 
-    new-instance v0, Lgk8;
+    invoke-direct {v0, v1}, Lg9c;-><init>(Lzy7;)V
 
-    invoke-direct {v0, p0}, Lgk8;-><init>(Ljava/lang/Object;)V
+    sput-object v0, Luj8;->c:Luj8;
 
-    return-object v0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lnk8;)V
-    .locals 2
+.method public final h(Ljava/lang/Object;)I
+    .locals 0
 
-    :try_start_0
-    invoke-virtual {p0, p1}, Luj8;->f(Lnk8;)V
-    :try_end_0
-    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    check-cast p1, [J
 
-    return-void
+    array-length p1, p1
 
-    :catchall_0
-    move-exception p1
-
-    invoke-static {p1}, Lq0j;->b(Ljava/lang/Throwable;)V
-
-    new-instance v0, Ljava/lang/NullPointerException;
-
-    const-string v1, "subscribeActual failed"
-
-    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
-
-    throw v0
-
-    :catch_0
-    move-exception p1
-
-    throw p1
+    return p1
 .end method
 
-.method public final b()Ljava/lang/Object;
-    .locals 2
+.method public final j(Lyl3;ILjava/lang/Object;)V
+    .locals 3
 
-    new-instance v0, Lxq0;
+    check-cast p3, Ltj8;
 
-    const/4 v1, 0x1
+    iget-object v0, p0, Lg9c;->b:Lf9c;
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
+    invoke-interface {p1, v0, p2}, Lyl3;->x(Lf9c;I)J
 
-    invoke-virtual {p0, v0}, Luj8;->a(Lnk8;)V
+    move-result-wide p1
 
-    invoke-virtual {v0}, Lxq0;->d()Ljava/lang/Object;
+    invoke-static {p3}, Le9c;->c(Le9c;)V
 
-    move-result-object v0
+    iget-object v0, p3, Ltj8;->a:[J
+
+    iget v1, p3, Ltj8;->b:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p3, Ltj8;->b:I
+
+    aput-wide p1, v0, v1
+
+    return-void
+.end method
+
+.method public final k(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    check-cast p1, [J
+
+    new-instance v0, Ltj8;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, v0, Ltj8;->a:[J
+
+    array-length p1, p1
+
+    iput p1, v0, Ltj8;->b:I
+
+    const/16 p1, 0xa
+
+    invoke-virtual {v0, p1}, Ltj8;->b(I)V
 
     return-object v0
 .end method
 
-.method public final c(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final n()Ljava/lang/Object;
+    .locals 1
 
-    const-string v0, "defaultValue is null"
+    const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    new-array v0, v0, [J
 
-    new-instance v0, Lxq0;
+    return-object v0
+.end method
 
-    const/4 v1, 0x1
+.method public final o(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;I)V
+    .locals 4
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
+    check-cast p2, [J
 
-    invoke-virtual {p0, v0}, Luj8;->a(Lnk8;)V
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->getCount()J
+    :goto_0
+    if-ge v0, p3, :cond_0
 
-    move-result-wide v2
+    aget-wide v1, p2, v0
 
-    const-wide/16 v4, 0x0
+    iget-object v3, p0, Lg9c;->b:Lf9c;
 
-    cmp-long v2, v2, v4
+    invoke-virtual {p1, v3, v0}, Lkotlinx/serialization/json/internal/b;->g(Lree;I)V
 
-    if-eqz v2, :cond_1
+    invoke-virtual {p1, v1, v2}, Lkotlinx/serialization/json/internal/b;->l(J)V
 
-    :try_start_0
-    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->await()V
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    :catch_0
-    move-exception p1
-
-    iput-boolean v1, v0, Lxq0;->o:Z
-
-    iget-object v0, v0, Lxq0;->c:Lvv4;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lvv4;->g()V
-
     :cond_0
-    invoke-static {p1}, Luf5;->f(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
-
-    move-result-object p1
-
-    throw p1
-
-    :cond_1
-    :goto_0
-    iget-object v1, v0, Lxq0;->b:Ljava/lang/Throwable;
-
-    if-nez v1, :cond_3
-
-    iget-object v0, v0, Lxq0;->a:Ljava/lang/Object;
-
-    if-eqz v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    return-object p1
-
-    :cond_3
-    invoke-static {v1}, Luf5;->f(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
-
-    move-result-object p1
-
-    throw p1
-.end method
-
-.method public abstract f(Lnk8;)V
+    return-void
 .end method

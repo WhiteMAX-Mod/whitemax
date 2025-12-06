@@ -1,365 +1,241 @@
-.class public final Ltx8;
-.super Landroid/widget/ArrayAdapter;
+.class public Ltx8;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
 
 
 # instance fields
-.field public final X:Landroid/graphics/drawable/Drawable;
+.field public final a:Landroid/media/session/MediaController;
 
-.field public final a:Landroid/view/LayoutInflater;
+.field public final b:Ljava/lang/Object;
 
-.field public final b:Landroid/graphics/drawable/Drawable;
+.field public final c:Ljava/util/ArrayList;
 
-.field public final c:Landroid/graphics/drawable/Drawable;
+.field public final d:Ljava/util/HashMap;
 
-.field public final o:Landroid/graphics/drawable/Drawable;
+.field public final e:Lg79;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/util/ArrayList;)V
-    .locals 5
+.method public constructor <init>(Landroid/content/Context;Lg79;)V
+    .locals 2
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, v0, p2}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;ILjava/util/List;)V
+    new-instance v0, Ljava/lang/Object;
 
-    invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p2
+    iput-object v0, p0, Ltx8;->b:Ljava/lang/Object;
 
-    iput-object p2, p0, Ltx8;->a:Landroid/view/LayoutInflater;
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-virtual {p0}, Landroid/widget/ArrayAdapter;->getContext()Landroid/content/Context;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    move-result-object p2
+    iput-object v0, p0, Ltx8;->c:Ljava/util/ArrayList;
 
-    sget v1, Ldkc;->mediaRouteDefaultIconDrawable:I
+    new-instance v0, Ljava/util/HashMap;
 
-    sget v2, Ldkc;->mediaRouteTvIconDrawable:I
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sget v3, Ldkc;->mediaRouteSpeakerIconDrawable:I
+    iput-object v0, p0, Ltx8;->d:Ljava/util/HashMap;
 
-    sget v4, Ldkc;->mediaRouteSpeakerGroupIconDrawable:I
+    iput-object p2, p0, Ltx8;->e:Lg79;
 
-    filled-new-array {v1, v2, v3, v4}, [I
+    new-instance v0, Landroid/media/session/MediaController;
 
-    move-result-object v1
+    iget-object v1, p2, Lg79;->b:Landroid/media/session/MediaSession$Token;
 
-    invoke-virtual {p2, v1}, Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
+    invoke-direct {v0, p1, v1}, Landroid/media/session/MediaController;-><init>(Landroid/content/Context;Landroid/media/session/MediaSession$Token;)V
 
-    move-result-object p2
+    iput-object v0, p0, Ltx8;->a:Landroid/media/session/MediaController;
 
-    invoke-virtual {p2, v0, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
-
-    move-result v1
-
-    invoke-static {p1, v1}, Lofi;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    iput-object v1, p0, Ltx8;->b:Landroid/graphics/drawable/Drawable;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p2, v1, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
-
-    move-result v1
-
-    invoke-static {p1, v1}, Lofi;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    iput-object v1, p0, Ltx8;->c:Landroid/graphics/drawable/Drawable;
-
-    const/4 v1, 0x2
-
-    invoke-virtual {p2, v1, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
-
-    move-result v1
-
-    invoke-static {p1, v1}, Lofi;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    iput-object v1, p0, Ltx8;->o:Landroid/graphics/drawable/Drawable;
-
-    const/4 v1, 0x3
-
-    invoke-virtual {p2, v1, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
-
-    move-result v0
-
-    invoke-static {p1, v0}, Lofi;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p2}, Lg79;->a()Ldb7;
 
     move-result-object p1
 
-    iput-object p1, p0, Ltx8;->X:Landroid/graphics/drawable/Drawable;
+    if-nez p1, :cond_0
 
-    invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
+    new-instance p1, Lrx8;
 
+    invoke-direct {p1, p0}, Lrx8;-><init>(Ltx8;)V
+
+    const-string p2, "android.support.v4.media.session.command.GET_EXTRA_BINDER"
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, p2, v1, p1}, Landroid/media/session/MediaController;->sendCommand(Ljava/lang/String;Landroid/os/Bundle;Landroid/os/ResultReceiver;)V
+
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final areAllItemsEnabled()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+.method public final a()V
     .locals 6
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Ltx8;->e:Lg79;
 
-    if-nez p2, :cond_0
+    invoke-virtual {v0}, Lg79;->a()Ldb7;
 
-    iget-object p2, p0, Ltx8;->a:Landroid/view/LayoutInflater;
+    move-result-object v0
 
-    sget v1, Lmqc;->mr_chooser_list_item:I
+    if-nez v0, :cond_0
 
-    invoke-virtual {p2, v1, p3, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object p2
+    return-void
 
     :cond_0
-    invoke-virtual {p0, p1}, Landroid/widget/ArrayAdapter;->getItem(I)Ljava/lang/Object;
+    iget-object v1, p0, Ltx8;->c:Ljava/util/ArrayList;
 
-    move-result-object p1
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    check-cast p1, Lgz8;
+    move-result-object v2
 
-    sget p3, Lumc;->mr_chooser_route_name:I
-
-    invoke-virtual {p2, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p3
-
-    check-cast p3, Landroid/widget/TextView;
-
-    sget v1, Lumc;->mr_chooser_route_desc:I
-
-    invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/TextView;
-
-    iget-object v2, p1, Lgz8;->d:Ljava/lang/String;
-
-    invoke-virtual {p3, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object v2, p1, Lgz8;->e:Ljava/lang/String;
-
-    iget v3, p1, Lgz8;->h:I
-
-    const/4 v4, 0x1
-
-    const/4 v5, 0x2
-
-    if-eq v3, v5, :cond_1
-
-    if-ne v3, v4, :cond_2
-
-    :cond_1
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v3
 
-    if-nez v3, :cond_2
+    if-eqz v3, :cond_1
 
-    const/16 v3, 0x50
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-virtual {p3, v3}, Landroid/widget/TextView;->setGravity(I)V
+    move-result-object v3
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
+    check-cast v3, Lpy8;
 
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    new-instance v4, Lsx8;
+
+    invoke-direct {v4, v3}, Lsx8;-><init>(Lpy8;)V
+
+    iget-object v5, p0, Ltx8;->d:Ljava/util/HashMap;
+
+    invoke-virtual {v5, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iput-object v4, v3, Lpy8;->c:Lsx8;
+
+    :try_start_0
+    invoke-interface {v0, v4}, Ldb7;->I(Lab7;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
+
+    const/16 v4, 0xd
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v3, v4, v5, v5}, Lpy8;->i(ILjava/lang/Object;Landroid/os/Bundle;)V
 
     goto :goto_0
 
-    :cond_2
-    const/16 v0, 0x10
+    :catch_0
+    move-exception v0
 
-    invoke-virtual {p3, v0}, Landroid/widget/TextView;->setGravity(I)V
+    goto :goto_1
 
-    const/16 p3, 0x8
+    :catch_1
+    move-exception v0
 
-    invoke-virtual {v1, p3}, Landroid/view/View;->setVisibility(I)V
+    :goto_1
+    const-string v2, "MediaControllerCompat"
 
-    const-string p3, ""
+    const-string v3, "Dead object in registerCallback."
 
-    invoke-virtual {v1, p3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    :goto_0
-    iget-boolean p3, p1, Lgz8;->g:Z
+    :cond_1
+    invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    invoke-virtual {p2, p3}, Landroid/view/View;->setEnabled(Z)V
+    return-void
+.end method
 
-    sget p3, Lumc;->mr_chooser_route_icon:I
+.method public final b(Lpy8;)V
+    .locals 4
 
-    invoke-virtual {p2, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    iget-object v0, p0, Ltx8;->a:Landroid/media/session/MediaController;
 
-    move-result-object p3
+    iget-object v1, p1, Lpy8;->a:Lqx8;
 
-    check-cast p3, Landroid/widget/ImageView;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-eqz p3, :cond_7
+    invoke-virtual {v0, v1}, Landroid/media/session/MediaController;->unregisterCallback(Landroid/media/session/MediaController$Callback;)V
 
-    iget-object v0, p1, Lgz8;->f:Landroid/net/Uri;
+    iget-object v0, p0, Ltx8;->b:Ljava/lang/Object;
 
-    if-eqz v0, :cond_3
+    monitor-enter v0
 
     :try_start_0
-    invoke-virtual {p0}, Landroid/widget/ArrayAdapter;->getContext()Landroid/content/Context;
+    iget-object v1, p0, Ltx8;->e:Lg79;
+
+    invoke-virtual {v1}, Lg79;->a()Ldb7;
 
     move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Landroid/content/ContentResolver;->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-static {v1, v2}, Landroid/graphics/drawable/Drawable;->createFromStream(Ljava/io/InputStream;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
     :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-eqz v0, :cond_3
+    if-eqz v1, :cond_0
+
+    :try_start_1
+    iget-object v2, p0, Ltx8;->d:Ljava/util/HashMap;
+
+    invoke-virtual {v2, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lsx8;
+
+    if-eqz v2, :cond_1
+
+    const/4 v3, 0x0
+
+    iput-object v3, p1, Lpy8;->c:Lsx8;
+
+    invoke-interface {v1, v2}, Ldb7;->C(Lab7;)V
+    :try_end_1
+    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
 
     goto :goto_2
 
     :catch_0
-    move-exception v1
+    move-exception p1
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    const-string v3, "Failed to load "
+    :catch_1
+    move-exception p1
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :goto_0
+    :try_start_2
+    const-string v1, "MediaControllerCompat"
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v2, "Dead object in unregisterCallback."
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v2, "MediaRouteChooserDialog"
-
-    invoke-static {v2, v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :cond_3
-    iget v0, p1, Lgz8;->m:I
-
-    if-eq v0, v4, :cond_6
-
-    if-eq v0, v5, :cond_5
-
-    invoke-virtual {p1}, Lgz8;->e()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_4
-
-    iget-object p1, p0, Ltx8;->X:Landroid/graphics/drawable/Drawable;
-
-    :goto_1
-    move-object v0, p1
-
-    goto :goto_2
-
-    :cond_4
-    iget-object p1, p0, Ltx8;->b:Landroid/graphics/drawable/Drawable;
+    invoke-static {v1, v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_1
-
-    :cond_5
-    iget-object p1, p0, Ltx8;->o:Landroid/graphics/drawable/Drawable;
-
-    goto :goto_1
-
-    :cond_6
-    iget-object p1, p0, Ltx8;->c:Landroid/graphics/drawable/Drawable;
-
-    goto :goto_1
-
-    :goto_2
-    invoke-virtual {p3, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    :cond_7
-    return-object p2
-.end method
-
-.method public final isEnabled(I)Z
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/widget/ArrayAdapter;->getItem(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lgz8;
-
-    iget-boolean p1, p1, Lgz8;->g:Z
-
-    return p1
-.end method
-
-.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 0
-
-    invoke-virtual {p0, p3}, Landroid/widget/ArrayAdapter;->getItem(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lgz8;
-
-    iget-boolean p3, p1, Lgz8;->g:Z
-
-    if-eqz p3, :cond_1
-
-    sget p3, Lumc;->mr_chooser_route_icon:I
-
-    invoke-virtual {p2, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p3
-
-    check-cast p3, Landroid/widget/ImageView;
-
-    sget p4, Lumc;->mr_chooser_route_progress_bar:I
-
-    invoke-virtual {p2, p4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/widget/ProgressBar;
-
-    if-eqz p3, :cond_0
-
-    if-eqz p2, :cond_0
-
-    const/16 p4, 0x8
-
-    invoke-virtual {p3, p4}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    const/4 p3, 0x0
-
-    invoke-virtual {p2, p3}, Landroid/view/View;->setVisibility(I)V
 
     :cond_0
-    invoke-virtual {p1}, Lgz8;->l()V
+    iget-object v1, p0, Ltx8;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
     :cond_1
+    :goto_1
+    monitor-exit v0
+
     return-void
+
+    :goto_2
+    monitor-exit v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw p1
 .end method

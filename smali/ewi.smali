@@ -1,55 +1,105 @@
 .class public final Lewi;
-.super Ljava/lang/Object;
+.super Ll4;
 .source "SourceFile"
 
 
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lewi;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
 # instance fields
-.field public final a:Ljava/lang/Long;
+.field public X:Lyti;
 
-.field public final b:Lzwi;
+.field public Y:Lyti;
 
-.field public final c:Ljava/lang/Boolean;
+.field public a:Ljava/lang/String;
 
-.field public final d:Ljava/lang/Boolean;
+.field public b:Ljava/lang/String;
 
-.field public final e:Ljava/lang/Boolean;
+.field public c:Ljava/lang/String;
+
+.field public d:Ljava/lang/String;
+
+.field public o:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxh4;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lk3j;
 
-    iget-object v0, p1, Lxh4;->a:Ljava/lang/Object;
+    const/4 v1, 0x7
 
-    check-cast v0, Ljava/lang/Long;
+    invoke-direct {v0, v1}, Lk3j;-><init>(I)V
 
-    iput-object v0, p0, Lewi;->a:Ljava/lang/Long;
+    sput-object v0, Lewi;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    iget-object v0, p1, Lxh4;->b:Ljava/lang/Object;
+    return-void
+.end method
 
-    check-cast v0, Lzwi;
 
-    iput-object v0, p0, Lewi;->b:Lzwi;
+# virtual methods
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 3
 
-    iget-object v0, p1, Lxh4;->c:Ljava/lang/Object;
+    const/16 v0, 0x4f45
 
-    check-cast v0, Ljava/lang/Boolean;
+    invoke-static {p1, v0}, La9j;->k(Landroid/os/Parcel;I)I
 
-    iput-object v0, p0, Lewi;->c:Ljava/lang/Boolean;
+    move-result v0
 
-    iget-object v0, p1, Lxh4;->o:Ljava/lang/Object;
+    const/4 v1, 0x2
 
-    check-cast v0, Ljava/lang/Boolean;
+    iget-object v2, p0, Lewi;->a:Ljava/lang/String;
 
-    iput-object v0, p0, Lewi;->d:Ljava/lang/Boolean;
+    invoke-static {p1, v1, v2}, La9j;->g(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    iget-object p1, p1, Lxh4;->X:Ljava/lang/Object;
+    const/4 v1, 0x3
 
-    check-cast p1, Ljava/lang/Boolean;
+    iget-object v2, p0, Lewi;->b:Ljava/lang/String;
 
-    iput-object p1, p0, Lewi;->e:Ljava/lang/Boolean;
+    invoke-static {p1, v1, v2}, La9j;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+
+    const/4 v1, 0x4
+
+    iget-object v2, p0, Lewi;->c:Ljava/lang/String;
+
+    invoke-static {p1, v1, v2}, La9j;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+
+    const/4 v1, 0x5
+
+    iget-object v2, p0, Lewi;->d:Ljava/lang/String;
+
+    invoke-static {p1, v1, v2}, La9j;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+
+    const/4 v1, 0x6
+
+    iget-object v2, p0, Lewi;->o:Ljava/lang/String;
+
+    invoke-static {p1, v1, v2}, La9j;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+
+    const/4 v1, 0x7
+
+    iget-object v2, p0, Lewi;->X:Lyti;
+
+    invoke-static {p1, v1, v2, p2}, La9j;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
+
+    const/16 v1, 0x8
+
+    iget-object v2, p0, Lewi;->Y:Lyti;
+
+    invoke-static {p1, v1, v2, p2}, La9j;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
+
+    invoke-static {p1, v0}, La9j;->l(Landroid/os/Parcel;I)V
 
     return-void
 .end method

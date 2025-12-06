@@ -1,206 +1,110 @@
-.class public final synthetic Lz50;
+.class public final Lz50;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Luqa;
 
 
 # instance fields
-.field public final synthetic X:Ljava/lang/Object;
+.field public final synthetic a:Lwe5;
 
-.field public final synthetic a:I
-
-.field public final synthetic b:J
-
-.field public final synthetic c:J
-
-.field public final synthetic o:Ljava/lang/Object;
+.field public final synthetic b:La60;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;JJI)V
+.method public constructor <init>(La60;Lwe5;)V
     .locals 0
 
-    iput p7, p0, Lz50;->a:I
-
-    iput-object p1, p0, Lz50;->o:Ljava/lang/Object;
-
-    iput-object p2, p0, Lz50;->X:Ljava/lang/Object;
-
-    iput-wide p3, p0, Lz50;->b:J
-
-    iput-wide p5, p0, Lz50;->c:J
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lz50;->b:La60;
+
+    iput-object p2, p0, Lz50;->a:Lwe5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 12
+.method public final a(Ljava/lang/Object;)V
+    .locals 3
 
-    iget v0, p0, Lz50;->a:I
+    check-cast p1, Ldv0;
 
-    const/16 v1, 0x3f8
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v2, p0, Lz50;->X:Ljava/lang/Object;
+    iget-object v0, p0, Lz50;->b:La60;
 
-    iget-object v3, p0, Lz50;->o:Ljava/lang/Object;
+    iget-object v1, v0, La60;->l:Lwe5;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v2, p0, Lz50;->a:Lwe5;
 
-    check-cast v3, Lvxe;
+    if-ne v1, v2, :cond_0
 
-    move-object v6, v2
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    check-cast v6, Ljava/lang/String;
+    const-string v2, "Receive BufferProvider state change: "
 
-    iget-object v0, v3, Lvxe;->b:Ljava/lang/Object;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    check-cast v0, Lqi5;
+    iget-object v2, v0, La60;->h:Ldv0;
 
-    sget v2, Llig;->a:I
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object v0, v0, Lqi5;->a:Lwi5;
+    const-string v2, " to "
 
-    iget-object v0, v0, Lwi5;->A0:Ldh4;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ldh4;->J()Lmd;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v5
-
-    new-instance v4, Lpd2;
-
-    iget-wide v7, p0, Lz50;->c:J
-
-    iget-wide v9, p0, Lz50;->b:J
-
-    invoke-direct/range {v4 .. v10}, Lpd2;-><init>(Lmd;Ljava/lang/String;JJ)V
-
-    invoke-virtual {v0, v5, v1, v4}, Ldh4;->K(Lmd;ILt28;)V
-
-    return-void
-
-    :pswitch_0
-    check-cast v3, Lfqf;
-
-    move-object v6, v2
-
-    check-cast v6, Ljava/lang/String;
-
-    iget-object v0, v3, Lfqf;->b:Ljava/lang/Object;
-
-    check-cast v0, Lri5;
-
-    sget-object v2, Lnig;->a:Ljava/lang/String;
-
-    iget-object v0, v0, Lri5;->a:Lxi5;
-
-    iget-object v0, v0, Lxi5;->C0:Leh4;
-
-    invoke-virtual {v0}, Leh4;->H()Lnd;
-
-    move-result-object v5
-
-    new-instance v4, Llg4;
-
-    const/4 v11, 0x2
-
-    iget-wide v7, p0, Lz50;->c:J
-
-    iget-wide v9, p0, Lz50;->b:J
-
-    invoke-direct/range {v4 .. v11}, Llg4;-><init>(Lnd;Ljava/lang/String;JJI)V
-
-    invoke-virtual {v0, v5, v1, v4}, Leh4;->I(Lnd;ILu28;)V
-
-    return-void
-
-    :pswitch_1
-    check-cast v3, Ljava/util/List;
-
-    move-object v4, v2
-
-    check-cast v4, Ltgd;
-
-    invoke-interface {v3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    move-object v9, v1
+    const-string v2, "AudioSource"
 
-    check-cast v9, Lda9;
+    invoke-static {v2, v1}, Lgri;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    const/4 v10, 0x0
+    iget-object v1, v0, La60;->h:Ldv0;
 
-    iget-wide v5, p0, Lz50;->b:J
+    if-eq v1, p1, :cond_0
 
-    iget-wide v7, p0, Lz50;->c:J
+    iput-object p1, v0, La60;->h:Ldv0;
 
-    invoke-virtual/range {v4 .. v10}, Ltgd;->f(JJLda9;Z)J
-
-    goto :goto_0
+    invoke-virtual {v0}, La60;->f()V
 
     :cond_0
     return-void
+.end method
 
-    :pswitch_2
-    check-cast v3, Lir4;
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 4
 
-    move-object v6, v2
+    iget-object v0, p0, Lz50;->b:La60;
 
-    check-cast v6, Ljava/lang/String;
+    iget-object v1, v0, La60;->l:Lwe5;
 
-    iget-object v0, v3, Lir4;->c:Ljava/lang/Object;
+    iget-object v2, p0, Lz50;->a:Lwe5;
 
-    check-cast v0, Lri5;
+    if-ne v1, v2, :cond_0
 
-    sget-object v1, Lnig;->a:Ljava/lang/String;
+    iget-object v1, v0, La60;->j:Ljava/util/concurrent/Executor;
 
-    iget-object v0, v0, Lri5;->a:Lxi5;
+    iget-object v0, v0, La60;->k:Lenb;
 
-    iget-object v0, v0, Lxi5;->C0:Leh4;
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v0}, Leh4;->H()Lnd;
+    if-eqz v0, :cond_0
 
-    move-result-object v5
+    new-instance v2, Lud;
 
-    new-instance v4, Llg4;
+    const/16 v3, 0xa
 
-    const/4 v11, 0x0
+    invoke-direct {v2, v0, v3, p1}, Lud;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    iget-wide v7, p0, Lz50;->c:J
+    invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    iget-wide v9, p0, Lz50;->b:J
-
-    invoke-direct/range {v4 .. v11}, Llg4;-><init>(Lnd;Ljava/lang/String;JJI)V
-
-    const/16 v1, 0x3f0
-
-    invoke-virtual {v0, v5, v1, v4}, Leh4;->I(Lnd;ILu28;)V
-
+    :cond_0
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

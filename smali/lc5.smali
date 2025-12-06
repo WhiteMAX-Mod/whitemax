@@ -2,95 +2,97 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/text/method/TransformationMethod;
+
 
 # instance fields
-.field public final synthetic a:Lmc5;
+.field public final a:Landroid/text/method/TransformationMethod;
 
 
 # direct methods
-.method public constructor <init>(Lmc5;)V
+.method public constructor <init>(Landroid/text/method/TransformationMethod;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Llc5;->a:Lmc5;
+    iput-object p1, p0, Llc5;->a:Landroid/text/method/TransformationMethod;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/google/android/material/textfield/TextInputLayout;)V
-    .locals 4
+.method public final getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
+    .locals 1
 
-    iget-object v0, p0, Llc5;->a:Lmc5;
+    invoke-virtual {p2}, Landroid/view/View;->isInEditMode()Z
 
-    iget-object v1, v0, Lmc5;->H0:Lkc5;
+    move-result v0
 
-    iget-object v2, v0, Lmc5;->E0:Landroid/widget/EditText;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Lcom/google/android/material/textfield/TextInputLayout;->getEditText()Landroid/widget/EditText;
-
-    move-result-object v3
-
-    if-ne v2, v3, :cond_0
-
-    return-void
+    return-object p1
 
     :cond_0
-    iget-object v2, v0, Lmc5;->E0:Landroid/widget/EditText;
+    iget-object v0, p0, Llc5;->a:Landroid/text/method/TransformationMethod;
 
-    if-eqz v2, :cond_1
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v2, v1}, Landroid/widget/TextView;->removeTextChangedListener(Landroid/text/TextWatcher;)V
+    invoke-interface {v0, p1, p2}, Landroid/text/method/TransformationMethod;->getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
 
-    iget-object v2, v0, Lmc5;->E0:Landroid/widget/EditText;
-
-    invoke-virtual {v2}, Landroid/view/View;->getOnFocusChangeListener()Landroid/view/View$OnFocusChangeListener;
-
-    move-result-object v2
-
-    invoke-virtual {v0}, Lmc5;->b()Lnc5;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lnc5;->e()Landroid/view/View$OnFocusChangeListener;
-
-    move-result-object v3
-
-    if-ne v2, v3, :cond_1
-
-    iget-object v2, v0, Lmc5;->E0:Landroid/widget/EditText;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v2, v3}, Landroid/view/View;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
+    move-result-object p1
 
     :cond_1
-    invoke-virtual {p1}, Lcom/google/android/material/textfield/TextInputLayout;->getEditText()Landroid/widget/EditText;
+    if-eqz p1, :cond_3
 
-    move-result-object p1
+    invoke-static {}, Lta5;->a()Lta5;
 
-    iput-object p1, v0, Lmc5;->E0:Landroid/widget/EditText;
+    move-result-object p2
 
-    if-eqz p1, :cond_2
+    invoke-virtual {p2}, Lta5;->b()I
 
-    invoke-virtual {p1, v1}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
+    move-result p2
+
+    const/4 v0, 0x1
+
+    if-eq p2, v0, :cond_2
+
+    goto :goto_0
 
     :cond_2
-    invoke-virtual {v0}, Lmc5;->b()Lnc5;
+    invoke-static {}, Lta5;->a()Lta5;
+
+    move-result-object p2
+
+    invoke-virtual {p2, p1}, Lta5;->g(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
-    iget-object v1, v0, Lmc5;->E0:Landroid/widget/EditText;
+    :cond_3
+    :goto_0
+    return-object p1
+.end method
 
-    invoke-virtual {p1, v1}, Lnc5;->m(Landroid/widget/EditText;)V
+.method public final onFocusChanged(Landroid/view/View;Ljava/lang/CharSequence;ZILandroid/graphics/Rect;)V
+    .locals 6
 
-    invoke-virtual {v0}, Lmc5;->b()Lnc5;
+    iget-object v0, p0, Llc5;->a:Landroid/text/method/TransformationMethod;
 
-    move-result-object p1
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lmc5;->j(Lnc5;)V
+    move-object v1, p1
 
+    move-object v2, p2
+
+    move v3, p3
+
+    move v4, p4
+
+    move-object v5, p5
+
+    invoke-interface/range {v0 .. v5}, Landroid/text/method/TransformationMethod;->onFocusChanged(Landroid/view/View;Ljava/lang/CharSequence;ZILandroid/graphics/Rect;)V
+
+    :cond_0
     return-void
 .end method

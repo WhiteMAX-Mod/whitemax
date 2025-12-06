@@ -1,389 +1,161 @@
 .class public final Lwz2;
-.super Lsgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lzi6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Lk18;
 
-.field public final synthetic Y:Lone/me/chats/search/ChatsListSearchScreen;
+.field public final b:Lk18;
+
+.field public final c:Lk18;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/search/ChatsListSearchScreen;)V
+.method public constructor <init>(Lk18;Lk18;Lk18;)V
     .locals 0
 
-    iput-object p2, p0, Lwz2;->Y:Lone/me/chats/search/ChatsListSearchScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lwz2;->a:Lk18;
 
-    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lwz2;->b:Lk18;
+
+    iput-object p3, p0, Lwz2;->c:Lk18;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lhy2;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lwz2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lwz2;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lwz2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lwz2;
-
-    iget-object v1, p0, Lwz2;->Y:Lone/me/chats/search/ChatsListSearchScreen;
-
-    invoke-direct {v0, p2, v1}, Lwz2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/search/ChatsListSearchScreen;)V
-
-    iput-object p1, v0, Lwz2;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a(JJ)Lqqg;
     .locals 20
 
     move-object/from16 v0, p0
 
-    invoke-static/range {p1 .. p1}, Lxxi;->b(Ljava/lang/Object;)V
+    move-wide/from16 v4, p1
 
-    iget-object v1, v0, Lwz2;->X:Ljava/lang/Object;
+    iget-object v1, v0, Lwz2;->a:Lk18;
 
-    check-cast v1, Lhy2;
-
-    instance-of v2, v1, Lhsd;
-
-    const/4 v3, 0x1
-
-    sget-object v4, Lccg;->a:Lccg;
-
-    iget-object v5, v0, Lwz2;->Y:Lone/me/chats/search/ChatsListSearchScreen;
-
-    if-eqz v2, :cond_0
-
-    sget-object v2, Lone/me/chats/search/ChatsListSearchScreen;->H0:[Ltr7;
-
-    invoke-virtual {v5}, Lone/me/chats/search/ChatsListSearchScreen;->G0()V
-
-    check-cast v1, Lhsd;
-
-    iget-boolean v1, v1, Lhsd;->a:Z
-
-    if-eqz v1, :cond_a
-
-    sget-object v1, Llx2;->a:Llx2;
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
+    invoke-interface {v1}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lr5;->e()Ljava/lang/Object;
+    check-cast v1, Ldd;
+
+    const-string v2, "ACTION_MSG_UNPIN"
+
+    invoke-virtual {v1, v2}, Ldd;->e(Ljava/lang/String;)V
+
+    iget-object v1, v0, Lwz2;->b:Lk18;
+
+    invoke-interface {v1}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lad7;
+    check-cast v1, Lhwa;
 
-    if-eqz v1, :cond_a
+    invoke-virtual {v1, v4, v5}, Lhwa;->j(J)Z
 
-    new-instance v2, Lzc7;
+    move-result v2
 
-    sget-object v5, Lxc7;->q0:Lxc7;
-
-    invoke-direct {v2, v5, v3}, Lzc7;-><init>(Lxc7;I)V
-
-    invoke-static {v2}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
-
-    move-result-object v2
-
-    sget-object v3, Lupd;->w0:Lupd;
-
-    invoke-virtual {v1, v2, v3}, Lad7;->f(Ljava/util/Set;Lupd;)V
-
-    return-object v4
-
-    :cond_0
-    instance-of v2, v1, Lqme;
-
-    if-eqz v2, :cond_3
-
-    check-cast v1, Lqme;
-
-    iget-object v1, v1, Lqme;->a:Ltrf;
-
-    invoke-virtual {v5}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ltrf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    if-nez v1, :cond_1
-
-    goto/16 :goto_3
-
-    :cond_1
-    iget-object v2, v5, Lone/me/chats/search/ChatsListSearchScreen;->G0:Lb3b;
-
-    if-eqz v2, :cond_2
-
-    invoke-virtual {v2}, Lb3b;->a()V
-
-    :cond_2
-    new-instance v2, Lc3b;
-
-    invoke-direct {v2, v5}, Lc3b;-><init>(Lone/me/sdk/arch/Widget;)V
-
-    invoke-virtual {v2, v1}, Lc3b;->h(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {v2}, Lc3b;->i()Lb3b;
-
-    move-result-object v1
-
-    iput-object v1, v5, Lone/me/chats/search/ChatsListSearchScreen;->G0:Lb3b;
-
-    return-object v4
-
-    :cond_3
-    instance-of v2, v1, Lnle;
-
-    const/4 v6, 0x0
-
-    if-eqz v2, :cond_7
-
-    check-cast v1, Lnle;
-
-    sget-object v2, Lone/me/chats/search/ChatsListSearchScreen;->H0:[Ltr7;
-
-    sget-object v2, Lone/me/sdk/bottomsheet/BottomSheetWidget;->z0:[Ltr7;
-
-    iget-object v2, v1, Lnle;->b:Ltrf;
-
-    iget-wide v7, v1, Lnle;->a:J
-
-    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v7
-
-    new-instance v8, Ltcb;
-
-    const-string v9, "selected.chatId.Action"
-
-    invoke-direct {v8, v9, v7}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v8}, [Ltcb;
-
-    move-result-object v7
-
-    invoke-static {v7}, Leli;->b([Ltcb;)Landroid/os/Bundle;
-
-    move-result-object v7
-
-    const/4 v8, 0x4
-
-    const/4 v9, 0x0
-
-    invoke-static {v2, v7, v9, v8}, Levi;->a(Ltrf;Landroid/os/Bundle;Lupd;I)Leo3;
-
-    move-result-object v12
-
-    iget-object v2, v1, Lnle;->c:Ltrf;
-
-    invoke-virtual {v12, v2}, Leo3;->f(Ltrf;)V
-
-    iget-object v1, v1, Lnle;->d:Ljava/util/List;
-
-    new-instance v10, Lvo2;
-
-    const/16 v16, 0x8
-
-    const/16 v17, 0x2
-
-    const/4 v11, 0x1
-
-    const-class v13, Leo3;
-
-    const-string v14, "addButton"
-
-    const-string v15, "addButton([Lone/me/sdk/bottomsheet/ConfirmationBottomSheet$Button;)Lone/me/sdk/bottomsheet/ConfirmationBottomSheet$Builder;"
-
-    invoke-direct/range {v10 .. v17}, Lvo2;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    new-instance v2, Lg4;
-
-    const/4 v7, 0x2
-
-    invoke-direct {v2, v7, v10}, Lg4;-><init>(ILjava/lang/Object;)V
-
-    invoke-interface {v1, v2}, Ljava/lang/Iterable;->forEach(Ljava/util/function/Consumer;)V
-
-    invoke-virtual {v12}, Leo3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
-
-    move-result-object v14
-
-    invoke-virtual {v14, v5}, Lone/me/sdk/arch/Widget;->setTargetController(Ll24;)V
-
-    move-object v1, v5
-
-    :goto_0
-    invoke-virtual {v1}, Ll24;->getParentController()Ll24;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_4
-
-    invoke-virtual {v1}, Ll24;->getParentController()Ll24;
-
-    move-result-object v1
+    if-nez v2, :cond_0
 
     goto :goto_0
 
-    :cond_4
-    instance-of v2, v1, Lwid;
-
-    if-eqz v2, :cond_5
-
-    check-cast v1, Lwid;
-
-    goto :goto_1
-
-    :cond_5
-    move-object v1, v9
-
-    :goto_1
-    if-eqz v1, :cond_6
-
-    invoke-interface {v1}, Lwid;->f0()Lqid;
-
-    move-result-object v9
-
-    :cond_6
-    invoke-virtual {v14, v5}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->R0(Lone/me/sdk/arch/Widget;)V
-
-    if-eqz v9, :cond_a
-
-    new-instance v13, Ltid;
-
-    const/16 v18, 0x0
-
-    const/16 v19, -0x1
-
-    const/4 v15, 0x0
-
-    const/16 v16, 0x0
-
-    const/16 v17, 0x0
-
-    invoke-direct/range {v13 .. v19}, Ltid;-><init>(Ll24;Ljava/lang/String;Lq24;Lq24;ZI)V
-
-    const-string v1, "BottomSheetWidget"
-
-    invoke-static {v6, v13, v3, v1}, Ldy1;->u(ZLtid;ZLjava/lang/String;)V
-
-    invoke-virtual {v9, v13}, Lqid;->G(Ltid;)V
-
-    return-object v4
-
-    :cond_7
-    instance-of v2, v1, Ljle;
-
-    if-eqz v2, :cond_a
-
+    :cond_0
     move-object v2, v1
 
-    check-cast v2, Ljle;
+    new-instance v1, Lyz2;
 
-    iget-object v2, v2, Ljle;->a:Lorf;
-
-    invoke-virtual {v5}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    invoke-virtual {v2}, Lhwa;->t()Lz7c;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Ltrf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    iget-object v3, v3, Lz7c;->a:Lpe8;
 
-    move-result-object v2
+    invoke-virtual {v3}, Lw4e;->k()J
 
-    if-nez v2, :cond_8
+    move-result-wide v6
 
-    goto :goto_3
+    const-wide/16 v8, -0x1
 
-    :cond_8
-    new-instance v3, Lc3b;
+    invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-direct {v3, v5}, Lc3b;-><init>(Lone/me/sdk/arch/Widget;)V
+    move-result-object v16
 
-    sget-object v7, Lt3b;->a:Lt3b;
+    const-wide/16 v18, 0x0
 
-    invoke-virtual {v3, v7}, Lc3b;->e(Lu3b;)V
+    const/4 v8, 0x0
 
-    invoke-virtual {v3, v2}, Lc3b;->h(Ljava/lang/CharSequence;)V
+    const/4 v9, 0x0
 
-    sget-object v2, Lv3b;->a:Lv3b;
+    const/4 v10, 0x0
 
-    invoke-virtual {v3, v2}, Lc3b;->f(La4b;)V
+    const/4 v11, 0x0
 
-    new-instance v2, Lk3b;
+    const/4 v12, 0x0
 
-    invoke-virtual {v5}, Ll24;->getParentController()Ll24;
+    const/4 v13, 0x0
 
-    move-result-object v5
+    const/4 v14, 0x0
 
-    if-eqz v5, :cond_9
+    const/4 v15, 0x0
 
-    invoke-virtual {v5}, Ll24;->getView()Landroid/view/View;
+    const/16 v17, 0x0
 
-    move-result-object v5
+    move-object v0, v2
 
-    if-eqz v5, :cond_9
+    move-wide v2, v6
 
-    invoke-virtual {v5}, Landroid/view/View;->getPaddingBottom()I
+    move-wide/from16 v6, p3
 
-    move-result v5
+    invoke-direct/range {v1 .. v19}, Lyz2;-><init>(JJJILjava/lang/String;ZLjava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ln10;Ljava/lang/Long;ZJ)V
 
-    goto :goto_2
+    invoke-static {v0, v1}, Lhwa;->r(Lhwa;Lsm;)J
 
-    :cond_9
-    move v5, v6
+    move-object/from16 v0, p0
 
-    :goto_2
-    const/4 v7, 0x3
+    :goto_0
+    iget-object v1, v0, Lwz2;->c:Lk18;
 
-    invoke-direct {v2, v6, v6, v5, v7}, Lk3b;-><init>(IIII)V
+    invoke-interface {v1}, Lk18;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v3, v2}, Lc3b;->c(Lk3b;)V
+    move-result-object v1
 
-    new-instance v2, Lj42;
+    check-cast v1, Lw63;
 
-    const/16 v5, 0xe
+    invoke-virtual {v1}, Lw63;->i()Lve2;
 
-    invoke-direct {v2, v5, v1}, Lj42;-><init>(ILjava/lang/Object;)V
+    move-result-object v1
 
-    invoke-virtual {v3, v2}, Lc3b;->d(Ld3b;)V
+    new-instance v2, Ljava/lang/Long;
 
-    invoke-virtual {v3}, Lc3b;->i()Lb3b;
+    invoke-direct {v2, v4, v5}, Ljava/lang/Long;-><init>(J)V
 
-    :cond_a
-    :goto_3
-    return-object v4
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v3
+
+    sget-object v5, Lbf2;->d:Lbf2;
+
+    invoke-virtual {v1, v3, v4, v5}, Lve2;->n(JLbf2;)V
+
+    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v2
+
+    new-instance v4, Lde2;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v4, v5}, Lde2;-><init>(I)V
+
+    invoke-virtual {v1, v2, v3, v5, v4}, Lve2;->r(JZLiu3;)Lpb2;
+
+    sget-object v1, Lqqg;->a:Lqqg;
+
+    return-object v1
 .end method

@@ -21,7 +21,7 @@
         "",
         "",
         "path",
-        "Lccg;",
+        "Lqqg;",
         "setLocalAudioDumpLocation",
         "(Ljava/lang/String;)V",
         "",

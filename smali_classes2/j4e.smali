@@ -1,82 +1,230 @@
-.class public interface abstract Lj4e;
+.class public final Lj4e;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcm6;
 
-# static fields
-.field public static final a:Lht;
 
-.field public static final b:[Ljava/lang/String;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final c:[J
-
-.field public static final d:[I
+.field public final synthetic b:Lk18;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public synthetic constructor <init>(Lk18;I)V
+    .locals 0
 
-    new-instance v0, Lht;
+    iput p2, p0, Lj4e;->a:I
 
-    const-string v5, "error.message.like.unknown.like"
+    iput-object p1, p0, Lj4e;->b:Lk18;
 
-    const-string v6, "error.message.like.unknown.reaction"
-
-    const-string v1, "error.comment.chat.access"
-
-    const-string v2, "error.comment.invalid"
-
-    const-string v3, "error.message.invalid"
-
-    const-string v4, "error.message.chat.access"
-
-    filled-new-array/range {v1 .. v6}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lht;-><init>(Ljava/util/Collection;)V
-
-    sput-object v0, Lj4e;->a:Lht;
-
-    const-string v0, "modifiers"
-
-    const-string v1, "accessFlags"
-
-    filled-new-array {v0, v1}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lj4e;->b:[Ljava/lang/String;
-
-    const/4 v0, 0x3
-
-    new-array v1, v0, [J
-
-    fill-array-data v1, :array_0
-
-    sput-object v1, Lj4e;->c:[J
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x4
-
-    filled-new-array {v1, v0, v2}, [I
-
-    move-result-object v0
-
-    sput-object v0, Lj4e;->d:[I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
 
-    :array_0
-    .array-data 8
-        0x3a98
-        0x2710
-        0x1388
-    .end array-data
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 7
+
+    iget v0, p0, Lj4e;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lj4e;->b:Lk18;
+
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Llv4;
+
+    invoke-virtual {v1}, Llv4;->j()Lcxg;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lcxg;->b:Ljava/lang/String;
+
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Llv4;
+
+    invoke-virtual {v2}, Llv4;->j()Lcxg;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lcxg;->d:Ljava/lang/String;
+
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Llv4;
+
+    invoke-virtual {v3}, Llv4;->j()Lcxg;
+
+    move-result-object v3
+
+    iget-object v3, v3, Lcxg;->h:Ljava/lang/String;
+
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Llv4;
+
+    invoke-virtual {v0}, Llv4;->j()Lcxg;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcxg;->i:Ljava/lang/String;
+
+    const-string v4, "OKMessages/"
+
+    const-string v5, " ("
+
+    const-string v6, "; "
+
+    invoke-static {v4, v1, v5, v2, v6}, Lwy1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    :try_start_0
+    invoke-static {}, Ljava/nio/charset/Charset;->defaultCharset()Ljava/nio/charset/Charset;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/nio/charset/Charset;->name()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Ljava/net/URLEncoder;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lj4e;->b:Lk18;
+
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lc9f;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lj4e;->b:Lk18;
+
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lc9f;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :try_start_1
+    invoke-static {}, Ljavax/net/ssl/TrustManagerFactory;->getDefaultAlgorithm()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljavax/net/ssl/TrustManagerFactory;->getInstance(Ljava/lang/String;)Ljavax/net/ssl/TrustManagerFactory;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Ljavax/net/ssl/TrustManagerFactory;->init(Ljava/security/KeyStore;)V
+
+    invoke-virtual {v0}, Ljavax/net/ssl/TrustManagerFactory;->getTrustManagers()[Ljavax/net/ssl/TrustManager;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    aget-object v0, v0, v1
+
+    check-cast v0, Ljavax/net/ssl/X509TrustManager;
+    :try_end_1
+    .catch Ljavax/net/ssl/SSLException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_1
+
+    :goto_0
+    new-instance v1, Ljavax/net/ssl/SSLException;
+
+    const-string v2, "Failed to create trust manager"
+
+    invoke-direct {v1, v2, v0}, Ljavax/net/ssl/SSLException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v1
+
+    :goto_1
+    throw v0
+
+    :pswitch_2
+    iget-object v0, p0, Lj4e;->b:Lk18;
+
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lc9f;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lc9f;->a(Ljava/lang/String;)Lj6f;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

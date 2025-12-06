@@ -1,72 +1,55 @@
-.class public final Ljma;
-.super Lst7;
+.class public abstract Ljma;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lji6;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lpma;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lpma;I)V
+.method public static a(Landroid/app/Notification$Action$Builder;Z)Landroid/app/Notification$Action$Builder;
     .locals 0
 
-    iput p2, p0, Ljma;->a:I
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Action$Builder;->setAllowGeneratedReplies(Z)Landroid/app/Notification$Action$Builder;
 
-    iput-object p1, p0, Ljma;->b:Lpma;
+    move-result-object p0
 
-    const/4 p1, 0x0
-
-    invoke-direct {p0, p1}, Lst7;-><init>(I)V
-
-    return-void
+    return-object p0
 .end method
 
+.method public static b(Landroid/app/Notification$Builder;Landroid/widget/RemoteViews;)Landroid/app/Notification$Builder;
+    .locals 0
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 1
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setCustomBigContentView(Landroid/widget/RemoteViews;)Landroid/app/Notification$Builder;
 
-    iget v0, p0, Ljma;->a:I
+    move-result-object p0
 
-    packed-switch v0, :pswitch_data_0
+    return-object p0
+.end method
 
-    iget-object v0, p0, Ljma;->b:Lpma;
+.method public static c(Landroid/app/Notification$Builder;Landroid/widget/RemoteViews;)Landroid/app/Notification$Builder;
+    .locals 0
 
-    invoke-virtual {v0}, Lpma;->d()V
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setCustomContentView(Landroid/widget/RemoteViews;)Landroid/app/Notification$Builder;
 
-    sget-object v0, Lccg;->a:Lccg;
+    move-result-object p0
 
-    return-object v0
+    return-object p0
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Ljma;->b:Lpma;
+.method public static d(Landroid/app/Notification$Builder;Landroid/widget/RemoteViews;)Landroid/app/Notification$Builder;
+    .locals 0
 
-    invoke-virtual {v0}, Lpma;->c()V
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setCustomHeadsUpContentView(Landroid/widget/RemoteViews;)Landroid/app/Notification$Builder;
 
-    sget-object v0, Lccg;->a:Lccg;
+    move-result-object p0
 
-    return-object v0
+    return-object p0
+.end method
 
-    :pswitch_1
-    iget-object v0, p0, Ljma;->b:Lpma;
+.method public static e(Landroid/app/Notification$Builder;[Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
+    .locals 0
 
-    invoke-virtual {v0}, Lpma;->d()V
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setRemoteInputHistory([Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
-    sget-object v0, Lccg;->a:Lccg;
+    move-result-object p0
 
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method

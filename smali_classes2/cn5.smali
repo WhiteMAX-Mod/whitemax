@@ -3,52 +3,100 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lsuf;
+.implements Lwgg;
 
 
-# static fields
-.field public static final a:Lcn5;
+# instance fields
+.field public final a:Lvgb;
 
-.field public static final b:Lwif;
+.field public final b:Lyh6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lvgb;Lyh6;)V
+    .locals 0
 
-    new-instance v0, Lcn5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lcn5;->a:Lvgb;
 
-    sput-object v0, Lcn5;->a:Lcn5;
-
-    new-instance v0, Lbn5;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lbn5;-><init>(I)V
-
-    new-instance v1, Lwif;
-
-    invoke-direct {v1, v0}, Lwif;-><init>(Lji6;)V
-
-    sput-object v1, Lcn5;->b:Lwif;
+    iput-object p2, p0, Lcn5;->b:Lyh6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(III)Lpuf;
-    .locals 0
+.method public final c(Lse4;Lze4;Z)V
+    .locals 6
 
-    sget-object p1, Lcn5;->b:Lwif;
+    iget-object v2, p2, Lze4;->a:Landroid/net/Uri;
 
-    invoke-virtual {p1}, Lwif;->getValue()Ljava/lang/Object;
+    iget-wide v3, p2, Lze4;->g:J
 
-    move-result-object p1
+    iget-object v0, p0, Lcn5;->b:Lyh6;
 
-    check-cast p1, Lpuf;
+    iget-object v1, p0, Lcn5;->a:Lvgb;
 
-    return-object p1
+    move v5, p3
+
+    invoke-virtual/range {v0 .. v5}, Lyh6;->f(Lvgb;Landroid/net/Uri;JZ)V
+
+    return-void
+.end method
+
+.method public final d(Lse4;Lze4;ZI)V
+    .locals 7
+
+    iget-object v2, p2, Lze4;->a:Landroid/net/Uri;
+
+    iget-wide v3, p2, Lze4;->g:J
+
+    iget-object v0, p0, Lcn5;->b:Lyh6;
+
+    iget-object v1, p0, Lcn5;->a:Lvgb;
+
+    move v5, p3
+
+    move v6, p4
+
+    invoke-virtual/range {v0 .. v6}, Lyh6;->a(Lvgb;Landroid/net/Uri;JZI)V
+
+    return-void
+.end method
+
+.method public final h(Lse4;Lze4;Z)V
+    .locals 6
+
+    iget-object v2, p2, Lze4;->a:Landroid/net/Uri;
+
+    iget-wide v3, p2, Lze4;->g:J
+
+    iget-object v0, p0, Lcn5;->b:Lyh6;
+
+    iget-object v1, p0, Lcn5;->a:Lvgb;
+
+    move v5, p3
+
+    invoke-virtual/range {v0 .. v5}, Lyh6;->d(Lvgb;Landroid/net/Uri;JZ)V
+
+    return-void
+.end method
+
+.method public final i(Lse4;Lze4;Z)V
+    .locals 6
+
+    iget-object v2, p2, Lze4;->a:Landroid/net/Uri;
+
+    iget-wide v3, p2, Lze4;->g:J
+
+    iget-object v0, p0, Lcn5;->b:Lyh6;
+
+    iget-object v1, p0, Lcn5;->a:Lvgb;
+
+    move v5, p3
+
+    invoke-virtual/range {v0 .. v5}, Lyh6;->h(Lvgb;Landroid/net/Uri;JZ)V
+
+    return-void
 .end method

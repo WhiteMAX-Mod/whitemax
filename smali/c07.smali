@@ -1,95 +1,188 @@
 .class public final Lc07;
-.super Lbk0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+.implements Lpy4;
 
 
 # instance fields
-.field public final X:Ljava/util/List;
+.field public final synthetic a:I
 
-.field public final Y:J
+.field public volatile b:Z
+
+.field public final c:Ljava/lang/Object;
+
+.field public final d:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(JLjava/util/List;)V
-    .locals 7
+.method public constructor <init>(Landroid/os/Handler;Ljava/lang/Runnable;)V
+    .locals 1
 
-    invoke-interface {p3}, Ljava/util/List;->size()I
+    const/4 v0, 0x0
 
-    move-result v0
+    iput v0, p0, Lc07;->a:I
 
-    add-int/lit8 v0, v0, -0x1
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    int-to-long v5, v0
+    .line 2
+    iput-object p1, p0, Lc07;->c:Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    .line 3
+    iput-object p2, p0, Lc07;->d:Ljava/lang/Object;
 
-    const-wide/16 v3, 0x0
+    return-void
+.end method
 
-    move-object v1, p0
+.method public constructor <init>(Ljava/lang/Runnable;Lh0e;)V
+    .locals 1
 
-    invoke-direct/range {v1 .. v6}, Lbk0;-><init>(IJJ)V
+    const/4 v0, 0x1
 
-    iput-wide p1, v1, Lc07;->Y:J
+    iput v0, p0, Lc07;->a:I
 
-    iput-object p3, v1, Lc07;->X:Ljava/util/List;
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 5
+    check-cast p1, Ljava/util/concurrent/atomic/AtomicReference;
+
+    iput-object p1, p0, Lc07;->c:Ljava/lang/Object;
+
+    .line 6
+    iput-object p2, p0, Lc07;->d:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()J
-    .locals 4
+.method public final dispose()V
+    .locals 1
 
-    invoke-virtual {p0}, Lbk0;->a()V
+    iget v0, p0, Lc07;->a:I
 
-    iget-wide v0, p0, Lbk0;->o:J
+    packed-switch v0, :pswitch_data_0
 
-    long-to-int v0, v0
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Lc07;->X:Ljava/util/List;
+    iput-boolean v0, p0, Lc07;->b:Z
 
-    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    iget-object v0, p0, Lc07;->d:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast v0, Lh0e;
 
-    check-cast v0, La17;
+    invoke-interface {v0}, Lpy4;->dispose()V
 
-    iget-wide v0, v0, La17;->X:J
+    return-void
 
-    iget-wide v2, p0, Lc07;->Y:J
+    :pswitch_0
+    iget-object v0, p0, Lc07;->c:Ljava/lang/Object;
 
-    add-long/2addr v2, v0
+    check-cast v0, Landroid/os/Handler;
 
-    return-wide v2
+    invoke-virtual {v0, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lc07;->b:Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final c()J
-    .locals 5
+.method public final e()Z
+    .locals 1
 
-    invoke-virtual {p0}, Lbk0;->a()V
+    iget v0, p0, Lc07;->a:I
 
-    iget-wide v0, p0, Lbk0;->o:J
+    packed-switch v0, :pswitch_data_0
 
-    long-to-int v0, v0
+    iget-boolean v0, p0, Lc07;->b:Z
 
-    iget-object v1, p0, Lc07;->X:Ljava/util/List;
+    return v0
 
-    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    :pswitch_0
+    iget-boolean v0, p0, Lc07;->b:Z
 
-    move-result-object v0
+    return v0
 
-    check-cast v0, La17;
+    nop
 
-    iget-wide v1, p0, Lc07;->Y:J
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    iget-wide v3, v0, La17;->X:J
+.method public final run()V
+    .locals 1
 
-    add-long/2addr v1, v3
+    iget v0, p0, Lc07;->a:I
 
-    iget-wide v3, v0, La17;->c:J
+    packed-switch v0, :pswitch_data_0
 
-    add-long/2addr v1, v3
+    iget-boolean v0, p0, Lc07;->b:Z
 
-    return-wide v1
+    if-nez v0, :cond_0
+
+    :try_start_0
+    iget-object v0, p0, Lc07;->c:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {p0}, Lc07;->dispose()V
+
+    invoke-static {v0}, Lt8j;->a(Ljava/lang/Throwable;)V
+
+    throw v0
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :pswitch_0
+    :try_start_1
+    iget-object v0, p0, Lc07;->d:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Runnable;
+
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception v0
+
+    invoke-static {v0}, Lt8j;->a(Ljava/lang/Throwable;)V
+
+    :goto_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

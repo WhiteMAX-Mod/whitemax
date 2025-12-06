@@ -1,312 +1,200 @@
 .class public final Le22;
-.super Lwk0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/Executor;
+
+
+# static fields
+.field public static final c:Lh30;
 
 
 # instance fields
-.field public final v0:Lgf4;
+.field public final a:Ljava/lang/Object;
 
-.field public final w0:Ldjg;
-
-.field public x0:J
-
-.field public y0:Ld22;
-
-.field public z0:J
+.field public b:Ljava/util/concurrent/ThreadPoolExecutor;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 2
 
-    const/4 v0, 0x6
-
-    invoke-direct {p0, v0}, Lwk0;-><init>(I)V
-
-    new-instance v0, Lgf4;
+    new-instance v0, Lh30;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Lgf4;-><init>(I)V
+    invoke-direct {v0, v1}, Lh30;-><init>(I)V
 
-    iput-object v0, p0, Le22;->v0:Lgf4;
+    sput-object v0, Le22;->c:Lh30;
 
-    new-instance v0, Ldjg;
+    return-void
+.end method
 
-    const/4 v1, 0x2
+.method public constructor <init>()V
+    .locals 9
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Le22;->a:Ljava/lang/Object;
+
+    new-instance v1, Ljava/util/concurrent/ThreadPoolExecutor;
+
+    sget-object v6, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    new-instance v7, Ljava/util/concurrent/LinkedBlockingQueue;
+
+    invoke-direct {v7}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
+
+    sget-object v8, Le22;->c:Lh30;
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x1
+
+    const-wide/16 v4, 0x0
+
+    invoke-direct/range {v1 .. v8}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
+
+    new-instance v0, Ld22;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2}, Ldjg;-><init>(IZ)V
+    invoke-direct {v0, v2}, Ld22;-><init>(I)V
 
-    iput-object v0, p0, Le22;->w0:Ldjg;
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/ThreadPoolExecutor;->setRejectedExecutionHandler(Ljava/util/concurrent/RejectedExecutionHandler;)V
+
+    iput-object v1, p0, Le22;->b:Ljava/util/concurrent/ThreadPoolExecutor;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(ILjava/lang/Object;)V
-    .locals 1
+.method public final a(Lwm2;)V
+    .locals 10
 
-    const/16 v0, 0x8
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-ne p1, v0, :cond_0
+    iget-object v1, p0, Le22;->a:Ljava/lang/Object;
 
-    check-cast p2, Ld22;
+    monitor-enter v1
 
-    iput-object p2, p0, Le22;->y0:Ld22;
+    :try_start_0
+    iget-object v0, p0, Le22;->b:Ljava/util/concurrent/ThreadPoolExecutor;
 
-    :cond_0
-    return-void
-.end method
-
-.method public final f()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "CameraMotionRenderer"
-
-    return-object v0
-.end method
-
-.method public final h()Z
-    .locals 1
-
-    invoke-virtual {p0}, Lwk0;->g()Z
+    invoke-virtual {v0}, Ljava/util/concurrent/ThreadPoolExecutor;->isShutdown()Z
 
     move-result v0
 
-    return v0
-.end method
-
-.method public final i()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final j()V
-    .locals 1
-
-    iget-object v0, p0, Le22;->y0:Ld22;
-
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Ld22;->c()V
+    new-instance v2, Ljava/util/concurrent/ThreadPoolExecutor;
 
-    :cond_0
-    return-void
-.end method
+    sget-object v7, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-.method public final l(JZ)V
-    .locals 0
+    new-instance v8, Ljava/util/concurrent/LinkedBlockingQueue;
 
-    const-wide/high16 p1, -0x8000000000000000L
+    invoke-direct {v8}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
 
-    iput-wide p1, p0, Le22;->z0:J
+    sget-object v9, Le22;->c:Lh30;
 
-    iget-object p1, p0, Le22;->y0:Ld22;
+    const/4 v3, 0x1
 
-    if-eqz p1, :cond_0
+    const/4 v4, 0x1
 
-    invoke-interface {p1}, Ld22;->c()V
+    const-wide/16 v5, 0x0
 
-    :cond_0
-    return-void
-.end method
+    invoke-direct/range {v2 .. v9}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
 
-.method public final p([Lkb6;JJ)V
-    .locals 0
+    new-instance v0, Ld22;
 
-    iput-wide p4, p0, Le22;->x0:J
+    const/4 v3, 0x0
 
-    return-void
-.end method
+    invoke-direct {v0, v3}, Ld22;-><init>(I)V
 
-.method public final t(JJ)V
-    .locals 4
+    invoke-virtual {v2, v0}, Ljava/util/concurrent/ThreadPoolExecutor;->setRejectedExecutionHandler(Ljava/util/concurrent/RejectedExecutionHandler;)V
 
-    :cond_0
-    :goto_0
-    invoke-virtual {p0}, Lwk0;->g()Z
-
-    move-result p3
-
-    if-nez p3, :cond_6
-
-    iget-wide p3, p0, Le22;->z0:J
-
-    const-wide/32 v0, 0x186a0
-
-    add-long/2addr v0, p1
-
-    cmp-long p3, p3, v0
-
-    if-gez p3, :cond_6
-
-    iget-object p3, p0, Le22;->v0:Lgf4;
-
-    invoke-virtual {p3}, Lgf4;->w()V
-
-    iget-object p4, p0, Lwk0;->b:Lzgd;
-
-    invoke-virtual {p4}, Lzgd;->g()V
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, p4, p3, v0}, Lwk0;->q(Lzgd;Lgf4;I)I
-
-    move-result p4
-
-    const/4 v1, -0x4
-
-    if-ne p4, v1, :cond_6
-
-    const/4 p4, 0x4
-
-    invoke-virtual {p3, p4}, Lvy;->i(I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    goto :goto_3
-
-    :cond_1
-    iget-wide v1, p3, Lgf4;->Y:J
-
-    iput-wide v1, p0, Le22;->z0:J
-
-    iget-object v1, p0, Le22;->y0:Ld22;
-
-    if-eqz v1, :cond_0
-
-    const/high16 v1, -0x80000000
-
-    invoke-virtual {p3, v1}, Lvy;->i(I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
+    iput-object v2, p0, Le22;->b:Ljava/util/concurrent/ThreadPoolExecutor;
 
     goto :goto_0
 
-    :cond_2
-    invoke-virtual {p3}, Lgf4;->z()V
+    :catchall_0
+    move-exception v0
 
-    iget-object p3, p3, Lgf4;->o:Ljava/nio/ByteBuffer;
-
-    sget v1, Llig;->a:I
-
-    invoke-virtual {p3}, Ljava/nio/Buffer;->remaining()I
-
-    move-result v1
-
-    const/16 v2, 0x10
-
-    if-eq v1, v2, :cond_3
-
-    const/4 p3, 0x0
-
-    goto :goto_2
-
-    :cond_3
-    invoke-virtual {p3}, Ljava/nio/ByteBuffer;->array()[B
-
-    move-result-object v1
-
-    invoke-virtual {p3}, Ljava/nio/Buffer;->limit()I
-
-    move-result v2
-
-    iget-object v3, p0, Le22;->w0:Ldjg;
-
-    invoke-virtual {v3, v2, v1}, Ldjg;->C(I[B)V
-
-    invoke-virtual {p3}, Ljava/nio/ByteBuffer;->arrayOffset()I
-
-    move-result p3
-
-    add-int/2addr p3, p4
-
-    invoke-virtual {v3, p3}, Ldjg;->E(I)V
-
-    const/4 p3, 0x3
-
-    new-array p4, p3, [F
-
-    :goto_1
-    if-ge v0, p3, :cond_4
-
-    invoke-virtual {v3}, Ldjg;->h()I
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/Float;->intBitsToFloat(I)F
-
-    move-result v1
-
-    aput v1, p4, v0
-
-    add-int/lit8 v0, v0, 0x1
+    move-object p1, v0
 
     goto :goto_1
 
-    :cond_4
-    move-object p3, p4
+    :cond_0
+    :goto_0
+    iget-object v0, p0, Le22;->b:Ljava/util/concurrent/ThreadPoolExecutor;
 
-    :goto_2
-    if-nez p3, :cond_5
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    goto :goto_0
+    new-instance v1, Ljava/util/LinkedHashSet;
 
-    :cond_5
-    iget-object p4, p0, Le22;->y0:Ld22;
+    iget-object p1, p1, Lwm2;->g:Ljava/lang/Object;
 
-    iget-wide v0, p0, Le22;->z0:J
+    check-cast p1, Ljava/util/ArrayList;
 
-    iget-wide v2, p0, Le22;->x0:J
+    invoke-direct {v1, p1}, Ljava/util/LinkedHashSet;-><init>(Ljava/util/Collection;)V
 
-    sub-long/2addr v0, v2
+    invoke-interface {v1}, Ljava/util/Set;->size()I
 
-    invoke-interface {p4, v0, v1, p3}, Ld22;->b(J[F)V
+    move-result p1
 
-    goto/16 :goto_0
+    const/4 v1, 0x1
 
-    :cond_6
-    :goto_3
+    invoke-static {v1, p1}, Ljava/lang/Math;->max(II)I
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/ThreadPoolExecutor;->setMaximumPoolSize(I)V
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/ThreadPoolExecutor;->setCorePoolSize(I)V
+
     return-void
+
+    :goto_1
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
 .end method
 
-.method public final x(Lkb6;)I
-    .locals 1
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 2
 
-    const-string v0, "application/x-camera-motion"
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object p1, p1, Lkb6;->u0:Ljava/lang/String;
+    iget-object v0, p0, Le22;->a:Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    monitor-enter v0
 
-    move-result p1
+    :try_start_0
+    iget-object v1, p0, Le22;->b:Ljava/util/concurrent/ThreadPoolExecutor;
 
-    const/4 v0, 0x0
+    invoke-virtual {v1, p1}, Ljava/util/concurrent/ThreadPoolExecutor;->execute(Ljava/lang/Runnable;)V
 
-    if-eqz p1, :cond_0
+    monitor-exit v0
 
-    const/4 p1, 0x4
+    return-void
 
-    invoke-static {p1, v0, v0}, Lwk0;->b(III)I
+    :catchall_0
+    move-exception p1
 
-    move-result p1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return p1
-
-    :cond_0
-    invoke-static {v0, v0, v0}, Lwk0;->b(III)I
-
-    move-result p1
-
-    return p1
+    throw p1
 .end method

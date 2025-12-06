@@ -1,216 +1,355 @@
 .class public final Lbq;
-.super Ljava/lang/Object;
+.super Lsaj;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final a:Landroid/view/View;
-
-.field public final b:Ljava/lang/String;
-
-.field public c:Ljava/lang/reflect/Method;
-
-.field public o:Landroid/content/Context;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Ljava/lang/String;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
+    iput p1, p0, Lbq;->a:I
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lbq;->a:Landroid/view/View;
-
-    iput-object p2, p0, Lbq;->b:Ljava/lang/String;
 
     return-void
 .end method
 
+.method public static e(Lumb;)Lni5;
+    .locals 8
 
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 5
-
-    iget-object v0, p0, Lbq;->c:Ljava/lang/reflect/Method;
-
-    if-nez v0, :cond_4
-
-    iget-object v0, p0, Lbq;->a:Landroid/view/View;
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lumb;->s()Ljava/lang/String;
 
     move-result-object v1
-
-    :goto_0
-    iget-object v2, p0, Lbq;->b:Ljava/lang/String;
-
-    if-eqz v1, :cond_2
-
-    :try_start_0
-    invoke-virtual {v1}, Landroid/content/Context;->isRestricted()Z
-
-    move-result v3
-
-    if-nez v3, :cond_0
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v3
-
-    const-class v4, Landroid/view/View;
-
-    filled-new-array {v4}, [Ljava/lang/Class;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v2, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    invoke-virtual {p0}, Lumb;->s()Ljava/lang/String;
 
     move-result-object v2
 
-    if-eqz v2, :cond_0
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput-object v2, p0, Lbq;->c:Ljava/lang/reflect/Method;
+    invoke-virtual {p0}, Lumb;->r()J
 
-    iput-object v1, p0, Lbq;->o:Landroid/content/Context;
-    :try_end_0
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-wide v3
+
+    invoke-virtual {p0}, Lumb;->r()J
+
+    move-result-wide v5
+
+    iget-object v0, p0, Lumb;->a:[B
+
+    iget v7, p0, Lumb;->b:I
+
+    iget p0, p0, Lumb;->c:I
+
+    invoke-static {v0, v7, p0}, Ljava/util/Arrays;->copyOfRange([BII)[B
+
+    move-result-object v7
+
+    new-instance v0, Lni5;
+
+    invoke-direct/range {v0 .. v7}, Lni5;-><init>(Ljava/lang/String;Ljava/lang/String;JJ[B)V
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final c(Lyy9;Ljava/nio/ByteBuffer;)Lty9;
+    .locals 17
+
+    move-object/from16 v0, p0
+
+    iget v1, v0, Lbq;->a:I
+
+    const/4 v2, 0x0
+
+    packed-switch v1, :pswitch_data_0
+
+    new-instance v1, Lty9;
+
+    new-instance v3, Lumb;
+
+    invoke-virtual/range {p2 .. p2}, Ljava/nio/ByteBuffer;->array()[B
+
+    move-result-object v4
+
+    invoke-virtual/range {p2 .. p2}, Ljava/nio/Buffer;->limit()I
+
+    move-result v5
+
+    invoke-direct {v3, v5, v4}, Lumb;-><init>(I[B)V
+
+    invoke-static {v3}, Lbq;->e(Lumb;)Lni5;
+
+    move-result-object v3
+
+    const/4 v4, 0x1
+
+    new-array v4, v4, [Lry9;
+
+    aput-object v3, v4, v2
+
+    invoke-direct {v1, v4}, Lty9;-><init>([Lry9;)V
+
+    return-object v1
+
+    :pswitch_0
+    invoke-virtual/range {p2 .. p2}, Ljava/nio/ByteBuffer;->get()B
+
+    move-result v1
+
+    const/16 v3, 0x74
+
+    if-ne v1, v3, :cond_7
+
+    new-instance v1, Lu62;
+
+    invoke-virtual/range {p2 .. p2}, Ljava/nio/ByteBuffer;->array()[B
+
+    move-result-object v3
+
+    invoke-virtual/range {p2 .. p2}, Ljava/nio/Buffer;->limit()I
+
+    move-result v5
+
+    const/4 v6, 0x3
+
+    invoke-direct {v1, v3, v5, v6, v2}, Lu62;-><init>([BIIB)V
+
+    const/16 v3, 0xc
+
+    invoke-virtual {v1, v3}, Lu62;->t(I)V
+
+    invoke-virtual {v1, v3}, Lu62;->i(I)I
+
+    move-result v5
+
+    invoke-virtual {v1}, Lu62;->f()I
+
+    move-result v7
+
+    add-int/2addr v7, v5
+
+    const/4 v5, 0x4
+
+    sub-int/2addr v7, v5
+
+    const/16 v8, 0x2c
+
+    invoke-virtual {v1, v8}, Lu62;->t(I)V
+
+    invoke-virtual {v1, v3}, Lu62;->i(I)I
+
+    move-result v8
+
+    invoke-virtual {v1, v8}, Lu62;->u(I)V
+
+    const/16 v8, 0x10
+
+    invoke-virtual {v1, v8}, Lu62;->t(I)V
+
+    new-instance v9, Ljava/util/ArrayList;
+
+    invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
+
+    :goto_0
+    invoke-virtual {v1}, Lu62;->f()I
+
+    move-result v10
+
+    if-ge v10, v7, :cond_5
+
+    const/16 v10, 0x30
+
+    invoke-virtual {v1, v10}, Lu62;->t(I)V
+
+    const/16 v10, 0x8
+
+    invoke-virtual {v1, v10}, Lu62;->i(I)I
+
+    move-result v11
+
+    invoke-virtual {v1, v5}, Lu62;->t(I)V
+
+    invoke-virtual {v1, v3}, Lu62;->i(I)I
+
+    move-result v12
+
+    invoke-virtual {v1}, Lu62;->f()I
+
+    move-result v13
+
+    add-int/2addr v13, v12
+
+    const/4 v12, 0x0
+
+    const/4 v14, 0x0
+
+    :goto_1
+    invoke-virtual {v1}, Lu62;->f()I
+
+    move-result v15
+
+    if-ge v15, v13, :cond_3
+
+    invoke-virtual {v1, v10}, Lu62;->i(I)I
+
+    move-result v15
+
+    invoke-virtual {v1, v10}, Lu62;->i(I)I
+
+    move-result v2
+
+    invoke-virtual {v1}, Lu62;->f()I
+
+    move-result v16
+
+    add-int v3, v16, v2
+
+    const/4 v4, 0x2
+
+    if-ne v15, v4, :cond_1
+
+    invoke-virtual {v1, v8}, Lu62;->i(I)I
+
+    move-result v2
+
+    invoke-virtual {v1, v10}, Lu62;->t(I)V
+
+    if-ne v2, v6, :cond_2
+
+    :goto_2
+    invoke-virtual {v1}, Lu62;->f()I
+
+    move-result v2
+
+    if-ge v2, v3, :cond_2
+
+    invoke-virtual {v1, v10}, Lu62;->i(I)I
+
+    move-result v2
+
+    sget-object v4, Ljava/nio/charset/StandardCharsets;->US_ASCII:Ljava/nio/charset/Charset;
+
+    new-array v12, v2, [B
+
+    invoke-virtual {v1, v2, v12}, Lu62;->l(I[B)V
+
+    new-instance v2, Ljava/lang/String;
+
+    invoke-direct {v2, v12, v4}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
+
+    invoke-virtual {v1, v10}, Lu62;->i(I)I
+
+    move-result v4
+
+    const/4 v12, 0x0
+
+    :goto_3
+    if-ge v12, v4, :cond_0
+
+    invoke-virtual {v1, v10}, Lu62;->i(I)I
+
+    move-result v15
+
+    invoke-virtual {v1, v15}, Lu62;->u(I)V
+
+    add-int/lit8 v12, v12, 0x1
+
+    goto :goto_3
+
+    :cond_0
+    move-object v12, v2
 
     goto :goto_2
 
-    :catch_0
-    :cond_0
-    instance-of v2, v1, Landroid/content/ContextWrapper;
-
-    if-eqz v2, :cond_1
-
-    check-cast v1, Landroid/content/ContextWrapper;
-
-    invoke-virtual {v1}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    goto :goto_0
-
     :cond_1
-    const/4 v1, 0x0
+    const/16 v4, 0x15
 
-    goto :goto_0
+    if-ne v15, v4, :cond_2
+
+    sget-object v4, Ljava/nio/charset/StandardCharsets;->US_ASCII:Ljava/nio/charset/Charset;
+
+    new-array v14, v2, [B
+
+    invoke-virtual {v1, v2, v14}, Lu62;->l(I[B)V
+
+    new-instance v2, Ljava/lang/String;
+
+    invoke-direct {v2, v14, v4}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
+
+    move-object v14, v2
 
     :cond_2
-    invoke-virtual {v0}, Landroid/view/View;->getId()I
+    mul-int/lit8 v3, v3, 0x8
 
-    move-result p1
+    invoke-virtual {v1, v3}, Lu62;->q(I)V
 
-    const/4 v1, -0x1
+    const/4 v2, 0x0
 
-    if-ne p1, v1, :cond_3
-
-    const-string p1, ""
+    const/16 v3, 0xc
 
     goto :goto_1
 
     :cond_3
-    new-instance v1, Ljava/lang/StringBuilder;
+    mul-int/lit8 v13, v13, 0x8
 
-    const-string v3, " with id \'"
+    invoke-virtual {v1, v13}, Lu62;->q(I)V
 
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-eqz v12, :cond_4
 
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    if-eqz v14, :cond_4
+
+    new-instance v2, Lzp;
+
+    invoke-virtual {v12, v14}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-direct {v2, v11, v3}, Lzp;-><init>(ILjava/lang/String;)V
 
-    move-result-object v3
-
-    invoke-virtual {v3, p1}, Landroid/content/res/Resources;->getResourceEntryName(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, "\'"
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    :goto_1
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    const-string v3, "Could not find method "
-
-    const-string v4, "(View) in a parent or ancestor Context for android:onClick attribute defined on view "
-
-    invoke-static {v3, v2, v4}, Ldy1;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v1, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v1
+    invoke-virtual {v9, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_4
-    :goto_2
-    :try_start_1
-    iget-object v0, p0, Lbq;->c:Ljava/lang/reflect/Method;
+    const/4 v2, 0x0
 
-    iget-object v1, p0, Lbq;->o:Landroid/content/Context;
+    const/16 v3, 0xc
 
-    filled-new-array {p1}, [Ljava/lang/Object;
+    goto/16 :goto_0
 
-    move-result-object p1
+    :cond_5
+    invoke-virtual {v9}, Ljava/util/ArrayList;->isEmpty()Z
 
-    invoke-virtual {v0, v1, p1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_1
-    .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_2
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_1 .. :try_end_1} :catch_1
+    move-result v1
 
-    return-void
-
-    :catch_1
-    move-exception p1
-
-    goto :goto_3
-
-    :catch_2
-    move-exception p1
+    if-eqz v1, :cond_6
 
     goto :goto_4
 
-    :goto_3
-    new-instance v0, Ljava/lang/IllegalStateException;
+    :cond_6
+    new-instance v4, Lty9;
 
-    const-string v1, "Could not execute method for android:onClick"
+    invoke-direct {v4, v9}, Lty9;-><init>(Ljava/util/List;)V
 
-    invoke-direct {v0, v1, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    goto :goto_5
 
-    throw v0
-
+    :cond_7
     :goto_4
-    new-instance v0, Ljava/lang/IllegalStateException;
+    const/4 v4, 0x0
 
-    const-string v1, "Could not execute non-public method for android:onClick"
+    :goto_5
+    return-object v4
 
-    invoke-direct {v0, v1, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    nop
 
-    throw v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

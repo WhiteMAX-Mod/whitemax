@@ -4,136 +4,106 @@
 
 
 # instance fields
-.field public final a:Liu7;
+.field public final a:I
+
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Liu7;)V
+.method public constructor <init>(II)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lbx0;->a:Liu7;
+    iput p1, p0, Lbx0;->a:I
+
+    iput p2, p0, Lbx0;->b:I
 
     return-void
 .end method
 
-.method public static a()Ltqa;
-    .locals 7
 
-    new-instance v0, Ltqa;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    sget v1, Lvza;->a1:I
+    const/4 v0, 0x1
 
-    sget v2, Lxza;->B:I
+    if-ne p0, p1, :cond_0
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    return v0
 
-    move-result-object v2
+    :cond_0
+    instance-of v1, p1, Lbx0;
 
-    sget v3, Lpjd;->u1:I
+    const/4 v2, 0x0
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    if-nez v1, :cond_1
 
-    move-result-object v4
+    return v2
 
-    const/4 v5, 0x0
+    :cond_1
+    check-cast p1, Lbx0;
 
-    const/16 v6, 0x34
+    iget v1, p0, Lbx0;->a:I
 
-    const/4 v3, 0x0
+    iget v3, p1, Lbx0;->a:I
 
-    invoke-direct/range {v0 .. v6}, Ltqa;-><init>(ILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;I)V
+    if-eq v1, v3, :cond_2
 
-    return-object v0
+    return v2
+
+    :cond_2
+    iget v1, p0, Lbx0;->b:I
+
+    iget p1, p1, Lbx0;->b:I
+
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public static b()Ltqa;
-    .locals 7
+.method public final hashCode()I
+    .locals 2
 
-    new-instance v0, Ltqa;
+    iget v0, p0, Lbx0;->a:I
 
-    sget v1, Lvza;->b1:I
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    sget v2, Lxza;->B:I
+    move-result v0
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    mul-int/lit8 v0, v0, 0x1f
 
-    move-result-object v2
+    iget v1, p0, Lbx0;->b:I
 
-    sget v3, Lpjd;->v1:I
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result v1
 
-    move-result-object v4
+    add-int/2addr v1, v0
 
-    const/4 v5, 0x0
-
-    const/16 v6, 0x34
-
-    const/4 v3, 0x0
-
-    invoke-direct/range {v0 .. v6}, Ltqa;-><init>(ILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;I)V
-
-    return-object v0
+    return v1
 .end method
 
-.method public static c()Ltqa;
-    .locals 7
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    new-instance v0, Ltqa;
+    const-string v0, ", verticalPaddings="
 
-    sget v1, Lvza;->r1:I
+    const-string v1, ")"
 
-    sget v2, Lxza;->C:I
+    const-string v2, "ButtonPaddings(horizontalPaddings="
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget v3, p0, Lbx0;->a:I
 
-    move-result-object v2
+    iget v4, p0, Lbx0;->b:I
 
-    sget v3, Lpjd;->M0:I
+    invoke-static {v2, v3, v0, v4, v1}, Lwy1;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    const/4 v5, 0x0
-
-    const/16 v6, 0x34
-
-    const/4 v3, 0x0
-
-    invoke-direct/range {v0 .. v6}, Ltqa;-><init>(ILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;I)V
-
-    return-object v0
-.end method
-
-.method public static d()Ltqa;
-    .locals 7
-
-    new-instance v0, Ltqa;
-
-    sget v1, Lvza;->t1:I
-
-    sget v2, Lxza;->O:I
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    sget v3, Lpjd;->m1:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    const/4 v5, 0x0
-
-    const/16 v6, 0x34
-
-    const/4 v3, 0x0
-
-    invoke-direct/range {v0 .. v6}, Ltqa;-><init>(ILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;I)V
+    move-result-object v0
 
     return-object v0
 .end method

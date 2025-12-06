@@ -1,41 +1,22 @@
 .class public final Lsl1;
-.super Ldq;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lh91;
 
-# static fields
-.field public static final a:Lsl1;
+
+# instance fields
+.field public final synthetic a:Lone/me/calls/ui/ui/call/CallScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lone/me/calls/ui/ui/call/CallScreen;)V
+    .locals 0
 
-    new-instance v0, Lsl1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ldq;-><init>()V
-
-    sput-object v0, Lsl1;->a:Lsl1;
+    iput-object p1, p0, Lsl1;->a:Lone/me/calls/ui/ui/call/CallScreen;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()Lcv1;
-    .locals 2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v0
-
-    const-class v1, Lcv1;
-
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcv1;
-
-    return-object v0
 .end method

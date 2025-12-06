@@ -1,421 +1,134 @@
-.class public final synthetic Li4d;
+.class public abstract Li4d;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
-# interfaces
-.implements Lji6;
 
+# static fields
+.field public static permission_fsi_request:I = 0x7f130ab6
 
-# instance fields
-.field public final synthetic a:I
+.field public static permission_fsi_request_rationale:I = 0x7f130ab7
 
-.field public final synthetic b:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static permissions_allow_access:I = 0x7f130ab8
 
+.field public static permissions_audio_denied_title:I = 0x7f130ab9
 
-# direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
-    .locals 0
+.field public static permissions_audio_for_video_not_granted:I = 0x7f130aba
 
-    iput p2, p0, Li4d;->a:I
+.field public static permissions_audio_for_video_request:I = 0x7f130abb
 
-    iput-object p1, p0, Li4d;->b:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static permissions_audio_for_video_request_denied:I = 0x7f130abc
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static permissions_audio_not_granted:I = 0x7f130abd
 
-    return-void
-.end method
+.field public static permissions_audio_request:I = 0x7f130abe
 
+.field public static permissions_audio_request_denied:I = 0x7f130abf
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 12
+.field public static permissions_audio_title:I = 0x7f130ac0
 
-    iget v0, p0, Li4d;->a:I
+.field public static permissions_background_location_denied:I = 0x7f130ac1
 
-    const/4 v1, 0x2
+.field public static permissions_calls_audio:I = 0x7f130ac2
 
-    const/4 v2, 0x1
+.field public static permissions_calls_audio_denied:I = 0x7f130ac3
 
-    iget-object v3, p0, Li4d;->b:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static permissions_calls_audio_not_granted:I = 0x7f130ac4
 
-    packed-switch v0, :pswitch_data_0
+.field public static permissions_calls_audio_video_request:I = 0x7f130ac5
 
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->f1:[Ltr7;
+.field public static permissions_calls_audio_video_request_title:I = 0x7f130ac6
 
-    sget v0, Lpjd;->p:I
+.field public static permissions_calls_only_audio:I = 0x7f130ac7
 
-    invoke-virtual {v3}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+.field public static permissions_calls_only_calls:I = 0x7f130ac8
 
-    move-result-object v2
+.field public static permissions_calls_only_video:I = 0x7f130ac9
 
-    invoke-static {v2, v0}, La14;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+.field public static permissions_calls_only_video_bluetooth_connect:I = 0x7f130aca
 
-    move-result-object v4
+.field public static permissions_calls_video:I = 0x7f130acb
 
-    new-instance v3, Landroid/graphics/drawable/InsetDrawable;
+.field public static permissions_calls_video_bluetooth_connect:I = 0x7f130acc
 
-    int-to-float v0, v1
+.field public static permissions_calls_video_denied:I = 0x7f130acd
 
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+.field public static permissions_calls_video_not_granted:I = 0x7f130ace
 
-    move-result-object v1
+.field public static permissions_calls_video_preview_request:I = 0x7f130acf
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+.field public static permissions_calls_video_request:I = 0x7f130ad0
 
-    move-result-object v1
+.field public static permissions_calls_video_request_denied:I = 0x7f130ad1
 
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+.field public static permissions_calls_video_request_not_granted:I = 0x7f130ad2
 
-    mul-float/2addr v1, v0
+.field public static permissions_camera_and_storage_not_granted:I = 0x7f130ad3
 
-    invoke-static {v1}, Lfhi;->b(F)I
+.field public static permissions_camera_not_granted:I = 0x7f130ad4
 
-    move-result v5
+.field public static permissions_camera_request_denied_permanently:I = 0x7f130ad5
 
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+.field public static permissions_camera_request_photo:I = 0x7f130ad6
 
-    move-result-object v1
+.field public static permissions_camera_request_photo_denied:I = 0x7f130ad7
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+.field public static permissions_camera_request_photo_with_storage:I = 0x7f130ad8
 
-    move-result-object v1
+.field public static permissions_camera_request_photo_with_storage_denied:I = 0x7f130ad9
 
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+.field public static permissions_camera_request_video:I = 0x7f130ada
 
-    mul-float/2addr v1, v0
+.field public static permissions_camera_request_video_with_storage:I = 0x7f130adb
 
-    invoke-static {v1}, Lfhi;->b(F)I
+.field public static permissions_camera_request_video_with_storage_denied:I = 0x7f130adc
 
-    move-result v6
+.field public static permissions_contacts_not_granted:I = 0x7f130add
 
-    const/4 v1, 0x4
+.field public static permissions_contacts_request:I = 0x7f130ade
 
-    int-to-float v1, v1
+.field public static permissions_contacts_request_denied:I = 0x7f130adf
 
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+.field public static permissions_contacts_request_rationale:I = 0x7f130ae0
 
-    move-result-object v2
+.field public static permissions_dialog_enable_access:I = 0x7f130ae1
 
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+.field public static permissions_dialog_no:I = 0x7f130ae2
 
-    move-result-object v2
+.field public static permissions_dialog_open_setting:I = 0x7f130ae3
 
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+.field public static permissions_dialog_yes:I = 0x7f130ae4
 
-    mul-float/2addr v1, v2
+.field public static permissions_files_request_denied:I = 0x7f130ae5
 
-    invoke-static {v1}, Lfhi;->b(F)I
+.field public static permissions_fsi_request_positive_button:I = 0x7f130ae6
 
-    move-result v7
+.field public static permissions_location_denied:I = 0x7f130ae7
 
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+.field public static permissions_location_not_granted:I = 0x7f130ae8
 
-    move-result-object v1
+.field public static permissions_location_rationale_live:I = 0x7f130aea
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+.field public static permissions_location_rationale_nearby:I = 0x7f130aeb
 
-    move-result-object v1
+.field public static permissions_location_rationale_send:I = 0x7f130aed
 
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+.field public static permissions_post_notification_request_positive_button:I = 0x7f130aef
 
-    mul-float/2addr v0, v1
+.field public static permissions_post_notification_request_rationale:I = 0x7f130af0
 
-    invoke-static {v0}, Lfhi;->b(F)I
+.field public static permissions_post_notification_request_title:I = 0x7f130af1
 
-    move-result v8
+.field public static permissions_storage_not_granted:I = 0x7f130af2
 
-    invoke-direct/range {v3 .. v8}, Landroid/graphics/drawable/InsetDrawable;-><init>(Landroid/graphics/drawable/Drawable;IIII)V
+.field public static permissions_storage_request:I = 0x7f130af3
 
-    return-object v3
+.field public static permissions_storage_request_denied:I = 0x7f130af4
 
-    :pswitch_0
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->f1:[Ltr7;
+.field public static permissions_storage_video_save_request_denied:I = 0x7f130af5
 
-    sget v0, Lpjd;->Q0:I
+.field public static permissions_storage_video_share_request_denied:I = 0x7f130af6
 
-    invoke-virtual {v3}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+.field public static permissions_video_message_request:I = 0x7f130af7
 
-    move-result-object v1
+.field public static permissions_video_message_request_only_camera_title:I = 0x7f130af8
 
-    invoke-static {v1, v0}, La14;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1
-    iget-object v0, v3, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->D0:Ll4d;
-
-    iget v0, v0, Ll4d;->a:I
-
-    invoke-virtual {v3}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-static {v1, v0}, La14;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_2
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->f1:[Ltr7;
-
-    invoke-virtual {v3}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->W0()Ly2d;
-
-    move-result-object v5
-
-    iget-object v0, v3, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->b:Liu7;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v6, v0
-
-    check-cast v6, Lk3d;
-
-    invoke-virtual {v3}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->W0()Ly2d;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    sget-object v0, Lfqh;->a:Lfqh;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v0
-
-    const-class v4, Lv50;
-
-    invoke-virtual {v0, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
-
-    move-result-object v0
-
-    :goto_0
-    move-object v7, v0
-
-    goto :goto_1
-
-    :cond_0
-    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw v0
-
-    :cond_1
-    sget-object v0, Lfqh;->a:Lfqh;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v0
-
-    const-class v4, Lhtg;
-
-    invoke-virtual {v0, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :goto_1
-    new-instance v0, Li4d;
-
-    invoke-direct {v0, v3, v2}, Li4d;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
-
-    new-instance v8, Lwif;
-
-    invoke-direct {v8, v0}, Lwif;-><init>(Lji6;)V
-
-    new-instance v0, Li4d;
-
-    invoke-direct {v0, v3, v1}, Li4d;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
-
-    new-instance v9, Lwif;
-
-    invoke-direct {v9, v0}, Lwif;-><init>(Lji6;)V
-
-    new-instance v0, Li4d;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v3, v1}, Li4d;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
-
-    new-instance v10, Lwif;
-
-    invoke-direct {v10, v0}, Lwif;-><init>(Lji6;)V
-
-    new-instance v4, Lg4d;
-
-    new-instance v11, Lyac;
-
-    const/16 v0, 0xe
-
-    invoke-direct {v11, v0}, Lyac;-><init>(I)V
-
-    invoke-direct/range {v4 .. v11}, Lg4d;-><init>(Ly2d;Lk3d;Liu7;Lwif;Lwif;Lwif;Lyac;)V
-
-    return-object v4
-
-    :pswitch_3
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->f1:[Ltr7;
-
-    invoke-virtual {v3}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->W0()Ly2d;
-
-    move-result-object v0
-
-    sget-object v1, Ly2d;->a:Ly2d;
-
-    if-ne v0, v1, :cond_2
-
-    new-instance v0, Lnpg;
-
-    sget-object v1, Lfqh;->a:Lfqh;
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v1
-
-    const-class v2, Lttg;
-
-    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
-
-    move-result-object v1
-
-    iget-object v2, v3, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->b:Liu7;
-
-    invoke-interface {v2}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lk3d;
-
-    iget-object v2, v2, Lk3d;->b:Lor2;
-
-    invoke-direct {v0, v1, v2}, Lnpg;-><init>(Liu7;Lji6;)V
-
-    goto :goto_2
-
-    :cond_2
-    new-instance v0, Lt40;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    :goto_2
-    return-object v0
-
-    :pswitch_4
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->f1:[Ltr7;
-
-    invoke-virtual {v3}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->W0()Ly2d;
-
-    move-result-object v0
-
-    sget-object v1, Ly2d;->b:Ly2d;
-
-    if-ne v0, v1, :cond_3
-
-    new-instance v0, Lc70;
-
-    invoke-direct {v0}, Lc70;-><init>()V
-
-    goto :goto_3
-
-    :cond_3
-    const/4 v0, 0x0
-
-    :goto_3
-    return-object v0
-
-    :pswitch_5
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->f1:[Ltr7;
-
-    invoke-virtual {v3}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->W0()Ly2d;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    if-ne v0, v2, :cond_4
-
-    new-instance v0, Lm40;
-
-    sget-object v1, Lfqh;->a:Lfqh;
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v2
-
-    const-class v3, Lulf;
-
-    invoke-virtual {v2, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
-
-    move-result-object v2
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v1
-
-    const-class v3, Lqz9;
-
-    invoke-virtual {v1, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
-
-    move-result-object v1
-
-    invoke-direct {v0, v2, v1}, Lm40;-><init>(Liu7;Liu7;)V
-
-    goto :goto_4
-
-    :cond_4
-    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw v0
-
-    :cond_5
-    new-instance v0, Lkrg;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    :goto_4
-    return-object v0
-
-    :pswitch_6
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->f1:[Ltr7;
-
-    new-instance v0, Ljd5;
-
-    invoke-virtual {v3}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    sget v2, Lzjd;->a:I
-
-    invoke-direct {v0, v1}, Ljd5;-><init>(Landroid/content/Context;)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+.field public static permissions_video_message_request_title:I = 0x7f130af9

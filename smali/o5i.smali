@@ -1,80 +1,204 @@
-.class public final Lo5i;
-.super Lb4i;
+.class public abstract Lo5i;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final transient c:Lu5i;
+# static fields
+.field public static final a:Ljava/lang/reflect/Method;
 
-.field public final transient o:Ls5i;
+.field public static final b:Ljava/lang/reflect/Method;
+
+.field public static final c:Ljava/lang/reflect/Method;
+
+.field public static final d:Ljava/lang/reflect/Method;
+
+.field public static e:Ljava/lang/Boolean;
 
 
 # direct methods
-.method public constructor <init>(Lu5i;Ls5i;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 8
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+    const-class v0, Ljava/lang/String;
 
-    iput-object p1, p0, Lo5i;->c:Lu5i;
+    const-string v1, "add"
 
-    iput-object p2, p0, Lo5i;->o:Ls5i;
+    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    return-void
-.end method
+    const-class v3, Landroid/os/WorkSource;
 
+    invoke-static {}, Landroid/os/Process;->myUid()I
 
-# virtual methods
-.method public final a(I[Ljava/lang/Object;)I
-    .locals 1
+    const/4 v4, 0x0
 
-    iget-object v0, p0, Lo5i;->o:Ls5i;
+    :try_start_0
+    filled-new-array {v2}, [Ljava/lang/Class;
 
-    invoke-virtual {v0, p1, p2}, Lv3i;->a(I[Ljava/lang/Object;)I
+    move-result-object v5
 
-    move-result p1
+    invoke-virtual {v3, v1, v5}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    return p1
-.end method
+    move-result-object v5
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-.method public final contains(Ljava/lang/Object;)Z
-    .locals 1
+    goto :goto_0
 
-    iget-object v0, p0, Lo5i;->c:Lu5i;
+    :catch_0
+    move-object v5, v4
 
-    invoke-virtual {v0, p1}, Lu5i;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    :goto_0
+    sput-object v5, Lo5i;->a:Ljava/lang/reflect/Method;
 
-    move-result-object p1
+    :try_start_1
+    filled-new-array {v2, v0}, [Ljava/lang/Class;
 
-    if-eqz p1, :cond_0
+    move-result-object v5
 
-    const/4 p1, 0x1
+    invoke-virtual {v3, v1, v5}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    return p1
+    move-result-object v1
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+
+    goto :goto_1
+
+    :catch_1
+    move-object v1, v4
+
+    :goto_1
+    sput-object v1, Lo5i;->b:Ljava/lang/reflect/Method;
+
+    :try_start_2
+    const-string v1, "size"
+
+    invoke-virtual {v3, v1, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v1
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
+
+    goto :goto_2
+
+    :catch_2
+    move-object v1, v4
+
+    :goto_2
+    sput-object v1, Lo5i;->c:Ljava/lang/reflect/Method;
+
+    :try_start_3
+    const-string v1, "get"
+
+    filled-new-array {v2}, [Ljava/lang/Class;
+
+    move-result-object v5
+
+    invoke-virtual {v3, v1, v5}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    :try_start_4
+    const-string v1, "getName"
+
+    filled-new-array {v2}, [Ljava/lang/Class;
+
+    move-result-object v5
+
+    invoke-virtual {v3, v1, v5}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v5, 0x1c
+
+    const-string v6, "WorkSourceUtil"
+
+    if-lt v1, v5, :cond_0
+
+    :try_start_5
+    const-string v1, "createWorkChain"
+
+    invoke-virtual {v3, v1, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    :try_end_5
+    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_5
+
+    goto :goto_3
+
+    :catch_5
+    move-exception v1
+
+    const-string v7, "Missing WorkChain API createWorkChain"
+
+    invoke-static {v6, v7, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
-    const/4 p1, 0x0
+    :goto_3
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    return p1
-.end method
+    if-lt v1, v5, :cond_1
 
-.method public final synthetic iterator()Ljava/util/Iterator;
-    .locals 2
+    :try_start_6
+    const-string v1, "android.os.WorkSource$WorkChain"
 
-    iget-object v0, p0, Lo5i;->o:Ls5i;
+    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
-    const/4 v1, 0x0
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Lv3i;->g(I)Lq3i;
+    const-string v7, "addNode"
+
+    filled-new-array {v2, v0}, [Ljava/lang/Class;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    invoke-virtual {v1, v7, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    :try_end_6
+    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_6
 
-.method public final size()I
-    .locals 1
+    goto :goto_4
 
-    const/4 v0, 0x1
+    :catch_6
+    move-exception v0
 
-    return v0
+    const-string v1, "Missing WorkChain class"
+
+    invoke-static {v6, v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :cond_1
+    :goto_4
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    if-lt v0, v5, :cond_2
+
+    :try_start_7
+    const-string v0, "isEmpty"
+
+    invoke-virtual {v3, v0, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+    :try_end_7
+    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_7
+
+    const/4 v1, 0x1
+
+    :try_start_8
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    :try_end_8
+    .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_8
+
+    goto :goto_5
+
+    :catch_7
+    :cond_2
+    move-object v0, v4
+
+    :catch_8
+    :goto_5
+    sput-object v0, Lo5i;->d:Ljava/lang/reflect/Method;
+
+    sput-object v4, Lo5i;->e:Ljava/lang/Boolean;
+
+    return-void
 .end method

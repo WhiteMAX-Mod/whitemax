@@ -1,104 +1,67 @@
-.class public final Lfk8;
-.super Luj8;
+.class public abstract Lfk8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lxef;
 
-
-# instance fields
-.field public final a:Ljava/util/concurrent/Callable;
+# static fields
+.field public static final a:[B
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Callable;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0x80
 
-    iput-object p1, p0, Lfk8;->a:Ljava/util/concurrent/Callable;
+    new-array v0, v0, [B
 
-    return-void
-.end method
+    const/4 v1, -0x1
 
+    invoke-static {v0, v1}, Ljava/util/Arrays;->fill([BB)V
 
-# virtual methods
-.method public final f(Lnk8;)V
-    .locals 3
+    const/4 v1, 0x0
 
-    new-instance v0, Lb7;
+    move v2, v1
 
-    const/4 v1, 0x1
+    :goto_0
+    const/16 v3, 0xa
 
-    sget-object v2, Louf;->b:Lzuh;
+    if-ge v2, v3, :cond_0
 
-    invoke-direct {v0, v1, v2}, Lb7;-><init>(ILjava/lang/Object;)V
+    add-int/lit8 v3, v2, 0x30
 
-    invoke-interface {p1, v0}, Lnk8;->c(Lvv4;)V
+    int-to-byte v4, v2
 
-    invoke-virtual {v0}, Lb7;->h()Z
+    aput-byte v4, v0, v3
 
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    :try_start_0
-    iget-object v1, p0, Lfk8;->a:Ljava/util/concurrent/Callable;
-
-    invoke-interface {v1}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
-
-    move-result-object v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v0}, Lb7;->h()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    if-nez v1, :cond_0
-
-    invoke-interface {p1}, Lnk8;->b()V
-
-    return-void
-
-    :cond_0
-    invoke-interface {p1, v1}, Lnk8;->a(Ljava/lang/Object;)V
-
-    return-void
-
-    :catchall_0
-    move-exception v1
-
-    invoke-static {v1}, Lq0j;->b(Ljava/lang/Throwable;)V
-
-    invoke-virtual {v0}, Lb7;->h()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    invoke-interface {p1, v1}, Lnk8;->onError(Ljava/lang/Throwable;)V
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
+    :cond_0
+    :goto_1
+    const/16 v2, 0x1a
+
+    if-ge v1, v2, :cond_1
+
+    add-int/lit8 v2, v1, 0x41
+
+    add-int/lit8 v3, v1, 0xa
+
+    int-to-byte v3, v3
+
+    aput-byte v3, v0, v2
+
+    add-int/lit8 v2, v1, 0x61
+
+    aput-byte v3, v0, v2
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1
+
     :cond_1
-    invoke-static {v1}, Liyi;->a(Ljava/lang/Throwable;)V
+    sput-object v0, Lfk8;->a:[B
 
-    :cond_2
-    :goto_0
     return-void
-.end method
-
-.method public final get()Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lfk8;->a:Ljava/util/concurrent/Callable;
-
-    invoke-interface {v0}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
 .end method

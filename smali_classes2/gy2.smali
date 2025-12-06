@@ -1,106 +1,157 @@
-.class public final Lgy2;
-.super Lpmf;
+.class public final enum Lgy2;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public c:Ljava/util/List;
+# static fields
+.field public static final enum X:Lgy2;
 
-.field public o:J
+.field public static final enum Y:Lgy2;
+
+.field public static final enum Z:Lgy2;
+
+.field public static final enum a:Lgy2;
+
+.field public static final enum b:Lgy2;
+
+.field public static final enum c:Lgy2;
+
+.field public static final enum d:Lgy2;
+
+.field public static final enum o:Lgy2;
+
+.field public static final enum s0:Lgy2;
+
+.field public static final synthetic t0:[Lgy2;
 
 
 # direct methods
-.method public constructor <init>(Lpf9;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 11
 
-    invoke-direct {p0, p1}, Lpmf;-><init>(Lpf9;)V
+    new-instance v0, Lgy2;
 
-    iget-object p1, p0, Lgy2;->c:Ljava/util/List;
+    const-string v1, "UNBLOCK"
 
-    if-nez p1, :cond_0
+    const/4 v2, 0x0
 
-    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object p1, p0, Lgy2;->c:Ljava/util/List;
+    sput-object v0, Lgy2;->a:Lgy2;
 
-    :cond_0
-    return-void
-.end method
+    new-instance v1, Lgy2;
 
+    const-string v2, "REMOVE_CHAT"
 
-# virtual methods
-.method public final d(Lpf9;Ljava/lang/String;)V
-    .locals 1
+    const/4 v3, 0x1
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const-string v0, "marker"
+    sput-object v1, Lgy2;->b:Lgy2;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    new-instance v2, Lgy2;
 
-    move-result v0
+    const-string v3, "LEAVE_CHAT"
 
-    if-nez v0, :cond_1
+    const/4 v4, 0x2
 
-    const-string v0, "chats"
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    sput-object v2, Lgy2;->c:Lgy2;
 
-    move-result p2
+    new-instance v3, Lgy2;
 
-    if-nez p2, :cond_0
+    const-string v4, "JOIN_CHAT"
 
-    invoke-virtual {p1}, Lpf9;->y()V
+    const/4 v5, 0x3
 
-    return-void
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    :cond_0
-    invoke-static {p1}, Lzz;->b(Lpf9;)Lzz;
+    sput-object v3, Lgy2;->d:Lgy2;
 
-    move-result-object p1
+    new-instance v4, Lgy2;
 
-    iput-object p1, p0, Lgy2;->c:Ljava/util/List;
+    const-string v5, "START_BOT"
 
-    return-void
+    const/4 v6, 0x4
 
-    :cond_1
-    invoke-virtual {p1}, Lpf9;->r0()J
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    move-result-wide p1
+    sput-object v4, Lgy2;->o:Lgy2;
 
-    iput-wide p1, p0, Lgy2;->o:J
+    new-instance v5, Lgy2;
 
-    return-void
-.end method
+    const-string v6, "POST_RESTRICTED"
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    const/4 v7, 0x5
 
-    iget-wide v0, p0, Lgy2;->o:J
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget-object v2, p0, Lgy2;->c:Ljava/util/List;
+    sput-object v5, Lgy2;->X:Lgy2;
 
-    invoke-static {v2}, Lhuh;->c(Ljava/util/Collection;)I
+    new-instance v6, Lgy2;
 
-    move-result v2
+    const-string v7, "UNMUTE_CHAT"
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    const/4 v8, 0x6
 
-    const-string v4, "marker="
+    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    sput-object v6, Lgy2;->Y:Lgy2;
 
-    invoke-virtual {v3, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    new-instance v7, Lgy2;
 
-    const-string v0, ", chats="
+    const-string v8, "MUTE_CHAT"
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v9, 0x7
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    sput-object v7, Lgy2;->Z:Lgy2;
+
+    new-instance v8, Lgy2;
+
+    const-string v9, "SUBSCRIBE"
+
+    const/16 v10, 0x8
+
+    invoke-direct {v8, v9, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v8, Lgy2;->s0:Lgy2;
+
+    filled-new-array/range {v0 .. v8}, [Lgy2;
 
     move-result-object v0
+
+    sput-object v0, Lgy2;->t0:[Lgy2;
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lgy2;
+    .locals 1
+
+    const-class v0, Lgy2;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lgy2;
+
+    return-object p0
+.end method
+
+.method public static values()[Lgy2;
+    .locals 1
+
+    sget-object v0, Lgy2;->t0:[Lgy2;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lgy2;
 
     return-object v0
 .end method

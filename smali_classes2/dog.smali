@@ -1,61 +1,150 @@
 .class public final Ldog;
-.super Ly14;
+.super Ldtf;
 .source "SourceFile"
+
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public X:Le20;
+.field public X:I
 
-.field public Y:Ld20;
+.field public final synthetic Y:Leog;
 
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Lfog;
-
-.field public final synthetic q0:Lfog;
-
-.field public r0:I
+.field public o:J
 
 
 # direct methods
-.method public constructor <init>(Lfog;Ly14;)V
+.method public constructor <init>(Leog;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Ldog;->q0:Lfog;
+    iput-object p1, p0, Ldog;->Y:Leog;
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lf84;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Ldog;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Ldog;
+
+    sget-object p2, Lqqg;->a:Lqqg;
+
+    invoke-virtual {p1, p2}, Ldog;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Ldog;
+
+    iget-object v0, p0, Ldog;->Y:Leog;
+
+    invoke-direct {p1, v0, p2}, Ldog;-><init>(Leog;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+    .locals 9
 
-    iput-object p1, p0, Ldog;->Z:Ljava/lang/Object;
+    iget-object v0, p0, Ldog;->Y:Leog;
 
-    iget p1, p0, Ldog;->r0:I
+    iget-object v0, v0, Leog;->v0:Ltcf;
 
-    const/high16 v0, -0x80000000
+    iget v1, p0, Ldog;->X:I
 
-    or-int/2addr p1, v0
+    const-wide/16 v2, -0x1
 
-    iput p1, p0, Ldog;->r0:I
+    const/4 v4, 0x1
 
-    const-wide/16 v2, 0x0
+    if-eqz v1, :cond_1
 
-    const-wide/16 v4, 0x0
+    if-ne v1, v4, :cond_0
 
-    iget-object v0, p0, Ldog;->q0:Lfog;
+    iget-wide v5, p0, Ldog;->o:J
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    invoke-virtual {v0}, Ltcf;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v5
+
+    :goto_0
+    cmp-long p1, v2, v5
+
+    if-gez p1, :cond_3
+
+    new-instance p1, Ljava/lang/Long;
+
+    invoke-direct {p1, v5, v6}, Ljava/lang/Long;-><init>(J)V
 
     const/4 v1, 0x0
 
-    move-object v6, p0
+    invoke-virtual {v0, v1, p1}, Ltcf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual/range {v0 .. v6}, Lfog;->c(Le20;JJLy14;)Ljava/lang/Object;
+    iput-wide v5, p0, Ldog;->o:J
+
+    iput v4, p0, Ldog;->X:I
+
+    const-wide/16 v7, 0x3e8
+
+    invoke-static {v7, v8, p0}, Ls8j;->c(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
+
+    sget-object v1, Lg84;->a:Lg84;
+
+    if-ne p1, v1, :cond_2
+
+    return-object v1
+
+    :cond_2
+    :goto_1
+    add-long/2addr v5, v2
+
+    goto :goto_0
+
+    :cond_3
+    sget-object p1, Lqqg;->a:Lqqg;
 
     return-object p1
 .end method

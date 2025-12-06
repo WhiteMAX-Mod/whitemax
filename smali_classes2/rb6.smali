@@ -1,63 +1,45 @@
 .class public final Lrb6;
-.super Ly14;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public X:Z
-
-.field public Y:Ltb6;
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Z
-
-.field public final synthetic q0:Ltb6;
-
-.field public r0:I
+# interfaces
+.implements Laid;
 
 
-# direct methods
-.method public constructor <init>(Ltb6;Ly14;)V
+# virtual methods
+.method public final a(Landroid/view/MotionEvent;)V
     .locals 0
-
-    iput-object p1, p0, Lrb6;->q0:Ltb6;
-
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
+.method public final c(Landroidx/recyclerview/widget/RecyclerView;Landroid/view/MotionEvent;)Z
+    .locals 1
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
-    iput-object p1, p0, Lrb6;->Z:Ljava/lang/Object;
+    move-result p2
 
-    iget p1, p0, Lrb6;->r0:I
+    const/4 v0, 0x2
 
-    const/high16 v0, -0x80000000
+    if-ne p2, v0, :cond_0
 
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lrb6;->r0:I
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    iget-object v0, p0, Lrb6;->q0:Ltb6;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    move-object v5, p0
-
-    invoke-virtual/range {v0 .. v5}, Ltb6;->a(Lpb9;Ljava/lang/Long;ZZLy14;)Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object p1
 
-    return-object p1
+    const/4 p2, 0x1
+
+    invoke-interface {p1, p2}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final e(Z)V
+    .locals 0
+
+    return-void
 .end method

@@ -575,6 +575,8 @@
     <attr name="chat_common_background_chatBackground_backgroundStep1" format="reference|color" />
     <attr name="chat_common_background_chatBackground_backgroundStep2" format="reference|color" />
     <attr name="chat_common_background_chatBackground_patternColor" format="reference|color" />
+    <attr name="chat_common_background_chatBackground_patternGradientStep1" format="reference|color" />
+    <attr name="chat_common_background_chatBackground_patternGradientStep2" format="reference|color" />
     <attr name="chat_common_background_chatBackground_patternStep1" format="reference|color" />
     <attr name="chat_common_background_chatBackground_patternStep2" format="reference|color" />
     <attr name="chat_common_background_chatBackground_patternStep3" format="reference|color" />
@@ -727,6 +729,7 @@
     <attr name="chat_common_stroke_glass" format="reference|color" />
     <attr name="chat_common_stroke_separator" format="reference" />
     <attr name="chat_common_stroke_separator_primary" format="reference|color" />
+    <attr name="chat_common_stroke_separator_secondary" format="reference|color" />
     <attr name="chat_common_text" format="reference" />
     <attr name="chat_common_text_capsule" format="reference|color" />
     <attr name="chat_common_text_capsuleSecondary" format="reference|color" />
@@ -1794,7 +1797,6 @@
         <enum name="screen" value="15" />
         <enum name="add" value="16" />
     </attr>
-    <attr name="icon_switch_start_drawable" format="reference" />
     <attr name="iconifiedByDefault" format="boolean" />
     <attr name="ifTagNotSet" format="reference" />
     <attr name="ifTagSet" format="reference" />

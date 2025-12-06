@@ -1,70 +1,96 @@
-.class public final Lipi;
+.class public abstract Lipi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ltha;
-
-
-# static fields
-.field public static final a:Lipi;
-
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public static a(II)J
+    .locals 4
 
-    new-instance v0, Lipi;
+    int-to-long v0, p0
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 p0, 0x20
 
-    sput-object v0, Lipi;->a:Lipi;
+    shl-long/2addr v0, p0
 
-    new-instance v0, Lr8i;
+    int-to-long p0, p1
+
+    const-wide v2, 0xffffffffL
+
+    and-long/2addr p0, v2
+
+    or-long/2addr p0, v0
+
+    return-wide p0
+.end method
+
+.method public static b(ILcm6;)Lk18;
+    .locals 2
+
+    sget-object v0, Lqha;->G0:Lqha;
+
+    sget-object v1, Lo18;->$EnumSwitchMapping$0:[I
+
+    invoke-static {p0}, Laz1;->v(I)I
+
+    move-result p0
+
+    aget p0, v1, p0
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Lr8i;-><init>(I)V
+    if-eq p0, v1, :cond_2
 
-    const-class v1, Lm9i;
+    const/4 v1, 0x2
 
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+    if-eq p0, v1, :cond_1
 
-    move-result-object v0
+    const/4 v1, 0x3
 
-    const/4 v2, 0x2
+    if-ne p0, v1, :cond_0
 
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
+    new-instance p0, Ldsg;
 
-    move-result-object v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+    iput-object p1, p0, Ldsg;->a:Lcm6;
 
-    move-result-object v0
+    iput-object v0, p0, Ldsg;->b:Ljava/lang/Object;
 
-    const/4 v2, 0x3
+    return-object p0
 
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
+    :cond_0
+    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
 
-    move-result-object v0
+    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+    throw p0
 
-    move-result-object v0
+    :cond_1
+    new-instance p0, Lxwd;
 
-    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
+    iput-object p1, p0, Lxwd;->a:Lcm6;
+
+    iput-object v0, p0, Lxwd;->b:Ljava/lang/Object;
+
+    return-object p0
+
+    :cond_2
+    new-instance p0, Lbwf;
+
+    invoke-direct {p0, p1}, Lbwf;-><init>(Lcm6;)V
+
+    return-object p0
 .end method
 
+.method public static c(Lcm6;)Lbwf;
+    .locals 1
 
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+    new-instance v0, Lbwf;
 
-    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    invoke-direct {v0, p0}, Lbwf;-><init>(Lcm6;)V
 
-    move-result-object p1
-
-    throw p1
+    return-object v0
 .end method

@@ -1,53 +1,89 @@
 .class public final Llfd;
-.super Ly14;
+.super Ldtf;
 .source "SourceFile"
+
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public X:Ljava/lang/String;
+.field public final synthetic X:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lyfd;
-
-.field public o:Ljava/lang/Object;
-
-.field public q0:I
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lyfd;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
     .locals 0
 
-    iput-object p1, p0, Llfd;->Z:Lyfd;
+    iput-object p2, p0, Llfd;->X:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iput-object p1, p0, Llfd;->Y:Ljava/lang/Object;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget p1, p0, Llfd;->q0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Llfd;->q0:I
-
-    iget-object p1, p0, Llfd;->Z:Lyfd;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0, p0}, Lyfd;->b(Lyfd;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Llfd;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
+
+    check-cast p1, Llfd;
+
+    sget-object p2, Lqqg;->a:Lqqg;
+
+    invoke-virtual {p1, p2}, Llfd;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Llfd;
+
+    iget-object v1, p0, Llfd;->X:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+
+    invoke-direct {v0, p2, v1}, Llfd;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
+
+    iput-object p1, v0, Llfd;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Llfd;->o:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/String;
+
+    iget-object v0, p0, Llfd;->X:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+
+    iget-object v1, v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->D0:Lrkh;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1, p1}, Lrkh;->setDurationText(Ljava/lang/String;)V
+
+    :cond_0
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0()Landroid/widget/TextView;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    sget-object p1, Lqqg;->a:Lqqg;
 
     return-object p1
 .end method

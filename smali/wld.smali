@@ -1,17 +1,50 @@
-.class public interface abstract Lwld;
+.class public final Lwld;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Comparable;
+
+
+# instance fields
+.field public final a:Ljava/util/ArrayList;
+
+.field public b:J
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+
+    iput-wide v0, p0, Lwld;->b:J
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lwld;->a:Ljava/util/ArrayList;
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public abstract b()V
-.end method
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 4
 
-.method public abstract e()Z
-.end method
+    check-cast p1, Lwld;
 
-.method public abstract h(J)I
-.end method
+    iget-wide v0, p0, Lwld;->b:J
 
-.method public abstract n(Lzgd;Lgf4;I)I
+    iget-wide v2, p1, Lwld;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Long;->compare(JJ)I
+
+    move-result p1
+
+    return p1
 .end method

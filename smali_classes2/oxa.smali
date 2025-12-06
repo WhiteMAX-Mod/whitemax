@@ -1,73 +1,70 @@
-.class public abstract Loxa;
+.class public final Loxa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final synthetic a:I
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
+.field public final synthetic b:Luxa;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Luxa;I)V
+    .locals 0
 
-    sget v0, Ldoc;->oneme_main_bottom_bar:I
+    iput p2, p0, Loxa;->a:I
 
-    sput v0, Loxa;->a:I
+    iput-object p1, p0, Loxa;->b:Luxa;
 
-    sget v0, Ldoc;->oneme_main_calls_bottom_item:I
-
-    sput v0, Loxa;->b:I
-
-    sget v0, Ldoc;->oneme_main_calls_container:I
-
-    sput v0, Loxa;->c:I
-
-    sget v0, Ldoc;->oneme_main_chats_bottom_item:I
-
-    sput v0, Loxa;->d:I
-
-    sget v0, Ldoc;->oneme_main_chats_container:I
-
-    sput v0, Loxa;->e:I
-
-    sget v0, Ldoc;->oneme_main_contacts_bottom_item:I
-
-    sput v0, Loxa;->f:I
-
-    sget v0, Ldoc;->oneme_main_contacts_container:I
-
-    sput v0, Loxa;->g:I
-
-    sget v0, Ldoc;->oneme_main_root:I
-
-    sput v0, Loxa;->h:I
-
-    sget v0, Ldoc;->oneme_main_settings_bottom_item:I
-
-    sput v0, Loxa;->i:I
-
-    sget v0, Ldoc;->oneme_main_settings_container:I
-
-    sput v0, Loxa;->j:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 2
+
+    iget v0, p0, Loxa;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Loxa;->b:Luxa;
+
+    iget-object v1, v0, Luxa;->C0:Lcm6;
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v1}, Lcm6;->invoke()Ljava/lang/Object;
+
+    :cond_0
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Loxa;->b:Luxa;
+
+    iget-object v1, v0, Luxa;->C0:Lcm6;
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v1}, Lcm6;->invoke()Ljava/lang/Object;
+
+    :cond_1
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lsr3;
+.implements Lgu3;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lsr3;"
+        "Lgu3;"
     }
 .end annotation
 
@@ -33,7 +33,7 @@
     d2 = {
         "",
         "it",
-        "Lccg;",
+        "Lqqg;",
         "accept",
         "(Ljava/lang/Throwable;)V",
         "<anonymous>"

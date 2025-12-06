@@ -1,66 +1,25 @@
-.class public final Lq4i;
+.class public abstract Lq4i;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/Iterator;
 
-
-# instance fields
-.field public final a:Ljava/util/Iterator;
+# static fields
+.field public static final a:J
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Iterator;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-wide/16 v1, 0x1
 
-    iput-object p1, p0, Lq4i;->a:Ljava/util/Iterator;
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
-    return-void
-.end method
+    move-result-wide v0
 
-
-# virtual methods
-.method public final hasNext()Z
-    .locals 1
-
-    iget-object v0, p0, Lq4i;->a:Ljava/util/Iterator;
-
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final next()Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lq4i;->a:Ljava/util/Iterator;
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/Map$Entry;
-
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final remove()V
-    .locals 1
-
-    iget-object v0, p0, Lq4i;->a:Ljava/util/Iterator;
-
-    invoke-interface {v0}, Ljava/util/Iterator;->remove()V
+    sput-wide v0, Lq4i;->a:J
 
     return-void
 .end method

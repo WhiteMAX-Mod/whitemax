@@ -1,53 +1,100 @@
 .class public final Lcg7;
-.super Ljava/lang/Object;
+.super Lzr4;
 .source "SourceFile"
-
-# interfaces
-.implements Liu7;
-.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final synthetic o:I
+
+.field public final p:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
-    .locals 0
+.method public constructor <init>(Landroid/view/Surface;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lcg7;->a:Ljava/lang/Object;
+    iput v0, p0, Lcg7;->o:I
+
+    .line 3
+    sget-object v0, Lzr4;->k:Landroid/util/Size;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p0, v0, v1}, Lzr4;-><init>(Landroid/util/Size;I)V
+
+    .line 4
+    iput-object p1, p0, Lcg7;->p:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/view/Surface;Landroid/util/Size;I)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcg7;->o:I
+
+    .line 1
+    invoke-direct {p0, p2, p3}, Lzr4;-><init>(Landroid/util/Size;I)V
+
+    .line 2
+    iput-object p1, p0, Lcg7;->p:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lmsf;Landroid/util/Size;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lcg7;->o:I
+
+    .line 5
+    iput-object p1, p0, Lcg7;->p:Ljava/lang/Object;
+
+    const/16 p1, 0x22
+
+    invoke-direct {p0, p2, p1}, Lzr4;-><init>(Landroid/util/Size;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e()Z
+.method public final f()Lha8;
     .locals 1
 
-    const/4 v0, 0x1
+    iget v0, p0, Lcg7;->o:I
 
-    return v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final getValue()Ljava/lang/Object;
-    .locals 1
+    iget-object v0, p0, Lcg7;->p:Ljava/lang/Object;
 
-    iget-object v0, p0, Lcg7;->a:Ljava/lang/Object;
+    check-cast v0, Lmsf;
+
+    iget-object v0, v0, Lmsf;->g:Lwu1;
 
     return-object v0
-.end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    :pswitch_0
+    iget-object v0, p0, Lcg7;->p:Ljava/lang/Object;
 
-    iget-object v0, p0, Lcg7;->a:Ljava/lang/Object;
+    check-cast v0, Landroid/view/Surface;
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v0}, Lwsf;->f(Ljava/lang/Object;)Lag7;
 
     move-result-object v0
 
     return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

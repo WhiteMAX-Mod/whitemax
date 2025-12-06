@@ -1,55 +1,112 @@
-.class public abstract Lxca;
+.class public final Lxca;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/Comparator;
+
+
+# static fields
+.field public static final b:Lxca;
+
+.field public static final c:Lxca;
+
+
+# instance fields
+.field public final synthetic a:I
+
 
 # direct methods
-.method public static a(Landroid/media/AudioAttributes$Builder;)Landroid/media/AudioAttributes;
-    .locals 0
+.method static synthetic constructor <clinit>()V
+    .locals 2
 
-    invoke-virtual {p0}, Landroid/media/AudioAttributes$Builder;->build()Landroid/media/AudioAttributes;
+    new-instance v0, Lxca;
 
-    move-result-object p0
+    const/4 v1, 0x0
 
-    return-object p0
+    invoke-direct {v0, v1}, Lxca;-><init>(I)V
+
+    sput-object v0, Lxca;->b:Lxca;
+
+    new-instance v0, Lxca;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lxca;-><init>(I)V
+
+    sput-object v0, Lxca;->c:Lxca;
+
+    return-void
 .end method
 
-.method public static b()Landroid/media/AudioAttributes$Builder;
+.method public synthetic constructor <init>(I)V
+    .locals 0
+
+    iput p1, p0, Lxca;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
 
-    new-instance v0, Landroid/media/AudioAttributes$Builder;
+    iget v0, p0, Lxca;->a:I
 
-    invoke-direct {v0}, Landroid/media/AudioAttributes$Builder;-><init>()V
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Ljava/lang/Comparable;
+
+    check-cast p2, Ljava/lang/Comparable;
+
+    invoke-interface {p2, p1}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    check-cast p1, Ljava/lang/Comparable;
+
+    check-cast p2, Ljava/lang/Comparable;
+
+    invoke-interface {p1, p2}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
+
+    move-result p1
+
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final reversed()Ljava/util/Comparator;
+    .locals 1
+
+    iget v0, p0, Lxca;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    sget-object v0, Lxca;->b:Lxca;
 
     return-object v0
-.end method
 
-.method public static c(Landroid/media/AudioAttributes$Builder;I)Landroid/media/AudioAttributes$Builder;
-    .locals 0
+    :pswitch_0
+    sget-object v0, Lxca;->c:Lxca;
 
-    invoke-virtual {p0, p1}, Landroid/media/AudioAttributes$Builder;->setContentType(I)Landroid/media/AudioAttributes$Builder;
+    return-object v0
 
-    move-result-object p0
+    nop
 
-    return-object p0
-.end method
-
-.method public static d(Landroid/media/AudioAttributes$Builder;I)Landroid/media/AudioAttributes$Builder;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/AudioAttributes$Builder;->setLegacyStreamType(I)Landroid/media/AudioAttributes$Builder;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static e(Landroid/media/AudioAttributes$Builder;I)Landroid/media/AudioAttributes$Builder;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/AudioAttributes$Builder;->setUsage(I)Landroid/media/AudioAttributes$Builder;
-
-    move-result-object p0
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

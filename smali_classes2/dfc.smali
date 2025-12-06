@@ -1,72 +1,152 @@
-.class public final synthetic Ldfc;
-.super Ljava/lang/Object;
+.class public final enum Ldfc;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 # interfaces
-.implements Lji6;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Ldfc;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final enum b:Ldfc;
+
+.field public static final enum c:Ldfc;
+
+.field public static final synthetic d:[Ldfc;
+
+.field public static final synthetic o:Lzg5;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lffc;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lffc;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput p2, p0, Ldfc;->a:I
+    new-instance v0, Ldfc;
 
-    iput-object p1, p0, Ldfc;->b:Lffc;
+    const/4 v1, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v2, "local_chat"
+
+    const-string v3, "LOCAL_CHAT"
+
+    invoke-direct {v0, v3, v1, v2}, Ldfc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Ldfc;->b:Ldfc;
+
+    new-instance v1, Ldfc;
+
+    const/4 v2, 0x1
+
+    const-string v3, "server_chat"
+
+    const-string v4, "SERVER_CHAT"
+
+    invoke-direct {v1, v4, v2, v3}, Ldfc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    new-instance v2, Ldfc;
+
+    const/4 v3, 0x2
+
+    const-string v4, "contact"
+
+    const-string v5, "CONTACT"
+
+    invoke-direct {v2, v5, v3, v4}, Ldfc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v2, Ldfc;->c:Ldfc;
+
+    filled-new-array {v0, v1, v2}, [Ldfc;
+
+    move-result-object v0
+
+    sput-object v0, Ldfc;->d:[Ldfc;
+
+    new-instance v1, Lzg5;
+
+    invoke-direct {v1, v0}, Lzg5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Ldfc;->o:Lzg5;
+
+    new-instance v0, Lwcb;
+
+    const/16 v1, 0x13
+
+    invoke-direct {v0, v1}, Lwcb;-><init>(I)V
+
+    sput-object v0, Ldfc;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput-object p3, p0, Ldfc;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Ldfc;
+    .locals 1
+
+    const-class v0, Ldfc;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Ldfc;
+
+    return-object p0
+.end method
+
+.method public static values()[Ldfc;
+    .locals 1
+
+    sget-object v0, Ldfc;->d:[Ldfc;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ldfc;
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 3
+.method public final describeContents()I
+    .locals 1
 
-    iget v0, p0, Ldfc;->a:I
+    const/4 v0, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    return v0
+.end method
 
-    new-instance v0, Lkx7;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    const/4 v1, 0x1
+    invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
-    iget-object v2, p0, Ldfc;->b:Lffc;
+    move-result-object p2
 
-    invoke-direct {v0, v1, v2}, Lkx7;-><init>(ILjava/lang/Object;)V
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Ldfc;->b:Lffc;
-
-    iget-object v0, v0, Lffc;->a:Lwif;
-
-    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/hardware/SensorManager;
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

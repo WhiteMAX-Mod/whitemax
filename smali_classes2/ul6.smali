@@ -1,71 +1,90 @@
 .class public final Lul6;
-.super Lwl6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lul6;
+# instance fields
+.field public final a:Ljava/util/concurrent/ConcurrentHashMap;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Ljava/util/concurrent/ConcurrentHashMap;)V
+    .locals 0
 
-    new-instance v0, Lul6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x5
-
-    invoke-direct {v0, v1}, Lwl6;-><init>(I)V
-
-    sput-object v0, Lul6;->b:Lul6;
+    iput-object p1, p0, Lul6;->a:Ljava/util/concurrent/ConcurrentHashMap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Long;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
 .method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    const/4 v0, 0x1
+    instance-of v0, p1, Lul6;
 
-    if-ne p0, p1, :cond_0
+    if-nez v0, :cond_0
 
-    return v0
+    goto :goto_0
 
     :cond_0
-    instance-of p1, p1, Lul6;
+    check-cast p1, Lul6;
+
+    iget-object p1, p1, Lul6;->a:Ljava/util/concurrent/ConcurrentHashMap;
+
+    iget-object v0, p0, Lul6;->a:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-static {v0, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
 
     if-nez p1, :cond_1
 
+    :goto_0
     const/4 p1, 0x0
 
     return p1
 
     :cond_1
-    return v0
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x41cf7668
+    iget-object v0, p0, Lul6;->a:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->hashCode()I
+
+    move-result v0
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 1
+    .locals 2
 
-    const-string v0, "Camera"
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "FtsCache(titles="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lul6;->a:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

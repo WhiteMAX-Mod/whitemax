@@ -1,334 +1,112 @@
 .class public final La24;
-.super Lez;
+.super Ldtf;
 .source "SourceFile"
+
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public final X:Ljava/lang/Long;
+.field public final synthetic X:Lone/me/sdk/uikit/common/button/OneMeButton;
 
-.field public final Y:Ljava/util/List;
-
-.field public final Z:Ljava/lang/String;
-
-.field public final o:I
-
-.field public final q0:Ljava/lang/String;
-
-.field public final r0:Ljava/lang/String;
-
-.field public final s0:Ljava/lang/String;
-
-.field public final t0:Lv10;
-
-.field public final u0:Ljava/lang/String;
-
-.field public final v0:Ljava/lang/String;
-
-.field public final w0:Z
-
-.field public final x0:I
-
-.field public final y0:Lda9;
-
-.field public final z0:Ljava/lang/String;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/Long;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lv10;Ljava/lang/String;Ljava/lang/String;ZILda9;Ljava/lang/String;ZZ)V
-    .locals 3
+.method public constructor <init>(Lone/me/sdk/uikit/common/button/OneMeButton;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    sget-object v0, La10;->c:La10;
+    iput-object p1, p0, La24;->X:Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    move/from16 v1, p15
+    const/4 p1, 0x2
 
-    move/from16 v2, p16
-
-    invoke-direct {p0, v0, v1, v2}, Lez;-><init>(La10;ZZ)V
-
-    iput p1, p0, La24;->o:I
-
-    iput-object p2, p0, La24;->X:Ljava/lang/Long;
-
-    iput-object p3, p0, La24;->Y:Ljava/util/List;
-
-    iput-object p4, p0, La24;->Z:Ljava/lang/String;
-
-    iput-object p5, p0, La24;->q0:Ljava/lang/String;
-
-    iput-object p6, p0, La24;->r0:Ljava/lang/String;
-
-    iput-object p7, p0, La24;->s0:Ljava/lang/String;
-
-    iput-object p8, p0, La24;->t0:Lv10;
-
-    iput-object p9, p0, La24;->u0:Ljava/lang/String;
-
-    iput-object p10, p0, La24;->v0:Ljava/lang/String;
-
-    iput-boolean p11, p0, La24;->w0:Z
-
-    iput p12, p0, La24;->x0:I
-
-    move-object/from16 p1, p13
-
-    iput-object p1, p0, La24;->y0:Lda9;
-
-    move-object/from16 p1, p14
-
-    iput-object p1, p0, La24;->z0:Ljava/lang/String;
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/util/HashMap;
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-super {p0}, Lez;->a()Ljava/util/HashMap;
+    check-cast p1, Ljava/util/Set;
 
-    move-result-object v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget v1, p0, La24;->o:I
+    invoke-virtual {p0, p1, p2}, La24;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    packed-switch v1, :pswitch_data_0
+    move-result-object p1
 
-    const/4 v0, 0x0
+    check-cast p1, La24;
 
-    throw v0
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    :pswitch_0
-    const-string v2, "botStarted"
+    invoke-virtual {p1, p2}, La24;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    goto :goto_0
+    return-object p2
+.end method
 
-    :pswitch_1
-    const-string v2, "pin"
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    goto :goto_0
+    new-instance v0, La24;
 
-    :pswitch_2
-    const-string v2, "joinByLink"
+    iget-object v1, p0, La24;->X:Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    goto :goto_0
+    invoke-direct {v0, v1, p2}, La24;-><init>(Lone/me/sdk/uikit/common/button/OneMeButton;Lkotlin/coroutines/Continuation;)V
 
-    :pswitch_3
-    const-string v2, "system"
+    iput-object p1, v0, La24;->o:Ljava/lang/Object;
 
-    goto :goto_0
+    return-object v0
+.end method
 
-    :pswitch_4
-    const-string v2, "hello"
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    goto :goto_0
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    :pswitch_5
-    const-string v2, "icon"
+    iget-object p1, p0, La24;->o:Ljava/lang/Object;
 
-    goto :goto_0
+    check-cast p1, Ljava/util/Set;
 
-    :pswitch_6
-    const-string v2, "title"
+    invoke-interface {p1}, Ljava/util/Set;->size()I
 
-    goto :goto_0
+    move-result p1
 
-    :pswitch_7
-    const-string v2, "leave"
+    const/4 v0, 0x1
 
-    goto :goto_0
+    iget-object v1, p0, La24;->X:Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    :pswitch_8
-    const-string v2, "remove"
+    if-nez p1, :cond_0
 
-    goto :goto_0
+    const/16 p1, 0x8
 
-    :pswitch_9
-    const-string v2, "add"
+    invoke-virtual {v1, p1}, Landroid/view/View;->setVisibility(I)V
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v1, p1, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->c(Ljava/lang/Integer;Z)V
 
     goto :goto_0
-
-    :pswitch_a
-    const-string v2, "new"
-
-    goto :goto_0
-
-    :pswitch_b
-    const-string v2, "unknown"
-
-    :goto_0
-    const-string v3, "event"
-
-    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v2, p0, La24;->Y:Ljava/util/List;
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v2}, Ljava/util/List;->size()I
-
-    move-result v3
-
-    if-lez v3, :cond_0
-
-    const-string v3, "userIds"
-
-    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
-    iget-object v2, p0, La24;->X:Ljava/lang/Long;
+    const/4 v2, 0x0
 
-    if-eqz v2, :cond_1
+    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+    sget v2, Lk1b;->F:I
 
-    move-result-wide v3
+    invoke-virtual {v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
 
-    const-wide/16 v5, 0x0
+    new-instance v2, Ljava/lang/Integer;
 
-    cmp-long v3, v3, v5
+    invoke-direct {v2, p1}, Ljava/lang/Integer;-><init>(I)V
 
-    if-eqz v3, :cond_1
+    invoke-virtual {v1, v2, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->c(Ljava/lang/Integer;Z)V
 
-    const-string v3, "userId"
+    :goto_0
+    sget-object p1, Lqqg;->a:Lqqg;
 
-    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_1
-    iget-object v2, p0, La24;->Z:Ljava/lang/String;
-
-    if-eqz v2, :cond_2
-
-    const-string v3, "title"
-
-    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_2
-    iget-object v2, p0, La24;->q0:Ljava/lang/String;
-
-    if-eqz v2, :cond_3
-
-    const-string v3, "photoToken"
-
-    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_3
-    iget-object v2, p0, La24;->t0:Lv10;
-
-    if-eqz v2, :cond_4
-
-    const-string v3, "crop"
-
-    invoke-virtual {v2}, Lv10;->a()Ljava/util/HashMap;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_4
-    const/4 v2, 0x3
-
-    if-ne v1, v2, :cond_5
-
-    iget-boolean v2, p0, La24;->w0:Z
-
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    const-string v3, "showHistory"
-
-    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_5
-    const/4 v2, 0x2
-
-    if-ne v1, v2, :cond_b
-
-    const/4 v1, 0x1
-
-    iget v2, p0, La24;->x0:I
-
-    if-eq v2, v1, :cond_a
-
-    const/4 v1, 0x2
-
-    if-eq v2, v1, :cond_9
-
-    const/4 v1, 0x3
-
-    if-eq v2, v1, :cond_8
-
-    const/4 v1, 0x4
-
-    if-eq v2, v1, :cond_7
-
-    const/4 v1, 0x5
-
-    if-ne v2, v1, :cond_6
-
-    const-string v1, "GROUP_CHAT"
-
-    goto :goto_1
-
-    :cond_6
-    const/4 v0, 0x0
-
-    throw v0
-
-    :cond_7
-    const-string v1, "CHANNEL"
-
-    goto :goto_1
-
-    :cond_8
-    const-string v1, "CHAT"
-
-    goto :goto_1
-
-    :cond_9
-    const-string v1, "DIALOG"
-
-    goto :goto_1
-
-    :cond_a
-    const-string v1, "UNKNOWN"
-
-    :goto_1
-    const-string v2, "chatType"
-
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_b
-    iget-object v1, p0, La24;->z0:Ljava/lang/String;
-
-    invoke-static {v1}, Li79;->b(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_c
-
-    const-string v2, "startPayload"
-
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_c
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

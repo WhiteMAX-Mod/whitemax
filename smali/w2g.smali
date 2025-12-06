@@ -1,98 +1,103 @@
 .class public final Lw2g;
-.super Ljava/lang/Object;
+.super Ll2g;
 .source "SourceFile"
-
-# interfaces
-.implements Lg54;
-
-
-# static fields
-.field public static final c:Lftd;
 
 
 # instance fields
-.field public final a:Lz14;
-
-.field public final b:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public final a:Ljava/lang/Runnable;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/Runnable;JLp2g;)V
+    .locals 0
 
-    new-instance v0, Lftd;
+    invoke-direct {p0, p2, p3, p4}, Ll2g;-><init>(JLp2g;)V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lw2g;->c:Lftd;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lz14;)V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lw2g;->a:Lz14;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    iput-object p1, p0, Lw2g;->b:Ljava/util/concurrent/atomic/AtomicInteger;
+    iput-object p1, p0, Lw2g;->a:Ljava/lang/Runnable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final fold(Ljava/lang/Object;Lzi6;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 2
 
-    invoke-interface {p2, p1, p0}, Lzi6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :try_start_0
+    iget-object v0, p0, Lw2g;->a:Ljava/lang/Runnable;
 
-    move-result-object p1
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-object p1
+    iget-object v0, p0, Ll2g;->taskContext:Lp2g;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    iget-object v1, p0, Ll2g;->taskContext:Lp2g;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    throw v0
 .end method
 
-.method public final get(Lh54;)Lg54;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    invoke-static {p0, p1}, Lkwi;->a(Lg54;Lh54;)Lg54;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    const-string v1, "Task["
 
-    return-object p1
-.end method
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.method public final getKey()Lh54;
-    .locals 1
+    iget-object v1, p0, Lw2g;->a:Ljava/lang/Runnable;
 
-    sget-object v0, Lw2g;->c:Lftd;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v2, 0x40
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-static {v1}, Lzg4;->a(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v2, p0, Ll2g;->submissionTime:J
+
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ll2g;->taskContext:Lp2g;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x5d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-.end method
-
-.method public final minusKey(Lh54;)Li54;
-    .locals 0
-
-    invoke-static {p0, p1}, Lkwi;->c(Lg54;Lh54;)Li54;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final plus(Li54;)Li54;
-    .locals 0
-
-    invoke-static {p0, p1}, Ljwi;->a(Li54;Li54;)Li54;
-
-    move-result-object p1
-
-    return-object p1
 .end method

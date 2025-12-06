@@ -1,64 +1,272 @@
 .class public final Lwuf;
-.super Lq7d;
+.super Landroid/graphics/drawable/Drawable;
 .source "SourceFile"
-
-# interfaces
-.implements Lcof;
 
 
 # instance fields
-.field public final D0:Landroidx/appcompat/widget/AppCompatTextView;
+.field public final a:Ls8g;
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 3
 
-    invoke-direct {p0, p1}, Lq7d;-><init>(Landroid/view/View;)V
+    .line 7
+    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    move-object v0, p1
+    .line 8
+    iput-object p1, p0, Lwuf;->b:Ljava/lang/String;
 
-    check-cast v0, Landroidx/appcompat/widget/AppCompatTextView;
+    .line 9
+    iput p2, p0, Lwuf;->c:I
 
-    iput-object v0, p0, Lwuf;->D0:Landroidx/appcompat/widget/AppCompatTextView;
+    .line 10
+    iput p3, p0, Lwuf;->d:I
 
-    invoke-virtual {p1}, Landroid/view/View;->isInEditMode()Z
+    const/4 v0, 0x1
 
-    move-result v0
+    .line 11
+    iput v0, p0, Lwuf;->e:I
 
-    if-eqz v0, :cond_0
+    .line 12
+    sget-object v1, Lvuf;->$EnumSwitchMapping$0:[I
 
-    sget-object p1, Lqn4;->e0:Lqn4;
+    invoke-static {v0}, Laz1;->v(I)I
 
-    goto :goto_0
+    move-result v2
+
+    aget v1, v1, v2
+
+    if-ne v1, v0, :cond_0
+
+    .line 13
+    new-instance v0, Ls8g;
+
+    invoke-direct {v0, p1, p2, p3}, Ls8g;-><init>(Ljava/lang/String;II)V
+
+    .line 14
+    iget-object p1, v0, Ls8g;->h:Lbwf;
+
+    invoke-virtual {p1}, Lbwf;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lqqg;
+
+    .line 15
+    iput-object v0, p0, Lwuf;->a:Ls8g;
+
+    return-void
 
     :cond_0
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    move-result-object p1
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    sget-object v0, Lynf;->a0:Lwif;
+    throw p1
+.end method
 
-    invoke-static {p1}, Laa4;->c(Landroid/content/Context;)Lynf;
+.method public constructor <init>(Ljava/lang/String;IIILs8g;)V
+    .locals 0
 
-    move-result-object p1
+    .line 1
+    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    :goto_0
-    invoke-virtual {p0, p1}, Lwuf;->n(Lynf;)V
+    .line 2
+    iput-object p1, p0, Lwuf;->b:Ljava/lang/String;
+
+    .line 3
+    iput p2, p0, Lwuf;->c:I
+
+    .line 4
+    iput p3, p0, Lwuf;->d:I
+
+    .line 5
+    iput p4, p0, Lwuf;->e:I
+
+    .line 6
+    iput-object p5, p0, Lwuf;->a:Ls8g;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Lynf;)V
+.method public final a()Lwuf;
+    .locals 6
+
+    new-instance v0, Lwuf;
+
+    iget-object v1, p0, Lwuf;->a:Ls8g;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v2, Landroid/graphics/Paint;
+
+    iget-object v3, v1, Ls8g;->g:Landroid/graphics/Paint;
+
+    invoke-direct {v2, v3}, Landroid/graphics/Paint;-><init>(Landroid/graphics/Paint;)V
+
+    new-instance v5, Ls8g;
+
+    iget-object v3, v1, Ls8g;->a:Ljava/lang/String;
+
+    iget v4, v1, Ls8g;->b:I
+
+    iget v1, v1, Ls8g;->c:I
+
+    invoke-direct {v5, v3, v4, v1}, Ls8g;-><init>(Ljava/lang/String;II)V
+
+    iput-object v2, v5, Ls8g;->g:Landroid/graphics/Paint;
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, v5, Ls8g;->j:Z
+
+    iget-object v1, p0, Lwuf;->b:Ljava/lang/String;
+
+    iget v2, p0, Lwuf;->c:I
+
+    iget v3, p0, Lwuf;->d:I
+
+    iget v4, p0, Lwuf;->e:I
+
+    invoke-direct/range {v0 .. v5}, Lwuf;-><init>(Ljava/lang/String;IIILs8g;)V
+
+    return-object v0
+.end method
+
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 4
+
+    iget-object v0, p0, Lwuf;->a:Ls8g;
+
+    iget-boolean v1, v0, Ls8g;->j:Z
+
+    if-eqz v1, :cond_0
+
+    iget v1, v0, Ls8g;->f:F
+
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    invoke-virtual {p1, v1, v1, v3, v3}, Landroid/graphics/Canvas;->scale(FFFF)V
+
+    :try_start_0
+    iget-object v0, v0, Ls8g;->g:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->drawPaint(Landroid/graphics/Paint;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p1, v2}, Landroid/graphics/Canvas;->restoreToCount(I)V
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {p1, v2}, Landroid/graphics/Canvas;->restoreToCount(I)V
+
+    throw v0
+
+    :cond_0
+    const-class p1, Ls8g;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "error: cant\' render svg, incorrect data!"
+
+    invoke-static {p1, v0}, Lwqi;->r(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final getAlpha()I
     .locals 1
 
-    iget-object v0, p0, Lwuf;->D0:Landroidx/appcompat/widget/AppCompatTextView;
+    iget-object v0, p0, Lwuf;->a:Ls8g;
 
-    iget p1, p1, Lynf;->F:I
+    iget-object v0, v0, Ls8g;->g:Landroid/graphics/Paint;
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getAlpha()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final getIntrinsicHeight()I
+    .locals 1
+
+    iget-object v0, p0, Lwuf;->a:Ls8g;
+
+    iget v0, v0, Ls8g;->e:I
+
+    return v0
+.end method
+
+.method public final getIntrinsicWidth()I
+    .locals 1
+
+    iget-object v0, p0, Lwuf;->a:Ls8g;
+
+    iget v0, v0, Ls8g;->d:I
+
+    return v0
+.end method
+
+.method public final getOpacity()I
+    .locals 1
+
+    const/4 v0, -0x2
+
+    return v0
+.end method
+
+.method public final bridge synthetic mutate()Landroid/graphics/drawable/Drawable;
+    .locals 1
+
+    invoke-virtual {p0}, Lwuf;->a()Lwuf;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final setAlpha(I)V
+    .locals 1
+
+    iget-object v0, p0, Lwuf;->a:Ls8g;
+
+    iget-object v0, v0, Ls8g;->g:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
+
+    return-void
+.end method
+
+.method public final setColorFilter(Landroid/graphics/ColorFilter;)V
+    .locals 1
+
+    iget-object v0, p0, Lwuf;->a:Ls8g;
+
+    iget-object v0, v0, Ls8g;->g:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
     return-void
 .end method

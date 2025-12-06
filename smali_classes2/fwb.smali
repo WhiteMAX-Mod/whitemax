@@ -1,93 +1,90 @@
 .class public final Lfwb;
-.super Landroid/view/View$BaseSavedState;
+.super Ldtf;
 .source "SourceFile"
 
-
-# static fields
-.field public static final CREATOR:Lewb;
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public final a:I
-
-.field public final b:Z
+.field public final synthetic o:Lgwb;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lewb;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lfwb;->CREATOR:Lewb;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 1
-
-    .line 4
-    invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
-
-    .line 5
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    iput v0, p0, Lfwb;->a:I
-
-    .line 6
-    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
-
-    move-result p1
-
-    if-lez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    iput-boolean p1, p0, Lfwb;->b:Z
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcelable;IZ)V
+.method public constructor <init>(Lgwb;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    .line 1
-    invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
+    iput-object p1, p0, Lfwb;->o:Lgwb;
 
-    .line 2
-    iput p2, p0, Lfwb;->a:I
+    const/4 p1, 0x2
 
-    .line 3
-    iput-boolean p3, p0, Lfwb;->b:Z
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
+    check-cast p1, Lf84;
 
-    iget p2, p0, Lfwb;->a:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p0, p1, p2}, Lfwb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-boolean p2, p0, Lfwb;->b:Z
+    move-result-object p1
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
+    check-cast p1, Lfwb;
 
-    return-void
+    sget-object p2, Lqqg;->a:Lqqg;
+
+    invoke-virtual {p1, p2}, Lfwb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lfwb;
+
+    iget-object v0, p0, Lfwb;->o:Lgwb;
+
+    invoke-direct {p1, v0, p2}, Lfwb;-><init>(Lgwb;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lfwb;->o:Lgwb;
+
+    iget-object p1, p1, Lgwb;->X:Lk18;
+
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lccb;
+
+    sget v0, Ls3d;->oneme_location_map_location_error:I
+
+    new-instance v1, Ln5g;
+
+    invoke-direct {v1, v0}, Ln5g;-><init>(I)V
+
+    invoke-virtual {p1, v1}, Lccb;->g(Ls5g;)V
+
+    invoke-virtual {p1}, Lccb;->i()Lbcb;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,286 +1,114 @@
-.class public final Lbzc;
-.super Lmmf;
-.source "SourceFile"
+.class public abstract Lbzc;
+.super Ljava/lang/Object;
 
-# interfaces
-.implements Lb0d;
 
+# static fields
+.field public static chat_screen_message_send_error_delete_action:I = 0x7f0a027d
 
-# instance fields
-.field public X:Lli6;
+.field public static chat_screen_message_send_error_resend_action_multi:I = 0x7f0a027e
 
-.field public Y:Leyc;
+.field public static chat_screen_message_send_error_resend_action_solo:I = 0x7f0a027f
 
-.field public Z:Z
+.field public static messages_contact_attach_chat_action:I = 0x7f0a0538
 
-.field public o:Z
+.field public static messages_contact_attach_profile_action:I = 0x7f0a0539
 
+.field public static messages_list_chat_description_view_id:I = 0x7f0a053a
 
-# direct methods
-.method public constructor <init>()V
-    .locals 2
+.field public static messages_list_chat_description_view_type:I = 0x7f0a053b
 
-    new-instance v0, Lazc;
+.field public static messages_list_confirm_cancel:I = 0x7f0a053c
 
-    const/4 v1, 0x0
+.field public static messages_list_confirm_complaint_extremism:I = 0x7f0a053d
 
-    invoke-direct {v0, v1}, Lazc;-><init>(I)V
+.field public static messages_list_confirm_complaint_fake:I = 0x7f0a053e
 
-    invoke-direct {p0, v0}, Lmmf;-><init>(Lli6;)V
+.field public static messages_list_confirm_complaint_other:I = 0x7f0a053f
 
-    const/4 v0, 0x1
+.field public static messages_list_confirm_complaint_porno:I = 0x7f0a0540
 
-    iput-boolean v0, p0, Lbzc;->o:Z
+.field public static messages_list_confirm_complaint_spam:I = 0x7f0a0541
 
-    return-void
-.end method
+.field public static messages_list_confirm_complaint_threat:I = 0x7f0a0542
 
+.field public static messages_list_confirm_delete:I = 0x7f0a0543
 
-# virtual methods
-.method public final g(Lwe9;Z)V
-    .locals 2
+.field public static messages_list_confirm_delete_for_all:I = 0x7f0a0544
 
-    invoke-virtual {p0}, Lmmf;->S()Landroid/view/View;
+.field public static messages_list_confirm_pin_with_notify:I = 0x7f0a0545
 
-    move-result-object v0
+.field public static messages_list_confirm_pin_without_notify:I = 0x7f0a0546
 
-    check-cast v0, Lkyc;
+.field public static messages_list_context_action_copy:I = 0x7f0a0547
 
-    iget-object v1, p0, Lbzc;->X:Lli6;
+.field public static messages_list_context_action_copy_photo:I = 0x7f0a0548
 
-    invoke-virtual {v0, v1}, Lkyc;->setOnChipClickListener(Lli6;)V
+.field public static messages_list_context_action_delete:I = 0x7f0a0549
 
-    iget-object v0, p0, Lbzc;->Y:Leyc;
+.field public static messages_list_context_action_delete_for_all:I = 0x7f0a054a
 
-    if-eqz v0, :cond_0
+.field public static messages_list_context_action_edit:I = 0x7f0a054b
 
-    invoke-virtual {p0}, Lmmf;->S()Landroid/view/View;
+.field public static messages_list_context_action_forward:I = 0x7f0a054c
 
-    move-result-object v1
+.field public static messages_list_context_action_mark_as_unread:I = 0x7f0a054d
 
-    check-cast v1, Lkyc;
+.field public static messages_list_context_action_pin:I = 0x7f0a054e
 
-    invoke-virtual {v1, v0}, Lkyc;->setChipObserver(Leyc;)V
+.field public static messages_list_context_action_reply:I = 0x7f0a054f
 
-    :cond_0
-    invoke-virtual {p0}, Lmmf;->S()Landroid/view/View;
+.field public static messages_list_context_action_report:I = 0x7f0a0550
 
-    move-result-object v0
+.field public static messages_list_context_action_save_to_gallery:I = 0x7f0a0551
 
-    check-cast v0, Lkyc;
+.field public static messages_list_context_action_select:I = 0x7f0a0552
 
-    iget-boolean v1, p0, Lbzc;->Z:Z
+.field public static messages_list_context_action_share_externally:I = 0x7f0a0553
 
-    invoke-virtual {v0, v1}, Lkyc;->setStackFromEnd(Z)V
+.field public static messages_list_context_action_share_post:I = 0x7f0a0554
 
-    invoke-virtual {p0}, Lmmf;->S()Landroid/view/View;
+.field public static messages_list_context_action_unpin:I = 0x7f0a0555
 
-    move-result-object v0
+.field public static messages_list_context_actions_view_type:I = 0x7f0a0556
 
-    check-cast v0, Lkyc;
+.field public static messages_list_context_content_container:I = 0x7f0a0557
 
-    iget-boolean v1, p0, Lbzc;->o:Z
+.field public static messages_list_context_member_view_type:I = 0x7f0a0558
 
-    invoke-virtual {v0, v1}, Lkyc;->setIncoming(Z)V
+.field public static messages_list_context_members_member_cell:I = 0x7f0a0559
 
-    invoke-virtual {p0}, Lmmf;->S()Landroid/view/View;
+.field public static messages_list_context_members_member_reaction:I = 0x7f0a055a
 
-    move-result-object v0
+.field public static messages_list_context_reactions_container:I = 0x7f0a055b
 
-    check-cast v0, Lkyc;
+.field public static messages_list_item_alias:I = 0x7f0a055c
 
-    invoke-virtual {v0, p1, p2}, Lkyc;->f(Lwe9;Z)V
+.field public static messages_list_item_date:I = 0x7f0a055d
 
-    invoke-virtual {p0}, Lmmf;->y()V
+.field public static messages_list_item_keyboard_buttons:I = 0x7f0a055e
 
-    return-void
-.end method
+.field public static messages_list_item_single_image:I = 0x7f0a055f
 
-.method public final l(Lvt0;Z)V
-    .locals 6
+.field public static messages_list_item_text:I = 0x7f0a0560
 
-    iget-object v0, p0, Lmmf;->c:Ljava/lang/Object;
+.field public static messages_list_item_title:I = 0x7f0a0561
 
-    invoke-interface {v0}, Liu7;->e()Z
+.field public static messages_list_item_video_duration:I = 0x7f0a0562
 
-    move-result v1
+.field public static messages_list_reactions_badge:I = 0x7f0a0563
 
-    if-eqz v1, :cond_2
+.field public static messages_list_recycler_view:I = 0x7f0a0564
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+.field public static messages_list_scroll_btn:I = 0x7f0a0565
 
-    move-result-object v0
+.field public static messages_list_share_contact_for_bot_action:I = 0x7f0a0566
 
-    check-cast v0, Lkyc;
+.field public static messages_list_vh_message_subtitle:I = 0x7f0a0567
 
-    invoke-virtual {p0}, Lmmf;->S()Landroid/view/View;
+.field public static messages_list_vh_message_title:I = 0x7f0a0568
 
-    move-result-object v0
+.field public static messages_list_warning_link_subtitle:I = 0x7f0a0569
 
-    check-cast v0, Lkyc;
+.field public static messages_list_warning_link_title:I = 0x7f0a056a
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x0
-
-    :goto_0
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
-
-    move-result v2
-
-    if-ge v1, v2, :cond_2
-
-    add-int/lit8 v2, v1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    check-cast v1, Liyc;
-
-    iget-object v3, p1, Lvt0;->d:Lyt0;
-
-    iget-object v3, v3, Lyt0;->a:Lzt0;
-
-    iget-object v4, p1, Lvt0;->a:Lot0;
-
-    iget-object v4, v4, Lot0;->c:Ltt0;
-
-    if-eqz p2, :cond_0
-
-    iget v5, v4, Ltt0;->a:I
-
-    iput v5, v1, Liyc;->q0:I
-
-    iget v4, v4, Ltt0;->b:I
-
-    iput v4, v1, Liyc;->r0:I
-
-    iget v4, v3, Lzt0;->a:I
-
-    iput v4, v1, Liyc;->s0:I
-
-    iget v3, v3, Lzt0;->b:I
-
-    iput v3, v1, Liyc;->t0:I
-
-    goto :goto_1
-
-    :cond_0
-    iget v5, v4, Ltt0;->c:I
-
-    iput v5, v1, Liyc;->q0:I
-
-    iget v4, v4, Ltt0;->d:I
-
-    iput v4, v1, Liyc;->r0:I
-
-    iget v4, v3, Lzt0;->c:I
-
-    iput v4, v1, Liyc;->s0:I
-
-    iget v3, v3, Lzt0;->d:I
-
-    iput v3, v1, Liyc;->t0:I
-
-    :goto_1
-    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
-
-    move v1, v2
-
-    goto :goto_0
-
-    :cond_1
-    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
-
-    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
-
-    throw p1
-
-    :cond_2
-    return-void
-.end method
-
-.method public final r(Z)V
-    .locals 2
-
-    iget-object v0, p0, Lmmf;->c:Ljava/lang/Object;
-
-    invoke-interface {v0}, Liu7;->e()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lkyc;
-
-    invoke-virtual {p0}, Lmmf;->S()Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lkyc;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1, p1}, Lkyc;->f(Lwe9;Z)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final setChipObserver(Leyc;)V
-    .locals 1
-
-    iget-object v0, p0, Lmmf;->c:Ljava/lang/Object;
-
-    invoke-interface {v0}, Liu7;->e()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lmmf;->S()Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lkyc;
-
-    invoke-virtual {v0, p1}, Lkyc;->setChipObserver(Leyc;)V
-
-    return-void
-
-    :cond_0
-    iput-object p1, p0, Lbzc;->Y:Leyc;
-
-    return-void
-.end method
-
-.method public final setIsIncoming(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lbzc;->o:Z
-
-    return-void
-.end method
-
-.method public final setOnClickListener(Lli6;)V
-    .locals 0
-
-    iput-object p1, p0, Lbzc;->X:Lli6;
-
-    return-void
-.end method
-
-.method public final setStackFromEnd(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lbzc;->Z:Z
-
-    return-void
-.end method
+.field public static messages_share_attach_open_url_action:I = 0x7f0a056b

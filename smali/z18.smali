@@ -1,197 +1,231 @@
 .class public final Lz18;
-.super Landroid/widget/BaseAdapter;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:I
+.field public final synthetic a:I
 
-.field public final synthetic b:La28;
+.field public final b:Lcom/google/android/material/sidesheet/SideSheetBehavior;
 
 
 # direct methods
-.method public constructor <init>(La28;)V
+.method public synthetic constructor <init>(Lcom/google/android/material/sidesheet/SideSheetBehavior;I)V
     .locals 0
 
-    iput-object p1, p0, Lz18;->b:La28;
+    iput p2, p0, Lz18;->a:I
 
-    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
+    iput-object p1, p0, Lz18;->b:Lcom/google/android/material/sidesheet/SideSheetBehavior;
 
-    const/4 p1, -0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lz18;->a:I
+    return-void
+.end method
 
-    invoke-virtual {p0}, Lz18;->a()V
+.method public static final e(Lmzg;Ljava/lang/String;I)V
+    .locals 0
 
+    invoke-interface {p0, p1}, Lmzg;->findPath(Ljava/lang/String;)Lone/me/sdk/richvector/VectorPath;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {p1, p2}, Lone/me/sdk/richvector/VectorPath;->setFillColor(I)V
+
+    invoke-interface {p0}, Lmzg;->invalidatePath()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public static final f(Lmzg;Ljava/lang/String;I)V
+    .locals 0
+
+    invoke-interface {p0, p1}, Lmzg;->findPath(Ljava/lang/String;)Lone/me/sdk/richvector/VectorPath;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {p1, p2}, Lone/me/sdk/richvector/VectorPath;->setStrokeColor(I)V
+
+    invoke-interface {p0}, Lmzg;->invalidatePath()V
+
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 5
-
-    iget-object v0, p0, Lz18;->b:La28;
-
-    iget-object v0, v0, La28;->c:Lt89;
-
-    iget-object v1, v0, Lt89;->E0:Lx89;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v0}, Lt89;->i()V
-
-    iget-object v0, v0, Lt89;->s0:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    const/4 v3, 0x0
-
-    :goto_0
-    if-ge v3, v2, :cond_1
-
-    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lx89;
-
-    if-ne v4, v1, :cond_0
-
-    iput v3, p0, Lz18;->a:I
-
-    return-void
-
-    :cond_0
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, -0x1
-
-    iput v0, p0, Lz18;->a:I
-
-    return-void
-.end method
-
-.method public final b(I)Lx89;
-    .locals 2
-
-    iget-object v0, p0, Lz18;->b:La28;
-
-    iget-object v1, v0, La28;->c:Lt89;
-
-    invoke-virtual {v1}, Lt89;->i()V
-
-    iget-object v1, v1, Lt89;->s0:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.method public final a()I
+    .locals 3
 
     iget v0, p0, Lz18;->a:I
 
-    if-ltz v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    if-lt p1, v0, :cond_0
+    iget-object v0, p0, Lz18;->b:Lcom/google/android/material/sidesheet/SideSheetBehavior;
 
-    add-int/lit8 p1, p1, 0x1
+    iget v1, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->m:I
 
-    :cond_0
-    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    iget v2, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->l:I
 
-    move-result-object p1
+    sub-int/2addr v1, v2
 
-    check-cast p1, Lx89;
+    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->o:I
 
-    return-object p1
+    sub-int/2addr v1, v0
+
+    const/4 v0, 0x0
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    return v0
+
+    :pswitch_0
+    iget-object v0, p0, Lz18;->b:Lcom/google/android/material/sidesheet/SideSheetBehavior;
+
+    iget v1, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->n:I
+
+    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->o:I
+
+    add-int/2addr v1, v0
+
+    const/4 v0, 0x0
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    return v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final getCount()I
+.method public final b()I
     .locals 2
-
-    iget-object v0, p0, Lz18;->b:La28;
-
-    iget-object v1, v0, La28;->c:Lt89;
-
-    invoke-virtual {v1}, Lt89;->i()V
-
-    iget-object v1, v1, Lt89;->s0:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     iget v0, p0, Lz18;->a:I
 
-    if-gez v0, :cond_0
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lz18;->b:Lcom/google/android/material/sidesheet/SideSheetBehavior;
+
+    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->m:I
+
+    return v0
+
+    :pswitch_0
+    iget-object v0, p0, Lz18;->b:Lcom/google/android/material/sidesheet/SideSheetBehavior;
+
+    iget v1, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->l:I
+
+    neg-int v1, v1
+
+    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->o:I
+
+    sub-int/2addr v1, v0
 
     return v1
 
-    :cond_0
-    add-int/lit8 v1, v1, -0x1
+    nop
 
-    return v1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final bridge synthetic getItem(I)Ljava/lang/Object;
-    .locals 0
+.method public final c(Landroid/view/View;)I
+    .locals 1
 
-    invoke-virtual {p0, p1}, Lz18;->b(I)Lx89;
+    iget v0, p0, Lz18;->a:I
 
-    move-result-object p1
+    packed-switch v0, :pswitch_data_0
 
-    return-object p1
+    invoke-virtual {p1}, Landroid/view/View;->getLeft()I
+
+    move-result p1
+
+    iget-object v0, p0, Lz18;->b:Lcom/google/android/material/sidesheet/SideSheetBehavior;
+
+    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->o:I
+
+    sub-int/2addr p1, v0
+
+    return p1
+
+    :pswitch_0
+    invoke-virtual {p1}, Landroid/view/View;->getRight()I
+
+    move-result p1
+
+    iget-object v0, p0, Lz18;->b:Lcom/google/android/material/sidesheet/SideSheetBehavior;
+
+    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->o:I
+
+    add-int/2addr p1, v0
+
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final getItemId(I)J
-    .locals 2
+.method public final d()I
+    .locals 1
 
-    int-to-long v0, p1
+    iget v0, p0, Lz18;->a:I
 
-    return-wide v0
+    packed-switch v0, :pswitch_data_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :pswitch_0
+    const/4 v0, 0x1
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 2
+.method public final g(Landroid/view/ViewGroup$MarginLayoutParams;I)V
+    .locals 1
 
-    if-nez p2, :cond_0
+    iget v0, p0, Lz18;->a:I
 
-    iget-object p2, p0, Lz18;->b:La28;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p2, La28;->b:Landroid/view/LayoutInflater;
-
-    iget p2, p2, La28;->X:I
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p2, p3, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object p2
-
-    :cond_0
-    move-object p3, p2
-
-    check-cast p3, Ll99;
-
-    invoke-virtual {p0, p1}, Lz18;->b(I)Lx89;
-
-    move-result-object p1
-
-    invoke-interface {p3, p1}, Ll99;->d(Lx89;)V
-
-    return-object p2
-.end method
-
-.method public final notifyDataSetChanged()V
-    .locals 0
-
-    invoke-virtual {p0}, Lz18;->a()V
-
-    invoke-super {p0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
+    iput p2, p1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
     return-void
+
+    :pswitch_0
+    iput p2, p1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,561 +1,713 @@
-.class public final Lw77;
+.class public abstract Lw77;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzq9;
 
+# static fields
+.field public static final a:[Lc17;
 
-# instance fields
-.field public final a:I
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:Z
-
-.field public final f:I
+.field public static final b:Ljava/util/Map;
 
 
 # direct methods
-.method public constructor <init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 63
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v1, Lc17;
 
-    const/4 v0, -0x1
+    sget-object v0, Lc17;->i:Lxx0;
 
-    if-eq p2, v0, :cond_1
+    const-string v2, ""
 
-    if-lez p2, :cond_0
+    invoke-direct {v1, v0, v2}, Lc17;-><init>(Lxx0;Ljava/lang/String;)V
 
-    goto :goto_0
+    new-instance v0, Lc17;
 
-    :cond_0
-    const/4 v0, 0x0
+    sget-object v3, Lc17;->f:Lxx0;
 
-    goto :goto_1
+    const-string v4, "GET"
 
-    :cond_1
-    :goto_0
-    const/4 v0, 0x1
+    invoke-direct {v0, v3, v4}, Lc17;-><init>(Lxx0;Ljava/lang/String;)V
 
-    :goto_1
-    invoke-static {v0}, Lsgi;->d(Z)V
+    new-instance v4, Lc17;
 
-    iput p1, p0, Lw77;->a:I
+    const-string v5, "POST"
 
-    iput-object p3, p0, Lw77;->b:Ljava/lang/String;
+    invoke-direct {v4, v3, v5}, Lc17;-><init>(Lxx0;Ljava/lang/String;)V
 
-    iput-object p4, p0, Lw77;->c:Ljava/lang/String;
+    move-object v3, v4
 
-    iput-object p5, p0, Lw77;->d:Ljava/lang/String;
+    new-instance v4, Lc17;
 
-    iput-boolean p6, p0, Lw77;->e:Z
+    sget-object v5, Lc17;->g:Lxx0;
 
-    iput p2, p0, Lw77;->f:I
+    const-string v6, "/"
 
-    return-void
-.end method
+    invoke-direct {v4, v5, v6}, Lc17;-><init>(Lxx0;Ljava/lang/String;)V
 
-.method public static b(Ljava/util/Map;)Lw77;
-    .locals 14
+    new-instance v6, Lc17;
 
-    const-string v0, "Invalid metadata interval: "
+    const-string v7, "/index.html"
 
-    const-string v1, "Invalid bitrate: "
+    invoke-direct {v6, v5, v7}, Lc17;-><init>(Lxx0;Ljava/lang/String;)V
 
-    const-string v2, "icy-br"
+    move-object v5, v6
 
-    invoke-interface {p0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance v6, Lc17;
 
-    move-result-object v2
+    sget-object v7, Lc17;->h:Lxx0;
 
-    check-cast v2, Ljava/util/List;
+    const-string v8, "http"
 
-    const-string v3, "IcyHeaders"
+    invoke-direct {v6, v7, v8}, Lc17;-><init>(Lxx0;Ljava/lang/String;)V
 
-    const/4 v4, 0x1
+    new-instance v8, Lc17;
 
-    const/4 v5, 0x0
+    const-string v9, "https"
 
-    const/4 v6, -0x1
+    invoke-direct {v8, v7, v9}, Lc17;-><init>(Lxx0;Ljava/lang/String;)V
 
-    if-eqz v2, :cond_1
+    move-object v7, v8
 
-    invoke-interface {v2, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    new-instance v8, Lc17;
 
-    move-result-object v2
+    sget-object v9, Lc17;->e:Lxx0;
 
-    check-cast v2, Ljava/lang/String;
+    const-string v10, "200"
 
-    :try_start_0
-    invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+    invoke-direct {v8, v9, v10}, Lc17;-><init>(Lxx0;Ljava/lang/String;)V
 
-    move-result v7
-    :try_end_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+    new-instance v10, Lc17;
 
-    mul-int/lit16 v7, v7, 0x3e8
+    const-string v11, "204"
 
-    if-lez v7, :cond_0
+    invoke-direct {v10, v9, v11}, Lc17;-><init>(Lxx0;Ljava/lang/String;)V
 
-    move v1, v4
+    move-object v11, v10
 
-    goto :goto_0
+    new-instance v10, Lc17;
 
-    :cond_0
-    :try_start_1
-    new-instance v8, Ljava/lang/StringBuilder;
+    const-string v12, "206"
 
-    invoke-direct {v8, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v10, v9, v12}, Lc17;-><init>(Lxx0;Ljava/lang/String;)V
 
-    invoke-virtual {v8, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-object v12, v11
 
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    new-instance v11, Lc17;
 
-    move-result-object v1
+    const-string v13, "304"
 
-    invoke-static {v3, v1}, Luyh;->m(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_1
-    .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_1
+    invoke-direct {v11, v9, v13}, Lc17;-><init>(Lxx0;Ljava/lang/String;)V
 
-    move v1, v5
+    move-object v13, v12
 
-    move v7, v6
+    new-instance v12, Lc17;
 
-    :goto_0
-    move v8, v7
+    const-string v14, "400"
 
-    goto :goto_1
+    invoke-direct {v12, v9, v14}, Lc17;-><init>(Lxx0;Ljava/lang/String;)V
 
-    :catch_0
-    move v7, v6
+    move-object v14, v13
 
-    :catch_1
-    const-string v1, "Invalid bitrate header: "
+    new-instance v13, Lc17;
 
-    invoke-static {v1, v2, v3}, Ley1;->u(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    const-string v15, "404"
 
-    move v1, v5
+    invoke-direct {v13, v9, v15}, Lc17;-><init>(Lxx0;Ljava/lang/String;)V
 
-    goto :goto_0
+    move-object v15, v14
 
-    :cond_1
-    move v1, v5
+    new-instance v14, Lc17;
 
-    move v8, v6
+    move-object/from16 v16, v0
 
-    :goto_1
-    const-string v2, "icy-genre"
+    const-string v0, "500"
 
-    invoke-interface {p0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v14, v9, v0}, Lc17;-><init>(Lxx0;Ljava/lang/String;)V
 
-    move-result-object v2
+    move-object v9, v15
 
-    check-cast v2, Ljava/util/List;
+    new-instance v15, Lc17;
 
-    const/4 v7, 0x0
+    const-string v0, "accept-charset"
 
-    if-eqz v2, :cond_2
+    invoke-direct {v15, v0, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-interface {v2, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    new-instance v0, Lc17;
 
-    move-result-object v1
+    move-object/from16 v17, v1
 
-    check-cast v1, Ljava/lang/String;
+    const-string v1, "accept-encoding"
 
-    move-object v10, v1
+    move-object/from16 v18, v3
 
-    move v1, v4
+    const-string v3, "gzip, deflate"
 
-    goto :goto_2
+    invoke-direct {v0, v1, v3}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_2
-    move-object v10, v7
+    new-instance v1, Lc17;
 
-    :goto_2
-    const-string v2, "icy-name"
+    const-string v3, "accept-language"
 
-    invoke-interface {p0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v1, v3, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v2
+    new-instance v3, Lc17;
 
-    check-cast v2, Ljava/util/List;
+    move-object/from16 v19, v0
 
-    if-eqz v2, :cond_3
+    const-string v0, "accept-ranges"
 
-    invoke-interface {v2, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-direct {v3, v0, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v1
+    new-instance v0, Lc17;
 
-    check-cast v1, Ljava/lang/String;
+    move-object/from16 v20, v1
 
-    move-object v11, v1
+    const-string v1, "accept"
 
-    move v1, v4
+    invoke-direct {v0, v1, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_3
+    new-instance v1, Lc17;
 
-    :cond_3
-    move-object v11, v7
+    move-object/from16 v21, v0
 
-    :goto_3
-    const-string v2, "icy-url"
+    const-string v0, "access-control-allow-origin"
 
-    invoke-interface {p0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v1, v0, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v2
+    new-instance v0, Lc17;
 
-    check-cast v2, Ljava/util/List;
+    move-object/from16 v22, v1
 
-    if-eqz v2, :cond_4
+    const-string v1, "age"
 
-    invoke-interface {v2, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-direct {v0, v1, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v1
+    new-instance v1, Lc17;
 
-    check-cast v1, Ljava/lang/String;
+    move-object/from16 v23, v0
 
-    move-object v12, v1
+    const-string v0, "allow"
 
-    move v1, v4
+    invoke-direct {v1, v0, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_4
+    new-instance v0, Lc17;
 
-    :cond_4
-    move-object v12, v7
+    move-object/from16 v24, v1
 
-    :goto_4
-    const-string v2, "icy-pub"
+    const-string v1, "authorization"
 
-    invoke-interface {p0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v1, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v2
+    new-instance v1, Lc17;
 
-    check-cast v2, Ljava/util/List;
+    move-object/from16 v25, v0
 
-    if-eqz v2, :cond_5
+    const-string v0, "cache-control"
 
-    invoke-interface {v2, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-direct {v1, v0, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v1
+    new-instance v0, Lc17;
 
-    check-cast v1, Ljava/lang/String;
+    move-object/from16 v26, v1
 
-    const-string v2, "1"
+    const-string v1, "content-disposition"
 
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-direct {v0, v1, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result v1
+    new-instance v1, Lc17;
 
-    move v13, v1
+    move-object/from16 v27, v0
 
-    move v1, v4
+    const-string v0, "content-encoding"
 
-    goto :goto_5
+    invoke-direct {v1, v0, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_5
-    move v13, v5
+    new-instance v0, Lc17;
 
-    :goto_5
-    const-string v2, "icy-metaint"
+    move-object/from16 v28, v1
 
-    invoke-interface {p0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v1, "content-language"
 
-    move-result-object p0
+    invoke-direct {v0, v1, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    check-cast p0, Ljava/util/List;
+    new-instance v1, Lc17;
 
-    if-eqz p0, :cond_7
+    move-object/from16 v29, v0
 
-    invoke-interface {p0, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    const-string v0, "content-length"
 
-    move-result-object p0
+    invoke-direct {v1, v0, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    check-cast p0, Ljava/lang/String;
+    new-instance v0, Lc17;
 
-    :try_start_2
-    invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+    move-object/from16 v30, v1
 
-    move-result v2
-    :try_end_2
-    .catch Ljava/lang/NumberFormatException; {:try_start_2 .. :try_end_2} :catch_3
+    const-string v1, "content-location"
 
-    if-lez v2, :cond_6
+    invoke-direct {v0, v1, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    move v6, v2
+    new-instance v1, Lc17;
 
-    goto :goto_6
+    move-object/from16 v31, v0
 
-    :cond_6
-    :try_start_3
-    new-instance v4, Ljava/lang/StringBuilder;
+    const-string v0, "content-range"
 
-    invoke-direct {v4, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v0, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v0, Lc17;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-object/from16 v32, v1
 
-    move-result-object v4
+    const-string v1, "content-type"
 
-    invoke-static {v3, v4}, Luyh;->m(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_3
-    .catch Ljava/lang/NumberFormatException; {:try_start_3 .. :try_end_3} :catch_2
+    invoke-direct {v0, v1, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    move v4, v1
+    new-instance v1, Lc17;
 
-    :goto_6
-    move v1, v4
+    move-object/from16 v33, v0
 
-    :cond_7
-    :goto_7
-    move v9, v6
+    const-string v0, "cookie"
 
-    goto :goto_8
+    invoke-direct {v1, v0, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    :catch_2
-    move v6, v2
+    new-instance v0, Lc17;
 
-    :catch_3
-    invoke-static {v0, p0, v3}, Ley1;->u(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    move-object/from16 v34, v1
 
-    goto :goto_7
+    const-string v1, "date"
 
-    :goto_8
-    if-eqz v1, :cond_8
+    invoke-direct {v0, v1, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v7, Lw77;
+    new-instance v1, Lc17;
 
-    invoke-direct/range {v7 .. v13}, Lw77;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
+    move-object/from16 v35, v0
 
-    :cond_8
-    return-object v7
-.end method
+    const-string v0, "etag"
 
+    invoke-direct {v1, v0, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-# virtual methods
-.method public final a(Llu8;)V
-    .locals 1
+    new-instance v0, Lc17;
 
-    iget-object v0, p0, Lw77;->c:Ljava/lang/String;
+    move-object/from16 v36, v1
 
-    if-eqz v0, :cond_0
+    const-string v1, "expect"
 
-    iput-object v0, p1, Llu8;->F:Ljava/lang/CharSequence;
+    invoke-direct {v0, v1, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_0
-    iget-object v0, p0, Lw77;->b:Ljava/lang/String;
+    new-instance v1, Lc17;
 
-    if-eqz v0, :cond_1
+    move-object/from16 v37, v0
 
-    iput-object v0, p1, Llu8;->D:Ljava/lang/CharSequence;
+    const-string v0, "expires"
 
-    :cond_1
-    return-void
-.end method
+    invoke-direct {v1, v0, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    new-instance v0, Lc17;
 
-    const/4 v0, 0x1
+    move-object/from16 v38, v1
 
-    if-ne p0, p1, :cond_0
+    const-string v1, "from"
 
-    return v0
+    invoke-direct {v0, v1, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_0
-    const/4 v1, 0x0
+    new-instance v1, Lc17;
 
-    if-eqz p1, :cond_2
+    move-object/from16 v39, v0
 
-    const-class v2, Lw77;
+    const-string v0, "host"
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {v1, v0, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v3
+    new-instance v0, Lc17;
 
-    if-eq v2, v3, :cond_1
+    move-object/from16 v40, v1
 
-    goto :goto_0
+    const-string v1, "if-match"
 
-    :cond_1
-    check-cast p1, Lw77;
+    invoke-direct {v0, v1, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget v2, p0, Lw77;->a:I
+    new-instance v1, Lc17;
 
-    iget v3, p1, Lw77;->a:I
+    move-object/from16 v41, v0
 
-    if-ne v2, v3, :cond_2
+    const-string v0, "if-modified-since"
 
-    iget-object v2, p0, Lw77;->b:Ljava/lang/String;
+    invoke-direct {v1, v0, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v3, p1, Lw77;->b:Ljava/lang/String;
+    new-instance v0, Lc17;
 
-    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-object/from16 v42, v1
 
-    move-result v2
+    const-string v1, "if-none-match"
 
-    if-eqz v2, :cond_2
+    invoke-direct {v0, v1, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v2, p0, Lw77;->c:Ljava/lang/String;
+    new-instance v1, Lc17;
 
-    iget-object v3, p1, Lw77;->c:Ljava/lang/String;
+    move-object/from16 v43, v0
 
-    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const-string v0, "if-range"
 
-    move-result v2
+    invoke-direct {v1, v0, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-eqz v2, :cond_2
+    new-instance v0, Lc17;
 
-    iget-object v2, p0, Lw77;->d:Ljava/lang/String;
+    move-object/from16 v44, v1
 
-    iget-object v3, p1, Lw77;->d:Ljava/lang/String;
+    const-string v1, "if-unmodified-since"
 
-    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-direct {v0, v1, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result v2
+    new-instance v1, Lc17;
 
-    if-eqz v2, :cond_2
+    move-object/from16 v45, v0
 
-    iget-boolean v2, p0, Lw77;->e:Z
+    const-string v0, "last-modified"
 
-    iget-boolean v3, p1, Lw77;->e:Z
+    invoke-direct {v1, v0, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-ne v2, v3, :cond_2
+    new-instance v0, Lc17;
 
-    iget v2, p0, Lw77;->f:I
+    move-object/from16 v46, v1
 
-    iget p1, p1, Lw77;->f:I
+    const-string v1, "link"
 
-    if-ne v2, p1, :cond_2
+    invoke-direct {v0, v1, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    return v0
+    new-instance v1, Lc17;
 
-    :cond_2
-    :goto_0
-    return v1
-.end method
+    move-object/from16 v47, v0
 
-.method public final hashCode()I
-    .locals 3
+    const-string v0, "location"
 
-    const/16 v0, 0x20f
+    invoke-direct {v1, v0, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget v1, p0, Lw77;->a:I
+    new-instance v0, Lc17;
 
-    add-int/2addr v0, v1
+    move-object/from16 v48, v1
 
-    mul-int/lit8 v0, v0, 0x1f
+    const-string v1, "max-forwards"
 
-    const/4 v1, 0x0
+    invoke-direct {v0, v1, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v2, p0, Lw77;->b:Ljava/lang/String;
+    new-instance v1, Lc17;
 
-    if-eqz v2, :cond_0
+    move-object/from16 v49, v0
 
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+    const-string v0, "proxy-authenticate"
 
-    move-result v2
+    invoke-direct {v1, v0, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_0
+    new-instance v0, Lc17;
 
-    :cond_0
-    move v2, v1
+    move-object/from16 v50, v1
 
-    :goto_0
-    add-int/2addr v0, v2
+    const-string v1, "proxy-authorization"
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-direct {v0, v1, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v2, p0, Lw77;->c:Ljava/lang/String;
+    new-instance v1, Lc17;
 
-    if-eqz v2, :cond_1
+    move-object/from16 v51, v0
 
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+    const-string v0, "range"
 
-    move-result v2
+    invoke-direct {v1, v0, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_1
+    new-instance v0, Lc17;
 
-    :cond_1
-    move v2, v1
+    move-object/from16 v52, v1
 
-    :goto_1
-    add-int/2addr v0, v2
+    const-string v1, "referer"
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-direct {v0, v1, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v2, p0, Lw77;->d:Ljava/lang/String;
+    new-instance v1, Lc17;
 
-    if-eqz v2, :cond_2
+    move-object/from16 v53, v0
 
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+    const-string v0, "refresh"
 
-    move-result v1
+    invoke-direct {v1, v0, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_2
-    add-int/2addr v0, v1
+    new-instance v0, Lc17;
 
-    mul-int/lit8 v0, v0, 0x1f
+    move-object/from16 v54, v1
 
-    iget-boolean v1, p0, Lw77;->e:Z
+    const-string v1, "retry-after"
 
-    add-int/2addr v0, v1
+    invoke-direct {v0, v1, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    mul-int/lit8 v0, v0, 0x1f
+    new-instance v1, Lc17;
 
-    iget v1, p0, Lw77;->f:I
+    move-object/from16 v55, v0
 
-    add-int/2addr v0, v1
+    const-string v0, "server"
 
-    return v0
-.end method
+    invoke-direct {v1, v0, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    new-instance v0, Lc17;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    move-object/from16 v56, v1
 
-    const-string v1, "IcyHeaders: name=\""
+    const-string v1, "set-cookie"
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lw77;->c:Ljava/lang/String;
+    new-instance v1, Lc17;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-object/from16 v57, v0
 
-    const-string v1, "\", genre=\""
+    const-string v0, "strict-transport-security"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v1, v0, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lw77;->b:Ljava/lang/String;
+    new-instance v0, Lc17;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-object/from16 v58, v1
 
-    const-string v1, "\", bitrate="
+    const-string v1, "transfer-encoding"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget v1, p0, Lw77;->a:I
+    new-instance v1, Lc17;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-object/from16 v59, v0
 
-    const-string v1, ", metadataInterval="
+    const-string v0, "user-agent"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v1, v0, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget v1, p0, Lw77;->f:I
+    new-instance v0, Lc17;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-object/from16 v60, v1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v1, "vary"
+
+    invoke-direct {v0, v1, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v1, Lc17;
+
+    move-object/from16 v61, v0
+
+    const-string v0, "via"
+
+    invoke-direct {v1, v0, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v0, Lc17;
+
+    move-object/from16 v62, v1
+
+    const-string v1, "www-authenticate"
+
+    invoke-direct {v0, v1, v2}, Lc17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    move-object/from16 v1, v18
+
+    move-object/from16 v18, v3
+
+    move-object v3, v1
+
+    move-object/from16 v2, v16
+
+    move-object/from16 v1, v17
+
+    move-object/from16 v16, v19
+
+    move-object/from16 v17, v20
+
+    move-object/from16 v19, v21
+
+    move-object/from16 v20, v22
+
+    move-object/from16 v21, v23
+
+    move-object/from16 v22, v24
+
+    move-object/from16 v23, v25
+
+    move-object/from16 v24, v26
+
+    move-object/from16 v25, v27
+
+    move-object/from16 v26, v28
+
+    move-object/from16 v27, v29
+
+    move-object/from16 v28, v30
+
+    move-object/from16 v29, v31
+
+    move-object/from16 v30, v32
+
+    move-object/from16 v31, v33
+
+    move-object/from16 v32, v34
+
+    move-object/from16 v33, v35
+
+    move-object/from16 v34, v36
+
+    move-object/from16 v35, v37
+
+    move-object/from16 v36, v38
+
+    move-object/from16 v37, v39
+
+    move-object/from16 v38, v40
+
+    move-object/from16 v39, v41
+
+    move-object/from16 v40, v42
+
+    move-object/from16 v41, v43
+
+    move-object/from16 v42, v44
+
+    move-object/from16 v43, v45
+
+    move-object/from16 v44, v46
+
+    move-object/from16 v45, v47
+
+    move-object/from16 v46, v48
+
+    move-object/from16 v47, v49
+
+    move-object/from16 v48, v50
+
+    move-object/from16 v49, v51
+
+    move-object/from16 v50, v52
+
+    move-object/from16 v51, v53
+
+    move-object/from16 v52, v54
+
+    move-object/from16 v53, v55
+
+    move-object/from16 v54, v56
+
+    move-object/from16 v55, v57
+
+    move-object/from16 v56, v58
+
+    move-object/from16 v57, v59
+
+    move-object/from16 v58, v60
+
+    move-object/from16 v59, v61
+
+    move-object/from16 v60, v62
+
+    move-object/from16 v61, v0
+
+    filled-new-array/range {v1 .. v61}, [Lc17;
 
     move-result-object v0
 
-    return-object v0
+    sput-object v0, Lw77;->a:[Lc17;
+
+    new-instance v1, Ljava/util/LinkedHashMap;
+
+    const/16 v2, 0x3d
+
+    invoke-direct {v1, v2}, Ljava/util/LinkedHashMap;-><init>(I)V
+
+    const/4 v3, 0x0
+
+    :goto_0
+    if-ge v3, v2, :cond_1
+
+    aget-object v4, v0, v3
+
+    iget-object v4, v4, Lc17;->b:Lxx0;
+
+    invoke-virtual {v1, v4}, Ljava/util/AbstractMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_0
+
+    aget-object v4, v0, v3
+
+    iget-object v4, v4, Lc17;->b:Lxx0;
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    invoke-interface {v1, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-static {v1}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
+
+    move-result-object v0
+
+    sput-object v0, Lw77;->b:Ljava/util/Map;
+
+    return-void
+.end method
+
+.method public static a(Lxx0;)V
+    .locals 5
+
+    invoke-virtual {p0}, Lxx0;->d()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, v0, :cond_2
+
+    const/16 v2, 0x41
+
+    int-to-byte v2, v2
+
+    const/16 v3, 0x5a
+
+    int-to-byte v3, v3
+
+    invoke-virtual {p0, v1}, Lxx0;->h(I)B
+
+    move-result v4
+
+    if-le v2, v4, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    if-ge v3, v4, :cond_1
+
+    :goto_1
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v0, Ljava/io/IOException;
+
+    invoke-virtual {p0}, Lxx0;->l()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v1, "PROTOCOL_ERROR response malformed: mixed case name: "
+
+    invoke-virtual {v1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_2
+    return-void
 .end method

@@ -1,120 +1,48 @@
-.class public final synthetic Lmg2;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lur3;
+.class public final Lmg2;
+.super Lq44;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lld2;
 
-.field public final synthetic b:J
+.field public synthetic d:Ljava/lang/Object;
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;JI)V
+.method public constructor <init>(Lld2;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p4, p0, Lmg2;->a:I
+    iput-object p1, p0, Lmg2;->X:Lld2;
 
-    iput-object p1, p0, Lmg2;->c:Ljava/lang/Object;
-
-    iput-wide p2, p0, Lmg2;->b:J
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 10
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lmg2;->a:I
+    iput-object p1, p0, Lmg2;->d:Ljava/lang/Object;
 
-    iget-object v1, p0, Lmg2;->c:Ljava/lang/Object;
+    iget p1, p0, Lmg2;->o:I
 
-    packed-switch v0, :pswitch_data_0
+    const/high16 v0, -0x80000000
 
-    check-cast v1, Ltgd;
+    or-int/2addr p1, v0
 
-    check-cast p1, Ljava/util/List;
+    iput p1, p0, Lmg2;->o:I
 
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    iget-object p1, p0, Lmg2;->X:Lld2;
 
-    move-result-object p1
+    const/4 v0, 0x0
 
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lkab;
-
-    iget-wide v2, p0, Lmg2;->b:J
-
-    invoke-virtual {v1, v0, v2, v3}, Ltgd;->g(Lkab;J)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    move-object v5, v1
-
-    check-cast v5, Lng2;
-
-    move-object v8, p1
-
-    check-cast v8, Ljava/util/Collection;
-
-    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-interface {v8}, Ljava/util/Collection;->size()I
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {p1, v0, p0}, Lld2;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    const-string v0, "ng2"
-
-    const-string v1, "ValidateMessagesTimeUseCase found some items for delete, size = %d"
-
-    invoke-static {v0, v1, p1}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object p1, v5, Lng2;->h:Lxod;
-
-    new-instance v4, Llg2;
-
-    const/4 v9, 0x0
-
-    iget-wide v6, p0, Lmg2;->b:J
-
-    invoke-direct/range {v4 .. v9}, Llg2;-><init>(Ljava/lang/Object;JLjava/lang/Object;I)V
-
-    invoke-virtual {p1, v4}, Lxod;->b(Ljava/lang/Runnable;)Lvv4;
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

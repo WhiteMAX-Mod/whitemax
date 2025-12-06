@@ -1,72 +1,69 @@
 .class public final Lbpg;
-.super Ljava/lang/Object;
+.super Lcie;
 .source "SourceFile"
 
-# interfaces
-.implements Lcpg;
 
+# instance fields
+.field public final i:I
 
-# static fields
-.field public static final a:Lbpg;
+.field public final j:Z
+
+.field public final k:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;Lh18;Lnxg;Lpc2;Lso3;)V
+    .locals 6
 
-    new-instance v0, Lbpg;
+    move-object v0, p0
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-object v1, p1
 
-    sput-object v0, Lbpg;->a:Lbpg;
+    move-object v2, p2
+
+    move-object v4, p3
+
+    move-object v3, p4
+
+    move-object v5, p5
+
+    invoke-direct/range {v0 .. v5}, Lcie;-><init>(Landroid/content/Context;Lh18;Lpc2;Lf84;Lso3;)V
+
+    const/4 p1, 0x2
+
+    iput p1, v0, Lbpg;->i:I
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, v0, Lbpg;->j:Z
+
+    iput-boolean p1, v0, Lbpg;->k:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/graphics/Matrix;II)Lorg/webrtc/SurfaceTextureHelper$FrameGeometry;
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return-object p1
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
+.method public final c()Z
     .locals 1
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lbpg;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x62c43bf4
+    iget-boolean v0, p0, Lbpg;->k:Z
 
     return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final d()Z
     .locals 1
 
-    const-string v0, "NoOp"
+    iget-boolean v0, p0, Lbpg;->j:Z
 
-    return-object v0
+    return v0
+.end method
+
+.method public final e()I
+    .locals 1
+
+    iget v0, p0, Lbpg;->i:I
+
+    return v0
 .end method

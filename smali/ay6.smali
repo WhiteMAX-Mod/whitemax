@@ -1,176 +1,144 @@
 .class public final Lay6;
-.super Llxc;
+.super Ljava/util/ArrayList;
 .source "SourceFile"
 
 
-# static fields
-.field public static final d:Ljava/lang/String;
-
-.field public static final e:Ljava/lang/String;
-
-
 # instance fields
-.field public final b:Z
+.field public final a:Ljava/lang/Class;
 
-.field public final c:Z
+.field public final b:Ljava/lang/Class;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ljava/lang/Class;Ljava/lang/Class;)V
+    .locals 0
 
-    sget-object v0, Lnig;->a:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lay6;->a:Ljava/lang/Class;
 
-    const/16 v1, 0x24
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lay6;->d:Ljava/lang/String;
-
-    const/4 v0, 0x2
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lay6;->e:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    .line 2
-    iput-boolean v0, p0, Lay6;->b:Z
-
-    .line 3
-    iput-boolean v0, p0, Lay6;->c:Z
-
-    return-void
-.end method
-
-.method public constructor <init>(Z)V
-    .locals 1
-
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x1
-
-    .line 5
-    iput-boolean v0, p0, Lay6;->b:Z
-
-    .line 6
-    iput-boolean p1, p0, Lay6;->c:Z
+    iput-object p2, p0, Lay6;->b:Ljava/lang/Class;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Z
-    .locals 1
+.method public final a()Lsa9;
+    .locals 9
 
-    iget-boolean v0, p0, Lay6;->b:Z
+    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
 
-    return v0
-.end method
+    move-result v0
 
-.method public final c()Landroid/os/Bundle;
-    .locals 3
+    iget-object v1, p0, Lay6;->a:Ljava/lang/Class;
 
-    new-instance v0, Landroid/os/Bundle;
+    invoke-static {v1, v0}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
 
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+    move-result-object v1
 
-    sget-object v1, Llxc;->a:Ljava/lang/String;
+    check-cast v1, [Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    iget-object v2, p0, Lay6;->b:Ljava/lang/Class;
 
-    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+    invoke-static {v2, v0}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
 
-    sget-object v1, Lay6;->d:Ljava/lang/String;
+    move-result-object v2
 
-    iget-boolean v2, p0, Lay6;->b:Z
+    check-cast v2, [Ljava/lang/Object;
 
-    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
+    const/4 v3, 0x0
 
-    sget-object v1, Lay6;->e:Ljava/lang/String;
+    :goto_0
+    if-ge v3, v0, :cond_0
 
-    iget-boolean v2, p0, Lay6;->c:Z
+    invoke-virtual {p0, v3}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
+    move-result-object v4
 
-    return-object v0
-.end method
+    check-cast v4, Landroid/util/Pair;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    iget-object v4, v4, Landroid/util/Pair;->first:Ljava/lang/Object;
 
-    instance-of v0, p1, Lay6;
+    aput-object v4, v1, v3
 
-    if-nez v0, :cond_0
+    invoke-virtual {p0, v3}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroid/util/Pair;
+
+    iget-object v4, v4, Landroid/util/Pair;->second:Ljava/lang/Object;
+
+    aput-object v4, v2, v3
+
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     :cond_0
-    check-cast p1, Lay6;
+    new-instance v0, Lsa9;
 
-    iget-boolean v0, p0, Lay6;->c:Z
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iget-boolean v1, p1, Lay6;->c:Z
+    array-length v3, v1
 
-    if-ne v0, v1, :cond_1
+    new-array v4, v3, [I
 
-    iget-boolean v0, p0, Lay6;->b:Z
+    new-instance v5, Ljava/util/HashMap;
 
-    iget-boolean p1, p1, Lay6;->b:Z
+    invoke-direct {v5}, Ljava/util/HashMap;-><init>()V
 
-    if-ne v0, p1, :cond_1
+    const/4 v6, 0x0
 
-    const/4 p1, 0x1
+    :goto_1
+    if-ge v6, v3, :cond_2
 
-    return p1
+    aget-object v7, v1, v6
+
+    invoke-virtual {v5, v7}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Ljava/lang/Integer;
+
+    if-nez v8, :cond_1
+
+    invoke-virtual {v5}, Ljava/util/HashMap;->size()I
+
+    move-result v8
+
+    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
+
+    invoke-virtual {v5, v7, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_1
-    :goto_0
-    const/4 p1, 0x0
+    invoke-virtual {v8}, Ljava/lang/Integer;->intValue()I
 
-    return p1
-.end method
+    move-result v7
 
-.method public final hashCode()I
-    .locals 2
+    aput v7, v4, v6
 
-    iget-boolean v0, p0, Lay6;->b:Z
+    add-int/lit8 v6, v6, 0x1
 
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    goto :goto_1
 
-    move-result-object v0
+    :cond_2
+    iput-object v4, v0, Lsa9;->a:Ljava/lang/Object;
 
-    iget-boolean v1, p0, Lay6;->c:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v1, v4}, Lsa9;->o([Ljava/lang/Object;[I)[Ljava/lang/Object;
 
     move-result-object v1
 
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
+    iput-object v1, v0, Lsa9;->b:Ljava/lang/Object;
 
-    move-result-object v0
+    invoke-static {v2, v4}, Lsa9;->o([Ljava/lang/Object;[I)[Ljava/lang/Object;
 
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+    move-result-object v1
 
-    move-result v0
+    iput-object v1, v0, Lsa9;->c:Ljava/lang/Object;
 
-    return v0
+    return-object v0
 .end method

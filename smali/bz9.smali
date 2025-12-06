@@ -1,19 +1,20 @@
-.class public final Lbz9;
+.class public interface abstract Lbz9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Z
+# virtual methods
+.method public abstract c()I
+.end method
 
+.method public abstract getPosition()J
+.end method
 
-# direct methods
-.method public constructor <init>(Z)V
-    .locals 0
+.method public abstract h()J
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract readUnsignedShort()I
+.end method
 
-    iput-boolean p1, p0, Lbz9;->a:Z
-
-    return-void
+.method public abstract v(I)V
 .end method

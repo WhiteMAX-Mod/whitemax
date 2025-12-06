@@ -1,164 +1,293 @@
-.class public final synthetic Lun5;
-.super Ljava/lang/Object;
+.class public final Lun5;
+.super Lu08;
 .source "SourceFile"
 
 # interfaces
-.implements Laj6;
-.implements Lhv;
+.implements Lcm6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:J
+.field public final synthetic b:Ljava/lang/Object;
 
-.field public final synthetic c:I
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(IIJ)V
+.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
     .locals 0
 
-    .line 1
     iput p2, p0, Lun5;->a:I
 
-    iput-wide p3, p0, Lun5;->b:J
+    iput-object p1, p0, Lun5;->b:Ljava/lang/Object;
 
-    iput p1, p0, Lun5;->c:I
+    iput-object p3, p0, Lun5;->c:Ljava/lang/Object;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x0
 
-    return-void
-.end method
-
-.method public synthetic constructor <init>(IJ)V
-    .locals 1
-
-    .line 2
-    const/4 v0, 0x3
-
-    iput v0, p0, Lun5;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lun5;->c:I
-
-    iput-wide p2, p0, Lun5;->b:J
+    invoke-direct {p0, p1}, Lu08;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
+.method public a()Ljava/util/List;
+    .locals 2
+
+    iget-object v0, p0, Lun5;->c:Ljava/lang/Object;
+
+    check-cast v0, Lga7;
+
+    invoke-virtual {v0}, Lga7;->i()Ljava/net/URI;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/net/URI;->getHost()Ljava/lang/String;
+
+    move-result-object v1
+
+    if-nez v1, :cond_0
+
+    sget-object v0, Ljava/net/Proxy;->NO_PROXY:Ljava/net/Proxy;
+
+    filled-new-array {v0}, [Ljava/net/Proxy;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lyxg;->k([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    iget-object v1, p0, Lun5;->b:Ljava/lang/Object;
+
+    check-cast v1, La9;
+
+    iget-object v1, v1, La9;->e:Ljava/lang/Object;
+
+    check-cast v1, Laa;
+
+    iget-object v1, v1, Laa;->j:Ljava/net/ProxySelector;
+
+    invoke-virtual {v1, v0}, Ljava/net/ProxySelector;->select(Ljava/net/URI;)Ljava/util/List;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-static {v0}, Lyxg;->w(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object v0, Ljava/net/Proxy;->NO_PROXY:Ljava/net/Proxy;
+
+    filled-new-array {v0}, [Ljava/net/Proxy;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lyxg;->k([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
 
     iget v0, p0, Lun5;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    move-object v2, p1
+    :try_start_0
+    new-instance v0, Lorg/webrtc/HardwareVideoEncoderFactory;
 
-    check-cast v2, Lto5;
+    iget-object v1, p0, Lun5;->b:Ljava/lang/Object;
 
-    .line 1
-    new-instance v1, Lvn5;
+    check-cast v1, Lorg/webrtc/EglBase$Context;
 
-    const/4 v6, 0x1
+    const/4 v2, 0x0
 
-    iget-wide v3, p0, Lun5;->b:J
+    invoke-direct {v0, v1, v2, v2}, Lorg/webrtc/HardwareVideoEncoderFactory;-><init>(Lorg/webrtc/EglBase$Context;ZZ)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget v5, p0, Lun5;->c:I
+    goto :goto_0
 
-    invoke-direct/range {v1 .. v6}, Lvn5;-><init>(Ljava/lang/Object;JII)V
+    :catchall_0
+    move-exception v0
 
-    .line 2
-    new-instance p1, Lzg3;
+    new-instance v1, Lmob;
 
-    const/4 v0, 0x1
+    iget-object v2, p0, Lun5;->c:Ljava/lang/Object;
 
-    invoke-direct {p1, v0, v1}, Lzg3;-><init>(ILjava/lang/Object;)V
+    check-cast v2, Lnob;
 
-    return-object p1
+    iget-object v2, v2, Lnob;->a:Ly6d;
 
-    .line 3
+    new-instance v3, Ljava/lang/IllegalStateException;
+
+    const-string v4, "Can\'t create HardwareVideoEncoder"
+
+    invoke-direct {v3, v4, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-direct {v1, v2, v3}, Lmob;-><init>(Ly6d;Ljava/lang/IllegalStateException;)V
+
+    move-object v0, v1
+
+    :goto_0
+    return-object v0
+
     :pswitch_0
-    check-cast p1, Llo5;
+    new-instance v0, Lw55;
 
-    .line 4
-    invoke-virtual {p1}, Llo5;->a()Lhqe;
+    iget-object v1, p0, Lun5;->b:Ljava/lang/Object;
 
-    move-result-object p1
+    check-cast v1, Landroid/content/Context;
 
-    new-instance v0, Lun5;
+    iget-object v2, p0, Lun5;->c:Ljava/lang/Object;
 
-    const/4 v1, 0x2
+    check-cast v2, Ljava/lang/String;
 
-    iget v2, p0, Lun5;->c:I
+    invoke-virtual {v1}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
 
-    iget-wide v3, p0, Lun5;->b:J
+    move-result-object v1
 
-    invoke-direct {v0, v2, v1, v3, v4}, Lun5;-><init>(IIJ)V
+    const-string v3, "tracer-lite-"
 
-    .line 5
-    new-instance v1, Lxg3;
+    invoke-virtual {v3, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v2, 0x2
+    move-result-object v2
 
-    invoke-direct {v1, p1, v2, v0}, Lxg3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-static {v1, v2}, Ljz5;->g(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
-    return-object v1
+    move-result-object v1
 
-    .line 6
+    const-string v2, "drops.json"
+
+    invoke-static {v1, v2}, Ljz5;->g(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lw55;-><init>(Ljava/io/File;)V
+
+    return-object v0
+
     :pswitch_1
-    move-object v4, p1
+    iget-object v0, p0, Lun5;->c:Ljava/lang/Object;
 
-    check-cast v4, Lbp5;
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
-    .line 7
-    new-instance v3, Lvn5;
+    move-result-object v0
 
-    const/4 v8, 0x0
+    check-cast v0, Lggh;
 
-    iget-wide v5, p0, Lun5;->b:J
+    instance-of v1, v0, Ls07;
 
-    iget v7, p0, Lun5;->c:I
+    if-eqz v1, :cond_0
 
-    invoke-direct/range {v3 .. v8}, Lvn5;-><init>(Ljava/lang/Object;JII)V
+    check-cast v0, Ls07;
 
-    .line 8
-    new-instance p1, Lzg3;
+    goto :goto_1
 
-    const/4 v0, 0x1
+    :cond_0
+    const/4 v0, 0x0
 
-    invoke-direct {p1, v0, v3}, Lzg3;-><init>(ILjava/lang/Object;)V
+    :goto_1
+    if-eqz v0, :cond_1
 
-    return-object p1
+    invoke-interface {v0}, Ls07;->d()Ldgh;
+
+    move-result-object v0
+
+    if-nez v0, :cond_2
+
+    :cond_1
+    iget-object v0, p0, Lun5;->b:Ljava/lang/Object;
+
+    check-cast v0, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
+
+    invoke-virtual {v0}, Landroidx/fragment/app/a;->d()Ldgh;
+
+    move-result-object v0
+
+    :cond_2
+    return-object v0
+
+    :pswitch_2
+    invoke-virtual {p0}, Lun5;->a()Ljava/util/List;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_3
+    iget-object v0, p0, Lun5;->b:Ljava/lang/Object;
+
+    check-cast v0, Lys4;
+
+    iget-object v1, p0, Lun5;->c:Ljava/lang/Object;
+
+    check-cast v1, Lz3e;
+
+    invoke-virtual {v1}, Lz3e;->a()Landroid/net/Uri;
+
+    move-result-object v2
+
+    iget-object v0, v0, Lys4;->a:Ljava/lang/Object;
+
+    check-cast v0, Lrm;
+
+    new-instance v3, Lqm;
+
+    iget-object v1, v1, Lz3e;->a:Ltl;
+
+    iget-object v4, v1, Ltl;->c:Ljava/lang/String;
+
+    iget-object v1, v1, Ltl;->d:Ljava/lang/String;
+
+    if-eqz v2, :cond_3
+
+    invoke-virtual {v2}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    goto :goto_2
+
+    :cond_3
+    const/4 v2, 0x0
+
+    :goto_2
+    invoke-direct {v3, v4, v1, v2}, Lqm;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v0, v3}, Lrm;->setSessionInfo(Lqm;)V
+
+    sget-object v0, Lqqg;->a:Lqqg;
+
+    return-object v0
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch
-.end method
-
-.method public apply(Ljava/lang/Object;)Ll28;
-    .locals 4
-
-    check-cast p1, Ljava/util/List;
-
-    .line 9
-    new-instance v0, Lrz8;
-
-    iget v1, p0, Lun5;->c:I
-
-    iget-wide v2, p0, Lun5;->b:J
-
-    invoke-direct {v0, v1, v2, v3, p1}, Lrz8;-><init>(IJLjava/util/List;)V
-
-    invoke-static {v0}, Lxj7;->g(Ljava/lang/Object;)Ljb7;
-
-    move-result-object p1
-
-    return-object p1
 .end method

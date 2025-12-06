@@ -4,24 +4,42 @@
 
 
 # instance fields
-.field public a:Z
+.field public final a:Landroid/graphics/Typeface;
 
-.field public b:I
+.field public final b:I
 
-.field public c:I
 
-.field public d:I
+# direct methods
+.method public constructor <init>(I)V
+    .locals 1
 
-.field public e:I
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public f:I
+    const/4 v0, 0x0
 
-.field public g:Ljava/lang/Object;
+    .line 2
+    iput-object v0, p0, Lfe6;->a:Landroid/graphics/Typeface;
 
-.field public h:Ljava/lang/Object;
+    .line 3
+    iput p1, p0, Lfe6;->b:I
 
-.field public i:Ljava/lang/Object;
+    return-void
+.end method
 
-.field public j:F
+.method public constructor <init>(Landroid/graphics/Typeface;)V
+    .locals 0
 
-.field public k:Landroid/view/View;
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 5
+    iput-object p1, p0, Lfe6;->a:Landroid/graphics/Typeface;
+
+    const/4 p1, 0x0
+
+    .line 6
+    iput p1, p0, Lfe6;->b:I
+
+    return-void
+.end method

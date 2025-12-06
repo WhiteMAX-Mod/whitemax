@@ -1,64 +1,14 @@
-.class public final Lp3d;
+.class public abstract Lp3d;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Ls3d;
 
 
 # static fields
-.field public static final a:Lp3d;
+.field public static oneme_in_app_review_close:I = 0x7f13085a
 
+.field public static oneme_in_app_review_not_now:I = 0x7f13085b
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public static oneme_in_app_review_send:I = 0x7f13085c
 
-    new-instance v0, Lp3d;
+.field public static oneme_in_app_review_subtitle:I = 0x7f13085d
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lp3d;->a:Lp3d;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lp3d;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x7ab69f16
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "PerformErrorHaptic"
-
-    return-object v0
-.end method
+.field public static oneme_in_app_review_thanks:I = 0x7f13085e

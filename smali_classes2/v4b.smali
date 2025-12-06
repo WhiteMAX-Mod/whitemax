@@ -1,133 +1,118 @@
-.class public final synthetic Lv4b;
-.super Ljava/lang/Object;
+.class public final Lv4b;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Lvma;
+.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/geo/view/OneMeSupportMapFragment;
+.field public final synthetic X:Lx4b;
 
-.field public final synthetic b:Ljava/lang/String;
-
-.field public final synthetic c:Lj3a;
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/messages/location/TamOneMeSupportMapFragment;Ljava/lang/String;Lj3a;)V
+.method public constructor <init>(Lx4b;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lv4b;->X:Lx4b;
 
-    iput-object p1, p0, Lv4b;->a:Lone/me/geo/view/OneMeSupportMapFragment;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lv4b;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Lv4b;->c:Lj3a;
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final W(Lns6;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lf84;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lv4b;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lv4b;
+
+    sget-object p2, Lqqg;->a:Lqqg;
+
+    invoke-virtual {p1, p2}, Lv4b;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lv4b;
+
+    iget-object v0, p0, Lv4b;->X:Lx4b;
+
+    invoke-direct {p1, v0, p2}, Lv4b;-><init>(Lx4b;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    iget-object v0, p0, Lv4b;->a:Lone/me/geo/view/OneMeSupportMapFragment;
+    iget v0, p0, Lv4b;->o:I
 
-    iput-object p1, v0, Lone/me/geo/view/OneMeSupportMapFragment;->l1:Lns6;
+    const/4 v1, 0x1
 
-    invoke-virtual {p1}, Lns6;->h()V
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p1}, Lns6;->i()V
+    if-ne v0, v1, :cond_0
 
-    invoke-virtual {p1}, Lns6;->p()V
-
-    iget-object v1, p0, Lv4b;->b:Ljava/lang/String;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    if-nez v1, :cond_0
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    new-instance v1, Lruf;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-direct {v1}, Lruf;-><init>()V
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    const v2, 0x7f7fffff    # Float.MAX_VALUE
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iput v2, v1, Lruf;->c:F
-
-    sget-object v2, Lcn5;->a:Lcn5;
-
-    invoke-virtual {v1, v2}, Lruf;->b(Lsuf;)V
-
-    const/4 v2, 0x1
-
-    iput-boolean v2, v1, Lruf;->b:Z
-
-    invoke-virtual {p1, v1}, Lns6;->b(Lruf;)Lquf;
-
-    sget-object v1, Ll05;->s0:Lk82;
-
-    invoke-virtual {v0}, Landroidx/fragment/app/a;->t0()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lk82;->e(Landroid/content/Context;)Ll05;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ll05;->l()Lv5b;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lone/me/geo/view/OneMeSupportMapFragment;->B0(Lv5b;)V
+    throw p1
 
     :cond_1
-    :goto_0
-    :try_start_0
-    iget-object v0, p1, Lns6;->a:Lkbi;
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Lguh;->W()Landroid/os/Parcel;
+    iput v1, p0, Lv4b;->o:I
 
-    move-result-object v1
+    new-instance p1, Lt4b;
+
+    const/4 v0, 0x0
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v2}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-direct {p1, v1, v0, v2}, Lt4b;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-virtual {v1, v2}, Landroid/os/Parcel;->writeInt(I)V
+    iget-object v0, p0, Lv4b;->X:Lx4b;
 
-    invoke-virtual {v1, v2}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {v0, p1, p0}, Lx4b;->g(Lem6;Lq44;)Ljava/lang/Object;
 
-    invoke-virtual {v1, v2}, Landroid/os/Parcel;->writeInt(I)V
+    move-result-object p1
 
-    const/16 v2, 0x27
+    sget-object v0, Lg84;->a:Lg84;
 
-    invoke-virtual {v0, v1, v2}, Lguh;->Y(Landroid/os/Parcel;I)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    if-ne p1, v0, :cond_2
 
-    iget-object v0, p0, Lv4b;->c:Lj3a;
+    return-object v0
 
-    invoke-virtual {v0, p1}, Lj3a;->W(Lns6;)V
+    :cond_2
+    :goto_0
+    sget-object p1, Lqqg;->a:Lqqg;
 
-    return-void
-
-    :catch_0
-    move-exception p1
-
-    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
-
-    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
+    return-object p1
 .end method

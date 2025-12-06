@@ -1,138 +1,201 @@
-.class public final Ldli;
-.super Lb7i;
+.class public abstract Ldli;
+.super Ljava/util/AbstractCollection;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/io/Serializable;
 
 
 # static fields
-.field private static final zzd:Ldli;
-
-
-# instance fields
-.field private zze:B
+.field public static final a:[Ljava/lang/Object;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Ldli;
-
-    invoke-direct {v0}, Ldli;-><init>()V
-
-    sput-object v0, Ldli;->zzd:Ldli;
-
-    const-class v1, Ldli;
-
-    invoke-static {v1, v0}, Lj7i;->h(Ljava/lang/Class;Lj7i;)V
-
-    return-void
-.end method
-
-.method public constructor <init>()V
     .locals 1
 
-    invoke-direct {p0}, Lj7i;-><init>()V
+    const/4 v0, 0x0
 
-    sget-object v0, Lh6i;->c:Lh6i;
+    new-array v0, v0, [Ljava/lang/Object;
 
-    iput-object v0, p0, Lb7i;->zzb:Lh6i;
-
-    const/4 v0, 0x2
-
-    iput-byte v0, p0, Ldli;->zze:B
+    sput-object v0, Ldli;->a:[Ljava/lang/Object;
 
     return-void
-.end method
-
-.method public static n()Ldli;
-    .locals 1
-
-    sget-object v0, Ldli;->zzd:Ldli;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final m(ILj7i;)Ljava/lang/Object;
-    .locals 2
+.method public abstract a()[Ljava/lang/Object;
+.end method
 
-    add-int/lit8 p1, p1, -0x1
+.method public final add(Ljava/lang/Object;)Z
+    .locals 0
 
-    if-eqz p1, :cond_5
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    const/4 v0, 0x2
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final addAll(Ljava/util/Collection;)Z
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public abstract b()I
+.end method
+
+.method public abstract c()I
+.end method
+
+.method public final clear()V
+    .locals 1
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw v0
+.end method
+
+.method public abstract d()Z
+.end method
+
+.method public abstract e([Ljava/lang/Object;)I
+.end method
+
+.method public final remove(Ljava/lang/Object;)Z
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final removeAll(Ljava/util/Collection;)Z
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final retainAll(Ljava/util/Collection;)Z
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final spliterator()Ljava/util/Spliterator;
+    .locals 1
+
+    const/16 v0, 0x510
+
+    invoke-static {p0, v0}, Ljava/util/Spliterators;->spliterator(Ljava/util/Collection;I)Ljava/util/Spliterator;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final toArray()[Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    sget-object v0, Ldli;->a:[Ljava/lang/Object;
+
+    invoke-virtual {p0, v0}, Ldli;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    .locals 3
+
+    .line 2
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 3
+    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
+
+    move-result v0
+
+    array-length v1, p1
+
+    if-ge v1, v0, :cond_2
+
+    .line 4
+    invoke-virtual {p0}, Ldli;->a()[Ljava/lang/Object;
+
+    move-result-object v2
+
+    if-nez v2, :cond_1
+
+    if-eqz v1, :cond_0
 
     const/4 v1, 0x0
 
-    if-eq p1, v0, :cond_4
+    invoke-static {p1, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
-    const/4 v0, 0x3
+    move-result-object p1
 
-    if-eq p1, v0, :cond_3
+    .line 5
+    :cond_0
+    invoke-static {p1, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
-    const/4 v0, 0x4
-
-    if-eq p1, v0, :cond_2
-
-    const/4 v0, 0x5
-
-    if-eq p1, v0, :cond_1
-
-    if-nez p2, :cond_0
-
-    const/4 p1, 0x0
+    move-result-object p1
 
     goto :goto_0
 
-    :cond_0
-    const/4 p1, 0x1
-
-    :goto_0
-    iput-byte p1, p0, Ldli;->zze:B
-
-    return-object v1
-
+    .line 6
     :cond_1
-    sget-object p1, Ldli;->zzd:Ldli;
+    invoke-virtual {p0}, Ldli;->b()I
+
+    move-result v0
+
+    invoke-virtual {p0}, Ldli;->c()I
+
+    move-result v1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p1
+
+    .line 7
+    invoke-static {v2, v0, v1, p1}, Ljava/util/Arrays;->copyOfRange([Ljava/lang/Object;IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object p1
 
     return-object p1
 
     :cond_2
-    new-instance p1, Lali;
+    if-le v1, v0, :cond_3
 
-    sget-object p2, Ldli;->zzd:Ldli;
+    const/4 v1, 0x0
 
-    const/4 v0, 0x0
+    .line 8
+    aput-object v1, p1, v0
 
-    invoke-direct {p1, v0, p2}, Lali;-><init>(ILj7i;)V
-
-    return-object p1
-
+    .line 9
     :cond_3
-    new-instance p1, Ldli;
-
-    invoke-direct {p1}, Ldli;-><init>()V
-
-    return-object p1
-
-    :cond_4
-    sget-object p1, Ldli;->zzd:Ldli;
-
-    new-instance p2, Lwai;
-
-    const-string v0, "\u0003\u0000"
-
-    invoke-direct {p2, p1, v0, v1}, Lwai;-><init>(Lo3i;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-object p2
-
-    :cond_5
-    iget-byte p1, p0, Ldli;->zze:B
-
-    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
-
-    move-result-object p1
+    :goto_0
+    invoke-virtual {p0, p1}, Ldli;->e([Ljava/lang/Object;)I
 
     return-object p1
 .end method

@@ -1,99 +1,127 @@
-.class public abstract synthetic Loig;
-.super Ljava/lang/Object;
+.class public final Loig;
+.super Lnig;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:[I
+# instance fields
+.field public b:Z
+
+.field public c:Ljava/util/Iterator;
+
+.field public d:Z
+
+.field public final synthetic e:Lay5;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lay5;Ljava/lang/Object;)V
+    .locals 0
 
-    invoke-static {}, Ljg6;->values()[Ljg6;
+    iput-object p1, p0, Loig;->e:Lay5;
+
+    invoke-direct {p0, p2}, Lsig;-><init>(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Ljava/lang/Object;
+    .locals 5
+
+    iget-object v0, p0, Loig;->e:Lay5;
+
+    iget-object v0, v0, Lay5;->o:Lzde;
+
+    check-cast v0, Lb26;
+
+    iget-boolean v1, p0, Loig;->d:Z
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    iget-object v4, p0, Lsig;->a:Ljava/lang/Object;
+
+    if-nez v1, :cond_2
+
+    iget-object v1, p0, Loig;->c:Ljava/util/Iterator;
+
+    if-nez v1, :cond_2
+
+    iget-object v1, v0, Lb26;->d:Ljava/lang/Object;
+
+    check-cast v1, Lem6;
+
+    invoke-interface {v1, v4}, Lem6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Boolean;
+
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    return-object v3
+
+    :cond_0
+    iget-object v0, v0, Lb26;->c:Lem6;
+
+    invoke-interface {v0, v4}, Lem6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    array-length v0, v0
+    check-cast v0, Lzde;
 
-    new-array v0, v0, [I
+    if-eqz v0, :cond_1
 
-    const/4 v1, 0x1
+    invoke-interface {v0}, Lzde;->iterator()Ljava/util/Iterator;
 
-    const/4 v2, 0x0
+    move-result-object v0
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    goto :goto_0
 
-    :catch_0
-    const/4 v2, 0x2
+    :cond_1
+    move-object v0, v3
 
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    :goto_0
+    iput-object v0, p0, Loig;->c:Ljava/util/Iterator;
 
-    :catch_1
-    const/4 v1, 0x3
+    if-nez v0, :cond_2
 
-    :try_start_2
-    aput v1, v0, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    iput-boolean v2, p0, Loig;->d:Z
 
-    :catch_2
-    const/4 v2, 0x4
+    :cond_2
+    iget-object v0, p0, Loig;->c:Ljava/util/Iterator;
 
-    :try_start_3
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    if-eqz v0, :cond_3
 
-    :catch_3
-    const/4 v1, 0x5
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    :try_start_4
-    aput v1, v0, v2
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    move-result v0
 
-    :catch_4
-    const/4 v2, 0x6
+    if-ne v0, v2, :cond_3
 
-    :try_start_5
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+    iget-object v0, p0, Loig;->c:Ljava/util/Iterator;
 
-    :catch_5
-    const/4 v1, 0x7
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    :try_start_6
-    aput v1, v0, v2
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+    move-result-object v0
 
-    :catch_6
-    const/16 v2, 0x8
+    return-object v0
 
-    :try_start_7
-    aput v2, v0, v1
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+    :cond_3
+    iget-boolean v0, p0, Loig;->b:Z
 
-    :catch_7
-    const/16 v1, 0x9
+    if-nez v0, :cond_4
 
-    :try_start_8
-    aput v1, v0, v2
-    :try_end_8
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
+    iput-boolean v2, p0, Loig;->b:Z
 
-    :catch_8
-    sput-object v0, Loig;->a:[I
+    return-object v4
 
-    return-void
+    :cond_4
+    return-object v3
 .end method

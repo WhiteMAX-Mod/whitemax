@@ -1,127 +1,51 @@
-.class public abstract Lk4b;
-.super Ljava/lang/Object;
+.class public final Lk4b;
+.super Lq44;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static final b:I
+.field public final synthetic Y:Lx4b;
 
-.field public static final c:I
+.field public Z:I
 
-.field public static final d:I
+.field public d:Lx4b;
 
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
+.field public o:Ln9a;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lx4b;Lq44;)V
+    .locals 0
 
-    sget v0, Llpc;->oneme_startconversation_chat_titleicon_avatars_cancel_action:I
+    iput-object p1, p0, Lk4b;->Y:Lx4b;
 
-    sput v0, Lk4b;->a:I
-
-    sget v0, Llpc;->oneme_startconversation_chat_titleicon_avatars_load_from_gallery_action:I
-
-    sput v0, Lk4b;->b:I
-
-    sget v0, Llpc;->oneme_startconversation_chat_titleicon_avatars_take_photo_action:I
-
-    sput v0, Lk4b;->c:I
-
-    sget v0, Llpc;->oneme_startconversation_chat_titleicon_constraint_layout:I
-
-    sput v0, Lk4b;->d:I
-
-    sget v0, Llpc;->oneme_startconversation_chat_titleicon_create_button_view:I
-
-    sput v0, Lk4b;->e:I
-
-    sget v0, Llpc;->oneme_startconversation_chat_titleicon_create_hint_text_view:I
-
-    sput v0, Lk4b;->f:I
-
-    sget v0, Llpc;->oneme_startconversation_chat_titleicon_description_view:I
-
-    sput v0, Lk4b;->g:I
-
-    sget v0, Llpc;->oneme_startconversation_chat_titleicon_icon_view:I
-
-    sput v0, Lk4b;->h:I
-
-    sget v0, Llpc;->oneme_startconversation_chat_titleicon_title_view:I
-
-    sput v0, Lk4b;->i:I
-
-    sget v0, Llpc;->oneme_startconversation_chat_titleicon_toolbar:I
-
-    sput v0, Lk4b;->j:I
-
-    sget v0, Llpc;->oneme_startconversation_chat_toolbar:I
-
-    sput v0, Lk4b;->k:I
-
-    sget v0, Llpc;->oneme_startconversation_confirm_add_subscribers_button:I
-
-    sput v0, Lk4b;->l:I
-
-    sget v0, Llpc;->oneme_startconversation_container:I
-
-    sput v0, Lk4b;->m:I
-
-    sget v0, Llpc;->oneme_startconversation_create_button_view_type:I
-
-    sput v0, Lk4b;->n:I
-
-    sget v0, Llpc;->oneme_startconversation_recyclerview:I
-
-    sput v0, Lk4b;->o:I
-
-    sget v0, Llpc;->oneme_startconversation_select_channel_subscribers_toolbar:I
-
-    sput v0, Lk4b;->p:I
-
-    sget v0, Llpc;->oneme_startconversation_toolbar:I
-
-    sput v0, Lk4b;->q:I
-
-    sget v0, Llpc;->oneme_startconversations_create_channel:I
-
-    sput v0, Lk4b;->r:I
-
-    sget v0, Llpc;->oneme_startconversations_create_chat:I
-
-    sput v0, Lk4b;->s:I
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lk4b;->X:Ljava/lang/Object;
+
+    iget p1, p0, Lk4b;->Z:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lk4b;->Z:I
+
+    iget-object p1, p0, Lk4b;->Y:Lx4b;
+
+    invoke-static {p1, p0}, Lx4b;->a(Lx4b;Lq44;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

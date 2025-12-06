@@ -1,68 +1,49 @@
-.class public final Lqqf;
+.class public abstract synthetic Lqqf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpr8;
 
-
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Lc10;->values()[Lc10;
 
-    iput-object p1, p0, Lqqf;->a:Ljava/lang/String;
+    move-result-object v0
 
-    iput-object p2, p0, Lqqf;->b:Ljava/lang/String;
+    array-length v0, v0
 
-    iput-object p3, p0, Lqqf;->c:Ljava/lang/String;
+    new-array v0, v0, [I
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x2
+
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    const/4 v3, 0x3
+
+    :try_start_1
+    aput v2, v0, v3
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    :try_start_2
+    aput v3, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    sput-object v0, Lqqf;->$EnumSwitchMapping$0:[I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lqqf;->b:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", sampleMimeType: "
-
-    const-string v1, ", language: "
-
-    const-string v2, "TextFormat(id: "
-
-    iget-object v3, p0, Lqqf;->a:Ljava/lang/String;
-
-    iget-object v4, p0, Lqqf;->b:Ljava/lang/String;
-
-    invoke-static {v2, v3, v0, v4, v1}, Ley1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    iget-object v2, p0, Lqqf;->c:Ljava/lang/String;
-
-    invoke-static {v0, v2, v1}, Li57;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

@@ -1,24 +1,24 @@
-.class public final Lbl1;
+.class public final synthetic Lbl1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnLayoutChangeListener;
+.implements Lcm6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lone/me/calls/ui/ui/call/CallScreen;
+.field public final synthetic b:Lel1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/calls/ui/ui/call/CallScreen;I)V
+.method public synthetic constructor <init>(Lel1;I)V
     .locals 0
 
     iput p2, p0, Lbl1;->a:I
 
-    iput-object p1, p0, Lbl1;->b:Lone/me/calls/ui/ui/call/CallScreen;
+    iput-object p1, p0, Lbl1;->b:Lel1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,44 +27,100 @@
 
 
 # virtual methods
-.method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    iget p2, p0, Lbl1;->a:I
+    iget v0, p0, Lbl1;->a:I
 
-    iget-object p3, p0, Lbl1;->b:Lone/me/calls/ui/ui/call/CallScreen;
+    packed-switch v0, :pswitch_data_0
 
-    packed-switch p2, :pswitch_data_0
+    iget-object v0, p0, Lbl1;->b:Lel1;
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+    iget-object v0, v0, Lel1;->e:Lk18;
 
-    sget-object p1, Lone/me/calls/ui/ui/call/CallScreen;->M0:Llga;
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p3}, Lone/me/calls/ui/ui/call/CallScreen;->K0()Lcrb;
+    move-result-object v0
 
-    move-result-object p1
+    check-cast v0, Lrt5;
 
-    invoke-virtual {p1}, Lcrb;->c()V
+    check-cast v0, Lgu5;
 
-    return-void
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->call-custom-ringtone:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lf5e;->j(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
 
     :pswitch_0
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+    iget-object v0, p0, Lbl1;->b:Lel1;
 
-    sget-object p1, Lone/me/calls/ui/ui/call/CallScreen;->M0:Llga;
+    iget-object v0, v0, Lel1;->b:Lage;
 
-    invoke-virtual {p3}, Lone/me/calls/ui/ui/call/CallScreen;->K0()Lcrb;
+    check-cast v0, Ll5c;
 
-    move-result-object p1
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p1}, Lcrb;->c()V
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->reconnect-call-ringtone:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    return-void
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Ll5c;->j(Ljava/lang/Enum;Z)Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lbl1;->b:Lel1;
+
+    iget-object v0, v0, Lel1;->a:Landroid/content/Context;
+
+    const-string v1, "vibrator"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/os/Vibrator;
+
+    return-object v0
+
+    :pswitch_2
+    iget-object v0, p0, Lbl1;->b:Lel1;
+
+    iget-object v0, v0, Lel1;->a:Landroid/content/Context;
+
+    const-string v1, "audio"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/media/AudioManager;
+
+    return-object v0
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

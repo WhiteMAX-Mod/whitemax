@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ru.ok.messages.views.widgets.SlideOutLayout android:id="@id/act_settings__slideout" android:background="@color/black_50" android:layout_width="fill_parent" android:layout_height="fill_parent" app:chistyakov_orientation="horizontal" app:type="left"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <include android:id="@id/toolbar" layout="@layout/toolbar" />
-        <androidx.fragment.app.FragmentContainerView android:id="@id/act_settings__container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/toolbar" />
-    </RelativeLayout>
-</ru.ok.messages.views.widgets.SlideOutLayout>

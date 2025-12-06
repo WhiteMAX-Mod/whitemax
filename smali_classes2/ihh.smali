@@ -1,277 +1,93 @@
-.class public final synthetic Lihh;
-.super Ljava/lang/Object;
+.class public final Lihh;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Lhn6;
+.implements Lsm6;
 
 
-# static fields
-.field public static final a:Lihh;
-
-.field private static final descriptor:Lb3e;
+# instance fields
+.field public final synthetic o:Landroid/widget/TextView;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Landroid/widget/TextView;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lihh;
+    iput-object p1, p0, Lihh;->o:Landroid/widget/TextView;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
 
-    sput-object v0, Lihh;->a:Lihh;
-
-    new-instance v1, Levb;
-
-    const-string v2, "one.me.webapp.domain.jsbridge.WebAppShareRequest"
-
-    const/4 v3, 0x3
-
-    invoke-direct {v1, v2, v0, v3}, Levb;-><init>(Ljava/lang/String;Lhn6;I)V
-
-    const-string v0, "url"
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, v0, v2}, Levb;->k(Ljava/lang/String;Z)V
-
-    const-string v0, "title"
-
-    invoke-virtual {v1, v0, v2}, Levb;->k(Ljava/lang/String;Z)V
-
-    const-string v0, "text"
-
-    invoke-virtual {v1, v0, v2}, Levb;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Lihh;->descriptor:Lb3e;
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ld9;)Ljava/lang/Object;
-    .locals 10
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    sget-object v0, Lihh;->descriptor:Lb3e;
+    check-cast p1, Lz26;
 
-    invoke-virtual {p1, v0}, Ld9;->k(Lb3e;)Ld9;
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lihh;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    const/4 v1, 0x1
+    check-cast p1, Lihh;
 
-    const/4 v2, 0x0
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    const/4 v3, 0x0
+    invoke-virtual {p1, p2}, Lihh;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move v6, v1
+    return-object p2
+.end method
 
-    move v7, v2
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    move-object v4, v3
+    new-instance p1, Lihh;
 
-    move-object v5, v4
+    iget-object v0, p0, Lihh;->o:Landroid/widget/TextView;
 
-    :goto_0
-    if-eqz v6, :cond_4
-
-    invoke-virtual {p1, v0}, Ld9;->q(Lb3e;)I
-
-    move-result v8
-
-    const/4 v9, -0x1
-
-    if-eq v8, v9, :cond_3
-
-    if-eqz v8, :cond_2
-
-    if-eq v8, v1, :cond_1
-
-    const/4 v9, 0x2
-
-    if-ne v8, v9, :cond_0
-
-    sget-object v8, Lvaf;->a:Lvaf;
-
-    invoke-virtual {p1, v0, v9, v8, v5}, Ld9;->s(Lb3e;ILur7;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/lang/String;
-
-    or-int/lit8 v7, v7, 0x4
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
-
-    invoke-direct {p1, v8}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
-
-    throw p1
-
-    :cond_1
-    sget-object v8, Lvaf;->a:Lvaf;
-
-    invoke-virtual {p1, v0, v1, v8, v4}, Ld9;->s(Lb3e;ILur7;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/lang/String;
-
-    or-int/lit8 v7, v7, 0x2
-
-    goto :goto_0
-
-    :cond_2
-    sget-object v8, Lvaf;->a:Lvaf;
-
-    invoke-virtual {p1, v0, v2, v8, v3}, Ld9;->s(Lb3e;ILur7;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/String;
-
-    or-int/lit8 v7, v7, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    move v6, v2
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {p1, v0}, Ld9;->z(Lb3e;)V
-
-    new-instance p1, Lmhh;
-
-    invoke-direct {p1, v3, v7, v4, v5}, Lmhh;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p1, v0, p2}, Lihh;-><init>(Landroid/widget/TextView;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
 
-.method public final b(Lo24;Ljava/lang/Object;)V
-    .locals 5
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    check-cast p2, Lmhh;
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    iget-object v0, p2, Lmhh;->c:Ljava/lang/String;
+    iget-object p1, p0, Lihh;->o:Landroid/widget/TextView;
 
-    iget-object v1, p2, Lmhh;->b:Ljava/lang/String;
-
-    iget-object p2, p2, Lmhh;->a:Ljava/lang/String;
-
-    sget-object v2, Lihh;->descriptor:Lb3e;
-
-    invoke-virtual {p1, v2}, Lo24;->b(Lb3e;)Lo24;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lo24;->s()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    if-eqz p2, :cond_1
-
-    :goto_0
-    sget-object v3, Lvaf;->a:Lvaf;
-
-    const/4 v4, 0x0
-
-    invoke-virtual {p1, v2, v4, v3, p2}, Lo24;->h(Lb3e;ILur7;Ljava/lang/Object;)V
-
-    :cond_1
-    invoke-virtual {p1}, Lo24;->s()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    if-eqz v1, :cond_3
-
-    :goto_1
-    sget-object p2, Lvaf;->a:Lvaf;
-
-    const/4 v3, 0x1
-
-    invoke-virtual {p1, v2, v3, p2, v1}, Lo24;->h(Lb3e;ILur7;Ljava/lang/Object;)V
-
-    :cond_3
-    invoke-virtual {p1}, Lo24;->s()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    if-eqz v0, :cond_5
-
-    :goto_2
-    sget-object p2, Lvaf;->a:Lvaf;
-
-    const/4 v1, 0x2
-
-    invoke-virtual {p1, v2, v1, p2, v0}, Lo24;->h(Lb3e;ILur7;Ljava/lang/Object;)V
-
-    :cond_5
-    invoke-virtual {p1}, Lo24;->m()V
-
-    return-void
-.end method
-
-.method public final c()[Lur7;
-    .locals 5
-
-    sget-object v0, Lvaf;->a:Lvaf;
-
-    invoke-static {v0}, Lyki;->a(Lur7;)Lur7;
-
-    move-result-object v1
-
-    invoke-static {v0}, Lyki;->a(Lur7;)Lur7;
-
-    move-result-object v2
-
-    invoke-static {v0}, Lyki;->a(Lur7;)Lur7;
+    invoke-virtual {p1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    const/4 v3, 0x3
+    if-eqz v0, :cond_0
 
-    new-array v3, v3, [Lur7;
+    sget-object v1, La93;->s0:Lv1a;
 
-    const/4 v4, 0x0
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    aput-object v1, v3, v4
+    move-result-object p1
 
-    const/4 v1, 0x1
+    invoke-virtual {v1, p1}, Lv1a;->x(Landroid/content/Context;)La93;
 
-    aput-object v2, v3, v1
+    move-result-object p1
 
-    const/4 v1, 0x2
+    invoke-virtual {p1}, La93;->k()Lyeb;
 
-    aput-object v0, v3, v1
+    move-result-object p1
 
-    return-object v3
-.end method
+    invoke-static {v0, p1}, La8i;->b(Ljava/lang/CharSequence;Lyeb;)V
 
-.method public final d()Lb3e;
-    .locals 1
+    :cond_0
+    sget-object p1, Lqqg;->a:Lqqg;
 
-    sget-object v0, Lihh;->descriptor:Lb3e;
-
-    return-object v0
+    return-object p1
 .end method

@@ -1,434 +1,96 @@
-.class public final Luwc;
+.class public abstract Luwc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:J
+# static fields
+.field public static add_24:I = 0x7f0802ce
 
-.field public final b:J
+.field public static call_24:I = 0x7f0802fe
 
+.field public static call_fill_16:I = 0x7f080300
 
-# direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.field public static calls_avd:I = 0x7f080303
 
-    .line 5
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static cancel_10:I = 0x7f080305
 
-    .line 6
-    iput-wide p1, p0, Luwc;->a:J
+.field public static cancel_outline_28:I = 0x7f080306
 
-    .line 7
-    iput-wide p1, p0, Luwc;->b:J
+.field public static chat_24:I = 0x7f08030c
 
-    return-void
-.end method
+.field public static check_24:I = 0x7f080312
 
-.method public constructor <init>(JJ)V
-    .locals 1
+.field public static contact_24:I = 0x7f08033a
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static contacts_avd:I = 0x7f08033d
 
-    cmp-long v0, p1, p3
+.field public static copy_24:I = 0x7f08033e
 
-    if-gtz v0, :cond_0
+.field public static download_24:I = 0x7f08035c
 
-    .line 2
-    iput-wide p1, p0, Luwc;->a:J
+.field public static edit_outline_24:I = 0x7f080365
 
-    .line 3
-    iput-wide p3, p0, Luwc;->b:J
+.field public static file_24:I = 0x7f0803da
 
-    return-void
+.field public static forward_24:I = 0x7f0804df
 
-    .line 4
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+.field public static ic_add_16:I = 0x7f0804f8
 
-    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
+.field public static ic_arrow_left_outline_28:I = 0x7f080528
 
-    throw p1
-.end method
+.field public static ic_cancel_filled_24:I = 0x7f080572
 
-.method public static a(JLjava/util/ArrayList;)V
-    .locals 18
+.field public static ic_cancel_outline_24:I = 0x7f080573
 
-    move-wide/from16 v0, p0
+.field public static ic_cancel_outline_28:I = 0x7f080574
 
-    move-object/from16 v2, p2
+.field public static ic_channel_outline_28:I = 0x7f080579
 
-    invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+.field public static ic_check_filled_24:I = 0x7f080581
 
-    move-result-object v3
+.field public static ic_delete_filled_apart_24:I = 0x7f0805b9
 
-    const/4 v4, 0x0
+.field public static ic_delete_filled_cut_out_24:I = 0x7f0805ba
 
-    :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+.field public static ic_done_28:I = 0x7f0805c3
 
-    move-result v5
+.field public static ic_heart_fill_24:I = 0x7f080632
 
-    if-eqz v5, :cond_b
+.field public static ic_heart_outline_24:I = 0x7f080633
 
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+.field public static ic_mention_24:I = 0x7f08066f
 
-    move-result-object v5
+.field public static ic_message_filled_28:I = 0x7f080677
 
-    check-cast v5, Luwc;
+.field public static ic_more_vertical_filled_16:I = 0x7f080693
 
-    iget-wide v6, v5, Luwc;->a:J
+.field public static ic_next_16:I = 0x7f080721
 
-    iget-wide v8, v5, Luwc;->b:J
+.field public static ic_online_24:I = 0x7f08072d
 
-    cmp-long v5, v0, v6
+.field public static ic_phone_28:I = 0x7f08073d
 
-    if-ltz v5, :cond_0
+.field public static ic_search_outline_16:I = 0x7f08077c
 
-    cmp-long v5, v0, v8
+.field public static ic_settings_filled_28:I = 0x7f08078d
 
-    if-gtz v5, :cond_0
+.field public static ic_stub_outline_24:I = 0x7f0807b4
 
-    return-void
+.field public static ic_swap_24:I = 0x7f0807b9
 
-    :cond_0
-    const-wide/16 v10, 0x1
+.field public static ic_users_28:I = 0x7f0807d9
 
-    sub-long/2addr v6, v10
+.field public static ic_users_outline_28:I = 0x7f0807da
 
-    cmp-long v5, v0, v6
+.field public static link_24:I = 0x7f080822
 
-    if-eqz v5, :cond_3
+.field public static media_24:I = 0x7f080890
 
-    add-long v5, v8, v10
+.field public static microphone_on_24:I = 0x7f08089e
 
-    cmp-long v5, v0, v5
+.field public static setting_24:I = 0x7f080956
 
-    if-nez v5, :cond_1
+.field public static settings_outline_24:I = 0x7f080957
 
-    goto :goto_1
+.field public static share_24_android:I = 0x7f080958
 
-    :cond_1
-    cmp-long v5, v8, v0
-
-    if-gez v5, :cond_2
-
-    new-instance v3, Luwc;
-
-    invoke-direct {v3, v0, v1}, Luwc;-><init>(J)V
-
-    invoke-virtual {v2, v4, v3}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
-
-    return-void
-
-    :cond_2
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    :goto_1
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_4
-
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Luwc;
-
-    goto :goto_2
-
-    :cond_4
-    const/4 v3, 0x0
-
-    :goto_2
-    if-eqz v3, :cond_8
-
-    iget-wide v5, v3, Luwc;->b:J
-
-    iget-wide v7, v3, Luwc;->a:J
-
-    sub-long v12, v7, v10
-
-    cmp-long v3, v0, v12
-
-    if-eqz v3, :cond_5
-
-    add-long v12, v5, v10
-
-    cmp-long v3, v0, v12
-
-    if-nez v3, :cond_8
-
-    :cond_5
-    invoke-virtual {v2, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Luwc;
-
-    iget-wide v12, v3, Luwc;->b:J
-
-    iget-wide v14, v3, Luwc;->a:J
-
-    add-long v16, v5, v10
-
-    cmp-long v3, v0, v16
-
-    if-nez v3, :cond_6
-
-    sub-long v16, v14, v10
-
-    cmp-long v3, v16, v0
-
-    if-nez v3, :cond_6
-
-    new-instance v0, Luwc;
-
-    invoke-direct {v0, v7, v8, v12, v13}, Luwc;-><init>(JJ)V
-
-    goto :goto_3
-
-    :cond_6
-    add-long/2addr v12, v10
-
-    cmp-long v3, v12, v0
-
-    if-nez v3, :cond_7
-
-    sub-long/2addr v7, v10
-
-    cmp-long v0, v0, v7
-
-    if-nez v0, :cond_7
-
-    new-instance v0, Luwc;
-
-    invoke-direct {v0, v14, v15, v5, v6}, Luwc;-><init>(JJ)V
-
-    :goto_3
-    invoke-virtual {v2, v4, v0}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
-
-    add-int/lit8 v4, v4, 0x1
-
-    invoke-virtual {v2, v4}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
-
-    return-void
-
-    :cond_7
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    throw v0
-
-    :cond_8
-    invoke-virtual {v2, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Luwc;
-
-    iget-wide v5, v3, Luwc;->a:J
-
-    iget-wide v7, v3, Luwc;->b:J
-
-    add-long v12, v7, v10
-
-    cmp-long v3, v0, v12
-
-    if-nez v3, :cond_9
-
-    new-instance v0, Luwc;
-
-    invoke-direct {v0, v5, v6, v12, v13}, Luwc;-><init>(JJ)V
-
-    goto :goto_4
-
-    :cond_9
-    sub-long/2addr v5, v10
-
-    cmp-long v3, v0, v5
-
-    if-nez v3, :cond_a
-
-    new-instance v0, Luwc;
-
-    invoke-direct {v0, v5, v6, v7, v8}, Luwc;-><init>(JJ)V
-
-    :goto_4
-    invoke-virtual {v2, v4, v0}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :cond_a
-    new-instance v2, Ljava/lang/IllegalArgumentException;
-
-    const-string v3, "Range cannot be extended with that number "
-
-    invoke-static {v0, v1, v3}, Lrv8;->d(JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v2, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v2
-
-    :cond_b
-    new-instance v3, Luwc;
-
-    invoke-direct {v3, v0, v1}, Luwc;-><init>(J)V
-
-    invoke-virtual {v2, v4, v3}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final b(Luwc;)Z
-    .locals 4
-
-    iget-wide v0, p0, Luwc;->a:J
-
-    iget-wide v2, p1, Luwc;->a:J
-
-    cmp-long v0, v0, v2
-
-    if-gez v0, :cond_0
-
-    iget-wide v0, p0, Luwc;->b:J
-
-    iget-wide v2, p1, Luwc;->b:J
-
-    cmp-long p1, v0, v2
-
-    if-lez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 5
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Luwc;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Luwc;
-
-    iget-wide v3, p0, Luwc;->a:J
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    iget-wide v3, p1, Luwc;->a:J
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget-wide v3, p0, Luwc;->b:J
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    iget-wide v3, p1, Luwc;->b:J
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Luwc;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Luwc;->b:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "["
-
-    const-string v1, ".."
-
-    iget-wide v2, p0, Luwc;->b:J
-
-    invoke-static {v2, v3, v0, v1}, Ldy1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "]"
-
-    iget-wide v2, p0, Luwc;->a:J
-
-    invoke-static {v0, v2, v3, v1}, Lrv8;->g(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
+.field public static support_24:I = 0x7f08096e

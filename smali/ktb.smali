@@ -1,240 +1,130 @@
-.class public final Lktb;
+.class public abstract Lktb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lktb;
-
-.field public static final c:Ljava/lang/String;
-
-
-# instance fields
-.field public final a:Lzx5;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public static a(Landroid/app/Person;)Lltb;
+    .locals 6
 
-    new-instance v0, Landroid/util/SparseBooleanArray;
-
-    invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
-
-    new-instance v1, Lktb;
-
-    const/4 v2, 0x0
-
-    xor-int/lit8 v3, v2, 0x1
-
-    invoke-static {v3}, Lsgi;->i(Z)V
-
-    new-instance v3, Lzx5;
-
-    invoke-direct {v3, v0}, Lzx5;-><init>(Landroid/util/SparseBooleanArray;)V
-
-    invoke-direct {v1, v3}, Lktb;-><init>(Lzx5;)V
-
-    sput-object v1, Lktb;->b:Lktb;
-
-    sget-object v0, Lnig;->a:Ljava/lang/String;
-
-    const/16 v0, 0x24
-
-    invoke-static {v2, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/app/Person;->getName()Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    sput-object v0, Lktb;->c:Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/app/Person;->getIcon()Landroid/graphics/drawable/Icon;
 
-    return-void
-.end method
+    move-result-object v1
 
-.method public constructor <init>(Lzx5;)V
-    .locals 0
+    if-eqz v1, :cond_0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Landroid/app/Person;->getIcon()Landroid/graphics/drawable/Icon;
 
-    iput-object p1, p0, Lktb;->a:Lzx5;
+    move-result-object v1
 
-    return-void
-.end method
+    sget-object v2, Landroidx/core/graphics/drawable/IconCompat;->k:Landroid/graphics/PorterDuff$Mode;
 
-.method public static b(Landroid/os/Bundle;)Lktb;
-    .locals 6
+    invoke-static {v1}, Lob7;->a(Landroid/graphics/drawable/Icon;)Landroidx/core/graphics/drawable/IconCompat;
 
-    sget-object v0, Lktb;->c:Ljava/lang/String;
-
-    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getIntegerArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object p0
-
-    if-nez p0, :cond_0
-
-    sget-object p0, Lktb;->b:Lktb;
-
-    return-object p0
-
-    :cond_0
-    new-instance v0, Landroid/util/SparseBooleanArray;
-
-    invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
-
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    :goto_0
-    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
-
-    move-result v3
-
-    const/4 v4, 0x1
-
-    if-ge v2, v3, :cond_1
-
-    invoke-virtual {p0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/Integer;
-
-    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
-
-    move-result v3
-
-    const/4 v5, 0x0
-
-    xor-int/2addr v5, v4
-
-    invoke-static {v5}, Lsgi;->i(Z)V
-
-    invoke-virtual {v0, v3, v4}, Landroid/util/SparseBooleanArray;->append(IZ)V
-
-    add-int/lit8 v2, v2, 0x1
+    move-result-object v1
 
     goto :goto_0
 
-    :cond_1
-    new-instance p0, Lktb;
-
-    xor-int/2addr v1, v4
-
-    invoke-static {v1}, Lsgi;->i(Z)V
-
-    new-instance v1, Lzx5;
-
-    invoke-direct {v1, v0}, Lzx5;-><init>(Landroid/util/SparseBooleanArray;)V
-
-    invoke-direct {p0, v1}, Lktb;-><init>(Lzx5;)V
-
-    return-object p0
-.end method
-
-
-# virtual methods
-.method public final a(I)Z
-    .locals 1
-
-    iget-object v0, p0, Lktb;->a:Lzx5;
-
-    iget-object v0, v0, Lzx5;->a:Landroid/util/SparseBooleanArray;
-
-    invoke-virtual {v0, p1}, Landroid/util/SparseBooleanArray;->get(I)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final c()Landroid/os/Bundle;
-    .locals 5
-
-    new-instance v0, Landroid/os/Bundle;
-
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    const/4 v2, 0x0
+    :cond_0
+    const/4 v1, 0x0
 
     :goto_0
-    iget-object v3, p0, Lktb;->a:Lzx5;
+    invoke-virtual {p0}, Landroid/app/Person;->getUri()Ljava/lang/String;
 
-    iget-object v4, v3, Lzx5;->a:Landroid/util/SparseBooleanArray;
+    move-result-object v2
 
-    invoke-virtual {v4}, Landroid/util/SparseBooleanArray;->size()I
+    invoke-virtual {p0}, Landroid/app/Person;->getKey()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {p0}, Landroid/app/Person;->isBot()Z
 
     move-result v4
 
-    if-ge v2, v4, :cond_0
+    invoke-virtual {p0}, Landroid/app/Person;->isImportant()Z
 
-    invoke-virtual {v3, v2}, Lzx5;->b(I)I
+    move-result p0
 
-    move-result v3
+    new-instance v5, Lltb;
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-direct {v5}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v3
+    iput-object v0, v5, Lltb;->a:Ljava/lang/CharSequence;
 
-    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    iput-object v1, v5, Lltb;->b:Landroidx/core/graphics/drawable/IconCompat;
 
-    add-int/lit8 v2, v2, 0x1
+    iput-object v2, v5, Lltb;->c:Ljava/lang/String;
 
-    goto :goto_0
+    iput-object v3, v5, Lltb;->d:Ljava/lang/String;
 
-    :cond_0
-    sget-object v2, Lktb;->c:Ljava/lang/String;
+    iput-boolean v4, v5, Lltb;->e:Z
 
-    invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putIntegerArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
+    iput-boolean p0, v5, Lltb;->f:Z
 
-    return-object v0
+    return-object v5
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public static b(Lltb;)Landroid/app/Person;
+    .locals 3
 
-    if-ne p0, p1, :cond_0
+    new-instance v0, Landroid/app/Person$Builder;
 
-    const/4 p1, 0x1
+    invoke-direct {v0}, Landroid/app/Person$Builder;-><init>()V
 
-    return p1
+    iget-object v1, p0, Lltb;->a:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Landroid/app/Person$Builder;->setName(Ljava/lang/CharSequence;)Landroid/app/Person$Builder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lltb;->b:Landroidx/core/graphics/drawable/IconCompat;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v1, v2}, Lob7;->g(Landroidx/core/graphics/drawable/IconCompat;Landroid/content/Context;)Landroid/graphics/drawable/Icon;
+
+    move-result-object v2
 
     :cond_0
-    instance-of v0, p1, Lktb;
+    invoke-virtual {v0, v2}, Landroid/app/Person$Builder;->setIcon(Landroid/graphics/drawable/Icon;)Landroid/app/Person$Builder;
 
-    if-nez v0, :cond_1
+    move-result-object v0
 
-    const/4 p1, 0x0
+    iget-object v1, p0, Lltb;->c:Ljava/lang/String;
 
-    return p1
+    invoke-virtual {v0, v1}, Landroid/app/Person$Builder;->setUri(Ljava/lang/String;)Landroid/app/Person$Builder;
 
-    :cond_1
-    check-cast p1, Lktb;
+    move-result-object v0
 
-    iget-object v0, p0, Lktb;->a:Lzx5;
+    iget-object v1, p0, Lltb;->d:Ljava/lang/String;
 
-    iget-object p1, p1, Lktb;->a:Lzx5;
+    invoke-virtual {v0, v1}, Landroid/app/Person$Builder;->setKey(Ljava/lang/String;)Landroid/app/Person$Builder;
 
-    invoke-virtual {v0, p1}, Lzx5;->equals(Ljava/lang/Object;)Z
+    move-result-object v0
 
-    move-result p1
+    iget-boolean v1, p0, Lltb;->e:Z
 
-    return p1
-.end method
+    invoke-virtual {v0, v1}, Landroid/app/Person$Builder;->setBot(Z)Landroid/app/Person$Builder;
 
-.method public final hashCode()I
-    .locals 1
+    move-result-object v0
 
-    iget-object v0, p0, Lktb;->a:Lzx5;
+    iget-boolean p0, p0, Lltb;->f:Z
 
-    iget-object v0, v0, Lzx5;->a:Landroid/util/SparseBooleanArray;
+    invoke-virtual {v0, p0}, Landroid/app/Person$Builder;->setImportant(Z)Landroid/app/Person$Builder;
 
-    invoke-virtual {v0}, Landroid/util/SparseBooleanArray;->hashCode()I
+    move-result-object p0
 
-    move-result v0
+    invoke-virtual {p0}, Landroid/app/Person$Builder;->build()Landroid/app/Person;
 
-    return v0
+    move-result-object p0
+
+    return-object p0
 .end method

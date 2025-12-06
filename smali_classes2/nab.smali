@@ -1,193 +1,133 @@
-.class public final synthetic Lnab;
+.class public abstract Lnab;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Laj6;
-.implements Lsr3;
-.implements Lvqe;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:Lrab;
+.field public static final b:I
 
-.field public final synthetic b:J
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrab;J)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lnab;->a:Lrab;
+    sget v0, Lh4d;->audio_record_active_call_error_snackbar_title:I
 
-    iput-wide p2, p0, Lnab;->b:J
+    sput v0, Lnab;->a:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lh4d;->audio_record_confirm_exit_accept:I
 
-    return-void
-.end method
+    sput v0, Lnab;->b:I
 
+    sget v0, Lh4d;->audio_record_confirm_exit_description:I
 
-# virtual methods
-.method public accept(Ljava/lang/Object;)V
-    .locals 3
+    sput v0, Lnab;->c:I
 
-    check-cast p1, Ljava/lang/Throwable;
+    sget v0, Lh4d;->audio_record_confirm_exit_title:I
 
-    const-string v0, "rab"
+    sput v0, Lnab;->d:I
 
-    const-string v1, "handleMediaTypingError"
+    sget v0, Lh4d;->audio_record_error_common:I
 
-    invoke-static {v0, v1, p1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    sput v0, Lnab;->e:I
 
-    iget-wide v0, p0, Lnab;->b:J
+    sget v0, Lh4d;->audio_record_error_limit:I
 
-    invoke-static {v0, v1}, Lrab;->c(J)Lpab;
+    sput v0, Lnab;->f:I
 
-    move-result-object p1
+    sget v0, Lh4d;->audio_record_hold_to_start:I
 
-    iget-object p1, p1, Lpab;->a:Ljava/util/concurrent/LinkedBlockingDeque;
+    sput v0, Lnab;->g:I
 
-    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+    sget v0, Lh4d;->channel_input_hint:I
 
-    move-result v2
+    sput v0, Lnab;->h:I
 
-    if-nez v2, :cond_0
+    sget v0, Lh4d;->chat_input_hint:I
 
-    :try_start_0
-    invoke-virtual {p1}, Ljava/util/concurrent/LinkedBlockingDeque;->pop()Ljava/lang/Object;
-    :try_end_0
-    .catch Ljava/util/NoSuchElementException; {:try_start_0 .. :try_end_0} :catch_0
+    sput v0, Lnab;->i:I
 
-    :catch_0
-    :cond_0
-    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+    sget v0, Lh4d;->messagewrite_edit_quote_title:I
 
-    move-result p1
+    sput v0, Lnab;->j:I
 
-    if-nez p1, :cond_1
+    sget v0, Lh4d;->reply_quote_self:I
 
-    iget-object p1, p0, Lnab;->a:Lrab;
+    sput v0, Lnab;->k:I
 
-    invoke-virtual {p1, v0, v1}, Lrab;->e(J)V
+    sget v0, Lh4d;->reply_quote_to_somebody:I
 
-    :cond_1
-    return-void
-.end method
+    sput v0, Lnab;->l:I
 
-.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    sget v0, Lh4d;->video_message_record_error_common:I
 
-    check-cast p1, Ljava/lang/Long;
+    sput v0, Lnab;->m:I
 
-    iget-wide v0, p0, Lnab;->b:J
+    sget v0, Lh4d;->video_message_record_error_no_camera:I
 
-    const-wide/16 v2, 0x0
+    sput v0, Lnab;->n:I
 
-    cmp-long p1, v0, v2
+    sget v0, Lh4d;->video_record_active_call_error_snackbar_title:I
 
-    if-nez p1, :cond_0
+    sput v0, Lnab;->o:I
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    sget v0, Lh4d;->writebar__add_link_button:I
 
-    move-result-object p1
+    sput v0, Lnab;->p:I
 
-    invoke-static {p1}, Lwpe;->g(Ljava/lang/Object;)Ltka;
+    sget v0, Lh4d;->writebar__add_link_title:I
 
-    move-result-object p1
+    sput v0, Lnab;->q:I
 
-    goto :goto_0
+    sget v0, Lh4d;->writebar_commands_not_found:I
 
-    :cond_0
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    sput v0, Lnab;->r:I
 
-    move-result-object p1
+    sget v0, Lh4d;->writebar_mentions_not_found:I
 
-    filled-new-array {p1}, [Ljava/lang/Object;
+    sput v0, Lnab;->s:I
 
-    move-result-object p1
+    sget v0, Lh4d;->writebar_mentions_title:I
 
-    const-string v2, "rab"
-
-    const-string v3, "sendMediaTyping %d"
-
-    invoke-static {v2, v3, p1}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    new-instance p1, Lnab;
-
-    iget-object v2, p0, Lnab;->a:Lrab;
-
-    invoke-direct {p1, v2, v0, v1}, Lnab;-><init>(Lrab;J)V
-
-    new-instance v0, Ltka;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1, p1}, Ltka;-><init>(ILjava/lang/Object;)V
-
-    move-object p1, v0
-
-    :goto_0
-    invoke-virtual {p1}, Lwpe;->n()Lyha;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public j(Laqe;)V
-    .locals 5
-
-    sget-object v0, Lrab;->b:Ljava/util/concurrent/ConcurrentHashMap;
-
-    iget-wide v1, p0, Lnab;->b:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lpab;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, v0, Lpab;->a:Ljava/util/concurrent/LinkedBlockingDeque;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/LinkedBlockingDeque;->peek()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Loab;
-
-    if-eqz v0, :cond_0
-
-    iget-object v3, v0, Loab;->a:La10;
-
-    iget-object v4, p0, Lnab;->a:Lrab;
-
-    invoke-virtual {v4, v1, v2, v3}, Lrab;->d(JLa10;)V
-
-    iget-wide v0, v0, Loab;->b:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Laqe;->a(Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_0
-    new-instance v0, Ljava/lang/Throwable;
-
-    const-string v1, "No media typing to send"
-
-    invoke-direct {v0, v1}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, v0}, Laqe;->onError(Ljava/lang/Throwable;)V
+    sput v0, Lnab;->t:I
 
     return-void
 .end method

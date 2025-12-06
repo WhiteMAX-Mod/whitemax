@@ -1,23 +1,105 @@
 .class public final Lgoe;
-.super Ljava/lang/Object;
+.super Li3;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lfwc;
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 11
 
-.field public final b:Lgwc;
+    iget-object v0, p0, Li3;->b:Ljava/lang/Object;
 
+    check-cast v0, Ljava/util/BitSet;
 
-# direct methods
-.method public constructor <init>(Lfwc;Lgwc;)V
-    .locals 0
+    const/4 v1, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {v0, v1}, Ljava/util/BitSet;->get(I)Z
 
-    iput-object p1, p0, Lgoe;->a:Lfwc;
+    move-result v1
 
-    iput-object p2, p0, Lgoe;->b:Lgwc;
+    const/4 v2, 0x1
 
-    return-void
+    invoke-virtual {v0, v2}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v2
+
+    const/4 v3, 0x2
+
+    invoke-virtual {v0, v3}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v3
+
+    const/4 v4, 0x3
+
+    invoke-virtual {v0, v4}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v4
+
+    const/4 v5, 0x4
+
+    invoke-virtual {v0, v5}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v5
+
+    const/4 v6, 0x5
+
+    invoke-virtual {v0, v6}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v6
+
+    const/4 v7, 0x6
+
+    invoke-virtual {v0, v7}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v7
+
+    const/4 v8, 0x7
+
+    invoke-virtual {v0, v8}, Ljava/util/BitSet;->get(I)Z
+
+    move-result v0
+
+    const-string v8, ",\n                isTitleChanged="
+
+    const-string v9, ",\n                isTypeChanged="
+
+    const-string v10, "\n            Payload(\n                isSectionChanged="
+
+    invoke-static {v10, v1, v8, v2, v9}, Lho7;->p(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, ",\n                isDescriptionResChanged="
+
+    const-string v8, ",\n                isEndViewChanged="
+
+    invoke-static {v2, v8, v1, v3, v4}, Laz1;->t(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+
+    const-string v2, ",\n                isCounterTypeChanged="
+
+    const-string v3, ",\n                isUpperTextChanged="
+
+    invoke-static {v2, v3, v1, v5, v6}, Laz1;->t(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+
+    invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v2, ",\n                isStartIconChanged="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, ",\n            )\n        "
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lwmf;->d(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

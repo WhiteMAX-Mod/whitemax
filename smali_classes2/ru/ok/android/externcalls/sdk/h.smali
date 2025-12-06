@@ -3,23 +3,23 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lsr3;
+.implements Lgu3;
 
 
 # instance fields
-.field public final synthetic X:Ltr3;
-
 .field public final synthetic a:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
 .field public final synthetic b:Z
 
-.field public final synthetic c:Ltr3;
+.field public final synthetic c:Lhu3;
 
-.field public final synthetic o:Z
+.field public final synthetic d:Z
+
+.field public final synthetic o:Lhu3;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLtr3;ZLtr3;)V
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLhu3;ZLhu3;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,11 +28,11 @@
 
     iput-boolean p2, p0, Lru/ok/android/externcalls/sdk/h;->b:Z
 
-    iput-object p3, p0, Lru/ok/android/externcalls/sdk/h;->c:Ltr3;
+    iput-object p3, p0, Lru/ok/android/externcalls/sdk/h;->c:Lhu3;
 
-    iput-boolean p4, p0, Lru/ok/android/externcalls/sdk/h;->o:Z
+    iput-boolean p4, p0, Lru/ok/android/externcalls/sdk/h;->d:Z
 
-    iput-object p5, p0, Lru/ok/android/externcalls/sdk/h;->X:Ltr3;
+    iput-object p5, p0, Lru/ok/android/externcalls/sdk/h;->o:Lhu3;
 
     return-void
 .end method
@@ -42,7 +42,7 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 6
 
-    iget-object v4, p0, Lru/ok/android/externcalls/sdk/h;->X:Ltr3;
+    iget-object v4, p0, Lru/ok/android/externcalls/sdk/h;->o:Lhu3;
 
     move-object v5, p1
 
@@ -52,11 +52,11 @@
 
     iget-boolean v1, p0, Lru/ok/android/externcalls/sdk/h;->b:Z
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/h;->c:Ltr3;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/h;->c:Lhu3;
 
-    iget-boolean v3, p0, Lru/ok/android/externcalls/sdk/h;->o:Z
+    iget-boolean v3, p0, Lru/ok/android/externcalls/sdk/h;->d:Z
 
-    invoke-static/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/ConversationImpl;->B(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLtr3;ZLtr3;Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;)V
+    invoke-static/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/ConversationImpl;->B(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLhu3;ZLhu3;Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;)V
 
     return-void
 .end method

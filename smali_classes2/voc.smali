@@ -1,76 +1,156 @@
-.class public abstract Lvoc;
+.class public final Lvoc;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/animation/TypeEvaluator;
 
 
-# static fields
-.field public static check_button:I = 0x7f0a029a
+# instance fields
+.field public a:[Lxob;
 
-.field public static check_button_parent:I = 0x7f0a029b
 
-.field public static check_button_view_stub:I = 0x7f0a029c
+# direct methods
+.method public constructor <init>()V
+    .locals 1
 
-.field public static media_bar_view__iv_constructor:I = 0x7f0a049d
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static media_bar_view__iv_contact:I = 0x7f0a049e
+    const/4 v0, 0x0
 
-.field public static media_bar_view__iv_drawing:I = 0x7f0a049f
+    iput-object v0, p0, Lvoc;->a:[Lxob;
 
-.field public static media_bar_view__iv_file:I = 0x7f0a04a0
+    return-void
+.end method
 
-.field public static media_bar_view__iv_gallery:I = 0x7f0a04a1
 
-.field public static media_bar_view__iv_location:I = 0x7f0a04a3
+# virtual methods
+.method public final evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
 
-.field public static media_bar_view__iv_photo:I = 0x7f0a04a4
+    check-cast p2, [Lxob;
 
-.field public static media_bar_view__iv_video:I = 0x7f0a04a6
+    check-cast p3, [Lxob;
 
-.field public static media_bar_view__ll_constructor:I = 0x7f0a04a7
+    invoke-static {p2, p3}, Lve3;->b([Lxob;[Lxob;)Z
 
-.field public static media_bar_view__ll_contact:I = 0x7f0a04a8
+    move-result v0
 
-.field public static media_bar_view__ll_drawing:I = 0x7f0a04a9
+    if-eqz v0, :cond_6
 
-.field public static media_bar_view__ll_file:I = 0x7f0a04aa
+    iget-object v0, p0, Lvoc;->a:[Lxob;
 
-.field public static media_bar_view__ll_gallery:I = 0x7f0a04ab
+    invoke-static {v0, p2}, Lve3;->b([Lxob;[Lxob;)Z
 
-.field public static media_bar_view__ll_layout_create:I = 0x7f0a04ac
+    move-result v0
 
-.field public static media_bar_view__ll_location:I = 0x7f0a04ad
+    if-nez v0, :cond_1
 
-.field public static media_bar_view__ll_photo:I = 0x7f0a04ae
+    if-eqz p2, :cond_0
 
-.field public static media_bar_view__ll_video:I = 0x7f0a04af
+    invoke-static {p2}, Lve3;->g([Lxob;)[Lxob;
 
-.field public static media_bar_view__tv_constructor:I = 0x7f0a04b0
+    move-result-object v0
 
-.field public static media_bar_view__tv_contact:I = 0x7f0a04b1
+    goto :goto_0
 
-.field public static media_bar_view__tv_drawing:I = 0x7f0a04b2
+    :cond_0
+    const/4 v0, 0x0
 
-.field public static media_bar_view__tv_file:I = 0x7f0a04b3
+    :goto_0
+    iput-object v0, p0, Lvoc;->a:[Lxob;
 
-.field public static media_bar_view__tv_gallery:I = 0x7f0a04b4
+    :cond_1
+    iget-object v0, p0, Lvoc;->a:[Lxob;
 
-.field public static media_bar_view__tv_location:I = 0x7f0a04b6
+    const-string v1, "Required value was null."
 
-.field public static media_bar_view__tv_photo:I = 0x7f0a04b7
+    if-eqz v0, :cond_5
 
-.field public static media_bar_view__tv_video:I = 0x7f0a04b9
+    if-eqz p2, :cond_4
 
-.field public static media_permissions_view_button:I = 0x7f0a04c3
+    array-length v1, p2
 
-.field public static media_permissions_view_title:I = 0x7f0a04c4
+    const/4 v2, 0x0
 
-.field public static quick_camera_view__cv_camera:I = 0x7f0a09f0
+    :goto_1
+    if-ge v2, v1, :cond_3
 
-.field public static row_media_bar_actions__icon:I = 0x7f0a0a84
+    if-eqz p3, :cond_2
 
-.field public static row_media_bar_actions__title:I = 0x7f0a0a85
+    aget-object v3, v0, v2
 
-.field public static select_album_content_container:I = 0x7f0a0b2b
+    aget-object v4, p2, v2
 
-.field public static simple_drawee_view:I = 0x7f0a0bac
+    aget-object v5, p3, v2
 
-.field public static video_info:I = 0x7f0a0c51
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-char v6, v4, Lxob;->a:C
+
+    iput-char v6, v3, Lxob;->a:C
+
+    const/4 v6, 0x0
+
+    :goto_2
+    iget-object v7, v4, Lxob;->b:[F
+
+    array-length v8, v7
+
+    if-ge v6, v8, :cond_2
+
+    iget-object v8, v3, Lxob;->b:[F
+
+    aget v7, v7, v6
+
+    const/high16 v9, 0x3f800000    # 1.0f
+
+    sub-float/2addr v9, p1
+
+    mul-float/2addr v9, v7
+
+    iget-object v7, v5, Lxob;->b:[F
+
+    aget v7, v7, v6
+
+    mul-float/2addr v7, p1
+
+    add-float/2addr v7, v9
+
+    aput v7, v8, v6
+
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_2
+
+    :cond_2
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_1
+
+    :cond_3
+    return-object v0
+
+    :cond_4
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p1, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_5
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p1, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_6
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "Can\'t interpolate between two incompatible pathData"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method

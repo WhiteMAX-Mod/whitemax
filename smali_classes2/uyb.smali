@@ -1,73 +1,90 @@
-.class public final enum Luyb;
-.super Ljava/lang/Enum;
+.class public final Luyb;
+.super Ldtf;
 .source "SourceFile"
 
+# interfaces
+.implements Lsm6;
 
-# static fields
-.field public static final enum a:Luyb;
 
-.field public static final enum b:Luyb;
+# instance fields
+.field public final synthetic X:Ljava/lang/String;
 
-.field public static final synthetic c:[Luyb;
+.field public final synthetic o:Lwyb;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lwyb;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Luyb;
+    iput-object p1, p0, Luyb;->o:Lwyb;
 
-    const-string v1, "Gallery"
+    iput-object p2, p0, Luyb;->X:Ljava/lang/String;
 
-    const/4 v2, 0x0
+    const/4 p1, 0x2
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Luyb;->a:Luyb;
-
-    new-instance v1, Luyb;
-
-    const-string v2, "Permissions"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Luyb;->b:Luyb;
-
-    filled-new-array {v0, v1}, [Luyb;
-
-    move-result-object v0
-
-    sput-object v0, Luyb;->c:[Luyb;
+    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Luyb;
-    .locals 1
 
-    const-class v0, Luyb;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p1, Lf84;
 
-    move-result-object p0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast p0, Luyb;
+    invoke-virtual {p0, p1, p2}, Luyb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-object p0
+    move-result-object p1
+
+    check-cast p1, Luyb;
+
+    sget-object p2, Lqqg;->a:Lqqg;
+
+    invoke-virtual {p1, p2}, Luyb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public static values()[Luyb;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Luyb;
+
+    iget-object v0, p0, Luyb;->o:Lwyb;
+
+    iget-object v1, p0, Luyb;->X:Ljava/lang/String;
+
+    invoke-direct {p1, v0, v1, p2}, Luyb;-><init>(Lwyb;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    sget-object v0, Luyb;->c:[Luyb;
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object p1, p0, Luyb;->o:Lwyb;
 
-    move-result-object v0
+    iget-object p1, p1, Lwyb;->d:Lq24;
 
-    check-cast v0, [Luyb;
+    iget-object p1, p1, Lq24;->g:Lbwf;
 
-    return-object v0
+    invoke-virtual {p1}, Lbwf;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lf9a;
+
+    iget-object v0, p0, Luyb;->X:Ljava/lang/String;
+
+    invoke-interface {p1, v0}, Lf9a;->setValue(Ljava/lang/Object;)V
+
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

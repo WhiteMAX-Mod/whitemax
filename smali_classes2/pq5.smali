@@ -1,51 +1,54 @@
 .class public final Lpq5;
-.super Ly14;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lp8g;
 
-# instance fields
-.field public X:Z
 
-.field public Y:Z
+# static fields
+.field public static final a:Lpq5;
 
-.field public synthetic Z:Ljava/lang/Object;
+.field public static final b:Lbwf;
 
-.field public o:Lab7;
 
-.field public q0:I
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lpq5;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lpq5;->a:Lpq5;
+
+    new-instance v0, Lnq5;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lnq5;-><init>(I)V
+
+    new-instance v1, Lbwf;
+
+    invoke-direct {v1, v0}, Lbwf;-><init>(Lcm6;)V
+
+    sput-object v1, Lpq5;->b:Lbwf;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+.method public final a(III)Lm8g;
+    .locals 0
 
-    iput-object p1, p0, Lpq5;->Z:Ljava/lang/Object;
+    sget-object p1, Lpq5;->b:Lbwf;
 
-    iget p1, p0, Lpq5;->q0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lpq5;->q0:I
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x0
-
-    const-wide/16 v2, 0x0
-
-    const/4 v4, 0x0
-
-    move-object v7, p0
-
-    invoke-static/range {v0 .. v7}, Lb1j;->a(Lma7;Lab7;JLjava/lang/Object;ZZLy14;)Ljava/lang/Object;
+    invoke-virtual {p1}, Lbwf;->getValue()Ljava/lang/Object;
 
     move-result-object p1
+
+    check-cast p1, Lm8g;
 
     return-object p1
 .end method

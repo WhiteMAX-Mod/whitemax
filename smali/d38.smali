@@ -1,86 +1,55 @@
 .class public final Ld38;
-.super Ljava/util/AbstractSequentialList;
+.super Lq44;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final a:Ljava/util/List;
+.field public X:I
 
-.field public final b:Lvi6;
+.field public Y:J
+
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public d:Luy5;
+
+.field public o:I
+
+.field public final synthetic s0:Luy5;
+
+.field public t0:I
 
 
 # direct methods
-.method public constructor <init>(Lvi6;Ljava/util/List;)V
+.method public constructor <init>(Luy5;Lq44;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/AbstractSequentialList;-><init>()V
+    iput-object p1, p0, Ld38;->s0:Luy5;
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iput-object p2, p0, Ld38;->a:Ljava/util/List;
-
-    iput-object p1, p0, Ld38;->b:Lvi6;
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final isEmpty()Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Ld38;->a:Ljava/util/List;
+    iput-object p1, p0, Ld38;->Z:Ljava/lang/Object;
 
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+    iget p1, p0, Ld38;->t0:I
 
-    move-result v0
+    const/high16 v0, -0x80000000
 
-    return v0
-.end method
+    or-int/2addr p1, v0
 
-.method public final listIterator(I)Ljava/util/ListIterator;
-    .locals 2
+    iput p1, p0, Ld38;->t0:I
 
-    new-instance v0, Lb38;
+    iget-object p1, p0, Ld38;->s0:Luy5;
 
-    iget-object v1, p0, Ld38;->a:Ljava/util/List;
-
-    invoke-interface {v1, p1}, Ljava/util/List;->listIterator(I)Ljava/util/ListIterator;
+    invoke-virtual {p1, p0}, Luy5;->b(Lq44;)Ljava/lang/Object;
 
     move-result-object p1
 
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p0, p1, v1}, Lb38;-><init>(Ljava/util/AbstractList;Ljava/util/ListIterator;I)V
-
-    return-object v0
-.end method
-
-.method public final removeRange(II)V
-    .locals 1
-
-    iget-object v0, p0, Ld38;->a:Ljava/util/List;
-
-    invoke-interface {v0, p1, p2}, Ljava/util/List;->subList(II)Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljava/util/List;->clear()V
-
-    return-void
-.end method
-
-.method public final size()I
-    .locals 1
-
-    iget-object v0, p0, Ld38;->a:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    return v0
+    return-object p1
 .end method

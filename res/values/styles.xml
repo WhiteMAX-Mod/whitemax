@@ -2922,12 +2922,6 @@
         <item name="android:src">@drawable/ic_down_16</item>
         <item name="android:contentDescription">@string/chat_extra_actions_show</item>
     </style>
-    <style name="LayoutPadding">
-        <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
-        <item name="android:paddingTop">@dimen/activity_vertical_margin</item>
-        <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
-        <item name="android:paddingBottom">@dimen/activity_vertical_margin</item>
-    </style>
     <style name="MaterialAlertDialog.Material3" parent="@style/MaterialAlertDialog.MaterialComponents">
         <item name="android:layout">@layout/m3_alert_dialog</item>
         <item name="backgroundTint">?colorSurfaceContainerHigh</item>
@@ -3232,12 +3226,6 @@
     </style>
     <style name="PreferenceThemeOverlay" parent="@style/BasePreferenceThemeOverlay">
         <item name="preferenceCategoryTitleTextColor">?android:colorAccent</item>
-    </style>
-    <style name="RowPadding">
-        <item name="android:paddingLeft">12.0dip</item>
-        <item name="android:paddingTop">@dimen/small_vertical_margin</item>
-        <item name="android:paddingRight">12.0dip</item>
-        <item name="android:paddingBottom">@dimen/small_vertical_margin</item>
     </style>
     <style name="RtlOverlay.DialogWindowTitle.AppCompat" parent="@style/Base.DialogWindowTitle.AppCompat">
         <item name="android:textAlignment">viewStart</item>
@@ -4716,22 +4704,6 @@
         <item name="android:textAllCaps">false</item>
         <item name="android:letterSpacing">0.02</item>
         <item name="lineHeight">16.0dip</item>
-    </style>
-    <style name="Typography.Headline1" parent="@style/Typography">
-        <item name="android:textSize">16.0dip</item>
-        <item name="android:includeFontPadding">false</item>
-        <item name="android:textAllCaps">false</item>
-        <item name="android:letterSpacing">0.01</item>
-        <item name="android:fontWeight">@integer/font_weight_medium</item>
-        <item name="android:lineHeight">20.0dip</item>
-        <item name="lineHeight">20.0dip</item>
-    </style>
-    <style name="Typography.Paragraph" parent="@style/Typography">
-        <item name="android:textSize">15.0dip</item>
-        <item name="android:includeFontPadding">false</item>
-        <item name="android:textAllCaps">false</item>
-        <item name="android:letterSpacing">0.0</item>
-        <item name="lineHeight">20.0dip</item>
     </style>
     <style name="Typography.Title3" parent="@style/Typography">
         <item name="android:textSize">17.0dip</item>

@@ -1,63 +1,46 @@
-.class public final Lcz3;
-.super Lkhd;
+.class public final synthetic Lcz3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcm6;
 
-# static fields
-.field public static final b:Lcz3;
 
-.field public static final c:Lyf4;
+# instance fields
+.field public final synthetic a:J
 
-.field public static final d:Lyf4;
-
-.field public static final e:Lyf4;
+.field public final synthetic b:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public synthetic constructor <init>(JZ)V
+    .locals 0
 
-    new-instance v0, Lcz3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ldg4;-><init>()V
+    iput-wide p1, p0, Lcz3;->a:J
 
-    sput-object v0, Lcz3;->b:Lcz3;
-
-    const/4 v1, 0x0
-
-    new-array v2, v1, [Ljava/lang/String;
-
-    const-string v3, ":contact-list/create-contact"
-
-    const/4 v4, 0x0
-
-    const/16 v5, 0xe
-
-    invoke-static {v0, v3, v2, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
-
-    move-result-object v2
-
-    sput-object v2, Lcz3;->c:Lyf4;
-
-    const-string v2, ":contact-list/share-invite"
-
-    new-array v3, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
-
-    move-result-object v2
-
-    sput-object v2, Lcz3;->d:Lyf4;
-
-    const-string v2, ":call-contact"
-
-    new-array v1, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v1, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
-
-    move-result-object v0
-
-    sput-object v0, Lcz3;->e:Lyf4;
+    iput-boolean p3, p0, Lcz3;->b:Z
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
+
+    sget-object v0, Lone/me/contactlist/ContactListWidget;->O0:[Lyy7;
+
+    sget-object v0, Ly14;->c:Ly14;
+
+    iget-wide v1, p0, Lcz3;->a:J
+
+    iget-boolean v3, p0, Lcz3;->b:Z
+
+    invoke-virtual {v0, v1, v2, v3}, Ly14;->L0(JZ)V
+
+    sget-object v0, Lqqg;->a:Lqqg;
+
+    return-object v0
 .end method

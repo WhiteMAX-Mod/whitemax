@@ -1,85 +1,93 @@
-.class public final enum Lu10;
-.super Ljava/lang/Enum;
+.class public final Lu10;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Lu10;
+# instance fields
+.field public a:F
 
-.field public static final enum b:Lu10;
+.field public b:F
 
-.field public static final enum c:Lu10;
+.field public c:Lgsc;
 
-.field public static final synthetic o:[Lu10;
+.field public d:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(I)V
+    .locals 0
 
-    new-instance v0, Lu10;
+    packed-switch p1, :pswitch_data_0
 
-    const-string v1, "DEFAULT"
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v2, 0x0
+    .line 7
+    sget-object p1, Lgsc;->X:Lgsc;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lu10;->a:Lu10;
-
-    new-instance v1, Lu10;
-
-    const-string v2, "PROCESSING"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lu10;->b:Lu10;
-
-    new-instance v2, Lu10;
-
-    const-string v3, "PROCESSED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lu10;->c:Lu10;
-
-    filled-new-array {v0, v1, v2}, [Lu10;
-
-    move-result-object v0
-
-    sput-object v0, Lu10;->o:[Lu10;
+    iput-object p1, p0, Lu10;->c:Lgsc;
 
     return-void
+
+    .line 8
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 9
+    sget-object p1, Lgsc;->X:Lgsc;
+
+    iput-object p1, p0, Lu10;->c:Lgsc;
+
+    const/4 p1, 0x0
+
+    .line 10
+    iput p1, p0, Lu10;->a:F
+
+    const/high16 p1, 0x3f800000    # 1.0f
+
+    .line 11
+    iput p1, p0, Lu10;->b:F
+
+    const/4 p1, 0x0
+
+    .line 12
+    iput-boolean p1, p0, Lu10;->d:Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lu10;
+.method public constructor <init>(Lu10;)V
     .locals 1
 
-    const-class v0, Lu10;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    .line 2
+    iget v0, p1, Lu10;->a:F
 
-    move-result-object p0
+    iput v0, p0, Lu10;->a:F
 
-    check-cast p0, Lu10;
+    .line 3
+    iget v0, p1, Lu10;->b:F
 
-    return-object p0
-.end method
+    iput v0, p0, Lu10;->b:F
 
-.method public static values()[Lu10;
-    .locals 1
+    .line 4
+    iget-object v0, p1, Lu10;->c:Lgsc;
 
-    sget-object v0, Lu10;->o:[Lu10;
+    iput-object v0, p0, Lu10;->c:Lgsc;
 
-    invoke-virtual {v0}, [Lu10;->clone()Ljava/lang/Object;
+    .line 5
+    iget-boolean p1, p1, Lu10;->d:Z
 
-    move-result-object v0
+    iput-boolean p1, p0, Lu10;->d:Z
 
-    check-cast v0, [Lu10;
-
-    return-object v0
+    return-void
 .end method

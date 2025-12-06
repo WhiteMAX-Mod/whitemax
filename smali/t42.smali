@@ -1,191 +1,64 @@
 .class public final Lt42;
-.super Lz6d;
+.super Lzk3;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/graphics/Paint;
+# static fields
+.field public static final synthetic c:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
-.field public final b:Ljava/util/List;
+
+# instance fields
+.field private volatile synthetic _resumed$volatile:I
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
     .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-class v0, Lt42;
 
-    new-instance v0, Landroid/graphics/Paint;
+    const-string v1, "_resumed$volatile"
 
-    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
+    invoke-static {v0, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
-    iput-object v0, p0, Lt42;->a:Landroid/graphics/Paint;
+    move-result-object v0
 
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-static {v1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lt42;->b:Ljava/util/List;
-
-    const/high16 v1, 0x40a00000    # 5.0f
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
-
-    const v1, -0xff01
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
+    sput-object v0, Lt42;->c:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
     return-void
 .end method
 
+.method public constructor <init>(Ll42;Ljava/lang/Throwable;Z)V
+    .locals 2
 
-# virtual methods
-.method public final h(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;)V
-    .locals 7
+    if-nez p2, :cond_0
 
-    invoke-virtual {p2}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    new-instance p2, Ljava/util/concurrent/CancellationException;
 
-    move-result-object v0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    sget v1, Lhlc;->m3_carousel_debug_keyline_width:I
+    const-string v1, "Continuation "
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result v0
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object v6, p0, Lt42;->a:Landroid/graphics/Paint;
+    const-string p1, " was cancelled normally"
 
-    invoke-virtual {v6, v0}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lt42;->b:Ljava/util/List;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    move-result-object p1
 
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljt7;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const v1, -0xff01
-
-    const/4 v2, 0x0
-
-    const v3, -0xffff01
-
-    invoke-static {v1, v2, v3}, Ljc3;->c(IFI)I
-
-    move-result v1
-
-    invoke-virtual {v6, v1}, Landroid/graphics/Paint;->setColor(I)V
-
-    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/google/android/material/carousel/CarouselLayoutManager;
-
-    invoke-virtual {v1}, Lcom/google/android/material/carousel/CarouselLayoutManager;->K0()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/google/android/material/carousel/CarouselLayoutManager;
-
-    iget-object v1, v1, Lcom/google/android/material/carousel/CarouselLayoutManager;->q:Lvy;
-
-    invoke-virtual {v1}, Lvy;->p()I
-
-    move-result v1
-
-    int-to-float v3, v1
-
-    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/google/android/material/carousel/CarouselLayoutManager;
-
-    iget-object v1, v1, Lcom/google/android/material/carousel/CarouselLayoutManager;->q:Lvy;
-
-    invoke-virtual {v1}, Lvy;->k()I
-
-    move-result v1
-
-    int-to-float v5, v1
-
-    const/4 v2, 0x0
-
-    const/4 v4, 0x0
-
-    move-object v1, p1
-
-    invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
-
-    goto :goto_1
+    invoke-direct {p2, p1}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
 
     :cond_0
-    move-object v1, p1
+    invoke-direct {p0, p2, p3}, Lzk3;-><init>(Ljava/lang/Throwable;Z)V
 
-    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+    const/4 p1, 0x0
 
-    move-result-object p1
+    iput p1, p0, Lt42;->_resumed$volatile:I
 
-    check-cast p1, Lcom/google/android/material/carousel/CarouselLayoutManager;
-
-    iget-object p1, p1, Lcom/google/android/material/carousel/CarouselLayoutManager;->q:Lvy;
-
-    invoke-virtual {p1}, Lvy;->l()I
-
-    move-result p1
-
-    int-to-float v2, p1
-
-    invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/google/android/material/carousel/CarouselLayoutManager;
-
-    iget-object p1, p1, Lcom/google/android/material/carousel/CarouselLayoutManager;->q:Lvy;
-
-    invoke-virtual {p1}, Lvy;->n()I
-
-    move-result p1
-
-    int-to-float v4, p1
-
-    const/4 v5, 0x0
-
-    const/4 v3, 0x0
-
-    invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
-
-    :goto_1
-    move-object p1, v1
-
-    goto :goto_0
-
-    :cond_1
     return-void
 .end method

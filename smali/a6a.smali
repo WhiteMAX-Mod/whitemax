@@ -1,343 +1,806 @@
-.class public final enum La6a;
-.super Ljava/lang/Enum;
+.class public abstract La6a;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Landroid/util/SparseArray;
-
-.field public static final synthetic b:[La6a;
+.field public static final a:[[Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 30
+    .locals 68
 
-    new-instance v1, La6a;
+    const-string v0, ":-)"
 
-    const-string v0, "MOBILE"
+    const-string v1, "\ud83d\ude0a"
 
-    const/4 v2, 0x0
+    filled-new-array {v0, v1}, [Ljava/lang/String;
 
-    invoke-direct {v1, v0, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    move-result-object v2
 
-    move v0, v2
+    const-string v0, ":)"
 
-    new-instance v2, La6a;
+    filled-new-array {v0, v1}, [Ljava/lang/String;
 
-    const-string v3, "WIFI"
+    move-result-object v3
 
-    const/4 v4, 0x1
+    const-string v0, ":-("
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const-string v4, "\ud83d\ude1e"
 
-    new-instance v3, La6a;
+    filled-new-array {v0, v4}, [Ljava/lang/String;
 
-    const-string v5, "MOBILE_MMS"
+    move-result-object v0
 
-    const/4 v6, 0x2
+    const-string v5, ":("
 
-    invoke-direct {v3, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    filled-new-array {v5, v4}, [Ljava/lang/String;
 
-    move v5, v4
+    move-result-object v5
 
-    new-instance v4, La6a;
+    const-string v6, ";-)"
 
-    const-string v7, "MOBILE_SUPL"
+    const-string v7, "\ud83d\ude09"
 
-    const/4 v8, 0x3
+    filled-new-array {v6, v7}, [Ljava/lang/String;
 
-    invoke-direct {v4, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    move-result-object v6
 
-    move v7, v5
+    const-string v8, ";)"
 
-    new-instance v5, La6a;
+    filled-new-array {v8, v7}, [Ljava/lang/String;
 
-    const-string v9, "MOBILE_DUN"
+    move-result-object v7
 
-    const/4 v10, 0x4
+    const-string v8, ":-D"
 
-    invoke-direct {v5, v9, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const-string v9, "\ud83d\ude02"
 
-    move v9, v6
+    filled-new-array {v8, v9}, [Ljava/lang/String;
 
-    new-instance v6, La6a;
+    move-result-object v8
 
-    const-string v11, "MOBILE_HIPRI"
+    const-string v10, ":D"
 
-    const/4 v12, 0x5
+    filled-new-array {v10, v9}, [Ljava/lang/String;
 
-    invoke-direct {v6, v11, v12}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    move-result-object v9
 
-    move v11, v7
+    const-string v10, ":-@"
 
-    new-instance v7, La6a;
+    filled-new-array {v10, v4}, [Ljava/lang/String;
 
-    const-string v13, "WIMAX"
+    move-result-object v10
 
-    const/4 v14, 0x6
+    const-string v11, ":@"
 
-    invoke-direct {v7, v13, v14}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    filled-new-array {v11, v4}, [Ljava/lang/String;
 
-    move v13, v8
+    move-result-object v11
 
-    new-instance v8, La6a;
+    const-string v12, "^o)"
 
-    const-string v15, "BLUETOOTH"
+    const-string v13, "\ud83d\ude11"
 
-    const/4 v0, 0x7
+    filled-new-array {v12, v13}, [Ljava/lang/String;
 
-    invoke-direct {v8, v15, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    move-result-object v12
 
-    move v15, v9
+    const-string v13, ":-S"
 
-    new-instance v9, La6a;
+    const-string v14, "\ud83d\ude48"
 
-    const-string v10, "DUMMY"
+    filled-new-array {v13, v14}, [Ljava/lang/String;
 
-    const/16 v0, 0x8
+    move-result-object v13
 
-    invoke-direct {v9, v10, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const-string v15, ":S"
 
-    new-instance v10, La6a;
+    filled-new-array {v15, v14}, [Ljava/lang/String;
 
-    const-string v11, "ETHERNET"
+    move-result-object v14
 
-    const/16 v0, 0x9
+    const-string v15, "*-)"
 
-    invoke-direct {v10, v11, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    move-object/from16 v16, v0
 
-    new-instance v11, La6a;
+    const-string v0, "\ud83d\ude0f"
 
-    const-string v12, "MOBILE_FOTA"
+    filled-new-array {v15, v0}, [Ljava/lang/String;
 
-    const/16 v0, 0xa
+    move-result-object v15
 
-    invoke-direct {v11, v12, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    move-object/from16 v17, v2
 
-    new-instance v12, La6a;
+    const-string v2, "*)"
 
-    const-string v13, "MOBILE_IMS"
+    filled-new-array {v2, v0}, [Ljava/lang/String;
 
-    const/16 v0, 0xb
+    move-result-object v0
 
-    invoke-direct {v12, v13, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const-string v2, ":-|"
 
-    new-instance v13, La6a;
+    move-object/from16 v18, v0
 
-    const-string v14, "MOBILE_CBS"
+    const-string v0, "\ud83d\ude20"
 
-    const/16 v0, 0xc
+    filled-new-array {v2, v0}, [Ljava/lang/String;
 
-    invoke-direct {v13, v14, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    move-result-object v2
 
-    new-instance v14, La6a;
+    move-object/from16 v19, v2
 
-    const-string v15, "WIFI_P2P"
+    const-string v2, ":|"
 
-    const/16 v0, 0xd
+    filled-new-array {v2, v0}, [Ljava/lang/String;
 
-    invoke-direct {v14, v15, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    move-result-object v0
 
-    new-instance v15, La6a;
+    const-string v2, "8oI"
 
-    const-string v0, "MOBILE_IA"
+    move-object/from16 v20, v0
 
-    move-object/from16 v21, v1
+    const-string v0, "\ud83d\ude21"
 
-    const/16 v1, 0xe
+    filled-new-array {v2, v0}, [Ljava/lang/String;
 
-    invoke-direct {v15, v0, v1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    move-result-object v0
 
-    new-instance v0, La6a;
+    const-string v2, ";("
 
-    const-string v1, "MOBILE_EMERGENCY"
+    move-object/from16 v21, v0
+
+    const-string v0, "\ud83d\ude22"
+
+    filled-new-array {v2, v0}, [Ljava/lang/String;
+
+    move-result-object v2
 
     move-object/from16 v22, v2
 
-    const/16 v2, 0xf
+    const-string v2, ":\'("
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    filled-new-array {v2, v0}, [Ljava/lang/String;
 
-    new-instance v1, La6a;
+    move-result-object v0
 
-    const-string v2, "PROXY"
+    const-string v2, ":-P"
 
     move-object/from16 v23, v0
 
-    const/16 v0, 0x10
+    const-string v0, "\ud83d\ude1c"
 
-    invoke-direct {v1, v2, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    filled-new-array {v2, v0}, [Ljava/lang/String;
 
-    new-instance v2, La6a;
+    move-result-object v2
 
-    const-string v0, "VPN"
+    move-object/from16 v24, v2
 
-    move-object/from16 v24, v1
+    const-string v2, ":P"
 
-    const/16 v1, 0x11
+    filled-new-array {v2, v0}, [Ljava/lang/String;
 
-    invoke-direct {v2, v0, v1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    move-result-object v0
 
-    new-instance v0, La6a;
+    const-string v2, ":-$"
 
-    const-string v1, "NONE"
+    filled-new-array {v2, v1}, [Ljava/lang/String;
 
-    move-object/from16 v25, v2
+    move-result-object v2
 
-    const/16 v2, 0x12
+    move-object/from16 v25, v0
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const-string v0, ":$"
 
-    move-object/from16 v19, v0
+    filled-new-array {v0, v1}, [Ljava/lang/String;
 
-    move-object/from16 v1, v21
+    move-result-object v0
 
-    move-object/from16 v2, v22
+    move-object/from16 v26, v0
 
-    move-object/from16 v16, v23
+    const-string v0, ":-O"
 
-    move-object/from16 v17, v24
+    move-object/from16 v27, v2
 
-    move-object/from16 v18, v25
+    const-string v2, "\ud83d\ude33"
 
-    const/4 v0, 0x0
+    filled-new-array {v0, v2}, [Ljava/lang/String;
 
-    filled-new-array/range {v1 .. v19}, [La6a;
+    move-result-object v0
 
-    move-result-object v20
+    move-object/from16 v28, v0
 
-    move-object/from16 v26, v16
+    const-string v0, ":O"
 
-    move-object/from16 v27, v17
+    filled-new-array {v0, v2}, [Ljava/lang/String;
 
-    move-object/from16 v28, v18
+    move-result-object v0
 
-    move-object/from16 v29, v19
+    const-string v2, "|-)"
 
-    sput-object v20, La6a;->b:[La6a;
+    move-object/from16 v29, v0
 
-    new-instance v0, Landroid/util/SparseArray;
+    const-string v0, "\ud83d\ude2a"
 
-    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
+    filled-new-array {v2, v0}, [Ljava/lang/String;
 
-    sput-object v0, La6a;->a:Landroid/util/SparseArray;
+    move-result-object v2
 
-    move-object/from16 v17, v15
+    move-object/from16 v30, v2
 
-    const/4 v15, 0x0
+    const-string v2, "|)"
 
-    invoke-virtual {v0, v15, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    filled-new-array {v2, v0}, [Ljava/lang/String;
 
-    const/4 v1, 0x1
+    move-result-object v0
 
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    const-string v2, "(ch)"
 
-    const/4 v15, 0x2
+    filled-new-array {v2, v1}, [Ljava/lang/String;
 
-    invoke-virtual {v0, v15, v3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    move-result-object v1
 
-    const/4 v1, 0x3
+    const-string v2, "(lo)"
 
-    invoke-virtual {v0, v1, v4}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    move-object/from16 v31, v0
 
-    const/4 v1, 0x4
+    const-string v0, "\ud83d\ude0d"
 
-    invoke-virtual {v0, v1, v5}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    filled-new-array {v2, v0}, [Ljava/lang/String;
 
-    const/4 v1, 0x5
+    move-result-object v0
 
-    invoke-virtual {v0, v1, v6}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    const-string v2, "(sr)"
 
-    const/4 v1, 0x6
+    move-object/from16 v32, v0
 
-    invoke-virtual {v0, v1, v7}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    const-string v0, "\ud83d\ude14"
 
-    const/4 v1, 0x7
+    filled-new-array {v2, v0}, [Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v8}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    move-result-object v0
 
-    const/16 v1, 0x8
+    const-string v2, "|-("
 
-    invoke-virtual {v0, v1, v9}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    move-object/from16 v33, v0
 
-    const/16 v1, 0x9
+    const-string v0, "\ud83d\ude34"
 
-    invoke-virtual {v0, v1, v10}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    filled-new-array {v2, v0}, [Ljava/lang/String;
 
-    const/16 v1, 0xa
+    move-result-object v2
 
-    invoke-virtual {v0, v1, v11}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    move-object/from16 v34, v1
 
-    const/16 v1, 0xb
+    const-string v1, "|("
 
-    invoke-virtual {v0, v1, v12}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    filled-new-array {v1, v0}, [Ljava/lang/String;
 
-    const/16 v1, 0xc
+    move-result-object v0
 
-    invoke-virtual {v0, v1, v13}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    const-string v1, "(H)"
 
-    const/16 v1, 0xd
+    move-object/from16 v35, v0
 
-    invoke-virtual {v0, v1, v14}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    const-string v0, "\ud83d\ude0e"
 
-    move-object/from16 v15, v17
+    filled-new-array {v1, v0}, [Ljava/lang/String;
 
-    const/16 v1, 0xe
+    move-result-object v0
 
-    invoke-virtual {v0, v1, v15}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    const-string v1, "(hu)"
 
-    move-object/from16 v1, v26
+    move-object/from16 v36, v0
 
-    const/16 v2, 0xf
+    const-string v0, "\ud83d\ude2c"
 
-    invoke-virtual {v0, v2, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    filled-new-array {v1, v0}, [Ljava/lang/String;
 
-    move-object/from16 v1, v27
+    move-result-object v1
 
-    const/16 v2, 0x10
+    move-object/from16 v37, v1
 
-    invoke-virtual {v0, v2, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    const-string v1, "(tr)"
 
-    move-object/from16 v1, v28
+    filled-new-array {v1, v4}, [Ljava/lang/String;
 
-    const/16 v2, 0x11
+    move-result-object v1
 
-    invoke-virtual {v0, v2, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    const-string v4, "(md)"
 
-    const/4 v1, -0x1
+    move-object/from16 v38, v1
 
-    move-object/from16 v2, v29
+    const-string v1, "\ud83d\ude35"
 
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    filled-new-array {v4, v1}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v4, "(fr)"
+
+    move-object/from16 v39, v1
+
+    const-string v1, "\ud83d\ude04"
+
+    filled-new-array {v4, v1}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v4, "(dt)"
+
+    move-object/from16 v40, v1
+
+    const-string v1, "\ud83d\ude1f"
+
+    filled-new-array {v4, v1}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v4, "(sc)"
+
+    filled-new-array {v4, v0}, [Ljava/lang/String;
+
+    move-result-object v41
+
+    const-string v0, "(Y)"
+
+    const-string v4, "\ud83d\udc4d"
+
+    filled-new-array {v0, v4}, [Ljava/lang/String;
+
+    move-result-object v42
+
+    const-string v0, "(N)"
+
+    const-string v4, "\ud83d\udc4e"
+
+    filled-new-array {v0, v4}, [Ljava/lang/String;
+
+    move-result-object v43
+
+    const-string v0, "(v)"
+
+    const-string v4, "\u270c"
+
+    filled-new-array {v0, v4}, [Ljava/lang/String;
+
+    move-result-object v44
+
+    const-string v0, "(L)"
+
+    const-string v4, "\u2764"
+
+    filled-new-array {v0, v4}, [Ljava/lang/String;
+
+    move-result-object v45
+
+    const-string v0, "(U)"
+
+    const-string v4, "\ud83d\udc94"
+
+    filled-new-array {v0, v4}, [Ljava/lang/String;
+
+    move-result-object v46
+
+    const-string v0, "(K)"
+
+    const-string v4, "\ud83d\udc8b"
+
+    filled-new-array {v0, v4}, [Ljava/lang/String;
+
+    move-result-object v47
+
+    const-string v0, "(F)"
+
+    const-string v4, "\u2698"
+
+    filled-new-array {v0, v4}, [Ljava/lang/String;
+
+    move-result-object v48
+
+    const-string v0, "(*)"
+
+    const-string v4, "\u2605"
+
+    filled-new-array {v0, v4}, [Ljava/lang/String;
+
+    move-result-object v49
+
+    const-string v0, "(^)"
+
+    const-string v4, "\ud83c\udf82"
+
+    filled-new-array {v0, v4}, [Ljava/lang/String;
+
+    move-result-object v50
+
+    const-string v0, "(G)"
+
+    const-string v4, "\ud83c\udf81"
+
+    filled-new-array {v0, v4}, [Ljava/lang/String;
+
+    move-result-object v51
+
+    const-string v0, "(B)"
+
+    const-string v4, "\ud83c\udf7a"
+
+    filled-new-array {v0, v4}, [Ljava/lang/String;
+
+    move-result-object v52
+
+    const-string v0, "(D)"
+
+    const-string v4, "\ud83c\udf78"
+
+    filled-new-array {v0, v4}, [Ljava/lang/String;
+
+    move-result-object v53
+
+    const-string v0, "(CC)"
+
+    const-string v4, "\u2615"
+
+    filled-new-array {v0, v4}, [Ljava/lang/String;
+
+    move-result-object v54
+
+    const-string v0, "(pi)"
+
+    const-string v4, "\ud83c\udf55"
+
+    filled-new-array {v0, v4}, [Ljava/lang/String;
+
+    move-result-object v55
+
+    const-string v0, "(pl)"
+
+    const-string v4, "\ud83c\udf74"
+
+    filled-new-array {v0, v4}, [Ljava/lang/String;
+
+    move-result-object v56
+
+    const-string v0, "(ic)"
+
+    const-string v4, "\ud83c\udf66"
+
+    filled-new-array {v0, v4}, [Ljava/lang/String;
+
+    move-result-object v57
+
+    const-string v0, "($)"
+
+    const-string v4, "\ud83d\udcb0"
+
+    filled-new-array {v0, v4}, [Ljava/lang/String;
+
+    move-result-object v58
+
+    const-string v0, "(co)"
+
+    const-string v4, "\ud83d\udcbb"
+
+    filled-new-array {v0, v4}, [Ljava/lang/String;
+
+    move-result-object v59
+
+    const-string v0, "(so)"
+
+    const-string v4, "\u26bd"
+
+    filled-new-array {v0, v4}, [Ljava/lang/String;
+
+    move-result-object v60
+
+    const-string v0, "(te)"
+
+    const-string v4, "\ud83c\udfbe"
+
+    filled-new-array {v0, v4}, [Ljava/lang/String;
+
+    move-result-object v61
+
+    const-string v0, "(nt)"
+
+    const-string v4, "\u266c"
+
+    filled-new-array {v0, v4}, [Ljava/lang/String;
+
+    move-result-object v62
+
+    const-string v0, "(I)"
+
+    const-string v4, "\ud83d\udca1"
+
+    filled-new-array {v0, v4}, [Ljava/lang/String;
+
+    move-result-object v63
+
+    const-string v0, "(E)"
+
+    const-string v4, "\u2709"
+
+    filled-new-array {v0, v4}, [Ljava/lang/String;
+
+    move-result-object v64
+
+    const-string v0, "(Z)"
+
+    const-string v4, "\ud83d\udc66"
+
+    filled-new-array {v0, v4}, [Ljava/lang/String;
+
+    move-result-object v65
+
+    const-string v0, "(X)"
+
+    const-string v4, "\ud83d\udc67"
+
+    filled-new-array {v0, v4}, [Ljava/lang/String;
+
+    move-result-object v66
+
+    const-string v0, "(S)"
+
+    const-string v4, "\ud83c\udf19"
+
+    filled-new-array {v0, v4}, [Ljava/lang/String;
+
+    move-result-object v67
+
+    move-object/from16 v4, v16
+
+    move-object/from16 v16, v18
+
+    move-object/from16 v18, v20
+
+    move-object/from16 v20, v22
+
+    move-object/from16 v22, v24
+
+    move-object/from16 v24, v27
+
+    move-object/from16 v27, v29
+
+    move-object/from16 v29, v31
+
+    move-object/from16 v31, v32
+
+    move-object/from16 v32, v33
+
+    move-object/from16 v33, v2
+
+    move-object/from16 v2, v17
+
+    move-object/from16 v17, v19
+
+    move-object/from16 v19, v21
+
+    move-object/from16 v21, v23
+
+    move-object/from16 v23, v25
+
+    move-object/from16 v25, v26
+
+    move-object/from16 v26, v28
+
+    move-object/from16 v28, v30
+
+    move-object/from16 v30, v34
+
+    move-object/from16 v34, v35
+
+    move-object/from16 v35, v36
+
+    move-object/from16 v36, v37
+
+    move-object/from16 v37, v38
+
+    move-object/from16 v38, v39
+
+    move-object/from16 v39, v40
+
+    move-object/from16 v40, v1
+
+    filled-new-array/range {v2 .. v67}, [[Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, La6a;->a:[[Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)La6a;
-    .locals 1
+.method public static a(Ljava/util/concurrent/Future;)Ljava/lang/Object;
+    .locals 2
 
-    const-class v0, La6a;
+    invoke-interface {p0}, Ljava/util/concurrent/Future;->isDone()Z
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    const/4 v0, 0x0
+
+    :goto_0
+    :try_start_0
+    invoke-interface {p0}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
 
     move-result-object p0
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    check-cast p0, La6a;
+    if-eqz v0, :cond_0
 
-    return-object p0
-.end method
-
-.method public static values()[La6a;
-    .locals 1
-
-    sget-object v0, La6a;->b:[La6a;
-
-    invoke-virtual {v0}, [La6a;->clone()Ljava/lang/Object;
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
 
-    check-cast v0, [La6a;
+    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
+
+    :cond_0
+    return-object p0
+
+    :catchall_0
+    move-exception p0
+
+    if-eqz v0, :cond_1
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
+
+    :cond_1
+    throw p0
+
+    :catch_0
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    const-string v1, "Future was expected to be done: %s"
+
+    invoke-static {v1, p0}, Lmc4;->e(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public static final b(Lpzf;)Luzf;
+    .locals 4
+
+    sget-object v0, Lqzf;->a:Lqzf;
+
+    if-nez p0, :cond_0
+
+    return-object v0
+
+    :cond_0
+    iget-object v1, p0, Lpzf;->d:Ljava/lang/String;
+
+    iget-object v2, p0, Lpzf;->b:Ljava/lang/String;
+
+    instance-of v3, p0, Lvzf;
+
+    if-eqz v3, :cond_2
+
+    check-cast p0, Lvzf;
+
+    iget-object p0, p0, Lvzf;->o:Ljava/lang/String;
+
+    if-eqz p0, :cond_2
+
+    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v0, Ltzf;
+
+    invoke-direct {v0, p0}, Ltzf;-><init>(Ljava/lang/String;)V
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    if-eqz v1, :cond_3
+
+    invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
+
+    move-result p0
+
+    if-lez p0, :cond_3
+
+    new-instance p0, Ltzf;
+
+    invoke-direct {p0, v1}, Ltzf;-><init>(Ljava/lang/String;)V
+
+    return-object p0
+
+    :cond_3
+    const-string p0, ""
+
+    if-nez v2, :cond_4
+
+    move-object v1, p0
+
+    goto :goto_1
+
+    :cond_4
+    move-object v1, v2
+
+    :goto_1
+    invoke-static {v1}, Lqaj;->c(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    const-string v1, "io.exception"
+
+    invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    sget-object p0, Lrzf;->a:Lrzf;
+
+    return-object p0
+
+    :cond_5
+    if-nez v2, :cond_6
+
+    move-object v2, p0
+
+    :cond_6
+    invoke-static {v2}, Lqaj;->c(Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_7
+
+    sget-object p0, Lszf;->a:Lszf;
+
+    return-object p0
+
+    :cond_7
+    return-object v0
+.end method
+
+.method public static c(Ljava/lang/Object;)Lbg7;
+    .locals 1
+
+    if-nez p0, :cond_0
+
+    sget-object p0, Lbg7;->b:Lbg7;
+
+    return-object p0
+
+    :cond_0
+    new-instance v0, Lbg7;
+
+    invoke-direct {v0, p0}, Lbg7;-><init>(Ljava/lang/Object;)V
 
     return-object v0
 .end method

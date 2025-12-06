@@ -3,140 +3,159 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
-.implements Landroid/view/View$OnAttachStateChangeListener;
+.implements Lq9e;
 
 
 # instance fields
-.field public final a:Ljava/util/WeakHashMap;
+.field public final X:I
+
+.field public final a:[J
+
+.field public final b:[J
+
+.field public final c:J
+
+.field public final d:J
+
+.field public final o:J
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>([J[JJJJI)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/WeakHashMap;
+    iput-object p1, p0, Lsyg;->a:[J
 
-    invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
+    iput-object p2, p0, Lsyg;->b:[J
 
-    iput-object v0, p0, Lsyg;->a:Ljava/util/WeakHashMap;
+    iput-wide p3, p0, Lsyg;->c:J
+
+    iput-wide p5, p0, Lsyg;->d:J
+
+    iput-wide p7, p0, Lsyg;->o:J
+
+    iput p9, p0, Lsyg;->X:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onGlobalLayout()V
-    .locals 5
+.method public final a()J
+    .locals 2
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    iget-wide v0, p0, Lsyg;->o:J
 
-    const/16 v1, 0x1c
+    return-wide v0
+.end method
 
-    if-ge v0, v1, :cond_3
+.method public final b(J)J
+    .locals 2
 
-    iget-object v0, p0, Lsyg;->a:Ljava/util/WeakHashMap;
+    iget-object v0, p0, Lsyg;->b:[J
 
-    invoke-virtual {v0}, Ljava/util/WeakHashMap;->entrySet()Ljava/util/Set;
+    const/4 v1, 0x1
 
-    move-result-object v0
+    invoke-static {v0, p1, p2, v1}, Lzxg;->e([JJZ)I
 
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    move-result p1
 
-    move-result-object v0
+    iget-object p2, p0, Lsyg;->a:[J
 
-    :cond_0
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    aget-wide p1, p2, p1
 
-    move-result v1
+    return-wide p1
+.end method
 
-    if-eqz v1, :cond_3
+.method public final c()Z
+    .locals 1
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    move-result-object v1
+    return v0
+.end method
 
-    check-cast v1, Ljava/util/Map$Entry;
+.method public final e(J)Lg9e;
+    .locals 9
 
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    iget-object v0, p0, Lsyg;->a:[J
 
-    move-result-object v2
+    const/4 v1, 0x1
 
-    check-cast v2, Landroid/view/View;
+    invoke-static {v0, p1, p2, v1}, Lzxg;->e([JJZ)I
 
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    move-result v2
 
-    move-result-object v3
+    new-instance v3, Lm9e;
 
-    check-cast v3, Ljava/lang/Boolean;
+    aget-wide v4, v0, v2
 
-    invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
+    iget-object v6, p0, Lsyg;->b:[J
 
-    move-result v3
+    aget-wide v7, v6, v2
 
-    invoke-virtual {v2}, Landroid/view/View;->isShown()Z
+    invoke-direct {v3, v4, v5, v7, v8}, Lm9e;-><init>(JJ)V
 
-    move-result v4
+    cmp-long p1, v4, p1
 
-    if-eqz v4, :cond_1
+    if-gez p1, :cond_1
 
-    invoke-virtual {v2}, Landroid/view/View;->getWindowVisibility()I
+    array-length p1, v0
 
-    move-result v4
+    sub-int/2addr p1, v1
 
-    if-nez v4, :cond_1
-
-    const/4 v4, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v4, 0x0
-
-    :goto_1
-    if-eq v3, v4, :cond_0
-
-    if-eqz v4, :cond_2
-
-    const/16 v3, 0x10
-
-    goto :goto_2
-
-    :cond_2
-    const/16 v3, 0x20
-
-    :goto_2
-    invoke-static {v2, v3}, Lhzg;->h(Landroid/view/View;I)V
-
-    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    invoke-interface {v1, v2}, Ljava/util/Map$Entry;->setValue(Ljava/lang/Object;)Ljava/lang/Object;
+    if-ne v2, p1, :cond_0
 
     goto :goto_0
 
-    :cond_3
-    return-void
+    :cond_0
+    new-instance p1, Lm9e;
+
+    add-int/2addr v2, v1
+
+    aget-wide v4, v0, v2
+
+    aget-wide v0, v6, v2
+
+    invoke-direct {p1, v4, v5, v0, v1}, Lm9e;-><init>(JJ)V
+
+    new-instance p2, Lg9e;
+
+    invoke-direct {p2, v3, p1}, Lg9e;-><init>(Lm9e;Lm9e;)V
+
+    return-object p2
+
+    :cond_1
+    :goto_0
+    new-instance p1, Lg9e;
+
+    invoke-direct {p1, v3, v3}, Lg9e;-><init>(Lm9e;Lm9e;)V
+
+    return-object p1
 .end method
 
-.method public final onViewAttachedToWindow(Landroid/view/View;)V
-    .locals 0
+.method public final f()J
+    .locals 2
 
-    invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+    iget-wide v0, p0, Lsyg;->c:J
 
-    move-result-object p1
-
-    invoke-virtual {p1, p0}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
-
-    return-void
+    return-wide v0
 .end method
 
-.method public final onViewDetachedFromWindow(Landroid/view/View;)V
-    .locals 0
+.method public final g()J
+    .locals 2
 
-    return-void
+    iget-wide v0, p0, Lsyg;->d:J
+
+    return-wide v0
+.end method
+
+.method public final h()I
+    .locals 1
+
+    iget v0, p0, Lsyg;->X:I
+
+    return v0
 .end method

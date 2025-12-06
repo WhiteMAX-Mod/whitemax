@@ -1,120 +1,129 @@
 .class public final Lc7c;
-.super Lsgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lzi6;
 
 
 # instance fields
-.field public X:I
+.field public final a:Ltw0;
 
-.field public final synthetic Y:Ld7c;
+.field public final b:Lk18;
 
-.field public final synthetic Z:Lb7c;
+.field public final c:Ljava/util/concurrent/ConcurrentHashMap;
 
 
 # direct methods
-.method public constructor <init>(Ld7c;Lb7c;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ltw0;Lk18;)V
     .locals 0
 
-    iput-object p1, p0, Lc7c;->Y:Ld7c;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lc7c;->Z:Lb7c;
+    iput-object p1, p0, Lc7c;->a:Ltw0;
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Lc7c;->b:Lk18;
 
-    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    iput-object p1, p0, Lc7c;->c:Ljava/util/concurrent/ConcurrentHashMap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()V
+    .locals 4
 
-    check-cast p1, Lq54;
+    iget-object v0, p0, Lc7c;->c:Ljava/util/concurrent/ConcurrentHashMap;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->entrySet()Ljava/util/Set;
 
-    invoke-virtual {p0, p1, p2}, Lc7c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result-object v1
 
-    move-result-object p1
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    check-cast p1, Lc7c;
+    move-result-object v1
 
-    sget-object p2, Lccg;->a:Lccg;
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {p1, p2}, Lc7c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result v2
 
-    move-result-object p1
+    if-eqz v2, :cond_0
 
-    return-object p1
-.end method
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    move-result-object v2
 
-    new-instance p1, Lc7c;
+    check-cast v2, Ljava/util/Map$Entry;
 
-    iget-object v0, p0, Lc7c;->Y:Ld7c;
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
-    iget-object v1, p0, Lc7c;->Z:Lb7c;
+    move-result-object v2
 
-    invoke-direct {p1, v0, v1, p2}, Lc7c;-><init>(Ld7c;Lb7c;Lkotlin/coroutines/Continuation;)V
+    check-cast v2, Ld7c;
 
-    return-object p1
-.end method
+    const/4 v3, 0x0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    iput-object v3, v2, Ld7c;->g:Ljava/lang/CharSequence;
 
-    iget v0, p0, Lc7c;->X:I
+    iput-object v3, v2, Ld7c;->h:Ljava/lang/CharSequence;
 
-    const/4 v1, 0x1
+    iput-object v3, v2, Ld7c;->i:Ljava/lang/CharSequence;
 
-    if-eqz v0, :cond_1
+    iput-object v3, v2, Ld7c;->j:Ljava/lang/CharSequence;
 
-    if-ne v0, v1, :cond_0
+    iput-object v3, v2, Ld7c;->k:Ljava/lang/String;
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    iput-object v3, v2, Ld7c;->l:Ljava/lang/String;
+
+    iput-object v3, v2, Ld7c;->m:Lmf4;
+
+    const/4 v3, 0x0
+
+    iput-boolean v3, v2, Ld7c;->n:Z
+
+    iput-boolean v3, v2, Ld7c;->o:Z
+
+    iput-boolean v3, v2, Ld7c;->p:Z
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    return-void
+.end method
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+.method public final b(Lpb2;Lsi9;)V
+    .locals 3
 
-    throw p1
+    iget-object v0, p0, Lc7c;->b:Lk18;
 
-    :cond_1
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
-    iget-object p1, p0, Lc7c;->Y:Ld7c;
+    move-result-object v0
 
-    iget-object p1, p1, Ld7c;->b:Lnje;
+    check-cast v0, Le7c;
 
-    iput v1, p0, Lc7c;->X:I
+    const/4 v1, 0x0
 
-    iget-object v0, p0, Lc7c;->Z:Lb7c;
+    invoke-virtual {v0, v1, p2}, Le7c;->a(Lpb2;Lsi9;)Ld7c;
 
-    invoke-virtual {p1, v0, p0}, Lnje;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p1
+    iget-wide v1, p2, Lpj0;->a:J
 
-    sget-object v0, Lr54;->a:Lr54;
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    if-ne p1, v0, :cond_2
+    move-result-object p2
 
-    return-object v0
+    iget-object v1, p0, Lc7c;->c:Ljava/util/concurrent/ConcurrentHashMap;
 
-    :cond_2
-    :goto_0
-    sget-object p1, Lccg;->a:Lccg;
+    invoke-virtual {v1, p2, v0}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p1
+    invoke-virtual {v0, p1}, Ld7c;->i(Lpb2;)V
+
+    return-void
 .end method

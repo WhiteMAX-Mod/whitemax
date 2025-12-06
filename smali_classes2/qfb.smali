@@ -1,131 +1,85 @@
-.class public final synthetic Lqfb;
-.super Ljava/lang/Object;
+.class public final enum Lqfb;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field public static final enum a:Lqfb;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final enum b:Lqfb;
 
-.field public final synthetic b:Legb;
+.field public static final enum c:Lqfb;
 
-.field public final synthetic c:Ljava/lang/String;
+.field public static final synthetic d:[Lqfb;
 
 
 # direct methods
-.method public synthetic constructor <init>(Legb;Ljava/lang/String;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput p3, p0, Lqfb;->a:I
+    new-instance v0, Lqfb;
 
-    iput-object p1, p0, Lqfb;->b:Legb;
+    const-string v1, "Compact"
 
-    iput-object p2, p0, Lqfb;->c:Ljava/lang/String;
+    const/4 v2, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lqfb;->a:Lqfb;
+
+    new-instance v1, Lqfb;
+
+    const-string v2, "Main"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lqfb;->b:Lqfb;
+
+    new-instance v2, Lqfb;
+
+    const-string v3, "Chat"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lqfb;->c:Lqfb;
+
+    filled-new-array {v0, v1, v2}, [Lqfb;
+
+    move-result-object v0
+
+    sput-object v0, Lqfb;->d:[Lqfb;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lqfb;
+    .locals 1
 
-# virtual methods
-.method public final run()V
-    .locals 4
+    const-class v0, Lqfb;
 
-    iget v0, p0, Lqfb;->a:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p0
 
-    iget-object v0, p0, Lqfb;->b:Legb;
+    check-cast p0, Lqfb;
 
-    iget-object v1, v0, Legb;->R:Ldgb;
+    return-object p0
+.end method
 
-    if-eqz v1, :cond_0
+.method public static values()[Lqfb;
+    .locals 1
 
-    iget-object v2, p0, Lqfb;->c:Ljava/lang/String;
+    sget-object v0, Lqfb;->d:[Lqfb;
 
-    invoke-interface {v1, v0, v2}, Ldgb;->f(Legb;Ljava/lang/String;)V
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    :cond_0
-    return-void
+    move-result-object v0
 
-    :pswitch_0
-    iget-object v0, p0, Lqfb;->b:Legb;
+    check-cast v0, [Lqfb;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "create sdp error "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v2, p0, Lqfb;->c:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "create.sdp2"
-
-    invoke-virtual {v0, v1, v2}, Legb;->k(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, v0, Legb;->A:Liwc;
-
-    const-string v1, "onCreateSDPFailed"
-
-    const/4 v2, 0x0
-
-    sget-object v3, Ll0f;->c:Ll0f;
-
-    invoke-virtual {v0, v3, v1, v2}, Liwc;->log(Ll0f;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lqfb;->b:Legb;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "set sdp error "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v2, p0, Lqfb;->c:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "set.sdp2"
-
-    invoke-virtual {v0, v1, v2}, Legb;->k(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, v0, Legb;->A:Liwc;
-
-    const-string v1, "setSdpFailed"
-
-    const/4 v2, 0x0
-
-    sget-object v3, Ll0f;->c:Ll0f;
-
-    invoke-virtual {v0, v3, v1, v2}, Liwc;->log(Ll0f;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

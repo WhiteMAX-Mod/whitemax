@@ -1,162 +1,88 @@
 .class public final Loah;
-.super Ljava/lang/Object;
+.super Ldtf;
 .source "SourceFile"
+
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public final a:Liu7;
+.field public final synthetic X:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-.field public final b:Lnje;
-
-.field public final c:Lkotlinx/coroutines/internal/ContextScope;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Liu7;Liu7;)V
-    .locals 2
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Loah;->X:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-    iput-object p1, p0, Loah;->a:Liu7;
+    const/4 p2, 0x2
 
-    const/4 v0, 0x0
-
-    const/4 v1, 0x7
-
-    invoke-static {v0, v0, v1}, Loje;->b(III)Lnje;
-
-    move-result-object v0
-
-    iput-object v0, p0, Loah;->b:Lnje;
-
-    invoke-interface {p2}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lulf;
-
-    check-cast p2, Lqta;
-
-    invoke-virtual {p2}, Lqta;->a()Lk54;
-
-    move-result-object p2
-
-    invoke-static {p2}, Ldxi;->a(Li54;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p2
-
-    iput-object p2, p0, Loah;->c:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lpw0;
-
-    invoke-virtual {p1, p0}, Lpw0;->d(Ljava/lang/Object;)V
+    invoke-direct {p0, p2, p1}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lmah;)V
-    .locals 3
-
-    new-instance v0, Lnah;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, p1, v1}, Lnah;-><init>(Loah;Lmah;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x3
-
-    iget-object v2, p0, Loah;->c:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v2, v1, v1, v0, p1}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
-
-    return-void
-.end method
-
-.method public final onEvent(Lds5;)V
-    .locals 3
-    .annotation runtime Lzbf;
-    .end annotation
-
-    .line 6
-    new-instance v0, Ljah;
-
-    .line 7
-    iget-wide v1, p1, Lds5;->b:J
-
-    .line 8
-    invoke-direct {v0, v1, v2}, Ljah;-><init>(J)V
-
-    invoke-virtual {p0, v0}, Loah;->a(Lmah;)V
-
-    return-void
-.end method
-
-.method public final onEvent(Lfs5;)V
-    .locals 3
-    .annotation runtime Lzbf;
-    .end annotation
-
-    .line 3
-    new-instance v0, Llah;
-
-    .line 4
-    iget-wide v1, p1, Lfs5;->b:J
-
-    .line 5
-    invoke-direct {v0, v1, v2}, Llah;-><init>(J)V
-
-    invoke-virtual {p0, v0}, Loah;->a(Lmah;)V
-
-    return-void
-.end method
-
-.method public final onEvent(Lgs5;)V
-    .locals 3
-    .annotation runtime Lzbf;
-    .end annotation
-
-    .line 9
-    new-instance v0, Lkah;
-
-    iget-wide v1, p1, Luj0;->a:J
-
-    invoke-direct {v0, v1, v2}, Lkah;-><init>(J)V
-
-    invoke-virtual {p0, v0}, Loah;->a(Lmah;)V
-
-    return-void
-.end method
-
-.method public final onEvent(Lhs5;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
-    .annotation runtime Lzbf;
-    .end annotation
 
-    const/4 p1, 0x0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    .line 1
-    throw p1
+    invoke-virtual {p0, p1, p2}, Loah;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Loah;
+
+    sget-object p2, Lqqg;->a:Lqqg;
+
+    invoke-virtual {p1, p2}, Loah;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final onEvent(Ltj0;)V
-    .locals 3
-    .annotation runtime Lzbf;
-    .end annotation
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    .line 2
-    new-instance v0, Llah;
+    new-instance v0, Loah;
 
-    iget-wide v1, p1, Luj0;->a:J
+    iget-object v1, p0, Loah;->X:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-    invoke-direct {v0, v1, v2}, Llah;-><init>(J)V
+    invoke-direct {v0, p2, v1}, Loah;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
 
-    invoke-virtual {p0, v0}, Loah;->a(Lmah;)V
+    iput-object p1, v0, Loah;->o:Ljava/lang/Object;
 
-    return-void
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Loah;->o:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object p1, Lone/me/chatscreen/videomsg/VideoMessageWidget;->H0:[Lyy7;
+
+    iget-object p1, p0, Loah;->X:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+
+    invoke-virtual {p1}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->G0()Lx9h;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lx9h;->Z:Lci5;
+
+    sget-object v0, Lqqg;->a:Lqqg;
+
+    invoke-static {p1, v0}, Lxfh;->r(Lci5;Ljava/lang/Object;)V
+
+    return-object v0
 .end method

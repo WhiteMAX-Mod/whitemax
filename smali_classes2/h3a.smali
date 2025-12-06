@@ -1,78 +1,96 @@
-.class public final synthetic Lh3a;
+.class public final Lh3a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Li3a;
+.field public final a:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public synthetic constructor <init>(Li3a;I)V
+.method public constructor <init>(Ljava/util/ArrayList;)V
     .locals 0
 
-    iput p2, p0, Lh3a;->a:I
-
-    iput-object p1, p0, Lh3a;->b:Li3a;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lh3a;->a:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Lh3a;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lh3a;
+
+    iget-object v0, p0, Lh3a;->a:Ljava/util/ArrayList;
+
+    iget-object p1, p1, Lh3a;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lh3a;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    iget v0, p0, Lh3a;->a:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "MovieStateUpdates(updates="
 
-    iget-object v0, p0, Lh3a;->b:Li3a;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, v0, Li3a;->q0:Landroidx/appcompat/widget/AppCompatTextView;
+    iget-object v1, p0, Lh3a;->a:Ljava/util/ArrayList;
 
-    invoke-virtual {v1}, Landroid/view/View;->requestLayout()V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object v1, v0, Li3a;->r0:Landroid/widget/ProgressBar;
+    const-string v1, ")"
 
-    invoke-virtual {v1}, Landroid/view/View;->requestLayout()V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, v0, Li3a;->Z:Landroid/widget/FrameLayout;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v1}, Landroid/view/View;->requestLayout()V
+    move-result-object v0
 
-    iget-object v1, v0, Li3a;->s0:Landroidx/appcompat/widget/AppCompatImageButton;
-
-    invoke-virtual {v1}, Landroid/view/View;->requestLayout()V
-
-    iget-object v0, v0, Li3a;->u0:Landroid/widget/ImageView;
-
-    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lh3a;->b:Li3a;
-
-    iget-object v0, v0, Lf3;->c:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/View;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

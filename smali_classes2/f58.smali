@@ -1,51 +1,129 @@
-.class public abstract synthetic Lf58;
-.super Ljava/lang/Object;
+.class public final Lf58;
+.super Lh58;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public final a:J
+
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(JLjava/lang/String;)V
+    .locals 0
 
-    invoke-static {}, Lme2;->values()[Lme2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    iput-wide p1, p0, Lf58;->a:J
 
-    array-length v0, v0
+    iput-object p3, p0, Lf58;->b:Ljava/lang/String;
 
-    new-array v0, v0, [I
+    return-void
+.end method
 
-    const/4 v1, 0x1
+
+# virtual methods
+.method public final a()J
+    .locals 2
+
+    iget-wide v0, p0, Lf58;->a:J
+
+    return-wide v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lf58;
 
     const/4 v2, 0x0
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    if-nez v1, :cond_1
 
-    :catch_0
-    const/4 v1, 0x2
+    return v2
 
-    :try_start_1
-    aput v1, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    :cond_1
+    check-cast p1, Lf58;
 
-    :catch_1
-    const/4 v1, 0x3
+    iget-wide v3, p0, Lf58;->a:J
 
-    :try_start_2
-    aput v1, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    iget-wide v5, p1, Lf58;->a:J
 
-    :catch_2
-    sput-object v0, Lf58;->$EnumSwitchMapping$0:[I
+    cmp-long v1, v3, v5
 
-    return-void
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lf58;->b:Ljava/lang/String;
+
+    iget-object p1, p1, Lf58;->b:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lf58;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lf58;->b:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "ErrorLinkInfo(requestId="
+
+    const-string v1, ", error="
+
+    iget-wide v2, p0, Lf58;->a:J
+
+    iget-object v4, p0, Lf58;->b:Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v1, v4}, Lho7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

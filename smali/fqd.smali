@@ -1,23 +1,141 @@
-.class public abstract Lfqd;
-.super Ljava/lang/Object;
+.class public final Lfqd;
+.super Lf3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lc8d;
+# instance fields
+.field public final a:Ljava/util/List;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ljava/util/List;)V
+    .locals 0
 
-    new-instance v0, Lc8d;
+    invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
 
-    const-string v1, "[\\x00-\\x20]*[+-]?(NaN|Infinity|((((\\p{Digit}+)(\\.)?((\\p{Digit}+)?)([eE][+-]?(\\p{Digit}+))?)|(\\.((\\p{Digit}+))([eE][+-]?(\\p{Digit}+))?)|(((0[xX](\\p{XDigit}+)(\\.)?)|(0[xX](\\p{XDigit}+)?(\\.)(\\p{XDigit}+)))[pP][+-]?(\\p{Digit}+)))[fFdD]?))[\\x00-\\x20]*"
-
-    invoke-direct {v0, v1}, Lc8d;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lfqd;->a:Lc8d;
+    iput-object p1, p0, Lfqd;->a:Ljava/util/List;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a(I)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lfqd;->a:Ljava/util/List;
+
+    invoke-static {p1, p0}, Lue3;->y(ILjava/util/List;)I
+
+    move-result p1
+
+    invoke-interface {v0, p1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final add(ILjava/lang/Object;)V
+    .locals 1
+
+    iget-object v0, p0, Lfqd;->a:Ljava/util/List;
+
+    invoke-static {p1, p0}, Lue3;->z(ILjava/util/List;)I
+
+    move-result p1
+
+    invoke-interface {v0, p1, p2}, Ljava/util/List;->add(ILjava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final clear()V
+    .locals 1
+
+    iget-object v0, p0, Lfqd;->a:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->clear()V
+
+    return-void
+.end method
+
+.method public final get(I)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lfqd;->a:Ljava/util/List;
+
+    invoke-static {p1, p0}, Lue3;->y(ILjava/util/List;)I
+
+    move-result p1
+
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final getSize()I
+    .locals 1
+
+    iget-object v0, p0, Lfqd;->a:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final iterator()Ljava/util/Iterator;
+    .locals 2
+
+    new-instance v0, Leqd;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Leqd;-><init>(Lfqd;I)V
+
+    return-object v0
+.end method
+
+.method public final listIterator()Ljava/util/ListIterator;
+    .locals 2
+
+    .line 1
+    new-instance v0, Leqd;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Leqd;-><init>(Lfqd;I)V
+
+    return-object v0
+.end method
+
+.method public final listIterator(I)Ljava/util/ListIterator;
+    .locals 1
+
+    .line 2
+    new-instance v0, Leqd;
+
+    invoke-direct {v0, p0, p1}, Leqd;-><init>(Lfqd;I)V
+
+    return-object v0
+.end method
+
+.method public final set(ILjava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lfqd;->a:Ljava/util/List;
+
+    invoke-static {p1, p0}, Lue3;->y(ILjava/util/List;)I
+
+    move-result p1
+
+    invoke-interface {v0, p1, p2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,272 +1,180 @@
 .class public final Lvfa;
-.super Lyoe;
+.super Ldtf;
 .source "SourceFile"
+
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public final X:Lj7;
+.field public final synthetic X:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lj7;Ljava/util/concurrent/ExecutorService;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/NeuroAvatarsScreen;)V
     .locals 0
 
-    invoke-direct {p0, p2}, Lyoe;-><init>(Ljava/util/concurrent/Executor;)V
+    iput-object p2, p0, Lvfa;->X:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
 
-    iput-object p1, p0, Lvfa;->X:Lj7;
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final H(Lvpe;I)V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    instance-of v0, p1, Lufa;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-eqz v0, :cond_2
+    invoke-virtual {p0, p1, p2}, Lvfa;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    check-cast p1, Lufa;
+    move-result-object p1
 
-    iget-object v0, p1, Lq7d;->a:Landroid/view/View;
+    check-cast p1, Lvfa;
 
-    invoke-virtual {p0, p2}, Lr18;->C(I)Ljava/lang/Object;
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    move-result-object p2
+    invoke-virtual {p1, p2}, Lvfa;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast p2, Ly18;
+    return-object p2
+.end method
 
-    instance-of v1, p2, Lmfa;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    if-nez v1, :cond_0
+    new-instance v0, Lvfa;
 
-    return-void
+    iget-object v1, p0, Lvfa;->X:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
 
-    :cond_0
-    invoke-virtual {p1, p2}, Lufa;->A(Ly18;)V
+    invoke-direct {v0, p2, v1}, Lvfa;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/NeuroAvatarsScreen;)V
 
-    move-object p1, p2
+    iput-object p1, v0, Lvfa;->o:Ljava/lang/Object;
 
-    check-cast p1, Lmfa;
+    return-object v0
+.end method
 
-    iget-object p1, p1, Lmfa;->X:Lqce;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    instance-of p1, p1, Loce;
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    iget-object v1, p0, Lvfa;->X:Lj7;
+    iget-object p1, p0, Lvfa;->o:Ljava/lang/Object;
 
-    if-eqz p1, :cond_1
+    check-cast p1, Lvc0;
 
-    move-object p1, v0
+    sget-object v0, Lsc0;->a:Lsc0;
 
-    check-cast p1, Lcde;
+    invoke-static {p1, v0}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    new-instance v2, Lvk;
+    move-result v0
 
-    const/16 v3, 0xc
+    iget-object v1, p0, Lvfa;->X:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
 
-    invoke-direct {v2, v3, v1}, Lvk;-><init>(ILjava/lang/Object;)V
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p1, v2}, Lcde;->setOnSwitchCheckedListener(Lzi6;)V
+    sget-object p1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->K0:[Lyy7;
+
+    iget-object p1, v1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->x0:Lk18;
+
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lqsb;
+
+    new-instance v0, Ls2i;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, v2}, Ls2i;-><init>(Lone/me/sdk/arch/Widget;I)V
+
+    invoke-virtual {p1, v0}, Lqsb;->k(Ls2i;)V
 
     goto :goto_0
 
-    :cond_1
-    move-object p1, v0
+    :cond_0
+    instance-of v0, p1, Ltc0;
 
-    check-cast p1, Lcde;
+    if-eqz v0, :cond_1
+
+    :try_start_0
+    check-cast p1, Ltc0;
+
+    iget-object p1, p1, Ltc0;->a:Landroid/content/Intent;
+
+    const/16 v0, 0x22b
+
+    invoke-virtual {v1, p1, v0}, Lc54;->startActivityForResult(Landroid/content/Intent;I)V
+
+    iget-object p1, v1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->y0:Lk18;
+
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lgda;
+
+    sget-object v0, Lf1e;->E0:Lf1e;
+
+    invoke-static {p1, v0}, Lgda;->g(Lgda;Lf1e;)V
+    :try_end_0
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    const-class p1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "failed open camera"
 
     const/4 v2, 0x0
 
-    invoke-virtual {p1, v2}, Lcde;->setOnSwitchListener(Lzce;)V
+    invoke-static {p1, v0, v2}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :goto_0
-    new-instance p1, Lfr6;
-
-    check-cast p2, Lmfa;
-
-    const/16 v2, 0x13
-
-    invoke-direct {p1, v1, v2, p2}, Lfr6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {v0, p1}, Leyi;->e(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    return-void
-
-    :cond_2
-    invoke-virtual {p0, p2}, Lr18;->C(I)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Ly18;
-
-    invoke-virtual {p1, p2}, Lvpe;->A(Ly18;)V
-
-    return-void
-.end method
-
-.method public final bridge synthetic r(Lq7d;I)V
-    .locals 0
-
-    check-cast p1, Lvpe;
-
-    invoke-virtual {p0, p1, p2}, Lvfa;->H(Lvpe;I)V
-
-    return-void
-.end method
-
-.method public final t(Landroid/view/ViewGroup;I)Lq7d;
-    .locals 5
-
-    sget v0, Lzya;->o:I
-
-    if-ne p2, v0, :cond_0
-
-    new-instance p2, Lufa;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {v1}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->C0()Loga;
 
     move-result-object p1
 
-    new-instance v0, Lcde;
+    iget-object p1, p1, Loga;->b:Lvea;
 
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v1}, Lcde;-><init>(Landroid/content/Context;I)V
-
-    invoke-direct {p2, v0}, Lq7d;-><init>(Landroid/view/View;)V
-
-    return-object p2
-
-    :cond_0
-    sget v0, Lzya;->n:I
-
-    const/4 v1, 0x0
-
-    if-ne p2, v0, :cond_1
-
-    new-instance p2, Ls01;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    new-instance v0, Landroid/widget/TextView;
-
-    invoke-direct {v0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
-
-    const/16 p1, 0xc
-
-    int-to-float p1, p1
-
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, p1
-
-    invoke-static {v2}, Lfhi;->b(F)I
-
-    move-result v2
-
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p1, v3
-
-    invoke-static {p1}, Lfhi;->b(F)I
-
-    move-result p1
-
-    invoke-virtual {v0}, Landroid/view/View;->getPaddingTop()I
-
-    move-result v3
-
-    invoke-virtual {v0}, Landroid/view/View;->getPaddingBottom()I
-
-    move-result v4
-
-    invoke-virtual {v0, v2, v3, p1, v4}, Landroid/view/View;->setPadding(IIII)V
-
-    sget-object p1, Lgbg;->w:Lurf;
-
-    invoke-static {p1, v0}, Lurf;->d(Lurf;Landroid/widget/TextView;)V
-
-    new-instance p1, Laa;
-
-    const/4 v2, 0x3
-
-    const/16 v3, 0x1a
-
-    invoke-direct {p1, v2, v1, v3}, Laa;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    invoke-static {p1, v0}, Lqdi;->d(Lbj6;Landroid/view/View;)V
-
-    const/16 p1, 0xb
-
-    invoke-direct {p2, v0, p1}, Ls01;-><init>(Landroid/view/View;I)V
-
-    return-object p2
-
-    :cond_1
-    const-class v0, Lvfa;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    sget-object v2, Ltei;->a:Lmxa;
-
-    if-nez v2, :cond_2
+    invoke-virtual {p1}, Lvea;->b()V
 
     goto :goto_0
 
-    :cond_2
-    sget-object v3, Lc98;->Y:Lc98;
+    :cond_1
+    instance-of v0, p1, Luc0;
 
-    invoke-virtual {v2, v3}, Lmxa;->b(Lc98;)Z
+    if-eqz v0, :cond_2
 
-    move-result v4
+    sget-object v0, Lc39;->c:Lc39;
 
-    if-eqz v4, :cond_3
+    check-cast p1, Luc0;
 
-    const-string v4, "unknown item viewType: "
+    iget-object v1, p1, Luc0;->a:Ljava/lang/String;
 
-    invoke-static {p2, v4}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
+    iget-object p1, p1, Luc0;->b:Ljava/lang/String;
 
-    move-result-object p2
+    invoke-virtual {v0, v1, p1}, Lc39;->L0(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v2, v3, v0, p2, v1}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_3
     :goto_0
-    new-instance p2, Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
-
-    new-instance p1, Ls01;
-
-    const/16 v0, 0xc
-
-    invoke-direct {p1, p2, v0}, Ls01;-><init>(Landroid/view/View;I)V
+    sget-object p1, Lqqg;->a:Lqqg;
 
     return-object p1
+
+    :cond_2
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 .end method

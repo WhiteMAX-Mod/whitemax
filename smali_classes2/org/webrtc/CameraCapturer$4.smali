@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/webrtc/CameraCapturer;-><init>(Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;Lorg/webrtc/CameraEnumerator;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lorg/webrtc/CameraCapturer;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -34,38 +34,18 @@
 
 
 # virtual methods
-.method public onCameraClosed()V
-    .locals 0
+.method public run()V
+    .locals 2
 
-    return-void
-.end method
+    iget-object v0, p0, Lorg/webrtc/CameraCapturer$4;->this$0:Lorg/webrtc/CameraCapturer;
 
-.method public onCameraDisconnected()V
-    .locals 0
+    invoke-static {v0}, Lorg/webrtc/CameraCapturer;->k(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public onCameraError(Ljava/lang/String;)V
-    .locals 0
+    const-string v1, "Camera failed to start within timeout."
 
-    return-void
-.end method
-
-.method public onCameraFreezed(Ljava/lang/String;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onCameraOpening(Ljava/lang/String;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onFirstFrameAvailable()V
-    .locals 0
+    invoke-interface {v0, v1}, Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;->onCameraError(Ljava/lang/String;)V
 
     return-void
 .end method

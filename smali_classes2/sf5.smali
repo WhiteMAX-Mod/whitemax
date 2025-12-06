@@ -3,27 +3,23 @@
 .source "SourceFile"
 
 
-# direct methods
-.method public static synthetic b(Lsf5;Ljava/lang/Throwable;)V
+# virtual methods
+.method public g()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public j()V
     .locals 0
-
-    check-cast p0, Lxua;
-
-    invoke-virtual {p0, p1}, Lxua;->c(Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
+.method public abstract p()V
+.end method
 
-# virtual methods
-.method public a(Ljava/lang/Throwable;)V
-    .locals 1
-
-    move-object v0, p0
-
-    check-cast v0, Lxua;
-
-    invoke-virtual {v0, p1}, Lxua;->c(Ljava/lang/Throwable;)V
-
-    return-void
+.method public abstract q()Z
 .end method

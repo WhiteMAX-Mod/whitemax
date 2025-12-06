@@ -4,30 +4,32 @@
 
 
 # direct methods
-.method public static a(Landroid/view/ViewGroup;)I
+.method public static a(Landroid/view/VelocityTracker;I)F
     .locals 0
 
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getNestedScrollAxes()I
+    invoke-virtual {p0, p1}, Landroid/view/VelocityTracker;->getAxisVelocity(I)F
 
     move-result p0
 
     return p0
 .end method
 
-.method public static b(Landroid/view/ViewGroup;)Z
+.method public static b(Landroid/view/VelocityTracker;II)F
     .locals 0
 
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->isTransitionGroup()Z
+    invoke-virtual {p0, p1, p2}, Landroid/view/VelocityTracker;->getAxisVelocity(II)F
 
     move-result p0
 
     return p0
 .end method
 
-.method public static c(Landroid/view/ViewGroup;Z)V
+.method public static c(Landroid/view/VelocityTracker;I)Z
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setTransitionGroup(Z)V
+    invoke-virtual {p0, p1}, Landroid/view/VelocityTracker;->isAxisSupported(I)Z
 
-    return-void
+    move-result p0
+
+    return p0
 .end method

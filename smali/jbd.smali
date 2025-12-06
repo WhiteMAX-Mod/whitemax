@@ -1,170 +1,1206 @@
-.class public Ljbd;
-.super Landroid/app/Fragment;
+.class public final Ljbd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Ljbd$a;
-    }
-.end annotation
-
-
-# static fields
-.field public static final synthetic b:I
+# interfaces
+.implements Lwv0;
 
 
 # instance fields
-.field public a:Lbua;
+.field public final a:Lqu0;
+
+.field public b:Z
+
+.field public final c:Lx6f;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Lx6f;)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/app/Fragment;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ljbd;->c:Lx6f;
+
+    new-instance p1, Lqu0;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ljbd;->a:Lqu0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lgw7;)V
+.method public final H(Lux;)J
+    .locals 10
+
+    const-wide/16 v0, 0x0
+
+    move-wide v2, v0
+
+    :cond_0
+    :goto_0
+    const/16 v4, 0x2000
+
+    int-to-long v4, v4
+
+    iget-object v6, p0, Ljbd;->c:Lx6f;
+
+    iget-object v7, p0, Ljbd;->a:Lqu0;
+
+    invoke-interface {v6, v7, v4, v5}, Lx6f;->b(Lqu0;J)J
+
+    move-result-wide v4
+
+    const-wide/16 v8, -0x1
+
+    cmp-long v4, v4, v8
+
+    if-eqz v4, :cond_1
+
+    invoke-virtual {v7}, Lqu0;->w()J
+
+    move-result-wide v4
+
+    cmp-long v6, v4, v0
+
+    if-lez v6, :cond_0
+
+    add-long/2addr v2, v4
+
+    invoke-virtual {p1, v7, v4, v5}, Lux;->L(Lqu0;J)V
+
+    goto :goto_0
+
+    :cond_1
+    iget-wide v4, v7, Lqu0;->b:J
+
+    cmp-long v0, v4, v0
+
+    if-lez v0, :cond_2
+
+    add-long/2addr v2, v4
+
+    invoke-virtual {p1, v7, v4, v5}, Lux;->L(Lqu0;J)V
+
+    :cond_2
+    return-wide v2
+.end method
+
+.method public final M(Ljava/nio/charset/Charset;)Ljava/lang/String;
+    .locals 4
+
+    iget-object v0, p0, Ljbd;->c:Lx6f;
+
+    iget-object v1, p0, Ljbd;->a:Lqu0;
+
+    invoke-virtual {v1, v0}, Lqu0;->p0(Lx6f;)V
+
+    iget-wide v2, v1, Lqu0;->b:J
+
+    invoke-virtual {v1, v2, v3, p1}, Lqu0;->j0(JLjava/nio/charset/Charset;)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final O(Lqu0;J)V
+    .locals 1
+
+    iget-object v0, p0, Ljbd;->a:Lqu0;
+
+    :try_start_0
+    invoke-virtual {p0, p2, p3}, Ljbd;->d0(J)V
+    :try_end_0
+    .catch Ljava/io/EOFException; {:try_start_0 .. :try_end_0} :catch_0
+
+    invoke-virtual {v0, p1, p2, p3}, Lqu0;->O(Lqu0;J)V
+
+    return-void
+
+    :catch_0
+    move-exception p2
+
+    invoke-virtual {p1, v0}, Lqu0;->p0(Lx6f;)V
+
+    throw p2
+.end method
+
+.method public final P(J)Z
+    .locals 4
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v0, p1, v0
+
+    if-ltz v0, :cond_3
+
+    iget-boolean v0, p0, Ljbd;->b:Z
+
+    if-nez v0, :cond_2
+
+    :cond_0
+    iget-object v0, p0, Ljbd;->a:Lqu0;
+
+    iget-wide v1, v0, Lqu0;->b:J
+
+    cmp-long v1, v1, p1
+
+    if-gez v1, :cond_1
+
+    const/16 v1, 0x2000
+
+    int-to-long v1, v1
+
+    iget-object v3, p0, Ljbd;->c:Lx6f;
+
+    invoke-interface {v3, v0, v1, v2}, Lx6f;->b(Lqu0;J)J
+
+    move-result-wide v0
+
+    const-wide/16 v2, -0x1
+
+    cmp-long v0, v0, v2
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "closed"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_3
+    const-string v0, "byteCount < 0: "
+
+    invoke-static {p1, p2, v0}, Lvb9;->e(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance p2, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+.end method
+
+.method public final T()Ljava/lang/String;
     .locals 2
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    const-wide v0, 0x7fffffffffffffffL
 
-    const/16 v1, 0x1d
-
-    if-ge v0, v1, :cond_0
-
-    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0, v0, v1}, Ljbd;->j(J)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lhbd;->a(Landroid/app/Activity;Lgw7;)V
+    return-object v0
+.end method
+
+.method public final Y(Lejb;)I
+    .locals 6
+
+    iget-boolean v0, p0, Ljbd;->b:Z
+
+    if-nez v0, :cond_3
 
     :cond_0
-    return-void
+    const/4 v0, 0x1
+
+    iget-object v1, p0, Ljbd;->a:Lqu0;
+
+    invoke-static {v1, p1, v0}, Lbv0;->b(Lqu0;Lejb;Z)I
+
+    move-result v0
+
+    const/4 v2, -0x2
+
+    const/4 v3, -0x1
+
+    if-eq v0, v2, :cond_1
+
+    if-eq v0, v3, :cond_2
+
+    iget-object p1, p1, Lejb;->a:[Lxx0;
+
+    aget-object p1, p1, v0
+
+    invoke-virtual {p1}, Lxx0;->d()I
+
+    move-result p1
+
+    int-to-long v2, p1
+
+    invoke-virtual {v1, v2, v3}, Lqu0;->skip(J)V
+
+    return v0
+
+    :cond_1
+    const/16 v0, 0x2000
+
+    int-to-long v4, v0
+
+    iget-object v0, p0, Ljbd;->c:Lx6f;
+
+    invoke-interface {v0, v1, v4, v5}, Lx6f;->b(Lqu0;J)J
+
+    move-result-wide v0
+
+    const-wide/16 v4, -0x1
+
+    cmp-long v0, v0, v4
+
+    if-nez v0, :cond_0
+
+    :cond_2
+    return v3
+
+    :cond_3
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "closed"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
-.method public final onActivityCreated(Landroid/os/Bundle;)V
-    .locals 0
+.method public final b(Lqu0;J)J
+    .locals 5
 
-    invoke-super {p0, p1}, Landroid/app/Fragment;->onActivityCreated(Landroid/os/Bundle;)V
+    const-wide/16 v0, 0x0
 
-    sget-object p1, Lgw7;->ON_CREATE:Lgw7;
+    cmp-long v2, p2, v0
 
-    invoke-virtual {p0, p1}, Ljbd;->a(Lgw7;)V
+    if-ltz v2, :cond_2
 
-    return-void
+    iget-boolean v2, p0, Ljbd;->b:Z
+
+    if-nez v2, :cond_1
+
+    iget-object v2, p0, Ljbd;->a:Lqu0;
+
+    iget-wide v3, v2, Lqu0;->b:J
+
+    cmp-long v0, v3, v0
+
+    if-nez v0, :cond_0
+
+    const/16 v0, 0x2000
+
+    int-to-long v0, v0
+
+    iget-object v3, p0, Ljbd;->c:Lx6f;
+
+    invoke-interface {v3, v2, v0, v1}, Lx6f;->b(Lqu0;J)J
+
+    move-result-wide v0
+
+    const-wide/16 v3, -0x1
+
+    cmp-long v0, v0, v3
+
+    if-nez v0, :cond_0
+
+    return-wide v3
+
+    :cond_0
+    iget-wide v0, v2, Lqu0;->b:J
+
+    invoke-static {p2, p3, v0, v1}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide p2
+
+    invoke-virtual {v2, p1, p2, p3}, Lqu0;->b(Lqu0;J)J
+
+    move-result-wide p1
+
+    return-wide p1
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "closed"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    const-string p1, "byteCount < 0: "
+
+    invoke-static {p2, p3, p1}, Lvb9;->e(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance p2, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p2
 .end method
 
-.method public final onDestroy()V
+.method public final close()V
     .locals 1
 
-    invoke-super {p0}, Landroid/app/Fragment;->onDestroy()V
+    iget-boolean v0, p0, Ljbd;->b:Z
 
-    sget-object v0, Lgw7;->ON_DESTROY:Lgw7;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0, v0}, Ljbd;->a(Lgw7;)V
+    return-void
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Ljbd;->b:Z
+
+    iget-object v0, p0, Ljbd;->c:Lx6f;
+
+    invoke-interface {v0}, Ljava/io/Closeable;->close()V
+
+    iget-object v0, p0, Ljbd;->a:Lqu0;
+
+    invoke-virtual {v0}, Lqu0;->l()V
+
+    return-void
+.end method
+
+.method public final d0(J)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Ljbd;->P(J)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/io/EOFException;
+
+    invoke-direct {p1}, Ljava/io/EOFException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final e(J)Lxx0;
+    .locals 1
+
+    invoke-virtual {p0, p1, p2}, Ljbd;->d0(J)V
+
+    iget-object v0, p0, Ljbd;->a:Lqu0;
+
+    invoke-virtual {v0, p1, p2}, Lqu0;->e(J)Lxx0;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final f0()J
+    .locals 6
+
+    const-wide/16 v0, 0x1
+
+    invoke-virtual {p0, v0, v1}, Ljbd;->d0(J)V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Ljbd;->a:Lbua;
+    :goto_0
+    add-int/lit8 v1, v0, 0x1
 
-    return-void
-.end method
+    int-to-long v2, v1
 
-.method public final onPause()V
-    .locals 1
+    invoke-virtual {p0, v2, v3}, Ljbd;->P(J)Z
 
-    invoke-super {p0}, Landroid/app/Fragment;->onPause()V
+    move-result v2
 
-    sget-object v0, Lgw7;->ON_PAUSE:Lgw7;
+    iget-object v3, p0, Ljbd;->a:Lqu0;
 
-    invoke-virtual {p0, v0}, Ljbd;->a(Lgw7;)V
+    if-eqz v2, :cond_5
 
-    return-void
-.end method
+    int-to-long v4, v0
 
-.method public final onResume()V
-    .locals 1
+    invoke-virtual {v3, v4, v5}, Lqu0;->Q(J)B
 
-    invoke-super {p0}, Landroid/app/Fragment;->onResume()V
+    move-result v2
 
-    iget-object v0, p0, Ljbd;->a:Lbua;
+    const/16 v4, 0x30
 
-    if-eqz v0, :cond_0
+    int-to-byte v4, v4
 
-    iget-object v0, v0, Lbua;->b:Ljava/lang/Object;
+    if-lt v2, v4, :cond_0
 
-    check-cast v0, Lnzb;
+    const/16 v4, 0x39
 
-    invoke-virtual {v0}, Lnzb;->a()V
+    int-to-byte v4, v4
+
+    if-le v2, v4, :cond_2
 
     :cond_0
-    sget-object v0, Lgw7;->ON_RESUME:Lgw7;
+    const/16 v4, 0x61
 
-    invoke-virtual {p0, v0}, Ljbd;->a(Lgw7;)V
+    int-to-byte v4, v4
 
-    return-void
+    if-lt v2, v4, :cond_1
+
+    const/16 v4, 0x66
+
+    int-to-byte v4, v4
+
+    if-le v2, v4, :cond_2
+
+    :cond_1
+    const/16 v4, 0x41
+
+    int-to-byte v4, v4
+
+    if-lt v2, v4, :cond_3
+
+    const/16 v4, 0x46
+
+    int-to-byte v4, v4
+
+    if-le v2, v4, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_3
+    :goto_1
+    if-eqz v0, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    new-instance v0, Ljava/lang/NumberFormatException;
+
+    const/16 v1, 0x10
+
+    invoke-static {v1}, Lozi;->a(I)V
+
+    invoke-static {v1}, Lozi;->a(I)V
+
+    invoke-static {v2, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "Expected leading [0-9a-fA-F] character but was 0x"
+
+    invoke-virtual {v2, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/NumberFormatException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_5
+    :goto_2
+    invoke-virtual {v3}, Lqu0;->f0()J
+
+    move-result-wide v0
+
+    return-wide v0
 .end method
 
-.method public final onStart()V
-    .locals 3
+.method public final g0()Ljava/io/InputStream;
+    .locals 2
 
-    invoke-super {p0}, Landroid/app/Fragment;->onStart()V
+    new-instance v0, Lju0;
 
-    iget-object v0, p0, Ljbd;->a:Lbua;
+    const/4 v1, 0x1
 
-    if-eqz v0, :cond_0
+    invoke-direct {v0, p0, v1}, Lju0;-><init>(Lwv0;I)V
 
-    iget-object v0, v0, Lbua;->b:Ljava/lang/Object;
+    return-object v0
+.end method
 
-    check-cast v0, Lnzb;
+.method public final isOpen()Z
+    .locals 1
 
-    iget v1, v0, Lnzb;->a:I
+    iget-boolean v0, p0, Ljbd;->b:Z
 
-    const/4 v2, 0x1
+    xor-int/lit8 v0, v0, 0x1
 
-    add-int/2addr v1, v2
+    return v0
+.end method
 
-    iput v1, v0, Lnzb;->a:I
+.method public final j(J)Ljava/lang/String;
+    .locals 19
 
-    if-ne v1, v2, :cond_0
+    move-wide/from16 v6, p1
 
-    iget-boolean v1, v0, Lnzb;->o:Z
+    const-wide/16 v0, 0x0
+
+    cmp-long v0, v6, v0
+
+    if-ltz v0, :cond_3
+
+    const-wide v8, 0x7fffffffffffffffL
+
+    cmp-long v0, v6, v8
+
+    const-wide/16 v10, 0x1
+
+    if-nez v0, :cond_0
+
+    move-wide v4, v8
+
+    goto :goto_0
+
+    :cond_0
+    add-long v0, v6, v10
+
+    move-wide v4, v0
+
+    :goto_0
+    const/16 v0, 0xa
+
+    int-to-byte v1, v0
+
+    const-wide/16 v2, 0x0
+
+    move-object/from16 v0, p0
+
+    invoke-virtual/range {v0 .. v5}, Ljbd;->w(BJJ)J
+
+    move-result-wide v2
+
+    const-wide/16 v12, -0x1
+
+    cmp-long v12, v2, v12
+
+    iget-object v13, v0, Ljbd;->a:Lqu0;
+
+    if-eqz v12, :cond_1
+
+    invoke-static {v13, v2, v3}, Lbv0;->a(Lqu0;J)Ljava/lang/String;
+
+    move-result-object v1
+
+    return-object v1
+
+    :cond_1
+    cmp-long v2, v4, v8
+
+    if-gez v2, :cond_2
+
+    invoke-virtual {v0, v4, v5}, Ljbd;->P(J)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    sub-long v2, v4, v10
+
+    invoke-virtual {v13, v2, v3}, Lqu0;->Q(J)B
+
+    move-result v2
+
+    const/16 v3, 0xd
+
+    int-to-byte v3, v3
+
+    if-ne v2, v3, :cond_2
+
+    add-long v2, v4, v10
+
+    invoke-virtual {v0, v2, v3}, Ljbd;->P(J)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v13, v4, v5}, Lqu0;->Q(J)B
+
+    move-result v2
+
+    if-ne v2, v1, :cond_2
+
+    invoke-static {v13, v4, v5}, Lbv0;->a(Lqu0;J)Ljava/lang/String;
+
+    move-result-object v1
+
+    return-object v1
+
+    :cond_2
+    new-instance v14, Lqu0;
+
+    invoke-direct {v14}, Ljava/lang/Object;-><init>()V
+
+    iget-wide v1, v13, Lqu0;->b:J
+
+    const/16 v3, 0x20
+
+    int-to-long v3, v3
+
+    invoke-static {v3, v4, v1, v2}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide v17
+
+    const-wide/16 v15, 0x0
+
+    invoke-virtual/range {v13 .. v18}, Lqu0;->y(Lqu0;JJ)V
+
+    new-instance v1, Ljava/io/EOFException;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "\\n not found: limit="
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v3, v13, Lqu0;->b:J
+
+    invoke-static {v3, v4, v6, v7}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide v3
+
+    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v3, " content="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v3, v14, Lqu0;->b:J
+
+    invoke-virtual {v14, v3, v4}, Lqu0;->e(J)Lxx0;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lxx0;->e()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, "\u2026"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/io/EOFException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_3
+    move-object/from16 v0, p0
+
+    const-string v1, "limit < 0: "
+
+    invoke-static {v6, v7, v1}, Lvb9;->e(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v2, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v2
+.end method
+
+.method public final l()Z
+    .locals 4
+
+    iget-boolean v0, p0, Ljbd;->b:Z
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Ljbd;->a:Lqu0;
+
+    invoke-virtual {v0}, Lqu0;->P()Z
+
+    move-result v1
 
     if-eqz v1, :cond_0
 
-    iget-object v1, v0, Lnzb;->Y:Lhx7;
+    const/16 v1, 0x2000
 
-    sget-object v2, Lgw7;->ON_START:Lgw7;
+    int-to-long v1, v1
 
-    invoke-virtual {v1, v2}, Lhx7;->d(Lgw7;)V
+    iget-object v3, p0, Ljbd;->c:Lx6f;
 
-    const/4 v1, 0x0
+    invoke-interface {v3, v0, v1, v2}, Lx6f;->b(Lqu0;J)J
 
-    iput-boolean v1, v0, Lnzb;->o:Z
+    move-result-wide v0
+
+    const-wide/16 v2, -0x1
+
+    cmp-long v0, v0, v2
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
 
     :cond_0
-    sget-object v0, Lgw7;->ON_START:Lgw7;
+    const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Ljbd;->a(Lgw7;)V
+    return v0
 
-    return-void
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "closed"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
-.method public final onStop()V
+.method public final m()Lu9g;
     .locals 1
 
-    invoke-super {p0}, Landroid/app/Fragment;->onStop()V
+    iget-object v0, p0, Ljbd;->c:Lx6f;
 
-    sget-object v0, Lgw7;->ON_STOP:Lgw7;
+    invoke-interface {v0}, Lx6f;->m()Lu9g;
 
-    invoke-virtual {p0, v0}, Ljbd;->a(Lgw7;)V
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final read(Ljava/nio/ByteBuffer;)I
+    .locals 5
+
+    iget-object v0, p0, Ljbd;->a:Lqu0;
+
+    iget-wide v1, v0, Lqu0;->b:J
+
+    const-wide/16 v3, 0x0
+
+    cmp-long v1, v1, v3
+
+    if-nez v1, :cond_0
+
+    const/16 v1, 0x2000
+
+    int-to-long v1, v1
+
+    iget-object v3, p0, Ljbd;->c:Lx6f;
+
+    invoke-interface {v3, v0, v1, v2}, Lx6f;->b(Lqu0;J)J
+
+    move-result-wide v1
+
+    const-wide/16 v3, -0x1
+
+    cmp-long v1, v1, v3
+
+    if-nez v1, :cond_0
+
+    const/4 p1, -0x1
+
+    return p1
+
+    :cond_0
+    invoke-virtual {v0, p1}, Lqu0;->read(Ljava/nio/ByteBuffer;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final readByte()B
+    .locals 2
+
+    const-wide/16 v0, 0x1
+
+    invoke-virtual {p0, v0, v1}, Ljbd;->d0(J)V
+
+    iget-object v0, p0, Ljbd;->a:Lqu0;
+
+    invoke-virtual {v0}, Lqu0;->readByte()B
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final readFully([B)V
+    .locals 7
+
+    iget-object v0, p0, Ljbd;->a:Lqu0;
+
+    :try_start_0
+    array-length v1, p1
+
+    int-to-long v1, v1
+
+    invoke-virtual {p0, v1, v2}, Ljbd;->d0(J)V
+    :try_end_0
+    .catch Ljava/io/EOFException; {:try_start_0 .. :try_end_0} :catch_0
+
+    invoke-virtual {v0, p1}, Lqu0;->readFully([B)V
 
     return-void
+
+    :catch_0
+    move-exception v1
+
+    const/4 v2, 0x0
+
+    :goto_0
+    iget-wide v3, v0, Lqu0;->b:J
+
+    const-wide/16 v5, 0x0
+
+    cmp-long v5, v3, v5
+
+    if-lez v5, :cond_1
+
+    long-to-int v3, v3
+
+    invoke-virtual {v0, p1, v2, v3}, Lqu0;->read([BII)I
+
+    move-result v3
+
+    const/4 v4, -0x1
+
+    if-eq v3, v4, :cond_0
+
+    add-int/2addr v2, v3
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/AssertionError;
+
+    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
+
+    throw p1
+
+    :cond_1
+    throw v1
+.end method
+
+.method public final readInt()I
+    .locals 2
+
+    const-wide/16 v0, 0x4
+
+    invoke-virtual {p0, v0, v1}, Ljbd;->d0(J)V
+
+    iget-object v0, p0, Ljbd;->a:Lqu0;
+
+    invoke-virtual {v0}, Lqu0;->readInt()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final readLong()J
+    .locals 2
+
+    const-wide/16 v0, 0x8
+
+    invoke-virtual {p0, v0, v1}, Ljbd;->d0(J)V
+
+    iget-object v0, p0, Ljbd;->a:Lqu0;
+
+    invoke-virtual {v0}, Lqu0;->readLong()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final readShort()S
+    .locals 2
+
+    const-wide/16 v0, 0x2
+
+    invoke-virtual {p0, v0, v1}, Ljbd;->d0(J)V
+
+    iget-object v0, p0, Ljbd;->a:Lqu0;
+
+    invoke-virtual {v0}, Lqu0;->readShort()S
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final skip(J)V
+    .locals 5
+
+    iget-boolean v0, p0, Ljbd;->b:Z
+
+    if-nez v0, :cond_3
+
+    :goto_0
+    const-wide/16 v0, 0x0
+
+    cmp-long v2, p1, v0
+
+    if-lez v2, :cond_2
+
+    iget-object v2, p0, Ljbd;->a:Lqu0;
+
+    iget-wide v3, v2, Lqu0;->b:J
+
+    cmp-long v0, v3, v0
+
+    if-nez v0, :cond_1
+
+    const/16 v0, 0x2000
+
+    int-to-long v0, v0
+
+    iget-object v3, p0, Ljbd;->c:Lx6f;
+
+    invoke-interface {v3, v2, v0, v1}, Lx6f;->b(Lqu0;J)J
+
+    move-result-wide v0
+
+    const-wide/16 v3, -0x1
+
+    cmp-long v0, v0, v3
+
+    if-eqz v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    new-instance p1, Ljava/io/EOFException;
+
+    invoke-direct {p1}, Ljava/io/EOFException;-><init>()V
+
+    throw p1
+
+    :cond_1
+    :goto_1
+    iget-wide v0, v2, Lqu0;->b:J
+
+    invoke-static {p1, p2, v0, v1}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide v0
+
+    invoke-virtual {v2, v0, v1}, Lqu0;->skip(J)V
+
+    sub-long/2addr p1, v0
+
+    goto :goto_0
+
+    :cond_2
+    return-void
+
+    :cond_3
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "closed"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "buffer("
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ljbd;->c:Lx6f;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x29
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final w(BJJ)J
+    .locals 9
+
+    iget-boolean p2, p0, Ljbd;->b:Z
+
+    if-nez p2, :cond_4
+
+    const-wide/16 p2, 0x0
+
+    cmp-long v0, p4, p2
+
+    if-ltz v0, :cond_3
+
+    move-wide v3, p2
+
+    :goto_0
+    cmp-long p2, v3, p4
+
+    const-wide/16 v7, -0x1
+
+    if-gez p2, :cond_2
+
+    iget-object v1, p0, Ljbd;->a:Lqu0;
+
+    move v2, p1
+
+    move-wide v5, p4
+
+    invoke-virtual/range {v1 .. v6}, Lqu0;->Z(BJJ)J
+
+    move-result-wide p1
+
+    cmp-long p3, p1, v7
+
+    if-eqz p3, :cond_0
+
+    return-wide p1
+
+    :cond_0
+    iget-wide p1, v1, Lqu0;->b:J
+
+    cmp-long p3, p1, v5
+
+    if-gez p3, :cond_2
+
+    const/16 p3, 0x2000
+
+    int-to-long p3, p3
+
+    iget-object p5, p0, Ljbd;->c:Lx6f;
+
+    invoke-interface {p5, v1, p3, p4}, Lx6f;->b(Lqu0;J)J
+
+    move-result-wide p3
+
+    cmp-long p3, p3, v7
+
+    if-nez p3, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-static {v3, v4, p1, p2}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v3
+
+    move p1, v2
+
+    move-wide p4, v5
+
+    goto :goto_0
+
+    :cond_2
+    :goto_1
+    return-wide v7
+
+    :cond_3
+    move-wide v5, p4
+
+    const-string p1, "fromIndex=0 toIndex="
+
+    invoke-static {v5, v6, p1}, Lvb9;->e(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance p2, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+
+    :cond_4
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "closed"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final y()I
+    .locals 3
+
+    const-wide/16 v0, 0x4
+
+    invoke-virtual {p0, v0, v1}, Ljbd;->d0(J)V
+
+    iget-object v0, p0, Ljbd;->a:Lqu0;
+
+    invoke-virtual {v0}, Lqu0;->readInt()I
+
+    move-result v0
+
+    const/high16 v1, -0x1000000
+
+    and-int/2addr v1, v0
+
+    ushr-int/lit8 v1, v1, 0x18
+
+    const/high16 v2, 0xff0000
+
+    and-int/2addr v2, v0
+
+    ushr-int/lit8 v2, v2, 0x8
+
+    or-int/2addr v1, v2
+
+    const v2, 0xff00
+
+    and-int/2addr v2, v0
+
+    shl-int/lit8 v2, v2, 0x8
+
+    or-int/2addr v1, v2
+
+    and-int/lit16 v0, v0, 0xff
+
+    shl-int/lit8 v0, v0, 0x18
+
+    or-int/2addr v0, v1
+
+    return v0
 .end method

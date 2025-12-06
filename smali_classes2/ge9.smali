@@ -1,582 +1,189 @@
 .class public final Lge9;
-.super Ljava/lang/Object;
+.super Ldtf;
 .source "SourceFile"
+
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public final a:Lpw4;
+.field public final synthetic X:Lone/me/members/list/MembersListWidget;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lpw4;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/members/list/MembersListWidget;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lge9;->X:Lone/me/members/list/MembersListWidget;
 
-    iput-object p1, p0, Lge9;->a:Lpw4;
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static a(Lla2;Z)Z
-    .locals 5
 
-    const/4 v0, 0x0
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-eqz p0, :cond_6
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p0}, Lla2;->h0()Z
+    invoke-virtual {p0, p1, p2}, Lge9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result v1
+    move-result-object p1
 
-    if-nez v1, :cond_0
+    check-cast p1, Lge9;
 
-    goto :goto_2
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    :cond_0
-    invoke-virtual {p0}, Lla2;->z()Z
+    invoke-virtual {p1, p2}, Lge9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result v1
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_1
-
-    if-nez p1, :cond_4
-
-    :cond_1
-    invoke-virtual {p0}, Lla2;->g0()Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    iget-wide v3, p0, Lla2;->Y:J
-
-    invoke-virtual {p0, v3, v4}, Lla2;->f(J)I
-
-    move-result v1
-
-    const/16 v3, 0x400
-
-    invoke-static {v1, v3}, Ltdi;->d(II)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    if-eqz p1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    move p1, v0
-
-    goto :goto_1
-
-    :cond_4
-    :goto_0
-    move p1, v2
-
-    :goto_1
-    invoke-virtual {p0}, Lla2;->K()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    invoke-virtual {p0}, Lla2;->y()Z
-
-    move-result p0
-
-    if-nez p0, :cond_5
-
-    if-eqz p1, :cond_6
-
-    :cond_5
-    return v2
-
-    :cond_6
-    :goto_2
-    return v0
+    return-object p2
 .end method
 
-.method public static c(Lla2;Lpb9;)Z
-    .locals 4
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-virtual {p1}, Lpb9;->A()Z
+    new-instance v0, Lge9;
+
+    iget-object v1, p0, Lge9;->X:Lone/me/members/list/MembersListWidget;
+
+    invoke-direct {v0, p2, v1}, Lge9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/members/list/MembersListWidget;)V
+
+    iput-object p1, v0, Lge9;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lge9;->o:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/Set;
+
+    sget-object p1, Lone/me/members/list/MembersListWidget;->C0:[Lyy7;
+
+    iget-object p1, p0, Lge9;->X:Lone/me/members/list/MembersListWidget;
+
+    invoke-virtual {p1}, Lone/me/members/list/MembersListWidget;->A0()Ltd9;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ltd9;->u()Z
 
     move-result v0
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p1}, Lpb9;->s()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    iget-object v0, p1, Lpb9;->Z:Ljava/lang/String;
-
-    invoke-static {v0}, Li79;->b(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p1, Lpb9;->w0:Lh78;
 
     if-eqz v0, :cond_1
 
-    iget-object v2, v0, Lh78;->b:Ljava/lang/Object;
-
-    check-cast v2, Lgg7;
-
-    if-eqz v2, :cond_1
-
-    return v1
-
-    :cond_1
-    if-eqz v0, :cond_2
-
-    iget-object v0, v0, Lh78;->c:Ljava/lang/Object;
-
-    check-cast v0, Lebd;
-
-    if-eqz v0, :cond_2
-
-    return v1
-
-    :cond_2
-    iget-object p0, p0, Lla2;->b:Lne2;
-
-    invoke-virtual {p0}, Lne2;->f()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_3
-
-    iget-wide p0, p1, Lpb9;->b:J
-
-    const-wide/16 v2, 0x0
-
-    cmp-long p0, p0, v2
-
-    if-eqz p0, :cond_3
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_3
-    :goto_0
-    return v1
-.end method
-
-.method public static d(Lla2;Lca9;)Z
-    .locals 2
-
-    invoke-virtual {p0}, Lla2;->W()Z
-
-    move-result v0
+    iget-object v0, p1, Lone/me/members/list/MembersListWidget;->A0:Lw73;
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lla2;->b:Lne2;
-
-    invoke-virtual {p0}, Lne2;->f()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    iget-object p0, p1, Lca9;->a:Lpb9;
-
-    iget-wide p0, p0, Lpb9;->b:J
-
-    const-wide/16 v0, 0x0
-
-    cmp-long p0, p0, v0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
+    goto :goto_0
 
     :cond_0
-    const/4 p0, 0x0
+    new-instance v0, Lwu7;
 
-    return p0
-.end method
+    const/16 v1, 0xf
 
+    invoke-direct {v0, v1, p1}, Lwu7;-><init>(ILjava/lang/Object;)V
 
-# virtual methods
-.method public final b(Lla2;Lca9;)Z
-    .locals 13
+    new-instance v1, Lw73;
 
-    iget-object v0, p2, Lca9;->a:Lpb9;
+    new-instance v2, Lde9;
 
-    invoke-virtual {v0}, Lpb9;->A()Z
+    const/4 v3, 0x0
 
-    move-result v1
+    invoke-direct {v2, p1, v3}, Lde9;-><init>(Lone/me/members/list/MembersListWidget;I)V
 
-    const/4 v2, 0x0
+    new-instance v4, Lia;
 
-    if-nez v1, :cond_10
+    const/16 v5, 0x14
 
-    invoke-virtual {v0}, Lpb9;->B()Z
+    invoke-direct {v4, v0, v5, p1}, Lia;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    move-result v1
+    new-instance v5, Lee9;
 
-    iget-wide v3, v0, Lpb9;->X:J
+    invoke-direct {v5, v0, v3}, Lee9;-><init>(Lwu7;I)V
 
-    iget-object v5, v0, Lpb9;->w0:Lh78;
-
-    if-nez v1, :cond_10
-
-    invoke-virtual {v0}, Lpb9;->I()Z
-
-    move-result v1
-
-    if-nez v1, :cond_10
-
-    invoke-virtual {v0}, Lpb9;->D()Z
-
-    move-result v1
-
-    if-nez v1, :cond_10
-
-    invoke-virtual {v0}, Lpb9;->z()Z
-
-    move-result v1
-
-    if-nez v1, :cond_10
-
-    invoke-virtual {v0}, Lpb9;->s()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    sget-object v1, La20;->r0:La20;
-
-    invoke-virtual {v5, v1}, Lh78;->w(La20;)Le20;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    return v2
-
-    :cond_0
-    invoke-virtual {v0}, Lpb9;->u()Z
-
-    move-result v1
-
-    if-nez v1, :cond_10
-
-    invoke-virtual {v0}, Lpb9;->G()Z
-
-    move-result v1
-
-    if-nez v1, :cond_10
-
-    invoke-virtual {v0}, Lpb9;->y()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    goto/16 :goto_7
-
-    :cond_1
-    invoke-virtual {p1}, Lla2;->W()Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    goto/16 :goto_7
-
-    :cond_2
-    invoke-virtual {v0}, Lpb9;->s()Z
-
-    move-result v1
+    new-instance v3, Lee9;
 
     const/4 v6, 0x1
 
-    if-eqz v1, :cond_7
+    invoke-direct {v3, v0, v6}, Lee9;-><init>(Lwu7;I)V
 
-    iget-object v1, v5, Lh78;->a:Ljava/lang/Object;
+    invoke-direct {v1, v2, v4, v5, v3}, Lw73;-><init>(Lcm6;Lem6;Lem6;Lem6;)V
 
-    check-cast v1, Ljava/util/List;
+    invoke-virtual {p1}, Lone/me/members/list/MembersListWidget;->z0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    if-eqz v1, :cond_3
+    move-result-object v0
 
-    invoke-interface {v1}, Ljava/util/Collection;->isEmpty()Z
+    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->j(Lvhd;)V
 
-    move-result v7
+    iput-object v1, p1, Lone/me/members/list/MembersListWidget;->A0:Lw73;
 
-    if-eqz v7, :cond_3
+    new-instance v0, Lyh4;
 
-    move v7, v2
-
-    goto :goto_1
-
-    :cond_3
-    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-virtual {p1}, Lone/me/members/list/MembersListWidget;->z0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
     move-result-object v1
 
-    move v7, v2
+    invoke-direct {v0, v1}, Lyh4;-><init>(Landroidx/recyclerview/widget/RecyclerView;)V
 
-    :cond_4
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {p1}, Lone/me/members/list/MembersListWidget;->z0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    move-result v8
+    move-result-object v1
 
-    if-eqz v8, :cond_6
+    invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->l(Laid;)V
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v8
-
-    :try_start_0
-    check-cast v8, Le20;
-
-    iget-object v8, v8, Le20;->a:La20;
-
-    sget-object v9, La20;->c:La20;
-
-    if-eq v8, v9, :cond_5
-
-    sget-object v9, La20;->o:La20;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-ne v8, v9, :cond_4
-
-    :cond_5
-    add-int/lit8 v7, v7, 0x1
+    iput-object v0, p1, Lone/me/members/list/MembersListWidget;->B0:Lyh4;
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p1
+    :cond_1
+    iget-object v0, p1, Lone/me/members/list/MembersListWidget;->A0:Lw73;
 
-    new-instance p2, Ljava/lang/RuntimeException;
+    if-eqz v0, :cond_2
 
-    invoke-direct {p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    invoke-virtual {p1}, Lone/me/members/list/MembersListWidget;->z0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    throw p2
+    move-result-object v1
 
-    :cond_6
-    :goto_1
-    invoke-virtual {v5}, Lh78;->u()I
+    invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->p0(Lvhd;)V
 
-    move-result v1
+    :cond_2
+    const/4 v0, 0x0
 
-    if-ne v7, v1, :cond_7
+    iput-object v0, p1, Lone/me/members/list/MembersListWidget;->A0:Lw73;
 
-    move v1, v6
+    iget-object v1, p1, Lone/me/members/list/MembersListWidget;->B0:Lyh4;
 
-    goto :goto_2
+    if-eqz v1, :cond_3
 
-    :cond_7
-    move v1, v2
+    invoke-virtual {p1}, Lone/me/members/list/MembersListWidget;->z0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    :goto_2
-    iget-object v5, v0, Lpb9;->Z:Ljava/lang/String;
+    move-result-object v2
 
-    invoke-static {v5}, Li79;->b(Ljava/lang/CharSequence;)Z
+    invoke-virtual {v2, v1}, Landroidx/recyclerview/widget/RecyclerView;->r0(Laid;)V
 
-    move-result v5
+    :cond_3
+    iput-object v0, p1, Lone/me/members/list/MembersListWidget;->B0:Lyh4;
 
-    if-eqz v5, :cond_8
+    :goto_0
+    invoke-virtual {p1}, Lone/me/members/list/MembersListWidget;->z0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    if-nez v1, :cond_8
+    move-result-object p1
 
-    goto/16 :goto_7
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
 
-    :cond_8
-    invoke-virtual {p1}, Lla2;->K()Z
+    sget-object p1, Lqqg;->a:Lqqg;
 
-    move-result v1
-
-    if-eqz v1, :cond_c
-
-    invoke-virtual {p1}, Lla2;->z()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_9
-
-    iget-object p2, p2, Lca9;->b:Lwr3;
-
-    iget-boolean p2, p2, Lwr3;->Y:Z
-
-    if-eqz p2, :cond_9
-
-    move p2, v6
-
-    goto :goto_3
-
-    :cond_9
-    move p2, v2
-
-    :goto_3
-    invoke-virtual {p1}, Lla2;->g0()Z
-
-    move-result v0
-
-    if-nez v0, :cond_b
-
-    iget-wide v0, p1, Lla2;->Y:J
-
-    invoke-virtual {p1, v0, v1}, Lla2;->f(J)I
-
-    move-result v0
-
-    const/16 v1, 0x200
-
-    invoke-static {v0, v1}, Ltdi;->d(II)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_a
-
-    goto :goto_4
-
-    :cond_a
-    move v0, v2
-
-    goto :goto_5
-
-    :cond_b
-    :goto_4
-    move v0, v6
-
-    :goto_5
-    invoke-virtual {p1}, Lla2;->y()Z
-
-    move-result p1
-
-    if-nez p1, :cond_f
-
-    if-nez p2, :cond_f
-
-    if-eqz v0, :cond_10
-
-    goto :goto_6
-
-    :cond_c
-    invoke-virtual {v0}, Lpb9;->t()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_d
-
-    goto :goto_6
-
-    :cond_d
-    iget-wide v7, v0, Lpb9;->b:J
-
-    const-wide/16 v9, 0x0
-
-    cmp-long p2, v7, v9
-
-    iget-object v1, p0, Lge9;->a:Lpw4;
-
-    if-eqz p2, :cond_e
-
-    invoke-virtual {v1}, Lpw4;->get()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lpxb;
-
-    check-cast p2, Lrxb;
-
-    iget-object v5, p2, Lrxb;->a:Ld78;
-
-    invoke-virtual {v5}, Lntd;->j()J
-
-    move-result-wide v7
-
-    iget-wide v11, v0, Lpb9;->c:J
-
-    sub-long/2addr v7, v11
-
-    const-wide/16 v11, 0x3e8
-
-    div-long/2addr v7, v11
-
-    iget-object p2, p2, Lrxb;->b:Lgvb;
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->edit-timeout:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const v5, 0x15180
-
-    int-to-long v11, v5
-
-    invoke-virtual {p2, v0, v11, v12}, Lwtd;->m(Ljava/lang/Enum;J)J
-
-    move-result-wide v11
-
-    long-to-int p2, v11
-
-    int-to-long v11, p2
-
-    cmp-long p2, v7, v11
-
-    if-gez p2, :cond_10
-
-    :cond_e
-    invoke-virtual {v1}, Lpw4;->get()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lpxb;
-
-    check-cast p2, Lrxb;
-
-    iget-object p2, p2, Lrxb;->a:Ld78;
-
-    invoke-virtual {p2}, Lntd;->s()J
-
-    move-result-wide v0
-
-    cmp-long p2, v3, v0
-
-    if-eqz p2, :cond_f
-
-    invoke-virtual {p1}, Lla2;->H()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_10
-
-    cmp-long p1, v3, v9
-
-    if-nez p1, :cond_10
-
-    :cond_f
-    :goto_6
-    return v6
-
-    :cond_10
-    :goto_7
-    return v2
+    return-object p1
 .end method

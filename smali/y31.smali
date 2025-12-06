@@ -1,205 +1,133 @@
 .class public final Ly31;
-.super Landroidx/constraintlayout/widget/ConstraintLayout;
+.super Ldtf;
 .source "SourceFile"
+
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public final E0:Lhs1;
+.field public final synthetic X:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
 
-.field public F0:Lx31;
-
-.field public final G0:Lwif;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 5
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput-object p2, p0, Ly31;->X:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
 
-    invoke-direct {p0, p1, v0}, Landroidx/constraintlayout/widget/ConstraintLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    const/4 p2, 0x2
 
-    new-instance v0, Lw5;
-
-    const/4 v1, 0x7
-
-    invoke-direct {v0, p1, v1}, Lw5;-><init>(Landroid/content/Context;I)V
-
-    new-instance v1, Lwif;
-
-    invoke-direct {v1, v0}, Lwif;-><init>(Lji6;)V
-
-    iput-object v1, p0, Ly31;->G0:Lwif;
-
-    new-instance v0, Lwq3;
-
-    const/4 v1, -0x1
-
-    invoke-direct {v0, v1, v1}, Lwq3;-><init>(II)V
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    sget-object v0, Ll05;->s0:Lk82;
-
-    invoke-virtual {v0, p0}, Lk82;->q(Landroid/view/View;)Lewa;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lewa;->c:Lv5b;
-
-    invoke-interface {v0}, Lv5b;->b()Lff0;
-
-    move-result-object v0
-
-    iget v0, v0, Lff0;->l:I
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->setBackgroundColor(I)V
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->setFocusable(Z)V
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->setClickable(Z)V
-
-    new-instance v0, Lhs1;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, p1, v2}, Lhs1;-><init>(Landroid/content/Context;I)V
-
-    sget v3, Ljnc;->call_user_full_avatar:I
-
-    invoke-virtual {v0, v3}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
-
-    sget-object v3, Lds1;->b:Lds1;
-
-    invoke-virtual {v0, v3}, Lhs1;->setMode(Lds1;)V
-
-    iput-object v0, p0, Ly31;->E0:Lhs1;
-
-    new-instance v3, Landroid/view/ViewStub;
-
-    invoke-direct {v3, p1}, Landroid/view/ViewStub;-><init>(Landroid/content/Context;)V
-
-    sget v4, Ljnc;->call_recall:I
-
-    invoke-virtual {v3, v4}, Landroid/view/View;->setId(I)V
-
-    new-instance v3, Landroid/view/ViewStub;
-
-    invoke-direct {v3, p1}, Landroid/view/ViewStub;-><init>(Landroid/content/Context;)V
-
-    sget p1, Ljnc;->call_cancel:I
-
-    invoke-virtual {v3, p1}, Landroid/view/View;->setId(I)V
-
-    invoke-virtual {p0, v0, v1, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;II)V
-
-    invoke-static {p0}, Lgvi;->a(Landroidx/constraintlayout/widget/ConstraintLayout;)Lgr3;
-
-    move-result-object p1
-
-    invoke-virtual {v0}, Landroid/view/View;->getId()I
-
-    move-result v0
-
-    const/4 v1, 0x7
-
-    invoke-virtual {p1, v0, v1, v2, v1}, Lgr3;->d(IIII)V
-
-    const/4 v1, 0x6
-
-    invoke-virtual {p1, v0, v1, v2, v1}, Lgr3;->d(IIII)V
-
-    const/4 v1, 0x3
-
-    invoke-virtual {p1, v0, v1, v2, v1}, Lgr3;->d(IIII)V
-
-    const/4 v1, 0x4
-
-    invoke-virtual {p1, v0, v1, v2, v1}, Lgr3;->d(IIII)V
-
-    invoke-virtual {p1, p0}, Lgr3;->a(Landroidx/constraintlayout/widget/ConstraintLayout;)V
+    invoke-direct {p0, p2, p1}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
-.end method
-
-.method private final getChatIcon()Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
-    .locals 1
-
-    iget-object v0, p0, Ly31;->G0:Lwif;
-
-    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final setClickListener(Lx31;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    iput-object p1, p0, Ly31;->F0:Lx31;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return-void
+    invoke-virtual {p0, p1, p2}, Ly31;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Ly31;
+
+    sget-object p2, Lqqg;->a:Lqqg;
+
+    invoke-virtual {p1, p2}, Ly31;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final setName(Ljava/lang/CharSequence;)V
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object v0, p0, Ly31;->E0:Lhs1;
+    new-instance v0, Ly31;
 
-    invoke-virtual {v0, p1}, Lhs1;->setName(Ljava/lang/CharSequence;)V
+    iget-object v1, p0, Ly31;->X:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
 
-    return-void
+    invoke-direct {v0, p2, v1}, Ly31;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;)V
+
+    iput-object p1, v0, Ly31;->o:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
-.method public final setStatus(Ljava/lang/CharSequence;)V
-    .locals 1
-
-    iget-object v0, p0, Ly31;->E0:Lhs1;
-
-    invoke-virtual {v0, p1}, Lhs1;->setStatus(Ljava/lang/CharSequence;)V
-
-    return-void
-.end method
-
-.method public final v(Z)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 7
 
-    invoke-direct {p0}, Ly31;->getChatIcon()Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    move-result-object v0
+    iget-object p1, p0, Ly31;->o:Ljava/lang/Object;
 
-    sget v3, Lisc;->call_write_message:I
+    check-cast p1, Ljava/lang/Boolean;
 
-    new-instance v4, Lorf;
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-direct {v4, v3}, Lorf;-><init>(I)V
+    move-result p1
 
-    new-instance v5, Lw31;
+    iget-object v0, p0, Ly31;->X:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
 
-    const/4 v1, 0x1
+    if-eqz p1, :cond_0
 
-    invoke-direct {v5, p0, v1}, Lw31;-><init>(Ly31;I)V
+    sget-object p1, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->Z:[Lyy7;
 
-    iget-object v1, p0, Ly31;->E0:Lhs1;
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->y0()Lk31;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v1
 
-    new-instance v6, Ll;
+    iget-object v2, v1, Lk31;->R0:Lncg;
 
-    const/16 v2, 0x1a
+    iget-object v3, v1, Lk31;->J0:Ljtd;
 
-    invoke-direct {v6, v2, v0}, Ll;-><init>(ILjava/lang/Object;)V
+    sget p1, Lm0b;->i2:I
 
-    move v2, p1
+    new-instance v4, Ln5g;
 
-    invoke-virtual/range {v1 .. v6}, Lhs1;->X(ZILtrf;Lji6;Lli6;)V
+    invoke-direct {v4, p1}, Ln5g;-><init>(I)V
 
-    return-void
+    sget p1, Li0b;->Q:I
+
+    new-instance v5, Lf31;
+
+    const/4 v0, 0x2
+
+    invoke-direct {v5, v1, v0}, Lf31;-><init>(Lk31;I)V
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    invoke-virtual/range {v1 .. v6}, Lk31;->w(Lncg;Ljtd;Ln5g;Lcm6;Ljava/lang/Integer;)Lncg;
+
+    move-result-object p1
+
+    iput-object p1, v1, Lk31;->R0:Lncg;
+
+    goto :goto_0
+
+    :cond_0
+    sget-object p1, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->Z:[Lyy7;
+
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->y0()Lk31;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lk31;->R0:Lncg;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Lncg;->a()V
+
+    :cond_1
+    :goto_0
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

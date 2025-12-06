@@ -1,122 +1,50 @@
-.class public abstract Ls0j;
+.class public final Ls0j;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpqa;
+
+
+# static fields
+.field public static final a:Ls0j;
+
 
 # direct methods
-.method public static final a(Lla2;)Lgve;
+.method static constructor <clinit>()V
     .locals 2
 
-    iget-object v0, p0, Lla2;->b:Lne2;
+    new-instance v0, Ls0j;
 
-    invoke-virtual {p0}, Lla2;->K()Z
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result v1
+    sput-object v0, Ls0j;->a:Ls0j;
 
-    if-eqz v1, :cond_0
+    new-instance v0, Lmli;
 
-    new-instance p0, Lbve;
+    const/4 v1, 0x1
 
-    iget-wide v0, v0, Lne2;->a:J
+    invoke-direct {v0, v1}, Lmli;-><init>(I)V
 
-    invoke-direct {p0, v0, v1}, Lbve;-><init>(J)V
+    const-class v1, Lemi;
 
-    return-object p0
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    :cond_0
-    invoke-virtual {p0}, Lla2;->J()Z
+    move-result-object v0
 
-    move-result v1
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
 
-    if-eqz v1, :cond_1
-
-    invoke-virtual {p0}, Lla2;->n()Lwr3;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_2
-
-    invoke-virtual {p0}, Lwr3;->p()J
-
-    move-result-wide v0
-
-    new-instance p0, Ldve;
-
-    invoke-direct {p0, v0, v1}, Ldve;-><init>(J)V
-
-    return-object p0
-
-    :cond_1
-    invoke-virtual {p0}, Lla2;->O()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    invoke-virtual {p0}, Lla2;->n()Lwr3;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_2
-
-    invoke-virtual {p0}, Lwr3;->p()J
-
-    move-result-wide v0
-
-    new-instance p0, Leve;
-
-    invoke-direct {p0, v0, v1}, Leve;-><init>(J)V
-
-    return-object p0
-
-    :cond_2
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_3
-    new-instance p0, Lcve;
-
-    iget-wide v0, v0, Lne2;->a:J
-
-    invoke-direct {p0, v0, v1}, Lcve;-><init>(J)V
-
-    return-object p0
+    return-void
 .end method
 
-.method public static final b(Ljava/util/concurrent/Executor;)Lk54;
-    .locals 1
 
-    instance-of v0, p0, Llv4;
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    if-eqz v0, :cond_0
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    move-object v0, p0
+    move-result-object p1
 
-    check-cast v0, Llv4;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_2
-
-    iget-object v0, v0, Llv4;->a:Lk54;
-
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    return-object v0
-
-    :cond_2
-    :goto_1
-    new-instance v0, Leg5;
-
-    invoke-direct {v0, p0}, Leg5;-><init>(Ljava/util/concurrent/Executor;)V
-
-    return-object v0
+    throw p1
 .end method

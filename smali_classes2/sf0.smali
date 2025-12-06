@@ -1,116 +1,80 @@
-.class public final Lsf0;
+.class public final synthetic Lsf0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic b:I
+# interfaces
+.implements Lcm6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lru/ok/tamtam/workmanager/BacklogWorker;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    const-string v0, "space_light"
-
-    const-string v1, "gradient_light"
-
-    filled-new-array {v0, v1}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lob3;->e([Ljava/lang/Object;)Ljava/util/List;
-
-    const-string v0, "space_dark"
-
-    const-string v1, "gradient_dark"
-
-    filled-new-array {v0, v1}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lob3;->e([Ljava/lang/Object;)Ljava/util/List;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;)V
+.method public synthetic constructor <init>(Lru/ok/tamtam/workmanager/BacklogWorker;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lsf0;->a:I
 
-    iput-object p1, p0, Lsf0;->a:Ljava/lang/String;
+    iput-object p1, p0, Lsf0;->b:Lru/ok/tamtam/workmanager/BacklogWorker;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-    const/4 v0, 0x1
+    iget v0, p0, Lsf0;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lsf0;->b:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-    :cond_0
-    instance-of v1, p1, Lsf0;
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
 
-    const/4 v2, 0x0
+    move-result-object v0
 
-    if-nez v1, :cond_1
+    check-cast v0, Ly4e;
 
-    return v2
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
 
-    :cond_1
-    check-cast p1, Lsf0;
+    move-result-object v0
 
-    iget-object v1, p0, Lsf0;->a:Ljava/lang/String;
+    const/16 v1, 0xa9
 
-    iget-object p1, p1, Lsf0;->a:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
 
-    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object v0
 
-    move-result p1
+    check-cast v0, Lg5i;
 
-    if-nez p1, :cond_2
+    return-object v0
 
-    return v2
+    :pswitch_0
+    iget-object v0, p0, Lsf0;->b:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-    :cond_2
-    return v0
-.end method
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
 
-.method public final hashCode()I
-    .locals 1
+    move-result-object v0
 
-    iget-object v0, p0, Lsf0;->a:Ljava/lang/String;
+    check-cast v0, Ly4e;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "BackgroundNameId(name="
-
-    const-string v1, ")"
-
-    iget-object v2, p0, Lsf0;->a:Ljava/lang/String;
-
-    invoke-static {v0, v2, v1}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ly4e;->j()Llzf;
 
     move-result-object v0
 
     return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

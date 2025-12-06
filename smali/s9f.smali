@@ -3,81 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Comparable;
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Ls9f;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public static final X:Ljava/lang/String;
-
-.field public static final Y:Ljava/lang/String;
-
-.field public static final o:Ljava/lang/String;
+.implements Lr9i;
 
 
 # instance fields
-.field public final a:I
+.field public a:I
 
-.field public final b:I
+.field public b:I
 
-.field public final c:I
+.field public c:I
+
+.field public final d:I
+
+.field public final e:Ljava/lang/Object;
+
+.field public final f:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lo0e;
-
-    const/16 v1, 0x14
-
-    invoke-direct {v0, v1}, Lo0e;-><init>(I)V
-
-    sput-object v0, Ls9f;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    sget-object v0, Lnig;->a:Ljava/lang/String;
-
-    const/4 v0, 0x0
-
-    const/16 v1, 0x24
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Ls9f;->o:Ljava/lang/String;
-
-    const/4 v0, 0x1
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Ls9f;->X:Ljava/lang/String;
-
-    const/4 v0, 0x2
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Ls9f;->Y:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(III)V
-    .locals 0
+.method public constructor <init>(II[F[F)V
+    .locals 1
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -89,200 +34,714 @@
     iput p2, p0, Ls9f;->b:I
 
     .line 4
-    iput p3, p0, Ls9f;->c:I
+    array-length p1, p3
+
+    const/4 p2, 0x4
+
+    mul-int/2addr p1, p2
+
+    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+
+    move-result-object p1
+
+    .line 5
+    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+
+    .line 6
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->asFloatBuffer()Ljava/nio/FloatBuffer;
+
+    move-result-object p1
+
+    .line 7
+    invoke-virtual {p1, p3}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
+
+    const/4 p3, 0x0
+
+    .line 8
+    invoke-virtual {p1, p3}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
+
+    .line 9
+    iput-object p1, p0, Ls9f;->e:Ljava/lang/Object;
+
+    .line 10
+    array-length p1, p4
+
+    mul-int/2addr p1, p2
+
+    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+
+    move-result-object p1
+
+    .line 11
+    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+
+    .line 12
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->asFloatBuffer()Ljava/nio/FloatBuffer;
+
+    move-result-object p1
+
+    .line 13
+    invoke-virtual {p1, p4}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
+
+    .line 14
+    invoke-virtual {p1, p3}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
+
+    .line 15
+    iput-object p1, p0, Ls9f;->f:Ljava/lang/Object;
+
+    const/4 p1, 0x5
+
+    .line 16
+    iput p1, p0, Ls9f;->d:I
+
+    .line 17
+    iput p2, p0, Ls9f;->c:I
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 1
+.method public constructor <init>(Landroidx/recyclerview/widget/StaggeredGridLayoutManager;I)V
+    .locals 0
 
-    .line 5
+    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    iput-object p1, p0, Ls9f;->f:Ljava/lang/Object;
 
-    move-result v0
+    .line 19
+    new-instance p1, Ljava/util/ArrayList;
 
-    iput v0, p0, Ls9f;->a:I
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 7
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    iput-object p1, p0, Ls9f;->e:Ljava/lang/Object;
 
-    move-result v0
+    const/high16 p1, -0x80000000
 
-    iput v0, p0, Ls9f;->b:I
+    .line 20
+    iput p1, p0, Ls9f;->a:I
 
-    .line 8
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    .line 21
+    iput p1, p0, Ls9f;->b:I
 
-    move-result p1
+    const/4 p1, 0x0
 
+    .line 22
     iput p1, p0, Ls9f;->c:I
+
+    .line 23
+    iput p2, p0, Ls9f;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 2
+.method public a()V
+    .locals 0
 
-    check-cast p1, Ls9f;
+    return-void
+.end method
 
-    iget v0, p0, Ls9f;->a:I
-
-    iget v1, p1, Ls9f;->a:I
-
-    sub-int/2addr v0, v1
-
-    if-nez v0, :cond_0
+.method public b()V
+    .locals 9
 
     iget v0, p0, Ls9f;->b:I
 
-    iget v1, p1, Ls9f;->b:I
+    iget v1, p0, Ls9f;->a:I
 
-    sub-int/2addr v0, v1
+    iget-object v2, p0, Ls9f;->e:Ljava/lang/Object;
 
-    if-nez v0, :cond_0
+    check-cast v2, Ljava/nio/FloatBuffer;
 
-    iget v0, p0, Ls9f;->c:I
+    if-eqz v2, :cond_1
 
-    iget p1, p1, Ls9f;->c:I
+    iget-object v2, p0, Ls9f;->f:Ljava/lang/Object;
 
-    sub-int/2addr v0, p1
+    check-cast v2, Ljava/nio/FloatBuffer;
 
-    :cond_0
-    return v0
-.end method
-
-.method public final describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_2
-
-    const-class v2, Ls9f;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
+    if-nez v2, :cond_0
 
     goto :goto_0
 
-    :cond_1
-    check-cast p1, Ls9f;
+    :cond_0
+    invoke-static {v1}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
-    iget v2, p0, Ls9f;->a:I
+    const-string v2, "glEnableVertexAttribArray"
 
-    iget v3, p1, Ls9f;->a:I
+    invoke-static {v2}, Ldui;->b(Ljava/lang/String;)V
 
-    if-ne v2, v3, :cond_2
+    invoke-static {v0}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
-    iget v2, p0, Ls9f;->b:I
+    invoke-static {v2}, Ldui;->b(Ljava/lang/String;)V
 
-    iget v3, p1, Ls9f;->b:I
+    iget v3, p0, Ls9f;->a:I
 
-    if-ne v2, v3, :cond_2
+    iget-object v2, p0, Ls9f;->e:Ljava/lang/Object;
+
+    move-object v8, v2
+
+    check-cast v8, Ljava/nio/FloatBuffer;
+
+    const/4 v6, 0x0
+
+    const/16 v7, 0x8
+
+    const/4 v4, 0x2
+
+    const/16 v5, 0x1406
+
+    invoke-static/range {v3 .. v8}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
+
+    const-string v2, "glVertexAttribPointer"
+
+    invoke-static {v2}, Ldui;->b(Ljava/lang/String;)V
+
+    iget v3, p0, Ls9f;->b:I
+
+    iget-object v4, p0, Ls9f;->f:Ljava/lang/Object;
+
+    move-object v8, v4
+
+    check-cast v8, Ljava/nio/FloatBuffer;
+
+    const/4 v4, 0x2
+
+    invoke-static/range {v3 .. v8}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
+
+    invoke-static {v2}, Ldui;->b(Ljava/lang/String;)V
 
     iget v2, p0, Ls9f;->c:I
 
-    iget p1, p1, Ls9f;->c:I
+    const/4 v3, 0x0
 
-    if-ne v2, p1, :cond_2
+    iget v4, p0, Ls9f;->d:I
+
+    invoke-static {v4, v3, v2}, Landroid/opengl/GLES20;->glDrawArrays(III)V
+
+    const-string v2, "glDrawArrays"
+
+    invoke-static {v2}, Ldui;->b(Ljava/lang/String;)V
+
+    invoke-static {v1}, Landroid/opengl/GLES20;->glDisableVertexAttribArray(I)V
+
+    const-string v1, "glDisableVertexAttribArray"
+
+    invoke-static {v1}, Ldui;->b(Ljava/lang/String;)V
+
+    invoke-static {v0}, Landroid/opengl/GLES20;->glDisableVertexAttribArray(I)V
+
+    invoke-static {v1}, Ldui;->b(Ljava/lang/String;)V
+
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
+.method public c()V
+    .locals 3
+
+    iget-object v0, p0, Ls9f;->e:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/ArrayList;
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Lwy1;->d(Ljava/util/ArrayList;I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/View;
+
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v1
+
+    check-cast v1, Lp9f;
+
+    iget-object v2, p0, Ls9f;->f:Ljava/lang/Object;
+
+    check-cast v2, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
+
+    iget-object v2, v2, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->r:Law7;
+
+    invoke-virtual {v2, v0}, Law7;->c(Landroid/view/View;)I
+
+    move-result v0
+
+    iput v0, p0, Ls9f;->b:I
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+.end method
+
+.method public d()V
+    .locals 1
+
+    iget-object v0, p0, Ls9f;->e:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+
+    const/high16 v0, -0x80000000
+
+    iput v0, p0, Ls9f;->a:I
+
+    iput v0, p0, Ls9f;->b:I
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Ls9f;->c:I
+
+    return-void
+.end method
+
+.method public e()I
+    .locals 4
+
+    iget-object v0, p0, Ls9f;->e:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/ArrayList;
+
+    iget-object v1, p0, Ls9f;->f:Ljava/lang/Object;
+
+    check-cast v1, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
+
+    iget-boolean v1, v1, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->w:Z
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    sub-int/2addr v0, v3
+
+    const/4 v1, -0x1
+
+    invoke-virtual {p0, v0, v1, v2, v3}, Ls9f;->g(IIZZ)I
+
+    move-result v0
 
     return v0
 
-    :cond_2
-    :goto_0
-    return v1
+    :cond_0
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    invoke-virtual {p0, v2, v0, v2, v3}, Ls9f;->g(IIZZ)I
+
+    move-result v0
+
+    return v0
 .end method
 
-.method public final hashCode()I
+.method public f()I
+    .locals 4
+
+    iget-object v0, p0, Ls9f;->e:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/ArrayList;
+
+    iget-object v1, p0, Ls9f;->f:Ljava/lang/Object;
+
+    check-cast v1, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
+
+    iget-boolean v1, v1, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->w:Z
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    invoke-virtual {p0, v3, v0, v3, v2}, Ls9f;->g(IIZZ)I
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    sub-int/2addr v0, v2
+
+    const/4 v1, -0x1
+
+    invoke-virtual {p0, v0, v1, v3, v2}, Ls9f;->g(IIZZ)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public g(IIZZ)I
+    .locals 11
+
+    iget-object v0, p0, Ls9f;->f:Ljava/lang/Object;
+
+    check-cast v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
+
+    iget-object v1, v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->r:Law7;
+
+    invoke-virtual {v1}, Law7;->m()I
+
+    move-result v1
+
+    iget-object v2, v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->r:Law7;
+
+    invoke-virtual {v2}, Law7;->h()I
+
+    move-result v2
+
+    const/4 v3, -0x1
+
+    const/4 v4, 0x1
+
+    if-le p2, p1, :cond_0
+
+    move v5, v4
+
+    goto :goto_0
+
+    :cond_0
+    move v5, v3
+
+    :goto_0
+    if-eq p1, p2, :cond_8
+
+    iget-object v6, p0, Ls9f;->e:Ljava/lang/Object;
+
+    check-cast v6, Ljava/util/ArrayList;
+
+    invoke-virtual {v6, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Landroid/view/View;
+
+    iget-object v7, v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->r:Law7;
+
+    invoke-virtual {v7, v6}, Law7;->f(Landroid/view/View;)I
+
+    move-result v7
+
+    iget-object v8, v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->r:Law7;
+
+    invoke-virtual {v8, v6}, Law7;->c(Landroid/view/View;)I
+
+    move-result v8
+
+    const/4 v9, 0x0
+
+    if-eqz p4, :cond_2
+
+    if-gt v7, v2, :cond_1
+
+    :goto_1
+    move v10, v4
+
+    goto :goto_2
+
+    :cond_1
+    move v10, v9
+
+    goto :goto_2
+
+    :cond_2
+    if-ge v7, v2, :cond_1
+
+    goto :goto_1
+
+    :goto_2
+    if-eqz p4, :cond_3
+
+    if-lt v8, v1, :cond_4
+
+    :goto_3
+    move v9, v4
+
+    goto :goto_4
+
+    :cond_3
+    if-le v8, v1, :cond_4
+
+    goto :goto_3
+
+    :cond_4
+    :goto_4
+    if-eqz v10, :cond_7
+
+    if-eqz v9, :cond_7
+
+    if-eqz p3, :cond_5
+
+    invoke-static {v6}, Landroidx/recyclerview/widget/a;->N(Landroid/view/View;)I
+
+    move-result p1
+
+    return p1
+
+    :cond_5
+    if-lt v7, v1, :cond_6
+
+    if-le v8, v2, :cond_7
+
+    :cond_6
+    invoke-static {v6}, Landroidx/recyclerview/widget/a;->N(Landroid/view/View;)I
+
+    move-result p1
+
+    return p1
+
+    :cond_7
+    add-int/2addr p1, v5
+
+    goto :goto_0
+
+    :cond_8
+    return v3
+.end method
+
+.method public h(I)I
+    .locals 2
+
+    iget v0, p0, Ls9f;->b:I
+
+    const/high16 v1, -0x80000000
+
+    if-eq v0, v1, :cond_0
+
+    return v0
+
+    :cond_0
+    iget-object v0, p0, Ls9f;->e:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    return p1
+
+    :cond_1
+    invoke-virtual {p0}, Ls9f;->c()V
+
+    iget p1, p0, Ls9f;->b:I
+
+    return p1
+.end method
+
+.method public i(II)Landroid/view/View;
+    .locals 6
+
+    iget-object v0, p0, Ls9f;->f:Ljava/lang/Object;
+
+    check-cast v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
+
+    iget-object v1, p0, Ls9f;->e:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/ArrayList;
+
+    const/4 v2, -0x1
+
+    const/4 v3, 0x0
+
+    if-ne p2, v2, :cond_3
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result p2
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, p2, :cond_2
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroid/view/View;
+
+    iget-boolean v5, v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->w:Z
+
+    if-eqz v5, :cond_0
+
+    invoke-static {v4}, Landroidx/recyclerview/widget/a;->N(Landroid/view/View;)I
+
+    move-result v5
+
+    if-le v5, p1, :cond_2
+
+    :cond_0
+    iget-boolean v5, v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->w:Z
+
+    if-nez v5, :cond_1
+
+    invoke-static {v4}, Landroidx/recyclerview/widget/a;->N(Landroid/view/View;)I
+
+    move-result v5
+
+    if-lt v5, p1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v4}, Landroid/view/View;->hasFocusable()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2
+
+    add-int/lit8 v2, v2, 0x1
+
+    move-object v3, v4
+
+    goto :goto_0
+
+    :cond_2
+    :goto_1
+    return-object v3
+
+    :cond_3
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result p2
+
+    add-int/lit8 p2, p2, -0x1
+
+    :goto_2
+    if-ltz p2, :cond_6
+
+    invoke-virtual {v1, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/view/View;
+
+    iget-boolean v4, v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->w:Z
+
+    if-eqz v4, :cond_4
+
+    invoke-static {v2}, Landroidx/recyclerview/widget/a;->N(Landroid/view/View;)I
+
+    move-result v4
+
+    if-ge v4, p1, :cond_6
+
+    :cond_4
+    iget-boolean v4, v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->w:Z
+
+    if-nez v4, :cond_5
+
+    invoke-static {v2}, Landroidx/recyclerview/widget/a;->N(Landroid/view/View;)I
+
+    move-result v4
+
+    if-gt v4, p1, :cond_5
+
+    goto :goto_3
+
+    :cond_5
+    invoke-virtual {v2}, Landroid/view/View;->hasFocusable()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_6
+
+    add-int/lit8 p2, p2, -0x1
+
+    move-object v3, v2
+
+    goto :goto_2
+
+    :cond_6
+    :goto_3
+    return-object v3
+.end method
+
+.method public j(I)I
     .locals 2
 
     iget v0, p0, Ls9f;->a:I
 
-    mul-int/lit8 v0, v0, 0x1f
+    const/high16 v1, -0x80000000
 
-    iget v1, p0, Ls9f;->b:I
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Ls9f;->c:I
-
-    add-int/2addr v0, v1
+    if-eq v0, v1, :cond_0
 
     return v0
-.end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    :cond_0
+    iget-object v0, p0, Ls9f;->e:Ljava/lang/Object;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast v0, Ljava/util/ArrayList;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
-    iget v1, p0, Ls9f;->a:I
+    move-result v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    if-nez v0, :cond_1
 
-    const-string v1, "."
+    return p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_1
+    iget-object p1, p0, Ls9f;->e:Ljava/lang/Object;
 
-    iget v2, p0, Ls9f;->b:I
+    check-cast p1, Ljava/util/ArrayList;
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    iget v1, p0, Ls9f;->c:I
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    check-cast p1, Landroid/view/View;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    check-cast v0, Lp9f;
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    iget-object v1, p0, Ls9f;->f:Ljava/lang/Object;
 
-    iget p2, p0, Ls9f;->a:I
+    check-cast v1, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    iget-object v1, v1, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->r:Law7;
 
-    iget p2, p0, Ls9f;->b:I
+    invoke-virtual {v1, p1}, Law7;->f(Landroid/view/View;)I
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    move-result p1
 
-    iget p2, p0, Ls9f;->c:I
+    iput p1, p0, Ls9f;->a:I
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-void
+    iget p1, p0, Ls9f;->a:I
+
+    return p1
 .end method

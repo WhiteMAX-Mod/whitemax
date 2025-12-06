@@ -1,189 +1,126 @@
-.class public final Lns5;
-.super Lsgf;
+.class public final synthetic Lns5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Ldrf;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Los5;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Los5;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    iput-object p1, p0, Lns5;->Y:Los5;
+    iput p1, p0, Lns5;->a:I
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Lns5;->b:Ljava/lang/Object;
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final get()Ljava/lang/Object;
+    .locals 4
 
-    check-cast p1, Lq54;
+    iget v0, p0, Lns5;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Lns5;->b:Ljava/lang/Object;
 
-    invoke-virtual {p0, p1, p2}, Lns5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
+    check-cast v1, Lg5i;
 
-    check-cast p1, Lns5;
+    iget-object v0, v1, Lg5i;->d:Lnm0;
 
-    sget-object p2, Lccg;->a:Lccg;
+    invoke-virtual {v0}, Lnm0;->u()Ljava/lang/Object;
 
-    invoke-virtual {p1, p2}, Lns5;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object p1
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    return-object p1
-.end method
+    const-string v3, "getWorkManager: enable = "
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    new-instance p1, Lns5;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lns5;->Y:Los5;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-direct {p1, v0, p2}, Lns5;-><init>(Los5;Lkotlin/coroutines/Continuation;)V
+    move-result-object v1
 
-    return-object p1
-.end method
+    const-string v2, "g5i"
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 31
+    invoke-static {v2, v1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-object/from16 v7, p0
+    invoke-virtual {v0}, Lnm0;->u()Ljava/lang/Object;
 
-    iget-object v8, v7, Lns5;->Y:Los5;
+    move-result-object v1
 
-    iget-object v5, v8, Los5;->o:Ljava/lang/String;
+    check-cast v1, Ljava/lang/Boolean;
 
-    iget v0, v7, Lns5;->X:I
+    if-eqz v1, :cond_0
 
-    const/4 v1, 0x1
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    if-eqz v0, :cond_1
+    move-result v1
 
-    if-ne v0, v1, :cond_0
+    if-eqz v1, :cond_0
 
-    invoke-static/range {p1 .. p1}, Lxxi;->b(Ljava/lang/Object;)V
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-static {v0}, Lvqa;->k(Ljava/lang/Object;)Lqsa;
+
+    move-result-object v0
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
+    const-string v1, "waiting for enable ..."
 
-    const-string v1, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-static {v2, v1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    invoke-static/range {p1 .. p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    if-eqz v5, :cond_2
-
-    iget-object v0, v8, Los5;->t0:Liu7;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lceg;
-
-    iget-wide v2, v8, Los5;->b:J
-
-    move-wide v9, v2
-
-    iget-wide v3, v8, Los5;->c:J
-
-    iput v1, v7, Lns5;->X:I
-
-    sget-object v6, Lx10;->X:Lx10;
-
-    move-wide v1, v9
-
-    invoke-virtual/range {v0 .. v7}, Lceg;->a(JJLjava/lang/String;Lx10;Ly14;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    sget-object v1, Lr54;->a:Lr54;
-
-    if-ne v0, v1, :cond_2
-
-    return-object v1
-
-    :cond_2
     :goto_0
-    iget-object v0, v8, Los5;->s0:Liu7;
+    return-object v0
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    :pswitch_0
+    check-cast v1, Lps5;
+
+    iget-object v0, v1, Lps5;->a:Lkz4;
+
+    invoke-virtual {v0}, Lkz4;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lir5;
+    check-cast v0, Lkr5;
 
-    iget-wide v10, v8, Los5;->c:J
+    invoke-virtual {v0}, Lkr5;->a()Lm2f;
 
-    if-nez v5, :cond_3
+    move-result-object v0
 
-    const-string v5, ""
+    new-instance v1, Ler5;
 
-    :cond_3
-    move-object v12, v5
+    const/4 v2, 0x3
 
-    iget-wide v1, v8, Los5;->X:J
+    invoke-direct {v1, v2}, Ler5;-><init>(I)V
 
-    iget-object v3, v8, Los5;->Y:Ljava/lang/String;
+    new-instance v3, Lvr8;
 
-    iget-object v4, v8, Los5;->Z:Ljava/lang/String;
+    invoke-direct {v3, v0, v1, v2}, Lvr8;-><init>(Ljava/lang/Object;Ltm6;I)V
 
-    new-instance v9, Luof;
+    return-object v3
 
-    const-wide/16 v13, 0x0
+    nop
 
-    const-wide/16 v15, 0x0
-
-    const-wide/16 v17, 0x0
-
-    const-wide/16 v19, 0x0
-
-    const/16 v22, 0x1
-
-    const/16 v23, 0x0
-
-    const/16 v27, 0x0
-
-    const/16 v28, 0x0
-
-    const/16 v29, 0x0
-
-    const-string v30, "FILE"
-
-    move-wide/from16 v24, v1
-
-    move-object/from16 v26, v3
-
-    move-object/from16 v21, v4
-
-    invoke-direct/range {v9 .. v30}, Luof;-><init>(JLjava/lang/String;JJJJLjava/lang/String;ZZJLjava/lang/String;IZZLjava/lang/String;)V
-
-    invoke-virtual {v0, v9}, Lir5;->a(Luof;)Lx23;
-
-    sget-object v0, Lccg;->a:Lccg;
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

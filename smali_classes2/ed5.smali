@@ -1,109 +1,45 @@
 .class public final Led5;
-.super Lre;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final synthetic b:I
-
-.field public final synthetic c:Landroid/graphics/drawable/Drawable$Callback;
-
-
-# direct methods
-.method public synthetic constructor <init>(Landroid/graphics/drawable/Drawable$Callback;I)V
-    .locals 0
-
-    iput p2, p0, Led5;->b:I
-
-    iput-object p1, p0, Led5;->c:Landroid/graphics/drawable/Drawable$Callback;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+# interfaces
+.implements Lkyg;
 
 
 # virtual methods
-.method public final a(Landroid/graphics/drawable/Drawable;)V
-    .locals 1
+.method public final a(ILjava/lang/String;)Ln5g;
+    .locals 0
 
-    iget v0, p0, Led5;->b:I
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
 
-    packed-switch v0, :pswitch_data_0
+    move-result p2
 
-    iget-object v0, p0, Led5;->c:Landroid/graphics/drawable/Drawable$Callback;
+    if-nez p2, :cond_0
 
-    check-cast v0, Lxi8;
+    const-class p2, Led5;
 
-    iget-object v0, v0, Lxi8;->A0:Landroid/content/res/ColorStateList;
+    invoke-static {p2}, Lvid;->a(Ljava/lang/Class;)Lca3;
 
-    if-eqz v0, :cond_0
+    move-result-object p2
 
-    invoke-static {p1, v0}, Lv05;->h(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-static {p1, p2}, Lapi;->b(ILca3;)Ljava/lang/Integer;
 
-    :cond_0
-    return-void
+    move-result-object p1
 
-    :pswitch_0
-    iget-object p1, p0, Led5;->c:Landroid/graphics/drawable/Drawable$Callback;
+    if-eqz p1, :cond_0
 
-    check-cast p1, Lfd5;
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    invoke-virtual {p1}, Lfd5;->a()V
+    move-result p1
 
-    return-void
+    new-instance p2, Ln5g;
 
-    nop
+    invoke-direct {p2, p1}, Ln5g;-><init>(I)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final b(Landroid/graphics/drawable/Drawable;)V
-    .locals 3
-
-    iget v0, p0, Led5;->b:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Led5;->c:Landroid/graphics/drawable/Drawable$Callback;
-
-    check-cast v0, Lxi8;
-
-    iget-object v1, v0, Lxi8;->A0:Landroid/content/res/ColorStateList;
-
-    if-eqz v1, :cond_0
-
-    iget-object v0, v0, Lxi8;->E0:[I
-
-    invoke-virtual {v1}, Landroid/content/res/ColorStateList;->getDefaultColor()I
-
-    move-result v2
-
-    invoke-virtual {v1, v0, v2}, Landroid/content/res/ColorStateList;->getColorForState([II)I
-
-    move-result v0
-
-    invoke-static {p1, v0}, Lv05;->g(Landroid/graphics/drawable/Drawable;I)V
+    return-object p2
 
     :cond_0
-    return-void
+    const/4 p1, 0x0
 
-    :pswitch_0
-    iget-object p1, p0, Led5;->c:Landroid/graphics/drawable/Drawable$Callback;
-
-    check-cast p1, Lfd5;
-
-    invoke-virtual {p1}, Lfd5;->b()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

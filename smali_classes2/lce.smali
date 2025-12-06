@@ -1,126 +1,110 @@
 .class public final Llce;
-.super Lqce;
+.super Ldtf;
 .source "SourceFile"
 
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Llce;",
-            ">;"
-        }
-    .end annotation
-.end field
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic X:Lmce;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lo0e;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1}, Lo0e;-><init>(I)V
-
-    sput-object v0, Llce;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(I)V
+.method public constructor <init>(Lmce;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Llce;->X:Lmce;
 
-    iput p1, p0, Llce;->a:I
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x0
+    check-cast p1, Ljava/util/List;
 
-    return v0
-.end method
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    invoke-virtual {p0, p1, p2}, Llce;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const/4 v0, 0x1
+    move-result-object p1
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Llce;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Llce;
 
-    iget v1, p0, Llce;->a:I
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    iget p1, p1, Llce;->a:I
+    invoke-virtual {p1, p2}, Llce;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget v0, p0, Llce;->a:I
+    new-instance v0, Llce;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    iget-object v1, p0, Llce;->X:Lmce;
 
-    move-result v0
+    invoke-direct {v0, v1, p2}, Llce;-><init>(Lmce;Lkotlin/coroutines/Continuation;)V
 
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "Icon(icon="
-
-    const-string v1, ")"
-
-    iget v2, p0, Llce;->a:I
-
-    invoke-static {v2, v0, v1}, Ley1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    iput-object p1, v0, Llce;->o:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    iget p2, p0, Llce;->a:I
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    iget-object p1, p0, Llce;->o:Ljava/lang/Object;
 
-    return-void
+    check-cast p1, Ljava/util/List;
+
+    iget-object v0, p0, Llce;->X:Lmce;
+
+    iget-object v0, v0, Lmce;->a:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->clear()V
+
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljce;
+
+    iget-wide v2, v1, Ljce;->a:J
+
+    new-instance v4, Ljava/lang/Long;
+
+    invoke-direct {v4, v2, v3}, Ljava/lang/Long;-><init>(J)V
+
+    invoke-interface {v0, v4, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_0
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

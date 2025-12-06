@@ -1,40 +1,39 @@
-.class public abstract Lcom/my/tracker/MyTracker$a;
+.class Lcom/my/tracker/MyTracker$a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcom/my/tracker/core/TimeCore;
+
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/my/tracker/MyTracker;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/my/tracker/MyTracker;->initTracker(Ljava/lang/String;Landroid/app/Application;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x19
-    name = "a"
+    accessFlags = 0x1
+    name = null
 .end annotation
 
 
-# static fields
-.field public static final a:Lcom/my/tracker/obfuscated/z0;
-
-.field static final b:Lcom/my/tracker/MyTrackerConfig;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
-    invoke-static {}, Lcom/my/tracker/obfuscated/z0;->r()Lcom/my/tracker/obfuscated/z0;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/my/tracker/MyTracker$a;->a:Lcom/my/tracker/obfuscated/z0;
-
-    invoke-static {v0}, Lcom/my/tracker/MyTrackerConfig;->a(Lcom/my/tracker/obfuscated/z0;)Lcom/my/tracker/MyTrackerConfig;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/my/tracker/MyTracker$a;->b:Lcom/my/tracker/MyTrackerConfig;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public currentTimeSec()J
+    .locals 2
+
+    invoke-static {}, Lcom/my/tracker/core/utils/TimeUtils;->currentTimeSec()J
+
+    move-result-wide v0
+
+    return-wide v0
 .end method

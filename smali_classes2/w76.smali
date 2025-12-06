@@ -1,99 +1,61 @@
 .class public final Lw76;
-.super Landroidx/recyclerview/widget/RecyclerView;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final T1:Li76;
+# static fields
+.field public static final a:Lw76;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/util/concurrent/Executor;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
-    const/4 v0, 0x0
+    new-instance v0, Lw76;
 
-    invoke-direct {p0, p1, v0}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Li76;
-
-    invoke-direct {v0, p2}, Li76;-><init>(Ljava/util/concurrent/Executor;)V
-
-    iput-object v0, p0, Lw76;->T1:Li76;
-
-    new-instance p2, Lv76;
-
-    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
-
-    new-instance v1, Lone/me/chats/list/folderwidget/section/FolderWidgetsSectionView$1;
-
-    invoke-direct {v1, p1, p0}, Lone/me/chats/list/folderwidget/section/FolderWidgetsSectionView$1;-><init>(Landroid/content/Context;Lw76;)V
-
-    invoke-virtual {p0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
-
-    invoke-virtual {p0, p2}, Landroidx/recyclerview/widget/RecyclerView;->l(Le7d;)V
-
-    invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lt6d;)V
-
-    new-instance p1, Lj01;
-
-    const/16 p2, 0x8
-
-    int-to-float p2, p2
-
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p2, v0
-
-    invoke-static {p2}, Lfhi;->b(F)I
-
-    move-result p2
-
-    const/4 v0, 0x6
-
-    int-to-float v0, v0
-
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    invoke-static {v0}, Lfhi;->b(F)I
-
-    move-result v0
-
-    const/4 v1, 0x4
-
-    invoke-direct {p1, p2, v0, v1}, Lj01;-><init>(III)V
-
-    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->j(Lz6d;)V
+    sput-object v0, Lw76;->a:Lw76;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final setListener(Lu76;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iget-object v0, p0, Lw76;->T1:Li76;
+    const/4 v0, 0x1
 
-    iput-object p1, v0, Li76;->Y:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    return-void
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lw76;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x333710ea
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "FlushSignal"
+
+    return-object v0
 .end method

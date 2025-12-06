@@ -2,89 +2,30 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lvef;
 
+# instance fields
+.field public final a:Lb3c;
 
-# static fields
-.field public static final a:J
+.field public final b:Z
+
+.field public final c:J
+
+.field public final d:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lb3c;ZJJ)V
+    .locals 0
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-wide/16 v1, 0x5
+    iput-object p1, p0, Lvj4;->a:Lb3c;
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+    iput-boolean p2, p0, Lvj4;->b:Z
 
-    move-result-wide v0
+    iput-wide p3, p0, Lvj4;->c:J
 
-    sput-wide v0, Lvj4;->a:J
+    iput-wide p5, p0, Lvj4;->d:J
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 8
-
-    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Runtime;->maxMemory()J
-
-    move-result-wide v0
-
-    const-wide/32 v2, 0x7fffffff
-
-    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v0
-
-    long-to-int v0, v0
-
-    const/high16 v1, 0x1000000
-
-    if-ge v0, v1, :cond_0
-
-    const/high16 v0, 0x100000
-
-    :goto_0
-    move v2, v0
-
-    goto :goto_1
-
-    :cond_0
-    const/high16 v1, 0x2000000
-
-    if-ge v0, v1, :cond_1
-
-    const/high16 v0, 0x200000
-
-    goto :goto_0
-
-    :cond_1
-    const/high16 v0, 0x400000
-
-    goto :goto_0
-
-    :goto_1
-    div-int/lit8 v7, v2, 0x8
-
-    new-instance v1, Lh89;
-
-    const v3, 0x7fffffff
-
-    sget-wide v5, Lvj4;->a:J
-
-    move v4, v2
-
-    invoke-direct/range {v1 .. v7}, Lh89;-><init>(IIIJI)V
-
-    return-object v1
 .end method

@@ -1,119 +1,99 @@
 .class public final Law2;
-.super Lpd0;
+.super Ldtf;
 .source "SourceFile"
+
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public final b:Ljava/lang/String;
+.field public final synthetic X:Lzx2;
 
-.field public final c:Ljava/lang/String;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
+.method public constructor <init>(Lzx2;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/4 v0, 0x4
+    iput-object p1, p0, Law2;->X:Lzx2;
 
-    invoke-direct {p0, v0}, Lpd0;-><init>(I)V
+    const/4 p1, 0x2
 
-    iput-object p1, p0, Law2;->b:Ljava/lang/String;
-
-    iput-object p2, p0, Law2;->c:Ljava/lang/String;
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lsg2;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Law2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Law2;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Law2;
 
-    iget-object v1, p0, Law2;->b:Ljava/lang/String;
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    iget-object v3, p1, Law2;->b:Ljava/lang/String;
+    invoke-virtual {p1, p2}, Law2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    return-object p2
+.end method
 
-    move-result v1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    if-nez v1, :cond_2
+    new-instance v0, Law2;
 
-    return v2
+    iget-object v1, p0, Law2;->X:Lzx2;
 
-    :cond_2
-    iget-object v1, p0, Law2;->c:Ljava/lang/String;
+    invoke-direct {v0, v1, p2}, Law2;-><init>(Lzx2;Lkotlin/coroutines/Continuation;)V
 
-    iget-object p1, p1, Law2;->c:Ljava/lang/String;
+    iput-object p1, v0, Law2;->o:Ljava/lang/Object;
 
-    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Law2;->o:Ljava/lang/Object;
+
+    check-cast p1, Lsg2;
+
+    sget-object v0, Lsg2;->a:Lsg2;
+
+    invoke-static {p1, v0}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-nez p1, :cond_3
+    if-eqz p1, :cond_0
 
-    return v2
+    iget-object p1, p0, Law2;->X:Lzx2;
 
-    :cond_3
-    return v0
-.end method
+    iget-object p1, p1, Lzx2;->d1:Lci5;
 
-.method public final hashCode()I
-    .locals 2
+    sget-object v0, Lcw2;->c:Lcw2;
 
-    iget-object v0, p0, Law2;->b:Ljava/lang/String;
+    invoke-static {p1, v0}, Lxfh;->r(Lci5;Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    sget-object p1, Lqqg;->a:Lqqg;
 
-    move-result v0
+    return-object p1
 
-    mul-int/lit8 v0, v0, 0x1f
+    :cond_0
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    iget-object v1, p0, Law2;->c:Ljava/lang/String;
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", path="
-
-    const-string v1, ")"
-
-    const-string v2, "CropPhoto(uriAsString="
-
-    iget-object v3, p0, Law2;->b:Ljava/lang/String;
-
-    iget-object v4, p0, Law2;->c:Ljava/lang/String;
-
-    invoke-static {v2, v3, v0, v4, v1}, Ley1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    throw p1
 .end method

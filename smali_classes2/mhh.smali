@@ -2,222 +2,117 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final Companion:Lkhh;
+# interfaces
+.implements Landroid/view/View$OnAttachStateChangeListener;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public a:Lx9f;
 
-.field public final b:Ljava/lang/String;
+.field public final synthetic b:Ldtf;
 
-.field public final c:Ljava/lang/String;
+.field public final synthetic c:Landroid/view/View;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lkhh;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lmhh;->Companion:Lkhh;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-    .locals 2
+.method public constructor <init>(Lum6;Landroid/view/View;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    and-int/lit8 v0, p2, 0x1
+    check-cast p1, Ldtf;
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Lmhh;->b:Ldtf;
 
-    if-nez v0, :cond_0
-
-    iput-object v1, p0, Lmhh;->a:Ljava/lang/String;
-
-    goto :goto_0
-
-    :cond_0
-    iput-object p1, p0, Lmhh;->a:Ljava/lang/String;
-
-    :goto_0
-    and-int/lit8 p1, p2, 0x2
-
-    if-nez p1, :cond_1
-
-    iput-object v1, p0, Lmhh;->b:Ljava/lang/String;
-
-    goto :goto_1
-
-    :cond_1
-    iput-object p3, p0, Lmhh;->b:Ljava/lang/String;
-
-    :goto_1
-    and-int/lit8 p1, p2, 0x4
-
-    if-nez p1, :cond_2
-
-    iput-object v1, p0, Lmhh;->c:Ljava/lang/String;
-
-    return-void
-
-    :cond_2
-    iput-object p4, p0, Lmhh;->c:Ljava/lang/String;
+    iput-object p2, p0, Lmhh;->c:Landroid/view/View;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final onViewAttachedToWindow(Landroid/view/View;)V
+    .locals 6
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lmhh;->a:Lx9f;
 
-    if-ne p0, p1, :cond_0
+    if-eqz v0, :cond_0
 
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lmhh;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lmhh;
-
-    iget-object v1, p0, Lmhh;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lmhh;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lmhh;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lmhh;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lmhh;->c:Ljava/lang/String;
-
-    iget-object p1, p1, Lmhh;->c:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lmhh;->a:Ljava/lang/String;
-
-    if-nez v1, :cond_0
-
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Lmhh;->b:Ljava/lang/String;
-
-    if-nez v2, :cond_1
-
-    move v2, v0
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
-
-    :goto_1
-    add-int/2addr v1, v2
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Lmhh;->c:Ljava/lang/String;
-
-    if-nez v2, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v0}, Lo0;->isActive()Z
 
     move-result v0
 
-    :goto_2
-    add-int/2addr v1, v0
+    const/4 v1, 0x1
 
-    return v1
+    if-ne v0, v1, :cond_0
+
+    return-void
+
+    :cond_0
+    sget-object v0, La93;->s0:Lv1a;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lv1a;->x(Landroid/content/Context;)La93;
+
+    move-result-object v0
+
+    iget-object v0, v0, La93;->Y:Ljava/lang/Object;
+
+    check-cast v0, Lhbd;
+
+    new-instance v1, Lkhh;
+
+    iget-object v2, p0, Lmhh;->b:Ldtf;
+
+    iget-object v3, p0, Lmhh;->c:Landroid/view/View;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v1, v2, v3, p1, v4}, Lkhh;-><init>(Lum6;Landroid/view/View;Landroid/view/View;Lkotlin/coroutines/Continuation;)V
+
+    new-instance v5, Lm36;
+
+    invoke-direct {v5, v1, v0}, Lm36;-><init>(Lsm6;Lx26;)V
+
+    new-instance v0, Llhh;
+
+    invoke-direct {v0, v2, v3, v4}, Llhh;-><init>(Lum6;Landroid/view/View;Lkotlin/coroutines/Continuation;)V
+
+    new-instance v1, Lg56;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v5, v0, v2}, Lg56;-><init>(Lx26;Lsm6;I)V
+
+    invoke-static {p1}, Ltfh;->b(Landroid/view/View;)Lx38;
+
+    move-result-object p1
+
+    invoke-static {v1, p1}, Lgw0;->w(Lx26;Lf84;)Lx9f;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lmhh;->a:Lx9f;
+
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final onViewDetachedFromWindow(Landroid/view/View;)V
+    .locals 1
 
-    const-string v0, ", title="
+    iget-object p1, p0, Lmhh;->a:Lx9f;
 
-    const-string v1, ", text="
+    const/4 v0, 0x0
 
-    const-string v2, "WebAppShareRequest(url="
+    if-eqz p1, :cond_0
 
-    iget-object v3, p0, Lmhh;->a:Ljava/lang/String;
+    invoke-virtual {p1, v0}, Lsu7;->cancel(Ljava/util/concurrent/CancellationException;)V
 
-    iget-object v4, p0, Lmhh;->b:Ljava/lang/String;
+    :cond_0
+    iput-object v0, p0, Lmhh;->a:Lx9f;
 
-    invoke-static {v2, v3, v0, v4, v1}, Ley1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    iget-object v2, p0, Lmhh;->c:Ljava/lang/String;
-
-    invoke-static {v0, v2, v1}, Li57;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

@@ -1,15 +1,11 @@
-.class public abstract Lv35;
+.class public interface abstract Lv35;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public static final a(Ljava/time/Duration;)J
-    .locals 2
+# virtual methods
+.method public abstract a(Lsc3;)Landroid/graphics/drawable/Drawable;
+.end method
 
-    invoke-virtual {p0}, Ljava/time/Duration;->toMillis()J
-
-    move-result-wide v0
-
-    return-wide v0
+.method public abstract b(Lsc3;)Z
 .end method

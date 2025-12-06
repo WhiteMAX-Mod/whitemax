@@ -14,7 +14,7 @@
         "",
         "key",
         "value",
-        "Lccg;",
+        "Lqqg;",
         "setKey",
         "(Ljava/lang/String;Ljava/lang/String;)V",
         "msg",

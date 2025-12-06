@@ -1,90 +1,329 @@
 .class public final Lbci;
-.super Ljava/lang/Object;
+.super Lsv6;
 .source "SourceFile"
 
 # interfaces
-.implements Ltha;
+.implements Lk3g;
 
 
 # static fields
-.field public static final a:Lbci;
+.field public static final k:Lxo8;
+
+.field public static final l:Lxo8;
+
+.field public static final m:Lxo8;
+
+.field public static final n:Lxo8;
+
+.field public static o:I = 0x1
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method static synthetic constructor <clinit>()V
+    .locals 4
 
-    new-instance v0, Lbci;
+    new-instance v0, Lqha;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v1, 0xd
 
-    sput-object v0, Lbci;->a:Lbci;
+    invoke-direct {v0, v1}, Lqha;-><init>(I)V
 
-    new-instance v0, Ltwh;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ltwh;-><init>(I)V
-
-    const-class v1, Lmxh;
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
+    new-instance v1, Lpai;
 
     const/4 v2, 0x2
 
-    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
+    invoke-direct {v1, v2}, Lpai;-><init>(I)V
 
-    move-result-object v0
+    new-instance v2, Lxo8;
 
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+    const-string v3, "ClientTelemetry.API"
 
-    move-result-object v0
+    invoke-direct {v2, v3, v1, v0}, Lxo8;-><init>(Ljava/lang/String;Lpai;Lqha;)V
+
+    sput-object v2, Lbci;->k:Lxo8;
+
+    new-instance v0, Lqha;
+
+    const/16 v1, 0xd
+
+    invoke-direct {v0, v1}, Lqha;-><init>(I)V
+
+    new-instance v1, Lpai;
 
     const/4 v2, 0x3
 
-    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
+    invoke-direct {v1, v2}, Lpai;-><init>(I)V
 
-    move-result-object v0
+    new-instance v2, Lxo8;
 
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+    const-string v3, "ModuleInstall.API"
 
-    move-result-object v0
+    invoke-direct {v2, v3, v1, v0}, Lxo8;-><init>(Ljava/lang/String;Lpai;Lqha;)V
+
+    sput-object v2, Lbci;->l:Lxo8;
+
+    new-instance v0, Lqha;
+
+    const/16 v1, 0xd
+
+    invoke-direct {v0, v1}, Lqha;-><init>(I)V
+
+    new-instance v1, Lxo8;
+
+    new-instance v2, Lpai;
+
+    const/4 v3, 0x5
+
+    invoke-direct {v2, v3}, Lpai;-><init>(I)V
+
+    const-string v3, "LocationServices.API"
+
+    invoke-direct {v1, v3, v2, v0}, Lxo8;-><init>(Ljava/lang/String;Lpai;Lqha;)V
+
+    sput-object v1, Lbci;->m:Lxo8;
+
+    new-instance v0, Lqha;
+
+    const/16 v1, 0xd
+
+    invoke-direct {v0, v1}, Lqha;-><init>(I)V
+
+    new-instance v1, Lpai;
 
     const/4 v2, 0x4
 
-    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
+    invoke-direct {v1, v2}, Lpai;-><init>(I)V
 
-    move-result-object v0
+    new-instance v2, Lxo8;
 
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
+    const-string v3, "SmsRetriever.API"
 
-    move-result-object v0
+    invoke-direct {v2, v3, v1, v0}, Lxo8;-><init>(Ljava/lang/String;Lpai;Lqha;)V
 
-    const/4 v2, 0x5
-
-    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
+    sput-object v2, Lbci;->n:Lxo8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public varargs c([Lbjb;)Lybj;
+    .locals 6
 
-    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    array-length v0, p1
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    if-lez v0, :cond_0
+
+    move v3, v2
+
+    goto :goto_0
+
+    :cond_0
+    move v3, v1
+
+    :goto_0
+    const-string v4, "Please provide at least one OptionalModuleApi."
+
+    invoke-static {v4, v3}, Ls5j;->a(Ljava/lang/String;Z)V
+
+    move v3, v1
+
+    :goto_1
+    if-ge v3, v0, :cond_1
+
+    aget-object v4, p1, v3
+
+    const-string v5, "Requested API must not be null."
+
+    invoke-static {v4, v5}, Ls5j;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
 
-    throw p1
+    invoke-static {p1, v1}, Lbm;->b(Ljava/util/List;Z)Lbm;
+
+    move-result-object p1
+
+    iget-object v0, p1, Lbm;->a:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    new-instance p1, Lz1a;
+
+    invoke-direct {p1, v2, v1}, Lz1a;-><init>(ZI)V
+
+    invoke-static {p1}, Ln5e;->f(Ljava/lang/Object;)Lybj;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_2
+    invoke-static {}, Lmg7;->e()Lrs0;
+
+    move-result-object v0
+
+    sget-object v2, Lkoi;->a:Lqt5;
+
+    filled-new-array {v2}, [Lqt5;
+
+    move-result-object v2
+
+    iput-object v2, v0, Lrs0;->e:Ljava/lang/Object;
+
+    const/16 v2, 0x6aa5
+
+    iput v2, v0, Lrs0;->b:I
+
+    iput-boolean v1, v0, Lrs0;->c:Z
+
+    new-instance v2, Ln4e;
+
+    invoke-direct {v2, p0, p1}, Ln4e;-><init>(Lbci;Lbm;)V
+
+    iput-object v2, v0, Lrs0;->d:Ljava/lang/Object;
+
+    invoke-virtual {v0}, Lrs0;->e()Libi;
+
+    move-result-object p1
+
+    invoke-virtual {p0, v1, p1}, Lsv6;->b(ILmg7;)Lybj;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public d(Lj3g;)Lybj;
+    .locals 2
+
+    invoke-static {}, Lmg7;->e()Lrs0;
+
+    move-result-object v0
+
+    sget-object v1, Lioi;->a:Lqt5;
+
+    filled-new-array {v1}, [Lqt5;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lrs0;->e:Ljava/lang/Object;
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, v0, Lrs0;->c:Z
+
+    new-instance v1, Lzid;
+
+    invoke-direct {v1, p1}, Lzid;-><init>(Ljava/lang/Object;)V
+
+    iput-object v1, v0, Lrs0;->d:Ljava/lang/Object;
+
+    invoke-virtual {v0}, Lrs0;->e()Libi;
+
+    move-result-object p1
+
+    const/4 v0, 0x2
+
+    invoke-virtual {p0, v0, p1}, Lsv6;->b(ILmg7;)Lybj;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public declared-synchronized e()I
+    .locals 4
+
+    monitor-enter p0
+
+    :try_start_0
+    sget v0, Lbci;->o:I
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_2
+
+    iget-object v0, p0, Lsv6;->a:Landroid/content/Context;
+
+    sget-object v1, Ltv6;->d:Ltv6;
+
+    const v2, 0xbdfcb8
+
+    invoke-virtual {v1, v0, v2}, Luv6;->c(Landroid/content/Context;I)I
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    const/4 v0, 0x4
+
+    sput v0, Lbci;->o:I
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_0
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v0, v3, v2}, Luv6;->b(Landroid/content/Context;Ljava/lang/String;I)Landroid/content/Intent;
+
+    move-result-object v1
+
+    if-nez v1, :cond_1
+
+    const-string v1, "com.google.android.gms.auth.api.fallback"
+
+    invoke-static {v0, v1}, Ld85;->a(Landroid/content/Context;Ljava/lang/String;)I
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x3
+
+    sput v0, Lbci;->o:I
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x2
+
+    sput v0, Lbci;->o:I
+
+    :cond_2
+    :goto_0
+    sget v0, Lbci;->o:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return v0
+
+    :goto_1
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
 .end method

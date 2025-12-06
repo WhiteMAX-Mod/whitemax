@@ -1,43 +1,97 @@
-.class public abstract Ljo4;
+.class public final Ljo4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
+.field public final a:Ldz9;
 
-.field public final b:Lo1g;
-
-.field public final c:I
-
-.field public final o:Lkb6;
+.field public final b:Ld47;
 
 
 # direct methods
-.method public constructor <init>(ILo1g;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljo4;
 
-    iput p1, p0, Ljo4;->a:I
+    new-instance v1, Lba3;
 
-    iput-object p2, p0, Ljo4;->b:Lo1g;
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    iput p3, p0, Ljo4;->c:I
-
-    iget-object p1, p2, Lo1g;->c:[Lkb6;
-
-    aget-object p1, p1, p3
-
-    iput-object p1, p0, Ljo4;->o:Lkb6;
+    invoke-direct {v0, v1}, Ljo4;-><init>(Lcz9;)V
 
     return-void
 .end method
 
+.method public constructor <init>(Lcz9;)V
+    .locals 2
 
-# virtual methods
-.method public abstract a()I
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract c(Ljo4;)Z
+    new-instance p1, Ldz9;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ljo4;->a:Ldz9;
+
+    new-instance p1, Ld47;
+
+    const-string v0, "/io/michaelrocks/libphonenumber/android/data/PhoneNumberMetadataProto"
+
+    const/4 v1, 0x2
+
+    invoke-direct {p1, v0, v1}, Ld47;-><init>(Ljava/lang/String;I)V
+
+    iput-object p1, p0, Ljo4;->b:Ld47;
+
+    const-string p1, "/io/michaelrocks/libphonenumber/android/data/ShortNumberMetadataProto"
+
+    const-string v0, "_"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    const-string p1, "/io/michaelrocks/libphonenumber/android/data/PhoneNumberAlternateFormatsProto"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    new-instance p1, Li5i;
+
+    new-instance v0, Luha;
+
+    const/16 v1, 0x17
+
+    invoke-direct {v0, v1}, Luha;-><init>(I)V
+
+    invoke-direct {p1, v0}, Li5i;-><init>(Ljn8;)V
+
+    new-instance p1, Li5i;
+
+    new-instance v0, Ltha;
+
+    invoke-direct {v0, v1}, Ltha;-><init>(I)V
+
+    invoke-direct {p1, v0}, Li5i;-><init>(Ljn8;)V
+
+    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    return-void
 .end method

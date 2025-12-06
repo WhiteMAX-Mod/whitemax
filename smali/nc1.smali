@@ -1,64 +1,26 @@
 .class public final Lnc1;
-.super Ljava/lang/Object;
+.super Ld2f;
 .source "SourceFile"
-
-# interfaces
-.implements Lpc1;
-
-
-# static fields
-.field public static final a:Lnc1;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lnc1;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lnc1;->a:Lnc1;
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final z(Lt98;)V
     .locals 1
 
-    const/4 v0, 0x1
+    instance-of v0, p1, Lte1;
 
-    if-ne p0, p1, :cond_0
+    if-nez v0, :cond_0
 
-    return v0
+    return-void
 
     :cond_0
-    instance-of p1, p1, Lnc1;
+    iget-object v0, p0, Lmid;->a:Landroid/view/View;
 
-    if-nez p1, :cond_1
+    check-cast v0, Lroe;
 
-    const/4 p1, 0x0
+    check-cast p1, Lioe;
 
-    return p1
+    invoke-virtual {v0, p1}, Lroe;->setModelItem(Lioe;)V
 
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0xe924260
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "ShowRateCallBottomSheet"
-
-    return-object v0
+    return-void
 .end method

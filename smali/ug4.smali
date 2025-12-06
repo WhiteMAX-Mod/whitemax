@@ -1,68 +1,110 @@
-.class public final synthetic Lug4;
+.class public abstract Lug4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lu28;
 
+# static fields
+.field public static final a:Z
 
-# instance fields
-.field public final synthetic a:I
+.field public static final b:Lvn3;
 
-.field public final synthetic b:Lnd;
-
-.field public final synthetic c:Lmb6;
+.field public static final synthetic c:Ltg4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lnd;Lmb6;Lkf4;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput p4, p0, Lug4;->a:I
+    new-instance v0, Ljava/lang/Exception;
 
-    iput-object p1, p0, Lug4;->b:Lnd;
+    invoke-direct {v0}, Ljava/lang/Exception;-><init>()V
 
-    iput-object p2, p0, Lug4;->c:Lmb6;
+    const-class v1, La8i;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    return-void
-.end method
+    move-result-object v1
 
+    invoke-static {v0, v1}, La7j;->a(Ljava/lang/Exception;Ljava/lang/String;)Ljava/lang/StackTraceElement;
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)V
-    .locals 2
+    new-instance v0, Ljava/text/SimpleDateFormat;
 
-    iget v0, p0, Lug4;->a:I
+    const-string v1, "yyyy/MM/dd HH:mm:ss"
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lug4;->c:Lmb6;
+    new-instance v0, Lvn3;
 
-    check-cast p1, Lod;
+    const/4 v1, 0x0
 
-    iget-object v1, p0, Lug4;->b:Lnd;
+    invoke-direct {v0, v1}, Lvn3;-><init>(Z)V
 
-    invoke-interface {p1, v1, v0}, Lod;->L(Lnd;Lmb6;)V
+    const/4 v0, 0x1
 
-    return-void
+    sput-boolean v0, Lug4;->a:Z
 
-    :pswitch_0
-    iget-object v0, p0, Lug4;->c:Lmb6;
+    const/4 v2, 0x0
 
-    check-cast p1, Lod;
+    :try_start_0
+    const-string v3, "kotlinx.coroutines.debug.internal.ByteBuddyDynamicAttach"
 
-    iget-object v1, p0, Lug4;->b:Lnd;
+    invoke-static {v3}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
-    invoke-interface {p1, v1, v0}, Lod;->b0(Lnd;Lmb6;)V
+    move-result-object v3
 
-    return-void
+    invoke-virtual {v3}, Ljava/lang/Class;->getConstructors()[Ljava/lang/reflect/Constructor;
 
+    move-result-object v3
+
+    aget-object v1, v3, v1
+
+    invoke-virtual {v1, v2}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Luog;->d(ILjava/lang/Object;)V
+
+    check-cast v1, Lem6;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    new-instance v3, Lipd;
+
+    invoke-direct {v3, v1}, Lipd;-><init>(Ljava/lang/Throwable;)V
+
+    move-object v1, v3
+
+    :goto_0
     nop
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    instance-of v3, v1, Lipd;
+
+    if-eqz v3, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    move-object v2, v1
+
+    :goto_1
+    check-cast v2, Lem6;
+
+    new-instance v1, Lvn3;
+
+    invoke-direct {v1, v0}, Lvn3;-><init>(Z)V
+
+    sput-object v1, Lug4;->b:Lvn3;
+
+    new-instance v0, Ltg4;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lug4;->c:Ltg4;
+
+    return-void
 .end method

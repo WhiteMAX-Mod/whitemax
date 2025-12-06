@@ -4,39 +4,32 @@
 
 
 # instance fields
-.field public final a:Lmb0;
+.field public final a:J
 
-.field public final b:I
+.field public final b:J
+
+.field public final c:J
 
 
 # direct methods
-.method public constructor <init>(Lmb0;I)V
+.method public constructor <init>(JJJ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p1, :cond_0
+    iput-wide p1, p0, Llb0;->a:J
 
-    iput-object p1, p0, Llb0;->a:Lmb0;
+    iput-wide p3, p0, Llb0;->b:J
 
-    iput p2, p0, Llb0;->b:I
+    iput-wide p5, p0, Llb0;->c:J
 
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "Null quality"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 7
 
     const/4 v0, 0x1
 
@@ -53,21 +46,29 @@
 
     check-cast p1, Llb0;
 
-    iget-object v1, p0, Llb0;->a:Lmb0;
+    iget-wide v3, p0, Llb0;->a:J
 
-    iget-object v3, p1, Llb0;->a:Lmb0;
+    iget-wide v5, p1, Llb0;->a:J
 
-    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    cmp-long v1, v3, v5
 
-    move-result v1
+    if-nez v1, :cond_1
 
-    if-eqz v1, :cond_1
+    iget-wide v3, p0, Llb0;->b:J
 
-    iget v1, p0, Llb0;->b:I
+    iget-wide v5, p1, Llb0;->b:J
 
-    iget p1, p1, Llb0;->b:I
+    cmp-long v1, v3, v5
 
-    if-ne v1, p1, :cond_1
+    if-nez v1, :cond_1
+
+    iget-wide v3, p0, Llb0;->c:J
+
+    iget-wide v5, p1, Llb0;->c:J
+
+    cmp-long p1, v3, v5
+
+    if-nez p1, :cond_1
 
     return v0
 
@@ -76,13 +77,17 @@
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 7
 
-    iget-object v0, p0, Llb0;->a:Lmb0;
+    iget-wide v0, p0, Llb0;->a:J
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    const/16 v2, 0x20
 
-    move-result v0
+    ushr-long v3, v0, v2
+
+    xor-long/2addr v0, v3
+
+    long-to-int v0, v0
 
     const v1, 0xf4243
 
@@ -90,7 +95,25 @@
 
     mul-int/2addr v0, v1
 
-    iget v1, p0, Llb0;->b:I
+    iget-wide v3, p0, Llb0;->b:J
+
+    ushr-long v5, v3, v2
+
+    xor-long/2addr v3, v5
+
+    long-to-int v3, v3
+
+    xor-int/2addr v0, v3
+
+    mul-int/2addr v0, v1
+
+    iget-wide v3, p0, Llb0;->c:J
+
+    ushr-long v1, v3, v2
+
+    xor-long/2addr v1, v3
+
+    long-to-int v1, v1
 
     xor-int/2addr v0, v1
 
@@ -98,27 +121,35 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 4
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "QualityRatio{quality="
+    const-string v1, "StartupTime{epochMillis="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Llb0;->a:Lmb0;
+    iget-wide v1, p0, Llb0;->a:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string v1, ", aspectRatio="
+    const-string v1, ", elapsedRealtime="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Llb0;->b:I
+    iget-wide v1, p0, Llb0;->b:J
 
-    const-string v2, "}"
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v1, v2}, Li57;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    const-string v1, ", uptimeMillis="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Llb0;->c:J
+
+    const-string v3, "}"
+
+    invoke-static {v0, v1, v2, v3}, Lho7;->k(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

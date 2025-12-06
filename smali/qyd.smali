@@ -1,93 +1,285 @@
 .class public final Lqyd;
-.super Ljava/lang/Object;
+.super Lch6;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public X:Ljava/lang/Float;
 
-.field public final b:J
+.field public Y:I
+
+.field public Z:I
+
+.field public o:Lsyd;
+
+.field public s0:Landroid/graphics/Matrix;
+
+.field public final t0:Landroid/graphics/Matrix;
 
 
 # direct methods
-.method public constructor <init>(JJ)V
+.method public constructor <init>(Landroid/graphics/drawable/Drawable;Lsyd;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lch6;-><init>(Landroid/graphics/drawable/Drawable;)V
 
-    iput-wide p1, p0, Lqyd;->a:J
+    new-instance p1, Landroid/graphics/Matrix;
 
-    iput-wide p3, p0, Lqyd;->b:J
+    invoke-direct {p1}, Landroid/graphics/Matrix;-><init>()V
+
+    iput-object p1, p0, Lqyd;->t0:Landroid/graphics/Matrix;
+
+    iput-object p2, p0, Lqyd;->o:Lsyd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
+.method public final d(Landroid/graphics/Matrix;)V
+    .locals 1
 
-    const/4 v0, 0x1
+    invoke-virtual {p0, p1}, Lch6;->n(Landroid/graphics/Matrix;)V
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p0}, Lqyd;->q()V
 
-    return v0
+    iget-object v0, p0, Lqyd;->s0:Landroid/graphics/Matrix;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Matrix;->preConcat(Landroid/graphics/Matrix;)Z
 
     :cond_0
+    return-void
+.end method
+
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 2
+
+    invoke-virtual {p0}, Lqyd;->q()V
+
+    iget-object v0, p0, Lqyd;->s0:Landroid/graphics/Matrix;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+
+    move-result v0
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1}, Landroid/graphics/Canvas;->clipRect(Landroid/graphics/Rect;)Z
+
+    iget-object v1, p0, Lqyd;->s0:Landroid/graphics/Matrix;
+
+    invoke-virtual {p1, v1}, Landroid/graphics/Canvas;->concat(Landroid/graphics/Matrix;)V
+
+    invoke-super {p0, p1}, Lch6;->draw(Landroid/graphics/Canvas;)V
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
+
+    return-void
+
+    :cond_0
+    invoke-super {p0, p1}, Lch6;->draw(Landroid/graphics/Canvas;)V
+
+    return-void
+.end method
+
+.method public final o(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    .locals 0
+
+    invoke-super {p0, p1}, Lch6;->o(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    invoke-virtual {p0}, Lqyd;->p()V
+
+    return-object p1
+.end method
+
+.method public final onBoundsChange(Landroid/graphics/Rect;)V
+    .locals 0
+
+    invoke-virtual {p0}, Lqyd;->p()V
+
+    return-void
+.end method
+
+.method public final p()V
+    .locals 10
+
+    iget-object v0, p0, Lch6;->a:Landroid/graphics/drawable/Drawable;
+
     const/4 v1, 0x0
 
-    if-eqz p1, :cond_2
+    const/4 v2, 0x0
 
-    const-class v2, Lqyd;
+    if-nez v0, :cond_0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput v1, p0, Lqyd;->Z:I
 
-    move-result-object v3
+    iput v1, p0, Lqyd;->Y:I
 
-    if-eq v2, v3, :cond_1
+    iput-object v2, p0, Lqyd;->s0:Landroid/graphics/Matrix;
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroid/graphics/Rect;->width()I
+
+    move-result v3
+
+    invoke-virtual {v5}, Landroid/graphics/Rect;->height()I
+
+    move-result v4
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result v6
+
+    iput v6, p0, Lqyd;->Y:I
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+
+    move-result v7
+
+    iput v7, p0, Lqyd;->Z:I
+
+    if-lez v6, :cond_4
+
+    if-gtz v7, :cond_1
 
     goto :goto_0
 
     :cond_1
-    check-cast p1, Lqyd;
+    if-ne v6, v3, :cond_2
 
-    iget-wide v2, p0, Lqyd;->a:J
+    if-ne v7, v4, :cond_2
 
-    iget-wide v4, p1, Lqyd;->a:J
+    invoke-virtual {v0, v5}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    cmp-long v2, v2, v4
+    iput-object v2, p0, Lqyd;->s0:Landroid/graphics/Matrix;
 
-    if-nez v2, :cond_2
-
-    iget-wide v2, p0, Lqyd;->b:J
-
-    iget-wide v4, p1, Lqyd;->b:J
-
-    cmp-long p1, v2, v4
-
-    if-nez p1, :cond_2
-
-    return v0
+    return-void
 
     :cond_2
+    iget-object v3, p0, Lqyd;->o:Lsyd;
+
+    sget-object v4, Ltyd;->i:Ltyd;
+
+    if-ne v3, v4, :cond_3
+
+    invoke-virtual {v0, v5}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
+
+    iput-object v2, p0, Lqyd;->s0:Landroid/graphics/Matrix;
+
+    return-void
+
+    :cond_3
+    invoke-virtual {v0, v1, v1, v6, v7}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    iget-object v4, p0, Lqyd;->t0:Landroid/graphics/Matrix;
+
+    invoke-virtual {v4}, Landroid/graphics/Matrix;->reset()V
+
+    iget-object v3, p0, Lqyd;->o:Lsyd;
+
+    const/high16 v8, 0x3f000000    # 0.5f
+
+    move v9, v8
+
+    invoke-interface/range {v3 .. v9}, Lsyd;->a(Landroid/graphics/Matrix;Landroid/graphics/Rect;IIFF)Landroid/graphics/Matrix;
+
+    iput-object v4, p0, Lqyd;->s0:Landroid/graphics/Matrix;
+
+    return-void
+
+    :cond_4
     :goto_0
-    return v1
+    invoke-virtual {v0, v5}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
+
+    iput-object v2, p0, Lqyd;->s0:Landroid/graphics/Matrix;
+
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final q()V
+    .locals 4
 
-    iget-wide v0, p0, Lqyd;->a:J
+    iget-object v0, p0, Lqyd;->o:Lsyd;
 
-    long-to-int v0, v0
+    instance-of v1, v0, Lryd;
 
-    mul-int/lit8 v0, v0, 0x1f
+    if-eqz v1, :cond_0
 
-    iget-wide v1, p0, Lqyd;->b:J
+    check-cast v0, Lryd;
 
-    long-to-int v1, v1
+    iget v0, v0, Lryd;->h:F
 
-    add-int/2addr v0, v1
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    return v0
+    move-result-object v0
+
+    iget-object v1, p0, Lqyd;->X:Ljava/lang/Float;
+
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    xor-int/lit8 v1, v1, 0x1
+
+    iput-object v0, p0, Lqyd;->X:Ljava/lang/Float;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    iget-object v0, p0, Lch6;->a:Landroid/graphics/drawable/Drawable;
+
+    if-nez v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    iget v2, p0, Lqyd;->Y:I
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result v3
+
+    if-ne v2, v3, :cond_4
+
+    iget v2, p0, Lqyd;->Z:I
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+
+    move-result v0
+
+    if-eq v2, v0, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    if-eqz v1, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    :goto_1
+    return-void
+
+    :cond_4
+    :goto_2
+    invoke-virtual {p0}, Lqyd;->p()V
+
+    return-void
 .end method

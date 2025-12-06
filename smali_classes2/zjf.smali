@@ -1,61 +1,48 @@
-.class public final synthetic Lzjf;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
+.class public final Lzjf;
+.super Lq44;
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/String;
+.field public final synthetic X:Lhv7;
 
-.field public final synthetic b:Ljkf;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/String;Ljkf;)V
+.method public constructor <init>(Lhv7;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lzjf;->X:Lhv7;
 
-    iput-object p1, p0, Lzjf;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Lzjf;->b:Ljkf;
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onPushTokenGenerated(Ljava/lang/String;)V
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lzjf;->a:Ljava/lang/String;
+    iput-object p1, p0, Lzjf;->d:Ljava/lang/Object;
 
-    invoke-static {v0, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget p1, p0, Lzjf;->o:I
 
-    move-result v0
+    const/high16 v0, -0x80000000
 
-    if-nez v0, :cond_0
+    or-int/2addr p1, v0
 
-    iget-object v0, p0, Lzjf;->b:Ljkf;
+    iput p1, p0, Lzjf;->o:I
 
-    iget-object v1, v0, Ljkf;->b:Ljava/lang/String;
+    iget-object p1, p0, Lzjf;->X:Lhv7;
 
-    const-string v2, "checkTokenChanged: token changed"
+    const/4 v0, 0x0
 
-    invoke-static {v1, v2}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v0, p0}, Lhv7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    iget-object v0, v0, Ljkf;->Z:Liu7;
+    move-result-object p1
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
-
-    invoke-interface {v0, p1}, Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;->onPushTokenGenerated(Ljava/lang/String;)V
-
-    :cond_0
-    return-void
+    return-object p1
 .end method

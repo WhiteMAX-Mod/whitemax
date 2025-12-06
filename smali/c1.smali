@@ -19,7 +19,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    sget-boolean v0, Ly1;->o:Z
+    sget-boolean v0, Ly1;->d:Z
 
     const/4 v1, 0x0
 

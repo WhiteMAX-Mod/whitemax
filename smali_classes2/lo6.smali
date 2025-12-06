@@ -1,55 +1,208 @@
 .class public final Llo6;
-.super Ly14;
+.super Loo6;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Ljava/lang/Comparable;
+# static fields
+.field public static final e:Llo6;
 
-.field public Y:Lda9;
+.field public static final f:Landroid/net/Uri;
 
-.field public synthetic Z:Ljava/lang/Object;
+.field public static final g:Ljava/lang/String;
 
-.field public o:Ljava/lang/Object;
+.field public static final h:Ljava/lang/String;
 
-.field public final synthetic q0:Lmo6;
+.field public static final i:Ljava/lang/String;
 
-.field public r0:I
+.field public static final j:Ljava/lang/String;
+
+.field public static final k:Ljava/lang/String;
+
+.field public static final l:Ljava/lang/String;
+
+.field public static final m:Ljava/lang/String;
+
+.field public static final n:Ljava/lang/String;
+
+.field public static final o:Ljava/lang/String;
+
+.field public static final p:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lmo6;Ly14;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Llo6;->q0:Lmo6;
+    new-instance v0, Llo6;
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v1, "\n              _size > 0\n              AND\n              (\n                media_type = 1\n                OR\n                media_type = 3\n              )\n            "
+
+    invoke-direct {v0, v1}, Loo6;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Llo6;->e:Llo6;
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1d
+
+    const-string v2, "external"
+
+    if-lt v0, v1, :cond_1
+
+    invoke-static {v2}, Landroid/provider/MediaStore$Files;->getContentUri(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "no content uri for MediaStore.Files"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    invoke-static {v2}, Landroid/provider/MediaStore$Files;->getContentUri(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    :goto_0
+    sput-object v0, Llo6;->f:Landroid/net/Uri;
+
+    const-string v0, "_id"
+
+    sput-object v0, Llo6;->g:Ljava/lang/String;
+
+    const-string v0, "bucket_id"
+
+    sput-object v0, Llo6;->h:Ljava/lang/String;
+
+    const-string v0, "bucket_display_name"
+
+    sput-object v0, Llo6;->i:Ljava/lang/String;
+
+    const-string v0, "_data"
+
+    sput-object v0, Llo6;->j:Ljava/lang/String;
+
+    const-string v0, "date_modified"
+
+    sput-object v0, Llo6;->k:Ljava/lang/String;
+
+    const-string v0, "mime_type"
+
+    sput-object v0, Llo6;->l:Ljava/lang/String;
+
+    const-string v0, "orientation"
+
+    sput-object v0, Llo6;->m:Ljava/lang/String;
+
+    const-string v0, "duration"
+
+    sput-object v0, Llo6;->n:Ljava/lang/String;
+
+    const-string v0, "media_type"
+
+    sput-object v0, Llo6;->o:Ljava/lang/String;
+
+    const-string v0, "unknown"
+
+    sput-object v0, Llo6;->p:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a()Ljava/lang/String;
     .locals 1
 
-    iput-object p1, p0, Llo6;->Z:Ljava/lang/Object;
+    sget-object v0, Llo6;->i:Ljava/lang/String;
 
-    iget p1, p0, Llo6;->r0:I
+    return-object v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public final b()Ljava/lang/String;
+    .locals 1
 
-    or-int/2addr p1, v0
+    sget-object v0, Llo6;->h:Ljava/lang/String;
 
-    iput p1, p0, Llo6;->r0:I
+    return-object v0
+.end method
 
-    iget-object p1, p0, Llo6;->q0:Lmo6;
+.method public final c()Ljava/lang/String;
+    .locals 1
 
-    const/4 v0, 0x0
+    sget-object v0, Llo6;->j:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, p0}, Lmo6;->a(Ljava/lang/String;Ly14;)Ljava/lang/Object;
+    return-object v0
+.end method
 
-    move-result-object p1
+.method public final d()Ljava/lang/String;
+    .locals 1
 
-    return-object p1
+    sget-object v0, Llo6;->k:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final e()Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Llo6;->n:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final f()Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Llo6;->g:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final g()Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Llo6;->o:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final h()Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Llo6;->l:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final i()Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Llo6;->m:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final j()Landroid/net/Uri;
+    .locals 1
+
+    sget-object v0, Llo6;->f:Landroid/net/Uri;
+
+    return-object v0
+.end method
+
+.method public final k()Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Llo6;->p:Ljava/lang/String;
+
+    return-object v0
 .end method

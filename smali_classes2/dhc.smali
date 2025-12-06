@@ -1,126 +1,127 @@
-.class public final synthetic Ldhc;
-.super Ljava/lang/Object;
+.class public final Ldhc;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Lji6;
+.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lfhc;
 
-.field public final synthetic b:Lone/me/qrscanner/QrScannerWidget;
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/qrscanner/QrScannerWidget;I)V
+.method public constructor <init>(Lfhc;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Ldhc;->a:I
+    iput-object p1, p0, Ldhc;->X:Lfhc;
 
-    iput-object p1, p0, Ldhc;->b:Lone/me/qrscanner/QrScannerWidget;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 13
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Ldhc;->a:I
+    check-cast p1, Lf84;
 
-    iget-object v1, p0, Ldhc;->b:Lone/me/qrscanner/QrScannerWidget;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, p1, p2}, Ldhc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    sget-object v0, Lone/me/qrscanner/QrScannerWidget;->y0:[Ltr7;
+    move-result-object p1
 
-    sget v0, Lpjd;->N:I
+    check-cast p1, Ldhc;
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    move-result-object v1
+    invoke-virtual {p1, p2}, Ldhc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, v0}, La14;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    move-result-object p1
 
-    move-result-object v0
+    return-object p1
+.end method
 
-    return-object v0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    :pswitch_0
-    sget-object v0, Lone/me/qrscanner/QrScannerWidget;->y0:[Ltr7;
+    new-instance p1, Ldhc;
 
-    sget v0, Lpjd;->O:I
+    iget-object v0, p0, Ldhc;->X:Lfhc;
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    invoke-direct {p1, v0, p2}, Ldhc;-><init>(Lfhc;Lkotlin/coroutines/Continuation;)V
 
-    move-result-object v1
+    return-object p1
+.end method
 
-    invoke-static {v1, v0}, La14;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    move-result-object v0
+    iget v0, p0, Ldhc;->o:I
 
-    return-object v0
+    iget-object v1, p0, Ldhc;->X:Lfhc;
 
-    :pswitch_1
-    sget-object v0, Lone/me/qrscanner/QrScannerWidget;->y0:[Ltr7;
+    const/4 v2, 0x1
 
-    iget-object v0, v1, Lone/me/qrscanner/QrScannerWidget;->b:Lqs;
+    if-eqz v0, :cond_1
 
-    sget-object v2, Lone/me/qrscanner/QrScannerWidget;->y0:[Ltr7;
+    if-ne v0, v2, :cond_0
 
-    const/4 v3, 0x1
-
-    aget-object v4, v2, v3
-
-    invoke-virtual {v0, v1}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/lang/Long;
-
-    if-eqz v4, :cond_0
-
-    new-instance v5, Ladb;
-
-    aget-object v2, v2, v3
-
-    invoke-virtual {v0, v1}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v9, v0
-
-    check-cast v9, Ljava/lang/Long;
-
-    const/16 v12, 0x33
-
-    const/4 v7, 0x0
-
-    const/4 v6, 0x0
-
-    sget-object v8, Lfve;->Y:Lfve;
-
-    const/4 v10, 0x0
-
-    const/4 v11, 0x0
-
-    invoke-direct/range {v5 .. v12}, Ladb;-><init>(Lurb;ILfve;Ljava/lang/Long;Ljava/lang/Long;Let;I)V
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    sget-object v5, Ladb;->g:Ladb;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, v1, Lfhc;->b:Lb95;
+
+    iput v2, p0, Ldhc;->o:I
+
+    invoke-virtual {p1, p0}, Lb95;->l(Lq44;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lg84;->a:Lg84;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
     :goto_0
-    return-object v5
+    check-cast p1, Ljava/lang/Boolean;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    iget-object p1, v1, Lfhc;->v0:Lci5;
+
+    sget-object v0, Ljc3;->b:Ljc3;
+
+    invoke-static {p1, v0}, Lxfh;->r(Lci5;Ljava/lang/Object;)V
+
+    :cond_3
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

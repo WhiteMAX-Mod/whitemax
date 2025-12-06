@@ -1,20 +1,23 @@
-.class public interface abstract Lr01;
+.class public final Lr01;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract onActiveParticipantUpdated(Lq01;)V
-.end method
+# instance fields
+.field public final a:Ljava/util/Collection;
 
-.method public abstract onActiveParticipantsAdded(Lm01;)V
-.end method
+.field public final b:Ljava/util/Collection;
 
-.method public abstract onActiveParticipantsChanged(Ln01;)V
-.end method
 
-.method public abstract onActiveParticipantsDeAnonimized(Lo01;)V
-.end method
+# direct methods
+.method public constructor <init>(Ljava/util/List;Ljava/util/Collection;)V
+    .locals 0
 
-.method public abstract onActiveParticipantsRemoved(Lp01;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lr01;->a:Ljava/util/Collection;
+
+    iput-object p2, p0, Lr01;->b:Ljava/util/Collection;
+
+    return-void
 .end method

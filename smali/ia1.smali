@@ -1,149 +1,158 @@
 .class public final Lia1;
-.super Lsgf;
+.super Lyb4;
 .source "SourceFile"
-
-# interfaces
-.implements Lzi6;
 
 
 # instance fields
-.field public X:I
+.field public final v0:Ljava/lang/String;
 
-.field public final synthetic Y:Lja1;
-
-.field public final synthetic Z:Ljava/util/List;
+.field public w0:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lja1;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lone/me/calllist/ui/CallHistoryScreen;)V
     .locals 0
 
-    iput-object p1, p0, Lia1;->Y:Lja1;
+    invoke-direct {p0, p1}, Lyb4;-><init>(Lone/me/sdk/arch/Widget;)V
 
-    iput-object p2, p0, Lia1;->Z:Ljava/util/List;
+    const-class p1, Lia1;
 
-    const/4 p1, 0x2
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    move-result-object p1
+
+    iput-object p1, p0, Lia1;->v0:Ljava/lang/String;
+
+    sget-object p1, Lhd5;->a:Lhd5;
+
+    iput-object p1, p0, Lia1;->w0:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final E(Lytd;I)V
+    .locals 8
 
-    check-cast p1, Lq54;
+    invoke-virtual {p1}, Lytd;->n()Z
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result v0
 
-    invoke-virtual {p0, p1, p2}, Lia1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-eqz v0, :cond_0
 
-    move-result-object p1
-
-    check-cast p1, Lia1;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lia1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lia1;
-
-    iget-object v0, p0, Lia1;->Y:Lja1;
-
-    iget-object v1, p0, Lia1;->Z:Ljava/util/List;
-
-    invoke-direct {p1, v0, v1, p2}, Lia1;-><init>(Lja1;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    iget v0, p0, Lia1;->X:I
-
-    sget-object v1, Lccg;->a:Lccg;
-
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    return-object v1
+    return-void
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    iget-object v0, p0, Lia1;->w0:Ljava/util/List;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result-object p2
+
+    check-cast p2, Lcb1;
+
+    iget-object p2, p2, Lcb1;->c:Lbb1;
+
+    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    const/4 v0, 0x1
+
+    if-ne p2, v0, :cond_1
+
+    sget-object p2, Lone/me/calllist/ui/page/CallHistoryPageScreen;->u0:Lv17;
+
+    sget-object v0, Lbb1;->c:Lbb1;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance p2, Lone/me/calllist/ui/page/CallHistoryPageScreen;
+
+    invoke-direct {p2, v0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;-><init>(Lbb1;)V
+
+    :goto_0
+    move-object v2, p2
+
+    goto :goto_1
+
+    :cond_1
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
     throw p1
 
-    :cond_1
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    :cond_2
+    sget-object p2, Lone/me/calllist/ui/page/CallHistoryPageScreen;->u0:Lv17;
 
-    iget-object p1, p0, Lia1;->Y:Lja1;
+    sget-object v0, Lbb1;->b:Lbb1;
 
-    iget-object p1, p1, Lja1;->b:Lh78;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput v2, p0, Lia1;->X:I
+    new-instance p2, Lone/me/calllist/ui/page/CallHistoryPageScreen;
 
-    iget-object v0, p1, Lh78;->b:Ljava/lang/Object;
-
-    check-cast v0, Liu7;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lulf;
-
-    check-cast v0, Lqta;
-
-    invoke-virtual {v0}, Lqta;->b()Lk54;
-
-    move-result-object v0
-
-    new-instance v2, Llw1;
-
-    const/4 v3, 0x0
-
-    iget-object v4, p0, Lia1;->Z:Ljava/util/List;
-
-    invoke-direct {v2, v4, p1, v3}, Llw1;-><init>(Ljava/util/List;Lh78;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v0, v2, p0}, Ltki;->h(Li54;Lzi6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lr54;->a:Lr54;
-
-    if-ne p1, v0, :cond_2
+    invoke-direct {p2, v0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;-><init>(Lbb1;)V
 
     goto :goto_0
 
-    :cond_2
-    move-object p1, v1
+    :goto_1
+    sget-object p2, Lb54;->b:Lb54;
 
-    :goto_0
-    if-ne p1, v0, :cond_3
+    invoke-virtual {v2, p2}, Lc54;->setRetainViewMode(Lb54;)V
 
-    return-object v0
+    new-instance v1, Lbud;
 
-    :cond_3
-    return-object v1
+    const/4 v6, 0x0
+
+    const/4 v7, -0x1
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    invoke-direct/range {v1 .. v7}, Lbud;-><init>(Lc54;Ljava/lang/String;Lh54;Lh54;ZI)V
+
+    invoke-virtual {p1, v1}, Lytd;->S(Lbud;)V
+
+    return-void
+.end method
+
+.method public final J(Ldud;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput-object v0, p1, Ldud;->F0:Lytd;
+
+    invoke-super {p0, p1}, Lyb4;->J(Ldud;)V
+
+    return-void
+.end method
+
+.method public final j()I
+    .locals 1
+
+    iget-object v0, p0, Lia1;->w0:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final bridge synthetic y(Lmid;)V
+    .locals 0
+
+    check-cast p1, Ldud;
+
+    invoke-virtual {p0, p1}, Lia1;->J(Ldud;)V
+
+    return-void
 .end method

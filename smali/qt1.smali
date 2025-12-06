@@ -1,317 +1,833 @@
 .class public final Lqt1;
-.super Lxzg;
+.super Landroid/widget/FrameLayout;
 .source "SourceFile"
+
+# interfaces
+.implements Leob;
 
 
 # static fields
-.field public static final X:Ltcb;
+.field public static final synthetic y0:I
 
 
 # instance fields
-.field public final b:Liu7;
+.field public final a:Lbwf;
 
-.field public final c:Lx0f;
+.field public final b:Landroid/os/Handler;
 
-.field public final o:Ln0d;
+.field public c:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
+
+.field public d:Lot1;
+
+.field public o:Lcm6;
+
+.field public s0:Ltxg;
+
+.field public t0:Z
+
+.field public u0:Lvch;
+
+.field public final v0:Ljava/lang/Object;
+
+.field public w0:Z
+
+.field public x0:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, Ltcb;
-
-    const-wide/high16 v1, -0x8000000000000000L
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    const-string v2, ""
-
-    invoke-static {v2, v1}, Ljii;->a(Ljava/lang/CharSequence;Ljava/lang/Long;)Ltc0;
-
-    move-result-object v1
-
-    sget v2, Ljra;->A0:I
-
-    invoke-static {v2}, Lbhg;->c(I)Landroid/net/Uri;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v0, v1, v2}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    sput-object v0, Lqt1;->X:Ltcb;
-
-    return-void
-.end method
-
-.method public constructor <init>(Liu7;Liu7;Liu7;)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    invoke-direct {p0}, Lxzg;-><init>()V
-
-    iput-object p2, p0, Lqt1;->b:Liu7;
-
-    sget-object v0, Lkt1;->a:Lkt1;
-
-    invoke-static {v0}, Ly0f;->a(Ljava/lang/Object;)Lx0f;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lqt1;->c:Lx0f;
-
-    new-instance v1, Ln0d;
-
-    invoke-direct {v1, v0}, Ln0d;-><init>(Lj1a;)V
-
-    iput-object v1, p0, Lqt1;->o:Ln0d;
-
-    invoke-interface {p2}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lw01;
-
-    check-cast p2, Lr11;
-
-    iget-object p2, p2, Lr11;->s0:Lx0f;
-
-    new-instance v0, Lpt1;
+    const/4 v0, 0x0
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, p1, v1}, Lpt1;-><init>(Lqt1;Liu7;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, v0, v1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    new-instance p1, Lb16;
+    new-instance p1, Ljl1;
 
-    const/4 v1, 0x1
+    const/16 v0, 0xe
 
-    invoke-direct {p1, p2, v0, v1}, Lb16;-><init>(Lty5;Lzi6;I)V
+    invoke-direct {p1, v0}, Ljl1;-><init>(I)V
 
-    invoke-interface {p3}, Liu7;->getValue()Ljava/lang/Object;
+    new-instance v0, Lbwf;
 
-    move-result-object p2
+    invoke-direct {v0, p1}, Lbwf;-><init>(Lcm6;)V
 
-    check-cast p2, Lulf;
+    iput-object v0, p0, Lqt1;->a:Lbwf;
 
-    check-cast p2, Lqta;
+    new-instance p1, Landroid/os/Handler;
 
-    invoke-virtual {p2}, Lqta;->a()Lk54;
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    move-result-object p2
+    move-result-object v0
 
-    invoke-static {p1, p2}, Ltq;->t(Lty5;Li54;)Lty5;
+    invoke-direct {p1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-object p1, p0, Lqt1;->b:Landroid/os/Handler;
+
+    new-instance p1, Lhk1;
+
+    const/4 v0, 0x2
+
+    invoke-direct {p1, v0, p0}, Lhk1;-><init>(ILjava/lang/Object;)V
+
+    const/4 v0, 0x3
+
+    invoke-static {v0, p1}, Lipi;->b(ILcm6;)Lk18;
 
     move-result-object p1
 
-    iget-object p2, p0, Lxzg;->a:Lkotlinx/coroutines/internal/ContextScope;
+    iput-object p1, p0, Lqt1;->v0:Ljava/lang/Object;
 
-    invoke-static {p1, p2}, Ltq;->v(Lty5;Lq54;)Lcye;
+    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->setClipChildren(Z)V
+
+    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->setClipToPadding(Z)V
+
+    new-instance p1, Les0;
+
+    const/4 v0, 0x4
+
+    invoke-direct {p1, v0, p0}, Les0;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+
+    invoke-virtual {p0}, Landroid/view/View;->isLaidOut()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lqt1;->c:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
+
+    if-eqz p1, :cond_0
+
+    invoke-direct {p0}, Lqt1;->getVideoLayoutUpdatesController()Lx4h;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    iget-object v0, p0, Lqt1;->u0:Lvch;
+
+    invoke-virtual {p1, p0, v0}, Lx4h;->a(Landroid/view/View;Lvch;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public static a(Lqt1;)V
+    .locals 1
+
+    iget-object v0, p0, Lqt1;->b:Landroid/os/Handler;
+
+    invoke-direct {p0}, Lqt1;->getUpdateWhenReadyRunnable()Ljava/lang/Runnable;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
-.method public static final r(Lqt1;Ljava/util/List;)Lu18;
-    .locals 5
+.method public static b(Lqt1;)V
+    .locals 2
 
-    invoke-interface {p1}, Ljava/util/Collection;->size()I
+    iget-boolean v0, p0, Lqt1;->x0:Z
 
-    move-result p0
+    if-nez v0, :cond_1
 
-    const/4 v0, 0x3
+    iget-object v0, p0, Lqt1;->d:Lot1;
 
-    if-le p0, v0, :cond_0
+    const/4 v1, 0x1
 
-    const/4 p0, 0x1
+    if-eqz v0, :cond_0
 
-    goto :goto_0
+    invoke-interface {v0, v1}, Lot1;->c(Z)V
 
     :cond_0
-    const/4 p0, 0x0
+    iput-boolean v1, p0, Lqt1;->x0:Z
 
-    :goto_0
+    invoke-direct {p0}, Lqt1;->getVideoLayoutUpdatesController()Lx4h;
+
+    move-result-object p0
+
     if-eqz p0, :cond_1
 
-    const/4 v0, 0x2
+    iget-object p0, p0, Lx4h;->d:Lk18;
+
+    invoke-interface {p0}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ltv1;
+
+    check-cast p0, Lhw1;
+
+    iput-boolean v1, p0, Lhw1;->U0:Z
+
+    :cond_1
+    return-void
+.end method
+
+.method public static final synthetic c(Lqt1;)Lx4h;
+    .locals 0
+
+    invoke-direct {p0}, Lqt1;->getVideoLayoutUpdatesController()Lx4h;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method private final getParams()Landroid/widget/FrameLayout$LayoutParams;
+    .locals 3
+
+    iget-boolean v0, p0, Lqt1;->w0:Z
+
+    const/16 v1, 0x11
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/4 v2, -0x2
+
+    invoke-direct {v0, v2, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/4 v2, -0x1
+
+    invoke-direct {v0, v2, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+
+    return-object v0
+.end method
+
+.method private final getUpdateWhenReadyRunnable()Ljava/lang/Runnable;
+    .locals 1
+
+    iget-object v0, p0, Lqt1;->v0:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Runnable;
+
+    return-object v0
+.end method
+
+.method private final getVideoController()Lfob;
+    .locals 1
+
+    iget-object v0, p0, Lqt1;->a:Lbwf;
+
+    invoke-virtual {v0}, Lbwf;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lfob;
+
+    return-object v0
+.end method
+
+.method private final getVideoLayoutUpdatesController()Lx4h;
+    .locals 1
+
+    iget-object v0, p0, Lqt1;->o:Lcm6;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lcm6;->invoke()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lx4h;
+
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final d()V
+    .locals 3
+
+    iget-object v0, p0, Lqt1;->c:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
+
+    if-eqz v0, :cond_2
+
+    iget-object v1, p0, Lqt1;->u0:Lvch;
+
+    if-eqz v1, :cond_0
+
+    invoke-direct {p0}, Lqt1;->getVideoController()Lfob;
+
+    move-result-object v2
+
+    iget-object v1, v1, Lvch;->b:Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
+
+    check-cast v2, Lgob;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v2, v1, v0}, Lgob;->d(Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;)V
+
+    :cond_0
+    invoke-direct {p0}, Lqt1;->getVideoLayoutUpdatesController()Lx4h;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1, v0}, Lx4h;->c(Landroid/view/View;)Z
+
+    :cond_1
+    invoke-direct {p0}, Lqt1;->getVideoController()Lfob;
+
+    move-result-object v1
+
+    check-cast v1, Lgob;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->release()V
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->removeAllViews()V
+
+    :cond_2
+    iget-object v0, p0, Lqt1;->d:Lot1;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v0, v1}, Lot1;->c(Z)V
+
+    :cond_3
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lqt1;->u0:Lvch;
+
+    iput-object v0, p0, Lqt1;->c:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
+
+    iput-boolean v1, p0, Lqt1;->x0:Z
+
+    iget-object v0, p0, Lqt1;->b:Landroid/os/Handler;
+
+    invoke-direct {p0}, Lqt1;->getUpdateWhenReadyRunnable()Ljava/lang/Runnable;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    invoke-direct {p0}, Lqt1;->getVideoController()Lfob;
+
+    move-result-object v0
+
+    check-cast v0, Lgob;
+
+    iget-object v0, v0, Lgob;->o:Ljava/util/concurrent/ConcurrentHashMap$KeySetView;
+
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/ConcurrentHashMap$KeySetView;->remove(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public final e()V
+    .locals 10
+
+    iget-object v0, p0, Lqt1;->s0:Ltxg;
+
+    iget-boolean v1, p0, Lqt1;->t0:Z
+
+    const/4 v2, 0x0
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    iget-object v3, v0, Ltxg;->d:Lvch;
+
+    iget-boolean v4, v0, Ltxg;->c:Z
+
+    iget-boolean v5, v0, Ltxg;->g:Z
+
+    iget-boolean v6, v0, Ltxg;->b:Z
+
+    if-eqz v6, :cond_1
+
+    if-eqz v5, :cond_1
 
     goto :goto_1
 
     :cond_1
-    invoke-interface {p1}, Ljava/util/Collection;->size()I
-
-    move-result v0
-
-    :goto_1
-    invoke-static {p1, v0}, Lnb3;->T(Ljava/lang/Iterable;I)Ljava/util/List;
-
-    move-result-object p1
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    const/16 v1, 0xa
-
-    invoke-static {p1, v1}, Lpb3;->l(Ljava/lang/Iterable;I)I
-
-    move-result v1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_2
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
     if-eqz v1, :cond_2
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    if-eqz v4, :cond_2
 
-    move-result-object v1
+    :goto_0
+    move-object v2, v3
 
-    check-cast v1, Lsr1;
+    goto :goto_1
 
-    new-instance v2, Ltcb;
+    :cond_2
+    if-eqz v5, :cond_3
 
-    invoke-interface {v1}, Lsr1;->d()J
+    iget-object v2, v0, Ltxg;->h:Lvch;
 
-    move-result-wide v3
+    goto :goto_1
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    :cond_3
+    if-eqz v4, :cond_4
 
-    move-result-object v3
+    goto :goto_0
 
-    invoke-interface {v1}, Lsr1;->j()Ljava/lang/CharSequence;
+    :cond_4
+    :goto_1
+    const/4 v1, 0x1
 
-    move-result-object v4
+    const/4 v3, 0x0
 
-    invoke-static {v4, v3}, Ljii;->a(Ljava/lang/CharSequence;Ljava/lang/Long;)Ltc0;
+    if-eqz v0, :cond_5
 
-    move-result-object v3
+    iget-boolean v4, v0, Ltxg;->e:Z
 
-    invoke-interface {v1}, Lsr1;->q()Ljava/lang/String;
+    if-eqz v4, :cond_5
 
-    move-result-object v1
+    iget-boolean v4, v0, Ltxg;->f:Z
 
-    invoke-direct {v2, v3, v1}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    if-eqz v4, :cond_5
 
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move v4, v1
 
     goto :goto_2
 
-    :cond_2
-    invoke-static {}, Lob3;->b()Lu18;
+    :cond_5
+    move v4, v3
 
-    move-result-object p1
+    :goto_2
+    if-eqz v2, :cond_6
 
-    invoke-virtual {p1, v0}, Lu18;->addAll(Ljava/util/Collection;)Z
+    iget-boolean v5, v2, Lvch;->a:Z
 
-    if-eqz p0, :cond_3
+    if-eqz v5, :cond_6
 
-    sget-object p0, Lqt1;->X:Ltcb;
+    move v5, v1
 
-    invoke-virtual {p1, p0}, Lu18;->add(Ljava/lang/Object;)Z
+    goto :goto_3
 
-    :cond_3
-    invoke-static {p1}, Lob3;->a(Ljava/util/List;)Lu18;
+    :cond_6
+    move v5, v3
 
-    move-result-object p0
+    :goto_3
+    if-eqz v4, :cond_7
 
-    return-object p0
+    if-eqz v5, :cond_7
+
+    move v4, v1
+
+    goto :goto_4
+
+    :cond_7
+    move v4, v3
+
+    :goto_4
+    if-eqz v4, :cond_15
+
+    if-eqz v2, :cond_14
+
+    iget-object v5, v2, Lvch;->b:Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
+
+    if-eqz v0, :cond_8
+
+    iget-boolean v0, v0, Ltxg;->g:Z
+
+    if-ne v0, v1, :cond_8
+
+    move v0, v1
+
+    goto :goto_5
+
+    :cond_8
+    move v0, v3
+
+    :goto_5
+    iget-object v6, p0, Lqt1;->u0:Lvch;
+
+    if-nez v6, :cond_9
+
+    goto :goto_6
+
+    :cond_9
+    iget-object v7, p0, Lqt1;->c:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
+
+    if-eqz v7, :cond_c
+
+    invoke-direct {p0}, Lqt1;->getVideoLayoutUpdatesController()Lx4h;
+
+    move-result-object v8
+
+    if-eqz v8, :cond_a
+
+    invoke-virtual {v8, v7}, Lx4h;->c(Landroid/view/View;)Z
+
+    :cond_a
+    invoke-virtual {v6, v2}, Lvch;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-nez v8, :cond_b
+
+    invoke-direct {p0}, Lqt1;->getVideoController()Lfob;
+
+    move-result-object v8
+
+    iget-object v6, v6, Lvch;->b:Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
+
+    check-cast v8, Lgob;
+
+    invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v8, v6, v7}, Lgob;->d(Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;)V
+
+    invoke-direct {p0}, Lqt1;->getVideoController()Lfob;
+
+    move-result-object v6
+
+    invoke-interface {v6, v5, v7}, Lru/ok/android/externcalls/sdk/video/ParticipantVideoViewManager;->setParticipantView(Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;Lru/ok/android/externcalls/sdk/ui/RendererView;)V
+
+    :cond_b
+    invoke-direct {p0}, Lqt1;->getVideoLayoutUpdatesController()Lx4h;
+
+    move-result-object v6
+
+    if-eqz v6, :cond_c
+
+    invoke-virtual {v6, v7, v2}, Lx4h;->a(Landroid/view/View;Lvch;)V
+
+    :cond_c
+    :goto_6
+    new-instance v6, Luid;
+
+    invoke-direct {v6}, Ljava/lang/Object;-><init>()V
+
+    iget-object v7, p0, Lqt1;->c:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
+
+    iput-object v7, v6, Luid;->a:Ljava/lang/Object;
+
+    if-eqz v7, :cond_e
+
+    if-eqz v0, :cond_d
+
+    iget-boolean v8, p0, Lqt1;->w0:Z
+
+    if-eqz v8, :cond_d
+
+    sget-object v8, Lorg/webrtc/RendererCommon$ScalingType;->SCALE_ASPECT_FIT:Lorg/webrtc/RendererCommon$ScalingType;
+
+    goto :goto_7
+
+    :cond_d
+    sget-object v8, Lorg/webrtc/RendererCommon$ScalingType;->SCALE_ASPECT_FILL:Lorg/webrtc/RendererCommon$ScalingType;
+
+    :goto_7
+    sget-object v9, Lorg/webrtc/RendererCommon$ScalingType;->SCALE_ASPECT_FIT:Lorg/webrtc/RendererCommon$ScalingType;
+
+    invoke-virtual {v7, v8, v9}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->setScalingType(Lorg/webrtc/RendererCommon$ScalingType;Lorg/webrtc/RendererCommon$ScalingType;)V
+
+    :cond_e
+    iget-object v7, v6, Luid;->a:Ljava/lang/Object;
+
+    if-nez v7, :cond_13
+
+    invoke-direct {p0}, Lqt1;->getVideoController()Lfob;
+
+    move-result-object v7
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v8
+
+    check-cast v7, Lgob;
+
+    invoke-virtual {v7, v8}, Lgob;->createVideoViewInstance(Landroid/content/Context;)Lru/ok/android/externcalls/sdk/ui/RendererView;
+
+    move-result-object v7
+
+    iput-object v7, v6, Luid;->a:Ljava/lang/Object;
+
+    check-cast v7, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
+
+    if-eqz v0, :cond_f
+
+    iget-boolean v0, p0, Lqt1;->w0:Z
+
+    if-eqz v0, :cond_f
+
+    sget-object v0, Lorg/webrtc/RendererCommon$ScalingType;->SCALE_ASPECT_FIT:Lorg/webrtc/RendererCommon$ScalingType;
+
+    goto :goto_8
+
+    :cond_f
+    sget-object v0, Lorg/webrtc/RendererCommon$ScalingType;->SCALE_ASPECT_FILL:Lorg/webrtc/RendererCommon$ScalingType;
+
+    :goto_8
+    sget-object v8, Lorg/webrtc/RendererCommon$ScalingType;->SCALE_ASPECT_FIT:Lorg/webrtc/RendererCommon$ScalingType;
+
+    invoke-virtual {v7, v0, v8}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->setScalingType(Lorg/webrtc/RendererCommon$ScalingType;Lorg/webrtc/RendererCommon$ScalingType;)V
+
+    iget-object v0, v6, Luid;->a:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/View;
+
+    invoke-direct {p0}, Lqt1;->getParams()Landroid/widget/FrameLayout$LayoutParams;
+
+    move-result-object v7
+
+    invoke-virtual {p0, v0, v3, v7}, Landroid/view/ViewGroup;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
+
+    invoke-direct {p0}, Lqt1;->getVideoController()Lfob;
+
+    move-result-object v0
+
+    iget-object v7, v6, Luid;->a:Ljava/lang/Object;
+
+    check-cast v7, Lru/ok/android/externcalls/sdk/ui/RendererView;
+
+    invoke-interface {v0, v5, v7}, Lru/ok/android/externcalls/sdk/video/ParticipantVideoViewManager;->setParticipantView(Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;Lru/ok/android/externcalls/sdk/ui/RendererView;)V
+
+    invoke-direct {p0}, Lqt1;->getVideoLayoutUpdatesController()Lx4h;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_10
+
+    iget-object v5, v6, Luid;->a:Ljava/lang/Object;
+
+    check-cast v5, Landroid/view/View;
+
+    invoke-virtual {v0, v5, v2}, Lx4h;->a(Landroid/view/View;Lvch;)V
+
+    :cond_10
+    iget-object v0, v6, Luid;->a:Ljava/lang/Object;
+
+    check-cast v0, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
+
+    iput-object v0, p0, Lqt1;->c:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
+
+    invoke-virtual {p0}, Landroid/view/View;->isLaidOut()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_11
+
+    invoke-virtual {p0}, Landroid/view/View;->isLayoutRequested()Z
+
+    move-result v0
+
+    if-nez v0, :cond_11
+
+    invoke-direct {p0}, Lqt1;->getVideoLayoutUpdatesController()Lx4h;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_12
+
+    iget-object v5, v6, Luid;->a:Ljava/lang/Object;
+
+    check-cast v5, Landroid/view/View;
+
+    iget-object v7, p0, Lqt1;->u0:Lvch;
+
+    invoke-virtual {v0, v5, v7}, Lx4h;->a(Landroid/view/View;Lvch;)V
+
+    goto :goto_9
+
+    :cond_11
+    new-instance v0, Lpt1;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v0, p0, v5, v6}, Lpt1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+
+    :cond_12
+    :goto_9
+    iget-object v0, v6, Luid;->a:Ljava/lang/Object;
+
+    check-cast v0, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
+
+    new-instance v5, Lqk;
+
+    const/4 v6, 0x4
+
+    invoke-direct {v5, v6, p0}, Lqk;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v5}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->setFrameSizeListener(Lsm6;)V
+
+    :cond_13
+    iput-object v2, p0, Lqt1;->u0:Lvch;
+
+    goto :goto_a
+
+    :cond_14
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Required value was null."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_15
+    invoke-virtual {p0}, Lqt1;->d()V
+
+    :goto_a
+    iget-object v0, p0, Lqt1;->d:Lot1;
+
+    if-eqz v0, :cond_17
+
+    iget-boolean v2, p0, Lqt1;->x0:Z
+
+    if-eqz v2, :cond_16
+
+    if-eqz v4, :cond_16
+
+    goto :goto_b
+
+    :cond_16
+    move v1, v3
+
+    :goto_b
+    invoke-interface {v0, v1}, Lot1;->c(Z)V
+
+    :cond_17
+    invoke-direct {p0}, Lqt1;->getVideoController()Lfob;
+
+    move-result-object v0
+
+    check-cast v0, Lgob;
+
+    iget-object v0, v0, Lgob;->o:Ljava/util/concurrent/ConcurrentHashMap$KeySetView;
+
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/ConcurrentHashMap$KeySetView;->add(Ljava/lang/Object;)Z
+
+    return-void
 .end method
 
-.method public static final s(Lqt1;Ljava/lang/String;)Ljava/lang/CharSequence;
+.method public final onAttachedToWindow()V
+    .locals 2
+
+    invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
+
+    invoke-virtual {p0}, Lqt1;->e()V
+
+    invoke-direct {p0}, Lqt1;->getVideoLayoutUpdatesController()Lx4h;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Lqt1;->u0:Lvch;
+
+    invoke-virtual {v0, p0, v1}, Lx4h;->a(Landroid/view/View;Lvch;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onDetachedFromWindow()V
+    .locals 1
+
+    invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
+
+    invoke-direct {p0}, Lqt1;->getVideoLayoutUpdatesController()Lx4h;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p0}, Lx4h;->c(Landroid/view/View;)Z
+
+    :cond_0
+    invoke-virtual {p0}, Lqt1;->d()V
+
+    return-void
+.end method
+
+.method public final setFullScreen(Z)V
     .locals 3
 
-    invoke-static {p1}, Lzaf;->L(Ljava/lang/CharSequence;)Z
+    iget-object v0, p0, Lqt1;->c:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
 
-    move-result p0
+    if-eqz v0, :cond_1
 
-    if-eqz p0, :cond_0
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-direct {p0}, Lqt1;->getParams()Landroid/widget/FrameLayout$LayoutParams;
+
+    move-result-object v2
+
+    invoke-virtual {p0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-static {p1}, Lzaf;->i0(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    move-result-object p0
+    const-string v0, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
 
-    const/4 v0, 0x1
+    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    new-array v0, v0, [C
-
-    const/16 v1, 0x20
-
-    const/4 v2, 0x0
-
-    aput-char v1, v0, v2
-
-    invoke-static {p0, v0}, Lzaf;->X(Ljava/lang/CharSequence;[C)Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    const/4 v1, 0x2
-
-    if-ge v0, v1, :cond_1
-
-    :goto_0
-    return-object p1
+    throw p1
 
     :cond_1
-    invoke-static {p0}, Lnb3;->B(Ljava/util/List;)Ljava/lang/Object;
+    :goto_0
+    iput-boolean p1, p0, Lqt1;->w0:Z
 
-    move-result-object p1
+    return-void
+.end method
 
-    invoke-static {p0}, Lnb3;->K(Ljava/util/List;)Ljava/lang/Object;
+.method public final setListener(Lot1;)V
+    .locals 0
 
-    move-result-object p0
+    iput-object p1, p0, Lqt1;->d:Lot1;
 
-    check-cast p0, Ljava/lang/CharSequence;
+    return-void
+.end method
 
-    invoke-static {p0}, Lzaf;->C(Ljava/lang/CharSequence;)C
+.method public final setVideoLayoutUpdatesControllerProvider(Lcm6;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcm6;",
+            ")V"
+        }
+    .end annotation
 
-    move-result p0
+    iput-object p1, p0, Lqt1;->o:Lcm6;
 
-    invoke-static {p0}, Ljava/lang/String;->valueOf(C)Ljava/lang/String;
-
-    move-result-object p0
-
-    sget-object v0, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p1, " "
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, "."
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

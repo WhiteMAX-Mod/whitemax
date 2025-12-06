@@ -2,354 +2,155 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lekh;
-
 
 # instance fields
-.field public final a:J
+.field public final a:Lk18;
 
-.field public final b:J
-
-.field public final c:Landroid/content/Context;
-
-.field public final d:Liah;
-
-.field public final e:I
-
-.field public final f:Ljava/lang/String;
+.field public final b:Lk18;
 
 
 # direct methods
-.method public constructor <init>(JJLandroid/content/Context;Lj4e;)V
-    .locals 3
-
-    new-instance v0, Liah;
-
-    const-string v1, "webapp_s_key_"
-
-    const-string v2, "_"
-
-    invoke-static {p3, p4, v1, v2}, Ldy1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Liah;-><init>(Ljava/lang/String;Z)V
+.method public constructor <init>(Lk18;Lk18;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lzjh;->a:J
+    iput-object p1, p0, Lzjh;->a:Lk18;
 
-    iput-wide p3, p0, Lzjh;->b:J
-
-    iput-object p5, p0, Lzjh;->c:Landroid/content/Context;
-
-    iput-object v0, p0, Lzjh;->d:Liah;
-
-    check-cast p6, Lwtd;
-
-    sget-object p1, Lru/ok/tamtam/android/prefs/PmsKey;->webapp-ss-keys-count:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/16 p2, 0xa
-
-    int-to-long p2, p2
-
-    invoke-virtual {p6, p1, p2, p3}, Lwtd;->m(Ljava/lang/Enum;J)J
-
-    move-result-wide p1
-
-    long-to-int p1, p1
-
-    iput p1, p0, Lzjh;->e:I
-
-    const-class p1, Lzjh;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lzjh;->f:Ljava/lang/String;
+    iput-object p2, p0, Lzjh;->b:Lk18;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Boolean;
-    .locals 3
-
-    invoke-virtual {p0}, Lzjh;->b()Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    :try_start_0
-    iget-object v1, p0, Lzjh;->d:Liah;
-
-    invoke-virtual {v1, p2}, Liah;->d(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p2
-
-    new-instance v1, Lbed;
-
-    invoke-direct {v1, p2}, Lbed;-><init>(Ljava/lang/Throwable;)V
-
-    move-object p2, v1
-
-    :goto_0
-    nop
-
-    instance-of v1, p2, Lbed;
-
-    if-eqz v1, :cond_0
-
-    const-string p1, "Can\'t encrypt value"
-
-    invoke-static {p2}, Lded;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
-
-    move-result-object p2
-
-    iget-object v0, p0, Lzjh;->f:Ljava/lang/String;
-
-    invoke-static {v0, p1, p2}, Ltei;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    return-object p1
-
-    :cond_0
-    invoke-static {p2}, Lxxi;->b(Ljava/lang/Object;)V
-
-    check-cast p2, Ljava/lang/String;
-
-    invoke-interface {v0, p1}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->apply()V
-
-    goto :goto_1
-
-    :cond_1
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->getAll()Ljava/util/Map;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Map;->size()I
-
-    move-result v1
-
-    iget v2, p0, Lzjh;->e:I
-
-    if-ne v1, v2, :cond_2
-
-    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    return-object p1
-
-    :cond_2
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->apply()V
-
-    :goto_1
-    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    return-object p1
-.end method
-
-.method public final b()Landroid/content/SharedPreferences;
+.method public final a(II)V
     .locals 4
 
-    const-string v0, "webapp_ss_"
+    new-instance v0, Lnn8;
 
-    const-string v1, "_"
+    invoke-direct {v0}, Lnn8;-><init>()V
 
-    iget-wide v2, p0, Lzjh;->b:J
+    const-string v1, "UIElementType"
 
-    invoke-static {v2, v3, v0, v1}, Ldy1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, "procced_url_modal_window"
 
-    move-result-object v0
+    invoke-virtual {v0, v1, v2}, Lnn8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-wide v1, p0, Lzjh;->a:J
+    if-eqz p2, :cond_2
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    const/4 v1, 0x1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    if-eq p2, v1, :cond_1
 
-    move-result-object v0
+    const/4 v1, 0x2
 
-    iget-object v1, p0, Lzjh;->c:Landroid/content/Context;
+    if-ne p2, v1, :cond_0
 
-    invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final clear()Ljava/lang/Boolean;
-    .locals 2
-
-    invoke-virtual {p0}, Lzjh;->b()Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->getAll()Ljava/util/Map;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Map;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    return-object v0
-
-    :cond_0
-    iget-object v1, p0, Lzjh;->d:Liah;
-
-    invoke-virtual {v1}, Liah;->b()V
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->clear()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
-
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    return-object v0
-.end method
-
-.method public final get(Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
-
-    invoke-virtual {p0}, Lzjh;->b()Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-interface {v0, p1, v1}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    if-nez p1, :cond_0
-
-    return-object v1
-
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Lzjh;->d:Liah;
-
-    invoke-static {v0, p1}, Liah;->c(Liah;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const-string p2, "close"
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p1
+    :cond_0
+    const/4 p1, 0x0
 
-    new-instance v0, Lbed;
+    throw p1
 
-    invoke-direct {v0, p1}, Lbed;-><init>(Ljava/lang/Throwable;)V
-
-    move-object p1, v0
+    :cond_1
+    const-string p2, "go"
 
     :goto_0
-    nop
+    const-string v1, "clickType"
 
-    instance-of v0, p1, Lbed;
+    invoke-virtual {v0, v1, p2}, Lnn8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eqz v0, :cond_1
+    :cond_2
+    invoke-virtual {v0}, Lnn8;->b()Lnn8;
+
+    move-result-object p2
+
+    iget-object v0, p0, Lzjh;->a:Lk18;
+
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ldd;
+
+    new-instance v1, Lxp7;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    iput-wide v2, v1, Lxp7;->a:J
+
+    const-string v2, "DANGEROUS_URL_ACTIONS"
+
+    iput-object v2, v1, Lxp7;->c:Ljava/lang/String;
+
+    const/4 v2, 0x1
+
+    if-eq p1, v2, :cond_4
+
+    const/4 v2, 0x2
+
+    if-ne p1, v2, :cond_3
+
+    const-string p1, "showed"
 
     goto :goto_1
 
-    :cond_1
-    move-object v1, p1
+    :cond_3
+    const/4 p1, 0x0
+
+    throw p1
+
+    :cond_4
+    const-string p1, "clicked"
 
     :goto_1
-    check-cast v1, Ljava/lang/String;
+    iput-object p1, v1, Lxp7;->d:Ljava/lang/String;
 
-    return-object v1
-.end method
+    iget-object p1, p0, Lzjh;->b:Lk18;
 
-.method public final remove(Ljava/lang/String;)Ljava/lang/Boolean;
-    .locals 2
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lzjh;->b()Landroid/content/SharedPreferences;
+    move-result-object v2
 
-    move-result-object v0
+    check-cast v2, Lpb3;
 
-    invoke-interface {v0, p1}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
+    check-cast v2, Lw4e;
 
-    move-result v1
+    invoke-virtual {v2}, Lw4e;->s()J
 
-    if-nez v1, :cond_0
+    move-result-wide v2
 
-    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    iput-wide v2, v1, Lxp7;->b:J
 
-    return-object p1
+    invoke-virtual {v1, p2}, Lxp7;->c(Ljava/util/Map;)V
 
-    :cond_0
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->apply()V
+    check-cast p1, Lpb3;
 
-    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    check-cast p1, Lpe8;
 
-    return-object p1
+    invoke-virtual {p1}, Lpe8;->K()J
+
+    move-result-wide p1
+
+    iput-wide p1, v1, Lxp7;->o:J
+
+    invoke-virtual {v1}, Lxp7;->d()Lhg8;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ldd;->h(Lhg8;)V
+
+    return-void
 .end method

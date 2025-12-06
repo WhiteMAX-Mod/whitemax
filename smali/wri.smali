@@ -1,71 +1,69 @@
-.class public abstract Lwri;
-.super Ljava/lang/Object;
+.class public final Lwri;
+.super Ll4;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Ly8i;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lwri;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public static final b:Ly8i;
 
-.field public static c:Landroid/content/Context;
+# instance fields
+.field public a:I
+
+.field public b:[Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lwci;
+
+    const/16 v1, 0x17
+
+    invoke-direct {v0, v1}, Lwci;-><init>(I)V
+
+    sput-object v0, Lwri;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
 
-    new-instance v0, Ly8i;
+    const/16 p2, 0x4f45
 
-    const-string v1, "0\u0082\u0005\u00c80\u0082\u0003\u00b0\u00a0\u0003\u0002\u0001\u0002\u0002\u0014\u0010\u008ae\u0008s\u00f9/\u008eQ\u00ed"
+    invoke-static {p1, p2}, La9j;->k(Landroid/os/Parcel;I)I
 
-    invoke-static {v1}, Lzii;->Z(Ljava/lang/String;)[B
+    move-result p2
 
-    move-result-object v1
+    iget v0, p0, Lwri;->a:I
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v2, v1}, Ly8i;-><init>(I[B)V
-
-    new-instance v0, Ly8i;
-
-    const-string v1, "0\u0082\u0006\u00040\u0082\u0003\u00ec\u00a0\u0003\u0002\u0001\u0002\u0002\u0014\u0003\u00a3\u00b2\u00ad\u00d7\u00e1r\u00cak\u00ec"
-
-    invoke-static {v1}, Lzii;->Z(Ljava/lang/String;)[B
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v2, v1}, Ly8i;-><init>(I[B)V
-
-    new-instance v0, Ly8i;
-
-    const-string v1, "0\u0082\u0004C0\u0082\u0003+\u00a0\u0003\u0002\u0001\u0002\u0002\t\u0000\u00c2\u00e0\u0087FdJ0\u008d0"
-
-    invoke-static {v1}, Lzii;->Z(Ljava/lang/String;)[B
-
-    move-result-object v1
+    const/4 v1, 0x4
 
     const/4 v2, 0x2
 
-    invoke-direct {v0, v2, v1}, Ly8i;-><init>(I[B)V
+    invoke-static {p1, v2, v1}, La9j;->m(Landroid/os/Parcel;II)V
 
-    sput-object v0, Lwri;->a:Ly8i;
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    new-instance v0, Ly8i;
+    const/4 v0, 0x3
 
-    const-string v1, "0\u0082\u0004\u00a80\u0082\u0003\u0090\u00a0\u0003\u0002\u0001\u0002\u0002\t\u0000\u00d5\u0085\u00b8l}\u00d3N\u00f50"
+    iget-object v1, p0, Lwri;->b:[Ljava/lang/String;
 
-    invoke-static {v1}, Lzii;->Z(Ljava/lang/String;)[B
+    invoke-static {p1, v0, v1}, La9j;->h(Landroid/os/Parcel;I[Ljava/lang/String;)V
 
-    move-result-object v1
-
-    const/4 v2, 0x3
-
-    invoke-direct {v0, v2, v1}, Ly8i;-><init>(I[B)V
-
-    sput-object v0, Lwri;->b:Ly8i;
+    invoke-static {p1, p2}, La9j;->l(Landroid/os/Parcel;I)V
 
     return-void
 .end method

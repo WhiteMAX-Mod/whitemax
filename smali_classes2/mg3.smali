@@ -1,87 +1,131 @@
 .class public final Lmg3;
-.super Lkre;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lmg3;
+# instance fields
+.field public final a:[I
+
+.field public final b:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(I[I)V
+    .locals 0
 
-    new-instance v0, Lmg3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lkre;-><init>()V
+    iput-object p2, p0, Lmg3;->a:[I
 
-    sput-object v0, Lmg3;->b:Lmg3;
+    iput p1, p0, Lmg3;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()Leg4;
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    new-instance v0, Leg4;
+    if-ne p0, p1, :cond_0
 
-    new-instance v1, Lqr2;
+    goto :goto_1
 
-    const/16 v2, 0x10
+    :cond_0
+    instance-of v0, p1, Lmg3;
 
-    invoke-direct {v1, v2}, Lqr2;-><init>(I)V
+    if-nez v0, :cond_1
 
-    new-instance v2, Lqr2;
+    goto :goto_0
 
-    const/16 v3, 0x11
+    :cond_1
+    check-cast p1, Lmg3;
 
-    invoke-direct {v2, v3}, Lqr2;-><init>(I)V
+    iget-object v0, p0, Lmg3;->a:[I
 
-    invoke-direct {v0, v1, v2}, Leg4;-><init>(Lji6;Lji6;)V
+    iget-object v1, p1, Lmg3;->a:[I
 
-    return-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget v0, p0, Lmg3;->b:I
+
+    iget p1, p1, Lmg3;->b:I
+
+    if-eq v0, p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public final d(Landroid/os/Bundle;)Lfg4;
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lmg3;->a:[I
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lmg3;->b:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
     .locals 3
 
-    const-string v0, "parent_id"
+    iget-object v0, p0, Lmg3;->a:[I
 
-    invoke-static {v0, p1}, Llyi;->c(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Long;
+    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "ids"
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-static {v1, p1}, Llyi;->d(Ljava/lang/String;Landroid/os/Bundle;)[J
+    const-string v2, "CommonBackgroundSkeletonBubbleGradientPrimaryColors(gradient="
 
-    move-result-object p1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    new-instance v1, Llg3;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x0
+    const-string v0, ", staticBackground="
 
-    invoke-direct {v1, v0, v2, p1}, Llg3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object v1
-.end method
+    iget v0, p0, Lmg3;->b:I
 
-.method public final e(Ljre;)V
-    .locals 4
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x0
+    const-string v0, ")"
 
-    new-array v0, v0, [Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x0
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const/16 v2, 0xe
+    move-result-object v0
 
-    const-string v3, ":complaint"
-
-    invoke-static {p1, v3, v0, v1, v2}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
-
-    return-void
+    return-object v0
 .end method

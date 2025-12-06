@@ -1,114 +1,74 @@
 .class public final Lp26;
-.super Lf26;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lzy7;
 
-# instance fields
-.field public final synthetic b:I
 
-.field public final c:Ljava/lang/Object;
+# static fields
+.field public static final a:Lp26;
+
+.field public static final b:Lj9c;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p1, p0, Lp26;->b:I
+    new-instance v0, Lp26;
 
-    iput-object p2, p0, Lp26;->c:Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lp26;->a:Lp26;
+
+    new-instance v0, Lj9c;
+
+    const-string v1, "kotlin.Float"
+
+    sget-object v2, Lh9c;->f:Lh9c;
+
+    invoke-direct {v0, v1, v2}, Lj9c;-><init>(Ljava/lang/String;Li9c;)V
+
+    sput-object v0, Lp26;->b:Lj9c;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final g(Lq36;)V
-    .locals 2
+.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
+    .locals 0
 
-    iget v0, p0, Lp26;->b:I
+    check-cast p2, Ljava/lang/Number;
 
-    iget-object v1, p0, Lp26;->c:Ljava/lang/Object;
+    invoke-virtual {p2}, Ljava/lang/Number;->floatValue()F
 
-    packed-switch v0, :pswitch_data_0
+    move-result p2
 
-    check-cast v1, Lwpe;
-
-    new-instance v0, Lqre;
-
-    invoke-direct {v0, p1}, Lup4;-><init>(Lecf;)V
-
-    invoke-virtual {v1, v0}, Lwpe;->k(Lsqe;)V
+    invoke-virtual {p1, p2}, Lkotlinx/serialization/json/internal/b;->h(F)V
 
     return-void
+.end method
 
-    :pswitch_0
-    check-cast v1, Lvia;
+.method public final b(Llh4;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Ly26;
+    invoke-interface {p1}, Llh4;->B()F
 
-    invoke-direct {v0, p1}, Ly26;-><init>(Lecf;)V
+    move-result p1
 
-    invoke-virtual {v1, v0}, Lyha;->a(Lela;)V
+    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    return-void
+    move-result-object p1
 
-    :pswitch_1
-    new-instance v0, Lw26;
+    return-object p1
+.end method
 
-    check-cast v1, [Ljava/lang/Object;
+.method public final d()Lree;
+    .locals 1
 
-    invoke-direct {v0, p1, v1}, Lw26;-><init>(Lecf;[Ljava/lang/Object;)V
+    sget-object v0, Lp26;->b:Lj9c;
 
-    invoke-interface {p1, v0}, Lecf;->e(Lgcf;)V
-
-    return-void
-
-    :pswitch_2
-    :try_start_0
-    check-cast v1, Lsj6;
-
-    iget-object v0, v1, Lsj6;->a:Ljava/lang/Object;
-
-    const-string v1, "Callable returned a null Throwable."
-
-    if-eqz v0, :cond_0
-
-    sget-object v1, Luf5;->a:Ltf5;
-
-    check-cast v0, Ljava/lang/Throwable;
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {v1}, Luf5;->b(Ljava/lang/String;)Ljava/lang/NullPointerException;
-
-    move-result-object v0
-
-    throw v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :goto_0
-    invoke-static {v0}, Lq0j;->b(Ljava/lang/Throwable;)V
-
-    :goto_1
-    invoke-static {v0, p1}, Lab5;->c(Ljava/lang/Throwable;Lecf;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

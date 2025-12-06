@@ -1,19 +1,35 @@
-.class public final Lud4;
+.class public interface abstract Lud4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/Object;
+# virtual methods
+.method public abstract A()Z
+.end method
 
+.method public abstract C()J
+.end method
 
-# direct methods
-.method public constructor <init>(Lkf8;Ljava/lang/Object;)V
-    .locals 0
+.method public abstract D(J)J
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract E(JJ)J
+.end method
 
-    iput-object p2, p0, Lud4;->a:Ljava/lang/Object;
+.method public abstract b(J)J
+.end method
 
-    return-void
+.method public abstract f(JJ)J
+.end method
+
+.method public abstract h(JJ)J
+.end method
+
+.method public abstract j(JJ)J
+.end method
+
+.method public abstract k(J)Lr7d;
+.end method
+
+.method public abstract u(JJ)J
 .end method

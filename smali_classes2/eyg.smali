@@ -1,93 +1,35 @@
-.class public final Leyg;
-.super Lrdi;
+.class public abstract synthetic Leyg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic c:I
-
-.field public final synthetic o:Lfyg;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(Lfyg;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p2, p0, Leyg;->c:I
+    const/4 v0, 0x1
 
-    iput-object p1, p0, Leyg;->o:Lfyg;
+    invoke-static {v0}, Laz1;->y(I)[I
 
-    const/16 p1, 0xc
+    move-result-object v1
 
-    packed-switch p2, :pswitch_data_0
+    array-length v1, v1
 
-    const/4 p2, 0x0
+    new-array v1, v1, [I
 
-    invoke-direct {p0, p1, p2}, Lrdi;-><init>(ILjava/lang/Object;)V
+    const/4 v2, 0x0
+
+    :try_start_0
+    aput v0, v1, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    sput-object v1, Leyg;->$EnumSwitchMapping$0:[I
 
     return-void
-
-    :pswitch_0
-    sget-object p2, Lzxg;->a:Lzxg;
-
-    invoke-direct {p0, p1, p2}, Lrdi;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-
-# virtual methods
-.method public final b0(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 1
-
-    iget v0, p0, Leyg;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {p1, p2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    check-cast p2, Lzxg;
-
-    check-cast p1, Lzxg;
-
-    iget-object p1, p0, Leyg;->o:Lfyg;
-
-    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    invoke-static {p1, p2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    check-cast p2, Lcyg;
-
-    check-cast p1, Lcyg;
-
-    iget-object p1, p0, Leyg;->o:Lfyg;
-
-    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
-
-    :cond_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

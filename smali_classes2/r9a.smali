@@ -1,99 +1,163 @@
-.class public abstract synthetic Lr9a;
+.class public final Lr9a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public a:I
 
-.field public static final synthetic $EnumSwitchMapping$1:[I
+.field public b:I
+
+.field public c:Z
+
+.field public d:Z
+
+.field public e:Z
+
+.field public f:Ljava/lang/Object;
+
+.field public g:Ljava/lang/Object;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 5
+# virtual methods
+.method public a()V
+    .locals 6
 
-    const/4 v0, 0x3
+    iget-object v0, p0, Lr9a;->g:Ljava/lang/Object;
 
-    invoke-static {v0}, Ldy1;->y(I)[I
+    check-cast v0, Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    array-length v1, v1
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    new-array v1, v1, [I
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lq9a;
+
+    iget-object v3, p0, Lr9a;->f:Ljava/lang/Object;
+
+    check-cast v3, Landroid/media/MediaMuxer;
+
+    iget v4, v2, Lq9a;->a:I
+
+    iget-object v5, v2, Lq9a;->b:Ljava/nio/ByteBuffer;
+
+    iget-object v2, v2, Lq9a;->c:Landroid/media/MediaCodec$BufferInfo;
+
+    invoke-virtual {v3, v4, v5, v2}, Landroid/media/MediaMuxer;->writeSampleData(ILjava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+
+    return-void
+.end method
+
+.method public b()Z
+    .locals 6
+
+    iget-boolean v0, p0, Lr9a;->d:Z
+
+    const/4 v1, 0x0
 
     const/4 v2, 0x1
 
-    const/4 v3, 0x0
+    const/4 v3, -0x1
 
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    if-eqz v0, :cond_0
 
-    :catch_0
-    const/4 v3, 0x2
+    iget v4, p0, Lr9a;->a:I
 
-    :try_start_1
-    aput v3, v1, v3
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    if-ne v4, v3, :cond_1
 
-    :catch_1
-    :try_start_2
-    aput v0, v1, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    :cond_0
+    if-nez v0, :cond_2
 
-    :catch_2
-    sput-object v1, Lr9a;->$EnumSwitchMapping$0:[I
+    iget v0, p0, Lr9a;->a:I
 
-    invoke-static {}, Lorg/webrtc/PeerConnectionFactory$EnhancerKind;->values()[Lorg/webrtc/PeerConnectionFactory$EnhancerKind;
+    if-ne v0, v3, :cond_2
 
-    move-result-object v1
+    :cond_1
+    move v0, v2
 
-    array-length v1, v1
+    goto :goto_0
 
-    new-array v1, v1, [I
+    :cond_2
+    move v0, v1
 
-    :try_start_3
-    sget-object v4, Lorg/webrtc/PeerConnectionFactory$EnhancerKind;->NONE:Lorg/webrtc/PeerConnectionFactory$EnhancerKind;
+    :goto_0
+    iget-boolean v4, p0, Lr9a;->e:Z
 
-    invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
+    if-eqz v4, :cond_3
 
-    move-result v4
+    iget v5, p0, Lr9a;->b:I
 
-    aput v2, v1, v4
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    if-ne v5, v3, :cond_4
 
-    :catch_3
-    :try_start_4
-    sget-object v2, Lorg/webrtc/PeerConnectionFactory$EnhancerKind;->PIPELINE:Lorg/webrtc/PeerConnectionFactory$EnhancerKind;
+    :cond_3
+    if-nez v4, :cond_5
 
-    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
+    iget v4, p0, Lr9a;->b:I
 
-    move-result v2
+    if-ne v4, v3, :cond_5
 
-    aput v3, v1, v2
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    :cond_4
+    move v3, v2
 
-    :catch_4
-    :try_start_5
-    sget-object v2, Lorg/webrtc/PeerConnectionFactory$EnhancerKind;->BASELINE:Lorg/webrtc/PeerConnectionFactory$EnhancerKind;
+    goto :goto_1
 
-    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
+    :cond_5
+    move v3, v1
 
-    move-result v2
+    :goto_1
+    if-eqz v0, :cond_6
 
-    aput v0, v1, v2
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+    if-eqz v3, :cond_6
 
-    :catch_5
-    sput-object v1, Lr9a;->$EnumSwitchMapping$1:[I
+    return v2
 
+    :cond_6
+    return v1
+.end method
+
+.method public c()V
+    .locals 2
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lr9a;->a:I
+
+    const/high16 v1, -0x80000000
+
+    iput v1, p0, Lr9a;->b:I
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, p0, Lr9a;->c:Z
+
+    iput-boolean v1, p0, Lr9a;->d:Z
+
+    iput-boolean v1, p0, Lr9a;->e:Z
+
+    iget-object v1, p0, Lr9a;->f:Ljava/lang/Object;
+
+    check-cast v1, [I
+
+    if-eqz v1, :cond_0
+
+    invoke-static {v1, v0}, Ljava/util/Arrays;->fill([II)V
+
+    :cond_0
     return-void
 .end method

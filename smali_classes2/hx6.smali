@@ -1,23 +1,59 @@
-.class public abstract Lhx6;
+.class public final Lhx6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lorf;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-.field public final b:Ltrf;
+    const/4 v0, 0x1
 
+    if-ne p0, p1, :cond_0
 
-# direct methods
-.method public constructor <init>(Lorf;Lorf;)V
-    .locals 0
+    return v0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    :cond_0
+    instance-of v1, p1, Lhx6;
 
-    iput-object p1, p0, Lhx6;->a:Lorf;
+    if-nez v1, :cond_1
 
-    iput-object p2, p0, Lhx6;->b:Ltrf;
+    const/4 p1, 0x0
 
-    return-void
+    return p1
+
+    :cond_1
+    check-cast p1, Lhx6;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    const/4 v0, -0x1
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "GradientsLoadingIconContrastStaticColors(filled=-1, transparent=-1)"
+
+    return-object v0
 .end method

@@ -602,7 +602,7 @@
     const-string v2, " fieldTrialsString: "
 
     .line 10
-    invoke-static {v1, p2, p3, v2, p4}, Lrtg;->g(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p2, p3, v2, p4}, La9h;->e(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 

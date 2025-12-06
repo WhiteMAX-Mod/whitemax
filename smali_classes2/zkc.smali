@@ -1,28 +1,88 @@
-.class public abstract Lzkc;
-.super Ljava/lang/Object;
+.class public final Lzkc;
+.super Lid0;
+.source "SourceFile"
 
 
-# static fields
-.field public static date_picker_item_height:I = 0x7f070089
+# instance fields
+.field public final b:Ljava/lang/String;
 
-.field public static date_picker_land_height:I = 0x7f07008a
 
-.field public static date_picker_land_today_margin_top:I = 0x7f07008b
+# direct methods
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
 
-.field public static date_picker_portrait_height:I = 0x7f07008c
+    const/16 v0, 0x10
 
-.field public static date_picker_portrait_today_margin_top:I = 0x7f07008d
+    invoke-direct {p0, v0}, Lid0;-><init>(I)V
 
-.field public static date_picker_selection_rect_offset:I = 0x7f07008e
+    iput-object p1, p0, Lzkc;->b:Ljava/lang/String;
 
-.field public static date_picker_today_margin_top:I = 0x7f07008f
+    return-void
+.end method
 
-.field public static picker_height:I = 0x7f0703d9
 
-.field public static picker_max_width:I = 0x7f0703da
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-.field public static picker_min_scale_factor:I = 0x7f0703db
+    const/4 v0, 0x1
 
-.field public static picker_scale_factor:I = 0x7f0703dc
+    if-ne p0, p1, :cond_0
 
-.field public static picker_width:I = 0x7f0703dd
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lzkc;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lzkc;
+
+    iget-object v1, p0, Lzkc;->b:Ljava/lang/String;
+
+    iget-object p1, p1, Lzkc;->b:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lzkc;->b:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "ShowJoinCall(link="
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Lzkc;->b:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Lho7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

@@ -1,108 +1,77 @@
-.class public final Lgy1;
+.class public final synthetic Lgy1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Luu1;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public b:Z
-
-.field public final c:Ljava/lang/Object;
-
-.field public final o:Ljava/lang/Object;
+.field public final synthetic b:Liy1;
 
 
 # direct methods
-.method public constructor <init>(Lhx7;Lgw7;)V
-    .locals 1
+.method public synthetic constructor <init>(Liy1;I)V
+    .locals 0
 
-    const/4 v0, 0x1
+    iput p2, p0, Lgy1;->a:I
 
-    iput v0, p0, Lgy1;->a:I
+    iput-object p1, p0, Lgy1;->b:Liy1;
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-object p1, p0, Lgy1;->c:Ljava/lang/Object;
-
-    .line 3
-    iput-object p2, p0, Lgy1;->o:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lhy1;La3e;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lgy1;->a:I
-
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lgy1;->o:Ljava/lang/Object;
-
-    const/4 p1, 0x0
-
-    .line 5
-    iput-boolean p1, p0, Lgy1;->b:Z
-
-    .line 6
-    iput-object p2, p0, Lgy1;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final m(Ltu1;)Ljava/lang/String;
+    .locals 4
 
     iget v0, p0, Lgy1;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-boolean v0, p0, Lgy1;->b:Z
+    iget-object v0, p0, Lgy1;->b:Liy1;
 
-    if-nez v0, :cond_0
+    iget-object v1, v0, Liy1;->d:Ljava/lang/Object;
 
-    iget-object v0, p0, Lgy1;->c:Ljava/lang/Object;
+    check-cast v1, Lqee;
 
-    check-cast v0, Lhx7;
+    new-instance v2, Lhy1;
 
-    iget-object v1, p0, Lgy1;->o:Ljava/lang/Object;
+    const/4 v3, 0x0
 
-    check-cast v1, Lgw7;
+    invoke-direct {v2, v0, p1, v3}, Lhy1;-><init>(Liy1;Ltu1;I)V
 
-    invoke-virtual {v0, v1}, Lhx7;->d(Lgw7;)V
+    invoke-virtual {v1, v2}, Lqee;->execute(Ljava/lang/Runnable;)V
 
-    const/4 v0, 0x1
+    const-string p1, "clearCaptureRequestOptions"
 
-    iput-boolean v0, p0, Lgy1;->b:Z
-
-    :cond_0
-    return-void
+    return-object p1
 
     :pswitch_0
-    iget-object v0, p0, Lgy1;->c:Ljava/lang/Object;
+    iget-object v0, p0, Lgy1;->b:Liy1;
 
-    check-cast v0, Ljava/util/concurrent/Executor;
+    iget-object v1, v0, Liy1;->d:Ljava/lang/Object;
 
-    new-instance v1, Lzx1;
+    check-cast v1, Lqee;
 
-    const/4 v2, 0x1
+    new-instance v2, Lhy1;
 
-    invoke-direct {v1, v2, p0}, Lzx1;-><init>(ILjava/lang/Object;)V
+    const/4 v3, 0x1
 
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-direct {v2, v0, p1, v3}, Lhy1;-><init>(Liy1;Ltu1;I)V
 
-    return-void
+    invoke-virtual {v1, v2}, Lqee;->execute(Ljava/lang/Runnable;)V
+
+    const-string p1, "addCaptureRequestOptions"
+
+    return-object p1
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

@@ -1,152 +1,241 @@
-.class public final synthetic Loc6;
-.super Ljava/lang/Object;
+.class public final Loc6;
+.super Lxfh;
 .source "SourceFile"
-
-# interfaces
-.implements Lji6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:Lxa6;
 
-.field public final synthetic b:Lone/me/chats/forward/ForwardPickerScreen;
+.field public final Y:Lw86;
+
+.field public final Z:Lk18;
+
+.field public final b:Lva4;
+
+.field public final c:Llzf;
+
+.field public final d:Lk18;
+
+.field public final o:Lt86;
+
+.field public final s0:Ltcf;
+
+.field public final t0:Lhbd;
+
+.field public final u0:Lci5;
+
+.field public v0:Ljava/lang/String;
+
+.field public w0:Lfxg;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/chats/forward/ForwardPickerScreen;I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 12
 
-    iput p2, p0, Loc6;->a:I
+    sget-object v0, Lvb6;->a:Lvb6;
 
-    iput-object p1, p0, Loc6;->b:Lone/me/chats/forward/ForwardPickerScreen;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v1
+
+    const/16 v2, 0x95
+
+    invoke-virtual {v1, v2}, Lw5;->c(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lva4;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
+
+    move-result-object v3
+
+    const/16 v4, 0x8
+
+    invoke-virtual {v3, v4}, Lw5;->c(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Llzf;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
+
+    move-result-object v5
+
+    const/16 v6, 0x1a4
+
+    invoke-virtual {v5, v6}, Lw5;->d(I)Lbwf;
+
+    move-result-object v5
+
+    invoke-virtual {v0}, Lvb6;->a()Lt86;
+
+    move-result-object v6
+
+    new-instance v7, Lxa6;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
+
+    move-result-object v8
+
+    invoke-virtual {v8, v2}, Lw5;->d(I)Lbwf;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
+
+    move-result-object v8
+
+    const/16 v9, 0x4f
+
+    invoke-virtual {v8, v9}, Lw5;->d(I)Lbwf;
+
+    move-result-object v8
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
+
+    move-result-object v9
+
+    invoke-virtual {v9, v4}, Lw5;->c(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Llzf;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
+
+    move-result-object v9
+
+    const/16 v10, 0x54
+
+    invoke-virtual {v9, v10}, Lw5;->c(I)Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, La84;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
+
+    move-result-object v10
+
+    const/16 v11, 0x9
+
+    invoke-virtual {v10, v11}, Lw5;->d(I)Lbwf;
+
+    move-result-object v10
+
+    invoke-direct {v7}, Ljava/lang/Object;-><init>()V
+
+    const-class v11, Lxa6;
+
+    invoke-virtual {v11}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v11
+
+    iput-object v11, v7, Lxa6;->a:Ljava/lang/Object;
+
+    check-cast v4, Lq2b;
+
+    invoke-virtual {v4}, Lq2b;->b()Lz74;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v9}, Lp0;->plus(Lx74;)Lx74;
+
+    move-result-object v4
+
+    invoke-static {v4}, Ld7j;->a(Lx74;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object v4
+
+    iput-object v4, v7, Lxa6;->b:Ljava/lang/Object;
+
+    iput-object v8, v7, Lxa6;->c:Ljava/lang/Object;
+
+    iput-object v2, v7, Lxa6;->d:Ljava/lang/Object;
+
+    iput-object v10, v7, Lxa6;->o:Ljava/lang/Object;
+
+    invoke-virtual {v0}, Lvb6;->b()Lw86;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
+
+    move-result-object v0
+
+    const/16 v4, 0x1c6
+
+    invoke-virtual {v0, v4}, Lw5;->d(I)Lbwf;
+
+    move-result-object v0
+
+    invoke-direct {p0}, Lxfh;-><init>()V
+
+    iput-object v1, p0, Loc6;->b:Lva4;
+
+    iput-object v3, p0, Loc6;->c:Llzf;
+
+    iput-object v5, p0, Loc6;->d:Lk18;
+
+    iput-object v6, p0, Loc6;->o:Lt86;
+
+    iput-object v7, p0, Loc6;->X:Lxa6;
+
+    iput-object v2, p0, Loc6;->Y:Lw86;
+
+    iput-object v0, p0, Loc6;->Z:Lk18;
+
+    sget-object v0, Lhd5;->a:Lhd5;
+
+    invoke-static {v0}, Lucf;->a(Ljava/lang/Object;)Ltcf;
+
+    move-result-object v0
+
+    iput-object v0, p0, Loc6;->s0:Ltcf;
+
+    new-instance v2, Lhbd;
+
+    invoke-direct {v2, v0}, Lhbd;-><init>(Lf9a;)V
+
+    iput-object v2, p0, Loc6;->t0:Lhbd;
+
+    new-instance v0, Lci5;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v2}, Lci5;-><init>(I)V
+
+    iput-object v0, p0, Loc6;->u0:Lci5;
+
+    iget-object v0, v1, Lva4;->v0:Lhbd;
+
+    new-instance v1, Lic6;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p0, v2}, Lic6;-><init>(Loc6;Lkotlin/coroutines/Continuation;)V
+
+    new-instance v2, Lg56;
+
+    const/4 v4, 0x1
+
+    invoke-direct {v2, v0, v1, v4}, Lg56;-><init>(Lx26;Lsm6;I)V
+
+    check-cast v3, Lq2b;
+
+    invoke-virtual {v3}, Lq2b;->a()Lz74;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Lgw0;->u(Lx26;Lx74;)Lx26;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lxfh;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v0, v1}, Lgw0;->w(Lx26;Lf84;)Lx9f;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 6
-
-    iget v0, p0, Loc6;->a:I
-
-    const/4 v1, 0x0
-
-    sget-object v2, Lccg;->a:Lccg;
-
-    iget-object v3, p0, Loc6;->b:Lone/me/chats/forward/ForwardPickerScreen;
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, v3, Lone/me/chats/forward/ForwardPickerScreen;->E0:Lsc6;
-
-    invoke-virtual {v0}, Lsc6;->k()V
-
-    return-object v2
-
-    :pswitch_0
-    sget-object v0, Lone/me/chats/forward/ForwardPickerScreen;->H0:[Ltr7;
-
-    new-instance v0, Lgd9;
-
-    invoke-virtual {v3}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-direct {v0, v2}, Lgd9;-><init>(Landroid/content/Context;)V
-
-    sget v2, Lgsa;->a:I
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setId(I)V
-
-    sget v2, Lisa;->a:I
-
-    invoke-virtual {v0, v2}, Lgd9;->setInputHint(I)V
-
-    sget-object v2, Lxc9;->a:Lxc9;
-
-    invoke-virtual {v0, v2}, Lgd9;->setRightOuterIconActionState(Lad9;)V
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    new-instance v4, Le13;
-
-    const/16 v5, 0x10
-
-    invoke-direct {v4, v3, v5, v0}, Le13;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {v2, v4}, Lfy9;->a(Landroid/content/Context;Lji6;)Lvn6;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Lgd9;->setRightOuterIconTouchListener(Landroid/view/View$OnTouchListener;)V
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    new-instance v4, Loc6;
-
-    invoke-direct {v4, v3, v1}, Loc6;-><init>(Lone/me/chats/forward/ForwardPickerScreen;I)V
-
-    invoke-static {v2, v4}, Lfy9;->a(Landroid/content/Context;Lji6;)Lvn6;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lgd9;->setLeftInnerIconTouchListener(Landroid/view/View$OnTouchListener;)V
-
-    return-object v0
-
-    :pswitch_1
-    iget-object v0, v3, Lone/me/chats/forward/ForwardPickerScreen;->E0:Lsc6;
-
-    return-object v0
-
-    :pswitch_2
-    sget-object v0, Lone/me/chats/forward/ForwardPickerScreen;->H0:[Ltr7;
-
-    sget-object v0, Ll05;->s0:Lk82;
-
-    invoke-virtual {v3}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lk82;->p(Landroid/content/Context;)Lewa;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lewa;->c:Lv5b;
-
-    return-object v0
-
-    :pswitch_3
-    sget-object v0, Lone/me/chats/forward/ForwardPickerScreen;->H0:[Ltr7;
-
-    invoke-virtual {v3}, Lone/me/chats/picker/AbstractPickerScreen;->M0()Lmnb;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lmnb;->c:Lkpb;
-
-    check-cast v0, Lhc6;
-
-    iget-object v0, v0, Lhc6;->r:Lzgd;
-
-    invoke-virtual {v0, v1}, Lzgd;->A(I)V
-
-    return-object v2
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

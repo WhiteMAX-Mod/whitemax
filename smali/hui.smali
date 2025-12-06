@@ -1,336 +1,370 @@
-.class public final Lhui;
+.class public abstract Lhui;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/content/ServiceConnection;
-
-
-# instance fields
-.field public final X:Ldti;
-
-.field public Y:Landroid/content/ComponentName;
-
-.field public final synthetic Z:Luxi;
-
-.field public final a:Ljava/util/HashMap;
-
-.field public b:I
-
-.field public c:Z
-
-.field public o:Landroid/os/IBinder;
-
 
 # direct methods
-.method public constructor <init>(Luxi;Ldti;)V
-    .locals 0
+.method public static final a(III)I
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    rem-int/lit8 v0, p0, 0x10
 
-    iput-object p1, p0, Lhui;->Z:Luxi;
+    sub-int/2addr p0, v0
 
-    iput-object p2, p0, Lhui;->X:Ldti;
+    div-int v0, p0, p1
 
-    new-instance p1, Ljava/util/HashMap;
+    const/16 v1, 0x9
 
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
+    if-ne v0, v1, :cond_0
 
-    iput-object p1, p0, Lhui;->a:Ljava/util/HashMap;
-
-    const/4 p1, 0x2
-
-    iput p1, p0, Lhui;->b:I
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Ljava/lang/String;Ljava/util/concurrent/Executor;)V
-    .locals 9
-
-    const/4 v0, 0x3
-
-    iput v0, p0, Lhui;->b:I
-
-    invoke-static {}, Landroid/os/StrictMode;->getVmPolicy()Landroid/os/StrictMode$VmPolicy;
-
-    move-result-object v1
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v2, 0x1f
-
-    if-lt v0, v2, :cond_0
-
-    new-instance v0, Landroid/os/StrictMode$VmPolicy$Builder;
-
-    invoke-direct {v0, v1}, Landroid/os/StrictMode$VmPolicy$Builder;-><init>(Landroid/os/StrictMode$VmPolicy;)V
-
-    invoke-static {v0}, Lkdh;->a(Landroid/os/StrictMode$VmPolicy$Builder;)Landroid/os/StrictMode$VmPolicy$Builder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/os/StrictMode$VmPolicy$Builder;->build()Landroid/os/StrictMode$VmPolicy;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/os/StrictMode;->setVmPolicy(Landroid/os/StrictMode$VmPolicy;)V
+    return p0
 
     :cond_0
-    :try_start_0
-    iget-object v0, p0, Lhui;->Z:Luxi;
+    mul-int/2addr p1, v1
 
-    iget-object v2, v0, Luxi;->d:Lnhd;
+    rem-int/lit8 p0, p1, 0x10
 
-    iget-object v3, v0, Luxi;->b:Landroid/content/Context;
+    if-nez p0, :cond_1
 
-    iget-object v0, p0, Lhui;->X:Ldti;
+    return p1
 
-    invoke-virtual {v0, v3}, Ldti;->a(Landroid/content/Context;)Landroid/content/Intent;
+    :cond_1
+    sub-int/2addr p1, p0
 
-    move-result-object v5
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+    sub-int/2addr v1, v0
 
-    const/16 v7, 0x1081
+    sub-int/2addr p2, p1
 
-    move-object v6, p0
+    if-lez v1, :cond_3
 
-    move-object v4, p1
+    if-gtz p2, :cond_2
 
-    move-object v8, p2
+    goto :goto_0
 
-    :try_start_1
-    invoke-virtual/range {v2 .. v8}, Lnhd;->i0(Landroid/content/Context;Ljava/lang/String;Landroid/content/Intent;Landroid/content/ServiceConnection;ILjava/util/concurrent/Executor;)Z
+    :cond_2
+    div-int/lit8 p2, p2, 0x10
 
-    move-result p1
+    invoke-static {v1, p2}, Ljava/lang/Math;->min(II)I
 
-    iput-boolean p1, v6, Lhui;->c:Z
+    move-result p0
 
-    if-eqz p1, :cond_1
+    mul-int/lit8 p0, p0, 0x10
 
-    iget-object p1, v6, Lhui;->Z:Luxi;
+    add-int/2addr p0, p1
 
-    iget-object p1, p1, Luxi;->c:Lhu9;
+    return p0
 
-    iget-object p2, v6, Lhui;->X:Ldti;
+    :cond_3
+    :goto_0
+    return p1
+.end method
 
-    const/4 v0, 0x1
+.method public static final b(Ljava/util/Collection;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 2
 
-    invoke-virtual {p1, v0, p2}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+    invoke-interface {p0}, Ljava/util/Collection;->isEmpty()Z
 
-    move-result-object p1
+    move-result v0
 
-    iget-object p2, v6, Lhui;->Z:Luxi;
+    if-eqz v0, :cond_0
 
-    iget-object p2, p2, Luxi;->c:Lhu9;
+    sget-object p0, Lhd5;->a:Lhd5;
 
-    iget-object v0, v6, Lhui;->Z:Luxi;
+    return-object p0
 
-    iget-wide v2, v0, Luxi;->f:J
+    :cond_0
+    new-instance v0, Lne0;
 
-    invoke-virtual {p2, p1, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Lbs4;
+
+    invoke-interface {p0, v1}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, [Lbs4;
+
+    invoke-direct {v0, p0}, Lne0;-><init>([Lbs4;)V
+
+    invoke-virtual {v0, p1}, Lne0;->a(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final c(Ljava/util/ArrayList;Lq44;)Ljava/lang/Object;
+    .locals 4
+
+    instance-of v0, p1, Lpe0;
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p1
+
+    check-cast v0, Lpe0;
+
+    iget v1, v0, Lpe0;->X:I
+
+    const/high16 v2, -0x80000000
+
+    and-int v3, v1, v2
+
+    if-eqz v3, :cond_0
+
+    sub-int/2addr v1, v2
+
+    iput v1, v0, Lpe0;->X:I
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lpe0;
+
+    invoke-direct {v0, p1}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    :goto_0
+    iget-object p1, v0, Lpe0;->o:Ljava/lang/Object;
+
+    iget v1, v0, Lpe0;->X:I
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_2
+
+    if-ne v1, v2, :cond_1
+
+    iget-object p0, v0, Lpe0;->d:Ljava/util/Iterator;
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
     goto :goto_1
 
-    :catchall_0
-    move-exception v0
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_2
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :cond_3
+    :goto_1
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lqt7;
+
+    iput-object p0, v0, Lpe0;->d:Ljava/util/Iterator;
+
+    iput v2, v0, Lpe0;->X:I
+
+    invoke-interface {p1, v0}, Lqt7;->join(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v1, Lg84;->a:Lg84;
+
+    if-ne p1, v1, :cond_3
+
+    return-object v1
+
+    :cond_4
+    sget-object p0, Lqqg;->a:Lqqg;
+
+    return-object p0
+.end method
+
+.method public static final d([Lqt7;Lq44;)Ljava/lang/Object;
+    .locals 6
+
+    instance-of v0, p1, Loe0;
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p1
+
+    check-cast v0, Loe0;
+
+    iget v1, v0, Loe0;->Z:I
+
+    const/high16 v2, -0x80000000
+
+    and-int v3, v1, v2
+
+    if-eqz v3, :cond_0
+
+    sub-int/2addr v1, v2
+
+    iput v1, v0, Loe0;->Z:I
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Loe0;
+
+    invoke-direct {v0, p1}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     :goto_0
-    move-object p1, v0
+    iget-object p1, v0, Loe0;->Y:Ljava/lang/Object;
+
+    iget v1, v0, Loe0;->Z:I
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_2
+
+    if-ne v1, v2, :cond_1
+
+    iget p0, v0, Loe0;->X:I
+
+    iget v1, v0, Loe0;->o:I
+
+    iget-object v3, v0, Loe0;->d:[Ljava/lang/Object;
+
+    check-cast v3, [Lqt7;
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    move-object p1, v3
 
     goto :goto_2
 
     :cond_1
-    const/4 p1, 0x2
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    iput p1, v6, Lhui;->b:I
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
 
-    :try_start_2
-    iget-object p1, v6, Lhui;->Z:Luxi;
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iget-object p2, p1, Luxi;->d:Lnhd;
+    throw p0
 
-    iget-object p1, p1, Luxi;->b:Landroid/content/Context;
+    :cond_2
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {p2, p1, p0}, Lnhd;->h0(Landroid/content/Context;Landroid/content/ServiceConnection;)V
-    :try_end_2
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :catch_0
-    :goto_1
-    invoke-static {v1}, Landroid/os/StrictMode;->setVmPolicy(Landroid/os/StrictMode$VmPolicy;)V
-
-    return-void
-
-    :catchall_1
-    move-exception v0
-
-    move-object v6, p0
-
-    goto :goto_0
-
-    :goto_2
-    invoke-static {v1}, Landroid/os/StrictMode;->setVmPolicy(Landroid/os/StrictMode$VmPolicy;)V
-
-    throw p1
-.end method
-
-.method public final onBindingDied(Landroid/content/ComponentName;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Lhui;->onServiceDisconnected(Landroid/content/ComponentName;)V
-
-    return-void
-.end method
-
-.method public final onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
-    .locals 4
-
-    iget-object v0, p0, Lhui;->Z:Luxi;
-
-    iget-object v0, v0, Luxi;->a:Ljava/util/HashMap;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Lhui;->Z:Luxi;
-
-    iget-object v1, v1, Luxi;->c:Lhu9;
-
-    iget-object v2, p0, Lhui;->X:Ldti;
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v1, v3, v2}, Landroid/os/Handler;->removeMessages(ILjava/lang/Object;)V
-
-    iput-object p2, p0, Lhui;->o:Landroid/os/IBinder;
-
-    iput-object p1, p0, Lhui;->Y:Landroid/content/ComponentName;
-
-    iget-object v1, p0, Lhui;->a:Ljava/util/HashMap;
-
-    invoke-virtual {v1}, Ljava/util/HashMap;->values()Ljava/util/Collection;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/content/ServiceConnection;
-
-    invoke-interface {v2, p1, p2}, Landroid/content/ServiceConnection;->onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    iput v3, p0, Lhui;->b:I
-
-    monitor-exit v0
-
-    return-void
-
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
-.end method
-
-.method public final onServiceDisconnected(Landroid/content/ComponentName;)V
-    .locals 4
-
-    iget-object v0, p0, Lhui;->Z:Luxi;
-
-    iget-object v0, v0, Luxi;->a:Ljava/util/HashMap;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Lhui;->Z:Luxi;
-
-    iget-object v1, v1, Luxi;->c:Lhu9;
-
-    iget-object v2, p0, Lhui;->X:Ldti;
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v1, v3, v2}, Landroid/os/Handler;->removeMessages(ILjava/lang/Object;)V
+    array-length p1, p0
 
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lhui;->o:Landroid/os/IBinder;
+    move v5, p1
 
-    iput-object p1, p0, Lhui;->Y:Landroid/content/ComponentName;
+    move-object p1, p0
 
-    iget-object v1, p0, Lhui;->a:Ljava/util/HashMap;
+    move p0, v5
 
-    invoke-virtual {v1}, Ljava/util/HashMap;->values()Ljava/util/Collection;
+    :goto_1
+    if-ge v1, p0, :cond_4
 
-    move-result-object v1
+    aget-object v3, p1, v1
 
-    invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    iput-object p1, v0, Loe0;->d:[Ljava/lang/Object;
 
-    move-result-object v1
+    iput v1, v0, Loe0;->o:I
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    iput p0, v0, Loe0;->X:I
 
-    move-result v2
+    iput v2, v0, Loe0;->Z:I
 
-    if-eqz v2, :cond_0
+    invoke-interface {v3, v0}, Lqt7;->join(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-result-object v3
 
-    move-result-object v2
+    sget-object v4, Lg84;->a:Lg84;
 
-    check-cast v2, Landroid/content/ServiceConnection;
+    if-ne v3, v4, :cond_3
 
-    invoke-interface {v2, p1}, Landroid/content/ServiceConnection;->onServiceDisconnected(Landroid/content/ComponentName;)V
+    return-object v4
 
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
+    :cond_3
+    :goto_2
+    add-int/2addr v1, v2
 
     goto :goto_1
 
-    :cond_0
-    const/4 p1, 0x2
+    :cond_4
+    sget-object p0, Lqqg;->a:Lqqg;
 
-    iput p1, p0, Lhui;->b:I
+    return-object p0
+.end method
 
-    monitor-exit v0
+.method public static final e(Lesg;)V
+    .locals 2
+
+    new-instance v0, Lyv6;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1}, Lyv6;-><init>(I)V
+
+    const/16 v1, 0x32
+
+    invoke-virtual {p0, v1, v0}, Lesg;->e(ILio7;)V
+
+    new-instance v0, Lyv6;
+
+    const/16 v1, 0x9
+
+    invoke-direct {v0, v1}, Lyv6;-><init>(I)V
+
+    const/16 v1, 0x33
+
+    invoke-virtual {p0, v1, v0}, Lesg;->e(ILio7;)V
+
+    new-instance v0, Lyv6;
+
+    const/16 v1, 0xa
+
+    invoke-direct {v0, v1}, Lyv6;-><init>(I)V
+
+    const/16 v1, 0x34
+
+    invoke-virtual {p0, v1, v0}, Lesg;->e(ILio7;)V
+
+    new-instance v0, Lyv6;
+
+    const/16 v1, 0xb
+
+    invoke-direct {v0, v1}, Lyv6;-><init>(I)V
+
+    const/16 v1, 0x35
+
+    invoke-virtual {p0, v1, v0}, Lesg;->e(ILio7;)V
+
+    new-instance v0, Lbf8;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, v1}, Lbf8;-><init>(I)V
+
+    const/16 v1, 0x36
+
+    invoke-virtual {p0, v1, v0}, Lesg;->e(ILio7;)V
+
+    new-instance v0, Lbf8;
+
+    const/4 v1, 0x6
+
+    invoke-direct {v0, v1}, Lbf8;-><init>(I)V
+
+    const/16 v1, 0x37
+
+    invoke-virtual {p0, v1, v0}, Lesg;->e(ILio7;)V
 
     return-void
-
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
 .end method

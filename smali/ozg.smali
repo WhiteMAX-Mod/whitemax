@@ -3,21 +3,23 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final a:Ljava/util/Map;
+
+
 # direct methods
-.method public static a(Landroid/view/ViewGroup;I)I
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->getChildDrawingOrder(I)I
+    new-instance v0, Ljava/util/WeakHashMap;
 
-    move-result p0
+    invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
 
-    return p0
-.end method
+    invoke-static {v0}, Ljava/util/Collections;->synchronizedMap(Ljava/util/Map;)Ljava/util/Map;
 
-.method public static b(Landroid/view/ViewGroup;Z)V
-    .locals 0
+    move-result-object v0
 
-    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->suppressLayout(Z)V
+    sput-object v0, Lozg;->a:Ljava/util/Map;
 
     return-void
 .end method

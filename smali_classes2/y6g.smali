@@ -1,107 +1,133 @@
 .class public final Ly6g;
-.super Lsgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic X:La7g;
+.field public final a:[I
+
+.field public final b:F
 
 
 # direct methods
-.method public constructor <init>(La7g;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>([IF)V
     .locals 0
 
-    iput-object p1, p0, Ly6g;->X:La7g;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Ly6g;->a:[I
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p2, p0, Ly6g;->b:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lq54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ly6g;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ly6g;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Ly6g;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Ly6g;
-
-    iget-object v0, p0, Ly6g;->X:La7g;
-
-    invoke-direct {p1, v0, p2}, Ly6g;-><init>(La7g;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    const/4 v0, 0x1
 
-    iget-object p1, p0, Ly6g;->X:La7g;
+    if-ne p0, p1, :cond_0
 
-    iget-object p1, p1, La7g;->v0:Lx0f;
-
-    invoke-virtual {p1}, Lx0f;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lmag;
-
-    instance-of v1, v0, Lhag;
-
-    sget-object v2, Lccg;->a:Lccg;
-
-    if-eqz v1, :cond_1
-
-    check-cast v0, Lhag;
-
-    iget-object v1, v0, Lhag;->c:Lkag;
-
-    iget-object v3, v1, Lkag;->c:Ltrf;
-
-    if-nez v3, :cond_0
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    const/4 v3, 0x0
+    instance-of v1, p1, Ly6g;
 
-    invoke-static {v1, v3}, Lkag;->a(Lkag;Ltrf;)Lkag;
+    const/4 v2, 0x0
 
-    move-result-object v1
+    if-nez v1, :cond_1
 
-    invoke-static {v0, v1}, Lhag;->c(Lhag;Lkag;)Lhag;
+    return v2
+
+    :cond_1
+    check-cast p1, Ly6g;
+
+    iget-object v1, p0, Ly6g;->a:[I
+
+    iget-object v3, p1, Ly6g;->a:[I
+
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget v1, p0, Ly6g;->b:F
+
+    iget p1, p1, Ly6g;->b:F
+
+    invoke-static {v1, p1}, Ljava/lang/Float;->compare(FF)I
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Ly6g;->a:[I
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Ly6g;->b:F
+
+    invoke-static {v1}, Ljava/lang/Float;->hashCode(F)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Ly6g;->a:[I
+
+    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p1, v3, v0}, Lx0f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    :cond_1
-    :goto_0
-    return-object v2
+    const-string v2, "Gradient(colors="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", angle="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v0, p0, Ly6g;->b:F
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

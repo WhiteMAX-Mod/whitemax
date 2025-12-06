@@ -1,57 +1,77 @@
 .class public final Laj2;
-.super Ly14;
+.super Lqmc;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Le20;
+# virtual methods
+.method public final z(Lt98;)V
+    .locals 6
 
-.field public Y:Lpb9;
+    check-cast p1, Lyic;
 
-.field public Z:Ln10;
+    iget-object v0, p0, Lmid;->a:Landroid/view/View;
 
-.field public o:Lbj2;
+    check-cast v0, Lxi2;
 
-.field public synthetic q0:Ljava/lang/Object;
+    iget-object p1, p1, Lyic;->a:Luh2;
 
-.field public final synthetic r0:Lbj2;
+    iget-object v1, p1, Luh2;->e:Ljava/lang/String;
 
-.field public s0:I
+    invoke-virtual {v0, v1}, Lxi2;->setLink(Ljava/lang/String;)V
 
+    iget-boolean v1, p1, Luh2;->f:Z
 
-# direct methods
-.method public constructor <init>(Lbj2;Ly14;)V
-    .locals 0
+    invoke-virtual {v0, v1}, Lxi2;->setLoading(Z)V
 
-    iput-object p1, p0, Laj2;->r0:Lbj2;
+    iget-object v1, p1, Luh2;->d:Ljava/lang/String;
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0, v1}, Lxi2;->setChatTitle(Ljava/lang/String;)V
+
+    iget-wide v1, p1, Luh2;->b:J
+
+    iget-object v3, p1, Luh2;->a:Ljava/lang/String;
+
+    iget-object v4, p1, Luh2;->c:Ljava/lang/CharSequence;
+
+    iget-object v5, v0, Lxi2;->J0:Luxa;
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-static {v5, v3, v1, v4}, Luxa;->n(Luxa;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/CharSequence;)V
+
+    iget-boolean v1, p1, Luh2;->g:Z
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    iget-boolean p1, p1, Luh2;->h:Z
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    move p1, v2
+
+    :goto_0
+    iget-object v1, v0, Lxi2;->M0:Landroid/widget/ImageView;
+
+    if-eqz p1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    const/16 v2, 0x8
+
+    :goto_1
+    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+
+    invoke-virtual {v0}, Lxi2;->w()V
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Laj2;->q0:Ljava/lang/Object;
-
-    iget p1, p0, Laj2;->s0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Laj2;->s0:I
-
-    iget-object p1, p0, Laj2;->r0:Lbj2;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0, v0, v0, p0}, Lbj2;->s(Lbj2;Le20;Lqx4;Lpb9;Ly14;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

@@ -1,77 +1,135 @@
-.class public final synthetic Lpgc;
-.super Ljava/lang/Object;
+.class public final Lpgc;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.implements Lum6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-.field public final synthetic b:Lqgc;
+.field public synthetic Y:Lyeb;
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lqgc;I)V
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    iput p2, p0, Lpgc;->a:I
+    iput p3, p0, Lpgc;->o:I
 
-    iput-object p1, p0, Lpgc;->b:Lqgc;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    iget v0, p0, Lpgc;->a:I
+    iget v0, p0, Lpgc;->o:I
+
+    check-cast p1, Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+
+    check-cast p2, Lyeb;
+
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lpgc;->b:Lqgc;
+    new-instance v0, Lpgc;
 
-    iget-object v1, v0, Lqgc;->a:Landroid/graphics/Paint;
+    const/4 v1, 0x3
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    const/4 v2, 0x1
 
-    move-result-object p1
+    invoke-direct {v0, v1, p3, v2}, Lpgc;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    check-cast p1, Ljava/lang/Integer;
+    iput-object p1, v0, Lpgc;->X:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    iput-object p2, v0, Lpgc;->Y:Lyeb;
 
-    move-result p1
+    sget-object p1, Lqqg;->a:Lqqg;
 
-    invoke-virtual {v1, p1}, Landroid/graphics/Paint;->setColor(I)V
+    invoke-virtual {v0, p1}, Lpgc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
-
-    return-void
+    return-object p1
 
     :pswitch_0
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    new-instance v0, Lpgc;
 
-    move-result-object p1
+    const/4 v1, 0x3
 
-    check-cast p1, Ljava/lang/Float;
+    const/4 v2, 0x0
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    invoke-direct {v0, v1, p3, v2}, Lpgc;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    move-result p1
+    iput-object p1, v0, Lpgc;->X:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-    iget-object v0, p0, Lpgc;->b:Lqgc;
+    iput-object p2, v0, Lpgc;->Y:Lyeb;
 
-    iput p1, v0, Lqgc;->b:F
+    sget-object p1, Lqqg;->a:Lqqg;
 
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    invoke-virtual {v0, p1}, Lpgc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-void
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iget v0, p0, Lpgc;->o:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lpgc;->X:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+
+    iget-object v0, p0, Lpgc;->Y:Lyeb;
+
+    invoke-interface {v0}, Lyeb;->b()Lbf0;
+
+    move-result-object v0
+
+    iget v0, v0, Lbf0;->k:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
+
+    :pswitch_0
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lpgc;->X:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+
+    iget-object v0, p0, Lpgc;->Y:Lyeb;
+
+    invoke-interface {v0}, Lyeb;->b()Lbf0;
+
+    move-result-object v0
+
+    iget v0, v0, Lbf0;->k:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

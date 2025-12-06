@@ -1,97 +1,68 @@
 .class public final Lug0;
-.super Lsgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Lui8;
 
 
 # instance fields
-.field public synthetic X:I
+.field public final a:Landroid/content/Context;
 
-.field public final synthetic Y:Lvg0;
+.field public final b:Lw63;
+
+.field public final c:Lej0;
+
+.field public final d:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public constructor <init>(Lvg0;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Landroid/content/Context;Lw63;Lej0;Llzf;La84;)V
     .locals 0
 
-    iput-object p1, p0, Lug0;->Y:Lvg0;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lug0;->a:Landroid/content/Context;
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lug0;->b:Lw63;
+
+    iput-object p3, p0, Lug0;->c:Lej0;
+
+    check-cast p4, Lq2b;
+
+    invoke-virtual {p4}, Lq2b;->a()Lz74;
+
+    move-result-object p1
+
+    const/4 p2, 0x1
+
+    const-string p3, "badge-count"
+
+    invoke-virtual {p1, p2, p3}, Lz74;->limitedParallelism(ILjava/lang/String;)Lz74;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p5}, Lp0;->plus(Lx74;)Lx74;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ld7j;->a(Lx74;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lug0;->d:Lkotlinx/coroutines/internal/ContextScope;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    move-result p1
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1, p2}, Lug0;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lug0;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lug0;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lug0;
-
-    iget-object v1, p0, Lug0;->Y:Lvg0;
-
-    invoke-direct {v0, v1, p2}, Lug0;-><init>(Lvg0;Lkotlin/coroutines/Continuation;)V
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    move-result p1
-
-    iput p1, v0, Lug0;->X:I
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final c()V
     .locals 1
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    iget-object v0, p0, Lug0;->a:Landroid/content/Context;
 
-    iget p1, p0, Lug0;->X:I
+    invoke-static {v0}, Lme/leolin/shortcutbadger/ShortcutBadger;->removeCount(Landroid/content/Context;)Z
 
-    if-ltz p1, :cond_0
-
-    iget-object v0, p0, Lug0;->Y:Lvg0;
-
-    iget-object v0, v0, Lvg0;->a:Landroid/content/Context;
-
-    invoke-static {v0, p1}, Lme/leolin/shortcutbadger/ShortcutBadger;->applyCount(Landroid/content/Context;I)Z
-
-    :cond_0
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
+    return-void
 .end method

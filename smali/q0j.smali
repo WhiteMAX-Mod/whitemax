@@ -1,151 +1,80 @@
-.class public abstract Lq0j;
+.class public final Lq0j;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpqa;
+
+
+# static fields
+.field public static final a:Lq0j;
+
 
 # direct methods
-.method public static a(Ljava/lang/String;Ljava/lang/UnsatisfiedLinkError;)Lhue;
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    new-instance v0, Lq0j;
 
-    move-result-object v0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "SoLoader"
+    sput-object v0, Lq0j;->a:Lq0j;
 
-    if-eqz v0, :cond_0
+    new-instance v0, Lmli;
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    const/4 v1, 0x1
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Lmli;-><init>(I)V
 
-    const-string v2, "ELF"
+    const-class v1, Lemi;
 
-    invoke-virtual {v0, v2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "Corrupted lib file detected"
-
-    invoke-static {v1, v0}, Lafi;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v0, Lfue;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, p0, v1}, Lhue;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_0
-    const-string v0, "\\P{ASCII}+"
-
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/util/regex/Matcher;->find()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {v0}, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    const/4 v2, 0x3
 
-    const-string v3, "Library name is corrupted, contains non-ASCII characters "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    const-string v0, "Corrupted lib name detected"
+    move-result-object v0
 
-    invoke-static {v1, v0}, Lafi;->d(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v2, 0x4
 
-    new-instance v0, Lfue;
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    const-string v2, "corrupted lib name: "
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, p0, v1}, Lhue;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_1
-    new-instance v0, Lhue;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, p0, v1}, Lhue;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    :goto_0
-    invoke-virtual {v0, p1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
-
-    return-object v0
-.end method
-
-.method public static b(Ljava/lang/Throwable;)V
-    .locals 1
-
-    instance-of v0, p0, Ljava/lang/VirtualMachineError;
-
-    if-nez v0, :cond_2
-
-    instance-of v0, p0, Ljava/lang/ThreadDeath;
-
-    if-nez v0, :cond_1
-
-    instance-of v0, p0, Ljava/lang/LinkageError;
-
-    if-nez v0, :cond_0
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
 
     return-void
+.end method
 
-    :cond_0
-    check-cast p0, Ljava/lang/LinkageError;
 
-    throw p0
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    :cond_1
-    check-cast p0, Ljava/lang/ThreadDeath;
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    throw p0
+    move-result-object p1
 
-    :cond_2
-    check-cast p0, Ljava/lang/VirtualMachineError;
-
-    throw p0
+    throw p1
 .end method

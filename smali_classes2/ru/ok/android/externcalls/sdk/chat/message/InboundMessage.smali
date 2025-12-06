@@ -160,7 +160,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/chat/message/InboundMessage;->senderId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -173,7 +173,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/chat/message/InboundMessage;->text:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -233,7 +233,7 @@
 
     iget-object v2, p0, Lru/ok/android/externcalls/sdk/chat/message/InboundMessage;->text:Ljava/lang/String;
 
-    invoke-static {v0, v1, v2}, Lu15;->d(IILjava/lang/String;)I
+    invoke-static {v0, v1, v2}, Lu45;->e(IILjava/lang/String;)I
 
     move-result v0
 
@@ -285,7 +285,7 @@
 
     const-string v0, ")"
 
-    invoke-static {v3, v2, v0}, Ldy1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v2, v0}, Laz1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

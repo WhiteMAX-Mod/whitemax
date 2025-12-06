@@ -1,75 +1,76 @@
-.class public final Lqzc;
+.class public abstract Lqzc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:Lfgd;
+# static fields
+.field public static check_button:I = 0x7f0a029f
 
-.field public final b:Lei;
+.field public static check_button_parent:I = 0x7f0a02a0
 
-.field public final c:Lej9;
+.field public static check_button_view_stub:I = 0x7f0a02a1
 
+.field public static media_bar_view__iv_constructor:I = 0x7f0a0492
 
-# direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
-    .locals 2
+.field public static media_bar_view__iv_contact:I = 0x7f0a0493
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static media_bar_view__iv_drawing:I = 0x7f0a0494
 
-    iput-object p1, p0, Lqzc;->a:Lfgd;
+.field public static media_bar_view__iv_file:I = 0x7f0a0495
 
-    new-instance v0, Lei;
+.field public static media_bar_view__iv_gallery:I = 0x7f0a0496
 
-    const/16 v1, 0x13
+.field public static media_bar_view__iv_location:I = 0x7f0a0498
 
-    invoke-direct {v0, p1, v1}, Lei;-><init>(Lfgd;I)V
+.field public static media_bar_view__iv_photo:I = 0x7f0a0499
 
-    iput-object v0, p0, Lqzc;->b:Lei;
+.field public static media_bar_view__iv_video:I = 0x7f0a049b
 
-    new-instance v0, Lej9;
+.field public static media_bar_view__ll_constructor:I = 0x7f0a049c
 
-    const/16 v1, 0x18
+.field public static media_bar_view__ll_contact:I = 0x7f0a049d
 
-    invoke-direct {v0, p1, v1}, Lej9;-><init>(Lfgd;I)V
+.field public static media_bar_view__ll_drawing:I = 0x7f0a049e
 
-    iput-object v0, p0, Lqzc;->c:Lej9;
+.field public static media_bar_view__ll_file:I = 0x7f0a049f
 
-    return-void
-.end method
+.field public static media_bar_view__ll_gallery:I = 0x7f0a04a0
 
+.field public static media_bar_view__ll_layout_create:I = 0x7f0a04a1
 
-# virtual methods
-.method public final a(Ly14;)Ljava/lang/Object;
-    .locals 4
+.field public static media_bar_view__ll_location:I = 0x7f0a04a2
 
-    const/4 v0, 0x1
+.field public static media_bar_view__ll_photo:I = 0x7f0a04a3
 
-    const-string v1, "SELECT * FROM reactions_section WHERE id = ?"
+.field public static media_bar_view__ll_video:I = 0x7f0a04a4
 
-    invoke-static {v0, v1}, Lvgd;->c(ILjava/lang/String;)Lvgd;
+.field public static media_bar_view__tv_constructor:I = 0x7f0a04a5
 
-    move-result-object v1
+.field public static media_bar_view__tv_contact:I = 0x7f0a04a6
 
-    const-string v2, "POPULAR"
+.field public static media_bar_view__tv_drawing:I = 0x7f0a04a7
 
-    invoke-virtual {v1, v0, v2}, Lvgd;->f(ILjava/lang/String;)V
+.field public static media_bar_view__tv_file:I = 0x7f0a04a8
 
-    new-instance v0, Landroid/os/CancellationSignal;
+.field public static media_bar_view__tv_gallery:I = 0x7f0a04a9
 
-    invoke-direct {v0}, Landroid/os/CancellationSignal;-><init>()V
+.field public static media_bar_view__tv_location:I = 0x7f0a04ab
 
-    new-instance v2, Lgi;
+.field public static media_bar_view__tv_photo:I = 0x7f0a04ac
 
-    const/16 v3, 0x1b
+.field public static media_bar_view__tv_video:I = 0x7f0a04ae
 
-    invoke-direct {v2, p0, v3, v1}, Lgi;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+.field public static media_permissions_view_button:I = 0x7f0a04b8
 
-    iget-object v1, p0, Lqzc;->a:Lfgd;
+.field public static media_permissions_view_title:I = 0x7f0a04b9
 
-    invoke-static {v1, v0, v2, p1}, Lexi;->a(Lfgd;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.field public static quick_camera_view__cv_camera:I = 0x7f0a09f4
 
-    move-result-object p1
+.field public static row_media_bar_actions__icon:I = 0x7f0a0a86
 
-    return-object p1
-.end method
+.field public static row_media_bar_actions__title:I = 0x7f0a0a87
+
+.field public static select_album_content_container:I = 0x7f0a0b2d
+
+.field public static simple_drawee_view:I = 0x7f0a0bab
+
+.field public static video_info:I = 0x7f0a0c57

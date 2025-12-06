@@ -1,43 +1,25 @@
-.class public abstract Lwza;
-.super Ljava/lang/Object;
+.class public final Lwza;
+.super Lqmc;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# virtual methods
+.method public final z(Lt98;)V
+    .locals 3
 
-.field public static final b:I
+    check-cast p1, Lric;
 
-.field public static final c:I
+    iget-object v0, p0, Lmid;->a:Landroid/view/View;
 
-.field public static final d:I
+    check-cast v0, Lvza;
 
-.field public static final e:I
+    iget-object v1, p1, Lric;->a:Ljava/util/List;
 
+    iget-object v2, p1, Lric;->b:Ljava/util/List;
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+    iget-boolean p1, p1, Lric;->c:Z
 
-    sget v0, Lmrc;->profile_chat_members_list_toolbar_subtitle:I
-
-    sput v0, Lwza;->a:I
-
-    sget v0, Lmrc;->profile_members_list_delete_from_channel_snackbar:I
-
-    sput v0, Lwza;->b:I
-
-    sget v0, Lmrc;->profile_members_list_delete_from_chat_snackbar:I
-
-    sput v0, Lwza;->c:I
-
-    sget v0, Lmrc;->profile_members_list_restore_in_channel_snackbar:I
-
-    sput v0, Lwza;->d:I
-
-    sget v0, Lmrc;->profile_members_list_restore_in_chat_snackbar:I
-
-    sput v0, Lwza;->e:I
+    invoke-virtual {v0, v1, v2, p1}, Lvza;->b(Ljava/util/List;Ljava/util/List;Z)V
 
     return-void
 .end method

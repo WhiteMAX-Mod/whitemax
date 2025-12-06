@@ -3,160 +3,98 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
+.implements Lz26;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Landroid/view/View;
-
-.field public final synthetic c:F
+.field public final synthetic b:Lsj8;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/view/View;FI)V
+.method public synthetic constructor <init>(Lsj8;I)V
     .locals 0
 
-    iput p3, p0, Lej8;->a:I
+    iput p2, p0, Lej8;->a:I
 
-    iput-object p1, p0, Lej8;->b:Landroid/view/View;
-
-    iput p2, p0, Lej8;->c:F
+    iput-object p1, p0, Lej8;->b:Lsj8;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method private final a(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final b(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final c(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final d(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final e(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final f(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final g(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final h(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final i(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 1
+.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 3
 
-    iget p1, p0, Lej8;->a:I
+    iget v0, p0, Lej8;->a:I
 
-    packed-switch p1, :pswitch_data_0
+    packed-switch v0, :pswitch_data_0
 
-    :pswitch_0
-    return-void
+    check-cast p1, Ljava/util/List;
 
-    :pswitch_1
-    iget-object p1, p0, Lej8;->b:Landroid/view/View;
+    new-instance v0, Ldj8;
 
-    iget v0, p0, Lej8;->c:F
+    const/4 v1, 0x1
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+    iget-object v2, p0, Lej8;->b:Lsj8;
 
-    return-void
+    invoke-direct {v0, v2, p1, v1}, Ldj8;-><init>(Lsj8;Ljava/util/List;I)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+    sget-object p1, Lbd5;->a:Lbd5;
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 1
+    invoke-static {p1, v0, p2}, Lvmi;->i(Lx74;Lcm6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    iget p1, p0, Lej8;->a:I
+    move-result-object p1
 
-    packed-switch p1, :pswitch_data_0
+    sget-object p2, Lg84;->a:Lg84;
 
-    iget-object p1, p0, Lej8;->b:Landroid/view/View;
+    if-ne p1, p2, :cond_0
 
-    iget v0, p0, Lej8;->c:F
+    goto :goto_0
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationX(F)V
+    :cond_0
+    sget-object p1, Lqqg;->a:Lqqg;
 
-    return-void
+    :goto_0
+    return-object p1
 
     :pswitch_0
-    iget-object p1, p0, Lej8;->b:Landroid/view/View;
+    check-cast p1, Ljava/util/List;
 
-    iget v0, p0, Lej8;->c:F
+    new-instance v0, Ldj8;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+    const/4 v1, 0x0
 
-    :pswitch_1
-    return-void
+    iget-object v2, p0, Lej8;->b:Lsj8;
+
+    invoke-direct {v0, v2, p1, v1}, Ldj8;-><init>(Lsj8;Ljava/util/List;I)V
+
+    sget-object p1, Lbd5;->a:Lbd5;
+
+    invoke-static {p1, v0, p2}, Lvmi;->i(Lx74;Lcm6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lg84;->a:Lg84;
+
+    if-ne p1, p2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    :goto_1
+    return-object p1
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
         :pswitch_0
     .end packed-switch
-.end method
-
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
-
-    iget p1, p0, Lej8;->a:I
-
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
-
-    iget p1, p0, Lej8;->a:I
-
-    return-void
 .end method

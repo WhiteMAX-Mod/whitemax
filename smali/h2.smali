@@ -24,11 +24,11 @@
 
     iput p2, p0, Lh2;->b:I
 
-    invoke-virtual {p1}, Lk0;->getSize()I
+    invoke-virtual {p1}, Lj0;->getSize()I
 
     move-result p1
 
-    invoke-static {p2, p3, p1}, Lddi;->a(III)V
+    invoke-static {p2, p3, p1}, Lcpi;->a(III)V
 
     sub-int/2addr p3, p2
 
@@ -67,7 +67,7 @@
 
     const-string v3, ", size: "
 
-    invoke-static {v2, p1, v0, v3}, Li57;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, p1, v0, v3}, Lho7;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

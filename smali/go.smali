@@ -1,80 +1,37 @@
-.class public final synthetic Lgo;
+.class public final Lgo;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/window/OnBackInvokedCallback;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public a:I
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public b:I
 
+.field public c:I
 
-# direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.field public d:I
 
-    iput p1, p0, Lgo;->a:I
+.field public e:Lfo;
 
-    iput-object p2, p0, Lgo;->b:Ljava/lang/Object;
+.field public f:Landroid/view/View;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public g:Landroid/view/View;
 
-    return-void
-.end method
+.field public h:Lvf9;
 
+.field public i:Lw98;
 
-# virtual methods
-.method public final onBackInvoked()V
-    .locals 1
+.field public j:Lm44;
 
-    iget v0, p0, Lgo;->a:I
+.field public k:Z
 
-    packed-switch v0, :pswitch_data_0
+.field public l:Z
 
-    iget-object v0, p0, Lgo;->b:Ljava/lang/Object;
+.field public m:Z
 
-    check-cast v0, Ljava/lang/Runnable;
+.field public n:Z
 
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+.field public o:Z
 
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lgo;->b:Ljava/lang/Object;
-
-    check-cast v0, Lji6;
-
-    invoke-interface {v0}, Lji6;->invoke()Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lgo;->b:Ljava/lang/Object;
-
-    check-cast v0, Lii8;
-
-    invoke-interface {v0}, Lii8;->a()V
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lgo;->b:Ljava/lang/Object;
-
-    check-cast v0, Lno;
-
-    invoke-virtual {v0}, Lno;->D()Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+.field public p:Landroid/os/Bundle;

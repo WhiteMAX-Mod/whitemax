@@ -1,213 +1,90 @@
-.class public abstract Ln1j;
+.class public final Ln1j;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpqa;
+
+
+# static fields
+.field public static final a:Ln1j;
+
 
 # direct methods
-.method public static a(Ljava/io/File;)Z
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-virtual {p0}, Ljava/io/File;->isDirectory()Z
+    new-instance v0, Ln1j;
 
-    move-result v0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz v0, :cond_0
+    sput-object v0, Ln1j;->a:Ln1j;
 
-    invoke-virtual {p0}, Ljava/io/File;->listFiles()[Ljava/io/File;
+    new-instance v0, Lmli;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lmli;-><init>(I)V
+
+    const-class v1, Lemi;
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    const/4 v2, 0x2
 
-    array-length v1, v0
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    const/4 v2, 0x0
+    move-result-object v0
 
-    :goto_0
-    if-ge v2, v1, :cond_0
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    aget-object v3, v0, v2
+    move-result-object v0
 
-    invoke-static {v3}, Ln1j;->a(Ljava/io/File;)Z
+    const/4 v2, 0x3
 
-    add-int/lit8 v2, v2, 0x1
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    goto :goto_0
+    move-result-object v0
 
-    :cond_0
-    invoke-virtual {p0}, Ljava/io/File;->delete()Z
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    move-result p0
+    move-result-object v0
 
-    return p0
-.end method
+    const/4 v2, 0x4
 
-.method public static final b(Lzcg;)V
-    .locals 2
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    new-instance v0, Lzsd;
+    move-result-object v0
 
-    const/16 v1, 0x14
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    invoke-direct {v0, v1}, Lzsd;-><init>(I)V
+    move-result-object v0
 
-    const-class v1, Li5a;
+    const/4 v2, 0x5
 
-    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    new-instance v0, Lzsd;
+    move-result-object v0
 
-    const/16 v1, 0x15
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    invoke-direct {v0, v1}, Lzsd;-><init>(I)V
+    move-result-object v0
 
-    const-class v1, Lh2f;
-
-    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
-
-    new-instance v0, Lzsd;
-
-    const/16 v1, 0x16
-
-    invoke-direct {v0, v1}, Lzsd;-><init>(I)V
-
-    const-class v1, Lyi1;
-
-    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
-
-    new-instance v0, Lzsd;
-
-    const/16 v1, 0x17
-
-    invoke-direct {v0, v1}, Lzsd;-><init>(I)V
-
-    const-class v1, Lnib;
-
-    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
-
-    new-instance v0, Lzsd;
-
-    const/16 v1, 0x18
-
-    invoke-direct {v0, v1}, Lzsd;-><init>(I)V
-
-    const-class v1, Lii0;
-
-    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
-
-    new-instance v0, Lzsd;
-
-    const/16 v1, 0x19
-
-    invoke-direct {v0, v1}, Lzsd;-><init>(I)V
-
-    const-class v1, Lcx1;
-
-    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
-
-    new-instance v0, Lzsd;
-
-    const/16 v1, 0x1a
-
-    invoke-direct {v0, v1}, Lzsd;-><init>(I)V
-
-    const-class v1, Ly4h;
-
-    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
-
-    new-instance v0, Lzsd;
-
-    const/16 v1, 0x1b
-
-    invoke-direct {v0, v1}, Lzsd;-><init>(I)V
-
-    const-class v1, Lk8h;
-
-    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
-
-    new-instance v0, Lzsd;
-
-    const/16 v1, 0x1c
-
-    invoke-direct {v0, v1}, Lzsd;-><init>(I)V
-
-    const-class v1, Lab9;
-
-    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
-
-    new-instance v0, Lzsd;
-
-    const/16 v1, 0x12
-
-    invoke-direct {v0, v1}, Lzsd;-><init>(I)V
-
-    const-class v1, Lga4;
-
-    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
-
-    new-instance v0, Lzsd;
-
-    const/16 v1, 0x13
-
-    invoke-direct {v0, v1}, Lzsd;-><init>(I)V
-
-    const-class v1, Lttg;
-
-    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
-
-    new-instance v0, Lnee;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1}, Lnee;-><init>(I)V
-
-    const-class v1, Lid;
-
-    invoke-virtual {p0, v1, v0}, Lzcg;->c(Ljava/lang/Class;Lji7;)V
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
-.method public static c(Ljava/io/File;Lyt5;)V
-    .locals 5
 
-    invoke-interface {p1, p0}, Lyt5;->q(Ljava/io/File;)V
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    invoke-virtual {p0}, Ljava/io/File;->listFiles()[Ljava/io/File;
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    move-result-object v0
+    move-result-object p1
 
-    if-eqz v0, :cond_1
-
-    array-length v1, v0
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_1
-
-    aget-object v3, v0, v2
-
-    invoke-virtual {v3}, Ljava/io/File;->isDirectory()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    invoke-static {v3, p1}, Ln1j;->c(Ljava/io/File;Lyt5;)V
-
-    goto :goto_1
-
-    :cond_0
-    invoke-interface {p1, v3}, Lyt5;->j(Ljava/io/File;)V
-
-    :goto_1
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-interface {p1, p0}, Lyt5;->r(Ljava/io/File;)V
-
-    return-void
+    throw p1
 .end method

@@ -1,48 +1,27 @@
 .class public final La8c;
-.super Ly14;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final a:Ljava/util/List;
 
-.field public final synthetic Y:Lb8c;
+.field public final b:Z
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:Ljava/lang/CharSequence;
 
 
 # direct methods
-.method public constructor <init>(Lb8c;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/util/List;ZLjava/lang/CharSequence;)V
     .locals 0
 
-    iput-object p1, p0, La8c;->Y:Lb8c;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, La8c;->a:Ljava/util/List;
+
+    iput-boolean p2, p0, La8c;->b:Z
+
+    iput-object p3, p0, La8c;->c:Ljava/lang/CharSequence;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, La8c;->o:Ljava/lang/Object;
-
-    iget p1, p0, La8c;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, La8c;->X:I
-
-    iget-object p1, p0, La8c;->Y:Lb8c;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lb8c;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

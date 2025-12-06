@@ -1,111 +1,319 @@
 .class public final Lhl5;
-.super Lsgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lzi6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Landroid/content/Context;
 
-.field public final synthetic Y:Lone/me/android/externalcallback/ExternalCallbackWidget;
+.field public b:Lmwf;
+
+.field public final c:Lcrf;
+
+.field public d:Lcrf;
+
+.field public e:Lcrf;
+
+.field public f:Lcrf;
+
+.field public g:Lcrf;
+
+.field public final h:Ldm4;
+
+.field public i:Landroid/os/Looper;
+
+.field public final j:I
+
+.field public final k:Lk20;
+
+.field public final l:I
+
+.field public final m:Z
+
+.field public final n:Lk9e;
+
+.field public final o:Lx3e;
+
+.field public final p:J
+
+.field public final q:J
+
+.field public final r:J
+
+.field public s:Lyn4;
+
+.field public final t:J
+
+.field public u:J
+
+.field public v:Z
+
+.field public w:Lpea;
+
+.field public x:Z
+
+.field public final y:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/android/externalcallback/ExternalCallbackWidget;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 3
 
-    iput-object p2, p0, Lhl5;->Y:Lone/me/android/externalcallback/ExternalCallbackWidget;
+    .line 1
+    new-instance v0, Lk30;
 
-    const/4 p2, 0x2
+    const/4 v1, 0x2
 
-    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p1, v1}, Lk30;-><init>(Landroid/content/Context;I)V
+
+    new-instance v1, Lk30;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v1, p1, v2}, Lk30;-><init>(Landroid/content/Context;I)V
+
+    invoke-direct {p0, p1, v0, v1}, Lhl5;-><init>(Landroid/content/Context;Lcrf;Lcrf;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Lcrf;Lcrf;)V
+    .locals 6
+
+    .line 3
+    new-instance v0, Lk30;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, p1, v1}, Lk30;-><init>(Landroid/content/Context;I)V
+
+    new-instance v1, Lte4;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v1, v2}, Lte4;-><init>(I)V
+
+    new-instance v2, Lk30;
+
+    const/4 v3, 0x7
+
+    invoke-direct {v2, p1, v3}, Lk30;-><init>(Landroid/content/Context;I)V
+
+    new-instance v3, Ldm4;
+
+    const/16 v4, 0x16
+
+    invoke-direct {v3, v4}, Ldm4;-><init>(I)V
+
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 5
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 6
+    iput-object p1, p0, Lhl5;->a:Landroid/content/Context;
+
+    .line 7
+    iput-object p2, p0, Lhl5;->c:Lcrf;
+
+    .line 8
+    iput-object p3, p0, Lhl5;->d:Lcrf;
+
+    .line 9
+    iput-object v0, p0, Lhl5;->e:Lcrf;
+
+    .line 10
+    iput-object v1, p0, Lhl5;->f:Lcrf;
+
+    .line 11
+    iput-object v2, p0, Lhl5;->g:Lcrf;
+
+    .line 12
+    iput-object v3, p0, Lhl5;->h:Ldm4;
+
+    .line 13
+    invoke-static {}, Lzxg;->z()Landroid/os/Looper;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lhl5;->i:Landroid/os/Looper;
+
+    .line 14
+    sget-object p1, Lk20;->h:Lk20;
+
+    iput-object p1, p0, Lhl5;->k:Lk20;
+
+    const/4 p1, 0x1
+
+    .line 15
+    iput p1, p0, Lhl5;->l:I
+
+    .line 16
+    iput-boolean p1, p0, Lhl5;->m:Z
+
+    .line 17
+    sget-object p2, Lk9e;->c:Lk9e;
+
+    iput-object p2, p0, Lhl5;->n:Lk9e;
+
+    const-wide/16 p2, 0x1388
+
+    .line 18
+    iput-wide p2, p0, Lhl5;->p:J
+
+    const-wide/16 p2, 0x3a98
+
+    .line 19
+    iput-wide p2, p0, Lhl5;->q:J
+
+    const-wide/16 p2, 0xbb8
+
+    .line 20
+    iput-wide p2, p0, Lhl5;->r:J
+
+    .line 21
+    sget-object p2, Lx3e;->b:Lx3e;
+
+    iput-object p2, p0, Lhl5;->o:Lx3e;
+
+    const-wide/16 p2, 0x14
+
+    .line 22
+    invoke-static {p2, p3}, Lzxg;->U(J)J
+
+    move-result-wide v2
+
+    const-wide/16 p2, 0x1f4
+
+    .line 23
+    invoke-static {p2, p3}, Lzxg;->U(J)J
+
+    move-result-wide v4
+
+    .line 24
+    new-instance v0, Lyn4;
+
+    const/4 v1, 0x1
+
+    invoke-direct/range {v0 .. v5}, Lyn4;-><init>(IJJ)V
+
+    .line 25
+    iput-object v0, p0, Lhl5;->s:Lyn4;
+
+    .line 26
+    sget-object v0, Lmwf;->a:Lmwf;
+
+    iput-object v0, p0, Lhl5;->b:Lmwf;
+
+    .line 27
+    iput-wide p2, p0, Lhl5;->t:J
+
+    const-wide/16 p2, 0x7d0
+
+    .line 28
+    iput-wide p2, p0, Lhl5;->u:J
+
+    .line 29
+    iput-boolean p1, p0, Lhl5;->v:Z
+
+    .line 30
+    const-string p1, ""
+
+    iput-object p1, p0, Lhl5;->y:Ljava/lang/String;
+
+    const/16 p1, -0x3e8
+
+    .line 31
+    iput p1, p0, Lhl5;->j:I
+
+    .line 32
+    new-instance p1, Lu1j;
+
+    invoke-direct {p1}, Lu1j;-><init>()V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Lvld;)V
+    .locals 2
+
+    .line 2
+    new-instance v0, Leo4;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, v1, p2}, Leo4;-><init>(ILjava/lang/Object;)V
+
+    new-instance p2, Lk30;
+
+    const/4 v1, 0x1
+
+    invoke-direct {p2, p1, v1}, Lk30;-><init>(Landroid/content/Context;I)V
+
+    invoke-direct {p0, p1, v0, p2}, Lhl5;-><init>(Landroid/content/Context;Lcrf;Lcrf;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lhl5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lhl5;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lhl5;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final a()Lem5;
     .locals 2
 
-    new-instance v0, Lhl5;
+    iget-boolean v0, p0, Lhl5;->x:Z
 
-    iget-object v1, p0, Lhl5;->Y:Lone/me/android/externalcallback/ExternalCallbackWidget;
+    const/4 v1, 0x1
 
-    invoke-direct {v0, p2, v1}, Lhl5;-><init>(Lkotlin/coroutines/Continuation;Lone/me/android/externalcallback/ExternalCallbackWidget;)V
+    xor-int/2addr v0, v1
 
-    iput-object p1, v0, Lhl5;->X:Ljava/lang/Object;
+    invoke-static {v0}, Lhsi;->g(Z)V
+
+    iput-boolean v1, p0, Lhl5;->x:Z
+
+    new-instance v0, Lem5;
+
+    invoke-direct {v0, p0}, Lem5;-><init>(Lhl5;)V
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final b(Ljb8;)V
     .locals 2
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    iget-boolean v0, p0, Lhl5;->x:Z
 
-    iget-object p1, p0, Lhl5;->X:Ljava/lang/Object;
+    xor-int/lit8 v0, v0, 0x1
 
-    check-cast p1, Le5a;
+    invoke-static {v0}, Lhsi;->g(Z)V
 
-    instance-of v0, p1, Lwf4;
+    new-instance v0, Leo4;
 
-    iget-object v1, p0, Lhl5;->Y:Lone/me/android/externalcallback/ExternalCallbackWidget;
+    const/4 v1, 0x6
 
-    if-eqz v0, :cond_0
+    invoke-direct {v0, v1, p1}, Leo4;-><init>(ILjava/lang/Object;)V
 
-    sget-object v0, Lae8;->c:Lae8;
+    iput-object v0, p0, Lhl5;->f:Lcrf;
 
-    check-cast p1, Lwf4;
+    return-void
+.end method
 
-    invoke-virtual {v0, p1}, Lrdi;->t0(Lwf4;)V
+.method public final c(Lar4;)V
+    .locals 2
 
-    goto :goto_0
+    iget-boolean v0, p0, Lhl5;->x:Z
 
-    :cond_0
-    instance-of v0, p1, Lcl5;
+    xor-int/lit8 v0, v0, 0x1
 
-    if-eqz v0, :cond_1
+    invoke-static {v0}, Lhsi;->g(Z)V
 
-    new-instance v0, Lc3b;
+    new-instance v0, Leo4;
 
-    invoke-direct {v0, v1}, Lc3b;-><init>(Lone/me/sdk/arch/Widget;)V
+    const/4 v1, 0x7
 
-    check-cast p1, Lcl5;
+    invoke-direct {v0, v1, p1}, Leo4;-><init>(ILjava/lang/Object;)V
 
-    iget-object p1, p1, Lcl5;->b:Lorf;
+    iput-object v0, p0, Lhl5;->e:Lcrf;
 
-    invoke-virtual {v0, p1}, Lc3b;->g(Ltrf;)V
-
-    invoke-virtual {v0}, Lc3b;->i()Lb3b;
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x0
-
-    invoke-virtual {v1, p1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->I0(Z)V
-
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
+    return-void
 .end method

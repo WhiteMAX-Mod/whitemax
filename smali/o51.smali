@@ -2,110 +2,112 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lr51;
-
 
 # instance fields
-.field public final a:J
+.field public final a:Lru/ok/android/externcalls/sdk/Conversation;
 
-.field public final b:Z
+.field public final b:Lgxi;
 
 .field public final c:Z
 
+.field public final d:Z
+
 
 # direct methods
-.method public constructor <init>(JZZ)V
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/Conversation;Lgxi;ZZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lo51;->a:J
+    iput-object p1, p0, Lo51;->a:Lru/ok/android/externcalls/sdk/Conversation;
 
-    iput-boolean p3, p0, Lo51;->b:Z
+    iput-object p2, p0, Lo51;->b:Lgxi;
 
-    iput-boolean p4, p0, Lo51;->c:Z
+    iput-boolean p3, p0, Lo51;->c:Z
+
+    iput-boolean p4, p0, Lo51;->d:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lo51;->b:Z
-
-    return v0
-.end method
-
-.method public final b()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lo51;->c:Z
-
-    return v0
-.end method
-
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
+    .locals 2
 
     if-ne p0, p1, :cond_0
 
-    return v0
+    goto :goto_1
 
     :cond_0
-    instance-of v1, p1, Lo51;
+    instance-of v0, p1, Lo51;
 
-    const/4 v2, 0x0
+    if-nez v0, :cond_1
 
-    if-nez v1, :cond_1
-
-    return v2
+    goto :goto_0
 
     :cond_1
     check-cast p1, Lo51;
 
-    iget-wide v3, p0, Lo51;->a:J
+    iget-object v0, p0, Lo51;->a:Lru/ok/android/externcalls/sdk/Conversation;
 
-    iget-wide v5, p1, Lo51;->a:J
+    iget-object v1, p1, Lo51;->a:Lru/ok/android/externcalls/sdk/Conversation;
 
-    cmp-long v1, v3, v5
+    invoke-static {v0, v1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz v1, :cond_2
+    move-result v0
 
-    return v2
+    if-nez v0, :cond_2
+
+    goto :goto_0
 
     :cond_2
-    iget-boolean v1, p0, Lo51;->b:Z
+    iget-object v0, p0, Lo51;->b:Lgxi;
 
-    iget-boolean v3, p1, Lo51;->b:Z
+    iget-object v1, p1, Lo51;->b:Lgxi;
 
-    if-eq v1, v3, :cond_3
+    invoke-static {v0, v1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    return v2
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_0
 
     :cond_3
-    iget-boolean v1, p0, Lo51;->c:Z
+    iget-boolean v0, p0, Lo51;->c:Z
 
-    iget-boolean p1, p1, Lo51;->c:Z
+    iget-boolean v1, p1, Lo51;->c:Z
 
-    if-eq v1, p1, :cond_4
+    if-eq v0, v1, :cond_4
 
-    return v2
+    goto :goto_0
 
     :cond_4
-    return v0
+    iget-boolean v0, p0, Lo51;->d:Z
+
+    iget-boolean p1, p1, Lo51;->d:Z
+
+    if-eq v0, p1, :cond_5
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_5
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
 .method public final hashCode()I
     .locals 3
 
-    iget-wide v0, p0, Lo51;->a:J
+    iget-object v0, p0, Lo51;->a:Lru/ok/android/externcalls/sdk/Conversation;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
@@ -113,13 +115,23 @@
 
     mul-int/2addr v0, v1
 
-    iget-boolean v2, p0, Lo51;->b:Z
+    iget-object v2, p0, Lo51;->b:Lgxi;
 
-    invoke-static {v0, v1, v2}, Lrtg;->d(IIZ)I
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-boolean v0, p0, Lo51;->c:Z
+
+    invoke-static {v2, v1, v0}, La9h;->b(IIZ)I
 
     move-result v0
 
-    iget-boolean v1, p0, Lo51;->c:Z
+    iget-boolean v1, p0, Lo51;->d:Z
 
     invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
@@ -131,27 +143,47 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 5
+    .locals 2
 
-    const-string v0, "Chat(chatId="
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, ", isVideoEnabled="
+    const-string v1, "Result(conversation="
 
-    iget-wide v2, p0, Lo51;->a:J
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-boolean v4, p0, Lo51;->b:Z
+    iget-object v1, p0, Lo51;->a:Lru/ok/android/externcalls/sdk/Conversation;
 
-    invoke-static {v2, v3, v0, v1, v4}, Lfd0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    const-string v1, ", callTarget="
 
-    const-string v1, ", isAudioEnabled="
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v2, ")"
+    iget-object v1, p0, Lo51;->b:Lgxi;
 
-    iget-boolean v3, p0, Lo51;->c:Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v1, v3, v2}, Li57;->k(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+    const-string v1, ", isNewCall="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lo51;->c:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isIncoming="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lo51;->d:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

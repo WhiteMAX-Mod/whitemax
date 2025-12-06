@@ -1,196 +1,71 @@
-.class public final Llci;
+.class public abstract Llci;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/Iterator;
 
+# static fields
+.field public static final a:Ljava/util/HashMap;
 
-# instance fields
-.field public a:I
-
-.field public b:Z
-
-.field public c:Ljava/util/Iterator;
-
-.field public final synthetic o:Ldci;
+.field public static final b:Ljava/util/HashMap;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ldci;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/util/HashMap;
 
-    iput-object p1, p0, Llci;->o:Ldci;
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    const/4 p1, -0x1
+    sput-object v0, Llci;->a:Ljava/util/HashMap;
 
-    iput p1, p0, Llci;->a:I
+    new-instance v1, Ljava/util/HashMap;
+
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+
+    sput-object v1, Llci;->b:Ljava/util/HashMap;
+
+    const/4 v2, -0x1
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    const-string v3, "The Play Store app is either not installed or not the official version."
+
+    invoke-virtual {v0, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v3, -0x2
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    const-string v4, "Call first requestReviewFlow to get the ReviewInfo."
+
+    invoke-virtual {v0, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v4, -0x64
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    const-string v5, "Retry with an exponential backoff. Consider filing a bug if fails consistently."
+
+    invoke-virtual {v0, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "PLAY_STORE_NOT_FOUND"
+
+    invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "INVALID_REQUEST"
+
+    invoke-virtual {v1, v3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "INTERNAL_ERROR"
+
+    invoke-virtual {v1, v4, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()Ljava/util/Iterator;
-    .locals 1
-
-    iget-object v0, p0, Llci;->c:Ljava/util/Iterator;
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Llci;->o:Ldci;
-
-    iget-object v0, v0, Ldci;->c:Ljava/util/Map;
-
-    invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    iput-object v0, p0, Llci;->c:Ljava/util/Iterator;
-
-    :cond_0
-    iget-object v0, p0, Llci;->c:Ljava/util/Iterator;
-
-    return-object v0
-.end method
-
-.method public final hasNext()Z
-    .locals 4
-
-    iget v0, p0, Llci;->a:I
-
-    const/4 v1, 0x1
-
-    add-int/2addr v0, v1
-
-    iget-object v2, p0, Llci;->o:Ldci;
-
-    iget v3, v2, Ldci;->b:I
-
-    if-lt v0, v3, :cond_1
-
-    iget-object v0, v2, Ldci;->c:Ljava/util/Map;
-
-    invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
-
-    move-result v0
-
-    const/4 v2, 0x0
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0}, Llci;->a()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    return v1
-
-    :cond_0
-    return v2
-
-    :cond_1
-    return v1
-.end method
-
-.method public final bridge synthetic next()Ljava/lang/Object;
-    .locals 3
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Llci;->b:Z
-
-    iget v1, p0, Llci;->a:I
-
-    add-int/2addr v1, v0
-
-    iput v1, p0, Llci;->a:I
-
-    iget-object v0, p0, Llci;->o:Ldci;
-
-    iget v2, v0, Ldci;->b:I
-
-    if-ge v1, v2, :cond_0
-
-    iget-object v0, v0, Ldci;->a:[Ljava/lang/Object;
-
-    aget-object v0, v0, v1
-
-    check-cast v0, Lgci;
-
-    return-object v0
-
-    :cond_0
-    invoke-virtual {p0}, Llci;->a()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/Map$Entry;
-
-    return-object v0
-.end method
-
-.method public final remove()V
-    .locals 3
-
-    iget-boolean v0, p0, Llci;->b:Z
-
-    if-eqz v0, :cond_1
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Llci;->b:Z
-
-    sget v0, Ldci;->Z:I
-
-    iget-object v0, p0, Llci;->o:Ldci;
-
-    invoke-virtual {v0}, Ldci;->g()V
-
-    iget v1, p0, Llci;->a:I
-
-    iget v2, v0, Ldci;->b:I
-
-    if-ge v1, v2, :cond_0
-
-    add-int/lit8 v2, v1, -0x1
-
-    iput v2, p0, Llci;->a:I
-
-    invoke-virtual {v0, v1}, Ldci;->e(I)Ljava/lang/Object;
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0}, Llci;->a()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->remove()V
-
-    return-void
-
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "remove() was called before next()"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
 .end method

@@ -1,5 +1,5 @@
 .class public final Ln1;
-.super Lzci;
+.super Lyoi;
 .source "SourceFile"
 
 
@@ -118,7 +118,7 @@
     throw p2
 .end method
 
-.method public final f(Lw1;Lw1;)V
+.method public final g(Lw1;Lw1;)V
     .locals 0
 
     iput-object p2, p1, Lw1;->b:Lw1;
@@ -126,7 +126,7 @@
     return-void
 .end method
 
-.method public final g(Lw1;Ljava/lang/Thread;)V
+.method public final h(Lw1;Ljava/lang/Thread;)V
     .locals 0
 
     iput-object p2, p1, Lw1;->a:Ljava/lang/Thread;

@@ -1,92 +1,368 @@
-.class public final Lsy1;
+.class public final synthetic Lsy1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lvz1;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/Executor;
+.field public final synthetic a:I
 
-.field public final b:Lwy1;
+.field public final synthetic b:Lez1;
 
-.field public final c:I
+.field public final synthetic c:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Lwy1;La3e;I)V
+.method public synthetic constructor <init>(Lez1;Ljava/util/ArrayList;I)V
     .locals 0
 
+    iput p3, p0, Lsy1;->a:I
+
+    iput-object p1, p0, Lsy1;->b:Lez1;
+
+    iput-object p2, p0, Lsy1;->c:Ljava/util/ArrayList;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lsy1;->b:Lwy1;
-
-    iput-object p2, p0, Lsy1;->a:Ljava/util/concurrent/Executor;
-
-    iput p3, p0, Lsy1;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ll28;
-    .locals 4
+.method public final run()V
+    .locals 9
 
-    const-string v0, "Camera2CapturePipeline"
+    iget v0, p0, Lsy1;->a:I
 
-    const-string v1, "invokePreCapture"
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {v0, v1}, Lgfi;->a(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v0, p0, Lsy1;->b:Lez1;
 
-    iget-object v0, p0, Lsy1;->b:Lwy1;
+    iget-object v1, p0, Lsy1;->c:Ljava/util/ArrayList;
 
-    iget v1, p0, Lsy1;->c:I
+    iget-object v2, v0, Lez1;->Y:Lry1;
 
-    invoke-virtual {v0, v1}, Lwy1;->a(I)Ll28;
+    :try_start_0
+    invoke-virtual {v0, v1}, Lez1;->H(Ljava/util/ArrayList;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-object v0
+    invoke-virtual {v2}, Lry1;->q()V
 
-    invoke-static {v0}, Lak6;->a(Ll28;)Lak6;
+    return-void
 
-    move-result-object v0
+    :catchall_0
+    move-exception v0
 
-    new-instance v1, Lpy1;
+    invoke-virtual {v2}, Lry1;->q()V
 
-    const/4 v2, 0x1
+    throw v0
 
-    invoke-direct {v1, v2}, Lpy1;-><init>(I)V
+    :pswitch_0
+    iget-object v0, p0, Lsy1;->b:Lez1;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v1, p0, Lsy1;->c:Ljava/util/ArrayList;
 
-    new-instance v2, Ls9d;
+    new-instance v2, Ljava/util/ArrayList;
 
-    const/16 v3, 0xe
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-direct {v2, v3, v1}, Ls9d;-><init>(ILjava/lang/Object;)V
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    iget-object v1, p0, Lsy1;->a:Ljava/util/concurrent/Executor;
+    move-result-object v1
 
-    invoke-static {v0, v2, v1}, Lwag;->r(Ll28;Liv;Ljava/util/concurrent/Executor;)Ls62;
+    const/4 v3, 0x0
 
-    move-result-object v0
+    move v4, v3
 
-    return-object v0
-.end method
+    :cond_0
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-.method public final b()Ll28;
-    .locals 2
+    move-result v5
 
-    new-instance v0, Lpid;
+    const/4 v6, 0x1
 
-    const/16 v1, 0x19
+    if-eqz v5, :cond_1
 
-    invoke-direct {v0, v1, p0}, Lpid;-><init>(ILjava/lang/Object;)V
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-static {v0}, Lomi;->a(Lhu1;)Lju1;
+    move-result-object v5
 
-    move-result-object v0
+    check-cast v5, Ll90;
 
-    return-object v0
+    iget-object v7, v0, Lez1;->a:Lssb;
+
+    iget-object v8, v5, Ll90;->a:Ljava/lang/String;
+
+    invoke-virtual {v7, v8}, Lssb;->r(Ljava/lang/String;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_0
+
+    iget-object v7, v0, Lez1;->a:Lssb;
+
+    iget-object v8, v5, Ll90;->a:Ljava/lang/String;
+
+    iget-object v7, v7, Lssb;->c:Ljava/lang/Object;
+
+    check-cast v7, Ljava/util/LinkedHashMap;
+
+    invoke-interface {v7, v8}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v7, v5, Ll90;->a:Ljava/lang/String;
+
+    invoke-virtual {v2, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iget-object v5, v5, Ll90;->b:Ljava/lang/Class;
+
+    const-class v7, Lr8c;
+
+    if-ne v5, v7, :cond_0
+
+    move v4, v6
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    goto/16 :goto_2
+
+    :cond_2
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v5, "Use cases ["
+
+    invoke-direct {v1, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v5, ", "
+
+    invoke-static {v5, v2}, Landroid/text/TextUtils;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, "] now DETACHED for camera"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lez1;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    if-eqz v4, :cond_3
+
+    iget-object v1, v0, Lez1;->Y:Lry1;
+
+    iget-object v1, v1, Lry1;->h:Lc86;
+
+    iput-object v2, v1, Lc86;->e:Landroid/util/Rational;
+
+    :cond_3
+    invoke-virtual {v0}, Lez1;->p()V
+
+    iget-object v1, v0, Lez1;->a:Lssb;
+
+    invoke-virtual {v1}, Lssb;->p()Ljava/util/Collection;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    iget-object v1, v0, Lez1;->Y:Lry1;
+
+    iget-object v1, v1, Lry1;->l:Lx7i;
+
+    iput-boolean v3, v1, Lx7i;->c:Z
+
+    goto :goto_1
+
+    :cond_4
+    invoke-virtual {v0}, Lez1;->L()V
+
+    :goto_1
+    iget-object v1, v0, Lez1;->a:Lssb;
+
+    invoke-virtual {v1}, Lssb;->o()Ljava/util/Collection;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_8
+
+    iget-object v1, v0, Lez1;->Y:Lry1;
+
+    invoke-virtual {v1}, Lry1;->q()V
+
+    invoke-virtual {v0}, Lez1;->D()V
+
+    iget-object v1, v0, Lez1;->Y:Lry1;
+
+    invoke-virtual {v1, v3}, Lry1;->y(Z)V
+
+    invoke-virtual {v0}, Lez1;->z()Lp52;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lez1;->v0:Lp52;
+
+    const-string v1, "Closing camera."
+
+    invoke-virtual {v0, v1, v2}, Lez1;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget v1, v0, Lez1;->R0:I
+
+    invoke-static {v1}, Laz1;->v(I)I
+
+    move-result v1
+
+    const/4 v4, 0x5
+
+    packed-switch v1, :pswitch_data_1
+
+    :pswitch_1
+    iget v1, v0, Lez1;->R0:I
+
+    invoke-static {v1}, Lwy1;->u(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v3, "close() ignored due to being in state: "
+
+    invoke-virtual {v3, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1, v2}, Lez1;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_2
+
+    :pswitch_2
+    invoke-virtual {v0, v4}, Lez1;->F(I)V
+
+    invoke-virtual {v0}, Lez1;->q()V
+
+    goto :goto_2
+
+    :pswitch_3
+    iget-object v1, v0, Lez1;->Z:Ldz1;
+
+    invoke-virtual {v1}, Ldz1;->a()Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    iget-object v1, v0, Lez1;->Q0:Lh79;
+
+    iget-object v1, v1, Lh79;->b:Ljava/lang/Object;
+
+    check-cast v1, Lte8;
+
+    if-eqz v1, :cond_6
+
+    iget-object v1, v1, Lte8;->b:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v1
+
+    if-nez v1, :cond_6
+
+    :cond_5
+    move v3, v6
+
+    :cond_6
+    iget-object v1, v0, Lez1;->Q0:Lh79;
+
+    invoke-virtual {v1}, Lh79;->v()V
+
+    invoke-virtual {v0, v4}, Lez1;->F(I)V
+
+    if-eqz v3, :cond_9
+
+    iget-object v1, v0, Lez1;->w0:Ljava/util/LinkedHashMap;
+
+    invoke-interface {v1}, Ljava/util/Map;->isEmpty()Z
+
+    move-result v1
+
+    invoke-static {v2, v1}, Lz5j;->f(Ljava/lang/String;Z)V
+
+    invoke-virtual {v0}, Lez1;->r()V
+
+    goto :goto_2
+
+    :pswitch_4
+    iget-object v1, v0, Lez1;->t0:Landroid/hardware/camera2/CameraDevice;
+
+    if-nez v1, :cond_7
+
+    move v3, v6
+
+    :cond_7
+    invoke-static {v2, v3}, Lz5j;->f(Ljava/lang/String;Z)V
+
+    const/4 v1, 0x3
+
+    invoke-virtual {v0, v1}, Lez1;->F(I)V
+
+    goto :goto_2
+
+    :cond_8
+    invoke-virtual {v0}, Lez1;->K()V
+
+    invoke-virtual {v0}, Lez1;->D()V
+
+    iget v1, v0, Lez1;->R0:I
+
+    const/16 v2, 0x9
+
+    if-ne v1, v2, :cond_9
+
+    invoke-virtual {v0}, Lez1;->B()V
+
+    :cond_9
+    :goto_2
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+
+    :pswitch_data_1
+    .packed-switch 0x3
+        :pswitch_4
+        :pswitch_1
+        :pswitch_3
+        :pswitch_3
+        :pswitch_3
+        :pswitch_2
+        :pswitch_2
+    .end packed-switch
 .end method

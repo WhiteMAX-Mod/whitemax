@@ -1,73 +1,36 @@
 .class public final Laa0;
-.super Lg74;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final a:Ljava/lang/Object;
 
-.field public final b:Lq93;
+.field public final b:Ll9c;
 
-.field public final c:Lq93;
-
-.field public final d:Ljava/lang/String;
+.field public final c:Ldb0;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lq93;Lq93;Ljava/lang/String;)V
+.method public constructor <init>(Ljava/lang/Object;Ll9c;Ldb0;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_0
 
-    iput-object p1, p0, Laa0;->a:Landroid/content/Context;
+    iput-object p1, p0, Laa0;->a:Ljava/lang/Object;
 
-    if-eqz p2, :cond_2
+    iput-object p2, p0, Laa0;->b:Ll9c;
 
-    iput-object p2, p0, Laa0;->b:Lq93;
-
-    if-eqz p3, :cond_1
-
-    iput-object p3, p0, Laa0;->c:Lq93;
-
-    if-eqz p4, :cond_0
-
-    iput-object p4, p0, Laa0;->d:Ljava/lang/String;
+    iput-object p3, p0, Laa0;->c:Ldb0;
 
     return-void
 
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null backendName"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "Null monotonicClock"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "Null wallClock"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_3
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "Null applicationContext"
+    const-string p2, "Null payload"
 
     invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
@@ -77,7 +40,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 5
 
     const/4 v0, 0x1
 
@@ -86,150 +49,140 @@
     return v0
 
     :cond_0
-    instance-of v1, p1, Lg74;
+    instance-of v1, p1, Laa0;
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_1
-
-    check-cast p1, Lg74;
-
-    move-object v1, p1
-
-    check-cast v1, Laa0;
-
-    iget-object v1, v1, Laa0;->a:Landroid/content/Context;
-
-    iget-object v3, p0, Laa0;->a:Landroid/content/Context;
-
-    invoke-virtual {v3, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
     check-cast p1, Laa0;
 
-    iget-object v1, p1, Laa0;->b:Lq93;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v3, p0, Laa0;->b:Lq93;
+    iget-object v1, p1, Laa0;->a:Ljava/lang/Object;
 
-    invoke-virtual {v3, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iget-object v3, p1, Laa0;->c:Ldb0;
 
-    move-result v1
+    iget-object v4, p0, Laa0;->a:Ljava/lang/Object;
 
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Laa0;->c:Lq93;
-
-    iget-object v3, p1, Laa0;->c:Lq93;
-
-    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
-    iget-object v1, p0, Laa0;->d:Ljava/lang/String;
+    iget-object v1, p0, Laa0;->b:Ll9c;
 
-    iget-object p1, p1, Laa0;->d:Ljava/lang/String;
+    iget-object p1, p1, Laa0;->b:Ll9c;
 
-    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_2
 
-    return v0
+    iget-object p1, p0, Laa0;->c:Ldb0;
+
+    if-nez p1, :cond_1
+
+    if-nez v3, :cond_2
+
+    goto :goto_0
 
     :cond_1
+    invoke-virtual {p1, v3}, Ldb0;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    :goto_0
+    return v0
+
+    :cond_2
     return v2
 .end method
 
 .method public final hashCode()I
     .locals 3
 
-    iget-object v0, p0, Laa0;->a:Landroid/content/Context;
+    const v0, 0xf4243
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    mul-int v1, v0, v0
+
+    iget-object v2, p0, Laa0;->a:Ljava/lang/Object;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    xor-int/2addr v1, v2
+
+    mul-int/2addr v1, v0
+
+    iget-object v2, p0, Laa0;->b:Ll9c;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    xor-int/2addr v1, v2
+
+    mul-int/2addr v1, v0
+
+    iget-object v0, p0, Laa0;->c:Ldb0;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ldb0;->hashCode()I
 
     move-result v0
 
-    const v1, 0xf4243
-
-    xor-int/2addr v0, v1
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Laa0;->b:Lq93;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Laa0;->c:Lq93;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v1, p0, Laa0;->d:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
+    :goto_0
     xor-int/2addr v0, v1
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "CreationContext{applicationContext="
+    const-string v1, "Event{code=null, payload="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Laa0;->a:Landroid/content/Context;
+    iget-object v1, p0, Laa0;->a:Ljava/lang/Object;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", wallClock="
+    const-string v1, ", priority="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Laa0;->b:Lq93;
+    iget-object v1, p0, Laa0;->b:Ll9c;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", monotonicClock="
+    const-string v1, ", productData="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Laa0;->c:Lq93;
+    iget-object v1, p0, Laa0;->c:Ldb0;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", backendName="
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Laa0;->d:Ljava/lang/String;
-
-    const-string v2, "}"
-
-    invoke-static {v0, v1, v2}, Li57;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

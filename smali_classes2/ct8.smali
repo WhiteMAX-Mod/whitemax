@@ -1,6 +1,9 @@
 .class public final Lct8;
-.super Lht8;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lit8;
 
 
 # static fields
@@ -47,7 +50,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x47a05548
+    const v0, 0x8c5b203
 
     return v0
 .end method
@@ -55,7 +58,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "DeleteText"
+    const-string v0, "Show"
 
     return-object v0
 .end method

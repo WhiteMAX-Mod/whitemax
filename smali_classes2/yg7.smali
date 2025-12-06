@@ -1,201 +1,232 @@
-.class public final synthetic Lyg7;
-.super Ljava/lang/Object;
+.class public final Lyg7;
+.super La2;
 .source "SourceFile"
 
 # interfaces
-.implements Lji6;
+.implements Lsg7;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/login/inputname/InputNameScreen;
+.field public final a:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/login/inputname/InputNameScreen;I)V
+.method public constructor <init>(J)V
     .locals 0
 
-    iput p2, p0, Lyg7;->a:I
-
-    iput-object p1, p0, Lyg7;->b:Lone/me/login/inputname/InputNameScreen;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lyg7;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 11
+.method public final a()Ljava/lang/String;
+    .locals 2
 
-    iget v0, p0, Lyg7;->a:I
+    iget-wide v0, p0, Lyg7;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final b()J
+    .locals 2
+
+    iget-wide v0, p0, Lyg7;->a:J
+
+    return-wide v0
+.end method
+
+.method public final d()I
+    .locals 1
+
+    const/4 v0, 0x3
+
+    return v0
+.end method
+
+.method public final e()I
+    .locals 4
+
+    const-wide/32 v0, -0x80000000
+
+    iget-wide v2, p0, Lyg7;->a:J
+
+    cmp-long v0, v0, v2
+
+    if-gtz v0, :cond_0
+
+    const-wide/32 v0, 0x7fffffff
+
+    cmp-long v0, v2, v0
+
+    if-gtz v0, :cond_0
+
+    long-to-int v0, v2
+
+    return v0
+
+    :cond_0
+    new-instance v0, Lorg/msgpack/core/MessageIntegerOverflowException;
+
+    invoke-static {v2, v3}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lorg/msgpack/core/MessageIntegerOverflowException;-><init>(Ljava/math/BigInteger;)V
+
+    throw v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
+
+    if-ne p1, p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    instance-of v0, p1, Llyg;
 
     const/4 v1, 0x0
 
-    const/4 v2, 0x1
-
-    iget-object v3, p0, Lyg7;->b:Lone/me/login/inputname/InputNameScreen;
-
-    packed-switch v0, :pswitch_data_0
-
-    sget-object v0, Lone/me/login/inputname/InputNameScreen;->z0:[Ltr7;
-
-    invoke-virtual {v3}, Lone/me/login/inputname/InputNameScreen;->G0()Lgh7;
-
-    move-result-object v0
-
-    iget-object v4, v3, Lone/me/login/inputname/InputNameScreen;->x0:Lqs;
-
-    sget-object v5, Lone/me/login/inputname/InputNameScreen;->z0:[Ltr7;
-
-    const/4 v6, 0x5
-
-    aget-object v5, v5, v6
-
-    invoke-virtual {v4, v3}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    move-object v8, v4
-
-    check-cast v8, Ljava/lang/String;
-
-    invoke-virtual {v3}, Lone/me/login/inputname/InputNameScreen;->F0()Ljava/lang/String;
-
-    move-result-object v9
-
-    invoke-virtual {v0, v2, v8}, Lgh7;->s(ILjava/lang/String;)Z
-
-    move-result v4
-
-    const/4 v5, 0x2
-
-    invoke-virtual {v0, v5, v9}, Lgh7;->s(ILjava/lang/String;)Z
-
-    move-result v5
-
-    if-eqz v4, :cond_0
-
-    if-eqz v5, :cond_0
-
-    new-instance v5, Lm8d;
-
-    iget-object v6, v0, Lgh7;->c:Ljava/lang/String;
-
-    iget-object v7, v0, Lgh7;->o:Ljava/lang/String;
-
-    const/4 v10, 0x0
-
-    invoke-direct/range {v5 .. v10}, Lm8d;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V
-
-    iget-object v0, v0, Lgh7;->Y:Lxe5;
-
-    new-instance v4, Lxg7;
-
-    invoke-direct {v4, v5}, Lxg7;-><init>(Lm8d;)V
-
-    invoke-static {v0, v4}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
-
-    :cond_0
-    invoke-virtual {v3}, Lone/me/login/inputname/InputNameScreen;->D0()Ls5b;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ls5b;->g()Z
-
-    move-result v0
-
     if-nez v0, :cond_1
 
-    invoke-virtual {v3}, Lone/me/login/inputname/InputNameScreen;->E0()Ls5b;
+    goto :goto_1
 
-    move-result-object v0
+    :cond_1
+    check-cast p1, Llyg;
 
-    invoke-virtual {v0}, Ls5b;->g()Z
+    check-cast p1, La2;
+
+    invoke-interface {p1}, Llyg;->d()I
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    const/4 v2, 0x3
 
-    :cond_1
-    move v1, v2
+    if-ne v0, v2, :cond_3
+
+    invoke-interface {p1}, Llyg;->f()Lsg7;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lsg7;->j()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_1
 
     :cond_2
-    xor-int/lit8 v0, v1, 0x1
+    iget-wide v2, p0, Lyg7;->a:J
 
-    invoke-virtual {v3}, Lone/me/login/inputname/InputNameScreen;->C0()Luf;
+    invoke-interface {p1}, Lgqa;->b()J
 
-    move-result-object v1
+    move-result-wide v4
 
-    invoke-virtual {v1, v0}, Luf;->setActiveButtonLoaderState(Z)V
+    cmp-long p1, v2, v4
 
-    sget-object v0, Lccg;->a:Lccg;
+    if-nez p1, :cond_3
 
-    return-object v0
+    :goto_0
+    const/4 p1, 0x1
 
-    :pswitch_0
-    sget-object v0, Lone/me/login/inputname/InputNameScreen;->z0:[Ltr7;
+    return p1
 
-    new-instance v0, Lgh7;
+    :cond_3
+    :goto_1
+    return v1
+.end method
 
-    iget-object v4, v3, Lone/me/login/inputname/InputNameScreen;->b:Lqs;
+.method public final f()Lsg7;
+    .locals 0
 
-    sget-object v5, Lone/me/login/inputname/InputNameScreen;->z0:[Ltr7;
+    return-object p0
+.end method
 
-    aget-object v1, v5, v1
+.method public final h()Ljava/math/BigInteger;
+    .locals 2
 
-    invoke-virtual {v4, v3}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    iget-wide v0, p0, Lyg7;->a:J
 
-    move-result-object v1
+    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
-    check-cast v1, Ljava/lang/String;
-
-    iget-object v4, v3, Lone/me/login/inputname/InputNameScreen;->c:Lqs;
-
-    aget-object v2, v5, v2
-
-    invoke-virtual {v4, v3}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/String;
-
-    sget-object v3, Lw98;->a:Lw98;
-
-    invoke-virtual {v3}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v3
-
-    const-class v4, Lip3;
-
-    invoke-virtual {v3, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
-
-    move-result-object v3
-
-    invoke-direct {v0, v1, v2, v3}, Lgh7;-><init>(Ljava/lang/String;Ljava/lang/String;Liu7;)V
+    move-result-object v0
 
     return-object v0
+.end method
 
-    :pswitch_1
-    sget-object v0, Lone/me/login/inputname/InputNameScreen;->z0:[Ltr7;
+.method public final hashCode()I
+    .locals 4
 
-    new-instance v0, Lhj7;
+    const-wide/32 v0, -0x80000000
 
-    invoke-virtual {v3}, Ll24;->getRouter()Lqid;
+    iget-wide v2, p0, Lyg7;->a:J
 
-    move-result-object v1
+    cmp-long v0, v0, v2
 
-    invoke-direct {v0, v1}, Lhj7;-><init>(Lqid;)V
+    if-gtz v0, :cond_0
+
+    const-wide/32 v0, 0x7fffffff
+
+    cmp-long v0, v2, v0
+
+    if-gtz v0, :cond_0
+
+    long-to-int v0, v2
+
+    return v0
+
+    :cond_0
+    const/16 v0, 0x20
+
+    ushr-long v0, v2, v0
+
+    xor-long/2addr v0, v2
+
+    long-to-int v0, v0
+
+    return v0
+.end method
+
+.method public final i()J
+    .locals 2
+
+    iget-wide v0, p0, Lyg7;->a:J
+
+    return-wide v0
+.end method
+
+.method public final j()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final k()Lsg7;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    iget-wide v0, p0, Lyg7;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

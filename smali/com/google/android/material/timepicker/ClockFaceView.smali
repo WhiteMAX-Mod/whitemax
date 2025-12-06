@@ -1,29 +1,27 @@
 .class Lcom/google/android/material/timepicker/ClockFaceView;
-.super Lkwc;
+.super Ld7d;
 .source "SourceFile"
 
 # interfaces
-.implements Lr93;
+.implements Lic3;
 
 
 # instance fields
-.field public final H0:Lcom/google/android/material/timepicker/ClockHandView;
+.field public final I0:Lcom/google/android/material/timepicker/ClockHandView;
 
-.field public final I0:Landroid/graphics/Rect;
+.field public final J0:Landroid/graphics/Rect;
 
-.field public final J0:Landroid/graphics/RectF;
+.field public final K0:Landroid/graphics/RectF;
 
-.field public final K0:Landroid/graphics/Rect;
+.field public final L0:Landroid/graphics/Rect;
 
-.field public final L0:Landroid/util/SparseArray;
+.field public final M0:Landroid/util/SparseArray;
 
-.field public final M0:Lcom/google/android/material/timepicker/c;
+.field public final N0:Lcom/google/android/material/timepicker/c;
 
-.field public final N0:[I
+.field public final O0:[I
 
-.field public final O0:[F
-
-.field public final P0:I
+.field public final P0:[F
 
 .field public final Q0:I
 
@@ -31,44 +29,46 @@
 
 .field public final S0:I
 
-.field public final T0:[Ljava/lang/String;
+.field public final T0:I
 
-.field public U0:F
+.field public final U0:[Ljava/lang/String;
 
-.field public final V0:Landroid/content/res/ColorStateList;
+.field public V0:F
+
+.field public final W0:Landroid/content/res/ColorStateList;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 10
 
-    sget v0, Lgkc;->materialClockStyle:I
+    sget v0, Ldvc;->materialClockStyle:I
 
-    invoke-direct {p0, p1, p2, v0}, Lkwc;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, v0}, Ld7d;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v1, p0, Lcom/google/android/material/timepicker/ClockFaceView;->I0:Landroid/graphics/Rect;
+    iput-object v1, p0, Lcom/google/android/material/timepicker/ClockFaceView;->J0:Landroid/graphics/Rect;
 
     new-instance v1, Landroid/graphics/RectF;
 
     invoke-direct {v1}, Landroid/graphics/RectF;-><init>()V
 
-    iput-object v1, p0, Lcom/google/android/material/timepicker/ClockFaceView;->J0:Landroid/graphics/RectF;
+    iput-object v1, p0, Lcom/google/android/material/timepicker/ClockFaceView;->K0:Landroid/graphics/RectF;
 
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v1, p0, Lcom/google/android/material/timepicker/ClockFaceView;->K0:Landroid/graphics/Rect;
+    iput-object v1, p0, Lcom/google/android/material/timepicker/ClockFaceView;->L0:Landroid/graphics/Rect;
 
     new-instance v1, Landroid/util/SparseArray;
 
     invoke-direct {v1}, Landroid/util/SparseArray;-><init>()V
 
-    iput-object v1, p0, Lcom/google/android/material/timepicker/ClockFaceView;->L0:Landroid/util/SparseArray;
+    iput-object v1, p0, Lcom/google/android/material/timepicker/ClockFaceView;->M0:Landroid/util/SparseArray;
 
     const/4 v2, 0x3
 
@@ -76,11 +76,11 @@
 
     fill-array-data v2, :array_0
 
-    iput-object v2, p0, Lcom/google/android/material/timepicker/ClockFaceView;->O0:[F
+    iput-object v2, p0, Lcom/google/android/material/timepicker/ClockFaceView;->P0:[F
 
-    sget-object v2, Lfvc;->ClockFaceView:[I
+    sget-object v2, Lz5d;->ClockFaceView:[I
 
-    sget v3, Lsuc;->Widget_MaterialComponents_TimePicker_Clock:I
+    sget v3, Lm5d;->Widget_MaterialComponents_TimePicker_Clock:I
 
     invoke-virtual {p1, p2, v2, v0, v3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
@@ -90,25 +90,25 @@
 
     move-result-object v0
 
-    sget v2, Lfvc;->ClockFaceView_clockNumberTextColor:I
+    sget v2, Lz5d;->ClockFaceView_clockNumberTextColor:I
 
-    invoke-static {p1, p2, v2}, Lbhi;->f(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+    invoke-static {p1, p2, v2}, Lgti;->c(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/google/android/material/timepicker/ClockFaceView;->V0:Landroid/content/res/ColorStateList;
+    iput-object v2, p0, Lcom/google/android/material/timepicker/ClockFaceView;->W0:Landroid/content/res/ColorStateList;
 
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v3
 
-    sget v4, Lpqc;->material_clockface_view:I
+    sget v4, Lk1d;->material_clockface_view:I
 
     const/4 v5, 0x1
 
     invoke-virtual {v3, v4, p0, v5}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    sget v3, Lzmc;->material_clock_hand:I
+    sget v3, Luxc;->material_clock_hand:I
 
     invoke-virtual {p0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -116,15 +116,15 @@
 
     check-cast v3, Lcom/google/android/material/timepicker/ClockHandView;
 
-    iput-object v3, p0, Lcom/google/android/material/timepicker/ClockFaceView;->H0:Lcom/google/android/material/timepicker/ClockHandView;
+    iput-object v3, p0, Lcom/google/android/material/timepicker/ClockFaceView;->I0:Lcom/google/android/material/timepicker/ClockHandView;
 
-    sget v4, Lhlc;->material_clock_hand_padding:I
+    sget v4, Ldwc;->material_clock_hand_padding:I
 
     invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v4
 
-    iput v4, p0, Lcom/google/android/material/timepicker/ClockFaceView;->P0:I
+    iput v4, p0, Lcom/google/android/material/timepicker/ClockFaceView;->Q0:I
 
     const v4, 0x10100a1
 
@@ -148,15 +148,15 @@
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/google/android/material/timepicker/ClockFaceView;->N0:[I
+    iput-object v2, p0, Lcom/google/android/material/timepicker/ClockFaceView;->O0:[I
 
     iget-object v2, v3, Lcom/google/android/material/timepicker/ClockHandView;->c:Ljava/util/ArrayList;
 
     invoke-virtual {v2, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    sget v2, Lrkc;->material_timepicker_clockface:I
+    sget v2, Lovc;->material_timepicker_clockface:I
 
-    invoke-static {p1, v2}, Lc8;->d(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+    invoke-static {p1, v2}, Lz7;->c(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     move-result-object v2
 
@@ -164,9 +164,9 @@
 
     move-result v2
 
-    sget v3, Lfvc;->ClockFaceView_clockFaceBackgroundColor:I
+    sget v3, Lz5d;->ClockFaceView_clockFaceBackgroundColor:I
 
-    invoke-static {p1, p2, v3}, Lbhi;->f(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
+    invoke-static {p1, p2, v3}, Lgti;->c(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
 
@@ -180,7 +180,7 @@
     move-result v2
 
     :goto_0
-    invoke-virtual {p0, v2}, Lkwc;->setBackgroundColor(I)V
+    invoke-virtual {p0, v2}, Ld7d;->setBackgroundColor(I)V
 
     invoke-virtual {p0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
@@ -200,7 +200,7 @@
 
     invoke-direct {p1, p0}, Lcom/google/android/material/timepicker/c;-><init>(Lcom/google/android/material/timepicker/ClockFaceView;)V
 
-    iput-object p1, p0, Lcom/google/android/material/timepicker/ClockFaceView;->M0:Lcom/google/android/material/timepicker/c;
+    iput-object p1, p0, Lcom/google/android/material/timepicker/ClockFaceView;->N0:Lcom/google/android/material/timepicker/c;
 
     const/16 p1, 0xc
 
@@ -210,7 +210,7 @@
 
     invoke-static {p1, p2}, Ljava/util/Arrays;->fill([Ljava/lang/Object;Ljava/lang/Object;)V
 
-    iput-object p1, p0, Lcom/google/android/material/timepicker/ClockFaceView;->T0:[Ljava/lang/String;
+    iput-object p1, p0, Lcom/google/android/material/timepicker/ClockFaceView;->U0:[Ljava/lang/String;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -231,7 +231,7 @@
     move v4, v3
 
     :goto_1
-    iget-object v6, p0, Lcom/google/android/material/timepicker/ClockFaceView;->T0:[Ljava/lang/String;
+    iget-object v6, p0, Lcom/google/android/material/timepicker/ClockFaceView;->U0:[Ljava/lang/String;
 
     array-length v6, v6
 
@@ -247,7 +247,7 @@
 
     check-cast v6, Landroid/widget/TextView;
 
-    iget-object v7, p0, Lcom/google/android/material/timepicker/ClockFaceView;->T0:[Ljava/lang/String;
+    iget-object v7, p0, Lcom/google/android/material/timepicker/ClockFaceView;->U0:[Ljava/lang/String;
 
     array-length v7, v7
 
@@ -262,7 +262,7 @@
     :cond_1
     if-nez v6, :cond_2
 
-    sget v6, Lpqc;->material_clockface_textview:I
+    sget v6, Lk1d;->material_clockface_textview:I
 
     invoke-virtual {p1, v6, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -275,13 +275,13 @@
     invoke-virtual {p0, v6}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     :cond_2
-    iget-object v7, p0, Lcom/google/android/material/timepicker/ClockFaceView;->T0:[Ljava/lang/String;
+    iget-object v7, p0, Lcom/google/android/material/timepicker/ClockFaceView;->U0:[Ljava/lang/String;
 
     aget-object v7, v7, v3
 
     invoke-virtual {v6, v7}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    sget v7, Lzmc;->material_value_index:I
+    sget v7, Luxc;->material_value_index:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -293,7 +293,7 @@
 
     add-int/2addr v7, v5
 
-    sget v8, Lzmc;->material_clock_level:I
+    sget v8, Luxc;->material_clock_level:I
 
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -306,11 +306,11 @@
     move v4, v5
 
     :cond_3
-    iget-object v7, p0, Lcom/google/android/material/timepicker/ClockFaceView;->M0:Lcom/google/android/material/timepicker/c;
+    iget-object v7, p0, Lcom/google/android/material/timepicker/ClockFaceView;->N0:Lcom/google/android/material/timepicker/c;
 
-    invoke-static {v6, v7}, Lhzg;->n(Landroid/view/View;Lt4;)V
+    invoke-static {v6, v7}, Lhfh;->n(Landroid/view/View;Lz4;)V
 
-    iget-object v7, p0, Lcom/google/android/material/timepicker/ClockFaceView;->V0:Landroid/content/res/ColorStateList;
+    iget-object v7, p0, Lcom/google/android/material/timepicker/ClockFaceView;->W0:Landroid/content/res/ColorStateList;
 
     invoke-virtual {v6, v7}, Landroid/widget/TextView;->setTextColor(Landroid/content/res/ColorStateList;)V
 
@@ -320,7 +320,7 @@
     goto :goto_1
 
     :cond_4
-    iget-object p1, p0, Lcom/google/android/material/timepicker/ClockFaceView;->H0:Lcom/google/android/material/timepicker/ClockHandView;
+    iget-object p1, p0, Lcom/google/android/material/timepicker/ClockFaceView;->I0:Lcom/google/android/material/timepicker/ClockHandView;
 
     iget-boolean p2, p1, Lcom/google/android/material/timepicker/ClockHandView;->b:Z
 
@@ -328,22 +328,14 @@
 
     if-nez v4, :cond_5
 
-    iput v5, p1, Lcom/google/android/material/timepicker/ClockHandView;->y0:I
+    iput v5, p1, Lcom/google/android/material/timepicker/ClockHandView;->z0:I
 
     :cond_5
     iput-boolean v4, p1, Lcom/google/android/material/timepicker/ClockHandView;->b:Z
 
     invoke-virtual {p1}, Landroid/view/View;->invalidate()V
 
-    sget p1, Lhlc;->material_time_picker_minimum_screen_height:I
-
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result p1
-
-    iput p1, p0, Lcom/google/android/material/timepicker/ClockFaceView;->Q0:I
-
-    sget p1, Lhlc;->material_time_picker_minimum_screen_width:I
+    sget p1, Ldwc;->material_time_picker_minimum_screen_height:I
 
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -351,13 +343,21 @@
 
     iput p1, p0, Lcom/google/android/material/timepicker/ClockFaceView;->R0:I
 
-    sget p1, Lhlc;->material_clock_size:I
+    sget p1, Ldwc;->material_time_picker_minimum_screen_width:I
 
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p1
 
     iput p1, p0, Lcom/google/android/material/timepicker/ClockFaceView;->S0:I
+
+    sget p1, Ldwc;->material_clock_size:I
+
+    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/google/android/material/timepicker/ClockFaceView;->T0:I
 
     return-void
 
@@ -378,17 +378,17 @@
 
     invoke-super {p0, p1}, Landroid/view/View;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    iget-object v0, p0, Lcom/google/android/material/timepicker/ClockFaceView;->T0:[Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/android/material/timepicker/ClockFaceView;->U0:[Ljava/lang/String;
 
     array-length v0, v0
 
     const/4 v1, 0x1
 
-    invoke-static {v1, v0, v1}, Le5;->a(III)Le5;
+    invoke-static {v1, v0, v1}, Lk5;->a(III)Lk5;
 
     move-result-object v0
 
-    iget-object v0, v0, Le5;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lk5;->a:Ljava/lang/Object;
 
     check-cast v0, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;
 
@@ -426,17 +426,17 @@
 
     int-to-float p1, p1
 
-    iget v0, p0, Lcom/google/android/material/timepicker/ClockFaceView;->S0:I
+    iget v0, p0, Lcom/google/android/material/timepicker/ClockFaceView;->T0:I
 
     int-to-float v0, v0
 
-    iget v1, p0, Lcom/google/android/material/timepicker/ClockFaceView;->Q0:I
+    iget v1, p0, Lcom/google/android/material/timepicker/ClockFaceView;->R0:I
 
     int-to-float v1, v1
 
     div-float/2addr v1, p2
 
-    iget p2, p0, Lcom/google/android/material/timepicker/ClockFaceView;->R0:I
+    iget p2, p0, Lcom/google/android/material/timepicker/ClockFaceView;->S0:I
 
     int-to-float p2, p2
 
@@ -472,11 +472,11 @@
 .method public final v()V
     .locals 9
 
-    new-instance v0, Lgr3;
+    new-instance v0, Lut3;
 
-    invoke-direct {v0}, Lgr3;-><init>()V
+    invoke-direct {v0}, Lut3;-><init>()V
 
-    invoke-virtual {v0, p0}, Lgr3;->c(Landroidx/constraintlayout/widget/ConstraintLayout;)V
+    invoke-virtual {v0, p0}, Lut3;->c(Landroidx/constraintlayout/widget/ConstraintLayout;)V
 
     new-instance v1, Ljava/util/HashMap;
 
@@ -501,7 +501,7 @@
 
     move-result v5
 
-    sget v6, Lzmc;->circle_center:I
+    sget v6, Luxc;->circle_center:I
 
     if-eq v5, v6, :cond_3
 
@@ -520,7 +520,7 @@
     goto :goto_1
 
     :cond_0
-    sget v5, Lzmc;->material_clock_level:I
+    sget v5, Luxc;->material_clock_level:I
 
     invoke-virtual {v4, v5}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
@@ -606,7 +606,7 @@
 
     if-ne v3, v5, :cond_6
 
-    iget v3, p0, Lkwc;->F0:I
+    iget v3, p0, Ld7d;->G0:I
 
     int-to-float v3, v3
 
@@ -621,7 +621,7 @@
     goto :goto_2
 
     :cond_6
-    iget v3, p0, Lkwc;->F0:I
+    iget v3, p0, Ld7d;->G0:I
 
     :goto_2
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -647,19 +647,19 @@
 
     move-result v7
 
-    sget v8, Lzmc;->circle_center:I
+    sget v8, Luxc;->circle_center:I
 
-    invoke-virtual {v0, v7}, Lgr3;->g(I)Lbr3;
+    invoke-virtual {v0, v7}, Lut3;->g(I)Lpt3;
 
     move-result-object v7
 
-    iget-object v7, v7, Lbr3;->d:Lcr3;
+    iget-object v7, v7, Lpt3;->d:Lqt3;
 
-    iput v8, v7, Lcr3;->z:I
+    iput v8, v7, Lqt3;->z:I
 
-    iput v3, v7, Lcr3;->A:I
+    iput v3, v7, Lqt3;->A:I
 
-    iput v6, v7, Lcr3;->B:F
+    iput v6, v7, Lqt3;->B:F
 
     invoke-interface {v4}, Ljava/util/List;->size()I
 
@@ -676,12 +676,12 @@
     goto :goto_3
 
     :cond_7
-    invoke-virtual {v0, p0}, Lgr3;->a(Landroidx/constraintlayout/widget/ConstraintLayout;)V
+    invoke-virtual {v0, p0}, Lut3;->a(Landroidx/constraintlayout/widget/ConstraintLayout;)V
 
     move v0, v2
 
     :goto_4
-    iget-object v1, p0, Lcom/google/android/material/timepicker/ClockFaceView;->L0:Landroid/util/SparseArray;
+    iget-object v1, p0, Lcom/google/android/material/timepicker/ClockFaceView;->M0:Landroid/util/SparseArray;
 
     invoke-virtual {v1}, Landroid/util/SparseArray;->size()I
 
@@ -710,9 +710,9 @@
 
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/google/android/material/timepicker/ClockFaceView;->H0:Lcom/google/android/material/timepicker/ClockHandView;
+    iget-object v1, v0, Lcom/google/android/material/timepicker/ClockFaceView;->I0:Lcom/google/android/material/timepicker/ClockHandView;
 
-    iget-object v1, v1, Lcom/google/android/material/timepicker/ClockHandView;->s0:Landroid/graphics/RectF;
+    iget-object v1, v1, Lcom/google/android/material/timepicker/ClockHandView;->t0:Landroid/graphics/RectF;
 
     const v2, 0x7f7fffff    # Float.MAX_VALUE
 
@@ -725,15 +725,15 @@
     move v5, v4
 
     :goto_0
-    iget-object v7, v0, Lcom/google/android/material/timepicker/ClockFaceView;->L0:Landroid/util/SparseArray;
+    iget-object v7, v0, Lcom/google/android/material/timepicker/ClockFaceView;->M0:Landroid/util/SparseArray;
 
     invoke-virtual {v7}, Landroid/util/SparseArray;->size()I
 
     move-result v8
 
-    iget-object v9, v0, Lcom/google/android/material/timepicker/ClockFaceView;->I0:Landroid/graphics/Rect;
+    iget-object v9, v0, Lcom/google/android/material/timepicker/ClockFaceView;->J0:Landroid/graphics/Rect;
 
-    iget-object v10, v0, Lcom/google/android/material/timepicker/ClockFaceView;->J0:Landroid/graphics/RectF;
+    iget-object v10, v0, Lcom/google/android/material/timepicker/ClockFaceView;->K0:Landroid/graphics/RectF;
 
     if-ge v5, v8, :cond_2
 
@@ -815,7 +815,7 @@
 
     invoke-virtual {v10, v9}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
 
-    iget-object v8, v0, Lcom/google/android/material/timepicker/ClockFaceView;->K0:Landroid/graphics/Rect;
+    iget-object v8, v0, Lcom/google/android/material/timepicker/ClockFaceView;->L0:Landroid/graphics/Rect;
 
     invoke-virtual {v5, v4, v8}, Landroid/widget/TextView;->getLineBounds(ILandroid/graphics/Rect;)I
 
@@ -866,11 +866,11 @@
 
     mul-float/2addr v14, v8
 
-    iget-object v8, v0, Lcom/google/android/material/timepicker/ClockFaceView;->O0:[F
+    iget-object v8, v0, Lcom/google/android/material/timepicker/ClockFaceView;->P0:[F
 
     sget-object v17, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
 
-    iget-object v15, v0, Lcom/google/android/material/timepicker/ClockFaceView;->N0:[I
+    iget-object v15, v0, Lcom/google/android/material/timepicker/ClockFaceView;->O0:[I
 
     move-object/from16 v16, v8
 

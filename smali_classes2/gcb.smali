@@ -1,31 +1,64 @@
-.class public final Lgcb;
+.class public final synthetic Lgcb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:I
-
-.field public final b:Lfcb;
-
-.field public final c:J
-
-.field public final d:Lbcb;
+# interfaces
+.implements Landroid/os/Handler$Callback;
 
 
-# direct methods
-.method public constructor <init>(ILfcb;JLbcb;)V
-    .locals 0
+# virtual methods
+.method public final handleMessage(Landroid/os/Message;)Z
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget v0, p1, Landroid/os/Message;->what:I
 
-    iput p1, p0, Lgcb;->a:I
+    const/4 v1, 0x0
 
-    iput-object p2, p0, Lgcb;->b:Lfcb;
+    if-nez v0, :cond_3
 
-    iput-wide p3, p0, Lgcb;->c:J
+    sget-object v0, Licb;->a:Landroid/os/Handler;
 
-    iput-object p5, p0, Lgcb;->d:Lbcb;
+    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    return-void
+    check-cast p1, Lhcb;
+
+    sget-object v0, Licb;->d:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    sget-object v3, Licb;->b:Lhcb;
+
+    invoke-static {v3, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    sget-object v3, Licb;->c:Lhcb;
+
+    invoke-static {v3, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    :cond_0
+    sget-object v3, Lecb;->a:Lecb;
+
+    invoke-static {p1, v3}, Licb;->a(Lhcb;Lecb;)V
+
+    :cond_1
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    :cond_2
+    return v2
+
+    :cond_3
+    return v1
 .end method

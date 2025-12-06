@@ -1,408 +1,288 @@
-.class public abstract Lwk0;
+.class public final Lwk0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpub;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public X:Liub;
+.field public final synthetic a:I
 
-.field public Y:I
-
-.field public Z:Lwld;
-
-.field public final a:I
-
-.field public final b:Lzgd;
-
-.field public c:Lead;
-
-.field public o:I
-
-.field public q0:[Lkb6;
-
-.field public r0:J
-
-.field public s0:J
-
-.field public t0:Z
-
-.field public u0:Z
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
     iput p1, p0, Lwk0;->a:I
 
-    new-instance p1, Lzgd;
+    iput-object p2, p0, Lwk0;->b:Ljava/lang/Object;
 
-    const/16 v0, 0xf
-
-    const/4 v1, 0x0
-
-    invoke-direct {p1, v0, v1}, Lzgd;-><init>(IZ)V
-
-    iput-object p1, p0, Lwk0;->b:Lzgd;
-
-    const-wide/high16 v0, -0x8000000000000000L
-
-    iput-wide v0, p0, Lwk0;->s0:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-.end method
-
-.method public static b(III)I
-    .locals 0
-
-    or-int/2addr p0, p1
-
-    or-int/2addr p0, p2
-
-    or-int/lit16 p0, p0, 0x80
-
-    return p0
 .end method
 
 
 # virtual methods
-.method public a(ILjava/lang/Object;)V
-    .locals 0
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 6
 
-    return-void
-.end method
+    iget v0, p0, Lwk0;->a:I
 
-.method public final c(Ljava/lang/Exception;Lkb6;ZI)Lcom/google/android/exoplayer2/ExoPlaybackException;
-    .locals 10
+    iget-object v1, p0, Lwk0;->b:Ljava/lang/Object;
 
-    const/4 v0, 0x4
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz p2, :cond_0
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    iget-boolean v1, p0, Lwk0;->u0:Z
+    move-result-object p1
 
-    if-nez v1, :cond_0
+    check-cast p1, Ljava/lang/Integer;
 
-    const/4 v1, 0x1
-
-    iput-boolean v1, p0, Lwk0;->u0:Z
-
-    const/4 v1, 0x0
-
-    :try_start_0
-    invoke-virtual {p0, p2}, Lwk0;->x(Lkb6;)I
-
-    move-result v2
-    :try_end_0
-    .catch Lcom/google/android/exoplayer2/ExoPlaybackException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    and-int/lit8 v2, v2, 0x7
-
-    iput-boolean v1, p0, Lwk0;->u0:Z
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    iput-boolean v1, p0, Lwk0;->u0:Z
-
-    throw v0
-
-    :catch_0
-    iput-boolean v1, p0, Lwk0;->u0:Z
-
-    :cond_0
-    move v2, v0
-
-    :goto_0
-    invoke-virtual {p0}, Lwk0;->f()Ljava/lang/String;
-
-    move-result-object v5
-
-    iget v6, p0, Lwk0;->o:I
-
-    new-instance v1, Lcom/google/android/exoplayer2/ExoPlaybackException;
-
-    if-nez p2, :cond_1
-
-    move v8, v0
-
-    goto :goto_1
-
-    :cond_1
-    move v8, v2
-
-    :goto_1
-    const/4 v2, 0x1
-
-    move-object v3, p1
-
-    move-object v7, p2
-
-    move v9, p3
-
-    move v4, p4
-
-    invoke-direct/range {v1 .. v9}, Lcom/google/android/exoplayer2/ExoPlaybackException;-><init>(ILjava/lang/Throwable;ILjava/lang/String;ILkb6;IZ)V
-
-    return-object v1
-.end method
-
-.method public d()Lvo8;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public abstract f()Ljava/lang/String;
-.end method
-
-.method public final g()Z
-    .locals 4
-
-    iget-wide v0, p0, Lwk0;->s0:J
-
-    const-wide/high16 v2, -0x8000000000000000L
-
-    cmp-long v0, v0, v2
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public abstract h()Z
-.end method
-
-.method public abstract i()Z
-.end method
-
-.method public abstract j()V
-.end method
-
-.method public k(ZZ)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public abstract l(JZ)V
-.end method
-
-.method public m()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public n()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public o()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public abstract p([Lkb6;JJ)V
-.end method
-
-.method public final q(Lzgd;Lgf4;I)I
-    .locals 4
-
-    iget-object v0, p0, Lwk0;->Z:Lwld;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-interface {v0, p1, p2, p3}, Lwld;->n(Lzgd;Lgf4;I)I
-
-    move-result p3
-
-    const/4 v0, -0x4
-
-    if-ne p3, v0, :cond_2
-
-    const/4 p1, 0x4
-
-    invoke-virtual {p2, p1}, Lvy;->i(I)Z
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    check-cast v1, Lv6h;
 
-    const-wide/high16 p1, -0x8000000000000000L
+    iget v0, v1, Lv6h;->L0:I
 
-    iput-wide p1, p0, Lwk0;->s0:J
+    if-eq v0, p1, :cond_0
 
-    iget-boolean p1, p0, Lwk0;->t0:Z
+    iput p1, v1, Lv6h;->L0:I
 
-    if-eqz p1, :cond_0
-
-    return v0
+    invoke-virtual {v1}, Landroid/view/View;->requestLayout()V
 
     :cond_0
-    const/4 p1, -0x3
+    return-void
 
-    return p1
+    :pswitch_0
+    check-cast v1, Lcom/google/android/material/textfield/TextInputLayout;
 
-    :cond_1
-    iget-wide v0, p2, Lgf4;->Y:J
+    iget-object v0, v1, Lcom/google/android/material/textfield/TextInputLayout;->F1:Lne3;
 
-    iget-wide v2, p0, Lwk0;->r0:J
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    add-long/2addr v0, v2
+    move-result-object p1
 
-    iput-wide v0, p2, Lgf4;->Y:J
+    check-cast p1, Ljava/lang/Float;
 
-    iget-wide p1, p0, Lwk0;->s0:J
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    invoke-static {p1, p2, v0, v1}, Ljava/lang/Math;->max(JJ)J
+    move-result p1
 
-    move-result-wide p1
-
-    iput-wide p1, p0, Lwk0;->s0:J
-
-    return p3
-
-    :cond_2
-    const/4 p2, -0x5
-
-    if-ne p3, p2, :cond_3
-
-    iget-object p2, p1, Lzgd;->c:Ljava/lang/Object;
-
-    check-cast p2, Lkb6;
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-wide v0, p2, Lkb6;->y0:J
-
-    const-wide v2, 0x7fffffffffffffffL
-
-    cmp-long v2, v0, v2
-
-    if-eqz v2, :cond_3
-
-    invoke-virtual {p2}, Lkb6;->a()Lib6;
-
-    move-result-object p2
-
-    iget-wide v2, p0, Lwk0;->r0:J
-
-    add-long/2addr v0, v2
-
-    iput-wide v0, p2, Lib6;->o:J
-
-    new-instance v0, Lkb6;
-
-    invoke-direct {v0, p2}, Lkb6;-><init>(Lib6;)V
-
-    iput-object v0, p1, Lzgd;->c:Ljava/lang/Object;
-
-    :cond_3
-    return p3
-.end method
-
-.method public abstract t(JJ)V
-.end method
-
-.method public final u([Lkb6;Lwld;JJ)V
-    .locals 6
-
-    iget-boolean v0, p0, Lwk0;->t0:Z
-
-    xor-int/lit8 v0, v0, 0x1
-
-    invoke-static {v0}, Lzg8;->e(Z)V
-
-    iput-object p2, p0, Lwk0;->Z:Lwld;
-
-    iget-wide v0, p0, Lwk0;->s0:J
-
-    const-wide/high16 v2, -0x8000000000000000L
-
-    cmp-long p2, v0, v2
-
-    if-nez p2, :cond_0
-
-    iput-wide p3, p0, Lwk0;->s0:J
-
-    :cond_0
-    iput-object p1, p0, Lwk0;->q0:[Lkb6;
-
-    iput-wide p5, p0, Lwk0;->r0:J
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move-wide v2, p3
-
-    move-wide v4, p5
-
-    invoke-virtual/range {v0 .. v5}, Lwk0;->p([Lkb6;JJ)V
+    invoke-virtual {v0, p1}, Lne3;->p(F)V
 
     return-void
-.end method
 
-.method public final v()V
-    .locals 1
+    :pswitch_1
+    check-cast v1, Lcom/google/android/material/tabs/TabLayout;
 
-    iget v0, p0, Lwk0;->Y:I
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    if-nez v0, :cond_0
+    move-result-object p1
 
-    const/4 v0, 0x1
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {v1, p1, v0}, Landroid/view/View;->scrollTo(II)V
+
+    return-void
+
+    :pswitch_2
+    check-cast v1, Lxs7;
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
+
+    move-result p1
+
+    iput p1, v1, Lxs7;->m:F
+
+    return-void
+
+    :pswitch_3
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Float;
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    const/high16 v0, 0x437f0000    # 255.0f
+
+    mul-float/2addr p1, v0
+
+    float-to-int p1, p1
+
+    check-cast v1, Lbr5;
+
+    iget-object v0, v1, Lbr5;->c:Landroid/graphics/drawable/StateListDrawable;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
+
+    iget-object v0, v1, Lbr5;->d:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
+
+    iget-object p1, v1, Lbr5;->C0:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_4
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Float;
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    check-cast v1, Lryd;
+
+    iput p1, v1, Lryd;->h:F
+
+    return-void
+
+    :pswitch_5
+    check-cast v1, Lre3;
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    invoke-virtual {v1, p1}, Lre3;->setScrimAlpha(I)V
+
+    return-void
+
+    :pswitch_6
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Float;
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    check-cast v1, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
+
+    iget-object v0, v1, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->i:Lwq8;
+
+    if-eqz v0, :cond_1
+
+    iget-object v1, v0, Lwq8;->a:Lvq8;
+
+    iget v2, v1, Lvq8;->i:F
+
+    cmpl-float v2, v2, p1
+
+    if-eqz v2, :cond_1
+
+    iput p1, v1, Lvq8;->i:F
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, v0, Lwq8;->o:Z
+
+    invoke-virtual {v0}, Lwq8;->invalidateSelf()V
+
+    :cond_1
+    return-void
+
+    :pswitch_7
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Float;
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    check-cast v1, Lal0;
+
+    iget-object v0, v1, Lal0;->y0:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Licg;
+
+    const v3, 0x3f99999a    # 1.2f
+
+    iput v3, v2, Licg;->X0:F
+
+    iput p1, v2, Licg;->V0:F
+
+    iput p1, v2, Licg;->W0:F
+
+    const/high16 v3, 0x3f800000    # 1.0f
+
+    const v4, 0x3e428f5c    # 0.19f
+
+    const/4 v5, 0x0
+
+    invoke-static {v5, v3, v4, v3, p1}, Lrg;->b(FFFFF)F
+
+    move-result v3
+
+    iput v3, v2, Licg;->Y0:F
+
+    invoke-virtual {v2}, Lwq8;->invalidateSelf()V
 
     goto :goto_0
 
-    :cond_0
-    const/4 v0, 0x0
+    :cond_2
+    sget-object p1, Lhfh;->a:Ljava/util/WeakHashMap;
 
-    :goto_0
-    invoke-static {v0}, Lzg8;->e(Z)V
-
-    iget-object v0, p0, Lwk0;->b:Lzgd;
-
-    invoke-virtual {v0}, Lzgd;->g()V
-
-    invoke-virtual {p0}, Lwk0;->m()V
+    invoke-virtual {v1}, Landroid/view/View;->postInvalidateOnAnimation()V
 
     return-void
-.end method
 
-.method public w(FF)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public abstract x(Lkb6;)I
-.end method
-
-.method public y()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

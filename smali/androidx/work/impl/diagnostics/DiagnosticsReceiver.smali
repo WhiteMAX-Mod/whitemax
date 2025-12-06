@@ -13,7 +13,7 @@
 
     const-string v0, "DiagnosticsRcvr"
 
-    invoke-static {v0}, Lxyh;->l(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcei;->m(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -40,7 +40,7 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lxyh;->e()Lxyh;
+    invoke-static {}, Lcei;->g()Lcei;
 
     move-result-object p2
 
@@ -48,26 +48,26 @@
 
     sget-object v1, Landroidx/work/impl/diagnostics/DiagnosticsReceiver;->a:Ljava/lang/String;
 
-    invoke-virtual {p2, v1, v0}, Lxyh;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p2, v1, v0}, Lcei;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :try_start_0
-    invoke-static {p1}, Lsoh;->d(Landroid/content/Context;)Lsoh;
+    invoke-static {p1}, Lc5i;->d(Landroid/content/Context;)Lc5i;
 
     move-result-object p1
 
     const-class p2, Landroidx/work/impl/workers/DiagnosticsWorker;
 
-    new-instance v0, Li7b;
+    new-instance v0, Lngb;
 
-    invoke-direct {v0, p2}, Li7b;-><init>(Ljava/lang/Class;)V
+    invoke-direct {v0, p2}, Lngb;-><init>(Ljava/lang/Class;)V
 
     invoke-virtual {v0}, Landroidx/work/WorkRequest$Builder;->build()Landroidx/work/WorkRequest;
 
     move-result-object p2
 
-    check-cast p2, Lj7b;
+    check-cast p2, Logb;
 
-    invoke-virtual {p1, p2}, Lpoh;->a(Landroidx/work/WorkRequest;)V
+    invoke-virtual {p1, p2}, Lz4i;->a(Landroidx/work/WorkRequest;)V
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -76,13 +76,13 @@
     :catch_0
     move-exception p1
 
-    invoke-static {}, Lxyh;->e()Lxyh;
+    invoke-static {}, Lcei;->g()Lcei;
 
     move-result-object p2
 
     const-string v0, "WorkManager is not initialized"
 
-    invoke-virtual {p2, v1, v0, p1}, Lxyh;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {p2, v1, v0, p1}, Lcei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method

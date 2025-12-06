@@ -1,9 +1,9 @@
 .class public final Lpo0;
-.super Ljp7;
+.super Lqv7;
 .source "SourceFile"
 
 # interfaces
-.implements Luo0;
+.implements Lqo0;
 
 
 # instance fields
@@ -11,16 +11,20 @@
 
 .field public final d:Ljava/lang/String;
 
+.field public final e:Ljava/lang/String;
+
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0}, Ljp7;-><init>()V
+    invoke-direct {p0}, Lqv7;-><init>()V
 
     iput-object p1, p0, Lpo0;->c:Ljava/lang/String;
 
     iput-object p2, p0, Lpo0;->d:Ljava/lang/String;
+
+    iput-object p3, p0, Lpo0;->e:Ljava/lang/String;
 
     return-void
 .end method

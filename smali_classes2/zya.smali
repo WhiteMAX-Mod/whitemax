@@ -1,181 +1,212 @@
-.class public abstract Lzya;
+.class public final Lzya;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final A:I
+# instance fields
+.field public final a:I
 
-.field public static final B:I
+.field public final b:Lyya;
 
-.field public static final a:I
+.field public final c:I
 
-.field public static final b:I
+.field public final d:Ljava/lang/String;
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
-
-.field public static final z:I
+.field public final e:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(ILyya;ILjava/lang/String;I)V
+    .locals 0
 
-    sget v0, Lioc;->oneme_notifications_settings_chat_enable_notifications_button:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lzya;->a:I
+    iput p1, p0, Lzya;->a:I
 
-    sget v0, Lioc;->oneme_notifications_settings_chat_linearlayout:I
+    iput-object p2, p0, Lzya;->b:Lyya;
 
-    sput v0, Lzya;->b:I
+    iput p3, p0, Lzya;->c:I
 
-    sget v0, Lioc;->oneme_notifications_settings_chat_recycler_view:I
+    iput-object p4, p0, Lzya;->d:Ljava/lang/String;
 
-    sput v0, Lzya;->c:I
-
-    sget v0, Lioc;->oneme_notifications_settings_chat_settings_button:I
-
-    sput v0, Lzya;->d:I
-
-    sget v0, Lioc;->oneme_notifications_settings_chat_toolbar:I
-
-    sput v0, Lzya;->e:I
-
-    sget v0, Lioc;->oneme_notifications_settings_chat_type_all_button:I
-
-    sput v0, Lzya;->f:I
-
-    sget v0, Lioc;->oneme_notifications_settings_chat_type_pin_reply_button:I
-
-    sput v0, Lzya;->g:I
-
-    sget v0, Lioc;->oneme_notifications_settings_dialog_enable_notifications_button:I
-
-    sput v0, Lzya;->h:I
-
-    sget v0, Lioc;->oneme_notifications_settings_dialog_linearlayout:I
-
-    sput v0, Lzya;->i:I
-
-    sget v0, Lioc;->oneme_notifications_settings_dialog_recycler_view:I
-
-    sput v0, Lzya;->j:I
-
-    sget v0, Lioc;->oneme_notifications_settings_dialog_settings_button:I
-
-    sput v0, Lzya;->k:I
-
-    sget v0, Lioc;->oneme_notifications_settings_dialog_toolbar:I
-
-    sput v0, Lzya;->l:I
-
-    sget v0, Lioc;->oneme_notifications_settings_enable_all_notifications_button:I
-
-    sput v0, Lzya;->m:I
-
-    sget v0, Lioc;->oneme_notifications_settings_header_vh:I
-
-    sput v0, Lzya;->n:I
-
-    sget v0, Lioc;->oneme_notifications_settings_item_vh:I
-
-    sput v0, Lzya;->o:I
-
-    sget v0, Lioc;->oneme_notifications_settings_linearlayout:I
-
-    sput v0, Lzya;->p:I
-
-    sget v0, Lioc;->oneme_notifications_settings_open_settings_button:I
-
-    sput v0, Lzya;->q:I
-
-    sget v0, Lioc;->oneme_notifications_settings_open_settings_calls_ringtone:I
-
-    sput v0, Lzya;->r:I
-
-    sget v0, Lioc;->oneme_notifications_settings_open_settings_calls_vibration:I
-
-    sput v0, Lzya;->s:I
-
-    sget v0, Lioc;->oneme_notifications_settings_other_linearlayout:I
-
-    sput v0, Lzya;->t:I
-
-    sget v0, Lioc;->oneme_notifications_settings_other_new_user_button:I
-
-    sput v0, Lzya;->u:I
-
-    sget v0, Lioc;->oneme_notifications_settings_other_recycler_view:I
-
-    sput v0, Lzya;->v:I
-
-    sget v0, Lioc;->oneme_notifications_settings_other_settings_button:I
-
-    sput v0, Lzya;->w:I
-
-    sget v0, Lioc;->oneme_notifications_settings_other_toolbar:I
-
-    sput v0, Lzya;->x:I
-
-    sget v0, Lioc;->oneme_notifications_settings_recycler_view:I
-
-    sput v0, Lzya;->y:I
-
-    sget v0, Lioc;->oneme_notifications_settings_reset_default_button:I
-
-    sput v0, Lzya;->z:I
-
-    sget v0, Lioc;->oneme_notifications_settings_show_content_button:I
-
-    sput v0, Lzya;->A:I
-
-    sget v0, Lioc;->oneme_notifications_settings_toolbar:I
-
-    sput v0, Lzya;->B:I
+    iput p5, p0, Lzya;->e:I
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lzya;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lzya;
+
+    iget v1, p0, Lzya;->a:I
+
+    iget v3, p1, Lzya;->a:I
+
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lzya;->b:Lyya;
+
+    iget-object v3, p1, Lzya;->b:Lyya;
+
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget v1, p0, Lzya;->c:I
+
+    iget v3, p1, Lzya;->c:I
+
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lzya;->d:Ljava/lang/String;
+
+    iget-object v3, p1, Lzya;->d:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget v1, p0, Lzya;->e:I
+
+    iget p1, p1, Lzya;->e:I
+
+    if-eq v1, p1, :cond_6
+
+    return v2
+
+    :cond_6
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget v0, p0, Lzya;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lzya;->b:Lyya;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget v0, p0, Lzya;->c:I
+
+    invoke-static {v0, v2, v1}, Lxrf;->k(III)I
+
+    move-result v0
+
+    iget-object v2, p0, Lzya;->d:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lu45;->e(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget v1, p0, Lzya;->e:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Item(title="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lzya;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", icon="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lzya;->b:Lyya;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", screenId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lzya;->c:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", tag="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lzya;->d:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", bottomBarItemId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget v2, p0, Lzya;->e:I
+
+    invoke-static {v0, v2, v1}, Lho7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

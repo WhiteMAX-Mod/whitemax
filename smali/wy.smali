@@ -1,351 +1,181 @@
 .class public final Lwy;
-.super Ljava/lang/Object;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final b:I
-
-.field public c:I
-
-.field public d:I
-
-.field public e:J
-
-.field public final f:Z
-
-.field public g:I
-
-.field public h:I
-
-.field public final i:Ljava/lang/Object;
-
-.field public final j:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Ldjg;Ldjg;Z)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lwy;->a:I
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-object p1, p0, Lwy;->j:Ljava/lang/Object;
-
-    .line 3
-    iput-object p2, p0, Lwy;->i:Ljava/lang/Object;
-
-    .line 4
-    iput-boolean p3, p0, Lwy;->f:Z
-
-    const/16 p3, 0xc
-
-    .line 5
-    invoke-virtual {p2, p3}, Ldjg;->E(I)V
-
-    .line 6
-    invoke-virtual {p2}, Ldjg;->v()I
-
-    move-result p2
-
-    iput p2, p0, Lwy;->b:I
-
-    .line 7
-    invoke-virtual {p1, p3}, Ldjg;->E(I)V
-
-    .line 8
-    invoke-virtual {p1}, Ldjg;->v()I
-
-    move-result p2
-
-    iput p2, p0, Lwy;->h:I
-
-    .line 9
-    invoke-virtual {p1}, Ldjg;->f()I
-
-    move-result p1
-
-    const/4 p2, 0x1
-
-    if-ne p1, p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p2, 0x0
-
-    :goto_0
-    const-string p1, "first_chunk must be 1"
-
-    invoke-static {p1, p2}, Lz0j;->a(Ljava/lang/String;Z)V
-
-    const/4 p1, -0x1
-
-    .line 10
-    iput p1, p0, Lwy;->c:I
-
-    return-void
-.end method
-
-.method public constructor <init>(Ledb;Ledb;Z)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lwy;->a:I
-
-    .line 11
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 12
-    iput-object p1, p0, Lwy;->j:Ljava/lang/Object;
-
-    .line 13
-    iput-object p2, p0, Lwy;->i:Ljava/lang/Object;
-
-    .line 14
-    iput-boolean p3, p0, Lwy;->f:Z
-
-    const/16 p3, 0xc
-
-    .line 15
-    invoke-virtual {p2, p3}, Ledb;->J(I)V
-
-    .line 16
-    invoke-virtual {p2}, Ledb;->B()I
-
-    move-result p2
-
-    iput p2, p0, Lwy;->b:I
-
-    .line 17
-    invoke-virtual {p1, p3}, Ledb;->J(I)V
-
-    .line 18
-    invoke-virtual {p1}, Ledb;->B()I
-
-    move-result p2
-
-    iput p2, p0, Lwy;->h:I
-
-    .line 19
-    invoke-virtual {p1}, Ledb;->j()I
-
-    move-result p1
-
-    const/4 p2, 0x1
-
-    if-ne p1, p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p2, 0x0
-
-    :goto_0
-    const-string p1, "first_chunk must be 1"
-
-    invoke-static {p1, p2}, La1j;->a(Ljava/lang/String;Z)V
-
-    const/4 p1, -0x1
-
-    .line 20
-    iput p1, p0, Lwy;->c:I
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final a()Z
-    .locals 6
+.method public final a()Ljava/lang/Throwable;
+    .locals 2
 
-    iget v0, p0, Lwy;->a:I
+    sget-object v0, Lbj5;->a:Laj5;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    iget-object v0, p0, Lwy;->i:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast v0, Ledb;
+    check-cast v0, Ljava/lang/Throwable;
 
-    iget-object v1, p0, Lwy;->j:Ljava/lang/Object;
+    sget-object v1, Lbj5;->a:Laj5;
 
-    check-cast v1, Ledb;
+    if-eq v0, v1, :cond_0
 
-    iget v2, p0, Lwy;->c:I
+    invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v3, 0x1
+    move-result-object v0
 
-    add-int/2addr v2, v3
-
-    iput v2, p0, Lwy;->c:I
-
-    iget v4, p0, Lwy;->b:I
-
-    if-ne v2, v4, :cond_0
-
-    const/4 v3, 0x0
-
-    goto :goto_2
+    check-cast v0, Ljava/lang/Throwable;
 
     :cond_0
-    iget-boolean v2, p0, Lwy;->f:Z
+    return-object v0
+.end method
 
-    if-eqz v2, :cond_1
+.method public final b(Ljava/lang/Throwable;)Z
+    .locals 3
 
-    invoke-virtual {v0}, Ledb;->C()J
-
-    move-result-wide v4
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v0}, Ledb;->z()J
-
-    move-result-wide v4
+    sget-object v0, Lbj5;->a:Laj5;
 
     :goto_0
-    iput-wide v4, p0, Lwy;->e:J
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    iget v0, p0, Lwy;->c:I
+    move-result-object v0
 
-    iget v2, p0, Lwy;->g:I
+    check-cast v0, Ljava/lang/Throwable;
 
-    if-ne v0, v2, :cond_3
+    sget-object v1, Lbj5;->a:Laj5;
 
-    invoke-virtual {v1}, Ledb;->B()I
+    if-ne v0, v1, :cond_0
 
-    move-result v0
+    invoke-static {p1}, Lt8j;->a(Ljava/lang/Throwable;)V
 
-    iput v0, p0, Lwy;->d:I
+    const/4 p1, 0x0
 
-    const/4 v0, 0x4
+    return p1
 
-    invoke-virtual {v1, v0}, Ledb;->K(I)V
+    :cond_0
+    if-nez v0, :cond_1
 
-    iget v0, p0, Lwy;->h:I
-
-    sub-int/2addr v0, v3
-
-    iput v0, p0, Lwy;->h:I
-
-    if-lez v0, :cond_2
-
-    invoke-virtual {v1}, Ledb;->B()I
-
-    move-result v0
-
-    sub-int/2addr v0, v3
+    move-object v1, p1
 
     goto :goto_1
 
-    :cond_2
-    const/4 v0, -0x1
+    :cond_1
+    new-instance v1, Lio/reactivex/rxjava3/exceptions/CompositeException;
 
+    filled-new-array {v0, p1}, [Ljava/lang/Throwable;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Lio/reactivex/rxjava3/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
+
+    :cond_2
     :goto_1
-    iput v0, p0, Lwy;->g:I
+    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_3
-    :goto_2
-    return v3
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    :pswitch_0
-    iget-object v0, p0, Lwy;->i:Ljava/lang/Object;
+    move-result-object v2
 
-    check-cast v0, Ldjg;
+    if-eq v2, v0, :cond_2
 
-    iget-object v1, p0, Lwy;->j:Ljava/lang/Object;
+    goto :goto_0
+.end method
 
-    check-cast v1, Ldjg;
+.method public final c()V
+    .locals 2
 
-    iget v2, p0, Lwy;->c:I
+    invoke-virtual {p0}, Lwy;->a()Ljava/lang/Throwable;
 
-    const/4 v3, 0x1
+    move-result-object v0
 
-    add-int/2addr v2, v3
+    if-eqz v0, :cond_0
 
-    iput v2, p0, Lwy;->c:I
+    sget-object v1, Lbj5;->a:Laj5;
 
-    iget v4, p0, Lwy;->b:I
+    if-eq v0, v1, :cond_0
 
-    if-ne v2, v4, :cond_4
+    invoke-static {v0}, Lt8j;->a(Ljava/lang/Throwable;)V
 
-    const/4 v3, 0x0
+    :cond_0
+    return-void
+.end method
 
-    goto :goto_5
+.method public final d(Lrk3;)V
+    .locals 2
 
-    :cond_4
-    iget-boolean v2, p0, Lwy;->f:Z
+    invoke-virtual {p0}, Lwy;->a()Ljava/lang/Throwable;
 
-    if-eqz v2, :cond_5
+    move-result-object v0
 
-    invoke-virtual {v0}, Ldjg;->w()J
+    if-nez v0, :cond_0
 
-    move-result-wide v4
+    invoke-interface {p1}, Lrk3;->b()V
 
-    goto :goto_3
+    return-void
 
-    :cond_5
-    invoke-virtual {v0}, Ldjg;->t()J
+    :cond_0
+    sget-object v1, Lbj5;->a:Laj5;
 
-    move-result-wide v4
+    if-eq v0, v1, :cond_1
 
-    :goto_3
-    iput-wide v4, p0, Lwy;->e:J
+    invoke-interface {p1, v0}, Lrk3;->onError(Ljava/lang/Throwable;)V
 
-    iget v0, p0, Lwy;->c:I
+    :cond_1
+    return-void
+.end method
 
-    iget v2, p0, Lwy;->g:I
+.method public final e(Lvta;)V
+    .locals 2
 
-    if-ne v0, v2, :cond_7
+    invoke-virtual {p0}, Lwy;->a()Ljava/lang/Throwable;
 
-    invoke-virtual {v1}, Ldjg;->v()I
+    move-result-object v0
 
-    move-result v0
+    if-nez v0, :cond_0
 
-    iput v0, p0, Lwy;->d:I
+    invoke-interface {p1}, Lvta;->b()V
 
-    const/4 v0, 0x4
+    return-void
 
-    invoke-virtual {v1, v0}, Ldjg;->F(I)V
+    :cond_0
+    sget-object v1, Lbj5;->a:Laj5;
 
-    iget v0, p0, Lwy;->h:I
+    if-eq v0, v1, :cond_1
 
-    sub-int/2addr v0, v3
+    invoke-interface {p1, v0}, Lvta;->onError(Ljava/lang/Throwable;)V
 
-    iput v0, p0, Lwy;->h:I
+    :cond_1
+    return-void
+.end method
 
-    if-lez v0, :cond_6
+.method public final f(Laof;)V
+    .locals 2
 
-    invoke-virtual {v1}, Ldjg;->v()I
+    invoke-virtual {p0}, Lwy;->a()Ljava/lang/Throwable;
 
-    move-result v0
+    move-result-object v0
 
-    sub-int/2addr v0, v3
+    if-nez v0, :cond_0
 
-    goto :goto_4
+    invoke-interface {p1}, Laof;->b()V
 
-    :cond_6
-    const/4 v0, -0x1
+    return-void
 
-    :goto_4
-    iput v0, p0, Lwy;->g:I
+    :cond_0
+    sget-object v1, Lbj5;->a:Laj5;
 
-    :cond_7
-    :goto_5
-    return v3
+    if-eq v0, v1, :cond_1
 
-    nop
+    invoke-interface {p1, v0}, Laof;->onError(Ljava/lang/Throwable;)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_1
+    return-void
 .end method

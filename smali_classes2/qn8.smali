@@ -1,80 +1,69 @@
 .class public final Lqn8;
-.super Lsgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lzi6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public a:D
 
-.field public final synthetic Y:Lone/me/chatscreen/mediabar/MediaBarWidget;
+.field public b:D
+
+.field public c:Z
+
+.field public d:Z
+
+.field public e:Z
+
+.field public f:I
+
+.field public g:F
+
+.field public h:F
+
+.field public i:F
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/MediaBarWidget;)V
-    .locals 0
-
-    iput-object p2, p0, Lqn8;->Y:Lone/me/chatscreen/mediabar/MediaBarWidget;
-
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lqn8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lqn8;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lqn8;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public constructor <init>(Lqn8;)V
     .locals 2
 
-    new-instance v0, Lqn8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v1, p0, Lqn8;->Y:Lone/me/chatscreen/mediabar/MediaBarWidget;
+    iget-wide v0, p1, Lqn8;->a:D
 
-    invoke-direct {v0, p2, v1}, Lqn8;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/MediaBarWidget;)V
+    iput-wide v0, p0, Lqn8;->a:D
 
-    iput-object p1, v0, Lqn8;->X:Ljava/lang/Object;
+    iget-wide v0, p1, Lqn8;->b:D
 
-    return-object v0
-.end method
+    iput-wide v0, p0, Lqn8;->b:D
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    iget-boolean v0, p1, Lqn8;->c:Z
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    iput-boolean v0, p0, Lqn8;->c:Z
 
-    iget-object p1, p0, Lqn8;->X:Ljava/lang/Object;
+    iget-boolean v0, p1, Lqn8;->d:Z
 
-    check-cast p1, Lm1e;
+    iput-boolean v0, p0, Lqn8;->d:Z
 
-    sget-object v0, Lone/me/chatscreen/mediabar/MediaBarWidget;->b1:[Ltr7;
+    iget-boolean v0, p1, Lqn8;->e:Z
 
-    iget-object v0, p0, Lqn8;->Y:Lone/me/chatscreen/mediabar/MediaBarWidget;
+    iput-boolean v0, p0, Lqn8;->e:Z
 
-    invoke-virtual {v0, p1}, Lone/me/chatscreen/mediabar/MediaBarWidget;->T0(Lm1e;)V
+    iget v0, p1, Lqn8;->f:I
 
-    sget-object p1, Lccg;->a:Lccg;
+    iput v0, p0, Lqn8;->f:I
 
-    return-object p1
+    iget v0, p1, Lqn8;->g:F
+
+    iput v0, p0, Lqn8;->g:F
+
+    iget v0, p1, Lqn8;->h:F
+
+    iput v0, p0, Lqn8;->h:F
+
+    iget p1, p1, Lqn8;->i:F
+
+    iput p1, p0, Lqn8;->i:F
+
+    return-void
 .end method

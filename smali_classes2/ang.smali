@@ -1,49 +1,65 @@
 .class public final Lang;
-.super Ljava/lang/Object;
+.super Lxfh;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lfgd;
+.field public final X:Lci5;
 
-.field public final b:Lymg;
+.field public volatile Y:Lx9f;
 
-.field public final c:Lxfd;
+.field public final b:Lwmg;
 
-.field public final d:Lxfd;
+.field public final c:Lk18;
+
+.field public final d:Lk18;
+
+.field public final o:Lci5;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
-    .locals 2
+.method public constructor <init>(Lwmg;)V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lykg;->a:Lykg;
 
-    iput-object p1, p0, Lang;->a:Lfgd;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
 
-    new-instance v0, Lymg;
+    move-result-object v1
 
-    const/4 v1, 0x0
+    const/16 v2, 0x2e
 
-    invoke-direct {v0, p1, v1}, Lymg;-><init>(Lfgd;I)V
+    invoke-virtual {v1, v2}, Lw5;->d(I)Lbwf;
 
-    iput-object v0, p0, Lang;->b:Lymg;
+    invoke-virtual {v0}, Lykg;->a()Lk18;
 
-    new-instance v0, Lxfd;
+    move-result-object v1
 
-    const/16 v1, 0x16
+    invoke-virtual {v0}, Lykg;->b()Lk18;
 
-    invoke-direct {v0, p1, v1}, Lxfd;-><init>(Lfgd;I)V
+    move-result-object v0
 
-    iput-object v0, p0, Lang;->c:Lxfd;
+    invoke-direct {p0}, Lxfh;-><init>()V
 
-    new-instance v0, Lxfd;
+    iput-object p1, p0, Lang;->b:Lwmg;
 
-    const/16 v1, 0x17
+    iput-object v1, p0, Lang;->c:Lk18;
 
-    invoke-direct {v0, p1, v1}, Lxfd;-><init>(Lfgd;I)V
+    iput-object v0, p0, Lang;->d:Lk18;
 
-    iput-object v0, p0, Lang;->d:Lxfd;
+    new-instance p1, Lci5;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, v0}, Lci5;-><init>(I)V
+
+    iput-object p1, p0, Lang;->o:Lci5;
+
+    new-instance p1, Lci5;
+
+    invoke-direct {p1, v0}, Lci5;-><init>(I)V
+
+    iput-object p1, p0, Lang;->X:Lci5;
 
     return-void
 .end method

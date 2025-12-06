@@ -1,62 +1,70 @@
 .class public final Liui;
-.super Lyr6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Luq;
+.implements Lpqa;
 
 
 # static fields
-.field public static final v0:Lkxb;
-
-
-# instance fields
-.field public final t0:Landroid/content/Context;
-
-.field public final u0:Las6;
+.field public static final a:Liui;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 3
 
-    new-instance v0, Lzod;
+    new-instance v0, Liui;
 
-    const/4 v1, 0x6
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Lzod;-><init>(I)V
+    sput-object v0, Liui;->a:Liui;
 
-    new-instance v1, Lhuh;
+    new-instance v0, Lmli;
 
-    const/16 v2, 0x8
+    const/4 v1, 0x1
 
-    invoke-direct {v1, v2}, Lhuh;-><init>(I)V
+    invoke-direct {v0, v1}, Lmli;-><init>(I)V
 
-    new-instance v2, Lkxb;
+    const-class v1, Lemi;
 
-    const-string v3, "AppSet.API"
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    invoke-direct {v2, v3, v1, v0}, Lkxb;-><init>(Ljava/lang/String;Lhuh;Lzod;)V
+    move-result-object v0
 
-    sput-object v2, Liui;->v0:Lkxb;
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Las6;)V
-    .locals 3
 
-    sget-object v0, Ljl;->d:Lil;
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    sget-object v1, Lxr6;->c:Lxr6;
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    sget-object v2, Liui;->v0:Lkxb;
+    move-result-object p1
 
-    invoke-direct {p0, p1, v2, v0, v1}, Lyr6;-><init>(Landroid/content/Context;Lkxb;Ljl;Lxr6;)V
-
-    iput-object p1, p0, Liui;->t0:Landroid/content/Context;
-
-    iput-object p2, p0, Liui;->u0:Las6;
-
-    return-void
+    throw p1
 .end method

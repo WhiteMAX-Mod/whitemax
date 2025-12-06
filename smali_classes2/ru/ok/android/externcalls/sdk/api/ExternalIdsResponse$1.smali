@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lpq7;
+.implements Lox7;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lpq7;"
+        "Lox7;"
     }
 .end annotation
 
@@ -33,16 +33,16 @@
     return-void
 .end method
 
-.method private parseIds(Ljava/util/Map;Lvq7;Z)V
+.method private parseIds(Ljava/util/Map;Lxx7;Z)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Map<",
-            "Lhi1;",
+            "Lti1;",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
             ">;",
-            "Lvq7;",
+            "Lxx7;",
             "Z)V"
         }
     .end annotation
@@ -54,25 +54,25 @@
         }
     .end annotation
 
-    invoke-interface {p2}, Lvq7;->s()V
+    invoke-interface {p2}, Lxx7;->p()V
 
     :goto_0
-    invoke-interface {p2}, Lvq7;->hasNext()Z
+    invoke-interface {p2}, Lxx7;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {p2}, Lvq7;->name()Ljava/lang/String;
+    invoke-interface {p2}, Lxx7;->name()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-interface {p2}, Lvq7;->B()Ljava/lang/String;
+    invoke-interface {p2}, Lxx7;->B()Ljava/lang/String;
 
     move-result-object v1
 
     :try_start_0
-    invoke-static {v0}, Lhi1;->a(Ljava/lang/String;)Lhi1;
+    invoke-static {v0}, Lti1;->a(Ljava/lang/String;)Lti1;
 
     move-result-object v2
 
@@ -110,14 +110,14 @@
     goto :goto_0
 
     :cond_0
-    invoke-interface {p2}, Lvq7;->q()V
+    invoke-interface {p2}, Lxx7;->n()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public bridge synthetic parse(Lvq7;)Ljava/lang/Object;
+.method public bridge synthetic parse(Lxx7;)Ljava/lang/Object;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -127,14 +127,14 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/api/ExternalIdsResponse$1;->parse(Lvq7;)Lru/ok/android/externcalls/sdk/api/ExternalIdsResponse;
+    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/api/ExternalIdsResponse$1;->parse(Lxx7;)Lru/ok/android/externcalls/sdk/api/ExternalIdsResponse;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public parse(Lvq7;)Lru/ok/android/externcalls/sdk/api/ExternalIdsResponse;
+.method public parse(Lxx7;)Lru/ok/android/externcalls/sdk/api/ExternalIdsResponse;
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -149,18 +149,18 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 3
-    invoke-interface {p1}, Lvq7;->s()V
+    invoke-interface {p1}, Lxx7;->p()V
 
     .line 4
     :goto_0
-    invoke-interface {p1}, Lvq7;->hasNext()Z
+    invoke-interface {p1}, Lxx7;->hasNext()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
     .line 5
-    invoke-interface {p1}, Lvq7;->name()Ljava/lang/String;
+    invoke-interface {p1}, Lxx7;->name()Ljava/lang/String;
 
     move-result-object v1
 
@@ -183,7 +183,7 @@
     if-nez v1, :cond_0
 
     .line 6
-    invoke-interface {p1}, Lvq7;->y()V
+    invoke-interface {p1}, Lxx7;->v()V
 
     goto :goto_0
 
@@ -191,7 +191,7 @@
     const/4 v1, 0x1
 
     .line 7
-    invoke-direct {p0, v0, p1, v1}, Lru/ok/android/externcalls/sdk/api/ExternalIdsResponse$1;->parseIds(Ljava/util/Map;Lvq7;Z)V
+    invoke-direct {p0, v0, p1, v1}, Lru/ok/android/externcalls/sdk/api/ExternalIdsResponse$1;->parseIds(Ljava/util/Map;Lxx7;Z)V
 
     goto :goto_0
 
@@ -199,13 +199,13 @@
     const/4 v1, 0x0
 
     .line 8
-    invoke-direct {p0, v0, p1, v1}, Lru/ok/android/externcalls/sdk/api/ExternalIdsResponse$1;->parseIds(Ljava/util/Map;Lvq7;Z)V
+    invoke-direct {p0, v0, p1, v1}, Lru/ok/android/externcalls/sdk/api/ExternalIdsResponse$1;->parseIds(Ljava/util/Map;Lxx7;Z)V
 
     goto :goto_0
 
     .line 9
     :cond_2
-    invoke-interface {p1}, Lvq7;->q()V
+    invoke-interface {p1}, Lxx7;->n()V
 
     .line 10
     new-instance p1, Lru/ok/android/externcalls/sdk/api/ExternalIdsResponse;

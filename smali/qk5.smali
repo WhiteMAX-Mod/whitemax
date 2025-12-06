@@ -1,24 +1,48 @@
-.class public final Lqk5;
+.class public abstract Lqk5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Luk5;
-
-
-# static fields
-.field public static final a:Lqk5;
-
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public static a(Ljava/io/FileDescriptor;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/system/ErrnoException;
+        }
+    .end annotation
 
-    new-instance v0, Lqk5;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lqk5;->a:Lqk5;
+    invoke-static {p0}, Landroid/system/Os;->close(Ljava/io/FileDescriptor;)V
 
     return-void
+.end method
+
+.method public static b(Ljava/io/FileDescriptor;)Ljava/io/FileDescriptor;
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/system/ErrnoException;
+        }
+    .end annotation
+
+    invoke-static {p0}, Landroid/system/Os;->dup(Ljava/io/FileDescriptor;)Ljava/io/FileDescriptor;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static c(Ljava/io/FileDescriptor;JI)J
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/system/ErrnoException;
+        }
+    .end annotation
+
+    invoke-static {p0, p1, p2, p3}, Landroid/system/Os;->lseek(Ljava/io/FileDescriptor;JI)J
+
+    move-result-wide p0
+
+    return-wide p0
 .end method

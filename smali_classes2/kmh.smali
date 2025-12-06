@@ -1,225 +1,123 @@
-.class public abstract Lkmh;
-.super Ljava/lang/Object;
+.class public final Lkmh;
+.super Ldtf;
 .source "SourceFile"
 
+# interfaces
+.implements Lsm6;
 
-# static fields
-.field public static final a:[C
+
+# instance fields
+.field public final synthetic X:Ltmh;
+
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ltmh;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/16 v0, 0x10
+    iput-object p1, p0, Lkmh;->X:Ltmh;
 
-    new-array v0, v0, [C
+    const/4 p1, 0x2
 
-    fill-array-data v0, :array_0
-
-    sput-object v0, Lkmh;->a:[C
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
-
-    :array_0
-    .array-data 2
-        0x30s
-        0x31s
-        0x32s
-        0x33s
-        0x34s
-        0x35s
-        0x36s
-        0x37s
-        0x38s
-        0x39s
-        0x41s
-        0x42s
-        0x43s
-        0x44s
-        0x45s
-        0x46s
-    .end array-data
 .end method
 
-.method public static a(Ljava/lang/String;)Lrxf;
-    .locals 2
 
-    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    move-result v0
+    check-cast p1, Lf84;
 
-    const v1, 0x4b88569
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-eq v0, v1, :cond_1
+    invoke-virtual {p0, p1, p2}, Lkmh;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const v1, 0x4c38896
+    move-result-object p1
 
-    if-eq v0, v1, :cond_0
+    check-cast p1, Lkmh;
 
-    packed-switch v0, :pswitch_data_0
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    goto :goto_0
+    invoke-virtual {p1, p2}, Lkmh;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :pswitch_0
-    const-string v0, "TLSv1.3"
+    move-result-object p1
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    sget-object p0, Lrxf;->b:Lrxf;
-
-    return-object p0
-
-    :pswitch_1
-    const-string v0, "TLSv1.2"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    sget-object p0, Lrxf;->c:Lrxf;
-
-    return-object p0
-
-    :pswitch_2
-    const-string v0, "TLSv1.1"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    sget-object p0, Lrxf;->o:Lrxf;
-
-    return-object p0
-
-    :cond_0
-    const-string v0, "TLSv1"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    sget-object p0, Lrxf;->X:Lrxf;
-
-    return-object p0
-
-    :cond_1
-    const-string v0, "SSLv3"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    sget-object p0, Lrxf;->Y:Lrxf;
-
-    return-object p0
-
-    :cond_2
-    :goto_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Unexpected TLS version: "
-
-    invoke-virtual {v1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch -0x1dfc3f27
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method
 
-.method public static b(I)I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    const/16 v0, 0x9
+    new-instance p1, Lkmh;
 
-    if-gt p0, v0, :cond_0
+    iget-object v0, p0, Lkmh;->X:Ltmh;
 
-    add-int/lit8 p0, p0, 0x30
+    invoke-direct {p1, v0, p2}, Lkmh;-><init>(Ltmh;Lkotlin/coroutines/Continuation;)V
 
-    return p0
-
-    :cond_0
-    add-int/lit8 p0, p0, 0x57
-
-    return p0
+    return-object p1
 .end method
 
-.method public static c(I)I
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    const/16 v0, 0x30
+    iget v0, p0, Lkmh;->o:I
 
-    if-lt p0, v0, :cond_0
+    const/4 v1, 0x1
 
-    const/16 v1, 0x39
+    if-eqz v0, :cond_1
 
-    if-gt p0, v1, :cond_0
+    if-ne v0, v1, :cond_0
 
-    sub-int/2addr p0, v0
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    return p0
+    return-object p1
 
     :cond_0
-    const/16 v0, 0x61
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    if-lt p0, v0, :cond_1
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    const/16 v0, 0x66
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    if-gt p0, v0, :cond_1
-
-    add-int/lit8 p0, p0, -0x57
-
-    return p0
+    throw p1
 
     :cond_1
-    const/16 v0, 0x41
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    if-lt p0, v0, :cond_2
+    iget-object p1, p0, Lkmh;->X:Ltmh;
 
-    const/16 v0, 0x46
+    iget-object v0, p1, Ltmh;->h:Lk18;
 
-    if-gt p0, v0, :cond_2
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
-    add-int/lit8 p0, p0, -0x37
+    move-result-object v0
 
-    return p0
+    move-object v2, v0
+
+    check-cast v2, Lqlh;
+
+    iget-wide v3, p1, Ltmh;->a:J
+
+    iget-wide v5, p1, Ltmh;->b:J
+
+    iput v1, p0, Lkmh;->o:I
+
+    move-object v7, p0
+
+    invoke-virtual/range {v2 .. v7}, Lqlh;->a(JJLdtf;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lg84;->a:Lg84;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
 
     :cond_2
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Not a hex char \'"
-
-    const-string v2, "\'"
-
-    invoke-static {p0, v1, v2}, Ley1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-object p1
 .end method

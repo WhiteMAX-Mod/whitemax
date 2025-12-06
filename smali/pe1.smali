@@ -1,160 +1,156 @@
-.class public final synthetic Lpe1;
+.class public final Lpe1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lji6;
+.implements Lte1;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:Lpe1;
 
-.field public final synthetic b:Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;
+.field public static final b:J
+
+.field public static final c:Ln5g;
+
+.field public static final d:Ls18;
+
+.field public static final o:Lhoe;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput p2, p0, Lpe1;->a:I
+    new-instance v0, Lpe1;
 
-    iput-object p1, p0, Lpe1;->b:Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lpe1;->a:Lpe1;
+
+    sget-wide v0, Lzza;->a:J
+
+    sput-wide v0, Lpe1;->b:J
+
+    sget v0, Lb0b;->e:I
+
+    new-instance v1, Ln5g;
+
+    invoke-direct {v1, v0}, Ln5g;-><init>(I)V
+
+    sput-object v1, Lpe1;->c:Ln5g;
+
+    new-instance v0, Ls18;
+
+    sget v1, Lxza;->d:I
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x6
+
+    invoke-direct {v0, v1, v2, v3}, Ls18;-><init>(III)V
+
+    sput-object v0, Lpe1;->d:Ls18;
+
+    sget-object v0, Lhoe;->a:Lhoe;
+
+    sput-object v0, Lpe1;->o:Lhoe;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 9
+.method public final e()Lu18;
+    .locals 1
 
-    iget v0, p0, Lpe1;->a:I
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lpe1;->b:Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;
-
-    packed-switch v0, :pswitch_data_0
-
-    sget-object v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->z0:Lp9a;
-
-    new-instance v0, Lwi1;
-
-    new-instance v3, Lpe1;
-
-    invoke-direct {v3, v2, v1}, Lpe1;-><init>(Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;I)V
-
-    new-instance v4, Lwif;
-
-    invoke-direct {v4, v3}, Lwif;-><init>(Lji6;)V
-
-    new-instance v3, Ljmh;
-
-    invoke-direct {v3, v2, v1}, Ljmh;-><init>(Lone/me/sdk/arch/Widget;I)V
-
-    invoke-direct {v0, v4, v3}, Lwi1;-><init>(Lwif;Ljmh;)V
+    sget-object v0, Lpe1;->d:Ls18;
 
     return-object v0
+.end method
 
-    :pswitch_0
-    sget-object v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->z0:Lp9a;
-
-    new-instance v3, Lee0;
-
-    sget v0, Lyqa;->a:I
-
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-static {v1, v0}, La14;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v4
-
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v6
-
-    new-instance v7, Lq8;
-
-    const/16 v0, 0x18
-
-    invoke-direct {v7, v0}, Lq8;-><init>(I)V
-
-    new-instance v8, Lq8;
-
-    const/16 v0, 0x19
-
-    invoke-direct {v8, v0}, Lq8;-><init>(I)V
-
-    sget-object v5, Looa;->a:Looa;
-
-    invoke-direct/range {v3 .. v8}, Lee0;-><init>(Landroid/graphics/drawable/Drawable;Lroa;Landroid/content/Context;Lli6;Lli6;)V
-
-    return-object v3
-
-    :pswitch_1
-    sget-object v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->z0:Lp9a;
-
-    new-instance v3, Lhe0;
-
-    sget v0, Lyqa;->c:I
-
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v4
-
-    invoke-static {v4, v0}, La14;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v4
-
-    sget-object v0, Ll05;->s0:Lk82;
-
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Lk82;->e(Landroid/content/Context;)Ll05;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ll05;->l()Lv5b;
-
-    move-result-object v6
-
-    new-instance v7, Lre1;
-
-    invoke-direct {v7, v1}, Lre1;-><init>(I)V
-
-    new-instance v8, Lre1;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
     const/4 v0, 0x1
 
-    invoke-direct {v8, v0}, Lre1;-><init>(I)V
+    if-ne p0, p1, :cond_0
 
-    sget-object v5, Lqoa;->a:Lqoa;
+    return v0
 
-    invoke-direct/range {v3 .. v8}, Lhe0;-><init>(Landroid/graphics/drawable/Drawable;Lroa;Lv5b;Lli6;Lli6;)V
+    :cond_0
+    instance-of p1, p1, Lpe1;
 
-    return-object v3
+    if-nez p1, :cond_1
 
-    :pswitch_2
-    sget-object v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->z0:Lp9a;
+    const/4 p1, 0x0
 
-    invoke-virtual {v2}, Ll24;->getRouter()Lqid;
+    return p1
 
-    move-result-object v0
+    :cond_1
+    return v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    sget-wide v0, Lpe1;->b:J
+
+    return-wide v0
+.end method
+
+.method public final getTitle()Ls5g;
+    .locals 1
+
+    sget-object v0, Lpe1;->c:Ln5g;
 
     return-object v0
+.end method
 
-    nop
+.method public final getType()Lhoe;
+    .locals 1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    sget-object v0, Lpe1;->o:Lhoe;
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x122eeb95
+
+    return v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    sget v0, Lyza;->m:I
+
+    return v0
+.end method
+
+.method public final t()I
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "CopyLink"
+
+    return-object v0
+.end method
+
+.method public final u()I
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
 .end method

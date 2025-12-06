@@ -35,7 +35,7 @@
         "Landroid/os/Parcel;",
         "dest",
         "flags",
-        "Lccg;",
+        "Lqqg;",
         "writeToParcel",
         "(Landroid/os/Parcel;I)V",
         "describeContents",
@@ -47,7 +47,7 @@
         "isSingleMedia",
         "()Z",
         "Companion",
-        "she",
+        "lte",
         "tamtam-android-sdk_release"
     }
     k = 0x1
@@ -71,7 +71,7 @@
     .end annotation
 .end field
 
-.field public static final Companion:Lshe;
+.field public static final Companion:Llte;
 
 .field public static final FILES:I = 0x4
 
@@ -138,17 +138,17 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lshe;
+    new-instance v0, Llte;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lru/ok/tamtam/android/util/share/ShareData;->Companion:Lshe;
+    sput-object v0, Lru/ok/tamtam/android/util/share/ShareData;->Companion:Llte;
 
-    new-instance v0, Lo0e;
+    new-instance v0, Lz6e;
 
-    const/16 v1, 0x9
+    const/16 v1, 0xa
 
-    invoke-direct {v0, v1}, Lo0e;-><init>(I)V
+    invoke-direct {v0, v1}, Lz6e;-><init>(I)V
 
     sput-object v0, Lru/ok/tamtam/android/util/share/ShareData;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -179,7 +179,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v9}, Lru/ok/tamtam/android/util/share/ShareData;-><init>(ILjava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;ILki4;)V
+    invoke-direct/range {v0 .. v9}, Lru/ok/tamtam/android/util/share/ShareData;-><init>(ILjava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;ILtk4;)V
 
     return-void
 .end method
@@ -234,7 +234,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(ILjava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;ILki4;)V
+.method public synthetic constructor <init>(ILjava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;ILtk4;)V
     .locals 1
 
     and-int/lit8 p9, p8, 0x1
@@ -498,7 +498,7 @@
 
     const-string v0, "\'}"
 
-    invoke-static {v7, v6, v0}, Li57;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v7, v6, v0}, Lho7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

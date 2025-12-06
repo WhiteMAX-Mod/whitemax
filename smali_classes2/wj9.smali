@@ -1,164 +1,85 @@
-.class public final Lwj9;
-.super Ljava/lang/Object;
+.class public final enum Lwj9;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# static fields
+.field public static final enum a:Lwj9;
 
-.field public final b:I
+.field public static final enum b:Lwj9;
 
-.field public final c:Z
+.field public static final enum c:Lwj9;
+
+.field public static final synthetic d:[Lwj9;
 
 
 # direct methods
-.method public constructor <init>(Lla2;Lca9;Z)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-virtual {p2, p1}, Lca9;->c(Lla2;)Ljava/lang/CharSequence;
+    new-instance v0, Lwj9;
 
-    move-result-object p1
+    const-string v1, "DISABLED"
 
-    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
+    const/4 v2, 0x0
 
-    move-result p1
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget-object p2, p2, Lca9;->a:Lpb9;
+    sput-object v0, Lwj9;->a:Lwj9;
 
-    iget-object p2, p2, Lpb9;->M0:Ljava/util/List;
+    new-instance v1, Lwj9;
 
-    if-eqz p2, :cond_0
+    const-string v2, "EXPANDED"
 
-    invoke-virtual {p2}, Ljava/lang/Object;->hashCode()I
+    const/4 v3, 0x1
 
-    move-result p2
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    goto :goto_0
+    sput-object v1, Lwj9;->b:Lwj9;
 
-    :cond_0
-    const/4 p2, 0x0
+    new-instance v2, Lwj9;
 
-    :goto_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v3, "COLLAPSED"
 
-    iput p1, p0, Lwj9;->a:I
+    const/4 v4, 0x2
 
-    iput p2, p0, Lwj9;->b:I
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-boolean p3, p0, Lwj9;->c:Z
+    sput-object v2, Lwj9;->c:Lwj9;
+
+    filled-new-array {v0, v1, v2}, [Lwj9;
+
+    move-result-object v0
+
+    sput-object v0, Lwj9;->d:[Lwj9;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lwj9;
+    .locals 1
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    const-class v0, Lwj9;
 
-    if-ne p0, p1, :cond_0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    goto :goto_1
+    move-result-object p0
 
-    :cond_0
-    instance-of v0, p1, Lwj9;
+    check-cast p0, Lwj9;
 
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lwj9;
-
-    iget v0, p0, Lwj9;->a:I
-
-    iget v1, p1, Lwj9;->a:I
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p0, Lwj9;->b:I
-
-    iget v1, p1, Lwj9;->b:I
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-boolean v0, p0, Lwj9;->c:Z
-
-    iget-boolean p1, p1, Lwj9;->c:Z
-
-    if-eq v0, p1, :cond_4
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_4
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-object p0
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public static values()[Lwj9;
+    .locals 1
 
-    iget v0, p0, Lwj9;->a:I
+    sget-object v0, Lwj9;->d:[Lwj9;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lwj9;->b:I
-
-    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Lwj9;->c:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", messageElementsHash="
-
-    const-string v1, ", isChild="
-
-    const-string v2, "Key(textHash="
-
-    iget v3, p0, Lwj9;->a:I
-
-    iget v4, p0, Lwj9;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Lwj9;->c:Z
-
-    invoke-static {v0, v2, v1}, Ldy1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    check-cast v0, [Lwj9;
 
     return-object v0
 .end method

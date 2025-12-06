@@ -1,199 +1,73 @@
 .class public final Lq3i;
-.super Lmcg;
+.super Lr3i;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/ListIterator;
 
 
 # instance fields
-.field public final b:I
-
-.field public c:I
-
-.field public final o:Lv3i;
+.field public final e:Landroid/view/WindowInsetsAnimation;
 
 
 # direct methods
-.method public constructor <init>(Lv3i;I)V
-    .locals 2
+.method public constructor <init>(Landroid/view/WindowInsetsAnimation;)V
+    .locals 4
 
-    invoke-virtual {p1}, Ljava/util/AbstractCollection;->size()I
+    const/4 v0, 0x0
 
-    move-result v0
+    const-wide/16 v1, 0x0
 
-    const/4 v1, 0x4
+    const/4 v3, 0x0
 
-    invoke-direct {p0, v1}, Lmcg;-><init>(I)V
+    invoke-direct {p0, v3, v0, v1, v2}, Lr3i;-><init>(ILandroid/view/animation/Interpolator;J)V
 
-    if-ltz p2, :cond_0
-
-    if-gt p2, v0, :cond_0
-
-    iput v0, p0, Lq3i;->b:I
-
-    iput p2, p0, Lq3i;->c:I
-
-    iput-object p1, p0, Lq3i;->o:Lv3i;
+    iput-object p1, p0, Lq3i;->e:Landroid/view/WindowInsetsAnimation;
 
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
-
-    const-string v1, "index"
-
-    invoke-static {p2, v0, v1}, Lohi;->g(IILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final add(Ljava/lang/Object;)V
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final b(I)Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lq3i;->o:Lv3i;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final hasNext()Z
+.method public final a()J
     .locals 2
 
-    iget v0, p0, Lq3i;->c:I
+    iget-object v0, p0, Lq3i;->e:Landroid/view/WindowInsetsAnimation;
 
-    iget v1, p0, Lq3i;->b:I
+    invoke-static {v0}, Ljlb;->d(Landroid/view/WindowInsetsAnimation;)J
 
-    if-ge v0, v1, :cond_0
+    move-result-wide v0
 
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
+    return-wide v0
 .end method
 
-.method public final hasPrevious()Z
+.method public final b()F
     .locals 1
 
-    iget v0, p0, Lq3i;->c:I
+    iget-object v0, p0, Lq3i;->e:Landroid/view/WindowInsetsAnimation;
 
-    if-lez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final next()Ljava/lang/Object;
-    .locals 2
-
-    invoke-virtual {p0}, Lq3i;->hasNext()Z
+    invoke-static {v0}, Ljlb;->a(Landroid/view/WindowInsetsAnimation;)F
 
     move-result v0
 
-    if-eqz v0, :cond_0
-
-    iget v0, p0, Lq3i;->c:I
-
-    add-int/lit8 v1, v0, 0x1
-
-    iput v1, p0, Lq3i;->c:I
-
-    invoke-virtual {p0, v0}, Lq3i;->b(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final nextIndex()I
-    .locals 1
-
-    iget v0, p0, Lq3i;->c:I
-
     return v0
 .end method
 
-.method public final previous()Ljava/lang/Object;
+.method public final c()I
     .locals 1
 
-    invoke-virtual {p0}, Lq3i;->hasPrevious()Z
+    iget-object v0, p0, Lq3i;->e:Landroid/view/WindowInsetsAnimation;
+
+    invoke-static {v0}, Ljlb;->c(Landroid/view/WindowInsetsAnimation;)I
 
     move-result v0
 
-    if-eqz v0, :cond_0
-
-    iget v0, p0, Lq3i;->c:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p0, Lq3i;->c:I
-
-    invoke-virtual {p0, v0}, Lq3i;->b(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final previousIndex()I
-    .locals 1
-
-    iget v0, p0, Lq3i;->c:I
-
-    add-int/lit8 v0, v0, -0x1
-
     return v0
 .end method
 
-.method public final set(Ljava/lang/Object;)V
-    .locals 0
+.method public final d(F)V
+    .locals 1
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    iget-object v0, p0, Lq3i;->e:Landroid/view/WindowInsetsAnimation;
 
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    invoke-static {v0, p1}, Ljlb;->w(Landroid/view/WindowInsetsAnimation;F)V
 
-    throw p1
+    return-void
 .end method

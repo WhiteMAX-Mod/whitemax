@@ -1,276 +1,260 @@
-.class public final synthetic Lrd0;
-.super Ljava/lang/Object;
+.class public final Lrd0;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Lone/me/mediapicker/crop/AvatarEditScreen;
+.field public final synthetic Y:Lvd0;
+
+.field public final synthetic Z:Landroid/net/Uri;
+
+.field public o:I
+
+.field public final synthetic s0:Ljava/lang/String;
+
+.field public final synthetic t0:Lk;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/mediapicker/crop/AvatarEditScreen;I)V
+.method public constructor <init>(Lvd0;Landroid/net/Uri;Ljava/lang/String;Lk;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lrd0;->a:I
+    iput-object p1, p0, Lrd0;->Y:Lvd0;
 
-    iput-object p1, p0, Lrd0;->b:Lone/me/mediapicker/crop/AvatarEditScreen;
+    iput-object p2, p0, Lrd0;->Z:Landroid/net/Uri;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p3, p0, Lrd0;->s0:Ljava/lang/String;
+
+    iput-object p4, p0, Lrd0;->t0:Lk;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p5}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 9
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget p1, p0, Lrd0;->a:I
+    check-cast p1, Lf84;
 
-    const/4 v0, 0x2
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, p0, Lrd0;->b:Lone/me/mediapicker/crop/AvatarEditScreen;
-
-    sget-object v0, Lone/me/mediapicker/crop/AvatarEditScreen;->s0:[Ltr7;
-
-    invoke-virtual {p1}, Lone/me/mediapicker/crop/AvatarEditScreen;->D0()Lbe0;
+    invoke-virtual {p0, p1, p2}, Lrd0;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    iget-object p1, p1, Lbe0;->o:Lxe5;
+    check-cast p1, Lrd0;
 
-    sget-object v0, Ls93;->b:Ls93;
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    invoke-static {p1, v0}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lrd0;->b:Lone/me/mediapicker/crop/AvatarEditScreen;
-
-    sget-object v0, Lone/me/mediapicker/crop/AvatarEditScreen;->s0:[Ltr7;
-
-    invoke-virtual {p1}, Lone/me/mediapicker/crop/AvatarEditScreen;->D0()Lbe0;
-
-    move-result-object v4
-
-    iget-object v0, p1, Lone/me/mediapicker/crop/AvatarEditScreen;->b:Ljava/lang/Object;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v5, v0
-
-    check-cast v5, Landroid/net/Uri;
-
-    iget-object v0, p1, Lone/me/mediapicker/crop/AvatarEditScreen;->c:Lqs;
-
-    sget-object v1, Lone/me/mediapicker/crop/AvatarEditScreen;->s0:[Ltr7;
-
-    const/4 v3, 0x1
-
-    aget-object v1, v1, v3
-
-    invoke-virtual {v0, p1}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v6, v0
-
-    check-cast v6, Ljava/lang/String;
-
-    new-instance v7, Ll;
-
-    const/16 v0, 0xc
-
-    invoke-direct {v7, v0, p1}, Ll;-><init>(ILjava/lang/Object;)V
-
-    iget-object p1, v4, Lxzg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    iget-object v0, v4, Lbe0;->b:Liu7;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lulf;
-
-    check-cast v0, Lqta;
-
-    invoke-virtual {v0}, Lqta;->b()Lk54;
-
-    move-result-object v0
-
-    sget-object v1, Lt54;->b:Lt54;
-
-    new-instance v3, Lxd0;
-
-    const/4 v8, 0x0
-
-    invoke-direct/range {v3 .. v8}, Lxd0;-><init>(Lbe0;Landroid/net/Uri;Ljava/lang/String;Ll;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {p1, v0, v1, v3}, Ltki;->c(Lq54;Li54;Lt54;Lzi6;)Lcye;
+    invoke-virtual {p1, p2}, Lrd0;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    iget-object v0, v4, Lbe0;->s0:Lw0e;
+    return-object p1
+.end method
 
-    sget-object v1, Lbe0;->u0:[Ltr7;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 6
 
-    aget-object v1, v1, v2
+    new-instance v0, Lrd0;
 
-    invoke-virtual {v0, v4, v1, p1}, Lw0e;->P(Ljava/lang/Object;Ltr7;Ljava/lang/Object;)V
+    iget-object v3, p0, Lrd0;->s0:Ljava/lang/String;
 
-    return-void
+    iget-object v4, p0, Lrd0;->t0:Lk;
 
-    :pswitch_1
-    iget-object p1, p0, Lrd0;->b:Lone/me/mediapicker/crop/AvatarEditScreen;
+    iget-object v1, p0, Lrd0;->Y:Lvd0;
 
-    sget-object v2, Lone/me/mediapicker/crop/AvatarEditScreen;->s0:[Ltr7;
+    iget-object v2, p0, Lrd0;->Z:Landroid/net/Uri;
 
-    invoke-virtual {p1}, Lone/me/mediapicker/crop/AvatarEditScreen;->C0()Lru/ok/messages/views/widgets/AvatarCropView;
+    move-object v5, p2
 
-    move-result-object v2
+    invoke-direct/range {v0 .. v5}, Lrd0;-><init>(Lvd0;Landroid/net/Uri;Ljava/lang/String;Lk;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v2}, Lru/ok/messages/views/widgets/AvatarCropView;->n()Z
+    iput-object p1, v0, Lrd0;->X:Ljava/lang/Object;
 
-    move-result v2
+    return-object v0
+.end method
 
-    if-eqz v2, :cond_0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
 
-    invoke-virtual {p1}, Lone/me/mediapicker/crop/AvatarEditScreen;->D0()Lbe0;
+    sget-object v0, Lg84;->a:Lg84;
 
-    move-result-object p1
+    iget v1, p0, Lrd0;->o:I
 
-    iget-object v2, p1, Lxzg;->a:Lkotlinx/coroutines/internal/ContextScope;
+    const/4 v2, 0x1
 
-    iget-object v3, p1, Lbe0;->b:Liu7;
+    if-eqz v1, :cond_1
 
-    invoke-interface {v3}, Liu7;->getValue()Ljava/lang/Object;
+    if-ne v1, v2, :cond_0
 
-    move-result-object v3
+    :try_start_0
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    check-cast v3, Lulf;
+    goto :goto_0
 
-    check-cast v3, Lqta;
+    :catchall_0
+    move-exception p1
 
-    invoke-virtual {v3}, Lqta;->a()Lk54;
-
-    move-result-object v3
-
-    new-instance v4, Lae0;
-
-    invoke-direct {v4, p1, v1}, Lae0;-><init>(Lbe0;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v2, v3, v1, v4, v0}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
+    goto :goto_1
 
     :cond_0
-    return-void
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    :pswitch_2
-    iget-object p1, p0, Lrd0;->b:Lone/me/mediapicker/crop/AvatarEditScreen;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    sget-object v2, Lone/me/mediapicker/crop/AvatarEditScreen;->s0:[Ltr7;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lone/me/mediapicker/crop/AvatarEditScreen;->C0()Lru/ok/messages/views/widgets/AvatarCropView;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lru/ok/messages/views/widgets/AvatarCropView;->k()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {p1}, Lone/me/mediapicker/crop/AvatarEditScreen;->D0()Lbe0;
-
-    move-result-object p1
-
-    iget-object v2, p1, Lxzg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    iget-object v3, p1, Lbe0;->b:Liu7;
-
-    invoke-interface {v3}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lulf;
-
-    check-cast v3, Lqta;
-
-    invoke-virtual {v3}, Lqta;->a()Lk54;
-
-    move-result-object v3
-
-    new-instance v4, Lyd0;
-
-    invoke-direct {v4, p1, v1}, Lyd0;-><init>(Lbe0;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v2, v3, v1, v4, v0}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
+    throw p1
 
     :cond_1
-    return-void
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    :pswitch_3
-    iget-object p1, p0, Lrd0;->b:Lone/me/mediapicker/crop/AvatarEditScreen;
+    iget-object p1, p0, Lrd0;->X:Ljava/lang/Object;
 
-    sget-object v0, Lone/me/mediapicker/crop/AvatarEditScreen;->s0:[Ltr7;
+    check-cast p1, Lf84;
 
-    invoke-virtual {p1}, Lone/me/mediapicker/crop/AvatarEditScreen;->C0()Lru/ok/messages/views/widgets/AvatarCropView;
+    iget-object p1, p0, Lrd0;->Y:Lvd0;
 
-    move-result-object v0
+    iget-object v1, p0, Lrd0;->Z:Landroid/net/Uri;
 
-    invoke-virtual {v0}, Lru/ok/messages/views/widgets/AvatarCropView;->m()V
+    iget-object v3, p0, Lrd0;->s0:Ljava/lang/String;
 
-    invoke-virtual {p1}, Lone/me/mediapicker/crop/AvatarEditScreen;->D0()Lbe0;
+    iget-object v4, p0, Lrd0;->t0:Lk;
 
-    move-result-object v0
+    :try_start_1
+    iput v2, p0, Lrd0;->o:I
 
-    iput-boolean v2, v0, Lbe0;->r0:Z
-
-    iget-object v0, v0, Lbe0;->Y:Landroid/graphics/Matrix;
-
-    invoke-virtual {v0}, Landroid/graphics/Matrix;->reset()V
-
-    iget-object v0, p1, Lone/me/mediapicker/crop/AvatarEditScreen;->q0:Lh0d;
-
-    sget-object v1, Lone/me/mediapicker/crop/AvatarEditScreen;->s0:[Ltr7;
-
-    const/4 v2, 0x3
-
-    aget-object v1, v1, v2
-
-    invoke-interface {v0, p1, v1}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
+    invoke-static {p1, v1, v3, v4, p0}, Lvd0;->t(Lvd0;Landroid/net/Uri;Ljava/lang/String;Lk;Lq44;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lone/me/sdk/uikit/common/button/OneMeButton;
+    if-ne p1, v0, :cond_2
 
-    const/16 v0, 0x8
+    return-object v0
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+    :cond_2
+    :goto_0
+    check-cast p1, Landroid/graphics/Rect;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    return-void
+    goto :goto_2
 
-    nop
+    :goto_1
+    new-instance v0, Lipd;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-direct {v0, p1}, Lipd;-><init>(Ljava/lang/Throwable;)V
+
+    move-object p1, v0
+
+    :goto_2
+    iget-object v0, p0, Lrd0;->Y:Lvd0;
+
+    instance-of v1, p1, Lipd;
+
+    if-nez v1, :cond_5
+
+    move-object v1, p1
+
+    check-cast v1, Landroid/graphics/Rect;
+
+    if-eqz v1, :cond_5
+
+    iget-wide v2, v0, Lvd0;->o:J
+
+    iget-wide v4, v0, Lvd0;->o:J
+
+    const/16 v6, 0x20
+
+    shr-long/2addr v4, v6
+
+    long-to-int v4, v4
+
+    invoke-static {v4}, Ljava/lang/Float;->intBitsToFloat(I)F
+
+    move-result v4
+
+    const/high16 v5, -0x40800000    # -1.0f
+
+    cmpg-float v4, v4, v5
+
+    if-nez v4, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    iget-wide v6, v0, Lvd0;->o:J
+
+    const-wide v8, 0xffffffffL
+
+    and-long/2addr v6, v8
+
+    long-to-int v4, v6
+
+    invoke-static {v4}, Ljava/lang/Float;->intBitsToFloat(I)F
+
+    move-result v4
+
+    cmpg-float v4, v4, v5
+
+    if-nez v4, :cond_4
+
+    goto :goto_3
+
+    :cond_4
+    iget-object v4, v0, Lvd0;->d:Lci5;
+
+    new-instance v5, Lgd0;
+
+    iget-boolean v0, v0, Lvd0;->s0:Z
+
+    invoke-direct {v5, v1, v2, v3, v0}, Lgd0;-><init>(Landroid/graphics/Rect;JZ)V
+
+    invoke-static {v4, v5}, Lxfh;->r(Lci5;Ljava/lang/Object;)V
+
+    :cond_5
+    :goto_3
+    iget-object v0, p0, Lrd0;->Y:Lvd0;
+
+    invoke-static {p1}, Lkpd;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_6
+
+    sget-object v1, Lvd0;->v0:[Lyy7;
+
+    const-class v1, Lvd0;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "Error occurred during applying image transformation"
+
+    invoke-static {v1, v2, p1}, Lwqi;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object p1, v0, Lvd0;->d:Lci5;
+
+    sget-object v0, Lfd0;->b:Lfd0;
+
+    invoke-static {p1, v0}, Lxfh;->r(Lci5;Ljava/lang/Object;)V
+
+    :cond_6
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

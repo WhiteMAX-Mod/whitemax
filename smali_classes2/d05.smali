@@ -1,62 +1,57 @@
 .class public final Ld05;
-.super Lpmf;
+.super Lq44;
 .source "SourceFile"
 
 
 # instance fields
-.field public c:J
+.field public X:Ljava/lang/Object;
+
+.field public Y:Lf10;
+
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public d:Ljava/lang/Object;
+
+.field public o:Lw10;
+
+.field public final synthetic s0:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+
+.field public t0:I
 
 
 # direct methods
-.method public constructor <init>(Lpf9;)V
+.method public constructor <init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Lq44;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lpmf;-><init>(Lpf9;)V
+    iput-object p1, p0, Ld05;->s0:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lpf9;Ljava/lang/String;)V
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const-string v0, "time"
+    iput-object p1, p0, Ld05;->Z:Ljava/lang/Object;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget p1, p0, Ld05;->t0:I
 
-    move-result p2
+    const/high16 v0, -0x80000000
 
-    if-eqz p2, :cond_0
+    or-int/2addr p1, v0
 
-    const-wide/16 v0, 0x0
+    iput p1, p0, Ld05;->t0:I
 
-    invoke-static {p1, v0, v1}, Lg0i;->m(Lpf9;J)J
+    iget-object p1, p0, Ld05;->s0:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
 
-    move-result-wide p1
+    const/4 v0, 0x0
 
-    iput-wide p1, p0, Ld05;->c:J
+    invoke-virtual {p1, v0, v0, p0}, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->c(Lw10;Lsi9;Lq44;)Ljava/lang/Object;
 
-    return-void
+    move-result-object p1
 
-    :cond_0
-    invoke-virtual {p1}, Lpf9;->y()V
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    iget-wide v0, p0, Ld05;->c:J
-
-    const-string v2, "Response{time="
-
-    const-string v3, "}"
-
-    invoke-static {v0, v1, v2, v3}, Lrtg;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

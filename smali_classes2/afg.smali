@@ -1,67 +1,65 @@
-.class public abstract synthetic Lafg;
+.class public abstract Lafg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static final a:Lbwf;
+
+.field public static final b:Lbwf;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
-    invoke-static {}, La20;->values()[La20;
+    sget-object v0, Ll8;->u0:Ll8;
+
+    new-instance v1, Lbwf;
+
+    invoke-direct {v1, v0}, Lbwf;-><init>(Lcm6;)V
+
+    sput-object v1, Lafg;->a:Lbwf;
+
+    sget-object v0, Ll8;->t0:Ll8;
+
+    new-instance v1, Lbwf;
+
+    invoke-direct {v1, v0}, Lbwf;-><init>(Lcm6;)V
+
+    sput-object v1, Lafg;->b:Lbwf;
+
+    return-void
+.end method
+
+.method public static a(Ljava/lang/Runnable;)V
+    .locals 1
+
+    sget-object v0, Lafg;->b:Lbwf;
+
+    invoke-virtual {v0}, Lbwf;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    array-length v0, v0
+    check-cast v0, Ljava/util/concurrent/Executor;
 
-    new-array v0, v0, [I
+    invoke-interface {v0, p0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    const/4 v1, 0x1
+    return-void
+.end method
 
-    const/4 v2, 0x2
+.method public static b(Ljava/lang/Runnable;)V
+    .locals 1
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    sget-object v0, Lafg;->a:Lbwf;
 
-    :catch_0
-    const/4 v1, 0x4
+    invoke-virtual {v0}, Lbwf;->getValue()Ljava/lang/Object;
 
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    move-result-object v0
 
-    :catch_1
-    const/4 v2, 0x3
+    check-cast v0, Ljava/util/concurrent/Executor;
 
-    :try_start_2
-    aput v2, v0, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    const/16 v2, 0x9
-
-    :try_start_3
-    aput v1, v0, v2
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    const/4 v1, 0x5
-
-    :try_start_4
-    aput v1, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    sput-object v0, Lafg;->$EnumSwitchMapping$0:[I
+    invoke-interface {v0, p0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-void
 .end method

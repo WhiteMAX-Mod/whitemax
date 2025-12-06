@@ -1,8 +1,26 @@
-.class public interface abstract Lz7e;
+.class public abstract Lz7e;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/Serializable;
 
-# virtual methods
-.method public abstract w(I)V
+
+# instance fields
+.field public final a:I
+
+.field public final b:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>(ILjava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lz7e;->a:I
+
+    iput-object p2, p0, Lz7e;->b:Ljava/lang/String;
+
+    return-void
 .end method

@@ -1,549 +1,180 @@
-.class public final Lixc;
-.super Landroid/view/ViewGroup;
-.source "SourceFile"
+.class public abstract Lixc;
+.super Ljava/lang/Object;
 
-# interfaces
-.implements Lwsf;
 
+# static fields
+.field public static media3_icon_album:I = 0x7f080845
 
-# instance fields
-.field public a:Lhxc;
+.field public static media3_icon_artist:I = 0x7f080846
 
+.field public static media3_icon_block:I = 0x7f080847
 
-# direct methods
-.method public static a(Lcxc;Lv5b;)V
-    .locals 6
+.field public static media3_icon_bookmark_filled:I = 0x7f080848
 
-    new-instance v0, Landroid/content/res/ColorStateList;
+.field public static media3_icon_bookmark_unfilled:I = 0x7f080849
 
-    const v1, 0x10100a0
+.field public static media3_icon_check_circle_filled:I = 0x7f08084a
 
-    filled-new-array {v1}, [I
+.field public static media3_icon_check_circle_unfilled:I = 0x7f08084b
 
-    move-result-object v2
+.field public static media3_icon_circular_play:I = 0x7f08084c
 
-    const/4 v3, 0x0
+.field public static media3_icon_closed_captions:I = 0x7f08084d
 
-    new-array v4, v3, [I
+.field public static media3_icon_closed_captions_off:I = 0x7f08084e
 
-    filled-new-array {v2, v4}, [[I
+.field public static media3_icon_fast_forward:I = 0x7f08084f
 
-    move-result-object v2
+.field public static media3_icon_feed:I = 0x7f080850
 
-    invoke-interface {p1}, Lv5b;->getText()Leqf;
+.field public static media3_icon_flag_filled:I = 0x7f080851
 
-    move-result-object v4
+.field public static media3_icon_flag_unfilled:I = 0x7f080852
 
-    iget v4, v4, Leqf;->a:I
+.field public static media3_icon_heart_filled:I = 0x7f080853
 
-    invoke-interface {p1}, Lv5b;->getText()Leqf;
+.field public static media3_icon_heart_unfilled:I = 0x7f080854
 
-    move-result-object v5
+.field public static media3_icon_minus:I = 0x7f080855
 
-    iget v5, v5, Leqf;->e:I
+.field public static media3_icon_minus_circle_filled:I = 0x7f080856
 
-    filled-new-array {v4, v5}, [I
+.field public static media3_icon_minus_circle_unfilled:I = 0x7f080857
 
-    move-result-object v4
+.field public static media3_icon_next:I = 0x7f080858
 
-    invoke-direct {v0, v2, v4}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
+.field public static media3_icon_pause:I = 0x7f080859
 
-    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setTextColor(Landroid/content/res/ColorStateList;)V
+.field public static media3_icon_play:I = 0x7f08085a
 
-    new-instance v0, Landroid/content/res/ColorStateList;
+.field public static media3_icon_playback_speed:I = 0x7f08085b
 
-    filled-new-array {v1}, [I
+.field public static media3_icon_playback_speed_0_5:I = 0x7f08085c
 
-    move-result-object v1
+.field public static media3_icon_playback_speed_0_8:I = 0x7f08085d
 
-    new-array v2, v3, [I
+.field public static media3_icon_playback_speed_1_0:I = 0x7f08085e
 
-    filled-new-array {v1, v2}, [[I
+.field public static media3_icon_playback_speed_1_2:I = 0x7f08085f
 
-    move-result-object v1
+.field public static media3_icon_playback_speed_1_5:I = 0x7f080860
 
-    invoke-interface {p1}, Lv5b;->b()Lff0;
+.field public static media3_icon_playback_speed_1_8:I = 0x7f080861
 
-    move-result-object v2
+.field public static media3_icon_playback_speed_2_0:I = 0x7f080862
 
-    iget-object v2, v2, Lff0;->a:Lef0;
+.field public static media3_icon_playlist_add:I = 0x7f080863
 
-    iget v2, v2, Lef0;->g:I
+.field public static media3_icon_playlist_remove:I = 0x7f080864
 
-    invoke-interface {p1}, Lv5b;->b()Lff0;
+.field public static media3_icon_plus:I = 0x7f080865
 
-    move-result-object p1
+.field public static media3_icon_plus_circle_filled:I = 0x7f080866
 
-    iget-object p1, p1, Lff0;->a:Lef0;
+.field public static media3_icon_plus_circle_unfilled:I = 0x7f080867
 
-    iget p1, p1, Lef0;->h:I
+.field public static media3_icon_previous:I = 0x7f080868
 
-    filled-new-array {v2, p1}, [I
+.field public static media3_icon_quality:I = 0x7f080869
 
-    move-result-object p1
+.field public static media3_icon_queue_add:I = 0x7f08086a
 
-    invoke-direct {v0, v1, p1}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
+.field public static media3_icon_queue_next:I = 0x7f08086b
 
-    invoke-virtual {p0, v0}, Lcxc;->setBackgroundColors(Landroid/content/res/ColorStateList;)V
+.field public static media3_icon_queue_remove:I = 0x7f08086c
 
-    return-void
-.end method
+.field public static media3_icon_radio:I = 0x7f08086d
 
+.field public static media3_icon_repeat_all:I = 0x7f08086e
 
-# virtual methods
-.method public final b(Lcxc;ZI)V
-    .locals 4
+.field public static media3_icon_repeat_off:I = 0x7f08086f
 
-    const/4 v0, 0x5
+.field public static media3_icon_repeat_one:I = 0x7f080870
 
-    const/4 v1, 0x0
+.field public static media3_icon_rewind:I = 0x7f080871
 
-    if-eqz p2, :cond_1
+.field public static media3_icon_settings:I = 0x7f080872
 
-    iget-object p1, p0, Lixc;->a:Lhxc;
+.field public static media3_icon_share:I = 0x7f080873
 
-    if-eqz p1, :cond_0
+.field public static media3_icon_shuffle_off:I = 0x7f080874
 
-    check-cast p1, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
+.field public static media3_icon_shuffle_on:I = 0x7f080875
 
-    invoke-virtual {p1}, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;->T0()Lfk1;
+.field public static media3_icon_shuffle_star:I = 0x7f080876
 
-    move-result-object p1
+.field public static media3_icon_signal:I = 0x7f080877
 
-    iget-object p1, p1, Lfk1;->Z:Lx0f;
+.field public static media3_icon_skip_back:I = 0x7f080878
 
-    invoke-virtual {p1}, Lx0f;->getValue()Ljava/lang/Object;
+.field public static media3_icon_skip_back_10:I = 0x7f080879
 
-    move-result-object p2
+.field public static media3_icon_skip_back_15:I = 0x7f08087a
 
-    check-cast p2, Ldk1;
+.field public static media3_icon_skip_back_30:I = 0x7f08087b
 
-    iget-object p2, p2, Ldk1;->b:Ln0a;
+.field public static media3_icon_skip_back_5:I = 0x7f08087c
 
-    new-instance v2, Ln0a;
+.field public static media3_icon_skip_forward:I = 0x7f08087d
 
-    invoke-direct {v2}, Ln0a;-><init>()V
+.field public static media3_icon_skip_forward_10:I = 0x7f08087e
 
-    invoke-virtual {v2, p2}, Ln0a;->b(Ln0a;)V
+.field public static media3_icon_skip_forward_15:I = 0x7f08087f
 
-    invoke-virtual {v2, p3}, Ln0a;->a(I)V
+.field public static media3_icon_skip_forward_30:I = 0x7f080880
 
-    invoke-virtual {p1}, Lx0f;->getValue()Ljava/lang/Object;
+.field public static media3_icon_skip_forward_5:I = 0x7f080881
 
-    move-result-object p2
+.field public static media3_icon_star_filled:I = 0x7f080882
 
-    check-cast p2, Ldk1;
+.field public static media3_icon_star_unfilled:I = 0x7f080883
 
-    invoke-static {p2, v1, v2, v0}, Ldk1;->a(Ldk1;Ljava/lang/Integer;Ln0a;I)Ldk1;
+.field public static media3_icon_stop:I = 0x7f080884
 
-    move-result-object p2
+.field public static media3_icon_subtitles:I = 0x7f080885
 
-    invoke-virtual {p1, v1, p2}, Lx0f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+.field public static media3_icon_subtitles_off:I = 0x7f080886
 
-    :cond_0
-    return-void
+.field public static media3_icon_sync:I = 0x7f080887
 
-    :cond_1
-    iget-object p2, p0, Lixc;->a:Lhxc;
+.field public static media3_icon_thumb_down_filled:I = 0x7f080888
 
-    if-eqz p2, :cond_2
+.field public static media3_icon_thumb_down_unfilled:I = 0x7f080889
 
-    check-cast p2, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
+.field public static media3_icon_thumb_up_filled:I = 0x7f08088a
 
-    invoke-virtual {p2}, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;->T0()Lfk1;
+.field public static media3_icon_thumb_up_unfilled:I = 0x7f08088b
 
-    move-result-object p2
+.field public static media3_icon_volume_down:I = 0x7f08088c
 
-    iget-object p2, p2, Lfk1;->Z:Lx0f;
+.field public static media3_icon_volume_off:I = 0x7f08088d
 
-    invoke-virtual {p2}, Lx0f;->getValue()Ljava/lang/Object;
+.field public static media3_icon_volume_up:I = 0x7f08088e
 
-    move-result-object v2
+.field public static media3_notification_small_icon:I = 0x7f08088f
 
-    check-cast v2, Ldk1;
+.field public static media_session_service_notification_ic_music_note:I = 0x7f080894
 
-    iget-object v2, v2, Ldk1;->b:Ln0a;
+.field public static notification_action_background:I = 0x7f0808f1
 
-    new-instance v3, Ln0a;
+.field public static notification_bg:I = 0x7f0808f2
 
-    invoke-direct {v3}, Ln0a;-><init>()V
+.field public static notification_bg_low:I = 0x7f0808f3
 
-    invoke-virtual {v3, v2}, Ln0a;->b(Ln0a;)V
+.field public static notification_bg_low_normal:I = 0x7f0808f4
 
-    invoke-virtual {v3, p3}, Ln0a;->i(I)V
+.field public static notification_bg_low_pressed:I = 0x7f0808f5
 
-    invoke-virtual {p2}, Lx0f;->getValue()Ljava/lang/Object;
+.field public static notification_bg_normal:I = 0x7f0808f6
 
-    move-result-object p3
+.field public static notification_bg_normal_pressed:I = 0x7f0808f7
 
-    check-cast p3, Ldk1;
+.field public static notification_icon_background:I = 0x7f0808f8
 
-    invoke-static {p3, v1, v3, v0}, Ldk1;->a(Ldk1;Ljava/lang/Integer;Ln0a;I)Ldk1;
+.field public static notification_template_icon_bg:I = 0x7f0808fc
 
-    move-result-object p3
+.field public static notification_template_icon_low_bg:I = 0x7f0808fd
 
-    invoke-virtual {p2, v1, p3}, Lx0f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+.field public static notification_tile_bg:I = 0x7f0808fe
 
-    :cond_2
-    invoke-virtual {p1, v1}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
-
-    return-void
-.end method
-
-.method public final onLayout(ZIIII)V
-    .locals 7
-
-    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result p1
-
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
-
-    move-result p2
-
-    const/4 p3, 0x0
-
-    move p4, p3
-
-    move p5, p4
-
-    move v0, p5
-
-    move v1, v0
-
-    move v2, v1
-
-    :goto_0
-    const/16 v3, 0xa
-
-    if-ge p4, p2, :cond_2
-
-    invoke-virtual {p0, p4}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result v5
-
-    add-int/2addr v5, p5
-
-    if-le v5, p1, :cond_1
-
-    int-to-float v5, v3
-
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v6
-
-    iget v6, v6, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v6, v5
-
-    invoke-static {v6}, Lfhi;->b(F)I
-
-    move-result v6
-
-    sub-int/2addr p5, v6
-
-    sub-int p5, p1, p5
-
-    div-int/lit8 p5, p5, 0x2
-
-    :goto_1
-    if-ge v0, p4, :cond_0
-
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v6
-
-    invoke-virtual {v6, p5}, Landroid/view/View;->offsetLeftAndRight(I)V
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_1
-
-    :cond_0
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
-
-    move-result-object p5
-
-    invoke-virtual {p5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p5
-
-    iget p5, p5, Landroid/util/DisplayMetrics;->density:F
-
-    invoke-static {v5, p5, v2, v1}, Laab;->i(FFII)I
-
-    move-result v1
-
-    move p5, p3
-
-    move v2, p5
-
-    move v0, p4
-
-    :cond_1
-    invoke-virtual {v4}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result v5
-
-    add-int/2addr v5, p5
-
-    invoke-virtual {v4}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v6
-
-    add-int/2addr v6, v1
-
-    invoke-virtual {v4, p5, v1, v5, v6}, Landroid/view/View;->layout(IIII)V
-
-    invoke-virtual {v4}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result v5
-
-    int-to-float v3, v3
-
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v6
-
-    iget v6, v6, Landroid/util/DisplayMetrics;->density:F
-
-    invoke-static {v3, v6, v5, p5}, Laab;->i(FFII)I
-
-    move-result p5
-
-    invoke-virtual {v4}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v3
-
-    invoke-static {v2, v3}, Ljava/lang/Math;->max(II)I
-
-    move-result v2
-
-    add-int/lit8 p4, p4, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    int-to-float p2, v3
-
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
-
-    move-result-object p3
-
-    invoke-virtual {p3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p3
-
-    iget p3, p3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p2, p3
-
-    invoke-static {p2}, Lfhi;->b(F)I
-
-    move-result p2
-
-    sub-int/2addr p5, p2
-
-    sub-int/2addr p1, p5
-
-    div-int/lit8 p1, p1, 0x2
-
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
-
-    move-result p2
-
-    :goto_2
-    if-ge v0, p2, :cond_3
-
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object p3
-
-    invoke-virtual {p3, p1}, Landroid/view/View;->offsetLeftAndRight(I)V
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_2
-
-    :cond_3
-    return-void
-.end method
-
-.method public final onMeasure(II)V
-    .locals 10
-
-    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
-
-    move-result v0
-
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingStart()I
-
-    move-result v1
-
-    sub-int/2addr v0, v1
-
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingEnd()I
-
-    move-result v1
-
-    sub-int/2addr v0, v1
-
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
-
-    move-result v1
-
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
-
-    move-result v2
-
-    add-int/2addr v2, v1
-
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
-
-    move-result v1
-
-    const/4 v3, 0x0
-
-    move v4, v3
-
-    move v5, v4
-
-    move v6, v5
-
-    :goto_0
-    if-ge v4, v1, :cond_2
-
-    invoke-virtual {p0, v4}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v7
-
-    invoke-virtual {p0, v7, p1, p2}, Landroid/view/ViewGroup;->measureChild(Landroid/view/View;II)V
-
-    invoke-virtual {v7}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result v8
-
-    add-int/2addr v8, v6
-
-    const/16 v9, 0xa
-
-    if-le v8, v0, :cond_0
-
-    int-to-float v6, v9
-
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v8
-
-    iget v8, v8, Landroid/util/DisplayMetrics;->density:F
-
-    invoke-static {v6, v8, v5, v2}, Laab;->i(FFII)I
-
-    move-result v2
-
-    move v5, v3
-
-    move v6, v5
-
-    :cond_0
-    if-eqz v6, :cond_1
-
-    int-to-float v8, v9
-
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
-
-    move-result-object v9
-
-    invoke-virtual {v9}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v9
-
-    iget v9, v9, Landroid/util/DisplayMetrics;->density:F
-
-    invoke-static {v8, v9, v6}, Lu15;->c(FFI)I
-
-    move-result v6
-
-    :cond_1
-    invoke-virtual {v7}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result v8
-
-    add-int/2addr v6, v8
-
-    invoke-virtual {v7}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v7
-
-    invoke-static {v5, v7}, Ljava/lang/Math;->max(II)I
-
-    move-result v5
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    add-int/2addr v2, v5
-
-    invoke-virtual {p0, v0, v2}, Landroid/view/View;->setMeasuredDimension(II)V
-
-    return-void
-.end method
-
-.method public final onThemeChanged(Lv5b;)V
-    .locals 4
-
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_1
-
-    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v2
-
-    instance-of v3, v2, Lcxc;
-
-    if-eqz v3, :cond_0
-
-    check-cast v2, Lcxc;
-
-    invoke-static {v2, p1}, Lixc;->a(Lcxc;Lv5b;)V
-
-    :cond_0
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return-void
-.end method
-
-.method public final setListener(Lhxc;)V
-    .locals 0
-
-    iput-object p1, p0, Lixc;->a:Lhxc;
-
-    return-void
-.end method
+.field public static notify_panel_notification_icon_bg:I = 0x7f0808ff

@@ -27,10 +27,10 @@
         "methodName",
         "Lkotlin/Function1;",
         "Lcom/facebook/fresco/ui/common/ControllerListener2;",
-        "Lccg;",
+        "Lqqg;",
         "block",
         "forEachListener",
-        "(Ljava/lang/String;Lli6;)V",
+        "(Ljava/lang/String;Lem6;)V",
         "listener",
         "addListener",
         "(Lcom/facebook/fresco/ui/common/ControllerListener2;)V",
@@ -62,7 +62,7 @@
         "listeners",
         "Ljava/util/List;",
         "Companion",
-        "fd6",
+        "bh6",
         "ui-common_release"
     }
     k = 0x1
@@ -76,7 +76,7 @@
 
 
 # static fields
-.field public static final Companion:Lfd6;
+.field public static final Companion:Lbh6;
 
 .field private static final TAG:Ljava/lang/String; = "FwdControllerListener2"
 
@@ -97,11 +97,11 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lfd6;
+    new-instance v0, Lbh6;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lcom/facebook/fresco/ui/common/ForwardingControllerListener2;->Companion:Lfd6;
+    sput-object v0, Lcom/facebook/fresco/ui/common/ForwardingControllerListener2;->Companion:Lbh6;
 
     return-void
 .end method
@@ -122,13 +122,13 @@
     return-void
 .end method
 
-.method private final forEachListener(Ljava/lang/String;Lli6;)V
+.method private final forEachListener(Ljava/lang/String;Lem6;)V
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lli6;",
+            "Lem6;",
             ")V"
         }
     .end annotation
@@ -156,7 +156,7 @@
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_1
 
     :try_start_1
-    invoke-interface {p2, v2}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v2}, Lem6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 

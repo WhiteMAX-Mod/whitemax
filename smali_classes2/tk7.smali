@@ -1,23 +1,21 @@
 .class public final Ltk7;
-.super Lrdi;
+.super Luk7;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Ltk7;
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
+    const-string v0, "Type.Unsupported("
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
+    const-string v1, ")"
 
-    new-instance v0, Ltk7;
+    iget-byte v2, p0, Luk7;->a:B
 
-    const/16 v1, 0xb
+    invoke-static {v2, v0, v1}, Lwy1;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Lrdi;-><init>(I)V
+    move-result-object v0
 
-    sput-object v0, Ltk7;->c:Ltk7;
-
-    return-void
+    return-object v0
 .end method

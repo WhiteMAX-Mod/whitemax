@@ -1,66 +1,48 @@
 .class public final Lfj8;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
+.super Lq44;
 
 
 # instance fields
-.field public final synthetic a:Landroid/view/View;
+.field public final synthetic X:Lh28;
 
-.field public final synthetic b:F
+.field public synthetic d:Ljava/lang/Object;
 
-.field public final synthetic c:F
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;FF)V
+.method public constructor <init>(Lh28;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lfj8;->X:Lh28;
 
-    iput-object p1, p0, Lfj8;->a:Landroid/view/View;
-
-    iput p2, p0, Lfj8;->b:F
-
-    iput p3, p0, Lfj8;->c:F
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget p1, p0, Lfj8;->b:F
+    iput-object p1, p0, Lfj8;->d:Ljava/lang/Object;
 
-    iget-object v0, p0, Lfj8;->a:Landroid/view/View;
+    iget p1, p0, Lfj8;->o:I
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setScaleX(F)V
+    const/high16 v0, -0x80000000
 
-    iget p1, p0, Lfj8;->c:F
+    or-int/2addr p1, v0
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setScaleY(F)V
+    iput p1, p0, Lfj8;->o:I
 
-    return-void
-.end method
+    iget-object p1, p0, Lfj8;->X:Lh28;
 
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
+    const/4 v0, 0x0
 
-    return-void
-.end method
+    invoke-virtual {p1, v0, p0}, Lh28;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
+    move-result-object p1
 
-    return-void
+    return-object p1
 .end method

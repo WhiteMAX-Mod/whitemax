@@ -1,261 +1,189 @@
-.class public final enum Ldr5;
-.super Ljava/lang/Enum;
+.class public final synthetic Ldr5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final enum Y:Ldr5;
-
-.field public static final enum Z:Ldr5;
-
-.field public static final enum q0:Ldr5;
-
-.field public static final enum r0:Ldr5;
-
-.field public static final enum s0:Ldr5;
-
-.field public static final enum t0:Ldr5;
-
-.field public static final enum u0:Ldr5;
-
-.field public static final enum v0:Ldr5;
-
-.field public static final enum w0:Ldr5;
-
-.field public static final synthetic x0:[Ldr5;
+# interfaces
+.implements Ltm6;
+.implements Lgu3;
 
 
 # instance fields
-.field public final X:I
+.field public final synthetic a:I
 
-.field public final a:I
+.field public final synthetic b:J
 
-.field public final b:I
-
-.field public final c:I
-
-.field public final o:I
+.field public final synthetic c:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 15
+.method public synthetic constructor <init>(IJZ)V
+    .locals 0
+
+    iput p1, p0, Ldr5;->a:I
+
+    iput-wide p2, p0, Ldr5;->b:J
+
+    iput-boolean p4, p0, Ldr5;->c:Z
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public accept(Ljava/lang/Object;)V
+    .locals 6
+
+    iget v0, p0, Ldr5;->a:I
+
+    const-string v1, " favorite="
+
+    iget-boolean v2, p0, Ldr5;->c:Z
+
+    iget-wide v3, p0, Ldr5;->b:J
+
+    check-cast p1, Ljava/lang/Throwable;
+
+    packed-switch v0, :pswitch_data_0
+
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v5, "markAsFavorite: failed for stickerId="
+
+    invoke-direct {v0, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "ps5"
+
+    invoke-static {v1, v0, p1}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
+
+    :pswitch_0
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v5, "markAsFavorite: failed for setId="
+
+    invoke-direct {v0, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "vr5"
+
+    invoke-static {v1, v0, p1}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
+
+    iget v0, p0, Ldr5;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    move-object v2, p1
+
+    check-cast v2, Lhs5;
+
+    new-instance v1, Lfr5;
+
+    const/4 v4, 0x1
+
+    iget-boolean v3, p0, Ldr5;->c:Z
+
+    iget-wide v5, p0, Ldr5;->b:J
+
+    invoke-direct/range {v1 .. v6}, Lfr5;-><init>(Ljava/lang/Object;ZIJ)V
+
+    new-instance p1, Lkk3;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p1, v0, v1}, Lkk3;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Lzr5;
+
+    invoke-virtual {p1}, Lzr5;->a()Lm2f;
+
+    move-result-object p1
 
     new-instance v0, Ldr5;
 
-    sget v2, Lw0b;->C:I
+    const/4 v1, 0x3
 
-    sget v3, Lw0b;->D:I
+    iget-wide v2, p0, Ldr5;->b:J
 
-    sget v4, Lw0b;->E:I
+    iget-boolean v4, p0, Ldr5;->c:Z
 
-    sget v5, Lw0b;->F:I
+    invoke-direct {v0, v1, v2, v3, v4}, Ldr5;-><init>(IJZ)V
 
-    const/4 v1, 0x0
+    new-instance v1, Lik3;
 
-    const-string v6, "UNKNOWN"
+    const/4 v2, 0x2
 
-    invoke-direct/range {v0 .. v6}, Ldr5;-><init>(IIIIILjava/lang/String;)V
+    invoke-direct {v1, p1, v2, v0}, Lik3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    sput-object v0, Ldr5;->Y:Ldr5;
+    return-object v1
 
-    new-instance v1, Ldr5;
+    :pswitch_1
+    move-object v4, p1
 
-    sget v3, Lw0b;->q:I
+    check-cast v4, Lqs5;
 
-    sget v4, Lw0b;->r:I
+    new-instance v3, Lfr5;
 
-    sget v5, Lw0b;->s:I
+    const/4 v6, 0x0
 
-    sget v6, Lw0b;->t:I
+    iget-boolean v5, p0, Ldr5;->c:Z
 
-    const/4 v2, 0x1
+    iget-wide v7, p0, Ldr5;->b:J
 
-    const-string v7, "DOCS"
+    invoke-direct/range {v3 .. v8}, Lfr5;-><init>(Ljava/lang/Object;ZIJ)V
 
-    invoke-direct/range {v1 .. v7}, Ldr5;-><init>(IIIIILjava/lang/String;)V
+    new-instance p1, Lkk3;
 
-    sput-object v1, Ldr5;->Z:Ldr5;
+    const/4 v0, 0x1
 
-    new-instance v2, Ldr5;
+    invoke-direct {p1, v0, v3}, Lkk3;-><init>(ILjava/lang/Object;)V
 
-    sget v4, Lw0b;->e:I
+    return-object p1
 
-    sget v5, Lw0b;->f:I
-
-    sget v6, Lw0b;->g:I
-
-    sget v7, Lw0b;->h:I
-
-    const/4 v3, 0x2
-
-    const-string v8, "TABLES"
-
-    invoke-direct/range {v2 .. v8}, Ldr5;-><init>(IIIIILjava/lang/String;)V
-
-    sput-object v2, Ldr5;->q0:Ldr5;
-
-    new-instance v3, Ldr5;
-
-    sget v5, Lw0b;->y:I
-
-    sget v6, Lw0b;->z:I
-
-    sget v7, Lw0b;->A:I
-
-    sget v8, Lw0b;->B:I
-
-    const/4 v4, 0x3
-
-    const-string v9, "TEXTS"
-
-    invoke-direct/range {v3 .. v9}, Ldr5;-><init>(IIIIILjava/lang/String;)V
-
-    sput-object v3, Ldr5;->r0:Ldr5;
-
-    new-instance v4, Ldr5;
-
-    sget v6, Lw0b;->i:I
-
-    sget v7, Lw0b;->j:I
-
-    sget v8, Lw0b;->k:I
-
-    sget v9, Lw0b;->l:I
-
-    const/4 v5, 0x4
-
-    const-string v10, "IMAGES"
-
-    invoke-direct/range {v4 .. v10}, Ldr5;-><init>(IIIIILjava/lang/String;)V
-
-    sput-object v4, Ldr5;->s0:Ldr5;
-
-    new-instance v5, Ldr5;
-
-    sget v7, Lw0b;->G:I
-
-    sget v8, Lw0b;->H:I
-
-    sget v9, Lw0b;->I:I
-
-    sget v10, Lw0b;->J:I
-
-    const/4 v6, 0x5
-
-    const-string v11, "VIDEOS"
-
-    invoke-direct/range {v5 .. v11}, Ldr5;-><init>(IIIIILjava/lang/String;)V
-
-    sput-object v5, Ldr5;->t0:Ldr5;
-
-    new-instance v6, Ldr5;
-
-    sget v8, Lw0b;->a:I
-
-    sget v9, Lw0b;->b:I
-
-    sget v10, Lw0b;->c:I
-
-    sget v11, Lw0b;->d:I
-
-    const/4 v7, 0x6
-
-    const-string v12, "ARCHIVES"
-
-    invoke-direct/range {v6 .. v12}, Ldr5;-><init>(IIIIILjava/lang/String;)V
-
-    sput-object v6, Ldr5;->u0:Ldr5;
-
-    new-instance v7, Ldr5;
-
-    sget v9, Lw0b;->u:I
-
-    sget v10, Lw0b;->v:I
-
-    sget v11, Lw0b;->w:I
-
-    sget v12, Lw0b;->x:I
-
-    const/4 v8, 0x7
-
-    const-string v13, "BINS"
-
-    invoke-direct/range {v7 .. v13}, Ldr5;-><init>(IIIIILjava/lang/String;)V
-
-    sput-object v7, Ldr5;->v0:Ldr5;
-
-    new-instance v8, Ldr5;
-
-    sget v10, Lw0b;->m:I
-
-    sget v11, Lw0b;->n:I
-
-    sget v12, Lw0b;->o:I
-
-    sget v13, Lw0b;->p:I
-
-    const/16 v9, 0x8
-
-    const-string v14, "MUSIC"
-
-    invoke-direct/range {v8 .. v14}, Ldr5;-><init>(IIIIILjava/lang/String;)V
-
-    sput-object v8, Ldr5;->w0:Ldr5;
-
-    filled-new-array/range {v0 .. v8}, [Ldr5;
-
-    move-result-object v0
-
-    sput-object v0, Ldr5;->x0:[Ldr5;
-
-    return-void
-.end method
-
-.method public constructor <init>(IIIIILjava/lang/String;)V
-    .locals 1
-
-    sget v0, Lw0b;->K:I
-
-    invoke-direct {p0, p6, p1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput p2, p0, Ldr5;->a:I
-
-    iput p3, p0, Ldr5;->b:I
-
-    iput p4, p0, Ldr5;->c:I
-
-    iput p5, p0, Ldr5;->o:I
-
-    iput v0, p0, Ldr5;->X:I
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Ldr5;
-    .locals 1
-
-    const-class v0, Ldr5;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Ldr5;
-
-    return-object p0
-.end method
-
-.method public static values()[Ldr5;
-    .locals 1
-
-    sget-object v0, Ldr5;->x0:[Ldr5;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ldr5;
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,76 +1,78 @@
-.class public final Lj49;
+.class public final synthetic Lj49;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcm6;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lru/ok/tamtam/android/calls/MediaProjectionService;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lru/ok/tamtam/android/calls/MediaProjectionService;I)V
+    .locals 0
+
+    iput p2, p0, Lj49;->a:I
+
+    iput-object p1, p0, Lj49;->b:Lru/ok/tamtam/android/calls/MediaProjectionService;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lj49;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lj49;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object p1, Lf49;->a:Lf49;
-
-    invoke-virtual {p1, p1}, Lf49;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x72d9d95f
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final invoke()Ljava/lang/Object;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Lj49;->a:I
 
-    const-string v1, "MediaTypePickerViewState(selectedButton="
+    iget-object v1, p0, Lj49;->b:Lru/ok/tamtam/android/calls/MediaProjectionService;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    packed-switch v0, :pswitch_data_0
 
-    sget-object v1, Lf49;->a:Lf49;
+    sget v0, Lru/ok/tamtam/android/calls/MediaProjectionService;->o:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {v1}, Lme9;->b(Landroid/content/Context;)Ly4e;
 
-    const-string v1, ")"
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ly4e;->f()Ljq;
 
     move-result-object v0
 
     return-object v0
+
+    :pswitch_0
+    sget v0, Lru/ok/tamtam/android/calls/MediaProjectionService;->o:I
+
+    invoke-static {v1}, Lme9;->b(Landroid/content/Context;)Ly4e;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
+
+    move-result-object v0
+
+    const/16 v1, 0x23
+
+    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Llv4;
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,206 +1,130 @@
 .class public final Lnw0;
-.super Ljava/lang/ThreadLocal;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lrfg;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:I
+
+.field public final b:Lgf6;
+
+.field public final c:Lq65;
+
+.field public d:Lgf6;
+
+.field public e:Lrfg;
+
+.field public f:J
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(IILgf6;)V
     .locals 0
 
-    iput p1, p0, Lnw0;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
+    iput p2, p0, Lnw0;->a:I
+
+    iput-object p3, p0, Lnw0;->b:Lgf6;
+
+    new-instance p1, Lq65;
+
+    invoke-direct {p1}, Lq65;-><init>()V
+
+    iput-object p1, p0, Lnw0;->c:Lq65;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final initialValue()Ljava/lang/Object;
-    .locals 3
+.method public final a(Lje4;IZ)I
+    .locals 2
 
-    iget v0, p0, Lnw0;->a:I
+    iget-object v0, p0, Lnw0;->e:Lrfg;
 
-    packed-switch v0, :pswitch_data_0
+    sget v1, Lxxg;->a:I
 
-    const-wide/16 v0, 0x0
+    invoke-interface {v0, p1, p2, p3}, Lrfg;->e(Lje4;IZ)I
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    move-result p1
 
-    move-result-object v0
+    return p1
+.end method
 
-    return-object v0
+.method public final b(JIIILpfg;)V
+    .locals 8
 
-    :pswitch_0
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    iget-wide v0, p0, Lnw0;->f:J
 
-    return-object v0
+    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
 
-    :pswitch_1
-    new-instance v0, Ljava/text/DecimalFormat;
+    cmp-long v2, v0, v2
 
-    const-string v1, "#,##0.0"
+    if-eqz v2, :cond_0
 
-    invoke-direct {v0, v1}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
+    cmp-long v0, p1, v0
 
-    return-object v0
+    if-ltz v0, :cond_0
 
-    :pswitch_2
-    new-instance v0, Ljava/text/DecimalFormat;
+    iget-object v0, p0, Lnw0;->c:Lq65;
 
-    const-string v1, "#,##0"
-
-    invoke-direct {v0, v1}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
-
-    return-object v0
-
-    :pswitch_3
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
-
-    move-result-object v0
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {}, Lfni;->e()Law6;
-
-    move-result-object v0
-
-    goto :goto_0
+    iput-object v0, p0, Lnw0;->e:Lrfg;
 
     :cond_0
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+    iget-object v1, p0, Lnw0;->e:Lrfg;
 
-    move-result-object v0
+    sget v0, Lxxg;->a:I
 
-    if-eqz v0, :cond_1
+    move-wide v2, p1
 
-    new-instance v0, Landroid/os/Handler;
+    move v4, p3
 
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+    move v5, p4
 
-    move-result-object v1
+    move v6, p5
 
-    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    move-object v7, p6
 
-    new-instance v1, Law6;
+    invoke-interface/range {v1 .. v7}, Lrfg;->b(JIIILpfg;)V
 
-    invoke-direct {v1, v0}, Law6;-><init>(Landroid/os/Handler;)V
+    return-void
+.end method
 
-    move-object v0, v1
+.method public final c(ILqyg;)V
+    .locals 2
 
-    goto :goto_0
+    iget-object v0, p0, Lnw0;->e:Lrfg;
 
-    :cond_1
-    const/4 v0, 0x0
+    sget v1, Lxxg;->a:I
 
-    :goto_0
-    return-object v0
+    invoke-interface {v0, p1, p2}, Lrfg;->c(ILqyg;)V
 
-    :pswitch_4
-    new-instance v0, Ljava/util/Random;
+    return-void
+.end method
 
-    invoke-direct {v0}, Ljava/util/Random;-><init>()V
+.method public final d(Lgf6;)V
+    .locals 2
 
-    return-object v0
+    iget-object v0, p0, Lnw0;->b:Lgf6;
 
-    :pswitch_5
-    new-instance v0, Ljava/text/SimpleDateFormat;
+    if-eqz v0, :cond_0
 
-    const-string v1, "yyyy:MM:dd HH:mm:ss"
+    invoke-virtual {p1, v0}, Lgf6;->c(Lgf6;)Lgf6;
 
-    sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
+    move-result-object p1
 
-    invoke-direct {v0, v1, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
+    :cond_0
+    iput-object p1, p0, Lnw0;->d:Lgf6;
 
-    return-object v0
+    iget-object v0, p0, Lnw0;->e:Lrfg;
 
-    :pswitch_6
-    new-instance v0, Ljava/text/SimpleDateFormat;
+    sget v1, Lxxg;->a:I
 
-    const-string v1, "HH:mm:ss"
+    invoke-interface {v0, p1}, Lrfg;->d(Lgf6;)V
 
-    sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    invoke-direct {v0, v1, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
-
-    return-object v0
-
-    :pswitch_7
-    new-instance v0, Ljava/text/SimpleDateFormat;
-
-    const-string v1, "yyyy:MM:dd"
-
-    sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    invoke-direct {v0, v1, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
-
-    return-object v0
-
-    :pswitch_8
-    sget-object v0, Lxe4;->a:Lnw0;
-
-    const/16 v0, 0x4000
-
-    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_9
-    new-instance v0, Ljava/text/SimpleDateFormat;
-
-    const-string v1, "EEE, dd MMM yyyy HH:mm:ss \'GMT\'"
-
-    sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    invoke-direct {v0, v1, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Ljava/text/DateFormat;->setLenient(Z)V
-
-    sget-object v1, Lmig;->e:Ljava/util/TimeZone;
-
-    invoke-virtual {v0, v1}, Ljava/text/DateFormat;->setTimeZone(Ljava/util/TimeZone;)V
-
-    return-object v0
-
-    :pswitch_a
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    return-object v0
-
-    :pswitch_b
-    new-instance v0, Ljava/util/concurrent/ConcurrentLinkedQueue;
-
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;-><init>()V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

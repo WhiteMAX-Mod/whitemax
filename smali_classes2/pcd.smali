@@ -1,11 +1,19 @@
-.class public interface abstract Lpcd;
+.class public final Lpcd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Liu7;
 
+# instance fields
+.field public a:J
 
-# virtual methods
-.method public abstract reset()V
-.end method
+.field public b:Lhdd;
+
+.field public c:J
+
+.field public d:J
+
+.field public e:Ln7;
+
+.field public f:Lkce;
+
+.field public g:Lv32;

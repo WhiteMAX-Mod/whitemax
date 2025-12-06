@@ -1,5 +1,5 @@
 .class public final Lhh4;
-.super Ljava/lang/Thread;
+.super Lnk0;
 .source "SourceFile"
 
 
@@ -8,170 +8,144 @@
 
 .field public final synthetic b:Ljava/lang/Object;
 
-.field public final synthetic c:Ljava/lang/Object;
-
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;Landroid/os/ConditionVariable;I)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    .line 1
-    iput p3, p0, Lhh4;->a:I
-
-    iput-object p1, p0, Lhh4;->c:Ljava/lang/Object;
+    iput p1, p0, Lhh4;->a:I
 
     iput-object p2, p0, Lhh4;->b:Ljava/lang/Object;
 
-    const-string p1, "ExoPlayer:SimpleCacheInit"
-
-    invoke-direct {p0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Lph4;Landroid/media/AudioTrack;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lhh4;->a:I
-
-    .line 2
-    iput-object p1, p0, Lhh4;->c:Ljava/lang/Object;
-
-    iput-object p2, p0, Lhh4;->b:Ljava/lang/Object;
-
-    const-string p1, "ExoPlayer:AudioTrackReleaseThread"
-
-    invoke-direct {p0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
+.method private final e()V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final a()V
     .locals 2
 
     iget v0, p0, Lhh4;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lhh4;->c:Ljava/lang/Object;
+    iget-object v0, p0, Lhh4;->b:Ljava/lang/Object;
 
-    check-cast v0, Lbpe;
+    check-cast v0, Lz6c;
 
-    monitor-enter v0
+    invoke-virtual {v0}, Lz6c;->n()Z
 
-    :try_start_0
-    iget-object v1, p0, Lhh4;->b:Ljava/lang/Object;
+    move-result v1
 
-    check-cast v1, Landroid/os/ConditionVariable;
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Landroid/os/ConditionVariable;->open()V
+    iget-object v0, v0, Lws4;->b:Lhj0;
 
-    iget-object v1, p0, Lhh4;->c:Ljava/lang/Object;
+    invoke-virtual {v0}, Lhj0;->c()V
 
-    check-cast v1, Lbpe;
-
-    invoke-static {v1}, Lbpe;->a(Lbpe;)V
-
-    iget-object v1, p0, Lhh4;->c:Ljava/lang/Object;
-
-    check-cast v1, Lbpe;
-
-    iget-object v1, v1, Lbpe;->b:Lhy0;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    monitor-exit v0
-
+    :cond_0
     return-void
-
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
 
     :pswitch_0
-    iget-object v0, p0, Lhh4;->c:Ljava/lang/Object;
+    iget-object v0, p0, Lhh4;->b:Ljava/lang/Object;
 
-    check-cast v0, Lape;
+    check-cast v0, Lfd8;
 
-    monitor-enter v0
-
-    :try_start_1
-    iget-object v1, p0, Lhh4;->b:Ljava/lang/Object;
-
-    check-cast v1, Landroid/os/ConditionVariable;
-
-    invoke-virtual {v1}, Landroid/os/ConditionVariable;->open()V
-
-    iget-object v1, p0, Lhh4;->c:Ljava/lang/Object;
-
-    check-cast v1, Lape;
-
-    invoke-static {v1}, Lape;->a(Lape;)V
-
-    iget-object v1, p0, Lhh4;->c:Ljava/lang/Object;
-
-    check-cast v1, Lape;
-
-    iget-object v1, v1, Lape;->b:Ltu7;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    monitor-exit v0
+    invoke-virtual {v0}, Lbdf;->a()V
 
     return-void
-
-    :catchall_1
-    move-exception v1
-
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    throw v1
 
     :pswitch_1
-    iget-object v0, p0, Lhh4;->c:Ljava/lang/Object;
+    iget-object v0, p0, Lhh4;->b:Ljava/lang/Object;
 
-    check-cast v0, Lph4;
+    check-cast v0, Lqe8;
 
-    iget-object v1, p0, Lhh4;->b:Ljava/lang/Object;
-
-    check-cast v1, Landroid/media/AudioTrack;
-
-    :try_start_2
-    invoke-virtual {v1}, Landroid/media/AudioTrack;->flush()V
-
-    invoke-virtual {v1}, Landroid/media/AudioTrack;->release()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
-
-    iget-object v0, v0, Lph4;->h:Landroid/os/ConditionVariable;
-
-    invoke-virtual {v0}, Landroid/os/ConditionVariable;->open()V
+    invoke-virtual {v0}, Lbdf;->a()V
 
     return-void
 
-    :catchall_2
-    move-exception v1
+    :pswitch_2
+    iget-object v0, p0, Lhh4;->b:Ljava/lang/Object;
 
-    iget-object v0, v0, Lph4;->h:Landroid/os/ConditionVariable;
+    check-cast v0, Lfd8;
 
-    invoke-virtual {v0}, Landroid/os/ConditionVariable;->open()V
+    invoke-virtual {v0}, Lbdf;->a()V
 
-    throw v1
+    return-void
+
+    :pswitch_3
+    iget-object v0, p0, Lhh4;->b:Ljava/lang/Object;
+
+    check-cast v0, Lcd8;
+
+    invoke-virtual {v0}, Lbdf;->a()V
+
+    return-void
+
+    :pswitch_4
+    iget-object v0, p0, Lhh4;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    :pswitch_5
+    return-void
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
         :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public b()V
+    .locals 2
+
+    iget v0, p0, Lhh4;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lhh4;->b:Ljava/lang/Object;
+
+    check-cast v0, Lih4;
+
+    iget-object v1, v0, Lih4;->c:Loac;
+
+    check-cast v1, Lmk0;
+
+    invoke-virtual {v1}, Lmk0;->f()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v0, v0, Lih4;->g:Lgu7;
+
+    invoke-virtual {v0}, Lgu7;->c()V
+
+    :cond_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
         :pswitch_0
     .end packed-switch
 .end method

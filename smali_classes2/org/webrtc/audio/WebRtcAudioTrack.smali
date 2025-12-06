@@ -223,11 +223,11 @@
         value = 0x1d
     .end annotation
 
-    invoke-static {p1}, Lyjh;->a(Landroid/media/AudioAttributes;)I
+    invoke-static {p1}, Lyhh;->a(Landroid/media/AudioAttributes;)I
 
     move-result p1
 
-    invoke-static {p0, p1}, Lyjh;->c(Landroid/media/AudioAttributes$Builder;I)Landroid/media/AudioAttributes$Builder;
+    invoke-static {p0, p1}, Lyhh;->c(Landroid/media/AudioAttributes$Builder;I)Landroid/media/AudioAttributes$Builder;
 
     move-result-object p0
 
@@ -999,7 +999,7 @@
 
     const-string v6, "AudioTrack: session ID: "
 
-    invoke-static {v6, v0, v4, v1, v5}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v6, v0, v4, v1, v5}, Lwy1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -1375,7 +1375,7 @@
 
     const-string v3, "AudioTrack.play failed - incorrect state :"
 
-    invoke-static {v1, v3}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v3}, Lho7;->f(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1396,7 +1396,7 @@
 
     const-string v3, "AudioTrack.play failed: "
 
-    invoke-static {v3, v0}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v0}, Lwy1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

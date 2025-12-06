@@ -1,20 +1,55 @@
-.class public abstract Lrqc;
-.super Ljava/lang/Object;
+.class public final Lrqc;
+.super Lq44;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_layout_quick_camera_api_view:I = 0x7f0d00f1
+# instance fields
+.field public X:Lws5;
 
-.field public static oneme_ll_chat_media_progress:I = 0x7f0d00f2
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public static oneme_media_bar_header_view:I = 0x7f0d00f4
+.field public final synthetic Z:Ltqc;
 
-.field public static oneme_row_gallery_camera:I = 0x7f0d00f5
+.field public d:Ltqc;
 
-.field public static oneme_row_gallery_media:I = 0x7f0d00f6
+.field public o:Llt5;
 
-.field public static oneme_row_gallery_media_check_button_layout:I = 0x7f0d00f7
+.field public s0:I
 
-.field public static oneme_view_media_permissions:I = 0x7f0d00f8
 
-.field public static row_media_bar_extra_actions:I = 0x7f0d013d
+# direct methods
+.method public constructor <init>(Ltqc;Lq44;)V
+    .locals 0
+
+    iput-object p1, p0, Lrqc;->Z:Ltqc;
+
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lrqc;->Y:Ljava/lang/Object;
+
+    iget p1, p0, Lrqc;->s0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lrqc;->s0:I
+
+    iget-object p1, p0, Lrqc;->Z:Ltqc;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, v0, p0}, Ltqc;->d(Llt5;Lws5;Lq44;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method

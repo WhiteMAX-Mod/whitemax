@@ -1,40 +1,60 @@
-.class public abstract Lxzi;
+.class public final Lxzi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpqa;
+
+
+# static fields
+.field public static final a:Lxzi;
+
 
 # direct methods
-.method public static a(Landroid/widget/EditText;)Z
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-virtual {p0}, Landroid/widget/TextView;->getInputType()I
+    new-instance v0, Lxzi;
 
-    move-result p0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p0, :cond_0
+    sput-object v0, Lxzi;->a:Lxzi;
 
-    const/4 p0, 0x1
+    new-instance v0, Lmli;
 
-    return p0
+    const/4 v1, 0x1
 
-    :cond_0
-    const/4 p0, 0x0
+    invoke-direct {v0, v1}, Lmli;-><init>(I)V
 
-    return p0
-.end method
+    const-class v1, Lemi;
 
-.method public static final b(Lzcg;)V
-    .locals 2
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    new-instance v0, Lnee;
+    move-result-object v0
 
-    const/4 v1, 0x5
+    const/4 v2, 0x2
 
-    invoke-direct {v0, v1}, Lnee;-><init>(I)V
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    const-class v1, Lvf4;
+    move-result-object v0
 
-    invoke-virtual {p0, v1, v0}, Lzcg;->c(Ljava/lang/Class;Lji7;)V
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

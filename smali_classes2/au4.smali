@@ -1,176 +1,127 @@
-.class public abstract Lau4;
-.super Ljava/lang/Object;
+.class public final Lau4;
+.super Lkua;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/lang/Object;
+# instance fields
+.field public final b:Lbu4;
 
-.field public static final b:Ljava/lang/Object;
+.field public final c:Ltvd;
 
-.field public static final c:Ljava/lang/Object;
+.field public final d:Ljdc;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(La93;Lwo3;Lubg;Ljava/util/List;)V
+    .locals 6
 
-    new-instance v0, Lbq3;
+    invoke-direct {p0, p1}, Lkua;-><init>(La93;)V
 
-    const/16 v1, 0x12
+    new-instance v2, Lrl;
 
-    invoke-direct {v0, v1}, Lbq3;-><init>(I)V
+    const/4 v0, 0x3
 
-    const/4 v1, 0x2
+    invoke-direct {v2, v0, p2}, Lrl;-><init>(ILjava/lang/Object;)V
 
-    invoke-static {v1, v0}, Lrci;->b(ILji6;)Liu7;
+    new-instance v1, Lkob;
 
-    move-result-object v0
+    new-instance p2, Ltlf;
 
-    sput-object v0, Lau4;->a:Ljava/lang/Object;
+    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lbq3;
+    invoke-direct {v1, p2}, Lkob;-><init>(Lh97;)V
 
-    const/16 v2, 0x13
+    iget-object p2, p1, La93;->d:Ljava/lang/Object;
 
-    invoke-direct {v0, v2}, Lbq3;-><init>(I)V
+    check-cast p2, Ljm;
 
-    invoke-static {v1, v0}, Lrci;->b(ILji6;)Liu7;
+    iput-object p2, v1, Lkob;->X:Ljava/lang/Object;
 
-    move-result-object v0
+    new-instance p2, Ldz4;
 
-    sput-object v0, Lau4;->b:Ljava/lang/Object;
+    new-instance v0, Lt9f;
 
-    new-instance v0, Lbq3;
+    const/16 v3, 0xb
 
-    const/16 v2, 0x14
+    invoke-direct {v0, v3, v2}, Lt9f;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {v0, v2}, Lbq3;-><init>(I)V
+    invoke-direct {p2, v0}, Ldz4;-><init>(Lt9f;)V
 
-    invoke-static {v1, v0}, Lrci;->b(ILji6;)Liu7;
+    iget-object v0, v1, Lkob;->b:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast v0, Lrl;
 
-    sput-object v0, Lau4;->c:Ljava/lang/Object;
+    iput-object p2, v0, Lrl;->c:Ljava/lang/Object;
+
+    new-instance v0, Lbu4;
+
+    iget-object p1, p1, La93;->c:Ljava/lang/Object;
+
+    move-object v4, p1
+
+    check-cast v4, Lxtd;
+
+    move-object v3, p3
+
+    move-object v5, p4
+
+    invoke-direct/range {v0 .. v5}, Lbu4;-><init>(Lkob;Lrl;Lubg;Lxtd;Ljava/util/List;)V
+
+    new-instance p1, Ljdc;
+
+    const/16 p2, 0x8
+
+    invoke-direct {p1, v2, v0, v1, p2}, Ljdc;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    iput-object p1, p0, Lau4;->d:Ljdc;
+
+    iput-object v0, p0, Lau4;->b:Lbu4;
+
+    new-instance p1, Ltvd;
+
+    invoke-direct {p1, v0}, Ltvd;-><init>(Lml;)V
+
+    iput-object p1, p0, Lau4;->c:Ltvd;
 
     return-void
 .end method
 
-.method public static final a(Landroidx/fragment/app/b;)I
-    .locals 4
 
-    new-instance v0, Landroid/util/TypedValue;
-
-    invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
-
-    invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
-
-    move-result-object v1
-
-    const v2, 0x10102eb
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v1, v2, v0, v3}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    iget v0, v0, Landroid/util/TypedValue;->data:I
-
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p0
-
-    invoke-static {v0, p0}, Landroid/util/TypedValue;->complexToDimensionPixelSize(ILandroid/util/DisplayMetrics;)I
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public static final b(I)I
+# virtual methods
+.method public final b()Lml;
     .locals 1
 
-    int-to-float p0, p0
-
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p0, v0
-
-    invoke-static {p0}, Lfhi;->b(F)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static final c()F
-    .locals 1
-
-    sget-object v0, Lau4;->c:Ljava/lang/Object;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->floatValue()F
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static final d()Landroid/content/res/Resources;
-    .locals 1
-
-    sget-object v0, Lau4;->a:Ljava/lang/Object;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/content/res/Resources;
+    iget-object v0, p0, Lau4;->b:Lbu4;
 
     return-object v0
 .end method
 
-.method public static final e(F)F
+.method public final e()Llua;
+    .locals 1
+
+    iget-object v0, p0, Lau4;->d:Ljdc;
+
+    return-object v0
+.end method
+
+.method public final f()Ltvd;
+    .locals 1
+
+    iget-object v0, p0, Lau4;->c:Ltvd;
+
+    return-object v0
+.end method
+
+.method public final g()La93;
     .locals 2
 
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+    new-instance v0, La93;
 
-    move-result-object v0
+    const/4 v1, 0x5
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-direct {v0, v1}, La93;-><init>(I)V
 
-    move-result-object v0
+    invoke-virtual {p0, v0}, Lkua;->a(La93;)V
 
-    const/4 v1, 0x2
-
-    invoke-static {v1, p0, v0}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
-
-    move-result p0
-
-    return p0
+    return-object v0
 .end method

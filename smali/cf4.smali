@@ -2,125 +2,62 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzzb;
-
 
 # instance fields
-.field public final a:Lkn6;
+.field public final a:Landroid/content/Context;
 
-.field public final b:Ljava/util/concurrent/Executor;
+.field public final b:Ljava/lang/String;
 
-.field public final c:Ls97;
+.field public final c:Lorf;
 
-.field public final d:Lj7;
+.field public final d:Lmc5;
 
-.field public final e:Lwz4;
+.field public final e:Ljava/util/List;
 
 .field public final f:Z
 
-.field public final g:Lzzb;
+.field public final g:I
 
-.field public final h:I
+.field public final h:Ljava/util/concurrent/Executor;
 
-.field public final i:Lp95;
+.field public final i:Ljava/util/concurrent/Executor;
+
+.field public final j:Z
+
+.field public final k:Z
+
+.field public final l:Ljava/util/Set;
 
 
 # direct methods
-.method public constructor <init>(Lkn6;Ljava/util/concurrent/Executor;Ls97;Lj7;Lwz4;ZLzzb;ILp95;)V
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lorf;Lmc5;Ljava/util/ArrayList;ZILjava/util/concurrent/Executor;Ljava/util/concurrent/Executor;ZZLjava/util/LinkedHashSet;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcf4;->a:Lkn6;
+    iput-object p1, p0, Lcf4;->a:Landroid/content/Context;
 
-    iput-object p2, p0, Lcf4;->b:Ljava/util/concurrent/Executor;
+    iput-object p2, p0, Lcf4;->b:Ljava/lang/String;
 
-    iput-object p3, p0, Lcf4;->c:Ls97;
+    iput-object p3, p0, Lcf4;->c:Lorf;
 
-    iput-object p4, p0, Lcf4;->d:Lj7;
+    iput-object p4, p0, Lcf4;->d:Lmc5;
 
-    iput-object p5, p0, Lcf4;->e:Lwz4;
+    iput-object p5, p0, Lcf4;->e:Ljava/util/List;
 
     iput-boolean p6, p0, Lcf4;->f:Z
 
-    iput-object p7, p0, Lcf4;->g:Lzzb;
+    iput p7, p0, Lcf4;->g:I
 
-    iput p8, p0, Lcf4;->h:I
+    iput-object p8, p0, Lcf4;->h:Ljava/util/concurrent/Executor;
 
-    iput-object p9, p0, Lcf4;->i:Lp95;
+    iput-object p9, p0, Lcf4;->i:Ljava/util/concurrent/Executor;
 
-    return-void
-.end method
+    iput-boolean p10, p0, Lcf4;->j:Z
 
+    iput-boolean p11, p0, Lcf4;->k:Z
 
-# virtual methods
-.method public final a(Ljj0;La0c;)V
-    .locals 9
-
-    invoke-static {}, Loh6;->l()Lnh6;
-
-    move-object v0, p2
-
-    check-cast v0, Lqk0;
-
-    iget-object v0, v0, Lqk0;->a:Lab7;
-
-    iget-object v1, v0, Lab7;->b:Landroid/net/Uri;
-
-    invoke-static {v1}, Lbhg;->d(Landroid/net/Uri;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    iget-object v0, v0, Lab7;->b:Landroid/net/Uri;
-
-    invoke-static {v0}, Lbb7;->c(Landroid/net/Uri;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Lye4;
-
-    iget v1, p0, Lcf4;->h:I
-
-    invoke-direct {v0, p0, p1, p2, v1}, Lbf4;-><init>(Lcf4;Ljj0;La0c;I)V
-
-    move-object v3, p0
-
-    move-object v5, p2
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v6, Lgdc;
-
-    iget-object v0, p0, Lcf4;->a:Lkn6;
-
-    invoke-direct {v6, v0}, Lgdc;-><init>(Lkn6;)V
-
-    new-instance v2, Lze4;
-
-    iget-object v7, p0, Lcf4;->d:Lj7;
-
-    iget v8, p0, Lcf4;->h:I
-
-    move-object v3, p0
-
-    move-object v4, p1
-
-    move-object v5, p2
-
-    invoke-direct/range {v2 .. v8}, Lze4;-><init>(Lcf4;Ljj0;La0c;Lgdc;Lj7;I)V
-
-    move-object v0, v2
-
-    :goto_0
-    iget-object p1, v3, Lcf4;->g:Lzzb;
-
-    invoke-interface {p1, v0, v5}, Lzzb;->a(Ljj0;La0c;)V
+    iput-object p12, p0, Lcf4;->l:Ljava/util/Set;
 
     return-void
 .end method

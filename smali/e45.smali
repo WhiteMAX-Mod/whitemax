@@ -1,31 +1,137 @@
 .class public final Le45;
-.super Ljava/lang/Object;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
 
-.field public final b:Z
-
-.field public final c:[B
-
-.field public final d:[B
+.field public final synthetic b:Lf45;
 
 
 # direct methods
-.method public constructor <init>(IZ[B[B)V
+.method public synthetic constructor <init>(Lf45;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Le45;->a:I
 
-    iput p1, p0, Le45;->a:I
+    iput-object p1, p0, Le45;->b:Lf45;
 
-    iput-boolean p2, p0, Le45;->b:Z
-
-    iput-object p3, p0, Le45;->c:[B
-
-    iput-object p4, p0, Le45;->d:[B
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 2
+
+    iget v0, p0, Le45;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
+
+    return-void
+
+    :pswitch_0
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
+
+    iget-object p1, p0, Le45;->b:Lf45;
+
+    invoke-static {p1}, Lf45;->a(Lf45;)V
+
+    iget-object v0, p1, Lf45;->X:Ljava/util/ArrayList;
+
+    if-eqz v0, :cond_0
+
+    iget-boolean v1, p1, Lf45;->Y:Z
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lle;
+
+    invoke-virtual {v1, p1}, Lle;->a(Landroid/graphics/drawable/Drawable;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .locals 2
+
+    iget v0, p0, Le45;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationStart(Landroid/animation/Animator;)V
+
+    return-void
+
+    :pswitch_0
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationStart(Landroid/animation/Animator;)V
+
+    iget-object p1, p0, Le45;->b:Lf45;
+
+    iget-object v0, p1, Lf45;->X:Ljava/util/ArrayList;
+
+    if-eqz v0, :cond_0
+
+    iget-boolean v1, p1, Lf45;->Y:Z
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lle;
+
+    invoke-virtual {v1, p1}, Lle;->b(Landroid/graphics/drawable/Drawable;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

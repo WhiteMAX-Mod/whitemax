@@ -1,100 +1,87 @@
-.class public abstract Lix7;
-.super Landroid/app/Service;
+.class public final Lix7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lfx7;
+.implements Lzy7;
 
 
-# instance fields
-.field public final a:Lyni;
+# static fields
+.field public static final a:Lix7;
+
+.field public static final b:Ltee;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Landroid/app/Service;-><init>()V
+    new-instance v0, Lix7;
 
-    new-instance v0, Lyni;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, p0}, Lyni;-><init>(Lix7;)V
+    sput-object v0, Lix7;->a:Lix7;
 
-    iput-object v0, p0, Lix7;->a:Lyni;
+    sget-object v0, Lwee;->c:Lwee;
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Lree;
+
+    const-string v2, "kotlinx.serialization.json.JsonNull"
+
+    invoke-static {v2, v0, v1}, Lr9j;->a(Ljava/lang/String;Ls9j;[Lree;)Ltee;
+
+    move-result-object v0
+
+    sput-object v0, Lix7;->b:Ltee;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onBind(Landroid/content/Intent;)Landroid/os/IBinder;
+.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
+    .locals 0
+
+    check-cast p2, Lhx7;
+
+    invoke-static {p1}, Lioi;->a(Lkotlinx/serialization/json/internal/b;)V
+
+    invoke-virtual {p1}, Lkotlinx/serialization/json/internal/b;->m()V
+
+    return-void
+.end method
+
+.method public final b(Llh4;)Ljava/lang/Object;
     .locals 1
 
-    iget-object p1, p0, Lix7;->a:Lyni;
+    invoke-static {p1}, Lioi;->b(Llh4;)Lkotlinx/serialization/json/internal/a;
 
-    sget-object v0, Lgw7;->ON_START:Lgw7;
+    invoke-interface {p1}, Llh4;->v()Z
 
-    invoke-virtual {p1, v0}, Lyni;->y(Lgw7;)V
+    move-result p1
 
-    const/4 p1, 0x0
+    if-nez p1, :cond_0
+
+    sget-object p1, Lhx7;->INSTANCE:Lhx7;
 
     return-object p1
+
+    :cond_0
+    new-instance p1, Lkotlinx/serialization/json/internal/JsonDecodingException;
+
+    const-string v0, "Expected \'null\' literal"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
-.method public onCreate()V
-    .locals 2
-
-    iget-object v0, p0, Lix7;->a:Lyni;
-
-    sget-object v1, Lgw7;->ON_CREATE:Lgw7;
-
-    invoke-virtual {v0, v1}, Lyni;->y(Lgw7;)V
-
-    invoke-super {p0}, Landroid/app/Service;->onCreate()V
-
-    return-void
-.end method
-
-.method public onDestroy()V
-    .locals 2
-
-    sget-object v0, Lgw7;->ON_STOP:Lgw7;
-
-    iget-object v1, p0, Lix7;->a:Lyni;
-
-    invoke-virtual {v1, v0}, Lyni;->y(Lgw7;)V
-
-    sget-object v0, Lgw7;->ON_DESTROY:Lgw7;
-
-    invoke-virtual {v1, v0}, Lyni;->y(Lgw7;)V
-
-    invoke-super {p0}, Landroid/app/Service;->onDestroy()V
-
-    return-void
-.end method
-
-.method public final onStart(Landroid/content/Intent;I)V
-    .locals 2
-
-    iget-object v0, p0, Lix7;->a:Lyni;
-
-    sget-object v1, Lgw7;->ON_START:Lgw7;
-
-    invoke-virtual {v0, v1}, Lyni;->y(Lgw7;)V
-
-    invoke-super {p0, p1, p2}, Landroid/app/Service;->onStart(Landroid/content/Intent;I)V
-
-    return-void
-.end method
-
-.method public final x()Lhx7;
+.method public final d()Lree;
     .locals 1
 
-    iget-object v0, p0, Lix7;->a:Lyni;
-
-    iget-object v0, v0, Lyni;->b:Ljava/lang/Object;
-
-    check-cast v0, Lhx7;
+    sget-object v0, Lix7;->b:Ltee;
 
     return-object v0
 .end method

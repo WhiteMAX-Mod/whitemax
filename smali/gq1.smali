@@ -1,188 +1,164 @@
 .class public final Lgq1;
-.super Ljava/lang/Object;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Lxg1;
+.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic a:Lhq1;
+.field public final synthetic X:Lgk1;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lhq1;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lgk1;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lgq1;->X:Lgk1;
 
-    iput-object p1, p0, Lgq1;->a:Lhq1;
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final B(Lmi1;)V
-    .locals 11
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lgq1;->a:Lhq1;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, v0, Lhq1;->W0:Lfq1;
-
-    if-eqz v0, :cond_1
-
-    check-cast v0, Lnl1;
-
-    iget-object v0, v0, Lnl1;->a:Lone/me/calls/ui/ui/call/CallScreen;
-
-    sget-object v1, Lone/me/calls/ui/ui/call/CallScreen;->M0:Llga;
-
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/CallScreen;->L0()Lio1;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lio1;->c:Lcv1;
-
-    iget-object v0, v0, Lcv1;->o:Lx0f;
-
-    :goto_0
-    invoke-virtual {v0}, Lx0f;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v2, v1
-
-    check-cast v2, Lns1;
-
-    const-wide/16 v8, 0x0
-
-    const/16 v10, 0xfb
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    move-object v5, p1
-
-    invoke-static/range {v2 .. v10}, Lns1;->a(Lns1;Lmi1;Lmi1;Lmi1;Lvzg;Lshg;JI)Lns1;
+    invoke-virtual {p0, p1, p2}, Lgq1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    invoke-virtual {v0, v1, p1}, Lx0f;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    check-cast p1, Lgq1;
 
-    move-result p1
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    if-eqz p1, :cond_0
+    invoke-virtual {p1, p2}, Lgq1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    goto :goto_1
+    return-object p2
+.end method
 
-    :cond_0
-    move-object p1, v5
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lgq1;
+
+    iget-object v1, p0, Lgq1;->X:Lgk1;
+
+    invoke-direct {v0, p2, v1}, Lgq1;-><init>(Lkotlin/coroutines/Continuation;Lgk1;)V
+
+    iput-object p1, v0, Lgq1;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lgq1;->o:Ljava/lang/Object;
+
+    check-cast p1, Laq1;
+
+    iget-object v0, p1, Laq1;->c:Lzp1;
+
+    instance-of v0, v0, Lwp1;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    move v0, v1
 
     goto :goto_0
 
+    :cond_0
+    const/16 v0, 0x8
+
+    :goto_0
+    iget-object v2, p0, Lgq1;->X:Lgk1;
+
+    invoke-virtual {v2, v0}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object v0, p1, Laq1;->c:Lzp1;
+
+    sget-object v3, Lwp1;->a:Lwp1;
+
+    invoke-static {v0, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_4
+
+    sget-object v3, Lyp1;->a:Lyp1;
+
+    invoke-static {v0, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    iget-object p1, p1, Laq1;->b:Lvp1;
+
+    if-eqz p1, :cond_1
+
+    iget-object p1, p1, Lvp1;->b:Ls5g;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ls5g;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    goto :goto_1
+
     :cond_1
+    const/4 p1, 0x0
+
     :goto_1
-    return-void
-.end method
+    invoke-virtual {v2, p1}, Lgk1;->setBody(Ljava/lang/CharSequence;)V
 
-.method public final L()V
-    .locals 2
+    invoke-virtual {v2, v1}, Lgk1;->setLoading(Z)V
 
-    iget-object v0, p0, Lgq1;->a:Lhq1;
+    goto :goto_2
 
-    iget-object v0, v0, Lhq1;->W0:Lfq1;
+    :cond_2
+    sget-object p1, Lxp1;->a:Lxp1;
 
-    if-eqz v0, :cond_0
+    invoke-static {v0, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    check-cast v0, Lnl1;
+    move-result p1
 
-    iget-object v0, v0, Lnl1;->a:Lone/me/calls/ui/ui/call/CallScreen;
+    if-eqz p1, :cond_3
 
-    sget-object v1, Lone/me/calls/ui/ui/call/CallScreen;->M0:Llga;
+    const/4 p1, 0x1
 
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/CallScreen;->L0()Lio1;
+    invoke-virtual {v2, p1}, Lgk1;->setLoading(Z)V
 
-    move-result-object v0
+    goto :goto_2
 
-    iget-object v0, v0, Lio1;->q0:Lwr1;
+    :cond_3
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    invoke-virtual {v0}, Lwr1;->h()V
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    :cond_0
-    return-void
-.end method
+    throw p1
 
-.method public final q(Lmi1;)V
-    .locals 1
+    :cond_4
+    :goto_2
+    sget-object p1, Lqqg;->a:Lqqg;
 
-    iget-object v0, p0, Lgq1;->a:Lhq1;
-
-    iget-object v0, v0, Lhq1;->W0:Lfq1;
-
-    if-eqz v0, :cond_0
-
-    check-cast v0, Lnl1;
-
-    invoke-virtual {v0, p1}, Lnl1;->q(Lmi1;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final r(Lmi1;Landroid/graphics/Point;)V
-    .locals 2
-
-    iget-object v0, p0, Lgq1;->a:Lhq1;
-
-    iget-object v0, v0, Lhq1;->W0:Lfq1;
-
-    if-eqz v0, :cond_0
-
-    check-cast v0, Lnl1;
-
-    iget-object v0, v0, Lnl1;->a:Lone/me/calls/ui/ui/call/CallScreen;
-
-    sget-object v1, Lone/me/calls/ui/ui/call/CallScreen;->M0:Llga;
-
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/CallScreen;->L0()Lio1;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1, p2}, Lio1;->A(Lmi1;Landroid/graphics/Point;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final t(Lmi1;)V
-    .locals 2
-
-    iget-object v0, p0, Lgq1;->a:Lhq1;
-
-    iget-object v0, v0, Lhq1;->W0:Lfq1;
-
-    if-eqz v0, :cond_0
-
-    check-cast v0, Lnl1;
-
-    iget-object v0, v0, Lnl1;->a:Lone/me/calls/ui/ui/call/CallScreen;
-
-    sget-object v1, Lone/me/calls/ui/ui/call/CallScreen;->M0:Llga;
-
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/CallScreen;->L0()Lio1;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lio1;->q0:Lwr1;
-
-    invoke-virtual {v0, p1}, Lwr1;->f(Lmi1;)V
-
-    :cond_0
-    return-void
+    return-object p1
 .end method

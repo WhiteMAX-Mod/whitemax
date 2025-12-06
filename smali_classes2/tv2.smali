@@ -1,85 +1,45 @@
-.class public final Ltv2;
-.super Lp0;
+.class public abstract Ltv2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ll54;
 
-
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:Lk18;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lh54;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p2, p0, Ltv2;->a:I
+    sget-object v0, Luv2;->a:Luv2;
 
-    invoke-direct {p0, p1}, Lp0;-><init>(Lh54;)V
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
 
-    return-void
-.end method
+    move-result-object v1
 
+    const/16 v2, 0x25b
 
-# virtual methods
-.method public final i(Li54;Ljava/lang/Throwable;)V
-    .locals 2
+    invoke-virtual {v1, v2}, Lw5;->d(I)Lbwf;
 
-    iget v0, p0, Ltv2;->a:I
+    move-result-object v1
 
-    packed-switch v0, :pswitch_data_0
+    sput-object v1, Ltv2;->a:Lk18;
 
-    instance-of p1, p2, Lone/me/sdk/design/theme/ChromaIllegalApplyThemeException;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
 
-    if-eqz p1, :cond_0
+    move-result-object v1
 
-    move-object p1, p2
+    const/16 v2, 0x1c6
 
-    check-cast p1, Lone/me/sdk/design/theme/ChromaIllegalApplyThemeException;
+    invoke-virtual {v1, v2}, Lw5;->d(I)Lbwf;
 
-    goto :goto_0
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
 
-    :cond_0
-    const/4 p1, 0x0
+    move-result-object v0
 
-    :goto_0
-    if-nez p1, :cond_1
+    const/16 v1, 0xa
 
-    new-instance p1, Lone/me/sdk/design/theme/ChromaIllegalApplyThemeException;
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
-
-    :cond_1
-    sget-object p2, Lfkg;->a:Lfkg;
-
-    invoke-virtual {p2}, Lfkg;->b()Ls64;
-
-    move-result-object p2
-
-    const-string v0, "ONEME-8759"
-
-    invoke-virtual {p2, v0, p1}, Ls64;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v0, v1}, Lw5;->d(I)Lbwf;
 
     return-void
-
-    :pswitch_0
-    const-string v0, "fail in %s"
-
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    const-string v1, "vv2"
-
-    invoke-static {v1, p2, v0, p1}, Ltei;->h(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -3,19 +3,19 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lbg5;
+.implements Lij5;
 
 
 # static fields
-.field public static final o:Ljava/lang/String;
+.field public static final d:Ljava/lang/String;
 
 
 # instance fields
-.field public a:Lsoh;
+.field public a:Lc5i;
 
 .field public final b:Ljava/util/HashMap;
 
-.field public final c:Lk22;
+.field public final c:Lssb;
 
 
 # direct methods
@@ -24,11 +24,11 @@
 
     const-string v0, "SystemJobService"
 
-    invoke-static {v0}, Lxyh;->l(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcei;->m(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Landroidx/work/impl/background/systemjob/SystemJobService;->o:Ljava/lang/String;
+    sput-object v0, Landroidx/work/impl/background/systemjob/SystemJobService;->d:Ljava/lang/String;
 
     return-void
 .end method
@@ -44,18 +44,18 @@
 
     iput-object v0, p0, Landroidx/work/impl/background/systemjob/SystemJobService;->b:Ljava/util/HashMap;
 
-    new-instance v0, Lk22;
+    new-instance v0, Lssb;
 
-    const/4 v1, 0x1
+    const/16 v1, 0x9
 
-    invoke-direct {v0, v1}, Lk22;-><init>(I)V
+    invoke-direct {v0, v1}, Lssb;-><init>(I)V
 
-    iput-object v0, p0, Landroidx/work/impl/background/systemjob/SystemJobService;->c:Lk22;
+    iput-object v0, p0, Landroidx/work/impl/background/systemjob/SystemJobService;->c:Lssb;
 
     return-void
 .end method
 
-.method public static b(Landroid/app/job/JobParameters;)Lloh;
+.method public static b(Landroid/app/job/JobParameters;)Lv4i;
     .locals 3
 
     const-string v0, "EXTRA_WORK_SPEC_ID"
@@ -73,7 +73,7 @@
 
     if-eqz v1, :cond_0
 
-    new-instance v1, Lloh;
+    new-instance v1, Lv4i;
 
     invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -85,7 +85,7 @@
 
     move-result p0
 
-    invoke-direct {v1, v0, p0}, Lloh;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v1, v0, p0}, Lv4i;-><init>(Ljava/lang/String;I)V
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -100,20 +100,20 @@
 
 
 # virtual methods
-.method public final a(Lloh;Z)V
+.method public final a(Lv4i;Z)V
     .locals 4
 
-    invoke-static {}, Lxyh;->e()Lxyh;
+    invoke-static {}, Lcei;->g()Lcei;
 
     move-result-object v0
 
-    sget-object v1, Landroidx/work/impl/background/systemjob/SystemJobService;->o:Ljava/lang/String;
+    sget-object v1, Landroidx/work/impl/background/systemjob/SystemJobService;->d:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v3, p1, Lloh;->a:Ljava/lang/String;
+    iget-object v3, p1, Lv4i;->a:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -125,7 +125,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lxyh;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcei;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Landroidx/work/impl/background/systemjob/SystemJobService;->b:Ljava/util/HashMap;
 
@@ -144,9 +144,9 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object v0, p0, Landroidx/work/impl/background/systemjob/SystemJobService;->c:Lk22;
+    iget-object v0, p0, Landroidx/work/impl/background/systemjob/SystemJobService;->c:Lssb;
 
-    invoke-virtual {v0, p1}, Lk22;->c(Lloh;)Lf0f;
+    invoke-virtual {v0, p1}, Lssb;->v(Lv4i;)Lacf;
 
     if-eqz v1, :cond_0
 
@@ -176,15 +176,15 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lsoh;->d(Landroid/content/Context;)Lsoh;
+    invoke-static {v0}, Lc5i;->d(Landroid/content/Context;)Lc5i;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/work/impl/background/systemjob/SystemJobService;->a:Lsoh;
+    iput-object v0, p0, Landroidx/work/impl/background/systemjob/SystemJobService;->a:Lc5i;
 
-    iget-object v0, v0, Lsoh;->f:Lvzb;
+    iget-object v0, v0, Lc5i;->f:Ljac;
 
-    invoke-virtual {v0, p0}, Lvzb;->b(Lbg5;)V
+    invoke-virtual {v0, p0}, Ljac;->b(Lij5;)V
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -207,15 +207,15 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lxyh;->e()Lxyh;
+    invoke-static {}, Lcei;->g()Lcei;
 
     move-result-object v0
 
-    sget-object v1, Landroidx/work/impl/background/systemjob/SystemJobService;->o:Ljava/lang/String;
+    sget-object v1, Landroidx/work/impl/background/systemjob/SystemJobService;->d:Ljava/lang/String;
 
     const-string v2, "Could not find WorkManager instance; this may be because an auto-backup is in progress. Ignoring JobScheduler commands for now. Please make sure that you are initializing WorkManager if you have manually disabled WorkManagerInitializer."
 
-    invoke-virtual {v0, v1, v2}, Lxyh;->o(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcei;->o(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -234,13 +234,13 @@
 
     invoke-super {p0}, Landroid/app/Service;->onDestroy()V
 
-    iget-object v0, p0, Landroidx/work/impl/background/systemjob/SystemJobService;->a:Lsoh;
+    iget-object v0, p0, Landroidx/work/impl/background/systemjob/SystemJobService;->a:Lc5i;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lsoh;->f:Lvzb;
+    iget-object v0, v0, Lc5i;->f:Ljac;
 
-    invoke-virtual {v0, p0}, Lvzb;->e(Lbg5;)V
+    invoke-virtual {v0, p0}, Ljac;->e(Lij5;)V
 
     :cond_0
     return-void
@@ -253,7 +253,7 @@
 
     const-string v1, "Job is already being executed by SystemJobService: "
 
-    iget-object v2, p0, Landroidx/work/impl/background/systemjob/SystemJobService;->a:Lsoh;
+    iget-object v2, p0, Landroidx/work/impl/background/systemjob/SystemJobService;->a:Lc5i;
 
     const/4 v3, 0x1
 
@@ -261,36 +261,36 @@
 
     if-nez v2, :cond_0
 
-    invoke-static {}, Lxyh;->e()Lxyh;
+    invoke-static {}, Lcei;->g()Lcei;
 
     move-result-object v0
 
-    sget-object v1, Landroidx/work/impl/background/systemjob/SystemJobService;->o:Ljava/lang/String;
+    sget-object v1, Landroidx/work/impl/background/systemjob/SystemJobService;->d:Ljava/lang/String;
 
     const-string v2, "WorkManager is not initialized; requesting retry."
 
-    invoke-virtual {v0, v1, v2}, Lxyh;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcei;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p0, p1, v3}, Landroid/app/job/JobService;->jobFinished(Landroid/app/job/JobParameters;Z)V
 
     return v4
 
     :cond_0
-    invoke-static {p1}, Landroidx/work/impl/background/systemjob/SystemJobService;->b(Landroid/app/job/JobParameters;)Lloh;
+    invoke-static {p1}, Landroidx/work/impl/background/systemjob/SystemJobService;->b(Landroid/app/job/JobParameters;)Lv4i;
 
     move-result-object v2
 
     if-nez v2, :cond_1
 
-    invoke-static {}, Lxyh;->e()Lxyh;
+    invoke-static {}, Lcei;->g()Lcei;
 
     move-result-object p1
 
-    sget-object v0, Landroidx/work/impl/background/systemjob/SystemJobService;->o:Ljava/lang/String;
+    sget-object v0, Landroidx/work/impl/background/systemjob/SystemJobService;->d:Ljava/lang/String;
 
     const-string v1, "WorkSpec id not found!"
 
-    invoke-virtual {p1, v0, v1}, Lxyh;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v0, v1}, Lcei;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v4
 
@@ -308,11 +308,11 @@
 
     if-eqz v6, :cond_2
 
-    invoke-static {}, Lxyh;->e()Lxyh;
+    invoke-static {}, Lcei;->g()Lcei;
 
     move-result-object p1
 
-    sget-object v0, Landroidx/work/impl/background/systemjob/SystemJobService;->o:Ljava/lang/String;
+    sget-object v0, Landroidx/work/impl/background/systemjob/SystemJobService;->d:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -324,7 +324,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p1, v0, v1}, Lxyh;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v0, v1}, Lcei;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     monitor-exit v5
 
@@ -336,11 +336,11 @@
     goto :goto_0
 
     :cond_2
-    invoke-static {}, Lxyh;->e()Lxyh;
+    invoke-static {}, Lcei;->g()Lcei;
 
     move-result-object v1
 
-    sget-object v4, Landroidx/work/impl/background/systemjob/SystemJobService;->o:Ljava/lang/String;
+    sget-object v4, Landroidx/work/impl/background/systemjob/SystemJobService;->d:Ljava/lang/String;
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -352,7 +352,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v1, v4, v0}, Lxyh;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1, v4, v0}, Lcei;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Landroidx/work/impl/background/systemjob/SystemJobService;->b:Ljava/util/HashMap;
 
@@ -364,17 +364,19 @@
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    new-instance v1, Ldgd;
+    new-instance v1, Lhc8;
 
-    invoke-direct {v1}, Ldgd;-><init>()V
+    const/16 v4, 0x13
 
-    invoke-static {p1}, Lpjf;->b(Landroid/app/job/JobParameters;)[Landroid/net/Uri;
+    invoke-direct {v1, v4}, Lhc8;-><init>(I)V
+
+    invoke-static {p1}, Lbxf;->b(Landroid/app/job/JobParameters;)[Landroid/net/Uri;
 
     move-result-object v4
 
     if-eqz v4, :cond_3
 
-    invoke-static {p1}, Lpjf;->b(Landroid/app/job/JobParameters;)[Landroid/net/Uri;
+    invoke-static {p1}, Lbxf;->b(Landroid/app/job/JobParameters;)[Landroid/net/Uri;
 
     move-result-object v4
 
@@ -382,16 +384,16 @@
 
     move-result-object v4
 
-    iput-object v4, v1, Ldgd;->b:Ljava/lang/Object;
+    iput-object v4, v1, Lhc8;->c:Ljava/lang/Object;
 
     :cond_3
-    invoke-static {p1}, Lpjf;->a(Landroid/app/job/JobParameters;)[Ljava/lang/String;
+    invoke-static {p1}, Lbxf;->a(Landroid/app/job/JobParameters;)[Ljava/lang/String;
 
     move-result-object v4
 
     if-eqz v4, :cond_4
 
-    invoke-static {p1}, Lpjf;->a(Landroid/app/job/JobParameters;)[Ljava/lang/String;
+    invoke-static {p1}, Lbxf;->a(Landroid/app/job/JobParameters;)[Ljava/lang/String;
 
     move-result-object v4
 
@@ -399,29 +401,29 @@
 
     move-result-object v4
 
-    iput-object v4, v1, Ldgd;->a:Ljava/lang/Object;
+    iput-object v4, v1, Lhc8;->b:Ljava/lang/Object;
 
     :cond_4
     const/16 v4, 0x1c
 
     if-lt v0, v4, :cond_5
 
-    invoke-static {p1}, Lqjf;->a(Landroid/app/job/JobParameters;)Landroid/net/Network;
+    invoke-static {p1}, Lcxf;->a(Landroid/app/job/JobParameters;)Landroid/net/Network;
 
     move-result-object p1
 
-    iput-object p1, v1, Ldgd;->c:Ljava/lang/Object;
+    iput-object p1, v1, Lhc8;->d:Ljava/lang/Object;
 
     :cond_5
-    iget-object p1, p0, Landroidx/work/impl/background/systemjob/SystemJobService;->a:Lsoh;
+    iget-object p1, p0, Landroidx/work/impl/background/systemjob/SystemJobService;->a:Lc5i;
 
-    iget-object v0, p0, Landroidx/work/impl/background/systemjob/SystemJobService;->c:Lk22;
+    iget-object v0, p0, Landroidx/work/impl/background/systemjob/SystemJobService;->c:Lssb;
 
-    invoke-virtual {v0, v2}, Lk22;->e(Lloh;)Lf0f;
+    invoke-virtual {v0, v2}, Lssb;->A(Lv4i;)Lacf;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0, v1}, Lsoh;->h(Lf0f;Ldgd;)V
+    invoke-virtual {p1, v0, v1}, Lc5i;->h(Lacf;Lhc8;)V
 
     return v3
 
@@ -437,26 +439,26 @@
 .method public final onStopJob(Landroid/app/job/JobParameters;)Z
     .locals 6
 
-    iget-object v0, p0, Landroidx/work/impl/background/systemjob/SystemJobService;->a:Lsoh;
+    iget-object v0, p0, Landroidx/work/impl/background/systemjob/SystemJobService;->a:Lc5i;
 
     const/4 v1, 0x1
 
     if-nez v0, :cond_0
 
-    invoke-static {}, Lxyh;->e()Lxyh;
+    invoke-static {}, Lcei;->g()Lcei;
 
     move-result-object p1
 
-    sget-object v0, Landroidx/work/impl/background/systemjob/SystemJobService;->o:Ljava/lang/String;
+    sget-object v0, Landroidx/work/impl/background/systemjob/SystemJobService;->d:Ljava/lang/String;
 
     const-string v2, "WorkManager is not initialized; requesting retry."
 
-    invoke-virtual {p1, v0, v2}, Lxyh;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v0, v2}, Lcei;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1
 
     :cond_0
-    invoke-static {p1}, Landroidx/work/impl/background/systemjob/SystemJobService;->b(Landroid/app/job/JobParameters;)Lloh;
+    invoke-static {p1}, Landroidx/work/impl/background/systemjob/SystemJobService;->b(Landroid/app/job/JobParameters;)Lv4i;
 
     move-result-object p1
 
@@ -464,24 +466,24 @@
 
     if-nez p1, :cond_1
 
-    invoke-static {}, Lxyh;->e()Lxyh;
+    invoke-static {}, Lcei;->g()Lcei;
 
     move-result-object p1
 
-    sget-object v1, Landroidx/work/impl/background/systemjob/SystemJobService;->o:Ljava/lang/String;
+    sget-object v1, Landroidx/work/impl/background/systemjob/SystemJobService;->d:Ljava/lang/String;
 
     const-string v2, "WorkSpec id not found!"
 
-    invoke-virtual {p1, v1, v2}, Lxyh;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v1, v2}, Lcei;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 
     :cond_1
-    invoke-static {}, Lxyh;->e()Lxyh;
+    invoke-static {}, Lcei;->g()Lcei;
 
     move-result-object v2
 
-    sget-object v3, Landroidx/work/impl/background/systemjob/SystemJobService;->o:Ljava/lang/String;
+    sget-object v3, Landroidx/work/impl/background/systemjob/SystemJobService;->d:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -495,7 +497,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v2, v3, v4}, Lxyh;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v2, v3, v4}, Lcei;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v2, p0, Landroidx/work/impl/background/systemjob/SystemJobService;->b:Ljava/util/HashMap;
 
@@ -510,37 +512,37 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    iget-object v2, p0, Landroidx/work/impl/background/systemjob/SystemJobService;->c:Lk22;
+    iget-object v2, p0, Landroidx/work/impl/background/systemjob/SystemJobService;->c:Lssb;
 
-    invoke-virtual {v2, p1}, Lk22;->c(Lloh;)Lf0f;
+    invoke-virtual {v2, p1}, Lssb;->v(Lv4i;)Lacf;
 
     move-result-object v2
 
     if-eqz v2, :cond_2
 
-    iget-object v3, p0, Landroidx/work/impl/background/systemjob/SystemJobService;->a:Lsoh;
+    iget-object v3, p0, Landroidx/work/impl/background/systemjob/SystemJobService;->a:Lc5i;
 
-    iget-object v4, v3, Lsoh;->d:Lw9c;
+    iget-object v4, v3, Lc5i;->d:Lu5i;
 
-    new-instance v5, Lz8f;
+    new-instance v5, Lqkf;
 
-    invoke-direct {v5, v3, v2, v0}, Lz8f;-><init>(Lsoh;Lf0f;Z)V
+    invoke-direct {v5, v3, v2, v0}, Lqkf;-><init>(Lc5i;Lacf;Z)V
 
-    invoke-interface {v4, v5}, Lbpf;->f(Ljava/lang/Runnable;)V
+    invoke-interface {v4, v5}, Lt2g;->c(Ljava/lang/Runnable;)V
 
     :cond_2
-    iget-object v0, p0, Landroidx/work/impl/background/systemjob/SystemJobService;->a:Lsoh;
+    iget-object v0, p0, Landroidx/work/impl/background/systemjob/SystemJobService;->a:Lc5i;
 
-    iget-object v0, v0, Lsoh;->f:Lvzb;
+    iget-object v0, v0, Lc5i;->f:Ljac;
 
-    iget-object p1, p1, Lloh;->a:Ljava/lang/String;
+    iget-object p1, p1, Lv4i;->a:Ljava/lang/String;
 
-    iget-object v3, v0, Lvzb;->u0:Ljava/lang/Object;
+    iget-object v3, v0, Ljac;->v0:Ljava/lang/Object;
 
     monitor-enter v3
 
     :try_start_1
-    iget-object v0, v0, Lvzb;->s0:Ljava/util/HashSet;
+    iget-object v0, v0, Ljac;->t0:Ljava/util/HashSet;
 
     invoke-virtual {v0, p1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 

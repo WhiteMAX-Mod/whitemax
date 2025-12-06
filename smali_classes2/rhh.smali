@@ -1,107 +1,59 @@
-.class public final enum Lrhh;
-.super Ljava/lang/Enum;
+.class public final Lrhh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Enum<",
-        "Lrhh;",
-        ">;"
-    }
-.end annotation
+# interfaces
+.implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 
 
-# static fields
-.field public static final Companion:Lqhh;
+# instance fields
+.field public final synthetic a:Lcm6;
 
-.field public static final a:Ljava/lang/Object;
+.field public final synthetic b:Landroid/view/ViewTreeObserver;
 
-.field public static final enum b:Lrhh;
-
-.field public static final enum c:Lrhh;
-
-.field public static final synthetic o:[Lrhh;
+.field public final synthetic c:Landroid/view/View;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lcm6;Landroid/view/ViewTreeObserver;Landroid/view/View;)V
+    .locals 0
 
-    new-instance v0, Lrhh;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "SHARED"
+    iput-object p1, p0, Lrhh;->a:Lcm6;
 
-    const/4 v2, 0x0
+    iput-object p2, p0, Lrhh;->b:Landroid/view/ViewTreeObserver;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lrhh;->b:Lrhh;
-
-    new-instance v1, Lrhh;
-
-    const-string v2, "CANCELLED"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lrhh;->c:Lrhh;
-
-    filled-new-array {v0, v1}, [Lrhh;
-
-    move-result-object v0
-
-    sput-object v0, Lrhh;->o:[Lrhh;
-
-    new-instance v0, Lqhh;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lrhh;->Companion:Lqhh;
-
-    new-instance v0, Llsg;
-
-    const/16 v1, 0xf
-
-    invoke-direct {v0, v1}, Llsg;-><init>(I)V
-
-    const/4 v1, 0x2
-
-    invoke-static {v1, v0}, Lrci;->b(ILji6;)Liu7;
-
-    move-result-object v0
-
-    sput-object v0, Lrhh;->a:Ljava/lang/Object;
+    iput-object p3, p0, Lrhh;->c:Landroid/view/View;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lrhh;
-    .locals 1
 
-    const-class v0, Lrhh;
+# virtual methods
+.method public final onGlobalLayout()V
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-object v0, p0, Lrhh;->a:Lcm6;
 
-    move-result-object p0
-
-    check-cast p0, Lrhh;
-
-    return-object p0
-.end method
-
-.method public static values()[Lrhh;
-    .locals 1
-
-    sget-object v0, Lrhh;->o:[Lrhh;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-interface {v0}, Lcm6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lrhh;
+    check-cast v0, Ljava/lang/Boolean;
 
-    return-object v0
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lrhh;->b:Landroid/view/ViewTreeObserver;
+
+    iget-object v1, p0, Lrhh;->c:Landroid/view/View;
+
+    invoke-static {p0, v0, v1}, Lshh;->a(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;Landroid/view/ViewTreeObserver;Landroid/view/View;)V
+
+    :cond_0
+    return-void
 .end method

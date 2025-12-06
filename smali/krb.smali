@@ -1,48 +1,39 @@
 .class public final Lkrb;
-.super Ly14;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic Y:Ls3a;
+.field public final b:J
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:Ljava/util/List;
+
+.field public final d:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Ls3a;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/lang/String;JLjava/util/ArrayList;Ljava/util/List;)V
     .locals 0
 
-    iput-object p1, p0, Lkrb;->Y:Ls3a;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lkrb;->a:Ljava/lang/String;
 
-    return-void
-.end method
+    iput-wide p2, p0, Lkrb;->b:J
 
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lkrb;->o:Ljava/lang/Object;
-
-    iget p1, p0, Lkrb;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lkrb;->X:I
-
-    iget-object p1, p0, Lkrb;->Y:Ls3a;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Ls3a;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {p4}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p1
 
-    return-object p1
+    iput-object p1, p0, Lkrb;->c:Ljava/util/List;
+
+    invoke-static {p5}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lkrb;->d:Ljava/util/List;
+
+    return-void
 .end method

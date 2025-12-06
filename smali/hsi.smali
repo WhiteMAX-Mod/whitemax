@@ -1,100 +1,213 @@
-.class public final Lhsi;
+.class public abstract Lhsi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ltha;
-
-
-# static fields
-.field public static final a:Lhsi;
-
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public static a(Ljava/lang/Object;Z)V
+    .locals 0
 
-    new-instance v0, Lhsi;
+    if-eqz p1, :cond_0
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    return-void
 
-    sput-object v0, Lhsi;->a:Lhsi;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    new-instance v0, Lr8i;
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public static b(Z)V
+    .locals 0
+
+    if-eqz p0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw p0
+.end method
+
+.method public static c(II)V
+    .locals 0
+
+    if-ltz p0, :cond_0
+
+    if-ge p0, p1, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/IndexOutOfBoundsException;
+
+    invoke-direct {p0}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+
+    throw p0
+.end method
+
+.method public static d(Lr29;)V
+    .locals 0
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+.end method
+
+.method public static e(Ljava/lang/Object;Ljava/lang/String;)V
+    .locals 0
+
+    if-eqz p0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/NullPointerException;
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static f(Ljava/lang/Object;Z)V
+    .locals 0
+
+    if-eqz p1, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public static g(Z)V
+    .locals 0
+
+    if-eqz p0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw p0
+.end method
+
+.method public static h(Ljava/lang/Object;)V
+    .locals 0
+
+    if-eqz p0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw p0
+.end method
+
+.method public static i(Ljava/lang/Object;Ljava/lang/String;)V
+    .locals 0
+
+    if-eqz p0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static final p(Lesg;)V
+    .locals 2
+
+    new-instance v0, Lbf8;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1}, Lbf8;-><init>(I)V
+
+    const/16 v1, 0x75
+
+    invoke-virtual {p0, v1, v0}, Lesg;->e(ILio7;)V
+
+    new-instance v0, La28;
+
+    const/4 v1, 0x6
+
+    invoke-direct {v0, v1}, La28;-><init>(I)V
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Lr8i;-><init>(I)V
+    invoke-virtual {p0, v1, v0}, Lesg;->c(ILio7;)V
 
-    const-class v1, Lm9i;
+    new-instance v0, Lbf8;
 
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+    const/4 v1, 0x3
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Lbf8;-><init>(I)V
 
-    const/4 v2, 0x2
+    const/16 v1, 0x263
 
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
+    invoke-virtual {p0, v1, v0}, Lesg;->e(ILio7;)V
 
-    move-result-object v0
+    new-instance v0, Lbf8;
 
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+    const/4 v1, 0x4
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Lbf8;-><init>(I)V
 
-    const/4 v2, 0x3
+    const/16 v1, 0x264
 
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x5
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x6
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
+    invoke-virtual {p0, v1, v0}, Lesg;->e(ILio7;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public abstract j(I)V
+.end method
 
-    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+.method public abstract k()Z
+.end method
 
-    move-result-object p1
+.method public abstract l(Z)V
+.end method
 
-    throw p1
+.method public abstract m(Z)V
+.end method
+
+.method public abstract n()V
+.end method
+
+.method public abstract o(I)V
 .end method

@@ -1,26 +1,63 @@
-.class public interface abstract Lam;
-.super Ljava/lang/Object;
+.class public final Lam;
+.super Lq44;
 .source "SourceFile"
 
 
-# static fields
-.field public static final e:Lfpd;
+# instance fields
+.field public X:Ljava/lang/String;
 
+.field public Y:Loje;
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public Z:Lem6;
 
-    new-instance v0, Lfpd;
+.field public d:Lhwa;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.field public o:Ln2;
 
-    sput-object v0, Lam;->e:Lfpd;
+.field public s0:Ll0g;
 
-    return-void
-.end method
+.field public t0:J
+
+.field public u0:I
+
+.field public v0:I
+
+.field public synthetic w0:Ljava/lang/Object;
+
+.field public x0:I
 
 
 # virtual methods
-.method public abstract e(Lzl;Ljava/lang/Object;)Lzl;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
+
+    iput-object p1, p0, Lam;->w0:Ljava/lang/Object;
+
+    iget p1, p0, Lam;->x0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lam;->x0:I
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x0
+
+    const-wide/16 v2, 0x0
+
+    const/4 v4, 0x0
+
+    move-object v7, p0
+
+    invoke-static/range {v0 .. v7}, Lari;->c(Lhwa;Lfh2;JILjava/lang/String;Loje;Lq44;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

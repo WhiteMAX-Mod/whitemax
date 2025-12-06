@@ -28,15 +28,15 @@
 
     iget-object v0, p0, Landroidx/appcompat/widget/a;->a:Landroidx/appcompat/widget/e;
 
-    iget-object v0, v0, Landroidx/appcompat/widget/e;->mSuggestionsAdapter:Li94;
+    iget-object v0, v0, Landroidx/appcompat/widget/e;->mSuggestionsAdapter:Lqb4;
 
-    instance-of v1, v0, Ldef;
+    instance-of v1, v0, Leqf;
 
     if-eqz v1, :cond_0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Li94;->b(Landroid/database/Cursor;)V
+    invoke-virtual {v0, v1}, Lqb4;->b(Landroid/database/Cursor;)V
 
     :cond_0
     return-void

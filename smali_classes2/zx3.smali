@@ -3,29 +3,27 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Liu7;
+# static fields
+.field public static final synthetic a:Lzx3;
 
-.field public final b:Liu7;
-
-.field public final c:Liu7;
-
-.field public final d:Liu7;
+.field public static final b:Lyx3;
 
 
 # direct methods
-.method public constructor <init>(Liu7;Liu7;Liu7;Liu7;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lzx3;
 
-    iput-object p1, p0, Lzx3;->a:Liu7;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lzx3;->b:Liu7;
+    sput-object v0, Lzx3;->a:Lzx3;
 
-    iput-object p3, p0, Lzx3;->c:Liu7;
+    new-instance v0, Lyx3;
 
-    iput-object p4, p0, Lzx3;->d:Liu7;
+    invoke-direct {v0}, Lyx3;-><init>()V
+
+    sput-object v0, Lzx3;->b:Lyx3;
 
     return-void
 .end method

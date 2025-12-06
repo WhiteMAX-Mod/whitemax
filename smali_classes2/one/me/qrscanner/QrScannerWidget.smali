@@ -3,10 +3,10 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lzqd;
-.implements Law8;
-.implements Lo14;
-.implements Lgo3;
+.implements Lj2e;
+.implements Lg39;
+.implements Lg44;
+.implements Lqq3;
 
 
 # annotations
@@ -17,10 +17,10 @@
     d2 = {
         "Lone/me/qrscanner/QrScannerWidget;",
         "Lone/me/sdk/arch/Widget;",
-        "Lzqd;",
-        "Law8;",
-        "Lo14;",
-        "Lgo3;",
+        "Lj2e;",
+        "Lg39;",
+        "Lg44;",
+        "Lqq3;",
         "Landroid/os/Bundle;",
         "args",
         "<init>",
@@ -43,48 +43,60 @@
 
 
 # static fields
-.field public static final synthetic y0:[Ltr7;
+.field public static final synthetic E0:[Lyy7;
 
-.field public static final z0:Landroid/util/Size;
+.field public static final F0:I
+
+.field public static final G0:Landroid/util/Size;
 
 
 # instance fields
+.field public A0:Landroid/view/ViewPropertyAnimator;
+
+.field public B0:Landroid/view/ViewPropertyAnimator;
+
+.field public C0:Z
+
+.field public final D0:Lbwf;
+
 .field public final X:Ljava/lang/Object;
 
 .field public final Y:Ljava/lang/Object;
 
 .field public final Z:Ljava/lang/Object;
 
-.field public final a:Lqs;
+.field public final a:Lhs;
 
-.field public final b:Lqs;
+.field public final b:Lhs;
 
-.field public final c:Lw9c;
+.field public final c:Lka5;
 
-.field public final o:Liu7;
+.field public final d:Lk18;
 
-.field public final q0:Ljava/lang/Object;
+.field public final o:Ljava/lang/Object;
 
-.field public final r0:Lh0d;
+.field public final s0:Lbbd;
 
-.field public final s0:Lh0d;
+.field public final t0:Lbbd;
 
-.field public final t0:Lh0d;
+.field public final u0:Lbbd;
 
-.field public final u0:Lh0d;
+.field public final v0:Lbbd;
 
-.field public final v0:Landroid/graphics/RectF;
+.field public final w0:Lbbd;
 
-.field public w0:Lkw7;
+.field public final x0:Landroid/graphics/RectF;
 
-.field public x0:Z
+.field public y0:Lo38;
+
+.field public z0:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 10
+    .locals 11
 
-    new-instance v0, Leec;
+    new-instance v0, Ltoc;
 
     const-class v1, Lone/me/qrscanner/QrScannerWidget;
 
@@ -94,53 +106,61 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Lz7d;->a:La8d;
+    sget-object v2, Lvid;->a:Lwid;
 
     const-string v3, "sourceId"
 
     const-string v5, "getSourceId()Ljava/lang/Long;"
 
-    invoke-static {v2, v1, v3, v5, v4}, Li57;->d(La8d;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Leec;
+    invoke-static {v2, v1, v3, v5, v4}, Lho7;->d(Lwid;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Ltoc;
 
     move-result-object v2
 
-    new-instance v3, Leec;
+    new-instance v3, Ltoc;
 
     const-string v5, "cameraPreview"
 
     const-string v6, "getCameraPreview()Landroidx/camera/view/PreviewView;"
 
-    invoke-direct {v3, v1, v5, v6, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v3, v1, v5, v6, v4}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v5, Leec;
+    new-instance v5, Ltoc;
 
     const-string v6, "overlayView"
 
     const-string v7, "getOverlayView()Lone/me/qrscanner/QrScanOverlayView;"
 
-    invoke-direct {v5, v1, v6, v7, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v5, v1, v6, v7, v4}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v6, Leec;
+    new-instance v6, Ltoc;
 
     const-string v7, "torchButton"
 
-    const-string v8, "getTorchButton()Landroidx/appcompat/widget/AppCompatImageView;"
+    const-string v8, "getTorchButton()Lone/me/sdk/uikit/common/overlaybutton/OneMeOverlayButton;"
 
-    invoke-direct {v6, v1, v7, v8, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v6, v1, v7, v8, v4}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v7, Leec;
+    new-instance v7, Ltoc;
 
     const-string v8, "hintText"
 
     const-string v9, "getHintText()Landroid/widget/TextView;"
 
-    invoke-direct {v7, v1, v8, v9, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v7, v1, v8, v9, v4}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    const/4 v1, 0x6
+    new-instance v8, Ltoc;
 
-    new-array v1, v1, [Ltr7;
+    const-string v9, "blackoutView"
+
+    const-string v10, "getBlackoutView()Landroid/widget/FrameLayout;"
+
+    invoke-direct {v8, v1, v9, v10, v4}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    const/4 v1, 0x7
+
+    new-array v1, v1, [Lyy7;
 
     aput-object v0, v1, v4
 
@@ -164,7 +184,21 @@
 
     aput-object v7, v1, v0
 
-    sput-object v1, Lone/me/qrscanner/QrScannerWidget;->y0:[Ltr7;
+    const/4 v0, 0x6
+
+    aput-object v8, v1, v0
+
+    sput-object v1, Lone/me/qrscanner/QrScannerWidget;->E0:[Lyy7;
+
+    const/high16 v0, -0x1000000
+
+    const/high16 v1, 0x3e800000    # 0.25f
+
+    invoke-static {v0, v1}, Lv4j;->c(IF)I
+
+    move-result v0
+
+    sput v0, Lone/me/qrscanner/QrScannerWidget;->F0:I
 
     new-instance v0, Landroid/util/Size;
 
@@ -174,7 +208,7 @@
 
     invoke-direct {v0, v1, v2}, Landroid/util/Size;-><init>(II)V
 
-    sput-object v0, Lone/me/qrscanner/QrScannerWidget;->z0:Landroid/util/Size;
+    sput-object v0, Lone/me/qrscanner/QrScannerWidget;->G0:Landroid/util/Size;
 
     return-void
 .end method
@@ -187,7 +221,7 @@
 
     const/4 v1, 0x1
 
-    invoke-direct {p0, v0, v1, v0}, Lone/me/qrscanner/QrScannerWidget;-><init>(Landroid/os/Bundle;ILki4;)V
+    invoke-direct {p0, v0, v1, v0}, Lone/me/qrscanner/QrScannerWidget;-><init>(Landroid/os/Bundle;ILtk4;)V
 
     return-void
 .end method
@@ -202,185 +236,209 @@
     const/4 v2, 0x0
 
     .line 3
-    invoke-direct {p0, p1, v2, v0, v1}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILki4;)V
+    invoke-direct {p0, p1, v2, v0, v1}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILtk4;)V
 
     .line 4
-    new-instance p1, Lqs;
+    new-instance p1, Lhs;
 
     const-class v0, Ljava/lang/Boolean;
 
     const-string v1, "can_select_file"
 
-    invoke-direct {p1, v0, v1}, Lqs;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {p1, v0, v1}, Lhs;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 5
-    iput-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->a:Lqs;
+    iput-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->a:Lhs;
 
     .line 6
-    new-instance p1, Lqs;
+    new-instance p1, Lhs;
 
     const-class v0, Ljava/lang/Long;
 
     const-string v1, "source_id"
 
-    invoke-direct {p1, v0, v1}, Lqs;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {p1, v0, v1}, Lhs;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 7
-    iput-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->b:Lqs;
+    iput-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->b:Lhs;
 
     .line 8
-    new-instance p1, Lw9c;
+    new-instance p1, Lka5;
 
-    new-instance v0, Lyac;
+    new-instance v0, Lhdc;
 
-    const/4 v1, 0x4
+    const/16 v1, 0x11
 
-    invoke-direct {v0, v1}, Lyac;-><init>(I)V
+    invoke-direct {v0, v1}, Lhdc;-><init>(I)V
 
     .line 9
-    new-instance v1, Ldhc;
+    new-instance v1, Lwrc;
 
-    invoke-direct {v1, p0, v2}, Ldhc;-><init>(Lone/me/qrscanner/QrScannerWidget;I)V
+    invoke-direct {v1, p0, v2}, Lwrc;-><init>(Lone/me/qrscanner/QrScannerWidget;I)V
 
     const/4 v2, 0x4
 
     .line 10
-    invoke-direct {p1, v0, v1, v2}, Lw9c;-><init>(Lji6;Lji6;I)V
+    invoke-direct {p1, v0, v1, v2}, Lka5;-><init>(Lcm6;Lcm6;I)V
 
-    iput-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->c:Lw9c;
+    iput-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->c:Lka5;
 
     .line 11
-    new-instance p1, Lyac;
+    new-instance p1, Lhdc;
 
-    const/4 v0, 0x5
+    const/16 v0, 0x12
 
-    invoke-direct {p1, v0}, Lyac;-><init>(I)V
+    invoke-direct {p1, v0}, Lhdc;-><init>(I)V
 
     .line 12
-    new-instance v0, Lj4c;
+    new-instance v0, Lvdc;
 
-    const/4 v1, 0x5
+    const/4 v1, 0x6
 
-    invoke-direct {v0, v1, p1}, Lj4c;-><init>(ILji6;)V
+    invoke-direct {v0, v1, p1}, Lvdc;-><init>(ILjava/lang/Object;)V
 
-    const-class p1, Lchc;
+    const-class p1, Ltrc;
 
-    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lji6;)Liu7;
+    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lcm6;)Lk18;
 
     move-result-object p1
 
     .line 13
-    iput-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->o:Liu7;
+    iput-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->d:Lk18;
 
     .line 14
-    new-instance p1, Lyac;
+    new-instance p1, Lhdc;
 
-    const/4 v0, 0x6
+    const/16 v0, 0x13
 
-    invoke-direct {p1, v0}, Lyac;-><init>(I)V
+    invoke-direct {p1, v0}, Lhdc;-><init>(I)V
 
     const/4 v0, 0x3
 
     .line 15
-    invoke-static {v0, p1}, Lrci;->b(ILji6;)Liu7;
+    invoke-static {v0, p1}, Lipi;->b(ILcm6;)Lk18;
 
     move-result-object p1
 
     .line 16
-    iput-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->X:Ljava/lang/Object;
+    iput-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->o:Ljava/lang/Object;
 
     .line 17
-    new-instance p1, Ldhc;
+    new-instance p1, Lwrc;
 
     const/4 v1, 0x1
 
-    invoke-direct {p1, p0, v1}, Ldhc;-><init>(Lone/me/qrscanner/QrScannerWidget;I)V
+    invoke-direct {p1, p0, v1}, Lwrc;-><init>(Lone/me/qrscanner/QrScannerWidget;I)V
 
     .line 18
-    invoke-static {v0, p1}, Lrci;->b(ILji6;)Liu7;
+    invoke-static {v0, p1}, Lipi;->b(ILcm6;)Lk18;
 
     move-result-object p1
 
     .line 19
-    iput-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->Y:Ljava/lang/Object;
+    iput-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->X:Ljava/lang/Object;
 
     .line 20
-    new-instance p1, Ldhc;
+    new-instance p1, Lwrc;
 
     const/4 v1, 0x2
 
-    invoke-direct {p1, p0, v1}, Ldhc;-><init>(Lone/me/qrscanner/QrScannerWidget;I)V
+    invoke-direct {p1, p0, v1}, Lwrc;-><init>(Lone/me/qrscanner/QrScannerWidget;I)V
 
     .line 21
-    invoke-static {v0, p1}, Lrci;->b(ILji6;)Liu7;
+    invoke-static {v0, p1}, Lipi;->b(ILcm6;)Lk18;
 
     move-result-object p1
 
     .line 22
-    iput-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->Z:Ljava/lang/Object;
+    iput-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->Y:Ljava/lang/Object;
 
     .line 23
-    new-instance p1, Lyac;
+    new-instance p1, Lhdc;
 
-    const/4 v1, 0x7
+    const/16 v1, 0x14
 
-    invoke-direct {p1, v1}, Lyac;-><init>(I)V
+    invoke-direct {p1, v1}, Lhdc;-><init>(I)V
 
     .line 24
-    invoke-static {v0, p1}, Lrci;->b(ILji6;)Liu7;
+    invoke-static {v0, p1}, Lipi;->b(ILcm6;)Lk18;
 
     move-result-object p1
 
     .line 25
-    iput-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->q0:Ljava/lang/Object;
+    iput-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->Z:Ljava/lang/Object;
 
     .line 26
-    sget p1, Ln0b;->b:I
+    sget p1, Ln9b;->c:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lh0d;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lbbd;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->r0:Lh0d;
+    iput-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->s0:Lbbd;
 
     .line 27
-    sget p1, Ln0b;->f:I
+    sget p1, Ln9b;->g:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lh0d;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lbbd;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->s0:Lh0d;
+    iput-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->t0:Lbbd;
 
     .line 28
-    sget p1, Ln0b;->h:I
+    sget p1, Ln9b;->i:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lh0d;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lbbd;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->t0:Lh0d;
+    iput-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->u0:Lbbd;
 
     .line 29
-    sget p1, Ln0b;->d:I
+    sget p1, Ln9b;->e:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lh0d;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lbbd;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->u0:Lh0d;
+    iput-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->v0:Lbbd;
 
     .line 30
+    sget p1, Ln9b;->b:I
+
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lbbd;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->w0:Lbbd;
+
+    .line 31
     new-instance p1, Landroid/graphics/RectF;
 
     invoke-direct {p1}, Landroid/graphics/RectF;-><init>()V
 
-    iput-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->v0:Landroid/graphics/RectF;
+    iput-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->x0:Landroid/graphics/RectF;
+
+    .line 32
+    new-instance p1, Lhdc;
+
+    const/16 v0, 0x15
+
+    invoke-direct {p1, v0}, Lhdc;-><init>(I)V
+
+    .line 33
+    new-instance v0, Lbwf;
+
+    invoke-direct {v0, p1}, Lbwf;-><init>(Lcm6;)V
+
+    .line 34
+    iput-object v0, p0, Lone/me/qrscanner/QrScannerWidget;->D0:Lbwf;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/os/Bundle;ILki4;)V
+.method public synthetic constructor <init>(Landroid/os/Bundle;ILtk4;)V
     .locals 0
 
     and-int/lit8 p2, p2, 0x1
@@ -399,36 +457,36 @@
 .method public constructor <init>(ZLjava/lang/Long;)V
     .locals 2
 
-    .line 31
+    .line 35
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
-    .line 32
-    new-instance v0, Ltcb;
+    .line 36
+    new-instance v0, Limb;
 
     const-string v1, "can_select_file"
 
-    invoke-direct {v0, v1, p1}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v0, v1, p1}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 33
-    new-instance p1, Ltcb;
+    .line 37
+    new-instance p1, Limb;
 
     const-string v1, "source_id"
 
-    invoke-direct {p1, v1, p2}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p1, v1, p2}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 34
-    filled-new-array {v0, p1}, [Ltcb;
-
-    move-result-object p1
-
-    .line 35
-    invoke-static {p1}, Leli;->b([Ltcb;)Landroid/os/Bundle;
+    .line 38
+    filled-new-array {v0, p1}, [Limb;
 
     move-result-object p1
 
-    .line 36
+    .line 39
+    invoke-static {p1}, Lgwi;->b([Limb;)Landroid/os/Bundle;
+
+    move-result-object p1
+
+    .line 40
     invoke-direct {p0, p1}, Lone/me/qrscanner/QrScannerWidget;-><init>(Landroid/os/Bundle;)V
 
     return-void
@@ -436,55 +494,63 @@
 
 
 # virtual methods
-.method public final C0()Lqgc;
-    .locals 2
-
-    sget-object v0, Lone/me/qrscanner/QrScannerWidget;->y0:[Ltr7;
-
-    const/4 v1, 0x3
-
-    aget-object v0, v0, v1
-
-    iget-object v1, p0, Lone/me/qrscanner/QrScannerWidget;->s0:Lh0d;
-
-    invoke-interface {v1, p0, v0}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lqgc;
-
-    return-object v0
-.end method
-
-.method public final D0()Lrib;
+.method public final A0()Ltrc;
     .locals 1
 
-    iget-object v0, p0, Lone/me/qrscanner/QrScannerWidget;->q0:Ljava/lang/Object;
+    iget-object v0, p0, Lone/me/qrscanner/QrScannerWidget;->d:Lk18;
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lrib;
+    check-cast v0, Ltrc;
 
     return-object v0
 .end method
 
-.method public final E0()Lchc;
-    .locals 1
+.method public final B0(Landroid/net/Uri;)V
+    .locals 4
 
-    iget-object v0, p0, Lone/me/qrscanner/QrScannerWidget;->o:Liu7;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0}, Lone/me/qrscanner/QrScannerWidget;->A0()Ltrc;
 
     move-result-object v0
 
-    check-cast v0, Lchc;
+    iget-object v1, v0, Ltrc;->c:Llzf;
 
-    return-object v0
+    check-cast v1, Lq2b;
+
+    invoke-virtual {v1}, Lq2b;->b()Lz74;
+
+    move-result-object v1
+
+    new-instance v2, Lrrc;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v0, p1, v3}, Lrrc;-><init>(Ltrc;Landroid/net/Uri;Lkotlin/coroutines/Continuation;)V
+
+    iget-object p1, v0, Lxfh;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    sget-object v3, Li84;->b:Li84;
+
+    invoke-static {p1, v1, v3, v2}, Lsvi;->d(Lf84;Lx74;Li84;Lsm6;)Lx9f;
+
+    move-result-object p1
+
+    iget-object v1, v0, Ltrc;->Y:Lt9f;
+
+    sget-object v2, Ltrc;->u0:[Lyy7;
+
+    const/4 v3, 0x0
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v1, v0, v2, p1}, Lt9f;->O(Ljava/lang/Object;Lyy7;Ljava/lang/Object;)V
+
+    return-void
 .end method
 
-.method public final F(ILandroid/os/Bundle;)V
+.method public final C(ILandroid/os/Bundle;)V
     .locals 3
 
     const/4 p2, 0x1
@@ -508,144 +574,102 @@
 
     const/16 p2, 0xe4
 
-    invoke-virtual {p0, p1, p2}, Ll24;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, p1, p2}, Lc54;->startActivityForResult(Landroid/content/Intent;I)V
 
     return-void
 
     :cond_1
-    invoke-virtual {p0}, Lone/me/qrscanner/QrScannerWidget;->E0()Lchc;
+    invoke-virtual {p0}, Lone/me/qrscanner/QrScannerWidget;->A0()Ltrc;
 
     move-result-object p1
 
-    sget-object v0, Lone/me/qrscanner/QrScannerWidget;->y0:[Ltr7;
+    sget-object v0, Lone/me/qrscanner/QrScannerWidget;->E0:[Lyy7;
 
     aget-object p2, v0, p2
 
-    iget-object p2, p0, Lone/me/qrscanner/QrScannerWidget;->b:Lqs;
+    iget-object p2, p0, Lone/me/qrscanner/QrScannerWidget;->b:Lhs;
 
-    invoke-virtual {p2, p0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {p2, p0}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object p2
 
     check-cast p2, Ljava/lang/Long;
 
-    iget-object p1, p1, Lchc;->Y:Lxe5;
+    iget-object p1, p1, Ltrc;->X:Lci5;
 
-    sget-object v0, Lxgc;->c:Lxgc;
+    sget-object v0, Lorc;->c:Lorc;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v0, Lzf4;
+    new-instance v0, Lhi4;
 
-    invoke-direct {v0}, Lzf4;-><init>()V
+    invoke-direct {v0}, Lhi4;-><init>()V
 
     const-string v1, ":media-picker/select/photo"
 
-    iput-object v1, v0, Lzf4;->a:Ljava/lang/String;
+    iput-object v1, v0, Lhi4;->a:Ljava/lang/String;
 
     const-string v1, "from_qr_scanner"
 
     sget-object v2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    invoke-virtual {v0, v2, v1}, Lzf4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual {v0, v2, v1}, Lhi4;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz p2, :cond_2
 
     const-string v1, "source_id"
 
-    invoke-virtual {v0, p2, v1}, Lzf4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual {v0, p2, v1}, Lhi4;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     :cond_2
-    invoke-virtual {v0}, Lzf4;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lhi4;->b()Ljava/lang/String;
 
     move-result-object p2
 
-    invoke-static {p2, p1}, Lfd0;->l(Ljava/lang/String;Lxe5;)V
+    invoke-static {p2, p1}, Lxc0;->l(Ljava/lang/String;Lci5;)V
 
     return-void
 .end method
 
-.method public final F0(Landroid/net/Uri;)V
-    .locals 4
-
-    invoke-virtual {p0}, Lone/me/qrscanner/QrScannerWidget;->E0()Lchc;
-
-    move-result-object v0
-
-    iget-object v1, v0, Lchc;->c:Lulf;
-
-    check-cast v1, Lqta;
-
-    invoke-virtual {v1}, Lqta;->b()Lk54;
-
-    move-result-object v1
-
-    new-instance v2, Lahc;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, v0, p1, v3}, Lahc;-><init>(Lchc;Landroid/net/Uri;Lkotlin/coroutines/Continuation;)V
-
-    iget-object p1, v0, Lxzg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    sget-object v3, Lt54;->b:Lt54;
-
-    invoke-static {p1, v1, v3, v2}, Ltki;->c(Lq54;Li54;Lt54;Lzi6;)Lcye;
-
-    move-result-object p1
-
-    iget-object v1, v0, Lchc;->Z:Lw0e;
-
-    sget-object v2, Lchc;->t0:[Ltr7;
-
-    const/4 v3, 0x0
-
-    aget-object v2, v2, v3
-
-    invoke-virtual {v1, v0, v2, p1}, Lw0e;->P(Ljava/lang/Object;Ltr7;Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final G0(Ljava/lang/String;)V
+.method public final C0(Ljava/lang/String;)V
     .locals 2
 
-    iget-boolean v0, p0, Lone/me/qrscanner/QrScannerWidget;->x0:Z
+    iget-boolean v0, p0, Lone/me/qrscanner/QrScannerWidget;->z0:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
     :cond_0
-    invoke-virtual {p0}, Ll24;->getView()Landroid/view/View;
+    invoke-virtual {p0}, Lc54;->getView()Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    sget-object v1, Lpw6;->Y:Lpw6;
+    sget-object v1, Lp07;->X:Lp07;
 
-    invoke-static {v0, v1}, Lzpe;->h(Landroid/view/View;Lrw6;)Z
+    invoke-static {v0, v1}, Luog;->i(Landroid/view/View;Lr07;)Z
 
     :cond_1
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lone/me/qrscanner/QrScannerWidget;->x0:Z
+    iput-boolean v0, p0, Lone/me/qrscanner/QrScannerWidget;->z0:Z
 
-    invoke-virtual {p0}, Lone/me/qrscanner/QrScannerWidget;->E0()Lchc;
+    invoke-virtual {p0}, Lone/me/qrscanner/QrScannerWidget;->A0()Ltrc;
 
     move-result-object v0
 
-    new-instance v1, Llnd;
+    new-instance v1, Lxyd;
 
-    invoke-direct {v1, p1}, Llnd;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, p1}, Lxyd;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lchc;->r(Lnnd;)V
+    invoke-virtual {v0, v1}, Ltrc;->t(Lzyd;)V
 
     return-void
 .end method
 
-.method public final H0()V
+.method public final D0()V
     .locals 7
 
     const/4 v0, 0x0
@@ -654,78 +678,78 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lone/me/qrscanner/QrScannerWidget;->w0:Lkw7;
+    iget-object v1, p0, Lone/me/qrscanner/QrScannerWidget;->y0:Lo38;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lkw7;->w()V
+    invoke-virtual {v1}, Lo38;->w()V
 
     :cond_0
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lone/me/qrscanner/QrScannerWidget;->w0:Lkw7;
+    iput-object v1, p0, Lone/me/qrscanner/QrScannerWidget;->y0:Lo38;
 
-    new-instance v2, Lkw7;
+    new-instance v2, Lo38;
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
-    invoke-direct {v2, v3}, Lb12;-><init>(Landroid/content/Context;)V
+    invoke-direct {v2, v3}, Lw12;-><init>(Landroid/content/Context;)V
 
-    sget-object v3, Ll22;->c:Ll22;
+    sget-object v3, Lf32;->c:Lf32;
 
-    invoke-virtual {v2, v3}, Lb12;->l(Ll22;)V
+    invoke-virtual {v2, v3}, Lw12;->l(Lf32;)V
 
-    iget-object v3, p0, Lone/me/qrscanner/QrScannerWidget;->X:Ljava/lang/Object;
+    iget-object v3, p0, Lone/me/qrscanner/QrScannerWidget;->o:Ljava/lang/Object;
 
-    invoke-interface {v3}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-interface {v3}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Ljava/util/concurrent/ExecutorService;
 
-    invoke-virtual {p0}, Lone/me/qrscanner/QrScannerWidget;->E0()Lchc;
+    invoke-virtual {p0}, Lone/me/qrscanner/QrScannerWidget;->A0()Ltrc;
 
     move-result-object v4
 
-    iget-object v4, v4, Lchc;->X:Lwt9;
+    iget-object v4, v4, Ltrc;->o:Ln1a;
 
-    invoke-static {}, Laud;->a()V
+    invoke-static {}, Ljei;->b()V
 
-    iget-object v5, v2, Lb12;->g:Lp87;
+    iget-object v5, v2, Lw12;->g:Lyc7;
 
     if-ne v5, v4, :cond_1
 
-    iget-object v6, v2, Lb12;->f:Ljava/util/concurrent/ExecutorService;
+    iget-object v6, v2, Lw12;->f:Ljava/util/concurrent/ExecutorService;
 
     if-ne v6, v3, :cond_1
 
     goto :goto_0
 
     :cond_1
-    iput-object v3, v2, Lb12;->f:Ljava/util/concurrent/ExecutorService;
+    iput-object v3, v2, Lw12;->f:Ljava/util/concurrent/ExecutorService;
 
-    iput-object v4, v2, Lb12;->g:Lp87;
+    iput-object v4, v2, Lw12;->g:Lyc7;
 
-    iget-object v6, v2, Lb12;->h:Lu87;
+    iget-object v6, v2, Lw12;->h:Ldd7;
 
-    invoke-virtual {v6, v3, v4}, Lu87;->I(Ljava/util/concurrent/ExecutorService;Lp87;)V
+    invoke-virtual {v6, v3, v4}, Ldd7;->I(Ljava/util/concurrent/ExecutorService;Lyc7;)V
 
-    invoke-virtual {v2, v5, v4}, Lb12;->k(Lp87;Lp87;)V
+    invoke-virtual {v2, v5, v4}, Lw12;->k(Lyc7;Lyc7;)V
 
     :goto_0
-    invoke-static {}, Laud;->a()V
+    invoke-static {}, Ljei;->b()V
 
-    iget-object v3, v2, Lb12;->h:Lu87;
+    iget-object v3, v2, Lw12;->h:Ldd7;
 
-    iget-object v3, v3, Ljhg;->f:Lmhg;
+    iget-object v3, v3, Luwg;->f:Lxwg;
 
-    check-cast v3, Lz87;
+    check-cast v3, Lid7;
 
-    sget-object v4, Lz87;->b:Lz90;
+    sget-object v4, Lid7;->b:Ls90;
 
-    invoke-interface {v3, v4, v0}, Lk0d;->d(Lz90;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v3, v4, v0}, Lebd;->d(Ls90;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -740,9 +764,9 @@
     goto :goto_1
 
     :cond_2
-    iget-object v3, v2, Lb12;->h:Lu87;
+    iget-object v3, v2, Lw12;->h:Ldd7;
 
-    invoke-virtual {v3}, Lu87;->G()I
+    invoke-virtual {v3}, Ldd7;->G()I
 
     move-result v3
 
@@ -750,9 +774,9 @@
 
     move-result-object v3
 
-    iget-object v4, v2, Lb12;->h:Lu87;
+    iget-object v4, v2, Lw12;->h:Ldd7;
 
-    invoke-virtual {v4}, Lu87;->H()I
+    invoke-virtual {v4}, Ldd7;->H()I
 
     move-result v4
 
@@ -760,67 +784,67 @@
 
     move-result-object v4
 
-    invoke-virtual {v2, v0, v3, v4}, Lb12;->t(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V
+    invoke-virtual {v2, v0, v3, v4}, Lw12;->t(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V
 
-    invoke-virtual {v2, v1}, Lb12;->r(Ljava/lang/Runnable;)V
+    invoke-virtual {v2, v1}, Lw12;->r(Ljava/lang/Runnable;)V
 
     :goto_1
-    sget-object v0, Lkx5;->c:Lkx5;
+    sget-object v0, Ll16;->c:Ll16;
 
-    new-instance v3, Lwcd;
+    new-instance v3, Lbod;
 
-    sget-object v4, Lone/me/qrscanner/QrScannerWidget;->z0:Landroid/util/Size;
+    sget-object v4, Lone/me/qrscanner/QrScannerWidget;->G0:Landroid/util/Size;
 
-    invoke-direct {v3, v4}, Lwcd;-><init>(Landroid/util/Size;)V
+    invoke-direct {v3, v4}, Lbod;-><init>(Landroid/util/Size;)V
 
-    new-instance v4, Lvcd;
+    new-instance v4, Laod;
 
-    invoke-direct {v4, v0, v3, v1}, Lvcd;-><init>(Lkx5;Lwcd;Ld46;)V
+    invoke-direct {v4, v0, v3, v1}, Laod;-><init>(Ll16;Lbod;Lsl6;)V
 
-    invoke-static {}, Laud;->a()V
+    invoke-static {}, Ljei;->b()V
 
-    iget-object v0, v2, Lb12;->d:Lvcd;
+    iget-object v0, v2, Lw12;->d:Laod;
 
     if-ne v0, v4, :cond_3
 
     goto :goto_2
 
     :cond_3
-    iput-object v4, v2, Lb12;->d:Lvcd;
+    iput-object v4, v2, Lw12;->d:Laod;
 
-    invoke-virtual {v2}, Lb12;->u()V
+    invoke-virtual {v2}, Lw12;->u()V
 
-    invoke-virtual {v2, v1}, Lb12;->r(Ljava/lang/Runnable;)V
+    invoke-virtual {v2, v1}, Lw12;->r(Ljava/lang/Runnable;)V
 
     :goto_2
-    iput-object v2, p0, Lone/me/qrscanner/QrScannerWidget;->w0:Lkw7;
+    iput-object v2, p0, Lone/me/qrscanner/QrScannerWidget;->y0:Lo38;
 
-    sget-object v0, Lone/me/qrscanner/QrScannerWidget;->y0:[Ltr7;
+    sget-object v0, Lone/me/qrscanner/QrScannerWidget;->E0:[Lyy7;
 
     const/4 v3, 0x2
 
     aget-object v0, v0, v3
 
-    iget-object v3, p0, Lone/me/qrscanner/QrScannerWidget;->r0:Lh0d;
+    iget-object v3, p0, Lone/me/qrscanner/QrScannerWidget;->s0:Lbbd;
 
-    invoke-interface {v3, p0, v0}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
+    invoke-interface {v3, p0, v0}, Lbbd;->D(Ljava/lang/Object;Lyy7;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lryb;
+    check-cast v0, La9c;
 
-    invoke-virtual {v0, v2}, Lryb;->setController(Lb12;)V
+    invoke-virtual {v0, v2}, La9c;->setController(Lw12;)V
 
     :try_start_0
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lfx7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj48;
 
     move-result-object v0
 
-    invoke-static {}, Laud;->a()V
+    invoke-static {}, Ljei;->b()V
 
-    iput-object v0, v2, Lkw7;->H:Lfx7;
+    iput-object v0, v2, Lo38;->H:Lj48;
 
-    invoke-virtual {v2, v1}, Lb12;->r(Ljava/lang/Runnable;)V
+    invoke-virtual {v2, v1}, Lw12;->r(Ljava/lang/Runnable;)V
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -837,51 +861,51 @@
 
     const-string v4, "Fail to bindCameraToLifecycle"
 
-    invoke-static {v3, v4, v0}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v3, v4, v0}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_3
-    invoke-static {}, Laud;->a()V
+    invoke-static {}, Ljei;->b()V
 
-    iget-object v0, v2, Lb12;->y:Lud6;
+    iget-object v0, v2, Lw12;->y:Lqh6;
 
-    invoke-static {v0}, Lvs0;->a(Lh38;)Lty5;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lfx7;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Lfx7;->x()Lhx7;
-
-    move-result-object v2
-
-    sget-object v3, Lhw7;->o:Lhw7;
-
-    invoke-static {v0, v2, v3}, Lc8;->c(Lty5;Lhx7;Lhw7;)Lfu1;
+    invoke-static {v0}, Llc4;->b(Lcb8;)Lx26;
 
     move-result-object v0
 
-    new-instance v2, Lihc;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj48;
 
-    invoke-direct {v2, v1, p0}, Lihc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/qrscanner/QrScannerWidget;)V
+    move-result-object v2
 
-    new-instance v1, Lb16;
+    invoke-interface {v2}, Lj48;->p()Ll48;
+
+    move-result-object v2
+
+    sget-object v3, Ll38;->d:Ll38;
+
+    invoke-static {v0, v2, v3}, Law0;->a(Lx26;Ll48;Ll38;)Lsu1;
+
+    move-result-object v0
+
+    new-instance v2, Ldsc;
+
+    invoke-direct {v2, v1, p0}, Ldsc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/qrscanner/QrScannerWidget;)V
+
+    new-instance v1, Lg56;
 
     const/4 v3, 0x1
 
-    invoke-direct {v1, v0, v2, v3}, Lb16;-><init>(Lty5;Lzi6;I)V
+    invoke-direct {v1, v0, v2, v3}, Lg56;-><init>(Lx26;Lsm6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lv38;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Ltq;->v(Lty5;Lq54;)Lcye;
+    invoke-static {v1, v0}, Lgw0;->w(Lx26;Lf84;)Lx9f;
 
     return-void
 .end method
 
-.method public final K(Landroid/os/Bundle;)V
+.method public final F(Landroid/os/Bundle;)V
     .locals 1
 
     if-eqz p1, :cond_0
@@ -894,15 +918,27 @@
 
     if-nez p1, :cond_0
 
-    invoke-virtual {p0}, Lone/me/qrscanner/QrScannerWidget;->E0()Lchc;
+    invoke-virtual {p0}, Lone/me/qrscanner/QrScannerWidget;->A0()Ltrc;
 
     move-result-object p1
 
-    sget-object v0, Lind;->a:Lind;
+    sget-object v0, Luyd;->a:Luyd;
 
-    invoke-virtual {p1, v0}, Lchc;->r(Lnnd;)V
+    invoke-virtual {p1, v0}, Ltrc;->t(Lzyd;)V
 
     :cond_0
+    return-void
+.end method
+
+.method public final b0(Ljava/lang/String;)V
+    .locals 0
+
+    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lone/me/qrscanner/QrScannerWidget;->B0(Landroid/net/Uri;)V
+
     return-void
 .end method
 
@@ -921,7 +957,7 @@
 
     const/4 v1, 0x0
 
-    const-class v2, Lekg;
+    const/16 v2, 0xd
 
     const/4 v3, 0x1
 
@@ -932,23 +968,23 @@
     goto/16 :goto_6
 
     :cond_0
-    sget p2, Ln0b;->a:I
+    sget p2, Ln9b;->a:I
 
     if-ne p1, p2, :cond_b
 
-    invoke-virtual {p0}, Lone/me/qrscanner/QrScannerWidget;->D0()Lrib;
+    invoke-virtual {p0}, Lone/me/qrscanner/QrScannerWidget;->z0()Lqsb;
 
     move-result-object p1
 
-    sget-object p2, Lyhb;->a:Lyhb;
+    sget-object p2, Lvrb;->a:Lvrb;
 
-    invoke-virtual {p2}, Lscout/Component;->getAccessor()Lr5;
+    invoke-virtual {p2}, Lscout/Component;->getAccessor()Lw5;
 
     move-result-object p2
 
-    invoke-virtual {p2, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+    invoke-virtual {p2, v2}, Lw5;->d(I)Lbwf;
 
-    sget-object p2, Lrib;->n:[Ljava/lang/String;
+    sget-object p2, Lqsb;->n:[Ljava/lang/String;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -965,11 +1001,11 @@
 
     if-lt v5, v0, :cond_1
 
-    sget-object v5, Lrib;->d:[Ljava/lang/String;
+    sget-object v5, Lqsb;->d:[Ljava/lang/String;
 
-    sget-object v5, Lrib;->p:[Ljava/lang/String;
+    sget-object v5, Lqsb;->p:[Ljava/lang/String;
 
-    invoke-static {v5, v4}, Ljt;->l([Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v5, v4}, Lys;->i([Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v5
 
@@ -980,7 +1016,7 @@
     goto :goto_1
 
     :cond_1
-    invoke-virtual {p0, v4}, Ll24;->shouldShowRequestPermissionRationale(Ljava/lang/String;)Z
+    invoke-virtual {p0, v4}, Lc54;->shouldShowRequestPermissionRationale(Ljava/lang/String;)Z
 
     move-result v4
 
@@ -1000,47 +1036,47 @@
     :goto_2
     if-eqz v1, :cond_4
 
-    invoke-virtual {p0}, Lone/me/qrscanner/QrScannerWidget;->D0()Lrib;
+    invoke-virtual {p0}, Lone/me/qrscanner/QrScannerWidget;->z0()Lqsb;
 
     move-result-object p1
 
-    new-instance p2, Ljmh;
+    new-instance p2, Ls2i;
 
-    invoke-direct {p2, p0, v3}, Ljmh;-><init>(Lone/me/sdk/arch/Widget;I)V
+    invoke-direct {p2, p0, v3}, Ls2i;-><init>(Lone/me/sdk/arch/Widget;I)V
 
-    invoke-virtual {p1, p2}, Lrib;->j(Ljmh;)V
+    invoke-virtual {p1, p2}, Lqsb;->l(Ls2i;)V
 
     return-void
 
     :cond_4
-    sget-object p1, Lyi7;->a:Ljava/lang/String;
+    sget-object p1, Lap7;->a:Ljava/lang/String;
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-static {p1}, Lyi7;->d(Landroid/content/Context;)V
+    invoke-static {p1}, Lap7;->e(Landroid/content/Context;)V
 
     return-void
 
     :cond_5
-    sget p2, Ln0b;->a:I
+    sget p2, Ln9b;->a:I
 
     if-ne p1, p2, :cond_a
 
-    invoke-virtual {p0}, Lone/me/qrscanner/QrScannerWidget;->D0()Lrib;
+    invoke-virtual {p0}, Lone/me/qrscanner/QrScannerWidget;->z0()Lqsb;
 
     move-result-object p1
 
-    sget-object p2, Lyhb;->a:Lyhb;
+    sget-object p2, Lvrb;->a:Lvrb;
 
-    invoke-virtual {p2}, Lscout/Component;->getAccessor()Lr5;
+    invoke-virtual {p2}, Lscout/Component;->getAccessor()Lw5;
 
     move-result-object p2
 
-    invoke-virtual {p2, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+    invoke-virtual {p2, v2}, Lw5;->d(I)Lbwf;
 
-    sget-object p2, Lrib;->m:[Ljava/lang/String;
+    sget-object p2, Lqsb;->m:[Ljava/lang/String;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -1057,11 +1093,11 @@
 
     if-lt v5, v0, :cond_6
 
-    sget-object v5, Lrib;->d:[Ljava/lang/String;
+    sget-object v5, Lqsb;->d:[Ljava/lang/String;
 
-    sget-object v5, Lrib;->p:[Ljava/lang/String;
+    sget-object v5, Lqsb;->p:[Ljava/lang/String;
 
-    invoke-static {v5, v4}, Ljt;->l([Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v5, v4}, Lys;->i([Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v5
 
@@ -1072,7 +1108,7 @@
     goto :goto_4
 
     :cond_6
-    invoke-virtual {p0, v4}, Ll24;->shouldShowRequestPermissionRationale(Ljava/lang/String;)Z
+    invoke-virtual {p0, v4}, Lc54;->shouldShowRequestPermissionRationale(Ljava/lang/String;)Z
 
     move-result v4
 
@@ -1092,67 +1128,55 @@
     :goto_5
     if-eqz v1, :cond_9
 
-    invoke-virtual {p0}, Lone/me/qrscanner/QrScannerWidget;->D0()Lrib;
+    invoke-virtual {p0}, Lone/me/qrscanner/QrScannerWidget;->z0()Lqsb;
 
     move-result-object p1
 
-    new-instance v0, Ljmh;
+    new-instance v0, Ls2i;
 
-    invoke-direct {v0, p0, v3}, Ljmh;-><init>(Lone/me/sdk/arch/Widget;I)V
+    invoke-direct {v0, p0, v3}, Ls2i;-><init>(Lone/me/sdk/arch/Widget;I)V
 
     const/16 v1, 0x9e
 
-    invoke-virtual {p1, v0, p2, v1}, Lrib;->h(Ljmh;[Ljava/lang/String;I)V
+    invoke-virtual {p1, v0, p2, v1}, Lqsb;->j(Ls2i;[Ljava/lang/String;I)V
 
     return-void
 
     :cond_9
-    sget-object p1, Lyi7;->a:Ljava/lang/String;
+    sget-object p1, Lap7;->a:Ljava/lang/String;
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-static {p1}, Lyi7;->d(Landroid/content/Context;)V
+    invoke-static {p1}, Lap7;->e(Landroid/content/Context;)V
 
     return-void
 
     :cond_a
-    sget p2, Ln0b;->e:I
+    sget p2, Ln9b;->f:I
 
     if-ne p1, p2, :cond_b
 
-    invoke-virtual {p0}, Lone/me/qrscanner/QrScannerWidget;->E0()Lchc;
+    invoke-virtual {p0}, Lone/me/qrscanner/QrScannerWidget;->A0()Ltrc;
 
     move-result-object p1
 
-    sget-object p2, Lind;->a:Lind;
+    sget-object p2, Luyd;->a:Luyd;
 
-    invoke-virtual {p1, p2}, Lchc;->r(Lnnd;)V
+    invoke-virtual {p1, p2}, Ltrc;->t(Lzyd;)V
 
     :cond_b
     :goto_6
     return-void
 .end method
 
-.method public final getScreenDelegate()Lzpd;
+.method public final getScreenDelegate()Lk1e;
     .locals 1
 
-    iget-object v0, p0, Lone/me/qrscanner/QrScannerWidget;->c:Lw9c;
+    iget-object v0, p0, Lone/me/qrscanner/QrScannerWidget;->c:Lka5;
 
     return-object v0
-.end method
-
-.method public final h0(Ljava/lang/String;)V
-    .locals 0
-
-    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lone/me/qrscanner/QrScannerWidget;->F0(Landroid/net/Uri;)V
-
-    return-void
 .end method
 
 .method public final onActivityResult(IILandroid/content/Intent;)V
@@ -1174,7 +1198,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p0, p1}, Lone/me/qrscanner/QrScannerWidget;->F0(Landroid/net/Uri;)V
+    invoke-virtual {p0, p1}, Lone/me/qrscanner/QrScannerWidget;->B0(Landroid/net/Uri;)V
 
     :cond_0
     return-void
@@ -1183,40 +1207,40 @@
 .method public final onAttach(Landroid/view/View;)V
     .locals 2
 
-    invoke-super {p0, p1}, Ll24;->onAttach(Landroid/view/View;)V
+    invoke-super {p0, p1}, Lc54;->onAttach(Landroid/view/View;)V
 
-    iget-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->w0:Lkw7;
+    iget-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->y0:Lo38;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p0}, Lone/me/qrscanner/QrScannerWidget;->D0()Lrib;
+    invoke-virtual {p0}, Lone/me/qrscanner/QrScannerWidget;->z0()Lqsb;
 
     move-result-object p1
 
-    sget-object v0, Lrib;->m:[Ljava/lang/String;
+    sget-object v0, Lqsb;->m:[Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Lrib;->c([Ljava/lang/String;)Z
+    invoke-virtual {p1, v0}, Lqsb;->c([Ljava/lang/String;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
     :try_start_0
-    iget-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->w0:Lkw7;
+    iget-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->y0:Lo38;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lfx7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj48;
 
     move-result-object v0
 
-    invoke-static {}, Laud;->a()V
+    invoke-static {}, Ljei;->b()V
 
-    iput-object v0, p1, Lkw7;->H:Lfx7;
+    iput-object v0, p1, Lo38;->H:Lj48;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Lb12;->r(Ljava/lang/Runnable;)V
+    invoke-virtual {p1, v0}, Lw12;->r(Ljava/lang/Runnable;)V
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1233,16 +1257,16 @@
 
     const-string v1, "Failed to bind camera on attach"
 
-    invoke-static {v0, v1, p1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, v1, p1}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-virtual {p0}, Lone/me/qrscanner/QrScannerWidget;->H0()V
+    invoke-virtual {p0}, Lone/me/qrscanner/QrScannerWidget;->D0()V
 
     :cond_0
     return-void
 .end method
 
 .method public final onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 17
+    .locals 19
 
     move-object/from16 v0, p0
 
@@ -1262,378 +1286,448 @@
 
     invoke-virtual {v4, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-static {v4}, Lt0i;->a(Landroid/view/ViewGroup;)V
+    invoke-static {v4}, Lzfi;->a(Landroid/view/ViewGroup;)V
 
-    new-instance v1, Lryb;
+    const/4 v1, 0x0
 
-    invoke-virtual {v4}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {v4, v1}, Landroid/view/ViewGroup;->setClipChildren(Z)V
 
-    move-result-object v2
+    sget-object v2, La93;->s0:Lv1a;
 
-    invoke-direct {v1, v2}, Lryb;-><init>(Landroid/content/Context;)V
-
-    sget v2, Ln0b;->b:I
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setId(I)V
-
-    new-instance v2, Lwq3;
-
-    invoke-direct {v2, v3, v3}, Lwq3;-><init>(II)V
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    invoke-virtual {v4, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    new-instance v2, Lu6b;
-
-    invoke-virtual {v4}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {v2, v4}, Lv1a;->B(Landroid/view/View;)Lh5b;
 
     move-result-object v5
 
-    const/4 v6, 0x6
+    iget-object v5, v5, Lh5b;->c:Lyeb;
 
-    invoke-direct {v2, v5, v6}, Lu6b;-><init>(Landroid/content/Context;I)V
+    invoke-interface {v5}, Lyeb;->b()Lbf0;
 
-    sget v5, Ln0b;->g:I
+    move-result-object v5
 
-    invoke-virtual {v2, v5}, Landroid/view/View;->setId(I)V
+    iget v5, v5, Lbf0;->l:I
 
-    new-instance v5, Lwq3;
+    invoke-virtual {v4, v5}, Landroid/view/View;->setBackgroundColor(I)V
 
-    const/4 v7, -0x2
+    new-instance v5, La9c;
 
-    invoke-direct {v5, v3, v7}, Lwq3;-><init>(II)V
+    invoke-virtual {v4}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-virtual {v2, v5}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    move-result-object v6
 
-    sget v5, Lo0b;->h:I
+    invoke-direct {v5, v6}, La9c;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v2, v5}, Lu6b;->setTitle(I)V
+    sget v6, Ln9b;->c:I
 
-    new-instance v5, Ld6b;
+    invoke-virtual {v5, v6}, Landroid/view/View;->setId(I)V
 
-    new-instance v8, Lanb;
+    new-instance v6, Lkt3;
 
-    const/16 v9, 0xd
+    invoke-direct {v6, v3, v3}, Lkt3;-><init>(II)V
 
-    invoke-direct {v8, v9, v0}, Lanb;-><init>(ILjava/lang/Object;)V
+    invoke-virtual {v5, v6}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-direct {v5, v8}, Ld6b;-><init>(Lli6;)V
+    invoke-virtual {v4, v5}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    invoke-virtual {v2, v5}, Lu6b;->setLeftActions(Li6b;)V
+    new-instance v6, Lhrc;
 
-    sget-object v5, Lm6b;->a:Lm6b;
+    invoke-virtual {v4}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-virtual {v2, v5}, Lu6b;->setForm(Lm6b;)V
+    move-result-object v7
 
-    sget-object v5, Ll05;->s0:Lk82;
+    invoke-direct {v6, v7}, Lhrc;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v5, v2}, Lk82;->q(Landroid/view/View;)Lewa;
+    sget v7, Ln9b;->g:I
 
-    move-result-object v8
+    invoke-virtual {v6, v7}, Landroid/view/View;->setId(I)V
 
-    iget-object v8, v8, Lewa;->c:Lv5b;
+    new-instance v7, Lkt3;
 
-    invoke-virtual {v2, v8}, Lu6b;->setCustomTheme(Lv5b;)V
+    invoke-direct {v7, v3, v3}, Lkt3;-><init>(II)V
 
-    invoke-static {v2}, Lt0i;->c(Landroid/view/View;)V
+    invoke-virtual {v6, v7}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-virtual {v4, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    const/4 v7, 0x0
 
-    new-instance v8, Lqgc;
+    invoke-virtual {v6, v7}, Landroid/view/View;->setAlpha(F)V
+
+    invoke-virtual {v4, v6}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    new-instance v8, Landroid/widget/FrameLayout;
 
     invoke-virtual {v4}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v9
 
-    invoke-direct {v8, v9}, Lqgc;-><init>(Landroid/content/Context;)V
+    invoke-direct {v8, v9}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    sget v9, Ln0b;->f:I
+    sget v9, Ln9b;->b:I
 
     invoke-virtual {v8, v9}, Landroid/view/View;->setId(I)V
 
-    new-instance v9, Lwq3;
+    new-instance v9, Lkt3;
 
-    invoke-direct {v9, v3, v3}, Lwq3;-><init>(II)V
+    invoke-direct {v9, v3, v3}, Lkt3;-><init>(II)V
 
     invoke-virtual {v8, v9}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
+    const/high16 v9, -0x1000000
+
+    invoke-virtual {v8, v9}, Landroid/view/View;->setBackgroundColor(I)V
+
     invoke-virtual {v4, v8}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    new-instance v9, Landroid/widget/TextView;
+    new-instance v9, Lyfb;
 
     invoke-virtual {v4}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v10
 
-    invoke-direct {v9, v10}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+    const/4 v11, 0x6
 
-    sget v10, Ln0b;->d:I
+    invoke-direct {v9, v10, v11}, Lyfb;-><init>(Landroid/content/Context;I)V
+
+    sget v10, Ln9b;->h:I
 
     invoke-virtual {v9, v10}, Landroid/view/View;->setId(I)V
 
-    new-instance v10, Lwq3;
+    new-instance v10, Lkt3;
 
-    invoke-direct {v10, v3, v7}, Lwq3;-><init>(II)V
+    const/4 v12, -0x2
+
+    invoke-direct {v10, v3, v12}, Lkt3;-><init>(II)V
 
     invoke-virtual {v9, v10}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    const/4 v7, 0x0
+    sget v10, Lo9b;->h:I
 
-    invoke-virtual {v9, v7}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v9, v10}, Lyfb;->setTitle(I)V
 
-    sget-object v10, Lgbg;->H:Lurf;
+    new-instance v10, Lhfb;
 
-    invoke-static {v10, v9}, Lurf;->d(Lurf;Landroid/widget/TextView;)V
+    new-instance v13, Liqb;
 
-    new-instance v10, Laa;
+    const/16 v14, 0x10
 
-    const/16 v11, 0x1c
+    invoke-direct {v13, v14, v0}, Liqb;-><init>(ILjava/lang/Object;)V
 
-    const/4 v12, 0x3
+    invoke-direct {v10, v13}, Lhfb;-><init>(Lem6;)V
 
-    const/4 v13, 0x0
+    invoke-virtual {v9, v10}, Lyfb;->setLeftActions(Lmfb;)V
 
-    invoke-direct {v10, v12, v13, v11}, Laa;-><init>(ILkotlin/coroutines/Continuation;I)V
+    sget-object v10, Lqfb;->a:Lqfb;
 
-    invoke-static {v10, v9}, Lqdi;->d(Lbj6;Landroid/view/View;)V
+    invoke-virtual {v9, v10}, Lyfb;->setForm(Lqfb;)V
 
-    sget-object v10, Lone/me/qrscanner/QrScannerWidget;->y0:[Ltr7;
+    invoke-virtual {v2, v9}, Lv1a;->B(Landroid/view/View;)Lh5b;
 
-    aget-object v11, v10, v7
+    move-result-object v10
 
-    iget-object v11, v0, Lone/me/qrscanner/QrScannerWidget;->a:Lqs;
+    iget-object v10, v10, Lh5b;->c:Lyeb;
 
-    invoke-virtual {v11, v0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {v9, v10}, Lyfb;->setCustomTheme(Lyeb;)V
 
-    move-result-object v14
+    invoke-static {v9}, Lzfi;->c(Landroid/view/View;)V
 
-    check-cast v14, Ljava/lang/Boolean;
+    invoke-virtual {v4, v9}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    invoke-virtual {v14}, Ljava/lang/Boolean;->booleanValue()Z
+    new-instance v10, Landroid/widget/TextView;
 
-    move-result v14
+    invoke-virtual {v4}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    if-eqz v14, :cond_0
+    move-result-object v13
 
-    sget v14, Lo0b;->e:I
+    invoke-direct {v10, v13}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v9}, Landroid/view/View;->getContext()Landroid/content/Context;
+    sget v13, Ln9b;->e:I
 
-    move-result-object v15
+    invoke-virtual {v10, v13}, Landroid/view/View;->setId(I)V
 
-    invoke-static {v15, v14}, Lc8;->f(Landroid/content/Context;I)Ljava/lang/String;
+    new-instance v13, Lkt3;
 
-    move-result-object v14
+    invoke-direct {v13, v3, v12}, Lkt3;-><init>(II)V
+
+    invoke-virtual {v10, v13}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    invoke-virtual {v10, v1}, Landroid/view/View;->setVisibility(I)V
+
+    sget-object v12, Ldpg;->M:Lt5g;
+
+    invoke-static {v12, v10}, Lt5g;->d(Lt5g;Landroid/widget/TextView;)V
+
+    new-instance v12, Lx9;
+
+    const/16 v13, 0x1c
+
+    const/4 v14, 0x3
+
+    const/4 v15, 0x0
+
+    invoke-direct {v12, v14, v15, v13}, Lx9;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    invoke-static {v12, v10}, Ltqi;->c(Lum6;Landroid/view/View;)V
+
+    sget-object v12, Lone/me/qrscanner/QrScannerWidget;->E0:[Lyy7;
+
+    aget-object v13, v12, v1
+
+    iget-object v13, v0, Lone/me/qrscanner/QrScannerWidget;->a:Lhs;
+
+    invoke-virtual {v13, v0}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v16
+
+    check-cast v16, Ljava/lang/Boolean;
+
+    invoke-virtual/range {v16 .. v16}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v16
+
+    if-eqz v16, :cond_0
+
+    sget v15, Lo9b;->e:I
+
+    invoke-virtual {v10}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v11
+
+    invoke-static {v11, v15}, Lz7;->e(Landroid/content/Context;I)Ljava/lang/String;
+
+    move-result-object v11
 
     goto :goto_0
 
     :cond_0
-    sget v14, Lo0b;->f:I
+    sget v11, Lo9b;->f:I
 
-    invoke-virtual {v9}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {v10}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v15
 
-    invoke-static {v15, v14}, Lc8;->f(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {v15, v11}, Lz7;->e(Landroid/content/Context;I)Ljava/lang/String;
 
-    move-result-object v14
+    move-result-object v11
 
     :goto_0
-    invoke-virtual {v9, v14}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v10, v11}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const/4 v14, 0x4
+    const/4 v11, 0x4
 
-    invoke-virtual {v9, v14}, Landroid/view/View;->setTextAlignment(I)V
+    invoke-virtual {v10, v11}, Landroid/view/View;->setTextAlignment(I)V
 
     const/16 v15, 0x11
 
-    invoke-virtual {v9, v15}, Landroid/widget/TextView;->setGravity(I)V
+    invoke-virtual {v10, v15}, Landroid/widget/TextView;->setGravity(I)V
 
-    invoke-virtual {v4, v9}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    aget-object v15, v10, v7
-
-    invoke-virtual {v11, v0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
 
     move-result-object v15
 
-    check-cast v15, Ljava/lang/Boolean;
+    invoke-virtual {v15}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    invoke-virtual {v15}, Ljava/lang/Boolean;->booleanValue()Z
+    move-result-object v15
 
-    move-result v15
+    iget v15, v15, Landroid/util/DisplayMetrics;->density:F
 
-    const/16 v14, 0xa
+    const/high16 v16, 0x41200000    # 10.0f
 
-    const/16 v6, 0x34
+    mul-float v15, v15, v16
 
-    if-eqz v15, :cond_3
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
 
-    new-instance v15, Landroidx/appcompat/widget/AppCompatImageView;
+    move-result-object v17
 
-    move/from16 p3, v7
+    invoke-virtual/range {v17 .. v17}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v11
+
+    iget v11, v11, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float v11, v11, v16
+
+    move/from16 v16, v1
+
+    sget v1, Lone/me/qrscanner/QrScannerWidget;->F0:I
+
+    invoke-virtual {v10, v15, v7, v11, v1}, Landroid/widget/TextView;->setShadowLayer(FFFI)V
+
+    invoke-virtual {v4, v10}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    aget-object v1, v12, v16
+
+    invoke-virtual {v13, v0}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Boolean;
+
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v1
+
+    sget-object v7, Lc8b;->b:Lc8b;
+
+    const/16 v11, 0x34
+
+    if-eqz v1, :cond_3
+
+    new-instance v15, Lf8b;
 
     invoke-virtual {v4}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    move-result-object v7
+    move-result-object v1
 
-    invoke-direct {v15, v7, v13}, Landroidx/appcompat/widget/AppCompatImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {v15, v1}, Lf8b;-><init>(Landroid/content/Context;)V
 
-    sget v7, Ln0b;->c:I
+    sget v1, Ln9b;->d:I
 
-    invoke-virtual {v15, v7}, Landroid/view/View;->setId(I)V
+    invoke-virtual {v15, v1}, Landroid/view/View;->setId(I)V
 
-    new-instance v7, Lwq3;
+    new-instance v1, Lkt3;
 
-    int-to-float v12, v6
+    int-to-float v14, v11
 
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
 
-    move-result-object v16
+    move-result-object v18
 
-    invoke-virtual/range {v16 .. v16}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual/range {v18 .. v18}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-result-object v6
+    move-result-object v11
 
-    iget v6, v6, Landroid/util/DisplayMetrics;->density:F
+    iget v11, v11, Landroid/util/DisplayMetrics;->density:F
 
-    mul-float/2addr v6, v12
+    mul-float/2addr v11, v14
 
-    invoke-static {v6}, Lfhi;->b(F)I
+    invoke-static {v11}, Lkti;->d(F)I
 
-    move-result v6
+    move-result v11
 
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
 
-    move-result-object v16
+    move-result-object v18
 
-    invoke-virtual/range {v16 .. v16}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual/range {v18 .. v18}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-result-object v13
+    move-result-object v3
 
-    iget v13, v13, Landroid/util/DisplayMetrics;->density:F
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
 
-    mul-float/2addr v12, v13
+    mul-float/2addr v14, v3
 
-    invoke-static {v12}, Lfhi;->b(F)I
+    invoke-static {v14}, Lkti;->d(F)I
 
-    move-result v12
+    move-result v3
 
-    invoke-direct {v7, v6, v12}, Lwq3;-><init>(II)V
+    invoke-direct {v1, v11, v3}, Lkt3;-><init>(II)V
 
-    invoke-virtual {v15, v7}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v15, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    int-to-float v6, v14
+    invoke-virtual {v15, v7}, Lf8b;->setMode(Lc8b;)V
 
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+    aget-object v1, v12, v16
 
-    move-result-object v7
+    invoke-virtual {v13, v0}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
-    invoke-virtual {v7}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    move-result-object v1
 
-    move-result-object v7
+    check-cast v1, Ljava/lang/Boolean;
 
-    iget v7, v7, Landroid/util/DisplayMetrics;->density:F
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    mul-float/2addr v6, v7
+    move-result v1
 
-    invoke-static {v6}, Lfhi;->b(F)I
+    if-eqz v1, :cond_1
 
-    move-result v6
-
-    invoke-virtual {v15, v6, v6, v6, v6}, Landroid/view/View;->setPadding(IIII)V
-
-    aget-object v6, v10, p3
-
-    invoke-virtual {v11, v0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Ljava/lang/Boolean;
-
-    invoke-virtual {v6}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_1
-
-    move/from16 v6, p3
+    move/from16 v1, v16
 
     goto :goto_1
 
     :cond_1
-    const/16 v6, 0x8
+    const/16 v1, 0x8
 
     :goto_1
-    invoke-virtual {v15, v6}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v15, v1}, Landroid/view/View;->setVisibility(I)V
 
-    sget v6, Lzjd;->u0:I
+    sget v1, Livd;->f1:I
 
-    invoke-virtual {v5, v15}, Lk82;->n(Landroid/view/View;)Lv5b;
+    invoke-virtual {v2, v15}, Lv1a;->y(Landroid/view/View;)Lyeb;
 
-    move-result-object v7
+    move-result-object v2
 
-    invoke-interface {v7}, Lv5b;->getIcon()Ld77;
+    invoke-interface {v2}, Lyeb;->getIcon()Lnb7;
 
     invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    move-result-object v7
+    move-result-object v2
 
-    invoke-static {v7, v6}, La14;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v2, v1}, Lr34;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    move-result-object v6
+    move-result-object v1
 
-    if-eqz v6, :cond_2
+    if-eqz v1, :cond_2
 
-    invoke-static {v6, v3}, Lv05;->g(Landroid/graphics/drawable/Drawable;I)V
+    const/4 v2, -0x1
 
-    sget-object v7, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+    invoke-static {v1, v2}, Lt35;->g(Landroid/graphics/drawable/Drawable;I)V
 
-    invoke-static {v6, v7}, Lv05;->i(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
+    sget-object v2, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+
+    invoke-static {v1, v2}, Lt35;->i(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
 
     :cond_2
-    invoke-virtual {v15, v6}, Landroidx/appcompat/widget/AppCompatImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
 
-    new-instance v6, Lehc;
+    move-result-object v2
 
-    const/4 v7, 0x1
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    invoke-direct {v6, v0, v7}, Lehc;-><init>(Lone/me/qrscanner/QrScannerWidget;I)V
+    move-result-object v2
 
-    invoke-virtual {v15, v6}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    const/high16 v3, 0x41c00000    # 24.0f
+
+    mul-float/2addr v2, v3
+
+    const-string v3, "M6.922 6.664L6.358 6.711l0.123-0.378 0.021-0.061C6.747 5.538 6.963 4.889 7.226 4.37c0.292-0.576 0.668-1.052 1.257-1.409 0.594-0.361 1.201-0.47 1.855-0.46 0.594 0.009 1.29 0.12 2.083 0.246l0.063 0.01c1.02 0.162 2.131 0.366 3.132 0.611 1 0.244 2.08 0.575 3.061 0.901l0.06 0.02c0.762 0.253 1.431 0.476 1.962 0.741 0.585 0.293 1.073 0.67 1.435 1.264 0.358 0.588 0.472 1.184 0.466 1.829-0.006 0.582-0.113 1.258-0.234 2.023l-0.01 0.063c-0.09 0.567-0.198 1.144-0.327 1.673-0.129 0.528-0.299 1.09-0.481 1.635l-0.02 0.061c-0.245 0.734-0.462 1.384-0.725 1.903-0.205 0.404-0.452 0.76-0.785 1.06 0.048-0.587 0.082-1.204 0.082-1.791 0-0.599-0.036-1.229-0.085-1.826l-0.01-0.118c-0.06-0.723-0.124-1.507-0.282-2.184-0.194-0.829-0.556-1.656-1.287-2.387-0.744-0.742-1.588-1.098-2.42-1.288-0.687-0.157-1.488-0.222-2.239-0.283l-0.118-0.01C12.609 6.569 11.436 6.5 10.35 6.5c-1.087 0-2.26 0.069-3.31 0.154l-0.118 0.01zM10.35 21.5c-1.03 0-2.158-0.065-3.187-0.149l-0.064-0.006c-0.8-0.065-1.503-0.122-2.082-0.254-0.638-0.146-1.201-0.396-1.693-0.887-0.487-0.487-0.74-1.039-0.886-1.667-0.133-0.567-0.189-1.249-0.253-2.02L2.18 16.452C2.132 15.88 2.1 15.294 2.1 14.75s0.032-1.13 0.08-1.703l0.005-0.064c0.064-0.771 0.12-1.453 0.253-2.02 0.146-0.628 0.399-1.18 0.886-1.667 0.492-0.491 1.055-0.741 1.693-0.887 0.579-0.132 1.282-0.189 2.082-0.254l0.064-0.006C8.192 8.065 9.32 8 10.35 8c1.03 0 2.158 0.065 3.187 0.149l0.064 0.006c0.8 0.065 1.503 0.122 2.082 0.254 0.638 0.146 1.201 0.396 1.693 0.887 0.488 0.487 0.74 1.039 0.887 1.667 0.132 0.567 0.188 1.249 0.252 2.02l0.006 0.064c0.047 0.573 0.079 1.159 0.079 1.703s-0.032 1.13-0.079 1.702l-0.006 0.065c-0.064 0.771-0.12 1.453-0.252 2.02-0.147 0.628-0.399 1.18-0.887 1.667-0.492 0.491-1.055 0.741-1.693 0.887-0.579 0.132-1.282 0.189-2.082 0.254l-0.064 0.006C12.508 21.435 11.38 21.5 10.35 21.5zM7.85 13c0 0.69-0.56 1.25-1.25 1.25S5.35 13.69 5.35 13s0.56-1.25 1.25-1.25S7.85 12.31 7.85 13zm-0.524 6.357c1.001 0.082 2.07 0.143 3.024 0.143 0.954 0 2.023-0.061 3.024-0.143 0.883-0.072 1.441-0.12 1.864-0.216 0.38-0.087 0.568-0.196 0.725-0.352 0.161-0.162 0.268-0.347 0.352-0.707 0.095-0.406 0.141-0.94 0.212-1.795l0.019-0.234c-0.827-0.714-1.709-1.391-2.687-1.977-0.559-0.335-1.257-0.328-1.805 0.025-2.041 1.31-4.193 3.377-5.87 5.153 0.31 0.035 0.682 0.066 1.142 0.103z"
+
+    invoke-virtual {v15, v1, v3, v2}, Lf8b;->b(Landroid/graphics/drawable/Drawable;Ljava/lang/String;F)V
+
+    new-instance v1, Lurc;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v0, v2}, Lurc;-><init>(Lone/me/qrscanner/QrScannerWidget;I)V
+
+    invoke-virtual {v15, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     invoke-virtual {v4, v15}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     goto :goto_2
 
     :cond_3
-    move/from16 p3, v7
-
     const/4 v15, 0x0
 
     :goto_2
-    new-instance v6, Landroidx/appcompat/widget/AppCompatImageView;
+    new-instance v1, Lf8b;
 
     invoke-virtual {v4}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    move-result-object v7
+    move-result-object v2
 
-    const/4 v10, 0x0
+    invoke-direct {v1, v2}, Lf8b;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {v6, v7, v10}, Landroidx/appcompat/widget/AppCompatImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    sget v2, Ln9b;->i:I
 
-    sget v7, Ln0b;->h:I
+    invoke-virtual {v1, v2}, Landroid/view/View;->setId(I)V
 
-    invoke-virtual {v6, v7}, Landroid/view/View;->setId(I)V
+    new-instance v2, Lkt3;
 
-    new-instance v7, Lwq3;
+    const/16 v3, 0x34
 
-    const/16 v10, 0x34
+    int-to-float v3, v3
 
-    int-to-float v10, v10
-
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
 
     move-result-object v11
 
@@ -1643,13 +1737,13 @@
 
     iget v11, v11, Landroid/util/DisplayMetrics;->density:F
 
-    mul-float/2addr v11, v10
+    mul-float/2addr v11, v3
 
-    invoke-static {v11}, Lfhi;->b(F)I
+    invoke-static {v11}, Lkti;->d(F)I
 
     move-result v11
 
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
 
     move-result-object v12
 
@@ -1659,123 +1753,105 @@
 
     iget v12, v12, Landroid/util/DisplayMetrics;->density:F
 
-    mul-float/2addr v10, v12
+    mul-float/2addr v3, v12
 
-    invoke-static {v10}, Lfhi;->b(F)I
+    invoke-static {v3}, Lkti;->d(F)I
 
-    move-result v10
+    move-result v3
 
-    invoke-direct {v7, v11, v10}, Lwq3;-><init>(II)V
+    invoke-direct {v2, v11, v3}, Lkt3;-><init>(II)V
 
-    invoke-virtual {v6, v7}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    int-to-float v7, v14
+    invoke-virtual {v1, v7}, Lf8b;->setMode(Lc8b;)V
 
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+    new-instance v2, Lurc;
 
-    move-result-object v10
+    const/4 v3, 0x1
 
-    invoke-virtual {v10}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-direct {v2, v0, v3}, Lurc;-><init>(Lone/me/qrscanner/QrScannerWidget;I)V
 
-    move-result-object v10
+    invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    iget v10, v10, Landroid/util/DisplayMetrics;->density:F
+    invoke-virtual {v4, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    mul-float/2addr v7, v10
+    invoke-static {v4}, Ll5j;->g(Landroidx/constraintlayout/widget/ConstraintLayout;)Lut3;
 
-    invoke-static {v7}, Lfhi;->b(F)I
-
-    move-result v7
-
-    invoke-virtual {v6, v7, v7, v7, v7}, Landroid/view/View;->setPadding(IIII)V
-
-    invoke-virtual {v5, v6}, Lk82;->n(Landroid/view/View;)Lv5b;
-
-    move-result-object v5
-
-    invoke-interface {v5}, Lv5b;->getIcon()Ld77;
-
-    invoke-static {v3}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v3
-
-    invoke-virtual {v6, v3}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
-
-    new-instance v3, Lehc;
-
-    const/4 v5, 0x0
-
-    invoke-direct {v3, v0, v5}, Lehc;-><init>(Lone/me/qrscanner/QrScannerWidget;I)V
-
-    invoke-virtual {v6, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    invoke-virtual {v4, v6}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    invoke-static {v4}, Lgvi;->a(Landroidx/constraintlayout/widget/ConstraintLayout;)Lgr3;
-
-    move-result-object v3
-
-    invoke-virtual {v2}, Landroid/view/View;->getId()I
-
-    move-result v2
-
-    move/from16 v5, p3
-
-    const/4 v7, 0x3
-
-    invoke-virtual {v3, v2, v7, v5, v7}, Lgr3;->d(IIII)V
-
-    const/4 v10, 0x6
-
-    invoke-virtual {v3, v2, v10, v5, v10}, Lgr3;->d(IIII)V
-
-    const/4 v11, 0x7
-
-    invoke-virtual {v3, v2, v11, v5, v11}, Lgr3;->d(IIII)V
-
-    invoke-virtual {v1}, Landroid/view/View;->getId()I
-
-    move-result v1
-
-    invoke-virtual {v3, v1, v10, v5, v10}, Lgr3;->d(IIII)V
-
-    invoke-virtual {v3, v1, v7, v5, v7}, Lgr3;->d(IIII)V
-
-    invoke-virtual {v3, v1, v11, v5, v11}, Lgr3;->d(IIII)V
-
-    const/4 v2, 0x4
-
-    invoke-virtual {v3, v1, v2, v5, v2}, Lgr3;->d(IIII)V
-
-    invoke-virtual {v8}, Landroid/view/View;->getId()I
-
-    move-result v1
-
-    invoke-virtual {v3, v1, v10, v5, v10}, Lgr3;->d(IIII)V
-
-    invoke-virtual {v3, v1, v11, v5, v11}, Lgr3;->d(IIII)V
-
-    invoke-virtual {v3, v1, v7, v5, v7}, Lgr3;->d(IIII)V
-
-    invoke-virtual {v3, v1, v2, v5, v2}, Lgr3;->d(IIII)V
+    move-result-object v2
 
     invoke-virtual {v9}, Landroid/view/View;->getId()I
 
-    move-result v1
+    move-result v3
 
-    invoke-virtual {v3, v1, v10, v5, v10}, Lgr3;->d(IIII)V
+    move/from16 v7, v16
 
-    new-instance v2, Lmla;
+    const/4 v9, 0x3
 
-    const/4 v7, 0x5
+    invoke-virtual {v2, v3, v9, v7, v9}, Lut3;->d(IIII)V
 
-    invoke-direct {v2, v3, v10, v1, v7}, Lmla;-><init>(Ljava/lang/Object;III)V
+    const/4 v11, 0x6
 
-    const/16 v7, 0x1e
+    invoke-virtual {v2, v3, v11, v7, v11}, Lut3;->d(IIII)V
 
-    int-to-float v7, v7
+    const/4 v12, 0x7
 
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+    invoke-virtual {v2, v3, v12, v7, v12}, Lut3;->d(IIII)V
+
+    invoke-virtual {v5}, Landroid/view/View;->getId()I
+
+    move-result v3
+
+    invoke-virtual {v2, v3, v11, v7, v11}, Lut3;->d(IIII)V
+
+    invoke-virtual {v2, v3, v9, v7, v9}, Lut3;->d(IIII)V
+
+    invoke-virtual {v2, v3, v12, v7, v12}, Lut3;->d(IIII)V
+
+    const/4 v5, 0x4
+
+    invoke-virtual {v2, v3, v5, v7, v5}, Lut3;->d(IIII)V
+
+    invoke-virtual {v6}, Landroid/view/View;->getId()I
+
+    move-result v3
+
+    invoke-virtual {v2, v3, v11, v7, v11}, Lut3;->d(IIII)V
+
+    invoke-virtual {v2, v3, v12, v7, v12}, Lut3;->d(IIII)V
+
+    invoke-virtual {v2, v3, v9, v7, v9}, Lut3;->d(IIII)V
+
+    invoke-virtual {v2, v3, v5, v7, v5}, Lut3;->d(IIII)V
+
+    invoke-virtual {v8}, Landroid/view/View;->getId()I
+
+    move-result v3
+
+    invoke-virtual {v2, v3, v11, v7, v11}, Lut3;->d(IIII)V
+
+    invoke-virtual {v2, v3, v9, v7, v9}, Lut3;->d(IIII)V
+
+    invoke-virtual {v2, v3, v12, v7, v12}, Lut3;->d(IIII)V
+
+    invoke-virtual {v2, v3, v5, v7, v5}, Lut3;->d(IIII)V
+
+    invoke-virtual {v10}, Landroid/view/View;->getId()I
+
+    move-result v3
+
+    invoke-virtual {v2, v3, v11, v7, v11}, Lut3;->d(IIII)V
+
+    new-instance v5, Lfua;
+
+    const/4 v6, 0x5
+
+    invoke-direct {v5, v2, v11, v3, v6}, Lfua;-><init>(Ljava/lang/Object;III)V
+
+    const/16 v6, 0x1e
+
+    int-to-float v6, v6
+
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -1785,17 +1861,17 @@
 
     iget v8, v8, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-static {v7, v8, v2}, Ldy1;->q(FFLmla;)V
+    invoke-static {v6, v8, v5}, Laz1;->q(FFLfua;)V
 
-    invoke-virtual {v3, v1, v11, v5, v11}, Lgr3;->d(IIII)V
+    invoke-virtual {v2, v3, v12, v7, v12}, Lut3;->d(IIII)V
 
-    new-instance v2, Lmla;
+    new-instance v5, Lfua;
 
     const/4 v8, 0x5
 
-    invoke-direct {v2, v3, v11, v1, v8}, Lmla;-><init>(Ljava/lang/Object;III)V
+    invoke-direct {v5, v2, v12, v3, v8}, Lfua;-><init>(Ljava/lang/Object;III)V
 
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -1805,59 +1881,59 @@
 
     iget v8, v8, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-static {v7, v8, v2}, Ldy1;->q(FFLmla;)V
+    invoke-static {v6, v8, v5}, Laz1;->q(FFLfua;)V
 
-    const/4 v2, 0x4
+    const/4 v5, 0x4
 
-    invoke-virtual {v3, v1, v2, v5, v2}, Lgr3;->d(IIII)V
+    invoke-virtual {v2, v3, v5, v7, v5}, Lut3;->d(IIII)V
 
-    new-instance v5, Lmla;
+    new-instance v6, Lfua;
 
     const/4 v7, 0x5
 
-    invoke-direct {v5, v3, v2, v1, v7}, Lmla;-><init>(Ljava/lang/Object;III)V
+    invoke-direct {v6, v2, v5, v3, v7}, Lfua;-><init>(Ljava/lang/Object;III)V
 
-    const/16 v1, 0x96
+    const/16 v3, 0x96
 
-    int-to-float v1, v1
+    int-to-float v3, v3
 
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
 
-    move-result-object v2
+    move-result-object v5
 
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-result-object v2
+    move-result-object v5
 
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-static {v1, v2, v5}, Ldy1;->q(FFLmla;)V
+    invoke-static {v3, v5, v6}, Laz1;->q(FFLfua;)V
 
-    const/16 v1, 0x40
+    const/16 v3, 0x40
 
-    const/16 v2, 0x6c
+    const/16 v5, 0x6c
 
     if-eqz v15, :cond_4
 
     invoke-virtual {v15}, Landroid/view/View;->getId()I
 
-    move-result v5
+    move-result v6
 
     const/4 v7, 0x0
 
-    const/4 v10, 0x6
+    const/4 v11, 0x6
 
-    invoke-virtual {v3, v5, v10, v7, v10}, Lgr3;->d(IIII)V
+    invoke-virtual {v2, v6, v11, v7, v11}, Lut3;->d(IIII)V
 
-    new-instance v8, Lmla;
+    new-instance v8, Lfua;
 
     const/4 v9, 0x5
 
-    invoke-direct {v8, v3, v10, v5, v9}, Lmla;-><init>(Ljava/lang/Object;III)V
+    invoke-direct {v8, v2, v11, v6, v9}, Lfua;-><init>(Ljava/lang/Object;III)V
 
-    int-to-float v9, v2
+    int-to-float v9, v5
 
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
 
     move-result-object v10
 
@@ -1867,21 +1943,21 @@
 
     iget v10, v10, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-static {v9, v10, v8}, Ldy1;->q(FFLmla;)V
+    invoke-static {v9, v10, v8}, Laz1;->q(FFLfua;)V
 
     const/4 v8, 0x4
 
-    invoke-virtual {v3, v5, v8, v7, v8}, Lgr3;->d(IIII)V
+    invoke-virtual {v2, v6, v8, v7, v8}, Lut3;->d(IIII)V
 
-    new-instance v7, Lmla;
+    new-instance v7, Lfua;
 
     const/4 v9, 0x5
 
-    invoke-direct {v7, v3, v8, v5, v9}, Lmla;-><init>(Ljava/lang/Object;III)V
+    invoke-direct {v7, v2, v8, v6, v9}, Lfua;-><init>(Ljava/lang/Object;III)V
 
-    int-to-float v5, v1
+    int-to-float v6, v3
 
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -1891,12 +1967,12 @@
 
     iget v8, v8, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-static {v5, v8, v7}, Ldy1;->q(FFLmla;)V
+    invoke-static {v6, v8, v7}, Laz1;->q(FFLfua;)V
 
     :cond_4
-    invoke-virtual {v6}, Landroid/view/View;->getId()I
+    invoke-virtual {v1}, Landroid/view/View;->getId()I
 
-    move-result v5
+    move-result v1
 
     if-eqz v15, :cond_5
 
@@ -1904,21 +1980,21 @@
 
     move-result v6
 
-    const/4 v10, 0x6
+    const/4 v11, 0x6
 
-    invoke-virtual {v3, v5, v10, v6, v11}, Lgr3;->d(IIII)V
+    invoke-virtual {v2, v1, v11, v6, v12}, Lut3;->d(IIII)V
 
-    new-instance v6, Lmla;
+    new-instance v6, Lfua;
 
     const/4 v7, 0x5
 
-    invoke-direct {v6, v3, v10, v5, v7}, Lmla;-><init>(Ljava/lang/Object;III)V
+    invoke-direct {v6, v2, v11, v1, v7}, Lfua;-><init>(Ljava/lang/Object;III)V
 
     const/16 v7, 0x28
 
     int-to-float v7, v7
 
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -1928,21 +2004,21 @@
 
     iget v8, v8, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-static {v7, v8, v6}, Ldy1;->q(FFLmla;)V
+    invoke-static {v7, v8, v6}, Laz1;->q(FFLfua;)V
 
     const/4 v7, 0x0
 
-    invoke-virtual {v3, v5, v11, v7, v11}, Lgr3;->d(IIII)V
+    invoke-virtual {v2, v1, v12, v7, v12}, Lut3;->d(IIII)V
 
-    new-instance v6, Lmla;
+    new-instance v6, Lfua;
 
     const/4 v8, 0x5
 
-    invoke-direct {v6, v3, v11, v5, v8}, Lmla;-><init>(Ljava/lang/Object;III)V
+    invoke-direct {v6, v2, v12, v1, v8}, Lfua;-><init>(Ljava/lang/Object;III)V
 
-    int-to-float v2, v2
+    int-to-float v5, v5
 
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -1952,73 +2028,91 @@
 
     iget v8, v8, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-static {v2, v8, v6}, Ldy1;->q(FFLmla;)V
+    invoke-static {v5, v8, v6}, Laz1;->q(FFLfua;)V
 
     :goto_3
-    const/4 v2, 0x4
+    const/4 v5, 0x4
 
     goto :goto_4
 
     :cond_5
     const/4 v7, 0x0
 
-    const/4 v10, 0x6
+    const/4 v11, 0x6
 
-    invoke-virtual {v3, v5, v10, v7, v10}, Lgr3;->d(IIII)V
+    invoke-virtual {v2, v1, v11, v7, v11}, Lut3;->d(IIII)V
 
-    invoke-virtual {v3, v5, v11, v7, v11}, Lgr3;->d(IIII)V
+    invoke-virtual {v2, v1, v12, v7, v12}, Lut3;->d(IIII)V
 
     goto :goto_3
 
     :goto_4
-    invoke-virtual {v3, v5, v2, v7, v2}, Lgr3;->d(IIII)V
+    invoke-virtual {v2, v1, v5, v7, v5}, Lut3;->d(IIII)V
 
-    new-instance v6, Lmla;
+    new-instance v6, Lfua;
 
     const/4 v7, 0x5
 
-    invoke-direct {v6, v3, v2, v5, v7}, Lmla;-><init>(Ljava/lang/Object;III)V
+    invoke-direct {v6, v2, v5, v1, v7}, Lfua;-><init>(Ljava/lang/Object;III)V
 
-    int-to-float v1, v1
+    int-to-float v1, v3
 
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-result-object v2
+    move-result-object v3
 
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
 
-    mul-float/2addr v1, v2
+    mul-float/2addr v1, v3
 
-    invoke-static {v1}, Lfhi;->b(F)I
+    invoke-static {v1}, Lkti;->d(F)I
 
     move-result v1
 
-    invoke-virtual {v6, v1}, Lmla;->e(I)V
+    invoke-virtual {v6, v1}, Lfua;->e(I)V
 
-    invoke-virtual {v3, v4}, Lgr3;->a(Landroidx/constraintlayout/widget/ConstraintLayout;)V
+    invoke-virtual {v2, v4}, Lut3;->a(Landroidx/constraintlayout/widget/ConstraintLayout;)V
 
     return-object v4
 .end method
 
 .method public final onDestroyView(Landroid/view/View;)V
-    .locals 0
+    .locals 1
 
-    iget-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->w0:Lkw7;
+    iget-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->A0:Landroid/view/ViewPropertyAnimator;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lkw7;->w()V
+    invoke-virtual {p1}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
     :cond_0
     const/4 p1, 0x0
 
-    iput-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->w0:Lkw7;
+    iput-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->A0:Landroid/view/ViewPropertyAnimator;
 
-    iget-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->v0:Landroid/graphics/RectF;
+    iget-object v0, p0, Lone/me/qrscanner/QrScannerWidget;->B0:Landroid/view/ViewPropertyAnimator;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->cancel()V
+
+    :cond_1
+    iput-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->B0:Landroid/view/ViewPropertyAnimator;
+
+    iget-object v0, p0, Lone/me/qrscanner/QrScannerWidget;->y0:Lo38;
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Lo38;->w()V
+
+    :cond_2
+    iput-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->y0:Lo38;
+
+    iget-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->x0:Landroid/graphics/RectF;
 
     invoke-virtual {p1}, Landroid/graphics/RectF;->setEmpty()V
 
@@ -2028,20 +2122,20 @@
 .method public final onDetach(Landroid/view/View;)V
     .locals 0
 
-    invoke-super {p0, p1}, Ll24;->onDetach(Landroid/view/View;)V
+    invoke-super {p0, p1}, Lc54;->onDetach(Landroid/view/View;)V
 
-    iget-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->w0:Lkw7;
+    iget-object p1, p0, Lone/me/qrscanner/QrScannerWidget;->y0:Lo38;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lkw7;->w()V
+    invoke-virtual {p1}, Lo38;->w()V
 
     :cond_0
     return-void
 .end method
 
 .method public final onRequestPermissionsResult(I[Ljava/lang/String;[I)V
-    .locals 2
+    .locals 1
 
     const/16 p2, 0x9e
 
@@ -2051,51 +2145,37 @@
 
     const/4 p2, 0x0
 
-    move v0, p2
-
     :goto_0
-    if-ge v0, p1, :cond_1
+    if-ge p2, p1, :cond_1
 
-    aget v1, p3, v0
+    aget v0, p3, p2
 
-    if-nez v1, :cond_0
+    if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Lone/me/qrscanner/QrScannerWidget;->H0()V
-
-    invoke-virtual {p0}, Lone/me/qrscanner/QrScannerWidget;->C0()Lqgc;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {p0}, Lone/me/qrscanner/QrScannerWidget;->C0()Lqgc;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lqgc;->a()V
+    invoke-virtual {p0}, Lone/me/qrscanner/QrScannerWidget;->D0()V
 
     return-void
 
     :cond_0
-    add-int/lit8 v0, v0, 0x1
+    add-int/lit8 p2, p2, 0x1
 
     goto :goto_0
 
     :cond_1
-    invoke-virtual {p0}, Lone/me/qrscanner/QrScannerWidget;->E0()Lchc;
+    invoke-virtual {p0}, Lone/me/qrscanner/QrScannerWidget;->A0()Ltrc;
 
     move-result-object p1
 
-    sget-object p2, Lind;->a:Lind;
+    sget-object p2, Luyd;->a:Luyd;
 
-    invoke-virtual {p1, p2}, Lchc;->r(Lnnd;)V
+    invoke-virtual {p1, p2}, Ltrc;->t(Lzyd;)V
 
     :cond_2
     return-void
 .end method
 
 .method public final onViewCreated(Landroid/view/View;)V
-    .locals 19
+    .locals 20
 
     move-object/from16 v0, p0
 
@@ -2115,354 +2195,380 @@
 
     if-nez v1, :cond_0
 
-    invoke-virtual {v0}, Lone/me/qrscanner/QrScannerWidget;->E0()Lchc;
+    invoke-virtual {v0}, Lone/me/qrscanner/QrScannerWidget;->A0()Ltrc;
 
     move-result-object v1
 
-    sget-object v2, Lknd;->a:Lknd;
+    sget-object v2, Lwyd;->a:Lwyd;
 
-    invoke-virtual {v1, v2}, Lchc;->r(Lnnd;)V
+    invoke-virtual {v1, v2}, Ltrc;->t(Lzyd;)V
 
     :cond_0
-    invoke-virtual {v0}, Ll24;->getRouter()Lqid;
+    invoke-virtual {v0}, Lc54;->getRouter()Lytd;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lqid;->h()Lpma;
+    invoke-virtual {v1}, Lytd;->h()Ljva;
 
     move-result-object v1
+
+    const/16 v2, 0xa
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lfx7;
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj48;
 
-    move-result-object v2
+    move-result-object v3
 
-    new-instance v3, Li24;
+    new-instance v4, Lz44;
 
-    const/16 v4, 0xa
+    invoke-direct {v4, v0, v2}, Lz44;-><init>(Lone/me/sdk/arch/Widget;I)V
 
-    invoke-direct {v3, v0, v4}, Li24;-><init>(Lone/me/sdk/arch/Widget;I)V
-
-    invoke-virtual {v1, v2, v3}, Lpma;->a(Lfx7;Lhma;)V
+    invoke-virtual {v1, v3, v4}, Ljva;->a(Lj48;Lbva;)V
 
     :cond_1
-    invoke-virtual {v0}, Lone/me/qrscanner/QrScannerWidget;->D0()Lrib;
+    invoke-virtual {v0}, Lone/me/qrscanner/QrScannerWidget;->z0()Lqsb;
 
     move-result-object v1
 
-    sget-object v2, Lrib;->m:[Ljava/lang/String;
+    sget-object v3, Lqsb;->m:[Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lrib;->c([Ljava/lang/String;)Z
+    invoke-virtual {v1, v3}, Lqsb;->c([Ljava/lang/String;)Z
 
     move-result v1
 
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
+    const/4 v3, 0x1
 
     const/4 v4, 0x0
 
     if-eqz v1, :cond_2
 
-    invoke-virtual {v0}, Lone/me/qrscanner/QrScannerWidget;->H0()V
-
-    invoke-virtual {v0}, Lone/me/qrscanner/QrScannerWidget;->C0()Lqgc;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {v0}, Lone/me/qrscanner/QrScannerWidget;->C0()Lqgc;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lqgc;->a()V
+    invoke-virtual {v0}, Lone/me/qrscanner/QrScannerWidget;->D0()V
 
     goto/16 :goto_3
 
     :cond_2
-    const-string v1, "dialog_id"
+    const/4 v1, 0x0
 
-    invoke-static {v3, v1}, Li57;->e(ILjava/lang/String;)Landroid/os/Bundle;
+    const-string v5, "dialog_id"
 
-    move-result-object v1
-
-    sget-object v5, Lone/me/sdk/bottomsheet/BottomSheetWidget;->z0:[Ltr7;
-
-    sget v5, Ldkd;->N1:I
-
-    const/4 v6, 0x4
-
-    invoke-static {v5, v1, v4, v6}, Ldy1;->e(ILandroid/os/Bundle;Lupd;I)Leo3;
-
-    move-result-object v1
-
-    sget v5, Ly0b;->w:I
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v1, v5}, Lho7;->e(ILjava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v5
 
-    invoke-virtual {v1, v5}, Leo3;->g(Ljava/lang/Integer;)V
+    sget-object v6, Lone/me/sdk/bottomsheet/BottomSheetWidget;->B0:[Lyy7;
 
-    sget v5, Lo0b;->a:I
+    sget v6, Lmvd;->U0:I
 
-    new-instance v6, Lorf;
+    const/4 v7, 0x4
 
-    invoke-direct {v6, v5}, Lorf;-><init>(I)V
+    invoke-static {v6, v5, v4, v7}, Laz1;->e(ILandroid/os/Bundle;Lf1e;I)Loq3;
 
-    invoke-virtual {v1, v6}, Leo3;->f(Ltrf;)V
+    move-result-object v5
 
-    sget v8, Ln0b;->a:I
+    sget v6, Ly9b;->w:I
 
-    sget v5, Ldkd;->W1:I
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    new-instance v9, Lorf;
+    move-result-object v6
 
-    invoke-direct {v9, v5}, Lorf;-><init>(I)V
+    invoke-virtual {v5, v6}, Loq3;->g(Ljava/lang/Integer;)V
 
-    new-instance v7, Lfo3;
+    sget v6, Lo9b;->a:I
 
-    const/4 v11, 0x1
+    new-instance v7, Ln5g;
 
-    const/4 v10, 0x3
+    invoke-direct {v7, v6}, Ln5g;-><init>(I)V
 
-    const/16 v17, 0x3
+    invoke-virtual {v5, v7}, Loq3;->f(Ls5g;)V
 
-    const/16 v18, 0x2
+    sget v9, Ln9b;->a:I
 
-    move/from16 v12, v17
+    sget v6, Lmvd;->e1:I
+
+    new-instance v10, Ln5g;
+
+    invoke-direct {v10, v6}, Ln5g;-><init>(I)V
+
+    new-instance v8, Lpq3;
+
+    const/4 v12, 0x1
+
+    const/4 v11, 0x3
+
+    const/16 v18, 0x3
+
+    const/4 v14, 0x2
 
     move/from16 v13, v18
 
-    invoke-direct/range {v7 .. v13}, Lfo3;-><init>(ILtrf;IZII)V
+    invoke-direct/range {v8 .. v14}, Lpq3;-><init>(ILs5g;IZII)V
 
-    sget v13, Ln0b;->e:I
+    sget v6, Ln9b;->f:I
 
-    sget v5, Ldkd;->U1:I
+    sget v7, Lmvd;->c1:I
 
-    new-instance v14, Lorf;
+    new-instance v15, Ln5g;
 
-    invoke-direct {v14, v5}, Lorf;-><init>(I)V
+    invoke-direct {v15, v7}, Ln5g;-><init>(I)V
 
-    new-instance v12, Lfo3;
+    new-instance v13, Lpq3;
 
-    const/16 v16, 0x1
+    const/16 v17, 0x1
 
-    const/4 v15, 0x2
+    const/16 v16, 0x2
 
-    invoke-direct/range {v12 .. v18}, Lfo3;-><init>(ILtrf;IZII)V
+    move/from16 v19, v14
 
-    filled-new-array {v7, v12}, [Lfo3;
+    move v14, v6
 
-    move-result-object v5
+    invoke-direct/range {v13 .. v19}, Lpq3;-><init>(ILs5g;IZII)V
 
-    invoke-virtual {v1, v5}, Leo3;->a([Lfo3;)V
+    filled-new-array {v8, v13}, [Lpq3;
 
-    invoke-virtual {v1}, Leo3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
+    move-result-object v6
 
-    move-result-object v7
+    invoke-virtual {v5, v6}, Loq3;->a([Lpq3;)V
 
-    invoke-virtual {v7, v0}, Lone/me/sdk/arch/Widget;->setTargetController(Ll24;)V
+    invoke-virtual {v5}, Loq3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
 
-    move-object v1, v0
+    move-result-object v8
+
+    invoke-virtual {v8, v0}, Lone/me/sdk/arch/Widget;->setTargetController(Lc54;)V
+
+    move-object v5, v0
 
     :goto_0
-    invoke-virtual {v1}, Ll24;->getParentController()Ll24;
+    invoke-virtual {v5}, Lc54;->getParentController()Lc54;
+
+    move-result-object v6
+
+    if-eqz v6, :cond_3
+
+    invoke-virtual {v5}, Lc54;->getParentController()Lc54;
 
     move-result-object v5
-
-    if-eqz v5, :cond_3
-
-    invoke-virtual {v1}, Ll24;->getParentController()Ll24;
-
-    move-result-object v1
 
     goto :goto_0
 
     :cond_3
-    instance-of v5, v1, Lwid;
+    instance-of v6, v5, Leud;
 
-    if-eqz v5, :cond_4
+    if-eqz v6, :cond_4
 
-    check-cast v1, Lwid;
+    check-cast v5, Leud;
 
     goto :goto_1
 
     :cond_4
-    move-object v1, v4
+    move-object v5, v4
 
     :goto_1
-    if-eqz v1, :cond_5
+    if-eqz v5, :cond_5
 
-    invoke-interface {v1}, Lwid;->f0()Lqid;
+    check-cast v5, Lone/me/android/root/RootController;
 
-    move-result-object v1
+    invoke-virtual {v5}, Lone/me/android/root/RootController;->E0()Lytd;
+
+    move-result-object v5
 
     goto :goto_2
 
     :cond_5
-    move-object v1, v4
+    move-object v5, v4
 
     :goto_2
-    invoke-virtual {v7, v0}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->R0(Lone/me/sdk/arch/Widget;)V
+    invoke-virtual {v8, v0}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->N0(Lone/me/sdk/arch/Widget;)V
 
-    if-eqz v1, :cond_6
+    if-eqz v5, :cond_6
 
-    new-instance v6, Ltid;
+    new-instance v7, Lbud;
 
-    const/4 v11, 0x0
+    const/4 v12, 0x0
 
-    const/4 v12, -0x1
-
-    const/4 v8, 0x0
+    const/4 v13, -0x1
 
     const/4 v9, 0x0
 
     const/4 v10, 0x0
 
-    invoke-direct/range {v6 .. v12}, Ltid;-><init>(Ll24;Ljava/lang/String;Lq24;Lq24;ZI)V
+    const/4 v11, 0x0
 
-    const-string v5, "BottomSheetWidget"
+    invoke-direct/range {v7 .. v13}, Lbud;-><init>(Lc54;Ljava/lang/String;Lh54;Lh54;ZI)V
 
-    invoke-static {v3, v6, v2, v5}, Ldy1;->u(ZLtid;ZLjava/lang/String;)V
+    const-string v6, "BottomSheetWidget"
 
-    invoke-virtual {v1, v6}, Lqid;->G(Ltid;)V
+    invoke-static {v1, v7, v3, v6}, Laz1;->u(ZLbud;ZLjava/lang/String;)V
+
+    invoke-virtual {v5, v7}, Lytd;->H(Lbud;)V
 
     :cond_6
-    invoke-virtual {v0}, Lone/me/qrscanner/QrScannerWidget;->C0()Lqgc;
-
-    move-result-object v1
-
-    const/16 v3, 0x8
-
-    invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {v0}, Lone/me/qrscanner/QrScannerWidget;->C0()Lqgc;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lqgc;->c:Landroid/animation/ValueAnimator;
-
-    invoke-virtual {v1}, Landroid/animation/ValueAnimator;->cancel()V
-
     :goto_3
-    invoke-virtual {v0}, Lone/me/qrscanner/QrScannerWidget;->E0()Lchc;
+    sget-object v1, Lone/me/qrscanner/QrScannerWidget;->E0:[Lyy7;
+
+    const/4 v5, 0x2
+
+    aget-object v1, v1, v5
+
+    iget-object v5, v0, Lone/me/qrscanner/QrScannerWidget;->s0:Lbbd;
+
+    invoke-interface {v5, v0, v1}, Lbbd;->D(Ljava/lang/Object;Lyy7;)Ljava/lang/Object;
 
     move-result-object v1
 
-    iget-object v1, v1, Lchc;->Y:Lxe5;
+    check-cast v1, La9c;
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lfx7;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Lfx7;->x()Lhx7;
-
-    move-result-object v3
-
-    sget-object v5, Lhw7;->o:Lhw7;
-
-    invoke-static {v1, v3, v5}, Lc8;->c(Lty5;Lhx7;Lhw7;)Lfu1;
+    invoke-virtual {v1}, La9c;->getPreviewStreamState()Lcb8;
 
     move-result-object v1
 
-    new-instance v3, Lfhc;
-
-    invoke-direct {v3, v4, v0}, Lfhc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/qrscanner/QrScannerWidget;)V
-
-    new-instance v6, Lb16;
-
-    invoke-direct {v6, v1, v3, v2}, Lb16;-><init>(Lty5;Lzi6;I)V
-
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
+    invoke-static {v1}, Llc4;->b(Lcb8;)Lx26;
 
     move-result-object v1
 
-    invoke-static {v6, v1}, Ltq;->v(Lty5;Lq54;)Lcye;
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj48;
 
-    invoke-virtual {v0}, Lone/me/qrscanner/QrScannerWidget;->E0()Lchc;
+    move-result-object v5
 
-    move-result-object v1
+    invoke-interface {v5}, Lj48;->p()Ll48;
 
-    iget-object v1, v1, Lchc;->s0:Ln0d;
+    move-result-object v5
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lfx7;
+    sget-object v6, Ll38;->d:Ll38;
 
-    move-result-object v3
-
-    invoke-interface {v3}, Lfx7;->x()Lhx7;
-
-    move-result-object v3
-
-    invoke-static {v1, v3, v5}, Lc8;->c(Lty5;Lhx7;Lhw7;)Lfu1;
+    invoke-static {v1, v5, v6}, Law0;->a(Lx26;Ll48;Ll38;)Lsu1;
 
     move-result-object v1
 
-    new-instance v3, Lghc;
+    new-instance v5, Lyrc;
 
-    invoke-direct {v3, v4, v0}, Lghc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/qrscanner/QrScannerWidget;)V
+    invoke-direct {v5, v4, v0}, Lyrc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/qrscanner/QrScannerWidget;)V
 
-    new-instance v6, Lb16;
+    new-instance v7, Lg56;
 
-    invoke-direct {v6, v1, v3, v2}, Lb16;-><init>(Lty5;Lzi6;I)V
+    invoke-direct {v7, v1, v5, v3}, Lg56;-><init>(Lx26;Lsm6;I)V
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
-
-    move-result-object v1
-
-    invoke-static {v6, v1}, Ltq;->v(Lty5;Lq54;)Lcye;
-
-    invoke-virtual {v0}, Lone/me/qrscanner/QrScannerWidget;->E0()Lchc;
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lv38;
 
     move-result-object v1
 
-    iget-object v1, v1, Lchc;->o:Ln0d;
+    invoke-static {v7, v1}, Lgw0;->w(Lx26;Lf84;)Lx9f;
 
-    new-instance v3, Lx53;
-
-    const/4 v6, 0x3
-
-    const/4 v7, 0x5
-
-    invoke-direct {v3, v6, v4, v7}, Lx53;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    new-instance v6, Ly06;
-
-    invoke-direct {v6, v1, v3, v4}, Ly06;-><init>(Lty5;Lbj6;Lkotlin/coroutines/Continuation;)V
-
-    new-instance v1, Lald;
-
-    invoke-direct {v1, v6}, Lald;-><init>(Lzi6;)V
-
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lfx7;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Lfx7;->x()Lhx7;
-
-    move-result-object v3
-
-    invoke-static {v1, v3, v5}, Lc8;->c(Lty5;Lhx7;Lhw7;)Lfu1;
+    invoke-virtual {v0}, Lone/me/qrscanner/QrScannerWidget;->A0()Ltrc;
 
     move-result-object v1
 
-    new-instance v3, Lhhc;
+    iget-object v1, v1, Ltrc;->X:Lci5;
+
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj48;
+
+    move-result-object v5
+
+    invoke-interface {v5}, Lj48;->p()Ll48;
+
+    move-result-object v5
+
+    invoke-static {v1, v5, v6}, Law0;->a(Lx26;Ll48;Ll38;)Lsu1;
+
+    move-result-object v1
+
+    new-instance v5, Lzrc;
+
+    invoke-direct {v5, v4, v0}, Lzrc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/qrscanner/QrScannerWidget;)V
+
+    new-instance v7, Lg56;
+
+    invoke-direct {v7, v1, v5, v3}, Lg56;-><init>(Lx26;Lsm6;I)V
+
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lv38;
+
+    move-result-object v1
+
+    invoke-static {v7, v1}, Lgw0;->w(Lx26;Lf84;)Lx9f;
+
+    invoke-virtual {v0}, Lone/me/qrscanner/QrScannerWidget;->A0()Ltrc;
+
+    move-result-object v1
+
+    iget-object v1, v1, Ltrc;->t0:Lhbd;
+
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj48;
+
+    move-result-object v5
+
+    invoke-interface {v5}, Lj48;->p()Ll48;
+
+    move-result-object v5
+
+    invoke-static {v1, v5, v6}, Law0;->a(Lx26;Ll48;Ll38;)Lsu1;
+
+    move-result-object v1
+
+    new-instance v5, Lasc;
+
+    invoke-direct {v5, v4, v0}, Lasc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/qrscanner/QrScannerWidget;)V
+
+    new-instance v7, Lg56;
+
+    invoke-direct {v7, v1, v5, v3}, Lg56;-><init>(Lx26;Lsm6;I)V
+
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lv38;
+
+    move-result-object v1
+
+    invoke-static {v7, v1}, Lgw0;->w(Lx26;Lf84;)Lx9f;
+
+    invoke-virtual {v0}, Lone/me/qrscanner/QrScannerWidget;->A0()Ltrc;
+
+    move-result-object v1
+
+    iget-object v1, v1, Ltrc;->d:Lhbd;
+
+    new-instance v5, Luxb;
+
+    invoke-direct {v5, v1, v0, v2}, Luxb;-><init>(Lx26;Ljava/lang/Object;I)V
+
+    new-instance v1, Ls83;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v1, v2, v4, v2}, Ls83;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    new-instance v2, Ld56;
+
+    invoke-direct {v2, v5, v1, v4}, Ld56;-><init>(Lx26;Lum6;Lkotlin/coroutines/Continuation;)V
+
+    new-instance v1, Lmwd;
+
+    invoke-direct {v1, v2}, Lmwd;-><init>(Lsm6;)V
+
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj48;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Lj48;->p()Ll48;
+
+    move-result-object v2
+
+    invoke-static {v1, v2, v6}, Law0;->a(Lx26;Ll48;Ll38;)Lsu1;
+
+    move-result-object v1
+
+    new-instance v2, Lbsc;
 
     move-object/from16 v5, p1
 
-    invoke-direct {v3, v4, v5, v0}, Lhhc;-><init>(Lkotlin/coroutines/Continuation;Landroid/view/View;Lone/me/qrscanner/QrScannerWidget;)V
+    invoke-direct {v2, v4, v5, v0}, Lbsc;-><init>(Lkotlin/coroutines/Continuation;Landroid/view/View;Lone/me/qrscanner/QrScannerWidget;)V
 
-    new-instance v4, Lb16;
+    new-instance v4, Lg56;
 
-    invoke-direct {v4, v1, v3, v2}, Lb16;-><init>(Lty5;Lzi6;I)V
+    invoke-direct {v4, v1, v2, v3}, Lg56;-><init>(Lx26;Lsm6;I)V
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lv38;
 
     move-result-object v1
 
-    invoke-static {v4, v1}, Ltq;->v(Lty5;Lq54;)Lcye;
+    invoke-static {v4, v1}, Lgw0;->w(Lx26;Lf84;)Lx9f;
 
     return-void
 .end method
@@ -2471,4 +2577,38 @@
     .locals 0
 
     return-void
+.end method
+
+.method public final y0()Lhrc;
+    .locals 2
+
+    sget-object v0, Lone/me/qrscanner/QrScannerWidget;->E0:[Lyy7;
+
+    const/4 v1, 0x3
+
+    aget-object v0, v0, v1
+
+    iget-object v1, p0, Lone/me/qrscanner/QrScannerWidget;->t0:Lbbd;
+
+    invoke-interface {v1, p0, v0}, Lbbd;->D(Ljava/lang/Object;Lyy7;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lhrc;
+
+    return-object v0
+.end method
+
+.method public final z0()Lqsb;
+    .locals 1
+
+    iget-object v0, p0, Lone/me/qrscanner/QrScannerWidget;->Z:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lqsb;
+
+    return-object v0
 .end method

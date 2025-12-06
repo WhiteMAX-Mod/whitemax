@@ -1,11 +1,9 @@
-.class public interface abstract Ll99;
+.class public final Ll99;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract d(Lx89;)V
-.end method
+# instance fields
+.field public a:Landroid/os/Handler;
 
-.method public abstract getItemData()Lx89;
-.end method
+.field public b:Ljava/lang/Object;

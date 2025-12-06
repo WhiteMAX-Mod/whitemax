@@ -1,178 +1,94 @@
-.class public final Lx8i;
-.super Lj7i;
+.class public abstract Lx8i;
+.super Ls8i;
 .source "SourceFile"
-
-# interfaces
-.implements Lbai;
-
-
-# static fields
-.field private static final zzb:Lx8i;
 
 
 # instance fields
-.field private zzd:Lx7i;
+.field private fragmentSource:Ljava/lang/String;
+
+.field private height:I
+
+.field public final id:I
+
+.field private width:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
 
-    new-instance v0, Lx8i;
+    invoke-direct {p0, p1}, Lu9i;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v0}, Lx8i;-><init>()V
+    iput-object p1, p0, Lx8i;->fragmentSource:Ljava/lang/String;
 
-    sput-object v0, Lx8i;->zzb:Lx8i;
-
-    const-class v1, Lx8i;
-
-    invoke-static {v1, v0}, Lj7i;->h(Ljava/lang/Class;Lj7i;)V
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Lj7i;-><init>()V
-
-    sget-object v0, Ltai;->o:Ltai;
-
-    iput-object v0, p0, Lx8i;->zzd:Lx7i;
-
-    return-void
-.end method
-
-.method public static n()Lp6i;
-    .locals 1
-
-    sget-object v0, Lx8i;->zzb:Lx8i;
-
-    invoke-virtual {v0}, Lj7i;->d()Ly6i;
-
-    move-result-object v0
-
-    check-cast v0, Lp6i;
-
-    return-object v0
-.end method
-
-.method public static o(Lx8i;Lg2i;)V
-    .locals 2
-
-    iget-object v0, p0, Lx8i;->zzd:Lx7i;
-
-    move-object v1, v0
-
-    check-cast v1, Lt3i;
-
-    iget-boolean v1, v1, Lt3i;->a:Z
-
-    if-nez v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const/16 v1, 0xa
-
-    goto :goto_0
-
-    :cond_0
-    add-int/2addr v1, v1
-
-    :goto_0
-    invoke-interface {v0, v1}, Lx7i;->c(I)Lx7i;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lx8i;->zzd:Lx7i;
-
-    :cond_1
-    iget-object p0, p0, Lx8i;->zzd:Lx7i;
-
-    invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    iput p2, p0, Lx8i;->id:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final m(ILj7i;)Ljava/lang/Object;
-    .locals 2
+.method public final getHeight()I
+    .locals 1
 
-    add-int/lit8 p1, p1, -0x1
+    iget v0, p0, Lx8i;->height:I
 
-    if-eqz p1, :cond_4
+    return v0
+.end method
 
-    const/4 p2, 0x2
+.method public getSource()Ljava/lang/String;
+    .locals 1
 
-    if-eq p1, p2, :cond_3
-
-    const/4 p2, 0x3
-
-    if-eq p1, p2, :cond_2
-
-    const/4 p2, 0x4
-
-    if-eq p1, p2, :cond_1
-
-    const/4 p2, 0x5
-
-    if-eq p1, p2, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :cond_0
-    sget-object p1, Lx8i;->zzb:Lx8i;
-
-    return-object p1
-
-    :cond_1
-    new-instance p1, Lp6i;
-
-    sget-object p2, Lx8i;->zzb:Lx8i;
-
-    invoke-direct {p1, p2}, Ly6i;-><init>(Lj7i;)V
-
-    return-object p1
-
-    :cond_2
-    new-instance p1, Lx8i;
-
-    invoke-direct {p1}, Lx8i;-><init>()V
-
-    return-object p1
-
-    :cond_3
-    const-string p1, "zzd"
-
-    const-class p2, Lg2i;
-
-    filled-new-array {p1, p2}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lx8i;->zzb:Lx8i;
-
-    new-instance v0, Lwai;
-
-    const-string v1, "\u0004\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0001\u001b"
-
-    invoke-direct {v0, p2, v1, p1}, Lwai;-><init>(Lo3i;Ljava/lang/String;[Ljava/lang/Object;)V
+    iget-object v0, p0, Lx8i;->fragmentSource:Ljava/lang/String;
 
     return-object v0
+.end method
 
-    :cond_4
-    const/4 p1, 0x1
+.method public getTarget()I
+    .locals 1
 
-    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+    const/16 v0, 0xde1
 
-    move-result-object p1
+    return v0
+.end method
 
-    return-object p1
+.method public final getWidth()I
+    .locals 1
+
+    iget v0, p0, Lx8i;->width:I
+
+    return v0
+.end method
+
+.method public final setSize(II)V
+    .locals 1
+
+    iget v0, p0, Lx8i;->width:I
+
+    if-ne p1, v0, :cond_1
+
+    iget v0, p0, Lx8i;->height:I
+
+    if-eq p2, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+
+    :cond_1
+    :goto_0
+    iput p2, p0, Lx8i;->height:I
+
+    iput p1, p0, Lx8i;->width:I
+
+    invoke-virtual {p0, p1, p2}, Lx8i;->updateLocations(II)V
+
+    return-void
+.end method
+
+.method public updateLocations(II)V
+    .locals 0
+
+    return-void
 .end method

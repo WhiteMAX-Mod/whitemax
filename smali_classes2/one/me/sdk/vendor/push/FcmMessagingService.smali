@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field public final q0:Ljava/lang/String;
+.field public final Z:Ljava/lang/String;
 
 
 # direct methods
@@ -38,7 +38,7 @@
 
     const-string v0, "FCM"
 
-    iput-object v0, p0, Lone/me/sdk/vendor/push/FcmMessagingService;->q0:Ljava/lang/String;
+    iput-object v0, p0, Lone/me/sdk/vendor/push/FcmMessagingService;->Z:Ljava/lang/String;
 
     return-void
 .end method
@@ -46,39 +46,56 @@
 
 # virtual methods
 .method public final c()V
-    .locals 4
+    .locals 6
 
-    iget-object v0, p0, Lone/me/sdk/vendor/push/FcmMessagingService;->q0:Ljava/lang/String;
+    iget-object v0, p0, Lone/me/sdk/vendor/push/FcmMessagingService;->Z:Ljava/lang/String;
 
     const-string v1, "onDeletedMessages"
 
-    invoke-static {v0, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object v0, Lfkg;->a:Lfkg;
+    sget-object v0, Luzg;->a:Luzg;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v0
-
-    const-class v2, Lxq9;
-
-    invoke-virtual {v0, v2}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
 
     move-result-object v0
 
-    check-cast v0, Lxq9;
+    const/16 v2, 0x5a
 
-    check-cast v0, Ljmf;
+    invoke-virtual {v0, v2}, Lw5;->c(I)Ljava/lang/Object;
 
-    iget-object v2, v0, Ljmf;->i:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-static {v2, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    check-cast v0, Lf0g;
 
-    invoke-virtual {v0}, Ljmf;->a()Lkmf;
+    iget-object v2, v0, Lf0g;->i:Ljava/lang/String;
+
+    sget-object v3, Lwqi;->a:Ll6b;
+
+    if-nez v3, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v4, Llg8;->d:Llg8;
+
+    invoke-virtual {v3, v4}, Ll6b;->b(Llg8;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_1
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v3, v4, v2, v1, v5}, Ll6b;->c(Llg8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    invoke-virtual {v0}, Lf0g;->d()Lg0g;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lkmf;->a()Lbgc;
+    invoke-virtual {v1}, Lg0g;->a()Ltqc;
 
     move-result-object v1
 
@@ -86,139 +103,251 @@
 
     const/4 v3, 0x1
 
-    invoke-virtual {v1, v2, v3}, Lbgc;->I(ZZ)V
+    invoke-virtual {v1, v2, v3}, Ltqc;->f(ZZ)V
 
-    iget-object v0, v0, Ljmf;->c:Liu7;
+    iget-object v0, v0, Lf0g;->c:Lk18;
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lhd;
+    check-cast v0, Ldd;
 
     const-string v1, "FCM_ON_DELETED_MESSAGES"
 
-    invoke-virtual {v0, v1}, Lhd;->f(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ldd;->e(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public final d(Lq9d;)V
-    .locals 13
+.method public final d(Lskd;)V
+    .locals 9
 
-    iget-object v0, p1, Lq9d;->a:Landroid/os/Bundle;
+    iget-object v0, p1, Lskd;->a:Landroid/os/Bundle;
 
-    iget-object v1, p0, Lone/me/sdk/vendor/push/FcmMessagingService;->q0:Ljava/lang/String;
+    iget-object v1, p0, Lone/me/sdk/vendor/push/FcmMessagingService;->Z:Ljava/lang/String;
 
     const-string v2, "onMessageReceived"
 
-    invoke-static {v1, v2}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object v1, Lfkg;->a:Lfkg;
+    sget-object v1, Luzg;->a:Luzg;
 
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v1
-
-    const-class v2, Lxq9;
-
-    invoke-virtual {v1, v2}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lw5;
 
     move-result-object v1
 
-    check-cast v1, Lxq9;
+    const/16 v2, 0x5a
 
-    iget-object v2, p1, Lq9d;->b:Let;
+    invoke-virtual {v1, v2}, Lw5;->c(I)Ljava/lang/Object;
 
-    if-nez v2, :cond_2
+    move-result-object v1
 
-    new-instance v2, Let;
+    move-object v4, v1
 
-    const/4 v3, 0x0
+    check-cast v4, Lf0g;
 
-    invoke-direct {v2, v3}, Lzoe;-><init>(I)V
+    new-instance v3, Lrkd;
+
+    iget-object v1, p1, Lskd;->b:Lus;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_2
+
+    new-instance v1, Lus;
+
+    invoke-direct {v1, v2}, Lz0f;-><init>(I)V
 
     invoke-virtual {v0}, Landroid/os/BaseBundle;->keySet()Ljava/util/Set;
 
-    move-result-object v3
+    move-result-object v5
 
-    invoke-interface {v3}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v3
-
-    :cond_0
-    :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/lang/String;
-
-    invoke-virtual {v0, v4}, Landroid/os/BaseBundle;->get(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-interface {v5}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
 
-    instance-of v6, v5, Ljava/lang/String;
-
-    if-eqz v6, :cond_0
-
-    check-cast v5, Ljava/lang/String;
-
-    const-string v6, "google."
-
-    invoke-virtual {v4, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    :cond_0
+    :goto_0
+    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v6
 
-    if-nez v6, :cond_0
+    if-eqz v6, :cond_1
 
-    const-string v6, "gcm."
+    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-virtual {v4, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    move-result-object v6
 
-    move-result v6
+    check-cast v6, Ljava/lang/String;
 
-    if-nez v6, :cond_0
+    invoke-virtual {v0, v6}, Landroid/os/BaseBundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
-    const-string v6, "from"
+    move-result-object v7
 
-    invoke-virtual {v4, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    instance-of v8, v7, Ljava/lang/String;
 
-    move-result v6
+    if-eqz v8, :cond_0
 
-    if-nez v6, :cond_0
+    check-cast v7, Ljava/lang/String;
 
-    const-string v6, "message_type"
+    const-string v8, "google."
 
-    invoke-virtual {v4, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v6, v8}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v6
+    move-result v8
 
-    if-nez v6, :cond_0
+    if-nez v8, :cond_0
 
-    const-string v6, "collapse_key"
+    const-string v8, "gcm."
 
-    invoke-virtual {v4, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v6, v8}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v6
+    move-result v8
 
-    if-nez v6, :cond_0
+    if-nez v8, :cond_0
 
-    invoke-virtual {v2, v4, v5}, Lzoe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v8, "from"
+
+    invoke-virtual {v6, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-nez v8, :cond_0
+
+    const-string v8, "message_type"
+
+    invoke-virtual {v6, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-nez v8, :cond_0
+
+    const-string v8, "collapse_key"
+
+    invoke-virtual {v6, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-nez v8, :cond_0
+
+    invoke-virtual {v1, v6, v7}, Lz0f;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
     :cond_1
-    iput-object v2, p1, Lq9d;->b:Let;
+    iput-object v1, p1, Lskd;->b:Lus;
 
     :cond_2
-    iget-object v8, p1, Lq9d;->b:Let;
+    iget-object p1, p1, Lskd;->b:Lus;
+
+    const-string v1, "google.delivered_priority"
+
+    invoke-virtual {v0, v1}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v5, 0x2
+
+    if-nez v1, :cond_4
+
+    const-string v1, "google.priority_reduced"
+
+    invoke-virtual {v0, v1}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v6, "1"
+
+    invoke-virtual {v6, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    :goto_1
+    move v2, v5
+
+    goto :goto_2
+
+    :cond_3
+    const-string v1, "google.priority"
+
+    invoke-virtual {v0, v1}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    :cond_4
+    const-string v6, "high"
+
+    invoke-virtual {v6, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_5
+
+    const/4 v2, 0x1
+
+    goto :goto_2
+
+    :cond_5
+    const-string v6, "normal"
+
+    invoke-virtual {v6, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_6
+
+    goto :goto_1
+
+    :cond_6
+    :goto_2
+    sget-object v1, Lqkd;->d:Lzg5;
+
+    invoke-virtual {v1}, Li2;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :cond_7
+    move-object v5, v1
+
+    check-cast v5, Lf2;
+
+    invoke-virtual {v5}, Lf2;->hasNext()Z
+
+    move-result v6
+
+    const/4 v8, 0x0
+
+    if-eqz v6, :cond_8
+
+    invoke-virtual {v5}, Lf2;->next()Ljava/lang/Object;
+
+    move-result-object v5
+
+    move-object v6, v5
+
+    check-cast v6, Lqkd;
+
+    iget v6, v6, Lqkd;->a:I
+
+    if-ne v6, v2, :cond_7
+
+    goto :goto_3
+
+    :cond_8
+    move-object v5, v8
+
+    :goto_3
+    check-cast v5, Lqkd;
+
+    if-nez v5, :cond_9
+
+    sget-object v5, Lqkd;->b:Lqkd;
+
+    :cond_9
+    invoke-direct {v3, p1, v5}, Lrkd;-><init>(Lus;Lqkd;)V
 
     const-string p1, "google.sent_time"
 
@@ -228,23 +357,23 @@
 
     instance-of v0, p1, Ljava/lang/Long;
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_a
 
     check-cast p1, Ljava/lang/Long;
 
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v2
+    move-result-wide v0
 
-    :goto_1
-    move-wide v10, v2
+    :goto_4
+    move-wide v5, v0
 
-    goto :goto_2
+    goto :goto_5
 
-    :cond_3
+    :cond_a
     instance-of v0, p1, Ljava/lang/String;
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_b
 
     :try_start_0
     move-object v0, p1
@@ -253,18 +382,18 @@
 
     invoke-static {v0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
-    move-result-wide v2
+    move-result-wide v0
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_1
+    goto :goto_4
 
     :catch_0
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v2, "Invalid sent time: "
+    const-string v1, "Invalid sent time: "
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -276,29 +405,23 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_4
-    const-wide/16 v2, 0x0
+    :cond_b
+    const-wide/16 v0, 0x0
 
-    goto :goto_1
+    goto :goto_4
 
-    :goto_2
-    move-object v9, v1
+    :goto_5
+    iget-object p1, v4, Lf0g;->h:Lkotlinx/coroutines/internal/ContextScope;
 
-    check-cast v9, Ljmf;
+    new-instance v2, Ld0g;
 
-    iget-object p1, v9, Ljmf;->h:Lkotlinx/coroutines/internal/ContextScope;
+    const/4 v7, 0x0
 
-    new-instance v7, Limf;
-
-    const/4 v12, 0x0
-
-    invoke-direct/range {v7 .. v12}, Limf;-><init>(Ljava/util/Map;Ljmf;JLkotlin/coroutines/Continuation;)V
+    invoke-direct/range {v2 .. v7}, Ld0g;-><init>(Lrkd;Lf0g;JLkotlin/coroutines/Continuation;)V
 
     const/4 v0, 0x3
 
-    const/4 v1, 0x0
-
-    invoke-static {p1, v1, v1, v7, v0}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
+    invoke-static {p1, v8, v8, v2, v0}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
 
     return-void
 .end method
@@ -306,39 +429,33 @@
 .method public final e(Ljava/lang/String;)V
     .locals 2
 
-    iget-object v0, p0, Lone/me/sdk/vendor/push/FcmMessagingService;->q0:Ljava/lang/String;
+    iget-object v0, p0, Lone/me/sdk/vendor/push/FcmMessagingService;->Z:Ljava/lang/String;
 
     const-string v1, "onNewToken"
 
-    invoke-static {v0, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object v0, Lfkg;->a:Lfkg;
+    sget-object v0, Luzg;->a:Luzg;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v0
-
-    const-class v1, Lxq9;
-
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
 
     move-result-object v0
 
-    check-cast v0, Lxq9;
+    const/16 v1, 0x5a
 
-    check-cast v0, Ljmf;
+    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
 
-    iget-object v1, v0, Ljmf;->d:Liu7;
+    move-result-object v0
 
-    invoke-interface {v1}, Liu7;->getValue()Ljava/lang/Object;
+    check-cast v0, Lf0g;
+
+    invoke-virtual {v0}, Lf0g;->b()Lpb3;
 
     move-result-object v1
 
-    check-cast v1, Ly83;
+    check-cast v1, Lw4e;
 
-    check-cast v1, Lntd;
-
-    invoke-virtual {v1, p1}, Lntd;->B(Ljava/lang/String;)V
+    invoke-virtual {v1, p1}, Lw4e;->B(Ljava/lang/String;)V
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -346,31 +463,29 @@
 
     if-lez p1, :cond_0
 
-    iget-object p1, v0, Ljmf;->e:Liu7;
+    iget-object p1, v0, Lf0g;->e:Lk18;
 
-    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Ljoa;
+    check-cast p1, Lfxa;
 
-    invoke-virtual {p1}, Ljoa;->d()Z
+    invoke-virtual {p1}, Lfxa;->b()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    iget-object p1, v0, Ljmf;->f:Liu7;
+    iget-object p1, v0, Lf0g;->f:Lk18;
 
-    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lll;
+    check-cast p1, Lhwa;
 
-    check-cast p1, Lmna;
-
-    invoke-virtual {p1}, Lmna;->r()J
+    invoke-virtual {p1}, Lhwa;->n()J
 
     :cond_0
     return-void

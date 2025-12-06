@@ -1,284 +1,132 @@
 .class public final Luaa;
-.super Lpmf;
+.super Lj3;
 .source "SourceFile"
+
+# interfaces
+.implements Luz4;
 
 
 # instance fields
-.field public X:Ljava/util/ArrayList;
+.field public X:Lpz4;
 
-.field public c:Ljava/util/ArrayList;
+.field public final d:Lzg;
 
-.field public o:Ljava/util/ArrayList;
+.field public o:Lpz4;
 
 
 # direct methods
-.method public constructor <init>(Lpf9;)V
+.method public constructor <init>(Landroid/content/Context;Lru/ok/messages/video/widgets/doubleTap/DoubleTapVideoViewWrapper;Lzg;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lpmf;-><init>(Lpf9;)V
+    invoke-direct {p0, p1}, Lj3;-><init>(Landroid/content/Context;)V
+
+    iput-object p3, p0, Luaa;->d:Lzg;
+
+    iput-object p2, p0, Lj3;->c:Ljava/lang/Object;
+
+    invoke-virtual {p0}, Luaa;->i()V
+
+    invoke-virtual {p2, p0}, Lru/ok/messages/video/widgets/doubleTap/DoubleTapVideoViewWrapper;->setTouchEventListener(Luz4;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lpf9;Ljava/lang/String;)V
-    .locals 4
+.method public final i()V
+    .locals 2
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, p0, Lj3;->c:Ljava/lang/Object;
 
-    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
+    check-cast v0, Landroid/view/View;
 
-    move-result v0
+    sget v1, Lq0d;->double_tap_video_view_wrapper__arrows_view_left:I
 
-    const/4 v1, 0x0
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    const/4 v2, -0x1
+    move-result-object v0
 
-    sparse-switch v0, :sswitch_data_0
+    check-cast v0, Lpz4;
 
-    goto :goto_0
+    iput-object v0, p0, Luaa;->o:Lpz4;
 
-    :sswitch_0
-    const-string v0, "ids"
+    iget-object v0, p0, Lj3;->c:Ljava/lang/Object;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    check-cast v0, Landroid/view/View;
 
-    move-result p2
+    sget v1, Lq0d;->double_tap_video_view_wrapper__arrows_view_right:I
 
-    if-nez p2, :cond_0
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    goto :goto_0
+    move-result-object v0
 
-    :cond_0
-    const/4 v2, 0x2
+    check-cast v0, Lpz4;
 
-    goto :goto_0
+    iput-object v0, p0, Luaa;->X:Lpz4;
 
-    :sswitch_1
-    const-string v0, "rindex"
+    iget-object v0, p0, Luaa;->o:Lpz4;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget-object v1, p0, Luaa;->d:Lzg;
 
-    move-result p2
+    invoke-virtual {v0, v1}, Lpz4;->setAnimations(Lzg;)V
 
-    if-nez p2, :cond_1
+    iget-object v0, p0, Luaa;->X:Lpz4;
 
-    goto :goto_0
-
-    :cond_1
-    const/4 v2, 0x1
-
-    goto :goto_0
-
-    :sswitch_2
-    const-string v0, "phones"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    move v2, v1
-
-    :goto_0
-    const/4 p2, 0x0
-
-    const/4 v0, 0x7
-
-    packed-switch v2, :pswitch_data_0
-
-    invoke-virtual {p1}, Lpf9;->y()V
+    invoke-virtual {v0, v1}, Lpz4;->setAnimations(Lzg;)V
 
     return-void
-
-    :pswitch_0
-    invoke-virtual {p1}, Lpf9;->n()Lnc9;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lnc9;->a()I
-
-    move-result v2
-
-    if-ne v2, v0, :cond_3
-
-    new-instance p2, Ljava/util/ArrayList;
-
-    invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-virtual {p1}, Lpf9;->n0()I
-
-    move-result v0
-
-    :goto_1
-    if-ge v1, v0, :cond_4
-
-    const-wide/16 v2, 0x0
-
-    invoke-static {p1, v2, v3}, Lg0i;->m(Lpf9;J)J
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    invoke-virtual {p2, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_1
-
-    :cond_3
-    invoke-virtual {p1}, Lpf9;->y()V
-
-    :cond_4
-    iput-object p2, p0, Luaa;->X:Ljava/util/ArrayList;
-
-    return-void
-
-    :pswitch_1
-    invoke-virtual {p1}, Lpf9;->n()Lnc9;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lnc9;->a()I
-
-    move-result v2
-
-    if-ne v2, v0, :cond_5
-
-    new-instance p2, Ljava/util/ArrayList;
-
-    invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-virtual {p1}, Lpf9;->n0()I
-
-    move-result v0
-
-    :goto_2
-    if-ge v1, v0, :cond_6
-
-    invoke-static {p1}, Lg0i;->k(Lpf9;)I
-
-    move-result v2
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {p2, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_2
-
-    :cond_5
-    invoke-virtual {p1}, Lpf9;->y()V
-
-    :cond_6
-    iput-object p2, p0, Luaa;->o:Ljava/util/ArrayList;
-
-    return-void
-
-    :pswitch_2
-    invoke-virtual {p1}, Lpf9;->n()Lnc9;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lnc9;->a()I
-
-    move-result v2
-
-    if-ne v2, v0, :cond_7
-
-    new-instance p2, Ljava/util/ArrayList;
-
-    invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-virtual {p1}, Lpf9;->n0()I
-
-    move-result v0
-
-    :goto_3
-    if-ge v1, v0, :cond_8
-
-    invoke-static {p1}, Lg0i;->p(Lpf9;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p2, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_3
-
-    :cond_7
-    invoke-virtual {p1}, Lpf9;->y()V
-
-    :cond_8
-    iput-object p2, p0, Luaa;->c:Ljava/util/ArrayList;
-
-    return-void
-
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x3af38f3b -> :sswitch_2
-        -0x377c6060 -> :sswitch_1
-        0x196b8 -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 6
+.method public final z(Ltaa;)V
+    .locals 2
 
-    iget-object v0, p0, Luaa;->c:Ljava/util/ArrayList;
+    iget-boolean v0, p1, Ltaa;->c:Z
 
-    invoke-static {v0}, Lhuh;->c(Ljava/util/Collection;)I
+    iget v1, p1, Ltaa;->a:I
 
-    move-result v0
+    if-nez v0, :cond_0
 
-    iget-object v1, p0, Luaa;->o:Ljava/util/ArrayList;
+    iget-object p1, p0, Luaa;->o:Lpz4;
 
-    invoke-static {v1}, Lhuh;->c(Ljava/util/Collection;)I
+    invoke-virtual {p1}, Lpz4;->a()V
 
-    move-result v1
+    iget-object p1, p0, Luaa;->X:Lpz4;
 
-    iget-object v2, p0, Luaa;->X:Ljava/util/ArrayList;
+    invoke-virtual {p1}, Lpz4;->a()V
 
-    invoke-static {v2}, Lhuh;->c(Ljava/util/Collection;)I
+    return-void
 
-    move-result v2
+    :cond_0
+    iget-boolean p1, p1, Ltaa;->b:Z
 
-    const-string v3, ", rindex="
+    if-eqz p1, :cond_1
 
-    const-string v4, ", ids="
+    iget-object p1, p0, Luaa;->o:Lpz4;
 
-    const-string v5, "{phones="
+    invoke-virtual {p1}, Lpz4;->a()V
 
-    invoke-static {v5, v0, v3, v1, v4}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object p1, p0, Luaa;->X:Lpz4;
 
-    move-result-object v0
+    invoke-virtual {p1}, Lpz4;->b()V
 
-    const-string v1, "}"
+    iget-object p1, p0, Luaa;->X:Lpz4;
 
-    invoke-static {v0, v2, v1}, Li57;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1, v1}, Lpz4;->c(I)V
 
-    move-result-object v0
+    return-void
 
-    return-object v0
+    :cond_1
+    iget-object p1, p0, Luaa;->o:Lpz4;
+
+    invoke-virtual {p1}, Lpz4;->b()V
+
+    iget-object p1, p0, Luaa;->o:Lpz4;
+
+    invoke-virtual {p1, v1}, Lpz4;->c(I)V
+
+    iget-object p1, p0, Luaa;->X:Lpz4;
+
+    invoke-virtual {p1}, Lpz4;->a()V
+
+    return-void
 .end method

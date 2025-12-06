@@ -1,142 +1,249 @@
-.class public final synthetic Lyz1;
+.class public final Lyz1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ltz1;
+
+
+# static fields
+.field public static final f:J
+
+.field public static final synthetic g:I
 
 
 # instance fields
-.field public final synthetic X:Ljava/lang/Object;
+.field public final a:Lry1;
 
-.field public final synthetic Y:Ljava/lang/Object;
+.field public final b:Ljava/util/concurrent/Executor;
 
-.field public final synthetic a:I
+.field public final c:Ljava/util/concurrent/ScheduledExecutorService;
 
-.field public final synthetic b:J
+.field public final d:Lde7;
 
-.field public final synthetic c:J
-
-.field public final synthetic o:Ljava/lang/Object;
+.field public final e:Lw7c;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/my/tracker/obfuscated/t;JLjava/lang/String;Lcom/my/tracker/obfuscated/o0$a;J)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    .line 2
-    const/4 v0, 0x1
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    iput v0, p0, Lyz1;->a:I
+    const-wide/16 v1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
 
-    iput-object p1, p0, Lyz1;->o:Ljava/lang/Object;
+    move-result-wide v0
 
-    iput-wide p2, p0, Lyz1;->b:J
-
-    iput-object p4, p0, Lyz1;->X:Ljava/lang/Object;
-
-    iput-object p5, p0, Lyz1;->Y:Ljava/lang/Object;
-
-    iput-wide p6, p0, Lyz1;->c:J
+    sput-wide v0, Lyz1;->f:J
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ltx1;Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;JJ)V
-    .locals 1
-
-    .line 1
-    const/4 v0, 0x0
-
-    iput v0, p0, Lyz1;->a:I
+.method public constructor <init>(Lry1;Lqee;La07;Lw7c;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lyz1;->o:Ljava/lang/Object;
+    iput-object p1, p0, Lyz1;->a:Lry1;
 
-    iput-object p2, p0, Lyz1;->X:Ljava/lang/Object;
+    iput-object p2, p0, Lyz1;->b:Ljava/util/concurrent/Executor;
 
-    iput-object p3, p0, Lyz1;->Y:Ljava/lang/Object;
+    iput-object p3, p0, Lyz1;->c:Ljava/util/concurrent/ScheduledExecutorService;
 
-    iput-wide p4, p0, Lyz1;->b:J
+    iput-object p4, p0, Lyz1;->e:Lw7c;
 
-    iput-wide p6, p0, Lyz1;->c:J
+    iget-object p1, p1, Lry1;->q:Lde7;
+
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    iput-object p1, p0, Lyz1;->d:Lde7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 9
+.method public final a(Landroid/hardware/camera2/TotalCaptureResult;)Lha8;
+    .locals 4
 
-    iget v0, p0, Lyz1;->a:I
+    const-string p1, "Camera2CapturePipeline"
 
-    packed-switch v0, :pswitch_data_0
+    const-string v0, "ScreenFlashTask#preCapture"
 
-    iget-object v0, p0, Lyz1;->o:Ljava/lang/Object;
+    invoke-static {p1, v0}, Lgri;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-object v1, v0
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
 
-    check-cast v1, Lcom/my/tracker/obfuscated/t;
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    iget-object v0, p0, Lyz1;->X:Ljava/lang/Object;
+    new-instance v0, Ltu0;
 
-    move-object v4, v0
+    const/4 v1, 0x1
 
-    check-cast v4, Ljava/lang/String;
+    invoke-direct {v0, p1, v1}, Ltu0;-><init>(Ljava/util/concurrent/atomic/AtomicReference;I)V
 
-    iget-object v0, p0, Lyz1;->Y:Ljava/lang/Object;
+    invoke-static {v0}, Lixi;->a(Luu1;)Lwu1;
 
-    move-object v5, v0
+    move-result-object v0
 
-    check-cast v5, Lcom/my/tracker/obfuscated/o0$a;
+    new-instance v1, Li00;
 
-    iget-wide v6, p0, Lyz1;->c:J
+    const/16 v2, 0x9
 
-    iget-wide v2, p0, Lyz1;->b:J
+    invoke-direct {v1, p0, v2, p1}, Li00;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-static/range {v1 .. v7}, Lcom/my/tracker/obfuscated/t;->k(Lcom/my/tracker/obfuscated/t;JLjava/lang/String;Lcom/my/tracker/obfuscated/o0$a;J)V
+    invoke-static {v1}, Lixi;->a(Luu1;)Lwu1;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lsn6;->a(Lha8;)Lsn6;
+
+    move-result-object p1
+
+    new-instance v1, Lxz1;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p0, v2}, Lxz1;-><init>(Lyz1;I)V
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v2, p0, Lyz1;->b:Ljava/util/concurrent/Executor;
+
+    invoke-static {p1, v1, v2}, Lwsf;->l(Lha8;Lyu;Ljava/util/concurrent/Executor;)Lq72;
+
+    move-result-object p1
+
+    new-instance v1, Lxz1;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, p0, v3}, Lxz1;-><init>(Lyz1;I)V
+
+    invoke-static {p1, v1, v2}, Lwsf;->l(Lha8;Lyu;Ljava/util/concurrent/Executor;)Lq72;
+
+    move-result-object p1
+
+    new-instance v1, Li00;
+
+    const/16 v3, 0xa
+
+    invoke-direct {v1, p0, v3, v0}, Li00;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {p1, v1, v2}, Lwsf;->l(Lha8;Lyu;Ljava/util/concurrent/Executor;)Lq72;
+
+    move-result-object p1
+
+    new-instance v0, Lxz1;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, p0, v1}, Lxz1;-><init>(Lyz1;I)V
+
+    invoke-static {p1, v0, v2}, Lwsf;->l(Lha8;Lyu;Ljava/util/concurrent/Executor;)Lq72;
+
+    move-result-object p1
+
+    new-instance v0, Lxz1;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, p0, v1}, Lxz1;-><init>(Lyz1;I)V
+
+    invoke-static {p1, v0, v2}, Lwsf;->l(Lha8;Lyu;Ljava/util/concurrent/Executor;)Lq72;
+
+    move-result-object p1
+
+    new-instance v0, Llz1;
+
+    invoke-direct {v0, v1}, Llz1;-><init>(I)V
+
+    invoke-static {}, Layi;->a()Lex4;
+
+    move-result-object v1
+
+    new-instance v2, Lusd;
+
+    const/16 v3, 0x13
+
+    invoke-direct {v2, v3, v0}, Lusd;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {p1, v2, v1}, Lwsf;->l(Lha8;Lyu;Ljava/util/concurrent/Executor;)Lq72;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final b()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final c()V
+    .locals 5
+
+    iget-object v0, p0, Lyz1;->a:Lry1;
+
+    iget-object v1, v0, Lry1;->h:Lc86;
+
+    const-string v2, "Camera2CapturePipeline"
+
+    const-string v3, "ScreenFlashTask#postCapture"
+
+    invoke-static {v2, v3}, Lgri;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v2, p0, Lyz1;->e:Lw7c;
+
+    invoke-virtual {v2}, Lw7c;->r()Z
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v0, v3}, Lry1;->r(Z)V
+
+    :cond_0
+    invoke-virtual {v1, v3}, Lc86;->c(Z)Lha8;
+
+    move-result-object v0
+
+    new-instance v2, Lmc;
+
+    const/4 v4, 0x7
+
+    invoke-direct {v2, v4}, Lmc;-><init>(I)V
+
+    iget-object v4, p0, Lyz1;->b:Ljava/util/concurrent/Executor;
+
+    invoke-interface {v0, v2, v4}, Lha8;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+
+    const/4 v0, 0x1
+
+    invoke-virtual {v1, v3, v0}, Lc86;->a(ZZ)V
+
+    invoke-static {}, Layi;->d()La07;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lyz1;->d:Lde7;
+
+    invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v2, Lvy1;
+
+    const/4 v3, 0x4
+
+    invoke-direct {v2, v3, v1}, Lvy1;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v2}, La07;->execute(Ljava/lang/Runnable;)V
 
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lyz1;->o:Ljava/lang/Object;
-
-    check-cast v0, Ltx1;
-
-    iget-object v1, p0, Lyz1;->X:Ljava/lang/Object;
-
-    move-object v3, v1
-
-    check-cast v3, Landroid/hardware/camera2/CameraCaptureSession;
-
-    iget-object v1, p0, Lyz1;->Y:Ljava/lang/Object;
-
-    move-object v4, v1
-
-    check-cast v4, Landroid/hardware/camera2/CaptureRequest;
-
-    iget-object v0, v0, Ltx1;->b:Ljava/lang/Object;
-
-    move-object v2, v0
-
-    check-cast v2, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
-
-    iget-wide v5, p0, Lyz1;->b:J
-
-    iget-wide v7, p0, Lyz1;->c:J
-
-    invoke-virtual/range {v2 .. v8}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureStarted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;JJ)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

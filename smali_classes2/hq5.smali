@@ -1,48 +1,81 @@
-.class public final Lhq5;
-.super Ly14;
+.class public final synthetic Lhq5;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Ls3;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;
 
 
 # direct methods
-.method public constructor <init>(Ls3;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;I)V
     .locals 0
 
-    iput-object p1, p0, Lhq5;->Y:Ls3;
+    iput p2, p0, Lhq5;->a:I
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lhq5;->b:Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
-    iput-object p1, p0, Lhq5;->o:Ljava/lang/Object;
+    iget p1, p0, Lhq5;->a:I
 
-    iget p1, p0, Lhq5;->X:I
+    const/4 v0, 0x1
 
-    const/high16 v0, -0x80000000
+    iget-object v1, p0, Lhq5;->b:Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;
 
-    or-int/2addr p1, v0
+    packed-switch p1, :pswitch_data_0
 
-    iput p1, p0, Lhq5;->X:I
+    sget-object p1, Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;->L0:[Lyy7;
 
-    iget-object p1, p0, Lhq5;->Y:Ls3;
+    invoke-virtual {v1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->E0(Z)V
 
-    const/4 v0, 0x0
+    return-void
 
-    invoke-virtual {p1, v0, p0}, Ls3;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :pswitch_0
+    const/4 p1, 0x0
+
+    iput-boolean p1, v1, Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;->K0:Z
+
+    sget-object p1, Lqh7;->a:Lqh7;
+
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lw5;
 
     move-result-object p1
 
-    return-object p1
+    invoke-virtual {p1}, Lw5;->f()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Luh7;
+
+    if-eqz p1, :cond_0
+
+    const/4 v2, 0x4
+
+    invoke-virtual {p1, v2}, Luh7;->b(I)V
+
+    :cond_0
+    invoke-virtual {v1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->E0(Z)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

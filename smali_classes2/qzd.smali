@@ -1,78 +1,61 @@
-.class public final Lqzd;
-.super Lsgf;
+.class public final synthetic Lqzd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Landroid/content/DialogInterface$OnKeyListener;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Ld0e;
+.field public final synthetic a:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Ld0e;)V
+.method public synthetic constructor <init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;)V
     .locals 0
 
-    iput-object p2, p0, Lqzd;->Y:Ld0e;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lqzd;->a:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onKey(Landroid/content/DialogInterface;ILandroid/view/KeyEvent;)Z
     .locals 0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 p1, 0x4
 
-    invoke-virtual {p0, p1, p2}, Lqzd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-ne p2, p1, :cond_0
 
-    move-result-object p1
+    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
-    check-cast p1, Lqzd;
+    move-result p1
 
-    sget-object p2, Lccg;->a:Lccg;
+    const/4 p2, 0x1
 
-    invoke-virtual {p1, p2}, Lqzd;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    if-ne p1, p2, :cond_0
 
-    return-object p2
-.end method
+    new-instance p1, Lszd;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    iget-object p2, p0, Lqzd;->a:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
-    new-instance v0, Lqzd;
+    iget-object p3, p2, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->C1:Ljava/lang/Object;
 
-    iget-object v1, p0, Lqzd;->Y:Ld0e;
+    invoke-interface {p3}, Lk18;->getValue()Ljava/lang/Object;
 
-    invoke-direct {v0, p2, v1}, Lqzd;-><init>(Lkotlin/coroutines/Continuation;Ld0e;)V
+    move-result-object p3
 
-    iput-object p1, v0, Lqzd;->X:Ljava/lang/Object;
+    check-cast p3, Landroid/os/Parcelable;
 
-    return-object v0
-.end method
+    invoke-direct {p1, p3}, Lszd;-><init>(Landroid/os/Parcelable;)V
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    invoke-virtual {p2, p1}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->B0(Luzd;)V
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    :cond_0
+    const/4 p1, 0x0
 
-    iget-object p1, p0, Lqzd;->X:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/List;
-
-    iget-object v0, p0, Lqzd;->Y:Ld0e;
-
-    invoke-virtual {v0, p1}, Lr18;->E(Ljava/util/List;)V
-
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
+    return p1
 .end method

@@ -1,41 +1,112 @@
 .class public final Lwb6;
-.super Ldg4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
 .field public static final b:Lwb6;
 
-.field public static final c:Lyf4;
+
+# instance fields
+.field public final a:Lc9a;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 2
 
     new-instance v0, Lwb6;
 
-    invoke-direct {v0}, Ldg4;-><init>()V
+    sget-object v1, Lfzd;->b:Lc9a;
+
+    invoke-direct {v0, v1}, Lwb6;-><init>(Lc9a;)V
 
     sput-object v0, Lwb6;->b:Lwb6;
 
-    const-string v1, "messages_ids"
+    return-void
+.end method
 
-    filled-new-array {v1}, [Ljava/lang/String;
+.method public constructor <init>(Lc9a;)V
+    .locals 0
 
-    move-result-object v1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lwb6;->a:Lc9a;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lwb6;
 
     const/4 v2, 0x0
 
-    const/16 v3, 0xe
+    if-nez v1, :cond_1
 
-    const-string v4, ":chats/forward"
+    return v2
 
-    invoke-static {v0, v4, v1, v2, v3}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+    :cond_1
+    check-cast p1, Lwb6;
+
+    iget-object v1, p0, Lwb6;->a:Lc9a;
+
+    iget-object p1, p1, Lwb6;->a:Lc9a;
+
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lwb6;->a:Lc9a;
+
+    invoke-virtual {v0}, Lc9a;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "FoldersCounters(counters="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lwb6;->a:Lc9a;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lwb6;->c:Lyf4;
-
-    return-void
+    return-object v0
 .end method

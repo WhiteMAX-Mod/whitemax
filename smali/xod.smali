@@ -1,158 +1,412 @@
-.class public abstract Lxod;
+.class public final Lxod;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ls12;
 
-# static fields
-.field public static final a:Z
 
-.field public static final b:J
+# instance fields
+.field public final b:Ls12;
+
+.field public final synthetic c:I
+
+.field public final d:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Ls12;)V
+    .locals 1
 
-    const-string v0, "rx3.scheduler.use-nanotime"
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Ljava/lang/Boolean;->getBoolean(Ljava/lang/String;)Z
+    iput v0, p0, Lxod;->c:I
 
-    move-result v0
+    .line 1
+    invoke-direct {p0, p1, v0}, Lxod;-><init>(Ls12;B)V
 
-    sput-boolean v0, Lxod;->a:Z
+    .line 2
+    iput-object p1, p0, Lxod;->d:Ljava/lang/Object;
 
-    const-string v0, "rx3.scheduler.drift-tolerance"
+    return-void
+.end method
 
-    const-wide/16 v1, 0xf
+.method public constructor <init>(Ls12;B)V
+    .locals 0
 
-    invoke-static {v0, v1, v2}, Ljava/lang/Long;->getLong(Ljava/lang/String;J)Ljava/lang/Long;
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    .line 4
+    iput-object p1, p0, Lxod;->b:Ls12;
 
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+    return-void
+.end method
 
-    move-result-wide v0
+.method public constructor <init>(Ls12;Lu4e;)V
+    .locals 1
 
-    const-string v2, "rx3.scheduler.drift-tolerance-unit"
+    const/4 v0, 0x1
 
-    const-string v3, "minutes"
+    iput v0, p0, Lxod;->c:I
 
-    invoke-static {v2, v3}, Ljava/lang/System;->getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const/4 v0, 0x0
 
-    move-result-object v2
+    .line 5
+    invoke-direct {p0, p1, v0}, Lxod;-><init>(Ls12;B)V
 
-    const-string v3, "seconds"
-
-    invoke-virtual {v3, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
-
-    move-result-wide v0
-
-    goto :goto_0
-
-    :cond_0
-    const-string v3, "milliseconds"
-
-    invoke-virtual {v3, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
-
-    move-result-wide v0
-
-    goto :goto_0
-
-    :cond_1
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
-
-    move-result-wide v0
-
-    :goto_0
-    sput-wide v0, Lxod;->b:J
+    .line 6
+    iput-object p2, p0, Lxod;->d:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a()Lvod;
+.method public final a()V
+    .locals 1
+
+    iget-object v0, p0, Lxod;->b:Ls12;
+
+    invoke-interface {v0}, Ls12;->a()V
+
+    return-void
 .end method
 
-.method public b(Ljava/lang/Runnable;)Lvv4;
-    .locals 3
+.method public b(F)Lha8;
+    .locals 1
 
-    const-wide/16 v0, 0x0
+    iget v0, p0, Lxod;->c:I
 
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, v0, v1, v2}, Lxod;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lvv4;
+    iget-object v0, p0, Lxod;->b:Ls12;
+
+    invoke-interface {v0, p1}, Ls12;->b(F)Lha8;
 
     move-result-object p1
 
     return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lxod;->d:Ljava/lang/Object;
+
+    check-cast v0, Ls12;
+
+    invoke-interface {v0, p1}, Ls12;->b(F)Lha8;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lvv4;
+.method public final c(Lao3;)V
+    .locals 1
+
+    iget-object v0, p0, Lxod;->b:Ls12;
+
+    invoke-interface {v0, p1}, Ls12;->c(Lao3;)V
+
+    return-void
+.end method
+
+.method public d(F)Lha8;
+    .locals 1
+
+    iget v0, p0, Lxod;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lxod;->b:Ls12;
+
+    invoke-interface {v0, p1}, Ls12;->d(F)Lha8;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lxod;->d:Ljava/lang/Object;
+
+    check-cast v0, Ls12;
+
+    invoke-interface {v0, p1}, Ls12;->d(F)Lha8;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final e()Landroid/graphics/Rect;
+    .locals 1
+
+    iget-object v0, p0, Lxod;->b:Ls12;
+
+    invoke-interface {v0}, Ls12;->e()Landroid/graphics/Rect;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final f(I)V
+    .locals 1
+
+    iget-object v0, p0, Lxod;->b:Ls12;
+
+    invoke-interface {v0, p1}, Ls12;->f(I)V
+
+    return-void
+.end method
+
+.method public final g(Lde7;)V
+    .locals 1
+
+    iget-object v0, p0, Lxod;->b:Ls12;
+
+    invoke-interface {v0, p1}, Ls12;->g(Lde7;)V
+
+    return-void
+.end method
+
+.method public h(Lz95;)Lha8;
+    .locals 1
+
+    iget v0, p0, Lxod;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lxod;->b:Ls12;
+
+    invoke-interface {v0, p1}, Ls12;->h(Lz95;)Lha8;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lxod;->d:Ljava/lang/Object;
+
+    check-cast v0, Ls12;
+
+    invoke-interface {v0, p1}, Ls12;->h(Lz95;)Lha8;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public i(Ljava/util/ArrayList;II)Lha8;
     .locals 2
 
-    invoke-virtual {p0}, Lxod;->a()Lvod;
+    iget v0, p0, Lxod;->c:I
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    const-string v1, "run is null"
+    iget-object v0, p0, Lxod;->b:Ls12;
 
-    invoke-static {p1, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    new-instance v1, Ltod;
-
-    invoke-direct {v1, p1, v0}, Ltod;-><init>(Ljava/lang/Runnable;Lvod;)V
-
-    invoke-virtual {v0, v1, p2, p3, p4}, Lvod;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lvv4;
-
-    return-object v1
-.end method
-
-.method public d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lvv4;
-    .locals 7
-
-    invoke-virtual {p0}, Lxod;->a()Lvod;
-
-    move-result-object v0
-
-    new-instance v1, Lcw6;
-
-    invoke-direct {v1, p1, v0}, Lcw6;-><init>(Ljava/lang/Runnable;Lvod;)V
-
-    move-wide v2, p2
-
-    move-wide v4, p4
-
-    move-object v6, p6
-
-    invoke-virtual/range {v0 .. v6}, Lvod;->d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lvv4;
+    invoke-interface {v0, p1, p2, p3}, Ls12;->i(Ljava/util/ArrayList;II)Lha8;
 
     move-result-object p1
 
-    sget-object p2, Lfa5;->a:Lfa5;
+    return-object p1
 
-    if-ne p1, p2, :cond_0
+    :pswitch_0
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    const-string v0, "Only support one capture config."
+
+    invoke-static {v0, v1}, Lz5j;->a(Ljava/lang/String;Z)V
+
+    iget-object v0, p0, Lxod;->b:Ls12;
+
+    invoke-interface {v0, p2, p3}, Ls12;->l(II)Lha8;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lsn6;->a(Lha8;)Lsn6;
+
+    move-result-object p3
+
+    new-instance v0, Lwn6;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, p2, v1}, Lwn6;-><init>(Lha8;I)V
+
+    invoke-static {}, Layi;->a()Lex4;
+
+    move-result-object v1
+
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p3, v0, v1}, Lwsf;->l(Lha8;Lyu;Ljava/util/concurrent/Executor;)Lq72;
+
+    move-result-object p3
+
+    new-instance v0, Lc5g;
+
+    const/16 v1, 0x11
+
+    invoke-direct {v0, p0, v1, p1}, Lc5g;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {}, Layi;->a()Lex4;
+
+    move-result-object p1
+
+    invoke-static {p3, v0, p1}, Lwsf;->l(Lha8;Lyu;Ljava/util/concurrent/Executor;)Lq72;
+
+    move-result-object p1
+
+    new-instance p3, Lwn6;
+
+    const/4 v0, 0x3
+
+    invoke-direct {p3, p2, v0}, Lwn6;-><init>(Lha8;I)V
+
+    invoke-static {}, Layi;->a()Lex4;
+
+    move-result-object p2
+
+    invoke-static {p1, p3, p2}, Lwsf;->l(Lha8;Lyu;Ljava/util/concurrent/Executor;)Lq72;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lwsf;->c(Ljava/util/List;)Ls98;
+
+    move-result-object p1
 
     return-object p1
 
-    :cond_0
-    return-object v1
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final j(Ldie;)V
+    .locals 1
+
+    iget-object v0, p0, Lxod;->b:Ls12;
+
+    invoke-interface {v0, p1}, Ls12;->j(Ldie;)V
+
+    return-void
+.end method
+
+.method public k(Z)Lha8;
+    .locals 1
+
+    iget v0, p0, Lxod;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lxod;->b:Ls12;
+
+    invoke-interface {v0, p1}, Ls12;->k(Z)Lha8;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lxod;->d:Ljava/lang/Object;
+
+    check-cast v0, Ls12;
+
+    invoke-interface {v0, p1}, Ls12;->k(Z)Lha8;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final l(II)Lha8;
+    .locals 1
+
+    iget-object v0, p0, Lxod;->b:Ls12;
+
+    invoke-interface {v0, p1, p2}, Ls12;->l(II)Lha8;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m()Lao3;
+    .locals 1
+
+    iget-object v0, p0, Lxod;->b:Ls12;
+
+    invoke-interface {v0}, Ls12;->m()Lao3;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final n()V
+    .locals 1
+
+    iget-object v0, p0, Lxod;->b:Ls12;
+
+    invoke-interface {v0}, Ls12;->n()V
+
+    return-void
+.end method
+
+.method public final o()V
+    .locals 1
+
+    iget-object v0, p0, Lxod;->b:Ls12;
+
+    invoke-interface {v0}, Ls12;->o()V
+
+    return-void
 .end method

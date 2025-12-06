@@ -1,243 +1,146 @@
 .class public final Lfz3;
-.super Ljava/lang/Object;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Ly18;
+.implements Lsm6;
 
 
 # instance fields
-.field public final a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Ljava/lang/Integer;
+.field public final synthetic Y:Lx26;
 
-.field public final c:I
+.field public final synthetic Z:Lone/me/contactlist/ContactListWidget;
+
+.field public o:I
+
+.field public final synthetic s0:Lvx3;
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/Integer;)V
-    .locals 1
+.method public constructor <init>(Lx26;Lkotlin/coroutines/Continuation;Lone/me/contactlist/ContactListWidget;Lvx3;)V
+    .locals 0
 
-    sget v0, Lpjd;->a:I
+    iput-object p1, p0, Lfz3;->Y:Lx26;
 
-    sget v0, Lusa;->a:I
+    iput-object p3, p0, Lfz3;->Z:Lone/me/contactlist/ContactListWidget;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p4, p0, Lfz3;->s0:Lvx3;
 
-    iput p1, p0, Lfz3;->a:I
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lfz3;->b:Ljava/lang/Integer;
-
-    sget p1, Ltsa;->o:I
-
-    iput p1, p0, Lfz3;->c:I
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lfz3;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lfz3;
-
-    sget v0, Lpjd;->a:I
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget v0, Lusa;->a:I
-
-    iget v0, p0, Lfz3;->a:I
-
-    iget v1, p1, Lfz3;->a:I
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lfz3;->b:Ljava/lang/Integer;
-
-    iget-object p1, p1, Lfz3;->b:Ljava/lang/Integer;
-
-    invoke-static {v0, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-.end method
-
-.method public final h(Ly18;)Z
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    instance-of p1, p1, Lfz3;
+    check-cast p1, Lz26;
 
-    return p1
-.end method
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.method public final hashCode()I
-    .locals 3
+    invoke-virtual {p0, p1, p2}, Lfz3;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    sget v0, Lpjd;->I0:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    sget v2, Lusa;->p:I
-
-    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
-
-    move-result v0
-
-    iget v2, p0, Lfz3;->a:I
-
-    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
-
-    move-result v0
-
-    iget-object v1, p0, Lfz3;->b:Ljava/lang/Integer;
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final k(Ly18;)Ljava/lang/Object;
-    .locals 2
-
-    instance-of v0, p1, Lfz3;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
+    move-result-object p1
 
     check-cast p1, Lfz3;
 
+    sget-object p2, Lqqg;->a:Lqqg;
+
+    invoke-virtual {p1, p2}, Lfz3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 4
+
+    new-instance v0, Lfz3;
+
+    iget-object v1, p0, Lfz3;->Z:Lone/me/contactlist/ContactListWidget;
+
+    iget-object v2, p0, Lfz3;->s0:Lvx3;
+
+    iget-object v3, p0, Lfz3;->Y:Lx26;
+
+    invoke-direct {v0, v3, p2, v1, v2}, Lfz3;-><init>(Lx26;Lkotlin/coroutines/Continuation;Lone/me/contactlist/ContactListWidget;Lvx3;)V
+
+    iput-object p1, v0, Lfz3;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
+
+    iget v0, p0, Lfz3;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
     goto :goto_0
 
     :cond_0
-    move-object p1, v1
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    :goto_0
-    if-nez p1, :cond_1
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    goto :goto_1
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 
     :cond_1
-    iget-object p1, p1, Lfz3;->b:Ljava/lang/Integer;
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lfz3;->b:Ljava/lang/Integer;
+    iget-object p1, p0, Lfz3;->X:Ljava/lang/Object;
 
-    invoke-static {p1, v0}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-object v4, p1
 
-    move-result v0
+    check-cast v4, Lz26;
 
-    if-nez v0, :cond_2
+    new-instance v3, Lrid;
 
-    new-instance v0, Lez3;
+    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, p1}, Lez3;-><init>(Ljava/lang/Integer;)V
+    new-instance v2, Lx92;
+
+    iget-object v6, p0, Lfz3;->s0:Lvx3;
+
+    const/4 v7, 0x4
+
+    iget-object v5, p0, Lfz3;->Z:Lone/me/contactlist/ContactListWidget;
+
+    invoke-direct/range {v2 .. v7}, Lx92;-><init>(Lrid;Lz26;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    iput v1, p0, Lfz3;->o:I
+
+    iget-object p1, p0, Lfz3;->Y:Lx26;
+
+    invoke-interface {p1, v2, p0}, Lx26;->d(Lz26;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lg84;->a:Lg84;
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
 
     :cond_2
-    :goto_1
-    return-object v1
-.end method
+    :goto_0
+    sget-object p1, Lqqg;->a:Lqqg;
 
-.method public final m()I
-    .locals 1
-
-    iget v0, p0, Lfz3;->c:I
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    sget v0, Lpjd;->I0:I
-
-    sget v1, Lusa;->p:I
-
-    const-string v2, ", titleRes="
-
-    const-string v3, ", descriptionRes="
-
-    const-string v4, "ContactsEmptySearchResultItem(iconRes="
-
-    invoke-static {v4, v0, v2, v1, v3}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v1, p0, Lfz3;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", buttonTitleRes="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lfz3;->b:Ljava/lang/Integer;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

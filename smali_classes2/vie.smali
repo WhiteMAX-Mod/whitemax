@@ -1,66 +1,35 @@
-.class public final synthetic Lvie;
+.class public final Lvie;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lfg4;
-
 
 # instance fields
-.field public final synthetic X:Ljava/lang/Integer;
+.field public final a:Ldi8;
 
-.field public final synthetic Y:Ljava/lang/Boolean;
+.field public final b:Lk18;
 
-.field public final synthetic a:J
+.field public final c:Lk18;
 
-.field public final synthetic b:J
+.field public final d:Lk18;
 
-.field public final synthetic c:Ljava/lang/String;
-
-.field public final synthetic o:I
+.field public final e:Lk18;
 
 
 # direct methods
-.method public synthetic constructor <init>(JJLjava/lang/String;ILjava/lang/Integer;Ljava/lang/Boolean;)V
+.method public constructor <init>(Lk18;Lk18;Lk18;Lk18;Ldi8;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lvie;->a:J
+    iput-object p5, p0, Lvie;->a:Ldi8;
 
-    iput-wide p3, p0, Lvie;->b:J
+    iput-object p1, p0, Lvie;->b:Lk18;
 
-    iput-object p5, p0, Lvie;->c:Ljava/lang/String;
+    iput-object p2, p0, Lvie;->c:Lk18;
 
-    iput p6, p0, Lvie;->o:I
+    iput-object p3, p0, Lvie;->d:Lk18;
 
-    iput-object p7, p0, Lvie;->X:Ljava/lang/Integer;
-
-    iput-object p8, p0, Lvie;->Y:Ljava/lang/Boolean;
+    iput-object p4, p0, Lvie;->e:Lk18;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 9
-
-    new-instance v0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
-
-    iget-wide v1, p0, Lvie;->a:J
-
-    iget-wide v3, p0, Lvie;->b:J
-
-    iget-object v5, p0, Lvie;->c:Ljava/lang/String;
-
-    iget v6, p0, Lvie;->o:I
-
-    iget-object v7, p0, Lvie;->X:Ljava/lang/Integer;
-
-    iget-object v8, p0, Lvie;->Y:Ljava/lang/Boolean;
-
-    invoke-direct/range {v0 .. v8}, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;-><init>(JJLjava/lang/String;ILjava/lang/Integer;Ljava/lang/Boolean;)V
-
-    return-object v0
 .end method

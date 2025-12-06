@@ -1,217 +1,108 @@
-.class public abstract Lj3i;
-.super Ljava/util/AbstractCollection;
+.class public final Lj3i;
+.super Lfhh;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Serializable;
 
+# instance fields
+.field public final synthetic a:I
 
-# static fields
-.field public static final a:[Ljava/lang/Object;
+.field public final synthetic b:Ll3i;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Ll3i;I)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput p2, p0, Lj3i;->a:I
 
-    new-array v0, v0, [Ljava/lang/Object;
+    iput-object p1, p0, Lj3i;->b:Ll3i;
 
-    sput-object v0, Lj3i;->a:[Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a(I[Ljava/lang/Object;)I
-.end method
-
-.method public final add(Ljava/lang/Object;)Z
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final addAll(Ljava/util/Collection;)Z
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public b()I
-    .locals 1
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final clear()V
-    .locals 1
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw v0
-.end method
-
-.method public d()I
-    .locals 1
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw v0
-.end method
-
-.method public e()[Ljava/lang/Object;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final remove(Ljava/lang/Object;)Z
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final removeAll(Ljava/util/Collection;)Z
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final retainAll(Ljava/util/Collection;)Z
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final spliterator()Ljava/util/Spliterator;
-    .locals 1
-
-    const/16 v0, 0x510
-
-    invoke-static {p0, v0}, Ljava/util/Spliterators;->spliterator(Ljava/util/Collection;I)Ljava/util/Spliterator;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final toArray()[Ljava/lang/Object;
-    .locals 1
-
-    .line 1
-    sget-object v0, Lj3i;->a:[Ljava/lang/Object;
-
-    invoke-virtual {p0, v0}, Lj3i;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+.method public final c()V
     .locals 4
 
-    .line 2
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 3
-    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
-
-    move-result v0
-
-    array-length v1, p1
-
-    const/4 v2, 0x0
-
-    if-ge v1, v0, :cond_2
-
-    .line 4
-    invoke-virtual {p0}, Lj3i;->e()[Ljava/lang/Object;
-
-    move-result-object v3
-
-    if-nez v3, :cond_1
-
-    if-eqz v1, :cond_0
-
-    invoke-static {p1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    .line 5
-    :cond_0
-    invoke-static {p1, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    .line 6
-    :cond_1
-    invoke-virtual {p0}, Lj3i;->d()I
-
-    move-result v0
-
-    invoke-virtual {p0}, Lj3i;->b()I
-
-    move-result v1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p1
-
-    .line 7
-    invoke-static {v3, v0, v1, p1}, Ljava/util/Arrays;->copyOfRange([Ljava/lang/Object;IILjava/lang/Class;)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_2
-    if-le v1, v0, :cond_3
+    iget v0, p0, Lj3i;->a:I
 
     const/4 v1, 0x0
 
-    .line 8
-    aput-object v1, p1, v0
+    iget-object v2, p0, Lj3i;->b:Ll3i;
 
-    .line 9
-    :cond_3
-    :goto_0
-    invoke-virtual {p0, v2, p1}, Lj3i;->a(I[Ljava/lang/Object;)I
+    packed-switch v0, :pswitch_data_0
 
-    return-object p1
+    iput-object v1, v2, Ll3i;->s:Liz8;
+
+    iget-object v0, v2, Ll3i;->d:Landroidx/appcompat/widget/ActionBarContainer;
+
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
+
+    return-void
+
+    :pswitch_0
+    iget-boolean v0, v2, Ll3i;->o:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, v2, Ll3i;->g:Landroid/view/View;
+
+    if-eqz v0, :cond_0
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v3}, Landroid/view/View;->setTranslationY(F)V
+
+    iget-object v0, v2, Ll3i;->d:Landroidx/appcompat/widget/ActionBarContainer;
+
+    invoke-virtual {v0, v3}, Landroid/view/View;->setTranslationY(F)V
+
+    :cond_0
+    iget-object v0, v2, Ll3i;->d:Landroidx/appcompat/widget/ActionBarContainer;
+
+    const/16 v3, 0x8
+
+    invoke-virtual {v0, v3}, Landroidx/appcompat/widget/ActionBarContainer;->setVisibility(I)V
+
+    iget-object v0, v2, Ll3i;->d:Landroidx/appcompat/widget/ActionBarContainer;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v3}, Landroidx/appcompat/widget/ActionBarContainer;->setTransitioning(Z)V
+
+    iput-object v1, v2, Ll3i;->s:Liz8;
+
+    iget-object v0, v2, Ll3i;->k:Lh79;
+
+    if-eqz v0, :cond_1
+
+    iget-object v3, v2, Ll3i;->j:Lk3i;
+
+    invoke-virtual {v0, v3}, Lh79;->C(Ll7;)V
+
+    iput-object v1, v2, Ll3i;->j:Lk3i;
+
+    iput-object v1, v2, Ll3i;->k:Lh79;
+
+    :cond_1
+    iget-object v0, v2, Ll3i;->c:Landroidx/appcompat/widget/ActionBarOverlayLayout;
+
+    if-eqz v0, :cond_2
+
+    sget-object v1, Lhfh;->a:Ljava/util/WeakHashMap;
+
+    invoke-static {v0}, Lteh;->c(Landroid/view/View;)V
+
+    :cond_2
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

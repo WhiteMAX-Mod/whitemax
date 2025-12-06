@@ -1,143 +1,146 @@
-.class public abstract Llra;
-.super Ljava/lang/Object;
+.class public final Llra;
+.super Lk3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:J
+# instance fields
+.field public final synthetic b:I
 
-.field public static final b:J
-
-.field public static final c:J
-
-.field public static final d:J
-
-.field public static final e:J
-
-.field public static final f:J
-
-.field public static final g:J
-
-.field public static final h:J
-
-.field public static final i:J
-
-.field public static final j:J
-
-.field public static final k:J
-
-.field public static final l:J
-
-.field public static final m:J
-
-.field public static final n:J
-
-.field public static final o:J
-
-.field public static final p:J
-
-.field public static final synthetic q:I
+.field public final c:Lj0e;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Llqc;Lj0e;I)V
+    .locals 0
 
-    sget v0, Ljnc;->call_admin_settings_media_bottom_header:I
+    iput p3, p0, Llra;->b:I
 
-    int-to-long v0, v0
+    packed-switch p3, :pswitch_data_0
 
-    sput-wide v0, Llra;->a:J
+    sget-object p3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    sget v0, Ljnc;->call_admin_settings_media_header:I
+    .line 3
+    invoke-direct {p0, p1}, Lk3;-><init>(Llta;)V
 
-    int-to-long v0, v0
-
-    sput-wide v0, Llra;->b:J
-
-    sget v0, Ljnc;->call_context_action_chat:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Llra;->c:J
-
-    sget v0, Ljnc;->call_context_action_open_profile:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Llra;->d:J
-
-    sget v0, Ljnc;->call_context_action_record_screen:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Llra;->e:J
-
-    sget v0, Ljnc;->call_context_action_record_screen_disable:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Llra;->f:J
-
-    sget v0, Ljnc;->call_context_action_record_screen_unavailable:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Llra;->g:J
-
-    sget v0, Ljnc;->call_context_action_record_screenin_progress:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Llra;->h:J
-
-    sget v0, Ljnc;->call_context_action_settings:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Llra;->i:J
-
-    sget v0, Ljnc;->call_context_action_share_screen:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Llra;->j:J
-
-    sget v0, Ljnc;->call_context_action_share_screen_disable:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Llra;->k:J
-
-    sget v0, Ljnc;->call_context_action_share_screen_unavailable:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Llra;->l:J
-
-    sget v0, Ljnc;->call_context_action_write_chat:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Llra;->m:J
-
-    sget v0, Ljnc;->call_context_dialog_invite_user_to_p2p:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Llra;->n:J
-
-    sget v0, Ljnc;->call_screen_menu_grid_mode:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Llra;->o:J
-
-    sget v0, Ljnc;->call_screen_menu_speaker_mode:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Llra;->p:J
+    .line 4
+    iput-object p2, p0, Llra;->c:Lj0e;
 
     return-void
+
+    .line 5
+    :pswitch_0
+    sget-object p3, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    .line 6
+    invoke-direct {p0, p1}, Lk3;-><init>(Llta;)V
+
+    .line 7
+    iput-object p2, p0, Llra;->c:Lj0e;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public constructor <init>(Lvqa;Lj0e;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Llra;->b:I
+
+    .line 1
+    invoke-direct {p0, p1}, Lk3;-><init>(Llta;)V
+
+    .line 2
+    iput-object p2, p0, Llra;->c:Lj0e;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final o(Lvta;)V
+    .locals 3
+
+    iget v0, p0, Llra;->b:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Lpta;
+
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    iget-object v1, p0, Llra;->c:Lj0e;
+
+    invoke-virtual {v1}, Lj0e;->a()Lh0e;
+
+    move-result-object v1
+
+    invoke-direct {v0, p1, v1}, Lpta;-><init>(Lvta;Lh0e;)V
+
+    iget-object p1, p0, Lk3;->a:Llta;
+
+    invoke-interface {p1, v0}, Llta;->a(Lvta;)V
+
+    return-void
+
+    :pswitch_0
+    new-instance v0, Lqu1;
+
+    invoke-direct {v0, p1}, Lqu1;-><init>(Lvta;)V
+
+    invoke-interface {p1, v0}, Lvta;->c(Lpy4;)V
+
+    new-instance p1, Lyn6;
+
+    const/16 v1, 0x17
+
+    const/4 v2, 0x0
+
+    invoke-direct {p1, p0, v0, v2, v1}, Lyn6;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+
+    iget-object v1, p0, Llra;->c:Lj0e;
+
+    invoke-virtual {v1, p1}, Lj0e;->b(Ljava/lang/Runnable;)Lpy4;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Lty4;->h(Ljava/util/concurrent/atomic/AtomicReference;Lpy4;)Z
+
+    return-void
+
+    :pswitch_1
+    new-instance v0, Lkra;
+
+    new-instance v1, Lyee;
+
+    invoke-direct {v1, p1}, Lyee;-><init>(Lvta;)V
+
+    sget-object p1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    iget-object p1, p0, Llra;->c:Lj0e;
+
+    invoke-virtual {p1}, Lj0e;->a()Lh0e;
+
+    move-result-object p1
+
+    invoke-direct {v0, v1, p1}, Lkra;-><init>(Lyee;Lh0e;)V
+
+    iget-object p1, p0, Lk3;->a:Llta;
+
+    invoke-interface {p1, v0}, Llta;->a(Lvta;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -3,41 +3,17 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public b:Ljava/lang/String;
-
-.field public final c:Ljava/util/ArrayList;
-
-.field public final d:Ljava/util/ArrayList;
-
-
-# direct methods
-.method public constructor <init>(Ljava/lang/String;)V
+# virtual methods
+.method public final serializer()Lzy7;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lzy7;"
+        }
+    .end annotation
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lxsh;->a:Lxsh;
 
-    iput-object p1, p0, Lysh;->a:Ljava/lang/String;
-
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Lysh;->b:Ljava/lang/String;
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    const/4 v0, 0x7
-
-    invoke-direct {p1, v0}, Ljava/util/ArrayList;-><init>(I)V
-
-    iput-object p1, p0, Lysh;->c:Ljava/util/ArrayList;
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Lysh;->d:Ljava/util/ArrayList;
-
-    return-void
+    return-object v0
 .end method

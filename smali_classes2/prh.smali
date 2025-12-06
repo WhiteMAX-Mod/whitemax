@@ -1,78 +1,55 @@
-.class public final synthetic Lprh;
-.super Ljava/lang/Object;
+.class public final Lprh;
+.super Lq44;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Lsqh;
 
-.field public final synthetic b:Lrrh;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lyrh;
+
+.field public d:Lyrh;
+
+.field public o:Lorh;
+
+.field public s0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrrh;I)V
+.method public constructor <init>(Lyrh;Lq44;)V
     .locals 0
 
-    iput p2, p0, Lprh;->a:I
+    iput-object p1, p0, Lprh;->Z:Lyrh;
 
-    iput-object p1, p0, Lprh;->b:Lrrh;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lprh;->a:I
+    iput-object p1, p0, Lprh;->Y:Ljava/lang/Object;
 
-    iget-object v1, p0, Lprh;->b:Lrrh;
+    iget p1, p0, Lprh;->s0:I
 
-    packed-switch v0, :pswitch_data_0
+    const/high16 v0, -0x80000000
 
-    sget v0, Lrrh;->B0:I
+    or-int/2addr p1, v0
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    iput p1, p0, Lprh;->s0:I
 
-    move-result v0
+    iget-object p1, p0, Lprh;->Z:Lyrh;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    invoke-virtual {p1, v0, p0}, Lyrh;->g(Ljava/lang/String;Lq44;)Ljava/lang/Object;
 
-    const-class v2, Lrrh;
+    move-result-object p1
 
-    const-string v3, "onRelease: view %x"
-
-    invoke-static {v2, v0, v3}, Lem5;->d(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
-
-    iget-object v0, v1, Lrrh;->A0:Lorh;
-
-    check-cast v0, Llp4;
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, v0, Llp4;->c:Z
-
-    invoke-virtual {v0}, Llp4;->reset()V
-
-    return-void
-
-    :pswitch_0
-    invoke-virtual {v1}, Landroid/view/View;->requestLayout()V
-
-    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

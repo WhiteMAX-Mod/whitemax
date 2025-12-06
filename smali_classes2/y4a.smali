@@ -1,23 +1,23 @@
 .class public final Ly4a;
-.super Ljava/lang/Object;
+.super Lrj0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final c:J
 
-.field public final b:Ljava/io/File;
+.field public final d:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/File;Ljava/lang/String;)V
+.method public constructor <init>(JLpzf;JLjava/util/List;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2, p3}, Lrj0;-><init>(JLpzf;)V
 
-    iput-object p2, p0, Ly4a;->a:Ljava/lang/String;
+    iput-wide p4, p0, Ly4a;->c:J
 
-    iput-object p1, p0, Ly4a;->b:Ljava/io/File;
+    iput-object p6, p0, Ly4a;->d:Ljava/util/List;
 
     return-void
 .end method

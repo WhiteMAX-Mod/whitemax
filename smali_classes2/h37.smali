@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract verify(Ljava/lang/String;Ljava/security/cert/X509Certificate;)Z
+.method public abstract n()Lg37;
 .end method

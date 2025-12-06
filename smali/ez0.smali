@@ -1,29 +1,23 @@
-.class public interface abstract Lez0;
+.class public final Lez0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract b(Ljava/util/HashMap;)V
-.end method
+# instance fields
+.field public final a:J
 
-.method public abstract d(Ldz0;Z)V
-.end method
+.field public final b:J
 
-.method public abstract e(Ldz0;)V
-.end method
 
-.method public abstract f()Z
-.end method
+# direct methods
+.method public constructor <init>(JJ)V
+    .locals 0
 
-.method public abstract g(Ljava/util/HashMap;)V
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract j(J)V
-.end method
+    iput-wide p1, p0, Lez0;->a:J
 
-.method public abstract l(Ljava/util/HashMap;Landroid/util/SparseArray;)V
-.end method
+    iput-wide p3, p0, Lez0;->b:J
 
-.method public abstract m()V
+    return-void
 .end method

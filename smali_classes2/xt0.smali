@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public final a:I
+.field public final a:[I
 
 .field public final b:I
 
@@ -14,18 +14,18 @@
 
 
 # direct methods
-.method public constructor <init>(IIII)V
+.method public constructor <init>(III[I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lxt0;->a:I
+    iput-object p4, p0, Lxt0;->a:[I
 
-    iput p2, p0, Lxt0;->b:I
+    iput p1, p0, Lxt0;->b:I
 
-    iput p3, p0, Lxt0;->c:I
+    iput p2, p0, Lxt0;->c:I
 
-    iput p4, p0, Lxt0;->d:I
+    iput p3, p0, Lxt0;->d:I
 
     return-void
 .end method
@@ -49,11 +49,15 @@
     :cond_1
     check-cast p1, Lxt0;
 
-    iget v0, p0, Lxt0;->a:I
+    iget-object v0, p0, Lxt0;->a:[I
 
-    iget v1, p1, Lxt0;->a:I
+    iget-object v1, p1, Lxt0;->a:[I
 
-    if-eq v0, v1, :cond_2
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
 
     goto :goto_0
 
@@ -97,9 +101,9 @@
 .method public final hashCode()I
     .locals 3
 
-    iget v0, p0, Lxt0;->a:I
+    iget-object v0, p0, Lxt0;->a:[I
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
 
     move-result v0
 
@@ -109,13 +113,13 @@
 
     iget v2, p0, Lxt0;->b:I
 
-    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+    invoke-static {v2, v0, v1}, Lxrf;->k(III)I
 
     move-result v0
 
     iget v2, p0, Lxt0;->c:I
 
-    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+    invoke-static {v2, v0, v1}, Lxrf;->k(III)I
 
     move-result v0
 
@@ -133,21 +137,25 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    const-string v0, ", neutralSecondary="
+    iget-object v0, p0, Lxt0;->a:[I
 
-    const-string v1, ", reply="
-
-    const-string v2, "BubbleStrokeColors(action="
-
-    iget v3, p0, Lxt0;->a:I
-
-    iget v4, p0, Lxt0;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, ", replyOutside="
+    const-string v1, ", strokeStep1="
+
+    const-string v2, ", strokeStep2="
+
+    iget v3, p0, Lxt0;->b:I
+
+    const-string v4, "BubbleBackgroundSystemAssetGradientColors(gradient="
+
+    invoke-static {v3, v4, v0, v1, v2}, Lutb;->m(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", strokeStep3="
 
     const-string v2, ")"
 
@@ -155,7 +163,7 @@
 
     iget v4, p0, Lxt0;->d:I
 
-    invoke-static {v0, v3, v1, v4, v2}, Lfd0;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v3, v1, v4, v2}, Lxc0;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

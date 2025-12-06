@@ -1,23 +1,31 @@
-.class public final Loab;
+.class public abstract Loab;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:La10;
+# static fields
+.field public static final a:I
 
-.field public final b:J
+.field public static final b:I
+
+.field public static final c:I
 
 
 # direct methods
-.method public constructor <init>(JLa10;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Luzc;->oneme_permissions_positive:I
 
-    iput-object p3, p0, Loab;->a:La10;
+    sput v0, Loab;->a:I
 
-    iput-wide p1, p0, Loab;->b:J
+    sget v0, Luzc;->oneme_permissions_rationale:I
+
+    sput v0, Loab;->b:I
+
+    sget v0, Luzc;->oneme_permissions_title:I
+
+    sput v0, Loab;->c:I
 
     return-void
 .end method

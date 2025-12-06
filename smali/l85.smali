@@ -1,148 +1,167 @@
-.class public final Ll85;
+.class public abstract Ll85;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/text/InputFilter;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final a:Landroid/widget/TextView;
-
-.field public b:Lk85;
+.field public static final b:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/widget/TextView;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0xe6
 
-    iput-object p1, p0, Ll85;->a:Landroid/widget/TextView;
+    const/16 v1, 0xff
+
+    invoke-static {v0, v1, v1, v1}, Landroid/graphics/Color;->argb(IIII)I
+
+    move-result v0
+
+    sput v0, Ll85;->a:I
+
+    const/16 v0, 0x80
+
+    const/16 v1, 0x1b
+
+    invoke-static {v0, v1, v1, v1}, Landroid/graphics/Color;->argb(IIII)I
+
+    move-result v0
+
+    sput v0, Ll85;->b:I
 
     return-void
 .end method
 
+.method public static a(Ld6;)V
+    .locals 8
 
-# virtual methods
-.method public final filter(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
-    .locals 6
+    new-instance v1, Ljwf;
 
-    iget-object v0, p0, Ll85;->a:Landroid/widget/TextView;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Landroid/view/View;->isInEditMode()Z
+    invoke-direct {v1, v0, v0}, Ljwf;-><init>(II)V
 
-    move-result v1
+    new-instance v2, Ljwf;
 
-    if-eqz v1, :cond_0
+    sget v3, Ll85;->a:I
 
-    goto :goto_2
+    sget v4, Ll85;->b:I
+
+    invoke-direct {v2, v3, v4}, Ljwf;-><init>(II)V
+
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/content/res/Configuration;->uiMode:I
+
+    and-int/lit8 v3, v3, 0x30
+
+    const/4 v5, 0x1
+
+    const/16 v6, 0x20
+
+    if-ne v3, v6, :cond_0
+
+    move v3, v5
+
+    goto :goto_0
 
     :cond_0
-    invoke-static {}, Lv75;->a()Lv75;
+    move v3, v5
 
-    move-result-object v1
+    move v5, v0
 
-    invoke-virtual {v1}, Lv75;->b()I
+    :goto_0
+    invoke-virtual {v4}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
-    move-result v1
+    move-result-object v7
 
-    if-eqz v1, :cond_5
+    invoke-virtual {v7}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
-    const/4 v2, 0x1
+    move-result-object v7
 
-    if-eq v1, v2, :cond_1
+    iget v7, v7, Landroid/content/res/Configuration;->uiMode:I
 
-    const/4 p2, 0x3
+    and-int/lit8 v7, v7, 0x30
 
-    if-eq v1, p2, :cond_5
+    if-ne v7, v6, :cond_1
 
-    goto :goto_2
+    move v6, v3
+
+    goto :goto_1
 
     :cond_1
-    if-nez p6, :cond_2
+    move v6, v0
 
-    if-nez p5, :cond_2
+    :goto_1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-interface {p4}, Ljava/lang/CharSequence;->length()I
+    const/16 v3, 0x1e
 
-    move-result p4
+    if-lt v0, v3, :cond_2
 
-    if-nez p4, :cond_2
+    new-instance v0, Lp85;
 
-    invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
-
-    move-result-object p4
-
-    if-ne p1, p4, :cond_2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     goto :goto_2
 
     :cond_2
-    if-eqz p1, :cond_4
+    const/16 v3, 0x1d
 
-    if-nez p2, :cond_3
+    if-lt v0, v3, :cond_3
 
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+    new-instance v0, Lo85;
 
-    move-result p4
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    if-ne p3, p4, :cond_3
-
-    :goto_0
-    move-object v3, p1
-
-    goto :goto_1
+    goto :goto_2
 
     :cond_3
-    invoke-interface {p1, p2, p3}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+    const/16 v3, 0x1c
 
-    move-result-object p1
+    if-lt v0, v3, :cond_4
 
-    goto :goto_0
+    new-instance v0, Ln85;
 
-    :goto_1
-    invoke-static {}, Lv75;->a()Lv75;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
-
-    invoke-interface {v3}, Ljava/lang/CharSequence;->length()I
-
-    move-result v2
-
-    const v4, 0x7fffffff
-
-    const/4 v5, 0x0
-
-    const/4 v1, 0x0
-
-    invoke-virtual/range {v0 .. v5}, Lv75;->f(IILjava/lang/CharSequence;II)Ljava/lang/CharSequence;
-
-    move-result-object p1
+    goto :goto_2
 
     :cond_4
+    new-instance v0, Lm85;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
     :goto_2
-    return-object p1
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
-    :cond_5
-    invoke-static {}, Lv75;->a()Lv75;
+    move-result-object v3
 
-    move-result-object p2
+    invoke-virtual/range {v0 .. v6}, Lm85;->b(Ljwf;Ljwf;Landroid/view/Window;Landroid/view/View;ZZ)V
 
-    iget-object p3, p0, Ll85;->b:Lk85;
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
-    if-nez p3, :cond_6
+    move-result-object p0
 
-    new-instance p3, Lk85;
+    invoke-virtual {v0, p0}, Lm85;->a(Landroid/view/Window;)V
 
-    invoke-direct {p3, v0, p0}, Lk85;-><init>(Landroid/widget/TextView;Ll85;)V
-
-    iput-object p3, p0, Ll85;->b:Lk85;
-
-    :cond_6
-    iget-object p3, p0, Ll85;->b:Lk85;
-
-    invoke-virtual {p2, p3}, Lv75;->h(Lt75;)V
-
-    return-object p1
+    return-void
 .end method

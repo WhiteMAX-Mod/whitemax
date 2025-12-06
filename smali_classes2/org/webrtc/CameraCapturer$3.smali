@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lorg/webrtc/CameraSession$ConfigurationProvider;
 
 
 # annotations
@@ -34,18 +34,18 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 2
+.method public isCrashOnCameraCloseRequired()Z
+    .locals 1
 
     iget-object v0, p0, Lorg/webrtc/CameraCapturer$3;->this$0:Lorg/webrtc/CameraCapturer;
 
-    invoke-static {v0}, Lorg/webrtc/CameraCapturer;->i(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;
+    invoke-static {v0}, Lorg/webrtc/CameraCapturer;->h(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraVideoCapturer$CameraConfigurationProvider;
 
     move-result-object v0
 
-    const-string v1, "Camera failed to start within timeout."
+    invoke-interface {v0}, Lorg/webrtc/CameraVideoCapturer$CameraConfigurationProvider;->isCrashOnCameraCloseRequired()Z
 
-    invoke-interface {v0, v1}, Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;->onCameraError(Ljava/lang/String;)V
+    move-result v0
 
-    return-void
+    return v0
 .end method

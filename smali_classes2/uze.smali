@@ -3,62 +3,70 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lxze;
+.implements Ltze;
 
 
-# static fields
-.field public static final a:Luze;
+# instance fields
+.field public final a:Lcs0;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lcs0;)V
+    .locals 0
 
-    new-instance v0, Luze;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Luze;->a:Luze;
+    iput-object p1, p0, Luze;->a:Lcs0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a()Lorg/json/JSONObject;
+    .locals 5
 
-    const/4 v0, 0x1
+    new-instance v0, Lorg/json/JSONObject;
 
-    if-ne p0, p1, :cond_0
+    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    return v0
+    const-string v1, "command"
 
-    :cond_0
-    instance-of p1, p1, Luze;
+    const-string v2, "update-media-modifiers"
 
-    if-nez p1, :cond_1
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    const/4 p1, 0x0
+    move-result-object v0
 
-    return p1
+    iget-object v1, p0, Luze;->a:Lcs0;
 
-    :cond_1
-    return v0
-.end method
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.method public final hashCode()I
-    .locals 1
+    new-instance v2, Lorg/json/JSONObject;
 
-    const v0, -0x65ba6d20
+    invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
 
-    return v0
-.end method
+    :try_start_0
+    const-string v3, "denoise"
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    iget-boolean v4, v1, Lcs0;->a:Z
 
-    const-string v0, "ShowError"
+    invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
+
+    const-string v3, "denoiseAnn"
+
+    iget-boolean v1, v1, Lcs0;->b:Z
+
+    invoke-virtual {v2, v3, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    const-string v1, "mediaModifiers"
+
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    move-result-object v0
 
     return-object v0
 .end method

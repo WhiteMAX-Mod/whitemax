@@ -4,87 +4,35 @@
 
 
 # virtual methods
-.method public abstract a(Lx38;[Luj5;)V
+.method public abstract a()V
 .end method
 
-.method public abstract b()Z
+.method public abstract e()V
 .end method
 
-.method public c()Z
-    .locals 2
-
-    const-string v0, "LoadControl"
-
-    const-string v1, "shouldContinuePreloading needs to be implemented when playlist preloading is enabled"
-
-    invoke-static {v0, v1}, Luyh;->m(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v0, 0x0
-
-    return v0
+.method public abstract g()V
 .end method
 
-.method public d(J)Z
-    .locals 0
-
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "shouldContinueLoading not implemented"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+.method public abstract h(Landroid/app/Activity;Landroid/os/Bundle;Landroid/os/Bundle;)V
 .end method
 
-.method public abstract e(Ljub;)V
+.method public abstract i()V
 .end method
 
-.method public abstract f(Ljub;)V
+.method public abstract j(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 .end method
 
-.method public g(JZ)Z
-    .locals 0
-
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "shouldStartPlayback not implemented"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+.method public abstract k(Landroid/os/Bundle;)V
 .end method
 
-.method public abstract h()J
+.method public abstract l()V
 .end method
 
-.method public abstract i(Ljub;)V
+.method public abstract m()V
 .end method
 
-.method public j(Lx38;)Z
-    .locals 2
-
-    iget-wide v0, p1, Lx38;->b:J
-
-    invoke-interface {p0, v0, v1}, Ly38;->d(J)Z
-
-    move-result p1
-
-    return p1
+.method public abstract n(Landroid/os/Bundle;)V
 .end method
 
-.method public abstract k()Ljg4;
-.end method
-
-.method public l(Lx38;)Z
-    .locals 2
-
-    iget-wide v0, p1, Lx38;->b:J
-
-    iget-boolean p1, p1, Lx38;->d:Z
-
-    invoke-interface {p0, v0, v1, p1}, Ly38;->g(JZ)Z
-
-    move-result p1
-
-    return p1
+.method public abstract onLowMemory()V
 .end method

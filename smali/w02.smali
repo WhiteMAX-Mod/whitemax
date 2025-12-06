@@ -1,102 +1,64 @@
-.class public final Lw02;
+.class public final synthetic Lw02;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lx02;
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic a:Lpy1;
+
+.field public final synthetic b:Landroid/hardware/camera2/CameraCaptureSession;
+
+.field public final synthetic c:Landroid/hardware/camera2/CaptureRequest;
+
+.field public final synthetic d:Landroid/view/Surface;
+
+.field public final synthetic o:J
+
+
+# direct methods
+.method public synthetic constructor <init>(Lpy1;Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/view/Surface;J)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lw02;->a:Lpy1;
+
+    iput-object p2, p0, Lw02;->b:Landroid/hardware/camera2/CameraCaptureSession;
+
+    iput-object p3, p0, Lw02;->c:Landroid/hardware/camera2/CaptureRequest;
+
+    iput-object p4, p0, Lw02;->d:Landroid/view/Surface;
+
+    iput-wide p5, p0, Lw02;->o:J
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final b(F)Ll28;
-    .locals 0
+.method public final run()V
+    .locals 7
 
-    sget-object p1, Lib7;->c:Lib7;
+    iget-object v0, p0, Lw02;->a:Lpy1;
 
-    return-object p1
-.end method
+    iget-object v0, v0, Lpy1;->b:Ljava/lang/Object;
 
-.method public final c(Lpk3;)V
-    .locals 0
+    move-object v1, v0
 
-    return-void
-.end method
+    check-cast v1, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
 
-.method public final d(F)Ll28;
-    .locals 0
+    iget-object v2, p0, Lw02;->b:Landroid/hardware/camera2/CameraCaptureSession;
 
-    sget-object p1, Lib7;->c:Lib7;
+    iget-object v3, p0, Lw02;->c:Landroid/hardware/camera2/CaptureRequest;
 
-    return-object p1
-.end method
+    iget-object v4, p0, Lw02;->d:Landroid/view/Surface;
 
-.method public final e()Landroid/graphics/Rect;
-    .locals 1
+    iget-wide v5, p0, Lw02;->o:J
 
-    new-instance v0, Landroid/graphics/Rect;
-
-    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
-
-    return-object v0
-.end method
-
-.method public final f(I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final h(Lb75;)Ll28;
-    .locals 1
-
-    new-instance p1, Lg46;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, v0}, Lg46;-><init>(Z)V
-
-    invoke-static {p1}, Lwag;->i(Ljava/lang/Object;)Lib7;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final i(Ljava/util/ArrayList;II)Ll28;
-    .locals 0
-
-    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    invoke-static {p1}, Lwag;->i(Ljava/lang/Object;)Lib7;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final j(Ln6e;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final k(Z)Ll28;
-    .locals 0
-
-    sget-object p1, Lib7;->c:Lib7;
-
-    return-object p1
-.end method
-
-.method public final m()Lpk3;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final n()V
-    .locals 0
+    invoke-virtual/range {v1 .. v6}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;->onCaptureBufferLost(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/view/Surface;J)V
 
     return-void
 .end method

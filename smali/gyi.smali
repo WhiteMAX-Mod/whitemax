@@ -1,191 +1,122 @@
-.class public abstract Lgyi;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.class public final Lgyi;
+.super Landroid/os/Binder;
+
+# interfaces
+.implements Landroid/os/IInterface;
+
+
+# instance fields
+.field public final synthetic c:Libi;
 
 
 # direct methods
-.method public static a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 11
+.method public constructor <init>(Libi;)V
+    .locals 0
 
-    if-nez p0, :cond_0
+    iput-object p1, p0, Lgyi;->c:Libi;
 
-    goto/16 :goto_5
+    invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    :cond_0
-    new-instance v0, Landroid/media/MediaCodecList;
+    const-string p1, "com.google.android.gms.auth.api.phone.internal.ISmsRetrieverResultCallback"
 
-    const/4 v1, 0x0
+    invoke-virtual {p0, p0, p1}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    invoke-direct {v0, v1}, Landroid/media/MediaCodecList;-><init>(I)V
+    return-void
+.end method
 
-    invoke-virtual {v0}, Landroid/media/MediaCodecList;->getCodecInfos()[Landroid/media/MediaCodecInfo;
 
-    move-result-object v0
-
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    array-length v3, v0
-
-    move v4, v1
-
-    :goto_0
-    if-ge v4, v3, :cond_3
-
-    aget-object v5, v0, v4
-
-    invoke-virtual {v5}, Landroid/media/MediaCodecInfo;->isEncoder()Z
-
-    move-result v6
-
-    if-nez v6, :cond_2
-
-    invoke-virtual {v5}, Landroid/media/MediaCodecInfo;->getSupportedTypes()[Ljava/lang/String;
-
-    move-result-object v6
-
-    array-length v7, v6
-
-    move v8, v1
-
-    :goto_1
-    if-ge v8, v7, :cond_2
-
-    aget-object v9, v6, v8
-
-    const/4 v10, 0x1
-
-    invoke-static {v9, p0, v10}, Lhbf;->s(Ljava/lang/String;Ljava/lang/String;Z)Z
-
-    move-result v9
-
-    if-eqz v9, :cond_1
-
-    invoke-virtual {v2, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_2
-
-    :cond_1
-    add-int/lit8 v8, v8, 0x1
-
-    goto :goto_1
-
-    :cond_2
-    :goto_2
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_4
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v2, v0
-
-    check-cast v2, Landroid/media/MediaCodecInfo;
-
-    invoke-virtual {v2}, Landroid/media/MediaCodecInfo;->getName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_4
-
-    goto :goto_3
-
-    :cond_5
-    const/4 v0, 0x0
-
-    :goto_3
-    check-cast v0, Landroid/media/MediaCodecInfo;
-
-    if-nez v0, :cond_6
-
-    goto :goto_5
-
-    :cond_6
-    sget p0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 p1, 0x1d
-
-    if-lt p0, p1, :cond_7
-
-    invoke-static {v0}, La15;->A(Landroid/media/MediaCodecInfo;)Z
-
-    move-result v2
-
-    goto :goto_4
-
-    :cond_7
-    move v2, v1
-
-    :goto_4
-    if-eqz v2, :cond_8
-
-    const-string p0, "HW"
-
-    return-object p0
-
-    :cond_8
-    if-lt p0, p1, :cond_9
-
-    invoke-static {v0}, La15;->v(Landroid/media/MediaCodecInfo;)Z
-
-    move-result v1
-
-    :cond_9
-    if-eqz v1, :cond_a
-
-    const-string p0, "SW"
-
-    return-object p0
-
-    :cond_a
-    :goto_5
-    const-string p0, "unknown"
+# virtual methods
+.method public final asBinder()Landroid/os/IBinder;
+    .locals 0
 
     return-object p0
 .end method
 
-.method public static final b(Li54;Ljava/lang/Throwable;)V
-    .locals 1
+.method public final onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    .locals 2
 
-    instance-of v0, p1, Ljava/util/concurrent/CancellationException;
+    const v0, 0xffffff
 
-    if-eqz v0, :cond_0
+    const/4 v1, 0x0
 
-    return-void
+    if-le p1, v0, :cond_0
+
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    move-result p3
+
+    goto :goto_0
 
     :cond_0
-    :try_start_0
-    invoke-static {p1}, Liyi;->a(Ljava/lang/Throwable;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {p0}, Landroid/os/Binder;->getInterfaceDescriptor()Ljava/lang/String;
 
-    return-void
+    move-result-object p3
 
-    :catchall_0
-    move-exception v0
+    invoke-virtual {p2, p3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    invoke-static {p1, v0}, Lr0j;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+    move p3, v1
 
-    invoke-static {p0, p1}, Lnwi;->b(Li54;Ljava/lang/Throwable;)V
+    :goto_0
+    const/4 p4, 0x1
 
-    return-void
+    if-eqz p3, :cond_1
+
+    return p4
+
+    :cond_1
+    if-ne p1, p4, :cond_4
+
+    sget-object p1, Lcom/google/android/gms/common/api/Status;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    sget p3, Lvgi;->a:I
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result p3
+
+    const/4 v0, 0x0
+
+    if-nez p3, :cond_2
+
+    move-object p1, v0
+
+    goto :goto_1
+
+    :cond_2
+    invoke-interface {p1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/os/Parcelable;
+
+    :goto_1
+    check-cast p1, Lcom/google/android/gms/common/api/Status;
+
+    iget-object p2, p0, Lgyi;->c:Libi;
+
+    iget-object p2, p2, Libi;->e:Ljava/lang/Object;
+
+    check-cast p2, Ln2g;
+
+    invoke-virtual {p1}, Lcom/google/android/gms/common/api/Status;->b()Z
+
+    move-result p3
+
+    if-eqz p3, :cond_3
+
+    invoke-virtual {p2, v0}, Ln2g;->b(Ljava/lang/Object;)V
+
+    return p4
+
+    :cond_3
+    invoke-static {p1}, Lyqi;->c(Lcom/google/android/gms/common/api/Status;)Lcom/google/android/gms/common/api/ApiException;
+
+    move-result-object p1
+
+    invoke-virtual {p2, p1}, Ln2g;->a(Ljava/lang/Exception;)V
+
+    return p4
+
+    :cond_4
+    return v1
 .end method

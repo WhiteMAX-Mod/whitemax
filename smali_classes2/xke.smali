@@ -1,188 +1,136 @@
 .class public final Lxke;
-.super Lb0j;
+.super Ldtf;
 .source "SourceFile"
+
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public final a:Lsrf;
+.field public final synthetic X:Lele;
 
-.field public final b:Lorf;
+.field public final synthetic Y:Ljava/lang/String;
 
-.field public final c:Ljava/lang/Integer;
+.field public final synthetic o:Landroid/graphics/RectF;
 
 
 # direct methods
-.method public constructor <init>(Lsrf;Lorf;Ljava/lang/Integer;)V
+.method public constructor <init>(Landroid/graphics/RectF;Lele;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lxke;->o:Landroid/graphics/RectF;
 
-    iput-object p1, p0, Lxke;->a:Lsrf;
+    iput-object p2, p0, Lxke;->X:Lele;
 
-    iput-object p2, p0, Lxke;->b:Lorf;
+    iput-object p3, p0, Lxke;->Y:Ljava/lang/String;
 
-    iput-object p3, p0, Lxke;->c:Ljava/lang/Integer;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ltrf;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lxke;->b:Lorf;
+    check-cast p1, Lf84;
 
-    return-object v0
-.end method
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.method public final b()Ljava/lang/Integer;
-    .locals 1
+    invoke-virtual {p0, p1, p2}, Lxke;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lxke;->c:Ljava/lang/Integer;
+    move-result-object p1
 
-    return-object v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lxke;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
     check-cast p1, Lxke;
 
-    iget-object v0, p0, Lxke;->a:Lsrf;
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    iget-object v1, p1, Lxke;->a:Lsrf;
+    invoke-virtual {p1, p2}, Lxke;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Lsrf;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lxke;->b:Lorf;
-
-    iget-object v1, p1, Lxke;->b:Lorf;
-
-    invoke-virtual {v0, v1}, Lorf;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Lxke;->c:Ljava/lang/Integer;
-
-    iget-object p1, p1, Lxke;->c:Ljava/lang/Integer;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_4
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-object p2
 .end method
 
-.method public final hashCode()I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 3
 
-    iget-object v0, p0, Lxke;->a:Lsrf;
+    new-instance p1, Lxke;
 
-    invoke-virtual {v0}, Lsrf;->hashCode()I
+    iget-object v0, p0, Lxke;->X:Lele;
 
-    move-result v0
+    iget-object v1, p0, Lxke;->Y:Ljava/lang/String;
 
-    const/16 v1, 0x1f
+    iget-object v2, p0, Lxke;->o:Landroid/graphics/RectF;
 
-    mul-int/2addr v0, v1
+    invoke-direct {p1, v2, v0, v1, p2}, Lxke;-><init>(Landroid/graphics/RectF;Lele;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
 
-    const/4 v2, 0x1
-
-    invoke-static {v0, v1, v2}, Lrtg;->d(IIZ)I
-
-    move-result v0
-
-    iget-object v2, p0, Lxke;->b:Lorf;
-
-    iget v2, v2, Lorf;->c:I
-
-    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
-
-    move-result v0
-
-    iget-object v1, p0, Lxke;->c:Ljava/lang/Integer;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    const-string v1, "Text(text="
+    new-instance v0, Ln10;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object p1, p0, Lxke;->o:Landroid/graphics/RectF;
 
-    iget-object v1, p0, Lxke;->a:Lsrf;
+    iget v1, p1, Landroid/graphics/RectF;->left:F
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget v2, p1, Landroid/graphics/RectF;->top:F
 
-    const-string v1, ", shouldShowMore=true, hint="
+    iget v3, p1, Landroid/graphics/RectF;->right:F
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v4, p1, Landroid/graphics/RectF;->bottom:F
 
-    iget-object v1, p0, Lxke;->b:Lorf;
+    const/4 v5, 0x2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-direct/range {v0 .. v5}, Ln10;-><init>(FFFFI)V
 
-    const-string v1, ", hintColor="
+    iget-object p1, p0, Lxke;->X:Lele;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v1, p1, Lele;->I0:Ljava/util/concurrent/atomic/AtomicLong;
 
-    iget-object v1, p0, Lxke;->c:Ljava/lang/Integer;
+    iget-object v2, p1, Lele;->t0:Lk18;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-interface {v2}, Lk18;->getValue()Ljava/lang/Object;
 
-    const-string v1, ")"
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast v2, Lhwa;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v3, p0, Lxke;->Y:Ljava/lang/String;
 
-    move-result-object v0
+    invoke-virtual {v2, v3, v0}, Lhwa;->A(Ljava/lang/String;Ln10;)J
 
-    return-object v0
+    move-result-wide v2
+
+    invoke-virtual {v1, v2, v3}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
+
+    iget-object p1, p1, Lele;->B0:Lci5;
+
+    new-instance v0, Lype;
+
+    sget v1, Lpbb;->q:I
+
+    new-instance v2, Ln5g;
+
+    invoke-direct {v2, v1}, Ln5g;-><init>(I)V
+
+    sget v1, Lyud;->n:I
+
+    new-instance v3, Ljava/lang/Integer;
+
+    invoke-direct {v3, v1}, Ljava/lang/Integer;-><init>(I)V
+
+    invoke-direct {v0, v2, v3}, Lype;-><init>(Ls5g;Ljava/lang/Integer;)V
+
+    invoke-static {p1, v0}, Lxfh;->r(Lci5;Ljava/lang/Object;)V
+
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

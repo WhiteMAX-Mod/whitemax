@@ -3,8 +3,9 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lem;
-.implements Lula;
+.implements Lkm;
+.implements Lnua;
+.implements Lyl;
 
 
 # annotations
@@ -20,20 +21,22 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lem;",
-        "Lula;"
+        "Lkm;",
+        "Lnua;",
+        "Lyl;"
     }
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000V\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00020\u00012\u00020\u0003B\u000f\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u00a2\u0006\u0004\u0008\u0006\u0010\u0007J\u000f\u0010\t\u001a\u00020\u0008H\u0016\u00a2\u0006\u0004\u0008\t\u0010\nJ\u000f\u0010\u000b\u001a\u00020\u0008H\u0016\u00a2\u0006\u0004\u0008\u000b\u0010\nJ\u000f\u0010\u000c\u001a\u00020\u0008H\u0016\u00a2\u0006\u0004\u0008\u000c\u0010\nJ\u000f\u0010\r\u001a\u00020\u0008H\u0016\u00a2\u0006\u0004\u0008\r\u0010\nJ\u0017\u0010\u0011\u001a\u00020\u00102\u0006\u0010\u000f\u001a\u00020\u000eH\u0016\u00a2\u0006\u0004\u0008\u0011\u0010\u0012J\u000f\u0010\u0014\u001a\u00020\u0013H\u0016\u00a2\u0006\u0004\u0008\u0014\u0010\u0015R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0005\u0010\u0016R\u0014\u0010\u001a\u001a\u00020\u00178VX\u0096\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u0018\u0010\u0019R\u0014\u0010\u001e\u001a\u00020\u001b8VX\u0096\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u001c\u0010\u001dR\u0014\u0010\"\u001a\u00020\u001f8VX\u0096\u0004\u00a2\u0006\u0006\u001a\u0004\u0008 \u0010!R\u001a\u0010&\u001a\u0008\u0012\u0004\u0012\u00020\u00020#8VX\u0096\u0004\u00a2\u0006\u0006\u001a\u0004\u0008$\u0010%\u00a8\u0006\'"
+        "\u0000Z\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u0018\u00002\u00020\u00012\u00020\u00022\u0008\u0012\u0004\u0012\u00020\u00040\u0003B\u000f\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u00a2\u0006\u0004\u0008\u0007\u0010\u0008J\u000f\u0010\n\u001a\u00020\tH\u0016\u00a2\u0006\u0004\u0008\n\u0010\u000bJ\u000f\u0010\u000c\u001a\u00020\tH\u0016\u00a2\u0006\u0004\u0008\u000c\u0010\u000bJ\u000f\u0010\r\u001a\u00020\tH\u0016\u00a2\u0006\u0004\u0008\r\u0010\u000bJ\u000f\u0010\u000e\u001a\u00020\tH\u0016\u00a2\u0006\u0004\u0008\u000e\u0010\u000bJ\u0017\u0010\u0012\u001a\u00020\u00112\u0006\u0010\u0010\u001a\u00020\u000fH\u0016\u00a2\u0006\u0004\u0008\u0012\u0010\u0013J\u000f\u0010\u0015\u001a\u00020\u0014H\u0016\u00a2\u0006\u0004\u0008\u0015\u0010\u0016R\u0014\u0010\u0006\u001a\u00020\u00058\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0006\u0010\u0017R\u0014\u0010\u001b\u001a\u00020\u00188VX\u0096\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u0019\u0010\u001aR\u0014\u0010\u001f\u001a\u00020\u001c8VX\u0096\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u001d\u0010\u001eR\u0014\u0010#\u001a\u00020 8VX\u0096\u0004\u00a2\u0006\u0006\u001a\u0004\u0008!\u0010\"R\u001a\u0010\'\u001a\u0008\u0012\u0004\u0012\u00020\u00040$8VX\u0096\u0004\u00a2\u0006\u0006\u001a\u0004\u0008%\u0010&\u00a8\u0006("
     }
     d2 = {
         "Lru/ok/android/externcalls/sdk/api/request/ClientSupportedCodecs$Request;",
-        "Lem;",
+        "Lkm;",
+        "Lnua;",
+        "Lyl;",
         "Lru/ok/android/externcalls/sdk/api/request/ClientSupportedCodecs$Response;",
-        "Lula;",
         "Lorg/json/JSONObject;",
         "json",
         "<init>",
@@ -44,11 +47,11 @@
         "shouldGzip",
         "shouldReport",
         "canRepeat",
-        "Lcr7;",
+        "Lgy7;",
         "writer",
-        "Lccg;",
+        "Lqqg;",
         "writeParams",
-        "(Lcr7;)V",
+        "(Lgy7;)V",
         "",
         "handleInterruptedIO",
         "()Ljava/lang/Object;",
@@ -57,17 +60,17 @@
         "getUri",
         "()Landroid/net/Uri;",
         "uri",
-        "Ltm;",
+        "Lnm;",
         "getScope",
-        "()Ltm;",
+        "()Lnm;",
         "scope",
         "",
         "getPriority",
         "()I",
         "priority",
-        "Lpq7;",
+        "Lox7;",
         "getOkParser",
-        "()Lpq7;",
+        "()Lox7;",
         "okParser",
         "calls-sdk_release"
     }
@@ -96,10 +99,10 @@
     return-void
 .end method
 
-.method private static final _get_okParser_$lambda$0(Lvq7;)Lru/ok/android/externcalls/sdk/api/request/ClientSupportedCodecs$Response;
+.method private static final _get_okParser_$lambda$0(Lxx7;)Lru/ok/android/externcalls/sdk/api/request/ClientSupportedCodecs$Response;
     .locals 3
 
-    invoke-static {p0}, Lhpi;->b(Lvq7;)Lorg/json/JSONObject;
+    invoke-static {p0}, Lq4j;->b(Lxx7;)Lorg/json/JSONObject;
 
     move-result-object p0
 
@@ -118,10 +121,10 @@
     return-object v0
 .end method
 
-.method public static synthetic a(Lvq7;)Lru/ok/android/externcalls/sdk/api/request/ClientSupportedCodecs$Response;
+.method public static synthetic a(Lxx7;)Lru/ok/android/externcalls/sdk/api/request/ClientSupportedCodecs$Response;
     .locals 0
 
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/request/ClientSupportedCodecs$Request;->_get_okParser_$lambda$0(Lvq7;)Lru/ok/android/externcalls/sdk/api/request/ClientSupportedCodecs$Response;
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/request/ClientSupportedCodecs$Request;->_get_okParser_$lambda$0(Lxx7;)Lru/ok/android/externcalls/sdk/api/request/ClientSupportedCodecs$Response;
 
     move-result-object p0
 
@@ -138,36 +141,36 @@
     return v0
 .end method
 
-.method public bridge synthetic getConfigExtractor()Lam;
+.method public bridge synthetic getConfigExtractor()Lul;
     .locals 1
 
-    sget-object v0, Lam;->e:Lfpd;
+    sget-object v0, Lul;->f:Lrha;
 
     return-object v0
 .end method
 
-.method public bridge synthetic getFailParser()Lpq7;
+.method public bridge synthetic getFailParser()Lox7;
     .locals 1
 
-    sget-object v0, Lzw3;->a:Lzw3;
+    sget-object v0, Ltha;->c:Ltha;
 
     return-object v0
 .end method
 
-.method public getOkParser()Lpq7;
+.method public getOkParser()Lox7;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lpq7;"
+            "Lox7;"
         }
     .end annotation
 
-    new-instance v0, Laz1;
+    new-instance v0, Luy0;
 
-    const/16 v1, 0xb
+    const/16 v1, 0x1d
 
-    invoke-direct {v0, v1}, Laz1;-><init>(I)V
+    invoke-direct {v0, v1}, Luy0;-><init>(I)V
 
     return-object v0
 .end method
@@ -180,18 +183,18 @@
     return v0
 .end method
 
-.method public getScope()Ltm;
+.method public getScope()Lnm;
     .locals 1
 
-    sget-object v0, Ltm;->c:Ltm;
+    sget-object v0, Lnm;->c:Lnm;
 
     return-object v0
 .end method
 
-.method public bridge synthetic getScopeAfter()Lum;
+.method public bridge synthetic getScopeAfter()Lom;
     .locals 1
 
-    sget-object v0, Lum;->a:Lum;
+    sget-object v0, Lom;->a:Lom;
 
     return-object v0
 .end method
@@ -201,7 +204,7 @@
 
     const-string v0, "vchat.clientSupportedCodecs"
 
-    invoke-static {v0}, Lcn;->a(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v0}, Lwm;->a(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
@@ -260,7 +263,7 @@
     return v0
 .end method
 
-.method public writeParams(Lcr7;)V
+.method public writeParams(Lgy7;)V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -271,16 +274,16 @@
 
     const-string v0, "data"
 
-    invoke-interface {p1, v0}, Lcr7;->b0(Ljava/lang/String;)Lcr7;
+    invoke-interface {p1, v0}, Lgy7;->b0(Ljava/lang/String;)Lgy7;
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/ClientSupportedCodecs$Request;->json:Lorg/json/JSONObject;
 
-    invoke-static {p1, v0}, Ljpi;->c(Lcr7;Lorg/json/JSONObject;)V
+    invoke-static {p1, v0}, Lr4j;->c(Lgy7;Lorg/json/JSONObject;)V
 
     return-void
 .end method
 
-.method public bridge synthetic writeSupplyParams(Lcr7;)V
+.method public bridge synthetic writeSupplyParams(Lgy7;)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {

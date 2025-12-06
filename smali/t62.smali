@@ -1,1250 +1,739 @@
 .class public final Lt62;
-.super Landroid/util/Property;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final A:[Z
+
+.field public static final B:[I
+
+.field public static final C:[I
+
+.field public static final D:[I
+
+.field public static final E:[I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:[I
+
+.field public static final y:[I
+
+.field public static final z:[I
+
+
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/util/ArrayList;
+
+.field public final b:Landroid/text/SpannableStringBuilder;
+
+.field public c:Z
+
+.field public d:Z
+
+.field public e:I
+
+.field public f:Z
+
+.field public g:I
+
+.field public h:I
+
+.field public i:I
+
+.field public j:I
+
+.field public k:I
+
+.field public l:I
+
+.field public m:I
+
+.field public n:I
+
+.field public o:I
+
+.field public p:I
+
+.field public q:I
+
+.field public r:I
+
+.field public s:I
+
+.field public t:I
+
+.field public u:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Class;Ljava/lang/String;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 9
 
-    iput p3, p0, Lt62;->a:I
+    const/4 v0, 0x2
 
-    invoke-direct {p0, p1, p2}, Landroid/util/Property;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    const/4 v1, 0x0
+
+    invoke-static {v0, v0, v0, v1}, Lt62;->c(IIII)I
+
+    move-result v0
+
+    sput v0, Lt62;->v:I
+
+    invoke-static {v1, v1, v1, v1}, Lt62;->c(IIII)I
+
+    move-result v2
+
+    sput v2, Lt62;->w:I
+
+    const/4 v0, 0x3
+
+    invoke-static {v1, v1, v1, v0}, Lt62;->c(IIII)I
+
+    move-result v3
+
+    const/4 v0, 0x7
+
+    new-array v1, v0, [I
+
+    fill-array-data v1, :array_0
+
+    sput-object v1, Lt62;->x:[I
+
+    new-array v1, v0, [I
+
+    fill-array-data v1, :array_1
+
+    sput-object v1, Lt62;->y:[I
+
+    new-array v1, v0, [I
+
+    fill-array-data v1, :array_2
+
+    sput-object v1, Lt62;->z:[I
+
+    new-array v1, v0, [Z
+
+    fill-array-data v1, :array_3
+
+    sput-object v1, Lt62;->A:[Z
+
+    move v4, v2
+
+    move v5, v2
+
+    move v6, v3
+
+    move v7, v2
+
+    move v8, v2
+
+    filled-new-array/range {v2 .. v8}, [I
+
+    move-result-object v1
+
+    sput-object v1, Lt62;->B:[I
+
+    new-array v1, v0, [I
+
+    fill-array-data v1, :array_4
+
+    sput-object v1, Lt62;->C:[I
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_5
+
+    sput-object v0, Lt62;->D:[I
+
+    move v7, v3
+
+    move v3, v2
+
+    move v6, v2
+
+    move v8, v7
+
+    filled-new-array/range {v2 .. v8}, [I
+
+    move-result-object v0
+
+    sput-object v0, Lt62;->E:[I
 
     return-void
+
+    :array_0
+    .array-data 4
+        0x0
+        0x0
+        0x0
+        0x0
+        0x0
+        0x2
+        0x0
+    .end array-data
+
+    :array_1
+    .array-data 4
+        0x0
+        0x0
+        0x0
+        0x0
+        0x0
+        0x0
+        0x2
+    .end array-data
+
+    :array_2
+    .array-data 4
+        0x3
+        0x3
+        0x3
+        0x3
+        0x3
+        0x3
+        0x1
+    .end array-data
+
+    :array_3
+    .array-data 1
+        0x0t
+        0x0t
+        0x0t
+        0x1t
+        0x1t
+        0x1t
+        0x0t
+    .end array-data
+
+    :array_4
+    .array-data 4
+        0x0
+        0x1
+        0x2
+        0x3
+        0x4
+        0x3
+        0x4
+    .end array-data
+
+    :array_5
+    .array-data 4
+        0x0
+        0x0
+        0x0
+        0x0
+        0x0
+        0x3
+        0x3
+    .end array-data
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lt62;->a:Ljava/util/ArrayList;
+
+    new-instance v0, Landroid/text/SpannableStringBuilder;
+
+    invoke-direct {v0}, Landroid/text/SpannableStringBuilder;-><init>()V
+
+    iput-object v0, p0, Lt62;->b:Landroid/text/SpannableStringBuilder;
+
+    invoke-virtual {p0}, Lt62;->d()V
+
+    return-void
+.end method
+
+.method public static c(IIII)I
+    .locals 4
+
+    const/4 v0, 0x4
+
+    invoke-static {p0, v0}, Lhsi;->c(II)V
+
+    invoke-static {p1, v0}, Lhsi;->c(II)V
+
+    invoke-static {p2, v0}, Lhsi;->c(II)V
+
+    invoke-static {p3, v0}, Lhsi;->c(II)V
+
+    const/4 v0, 0x1
+
+    const/16 v1, 0xff
+
+    const/4 v2, 0x0
+
+    if-eqz p3, :cond_0
+
+    if-eq p3, v0, :cond_0
+
+    const/4 v3, 0x2
+
+    if-eq p3, v3, :cond_2
+
+    const/4 v3, 0x3
+
+    if-eq p3, v3, :cond_1
+
+    :cond_0
+    move p3, v1
+
+    goto :goto_0
+
+    :cond_1
+    move p3, v2
+
+    goto :goto_0
+
+    :cond_2
+    const/16 p3, 0x7f
+
+    :goto_0
+    if-le p0, v0, :cond_3
+
+    move p0, v1
+
+    goto :goto_1
+
+    :cond_3
+    move p0, v2
+
+    :goto_1
+    if-le p1, v0, :cond_4
+
+    move p1, v1
+
+    goto :goto_2
+
+    :cond_4
+    move p1, v2
+
+    :goto_2
+    if-le p2, v0, :cond_5
+
+    goto :goto_3
+
+    :cond_5
+    move v1, v2
+
+    :goto_3
+    invoke-static {p3, p0, p1, v1}, Landroid/graphics/Color;->argb(IIII)I
+
+    move-result p0
+
+    return p0
 .end method
 
 
 # virtual methods
-.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(C)V
+    .locals 3
 
-    iget v0, p0, Lt62;->a:I
+    const/16 v0, 0xa
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, p0, Lt62;->b:Landroid/text/SpannableStringBuilder;
 
-    check-cast p1, Landroid/view/View;
+    if-ne p1, v0, :cond_6
 
-    invoke-virtual {p1}, Landroid/view/View;->getClipBounds()Landroid/graphics/Rect;
+    invoke-virtual {p0}, Lt62;->b()Landroid/text/SpannableString;
 
     move-result-object p1
 
-    return-object p1
+    iget-object v0, p0, Lt62;->a:Ljava/util/ArrayList;
 
-    :pswitch_0
-    check-cast p1, Landroid/view/View;
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lu1h;->a:La2h;
+    invoke-virtual {v1}, Landroid/text/SpannableStringBuilder;->clear()V
 
-    invoke-virtual {v0, p1}, Lfei;->a(Landroid/view/View;)F
+    iget p1, p0, Lt62;->o:I
+
+    const/4 v1, -0x1
+
+    const/4 v2, 0x0
+
+    if-eq p1, v1, :cond_0
+
+    iput v2, p0, Lt62;->o:I
+
+    :cond_0
+    iget p1, p0, Lt62;->p:I
+
+    if-eq p1, v1, :cond_1
+
+    iput v2, p0, Lt62;->p:I
+
+    :cond_1
+    iget p1, p0, Lt62;->q:I
+
+    if-eq p1, v1, :cond_2
+
+    iput v2, p0, Lt62;->q:I
+
+    :cond_2
+    iget p1, p0, Lt62;->s:I
+
+    if-eq p1, v1, :cond_3
+
+    iput v2, p0, Lt62;->s:I
+
+    :cond_3
+    :goto_0
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result p1
 
-    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    iget v1, p0, Lt62;->j:I
 
-    move-result-object p1
+    if-ge p1, v1, :cond_5
 
-    return-object p1
-
-    :pswitch_1
-    check-cast p1, Landroidx/appcompat/widget/SwitchCompat;
-
-    iget p1, p1, Landroidx/appcompat/widget/SwitchCompat;->L0:F
-
-    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_2
-    check-cast p1, Lrx7;
-
-    iget p1, p1, Lrx7;->s0:F
-
-    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_3
-    check-cast p1, Lpx7;
-
-    iget p1, p1, Lpx7;->r0:F
-
-    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_4
-    check-cast p1, Lh15;
-
-    invoke-virtual {p1}, Lh15;->b()F
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result p1
 
-    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    const/16 v1, 0xf
 
-    move-result-object p1
+    if-lt p1, v1, :cond_4
 
-    return-object p1
+    goto :goto_1
 
-    :pswitch_5
-    check-cast p1, La73;
+    :cond_4
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
-    iget p1, p1, La73;->s0:F
+    move-result p1
 
-    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    iput p1, p0, Lt62;->u:I
 
-    move-result-object p1
+    return-void
 
-    return-object p1
+    :cond_5
+    :goto_1
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    :pswitch_6
-    check-cast p1, La73;
+    goto :goto_0
 
-    iget p1, p1, La73;->r0:F
+    :cond_6
+    invoke-virtual {v1, p1}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
 
-    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_7
-    check-cast p1, Landroid/view/View;
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :pswitch_8
-    check-cast p1, Landroid/view/View;
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :pswitch_9
-    check-cast p1, Landroid/view/View;
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :pswitch_a
-    check-cast p1, Lw62;
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :pswitch_b
-    check-cast p1, Lw62;
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method
 
-.method public final set(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 16
+.method public final b()Landroid/text/SpannableString;
+    .locals 6
 
-    move-object/from16 v0, p0
+    new-instance v0, Landroid/text/SpannableStringBuilder;
 
-    iget v1, v0, Lt62;->a:I
+    iget-object v1, p0, Lt62;->b:Landroid/text/SpannableStringBuilder;
 
-    packed-switch v1, :pswitch_data_0
+    invoke-direct {v0, v1}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
-    move-object/from16 v1, p1
+    invoke-virtual {v0}, Landroid/text/SpannableStringBuilder;->length()I
 
-    check-cast v1, Landroid/view/View;
+    move-result v1
 
-    move-object/from16 v2, p2
+    if-lez v1, :cond_3
 
-    check-cast v2, Landroid/graphics/Rect;
+    iget v2, p0, Lt62;->o:I
 
-    invoke-virtual {v1, v2}, Landroid/view/View;->setClipBounds(Landroid/graphics/Rect;)V
+    const/16 v3, 0x21
+
+    const/4 v4, -0x1
+
+    if-eq v2, v4, :cond_0
+
+    new-instance v2, Landroid/text/style/StyleSpan;
+
+    const/4 v5, 0x2
+
+    invoke-direct {v2, v5}, Landroid/text/style/StyleSpan;-><init>(I)V
+
+    iget v5, p0, Lt62;->o:I
+
+    invoke-virtual {v0, v2, v5, v1, v3}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
+
+    :cond_0
+    iget v2, p0, Lt62;->p:I
+
+    if-eq v2, v4, :cond_1
+
+    new-instance v2, Landroid/text/style/UnderlineSpan;
+
+    invoke-direct {v2}, Landroid/text/style/UnderlineSpan;-><init>()V
+
+    iget v5, p0, Lt62;->p:I
+
+    invoke-virtual {v0, v2, v5, v1, v3}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
+
+    :cond_1
+    iget v2, p0, Lt62;->q:I
+
+    if-eq v2, v4, :cond_2
+
+    new-instance v2, Landroid/text/style/ForegroundColorSpan;
+
+    iget v5, p0, Lt62;->r:I
+
+    invoke-direct {v2, v5}, Landroid/text/style/ForegroundColorSpan;-><init>(I)V
+
+    iget v5, p0, Lt62;->q:I
+
+    invoke-virtual {v0, v2, v5, v1, v3}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
+
+    :cond_2
+    iget v2, p0, Lt62;->s:I
+
+    if-eq v2, v4, :cond_3
+
+    new-instance v2, Landroid/text/style/BackgroundColorSpan;
+
+    iget v4, p0, Lt62;->t:I
+
+    invoke-direct {v2, v4}, Landroid/text/style/BackgroundColorSpan;-><init>(I)V
+
+    iget v4, p0, Lt62;->s:I
+
+    invoke-virtual {v0, v2, v4, v1, v3}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
+
+    :cond_3
+    new-instance v1, Landroid/text/SpannableString;
+
+    invoke-direct {v1, v0}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
+
+    return-object v1
+.end method
+
+.method public final d()V
+    .locals 2
+
+    iget-object v0, p0, Lt62;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+
+    iget-object v0, p0, Lt62;->b:Landroid/text/SpannableStringBuilder;
+
+    invoke-virtual {v0}, Landroid/text/SpannableStringBuilder;->clear()V
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lt62;->o:I
+
+    iput v0, p0, Lt62;->p:I
+
+    iput v0, p0, Lt62;->q:I
+
+    iput v0, p0, Lt62;->s:I
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lt62;->u:I
+
+    iput-boolean v0, p0, Lt62;->c:Z
+
+    iput-boolean v0, p0, Lt62;->d:Z
+
+    const/4 v1, 0x4
+
+    iput v1, p0, Lt62;->e:I
+
+    iput-boolean v0, p0, Lt62;->f:Z
+
+    iput v0, p0, Lt62;->g:I
+
+    iput v0, p0, Lt62;->h:I
+
+    iput v0, p0, Lt62;->i:I
+
+    const/16 v1, 0xf
+
+    iput v1, p0, Lt62;->j:I
+
+    iput v0, p0, Lt62;->k:I
+
+    iput v0, p0, Lt62;->l:I
+
+    iput v0, p0, Lt62;->m:I
+
+    sget v0, Lt62;->w:I
+
+    iput v0, p0, Lt62;->n:I
+
+    sget v1, Lt62;->v:I
+
+    iput v1, p0, Lt62;->r:I
+
+    iput v0, p0, Lt62;->t:I
 
     return-void
+.end method
 
-    :pswitch_0
-    move-object/from16 v1, p1
+.method public final e(ZZ)V
+    .locals 5
 
-    check-cast v1, Landroid/view/View;
+    iget v0, p0, Lt62;->o:I
 
-    move-object/from16 v2, p2
+    const/16 v1, 0x21
 
-    check-cast v2, Ljava/lang/Float;
+    iget-object v2, p0, Lt62;->b:Landroid/text/SpannableStringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/Float;->floatValue()F
+    const/4 v3, -0x1
 
-    move-result v2
+    if-eq v0, v3, :cond_0
 
-    sget-object v3, Lu1h;->a:La2h;
+    if-nez p1, :cond_1
 
-    invoke-virtual {v3, v1, v2}, Lfei;->b(Landroid/view/View;F)V
+    new-instance p1, Landroid/text/style/StyleSpan;
 
-    return-void
+    const/4 v0, 0x2
 
-    :pswitch_1
-    move-object/from16 v1, p1
+    invoke-direct {p1, v0}, Landroid/text/style/StyleSpan;-><init>(I)V
 
-    check-cast v1, Landroidx/appcompat/widget/SwitchCompat;
+    iget v0, p0, Lt62;->o:I
 
-    move-object/from16 v2, p2
+    invoke-virtual {v2}, Landroid/text/SpannableStringBuilder;->length()I
 
-    check-cast v2, Ljava/lang/Float;
+    move-result v4
 
-    invoke-virtual {v2}, Ljava/lang/Float;->floatValue()F
+    invoke-virtual {v2, p1, v0, v4, v1}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    move-result v2
-
-    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/SwitchCompat;->setThumbPosition(F)V
-
-    return-void
-
-    :pswitch_2
-    move-object/from16 v1, p1
-
-    check-cast v1, Lrx7;
-
-    move-object/from16 v2, p2
-
-    check-cast v2, Ljava/lang/Float;
-
-    invoke-virtual {v2}, Ljava/lang/Float;->floatValue()F
-
-    move-result v2
-
-    iput v2, v1, Lrx7;->s0:F
-
-    const/high16 v3, 0x44e10000    # 1800.0f
-
-    mul-float/2addr v2, v3
-
-    float-to-int v2, v2
-
-    iget-object v3, v1, Lrx7;->Y:[Landroid/view/animation/Interpolator;
-
-    iget-object v4, v1, Lmmf;->c:Ljava/lang/Object;
-
-    check-cast v4, Ljava/util/ArrayList;
-
-    const/4 v5, 0x0
-
-    move v6, v5
-
-    :goto_0
-    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
-
-    move-result v7
-
-    if-ge v6, v7, :cond_0
-
-    invoke-virtual {v4, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Lr15;
-
-    sget-object v8, Lrx7;->v0:[I
-
-    mul-int/lit8 v9, v6, 0x2
-
-    aget v10, v8, v9
-
-    sget-object v11, Lrx7;->u0:[I
-
-    aget v12, v11, v9
-
-    invoke-static {v2, v10, v12}, Lmmf;->L(III)F
-
-    move-result v10
-
-    aget-object v12, v3, v9
-
-    invoke-interface {v12, v10}, Landroid/animation/TimeInterpolator;->getInterpolation(F)F
-
-    move-result v10
-
-    const/4 v12, 0x0
-
-    const/high16 v13, 0x3f800000    # 1.0f
-
-    invoke-static {v10, v12, v13}, Lohi;->a(FFF)F
-
-    move-result v10
-
-    iput v10, v7, Lr15;->a:F
-
-    add-int/lit8 v9, v9, 0x1
-
-    aget v8, v8, v9
-
-    aget v10, v11, v9
-
-    invoke-static {v2, v8, v10}, Lmmf;->L(III)F
-
-    move-result v8
-
-    aget-object v9, v3, v9
-
-    invoke-interface {v9, v8}, Landroid/animation/TimeInterpolator;->getInterpolation(F)F
-
-    move-result v8
-
-    invoke-static {v8, v12, v13}, Lohi;->a(FFF)F
-
-    move-result v8
-
-    iput v8, v7, Lr15;->b:F
-
-    add-int/lit8 v6, v6, 0x1
+    iput v3, p0, Lt62;->o:I
 
     goto :goto_0
 
     :cond_0
-    iget-boolean v2, v1, Lrx7;->r0:Z
+    if-eqz p1, :cond_1
 
-    if-eqz v2, :cond_2
+    invoke-virtual {v2}, Landroid/text/SpannableStringBuilder;->length()I
 
-    invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    move-result p1
 
-    move-result-object v2
-
-    :goto_1
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lr15;
-
-    iget-object v4, v1, Lrx7;->Z:Lyx7;
-
-    iget-object v4, v4, Lvk0;->c:[I
-
-    iget v6, v1, Lrx7;->q0:I
-
-    aget v4, v4, v6
-
-    iput v4, v3, Lr15;->c:I
-
-    goto :goto_1
+    iput p1, p0, Lt62;->o:I
 
     :cond_1
-    iput-boolean v5, v1, Lrx7;->r0:Z
+    :goto_0
+    iget p1, p0, Lt62;->p:I
+
+    if-eq p1, v3, :cond_2
+
+    if-nez p2, :cond_3
+
+    new-instance p1, Landroid/text/style/UnderlineSpan;
+
+    invoke-direct {p1}, Landroid/text/style/UnderlineSpan;-><init>()V
+
+    iget p2, p0, Lt62;->p:I
+
+    invoke-virtual {v2}, Landroid/text/SpannableStringBuilder;->length()I
+
+    move-result v0
+
+    invoke-virtual {v2, p1, p2, v0, v1}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
+
+    iput v3, p0, Lt62;->p:I
+
+    return-void
 
     :cond_2
-    iget-object v1, v1, Lmmf;->b:Ljava/lang/Object;
+    if-eqz p2, :cond_3
 
-    check-cast v1, Lve7;
+    invoke-virtual {v2}, Landroid/text/SpannableStringBuilder;->length()I
 
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+    move-result p1
 
-    return-void
-
-    :pswitch_3
-    move-object/from16 v1, p1
-
-    check-cast v1, Lpx7;
-
-    move-object/from16 v2, p2
-
-    check-cast v2, Ljava/lang/Float;
-
-    invoke-virtual {v2}, Ljava/lang/Float;->floatValue()F
-
-    move-result v2
-
-    iput v2, v1, Lpx7;->r0:F
-
-    const v3, 0x43a68000    # 333.0f
-
-    mul-float/2addr v2, v3
-
-    float-to-int v2, v2
-
-    iget-object v3, v1, Lmmf;->c:Ljava/lang/Object;
-
-    check-cast v3, Ljava/util/ArrayList;
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lr15;
-
-    const/4 v6, 0x0
-
-    iput v6, v5, Lr15;->a:F
-
-    const/16 v5, 0x29b
-
-    invoke-static {v2, v4, v5}, Lmmf;->L(III)F
-
-    move-result v2
-
-    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lr15;
-
-    const/4 v6, 0x1
-
-    invoke-virtual {v3, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Lr15;
-
-    iget-object v8, v1, Lpx7;->X:Lln5;
-
-    invoke-virtual {v8, v2}, Llc8;->getInterpolation(F)F
-
-    move-result v9
-
-    iput v9, v7, Lr15;->a:F
-
-    iput v9, v5, Lr15;->b:F
-
-    const v5, 0x3eff9dbf
-
-    add-float/2addr v2, v5
-
-    invoke-virtual {v3, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lr15;
-
-    const/4 v7, 0x2
-
-    invoke-virtual {v3, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v9
-
-    check-cast v9, Lr15;
-
-    invoke-virtual {v8, v2}, Llc8;->getInterpolation(F)F
-
-    move-result v2
-
-    iput v2, v9, Lr15;->a:F
-
-    iput v2, v5, Lr15;->b:F
-
-    invoke-virtual {v3, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lr15;
-
-    const/high16 v5, 0x3f800000    # 1.0f
-
-    iput v5, v2, Lr15;->b:F
-
-    iget-boolean v2, v1, Lpx7;->q0:Z
-
-    if-eqz v2, :cond_3
-
-    invoke-virtual {v3, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lr15;
-
-    iget v2, v2, Lr15;->b:F
-
-    cmpg-float v2, v2, v5
-
-    if-gez v2, :cond_3
-
-    invoke-virtual {v3, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lr15;
-
-    invoke-virtual {v3, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lr15;
-
-    iget v5, v5, Lr15;->c:I
-
-    iput v5, v2, Lr15;->c:I
-
-    invoke-virtual {v3, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lr15;
-
-    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lr15;
-
-    iget v5, v5, Lr15;->c:I
-
-    iput v5, v2, Lr15;->c:I
-
-    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lr15;
-
-    iget-object v3, v1, Lpx7;->Y:Lyx7;
-
-    iget-object v3, v3, Lvk0;->c:[I
-
-    iget v5, v1, Lpx7;->Z:I
-
-    aget v3, v3, v5
-
-    iput v3, v2, Lr15;->c:I
-
-    iput-boolean v4, v1, Lpx7;->q0:Z
+    iput p1, p0, Lt62;->p:I
 
     :cond_3
-    iget-object v1, v1, Lmmf;->b:Ljava/lang/Object;
-
-    check-cast v1, Lve7;
-
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
     return-void
+.end method
 
-    :pswitch_4
-    move-object/from16 v1, p1
+.method public final f(II)V
+    .locals 6
 
-    check-cast v1, Lh15;
+    iget v0, p0, Lt62;->q:I
 
-    move-object/from16 v2, p2
+    const/16 v1, 0x21
 
-    check-cast v2, Ljava/lang/Float;
+    iget-object v2, p0, Lt62;->b:Landroid/text/SpannableStringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/Float;->floatValue()F
+    const/4 v3, -0x1
 
-    move-result v2
+    if-eq v0, v3, :cond_0
 
-    iget v3, v1, Lh15;->q0:F
+    iget v0, p0, Lt62;->r:I
 
-    cmpl-float v3, v3, v2
+    if-eq v0, p1, :cond_0
 
-    if-eqz v3, :cond_4
+    new-instance v0, Landroid/text/style/ForegroundColorSpan;
 
-    iput v2, v1, Lh15;->q0:F
+    iget v4, p0, Lt62;->r:I
 
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+    invoke-direct {v0, v4}, Landroid/text/style/ForegroundColorSpan;-><init>(I)V
 
-    :cond_4
-    return-void
+    iget v4, p0, Lt62;->q:I
 
-    :pswitch_5
-    move-object/from16 v1, p1
-
-    check-cast v1, La73;
-
-    move-object/from16 v2, p2
-
-    check-cast v2, Ljava/lang/Float;
-
-    invoke-virtual {v2}, Ljava/lang/Float;->floatValue()F
-
-    move-result v2
-
-    iput v2, v1, La73;->s0:F
-
-    return-void
-
-    :pswitch_6
-    move-object/from16 v1, p1
-
-    check-cast v1, La73;
-
-    move-object/from16 v2, p2
-
-    check-cast v2, Ljava/lang/Float;
-
-    invoke-virtual {v2}, Ljava/lang/Float;->floatValue()F
-
-    move-result v2
-
-    iput v2, v1, La73;->r0:F
-
-    const v3, 0x45a8c000    # 5400.0f
-
-    mul-float/2addr v2, v3
-
-    float-to-int v2, v2
-
-    iget-object v3, v1, La73;->Y:Lln5;
-
-    iget-object v4, v1, Lmmf;->c:Ljava/lang/Object;
-
-    check-cast v4, Ljava/util/ArrayList;
-
-    const/4 v5, 0x0
-
-    invoke-virtual {v4, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Lr15;
-
-    const/high16 v7, 0x44be0000    # 1520.0f
-
-    iget v8, v1, La73;->r0:F
-
-    mul-float/2addr v8, v7
-
-    const/high16 v7, -0x3e600000    # -20.0f
-
-    add-float/2addr v7, v8
-
-    iput v7, v6, Lr15;->a:F
-
-    iput v8, v6, Lr15;->b:F
-
-    move v7, v5
-
-    :goto_2
-    const/4 v8, 0x4
-
-    if-ge v7, v8, :cond_5
-
-    sget-object v8, La73;->u0:[I
-
-    aget v8, v8, v7
-
-    const/16 v9, 0x29b
-
-    invoke-static {v2, v8, v9}, Lmmf;->L(III)F
-
-    move-result v8
-
-    iget v10, v6, Lr15;->b:F
-
-    invoke-virtual {v3, v8}, Llc8;->getInterpolation(F)F
-
-    move-result v8
-
-    const/high16 v11, 0x437a0000    # 250.0f
-
-    mul-float/2addr v8, v11
-
-    add-float/2addr v8, v10
-
-    iput v8, v6, Lr15;->b:F
-
-    sget-object v8, La73;->v0:[I
-
-    aget v8, v8, v7
-
-    invoke-static {v2, v8, v9}, Lmmf;->L(III)F
-
-    move-result v8
-
-    iget v9, v6, Lr15;->a:F
-
-    invoke-virtual {v3, v8}, Llc8;->getInterpolation(F)F
-
-    move-result v8
-
-    mul-float/2addr v8, v11
-
-    add-float/2addr v8, v9
-
-    iput v8, v6, Lr15;->a:F
-
-    add-int/lit8 v7, v7, 0x1
-
-    goto :goto_2
-
-    :cond_5
-    iget v7, v6, Lr15;->a:F
-
-    iget v9, v6, Lr15;->b:F
-
-    sub-float v10, v9, v7
-
-    iget v11, v1, La73;->s0:F
-
-    mul-float/2addr v10, v11
-
-    add-float/2addr v10, v7
-
-    const/high16 v7, 0x43b40000    # 360.0f
-
-    div-float/2addr v10, v7
-
-    iput v10, v6, Lr15;->a:F
-
-    div-float/2addr v9, v7
-
-    iput v9, v6, Lr15;->b:F
-
-    move v6, v5
-
-    :goto_3
-    if-ge v6, v8, :cond_7
-
-    sget-object v7, La73;->w0:[I
-
-    aget v7, v7, v6
-
-    const/16 v9, 0x14d
-
-    invoke-static {v2, v7, v9}, Lmmf;->L(III)F
-
-    move-result v7
-
-    const/4 v9, 0x0
-
-    cmpl-float v9, v7, v9
-
-    if-ltz v9, :cond_6
-
-    const/high16 v9, 0x3f800000    # 1.0f
-
-    cmpg-float v9, v7, v9
-
-    if-gtz v9, :cond_6
-
-    iget v2, v1, La73;->q0:I
-
-    add-int/2addr v6, v2
-
-    iget-object v2, v1, La73;->Z:Le73;
-
-    iget-object v2, v2, Lvk0;->c:[I
-
-    array-length v8, v2
-
-    rem-int/2addr v6, v8
-
-    add-int/lit8 v8, v6, 0x1
-
-    array-length v9, v2
-
-    rem-int/2addr v8, v9
-
-    aget v6, v2, v6
-
-    aget v2, v2, v8
-
-    invoke-virtual {v3, v7}, Llc8;->getInterpolation(F)F
-
-    move-result v3
-
-    invoke-virtual {v4, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lr15;
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v2}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v5
 
-    shr-int/lit8 v6, v5, 0x18
+    invoke-virtual {v2, v0, v4, v5, v1}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    and-int/lit16 v6, v6, 0xff
+    :cond_0
+    sget v0, Lt62;->v:I
 
-    int-to-float v6, v6
+    if-eq p1, v0, :cond_1
 
-    const/high16 v7, 0x437f0000    # 255.0f
+    invoke-virtual {v2}, Landroid/text/SpannableStringBuilder;->length()I
 
-    div-float/2addr v6, v7
+    move-result v0
 
-    shr-int/lit8 v8, v5, 0x10
+    iput v0, p0, Lt62;->q:I
 
-    and-int/lit16 v8, v8, 0xff
+    iput p1, p0, Lt62;->r:I
 
-    int-to-float v8, v8
+    :cond_1
+    iget p1, p0, Lt62;->s:I
 
-    div-float/2addr v8, v7
+    if-eq p1, v3, :cond_2
 
-    shr-int/lit8 v9, v5, 0x8
+    iget p1, p0, Lt62;->t:I
 
-    and-int/lit16 v9, v9, 0xff
+    if-eq p1, p2, :cond_2
 
-    int-to-float v9, v9
+    new-instance p1, Landroid/text/style/BackgroundColorSpan;
 
-    div-float/2addr v9, v7
+    iget v0, p0, Lt62;->t:I
 
-    and-int/lit16 v5, v5, 0xff
+    invoke-direct {p1, v0}, Landroid/text/style/BackgroundColorSpan;-><init>(I)V
 
-    int-to-float v5, v5
+    iget v0, p0, Lt62;->s:I
 
-    div-float/2addr v5, v7
-
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    shr-int/lit8 v10, v2, 0x18
-
-    and-int/lit16 v10, v10, 0xff
-
-    int-to-float v10, v10
-
-    div-float/2addr v10, v7
-
-    shr-int/lit8 v11, v2, 0x10
-
-    and-int/lit16 v11, v11, 0xff
-
-    int-to-float v11, v11
-
-    div-float/2addr v11, v7
-
-    shr-int/lit8 v12, v2, 0x8
-
-    and-int/lit16 v12, v12, 0xff
-
-    int-to-float v12, v12
-
-    div-float/2addr v12, v7
-
-    and-int/lit16 v2, v2, 0xff
-
-    int-to-float v2, v2
-
-    div-float/2addr v2, v7
-
-    float-to-double v13, v8
-
-    move/from16 p1, v7
-
-    const-wide v7, 0x400199999999999aL    # 2.2
-
-    invoke-static {v13, v14, v7, v8}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v13
-
-    double-to-float v13, v13
-
-    float-to-double v14, v9
-
-    invoke-static {v14, v15, v7, v8}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v14
-
-    double-to-float v9, v14
-
-    float-to-double v14, v5
-
-    invoke-static {v14, v15, v7, v8}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v14
-
-    double-to-float v5, v14
-
-    float-to-double v14, v11
-
-    invoke-static {v14, v15, v7, v8}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v14
-
-    double-to-float v11, v14
-
-    float-to-double v14, v12
-
-    invoke-static {v14, v15, v7, v8}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v14
-
-    double-to-float v12, v14
-
-    float-to-double v14, v2
-
-    invoke-static {v14, v15, v7, v8}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v7
-
-    double-to-float v2, v7
-
-    invoke-static {v10, v6, v3, v6}, Laab;->h(FFFF)F
-
-    move-result v6
-
-    invoke-static {v11, v13, v3, v13}, Laab;->h(FFFF)F
-
-    move-result v7
-
-    invoke-static {v12, v9, v3, v9}, Laab;->h(FFFF)F
-
-    move-result v8
-
-    invoke-static {v2, v5, v3, v5}, Laab;->h(FFFF)F
-
-    move-result v2
-
-    mul-float v6, v6, p1
-
-    float-to-double v9, v7
-
-    const-wide v11, 0x3fdd1745d1745d17L    # 0.45454545454545453
-
-    invoke-static {v9, v10, v11, v12}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v9
-
-    double-to-float v3, v9
-
-    mul-float v3, v3, p1
-
-    float-to-double v7, v8
-
-    invoke-static {v7, v8, v11, v12}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v7
-
-    double-to-float v5, v7
-
-    mul-float v5, v5, p1
-
-    float-to-double v7, v2
-
-    invoke-static {v7, v8, v11, v12}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v7
-
-    double-to-float v2, v7
-
-    mul-float v2, v2, p1
-
-    invoke-static {v6}, Ljava/lang/Math;->round(F)I
-
-    move-result v6
-
-    shl-int/lit8 v6, v6, 0x18
-
-    invoke-static {v3}, Ljava/lang/Math;->round(F)I
+    invoke-virtual {v2}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v3
 
-    shl-int/lit8 v3, v3, 0x10
+    invoke-virtual {v2, p1, v0, v3, v1}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    or-int/2addr v3, v6
+    :cond_2
+    sget p1, Lt62;->w:I
 
-    invoke-static {v5}, Ljava/lang/Math;->round(F)I
+    if-eq p2, p1, :cond_3
 
-    move-result v5
+    invoke-virtual {v2}, Landroid/text/SpannableStringBuilder;->length()I
 
-    shl-int/lit8 v5, v5, 0x8
+    move-result p1
 
-    or-int/2addr v3, v5
+    iput p1, p0, Lt62;->s:I
 
-    invoke-static {v2}, Ljava/lang/Math;->round(F)I
+    iput p2, p0, Lt62;->t:I
 
-    move-result v2
-
-    or-int/2addr v2, v3
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    iput v2, v4, Lr15;->c:I
-
-    goto :goto_4
-
-    :cond_6
-    add-int/lit8 v6, v6, 0x1
-
-    goto/16 :goto_3
-
-    :cond_7
-    :goto_4
-    iget-object v1, v1, Lmmf;->b:Ljava/lang/Object;
-
-    check-cast v1, Lve7;
-
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
+    :cond_3
     return-void
-
-    :pswitch_7
-    move-object/from16 v1, p1
-
-    check-cast v1, Landroid/view/View;
-
-    move-object/from16 v2, p2
-
-    check-cast v2, Landroid/graphics/PointF;
-
-    iget v3, v2, Landroid/graphics/PointF;->x:F
-
-    invoke-static {v3}, Ljava/lang/Math;->round(F)I
-
-    move-result v3
-
-    iget v2, v2, Landroid/graphics/PointF;->y:F
-
-    invoke-static {v2}, Ljava/lang/Math;->round(F)I
-
-    move-result v2
-
-    invoke-virtual {v1}, Landroid/view/View;->getWidth()I
-
-    move-result v4
-
-    add-int/2addr v4, v3
-
-    invoke-virtual {v1}, Landroid/view/View;->getHeight()I
-
-    move-result v5
-
-    add-int/2addr v5, v2
-
-    invoke-static {v1, v3, v2, v4, v5}, Lu1h;->a(Landroid/view/View;IIII)V
-
-    return-void
-
-    :pswitch_8
-    move-object/from16 v1, p1
-
-    check-cast v1, Landroid/view/View;
-
-    move-object/from16 v2, p2
-
-    check-cast v2, Landroid/graphics/PointF;
-
-    iget v3, v2, Landroid/graphics/PointF;->x:F
-
-    invoke-static {v3}, Ljava/lang/Math;->round(F)I
-
-    move-result v3
-
-    iget v2, v2, Landroid/graphics/PointF;->y:F
-
-    invoke-static {v2}, Ljava/lang/Math;->round(F)I
-
-    move-result v2
-
-    invoke-virtual {v1}, Landroid/view/View;->getRight()I
-
-    move-result v4
-
-    invoke-virtual {v1}, Landroid/view/View;->getBottom()I
-
-    move-result v5
-
-    invoke-static {v1, v3, v2, v4, v5}, Lu1h;->a(Landroid/view/View;IIII)V
-
-    return-void
-
-    :pswitch_9
-    move-object/from16 v1, p1
-
-    check-cast v1, Landroid/view/View;
-
-    move-object/from16 v2, p2
-
-    check-cast v2, Landroid/graphics/PointF;
-
-    invoke-virtual {v1}, Landroid/view/View;->getLeft()I
-
-    move-result v3
-
-    invoke-virtual {v1}, Landroid/view/View;->getTop()I
-
-    move-result v4
-
-    iget v5, v2, Landroid/graphics/PointF;->x:F
-
-    invoke-static {v5}, Ljava/lang/Math;->round(F)I
-
-    move-result v5
-
-    iget v2, v2, Landroid/graphics/PointF;->y:F
-
-    invoke-static {v2}, Ljava/lang/Math;->round(F)I
-
-    move-result v2
-
-    invoke-static {v1, v3, v4, v5, v2}, Lu1h;->a(Landroid/view/View;IIII)V
-
-    return-void
-
-    :pswitch_a
-    move-object/from16 v1, p1
-
-    check-cast v1, Lw62;
-
-    move-object/from16 v2, p2
-
-    check-cast v2, Landroid/graphics/PointF;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget v3, v2, Landroid/graphics/PointF;->x:F
-
-    invoke-static {v3}, Ljava/lang/Math;->round(F)I
-
-    move-result v3
-
-    iput v3, v1, Lw62;->c:I
-
-    iget v2, v2, Landroid/graphics/PointF;->y:F
-
-    invoke-static {v2}, Ljava/lang/Math;->round(F)I
-
-    move-result v2
-
-    iput v2, v1, Lw62;->d:I
-
-    iget v3, v1, Lw62;->g:I
-
-    add-int/lit8 v3, v3, 0x1
-
-    iput v3, v1, Lw62;->g:I
-
-    iget v4, v1, Lw62;->f:I
-
-    if-ne v4, v3, :cond_8
-
-    iget-object v3, v1, Lw62;->e:Landroid/view/View;
-
-    iget v4, v1, Lw62;->a:I
-
-    iget v5, v1, Lw62;->b:I
-
-    iget v6, v1, Lw62;->c:I
-
-    invoke-static {v3, v4, v5, v6, v2}, Lu1h;->a(Landroid/view/View;IIII)V
-
-    const/4 v2, 0x0
-
-    iput v2, v1, Lw62;->f:I
-
-    iput v2, v1, Lw62;->g:I
-
-    :cond_8
-    return-void
-
-    :pswitch_b
-    move-object/from16 v1, p1
-
-    check-cast v1, Lw62;
-
-    move-object/from16 v2, p2
-
-    check-cast v2, Landroid/graphics/PointF;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget v3, v2, Landroid/graphics/PointF;->x:F
-
-    invoke-static {v3}, Ljava/lang/Math;->round(F)I
-
-    move-result v3
-
-    iput v3, v1, Lw62;->a:I
-
-    iget v2, v2, Landroid/graphics/PointF;->y:F
-
-    invoke-static {v2}, Ljava/lang/Math;->round(F)I
-
-    move-result v2
-
-    iput v2, v1, Lw62;->b:I
-
-    iget v3, v1, Lw62;->f:I
-
-    add-int/lit8 v3, v3, 0x1
-
-    iput v3, v1, Lw62;->f:I
-
-    iget v4, v1, Lw62;->g:I
-
-    if-ne v3, v4, :cond_9
-
-    iget-object v3, v1, Lw62;->e:Landroid/view/View;
-
-    iget v4, v1, Lw62;->a:I
-
-    iget v5, v1, Lw62;->c:I
-
-    iget v6, v1, Lw62;->d:I
-
-    invoke-static {v3, v4, v2, v5, v6}, Lu1h;->a(Landroid/view/View;IIII)V
-
-    const/4 v2, 0x0
-
-    iput v2, v1, Lw62;->f:I
-
-    iput v2, v1, Lw62;->g:I
-
-    :cond_9
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

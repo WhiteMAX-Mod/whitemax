@@ -2,188 +2,73 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lzy7;
+
 
 # static fields
-.field public static final a:Ljava/util/regex/Pattern;
+.field public static final a:Lywe;
 
-.field public static final b:Ljava/util/regex/Pattern;
-
-.field public static final c:Ljava/util/regex/Pattern;
-
-.field public static final d:Ljava/util/regex/Pattern;
+.field public static final b:Lj9c;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 3
 
-    const-string v0, "\\{([^}]*)\\}"
+    new-instance v0, Lywe;
 
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    sput-object v0, Lywe;->a:Lywe;
 
-    sput-object v0, Lywe;->a:Ljava/util/regex/Pattern;
+    new-instance v0, Lj9c;
 
-    const-string v0, "\\s*\\d+(?:\\.\\d+)?\\s*"
+    const-string v1, "kotlin.Short"
 
-    filled-new-array {v0}, [Ljava/lang/Object;
+    sget-object v2, Lh9c;->i:Lh9c;
 
-    move-result-object v1
+    invoke-direct {v0, v1, v2}, Lj9c;-><init>(Ljava/lang/String;Li9c;)V
 
-    sget v2, Llig;->a:I
-
-    sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    const-string v3, "\\\\pos\\((%1$s),(%1$s)\\)"
-
-    invoke-static {v2, v3, v1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v1
-
-    sput-object v1, Lywe;->b:Ljava/util/regex/Pattern;
-
-    const-string v1, "\\\\move\\(%1$s,%1$s,(%1$s),(%1$s)(?:,%1$s,%1$s)?\\)"
-
-    filled-new-array {v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v2, v1, v0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Lywe;->c:Ljava/util/regex/Pattern;
-
-    const-string v0, "\\\\an(\\d+)"
-
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Lywe;->d:Ljava/util/regex/Pattern;
+    sput-object v0, Lywe;->b:Lj9c;
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;)Landroid/graphics/PointF;
-    .locals 6
 
-    sget-object v0, Lywe;->b:Ljava/util/regex/Pattern;
+# virtual methods
+.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
+    .locals 0
 
-    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+    check-cast p2, Ljava/lang/Number;
 
-    move-result-object v0
+    invoke-virtual {p2}, Ljava/lang/Number;->shortValue()S
 
-    sget-object v1, Lywe;->c:Ljava/util/regex/Pattern;
+    move-result p2
 
-    invoke-virtual {v1, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+    invoke-virtual {p1, p2}, Lkotlinx/serialization/json/internal/b;->q(S)V
 
-    move-result-object v1
+    return-void
+.end method
 
-    invoke-virtual {v0}, Ljava/util/regex/Matcher;->find()Z
+.method public final b(Llh4;)Ljava/lang/Object;
+    .locals 0
 
-    move-result v2
+    invoke-interface {p1}, Llh4;->A()S
 
-    invoke-virtual {v1}, Ljava/util/regex/Matcher;->find()Z
+    move-result p1
 
-    move-result v3
+    invoke-static {p1}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
 
-    const/4 v4, 0x2
+    move-result-object p1
 
-    const/4 v5, 0x1
+    return-object p1
+.end method
 
-    if-eqz v2, :cond_1
+.method public final d()Lree;
+    .locals 1
 
-    if-eqz v3, :cond_0
+    sget-object v0, Lywe;->b:Lj9c;
 
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    add-int/lit8 v1, v1, 0x52
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v1, "Override has both \\pos(x,y) and \\move(x1,y1,x2,y2); using \\pos values. override=\'"
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, "\'"
-
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string v1, "SsaStyle.Overrides"
-
-    invoke-static {v1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    invoke-virtual {v0, v5}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, v4}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_1
-    if-eqz v3, :cond_2
-
-    invoke-virtual {v1, v5}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v1, v4}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    :goto_0
-    new-instance v1, Landroid/graphics/PointF;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
-
-    move-result p0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
-
-    move-result v0
-
-    invoke-direct {v1, p0, v0}, Landroid/graphics/PointF;-><init>(FF)V
-
-    return-object v1
-
-    :cond_2
-    const/4 p0, 0x0
-
-    return-object p0
+    return-object v0
 .end method

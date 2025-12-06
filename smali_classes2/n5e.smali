@@ -1,278 +1,307 @@
-.class public final Ln5e;
-.super Lr5e;
+.class public abstract Ln5e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic w0:I
-
-
-# instance fields
-.field public final s0:Lq78;
-
-.field public final t0:F
-
-.field public final u0:Z
-
-.field public final v0:J
+.field public static final a:Lcj0;
 
 
 # direct methods
-.method public constructor <init>(Lm5e;)V
-    .locals 5
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0, p1}, Lr5e;-><init>(Lq5e;)V
+    new-instance v0, Lcj0;
 
-    iget-object v0, p1, Lm5e;->g:Lq78;
+    const/16 v1, 0x10
 
-    iput-object v0, p0, Ln5e;->s0:Lq78;
+    invoke-direct {v0, v1}, Lcj0;-><init>(I)V
 
-    iget v1, p1, Lm5e;->h:F
+    sput-object v0, Ln5e;->a:Lcj0;
 
-    iput v1, p0, Ln5e;->t0:F
+    return-void
+.end method
 
-    iget-wide v1, p1, Lm5e;->i:J
+.method public static a(Lcom/google/android/gms/tasks/Task;)Ljava/lang/Object;
+    .locals 2
 
-    iput-wide v1, p0, Ln5e;->v0:J
+    const-string v0, "Must not be called on the main application thread"
 
-    const-wide/16 v3, 0x0
+    invoke-static {v0}, Ls5j;->f(Ljava/lang/String;)V
 
-    cmp-long v1, v1, v3
+    invoke-static {}, Ls5j;->e()V
 
-    if-eqz v1, :cond_2
+    const-string v0, "Task must not be null"
 
-    invoke-virtual {v0}, Lq78;->a()Z
+    invoke-static {p0, v0}, Ls5j;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lcom/google/android/gms/tasks/Task;->g()Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
-    iget-object p1, p1, Lm5e;->g:Lq78;
+    invoke-static {p0}, Ln5e;->g(Lcom/google/android/gms/tasks/Task;)Ljava/lang/Object;
 
-    iget-wide v0, p1, Lq78;->a:D
+    move-result-object p0
 
-    const-wide/16 v2, 0x0
-
-    cmpg-double v0, v0, v2
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
+    return-object p0
 
     :cond_0
-    iget-wide v0, p1, Lq78;->b:D
+    new-instance v0, Lvgd;
 
-    cmpg-double p1, v0, v2
+    const/16 v1, 0xd
 
-    if-nez p1, :cond_2
+    invoke-direct {v0, v1}, Lvgd;-><init>(I)V
 
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
+    sget-object v1, Lu2g;->b:Lex4;
 
-    iput-boolean p1, p0, Ln5e;->u0:Z
+    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/tasks/Task;->d(Ljava/util/concurrent/Executor;Lvva;)Lybj;
 
-    return-void
+    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/tasks/Task;->c(Ljava/util/concurrent/Executor;Lnva;)Lybj;
 
-    :cond_2
-    const/4 p1, 0x0
+    invoke-virtual {p0, v1, v0}, Lcom/google/android/gms/tasks/Task;->a(Ljava/util/concurrent/Executor;Lkva;)Lybj;
 
-    iput-boolean p1, p0, Ln5e;->u0:Z
+    iget-object v0, v0, Lvgd;->b:Ljava/lang/Object;
 
-    return-void
+    check-cast v0, Ljava/util/concurrent/CountDownLatch;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->await()V
+
+    invoke-static {p0}, Ln5e;->g(Lcom/google/android/gms/tasks/Task;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
+.method public static b(Lcom/google/android/gms/tasks/Task;J)Ljava/lang/Object;
+    .locals 3
 
-# virtual methods
-.method public final x()Lob9;
-    .locals 9
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    new-instance v0, Lf20;
+    const-string v1, "Must not be called on the main application thread"
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-static {v1}, Ls5j;->f(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lr4e;->i()Ly83;
+    invoke-static {}, Ls5j;->e()V
 
-    move-result-object v1
+    const-string v1, "Task must not be null"
 
-    check-cast v1, Lntd;
+    invoke-static {p0, v1}, Ls5j;->h(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Lntd;->j()J
+    const-string v1, "TimeUnit must not be null"
 
-    move-result-wide v1
+    invoke-static {v0, v1}, Ls5j;->h(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-wide v3, p0, Ln5e;->v0:J
+    invoke-virtual {p0}, Lcom/google/android/gms/tasks/Task;->g()Z
 
-    const-wide v5, 0x7fffffffffffffffL
+    move-result v1
 
-    cmp-long v7, v3, v5
+    if-eqz v1, :cond_0
 
-    if-nez v7, :cond_0
+    invoke-static {p0}, Ln5e;->g(Lcom/google/android/gms/tasks/Task;)Ljava/lang/Object;
 
-    goto :goto_0
+    move-result-object p0
+
+    return-object p0
 
     :cond_0
-    sget-object v5, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    new-instance v1, Lvgd;
 
-    invoke-virtual {v5, v3, v4}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+    const/16 v2, 0xd
 
-    move-result-wide v5
+    invoke-direct {v1, v2}, Lvgd;-><init>(I)V
 
-    add-long/2addr v5, v1
+    sget-object v2, Lu2g;->b:Lex4;
 
-    :goto_0
-    new-instance v7, Lo10;
+    invoke-virtual {p0, v2, v1}, Lcom/google/android/gms/tasks/Task;->d(Ljava/util/concurrent/Executor;Lvva;)Lybj;
 
-    invoke-direct {v7}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0, v2, v1}, Lcom/google/android/gms/tasks/Task;->c(Ljava/util/concurrent/Executor;Lnva;)Lybj;
 
-    iget-object v8, p0, Ln5e;->s0:Lq78;
+    invoke-virtual {p0, v2, v1}, Lcom/google/android/gms/tasks/Task;->a(Ljava/util/concurrent/Executor;Lkva;)Lybj;
 
-    iput-object v8, v7, Lo10;->a:Lq78;
+    iget-object v1, v1, Lvgd;->b:Ljava/lang/Object;
 
-    iget v8, p0, Ln5e;->t0:F
+    check-cast v1, Ljava/util/concurrent/CountDownLatch;
 
-    iput v8, v7, Lo10;->g:F
+    invoke-virtual {v1, p1, p2, v0}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
 
-    iput-wide v3, v7, Lo10;->b:J
-
-    iput-wide v1, v7, Lo10;->c:J
-
-    iput-wide v5, v7, Lo10;->d:J
-
-    iget-object v1, p0, Lr4e;->a:Ls4e;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    move-object v1, v2
-
-    :goto_1
-    iget-object v1, v1, Ls4e;->d:Liu7;
-
-    invoke-interface {v1}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Los4;
-
-    invoke-virtual {v1}, Los4;->a()Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, v7, Lo10;->f:Ljava/lang/String;
-
-    invoke-virtual {v7}, Lo10;->a()Lp10;
-
-    move-result-object v1
-
-    new-instance v3, Lf10;
-
-    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
-
-    iput-object v1, v3, Lf10;->v:Lp10;
-
-    sget-object v1, La20;->v0:La20;
-
-    iput-object v1, v3, Lf10;->a:La20;
-
-    iget-boolean v1, p0, Ln5e;->u0:Z
-
-    if-eqz v1, :cond_2
-
-    sget-object v1, Lx10;->X:Lx10;
-
-    iput-object v1, v3, Lf10;->i:Lx10;
-
-    :cond_2
-    invoke-virtual {v3}, Lf10;->a()Le20;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lf20;->a:Ljava/util/List;
-
-    invoke-virtual {v0}, Lf20;->c()Lh78;
-
-    move-result-object v0
-
-    new-instance v1, Lob9;
-
-    invoke-direct {v1}, Lob9;-><init>()V
-
-    iput-object v2, v1, Lob9;->g:Ljava/lang/String;
-
-    iput-object v0, v1, Lob9;->n:Lh78;
-
-    return-object v1
-.end method
-
-.method public final y(Lla2;J)J
-    .locals 9
-
-    invoke-super {p0, p1, p2, p3}, Lr5e;->y(Lla2;J)J
-
-    move-result-wide v0
-
-    iget-boolean p1, p0, Ln5e;->u0:Z
+    move-result p1
 
     if-eqz p1, :cond_1
 
-    const-string p1, "n5e"
+    invoke-static {p0}, Ln5e;->g(Lcom/google/android/gms/tasks/Task;)Ljava/lang/Object;
 
-    const-string v2, "specifyLocation, start TaskLocationRequest to define location"
+    move-result-object p0
 
-    invoke-static {p1, v2}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    return-object p0
 
-    invoke-virtual {p0}, Lr4e;->t()Ltph;
+    :cond_1
+    new-instance p0, Ljava/util/concurrent/TimeoutException;
 
-    move-result-object p1
+    const-string p1, "Timed out waiting for Task"
 
-    new-instance v2, Lg5e;
+    invoke-direct {p0, p1}, Ljava/util/concurrent/TimeoutException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lr4e;->i()Ly83;
+    throw p0
+.end method
 
-    move-result-object v3
+.method public static final c(Landroidx/recyclerview/widget/RecyclerView;II)I
+    .locals 2
 
-    check-cast v3, Lntd;
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
-    invoke-virtual {v3}, Lntd;->k()J
+    move-result v0
 
-    move-result-wide v3
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
 
-    iget-wide v5, p0, Ln5e;->v0:J
+    move-result v1
 
-    const-wide/16 v7, 0x0
+    sub-int/2addr v0, v1
 
-    cmp-long v5, v5, v7
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
 
-    if-eqz v5, :cond_0
+    move-result v1
 
-    const/4 v5, 0x1
+    sub-int/2addr v0, v1
 
-    :goto_0
-    move v7, v5
+    if-gtz v0, :cond_0
 
-    move-wide v5, p2
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    goto :goto_1
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
+
+    move-result v1
+
+    sub-int/2addr v0, v1
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
+
+    move-result p0
+
+    sub-int/2addr v0, p0
 
     :cond_0
-    const/4 v5, 0x0
+    mul-int/2addr p1, p2
+
+    sub-int/2addr v0, p1
+
+    const/4 p0, 0x1
+
+    sub-int/2addr p2, p0
+
+    if-ge p2, p0, :cond_1
 
     goto :goto_0
 
-    :goto_1
-    invoke-direct/range {v2 .. v7}, Lg5e;-><init>(JJZ)V
+    :cond_1
+    move p0, p2
 
-    invoke-virtual {p1, v2}, Ltph;->c(Lr4e;)J
+    :goto_0
+    div-int/2addr v0, p0
+
+    return v0
+.end method
+
+.method public static d(Ljava/util/concurrent/Callable;Ljava/util/concurrent/Executor;)Lybj;
+    .locals 3
+
+    const-string v0, "Executor must not be null"
+
+    invoke-static {p1, v0}, Ls5j;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    new-instance v0, Lybj;
+
+    invoke-direct {v0}, Lybj;-><init>()V
+
+    new-instance v1, Lc5e;
+
+    const/16 v2, 0x11
+
+    invoke-direct {v1, v0, v2, p0}, Lc5e;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-interface {p1, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-object v0
+.end method
+
+.method public static e(Ljava/lang/Exception;)Lybj;
+    .locals 1
+
+    new-instance v0, Lybj;
+
+    invoke-direct {v0}, Lybj;-><init>()V
+
+    invoke-virtual {v0, p0}, Lybj;->n(Ljava/lang/Exception;)V
+
+    return-object v0
+.end method
+
+.method public static f(Ljava/lang/Object;)Lybj;
+    .locals 1
+
+    new-instance v0, Lybj;
+
+    invoke-direct {v0}, Lybj;-><init>()V
+
+    invoke-virtual {v0, p0}, Lybj;->o(Ljava/lang/Object;)V
+
+    return-object v0
+.end method
+
+.method public static g(Lcom/google/android/gms/tasks/Task;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/google/android/gms/tasks/Task;->h()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/google/android/gms/tasks/Task;->f()Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    move-object v0, p0
+
+    check-cast v0, Lybj;
+
+    iget-boolean v0, v0, Lybj;->d:Z
+
+    if-eqz v0, :cond_1
+
+    new-instance p0, Ljava/util/concurrent/CancellationException;
+
+    const-string v0, "Task is already canceled"
+
+    invoke-direct {p0, v0}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 
     :cond_1
-    return-wide v0
+    new-instance v0, Ljava/util/concurrent/ExecutionException;
+
+    invoke-virtual {p0}, Lcom/google/android/gms/tasks/Task;->e()Ljava/lang/Exception;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/util/concurrent/ExecutionException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
 .end method

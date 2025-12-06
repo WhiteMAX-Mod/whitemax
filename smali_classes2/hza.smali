@@ -1,54 +1,85 @@
-.class public final synthetic Lhza;
-.super Ljava/lang/Object;
+.class public final enum Lhza;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnKeyListener;
 
+# static fields
+.field public static final enum a:Lhza;
 
-# instance fields
-.field public final synthetic a:Ljza;
+.field public static final enum b:Lhza;
+
+.field public static final enum c:Lhza;
+
+.field public static final synthetic d:[Lhza;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljza;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lhza;
 
-    iput-object p1, p0, Lhza;->a:Ljza;
+    const-string v1, "STANDARD"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lhza;->a:Lhza;
+
+    new-instance v1, Lhza;
+
+    const-string v2, "ICON"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lhza;->b:Lhza;
+
+    new-instance v2, Lhza;
+
+    const-string v3, "PROGRESS_BAR"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lhza;->c:Lhza;
+
+    filled-new-array {v0, v1, v2}, [Lhza;
+
+    move-result-object v0
+
+    sput-object v0, Lhza;->d:[Lhza;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lhza;
+    .locals 1
 
-# virtual methods
-.method public final onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
-    .locals 0
+    const-class v0, Lhza;
 
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    move-result p1
+    move-result-object p0
 
-    const/4 p3, 0x0
+    check-cast p0, Lhza;
 
-    if-nez p1, :cond_0
+    return-object p0
+.end method
 
-    const/16 p1, 0x43
+.method public static values()[Lhza;
+    .locals 1
 
-    if-ne p2, p1, :cond_0
+    sget-object v0, Lhza;->d:[Lhza;
 
-    const/4 p1, 0x1
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    goto :goto_0
+    move-result-object v0
 
-    :cond_0
-    move p1, p3
+    check-cast v0, [Lhza;
 
-    :goto_0
-    iget-object p2, p0, Lhza;->a:Ljza;
-
-    iput-boolean p1, p2, Ljza;->q0:Z
-
-    return p3
+    return-object v0
 .end method

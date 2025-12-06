@@ -1,22 +1,14 @@
-.class public final Lme5;
+.class public interface abstract Lme5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lve5;
 
+# virtual methods
+.method public abstract a()Ljava/lang/String;
+.end method
 
-# instance fields
-.field public final a:Lzs8;
+.method public abstract b()Landroid/media/MediaFormat;
+.end method
 
-
-# direct methods
-.method public constructor <init>(Lzs8;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lme5;->a:Lzs8;
-
-    return-void
+.method public abstract c()Lf9g;
 .end method

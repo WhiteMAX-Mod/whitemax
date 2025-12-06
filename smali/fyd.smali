@@ -2,58 +2,57 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final d:Lpg6;
-
-.field public static final e:Lpg6;
+# interfaces
+.implements Lb48;
+.implements Ljava/io/Closeable;
 
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field public final a:Ljava/lang/String;
 
-.field public b:I
+.field public final b:Leyd;
 
-.field public c:I
+.field public c:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;Leyd;)V
+    .locals 0
 
-    const/16 v0, 0x3a
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Lpg6;->S(C)Lpg6;
+    iput-object p1, p0, Lfyd;->a:Ljava/lang/String;
 
-    move-result-object v0
-
-    sput-object v0, Lfyd;->d:Lpg6;
-
-    const/16 v0, 0x2a
-
-    invoke-static {v0}, Lpg6;->S(C)Lpg6;
-
-    move-result-object v0
-
-    sput-object v0, Lfyd;->e:Lpg6;
+    iput-object p2, p0, Lfyd;->b:Leyd;
 
     return-void
 .end method
 
-.method public constructor <init>()V
+
+# virtual methods
+.method public final close()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final d(Lj48;Lk38;)V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lk38;->ON_DESTROY:Lk38;
 
-    new-instance v0, Ljava/util/ArrayList;
+    if-ne p2, v0, :cond_0
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    const/4 p2, 0x0
 
-    iput-object v0, p0, Lfyd;->a:Ljava/util/ArrayList;
+    iput-boolean p2, p0, Lfyd;->c:Z
 
-    const/4 v0, 0x0
+    invoke-interface {p1}, Lj48;->p()Ll48;
 
-    iput v0, p0, Lfyd;->b:I
+    move-result-object p1
 
+    invoke-virtual {p1, p0}, Ll48;->f(Lf48;)V
+
+    :cond_0
     return-void
 .end method

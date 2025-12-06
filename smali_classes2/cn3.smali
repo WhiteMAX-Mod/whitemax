@@ -3,412 +3,293 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lji6;
+.implements Lg2h;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/util/List;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final b:J
+
+.field public final c:J
+
+.field public final d:J
+
+.field public final e:Landroid/net/Uri;
+
+.field public final f:Ljava/lang/String;
+
+.field public final g:I
+
+.field public final h:I
+
+.field public final i:I
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
-
-    iput p1, p0, Lcn3;->a:I
-
-    iput-object p2, p0, Lcn3;->b:Ljava/lang/Object;
+.method public constructor <init>(JLjava/util/List;)V
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p3, p0, Lcn3;->a:Ljava/util/List;
+
+    iput-wide p1, p0, Lcn3;->b:J
+
+    const/4 v0, 0x0
+
+    invoke-interface {p3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lbn3;
+
+    invoke-virtual {v1}, Lbn3;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    int-to-long v1, v1
+
+    iput-wide v1, p0, Lcn3;->c:J
+
+    iput-wide p1, p0, Lcn3;->d:J
+
+    sget-object p1, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
+
+    iput-object p1, p0, Lcn3;->e:Landroid/net/Uri;
+
+    const-string p1, "video/mp4"
+
+    iput-object p1, p0, Lcn3;->f:Ljava/lang/String;
+
+    invoke-interface {p3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lbn3;
+
+    iget p1, p1, Lbn3;->b:I
+
+    iput p1, p0, Lcn3;->g:I
+
+    invoke-interface {p3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lbn3;
+
+    iget p1, p1, Lbn3;->c:I
+
+    iput p1, p0, Lcn3;->h:I
+
+    const/4 p1, 0x2
+
+    iput p1, p0, Lcn3;->i:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final a()Landroid/net/Uri;
+    .locals 1
+
+    iget-object v0, p0, Lcn3;->e:Landroid/net/Uri;
+
+    return-object v0
+.end method
+
+.method public final b()J
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    return-wide v0
+.end method
+
+.method public final c()J
+    .locals 2
+
+    iget-wide v0, p0, Lcn3;->d:J
+
+    return-wide v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
     .locals 5
 
-    iget v0, p0, Lcn3;->a:I
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lcn3;
+
+    if-nez v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lcn3;
+
+    iget-object v1, p0, Lcn3;->a:Ljava/util/List;
+
+    iget-object v2, p1, Lcn3;->a:Ljava/util/List;
+
+    invoke-static {v1, v2}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-wide v1, p0, Lcn3;->b:J
+
+    iget-wide v3, p1, Lcn3;->b:J
+
+    cmp-long p1, v1, v3
+
+    if-eqz p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    return v0
+.end method
+
+.method public final g()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final getContentType()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcn3;->f:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final getDuration()J
+    .locals 2
+
+    iget-wide v0, p0, Lcn3;->b:J
+
+    return-wide v0
+.end method
+
+.method public final getHeight()I
+    .locals 1
+
+    iget v0, p0, Lcn3;->h:I
+
+    return v0
+.end method
+
+.method public final getType()I
+    .locals 1
+
+    iget v0, p0, Lcn3;->i:I
+
+    return v0
+.end method
+
+.method public final getWidth()I
+    .locals 1
+
+    iget v0, p0, Lcn3;->g:I
+
+    return v0
+.end method
+
+.method public final h()J
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    return-wide v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-object v0, p0, Lcn3;->a:Ljava/util/List;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lcn3;->b:J
+
+    invoke-static {v0, v1, v2, v3}, La9h;->a(IIJ)I
+
+    move-result v0
 
     const/4 v1, 0x1
 
-    iget-object v2, p0, Lcn3;->b:Ljava/lang/Object;
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    packed-switch v0, :pswitch_data_0
+    move-result v1
 
-    new-instance v0, Lyw3;
+    add-int/2addr v1, v0
 
-    check-cast v2, Len8;
+    return v1
+.end method
 
-    const/16 v1, 0x16
+.method public final i()J
+    .locals 2
 
-    invoke-direct {v0, v1, v2}, Lyw3;-><init>(ILji6;)V
+    iget-wide v0, p0, Lcn3;->c:J
 
-    return-object v0
+    return-wide v0
+.end method
 
-    :pswitch_0
-    new-instance v0, Lyw3;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    check-cast v2, Lrk7;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/16 v1, 0x15
+    const-string v1, "ConcatenatedMp4VideoContent(items="
 
-    invoke-direct {v0, v1, v2}, Lyw3;-><init>(ILji6;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return-object v0
+    iget-object v1, p0, Lcn3;->a:Ljava/util/List;
 
-    :pswitch_1
-    new-instance v0, Lyw3;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    check-cast v2, Lpo7;
+    const-string v1, ", duration="
 
-    const/16 v1, 0x14
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1, v2}, Lyw3;-><init>(ILji6;)V
+    iget-wide v1, p0, Lcn3;->b:J
 
-    return-object v0
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    :pswitch_2
-    new-instance v0, Lyw3;
+    const-string v1, ", isMute=true)"
 
-    check-cast v2, Lrk7;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/16 v1, 0x13
-
-    invoke-direct {v0, v1, v2}, Lyw3;-><init>(ILji6;)V
-
-    return-object v0
-
-    :pswitch_3
-    new-instance v0, Lyw3;
-
-    check-cast v2, Lrk7;
-
-    const/16 v1, 0x12
-
-    invoke-direct {v0, v1, v2}, Lyw3;-><init>(ILji6;)V
-
-    return-object v0
-
-    :pswitch_4
-    new-instance v0, Lyw3;
-
-    check-cast v2, Lrk7;
-
-    const/16 v1, 0x11
-
-    invoke-direct {v0, v1, v2}, Lyw3;-><init>(ILji6;)V
-
-    return-object v0
-
-    :pswitch_5
-    new-instance v0, Lyw3;
-
-    check-cast v2, Lij1;
-
-    const/16 v1, 0x10
-
-    invoke-direct {v0, v1, v2}, Lyw3;-><init>(ILji6;)V
-
-    return-object v0
-
-    :pswitch_6
-    new-instance v0, Lyw3;
-
-    check-cast v2, Lrk7;
-
-    const/16 v1, 0xf
-
-    invoke-direct {v0, v1, v2}, Lyw3;-><init>(ILji6;)V
-
-    return-object v0
-
-    :pswitch_7
-    new-instance v0, Lyw3;
-
-    check-cast v2, Lpo7;
-
-    const/16 v1, 0xe
-
-    invoke-direct {v0, v1, v2}, Lyw3;-><init>(ILji6;)V
-
-    return-object v0
-
-    :pswitch_8
-    new-instance v0, Lyw3;
-
-    check-cast v2, Lm14;
-
-    const/16 v1, 0xd
-
-    invoke-direct {v0, v1, v2}, Lyw3;-><init>(ILji6;)V
-
-    return-object v0
-
-    :pswitch_9
-    new-instance v0, Lyw3;
-
-    check-cast v2, Lql7;
-
-    const/16 v1, 0xc
-
-    invoke-direct {v0, v1, v2}, Lyw3;-><init>(ILji6;)V
-
-    return-object v0
-
-    :pswitch_a
-    new-instance v0, Lyw3;
-
-    check-cast v2, Lrk7;
-
-    const/16 v1, 0xb
-
-    invoke-direct {v0, v1, v2}, Lyw3;-><init>(ILji6;)V
-
-    return-object v0
-
-    :pswitch_b
-    new-instance v0, Lyw3;
-
-    check-cast v2, Lbn5;
-
-    const/16 v1, 0xa
-
-    invoke-direct {v0, v1, v2}, Lyw3;-><init>(ILji6;)V
-
-    return-object v0
-
-    :pswitch_c
-    new-instance v0, Lyw3;
-
-    check-cast v2, Lyg7;
-
-    const/16 v1, 0x9
-
-    invoke-direct {v0, v1, v2}, Lyw3;-><init>(ILji6;)V
-
-    return-object v0
-
-    :pswitch_d
-    new-instance v0, Lyw3;
-
-    check-cast v2, Lbn5;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1, v2}, Lyw3;-><init>(ILji6;)V
-
-    return-object v0
-
-    :pswitch_e
-    check-cast v2, Lone/me/chats/forward/ForwardPickerScreen;
-
-    sget-object v0, Lone/me/chats/forward/ForwardPickerScreen;->H0:[Ltr7;
-
-    invoke-virtual {v2}, Lone/me/chats/forward/ForwardPickerScreen;->Q0()Lqjc;
-
-    move-result-object v0
-
-    sget v3, Lrjd;->l0:I
-
-    new-instance v4, Lorf;
-
-    invoke-direct {v4, v3}, Lorf;-><init>(I)V
-
-    invoke-static {v2, v0, v4, v1}, Lone/me/chats/forward/ForwardPickerScreen;->O0(Lone/me/chats/forward/ForwardPickerScreen;Landroid/view/View;Lorf;Z)V
-
-    sget-object v0, Ls24;->q0:Ls24;
-
-    iput-object v0, v2, Lone/me/chats/forward/ForwardPickerScreen;->x0:Lji6;
-
-    sget-object v0, Lccg;->a:Lccg;
-
-    return-object v0
-
-    :pswitch_f
-    new-instance v0, Lyw3;
-
-    check-cast v2, Lw86;
-
-    const/4 v1, 0x7
-
-    invoke-direct {v0, v1, v2}, Lyw3;-><init>(ILji6;)V
-
-    return-object v0
-
-    :pswitch_10
-    new-instance v0, Lyw3;
-
-    check-cast v2, Lbn5;
-
-    const/4 v1, 0x6
-
-    invoke-direct {v0, v1, v2}, Lyw3;-><init>(ILji6;)V
-
-    return-object v0
-
-    :pswitch_11
-    new-instance v0, Lyw3;
-
-    check-cast v2, Lm14;
-
-    const/4 v1, 0x5
-
-    invoke-direct {v0, v1, v2}, Lyw3;-><init>(ILji6;)V
-
-    return-object v0
-
-    :pswitch_12
-    new-instance v0, Lyw3;
-
-    check-cast v2, Lij1;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1, v2}, Lyw3;-><init>(ILji6;)V
-
-    return-object v0
-
-    :pswitch_13
-    new-instance v0, Lyw3;
-
-    check-cast v2, Lbq3;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1, v2}, Lyw3;-><init>(ILji6;)V
-
-    return-object v0
-
-    :pswitch_14
-    new-instance v0, Lyw3;
-
-    check-cast v2, Lbq3;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1, v2}, Lyw3;-><init>(ILji6;)V
-
-    return-object v0
-
-    :pswitch_15
-    new-instance v0, Lyw3;
-
-    check-cast v2, Lbq3;
-
-    invoke-direct {v0, v1, v2}, Lyw3;-><init>(ILji6;)V
-
-    return-object v0
-
-    :pswitch_16
-    check-cast v2, Ljava/lang/String;
-
-    invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-
-    :pswitch_17
-    new-instance v0, Lyw3;
-
-    check-cast v2, Lkw3;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1, v2}, Lyw3;-><init>(ILji6;)V
-
-    return-object v0
-
-    :pswitch_18
-    new-instance v0, Lcl2;
-
-    check-cast v2, Lij1;
-
-    const/16 v1, 0x1d
-
-    invoke-direct {v0, v1, v2}, Lcl2;-><init>(ILji6;)V
-
-    return-object v0
-
-    :pswitch_19
-    check-cast v2, Lco3;
-
-    iget-object v0, v2, Lco3;->W1:Lji6;
-
-    invoke-interface {v0}, Lji6;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    return-object v0
-
-    :pswitch_1a
-    new-instance v0, Lcl2;
-
-    check-cast v2, Lij1;
-
-    const/16 v1, 0x1c
-
-    invoke-direct {v0, v1, v2}, Lcl2;-><init>(ILji6;)V
-
-    return-object v0
-
-    :pswitch_1b
-    new-instance v0, Lcl2;
-
-    check-cast v2, Lmn3;
-
-    const/16 v1, 0x1b
-
-    invoke-direct {v0, v1, v2}, Lcl2;-><init>(ILji6;)V
-
-    return-object v0
-
-    :pswitch_1c
-    new-instance v0, Lcl2;
-
-    check-cast v2, Lvm3;
-
-    const/16 v1, 0x1a
-
-    invoke-direct {v0, v1, v2}, Lcl2;-><init>(ILji6;)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1c
-        :pswitch_1b
-        :pswitch_1a
-        :pswitch_19
-        :pswitch_18
-        :pswitch_17
-        :pswitch_16
-        :pswitch_15
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

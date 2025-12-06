@@ -1,401 +1,184 @@
-.class public final Ltfh;
+.class public abstract Ltfh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Parcelable;
-
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Ltfh;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final a:Lsfh;
 
-
-# instance fields
-.field public final X:Z
-
-.field public final Y:Z
-
-.field public final Z:Z
-
-.field public final a:Ljava/lang/String;
-
-.field public final b:Z
-
-.field public final c:Ljava/lang/String;
-
-.field public final o:I
+.field public static final b:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Ljmg;
+    new-instance v0, Lsfh;
 
-    const/4 v1, 0x5
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Ljmg;-><init>(I)V
+    sput-object v0, Ltfh;->a:Lsfh;
 
-    sput-object v0, Ltfh;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(ILjava/lang/String;Ljava/lang/String;ZZZZ)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Ltfh;->a:Ljava/lang/String;
-
-    iput-boolean p4, p0, Ltfh;->b:Z
-
-    iput-object p3, p0, Ltfh;->c:Ljava/lang/String;
-
-    iput p1, p0, Ltfh;->o:I
-
-    iput-boolean p5, p0, Ltfh;->X:Z
-
-    iput-boolean p6, p0, Ltfh;->Y:Z
-
-    iput-boolean p7, p0, Ltfh;->Z:Z
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Ltfh;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Ltfh;
-
-    iget-object v0, p0, Ltfh;->a:Ljava/lang/String;
-
-    iget-object v1, p1, Ltfh;->a:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-boolean v0, p0, Ltfh;->b:Z
-
-    iget-boolean v1, p1, Ltfh;->b:Z
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Ltfh;->c:Ljava/lang/String;
-
-    iget-object v1, p1, Ltfh;->c:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget v0, p0, Ltfh;->o:I
-
-    iget v1, p1, Ltfh;->o:I
-
-    if-eq v0, v1, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget-boolean v0, p0, Ltfh;->X:Z
-
-    iget-boolean v1, p1, Ltfh;->X:Z
-
-    if-eq v0, v1, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget-boolean v0, p0, Ltfh;->Y:Z
-
-    iget-boolean v1, p1, Ltfh;->Y:Z
-
-    if-eq v0, v1, :cond_7
-
-    goto :goto_0
-
-    :cond_7
-    iget-boolean v0, p0, Ltfh;->Z:Z
-
-    iget-boolean p1, p1, Ltfh;->Z:Z
-
-    if-eq v0, p1, :cond_8
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_8
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Ltfh;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Ltfh;->b:Z
-
-    invoke-static {v0, v1, v2}, Lrtg;->d(IIZ)I
-
-    move-result v0
-
-    iget-object v2, p0, Ltfh;->c:Ljava/lang/String;
-
-    if-nez v2, :cond_0
-
-    const/4 v2, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
-
-    :goto_0
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Ltfh;->o:I
-
-    invoke-static {v2, v0, v1}, Laab;->j(III)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Ltfh;->X:Z
-
-    invoke-static {v0, v1, v2}, Lrtg;->d(IIZ)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Ltfh;->Y:Z
-
-    invoke-static {v0, v1, v2}, Lrtg;->d(IIZ)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Ltfh;->Z:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "WebAppRootViewStateParc(title="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ltfh;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isVerified="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Ltfh;->b:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", url="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ltfh;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", loadingState="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v1, 0x1
-
-    iget v2, p0, Ltfh;->o:I
-
-    if-eq v2, v1, :cond_2
-
-    const/4 v1, 0x2
-
-    if-eq v2, v1, :cond_1
+    const-string v0, "shared.ViewLifecycle"
 
     const/4 v1, 0x3
 
-    if-eq v2, v1, :cond_0
+    invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
-    const-string v1, "null"
+    move-result v0
+
+    sput-boolean v0, Ltfh;->b:Z
+
+    return-void
+.end method
+
+.method public static final a(Landroid/view/View;)Lj48;
+    .locals 4
+
+    sget-object v0, Lzx0;->I0:Lzx0;
+
+    if-nez p0, :cond_0
+
+    sget-object v0, Lqd5;->a:Lqd5;
 
     goto :goto_0
 
     :cond_0
-    const-string v1, "ERROR"
+    new-instance v1, Laz4;
 
-    goto :goto_0
+    new-instance v2, Lb0e;
 
-    :cond_1
-    const-string v1, "WEB_VIEW"
+    const/4 v3, 0x2
 
-    goto :goto_0
+    invoke-direct {v2, v3, p0}, Lb0e;-><init>(ILjava/lang/Object;)V
 
-    :cond_2
-    const-string v1, "LOADING"
+    invoke-direct {v1, v2, v0}, Laz4;-><init>(Lcm6;Lem6;)V
+
+    move-object v0, v1
 
     :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget-object v1, Lzx0;->J0:Lzx0;
 
-    const-string v1, ", showBackButton="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", needShowCloseConfirmationDialog="
-
-    const-string v2, ", isBrightnessMaximized="
-
-    iget-boolean v3, p0, Ltfh;->X:Z
-
-    iget-boolean v4, p0, Ltfh;->Y:Z
-
-    invoke-static {v1, v2, v0, v3, v4}, Ldy1;->t(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Ltfh;->Z:Z
-
-    invoke-static {v0, v2, v1}, Ldy1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Llee;->k(Lzde;Lem6;)Loz5;
 
     move-result-object v0
 
+    invoke-static {v0}, Llee;->i(Lzde;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lj48;
+
+    if-nez v0, :cond_4
+
+    sget v0, Lv0d;->view_custom_attach_lifecycle_owner:I
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    instance-of v1, v0, Lg48;
+
+    if-eqz v1, :cond_1
+
+    check-cast v0, Lg48;
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v0, 0x0
+
+    :goto_1
+    if-eqz v0, :cond_2
+
+    iget-object v1, v0, Lg48;->a:Ll48;
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, v1, Ll48;->d:Ll38;
+
+    if-eqz v1, :cond_2
+
+    sget-object v2, Ll38;->c:Ll38;
+
+    invoke-virtual {v1, v2}, Ll38;->a(Ll38;)Z
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-ne v1, v2, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    new-instance v0, Lg48;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v1, Ll48;
+
+    invoke-direct {v1, v0}, Ll48;-><init>(Lj48;)V
+
+    iput-object v1, v0, Lg48;->a:Ll48;
+
+    sget-object v2, Lk38;->ON_CREATE:Lk38;
+
+    invoke-virtual {v1, v2}, Ll48;->d(Lk38;)V
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    invoke-virtual {p0}, Landroid/view/View;->isAttachedToWindow()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {v0, p0}, Lg48;->onViewAttachedToWindow(Landroid/view/View;)V
+
+    :cond_3
+    sget v1, Lv0d;->view_custom_attach_lifecycle_owner:I
+
+    invoke-virtual {p0, v1, v0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    :cond_4
+    :goto_2
+    sget-boolean p0, Ltfh;->b:Z
+
+    if-eqz p0, :cond_5
+
+    invoke-interface {v0}, Lj48;->p()Ll48;
+
+    move-result-object p0
+
+    sget-object v1, Ltfh;->a:Lsfh;
+
+    invoke-virtual {p0, v1}, Ll48;->f(Lf48;)V
+
+    invoke-interface {v0}, Lj48;->p()Ll48;
+
+    move-result-object p0
+
+    invoke-virtual {p0, v1}, Ll48;->a(Lf48;)V
+
+    :cond_5
     return-object v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 1
+.method public static final b(Landroid/view/View;)Lx38;
+    .locals 0
 
-    iget-object p2, p0, Ltfh;->a:Ljava/lang/String;
+    invoke-static {p0}, Ltfh;->a(Landroid/view/View;)Lj48;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    move-result-object p0
 
-    iget-boolean p2, p0, Ltfh;->b:Z
+    invoke-interface {p0}, Lj48;->p()Ll48;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    move-result-object p0
 
-    iget-object p2, p0, Ltfh;->c:Ljava/lang/String;
+    invoke-static {p0}, Lzpi;->a(Ll48;)Lx38;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    move-result-object p0
 
-    const/4 p2, 0x1
-
-    iget v0, p0, Ltfh;->o:I
-
-    if-eq v0, p2, :cond_2
-
-    const/4 p2, 0x2
-
-    if-eq v0, p2, :cond_1
-
-    const/4 p2, 0x3
-
-    if-ne v0, p2, :cond_0
-
-    const-string p2, "ERROR"
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    throw p1
-
-    :cond_1
-    const-string p2, "WEB_VIEW"
-
-    goto :goto_0
-
-    :cond_2
-    const-string p2, "LOADING"
-
-    :goto_0
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    iget-boolean p2, p0, Ltfh;->X:Z
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-boolean p2, p0, Ltfh;->Y:Z
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-boolean p2, p0, Ltfh;->Z:Z
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    return-void
+    return-object p0
 .end method

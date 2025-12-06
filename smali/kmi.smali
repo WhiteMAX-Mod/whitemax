@@ -1,70 +1,50 @@
-.class public abstract Lkmi;
+.class public final Lkmi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpqa;
+
+
+# static fields
+.field public static final a:Lkmi;
+
 
 # direct methods
-.method public static final a(Loo1;)Lm7e;
-    .locals 8
+.method static constructor <clinit>()V
+    .locals 2
 
-    new-instance v0, Lm7e;
+    new-instance v0, Lkmi;
 
-    iget-object v3, p0, Loo1;->a:Lr7e;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v5, p0, Loo1;->b:Ljava/lang/String;
+    sput-object v0, Lkmi;->a:Lkmi;
 
-    iget-boolean v7, p0, Loo1;->c:Z
+    new-instance v0, Ltci;
 
-    iget v1, p0, Loo1;->e:I
+    const/4 v1, 0x1
 
-    iget-object v6, p0, Loo1;->d:Ljava/util/List;
+    invoke-direct {v0, v1}, Ltci;-><init>(I)V
 
-    iget-object v2, p0, Loo1;->f:Lhi1;
+    const-class v1, Lhdi;
 
-    iget-object v4, p0, Loo1;->g:Ljava/lang/Long;
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
 
-    invoke-direct/range {v0 .. v7}, Lm7e;-><init>(ILhi1;Lr7e;Ljava/lang/Long;Ljava/lang/String;Ljava/util/List;Z)V
+    move-result-object v0
 
-    return-object v0
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
+
+    return-void
 .end method
 
-.method public static final b(Ln1a;Lli6;Ly14;)Ljava/lang/Object;
-    .locals 3
 
-    new-instance v0, Lu7d;
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    invoke-direct {v0, p0}, Lu7d;-><init>(Ln1a;)V
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    invoke-interface {p2}, Lkotlin/coroutines/Continuation;->getContext()Li54;
+    move-result-object p1
 
-    move-result-object v1
-
-    invoke-interface {v1, v0}, Li54;->get(Lh54;)Lg54;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {p1, p2}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    new-instance v1, Lt7d;
-
-    invoke-direct {v1, v0}, Lt7d;-><init>(Lu7d;)V
-
-    new-instance v0, Lo1a;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, p0, p1, v2}, Lo1a;-><init>(Ln1a;Lli6;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v1, v0, p2}, Ltki;->h(Li54;Lzi6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    throw p1
 .end method

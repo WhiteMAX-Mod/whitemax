@@ -1,66 +1,181 @@
-.class public final Lvoh;
-.super Landroid/content/ContextWrapper;
+.class public final synthetic Lvoh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lfm3;
+.implements Lar6;
 
 
-# instance fields
-.field public final a:Luoh;
+# static fields
+.field public static final a:Lvoh;
 
-.field public final synthetic b:Lwoh;
+.field private static final descriptor:Lree;
 
 
 # direct methods
-.method public constructor <init>(Lwoh;Landroid/content/Context;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput-object p1, p0, Lvoh;->b:Lwoh;
+    new-instance v0, Lvoh;
 
-    invoke-direct {p0, p2}, Landroid/content/ContextWrapper;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iget-object p2, p1, Lwoh;->a:Landroid/content/Context;
+    sput-object v0, Lvoh;->a:Lvoh;
 
-    invoke-virtual {p2}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    new-instance v1, Lj5c;
 
-    move-result-object p2
+    const-string v2, "one.me.webapp.domain.jsbridge.delegates.brightness.WebAppChangeScreenBrightness"
 
-    new-instance v0, Luoh;
+    const/4 v3, 0x2
 
-    invoke-direct {v0, p1, p2}, Luoh;-><init>(Lwoh;Landroid/content/Context;)V
+    invoke-direct {v1, v2, v0, v3}, Lj5c;-><init>(Ljava/lang/String;Lar6;I)V
 
-    iput-object v0, p0, Lvoh;->a:Luoh;
+    const-string v0, "requestId"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2}, Lj5c;->k(Ljava/lang/String;Z)V
+
+    const-string v0, "maxBrightness"
+
+    invoke-virtual {v1, v0, v2}, Lj5c;->k(Ljava/lang/String;Z)V
+
+    sput-object v1, Lvoh;->descriptor:Lree;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lhm3;
-    .locals 1
+.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
+    .locals 3
 
-    iget-object v0, p0, Lvoh;->b:Lwoh;
+    check-cast p2, Lxoh;
 
-    iget-object v0, v0, Lwoh;->a:Landroid/content/Context;
+    sget-object v0, Lvoh;->descriptor:Lree;
 
-    invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {p1, v0}, Lkotlinx/serialization/json/internal/b;->a(Lree;)Lkotlinx/serialization/json/internal/b;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, Lfm3;
+    iget-object v1, p2, Lxoh;->a:Ljava/lang/String;
 
-    invoke-interface {v0}, Lfm3;->a()Lhm3;
+    const/4 v2, 0x0
 
-    move-result-object v0
+    invoke-virtual {p1, v0, v2, v1}, Lkotlinx/serialization/json/internal/b;->s(Lree;ILjava/lang/String;)V
+
+    const/4 v1, 0x1
+
+    iget-boolean p2, p2, Lxoh;->b:Z
+
+    invoke-virtual {p1, v0, v1, p2}, Lkotlinx/serialization/json/internal/b;->c(Lree;IZ)V
+
+    invoke-virtual {p1}, Lkotlinx/serialization/json/internal/b;->t()V
+
+    return-void
+.end method
+
+.method public final b(Llh4;)Ljava/lang/Object;
+    .locals 9
+
+    sget-object v0, Lvoh;->descriptor:Lree;
+
+    invoke-interface {p1, v0}, Llh4;->r(Lree;)Lyl3;
+
+    move-result-object p1
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    move v4, v1
+
+    move v5, v2
+
+    move v6, v5
+
+    :goto_0
+    if-eqz v4, :cond_3
+
+    invoke-interface {p1, v0}, Lyl3;->e(Lree;)I
+
+    move-result v7
+
+    const/4 v8, -0x1
+
+    if-eq v7, v8, :cond_2
+
+    if-eqz v7, :cond_1
+
+    if-ne v7, v1, :cond_0
+
+    invoke-interface {p1, v0, v1}, Lyl3;->y(Lree;I)Z
+
+    move-result v6
+
+    or-int/lit8 v5, v5, 0x2
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
+
+    invoke-direct {p1, v7}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+
+    throw p1
+
+    :cond_1
+    invoke-interface {p1, v0, v2}, Lyl3;->j(Lree;I)Ljava/lang/String;
+
+    move-result-object v3
+
+    or-int/lit8 v5, v5, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    move v4, v2
+
+    goto :goto_0
+
+    :cond_3
+    invoke-interface {p1, v0}, Lyl3;->m(Lree;)V
+
+    new-instance p1, Lxoh;
+
+    invoke-direct {p1, v3, v5, v6}, Lxoh;-><init>(Ljava/lang/String;IZ)V
+
+    return-object p1
+.end method
+
+.method public final c()[Lzy7;
+    .locals 3
+
+    const/4 v0, 0x2
+
+    new-array v0, v0, [Lzy7;
+
+    sget-object v1, Lrmf;->a:Lrmf;
+
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Ler0;->a:Ler0;
+
+    const/4 v2, 0x1
+
+    aput-object v1, v0, v2
 
     return-object v0
 .end method
 
-.method public final getApplicationContext()Landroid/content/Context;
+.method public final d()Lree;
     .locals 1
 
-    iget-object v0, p0, Lvoh;->a:Luoh;
+    sget-object v0, Lvoh;->descriptor:Lree;
 
     return-object v0
 .end method

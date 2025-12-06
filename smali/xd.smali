@@ -1,157 +1,194 @@
 .class public final Lxd;
-.super Ljava/lang/Object;
+.super Ljava/util/logging/Handler;
 .source "SourceFile"
 
-# interfaces
-.implements Lsa7;
 
-
-# instance fields
-.field public final a:Landroid/media/Image;
-
-.field public final b:[Lrs6;
-
-.field public final c:Lqa0;
+# static fields
+.field public static final a:Lxd;
 
 
 # direct methods
-.method public constructor <init>(Landroid/media/Image;)V
-    .locals 7
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lxd;
 
-    iput-object p1, p0, Lxd;->a:Landroid/media/Image;
+    invoke-direct {v0}, Ljava/util/logging/Handler;-><init>()V
 
-    invoke-virtual {p1}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    array-length v2, v0
-
-    new-array v2, v2, [Lrs6;
-
-    iput-object v2, p0, Lxd;->b:[Lrs6;
-
-    :goto_0
-    array-length v2, v0
-
-    if-ge v1, v2, :cond_1
-
-    iget-object v2, p0, Lxd;->b:[Lrs6;
-
-    new-instance v3, Lrs6;
-
-    aget-object v4, v0, v1
-
-    const/4 v5, 0x2
-
-    invoke-direct {v3, v5, v4}, Lrs6;-><init>(ILjava/lang/Object;)V
-
-    aput-object v3, v2, v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    new-array v0, v1, [Lrs6;
-
-    iput-object v0, p0, Lxd;->b:[Lrs6;
-
-    :cond_1
-    sget-object v2, Lalf;->b:Lalf;
-
-    invoke-virtual {p1}, Landroid/media/Image;->getTimestamp()J
-
-    move-result-wide v3
-
-    new-instance v6, Landroid/graphics/Matrix;
-
-    invoke-direct {v6}, Landroid/graphics/Matrix;-><init>()V
-
-    new-instance v1, Lqa0;
-
-    const/4 v5, 0x0
-
-    invoke-direct/range {v1 .. v6}, Lqa0;-><init>(Lalf;JILandroid/graphics/Matrix;)V
-
-    iput-object v1, p0, Lxd;->c:Lqa0;
+    sput-object v0, Lxd;->a:Lxd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final V()Landroid/media/Image;
-    .locals 1
-
-    iget-object v0, p0, Lxd;->a:Landroid/media/Image;
-
-    return-object v0
-.end method
-
 .method public final close()V
-    .locals 1
-
-    iget-object v0, p0, Lxd;->a:Landroid/media/Image;
-
-    invoke-virtual {v0}, Landroid/media/Image;->close()V
+    .locals 0
 
     return-void
 .end method
 
-.method public final getFormat()I
-    .locals 1
+.method public final flush()V
+    .locals 0
 
-    iget-object v0, p0, Lxd;->a:Landroid/media/Image;
+    return-void
+.end method
 
-    invoke-virtual {v0}, Landroid/media/Image;->getFormat()I
+.method public final publish(Ljava/util/logging/LogRecord;)V
+    .locals 7
+
+    sget-object v0, Lwd;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {p1}, Ljava/util/logging/LogRecord;->getLoggerName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Ljava/util/logging/LogRecord;->getLevel()Ljava/util/logging/Level;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/util/logging/Level;->intValue()I
+
+    move-result v1
+
+    sget-object v2, Ljava/util/logging/Level;->INFO:Ljava/util/logging/Level;
+
+    invoke-virtual {v2}, Ljava/util/logging/Level;->intValue()I
+
+    move-result v3
+
+    const/4 v4, 0x4
+
+    if-le v1, v3, :cond_0
+
+    const/4 v1, 0x5
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1}, Ljava/util/logging/LogRecord;->getLevel()Ljava/util/logging/Level;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/util/logging/Level;->intValue()I
+
+    move-result v1
+
+    invoke-virtual {v2}, Ljava/util/logging/Level;->intValue()I
+
+    move-result v2
+
+    if-ne v1, v2, :cond_1
+
+    move v1, v4
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x3
+
+    :goto_0
+    invoke-virtual {p1}, Ljava/util/logging/LogRecord;->getMessage()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p1}, Ljava/util/logging/LogRecord;->getThrown()Ljava/lang/Throwable;
+
+    move-result-object p1
+
+    sget-object v3, Lwd;->b:Ljava/util/Map;
+
+    invoke-interface {v3, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/String;
+
+    if-eqz v3, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    const/16 v3, 0x17
+
+    invoke-static {v3, v0}, Lvmf;->Z(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    :goto_1
+    invoke-static {v3, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
 
-    return v0
-.end method
+    if-eqz v0, :cond_6
 
-.method public final getHeight()I
-    .locals 1
+    if-eqz p1, :cond_3
 
-    iget-object v0, p0, Lxd;->a:Landroid/media/Image;
+    const-string v0, "\n"
 
-    invoke-virtual {v0}, Landroid/media/Image;->getHeight()I
+    invoke-static {v2, v0}, Lho7;->o(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v0
+    move-result-object v0
 
-    return v0
-.end method
+    invoke-static {p1}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
 
-.method public final getImageInfo()Lz97;
-    .locals 1
+    move-result-object p1
 
-    iget-object v0, p0, Lxd;->c:Lqa0;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object v0
-.end method
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-.method public final getWidth()I
-    .locals 1
+    move-result-object v2
 
-    iget-object v0, p0, Lxd;->a:Landroid/media/Image;
+    :cond_3
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
 
-    invoke-virtual {v0}, Landroid/media/Image;->getWidth()I
+    move-result p1
 
-    move-result v0
+    const/4 v0, 0x0
 
-    return v0
-.end method
+    :goto_2
+    if-ge v0, p1, :cond_6
 
-.method public final v()[Lrs6;
-    .locals 1
+    const/16 v5, 0xa
 
-    iget-object v0, p0, Lxd;->b:[Lrs6;
+    invoke-static {v2, v5, v0, v4}, Lvmf;->C(Ljava/lang/CharSequence;CII)I
 
-    return-object v0
+    move-result v5
+
+    const/4 v6, -0x1
+
+    if-eq v5, v6, :cond_4
+
+    goto :goto_3
+
+    :cond_4
+    move v5, p1
+
+    :goto_3
+    add-int/lit16 v6, v0, 0xfa0
+
+    invoke-static {v5, v6}, Ljava/lang/Math;->min(II)I
+
+    move-result v6
+
+    invoke-virtual {v2, v0, v6}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v3, v0}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
+
+    if-lt v6, v5, :cond_5
+
+    add-int/lit8 v0, v6, 0x1
+
+    goto :goto_2
+
+    :cond_5
+    move v0, v6
+
+    goto :goto_3
+
+    :cond_6
+    return-void
 .end method

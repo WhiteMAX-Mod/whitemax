@@ -1,90 +1,324 @@
 .class public final Ldz4;
-.super Lsgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Lf97;
 
 
 # instance fields
-.field public final synthetic X:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
+.field public final a:Lt9f;
+
+.field public volatile b:J
+
+.field public volatile c:Landroid/net/Uri;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Lt9f;)V
+    .locals 2
 
-    iput-object p1, p0, Ldz4;->X:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Ldz4;->a:Lt9f;
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    const-wide/high16 v0, -0x8000000000000000L
+
+    iput-wide v0, p0, Ldz4;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final v(Ljava/lang/String;)Landroid/net/Uri;
+    .locals 7
 
-    check-cast p1, Lq54;
+    iget-object v0, p0, Ldz4;->a:Lt9f;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ldz4;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ldz4;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Ldz4;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Ldz4;
-
-    iget-object v0, p0, Ldz4;->X:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
-
-    invoke-direct {p1, v0, p2}, Ldz4;-><init>(Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ldz4;->X:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
-
-    iget-object v0, p1, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->c:Lwif;
-
-    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lt9f;->v(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    check-cast v0, Ltt5;
+    const-string v1, "api"
 
-    invoke-virtual {p1}, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->b()Ldpf;
+    invoke-virtual {p1, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    return-object v0
+
+    :cond_0
+    sget-object p1, Lwm;->a:Landroid/net/Uri;
+
+    invoke-virtual {v0}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    iget-object p1, p1, Ldpf;->d:Ljava/lang/String;
+    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    check-cast v0, Liv5;
+    move-result v2
 
-    invoke-virtual {v0, p1}, Liv5;->h(Ljava/lang/String;)Ljava/io/File;
+    const/16 v3, 0x2f
+
+    const/4 v4, 0x0
+
+    if-eqz v2, :cond_1
+
+    goto :goto_2
+
+    :cond_1
+    invoke-static {v1, v3}, Lvmf;->v(Ljava/lang/String;C)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-static {v1}, Lvmf;->y(Ljava/lang/CharSequence;)I
+
+    move-result v2
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    :goto_0
+    invoke-static {p1, v3}, Lvmf;->v(Ljava/lang/String;C)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_3
+
+    invoke-static {p1}, Lvmf;->y(Ljava/lang/CharSequence;)I
+
+    move-result v5
+
+    goto :goto_1
+
+    :cond_3
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v5
+
+    :goto_1
+    if-ne v2, v5, :cond_c
+
+    invoke-virtual {v1, v4, p1, v4, v2}, Ljava/lang/String;->regionMatches(ILjava/lang/String;II)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_c
+
+    :goto_2
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v1
+
+    iget-wide v5, p0, Ldz4;->b:J
+
+    cmp-long p1, v1, v5
+
+    if-lez p1, :cond_a
+
+    monitor-enter p0
+
+    :try_start_0
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v1
+
+    iget-wide v5, p0, Ldz4;->b:J
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    cmp-long p1, v1, v5
+
+    if-lez p1, :cond_9
+
+    :try_start_1
+    invoke-static {}, Lv17;->x()Lhz4;
 
     move-result-object p1
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    :try_start_2
+    iget-object v0, p1, Lhz4;->b:Ljava/lang/String;
+
+    const/16 v1, 0x22
+
+    invoke-static {v0, v1}, Lvmf;->V(Ljava/lang/String;C)Z
+
+    move-result v2
+
+    const/4 v5, 0x1
+
+    if-eqz v2, :cond_4
+
+    invoke-static {v0, v1}, Lvmf;->v(Ljava/lang/String;C)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    invoke-static {v0}, Lvmf;->y(Ljava/lang/CharSequence;)I
+
+    move-result v1
+
+    invoke-virtual {v0, v5, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_4
+    const-string v1, "\"\""
+
+    invoke-static {v0, v1, v4}, Lvmf;->s(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    const-string v1, "\"\""
+
+    const-string v2, ""
+
+    invoke-static {v0, v1, v2}, Ldnf;->q(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_5
+    invoke-static {v0}, Lvmf;->c0(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/16 v1, 0x20
+
+    invoke-static {v0, v1}, Lvmf;->t(Ljava/lang/CharSequence;C)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_6
+
+    const/4 v2, 0x6
+
+    invoke-static {v0, v1, v4, v2}, Lvmf;->G(Ljava/lang/CharSequence;CII)I
+
+    move-result v1
+
+    add-int/2addr v1, v5
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_3
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_5
+
+    :cond_6
+    :goto_3
+    invoke-static {v0, v3}, Lvmf;->v(Ljava/lang/String;C)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_7
+
+    invoke-static {v0}, Lvmf;->y(Ljava/lang/CharSequence;)I
+
+    move-result v1
+
+    invoke-virtual {v0, v4, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_7
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ldz4;->c:Landroid/net/Uri;
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v1
+
+    iget p1, p1, Lhz4;->a:I
+
+    mul-int/lit16 p1, p1, 0x3e8
+
+    int-to-long v3, p1
+
+    add-long/2addr v1, v3
+
+    iput-wide v1, p0, Ldz4;->b:J
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    monitor-exit p0
+
+    return-object v0
+
+    :catch_0
+    const-wide v1, 0x7fffffffffffffffL
+
+    :try_start_3
+    iput-wide v1, p0, Ldz4;->b:J
+
+    iget-object p1, p0, Ldz4;->c:Landroid/net/Uri;
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    if-nez p1, :cond_8
+
+    goto :goto_4
+
+    :cond_8
+    move-object v0, p1
+
+    :goto_4
+    monitor-exit p0
+
+    return-object v0
+
+    :cond_9
+    monitor-exit p0
+
+    goto :goto_6
+
+    :goto_5
+    monitor-exit p0
+
+    throw p1
+
+    :cond_a
+    :goto_6
+    iget-object p1, p0, Ldz4;->c:Landroid/net/Uri;
+
+    if-nez p1, :cond_b
+
+    goto :goto_7
+
+    :cond_b
     return-object p1
+
+    :cond_c
+    :goto_7
+    return-object v0
 .end method

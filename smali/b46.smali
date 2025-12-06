@@ -1,170 +1,110 @@
-.class public final synthetic Lb46;
-.super Ljava/lang/Object;
+.class public final Lb46;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Lux1;
+.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic a:Lf46;
+.field public final synthetic X:Lx26;
 
-.field public final synthetic b:Z
-
-.field public final synthetic c:J
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lf46;ZJ)V
+.method public constructor <init>(Lx26;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lb46;->X:Lx26;
 
-    iput-object p1, p0, Lb46;->a:Lf46;
+    const/4 p1, 0x2
 
-    iput-boolean p2, p0, Lb46;->b:Z
-
-    iput-wide p3, p0, Lb46;->c:J
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/hardware/camera2/TotalCaptureResult;)Z
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lb46;->a:Lf46;
+    check-cast p1, Lf84;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    sget-object v1, Landroid/hardware/camera2/CaptureResult;->CONTROL_AF_STATE:Landroid/hardware/camera2/CaptureResult$Key;
+    invoke-virtual {p0, p1, p2}, Lb46;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p1, v1}, Landroid/hardware/camera2/CaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object v1
+    check-cast p1, Lb46;
 
-    check-cast v1, Ljava/lang/Integer;
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    iget-object v2, v0, Lf46;->p:[Landroid/hardware/camera2/params/MeteringRectangle;
+    invoke-virtual {p1, p2}, Lb46;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    array-length v2, v2
+    move-result-object p1
 
-    const/4 v3, 0x0
+    return-object p1
+.end method
 
-    const/4 v4, 0x1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    if-lez v2, :cond_3
+    new-instance p1, Lb46;
 
-    iget-boolean v2, p0, Lb46;->b:Z
+    iget-object v0, p0, Lb46;->X:Lx26;
 
-    if-eqz v2, :cond_2
+    invoke-direct {p1, v0, p2}, Lb46;-><init>(Lx26;Lkotlin/coroutines/Continuation;)V
 
-    if-nez v1, :cond_0
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lb46;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    iget-object v2, v0, Lf46;->h:Ljava/lang/Integer;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    move-result v2
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    const/4 v5, 0x3
-
-    if-ne v2, v5, :cond_3
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    const/4 v5, 0x4
-
-    if-ne v2, v5, :cond_1
-
-    iput-boolean v4, v0, Lf46;->m:Z
-
-    iput-boolean v4, v0, Lf46;->l:Z
-
-    goto :goto_1
+    throw p1
 
     :cond_1
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    move-result v2
+    iput v1, p0, Lb46;->o:I
 
-    const/4 v5, 0x5
+    iget-object p1, p0, Lb46;->X:Lx26;
 
-    if-ne v2, v5, :cond_3
+    invoke-static {p1, p0}, Lgw0;->g(Lx26;Ldtf;)Ljava/lang/Object;
 
-    iput-boolean v3, v0, Lf46;->m:Z
+    move-result-object p1
 
-    iput-boolean v4, v0, Lf46;->l:Z
+    sget-object v0, Lg84;->a:Lg84;
 
-    goto :goto_1
+    if-ne p1, v0, :cond_2
+
+    return-object v0
 
     :cond_2
     :goto_0
-    iput-boolean v4, v0, Lf46;->m:Z
+    sget-object p1, Lqqg;->a:Lqqg;
 
-    iput-boolean v4, v0, Lf46;->l:Z
-
-    :cond_3
-    :goto_1
-    iget-boolean v2, v0, Lf46;->l:Z
-
-    if-eqz v2, :cond_6
-
-    iget-wide v5, p0, Lb46;->c:J
-
-    invoke-static {p1, v5, v6}, Lvx1;->x(Landroid/hardware/camera2/TotalCaptureResult;J)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_6
-
-    iget-boolean p1, v0, Lf46;->m:Z
-
-    iget-object v1, v0, Lf46;->j:Ljava/util/concurrent/ScheduledFuture;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_4
-
-    invoke-interface {v1, v4}, Ljava/util/concurrent/Future;->cancel(Z)Z
-
-    iput-object v2, v0, Lf46;->j:Ljava/util/concurrent/ScheduledFuture;
-
-    :cond_4
-    iget-object v1, v0, Lf46;->s:Lgu1;
-
-    if-eqz v1, :cond_5
-
-    new-instance v3, Lg46;
-
-    invoke-direct {v3, p1}, Lg46;-><init>(Z)V
-
-    invoke-virtual {v1, v3}, Lgu1;->b(Ljava/lang/Object;)Z
-
-    iput-object v2, v0, Lf46;->s:Lgu1;
-
-    :cond_5
-    return v4
-
-    :cond_6
-    iget-object p1, v0, Lf46;->h:Ljava/lang/Integer;
-
-    invoke-virtual {p1, v1}, Ljava/lang/Integer;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_7
-
-    if-eqz v1, :cond_7
-
-    iput-object v1, v0, Lf46;->h:Ljava/lang/Integer;
-
-    :cond_7
-    return v3
+    return-object p1
 .end method

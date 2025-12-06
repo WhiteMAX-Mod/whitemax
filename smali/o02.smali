@@ -1,101 +1,133 @@
-.class public interface abstract Lo02;
-.super Ljava/lang/Object;
+.class public final enum Lo02;
+.super Ljava/lang/Enum;
 .source "SourceFile"
-
-# interfaces
-.implements Lk0d;
 
 
 # static fields
-.field public static final g:Lz90;
+.field public static final enum X:Lo02;
 
-.field public static final h:Lz90;
+.field public static final enum Y:Lo02;
 
-.field public static final i:Lz90;
+.field public static final synthetic Z:[Lo02;
 
-.field public static final j:Lz90;
+.field public static final enum a:Lo02;
 
-.field public static final k:Lz90;
+.field public static final enum b:Lo02;
+
+.field public static final enum c:Lo02;
+
+.field public static final enum d:Lo02;
+
+.field public static final enum o:Lo02;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 9
 
-    new-instance v0, Lz90;
+    new-instance v0, Lo02;
 
-    const-string v1, "camerax.core.camera.useCaseConfigFactory"
+    const-string v1, "UNKNOWN"
 
-    const-class v2, Lphg;
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    sput-object v0, Lo02;->a:Lo02;
 
-    sput-object v0, Lo02;->g:Lz90;
+    new-instance v1, Lo02;
 
-    new-instance v0, Lz90;
+    const-string v2, "INACTIVE"
 
-    const-string v1, "camerax.core.camera.useCaseCombinationRequiredRule"
+    const/4 v3, 0x1
 
-    const-class v2, Ljava/lang/Integer;
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    sput-object v1, Lo02;->b:Lo02;
 
-    sput-object v0, Lo02;->h:Lz90;
+    new-instance v2, Lo02;
 
-    new-instance v0, Lz90;
+    const-string v3, "SCANNING"
 
-    const-string v1, "camerax.core.camera.SessionProcessor"
+    const/4 v4, 0x2
 
-    const-class v2, Lk7e;
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    sput-object v2, Lo02;->c:Lo02;
 
-    sput-object v0, Lo02;->i:Lz90;
+    new-instance v3, Lo02;
 
-    new-instance v0, Lz90;
+    const-string v4, "PASSIVE_FOCUSED"
 
-    const-string v1, "camerax.core.camera.isPostviewSupported"
+    const/4 v5, 0x3
 
-    const-class v2, Ljava/lang/Boolean;
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    sput-object v3, Lo02;->d:Lo02;
 
-    sput-object v0, Lo02;->j:Lz90;
+    new-instance v4, Lo02;
 
-    new-instance v0, Lz90;
+    const-string v5, "PASSIVE_NOT_FOCUSED"
 
-    const-string v1, "camerax.core.camera.isCaptureProcessProgressSupported"
+    const/4 v6, 0x4
 
-    invoke-direct {v0, v1, v2, v3}, Lz90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lo02;->k:Lz90;
+    sput-object v4, Lo02;->o:Lo02;
+
+    new-instance v5, Lo02;
+
+    const-string v6, "LOCKED_FOCUSED"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v5, Lo02;->X:Lo02;
+
+    new-instance v6, Lo02;
+
+    const-string v7, "LOCKED_NOT_FOCUSED"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v6, Lo02;->Y:Lo02;
+
+    filled-new-array/range {v0 .. v6}, [Lo02;
+
+    move-result-object v0
+
+    sput-object v0, Lo02;->Z:[Lo02;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lo02;
+    .locals 1
 
-# virtual methods
-.method public B()V
-    .locals 2
+    const-class v0, Lo02;
 
-    const/4 v0, 0x0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    sget-object v1, Lo02;->i:Lz90;
+    move-result-object p0
 
-    invoke-interface {p0, v1, v0}, Lk0d;->d(Lz90;Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast p0, Lo02;
+
+    return-object p0
+.end method
+
+.method public static values()[Lo02;
+    .locals 1
+
+    sget-object v0, Lo02;->Z:[Lo02;
+
+    invoke-virtual {v0}, [Lo02;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    if-nez v0, :cond_0
+    check-cast v0, [Lo02;
 
-    return-void
-
-    :cond_0
-    new-instance v0, Ljava/lang/ClassCastException;
-
-    invoke-direct {v0}, Ljava/lang/ClassCastException;-><init>()V
-
-    throw v0
+    return-object v0
 .end method

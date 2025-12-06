@@ -1,127 +1,111 @@
 .class public final Lxb6;
-.super Ljava/lang/Object;
+.super Lki4;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/util/LinkedHashSet;
+# static fields
+.field public static final b:Lxb6;
 
-.field public final b:Lupd;
+.field public static final c:Lgi4;
+
+.field public static final d:Lgi4;
+
+.field public static final e:Lgi4;
+
+.field public static final f:Lgi4;
+
+.field public static final g:Lgi4;
+
+.field public static final h:Lgi4;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/LinkedHashSet;Lupd;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lxb6;
 
-    iput-object p1, p0, Lxb6;->a:Ljava/util/LinkedHashSet;
+    invoke-direct {v0}, Lki4;-><init>()V
 
-    iput-object p2, p0, Lxb6;->b:Lupd;
+    sput-object v0, Lxb6;->b:Lxb6;
 
-    return-void
-.end method
+    const/4 v1, 0x0
 
+    new-array v2, v1, [Ljava/lang/String;
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    const-string v3, ":settings/folder-list"
 
-    if-ne p0, p1, :cond_0
+    const/4 v4, 0x0
 
-    goto :goto_1
+    const/16 v5, 0xe
 
-    :cond_0
-    instance-of v0, p1, Lxb6;
+    invoke-static {v0, v3, v2, v4, v5}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
 
-    if-nez v0, :cond_1
+    move-result-object v2
 
-    goto :goto_0
+    sput-object v2, Lxb6;->c:Lgi4;
 
-    :cond_1
-    check-cast p1, Lxb6;
+    const-string v2, "id"
 
-    iget-object v0, p0, Lxb6;->a:Ljava/util/LinkedHashSet;
+    filled-new-array {v2}, [Ljava/lang/String;
 
-    iget-object v1, p1, Lxb6;->a:Ljava/util/LinkedHashSet;
+    move-result-object v3
 
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    const-string v6, ":settings/folder"
 
-    move-result v0
+    invoke-static {v0, v6, v3, v4, v5}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
 
-    if-nez v0, :cond_2
+    move-result-object v3
 
-    goto :goto_0
+    sput-object v3, Lxb6;->d:Lgi4;
 
-    :cond_2
-    iget-object v0, p0, Lxb6;->b:Lupd;
+    const-string v3, ":settings/folder/edit"
 
-    iget-object p1, p1, Lxb6;->b:Lupd;
+    new-array v6, v1, [Ljava/lang/String;
 
-    if-eq v0, p1, :cond_3
+    invoke-static {v0, v3, v6, v4, v5}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
 
-    :goto_0
-    const/4 p1, 0x0
+    move-result-object v3
 
-    return p1
+    sput-object v3, Lxb6;->e:Lgi4;
 
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
+    const-string v3, ":settings/folder/create"
 
-    return p1
-.end method
+    new-array v6, v1, [Ljava/lang/String;
 
-.method public final hashCode()I
-    .locals 2
+    invoke-static {v0, v3, v6, v4, v5}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
 
-    iget-object v0, p0, Lxb6;->a:Ljava/util/LinkedHashSet;
+    move-result-object v3
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    sput-object v3, Lxb6;->f:Lgi4;
 
-    move-result v0
+    const-string v3, ":settings/folder/by-chat"
 
-    mul-int/lit8 v0, v0, 0x1f
+    filled-new-array {v2}, [Ljava/lang/String;
 
-    iget-object v1, p0, Lxb6;->b:Lupd;
+    move-result-object v2
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    invoke-static {v0, v3, v2, v4, v5}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
 
-    move-result v1
+    move-result-object v2
 
-    add-int/2addr v1, v0
+    sput-object v2, Lxb6;->g:Lgi4;
 
-    return v1
-.end method
+    const-string v2, ":settings/folder/settings"
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    new-array v3, v1, [Ljava/lang/String;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {v0, v2, v3, v4, v5}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
 
-    const-string v1, "ForwardInAppReviewData(triggeredConditions="
+    const-string v2, ":settings/folder/members-picker"
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    new-array v1, v1, [Ljava/lang/String;
 
-    iget-object v1, p0, Lxb6;->a:Ljava/util/LinkedHashSet;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", screen="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lxb6;->b:Lupd;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v2, v1, v4, v5}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
 
     move-result-object v0
 
-    return-object v0
+    sput-object v0, Lxb6;->h:Lgi4;
+
+    return-void
 .end method

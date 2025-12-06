@@ -1,43 +1,60 @@
 .class public final Lnvi;
-.super Lmuh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpqa;
 
-# instance fields
-.field public final d:Low4;
 
-.field public final e:Lvof;
-
-.field public final synthetic f:Lowi;
-
-.field public final synthetic g:Lowi;
+# static fields
+.field public static final a:Lnvi;
 
 
 # direct methods
-.method public constructor <init>(Lowi;Lvof;Ljava/lang/String;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Lnvi;->g:Lowi;
+    new-instance v0, Lnvi;
 
-    new-instance p3, Low4;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, "OnRequestInstallCallback"
+    sput-object v0, Lnvi;->a:Lnvi;
 
-    invoke-direct {p3, v0}, Low4;-><init>(Ljava/lang/String;)V
+    new-instance v0, Lmli;
 
-    iput-object p1, p0, Lnvi;->f:Lowi;
+    const/4 v1, 0x1
 
-    const/4 p1, 0x3
+    invoke-direct {v0, v1}, Lmli;-><init>(I)V
 
-    invoke-direct {p0, p1}, Lmuh;-><init>(I)V
+    const-class v1, Lemi;
 
-    const-string p1, "com.google.android.play.core.appupdate.protocol.IAppUpdateServiceCallback"
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    invoke-virtual {p0, p0, p1}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
+    move-result-object v0
 
-    iput-object p3, p0, Lnvi;->d:Low4;
+    const/4 v2, 0x2
 
-    iput-object p2, p0, Lnvi;->e:Lvof;
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

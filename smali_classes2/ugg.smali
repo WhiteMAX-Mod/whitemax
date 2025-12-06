@@ -4,66 +4,44 @@
 
 
 # instance fields
-.field public final a:Lfgd;
+.field public final synthetic a:Ltgg;
 
-.field public final b:Lei;
+.field public final synthetic b:Lw5;
 
-.field public final c:Lxfd;
+.field public final synthetic c:Lk18;
 
-.field public final d:Lxfd;
+.field public final synthetic d:Lbwf;
 
-.field public final e:Lxfd;
+.field public final synthetic e:Lk18;
 
-.field public final f:Lxfd;
+.field public final synthetic f:Lk18;
+
+.field public final synthetic g:Lk18;
+
+.field public final synthetic h:Lbwf;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
-    .locals 2
+.method public constructor <init>(Ltgg;Lw5;Lk18;Lbwf;Lk18;Lk18;Lk18;Lbwf;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lugg;->a:Lfgd;
+    iput-object p1, p0, Lugg;->a:Ltgg;
 
-    new-instance v0, Lei;
+    iput-object p2, p0, Lugg;->b:Lw5;
 
-    const/16 v1, 0x1d
+    iput-object p3, p0, Lugg;->c:Lk18;
 
-    invoke-direct {v0, p1, v1}, Lei;-><init>(Lfgd;I)V
+    iput-object p4, p0, Lugg;->d:Lbwf;
 
-    iput-object v0, p0, Lugg;->b:Lei;
+    iput-object p5, p0, Lugg;->e:Lk18;
 
-    new-instance v0, Lxfd;
+    iput-object p6, p0, Lugg;->f:Lk18;
 
-    const/16 v1, 0x12
+    iput-object p7, p0, Lugg;->g:Lk18;
 
-    invoke-direct {v0, p1, v1}, Lxfd;-><init>(Lfgd;I)V
-
-    iput-object v0, p0, Lugg;->c:Lxfd;
-
-    new-instance v0, Lxfd;
-
-    const/16 v1, 0x13
-
-    invoke-direct {v0, p1, v1}, Lxfd;-><init>(Lfgd;I)V
-
-    iput-object v0, p0, Lugg;->d:Lxfd;
-
-    new-instance v0, Lxfd;
-
-    const/16 v1, 0x14
-
-    invoke-direct {v0, p1, v1}, Lxfd;-><init>(Lfgd;I)V
-
-    iput-object v0, p0, Lugg;->e:Lxfd;
-
-    new-instance v0, Lxfd;
-
-    const/16 v1, 0x15
-
-    invoke-direct {v0, p1, v1}, Lxfd;-><init>(Lfgd;I)V
-
-    iput-object v0, p0, Lugg;->f:Lxfd;
+    iput-object p8, p0, Lugg;->h:Lbwf;
 
     return-void
 .end method

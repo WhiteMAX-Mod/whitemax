@@ -1,105 +1,80 @@
-.class public final enum Lbfa;
-.super Ljava/lang/Enum;
+.class public final Lbfa;
+.super Ldtf;
 .source "SourceFile"
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Enum<",
-        "Lbfa;",
-        ">;"
-    }
-.end annotation
+# interfaces
+.implements Lsm6;
 
 
-# static fields
-.field public static final Companion:Lafa;
+# instance fields
+.field public final synthetic X:Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;
 
-.field public static final a:Ljava/lang/Object;
-
-.field public static final synthetic b:[Lbfa;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;)V
+    .locals 0
 
-    new-instance v0, Lbfa;
+    iput-object p2, p0, Lbfa;->X:Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;
 
-    const-string v1, "ERROR"
+    const/4 p2, 0x2
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v1, Lbfa;
-
-    const-string v2, "SUCCESS"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v2, Lbfa;
-
-    const-string v3, "WARNING"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    filled-new-array {v0, v1, v2}, [Lbfa;
-
-    move-result-object v0
-
-    sput-object v0, Lbfa;->b:[Lbfa;
-
-    new-instance v0, Lafa;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lbfa;->Companion:Lafa;
-
-    new-instance v0, Len8;
-
-    const/16 v1, 0x17
-
-    invoke-direct {v0, v1}, Len8;-><init>(I)V
-
-    invoke-static {v4, v0}, Lrci;->b(ILji6;)Liu7;
-
-    move-result-object v0
-
-    sput-object v0, Lbfa;->a:Ljava/lang/Object;
+    invoke-direct {p0, p2, p1}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lbfa;
-    .locals 1
 
-    const-class v0, Lbfa;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object p0
+    invoke-virtual {p0, p1, p2}, Lbfa;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    check-cast p0, Lbfa;
+    move-result-object p1
 
-    return-object p0
+    check-cast p1, Lbfa;
+
+    sget-object p2, Lqqg;->a:Lqqg;
+
+    invoke-virtual {p1, p2}, Lbfa;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public static values()[Lbfa;
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    sget-object v0, Lbfa;->b:[Lbfa;
+    new-instance v0, Lbfa;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object v1, p0, Lbfa;->X:Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;
 
-    move-result-object v0
+    invoke-direct {v0, p2, v1}, Lbfa;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;)V
 
-    check-cast v0, [Lbfa;
+    iput-object p1, v0, Lbfa;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lbfa;->o:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/List;
+
+    iget-object v0, p0, Lbfa;->X:Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;
+
+    iget-object v0, v0, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;->G0:Lb0i;
+
+    invoke-virtual {v0, p1}, Ll98;->E(Ljava/util/List;)V
+
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

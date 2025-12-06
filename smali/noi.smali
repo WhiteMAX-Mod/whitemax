@@ -1,52 +1,120 @@
-.class public abstract Lnoi;
+.class public final Lnoi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpqa;
+
+
+# static fields
+.field public static final a:Lnoi;
+
 
 # direct methods
-.method public static final a(Li54;Ljava/lang/Object;Ljava/lang/Object;Lzi6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-static {p0, p2}, Lkotlinx/coroutines/internal/ThreadContextKt;->updateThreadContext(Li54;Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance v0, Lnoi;
 
-    move-result-object p2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    :try_start_0
-    new-instance v0, Lsxe;
+    sput-object v0, Lnoi;->a:Lnoi;
 
-    invoke-direct {v0, p0, p4}, Lsxe;-><init>(Li54;Lkotlin/coroutines/Continuation;)V
+    new-instance v0, Ltci;
 
-    if-nez p3, :cond_0
+    const/4 v1, 0x1
 
-    invoke-static {p3, p1, v0}, Lj1i;->h(Lzi6;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-direct {v0, v1}, Ltci;-><init>(I)V
+
+    const-class v1, Lhdi;
+
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x4
+
+    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x5
+
+    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x6
+
+    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x7
+
+    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/16 v2, 0x8
+
+    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
     move-result-object p1
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    const/4 p4, 0x2
-
-    invoke-static {p4, p3}, Lwag;->f(ILjava/lang/Object;)V
-
-    invoke-interface {p3, p1, v0}, Lzi6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :goto_0
-    invoke-static {p0, p2}, Lkotlinx/coroutines/internal/ThreadContextKt;->restoreThreadContext(Li54;Ljava/lang/Object;)V
-
-    return-object p1
-
-    :goto_1
-    invoke-static {p0, p2}, Lkotlinx/coroutines/internal/ThreadContextKt;->restoreThreadContext(Li54;Ljava/lang/Object;)V
 
     throw p1
 .end method

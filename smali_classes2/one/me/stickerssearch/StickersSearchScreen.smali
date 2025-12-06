@@ -28,34 +28,34 @@
 
 
 # static fields
-.field public static final synthetic s0:[Ltr7;
+.field public static final synthetic t0:[Lyy7;
 
 
 # instance fields
-.field public final X:Lh0d;
+.field public final X:Lbbd;
 
-.field public final Y:Lh0d;
+.field public final Y:Lsn0;
 
-.field public final Z:Lwn0;
+.field public final Z:Lsn0;
 
-.field public final a:Lqs;
+.field public final a:Lhs;
 
-.field public final b:Liu7;
+.field public final b:Lk18;
 
-.field public final c:Liu7;
+.field public final c:Lk18;
 
-.field public final o:Lwc8;
+.field public final d:Lqk8;
 
-.field public final q0:Lwn0;
+.field public final o:Lbbd;
 
-.field public final r0:Lqjh;
+.field public final s0:Lfb6;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 7
 
-    new-instance v0, Leec;
+    new-instance v0, Ltoc;
 
     const-class v1, Lone/me/stickerssearch/StickersSearchScreen;
 
@@ -65,29 +65,29 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Lz7d;->a:La8d;
+    sget-object v2, Lvid;->a:Lwid;
 
     const-string v3, "stickersRecycler"
 
     const-string v5, "getStickersRecycler()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;"
 
-    invoke-static {v2, v1, v3, v5, v4}, Li57;->d(La8d;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Leec;
+    invoke-static {v2, v1, v3, v5, v4}, Lho7;->d(Lwid;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Ltoc;
 
     move-result-object v2
 
-    new-instance v3, Leec;
+    new-instance v3, Ltoc;
 
     const-string v5, "searchView"
 
     const-string v6, "getSearchView()Lone/me/sdk/uikit/common/search/OneMeSearchView;"
 
-    invoke-direct {v3, v1, v5, v6, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v3, v1, v5, v6, v4}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     const/4 v1, 0x3
 
-    new-array v1, v1, [Ltr7;
+    new-array v1, v1, [Lyy7;
 
     aput-object v0, v1, v4
 
@@ -99,7 +99,7 @@
 
     aput-object v3, v1, v0
 
-    sput-object v1, Lone/me/stickerssearch/StickersSearchScreen;->s0:[Ltr7;
+    sput-object v1, Lone/me/stickerssearch/StickersSearchScreen;->t0:[Lyy7;
 
     return-void
 .end method
@@ -113,171 +113,137 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {p0, p1, v2, v0, v1}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILki4;)V
+    invoke-direct {p0, p1, v2, v0, v1}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILtk4;)V
 
-    new-instance p1, Lqs;
+    new-instance p1, Lhs;
 
     const-class v0, Ljava/lang/Long;
 
     const-string v1, "chat_id"
 
-    invoke-direct {p1, v0, v1}, Lqs;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {p1, v0, v1}, Lhs;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
-    iput-object p1, p0, Lone/me/stickerssearch/StickersSearchScreen;->a:Lqs;
+    iput-object p1, p0, Lone/me/stickerssearch/StickersSearchScreen;->a:Lhs;
 
-    new-instance p1, Lw5f;
+    new-instance p1, Lmhf;
 
     const/4 v0, 0x0
 
-    invoke-direct {p1, p0, v0}, Lw5f;-><init>(Lone/me/stickerssearch/StickersSearchScreen;I)V
+    invoke-direct {p1, p0, v0}, Lmhf;-><init>(Lone/me/stickerssearch/StickersSearchScreen;I)V
 
-    new-instance v0, Lj4c;
+    new-instance v0, Lvdc;
 
-    const/16 v1, 0x1b
+    const/16 v1, 0x1d
 
-    invoke-direct {v0, v1, p1}, Lj4c;-><init>(ILji6;)V
+    invoke-direct {v0, v1, p1}, Lvdc;-><init>(ILjava/lang/Object;)V
 
-    const-class p1, Lg6f;
+    const-class p1, Lwhf;
 
-    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lji6;)Liu7;
+    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lcm6;)Lk18;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/stickerssearch/StickersSearchScreen;->b:Liu7;
+    iput-object p1, p0, Lone/me/stickerssearch/StickersSearchScreen;->b:Lk18;
 
-    sget-object p1, Lu5f;->a:Lu5f;
+    sget-object p1, Lkhf;->a:Lkhf;
 
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v0
-
-    const-class v1, Lxc8;
-
-    invoke-virtual {v0, v1}, Lr5;->d(Ljava/lang/Class;)Lwif;
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lw5;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/stickerssearch/StickersSearchScreen;->c:Liu7;
+    const/16 v1, 0x1dc
 
-    new-instance v0, Lwc8;
+    invoke-virtual {v0, v1}, Lw5;->d(I)Lbwf;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lone/me/stickerssearch/StickersSearchScreen;->c:Lk18;
+
+    new-instance v0, Lqk8;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lone/me/stickerssearch/StickersSearchScreen;->o:Lwc8;
+    iput-object v0, p0, Lone/me/stickerssearch/StickersSearchScreen;->d:Lqk8;
 
-    sget v0, Lo4b;->a:I
+    sget v0, Lrdb;->a:I
 
-    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lh0d;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lone/me/stickerssearch/StickersSearchScreen;->X:Lh0d;
-
-    sget v0, Lo4b;->b:I
-
-    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lh0d;
+    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lbbd;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/stickerssearch/StickersSearchScreen;->Y:Lh0d;
+    iput-object v0, p0, Lone/me/stickerssearch/StickersSearchScreen;->o:Lbbd;
 
-    new-instance v0, Lw5f;
+    sget v0, Lrdb;->b:I
+
+    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lbbd;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lone/me/stickerssearch/StickersSearchScreen;->X:Lbbd;
+
+    new-instance v0, Lmhf;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, p0, v1}, Lw5f;-><init>(Lone/me/stickerssearch/StickersSearchScreen;I)V
+    invoke-direct {v0, p0, v1}, Lmhf;-><init>(Lone/me/stickerssearch/StickersSearchScreen;I)V
 
-    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->binding(Lji6;)Lwn0;
+    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->binding(Lcm6;)Lsn0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/stickerssearch/StickersSearchScreen;->Z:Lwn0;
+    iput-object v0, p0, Lone/me/stickerssearch/StickersSearchScreen;->Y:Lsn0;
 
-    new-instance v0, Lw5f;
+    new-instance v0, Lmhf;
 
     const/4 v1, 0x2
 
-    invoke-direct {v0, p0, v1}, Lw5f;-><init>(Lone/me/stickerssearch/StickersSearchScreen;I)V
+    invoke-direct {v0, p0, v1}, Lmhf;-><init>(Lone/me/stickerssearch/StickersSearchScreen;I)V
 
-    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->binding(Lji6;)Lwn0;
+    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->binding(Lcm6;)Lsn0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/stickerssearch/StickersSearchScreen;->q0:Lwn0;
+    iput-object v0, p0, Lone/me/stickerssearch/StickersSearchScreen;->Z:Lsn0;
 
-    new-instance v0, Lqjh;
+    new-instance v0, Lfb6;
 
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object p1
-
-    const-class v1, Leva;
-
-    invoke-virtual {p1, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lw5;
 
     move-result-object p1
 
-    check-cast p1, Leva;
+    const/16 v1, 0x38
 
-    invoke-virtual {p1}, Leva;->a()Ljava/util/concurrent/ExecutorService;
+    invoke-virtual {p1, v1}, Lw5;->c(I)Ljava/lang/Object;
 
     move-result-object p1
 
-    new-instance v1, Ls9d;
+    check-cast p1, Lg4b;
 
-    const/16 v2, 0x1c
+    invoke-virtual {p1}, Lg4b;->a()Ljava/util/concurrent/ExecutorService;
 
-    invoke-direct {v1, v2, p0}, Ls9d;-><init>(ILjava/lang/Object;)V
+    move-result-object p1
 
-    invoke-direct {v0, p1, v1}, Lqjh;-><init>(Ljava/util/concurrent/Executor;Lg3f;)V
+    new-instance v1, Lkme;
 
-    iput-object v0, p0, Lone/me/stickerssearch/StickersSearchScreen;->r0:Lqjh;
+    const/4 v2, 0x3
+
+    invoke-direct {v1, v2, p0}, Lkme;-><init>(ILjava/lang/Object;)V
+
+    invoke-direct {v0, p1, v1}, Lfb6;-><init>(Ljava/util/concurrent/Executor;Lcff;)V
+
+    iput-object v0, p0, Lone/me/stickerssearch/StickersSearchScreen;->s0:Lfb6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final C0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-    .locals 2
-
-    sget-object v0, Lone/me/stickerssearch/StickersSearchScreen;->s0:[Ltr7;
-
-    const/4 v1, 0x1
-
-    aget-object v0, v0, v1
-
-    iget-object v1, p0, Lone/me/stickerssearch/StickersSearchScreen;->X:Lh0d;
-
-    invoke-interface {v1, p0, v0}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    return-object v0
-.end method
-
-.method public final D0()Lg6f;
+.method public final getInsetsConfig()Leo7;
     .locals 1
 
-    iget-object v0, p0, Lone/me/stickerssearch/StickersSearchScreen;->b:Liu7;
+    sget-object v0, Leo7;->e:Leo7;
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lg6f;
-
-    return-object v0
-.end method
-
-.method public final getInsetsConfig()Lgi7;
-    .locals 1
-
-    sget-object v0, Lgi7;->e:Lgi7;
-
-    sget-object v0, Lgi7;->f:Lgi7;
+    sget-object v0, Leo7;->f:Leo7;
 
     return-object v0
 .end method
@@ -285,17 +251,17 @@
 .method public final onActivityPaused(Landroid/app/Activity;)V
     .locals 1
 
-    iget-object p1, p0, Lone/me/stickerssearch/StickersSearchScreen;->c:Liu7;
+    iget-object p1, p0, Lone/me/stickerssearch/StickersSearchScreen;->c:Lk18;
 
-    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lxc8;
+    check-cast p1, Lrk8;
 
-    iget-object v0, p0, Lone/me/stickerssearch/StickersSearchScreen;->o:Lwc8;
+    iget-object v0, p0, Lone/me/stickerssearch/StickersSearchScreen;->d:Lqk8;
 
-    invoke-virtual {p1, v0}, Lxc8;->a(Lwc8;)V
+    invoke-virtual {p1, v0}, Lrk8;->a(Lqk8;)V
 
     return-void
 .end method
@@ -303,65 +269,65 @@
 .method public final onActivityResumed(Landroid/app/Activity;)V
     .locals 1
 
-    iget-object p1, p0, Lone/me/stickerssearch/StickersSearchScreen;->c:Liu7;
+    iget-object p1, p0, Lone/me/stickerssearch/StickersSearchScreen;->c:Lk18;
 
-    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lxc8;
+    check-cast p1, Lrk8;
 
-    iget-object v0, p0, Lone/me/stickerssearch/StickersSearchScreen;->o:Lwc8;
+    iget-object v0, p0, Lone/me/stickerssearch/StickersSearchScreen;->d:Lqk8;
 
-    invoke-virtual {p1, v0}, Lxc8;->b(Lwc8;)V
+    invoke-virtual {p1, v0}, Lrk8;->b(Lqk8;)V
 
     return-void
 .end method
 
-.method public final onChangeStarted(Lq24;Lr24;)V
+.method public final onChangeStarted(Lh54;Li54;)V
     .locals 2
 
-    invoke-super {p0, p1, p2}, Lone/me/sdk/arch/Widget;->onChangeStarted(Lq24;Lr24;)V
+    invoke-super {p0, p1, p2}, Lone/me/sdk/arch/Widget;->onChangeStarted(Lh54;Li54;)V
 
-    sget-object p1, Lr24;->X:Lr24;
+    sget-object p1, Li54;->o:Li54;
 
-    iget-object v0, p0, Lone/me/stickerssearch/StickersSearchScreen;->c:Liu7;
+    iget-object v0, p0, Lone/me/stickerssearch/StickersSearchScreen;->c:Lk18;
 
-    iget-object v1, p0, Lone/me/stickerssearch/StickersSearchScreen;->o:Lwc8;
+    iget-object v1, p0, Lone/me/stickerssearch/StickersSearchScreen;->d:Lqk8;
 
     if-eq p2, p1, :cond_2
 
-    sget-object p1, Lr24;->c:Lr24;
+    sget-object p1, Li54;->c:Li54;
 
     if-ne p2, p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    sget-object p1, Lr24;->o:Lr24;
+    sget-object p1, Li54;->d:Li54;
 
     if-ne p2, p1, :cond_1
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lxc8;
+    check-cast p1, Lrk8;
 
-    invoke-virtual {p1, v1}, Lxc8;->a(Lwc8;)V
+    invoke-virtual {p1, v1}, Lrk8;->a(Lqk8;)V
 
     :cond_1
     return-void
 
     :cond_2
     :goto_0
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lxc8;
+    check-cast p1, Lrk8;
 
-    invoke-virtual {p1, v1}, Lxc8;->b(Lwc8;)V
+    invoke-virtual {p1, v1}, Lrk8;->b(Lqk8;)V
 
     return-void
 .end method
@@ -377,7 +343,7 @@
 
     invoke-direct {p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    new-instance p2, Lst8;
+    new-instance p2, Lc19;
 
     const/4 p3, 0x3
 
@@ -385,19 +351,19 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {p2, p3, v1, v0}, Lst8;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {p2, p3, v1, v0}, Lc19;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-static {p2, p1}, Lqdi;->d(Lbj6;Landroid/view/View;)V
+    invoke-static {p2, p1}, Ltqi;->c(Lum6;Landroid/view/View;)V
 
-    new-instance p2, Lf2b;
+    new-instance p2, Lfbb;
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p3
 
-    invoke-direct {p2, p3}, Lf2b;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p3}, Lfbb;-><init>(Landroid/content/Context;)V
 
-    sget p3, Lo4b;->b:I
+    sget p3, Lrdb;->b:I
 
     invoke-virtual {p2, p3}, Landroid/view/View;->setId(I)V
 
@@ -413,7 +379,7 @@
 
     int-to-float v0, v0
 
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -425,7 +391,7 @@
 
     mul-float/2addr v3, v0
 
-    invoke-static {v3}, Lfhi;->b(F)I
+    invoke-static {v3}, Lkti;->d(F)I
 
     move-result v3
 
@@ -437,23 +403,23 @@
 
     move-result-object p3
 
-    sget v3, Lp4b;->a:I
+    sget v3, Lsdb;->a:I
 
     invoke-virtual {p3, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object p3
 
-    invoke-virtual {p2, p3}, Lf2b;->setSearchHint(Ljava/lang/String;)V
+    invoke-virtual {p2, p3}, Lfbb;->setSearchHint(Ljava/lang/String;)V
 
     const/4 p3, 0x1
 
-    invoke-virtual {p2, p3}, Lf2b;->c(Z)V
+    invoke-virtual {p2, p3}, Lfbb;->c(Z)V
 
-    new-instance p3, Lx5f;
+    new-instance p3, Lnhf;
 
-    invoke-direct {p3, p0}, Lx5f;-><init>(Lone/me/stickerssearch/StickersSearchScreen;)V
+    invoke-direct {p3, p0}, Lnhf;-><init>(Lone/me/stickerssearch/StickersSearchScreen;)V
 
-    invoke-virtual {p2, p3}, Lf2b;->setListener(Lc2b;)V
+    invoke-virtual {p2, p3}, Lfbb;->setListener(Lcbb;)V
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -467,7 +433,7 @@
 
     invoke-direct {p2, p3, v1, v3}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    sget p3, Lo4b;->a:I
+    sget p3, Lrdb;->a:I
 
     invoke-virtual {p2, p3}, Landroid/view/View;->setId(I)V
 
@@ -483,7 +449,7 @@
 
     invoke-virtual {p2, p3}, Landroid/view/ViewGroup;->setClipChildren(Z)V
 
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
 
     move-result-object p3
 
@@ -495,7 +461,7 @@
 
     mul-float/2addr v0, p3
 
-    invoke-static {v0}, Lfhi;->b(F)I
+    invoke-static {v0}, Lkti;->d(F)I
 
     move-result p3
 
@@ -517,19 +483,19 @@
 .method public final onDestroyView(Landroid/view/View;)V
     .locals 1
 
-    iget-object p1, p0, Lone/me/stickerssearch/StickersSearchScreen;->o:Lwc8;
+    iget-object p1, p0, Lone/me/stickerssearch/StickersSearchScreen;->d:Lqk8;
 
-    invoke-virtual {p1}, Lwc8;->b()V
+    invoke-virtual {p1}, Lqk8;->b()V
 
-    invoke-virtual {p0}, Lone/me/stickerssearch/StickersSearchScreen;->C0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-virtual {p0}, Lone/me/stickerssearch/StickersSearchScreen;->y0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
     move-result-object p1
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->setAdapter(Lt6d;)V
+    invoke-virtual {p1, v0}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->setAdapter(Lphd;)V
 
-    invoke-virtual {p1, v0}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setPager(Ltc5;)V
+    invoke-virtual {p1, v0}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setPager(Lsf5;)V
 
     return-void
 .end method
@@ -537,37 +503,37 @@
 .method public final onViewCreated(Landroid/view/View;)V
     .locals 10
 
-    invoke-virtual {p0}, Lone/me/stickerssearch/StickersSearchScreen;->C0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-virtual {p0}, Lone/me/stickerssearch/StickersSearchScreen;->y0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
     move-result-object v0
 
-    sget-object v1, Lone/me/stickerssearch/StickersSearchScreen;->s0:[Ltr7;
+    sget-object v1, Lone/me/stickerssearch/StickersSearchScreen;->t0:[Lyy7;
 
     const/4 v3, 0x2
 
     aget-object v1, v1, v3
 
-    iget-object v3, p0, Lone/me/stickerssearch/StickersSearchScreen;->Y:Lh0d;
+    iget-object v3, p0, Lone/me/stickerssearch/StickersSearchScreen;->X:Lbbd;
 
-    invoke-interface {v3, p0, v1}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
+    invoke-interface {v3, p0, v1}, Lbbd;->D(Ljava/lang/Object;Lyy7;)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lf2b;
+    check-cast v1, Lfbb;
 
-    new-instance v3, Lzq3;
+    new-instance v3, Lnt3;
 
     const/16 v4, 0x8
 
-    invoke-direct {v3, v1, v0, p0, v4}, Lzq3;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct {v3, v1, v0, p0, v4}, Lnt3;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    invoke-static {v1, v3}, Lh7b;->a(Landroid/view/View;Ljava/lang/Runnable;)Lh7b;
+    invoke-static {v1, v3}, Lmgb;->a(Landroid/view/View;Ljava/lang/Runnable;)Lmgb;
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v1}, Lq1j;->c(Landroid/content/Context;)I
+    invoke-static {v1}, Lgt;->b(Landroid/content/Context;)I
 
     move-result v1
 
@@ -581,15 +547,15 @@
 
     const/4 v3, 0x0
 
-    invoke-virtual {v0, v3}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Ly6d;)V
+    invoke-virtual {v0, v3}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Luhd;)V
 
-    new-instance v3, Lg85;
+    new-instance v3, Lfb5;
 
     const/4 v4, 0x4
 
     int-to-float v4, v4
 
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
 
     move-result-object v5
 
@@ -601,63 +567,63 @@
 
     mul-float/2addr v4, v5
 
-    invoke-static {v4}, Lfhi;->b(F)I
+    invoke-static {v4}, Lkti;->d(F)I
 
     move-result v4
 
     const/4 v5, 0x6
 
-    invoke-direct {v3, v1, v4, v5}, Lg85;-><init>(III)V
+    invoke-direct {v3, v1, v4, v5}, Lfb5;-><init>(III)V
 
-    invoke-virtual {v0, v3}, Landroidx/recyclerview/widget/RecyclerView;->j(Lz6d;)V
+    invoke-virtual {v0, v3}, Landroidx/recyclerview/widget/RecyclerView;->j(Lvhd;)V
 
-    new-instance v1, Lxs7;
+    new-instance v1, La08;
 
     const/4 v3, 0x4
 
-    invoke-direct {v1, v3, p0}, Lxs7;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v3, p0}, La08;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->k(Lc7d;)V
+    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->k(Lyhd;)V
 
-    new-instance v1, Lx91;
+    new-instance v1, Lma1;
 
     const/16 v3, 0x8
 
-    invoke-direct {v1, p0, v3}, Lx91;-><init>(Lone/me/sdk/arch/Widget;I)V
+    invoke-direct {v1, p0, v3}, Lma1;-><init>(Lone/me/sdk/arch/Widget;I)V
 
-    invoke-virtual {v0, v1}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setPager(Ltc5;)V
+    invoke-virtual {v0, v1}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setPager(Lsf5;)V
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setIgnoreRefreshingFlagsForScrollEvent(Z)V
 
-    iget-object v1, p0, Lone/me/stickerssearch/StickersSearchScreen;->r0:Lqjh;
+    iget-object v1, p0, Lone/me/stickerssearch/StickersSearchScreen;->s0:Lfb6;
 
-    invoke-virtual {v0, v1}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->setAdapter(Lt6d;)V
+    invoke-virtual {v0, v1}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->setAdapter(Lphd;)V
 
-    invoke-virtual {p0}, Lone/me/stickerssearch/StickersSearchScreen;->D0()Lg6f;
+    invoke-virtual {p0}, Lone/me/stickerssearch/StickersSearchScreen;->z0()Lwhf;
 
     move-result-object v0
 
-    iget-object v0, v0, Lg6f;->q0:Ln0d;
+    iget-object v0, v0, Lwhf;->Y:Lhbd;
 
-    iget-object v1, p0, Ll24;->lifecycleOwner:Lfx7;
+    iget-object v1, p0, Lc54;->lifecycleOwner:Lj48;
 
-    invoke-interface {v1}, Lfx7;->x()Lhx7;
+    invoke-interface {v1}, Lj48;->p()Ll48;
 
     move-result-object v1
 
-    sget-object v8, Lhw7;->o:Lhw7;
+    sget-object v8, Ll38;->d:Ll38;
 
-    invoke-static {v0, v1, v8}, Lc8;->c(Lty5;Lhx7;Lhw7;)Lfu1;
+    invoke-static {v0, v1, v8}, Law0;->a(Lx26;Ll48;Ll38;)Lsu1;
 
     move-result-object v9
 
-    new-instance v0, Loqb;
+    new-instance v0, Lbzb;
 
     const/4 v6, 0x4
 
-    const/16 v7, 0xf
+    const/16 v7, 0x10
 
     const/4 v1, 0x2
 
@@ -669,39 +635,39 @@
 
     move-object v2, p0
 
-    invoke-direct/range {v0 .. v7}, Loqb;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    invoke-direct/range {v0 .. v7}, Lbzb;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    new-instance v1, Lb16;
+    new-instance v1, Lg56;
 
     const/4 v3, 0x1
 
-    invoke-direct {v1, v9, v0, v3}, Lb16;-><init>(Lty5;Lzi6;I)V
+    invoke-direct {v1, v9, v0, v3}, Lg56;-><init>(Lx26;Lsm6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Lrw7;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Ltq;->v(Lty5;Lq54;)Lcye;
-
-    invoke-virtual {p0}, Lone/me/stickerssearch/StickersSearchScreen;->D0()Lg6f;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Lv38;
 
     move-result-object v0
 
-    iget-object v0, v0, Lg6f;->r0:Lxe5;
+    invoke-static {v1, v0}, Lgw0;->w(Lx26;Lf84;)Lx9f;
 
-    iget-object v1, p0, Ll24;->lifecycleOwner:Lfx7;
+    invoke-virtual {p0}, Lone/me/stickerssearch/StickersSearchScreen;->z0()Lwhf;
 
-    invoke-interface {v1}, Lfx7;->x()Lhx7;
+    move-result-object v0
+
+    iget-object v0, v0, Lwhf;->Z:Lci5;
+
+    iget-object v1, p0, Lc54;->lifecycleOwner:Lj48;
+
+    invoke-interface {v1}, Lj48;->p()Ll48;
 
     move-result-object v1
 
-    invoke-static {v0, v1, v8}, Lc8;->c(Lty5;Lhx7;Lhw7;)Lfu1;
+    invoke-static {v0, v1, v8}, Law0;->a(Lx26;Ll48;Ll38;)Lsu1;
 
     move-result-object v8
 
-    new-instance v0, Loqb;
+    new-instance v0, Lbzb;
 
-    const/16 v7, 0x10
+    const/16 v7, 0x11
 
     const/4 v1, 0x2
 
@@ -711,19 +677,53 @@
 
     const-string v5, "handleNavEvents(Lone/me/sdk/arch/event/NavigationEvent;)V"
 
-    invoke-direct/range {v0 .. v7}, Loqb;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    invoke-direct/range {v0 .. v7}, Lbzb;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    new-instance v1, Lb16;
+    new-instance v1, Lg56;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, v8, v0, v2}, Lb16;-><init>(Lty5;Lzi6;I)V
+    invoke-direct {v1, v8, v0, v2}, Lg56;-><init>(Lx26;Lsm6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Lrw7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Lv38;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Ltq;->v(Lty5;Lq54;)Lcye;
+    invoke-static {v1, v0}, Lgw0;->w(Lx26;Lf84;)Lx9f;
 
     return-void
+.end method
+
+.method public final y0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    .locals 2
+
+    sget-object v0, Lone/me/stickerssearch/StickersSearchScreen;->t0:[Lyy7;
+
+    const/4 v1, 0x1
+
+    aget-object v0, v0, v1
+
+    iget-object v1, p0, Lone/me/stickerssearch/StickersSearchScreen;->o:Lbbd;
+
+    invoke-interface {v1, p0, v0}, Lbbd;->D(Ljava/lang/Object;Lyy7;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    return-object v0
+.end method
+
+.method public final z0()Lwhf;
+    .locals 1
+
+    iget-object v0, p0, Lone/me/stickerssearch/StickersSearchScreen;->b:Lk18;
+
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lwhf;
+
+    return-object v0
 .end method

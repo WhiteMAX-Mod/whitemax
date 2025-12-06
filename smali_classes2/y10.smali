@@ -4,104 +4,122 @@
 
 
 # instance fields
-.field public a:J
+.field public final a:Ljava/lang/String;
 
-.field public b:I
+.field public final b:Z
 
-.field public c:I
 
-.field public d:Ljava/lang/String;
+# direct methods
+.method public constructor <init>(Ljava/lang/String;Z)V
+    .locals 0
 
-.field public e:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public f:Ljava/lang/String;
+    iput-object p1, p0, Ly10;->a:Ljava/lang/String;
 
-.field public g:Ljava/lang/String;
+    iput-boolean p2, p0, Ly10;->b:Z
 
-.field public h:Ljava/lang/String;
-
-.field public i:Ljava/util/List;
-
-.field public j:I
-
-.field public k:J
-
-.field public l:Ljava/lang/String;
-
-.field public m:Z
-
-.field public n:I
-
-.field public o:Ljava/lang/String;
+    return-void
+.end method
 
 
 # virtual methods
-.method public a()Lz10;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v0, p0, Ly10;->i:Ljava/util/List;
+    const/4 v0, 0x1
 
-    if-nez v0, :cond_0
+    if-ne p0, p1, :cond_0
 
-    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    iput-object v0, p0, Ly10;->i:Ljava/util/List;
+    return v0
 
     :cond_0
-    iget v0, p0, Ly10;->j:I
+    instance-of v1, p1, Ly10;
 
-    const/4 v1, 0x1
+    const/4 v2, 0x0
 
-    if-nez v0, :cond_1
+    if-nez v1, :cond_1
 
-    iput v1, p0, Ly10;->j:I
+    return v2
 
     :cond_1
-    iget v0, p0, Ly10;->n:I
+    check-cast p1, Ly10;
 
-    if-nez v0, :cond_2
+    iget-object v1, p0, Ly10;->a:Ljava/lang/String;
 
-    iput v1, p0, Ly10;->n:I
+    iget-object v3, p1, Ly10;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
 
     :cond_2
-    new-instance v0, Lz10;
+    iget-boolean v1, p0, Ly10;->b:Z
 
-    invoke-direct {v0, p0}, Lz10;-><init>(Ly10;)V
+    iget-boolean p1, p1, Ly10;->b:Z
 
-    return-object v0
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public b()Lo2f;
+.method public final hashCode()I
     .locals 2
 
-    iget-object v0, p0, Ly10;->i:Ljava/util/List;
+    iget-object v0, p0, Ly10;->a:Ljava/lang/String;
 
-    if-nez v0, :cond_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    move-result v0
 
-    iput-object v0, p0, Ly10;->i:Ljava/util/List;
+    mul-int/lit8 v0, v0, 0x1f
 
-    :cond_0
-    iget v0, p0, Ly10;->j:I
+    iget-boolean v1, p0, Ly10;->b:Z
 
-    const/4 v1, 0x1
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    if-nez v0, :cond_1
+    move-result v1
 
-    iput v1, p0, Ly10;->j:I
+    add-int/2addr v1, v0
 
-    :cond_1
-    iget v0, p0, Ly10;->n:I
+    return v1
+.end method
 
-    if-nez v0, :cond_2
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iput v1, p0, Ly10;->n:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    :cond_2
-    new-instance v0, Lo2f;
+    const-string v1, "PreviewCacheKey(attachId="
 
-    invoke-direct {v0, p0}, Lo2f;-><init>(Ly10;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ly10;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", blurred="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Ly10;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

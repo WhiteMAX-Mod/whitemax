@@ -1,92 +1,51 @@
-.class public final synthetic Lwo5;
+.class public abstract Lwo5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lsr3;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lap5;
-
-.field public final synthetic c:Ljava/util/List;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lap5;Ljava/util/List;I)V
-    .locals 0
+.method public static a([B)Lxo5;
+    .locals 10
 
-    iput p3, p0, Lwo5;->a:I
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;
 
-    iput-object p1, p0, Lwo5;->b:Lap5;
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;-><init>()V
 
-    iput-object p2, p0, Lwo5;->c:Ljava/util/List;
+    :try_start_0
+    invoke-static {v0, p0}, Lfl9;->mergeFrom(Lfl9;[B)Lfl9;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object p0
 
-    return-void
-.end method
+    check-cast p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;
+    :try_end_0
+    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
 
+    new-instance v0, Lxo5;
 
-# virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 5
+    iget-wide v1, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->requestId:J
 
-    iget v0, p0, Lwo5;->a:I
+    iget-object v3, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->externalUrl:Ljava/lang/String;
 
-    const-string v1, "ap5"
+    iget-object v4, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->attachLocalId:Ljava/lang/String;
 
-    iget-object v2, p0, Lwo5;->c:Ljava/util/List;
+    iget-wide v5, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->messageId:J
 
-    iget-object v3, p0, Lwo5;->b:Lap5;
+    iget-wide v7, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->chatId:J
 
-    check-cast p1, Ljava/lang/Throwable;
+    iget-object v9, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->stickerId:Ljava/lang/String;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct/range {v0 .. v9}, Lxo5;-><init>(JLjava/lang/String;Ljava/lang/String;JJLjava/lang/String;)V
 
-    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+    return-object v0
 
-    const-string v4, "onListUpdated: failed to store stickers %s"
+    :catch_0
+    move-exception v0
 
-    filled-new-array {v2}, [Ljava/lang/Object;
+    move-object p0, v0
 
-    move-result-object v2
+    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
 
-    invoke-static {v0, v4, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
 
-    move-result-object v0
-
-    invoke-static {v1, v0, p1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-virtual {v3}, Lap5;->I()V
-
-    return-void
-
-    :pswitch_0
-    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
-
-    const-string v4, "onNotifRemoved: failed to remove stickers %s from cache"
-
-    filled-new-array {v2}, [Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-static {v0, v4, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0, p1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-virtual {v3}, Lap5;->I()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    throw v0
 .end method

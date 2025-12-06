@@ -1,43 +1,37 @@
 .class public final Le0e;
-.super Landroidx/recyclerview/widget/RecyclerView;
+.super Li3;
 .source "SourceFile"
 
 
 # virtual methods
-.method public final onMeasure(II)V
-    .locals 3
+.method public final a0(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
 
-    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
+    check-cast p2, Ljava/lang/Boolean;
 
-    move-result v0
-
-    const/16 v1, 0x96
-
-    int-to-float v1, v1
-
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    invoke-static {v1, v2, v0}, Lu15;->q(FFI)I
-
-    move-result v0
-
-    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p2
 
-    invoke-static {v0, p2}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+    check-cast p1, Ljava/lang/Boolean;
 
-    move-result p2
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->onMeasure(II)V
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v0, "sendWithNotification = "
+
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, "ScheduledSendPickerViewModel"
+
+    invoke-static {p2, p1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

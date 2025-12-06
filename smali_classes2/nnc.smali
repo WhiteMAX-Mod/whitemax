@@ -1,82 +1,112 @@
-.class public abstract Lnnc;
-.super Ljava/lang/Object;
+.class public final Lnnc;
+.super Ldtf;
+.source "SourceFile"
+
+# interfaces
+.implements Lsm6;
 
 
-# static fields
-.field public static chat__audio_record:I = 0x7f0a023b
+# instance fields
+.field public final synthetic X:Lpnc;
 
-.field public static chat__background:I = 0x7f0a023c
+.field public o:I
 
-.field public static chat__bottom_container:I = 0x7f0a023d
 
-.field public static chat__bottom_container_chat_status_button:I = 0x7f0a023e
+# direct methods
+.method public constructor <init>(Lpnc;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static chat__bottom_container_search:I = 0x7f0a023f
+    iput-object p1, p0, Lnnc;->X:Lpnc;
 
-.field public static chat__bottom_container_search_down_button:I = 0x7f0a0240
+    const/4 p1, 0x2
 
-.field public static chat__bottom_container_search_separator:I = 0x7f0a0241
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static chat__bottom_container_search_up_button:I = 0x7f0a0242
+    return-void
+.end method
 
-.field public static chat__main_container:I = 0x7f0a0243
 
-.field public static chat__media_bar_container:I = 0x7f0a0244
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static chat__media_keyboard:I = 0x7f0a0245
+    check-cast p1, Lf84;
 
-.field public static chat__messages_container:I = 0x7f0a0246
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static chat__pinbars_container:I = 0x7f0a0247
+    invoke-virtual {p0, p1, p2}, Lnnc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static chat__root_container:I = 0x7f0a0248
+    move-result-object p1
 
-.field public static chat__search_view:I = 0x7f0a0249
+    check-cast p1, Lnnc;
 
-.field public static chat__suggestion_container:I = 0x7f0a024a
+    sget-object p2, Lqqg;->a:Lqqg;
 
-.field public static chat__toolbar:I = 0x7f0a024b
+    invoke-virtual {p1, p2}, Lnnc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static chat__video_msg_container:I = 0x7f0a024c
+    move-result-object p1
 
-.field public static chat_screen__action_cancel:I = 0x7f0a026d
+    return-object p1
+.end method
 
-.field public static chat_screen__leave_chat_confirm:I = 0x7f0a026e
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-.field public static chat_screen__remove_chat_confirm:I = 0x7f0a026f
+    new-instance p1, Lnnc;
 
-.field public static chat_screen__video_msg_placeholder:I = 0x7f0a0270
+    iget-object v0, p0, Lnnc;->X:Lpnc;
 
-.field public static chat_screen__video_msg_preview:I = 0x7f0a0271
+    invoke-direct {p1, v0, p2}, Lnnc;-><init>(Lpnc;Lkotlin/coroutines/Continuation;)V
 
-.field public static chat_screen__video_msg_progress:I = 0x7f0a0272
+    return-object p1
+.end method
 
-.field public static chat_screen__video_msg_root_container:I = 0x7f0a0273
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-.field public static chat_screen__video_msg_switch_camera_btn:I = 0x7f0a0274
+    iget v0, p0, Lnnc;->o:I
 
-.field public static chat_screen__video_msg_timer:I = 0x7f0a0275
+    const/4 v1, 0x1
 
-.field public static chat_screen__video_msg_torch_btn:I = 0x7f0a0276
+    if-eqz v0, :cond_1
 
-.field public static chat_screen__video_msg_video_view:I = 0x7f0a0277
+    if-ne v0, v1, :cond_0
 
-.field public static media_bar__album_chooser:I = 0x7f0a0492
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-.field public static media_bar__bottom_container:I = 0x7f0a0493
+    goto :goto_0
 
-.field public static media_bar__draggable_container:I = 0x7f0a0494
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-.field public static media_bar__emoji_keyboard_container:I = 0x7f0a0495
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-.field public static media_bar__media_type_picker_button:I = 0x7f0a0496
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-.field public static media_bar__message_container:I = 0x7f0a0497
+    throw p1
 
-.field public static media_bar__partial_media_access_container:I = 0x7f0a0498
+    :cond_1
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-.field public static media_bar__popup_layout:I = 0x7f0a0499
+    iget-object p1, p0, Lnnc;->X:Lpnc;
 
-.field public static media_bar__primary_container:I = 0x7f0a049a
+    iget-object p1, p1, Lpnc;->T0:Lyac;
 
-.field public static media_bar__select_album_container:I = 0x7f0a049b
+    iput v1, p0, Lnnc;->o:I
+
+    invoke-virtual {p1, p0}, Lyac;->B(Lnnc;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lg84;->a:Lg84;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
+.end method

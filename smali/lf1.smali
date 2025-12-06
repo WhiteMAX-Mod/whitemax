@@ -1,36 +1,22 @@
 .class public final Llf1;
-.super Lqf1;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lnf1;
 
 
 # instance fields
-.field public final b:Ljava/util/List;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Llu6;)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
-    if-eqz p1, :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object p1, p1, Llu6;->a:Ljava/util/List;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    if-nez p1, :cond_1
-
-    sget-object p1, Lka5;->a:Lka5;
-
-    :cond_1
-    sget-object v0, Lvzg;->c:Lvzg;
-
-    invoke-direct {p0, v0}, Lqf1;-><init>(Lvzg;)V
-
-    iput-object p1, p0, Llf1;->b:Ljava/util/List;
+    iput-object p1, p0, Llf1;->a:Ljava/lang/String;
 
     return-void
 .end method
@@ -58,11 +44,11 @@
     :cond_1
     check-cast p1, Llf1;
 
-    iget-object v1, p0, Llf1;->b:Ljava/util/List;
+    iget-object v1, p0, Llf1;->a:Ljava/lang/String;
 
-    iget-object p1, p1, Llf1;->b:Ljava/util/List;
+    iget-object p1, p1, Llf1;->a:Ljava/lang/String;
 
-    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -74,101 +60,28 @@
     return v0
 .end method
 
-.method public final getItemId()J
-    .locals 2
-
-    const-wide/16 v0, 0xde
-
-    return-wide v0
-.end method
-
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Llf1;->b:Ljava/util/List;
+    iget-object v0, p0, Llf1;->a:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
     return v0
 .end method
 
-.method public final k(Ly18;)Ljava/lang/Object;
+.method public final toString()Ljava/lang/String;
     .locals 3
 
-    instance-of v0, p1, Llf1;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Llf1;
-
-    goto :goto_0
-
-    :cond_0
-    move-object p1, v1
-
-    :goto_0
-    if-nez p1, :cond_1
-
-    return-object v1
-
-    :cond_1
-    new-instance v0, Lkf1;
-
-    const/16 v1, 0x9
-
-    invoke-direct {v0, v1}, Lrdi;-><init>(I)V
-
-    iget-object v1, p0, Llf1;->b:Ljava/util/List;
-
-    iget-object p1, p1, Llf1;->b:Ljava/util/List;
-
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    xor-int/lit8 p1, p1, 0x1
-
-    iget-object v1, v0, Lrdi;->b:Ljava/lang/Object;
-
-    check-cast v1, Ljava/util/BitSet;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2, p1}, Ljava/util/BitSet;->set(IZ)V
-
-    return-object v0
-.end method
-
-.method public final m()I
-    .locals 1
-
-    const/16 v0, 0xde
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Grid(opponentsPages="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Llf1;->b:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v0, "Create(link="
 
     const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v2, p0, Llf1;->a:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Lho7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -13,7 +13,7 @@
         "",
         "Lru/ok/tracer/nativebridge/NativeBridge;",
         "bridge",
-        "Lccg;",
+        "Lqqg;",
         "nativeInstallBridge",
         "(Lru/ok/tracer/nativebridge/NativeBridge;)V",
         "tracer-native-bindings_release"
@@ -42,7 +42,7 @@
 .method public static a()V
     .locals 1
 
-    sget-object v0, Ltt9;->o:Ltt9;
+    sget-object v0, Lrha;->y0:Lrha;
 
     invoke-static {v0}, Lru/ok/tracer/nativebridge/NativeBridgeInstaller;->nativeInstallBridge(Lru/ok/tracer/nativebridge/NativeBridge;)V
 

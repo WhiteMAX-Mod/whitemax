@@ -1,99 +1,156 @@
-.class public final Lc4b;
-.super Lrdi;
+.class public final synthetic Lc4b;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lcm6;
 
 
 # instance fields
-.field public final synthetic c:I
+.field public final synthetic a:I
 
-.field public final synthetic o:Ld4b;
+.field public final synthetic b:Lg4b;
+
+.field public final synthetic c:Ljj5;
 
 
 # direct methods
-.method public constructor <init>(Ld4b;I)V
+.method public synthetic constructor <init>(Lg4b;Ljj5;I)V
     .locals 0
 
-    iput p2, p0, Lc4b;->c:I
+    iput p3, p0, Lc4b;->a:I
 
-    iput-object p1, p0, Lc4b;->o:Ld4b;
+    iput-object p1, p0, Lc4b;->b:Lg4b;
 
-    const/16 p1, 0xc
+    iput-object p2, p0, Lc4b;->c:Ljj5;
 
-    packed-switch p2, :pswitch_data_0
-
-    sget-object p2, Lr3b;->a:Lr3b;
-
-    invoke-direct {p0, p1, p2}, Lrdi;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-
-    :pswitch_0
-    sget-object p2, Ly3b;->a:Ly3b;
-
-    invoke-direct {p0, p1, p2}, Lrdi;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final b0(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 8
 
-    iget v0, p0, Lc4b;->c:I
+    iget v0, p0, Lc4b;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    check-cast p2, La4b;
+    iget-object v0, p0, Lc4b;->b:Lg4b;
 
-    check-cast p1, La4b;
+    invoke-virtual {v0}, Lg4b;->d()Ljava/util/concurrent/ExecutorService;
 
-    invoke-static {p1, p2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object v1
 
-    move-result p1
+    iget-object v2, p0, Lc4b;->c:Ljj5;
 
-    if-nez p1, :cond_0
+    iget-object v2, v2, Ljj5;->a:Ljava/lang/String;
 
-    iget-object p1, p0, Lc4b;->o:Ld4b;
+    invoke-virtual {v0, v1, v2}, Lg4b;->h(Ljava/util/concurrent/ExecutorService;Ljava/lang/String;)Ljava/util/concurrent/ScheduledExecutorService;
 
-    invoke-static {p1, p2}, Ld4b;->w(Ld4b;La4b;)V
+    move-result-object v0
 
-    invoke-virtual {p1}, Ld4b;->x()V
-
-    :cond_0
-    return-void
+    return-object v0
 
     :pswitch_0
-    check-cast p2, Lu3b;
+    iget-object v0, p0, Lc4b;->b:Lg4b;
 
-    check-cast p1, Lu3b;
+    invoke-virtual {v0}, Lg4b;->a()Ljava/util/concurrent/ExecutorService;
 
-    invoke-static {p1, p2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object v1
 
-    move-result p1
+    iget-object v2, p0, Lc4b;->c:Ljj5;
 
-    if-nez p1, :cond_1
+    iget-object v2, v2, Ljj5;->a:Ljava/lang/String;
 
-    iget-object p1, p0, Lc4b;->o:Ld4b;
+    invoke-virtual {v0, v1, v2}, Lg4b;->h(Ljava/util/concurrent/ExecutorService;Ljava/lang/String;)Ljava/util/concurrent/ScheduledExecutorService;
 
-    invoke-static {p1, p2}, Ld4b;->v(Ld4b;Lu3b;)V
+    move-result-object v0
 
-    invoke-virtual {p1}, Ld4b;->x()V
+    return-object v0
 
-    :cond_1
-    return-void
+    :pswitch_1
+    iget-object v0, p0, Lc4b;->b:Lg4b;
+
+    invoke-virtual {v0}, Lg4b;->c()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lc4b;->c:Ljj5;
+
+    iget-object v2, v2, Ljj5;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Lg4b;->h(Ljava/util/concurrent/ExecutorService;Ljava/lang/String;)Ljava/util/concurrent/ScheduledExecutorService;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_2
+    iget-object v0, p0, Lc4b;->b:Lg4b;
+
+    invoke-virtual {v0}, Lg4b;->b()Lb4b;
+
+    move-result-object v1
+
+    const/16 v2, 0x1fe
+
+    iget-object v3, p0, Lc4b;->c:Ljj5;
+
+    invoke-static {v3, v2}, Ljj5;->a(Ljj5;I)Ljj5;
+
+    move-result-object v2
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v3, Lsz5;
+
+    iget v4, v2, Ljj5;->b:I
+
+    iget-object v1, v1, Lb4b;->a:Lgge;
+
+    iget-object v5, v2, Ljj5;->a:Ljava/lang/String;
+
+    iget v6, v2, Ljj5;->g:I
+
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    iget-boolean v7, v2, Ljj5;->h:Z
+
+    iget-boolean v2, v2, Ljj5;->i:Z
+
+    invoke-virtual {v1, v5, v6, v7, v2}, Lgge;->h(Ljava/lang/String;Ljava/lang/Integer;ZZ)Ljava/util/concurrent/ThreadFactory;
+
+    move-result-object v1
+
+    invoke-direct {v3, v4, v1}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;-><init>(ILjava/util/concurrent/ThreadFactory;)V
+
+    const-class v1, Ljava/util/concurrent/ScheduledExecutorService;
+
+    invoke-virtual {v1, v3}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/util/concurrent/ScheduledExecutorService;
+
+    const-string v2, "OneMeScheduler"
+
+    invoke-virtual {v0, v1, v2}, Lg4b;->j(Ljava/util/concurrent/ScheduledExecutorService;Ljava/lang/String;)Ljava/util/concurrent/ScheduledExecutorService;
+
+    move-result-object v0
+
+    return-object v0
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

@@ -1,21 +1,8 @@
-.class public abstract Lf99;
+.class public interface abstract Lf99;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Landroid/widget/PopupWindow;Landroid/transition/Transition;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/widget/PopupWindow;->setEnterTransition(Landroid/transition/Transition;)V
-
-    return-void
-.end method
-
-.method public static b(Landroid/widget/PopupWindow;Landroid/transition/Transition;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/widget/PopupWindow;->setExitTransition(Landroid/transition/Transition;)V
-
-    return-void
+# virtual methods
+.method public abstract a(Lck0;Ls9g;)V
 .end method

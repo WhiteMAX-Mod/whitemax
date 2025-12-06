@@ -1,52 +1,237 @@
-.class public abstract Lopc;
-.super Ljava/lang/Object;
+.class public final Lopc;
+.super Lfl9;
+.source "SourceFile"
 
 
 # static fields
-.field public static oneme_stickers_settings_confirm_cancel:I = 0x7f0a087d
+.field public static volatile e:[Lopc;
 
-.field public static oneme_stickers_settings_confirm_delete_set_action:I = 0x7f0a087e
 
-.field public static oneme_stickers_settings_confirm_delete_stickers_action:I = 0x7f0a087f
+# instance fields
+.field public a:I
 
-.field public static oneme_stickers_settings_confirm_favorite_clear_action:I = 0x7f0a0880
+.field public b:I
 
-.field public static oneme_stickers_settings_confirm_recent_clear_action:I = 0x7f0a0881
+.field public c:I
 
-.field public static oneme_stickers_settings_content_recycler:I = 0x7f0a0882
+.field public d:Lhd6;
 
-.field public static oneme_stickers_settings_emoji_suggest_view_type:I = 0x7f0a0883
 
-.field public static oneme_stickers_settings_favorite_view_type:I = 0x7f0a0884
+# direct methods
+.method public constructor <init>()V
+    .locals 1
 
-.field public static oneme_stickers_settings_menu_copy_link:I = 0x7f0a0885
+    invoke-direct {p0}, Lfl9;-><init>()V
 
-.field public static oneme_stickers_settings_menu_delete_set:I = 0x7f0a0886
+    const/4 v0, 0x0
 
-.field public static oneme_stickers_settings_menu_forward:I = 0x7f0a0887
+    iput v0, p0, Lopc;->a:I
 
-.field public static oneme_stickers_settings_menu_share:I = 0x7f0a0888
+    iput v0, p0, Lopc;->b:I
 
-.field public static oneme_stickers_settings_recent_view_type:I = 0x7f0a0889
+    iput v0, p0, Lopc;->c:I
 
-.field public static oneme_stickers_settings_set_item_drag:I = 0x7f0a088a
+    const/4 v0, 0x0
 
-.field public static oneme_stickers_settings_set_item_icon:I = 0x7f0a088b
+    iput-object v0, p0, Lopc;->d:Lhd6;
 
-.field public static oneme_stickers_settings_set_item_subtitle:I = 0x7f0a088c
+    const/4 v0, -0x1
 
-.field public static oneme_stickers_settings_set_item_title:I = 0x7f0a088d
+    iput v0, p0, Lfl9;->cachedSize:I
 
-.field public static oneme_stickers_settings_set_view_type:I = 0x7f0a088e
+    return-void
+.end method
 
-.field public static oneme_stickers_settings_sets_title_view_type:I = 0x7f0a088f
 
-.field public static oneme_stickers_settings_stickers_favorite_menu_clear:I = 0x7f0a0890
+# virtual methods
+.method public final computeSerializedSize()I
+    .locals 3
 
-.field public static oneme_stickers_settings_stickers_menu_change:I = 0x7f0a0891
+    iget v0, p0, Lopc;->a:I
 
-.field public static oneme_stickers_settings_stickers_multiselect_delete:I = 0x7f0a0892
+    if-eqz v0, :cond_0
 
-.field public static oneme_stickers_settings_stickers_recent_menu_clear:I = 0x7f0a0893
+    const/4 v1, 0x1
 
-.field public static oneme_stickers_settings_toolbar:I = 0x7f0a0894
+    invoke-static {v1, v0}, Lhd3;->f(II)I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    iget v1, p0, Lopc;->b:I
+
+    if-eqz v1, :cond_1
+
+    const/4 v2, 0x2
+
+    invoke-static {v2, v1}, Lhd3;->f(II)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    :cond_1
+    iget v1, p0, Lopc;->c:I
+
+    if-eqz v1, :cond_2
+
+    const/4 v2, 0x3
+
+    invoke-static {v2, v1}, Lhd3;->f(II)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    :cond_2
+    iget-object v1, p0, Lopc;->d:Lhd6;
+
+    if-eqz v1, :cond_3
+
+    const/4 v2, 0x4
+
+    invoke-static {v2, v1}, Lhd3;->i(ILfl9;)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+
+    :cond_3
+    return v0
+.end method
+
+.method public final mergeFrom(Lgd3;)Lfl9;
+    .locals 2
+
+    :cond_0
+    :goto_0
+    invoke-virtual {p1}, Lgd3;->s()I
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    const/16 v1, 0x8
+
+    if-eq v0, v1, :cond_5
+
+    const/16 v1, 0x10
+
+    if-eq v0, v1, :cond_4
+
+    const/16 v1, 0x18
+
+    if-eq v0, v1, :cond_3
+
+    const/16 v1, 0x22
+
+    if-eq v0, v1, :cond_1
+
+    invoke-virtual {p1, v0}, Lgd3;->u(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v0, p0, Lopc;->d:Lhd6;
+
+    if-nez v0, :cond_2
+
+    new-instance v0, Lhd6;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, v1}, Lhd6;-><init>(I)V
+
+    iput-object v0, p0, Lopc;->d:Lhd6;
+
+    :cond_2
+    iget-object v0, p0, Lopc;->d:Lhd6;
+
+    invoke-virtual {p1, v0}, Lgd3;->j(Lfl9;)V
+
+    goto :goto_0
+
+    :cond_3
+    invoke-virtual {p1}, Lgd3;->p()I
+
+    move-result v0
+
+    iput v0, p0, Lopc;->c:I
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {p1}, Lgd3;->p()I
+
+    move-result v0
+
+    iput v0, p0, Lopc;->b:I
+
+    goto :goto_0
+
+    :cond_5
+    invoke-virtual {p1}, Lgd3;->p()I
+
+    move-result v0
+
+    iput v0, p0, Lopc;->a:I
+
+    goto :goto_0
+
+    :cond_6
+    :goto_1
+    return-object p0
+.end method
+
+.method public final writeTo(Lhd3;)V
+    .locals 2
+
+    iget v0, p0, Lopc;->a:I
+
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p1, v1, v0}, Lhd3;->w(II)V
+
+    :cond_0
+    iget v0, p0, Lopc;->b:I
+
+    if-eqz v0, :cond_1
+
+    const/4 v1, 0x2
+
+    invoke-virtual {p1, v1, v0}, Lhd3;->w(II)V
+
+    :cond_1
+    iget v0, p0, Lopc;->c:I
+
+    if-eqz v0, :cond_2
+
+    const/4 v1, 0x3
+
+    invoke-virtual {p1, v1, v0}, Lhd3;->w(II)V
+
+    :cond_2
+    iget-object v0, p0, Lopc;->d:Lhd6;
+
+    if-eqz v0, :cond_3
+
+    const/4 v1, 0x4
+
+    invoke-virtual {p1, v1, v0}, Lhd3;->y(ILfl9;)V
+
+    :cond_3
+    return-void
+.end method

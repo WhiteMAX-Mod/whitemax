@@ -1,110 +1,90 @@
-.class public abstract Levi;
+.class public final Levi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpqa;
+
+
+# static fields
+.field public static final a:Levi;
+
 
 # direct methods
-.method public static a(Ltrf;Landroid/os/Bundle;Lupd;I)Leo3;
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    and-int/lit8 v0, p3, 0x2
+    new-instance v0, Levi;
 
-    const/4 v1, 0x0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz v0, :cond_0
+    sput-object v0, Levi;->a:Levi;
 
-    move-object p1, v1
+    new-instance v0, Lmli;
 
-    :cond_0
-    and-int/lit8 p3, p3, 0x4
+    const/4 v1, 0x1
 
-    if-eqz p3, :cond_1
+    invoke-direct {v0, v1}, Lmli;-><init>(I)V
 
-    move-object p2, v1
+    const-class v1, Lemi;
 
-    :cond_1
-    new-instance p3, Leo3;
-
-    invoke-direct {p3, p0, p1, p2}, Leo3;-><init>(Ltrf;Landroid/os/Bundle;Lupd;)V
-
-    return-object p3
-.end method
-
-.method public static b(Landroid/content/Context;)Ls62;
-    .locals 5
-
-    sget-object v0, Lizb;->f:Lizb;
-
-    iget-object v1, v0, Lizb;->a:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    :try_start_0
-    iget-object v2, v0, Lizb;->b:Lju1;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz v2, :cond_0
-
-    monitor-exit v1
-
-    goto :goto_0
-
-    :cond_0
-    :try_start_1
-    new-instance v2, Lv22;
-
-    invoke-direct {v2, p0}, Lv22;-><init>(Landroid/content/Context;)V
-
-    new-instance v3, Lek9;
-
-    const/16 v4, 0xa
-
-    invoke-direct {v3, v0, v4, v2}, Lek9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {v3}, Lomi;->a(Lhu1;)Lju1;
-
-    move-result-object v2
-
-    iput-object v2, v0, Lizb;->b:Lju1;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    monitor-exit v1
-
-    :goto_0
-    new-instance v0, Lj0;
-
-    const/4 v1, 0x7
-
-    invoke-direct {v0, v1, p0}, Lj0;-><init>(ILjava/lang/Object;)V
-
-    new-instance p0, Ly02;
-
-    const/4 v1, 0x3
-
-    invoke-direct {p0, v1, v0}, Ly02;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {}, Lfni;->a()Lju4;
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    new-instance v1, Ls9d;
+    const/4 v2, 0x2
 
-    const/16 v3, 0xe
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    invoke-direct {v1, v3, p0}, Ls9d;-><init>(ILjava/lang/Object;)V
+    move-result-object v0
 
-    invoke-static {v2, v1, v0}, Lwag;->r(Ll28;Liv;Ljava/util/concurrent/Executor;)Ls62;
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
+    const/4 v2, 0x3
 
-    :catchall_0
-    move-exception p0
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    monitor-exit v1
+    move-result-object v0
 
-    throw p0
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x4
+
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x5
+
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

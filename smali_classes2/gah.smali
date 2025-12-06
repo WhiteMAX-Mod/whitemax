@@ -2,18 +2,71 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnTouchListener;
+
+
+# static fields
+.field public static final b:Lgah;
+
+
+# instance fields
+.field public final synthetic a:I
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lgah;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lgah;-><init>(I)V
+
+    sput-object v0, Lgah;->b:Lgah;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(I)V
+    .locals 0
+
+    iput p1, p0, Lgah;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public final serializer()Lur7;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lur7;"
-        }
-    .end annotation
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 0
 
-    sget-object v0, Lfah;->a:Lfah;
+    iget p1, p0, Lgah;->a:I
 
-    return-object v0
+    packed-switch p1, :pswitch_data_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :pswitch_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :pswitch_1
+    const/4 p1, 0x1
+
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,333 +1,256 @@
-.class public final Lish;
+.class public final synthetic Lish;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lljd;
+.implements Lar6;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:Lish;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field private static final descriptor:Lree;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput p1, p0, Lish;->a:I
+    new-instance v0, Lish;
 
-    iput-object p2, p0, Lish;->b:Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lish;->a:Lish;
+
+    new-instance v1, Lj5c;
+
+    const-string v2, "one.me.webapp.domain.jsbridge.delegates.share.WebAppMaxShareRequest"
+
+    const/4 v3, 0x3
+
+    invoke-direct {v1, v2, v0, v3}, Lj5c;-><init>(Ljava/lang/String;Lar6;I)V
+
+    const-string v0, "requestId"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2}, Lj5c;->k(Ljava/lang/String;Z)V
+
+    const-string v0, "text"
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v0, v2}, Lj5c;->k(Ljava/lang/String;Z)V
+
+    const-string v0, "link"
+
+    invoke-virtual {v1, v0, v2}, Lj5c;->k(Ljava/lang/String;Z)V
+
+    sput-object v1, Lish;->descriptor:Lree;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lpb4;[BI)V
-    .locals 10
+.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
+    .locals 4
 
-    iget v0, p0, Lish;->a:I
+    check-cast p2, Lksh;
 
-    packed-switch v0, :pswitch_data_0
+    sget-object v0, Lish;->descriptor:Lree;
 
-    iget-object v0, p0, Lish;->b:Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lkotlinx/serialization/json/internal/b;->a(Lree;)Lkotlinx/serialization/json/internal/b;
 
-    check-cast v0, Ldrd;
+    move-result-object p1
 
-    iget-boolean v2, v0, Ldrd;->f:Z
+    iget-object v1, p2, Lksh;->a:Ljava/lang/String;
 
-    if-eqz v2, :cond_0
+    iget-object v2, p2, Lksh;->c:Ljava/lang/String;
 
-    goto/16 :goto_3
+    iget-object p2, p2, Lksh;->b:Ljava/lang/String;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {p1, v0, v3, v1}, Lkotlinx/serialization/json/internal/b;->s(Lree;ILjava/lang/String;)V
+
+    invoke-virtual {p1}, Lkotlinx/serialization/json/internal/b;->u()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    new-instance v2, Lnth;
+    if-eqz p2, :cond_1
 
-    invoke-direct {v2, p2}, Lnth;-><init>([B)V
+    :goto_0
+    sget-object v1, Lrmf;->a:Lrmf;
 
-    iget-object v3, v0, Ldrd;->c:Lbua;
+    const/4 v3, 0x1
 
-    iget v4, v2, Lnth;->d:I
-
-    invoke-virtual {v3, v4}, Lbua;->x(I)Lhi1;
-
-    move-result-object v3
-
-    if-nez v3, :cond_1
-
-    goto :goto_3
+    invoke-virtual {p1, v0, v3, v1, p2}, Lkotlinx/serialization/json/internal/b;->n(Lree;ILzy7;Ljava/lang/Object;)V
 
     :cond_1
-    iget-boolean v4, v0, Ldrd;->f:Z
+    invoke-virtual {p1}, Lkotlinx/serialization/json/internal/b;->u()Z
 
-    const/4 v5, 0x1
+    move-result p2
 
-    const/4 v6, 0x0
-
-    if-eqz v4, :cond_2
+    if-eqz p2, :cond_2
 
     goto :goto_1
 
     :cond_2
-    iget-object v4, v0, Ldrd;->a:Ljava/util/concurrent/ConcurrentHashMap;
+    if-eqz v2, :cond_3
 
-    invoke-virtual {v4, v3}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    :goto_1
+    sget-object p2, Lrmf;->a:Lrmf;
+
+    const/4 v1, 0x2
+
+    invoke-virtual {p1, v0, v1, p2, v2}, Lkotlinx/serialization/json/internal/b;->n(Lree;ILzy7;Ljava/lang/Object;)V
+
+    :cond_3
+    invoke-virtual {p1}, Lkotlinx/serialization/json/internal/b;->t()V
+
+    return-void
+.end method
+
+.method public final b(Llh4;)Ljava/lang/Object;
+    .locals 10
+
+    sget-object v0, Lish;->descriptor:Lree;
+
+    invoke-interface {p1, v0}, Llh4;->r(Lree;)Lyl3;
+
+    move-result-object p1
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    move v6, v1
+
+    move v7, v2
+
+    move-object v4, v3
+
+    move-object v5, v4
+
+    :goto_0
+    if-eqz v6, :cond_4
+
+    invoke-interface {p1, v0}, Lyl3;->e(Lree;)I
+
+    move-result v8
+
+    const/4 v9, -0x1
+
+    if-eq v8, v9, :cond_3
+
+    if-eqz v8, :cond_2
+
+    if-eq v8, v1, :cond_1
+
+    const/4 v9, 0x2
+
+    if-ne v8, v9, :cond_0
+
+    sget-object v8, Lrmf;->a:Lrmf;
+
+    invoke-interface {p1, v0, v9, v8, v5}, Lyl3;->w(Lree;ILzy7;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/lang/String;
+
+    or-int/lit8 v7, v7, 0x4
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
+
+    invoke-direct {p1, v8}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+
+    throw p1
+
+    :cond_1
+    sget-object v8, Lrmf;->a:Lrmf;
+
+    invoke-interface {p1, v0, v1, v8, v4}, Lyl3;->w(Lree;ILzy7;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
-    if-nez v4, :cond_5
+    check-cast v4, Ljava/lang/String;
 
-    iget-object v4, v0, Ldrd;->h:Ljava/util/Set;
+    or-int/lit8 v7, v7, 0x2
 
-    if-nez v4, :cond_3
+    goto :goto_0
 
-    move v4, v5
+    :cond_2
+    invoke-interface {p1, v0, v2}, Lyl3;->j(Lree;I)Ljava/lang/String;
+
+    move-result-object v3
+
+    or-int/lit8 v7, v7, 0x1
 
     goto :goto_0
 
     :cond_3
-    iget-object v4, v0, Ldrd;->h:Ljava/util/Set;
+    move v6, v2
 
-    invoke-interface {v4, v3}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    :goto_0
-    if-nez v4, :cond_4
-
-    goto :goto_1
+    goto :goto_0
 
     :cond_4
-    new-instance v4, Lssh;
+    invoke-interface {p1, v0}, Lyl3;->m(Lree;)V
 
-    iget-object v6, v0, Ldrd;->b:Lfwc;
+    new-instance p1, Lksh;
 
-    iget-object v7, v0, Ldrd;->i:Lavf;
+    invoke-direct {p1, v3, v7, v4, v5}, Lksh;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
 
-    new-instance v8, Lek9;
+    return-object p1
+.end method
 
-    const/16 v9, 0x18
+.method public final c()[Lzy7;
+    .locals 5
 
-    invoke-direct {v8, v0, v9, v3}, Lek9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    sget-object v0, Lrmf;->a:Lrmf;
 
-    invoke-direct {v4, v6, v7, v8}, Lssh;-><init>(Lfwc;Lavf;Lek9;)V
+    invoke-static {v0}, Lwvi;->b(Lzy7;)Lzy7;
 
-    iget-object v6, v0, Ldrd;->a:Ljava/util/concurrent/ConcurrentHashMap;
+    move-result-object v1
 
-    invoke-virtual {v6, v3, v4}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_5
-    iget-object v4, v0, Ldrd;->a:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v4, v3}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    move-object v6, v4
-
-    check-cast v6, Lssh;
-
-    :goto_1
-    if-eqz v6, :cond_6
-
-    iget-object v4, v6, Lssh;->e:Landroid/os/Handler;
-
-    new-instance v7, Ltlg;
-
-    const/16 v8, 0x17
-
-    invoke-direct {v7, v6, v8, v2}, Ltlg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v4, v7}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    :cond_6
-    iget-byte v2, v2, Lcrd;->a:B
-
-    and-int/lit8 v2, v2, 0x8
-
-    if-eqz v2, :cond_7
-
-    goto :goto_2
-
-    :cond_7
-    const/4 v5, 0x0
-
-    :goto_2
-    if-eqz v5, :cond_8
-
-    iget-object v2, v0, Ldrd;->a:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v2, v3}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Lwvi;->b(Lzy7;)Lzy7;
 
     move-result-object v2
 
-    check-cast v2, Lssh;
+    const/4 v3, 0x3
 
-    if-eqz v2, :cond_8
+    new-array v3, v3, [Lzy7;
 
-    invoke-virtual {v2}, Lssh;->a()V
+    const/4 v4, 0x0
 
-    iget-object v0, v0, Ldrd;->a:Ljava/util/concurrent/ConcurrentHashMap;
+    aput-object v0, v3, v4
 
-    invoke-virtual {v0, v3}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    :cond_8
-    :goto_3
-    return-void
+    aput-object v1, v3, v0
 
-    :pswitch_0
-    iget-object v0, p0, Lish;->b:Ljava/lang/Object;
+    const/4 v0, 0x2
 
-    move-object v6, v0
+    aput-object v2, v3, v0
 
-    check-cast v6, Lbjd;
+    return-object v3
+.end method
 
-    new-instance v0, Lsb5;
+.method public final d()Lree;
+    .locals 1
 
-    const/4 v5, 0x7
+    sget-object v0, Lish;->descriptor:Lree;
 
-    move-object v1, p0
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move v4, p3
-
-    invoke-direct/range {v0 .. v5}, Lsb5;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;II)V
-
-    iget-object v2, v6, Lbjd;->f:Landroid/os/Handler;
-
-    invoke-virtual {v2, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lish;->b:Ljava/lang/Object;
-
-    move-object v6, v0
-
-    check-cast v6, Ll05;
-
-    new-instance v0, Lsb5;
-
-    const/4 v5, 0x6
-
-    move-object v1, p0
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move v4, p3
-
-    invoke-direct/range {v0 .. v5}, Lsb5;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;II)V
-
-    iget-object v2, v6, Ll05;->X:Ljava/lang/Object;
-
-    check-cast v2, Landroid/os/Handler;
-
-    invoke-virtual {v2, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lish;->b:Ljava/lang/Object;
-
-    check-cast v0, Lr1e;
-
-    iget-object v2, v0, Lr1e;->o:Ljava/lang/Object;
-
-    check-cast v2, Lbua;
-
-    invoke-static {p2}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->get()B
-
-    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->get()B
-
-    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->getShort()S
-
-    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->getInt()I
-
-    move-result v4
-
-    const v5, 0xfffffff
-
-    and-int/2addr v4, v5
-
-    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->getInt()I
-
-    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->getInt()I
-
-    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
-
-    move-result-object v3
-
-    sget-object v5, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
-
-    invoke-virtual {v5, v3}, Ljava/nio/charset/Charset;->decode(Ljava/nio/ByteBuffer;)Ljava/nio/CharBuffer;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/nio/CharBuffer;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v4}, Lbua;->x(I)Lhi1;
-
-    new-instance v5, Leu;
-
-    invoke-virtual {v2, v4}, Lbua;->x(I)Lhi1;
-
-    move-result-object v2
-
-    invoke-direct {v5, v2, v3}, Leu;-><init>(Lhi1;Ljava/lang/String;)V
-
-    iget-object v0, v0, Lr1e;->X:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_4
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_9
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, La01;
-
-    iget-object v2, v2, La01;->a:Lh01;
-
-    iget-object v2, v2, Lh01;->S0:Lef1;
-
-    iget-object v2, v2, Lef1;->o:Lau;
-
-    invoke-virtual {v2, v5}, Lau;->onAsrDataPackage(Leu;)V
-
-    goto :goto_4
-
-    :cond_9
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

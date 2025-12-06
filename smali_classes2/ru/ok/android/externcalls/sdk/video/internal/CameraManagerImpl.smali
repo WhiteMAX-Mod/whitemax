@@ -14,21 +14,21 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/video/internal/CameraManagerImpl;",
         "Lru/ok/android/externcalls/sdk/video/CameraManager;",
-        "Lh01;",
+        "Lk01;",
         "call",
         "Lkotlin/Function0;",
         "",
         "isInited",
         "isPrepared",
         "<init>",
-        "(Lh01;Lji6;Lji6;)V",
-        "Lg22;",
+        "(Lk01;Lcm6;Lcm6;)V",
+        "Lb32;",
         "cameraParams",
-        "Lccg;",
+        "Lqqg;",
         "switchCamera",
-        "(Lg22;)V",
-        "Lh01;",
-        "Lji6;",
+        "(Lb32;)V",
+        "Lk01;",
+        "Lcm6;",
         "isCapturingFromFrontCamera",
         "()Z",
         "",
@@ -52,45 +52,45 @@
 
 
 # instance fields
-.field private final call:Lh01;
+.field private final call:Lk01;
 
-.field private final isInited:Lji6;
+.field private final isInited:Lcm6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lji6;"
+            "Lcm6;"
         }
     .end annotation
 .end field
 
-.field private final isPrepared:Lji6;
+.field private final isPrepared:Lcm6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lji6;"
+            "Lcm6;"
         }
     .end annotation
 .end field
 
 
 # direct methods
-.method public constructor <init>(Lh01;Lji6;Lji6;)V
+.method public constructor <init>(Lk01;Lcm6;Lcm6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lh01;",
-            "Lji6;",
-            "Lji6;",
+            "Lk01;",
+            "Lcm6;",
+            "Lcm6;",
             ")V"
         }
     .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/video/internal/CameraManagerImpl;->call:Lh01;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/video/internal/CameraManagerImpl;->call:Lk01;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/video/internal/CameraManagerImpl;->isInited:Lji6;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/video/internal/CameraManagerImpl;->isInited:Lcm6;
 
-    iput-object p3, p0, Lru/ok/android/externcalls/sdk/video/internal/CameraManagerImpl;->isPrepared:Lji6;
+    iput-object p3, p0, Lru/ok/android/externcalls/sdk/video/internal/CameraManagerImpl;->isPrepared:Lcm6;
 
     return-void
 .end method
@@ -100,9 +100,9 @@
 .method public getNumberOfCameras()I
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/video/internal/CameraManagerImpl;->isInited:Lji6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/video/internal/CameraManagerImpl;->isInited:Lcm6;
 
-    invoke-interface {v0}, Lji6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lcm6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -114,9 +114,9 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/video/internal/CameraManagerImpl;->call:Lh01;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/video/internal/CameraManagerImpl;->call:Lk01;
 
-    iget v0, v0, Lh01;->H:I
+    iget v0, v0, Lk01;->I:I
 
     return v0
 
@@ -129,11 +129,11 @@
 .method public isCameraEnabled()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/video/internal/CameraManagerImpl;->call:Lh01;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/video/internal/CameraManagerImpl;->call:Lk01;
 
-    iget-object v0, v0, Lh01;->t0:Lw0a;
+    iget-object v0, v0, Lk01;->u0:Lr8a;
 
-    iget-boolean v0, v0, Lw0a;->f:Z
+    iget-boolean v0, v0, Lr8a;->f:Z
 
     return v0
 .end method
@@ -141,11 +141,11 @@
 .method public isCapturingFromFrontCamera()Z
     .locals 2
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/video/internal/CameraManagerImpl;->call:Lh01;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/video/internal/CameraManagerImpl;->call:Lk01;
 
-    iget-object v0, v0, Lh01;->f0:Lsje;
+    iget-object v0, v0, Lk01;->g0:Love;
 
-    invoke-virtual {v0}, Lsje;->c()I
+    invoke-virtual {v0}, Love;->c()I
 
     move-result v0
 
@@ -164,9 +164,9 @@
 .method public setCameraEnabled(Z)V
     .locals 2
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/video/internal/CameraManagerImpl;->isPrepared:Lji6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/video/internal/CameraManagerImpl;->isPrepared:Lcm6;
 
-    invoke-interface {v0}, Lji6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lcm6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -181,9 +181,9 @@
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/video/internal/CameraManagerImpl;->call:Lh01;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/video/internal/CameraManagerImpl;->call:Lk01;
 
-    invoke-virtual {v0}, Lh01;->j()Z
+    invoke-virtual {v0}, Lk01;->j()Z
 
     move-result v1
 
@@ -195,21 +195,21 @@
     :cond_1
     const-string v1, "rtc.video.switch"
 
-    invoke-virtual {v0, v1}, Lh01;->x(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lk01;->x(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Lh01;->n(Z)V
+    invoke-virtual {v0, p1}, Lk01;->n(Z)V
 
-    invoke-virtual {v0}, Lh01;->J()V
+    invoke-virtual {v0}, Lk01;->J()V
 
     return-void
 .end method
 
-.method public switchCamera(Lg22;)V
+.method public switchCamera(Lb32;)V
     .locals 4
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/video/internal/CameraManagerImpl;->call:Lh01;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/video/internal/CameraManagerImpl;->call:Lk01;
 
-    invoke-virtual {v0}, Lh01;->j()Z
+    invoke-virtual {v0}, Lk01;->j()Z
 
     move-result v1
 
@@ -218,9 +218,9 @@
     goto :goto_0
 
     :cond_0
-    iget-object v1, v0, Lh01;->h0:Lk68;
+    iget-object v1, v0, Lk01;->i0:Lwd8;
 
-    iget-boolean v1, v1, Lk68;->d:Z
+    iget-boolean v1, v1, Lwd8;->d:Z
 
     if-nez v1, :cond_1
 
@@ -228,35 +228,35 @@
     return-void
 
     :cond_1
-    iget-object v1, v0, Lh01;->O:Lfwc;
+    iget-object v1, v0, Lk01;->P:Ly6d;
 
     const-string v2, "OKRTCCall"
 
     const-string v3, "switchCamera"
 
-    invoke-interface {v1, v2, v3}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v1, v2, v3}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "rtc.switch_camera"
 
-    invoke-virtual {v0, v1}, Lh01;->x(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lk01;->x(Ljava/lang/String;)V
 
-    iget-object v0, v0, Lh01;->f0:Lsje;
+    iget-object v0, v0, Lk01;->g0:Love;
 
-    iget-object v1, v0, Lsje;->k:Lfwc;
+    iget-object v1, v0, Love;->k:Ly6d;
 
     const-string v2, "SlmsSource"
 
-    invoke-interface {v1, v2, v3}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v1, v2, v3}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v1, v0, Lsje;->c:Lvje;
+    iget-object v1, v0, Love;->c:Lrve;
 
-    iget-object v1, v1, Lvje;->a:Ljava/util/concurrent/ExecutorService;
+    iget-object v1, v1, Lrve;->a:Ljava/util/concurrent/ExecutorService;
 
-    new-instance v2, Ll2e;
+    new-instance v2, Laee;
 
     const/16 v3, 0x9
 
-    invoke-direct {v2, v0, v3, p1}, Ll2e;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v2, v0, v3, p1}, Laee;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 

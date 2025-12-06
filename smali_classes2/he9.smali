@@ -1,47 +1,50 @@
 .class public final Lhe9;
-.super Ljava/lang/Object;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Cloneable;
+.implements Lsm6;
 
 
 # virtual methods
-.method public final clone()Ljava/lang/Object;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Lhe9;
+    check-cast p1, Ljava/util/Set;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return-object v0
-.end method
+    invoke-virtual {p0, p1, p2}, Lhe9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    move-result-object p1
 
-    instance-of v0, p1, Lhe9;
-
-    if-nez v0, :cond_0
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_0
     check-cast p1, Lhe9;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    const/4 p1, 0x1
+    invoke-virtual {p1, p2}, Lhe9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return p1
+    return-object p2
 .end method
 
-.method public final hashCode()I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    const v0, 0x164be01
+    new-instance p1, Lhe9;
 
-    return v0
+    const/4 v0, 0x2
+
+    invoke-direct {p1, v0, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

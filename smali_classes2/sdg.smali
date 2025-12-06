@@ -1,3 +1,8 @@
-.class public abstract Lsdg;
-.super Luj0;
+.class public interface abstract Lsdg;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+
+# virtual methods
+.method public abstract a(Lodg;)V
+.end method

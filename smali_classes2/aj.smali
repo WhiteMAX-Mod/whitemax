@@ -1,22 +1,29 @@
 .class public final Laj;
-.super Ljava/lang/Object;
+.super Lscd;
 .source "SourceFile"
-
-# interfaces
-.implements Lcj;
-
-
-# instance fields
-.field public final a:Landroid/graphics/drawable/Drawable;
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/drawable/Drawable;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 1
+    sget-object v0, Lhdd;->b:Lhdd;
 
-    iput-object p1, p0, Laj;->a:Landroid/graphics/drawable/Drawable;
+    const-wide/16 v1, 0x0
+
+    invoke-direct {p0, v0, v1, v2}, Lscd;-><init>(Lhdd;J)V
+
+    return-void
+.end method
+
+.method public constructor <init>(J)V
+    .locals 1
+
+    .line 2
+    sget-object v0, Lhdd;->X:Lhdd;
+
+    invoke-direct {p0, v0, p1, p2}, Lscd;-><init>(Lhdd;J)V
 
     return-void
 .end method

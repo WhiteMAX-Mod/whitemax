@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lnsb;
+.implements Ls2c;
 
 
 # annotations
@@ -13,7 +13,7 @@
     }
 .end annotation
 
-.annotation build Lmw4;
+.annotation build Lfz4;
 .end annotation
 
 
@@ -22,18 +22,18 @@
 
 
 # instance fields
-.field public final a:Lzo0;
+.field public final a:Lvo0;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lqa7;->a:I
+    sget v0, Lhf7;->a:I
 
     const-string v0, "imagepipeline"
 
-    invoke-static {v0}, Lp4a;->d(Ljava/lang/String;)Z
+    invoke-static {v0}, Lnca;->b(Ljava/lang/String;)Z
 
     const/4 v0, 0x2
 
@@ -57,28 +57,28 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Lap0;->c:Lzo0;
+    sget-object v0, Lwo0;->c:Lvo0;
 
     if-nez v0, :cond_1
 
-    const-class v0, Lap0;
+    const-class v0, Lwo0;
 
     monitor-enter v0
 
     :try_start_0
-    sget-object v1, Lap0;->c:Lzo0;
+    sget-object v1, Lwo0;->c:Lvo0;
 
     if-nez v1, :cond_0
 
-    new-instance v1, Lzo0;
+    new-instance v1, Lvo0;
 
-    sget v2, Lap0;->b:I
+    sget v2, Lwo0;->b:I
 
-    sget v3, Lap0;->a:I
+    sget v3, Lwo0;->a:I
 
-    invoke-direct {v1, v2, v3}, Lzo0;-><init>(II)V
+    invoke-direct {v1, v2, v3}, Lvo0;-><init>(II)V
 
-    sput-object v1, Lap0;->c:Lzo0;
+    sput-object v1, Lwo0;->c:Lvo0;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -102,21 +102,21 @@
 
     :cond_1
     :goto_2
-    sget-object v0, Lap0;->c:Lzo0;
+    sget-object v0, Lwo0;->c:Lvo0;
 
-    iput-object v0, p0, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->a:Lzo0;
+    iput-object v0, p0, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->a:Lvo0;
 
     return-void
 .end method
 
-.method public static e(ILda3;)Z
+.method public static d(ILvc3;)Z
     .locals 2
 
-    invoke-virtual {p1}, Lda3;->Z()Ljava/lang/Object;
+    invoke-virtual {p1}, Lvc3;->Z()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Ll89;
+    check-cast p1, Lnf9;
 
     const/4 v0, 0x2
 
@@ -124,7 +124,7 @@
 
     add-int/lit8 v0, p0, -0x2
 
-    invoke-virtual {p1, v0}, Ll89;->o(I)B
+    invoke-virtual {p1, v0}, Lnf9;->y(I)B
 
     move-result v0
 
@@ -136,7 +136,7 @@
 
     sub-int/2addr p0, v0
 
-    invoke-virtual {p1, p0}, Ll89;->o(I)B
+    invoke-virtual {p1, p0}, Lnf9;->y(I)B
 
     move-result p0
 
@@ -153,16 +153,22 @@
 .end method
 
 .method private static native nativePinBitmap(Landroid/graphics/Bitmap;)V
-    .annotation build Lmw4;
+    .annotation build Lfz4;
     .end annotation
 .end method
 
 
 # virtual methods
-.method public final a(Lfb5;Landroid/graphics/Bitmap$Config;)Lda3;
+.method public abstract a(Lvc3;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+.end method
+
+.method public abstract b(Lvc3;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+.end method
+
+.method public final c(Lce5;Landroid/graphics/Bitmap$Config;)Lvc3;
     .locals 3
 
-    iget v0, p1, Lfb5;->Z:I
+    iget v0, p1, Lce5;->Y:I
 
     new-instance v1, Landroid/graphics/BitmapFactory$Options;
 
@@ -190,109 +196,38 @@
 
     iput-object p2, v1, Landroid/graphics/BitmapFactory$Options;->inPreferredColorSpace:Landroid/graphics/ColorSpace;
 
-    iget-object p1, p1, Lfb5;->a:Lda3;
+    iget-object p1, p1, Lce5;->a:Lvc3;
 
-    invoke-static {p1}, Lda3;->o(Lda3;)Lda3;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :try_start_0
-    invoke-virtual {p0, p1, v1}, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->b(Lda3;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
-
-    move-result-object p2
-
-    invoke-virtual {p0, p2}, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->f(Landroid/graphics/Bitmap;)Lhi4;
-
-    move-result-object p2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {p1}, Lda3;->close()V
-
-    return-object p2
-
-    :catchall_0
-    move-exception p2
-
-    invoke-virtual {p1}, Lda3;->close()V
-
-    throw p2
-.end method
-
-.method public abstract b(Lda3;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
-.end method
-
-.method public final c(Lfb5;Landroid/graphics/Bitmap$Config;ILandroid/graphics/ColorSpace;)Lda3;
-    .locals 3
-
-    iget v0, p1, Lfb5;->Z:I
-
-    new-instance v1, Landroid/graphics/BitmapFactory$Options;
-
-    invoke-direct {v1}, Landroid/graphics/BitmapFactory$Options;-><init>()V
-
-    const/4 v2, 0x1
-
-    iput-boolean v2, v1, Landroid/graphics/BitmapFactory$Options;->inDither:Z
-
-    iput-object p2, v1, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
-
-    iput-boolean v2, v1, Landroid/graphics/BitmapFactory$Options;->inPurgeable:Z
-
-    iput-boolean v2, v1, Landroid/graphics/BitmapFactory$Options;->inInputShareable:Z
-
-    iput v0, v1, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
-
-    iput-boolean v2, v1, Landroid/graphics/BitmapFactory$Options;->inMutable:Z
-
-    if-nez p4, :cond_0
-
-    sget-object p2, Landroid/graphics/ColorSpace$Named;->SRGB:Landroid/graphics/ColorSpace$Named;
-
-    invoke-static {p2}, Landroid/graphics/ColorSpace;->get(Landroid/graphics/ColorSpace$Named;)Landroid/graphics/ColorSpace;
-
-    move-result-object p4
-
-    :cond_0
-    iput-object p4, v1, Landroid/graphics/BitmapFactory$Options;->inPreferredColorSpace:Landroid/graphics/ColorSpace;
-
-    iget-object p1, p1, Lfb5;->a:Lda3;
-
-    invoke-static {p1}, Lda3;->o(Lda3;)Lda3;
+    invoke-static {p1}, Lvc3;->y(Lvc3;)Lvc3;
 
     move-result-object p1
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     :try_start_0
-    invoke-virtual {p0, p1, p3, v1}, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->d(Lda3;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+    invoke-virtual {p0, p1, v1}, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->a(Lvc3;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object p2
 
-    invoke-virtual {p0, p2}, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->f(Landroid/graphics/Bitmap;)Lhi4;
+    invoke-virtual {p0, p2}, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->e(Landroid/graphics/Bitmap;)Lqk4;
 
     move-result-object p2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {p1}, Lda3;->close()V
+    invoke-virtual {p1}, Lvc3;->close()V
 
     return-object p2
 
     :catchall_0
     move-exception p2
 
-    invoke-virtual {p1}, Lda3;->close()V
+    invoke-virtual {p1}, Lvc3;->close()V
 
     throw p2
 .end method
 
-.method public abstract d(Lda3;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
-.end method
-
-.method public final f(Landroid/graphics/Bitmap;)Lhi4;
+.method public final e(Landroid/graphics/Bitmap;)Lqk4;
     .locals 8
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -302,28 +237,28 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object v0, p0, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->a:Lzo0;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->a:Lvo0;
 
     monitor-enter v0
 
     :try_start_1
-    invoke-static {p1}, Laq0;->d(Landroid/graphics/Bitmap;)I
+    invoke-static {p1}, Lxp0;->d(Landroid/graphics/Bitmap;)I
 
     move-result v1
 
-    iget v2, v0, Lzo0;->b:I
+    iget v2, v0, Lvo0;->a:I
 
-    iget v3, v0, Lzo0;->c:I
+    iget v3, v0, Lvo0;->c:I
 
     if-ge v2, v3, :cond_0
 
-    iget-wide v3, v0, Lzo0;->e:J
+    iget-wide v3, v0, Lvo0;->b:J
 
     int-to-long v5, v1
 
     add-long/2addr v3, v5
 
-    iget v1, v0, Lzo0;->d:I
+    iget v1, v0, Lvo0;->d:I
 
     int-to-long v5, v1
 
@@ -333,23 +268,21 @@
 
     add-int/lit8 v2, v2, 0x1
 
-    iput v2, v0, Lzo0;->b:I
+    iput v2, v0, Lvo0;->a:I
 
-    iput-wide v3, v0, Lzo0;->e:J
+    iput-wide v3, v0, Lvo0;->b:J
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     monitor-exit v0
 
-    iget-object v0, p0, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->a:Lzo0;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->a:Lvo0;
 
-    iget-object v0, v0, Lzo0;->f:Ljava/lang/Object;
+    iget-object v0, v0, Lvo0;->e:Lkce;
 
-    check-cast v0, Ltvi;
+    sget-object v1, Lvc3;->X:Ltha;
 
-    sget-object v1, Lda3;->Y:Lnx3;
-
-    invoke-static {p1, v0, v1}, Lda3;->k0(Ljava/lang/Object;Ladd;Lca3;)Lhi4;
+    invoke-static {p1, v0, v1}, Lvc3;->k0(Ljava/lang/Object;Lfod;Luc3;)Lqk4;
 
     move-result-object p1
 
@@ -363,7 +296,7 @@
     :cond_0
     monitor-exit v0
 
-    invoke-static {p1}, Laq0;->d(Landroid/graphics/Bitmap;)I
+    invoke-static {p1}, Lxp0;->d(Landroid/graphics/Bitmap;)I
 
     move-result v0
 
@@ -371,42 +304,42 @@
 
     sget-object p1, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    iget-object p1, p0, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->a:Lzo0;
+    iget-object p1, p0, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->a:Lvo0;
 
     monitor-enter p1
 
     :try_start_2
-    iget v1, p1, Lzo0;->b:I
+    iget v1, p1, Lvo0;->a:I
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_3
 
     monitor-exit p1
 
-    iget-object v2, p0, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->a:Lzo0;
+    iget-object v2, p0, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->a:Lvo0;
 
     monitor-enter v2
 
     :try_start_3
-    iget-wide v3, v2, Lzo0;->e:J
+    iget-wide v3, v2, Lvo0;->b:J
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
     monitor-exit v2
 
-    iget-object p1, p0, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->a:Lzo0;
+    iget-object p1, p0, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->a:Lvo0;
 
     monitor-enter p1
 
     :try_start_4
-    iget v2, p1, Lzo0;->c:I
+    iget v2, p1, Lvo0;->c:I
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
     monitor-exit p1
 
-    iget-object p1, p0, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->a:Lzo0;
+    iget-object p1, p0, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->a:Lvo0;
 
-    invoke-virtual {p1}, Lzo0;->b()I
+    invoke-virtual {p1}, Lvo0;->b()I
 
     move-result p1
 
@@ -416,19 +349,25 @@
 
     const-string v7, ", the current pool size is "
 
-    invoke-static {v5, v0, v6, v1, v7}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v5, v0, v6, v1, v7}, Lwy1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
     const-string v1, " bytes. The current pool max count is "
 
-    invoke-static {v0, v3, v4, v1, v2}, Laab;->m(Ljava/lang/StringBuilder;JLjava/lang/String;I)V
+    invoke-static {v0, v3, v4, v1, v2}, Lutb;->n(Ljava/lang/StringBuilder;JLjava/lang/String;I)V
 
     const-string v1, ", the current pool max size is "
 
-    const-string v2, " bytes."
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v1, p1, v2}, Lzb3;->c(Ljava/lang/StringBuilder;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, " bytes."
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
@@ -481,9 +420,74 @@
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
 
-    invoke-static {v0}, Lv1f;->c(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lrei;->g(Ljava/lang/Throwable;)V
 
     const/4 p1, 0x0
 
     throw p1
+.end method
+
+.method public final f(Lce5;Landroid/graphics/Bitmap$Config;ILandroid/graphics/ColorSpace;)Lvc3;
+    .locals 3
+
+    iget v0, p1, Lce5;->Y:I
+
+    new-instance v1, Landroid/graphics/BitmapFactory$Options;
+
+    invoke-direct {v1}, Landroid/graphics/BitmapFactory$Options;-><init>()V
+
+    const/4 v2, 0x1
+
+    iput-boolean v2, v1, Landroid/graphics/BitmapFactory$Options;->inDither:Z
+
+    iput-object p2, v1, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
+
+    iput-boolean v2, v1, Landroid/graphics/BitmapFactory$Options;->inPurgeable:Z
+
+    iput-boolean v2, v1, Landroid/graphics/BitmapFactory$Options;->inInputShareable:Z
+
+    iput v0, v1, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
+
+    iput-boolean v2, v1, Landroid/graphics/BitmapFactory$Options;->inMutable:Z
+
+    if-nez p4, :cond_0
+
+    sget-object p2, Landroid/graphics/ColorSpace$Named;->SRGB:Landroid/graphics/ColorSpace$Named;
+
+    invoke-static {p2}, Landroid/graphics/ColorSpace;->get(Landroid/graphics/ColorSpace$Named;)Landroid/graphics/ColorSpace;
+
+    move-result-object p4
+
+    :cond_0
+    iput-object p4, v1, Landroid/graphics/BitmapFactory$Options;->inPreferredColorSpace:Landroid/graphics/ColorSpace;
+
+    iget-object p1, p1, Lce5;->a:Lvc3;
+
+    invoke-static {p1}, Lvc3;->y(Lvc3;)Lvc3;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :try_start_0
+    invoke-virtual {p0, p1, p3, v1}, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->b(Lvc3;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+
+    move-result-object p2
+
+    invoke-virtual {p0, p2}, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->e(Landroid/graphics/Bitmap;)Lqk4;
+
+    move-result-object p2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p1}, Lvc3;->close()V
+
+    return-object p2
+
+    :catchall_0
+    move-exception p2
+
+    invoke-virtual {p1}, Lvc3;->close()V
+
+    throw p2
 .end method

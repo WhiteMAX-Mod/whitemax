@@ -1,215 +1,142 @@
 .class public final Lud7;
-.super Lsgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:J
+.field public final synthetic a:I
 
-.field public Y:I
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public final synthetic q0:Lhe7;
+.field public final synthetic b:Lzd7;
 
 
 # direct methods
-.method public constructor <init>(Lhe7;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lzd7;I)V
     .locals 0
 
-    iput-object p1, p0, Lud7;->q0:Lhe7;
+    iput p2, p0, Lud7;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lud7;->b:Lzd7;
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lq54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lud7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lud7;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lud7;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final run()V
     .locals 2
 
-    new-instance v0, Lud7;
+    iget v0, p0, Lud7;->a:I
 
-    iget-object v1, p0, Lud7;->q0:Lhe7;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, v1, p2}, Lud7;-><init>(Lhe7;Lkotlin/coroutines/Continuation;)V
+    iget-object v0, p0, Lud7;->b:Lzd7;
 
-    iput-object p1, v0, Lud7;->Z:Ljava/lang/Object;
+    sget-object v1, Lqd7;->a:Lqd7;
 
-    return-object v0
-.end method
+    invoke-static {v0, v1}, Lzd7;->l(Lzd7;Ltd7;)V
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
+    return-void
 
-    iget-object v0, p0, Lud7;->q0:Lhe7;
+    :pswitch_0
+    iget-object v0, p0, Lud7;->b:Lzd7;
 
-    iget-object v1, v0, Lhe7;->v0:Ljava/util/concurrent/atomic/AtomicInteger;
+    sget-object v1, Lqd7;->a:Lqd7;
 
-    iget v2, p0, Lud7;->Y:I
+    invoke-static {v0, v1}, Lzd7;->l(Lzd7;Ltd7;)V
 
-    const-string v3, "prefetch "
+    return-void
 
-    const/4 v4, 0x1
+    :pswitch_1
+    iget-object v0, p0, Lud7;->b:Lzd7;
 
-    const/4 v5, 0x0
+    invoke-virtual {v0}, Lzd7;->getShowProgress()Z
 
-    if-eqz v2, :cond_1
+    move-result v1
 
-    if-ne v2, v4, :cond_0
+    if-eqz v1, :cond_0
 
-    iget-wide v6, p0, Lud7;->X:J
+    sget-object v1, Lrd7;->a:Lrd7;
 
-    iget-object v2, p0, Lud7;->Z:Ljava/lang/Object;
-
-    check-cast v2, Lq54;
-
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
+    invoke-static {v0, v1}, Lzd7;->l(Lzd7;Ltd7;)V
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    return-void
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    :pswitch_2
+    iget-object v0, p0, Lud7;->b:Lzd7;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0}, Lzd7;->getShowProgress()Z
 
-    throw p1
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    sget-object v1, Lrd7;->a:Lrd7;
+
+    invoke-static {v0, v1}, Lzd7;->l(Lzd7;Ltd7;)V
 
     :cond_1
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    return-void
 
-    iget-object p1, p0, Lud7;->Z:Ljava/lang/Object;
+    :pswitch_3
+    iget-object v0, p0, Lud7;->b:Lzd7;
 
-    move-object v2, p1
+    sget-object v1, Lsd7;->a:Lsd7;
 
-    check-cast v2, Lq54;
+    invoke-static {v0, v1}, Lzd7;->l(Lzd7;Ltd7;)V
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    return-void
 
-    move-result-wide v6
+    :pswitch_4
+    iget-object v0, p0, Lud7;->b:Lzd7;
 
-    sget-object p1, Lhe7;->C0:Ljava/lang/String;
+    sget-object v1, Lsd7;->a:Lsd7;
 
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+    invoke-static {v0, v1}, Lzd7;->l(Lzd7;Ltd7;)V
 
-    move-result v8
+    return-void
 
-    new-instance v9, Ljava/lang/StringBuilder;
+    :pswitch_5
+    iget-object v0, p0, Lud7;->b:Lzd7;
 
-    invoke-direct {v9, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    sget-object v1, Lsd7;->a:Lsd7;
 
-    invoke-virtual {v9, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1}, Lzd7;->l(Lzd7;Ltd7;)V
 
-    const-string v8, ": start load real albums"
+    return-void
 
-    invoke-virtual {v9, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :pswitch_6
+    iget-object v0, p0, Lud7;->b:Lzd7;
 
-    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    sget-object v1, Lsd7;->a:Lsd7;
 
-    move-result-object v8
+    invoke-static {v0, v1}, Lzd7;->l(Lzd7;Ltd7;)V
 
-    invoke-static {p1, v8}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    return-void
 
-    new-instance p1, Ltd7;
+    :pswitch_7
+    iget-object v0, p0, Lud7;->b:Lzd7;
 
-    invoke-direct {p1, v0, v5}, Ltd7;-><init>(Lhe7;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
 
-    iput-object v2, p0, Lud7;->Z:Ljava/lang/Object;
+    return-void
 
-    iput-wide v6, p0, Lud7;->X:J
+    nop
 
-    iput v4, p0, Lud7;->Y:I
-
-    invoke-static {p1, p0}, Ldxi;->c(Lzi6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v4, Lr54;->a:Lr54;
-
-    if-ne p1, v4, :cond_2
-
-    return-object v4
-
-    :cond_2
-    :goto_0
-    check-cast p1, Ljava/util/List;
-
-    invoke-static {v2}, Ldxi;->e(Lq54;)Z
-
-    move-result v2
-
-    sget-object v4, Lccg;->a:Lccg;
-
-    if-nez v2, :cond_3
-
-    return-object v4
-
-    :cond_3
-    iget-object v0, v0, Lhe7;->t0:Lx0f;
-
-    new-instance v2, Lue5;
-
-    invoke-direct {v2, p1}, Lue5;-><init>(Ljava/lang/Object;)V
-
-    invoke-virtual {v0, v5, v2}, Lx0f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    sget-object p1, Lhe7;->C0:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result v0
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v1
-
-    sub-long/2addr v1, v6
-
-    const-string v5, ": finish load real albums, time = "
-
-    invoke-static {v0, v1, v2, v3, v5}, Lu15;->m(IJLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "ms"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p1, v0}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v4
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

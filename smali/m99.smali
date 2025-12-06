@@ -4,5 +4,20 @@
 
 
 # virtual methods
-.method public abstract b(Lt89;)V
+.method public abstract B(ILc99;Lg19;)V
+.end method
+
+.method public abstract C(ILc99;Lg19;)V
+.end method
+
+.method public abstract H(ILc99;Ltb8;Lg19;)V
+.end method
+
+.method public abstract I(ILc99;Ltb8;Lg19;)V
+.end method
+
+.method public abstract c(ILc99;Ltb8;Lg19;)V
+.end method
+
+.method public abstract g(ILc99;Ltb8;Lg19;Ljava/io/IOException;Z)V
 .end method

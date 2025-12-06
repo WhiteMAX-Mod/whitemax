@@ -1,136 +1,143 @@
 .class public final Lpm3;
-.super Lsgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic X:Lqm3;
+.field public a:Lwg7;
 
-.field public final synthetic Y:Z
+.field public b:Lmni;
 
-.field public final synthetic Z:J
+.field public c:Lt95;
 
+.field public d:Z
 
-# direct methods
-.method public constructor <init>(Lqm3;ZJLkotlin/coroutines/Continuation;)V
-    .locals 0
+.field public e:Z
 
-    iput-object p1, p0, Lpm3;->X:Lqm3;
+.field public f:I
 
-    iput-boolean p2, p0, Lpm3;->Y:Z
-
-    iput-wide p3, p0, Lpm3;->Z:J
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p5}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.field public g:Z
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public a()Lpm3;
+    .locals 10
 
-    check-cast p1, Lq54;
+    iget-object v0, p0, Lpm3;->a:Lwg7;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    new-instance v1, Lpm3;
 
-    invoke-virtual {p0, p1, p2}, Lpm3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v2, p0, Lpm3;->b:Lmni;
 
-    move-result-object p1
+    iget-object v3, p0, Lpm3;->c:Lt95;
 
-    check-cast p1, Lpm3;
+    iget-boolean v4, p0, Lpm3;->d:Z
 
-    sget-object p2, Lccg;->a:Lccg;
+    iget-boolean v5, p0, Lpm3;->e:Z
 
-    invoke-virtual {p1, p2}, Lpm3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget v6, p0, Lpm3;->f:I
 
-    return-object p2
+    iget-boolean v7, p0, Lpm3;->g:Z
+
+    if-eqz v7, :cond_0
+
+    if-nez v6, :cond_0
+
+    const/4 v7, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v7, 0x0
+
+    :goto_0
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v8
+
+    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v9
+
+    if-eqz v9, :cond_1
+
+    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Lh95;
+
+    invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v8, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v8, 0x0
+
+    :goto_1
+    const-string v9, "Composition must have at least one non-looping sequence."
+
+    invoke-static {v9, v8}, Lhsi;->a(Ljava/lang/Object;Z)V
+
+    invoke-static {v0}, Lwg7;->j(Ljava/util/Collection;)Lwg7;
+
+    move-result-object v0
+
+    iput-object v0, v1, Lpm3;->a:Lwg7;
+
+    iput-object v2, v1, Lpm3;->b:Lmni;
+
+    iput-object v3, v1, Lpm3;->c:Lt95;
+
+    iput-boolean v4, v1, Lpm3;->d:Z
+
+    iput-boolean v5, v1, Lpm3;->e:Z
+
+    iput v6, v1, Lpm3;->f:I
+
+    iput-boolean v7, v1, Lpm3;->g:Z
+
+    return-object v1
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 6
+.method public b()Lpm3;
+    .locals 2
 
     new-instance v0, Lpm3;
 
-    iget-boolean v2, p0, Lpm3;->Y:Z
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iget-wide v3, p0, Lpm3;->Z:J
+    iget-object v1, p0, Lpm3;->a:Lwg7;
 
-    iget-object v1, p0, Lpm3;->X:Lqm3;
+    iput-object v1, v0, Lpm3;->a:Lwg7;
 
-    move-object v5, p2
+    iget-object v1, p0, Lpm3;->b:Lmni;
 
-    invoke-direct/range {v0 .. v5}, Lpm3;-><init>(Lqm3;ZJLkotlin/coroutines/Continuation;)V
+    iput-object v1, v0, Lpm3;->b:Lmni;
+
+    iget-object v1, p0, Lpm3;->c:Lt95;
+
+    iput-object v1, v0, Lpm3;->c:Lt95;
+
+    iget-boolean v1, p0, Lpm3;->d:Z
+
+    iput-boolean v1, v0, Lpm3;->d:Z
+
+    iget-boolean v1, p0, Lpm3;->e:Z
+
+    iput-boolean v1, v0, Lpm3;->e:Z
+
+    iget v1, p0, Lpm3;->f:I
+
+    iput v1, v0, Lpm3;->f:I
+
+    iget-boolean v1, p0, Lpm3;->g:Z
+
+    iput-boolean v1, v0, Lpm3;->g:Z
 
     return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lpm3;->X:Lqm3;
-
-    iget-object v0, p1, Lqm3;->c:Liu7;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ly83;
-
-    check-cast v0, Ld78;
-
-    iget-object v1, v0, Ld78;->t0:Lq4e;
-
-    sget-object v2, Ld78;->P0:[Ltr7;
-
-    const/16 v3, 0x9
-
-    aget-object v2, v2, v3
-
-    iget-boolean v3, p0, Lpm3;->Y:Z
-
-    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v0, v2, v3}, Lq4e;->P(Ljava/lang/Object;Ltr7;Ljava/lang/Object;)V
-
-    iget-object p1, p1, Lqm3;->Y:Lxe5;
-
-    sget-object v0, Lig1;->c:Lig1;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, ":profile/add-members?chat_id="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lpm3;->Z:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, "&is_chat=true"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0, p1}, Lfd0;->l(Ljava/lang/String;Lxe5;)V
-
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
 .end method

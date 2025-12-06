@@ -1,39 +1,108 @@
-.class public final Ldt4;
+.class public final synthetic Ldt4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnCancelListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Landroidx/fragment/app/DialogFragment;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lft4;
+
+.field public final synthetic c:Ljava/lang/Runnable;
+
+.field public final synthetic d:Liv6;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/fragment/app/DialogFragment;)V
+.method public synthetic constructor <init>(Lft4;Ljava/lang/Runnable;Liv6;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p4, p0, Ldt4;->a:I
 
-    iput-object p1, p0, Ldt4;->a:Landroidx/fragment/app/DialogFragment;
+    iput-object p1, p0, Ldt4;->b:Lft4;
+
+    iput-object p2, p0, Ldt4;->c:Ljava/lang/Runnable;
+
+    iput-object p3, p0, Ldt4;->d:Liv6;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onCancel(Landroid/content/DialogInterface;)V
-    .locals 1
+.method public final run()V
+    .locals 5
 
-    iget-object p1, p0, Ldt4;->a:Landroidx/fragment/app/DialogFragment;
+    iget v0, p0, Ldt4;->a:I
 
-    iget-object v0, p1, Landroidx/fragment/app/DialogFragment;->s1:Landroid/app/Dialog;
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz v0, :cond_0
+    iget-object v0, p0, Ldt4;->b:Lft4;
 
-    invoke-virtual {p1, v0}, Landroidx/fragment/app/DialogFragment;->onCancel(Landroid/content/DialogInterface;)V
+    iget-object v0, v0, Lft4;->a:Ljava/util/concurrent/ExecutorService;
 
-    :cond_0
+    new-instance v1, Lbt4;
+
+    const/4 v2, 0x1
+
+    iget-object v3, p0, Ldt4;->c:Ljava/lang/Runnable;
+
+    iget-object v4, p0, Ldt4;->d:Liv6;
+
+    invoke-direct {v1, v3, v4, v2}, Lbt4;-><init>(Ljava/lang/Runnable;Liv6;I)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Ldt4;->b:Lft4;
+
+    iget-object v0, v0, Lft4;->a:Ljava/util/concurrent/ExecutorService;
+
+    new-instance v1, Lbt4;
+
+    const/4 v2, 0x2
+
+    iget-object v3, p0, Ldt4;->c:Ljava/lang/Runnable;
+
+    iget-object v4, p0, Ldt4;->d:Liv6;
+
+    invoke-direct {v1, v3, v4, v2}, Lbt4;-><init>(Ljava/lang/Runnable;Liv6;I)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Ldt4;->b:Lft4;
+
+    iget-object v0, v0, Lft4;->a:Ljava/util/concurrent/ExecutorService;
+
+    new-instance v1, Lbt4;
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Ldt4;->c:Ljava/lang/Runnable;
+
+    iget-object v4, p0, Ldt4;->d:Liv6;
+
+    invoke-direct {v1, v3, v4, v2}, Lbt4;-><init>(Ljava/lang/Runnable;Liv6;I)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,47 +1,33 @@
-.class public final Lgy7;
-.super Lmmf;
+.class public interface abstract Lgy7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final o:Z
-
-
-# direct methods
-.method public constructor <init>(Ljava/lang/String;Z)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lmmf;-><init>(Lm8b;)V
-
-    iput-boolean p2, p0, Lgy7;->o:Z
-
-    const-string p2, "link"
-
-    invoke-virtual {p0, p2, p1}, Lmmf;->x(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
+# interfaces
+.implements Ljava/io/Flushable;
+.implements Ljava/io/Closeable;
 
 
 # virtual methods
-.method public final P()S
-    .locals 1
-
-    sget-object v0, Lm8b;->c:Ln9a;
-
-    const/16 v0, 0x59
-
-    return v0
+.method public abstract G(Ljava/io/InputStreamReader;)V
 .end method
 
-.method public final X()Z
-    .locals 1
+.method public abstract X()V
+.end method
 
-    iget-boolean v0, p0, Lgy7;->o:Z
+.method public abstract b0(Ljava/lang/String;)Lgy7;
+.end method
 
-    xor-int/lit8 v0, v0, 0x1
+.method public abstract h(Ljava/lang/String;)V
+.end method
 
-    return v0
+.method public abstract n()V
+.end method
+
+.method public abstract p()V
+.end method
+
+.method public abstract q()V
+.end method
+
+.method public abstract r()V
 .end method

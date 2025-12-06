@@ -1,124 +1,324 @@
 .class public final Lwp8;
-.super Ljava/lang/Object;
+.super Li2;
 .source "SourceFile"
-
-# interfaces
-.implements Lfxg;
 
 
 # instance fields
-.field public final synthetic b:Lbq8;
+.field public final synthetic a:I
+
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lbq8;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lwp8;->a:I
 
-    iput-object p1, p0, Lwp8;->b:Lbq8;
+    iput-object p2, p0, Lwp8;->b:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroidx/media3/exoplayer/video/VideoSink$VideoSinkException;)V
-    .locals 4
+.method public bridge contains(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object v0, p1, Landroidx/media3/exoplayer/video/VideoSink$VideoSinkException;->a:Lmb6;
+    iget v0, p0, Lwp8;->a:I
 
-    const/16 v1, 0x1b59
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v2, 0x0
+    invoke-super {p0, p1}, Lj0;->contains(Ljava/lang/Object;)Z
 
-    iget-object v3, p0, Lwp8;->b:Lbq8;
+    move-result p1
 
-    invoke-virtual {v3, p1, v0, v2, v1}, Lxk0;->c(Ljava/lang/Exception;Lmb6;ZI)Landroidx/media3/exoplayer/ExoPlaybackException;
+    return p1
+
+    :pswitch_0
+    instance-of v0, p1, Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    check-cast p1, Ljava/lang/String;
+
+    invoke-super {p0, p1}, Lj0;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    :goto_0
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final get(I)Ljava/lang/Object;
+    .locals 1
+
+    iget v0, p0, Lwp8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lwp8;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/List;
+
+    invoke-static {p1, p0}, Lue3;->y(ILjava/util/List;)I
+
+    move-result p1
+
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
 
-    iput-object p1, v3, Lkp8;->E1:Landroidx/media3/exoplayer/ExoPlaybackException;
+    return-object p1
 
-    return-void
+    :pswitch_0
+    iget-object v0, p0, Lwp8;->b:Ljava/lang/Object;
+
+    check-cast v0, Lxt4;
+
+    iget-object v0, v0, Lxt4;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/regex/Matcher;
+
+    invoke-virtual {v0, p1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    const-string p1, ""
+
+    :cond_0
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final b()V
-    .locals 3
+.method public final getSize()I
+    .locals 1
 
-    iget-object v0, p0, Lwp8;->b:Lbq8;
+    iget v0, p0, Lwp8;->a:I
 
-    iget-object v1, v0, Lbq8;->e2:Landroid/view/Surface;
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz v1, :cond_0
+    iget-object v0, p0, Lwp8;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    return v0
+
+    :pswitch_0
+    iget-object v0, p0, Lwp8;->b:Ljava/lang/Object;
+
+    check-cast v0, Lxt4;
+
+    iget-object v0, v0, Lxt4;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/regex/Matcher;
+
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->groupCount()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public bridge indexOf(Ljava/lang/Object;)I
+    .locals 1
+
+    iget v0, p0, Lwp8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1}, Li2;->indexOf(Ljava/lang/Object;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    instance-of v0, p1, Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    const/4 p1, -0x1
+
+    goto :goto_0
+
+    :cond_0
+    check-cast p1, Ljava/lang/String;
+
+    invoke-super {p0, p1}, Li2;->indexOf(Ljava/lang/Object;)I
+
+    move-result p1
+
+    :goto_0
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public iterator()Ljava/util/Iterator;
+    .locals 2
+
+    iget v0, p0, Lwp8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0}, Li2;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Leqd;
 
     const/4 v1, 0x0
 
-    const/4 v2, 0x1
+    invoke-direct {v0, p0, v1}, Leqd;-><init>(Lwp8;I)V
 
-    invoke-virtual {v0, v1, v2}, Lbq8;->O0(II)V
+    return-object v0
 
-    :cond_0
-    return-void
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final c()V
+.method public bridge lastIndexOf(Ljava/lang/Object;)I
     .locals 1
 
-    iget-object v0, p0, Lwp8;->b:Lbq8;
+    iget v0, p0, Lwp8;->a:I
 
-    iget-object v0, v0, Lkp8;->Q0:Lbj5;
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz v0, :cond_0
+    invoke-super {p0, p1}, Li2;->lastIndexOf(Ljava/lang/Object;)I
 
-    invoke-virtual {v0}, Lbj5;->a()V
+    move-result p1
 
-    :cond_0
-    return-void
-.end method
+    return p1
 
-.method public final g(Ljxg;)V
-    .locals 0
+    :pswitch_0
+    instance-of v0, p1, Ljava/lang/String;
 
-    return-void
-.end method
+    if-nez v0, :cond_0
 
-.method public final onFirstFrameRendered()V
-    .locals 8
+    const/4 p1, -0x1
 
-    iget-object v0, p0, Lwp8;->b:Lbq8;
-
-    iget-object v3, v0, Lbq8;->e2:Landroid/view/Surface;
-
-    if-eqz v3, :cond_1
-
-    iget-object v2, v0, Lbq8;->Q1:Lfqf;
-
-    iget-object v1, v2, Lfqf;->a:Ljava/lang/Object;
-
-    move-object v7, v1
-
-    check-cast v7, Landroid/os/Handler;
-
-    if-eqz v7, :cond_0
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v4
-
-    new-instance v1, Llg2;
-
-    const/4 v6, 0x7
-
-    invoke-direct/range {v1 .. v6}, Llg2;-><init>(Ljava/lang/Object;Ljava/lang/Object;JI)V
-
-    invoke-virtual {v7, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    goto :goto_0
 
     :cond_0
-    const/4 v1, 0x1
+    check-cast p1, Ljava/lang/String;
 
-    iput-boolean v1, v0, Lbq8;->h2:Z
+    invoke-super {p0, p1}, Li2;->lastIndexOf(Ljava/lang/Object;)I
 
-    :cond_1
-    return-void
+    move-result p1
+
+    :goto_0
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public listIterator()Ljava/util/ListIterator;
+    .locals 2
+
+    iget v0, p0, Lwp8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0}, Li2;->listIterator()Ljava/util/ListIterator;
+
+    move-result-object v0
+
+    return-object v0
+
+    .line 1
+    :pswitch_0
+    new-instance v0, Leqd;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Leqd;-><init>(Lwp8;I)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public listIterator(I)Ljava/util/ListIterator;
+    .locals 1
+
+    iget v0, p0, Lwp8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1}, Li2;->listIterator(I)Ljava/util/ListIterator;
+
+    move-result-object p1
+
+    return-object p1
+
+    .line 2
+    :pswitch_0
+    new-instance v0, Leqd;
+
+    invoke-direct {v0, p0, p1}, Leqd;-><init>(Lwp8;I)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

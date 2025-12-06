@@ -1,114 +1,173 @@
 .class public final Lk50;
-.super Lsgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzi6;
+
+# static fields
+.field public static final d:[F
 
 
 # instance fields
-.field public X:I
+.field public final a:[J
 
-.field public final synthetic Y:Ln50;
+.field public b:F
+
+.field public c:F
 
 
 # direct methods
-.method public constructor <init>(Ln50;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 8
 
-    iput-object p1, p0, Lk50;->Y:Ln50;
+    const/4 v0, 0x3
 
-    const/4 p1, 0x2
+    new-array v1, v0, [F
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v1, Lk50;->d:[F
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    move v4, v1
+
+    move v3, v2
+
+    :goto_0
+    if-ge v3, v0, :cond_0
+
+    sget-object v5, Lk50;->d:[F
+
+    int-to-double v6, v3
+
+    invoke-static {v6, v7}, Ljava/lang/Math;->exp(D)D
+
+    move-result-wide v6
+
+    double-to-float v6, v6
+
+    aput v6, v5, v3
+
+    add-float/2addr v4, v6
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    :goto_1
+    const/4 v0, 0x2
+
+    if-ge v2, v0, :cond_1
+
+    sget-object v0, Lk50;->d:[F
+
+    aget v3, v0, v2
+
+    div-float/2addr v3, v4
+
+    aput v3, v0, v2
+
+    add-float/2addr v1, v3
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    sget-object v2, Lk50;->d:[F
+
+    const/high16 v3, 0x3f800000    # 1.0f
+
+    sub-float/2addr v3, v1
+
+    aput v3, v2, v0
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x3
+
+    new-array v0, v0, [J
+
+    iput-object v0, p0, Lk50;->a:[J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(J)V
+    .locals 7
 
-    check-cast p1, Lq54;
+    long-to-float v0, p1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iput v0, p0, Lk50;->c:F
 
-    invoke-virtual {p0, p1, p2}, Lk50;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/4 v1, 0x0
 
-    move-result-object p1
+    iput v1, p0, Lk50;->b:F
 
-    check-cast p1, Lk50;
+    const/4 v1, 0x0
 
-    sget-object p2, Lccg;->a:Lccg;
+    :goto_0
+    iget-object v2, p0, Lk50;->a:[J
 
-    invoke-virtual {p1, p2}, Lk50;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    array-length v3, v2
 
-    move-result-object p1
+    add-int/lit8 v3, v3, -0x1
 
-    return-object p1
-.end method
+    sget-object v4, Lk50;->d:[F
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    if-ge v1, v3, :cond_0
 
-    new-instance p1, Lk50;
+    add-int/lit8 v3, v1, 0x1
 
-    iget-object v0, p0, Lk50;->Y:Ln50;
+    aget-wide v5, v2, v3
 
-    invoke-direct {p1, v0, p2}, Lk50;-><init>(Ln50;Lkotlin/coroutines/Continuation;)V
+    aput-wide v5, v2, v1
 
-    return-object p1
-.end method
+    iget v2, p0, Lk50;->b:F
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    aget v1, v4, v1
 
-    iget v0, p0, Lk50;->X:I
+    long-to-float v4, v5
 
-    const/4 v1, 0x1
+    mul-float/2addr v1, v4
 
-    if-eqz v0, :cond_1
+    add-float/2addr v1, v2
 
-    if-ne v0, v1, :cond_0
+    iput v1, p0, Lk50;->b:F
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    move v1, v3
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    array-length v1, v2
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    add-int/lit8 v1, v1, -0x1
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    aput-wide p1, v2, v1
 
-    throw p1
+    iget p1, p0, Lk50;->b:F
 
-    :cond_1
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    array-length p2, v2
 
-    iget-object p1, p0, Lk50;->Y:Ln50;
+    add-int/lit8 p2, p2, -0x1
 
-    iget-object p1, p1, Ln50;->Z:Lnje;
+    aget p2, v4, p2
 
-    iput v1, p0, Lk50;->X:I
+    mul-float/2addr p2, v0
 
-    sget-object v0, Lus9;->a:Lus9;
+    add-float/2addr p2, p1
 
-    invoke-virtual {p1, v0, p0}, Lnje;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iput p2, p0, Lk50;->b:F
 
-    move-result-object p1
-
-    sget-object v0, Lr54;->a:Lr54;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
+    return-void
 .end method

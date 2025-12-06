@@ -1,56 +1,51 @@
 .class public final Ljc4;
-.super Ljava/lang/Object;
+.super Lvq8;
 .source "SourceFile"
-
-# interfaces
-.implements Lvef;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final r:Landroid/graphics/RectF;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Ljc4;)V
     .locals 0
 
-    iput p1, p0, Ljc4;->a:I
+    .line 3
+    invoke-direct {p0, p1}, Lvq8;-><init>(Lvq8;)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 4
+    iget-object p1, p1, Ljc4;->r:Landroid/graphics/RectF;
+
+    iput-object p1, p0, Ljc4;->r:Landroid/graphics/RectF;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lxse;Landroid/graphics/RectF;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0, p1}, Lvq8;-><init>(Lxse;)V
+
+    .line 2
+    iput-object p2, p0, Ljc4;->r:Landroid/graphics/RectF;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
+.method public final newDrawable()Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    iget v0, p0, Ljc4;->a:I
+    new-instance v0, Lkc4;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0, p0}, Lwq8;-><init>(Lvq8;)V
 
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    iput-object p0, v0, Lkc4;->I0:Ljc4;
 
-    return-object v0
-
-    :pswitch_0
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    invoke-virtual {v0}, Lwq8;->invalidateSelf()V
 
     return-object v0
-
-    :pswitch_1
-    sget-object v0, Ly0;->k:Ljava/lang/NullPointerException;
-
-    invoke-static {v0}, Layi;->d(Ljava/lang/Exception;)Lhpe;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

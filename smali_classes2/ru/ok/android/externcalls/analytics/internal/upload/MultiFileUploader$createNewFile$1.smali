@@ -1,9 +1,9 @@
 .class final Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$createNewFile$1;
-.super Lst7;
+.super Lu08;
 .source "SourceFile"
 
 # interfaces
-.implements Lji6;
+.implements Lcm6;
 
 
 # annotations
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lst7;",
-        "Lji6;"
+        "Lu08;",
+        "Lcm6;"
     }
 .end annotation
 
@@ -54,7 +54,7 @@
 
     const/4 p1, 0x0
 
-    invoke-direct {p0, p1}, Lst7;-><init>(I)V
+    invoke-direct {p0, p1}, Lu08;-><init>(I)V
 
     return-void
 .end method
@@ -150,7 +150,7 @@
 
     move-result-object v3
 
-    sget-object v4, Lhv5;->a:[B
+    sget-object v4, Lhz5;->a:[B
 
     const-wide/16 v4, 0x0
 
@@ -178,7 +178,7 @@
     check-cast v6, Ljava/io/File;
 
     .line 13
-    invoke-static {v6}, Lhv5;->d(Ljava/io/File;)J
+    invoke-static {v6}, Lhz5;->e(Ljava/io/File;)J
 
     move-result-wide v6
 

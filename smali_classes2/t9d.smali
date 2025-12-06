@@ -1,19 +1,31 @@
-.class public final Lt9d;
-.super Luj0;
+.class public abstract Lt9d;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:J
+# static fields
+.field public static a:I
+
+.field public static b:Landroid/util/Size;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Luj0;-><init>()V
+    invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
-    iput-wide p1, p0, Lt9d;->b:J
+    const/16 v0, 0x8
+
+    sput v0, Lt9d;->a:I
+
+    new-instance v0, Landroid/util/Size;
+
+    const/16 v1, 0xa0
+
+    invoke-direct {v0, v1, v1}, Landroid/util/Size;-><init>(II)V
+
+    sput-object v0, Lt9d;->b:Landroid/util/Size;
 
     return-void
 .end method

@@ -1,250 +1,379 @@
 .class public final Llqa;
-.super Lrdi;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lorg/webrtc/VideoDecoderFactory;
 
 
 # instance fields
-.field public final synthetic c:I
+.field public final a:Lorg/webrtc/EglBase$Context;
 
-.field public final synthetic o:Lone/me/sdk/uikit/common/button/OneMeButton;
+.field public final b:Ly6d;
+
+.field public final c:Lbwf;
+
+.field public final d:Lbwf;
+
+.field public volatile e:Z
 
 
 # direct methods
-.method public constructor <init>(Lone/me/sdk/uikit/common/button/OneMeButton;I)V
+.method public constructor <init>(Lorg/webrtc/EglBase$Context;Ly6d;)V
     .locals 0
 
-    iput p2, p0, Llqa;->c:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    packed-switch p2, :pswitch_data_0
+    iput-object p1, p0, Llqa;->a:Lorg/webrtc/EglBase$Context;
 
-    iput-object p1, p0, Llqa;->o:Lone/me/sdk/uikit/common/button/OneMeButton;
+    iput-object p2, p0, Llqa;->b:Ly6d;
 
-    const/16 p1, 0xc
-
-    sget-object p2, Lkqa;->b:Lkqa;
-
-    invoke-direct {p0, p1, p2}, Lrdi;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    :pswitch_0
-    sget-object p2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    iput-object p1, p0, Llqa;->o:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    const/16 p1, 0xc
-
-    invoke-direct {p0, p1, p2}, Lrdi;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    :pswitch_1
-    iput-object p1, p0, Llqa;->o:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    const/16 p1, 0xc
+    new-instance p1, Lhai;
 
     const/4 p2, 0x0
 
-    invoke-direct {p0, p1, p2}, Lrdi;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, p0, p2}, Lhai;-><init>(Llqa;I)V
+
+    new-instance p2, Lbwf;
+
+    invoke-direct {p2, p1}, Lbwf;-><init>(Lcm6;)V
+
+    iput-object p2, p0, Llqa;->c:Lbwf;
+
+    new-instance p1, Lhai;
+
+    const/4 p2, 0x1
+
+    invoke-direct {p1, p0, p2}, Lhai;-><init>(Llqa;I)V
+
+    new-instance p2, Lbwf;
+
+    invoke-direct {p2, p1}, Lbwf;-><init>(Lcm6;)V
+
+    iput-object p2, p0, Llqa;->d:Lbwf;
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Llqa;->e:Z
 
     return-void
-
-    :pswitch_2
-    iput-object p1, p0, Llqa;->o:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    const/16 p1, 0xc
-
-    sget-object p2, Lhqa;->a:Lhqa;
-
-    invoke-direct {p0, p1, p2}, Lrdi;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    :pswitch_3
-    iput-object p1, p0, Llqa;->o:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    const/16 p1, 0xc
-
-    sget-object p2, Ljqa;->a:Ljqa;
-
-    invoke-direct {p0, p1, p2}, Lrdi;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final b0(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 3
+.method public final a(Lorg/webrtc/VideoCodecInfo;)Lpy0;
+    .locals 5
 
-    iget v0, p0, Llqa;->c:I
+    const/4 v0, 0x0
 
-    iget-object v1, p0, Llqa;->o:Lone/me/sdk/uikit/common/button/OneMeButton;
+    if-nez p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    goto :goto_1
 
-    iget-object v0, v1, Lone/me/sdk/uikit/common/button/OneMeButton;->r0:Ljava/lang/Object;
+    :cond_0
+    iget-object v1, p1, Lorg/webrtc/VideoCodecInfo;->name:Ljava/lang/String;
 
-    invoke-static {p1, p2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const-string v2, "VP8"
+
+    invoke-static {v1, v2}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
-    if-nez v2, :cond_2
+    if-nez v2, :cond_1
 
-    check-cast p2, Ljava/lang/Boolean;
+    const-string v2, "VP9"
 
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-static {v1, v2}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result p2
+    move-result v1
 
-    check-cast p1, Ljava/lang/Boolean;
+    if-eqz v1, :cond_2
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :cond_1
+    iget-boolean v1, p0, Llqa;->e:Z
 
-    if-eqz p2, :cond_0
+    if-nez v1, :cond_2
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    iget-object v1, p0, Llqa;->d:Lbwf;
 
-    move-result-object p1
+    invoke-virtual {v1}, Lbwf;->getValue()Ljava/lang/Object;
 
-    check-cast p1, Landroid/view/View;
+    move-result-object v1
 
-    const/4 p2, 0x0
+    check-cast v1, Lorg/webrtc/VideoDecoderFactory;
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setVisibility(I)V
+    invoke-interface {v1, p1}, Lorg/webrtc/VideoDecoderFactory;->createDecoder(Lorg/webrtc/VideoCodecInfo;)Lorg/webrtc/VideoDecoder;
 
-    sget p1, Lqjd;->a:I
+    move-result-object v1
 
-    invoke-static {v1, p2}, Lone/me/sdk/uikit/common/button/OneMeButton;->a(Lone/me/sdk/uikit/common/button/OneMeButton;Z)V
+    if-eqz v1, :cond_4
+
+    new-instance v0, Lpy0;
+
+    iget-object v2, p0, Llqa;->b:Ly6d;
+
+    invoke-direct {v0, v1, p1, v2}, Lpy0;-><init>(Lorg/webrtc/VideoDecoder;Lorg/webrtc/VideoCodecInfo;Ly6d;)V
+
+    return-object v0
+
+    :cond_2
+    :try_start_0
+    iget-object v1, p0, Llqa;->c:Lbwf;
+
+    invoke-virtual {v1}, Lbwf;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lorg/webrtc/VideoDecoderFactory;
+
+    invoke-interface {v1, p1}, Lorg/webrtc/VideoDecoderFactory;->createDecoder(Lorg/webrtc/VideoCodecInfo;)Lorg/webrtc/VideoDecoder;
+
+    move-result-object v1
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v1
+
+    iget-object v2, p0, Llqa;->b:Ly6d;
+
+    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v3, "Hardware encoder creating failed! Error="
+
+    const-string v4, "OKDefaultVideoDecoderFactory"
+
+    invoke-static {v3, v1, v2, v4}, La9h;->o(Ljava/lang/String;Ljava/lang/String;Ly6d;Ljava/lang/String;)V
+
+    move-object v1, v0
+
+    :goto_0
+    iget-object v2, p0, Llqa;->d:Lbwf;
+
+    invoke-virtual {v2}, Lbwf;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lorg/webrtc/VideoDecoderFactory;
+
+    invoke-interface {v2, p1}, Lorg/webrtc/VideoDecoderFactory;->createDecoder(Lorg/webrtc/VideoCodecInfo;)Lorg/webrtc/VideoDecoder;
+
+    move-result-object v2
+
+    if-eqz v1, :cond_3
+
+    if-eqz v2, :cond_3
+
+    new-instance v0, Lorg/webrtc/VideoDecoderFallback;
+
+    invoke-direct {v0, v2, v1}, Lorg/webrtc/VideoDecoderFallback;-><init>(Lorg/webrtc/VideoDecoder;Lorg/webrtc/VideoDecoder;)V
+
+    move-object v1, v0
+
+    goto :goto_2
+
+    :cond_3
+    if-nez v1, :cond_6
+
+    if-nez v2, :cond_5
+
+    :cond_4
+    :goto_1
+    return-object v0
+
+    :cond_5
+    move-object v1, v2
+
+    :cond_6
+    :goto_2
+    new-instance v0, Lpy0;
+
+    iget-object v2, p0, Llqa;->b:Ly6d;
+
+    invoke-direct {v0, v1, p1, v2}, Lpy0;-><init>(Lorg/webrtc/VideoDecoder;Lorg/webrtc/VideoCodecInfo;Ly6d;)V
+
+    return-object v0
+.end method
+
+.method public final b()[Lorg/webrtc/VideoCodecInfo;
+    .locals 8
+
+    new-instance v0, Ljava/util/LinkedHashSet;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
+
+    iget-object v1, p0, Llqa;->d:Lbwf;
+
+    invoke-virtual {v1}, Lbwf;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lorg/webrtc/VideoDecoderFactory;
+
+    invoke-interface {v1}, Lorg/webrtc/VideoDecoderFactory;->getSupportedCodecs()[Lorg/webrtc/VideoCodecInfo;
+
+    move-result-object v1
+
+    array-length v2, v1
+
+    invoke-static {v1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
+
+    iget-object v1, p0, Llqa;->c:Lbwf;
+
+    invoke-virtual {v1}, Lbwf;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lorg/webrtc/VideoDecoderFactory;
+
+    invoke-interface {v1}, Lorg/webrtc/VideoDecoderFactory;->getSupportedCodecs()[Lorg/webrtc/VideoCodecInfo;
+
+    move-result-object v1
+
+    iget-boolean v2, p0, Llqa;->e:Z
+
+    const-string v3, "H265"
+
+    if-eqz v2, :cond_0
+
+    invoke-static {v3}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+
+    move-result-object v2
 
     goto :goto_0
 
     :cond_0
-    invoke-interface {v0}, Liu7;->e()Z
+    const-string v2, "VP8"
 
-    move-result p1
+    const-string v4, "VP9"
 
-    if-eqz p1, :cond_1
+    filled-new-array {v3, v2, v4}, [Ljava/lang/String;
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    move-result-object v2
 
-    move-result-object p1
+    invoke-static {v2}, Lgke;->h([Ljava/lang/Object;)Ljava/util/Set;
 
-    check-cast p1, Lm0b;
+    move-result-object v2
 
-    const/16 p2, 0x8
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Set;->isEmpty()Z
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setVisibility(I)V
+    move-result v3
 
-    sget p1, Lqjd;->a:I
+    const/4 v4, 0x0
 
-    const/4 p1, 0x1
+    if-eqz v3, :cond_1
 
-    invoke-static {v1, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->a(Lone/me/sdk/uikit/common/button/OneMeButton;Z)V
+    array-length v2, v1
+
+    invoke-static {v1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
+
+    goto :goto_2
 
     :cond_1
-    :goto_0
-    sget-object p1, Lone/me/sdk/uikit/common/button/OneMeButton;->z0:[Ltr7;
+    array-length v3, v1
 
-    invoke-virtual {v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->j()V
+    move v5, v4
+
+    :goto_1
+    if-ge v5, v3, :cond_3
+
+    aget-object v6, v1, v5
+
+    iget-object v7, v6, Lorg/webrtc/VideoCodecInfo;->name:Ljava/lang/String;
+
+    invoke-interface {v2, v7}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-nez v7, :cond_2
+
+    invoke-virtual {v0, v6}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
     :cond_2
-    return-void
+    add-int/lit8 v5, v5, 0x1
 
-    :pswitch_0
-    invoke-static {p1, p2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    check-cast p2, Lv5b;
-
-    check-cast p1, Lv5b;
-
-    if-nez p2, :cond_3
-
-    sget-object p1, Ll05;->s0:Lk82;
-
-    invoke-virtual {p1, v1}, Lk82;->n(Landroid/view/View;)Lv5b;
-
-    move-result-object p2
+    goto :goto_1
 
     :cond_3
-    invoke-virtual {v1, p2}, Lone/me/sdk/uikit/common/button/OneMeButton;->onThemeChanged(Lv5b;)V
+    :goto_2
+    new-array v1, v4, [Lorg/webrtc/VideoCodecInfo;
 
-    :cond_4
-    return-void
+    invoke-interface {v0, v1}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    :pswitch_1
-    invoke-static {p1, p2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object v0
 
-    move-result v0
+    check-cast v0, [Lorg/webrtc/VideoCodecInfo;
 
-    if-nez v0, :cond_5
+    return-object v0
+.end method
 
-    check-cast p2, Lhqa;
+.method public final createDecoder(Lorg/webrtc/VideoCodecInfo;)Lorg/webrtc/VideoDecoder;
+    .locals 3
 
-    check-cast p1, Lhqa;
+    :try_start_0
+    invoke-virtual {p0, p1}, Llqa;->a(Lorg/webrtc/VideoCodecInfo;)Lpy0;
 
-    sget-object p1, Lone/me/sdk/uikit/common/button/OneMeButton;->z0:[Ltr7;
+    move-result-object p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->e()V
+    return-object p1
 
-    :cond_5
-    return-void
+    :catchall_0
+    move-exception p1
 
-    :pswitch_2
-    invoke-static {p1, p2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const-string v0, "OKDefaultVideoDecoderFactory"
 
-    move-result v0
+    const-string v1, "Can\'t create video decoder"
 
-    if-nez v0, :cond_6
+    iget-object v2, p0, Llqa;->b:Ly6d;
 
-    check-cast p2, Ljqa;
+    invoke-interface {v2, v0, v1, p1}, Ly6d;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    check-cast p1, Ljqa;
+    const/4 p1, 0x0
 
-    sget-object p1, Lone/me/sdk/uikit/common/button/OneMeButton;->z0:[Ltr7;
+    return-object p1
+.end method
 
-    invoke-virtual {v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->e()V
+.method public final getSupportedCodecs()[Lorg/webrtc/VideoCodecInfo;
+    .locals 4
 
-    :cond_6
-    return-void
+    :try_start_0
+    invoke-virtual {p0}, Llqa;->b()[Lorg/webrtc/VideoCodecInfo;
 
-    :pswitch_3
-    invoke-static {p1, p2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result v0
+    return-object v0
 
-    if-nez v0, :cond_7
+    :catchall_0
+    move-exception v0
 
-    check-cast p2, Lkqa;
+    const-string v1, "OKDefaultVideoDecoderFactory"
 
-    check-cast p1, Lkqa;
+    const-string v2, "get.supported.codecs.failed"
 
-    sget-object p1, Lone/me/sdk/uikit/common/button/OneMeButton;->z0:[Ltr7;
+    iget-object v3, p0, Llqa;->b:Ly6d;
 
-    invoke-virtual {v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->j()V
+    invoke-interface {v3, v1, v2, v0}, Ly6d;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :cond_7
-    return-void
+    const/4 v0, 0x0
 
-    nop
+    new-array v0, v0, [Lorg/webrtc/VideoCodecInfo;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

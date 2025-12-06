@@ -1,213 +1,317 @@
-.class public abstract Lh1i;
+.class public final Lh1i;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Ljava/lang/Object;
+.field public static final c:Ljava/util/regex/Pattern;
+
+.field public static final d:Ljava/util/regex/Pattern;
+
+
+# instance fields
+.field public final a:Lumb;
+
+.field public final b:Ljava/lang/StringBuilder;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Ljava/lang/Object;
+    const-string v0, "\\[voice=\"([^\"]*)\"\\]"
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
-    sput-object v0, Lh1i;->a:Ljava/lang/Object;
+    move-result-object v0
+
+    sput-object v0, Lh1i;->c:Ljava/util/regex/Pattern;
+
+    const-string v0, "^((?:[0-9]*\\.)?[0-9]+)(px|em|%)$"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Lh1i;->d:Ljava/util/regex/Pattern;
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/Object;Ljava/lang/Object;)Z
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    if-nez p0, :cond_1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-nez p1, :cond_0
+    new-instance v0, Lumb;
 
-    const/4 p0, 0x1
+    invoke-direct {v0}, Lumb;-><init>()V
 
-    return p0
+    iput-object v0, p0, Lh1i;->a:Lumb;
 
-    :cond_0
-    const/4 p0, 0x0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return p0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    :cond_1
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iput-object v0, p0, Lh1i;->b:Ljava/lang/StringBuilder;
 
-    move-result p0
-
-    return p0
+    return-void
 .end method
 
-.method public static b(II)I
-    .locals 0
-
-    if-ge p0, p1, :cond_0
-
-    const/4 p0, -0x1
-
-    return p0
-
-    :cond_0
-    if-ne p0, p1, :cond_1
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public static c(JJ)I
-    .locals 0
-
-    cmp-long p0, p0, p2
-
-    if-gez p0, :cond_0
-
-    const/4 p0, -0x1
-
-    return p0
-
-    :cond_0
-    if-nez p0, :cond_1
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public static d(Lfgd;[Ljava/lang/String;Ljava/util/concurrent/Callable;)Lria;
-    .locals 3
-
-    iget-object v0, p0, Lfgd;->b:Ljava/util/concurrent/Executor;
-
-    if-nez v0, :cond_0
+.method public static a(Lumb;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    .locals 5
 
     const/4 v0, 0x0
 
-    :cond_0
-    sget-object v1, Lkpd;->a:Lire;
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    new-instance v1, Lkg5;
+    iget v1, p0, Lumb;->b:I
 
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v0, v2}, Lkg5;-><init>(Ljava/util/concurrent/Executor;Z)V
-
-    new-instance v0, Lfk8;
-
-    invoke-direct {v0, p2}, Lfk8;-><init>(Ljava/util/concurrent/Callable;)V
-
-    new-instance p2, Lek9;
-
-    const/16 v2, 0x15
-
-    invoke-direct {p2, p1, v2, p0}, Lek9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    new-instance p0, Lmh3;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lmh3;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p0, v1}, Lyha;->p(Lxod;)Loia;
-
-    move-result-object p0
-
-    new-instance p2, Lwja;
-
-    const/4 v2, 0x4
-
-    invoke-direct {p2, p0, v1, v2}, Lwja;-><init>(Luka;Ljava/lang/Object;I)V
-
-    invoke-virtual {p2, v1}, Lyha;->l(Lxod;)Lvja;
-
-    move-result-object p0
-
-    new-instance p2, Le2d;
-
-    const/4 v1, 0x5
-
-    invoke-direct {p2, v1, v0}, Le2d;-><init>(ILjava/lang/Object;)V
-
-    new-instance v0, Lria;
-
-    invoke-direct {v0, p0, p2, p1}, Lria;-><init>(Lyha;Laj6;I)V
-
-    return-object v0
-.end method
-
-.method public static e()V
-    .locals 2
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v1, "This function has a reified type parameter and thus can only be inlined at compilation time, not called directly."
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public static f(Ljava/lang/RuntimeException;Ljava/lang/String;)V
-    .locals 5
-
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
-
-    move-result-object v0
-
-    array-length v1, v0
-
-    const/4 v2, -0x1
-
-    const/4 v3, 0x0
+    iget v2, p0, Lumb;->c:I
 
     :goto_0
-    if-ge v3, v1, :cond_1
+    if-ge v1, v2, :cond_5
 
-    aget-object v4, v0, v3
+    if-nez v0, :cond_5
 
-    invoke-virtual {v4}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
+    iget-object v3, p0, Lumb;->a:[B
 
-    move-result-object v4
+    aget-byte v3, v3, v1
 
-    invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    int-to-char v3, v3
 
-    move-result v4
+    const/16 v4, 0x41
 
-    if-eqz v4, :cond_0
+    if-lt v3, v4, :cond_0
 
-    move v2, v3
+    const/16 v4, 0x5a
+
+    if-le v3, v4, :cond_4
 
     :cond_0
-    add-int/lit8 v3, v3, 0x1
+    const/16 v4, 0x61
+
+    if-lt v3, v4, :cond_1
+
+    const/16 v4, 0x7a
+
+    if-le v3, v4, :cond_4
+
+    :cond_1
+    const/16 v4, 0x30
+
+    if-lt v3, v4, :cond_2
+
+    const/16 v4, 0x39
+
+    if-le v3, v4, :cond_4
+
+    :cond_2
+    const/16 v4, 0x23
+
+    if-eq v3, v4, :cond_4
+
+    const/16 v4, 0x2d
+
+    if-eq v3, v4, :cond_4
+
+    const/16 v4, 0x2e
+
+    if-eq v3, v4, :cond_4
+
+    const/16 v4, 0x5f
+
+    if-ne v3, v4, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    const/4 v0, 0x1
 
     goto :goto_0
 
-    :cond_1
-    add-int/lit8 v2, v2, 0x1
+    :cond_4
+    :goto_1
+    add-int/lit8 v1, v1, 0x1
 
-    invoke-static {v0, v2, v1}, Ljava/util/Arrays;->copyOfRange([Ljava/lang/Object;II)[Ljava/lang/Object;
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    goto :goto_0
+
+    :cond_5
+    iget v0, p0, Lumb;->b:I
+
+    sub-int/2addr v1, v0
+
+    invoke-virtual {p0, v1}, Lumb;->K(I)V
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static b(Lumb;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    .locals 1
+
+    invoke-static {p0}, Lh1i;->c(Lumb;)V
+
+    invoke-virtual {p0}, Lumb;->a()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_0
+    invoke-static {p0, p1}, Lh1i;->a(Lumb;Ljava/lang/StringBuilder;)Ljava/lang/String;
 
     move-result-object p1
 
-    check-cast p1, [Ljava/lang/StackTraceElement;
+    invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
-    invoke-virtual {p0, p1}, Ljava/lang/Throwable;->setStackTrace([Ljava/lang/StackTraceElement;)V
+    move-result v0
 
+    if-nez v0, :cond_1
+
+    return-object p1
+
+    :cond_1
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v0, ""
+
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lumb;->x()I
+
+    move-result p0
+
+    int-to-char p0, p0
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static c(Lumb;)V
+    .locals 8
+
+    const/4 v0, 0x1
+
+    :goto_0
+    move v1, v0
+
+    :goto_1
+    invoke-virtual {p0}, Lumb;->a()I
+
+    move-result v2
+
+    if-lez v2, :cond_4
+
+    if-eqz v1, :cond_4
+
+    iget v1, p0, Lumb;->b:I
+
+    iget-object v2, p0, Lumb;->a:[B
+
+    aget-byte v3, v2, v1
+
+    int-to-char v4, v3
+
+    const/16 v5, 0x9
+
+    if-eq v4, v5, :cond_3
+
+    const/16 v5, 0xa
+
+    if-eq v4, v5, :cond_3
+
+    const/16 v5, 0xc
+
+    if-eq v4, v5, :cond_3
+
+    const/16 v5, 0xd
+
+    if-eq v4, v5, :cond_3
+
+    const/16 v5, 0x20
+
+    if-eq v4, v5, :cond_3
+
+    iget v4, p0, Lumb;->c:I
+
+    add-int/lit8 v5, v1, 0x2
+
+    if-gt v5, v4, :cond_2
+
+    add-int/lit8 v1, v1, 0x1
+
+    const/16 v6, 0x2f
+
+    if-ne v3, v6, :cond_2
+
+    aget-byte v1, v2, v1
+
+    const/16 v3, 0x2a
+
+    if-ne v1, v3, :cond_2
+
+    :goto_2
+    add-int/lit8 v1, v5, 0x1
+
+    if-ge v1, v4, :cond_1
+
+    aget-byte v7, v2, v5
+
+    int-to-char v7, v7
+
+    if-ne v7, v3, :cond_0
+
+    aget-byte v7, v2, v1
+
+    int-to-char v7, v7
+
+    if-ne v7, v6, :cond_0
+
+    add-int/lit8 v5, v5, 0x2
+
+    move v4, v5
+
+    goto :goto_2
+
+    :cond_0
+    move v5, v1
+
+    goto :goto_2
+
+    :cond_1
+    iget v1, p0, Lumb;->b:I
+
+    sub-int/2addr v4, v1
+
+    invoke-virtual {p0, v4}, Lumb;->K(I)V
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v1, 0x0
+
+    goto :goto_1
+
+    :cond_3
+    invoke-virtual {p0, v0}, Lumb;->K(I)V
+
+    goto :goto_0
+
+    :cond_4
     return-void
 .end method

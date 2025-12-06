@@ -1,332 +1,157 @@
-.class public final Ludb;
+.class public abstract Ludb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lvi1;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:I
+.field public static final b:I
 
-.field public final b:Ljava/lang/Object;
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
     .locals 1
 
-    const/4 v0, 0x0
+    sget v0, Lj0d;->oneme_stickers_settings_confirm_cancel:I
 
-    iput v0, p0, Ludb;->a:I
+    sput v0, Ludb;->a:I
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lj0d;->oneme_stickers_settings_confirm_delete_set_action:I
 
-    .line 2
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+    sput v0, Ludb;->b:I
 
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+    sget v0, Lj0d;->oneme_stickers_settings_confirm_delete_stickers_action:I
 
-    iput-object v0, p0, Ludb;->b:Ljava/lang/Object;
+    sput v0, Ludb;->c:I
+
+    sget v0, Lj0d;->oneme_stickers_settings_confirm_favorite_clear_action:I
+
+    sput v0, Ludb;->d:I
+
+    sget v0, Lj0d;->oneme_stickers_settings_confirm_recent_clear_action:I
+
+    sput v0, Ludb;->e:I
+
+    sget v0, Lj0d;->oneme_stickers_settings_content_recycler:I
+
+    sput v0, Ludb;->f:I
+
+    sget v0, Lj0d;->oneme_stickers_settings_emoji_suggest_view_type:I
+
+    sput v0, Ludb;->g:I
+
+    sget v0, Lj0d;->oneme_stickers_settings_favorite_view_type:I
+
+    sput v0, Ludb;->h:I
+
+    sget v0, Lj0d;->oneme_stickers_settings_menu_copy_link:I
+
+    sput v0, Ludb;->i:I
+
+    sget v0, Lj0d;->oneme_stickers_settings_menu_delete_set:I
+
+    sput v0, Ludb;->j:I
+
+    sget v0, Lj0d;->oneme_stickers_settings_menu_forward:I
+
+    sput v0, Ludb;->k:I
+
+    sget v0, Lj0d;->oneme_stickers_settings_menu_share:I
+
+    sput v0, Ludb;->l:I
+
+    sget v0, Lj0d;->oneme_stickers_settings_recent_view_type:I
+
+    sput v0, Ludb;->m:I
+
+    sget v0, Lj0d;->oneme_stickers_settings_set_item_drag:I
+
+    sput v0, Ludb;->n:I
+
+    sget v0, Lj0d;->oneme_stickers_settings_set_item_icon:I
+
+    sput v0, Ludb;->o:I
+
+    sget v0, Lj0d;->oneme_stickers_settings_set_item_subtitle:I
+
+    sput v0, Ludb;->p:I
+
+    sget v0, Lj0d;->oneme_stickers_settings_set_item_title:I
+
+    sput v0, Ludb;->q:I
+
+    sget v0, Lj0d;->oneme_stickers_settings_set_view_type:I
+
+    sput v0, Ludb;->r:I
+
+    sget v0, Lj0d;->oneme_stickers_settings_sets_title_view_type:I
+
+    sput v0, Ludb;->s:I
+
+    sget v0, Lj0d;->oneme_stickers_settings_stickers_favorite_menu_clear:I
+
+    sput v0, Ludb;->t:I
+
+    sget v0, Lj0d;->oneme_stickers_settings_stickers_menu_change:I
+
+    sput v0, Ludb;->u:I
+
+    sget v0, Lj0d;->oneme_stickers_settings_stickers_multiselect_delete:I
+
+    sput v0, Ludb;->v:I
+
+    sget v0, Lj0d;->oneme_stickers_settings_stickers_recent_menu_clear:I
+
+    sput v0, Ludb;->w:I
+
+    sget v0, Lj0d;->oneme_stickers_settings_toolbar:I
+
+    sput v0, Ludb;->x:I
 
     return-void
-.end method
-
-.method public constructor <init>(Ld09;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Ludb;->a:I
-
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ludb;->b:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method private final a(Lsi1;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final b(Lti1;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final c(Lui1;)V
-    .locals 0
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onCallParticipantsAdded(Lri1;)V
-    .locals 2
-
-    iget v0, p0, Ludb;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p1, p0, Ludb;->b:Ljava/lang/Object;
-
-    check-cast p1, Ld09;
-
-    iget-object v0, p1, Ld09;->b:Ljava/lang/Object;
-
-    check-cast v0, Lh01;
-
-    invoke-virtual {v0}, Lh01;->u()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p1, Ld09;->b:Ljava/lang/Object;
-
-    check-cast v0, Lh01;
-
-    iget-object v0, v0, Lh01;->j0:Lqi1;
-
-    invoke-virtual {v0}, Lqi1;->i()Ljava/util/Collection;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object p1, p1, Ld09;->b:Ljava/lang/Object;
-
-    check-cast p1, Lh01;
-
-    invoke-virtual {p1}, Lh01;->C()V
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p1, Lri1;->b:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    iget-object v0, p0, Ludb;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lvi1;
-
-    invoke-interface {v1, p1}, Lvi1;->onCallParticipantsAdded(Lri1;)V
-
-    goto :goto_0
-
-    :cond_2
-    :goto_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onCallParticipantsChanged(Lsi1;)V
-    .locals 2
-
-    iget v0, p0, Ludb;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p1, Lsi1;->a:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v0, p0, Ludb;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lvi1;
-
-    invoke-interface {v1, p1}, Lvi1;->onCallParticipantsChanged(Lsi1;)V
-
-    goto :goto_0
-
-    :cond_1
-    :goto_1
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onCallParticipantsDeAnonimized(Lti1;)V
-    .locals 2
-
-    iget v0, p0, Ludb;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p1, Lti1;->a:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v0, p0, Ludb;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lvi1;
-
-    invoke-interface {v1, p1}, Lvi1;->onCallParticipantsDeAnonimized(Lti1;)V
-
-    goto :goto_0
-
-    :cond_1
-    :goto_1
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onCallParticipantsRemoved(Lui1;)V
-    .locals 2
-
-    iget v0, p0, Ludb;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p1, Lui1;->a:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v0, p0, Ludb;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lvi1;
-
-    invoke-interface {v1, p1}, Lvi1;->onCallParticipantsRemoved(Lui1;)V
-
-    goto :goto_0
-
-    :cond_1
-    :goto_1
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

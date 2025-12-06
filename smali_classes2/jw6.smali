@@ -1,61 +1,51 @@
-.class public final enum Ljw6;
-.super Ljava/lang/Enum;
+.class public final Ljw6;
+.super Lq44;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Ljw6;
+# instance fields
+.field public final synthetic X:Lkw6;
 
-.field public static final synthetic b:[Ljw6;
+.field public Y:I
+
+.field public d:Lkw6;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lkw6;Lq44;)V
+    .locals 0
 
-    new-instance v0, Ljw6;
+    iput-object p1, p0, Ljw6;->X:Lkw6;
 
-    const-string v1, "ONE_VIDEO_TIMEOUT"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ljw6;->a:Ljw6;
-
-    filled-new-array {v0}, [Ljw6;
-
-    move-result-object v0
-
-    sput-object v0, Ljw6;->b:[Ljw6;
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ljw6;
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const-class v0, Ljw6;
+    iput-object p1, p0, Ljw6;->o:Ljava/lang/Object;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget p1, p0, Ljw6;->Y:I
 
-    move-result-object p0
+    const/high16 v0, -0x80000000
 
-    check-cast p0, Ljw6;
+    or-int/2addr p1, v0
 
-    return-object p0
-.end method
+    iput p1, p0, Ljw6;->Y:I
 
-.method public static values()[Ljw6;
-    .locals 1
+    iget-object p1, p0, Ljw6;->X:Lkw6;
 
-    sget-object v0, Ljw6;->b:[Ljw6;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, [Ljw6;->clone()Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Lkw6;->j(Landroid/net/Uri;Lq44;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, [Ljw6;
-
-    return-object v0
+    return-object p1
 .end method

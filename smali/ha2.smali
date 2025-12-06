@@ -1,59 +1,205 @@
-.class public abstract Lha2;
-.super Ljava/lang/Object;
+.class public final Lha2;
+.super Lwi0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/nio/charset/Charset;
+# instance fields
+.field public i:[I
 
-.field public static final b:Ljava/nio/charset/Charset;
-
-.field public static final c:Ljava/nio/charset/Charset;
-
-.field public static volatile d:Ljava/nio/charset/Charset;
-
-.field public static volatile e:Ljava/nio/charset/Charset;
+.field public j:[I
 
 
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public final c(Ljava/nio/ByteBuffer;)V
+    .locals 7
+
+    iget-object v0, p0, Lha2;->j:[I
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
+
+    move-result v1
+
+    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
+
+    move-result v2
+
+    sub-int v3, v2, v1
+
+    iget-object v4, p0, Lwi0;->b:Lh50;
+
+    iget v4, v4, Lh50;->d:I
+
+    div-int/2addr v3, v4
+
+    iget-object v4, p0, Lwi0;->c:Lh50;
+
+    iget v4, v4, Lh50;->d:I
+
+    mul-int/2addr v3, v4
+
+    invoke-virtual {p0, v3}, Lwi0;->j(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v3
+
+    :goto_0
+    if-ge v1, v2, :cond_1
+
+    array-length v4, v0
+
+    const/4 v5, 0x0
+
+    :goto_1
+    if-ge v5, v4, :cond_0
+
+    aget v6, v0, v5
+
+    mul-int/lit8 v6, v6, 0x2
+
+    add-int/2addr v6, v1
+
+    invoke-virtual {p1, v6}, Ljava/nio/ByteBuffer;->getShort(I)S
+
+    move-result v6
+
+    invoke-virtual {v3, v6}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_1
+
+    :cond_0
+    iget-object v4, p0, Lwi0;->b:Lh50;
+
+    iget v4, v4, Lh50;->d:I
+
+    add-int/2addr v1, v4
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p1, v2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
+
+    return-void
+.end method
+
+.method public final f(Lh50;)Lh50;
+    .locals 8
+
+    iget-object v0, p0, Lha2;->i:[I
+
+    if-nez v0, :cond_0
+
+    sget-object p1, Lh50;->e:Lh50;
+
+    return-object p1
+
+    :cond_0
+    iget v1, p1, Lh50;->c:I
+
+    iget v2, p1, Lh50;->b:I
+
+    const/4 v3, 0x2
+
+    if-ne v1, v3, :cond_6
+
+    array-length v1, v0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x1
+
+    if-eq v2, v1, :cond_1
+
+    move v1, v5
+
+    goto :goto_0
+
+    :cond_1
+    move v1, v4
+
+    :goto_0
+    move v6, v4
+
+    :goto_1
+    array-length v7, v0
+
+    if-ge v6, v7, :cond_4
+
+    aget v7, v0, v6
+
+    if-ge v7, v2, :cond_3
+
+    if-eq v7, v6, :cond_2
+
+    move v7, v5
+
+    goto :goto_2
+
+    :cond_2
+    move v7, v4
+
+    :goto_2
+    or-int/2addr v1, v7
+
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_1
+
+    :cond_3
+    new-instance v0, Lcom/google/android/exoplayer2/audio/AudioProcessor$UnhandledAudioFormatException;
+
+    invoke-direct {v0, p1}, Lcom/google/android/exoplayer2/audio/AudioProcessor$UnhandledAudioFormatException;-><init>(Lh50;)V
+
+    throw v0
+
+    :cond_4
+    if-eqz v1, :cond_5
+
+    new-instance v1, Lh50;
+
+    iget p1, p1, Lh50;->a:I
+
+    array-length v0, v0
+
+    invoke-direct {v1, p1, v0, v3}, Lh50;-><init>(III)V
+
+    return-object v1
+
+    :cond_5
+    sget-object p1, Lh50;->e:Lh50;
+
+    return-object p1
+
+    :cond_6
+    new-instance v0, Lcom/google/android/exoplayer2/audio/AudioProcessor$UnhandledAudioFormatException;
+
+    invoke-direct {v0, p1}, Lcom/google/android/exoplayer2/audio/AudioProcessor$UnhandledAudioFormatException;-><init>(Lh50;)V
+
+    throw v0
+.end method
+
+.method public final g()V
     .locals 1
 
-    const-string v0, "UTF-8"
+    iget-object v0, p0, Lha2;->i:[I
 
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+    iput-object v0, p0, Lha2;->j:[I
 
-    move-result-object v0
+    return-void
+.end method
 
-    sput-object v0, Lha2;->a:Ljava/nio/charset/Charset;
+.method public final i()V
+    .locals 1
 
-    const-string v0, "UTF-16"
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+    iput-object v0, p0, Lha2;->j:[I
 
-    move-result-object v0
-
-    sput-object v0, Lha2;->b:Ljava/nio/charset/Charset;
-
-    const-string v0, "UTF-16BE"
-
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    const-string v0, "UTF-16LE"
-
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    const-string v0, "US-ASCII"
-
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    const-string v0, "ISO-8859-1"
-
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    move-result-object v0
-
-    sput-object v0, Lha2;->c:Ljava/nio/charset/Charset;
+    iput-object v0, p0, Lha2;->i:[I
 
     return-void
 .end method

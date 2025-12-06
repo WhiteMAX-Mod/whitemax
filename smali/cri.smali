@@ -1,90 +1,129 @@
-.class public final Lcri;
+.class public abstract Lcri;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ltha;
-
-
-# static fields
-.field public static final a:Lcri;
-
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public static a(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
-    new-instance v0, Lcri;
+    const/4 v0, 0x3
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p0, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
-    sput-object v0, Lcri;->a:Lcri;
+    move-result v0
 
-    new-instance v0, Lr8i;
+    if-eqz v0, :cond_0
 
-    const/4 v1, 0x1
+    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-direct {v0, v1}, Lr8i;-><init>(I)V
+    :cond_0
+    return-void
+.end method
 
-    const-class v1, Lm9i;
+.method public static final b(Landroid/view/View;IIII)V
+    .locals 2
 
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
+    invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+    check-cast v0, Landroid/view/View;
 
-    move-result-object v0
+    invoke-static {p0}, Lm8j;->d(Landroid/view/View;)Z
 
-    const/4 v2, 0x4
+    move-result v1
 
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
+    if-eqz v1, :cond_0
 
-    move-result-object v0
+    invoke-virtual {v0}, Landroid/view/View;->getMeasuredWidth()I
 
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+    move-result v1
 
-    move-result-object v0
+    sub-int/2addr v1, p3
 
-    const/4 v2, 0x5
+    invoke-virtual {v0}, Landroid/view/View;->getMeasuredWidth()I
 
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
+    move-result p3
 
-    move-result-object v0
+    sub-int/2addr p3, p1
 
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+    invoke-virtual {p0, v1, p2, p3, p4}, Landroid/view/View;->layout(IIII)V
 
-    move-result-object v0
+    return-void
 
-    const/4 v2, 0x6
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
+    :cond_0
+    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/view/View;->layout(IIII)V
 
     return-void
 .end method
 
+.method public static synthetic c(Landroid/view/View;IIII)V
+    .locals 1
 
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result v0
+
+    add-int/2addr v0, p1
+
+    and-int/lit8 p4, p4, 0x8
+
+    if-eqz p4, :cond_0
+
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result p3
+
+    add-int/2addr p3, p2
+
+    :cond_0
+    invoke-static {p0, p1, p2, v0, p3}, Lcri;->b(Landroid/view/View;IIII)V
+
+    return-void
+.end method
+
+.method public static d(Landroid/view/inputmethod/EditorInfo;Landroid/view/inputmethod/InputConnection;Landroid/widget/TextView;)V
     .locals 0
 
-    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    if-eqz p1, :cond_0
 
-    move-result-object p1
+    iget-object p0, p0, Landroid/view/inputmethod/EditorInfo;->hintText:Ljava/lang/CharSequence;
 
-    throw p1
+    if-nez p0, :cond_0
+
+    invoke-virtual {p2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p0
+
+    :goto_0
+    instance-of p1, p0, Landroid/view/View;
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {p0}, Landroid/view/ViewParent;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p0
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public static e(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
+
+    const/4 v0, 0x2
+
+    invoke-static {p0, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    return-void
 .end method

@@ -3,72 +3,81 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Serializable;
+.implements Lsd9;
 
 
 # instance fields
-.field public final X:Ljava/lang/String;
-
-.field public final Y:Ljava/lang/String;
-
-.field public final Z:I
-
 .field public final a:I
-
-.field public final b:J
-
-.field public final c:Lda9;
-
-.field public final o:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(IJLda9;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+.method public constructor <init>(I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput p1, p0, Lpd9;->a:I
 
-    iput-wide p2, p0, Lpd9;->b:J
-
-    iput-object p4, p0, Lpd9;->c:Lda9;
-
-    iput-object p5, p0, Lpd9;->o:Ljava/lang/String;
-
-    iput-object p6, p0, Lpd9;->X:Ljava/lang/String;
-
-    iput-object p7, p0, Lpd9;->Y:Ljava/lang/String;
-
-    iput p8, p0, Lpd9;->Z:I
-
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const/4 v0, 0x1
 
-    const-string v1, "{type="
+    if-ne p0, p1, :cond_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lpd9;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lpd9;
 
     iget v1, p0, Lpd9;->a:I
 
-    invoke-static {v1}, Lrv8;->m(I)Ljava/lang/String;
+    iget p1, p1, Lpd9;->a:I
 
-    move-result-object v1
+    if-eq v1, p1, :cond_2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return v2
 
-    const-string v1, "}"
+    :cond_2
+    return v0
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final hashCode()I
+    .locals 1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget v0, p0, Lpd9;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "OnMemberListActionClicked(id="
+
+    const-string v1, ")"
+
+    iget v2, p0, Lpd9;->a:I
+
+    invoke-static {v2, v0, v1}, Lwy1;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,204 +1,98 @@
-.class public final Lq50;
+.class public final synthetic Lq50;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final e:Lq50;
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
 
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:I
+.field public final synthetic b:Lxo8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lq50;
-
-    const/4 v1, -0x1
-
-    invoke-direct {v0, v1, v1, v1}, Lq50;-><init>(III)V
-
-    sput-object v0, Lq50;->e:Lq50;
-
-    return-void
-.end method
-
-.method public constructor <init>(III)V
+.method public synthetic constructor <init>(Lxo8;Ljava/lang/Exception;I)V
     .locals 0
 
-    .line 2
+    iput p3, p0, Lq50;->a:I
+
+    iput-object p1, p0, Lq50;->b:Lxo8;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    iput p1, p0, Lq50;->a:I
-
-    .line 4
-    iput p2, p0, Lq50;->b:I
-
-    .line 5
-    iput p3, p0, Lq50;->c:I
-
-    .line 6
-    invoke-static {p3}, Lnig;->M(I)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    .line 7
-    invoke-static {p3}, Lnig;->t(I)I
-
-    move-result p1
-
-    mul-int/2addr p1, p2
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, -0x1
-
-    .line 8
-    :goto_0
-    iput p1, p0, Lq50;->d:I
-
-    return-void
-.end method
-
-.method public constructor <init>(Lmb6;)V
-    .locals 2
-
-    .line 1
-    iget v0, p1, Lmb6;->G:I
-
-    iget v1, p1, Lmb6;->F:I
-
-    iget p1, p1, Lmb6;->H:I
-
-    invoke-direct {p0, v0, v1, p1}, Lq50;-><init>(III)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final run()V
     .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lq50;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lq50;
-
-    iget v1, p0, Lq50;->a:I
-
-    iget v3, p1, Lq50;->a:I
-
-    if-ne v1, v3, :cond_2
-
-    iget v1, p0, Lq50;->b:I
-
-    iget v3, p1, Lq50;->b:I
-
-    if-ne v1, v3, :cond_2
-
-    iget v1, p0, Lq50;->c:I
-
-    iget p1, p1, Lq50;->c:I
-
-    if-ne v1, p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 3
 
     iget v0, p0, Lq50;->a:I
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object v1, p0, Lq50;->b:Lxo8;
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    iget v1, p0, Lq50;->b:I
+    iget-object v0, v1, Lxo8;->c:Ljava/lang/Object;
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    check-cast v0, Lyl5;
+
+    sget-object v1, Lzxg;->a:Ljava/lang/String;
+
+    iget-object v0, v0, Lyl5;->a:Lem5;
+
+    iget-object v0, v0, Lem5;->D0:Lnj4;
+
+    invoke-virtual {v0}, Lnj4;->H()Lid;
 
     move-result-object v1
 
-    iget v2, p0, Lq50;->c:I
+    new-instance v2, Lej4;
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/16 v3, 0x8
 
-    move-result-object v2
+    invoke-direct {v2, v3}, Lej4;-><init>(I)V
 
-    filled-new-array {v0, v1, v2}, [Ljava/lang/Object;
+    const/16 v3, 0x3f6
 
-    move-result-object v0
+    invoke-virtual {v0, v1, v3, v2}, Lnj4;->I(Lid;ILpa8;)V
 
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+    return-void
 
-    move-result v0
+    :pswitch_0
+    iget-object v0, v1, Lxo8;->c:Ljava/lang/Object;
 
-    return v0
-.end method
+    check-cast v0, Lyl5;
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    sget-object v1, Lzxg;->a:Ljava/lang/String;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, v0, Lyl5;->a:Lem5;
 
-    const-string v1, "AudioFormat[sampleRate="
+    iget-object v0, v0, Lem5;->D0:Lnj4;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0}, Lnj4;->H()Lid;
 
-    iget v1, p0, Lq50;->a:I
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    new-instance v2, Lvi4;
 
-    const-string v1, ", channelCount="
+    const/16 v3, 0xb
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v2, v3}, Lvi4;-><init>(I)V
 
-    iget v1, p0, Lq50;->b:I
+    const/16 v3, 0x405
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v3, v2}, Lnj4;->I(Lid;ILpa8;)V
 
-    const-string v1, ", encoding="
+    return-void
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    nop
 
-    iget v1, p0, Lq50;->c:I
-
-    const/16 v2, 0x5d
-
-    invoke-static {v0, v1, v2}, Lfd0;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

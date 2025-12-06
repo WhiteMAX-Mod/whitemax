@@ -1,121 +1,100 @@
 .class public final Ltc1;
-.super Ljava/lang/Object;
+.super Lid0;
 .source "SourceFile"
-
-# interfaces
-.implements Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;
 
 
 # instance fields
-.field public final synthetic a:Lvc1;
-
-.field public final synthetic b:Liu7;
+.field public final b:Ln5g;
 
 
 # direct methods
-.method public constructor <init>(Lvc1;Liu7;)V
-    .locals 0
+.method public constructor <init>(Ln5g;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x2
 
-    iput-object p1, p0, Ltc1;->a:Lvc1;
+    invoke-direct {p0, v0}, Lid0;-><init>(I)V
 
-    iput-object p2, p0, Ltc1;->b:Liu7;
+    iput-object p1, p0, Ltc1;->b:Ln5g;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onFeatureEnabledChanged(Lh81;Z)V
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    invoke-super {p0, p1, p2}, Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;->onFeatureEnabledChanged(Lh81;Z)V
+    if-ne p0, p1, :cond_0
 
-    sget-object v0, Lh81;->a:Lh81;
-
-    if-eq p1, v0, :cond_0
-
-    return-void
+    goto :goto_1
 
     :cond_0
-    sget-object v0, Ltei;->a:Lmxa;
-
-    const/4 v1, 0x0
+    instance-of v0, p1, Ltc1;
 
     if-nez v0, :cond_1
 
     goto :goto_0
 
     :cond_1
-    sget-object v2, Lc98;->o:Lc98;
+    check-cast p1, Ltc1;
 
-    invoke-virtual {v0, v2}, Lmxa;->b(Lc98;)Z
+    iget-object v0, p0, Ltc1;->b:Ln5g;
 
-    move-result v3
+    iget-object p1, p1, Ltc1;->b:Ln5g;
 
-    if-eqz v3, :cond_2
+    invoke-virtual {v0, p1}, Ln5g;->equals(Ljava/lang/Object;)Z
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    move-result p1
 
-    const-string v4, "Add participant to p2p changed="
+    if-nez p1, :cond_2
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :goto_0
+    const/4 p1, 0x0
 
-    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v4, " feature="
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v3, "CallInviteToP2PController"
-
-    invoke-virtual {v0, v2, v3, p1, v1}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    return p1
 
     :cond_2
-    :goto_0
-    iget-object p1, p0, Ltc1;->a:Lvc1;
+    :goto_1
+    const/4 p1, 0x1
 
-    iget-object p1, p1, Lvc1;->q0:Lx0f;
+    return p1
+.end method
 
-    const/4 v0, 0x0
+.method public final hashCode()I
+    .locals 1
 
-    if-eqz p2, :cond_3
+    iget-object v0, p0, Ltc1;->b:Ln5g;
 
-    iget-object p2, p0, Ltc1;->b:Liu7;
+    iget v0, v0, Ln5g;->c:I
 
-    invoke-interface {p2}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    move-result-object p2
+    move-result v0
 
-    check-cast p2, Ldq5;
+    return v0
+.end method
 
-    check-cast p2, Ljq5;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    sget-object v2, Lru/ok/tamtam/android/prefs/PmsKey;->gc-from-p2p:Lru/ok/tamtam/android/prefs/PmsKey;
+    const-string v1, "ShowSnackbar(message="
 
-    invoke-virtual {p2, v2, v0}, Lutd;->j(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result p2
+    iget-object v1, p0, Ltc1;->b:Ln5g;
 
-    if-eqz p2, :cond_3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x1
+    const-string v1, ")"
 
-    :cond_3
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p2
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {p1, v1, p2}, Lx0f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object v0
 
-    return-void
+    return-object v0
 .end method

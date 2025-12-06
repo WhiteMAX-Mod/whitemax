@@ -1,37 +1,49 @@
-.class public abstract Lvs4;
+.class public final Lvs4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static volatile a:Lp95;
+.field public static final d:Ljava/lang/String;
+
+
+# instance fields
+.field public final a:Lux6;
+
+.field public final b:Lusd;
+
+.field public final c:Ljava/util/HashMap;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 1
 
-    sget-object v0, Ljjc;->c:Ljjc;
+    const-string v0, "DelayedWorkTracker"
 
-    invoke-static {}, Lfni;->a()Lju4;
+    invoke-static {v0}, Lcei;->m(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    new-instance v2, Lgk0;
+    sput-object v0, Lvs4;->d:Ljava/lang/String;
 
-    const/16 v3, 0xc
+    return-void
+.end method
 
-    invoke-direct {v2, v3}, Lgk0;-><init>(I)V
+.method public constructor <init>(Lux6;Lusd;)V
+    .locals 0
 
-    iget-object v0, v0, Ljjc;->a:Lky;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v3, Lijc;
+    iput-object p1, p0, Lvs4;->a:Lux6;
 
-    const/4 v4, 0x0
+    iput-object p2, p0, Lvs4;->b:Lusd;
 
-    invoke-direct {v3, v4, v2}, Lijc;-><init>(ILjava/lang/Object;)V
+    new-instance p1, Ljava/util/HashMap;
 
-    invoke-virtual {v0, v1, v3}, Lky;->g(Ljava/util/concurrent/Executor;Lxha;)V
+    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
+
+    iput-object p1, p0, Lvs4;->c:Ljava/util/HashMap;
 
     return-void
 .end method

@@ -1,60 +1,95 @@
-.class public final Lcf0;
-.super Ljava/lang/Object;
+.class public final enum Lcf0;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Serializable;
+
+# static fields
+.field public static final synthetic c:[Lcf0;
+
+.field public static final synthetic d:Lzg5;
 
 
 # instance fields
-.field public final a:J
+.field public final a:Ljava/lang/String;
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lcf0;
 
-    iput-wide p1, p0, Lcf0;->a:J
+    const/4 v1, 0x0
 
-    iput-object p3, p0, Lcf0;->b:Ljava/lang/String;
+    const-string v2, "Light"
 
-    iput-object p4, p0, Lcf0;->c:Ljava/lang/String;
+    const-string v3, "LIGHT"
+
+    invoke-direct {v0, v3, v1, v2, v1}, Lcf0;-><init>(Ljava/lang/String;ILjava/lang/String;Z)V
+
+    new-instance v1, Lcf0;
+
+    const/4 v2, 0x1
+
+    const-string v3, "Dark"
+
+    const-string v4, "DARK"
+
+    invoke-direct {v1, v4, v2, v3, v2}, Lcf0;-><init>(Ljava/lang/String;ILjava/lang/String;Z)V
+
+    filled-new-array {v0, v1}, [Lcf0;
+
+    move-result-object v0
+
+    sput-object v0, Lcf0;->c:[Lcf0;
+
+    new-instance v1, Lzg5;
+
+    invoke-direct {v1, v0}, Lzg5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lcf0;->d:Lzg5;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Z)V
+    .locals 0
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const-string v0, "Background{id="
+    iput-object p3, p0, Lcf0;->a:Ljava/lang/String;
 
-    const-string v1, ", url="
+    iput-boolean p4, p0, Lcf0;->b:Z
 
-    iget-wide v2, p0, Lcf0;->a:J
+    return-void
+.end method
 
-    iget-object v4, p0, Lcf0;->b:Ljava/lang/String;
+.method public static valueOf(Ljava/lang/String;)Lcf0;
+    .locals 1
 
-    invoke-static {v0, v2, v3, v1, v4}, Li57;->m(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-class v0, Lcf0;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lcf0;
+
+    return-object p0
+.end method
+
+.method public static values()[Lcf0;
+    .locals 1
+
+    sget-object v0, Lcf0;->c:[Lcf0;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    const-string v1, ", color="
-
-    const-string v2, "}"
-
-    iget-object v3, p0, Lcf0;->c:Ljava/lang/String;
-
-    invoke-static {v0, v1, v3, v2}, Lzdf;->t(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    check-cast v0, [Lcf0;
 
     return-object v0
 .end method

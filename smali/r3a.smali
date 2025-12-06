@@ -1,48 +1,57 @@
 .class public final Lr3a;
-.super Ly14;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final a:Ldfg;
 
-.field public final synthetic Y:Ls3a;
+.field public final b:Ltfg;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:Lrfg;
+
+.field public final d:Ldjg;
+
+.field public e:I
 
 
 # direct methods
-.method public constructor <init>(Ls3a;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ldfg;Ltfg;Lrfg;)V
     .locals 0
 
-    iput-object p1, p0, Lr3a;->Y:Ls3a;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lr3a;->a:Ldfg;
+
+    iput-object p2, p0, Lr3a;->b:Ltfg;
+
+    iput-object p3, p0, Lr3a;->c:Lrfg;
+
+    iget-object p1, p1, Ldfg;->f:Lgf6;
+
+    iget-object p1, p1, Lgf6;->v0:Ljava/lang/String;
+
+    const-string p2, "audio/true-hd"
+
+    invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    new-instance p1, Ldjg;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p2}, Ldjg;-><init>(I)V
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    iput-object p1, p0, Lr3a;->d:Ldjg;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lr3a;->o:Ljava/lang/Object;
-
-    iget p1, p0, Lr3a;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lr3a;->X:I
-
-    iget-object p1, p0, Lr3a;->Y:Ls3a;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Ls3a;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

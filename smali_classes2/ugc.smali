@@ -1,3 +1,3 @@
-.class public interface abstract Lugc;
-.super Ljava/lang/Object;
+.class public abstract Lugc;
+.super Ld2f;
 .source "SourceFile"

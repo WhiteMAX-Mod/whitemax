@@ -1,55 +1,95 @@
 .class public final Le8b;
-.super Lgy9;
+.super Li3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final Z:Ln7b;
+.field public final synthetic c:I
 
-.field public final q0:Ln7b;
+.field public final synthetic d:Lf8b;
 
 
 # direct methods
-.method public constructor <init>(Ln7b;Ln7b;)V
-    .locals 1
+.method public constructor <init>(Lf8b;I)V
+    .locals 0
 
-    const/4 v0, 0x6
+    iput p2, p0, Le8b;->c:I
 
-    invoke-direct {p0, v0}, Lgy9;-><init>(I)V
+    iput-object p1, p0, Le8b;->d:Lf8b;
 
-    iput-object p1, p0, Le8b;->Z:Ln7b;
+    const/16 p1, 0xc
 
-    iput-object p2, p0, Le8b;->q0:Ln7b;
+    packed-switch p2, :pswitch_data_0
+
+    sget-object p2, Ld8b;->a:Ld8b;
+
+    invoke-direct {p0, p1, p2}, Li3;-><init>(ILjava/lang/Object;)V
 
     return-void
+
+    :pswitch_0
+    sget-object p2, Lc8b;->a:Lc8b;
+
+    invoke-direct {p0, p1, p2}, Li3;-><init>(ILjava/lang/Object;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final d(Lp1g;[ILdh0;Lec7;)Lh9;
-    .locals 7
+.method public final a0(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
 
-    new-instance v0, Lf8b;
+    iget v0, p0, Le8b;->c:I
 
-    sget v1, Lj2g;->a:I
+    packed-switch v0, :pswitch_data_0
 
-    sget v1, Lj2g;->a:I
+    invoke-static {p1, p2}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object v1, p1, Lp1g;->d:[Lmb6;
+    move-result v0
 
-    iget-object v5, p0, Le8b;->Z:Ln7b;
+    if-nez v0, :cond_0
 
-    iget-object v6, p0, Le8b;->q0:Ln7b;
+    check-cast p2, Lc8b;
 
-    move-object v1, p1
+    check-cast p1, Lc8b;
 
-    move-object v2, p2
+    iget-object p1, p0, Le8b;->d:Lf8b;
 
-    move-object v3, p3
+    invoke-virtual {p1}, Lf8b;->c()V
 
-    move-object v4, p4
+    :cond_0
+    return-void
 
-    invoke-direct/range {v0 .. v6}, Lf8b;-><init>(Lp1g;[ILdh0;Lec7;Ln7b;Ln7b;)V
+    :pswitch_0
+    invoke-static {p1, p2}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    return-object v0
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    check-cast p2, Ld8b;
+
+    check-cast p1, Ld8b;
+
+    iget-object p1, p0, Le8b;->d:Lf8b;
+
+    invoke-virtual {p1}, Lf8b;->d()V
+
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

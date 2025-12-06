@@ -1,110 +1,185 @@
 .class public final Lv6g;
-.super Lsgf;
+.super Landroid/graphics/drawable/DrawableWrapper;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Lu6g;
+.implements Landroid/graphics/drawable/Animatable;
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:La7g;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(La7g;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
+    .locals 1
 
-    iput-object p1, p0, Lv6g;->Y:La7g;
+    sget v0, Lw9b;->S:I
 
-    const/4 p1, 0x2
+    invoke-direct {p0, p1}, Landroid/graphics/drawable/DrawableWrapper;-><init>(Landroid/graphics/drawable/Drawable;)V
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput v0, p0, Lv6g;->a:I
 
+    if-eqz p2, :cond_0
+
+    sget-object p1, La93;->s0:Lv1a;
+
+    invoke-virtual {p1, p2}, Lv1a;->x(Landroid/content/Context;)La93;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, La93;->k()Lyeb;
+
+    move-result-object p1
+
+    invoke-interface {p1, v0}, Lyeb;->g(I)I
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setTint(I)V
+
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lq54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lv6g;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lv6g;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lv6g;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lv6g;
-
-    iget-object v0, p0, Lv6g;->Y:La7g;
-
-    invoke-direct {p1, v0, p2}, Lv6g;-><init>(La7g;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final isRunning()Z
     .locals 2
 
-    iget v0, p0, Lv6g;->X:I
+    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
 
-    const/4 v1, 0x1
+    move-result-object v0
 
-    if-eqz v0, :cond_1
+    instance-of v1, v0, Landroid/graphics/drawable/Animatable;
 
-    if-ne v0, v1, :cond_0
+    if-eqz v1, :cond_0
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    check-cast v0, Landroid/graphics/drawable/Animatable;
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const/4 v0, 0x0
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    :goto_0
+    if-eqz v0, :cond_1
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-interface {v0}, Landroid/graphics/drawable/Animatable;->isRunning()Z
 
-    throw p1
+    move-result v0
+
+    return v0
 
     :cond_1
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    const/4 v0, 0x0
 
-    iput v1, p0, Lv6g;->X:I
+    return v0
+.end method
 
-    iget-object p1, p0, Lv6g;->Y:La7g;
+.method public final onThemeChanged(Lyeb;)V
+    .locals 2
 
-    invoke-static {p1, p0}, La7g;->s(La7g;Ly14;)Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
 
-    move-result-object p1
+    move-result-object v0
 
-    sget-object v0, Lr54;->a:Lr54;
+    instance-of v0, v0, Lu6g;
 
-    if-ne p1, v0, :cond_2
+    if-eqz v0, :cond_1
 
-    return-object v0
+    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    instance-of v1, v0, Lu6g;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Lu6g;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0, p1}, Lu6g;->onThemeChanged(Lyeb;)V
+
+    return-void
+
+    :cond_1
+    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    iget v1, p0, Lv6g;->a:I
+
+    invoke-interface {p1, v1}, Lyeb;->g(I)I
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setTint(I)V
 
     :cond_2
-    :goto_0
-    sget-object p1, Lccg;->a:Lccg;
+    return-void
+.end method
 
-    return-object p1
+.method public final start()V
+    .locals 2
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    instance-of v1, v0, Landroid/graphics/drawable/Animatable;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Landroid/graphics/drawable/Animatable;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Landroid/graphics/drawable/Animatable;->start()V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final stop()V
+    .locals 2
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    instance-of v1, v0, Landroid/graphics/drawable/Animatable;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Landroid/graphics/drawable/Animatable;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Landroid/graphics/drawable/Animatable;->stop()V
+
+    :cond_1
+    return-void
 .end method

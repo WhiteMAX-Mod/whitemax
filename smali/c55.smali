@@ -1,11 +1,9 @@
-.class public interface abstract Lc55;
+.class public final Lc55;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract j(Landroid/content/Context;Ljava/lang/String;Z)I
-.end method
+# instance fields
+.field public a:Landroid/os/Handler;
 
-.method public abstract n(Landroid/content/Context;Ljava/lang/String;)I
-.end method
+.field public b:Ljava/lang/Object;

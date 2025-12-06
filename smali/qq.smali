@@ -1,55 +1,39 @@
-.class public abstract Lqq;
-.super Ljava/lang/Object;
+.class public final Lqq;
+.super Lki4;
 .source "SourceFile"
 
 
+# static fields
+.field public static final b:Lqq;
+
+.field public static final c:Lgi4;
+
+
 # direct methods
-.method public static a(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/Object;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Landroid/content/Context;",
-            "Ljava/lang/Class<",
-            "TT;>;)TT;"
-        }
-    .end annotation
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-virtual {p0, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+    new-instance v0, Lqq;
 
-    move-result-object p0
+    invoke-direct {v0}, Lki4;-><init>()V
 
-    return-object p0
-.end method
+    sput-object v0, Lqq;->b:Lqq;
 
-.method public static b(Landroid/app/AppOpsManager;Ljava/lang/String;Ljava/lang/String;)I
-    .locals 0
+    const/4 v1, 0x0
 
-    invoke-virtual {p0, p1, p2}, Landroid/app/AppOpsManager;->noteProxyOp(Ljava/lang/String;Ljava/lang/String;)I
+    new-array v1, v1, [Ljava/lang/String;
 
-    move-result p0
+    const/4 v2, 0x0
 
-    return p0
-.end method
+    const/16 v3, 0xa
 
-.method public static c(Landroid/app/AppOpsManager;Ljava/lang/String;Ljava/lang/String;)I
-    .locals 0
+    const-string v4, ":app-update/force"
 
-    invoke-virtual {p0, p1, p2}, Landroid/app/AppOpsManager;->noteProxyOpNoThrow(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v4, v1, v2, v3}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
 
-    move-result p0
+    move-result-object v0
 
-    return p0
-.end method
+    sput-object v0, Lqq;->c:Lgi4;
 
-.method public static d(Ljava/lang/String;)Ljava/lang/String;
-    .locals 0
-
-    invoke-static {p0}, Landroid/app/AppOpsManager;->permissionToOp(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

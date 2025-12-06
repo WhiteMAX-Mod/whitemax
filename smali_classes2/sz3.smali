@@ -1,49 +1,63 @@
 .class public final Lsz3;
-.super Ly14;
+.super Lmid;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Luz3;
+.field public final E0:Landroid/widget/ImageView;
 
-.field public Y:I
+.field public final F0:Lru/ok/messages/views/widgets/TamAvatarView;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final G0:Landroid/view/View;
+
+.field public H0:Lkp8;
+
+.field public final synthetic I0:Ltz3;
 
 
 # direct methods
-.method public constructor <init>(Luz3;Ly14;)V
-    .locals 0
+.method public constructor <init>(Ltz3;Landroid/view/View;)V
+    .locals 1
 
-    iput-object p1, p0, Lsz3;->X:Luz3;
+    iput-object p1, p0, Lsz3;->I0:Ltz3;
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lmid;-><init>(Landroid/view/View;)V
 
-    return-void
-.end method
+    sget p1, Lq0d;->row_contact_location__static_image:I
 
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iput-object p1, p0, Lsz3;->o:Ljava/lang/Object;
-
-    iget p1, p0, Lsz3;->Y:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lsz3;->Y:I
-
-    iget-object p1, p0, Lsz3;->X:Luz3;
-
-    const-wide/16 v0, 0x0
-
-    invoke-virtual {p1, v0, v1, p0}, Luz3;->b(JLy14;)Ljava/lang/Comparable;
+    invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
-    return-object p1
+    check-cast p1, Landroid/widget/ImageView;
+
+    iput-object p1, p0, Lsz3;->E0:Landroid/widget/ImageView;
+
+    sget p1, Lq0d;->row_contact_location__live_image:I
+
+    invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Lru/ok/messages/views/widgets/TamAvatarView;
+
+    iput-object p1, p0, Lsz3;->F0:Lru/ok/messages/views/widgets/TamAvatarView;
+
+    sget p1, Lq0d;->row_contact_location__indicator:I
+
+    invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lsz3;->G0:Landroid/view/View;
+
+    new-instance p1, Lgk0;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p1, v0, p0}, Lgk0;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {p2, p1}, Lu8j;->a(Landroid/view/View;Lp6;)V
+
+    return-void
 .end method

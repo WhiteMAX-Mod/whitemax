@@ -1,60 +1,42 @@
-.class public final Lg9i;
+.class public final synthetic Lg9i;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ltha;
+.implements Lcom/my/tracker/core/utils/BiConsumer;
 
 
-# static fields
-.field public static final a:Lg9i;
+# instance fields
+.field public final synthetic a:Lcom/my/tracker/applifecycle/o/d;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lcom/my/tracker/applifecycle/o/d;)V
+    .locals 0
 
-    new-instance v0, Lg9i;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lg9i;->a:Lg9i;
-
-    new-instance v0, Ltwh;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ltwh;-><init>(I)V
-
-    const-class v1, Lmxh;
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
+    iput-object p1, p0, Lg9i;->a:Lcom/my/tracker/applifecycle/o/d;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final accept(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 2
 
-    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    check-cast p1, Lcom/my/tracker/core/EngineCore;
 
-    move-result-object p1
+    check-cast p2, Ljava/lang/Long;
 
-    throw p1
+    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    iget-object p2, p0, Lg9i;->a:Lcom/my/tracker/applifecycle/o/d;
+
+    invoke-virtual {p2, p1, v0, v1}, Lcom/my/tracker/applifecycle/o/d;->a(Lcom/my/tracker/core/EngineCore;J)V
+
+    return-void
 .end method

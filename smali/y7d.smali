@@ -3,22 +3,28 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Serializable;
+.implements Lz7d;
 
 
 # instance fields
-.field public a:Ljava/lang/Object;
+.field public final a:Lk18;
+
+.field public final b:Lk18;
+
+.field public final c:Lk18;
 
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 1
+# direct methods
+.method public constructor <init>(Lk18;Lk18;Lk18;)V
+    .locals 0
 
-    iget-object v0, p0, Ly7d;->a:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    iput-object p1, p0, Ly7d;->a:Lk18;
 
-    move-result-object v0
+    iput-object p2, p0, Ly7d;->b:Lk18;
 
-    return-object v0
+    iput-object p3, p0, Ly7d;->c:Lk18;
+
+    return-void
 .end method

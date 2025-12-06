@@ -2,238 +2,314 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ldf5;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:I
 
-.field public final b:J
+.field public final b:I
 
-.field public final c:I
+.field public final c:Ljava/util/List;
+
+.field public final d:Ljava/util/List;
+
+.field public final e:Lx90;
+
+.field public final f:Lz90;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;I)V
+.method public constructor <init>(IILjava/util/List;Ljava/util/List;Lx90;Lz90;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lgc0;->a:Ljava/lang/String;
+    iput p1, p0, Lgc0;->a:I
 
-    iput-wide p1, p0, Lgc0;->b:J
+    iput p2, p0, Lgc0;->b:I
 
-    iput p4, p0, Lgc0;->c:I
+    if-eqz p3, :cond_2
+
+    iput-object p3, p0, Lgc0;->c:Ljava/util/List;
+
+    if-eqz p4, :cond_1
+
+    iput-object p4, p0, Lgc0;->d:Ljava/util/List;
+
+    iput-object p5, p0, Lgc0;->e:Lx90;
+
+    if-eqz p6, :cond_0
+
+    iput-object p6, p0, Lgc0;->f:Lz90;
 
     return-void
-.end method
 
-.method public static a()Lpg6;
-    .locals 3
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    new-instance v0, Lpg6;
+    const-string p2, "Null defaultVideoProfile"
 
-    const/4 v1, 0x3
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    const/4 v2, 0x0
+    throw p1
 
-    invoke-direct {v0, v2, v1}, Lpg6;-><init>(CI)V
+    :cond_1
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    const-wide/16 v1, 0x0
+    const-string p2, "Null videoProfiles"
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    move-result-object v1
+    throw p1
 
-    iput-object v1, v0, Lpg6;->o:Ljava/lang/Object;
+    :cond_2
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    return-object v0
+    const-string p2, "Null audioProfiles"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
+.method public final a()I
+    .locals 1
+
+    iget v0, p0, Lgc0;->a:I
+
+    return v0
+.end method
+
+.method public final b()I
+    .locals 1
+
+    iget v0, p0, Lgc0;->b:I
+
+    return v0
+.end method
+
+.method public final c()Ljava/util/List;
+    .locals 1
+
+    iget-object v0, p0, Lgc0;->c:Ljava/util/List;
+
+    return-object v0
+.end method
+
+.method public final d()Ljava/util/List;
+    .locals 1
+
+    iget-object v0, p0, Lgc0;->d:Ljava/util/List;
+
+    return-object v0
+.end method
+
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 5
+
+    const/4 v0, 0x1
 
     if-ne p1, p0, :cond_0
 
-    goto :goto_1
+    return v0
 
     :cond_0
-    instance-of v0, p1, Lgc0;
+    instance-of v1, p1, Lgc0;
 
-    if-eqz v0, :cond_3
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_2
 
     check-cast p1, Lgc0;
 
-    iget-object v0, p0, Lgc0;->a:Ljava/lang/String;
+    iget v1, p1, Lgc0;->a:I
 
-    if-nez v0, :cond_1
+    iget-object v3, p1, Lgc0;->e:Lx90;
 
-    iget-object v0, p1, Lgc0;->a:Ljava/lang/String;
+    iget v4, p0, Lgc0;->a:I
 
-    if-nez v0, :cond_3
+    if-ne v4, v1, :cond_2
+
+    iget v1, p0, Lgc0;->b:I
+
+    iget v4, p1, Lgc0;->b:I
+
+    if-ne v1, v4, :cond_2
+
+    iget-object v1, p0, Lgc0;->c:Ljava/util/List;
+
+    iget-object v4, p1, Lgc0;->c:Ljava/util/List;
+
+    invoke-interface {v1, v4}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lgc0;->d:Ljava/util/List;
+
+    iget-object v4, p1, Lgc0;->d:Ljava/util/List;
+
+    invoke-interface {v1, v4}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lgc0;->e:Lx90;
+
+    if-nez v1, :cond_1
+
+    if-nez v3, :cond_2
 
     goto :goto_0
 
     :cond_1
-    iget-object v1, p1, Lgc0;->a:Ljava/lang/String;
+    invoke-virtual {v1, v3}, Lx90;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v1
 
-    move-result v0
-
-    if-eqz v0, :cond_3
+    if-eqz v1, :cond_2
 
     :goto_0
-    iget-wide v0, p1, Lgc0;->b:J
+    iget-object v1, p0, Lgc0;->f:Lz90;
 
-    iget p1, p1, Lgc0;->c:I
+    iget-object p1, p1, Lgc0;->f:Lz90;
 
-    iget-wide v2, p0, Lgc0;->b:J
-
-    cmp-long v0, v2, v0
-
-    if-nez v0, :cond_3
-
-    iget v0, p0, Lgc0;->c:I
-
-    if-nez v0, :cond_2
-
-    if-nez p1, :cond_3
-
-    goto :goto_1
-
-    :cond_2
-    invoke-static {v0, p1}, Ldy1;->c(II)Z
+    invoke-virtual {v1, p1}, Lz90;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_2
 
-    :goto_1
-    const/4 p1, 0x1
+    return v0
 
-    return p1
-
-    :cond_3
-    const/4 p1, 0x0
-
-    return p1
+    :cond_2
+    return v2
 .end method
 
 .method public final hashCode()I
-    .locals 8
+    .locals 3
 
-    const/4 v0, 0x0
+    iget v0, p0, Lgc0;->a:I
 
-    iget-object v1, p0, Lgc0;->a:Ljava/lang/String;
+    const v1, 0xf4243
 
-    if-nez v1, :cond_0
+    xor-int/2addr v0, v1
 
-    move v1, v0
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lgc0;->b:I
+
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lgc0;->c:Ljava/util/List;
+
+    invoke-interface {v2}, Ljava/util/List;->hashCode()I
+
+    move-result v2
+
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lgc0;->d:Ljava/util/List;
+
+    invoke-interface {v2}, Ljava/util/List;->hashCode()I
+
+    move-result v2
+
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lgc0;->e:Lx90;
+
+    if-nez v2, :cond_0
+
+    const/4 v2, 0x0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v2}, Lx90;->hashCode()I
+
+    move-result v2
+
+    :goto_0
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v1, p0, Lgc0;->f:Lz90;
+
+    invoke-virtual {v1}, Lz90;->hashCode()I
 
     move-result v1
 
-    :goto_0
-    const v2, 0xf4243
-
-    xor-int/2addr v1, v2
-
-    mul-int/2addr v1, v2
-
-    const/16 v3, 0x20
-
-    iget-wide v4, p0, Lgc0;->b:J
-
-    ushr-long v6, v4, v3
-
-    xor-long v3, v6, v4
-
-    long-to-int v3, v3
-
-    xor-int/2addr v1, v3
-
-    mul-int/2addr v1, v2
-
-    iget v2, p0, Lgc0;->c:I
-
-    if-nez v2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-static {v2}, Ldy1;->v(I)I
-
-    move-result v0
-
-    :goto_1
     xor-int/2addr v0, v1
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "TokenResult{token="
+    const-string v1, "VideoValidatedEncoderProfilesProxy{defaultDurationSeconds="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lgc0;->a:Ljava/lang/String;
+    iget v1, p0, Lgc0;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", recommendedFileFormat="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", tokenExpirationTimestamp="
+    iget v1, p0, Lgc0;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", audioProfiles="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lgc0;->b:J
+    iget-object v1, p0, Lgc0;->c:Ljava/util/List;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", responseCode="
+    const-string v1, ", videoProfiles="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x1
+    iget-object v1, p0, Lgc0;->d:Ljava/util/List;
 
-    iget v2, p0, Lgc0;->c:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    if-eq v2, v1, :cond_2
+    const-string v1, ", defaultAudioProfile="
 
-    const/4 v1, 0x2
-
-    if-eq v2, v1, :cond_1
-
-    const/4 v1, 0x3
-
-    if-eq v2, v1, :cond_0
-
-    const-string v1, "null"
-
-    goto :goto_0
-
-    :cond_0
-    const-string v1, "AUTH_ERROR"
-
-    goto :goto_0
-
-    :cond_1
-    const-string v1, "BAD_CONFIG"
-
-    goto :goto_0
-
-    :cond_2
-    const-string v1, "OK"
-
-    :goto_0
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lgc0;->e:Lx90;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", defaultVideoProfile="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lgc0;->f:Lz90;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v1, "}"
 

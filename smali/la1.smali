@@ -1,150 +1,113 @@
 .class public final Lla1;
-.super Ljava/lang/Object;
+.super Ldtf;
 .source "SourceFile"
+
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic X:Lone/me/calllist/ui/page/CallHistoryPageScreen;
 
-.field public final b:I
-
-.field public final c:Lka1;
+.field public synthetic o:Z
 
 
 # direct methods
-.method public constructor <init>(IILka1;)V
+.method public constructor <init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lla1;->X:Lone/me/calllist/ui/page/CallHistoryPageScreen;
 
-    iput p1, p0, Lla1;->a:I
+    const/4 p1, 0x2
 
-    iput p2, p0, Lla1;->b:I
-
-    iput-object p3, p0, Lla1;->c:Lka1;
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Ljava/lang/Boolean;
 
-    goto :goto_1
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    :cond_0
-    instance-of v0, p1, Lla1;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-nez v0, :cond_1
+    invoke-virtual {p0, p1, p2}, Lla1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    goto :goto_0
+    move-result-object p1
 
-    :cond_1
     check-cast p1, Lla1;
 
-    iget v0, p0, Lla1;->a:I
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    iget v1, p1, Lla1;->a:I
+    invoke-virtual {p1, p2}, Lla1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p0, Lla1;->b:I
-
-    iget v1, p1, Lla1;->b:I
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Lla1;->c:Lka1;
-
-    iget-object p1, p1, Lla1;->c:Lka1;
-
-    if-eq v0, p1, :cond_4
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_4
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-object p2
 .end method
 
-.method public final hashCode()I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lla1;
+
+    iget-object v1, p0, Lla1;->X:Lone/me/calllist/ui/page/CallHistoryPageScreen;
+
+    invoke-direct {v0, v1, p2}, Lla1;-><init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;Lkotlin/coroutines/Continuation;)V
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    iput-boolean p1, v0, Lla1;->o:Z
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    iget v0, p0, Lla1;->a:I
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    iget-boolean p1, p0, Lla1;->o:Z
 
-    move-result v0
+    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->u0:Lv17;
 
-    const/16 v1, 0x1f
+    iget-object v0, p0, Lla1;->X:Lone/me/calllist/ui/page/CallHistoryPageScreen;
 
-    mul-int/2addr v0, v1
+    invoke-virtual {v0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->A0()Lza1;
 
-    iget v2, p0, Lla1;->b:I
+    move-result-object v0
 
-    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+    iget-object v0, v0, Lza1;->s0:Ltcf;
 
-    move-result v0
+    :cond_0
+    invoke-virtual {v0}, Ltcf;->getValue()Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    move-result-object v1
 
-    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
+    move-object v2, v1
 
-    move-result v0
+    check-cast v2, Ljava/lang/Boolean;
 
-    iget-object v1, p0, Lla1;->c:Lka1;
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Ltcf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
-    add-int/2addr v1, v0
+    if-eqz v1, :cond_0
 
-    return v1
-.end method
+    sget-object p1, Lqqg;->a:Lqqg;
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", nameRes="
-
-    const-string v1, ", count=0, type="
-
-    const-string v2, "CallHistoryTabState(id="
-
-    iget v3, p0, Lla1;->a:I
-
-    iget v4, p0, Lla1;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lla1;->c:Lka1;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

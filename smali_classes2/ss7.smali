@@ -1,67 +1,95 @@
-.class public abstract synthetic Lss7;
+.class public final Lss7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public final a:Ljava/net/InetAddress;
+
+.field public volatile b:I
+
+.field public volatile c:I
+
+.field public volatile d:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Ljava/net/InetAddress;)V
+    .locals 0
 
-    invoke-static {}, Lat7;->values()[Lat7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lss7;->a:Ljava/net/InetAddress;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 7
+
+    iget-object v0, p0, Lss7;->a:Ljava/net/InetAddress;
+
+    iget v1, p0, Lss7;->b:I
+
+    iget v2, p0, Lss7;->d:I
+
+    iget v3, p0, Lss7;->c:I
+
+    iget v4, p0, Lss7;->c:I
+
+    if-eqz v4, :cond_0
+
+    iget v4, p0, Lss7;->d:I
+
+    int-to-float v4, v4
+
+    iget v5, p0, Lss7;->c:I
+
+    int-to-float v5, v5
+
+    div-float/2addr v4, v5
+
+    goto :goto_0
+
+    :cond_0
+    const/high16 v4, 0x3f800000    # 1.0f
+
+    :goto_0
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    const-string v6, "Ip("
+
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, "|uc="
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, "|sc="
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "|tc="
+
+    const-string v1, "|sr="
+
+    invoke-static {v5, v2, v0, v3, v1}, Lhf3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    :try_start_0
-    sget-object v1, Lat7;->Y:Lat7;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :try_start_1
-    sget-object v1, Lat7;->Z:Lat7;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    :try_start_2
-    sget-object v1, Lat7;->q0:Lat7;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    sput-object v0, Lss7;->$EnumSwitchMapping$0:[I
-
-    return-void
+    return-object v0
 .end method

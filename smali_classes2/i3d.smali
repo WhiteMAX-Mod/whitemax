@@ -1,132 +1,48 @@
-.class public final Li3d;
+.class public abstract Li3d;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lj3d;
 
 
-# instance fields
-.field public final a:Ly2d;
+# static fields
+.field public static contact_list_call_contact_title:I = 0x7f130419
 
-.field public final b:Lorf;
+.field public static contact_list_confirm_contact_block_action:I = 0x7f13041a
 
+.field public static contact_list_confirm_contact_block_description:I = 0x7f13041b
 
-# direct methods
-.method public constructor <init>(Ly2d;Lorf;)V
-    .locals 0
+.field public static contact_list_confirm_contact_block_title:I = 0x7f13041c
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static contact_list_confirm_contact_delete_action:I = 0x7f13041d
 
-    iput-object p1, p0, Li3d;->a:Ly2d;
+.field public static contact_list_confirm_contact_delete_title:I = 0x7f13041e
 
-    iput-object p2, p0, Li3d;->b:Lorf;
+.field public static contact_list_confirm_contact_unblock_action:I = 0x7f13041f
 
-    return-void
-.end method
+.field public static contact_list_confirm_contact_unblock_description:I = 0x7f130420
 
+.field public static contact_list_confirm_contact_unblock_title:I = 0x7f130421
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.field public static contact_list_contact_block_snackbar_title:I = 0x7f130422
 
-    if-ne p0, p1, :cond_0
+.field public static contact_list_contact_delete_snackbar_title:I = 0x7f130423
 
-    goto :goto_1
+.field public static contact_list_contact_unblock_snackbar_title:I = 0x7f130424
 
-    :cond_0
-    instance-of v0, p1, Li3d;
+.field public static contact_list_menu_item_add_contact:I = 0x7f130425
 
-    if-nez v0, :cond_1
+.field public static contact_list_search_hint:I = 0x7f130426
 
-    goto :goto_0
+.field public static contact_list_search_hint_with_nick:I = 0x7f130427
 
-    :cond_1
-    check-cast p1, Li3d;
+.field public static empty_contact_list_description:I = 0x7f130496
 
-    iget-object v0, p0, Li3d;->a:Ly2d;
+.field public static empty_contact_list_title:I = 0x7f130497
 
-    iget-object v1, p1, Li3d;->a:Ly2d;
+.field public static empty_search_contact_btn_title:I = 0x7f13049a
 
-    if-eq v0, v1, :cond_2
+.field public static empty_search_contact_disabled_description:I = 0x7f13049b
 
-    goto :goto_0
+.field public static empty_search_contact_enabled_description:I = 0x7f13049c
 
-    :cond_2
-    iget-object v0, p0, Li3d;->b:Lorf;
+.field public static empty_search_contact_title:I = 0x7f13049d
 
-    iget-object p1, p1, Li3d;->b:Lorf;
-
-    invoke-virtual {v0, p1}, Lorf;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Li3d;->a:Ly2d;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Li3d;->b:Lorf;
-
-    iget v1, v1, Lorf;->c:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShowTooltip(recordControlType="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Li3d;->a:Ly2d;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", textSource="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Li3d;->b:Lorf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
+.field public static snackbar_self_title:I = 0x7f130d30

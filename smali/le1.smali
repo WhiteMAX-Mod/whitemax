@@ -3,105 +3,75 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lme1;
+.implements Lft1;
 
 
 # instance fields
-.field public final a:Lsrf;
+.field public final synthetic a:Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
 
 
 # direct methods
-.method public constructor <init>(Lsrf;)V
+.method public constructor <init>(Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lle1;->a:Lsrf;
+    iput-object p1, p0, Lle1;->a:Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final q()V
+    .locals 11
 
-    if-ne p0, p1, :cond_0
+    sget-object v0, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->A0:[Lyy7;
 
-    goto :goto_1
+    iget-object v0, p0, Lle1;->a:Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
 
-    :cond_0
-    instance-of v0, p1, Lle1;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lle1;
-
-    iget-object v0, p0, Lle1;->a:Lsrf;
-
-    iget-object p1, p1, Lle1;->a:Lsrf;
-
-    invoke-virtual {v0, p1}, Lsrf;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final getText()Ltrf;
-    .locals 1
-
-    iget-object v0, p0, Lle1;->a:Lsrf;
-
-    return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lle1;->a:Lsrf;
-
-    invoke-virtual {v0}, Lsrf;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Success(text="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lle1;->a:Lsrf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->C0()Lhe1;
 
     move-result-object v0
 
-    return-object v0
+    iget-object v0, v0, Lhe1;->w0:Ltcf;
+
+    :cond_0
+    invoke-virtual {v0}, Ltcf;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v2, v1
+
+    check-cast v2, Lae1;
+
+    iget-boolean v3, v2, Lae1;->d:Z
+
+    xor-int/lit8 v6, v3, 0x1
+
+    const/4 v9, 0x0
+
+    const/16 v10, 0x77
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    invoke-static/range {v2 .. v10}, Lae1;->a(Lae1;Lwd0;Lms8;Lms8;ZLs5g;Ljava/util/ArrayList;Ls5g;I)Lae1;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Ltcf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    return-void
 .end method

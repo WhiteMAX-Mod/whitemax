@@ -1,366 +1,157 @@
 .class public final Lfi6;
-.super Ljava/lang/Object;
+.super Landroid/view/animation/AnimationSet;
 .source "SourceFile"
 
-
-# static fields
-.field public static final d:[Ljava/lang/String;
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Landroid/view/ViewGroup;
 
-.field public final b:Ljava/util/Set;
+.field public final b:Landroid/view/View;
 
-.field public final c:Ljava/util/Set;
+.field public c:Z
+
+.field public d:Z
+
+.field public o:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
+.method public constructor <init>(Landroid/view/animation/Animation;Landroid/view/ViewGroup;Landroid/view/View;)V
+    .locals 1
 
-    const-string v7, "prefix="
+    const/4 v0, 0x0
 
-    const-string v8, "uncompress="
+    invoke-direct {p0, v0}, Landroid/view/animation/AnimationSet;-><init>(Z)V
 
-    const-string v0, "tokenize="
+    const/4 v0, 0x1
 
-    const-string v1, "compress="
+    iput-boolean v0, p0, Lfi6;->o:Z
 
-    const-string v2, "content="
+    iput-object p2, p0, Lfi6;->a:Landroid/view/ViewGroup;
 
-    const-string v3, "languageid="
+    iput-object p3, p0, Lfi6;->b:Landroid/view/View;
 
-    const-string v4, "matchinfo="
+    invoke-virtual {p0, p1}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    const-string v5, "notindexed="
-
-    const-string v6, "order="
-
-    filled-new-array/range {v0 .. v8}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lfi6;->d:[Ljava/lang/String;
+    invoke-virtual {p2, p0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
     return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Ljava/util/AbstractSet;Ljava/util/Set;)V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-object p1, p0, Lfi6;->a:Ljava/lang/String;
-
-    .line 3
-    iput-object p2, p0, Lfi6;->b:Ljava/util/Set;
-
-    .line 4
-    iput-object p3, p0, Lfi6;->c:Ljava/util/Set;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Ljava/util/HashSet;Ljava/lang/String;)V
-    .locals 0
-
-    .line 5
-    invoke-static {p3}, Loh6;->n(Ljava/lang/String;)Ljava/util/Set;
-
-    move-result-object p3
-
-    invoke-direct {p0, p1, p2, p3}, Lfi6;-><init>(Ljava/lang/String;Ljava/util/AbstractSet;Ljava/util/Set;)V
-
-    return-void
-.end method
-
-.method public static final a(Ltg6;Ljava/lang/String;)Lfi6;
-    .locals 4
-
-    new-instance v0, Lp8e;
-
-    invoke-direct {v0}, Lp8e;-><init>()V
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "PRAGMA table_info(`"
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, "`)"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1}, Ltg6;->k0(Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v1
-
-    :try_start_0
-    invoke-interface {v1}, Landroid/database/Cursor;->getColumnCount()I
-
-    move-result v2
-
-    if-lez v2, :cond_0
-
-    const-string v2, "name"
-
-    invoke-interface {v1, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result v2
-
-    :goto_0
-    invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    invoke-interface {v1, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Lp8e;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_3
-
-    :cond_0
-    invoke-interface {v1}, Ljava/io/Closeable;->close()V
-
-    invoke-static {v0}, Lu8e;->a(Lp8e;)Lp8e;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "SELECT * FROM sqlite_master WHERE `name` = \'"
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v2, 0x27
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1}, Ltg6;->k0(Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object p0
-
-    :try_start_1
-    invoke-interface {p0}, Landroid/database/Cursor;->moveToFirst()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    const-string v1, "sql"
-
-    invoke-interface {p0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
-
-    move-result v1
-
-    invoke-interface {p0, v1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    goto :goto_1
-
-    :catchall_1
-    move-exception p1
-
-    goto :goto_2
-
-    :cond_1
-    const-string v1, ""
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :goto_1
-    invoke-interface {p0}, Ljava/io/Closeable;->close()V
-
-    invoke-static {v1}, Loh6;->n(Ljava/lang/String;)Ljava/util/Set;
-
-    move-result-object p0
-
-    new-instance v1, Lfi6;
-
-    invoke-direct {v1, p1, v0, p0}, Lfi6;-><init>(Ljava/lang/String;Ljava/util/AbstractSet;Ljava/util/Set;)V
-
-    return-object v1
-
-    :goto_2
-    :try_start_2
-    throw p1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
-
-    :catchall_2
-    move-exception v0
-
-    invoke-static {p0, p1}, Lhfb;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
-
-    throw v0
-
-    :goto_3
-    :try_start_3
-    throw p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_3
-
-    :catchall_3
-    move-exception p1
-
-    invoke-static {v1, p0}, Lhfb;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final getTransformation(JLandroid/view/animation/Transformation;)Z
+    .locals 2
 
-    if-ne p0, p1, :cond_0
+    const/4 v0, 0x1
 
-    const/4 p1, 0x1
+    .line 1
+    iput-boolean v0, p0, Lfi6;->o:Z
+
+    .line 2
+    iget-boolean v1, p0, Lfi6;->c:Z
+
+    if-eqz v1, :cond_0
+
+    .line 3
+    iget-boolean p1, p0, Lfi6;->d:Z
+
+    xor-int/2addr p1, v0
 
     return p1
 
+    .line 4
     :cond_0
-    instance-of v0, p1, Lfi6;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_1
-
-    return v1
-
-    :cond_1
-    check-cast p1, Lfi6;
-
-    iget-object v0, p1, Lfi6;->a:Ljava/lang/String;
-
-    iget-object v2, p0, Lfi6;->a:Ljava/lang/String;
-
-    invoke-static {v2, v0}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    return v1
-
-    :cond_2
-    iget-object v0, p0, Lfi6;->b:Ljava/util/Set;
-
-    iget-object v2, p1, Lfi6;->b:Ljava/util/Set;
-
-    invoke-static {v0, v2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    return v1
-
-    :cond_3
-    iget-object v0, p0, Lfi6;->c:Ljava/util/Set;
-
-    iget-object p1, p1, Lfi6;->c:Ljava/util/Set;
-
-    invoke-static {v0, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-super {p0, p1, p2, p3}, Landroid/view/animation/AnimationSet;->getTransformation(JLandroid/view/animation/Transformation;)Z
 
     move-result p1
 
-    return p1
+    if-nez p1, :cond_1
+
+    .line 5
+    iput-boolean v0, p0, Lfi6;->c:Z
+
+    .line 6
+    iget-object p1, p0, Lfi6;->a:Landroid/view/ViewGroup;
+
+    invoke-static {p1, p0}, Lmgb;->a(Landroid/view/View;Ljava/lang/Runnable;)Lmgb;
+
+    :cond_1
+    return v0
 .end method
 
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lfi6;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lfi6;->b:Ljava/util/Set;
-
-    invoke-static {v2, v0, v1}, Lu15;->g(Ljava/util/Set;II)I
-
-    move-result v0
-
-    iget-object v1, p0, Lfi6;->c:Ljava/util/Set;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final getTransformation(JLandroid/view/animation/Transformation;F)Z
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const/4 v0, 0x1
 
-    const-string v1, "FtsTableInfo{name=\'"
+    .line 7
+    iput-boolean v0, p0, Lfi6;->o:Z
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 8
+    iget-boolean v1, p0, Lfi6;->c:Z
 
-    iget-object v1, p0, Lfi6;->a:Ljava/lang/String;
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 9
+    iget-boolean p1, p0, Lfi6;->d:Z
 
-    const-string v1, "\', columns="
+    xor-int/2addr p1, v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return p1
 
-    iget-object v1, p0, Lfi6;->b:Ljava/util/Set;
+    .line 10
+    :cond_0
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/view/animation/Animation;->getTransformation(JLandroid/view/animation/Transformation;F)Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result p1
 
-    const-string v1, ", options="
+    if-nez p1, :cond_1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 11
+    iput-boolean v0, p0, Lfi6;->c:Z
 
-    iget-object v1, p0, Lfi6;->c:Ljava/util/Set;
+    .line 12
+    iget-object p1, p0, Lfi6;->a:Landroid/view/ViewGroup;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {p1, p0}, Lmgb;->a(Landroid/view/View;Ljava/lang/Runnable;)Lmgb;
 
-    const-string v1, "\'}"
+    :cond_1
+    return v0
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final run()V
+    .locals 2
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-boolean v0, p0, Lfi6;->c:Z
 
-    move-result-object v0
+    iget-object v1, p0, Lfi6;->a:Landroid/view/ViewGroup;
 
-    return-object v0
+    if-nez v0, :cond_0
+
+    iget-boolean v0, p0, Lfi6;->o:Z
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lfi6;->o:Z
+
+    invoke-virtual {v1, p0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lfi6;->b:Landroid/view/View;
+
+    invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->endViewTransition(Landroid/view/View;)V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lfi6;->d:Z
+
+    return-void
 .end method

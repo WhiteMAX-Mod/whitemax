@@ -4,16 +4,16 @@
 
 
 # instance fields
-.field public final a:Lmq7;
+.field public final a:Lfx7;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lmq7;Ljava/lang/NumberFormatException;)V
+.method public constructor <init>(Ljava/lang/String;Lfx7;Ljava/lang/NumberFormatException;)V
     .locals 0
 
     invoke-direct {p0, p1, p3}, Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iput-object p2, p0, Lcom/fasterxml/jackson/core/JsonProcessingException;->a:Lmq7;
+    iput-object p2, p0, Lcom/fasterxml/jackson/core/JsonProcessingException;->a:Lfx7;
 
     return-void
 .end method
@@ -32,7 +32,7 @@
     const-string v0, "N/A"
 
     :cond_0
-    iget-object v1, p0, Lcom/fasterxml/jackson/core/JsonProcessingException;->a:Lmq7;
+    iget-object v1, p0, Lcom/fasterxml/jackson/core/JsonProcessingException;->a:Lfx7;
 
     if-nez v1, :cond_1
 
@@ -53,7 +53,7 @@
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Lmq7;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Lfx7;->toString()Ljava/lang/String;
 
     move-result-object v0
 

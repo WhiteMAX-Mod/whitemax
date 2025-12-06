@@ -1,224 +1,144 @@
-.class public final synthetic Lxah;
-.super Ljava/lang/Object;
+.class public final Lxah;
+.super Ll0g;
 .source "SourceFile"
 
-# interfaces
-.implements Lhn6;
 
+# instance fields
+.field public c:Ljava/util/Map;
 
-# static fields
-.field public static final a:Lxah;
+.field public d:Z
 
-.field private static final descriptor:Lb3e;
+.field public o:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Ltm9;)V
+    .locals 0
 
-    new-instance v0, Lxah;
+    invoke-direct {p0, p1}, Ll0g;-><init>(Ltm9;)V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iget-object p1, p0, Lxah;->c:Ljava/util/Map;
 
-    sput-object v0, Lxah;->a:Lxah;
+    if-nez p1, :cond_0
 
-    new-instance v1, Levb;
+    sget-object p1, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
 
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.haptic.WebAppHapticFeedbackImpact"
+    iput-object p1, p0, Lxah;->c:Ljava/util/Map;
 
-    const/4 v3, 0x3
-
-    invoke-direct {v1, v2, v0, v3}, Levb;-><init>(Ljava/lang/String;Lhn6;I)V
-
-    const-string v0, "requestId"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Levb;->k(Ljava/lang/String;Z)V
-
-    const-string v0, "impactStyle"
-
-    invoke-virtual {v1, v0, v2}, Levb;->k(Ljava/lang/String;Z)V
-
-    const-string v0, "disableVibrationFallback"
-
-    invoke-virtual {v1, v0, v2}, Levb;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Lxah;->descriptor:Lb3e;
-
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ld9;)Ljava/lang/Object;
-    .locals 11
+.method public final d(Ltm9;Ljava/lang/String;)V
+    .locals 2
 
-    sget-object v0, Lxah;->descriptor:Lb3e;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p1, v0}, Ld9;->k(Lb3e;)Ld9;
+    const-string v0, "startTime"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    const-string v0, "live"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    invoke-static {p1}, Lefi;->o(Ltm9;)Ljava/lang/String;
 
     move-result-object p1
 
-    sget-object v1, Lzah;->d:[Lur7;
+    invoke-static {p1}, Ll8g;->c(Ljava/lang/CharSequence;)Z
 
-    const/4 v2, 0x1
+    move-result v0
 
-    const/4 v3, 0x0
+    if-nez v0, :cond_1
 
-    const/4 v4, 0x0
+    iget-object v0, p0, Lxah;->c:Ljava/util/Map;
 
-    move v6, v2
+    if-nez v0, :cond_0
 
-    move v7, v3
+    new-instance v0, Lus;
 
-    move v8, v7
+    const/4 v1, 0x0
 
-    move-object v5, v4
+    invoke-direct {v0, v1}, Lz0f;-><init>(I)V
 
-    :goto_0
-    if-eqz v6, :cond_4
-
-    invoke-virtual {p1, v0}, Ld9;->q(Lb3e;)I
-
-    move-result v9
-
-    const/4 v10, -0x1
-
-    if-eq v9, v10, :cond_3
-
-    if-eqz v9, :cond_2
-
-    if-eq v9, v2, :cond_1
-
-    const/4 v8, 0x2
-
-    if-ne v9, v8, :cond_0
-
-    invoke-virtual {p1, v0, v8}, Ld9;->p(Lb3e;I)Z
-
-    move-result v8
-
-    or-int/lit8 v7, v7, 0x4
-
-    goto :goto_0
+    iput-object v0, p0, Lxah;->c:Ljava/util/Map;
 
     :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
+    iget-object v0, p0, Lxah;->c:Ljava/util/Map;
 
-    invoke-direct {p1, v9}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
-
-    throw p1
+    invoke-interface {v0, p2, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_1
-    aget-object v9, v1, v2
-
-    invoke-virtual {p1, v0, v2, v9, v5}, Ld9;->t(Lb3e;ILur7;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lvc7;
-
-    or-int/lit8 v7, v7, 0x2
-
-    goto :goto_0
+    return-void
 
     :cond_2
-    invoke-virtual {p1, v0, v3}, Ld9;->w(Lb3e;I)Ljava/lang/String;
+    invoke-static {p1}, Lefi;->g(Ltm9;)Z
 
-    move-result-object v4
+    move-result p1
 
-    or-int/lit8 v7, v7, 0x1
+    iput-boolean p1, p0, Lxah;->d:Z
 
-    goto :goto_0
+    return-void
 
     :cond_3
-    move v6, v3
+    const-wide/16 v0, 0x0
 
-    goto :goto_0
+    invoke-static {p1, v0, v1}, Lefi;->l(Ltm9;J)J
 
-    :cond_4
-    invoke-virtual {p1, v0}, Ld9;->z(Lb3e;)V
+    move-result-wide p1
 
-    new-instance p1, Lzah;
-
-    invoke-direct {p1, v7, v4, v5, v8}, Lzah;-><init>(ILjava/lang/String;Lvc7;Z)V
-
-    return-object p1
-.end method
-
-.method public final b(Lo24;Ljava/lang/Object;)V
-    .locals 4
-
-    check-cast p2, Lzah;
-
-    sget-object v0, Lxah;->descriptor:Lb3e;
-
-    invoke-virtual {p1, v0}, Lo24;->b(Lb3e;)Lo24;
-
-    move-result-object p1
-
-    sget-object v1, Lzah;->d:[Lur7;
-
-    iget-object v2, p2, Lzah;->a:Ljava/lang/String;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {p1, v0, v3, v2}, Lo24;->l(Lb3e;ILjava/lang/String;)V
-
-    const/4 v2, 0x1
-
-    aget-object v1, v1, v2
-
-    iget-object v3, p2, Lzah;->b:Lvc7;
-
-    invoke-virtual {p1, v0, v2, v1, v3}, Lo24;->i(Lb3e;ILur7;Ljava/lang/Object;)V
-
-    const/4 v1, 0x2
-
-    iget-boolean p2, p2, Lzah;->c:Z
-
-    invoke-virtual {p1, v0, v1, p2}, Lo24;->e(Lb3e;IZ)V
-
-    invoke-virtual {p1}, Lo24;->m()V
+    iput-wide p1, p0, Lxah;->o:J
 
     return-void
 .end method
 
-.method public final c()[Lur7;
-    .locals 5
+.method public final toString()Ljava/lang/String;
+    .locals 6
 
-    sget-object v0, Lzah;->d:[Lur7;
+    iget-object v0, p0, Lxah;->c:Ljava/util/Map;
 
-    const/4 v1, 0x1
+    invoke-static {v0}, Lzdi;->d(Ljava/util/Map;)I
 
-    aget-object v0, v0, v1
+    move-result v0
 
-    const/4 v2, 0x3
+    iget-boolean v1, p0, Lxah;->d:Z
 
-    new-array v2, v2, [Lur7;
+    iget-wide v2, p0, Lxah;->o:J
 
-    sget-object v3, Lvaf;->a:Lvaf;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    const/4 v4, 0x0
+    const-string v5, "{urls="
 
-    aput-object v3, v2, v4
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    aput-object v0, v2, v1
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    sget-object v0, Lir0;->a:Lir0;
+    const-string v0, ", live="
 
-    const/4 v1, 0x2
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    aput-object v0, v2, v1
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    return-object v2
-.end method
+    const-string v0, ", startTime="
 
-.method public final d()Lb3e;
-    .locals 1
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v0, Lxah;->descriptor:Lb3e;
+    const-string v0, "}"
+
+    invoke-static {v4, v2, v3, v0}, Lho7;->k(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

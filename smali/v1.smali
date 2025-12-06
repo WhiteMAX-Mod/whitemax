@@ -31,13 +31,13 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Lx1;->Y:Lxci;
+    sget-object v0, Lx1;->X:Lwoi;
 
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v1
 
-    invoke-virtual {v0, p0, v1}, Lxci;->l(Lv1;Ljava/lang/Thread;)V
+    invoke-virtual {v0, p0, v1}, Lwoi;->h(Lv1;Ljava/lang/Thread;)V
 
     return-void
 .end method

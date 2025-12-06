@@ -1,100 +1,101 @@
-.class public final Lxf7;
-.super Lee9;
+.class public final synthetic Lxf7;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/graphics/ImageDecoder$OnHeaderDecodedListener;
 
 
 # instance fields
-.field public a:I
+.field public final synthetic a:I
+
+.field public final synthetic b:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(II)V
+    .locals 0
 
-    invoke-direct {p0}, Lee9;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    iput p1, p0, Lxf7;->a:I
 
-    iput v0, p0, Lxf7;->a:I
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Lee9;->cachedSize:I
+    iput p2, p0, Lxf7;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final computeSerializedSize()I
-    .locals 2
+.method public final onHeaderDecoded(Landroid/graphics/ImageDecoder;Landroid/graphics/ImageDecoder$ImageInfo;Landroid/graphics/ImageDecoder$Source;)V
+    .locals 3
 
-    iget v0, p0, Lxf7;->a:I
+    iget p3, p0, Lxf7;->a:I
 
-    if-eqz v0, :cond_0
+    iget v0, p0, Lxf7;->b:I
 
-    const/4 v1, 0x1
+    invoke-static {p2}, Lb5;->n(Landroid/graphics/ImageDecoder$ImageInfo;)Landroid/util/Size;
 
-    invoke-static {v1, v0}, Lpa3;->n(II)I
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/util/Size;->getWidth()I
+
+    move-result v1
+
+    invoke-static {p2}, Lb5;->n(Landroid/graphics/ImageDecoder$ImageInfo;)Landroid/util/Size;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/util/Size;->getHeight()I
+
+    move-result p2
+
+    int-to-float p3, p3
+
+    int-to-float v1, v1
+
+    div-float/2addr p3, v1
+
+    int-to-float v0, v0
+
+    int-to-float p2, p2
+
+    div-float/2addr v0, p2
+
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    invoke-static {v0, v2}, Ljava/lang/Math;->min(FF)F
 
     move-result v0
 
-    return v0
+    invoke-static {p3, v0}, Ljava/lang/Math;->min(FF)F
+
+    move-result p3
+
+    cmpg-float v0, p3, v2
+
+    if-gez v0, :cond_0
+
+    mul-float/2addr v1, p3
+
+    float-to-int v0, v1
+
+    mul-float/2addr p2, p3
+
+    float-to-int p2, p2
+
+    invoke-static {p1, v0, p2}, Lb5;->t(Landroid/graphics/ImageDecoder;II)V
 
     :cond_0
-    const/4 v0, 0x0
+    sget-object p2, Landroid/graphics/ColorSpace$Named;->SRGB:Landroid/graphics/ColorSpace$Named;
 
-    return v0
-.end method
+    invoke-static {p2}, Landroid/graphics/ColorSpace;->get(Landroid/graphics/ColorSpace$Named;)Landroid/graphics/ColorSpace;
 
-.method public final mergeFrom(Loa3;)Lee9;
-    .locals 2
+    move-result-object p2
 
-    :cond_0
-    :goto_0
-    invoke-virtual {p1}, Loa3;->s()I
+    invoke-static {p1, p2}, Lb5;->u(Landroid/graphics/ImageDecoder;Landroid/graphics/ColorSpace;)V
 
-    move-result v0
+    invoke-static {p1}, Lb5;->s(Landroid/graphics/ImageDecoder;)V
 
-    if-eqz v0, :cond_2
-
-    const/16 v1, 0x8
-
-    if-eq v0, v1, :cond_1
-
-    invoke-virtual {p1, v0}, Loa3;->u(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {p1}, Loa3;->p()I
-
-    move-result v0
-
-    iput v0, p0, Lxf7;->a:I
-
-    goto :goto_0
-
-    :cond_2
-    :goto_1
-    return-object p0
-.end method
-
-.method public final writeTo(Lpa3;)V
-    .locals 2
-
-    iget v0, p0, Lxf7;->a:I
-
-    if-eqz v0, :cond_0
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p1, v1, v0}, Lpa3;->G(II)V
-
-    :cond_0
     return-void
 .end method

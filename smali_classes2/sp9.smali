@@ -1,90 +1,44 @@
-.class public final synthetic Lsp9;
+.class public final Lsp9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/function/UnaryOperator;
+.implements Leq9;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:J
 
-.field public final synthetic b:I
-
-.field public final synthetic c:Z
-
-.field public final synthetic d:J
+.field public final b:Lm00;
 
 
 # direct methods
-.method public synthetic constructor <init>(JIIZ)V
+.method public constructor <init>(JLm00;)V
     .locals 0
 
-    iput p4, p0, Lsp9;->a:I
-
-    iput p3, p0, Lsp9;->b:I
-
-    iput-boolean p5, p0, Lsp9;->c:Z
-
-    iput-wide p1, p0, Lsp9;->d:J
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lsp9;->a:J
+
+    iput-object p3, p0, Lsp9;->b:Lm00;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
+.method public final a()Z
+    .locals 1
 
-    iget v0, p0, Lsp9;->a:I
+    const/4 v0, 0x1
 
-    check-cast p1, Lup9;
+    return v0
+.end method
 
-    packed-switch v0, :pswitch_data_0
+.method public final j()J
+    .locals 2
 
-    new-instance v0, Lup9;
+    iget-wide v0, p0, Lsp9;->a:J
 
-    const-wide/16 v4, 0x0
-
-    const/16 v8, 0x16
-
-    iget v1, p0, Lsp9;->b:I
-
-    const/4 v2, 0x0
-
-    iget-boolean v3, p0, Lsp9;->c:Z
-
-    iget-wide v6, p0, Lsp9;->d:J
-
-    invoke-direct/range {v0 .. v8}, Lup9;-><init>(IZZJJI)V
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Lup9;
-
-    const-wide/16 v4, 0x0
-
-    const/16 v8, 0x16
-
-    iget v1, p0, Lsp9;->b:I
-
-    const/4 v2, 0x0
-
-    iget-boolean v3, p0, Lsp9;->c:Z
-
-    iget-wide v6, p0, Lsp9;->d:J
-
-    invoke-direct/range {v0 .. v8}, Lup9;-><init>(IZZJJI)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-wide v0
 .end method

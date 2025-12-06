@@ -1,133 +1,120 @@
 .class public final Ldd9;
-.super Landroid/widget/EditText;
+.super Ldtf;
 .source "SourceFile"
+
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic a:Lgd9;
+.field public final synthetic X:Led9;
+
+.field public final synthetic Y:Lzc9;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lgd9;)V
+.method public constructor <init>(Led9;Lzc9;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Ldd9;->a:Lgd9;
+    iput-object p1, p0, Ldd9;->X:Led9;
 
-    invoke-direct {p0, p1}, Landroid/widget/EditText;-><init>(Landroid/content/Context;)V
+    iput-object p2, p0, Ldd9;->Y:Lzc9;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onSelectionChanged(II)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-super {p0, p1, p2}, Landroid/widget/TextView;->onSelectionChanged(II)V
+    check-cast p1, Lf84;
 
-    iget-object p1, p0, Ldd9;->a:Lgd9;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object p2, p1, Lgd9;->c:Lbd9;
-
-    if-nez p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Landroid/widget/TextView;->hasSelection()Z
-
-    move-result p2
-
-    const/4 v0, 0x1
-
-    if-eqz p2, :cond_2
-
-    iget-object p1, p1, Lgd9;->c:Lbd9;
-
-    if-eqz p1, :cond_3
-
-    check-cast p1, Lbua;
-
-    iget-object p1, p1, Lbua;->b:Ljava/lang/Object;
-
-    check-cast p1, Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    sget-object p2, Lone/me/sdk/messagewrite/MessageWriteWidget;->J0:[Ltr7;
-
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->H0()Lid8;
+    invoke-virtual {p0, p1, p2}, Ldd9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    iget-object p2, p1, Lid8;->Y:Lx0f;
+    check-cast p1, Ldd9;
 
-    invoke-virtual {p2}, Lx0f;->getValue()Ljava/lang/Object;
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    move-result-object p2
-
-    check-cast p2, Ljd8;
-
-    iget p2, p2, Ljd8;->b:I
-
-    if-eq p2, v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p2, 0x2
-
-    invoke-static {p1, p2}, Lid8;->r(Lid8;I)V
-
-    return-void
-
-    :cond_2
-    iget-object p1, p1, Lgd9;->c:Lbd9;
-
-    if-eqz p1, :cond_3
-
-    check-cast p1, Lbua;
-
-    iget-object p1, p1, Lbua;->b:Ljava/lang/Object;
-
-    check-cast p1, Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    sget-object p2, Lone/me/sdk/messagewrite/MessageWriteWidget;->J0:[Ltr7;
-
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->H0()Lid8;
+    invoke-virtual {p1, p2}, Ldd9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p1, v0}, Lid8;->r(Lid8;I)V
-
-    :cond_3
-    :goto_0
-    return-void
+    return-object p1
 .end method
 
-.method public final verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    instance-of v0, p1, Landroid/graphics/drawable/Animatable;
+    new-instance p1, Ldd9;
 
-    if-nez v0, :cond_1
+    iget-object v0, p0, Ldd9;->X:Led9;
 
-    invoke-super {p0, p1}, Landroid/view/View;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+    iget-object v1, p0, Ldd9;->Y:Lzc9;
 
-    move-result p1
+    invoke-direct {p1, v0, v1, p2}, Ldd9;-><init>(Led9;Lzc9;Lkotlin/coroutines/Continuation;)V
 
-    if-eqz p1, :cond_0
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Ldd9;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    return p1
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 
     :cond_1
-    :goto_0
-    const/4 p1, 0x1
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    return p1
+    iget-object p1, p0, Ldd9;->X:Led9;
+
+    iget-object p1, p1, Led9;->a:Ljve;
+
+    iput v1, p0, Ldd9;->o:I
+
+    iget-object v0, p0, Ldd9;->Y:Lzc9;
+
+    invoke-virtual {p1, v0, p0}, Ljve;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lg84;->a:Lg84;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

@@ -1,413 +1,682 @@
 .class public final Lnm0;
-.super Lhr3;
+.super Lsnf;
 .source "SourceFile"
 
 
-# instance fields
-.field public final f:Lko;
+# static fields
+.field public static final Y:[Lmm0;
 
-.field public final synthetic g:I
+.field public static final Z:[Lmm0;
+
+
+# instance fields
+.field public X:J
+
+.field public final a:Ljava/util/concurrent/atomic/AtomicReference;
+
+.field public final b:Ljava/util/concurrent/atomic/AtomicReference;
+
+.field public final c:Ljava/util/concurrent/locks/Lock;
+
+.field public final d:Ljava/util/concurrent/locks/Lock;
+
+.field public final o:Ljava/util/concurrent/atomic/AtomicReference;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lw9c;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p3, p0, Lnm0;->g:I
+    const/4 v0, 0x0
 
-    invoke-direct {p0, p1, p2}, Lhr3;-><init>(Landroid/content/Context;Lw9c;)V
+    new-array v1, v0, [Lmm0;
 
-    new-instance p1, Lko;
+    sput-object v1, Lnm0;->Y:[Lmm0;
 
-    const/4 p2, 0x3
+    new-array v0, v0, [Lmm0;
 
-    invoke-direct {p1, p2, p0}, Lko;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, p0, Lnm0;->f:Lko;
+    sput-object v0, Lnm0;->Z:[Lmm0;
 
     return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/Object;)V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+
+    invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;-><init>()V
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->readLock()Ljava/util/concurrent/locks/Lock;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lnm0;->c:Ljava/util/concurrent/locks/Lock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->writeLock()Ljava/util/concurrent/locks/Lock;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lnm0;->d:Ljava/util/concurrent/locks/Lock;
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
+
+    sget-object v1, Lnm0;->Y:[Lmm0;
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lnm0;->b:Ljava/util/concurrent/atomic/AtomicReference;
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-direct {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lnm0;->a:Ljava/util/concurrent/atomic/AtomicReference;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    iput-object p1, p0, Lnm0;->o:Ljava/util/concurrent/atomic/AtomicReference;
+
+    return-void
+.end method
+
+.method public static t(Ljava/lang/Object;)Lnm0;
+    .locals 1
+
+    const-string v0, "defaultValue is null"
+
+    invoke-static {p0, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    new-instance v0, Lnm0;
+
+    invoke-direct {v0, p0}, Lnm0;-><init>(Ljava/lang/Object;)V
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final i()Ljava/lang/Object;
-    .locals 5
+.method public final b()V
+    .locals 7
 
-    iget v0, p0, Lnm0;->g:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lhr3;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroid/content/Context;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0}, Lnm0;->u()Landroid/content/IntentFilter;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
-
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_4
-
-    invoke-virtual {v0}, Landroid/content/Intent;->getAction()Ljava/lang/String;
-
-    move-result-object v2
-
-    if-nez v2, :cond_0
-
-    goto :goto_1
+    sget-object v0, Lbj5;->a:Laj5;
 
     :cond_0
-    invoke-virtual {v0}, Landroid/content/Intent;->getAction()Ljava/lang/String;
-
-    move-result-object v0
+    iget-object v1, p0, Lnm0;->o:Ljava/util/concurrent/atomic/AtomicReference;
 
     const/4 v2, 0x0
 
-    if-eqz v0, :cond_3
+    invoke-virtual {v1, v2, v0}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    move-result v2
 
-    move-result v3
+    if-eqz v2, :cond_1
 
-    const v4, -0x46671f94
+    iget-object v0, p0, Lnm0;->d:Ljava/util/concurrent/locks/Lock;
 
-    if-eq v3, v4, :cond_2
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
 
-    const v4, -0x2b8fb65c
+    iget-wide v1, p0, Lnm0;->X:J
 
-    if-eq v3, v4, :cond_1
+    const-wide/16 v3, 0x1
+
+    add-long/2addr v1, v3
+
+    iput-wide v1, p0, Lnm0;->X:J
+
+    iget-object v1, p0, Lnm0;->a:Ljava/util/concurrent/atomic/AtomicReference;
+
+    sget-object v2, Ltma;->a:Ltma;
+
+    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+
+    iget-object v0, p0, Lnm0;->b:Ljava/util/concurrent/atomic/AtomicReference;
+
+    sget-object v1, Lnm0;->Z:[Lmm0;
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lmm0;
+
+    array-length v1, v0
+
+    const/4 v3, 0x0
+
+    :goto_0
+    if-ge v3, v1, :cond_2
+
+    aget-object v4, v0, v3
+
+    iget-wide v5, p0, Lnm0;->X:J
+
+    invoke-virtual {v4, v5, v6, v2}, Lmm0;->a(JLjava/lang/Object;)V
+
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     :cond_1
-    const-string v3, "android.intent.action.DEVICE_STORAGE_OK"
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object v1
 
-    move-result v0
+    if-eqz v1, :cond_0
 
-    if-nez v0, :cond_4
+    :cond_2
+    return-void
+.end method
+
+.method public final c(Lpy4;)V
+    .locals 1
+
+    iget-object v0, p0, Lnm0;->o:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p1}, Lpy4;->dispose()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final f(Ljava/lang/Object;)V
+    .locals 6
+
+    const-string v0, "onNext called with a null value."
+
+    invoke-static {p1, v0}, Lbj5;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lnm0;->o:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    iget-object v0, p0, Lnm0;->d:Ljava/util/concurrent/locks/Lock;
+
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
+
+    iget-wide v1, p0, Lnm0;->X:J
+
+    const-wide/16 v3, 0x1
+
+    add-long/2addr v1, v3
+
+    iput-wide v1, p0, Lnm0;->X:J
+
+    iget-object v1, p0, Lnm0;->a:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v1, p1}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+
+    iget-object v0, p0, Lnm0;->b:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lmm0;
+
+    array-length v1, v0
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_1
+
+    aget-object v3, v0, v2
+
+    iget-wide v4, p0, Lnm0;->X:J
+
+    invoke-virtual {v3, v4, v5, p1}, Lmm0;->a(JLjava/lang/Object;)V
+
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    :cond_2
-    const-string v1, "android.intent.action.DEVICE_STORAGE_LOW"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    :cond_3
-    :goto_0
-    move v1, v2
-
-    :cond_4
+    :cond_1
     :goto_1
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    return-void
+.end method
+
+.method public final o(Lvta;)V
+    .locals 6
+
+    new-instance v0, Lmm0;
+
+    invoke-direct {v0, p1, p0}, Lmm0;-><init>(Lvta;Lnm0;)V
+
+    invoke-interface {p1, v0}, Lvta;->c(Lpy4;)V
+
+    iget-object v1, p0, Lnm0;->b:Ljava/util/concurrent/atomic/AtomicReference;
+
+    :goto_0
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, [Lmm0;
+
+    sget-object v3, Lnm0;->Z:[Lmm0;
+
+    if-ne v2, v3, :cond_1
+
+    iget-object v0, p0, Lnm0;->o:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Ljava/lang/Throwable;
 
-    :pswitch_0
-    new-instance v0, Landroid/content/IntentFilter;
+    sget-object v1, Lbj5;->a:Laj5;
 
-    const-string v1, "android.intent.action.BATTERY_CHANGED"
+    if-ne v0, v1, :cond_0
 
-    invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+    invoke-interface {p1}, Lvta;->b()V
 
-    iget-object v1, p0, Lhr3;->b:Ljava/lang/Object;
+    return-void
 
-    check-cast v1, Landroid/content/Context;
+    :cond_0
+    invoke-interface {p1, v0}, Lvta;->onError(Ljava/lang/Throwable;)V
 
-    const/4 v2, 0x0
+    return-void
 
-    invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    :cond_1
+    array-length v3, v2
 
-    move-result-object v0
+    add-int/lit8 v4, v3, 0x1
 
-    if-nez v0, :cond_5
+    new-array v4, v4, [Lmm0;
 
-    invoke-static {}, Lxyh;->e()Lxyh;
+    const/4 v5, 0x0
 
-    move-result-object v0
+    invoke-static {v2, v5, v4, v5, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    sget-object v1, Lpm0;->a:Ljava/lang/String;
+    aput-object v0, v4, v3
 
-    const-string v2, "getInitialState - null intent received"
-
-    invoke-virtual {v0, v1, v2}, Lxyh;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    goto :goto_3
-
-    :cond_5
-    const-string v1, "status"
-
-    const/4 v2, -0x1
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
-
-    move-result v1
-
-    const-string v3, "level"
-
-    invoke-virtual {v0, v3, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    :cond_2
+    invoke-virtual {v1, v2, v4}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
-    const-string v4, "scale"
+    if-eqz v3, :cond_c
 
-    invoke-virtual {v0, v4, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    iget-boolean p1, v0, Lmm0;->Y:Z
 
-    move-result v0
+    if-eqz p1, :cond_3
 
-    int-to-float v2, v3
+    invoke-virtual {p0, v0}, Lnm0;->v(Lmm0;)V
 
-    int-to-float v0, v0
+    return-void
 
-    div-float/2addr v2, v0
+    :cond_3
+    iget-boolean p1, v0, Lmm0;->Y:Z
 
-    const/4 v0, 0x1
+    if-eqz p1, :cond_4
 
-    if-eq v1, v0, :cond_7
+    goto :goto_4
 
-    const v1, 0x3e19999a    # 0.15f
+    :cond_4
+    monitor-enter v0
 
-    cmpl-float v1, v2, v1
+    :try_start_0
+    iget-boolean p1, v0, Lmm0;->Y:Z
 
-    if-lez v1, :cond_6
+    if-eqz p1, :cond_5
 
-    goto :goto_2
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_5
+
+    :cond_5
+    iget-boolean p1, v0, Lmm0;->c:Z
+
+    if-eqz p1, :cond_6
+
+    monitor-exit v0
+
+    return-void
 
     :cond_6
-    const/4 v0, 0x0
+    iget-object p1, v0, Lmm0;->b:Lnm0;
+
+    iget-object v1, p1, Lnm0;->c:Ljava/util/concurrent/locks/Lock;
+
+    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->lock()V
+
+    iget-wide v2, p1, Lnm0;->X:J
+
+    iput-wide v2, v0, Lmm0;->Z:J
+
+    iget-object p1, p1, Lnm0;->a:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
+
+    const/4 v1, 0x1
+
+    if-eqz p1, :cond_7
+
+    move v2, v1
+
+    goto :goto_1
 
     :cond_7
-    :goto_2
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    move v2, v5
 
-    move-result-object v0
+    :goto_1
+    iput-boolean v2, v0, Lmm0;->d:Z
 
-    :goto_3
-    return-object v0
+    iput-boolean v1, v0, Lmm0;->c:Z
 
-    :pswitch_1
-    new-instance v0, Landroid/content/IntentFilter;
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const-string v1, "android.intent.action.BATTERY_CHANGED"
+    if-eqz p1, :cond_b
 
-    invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lmm0;->test(Ljava/lang/Object;)Z
 
-    iget-object v1, p0, Lhr3;->b:Ljava/lang/Object;
+    move-result p1
 
-    check-cast v1, Landroid/content/Context;
+    if-eqz p1, :cond_8
 
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
-
-    move-result-object v0
-
-    if-nez v0, :cond_8
-
-    invoke-static {}, Lxyh;->e()Lxyh;
-
-    move-result-object v0
-
-    sget-object v1, Lom0;->a:Ljava/lang/String;
-
-    const-string v2, "getInitialState - null intent received"
-
-    invoke-virtual {v0, v1, v2}, Lxyh;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    goto :goto_6
+    goto :goto_4
 
     :cond_8
-    const-string v1, "status"
+    :goto_2
+    iget-boolean p1, v0, Lmm0;->Y:Z
 
-    const/4 v2, -0x1
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
-
-    move-result v0
-
-    const/4 v1, 0x2
-
-    if-eq v0, v1, :cond_a
-
-    const/4 v1, 0x5
-
-    if-ne v0, v1, :cond_9
+    if-eqz p1, :cond_9
 
     goto :goto_4
 
     :cond_9
-    const/4 v0, 0x0
+    monitor-enter v0
 
-    goto :goto_5
+    :try_start_1
+    iget-object p1, v0, Lmm0;->o:Llk6;
+
+    if-nez p1, :cond_a
+
+    iput-boolean v5, v0, Lmm0;->d:Z
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_1
+    move-exception p1
+
+    goto :goto_3
 
     :cond_a
+    const/4 v1, 0x0
+
+    iput-object v1, v0, Lmm0;->o:Llk6;
+
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    invoke-virtual {p1, v0}, Llk6;->z(Lzr;)V
+
+    goto :goto_2
+
+    :goto_3
+    :try_start_2
+    monitor-exit v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    throw p1
+
+    :cond_b
     :goto_4
-    const/4 v0, 0x1
+    return-void
 
     :goto_5
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    :try_start_3
+    monitor-exit v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    move-result-object v0
+    throw p1
 
-    :goto_6
-    return-object v0
+    :cond_c
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    move-result-object v3
+
+    if-eq v3, v2, :cond_2
+
+    goto/16 :goto_0
 .end method
 
-.method public final r()V
-    .locals 4
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 6
 
-    invoke-static {}, Lxyh;->e()Lxyh;
+    const-string v0, "onError called with a null Throwable."
+
+    invoke-static {p1, v0}, Lbj5;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    :cond_0
+    iget-object v0, p0, Lnm0;->o:Ljava/util/concurrent/atomic/AtomicReference;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1, p1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    new-instance v0, Lrma;
+
+    invoke-direct {v0, p1}, Lrma;-><init>(Ljava/lang/Throwable;)V
+
+    iget-object p1, p0, Lnm0;->d:Ljava/util/concurrent/locks/Lock;
+
+    invoke-interface {p1}, Ljava/util/concurrent/locks/Lock;->lock()V
+
+    iget-wide v1, p0, Lnm0;->X:J
+
+    const-wide/16 v3, 0x1
+
+    add-long/2addr v1, v3
+
+    iput-wide v1, p0, Lnm0;->X:J
+
+    iget-object v1, p0, Lnm0;->a:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    invoke-interface {p1}, Ljava/util/concurrent/locks/Lock;->unlock()V
+
+    iget-object p1, p0, Lnm0;->b:Ljava/util/concurrent/atomic/AtomicReference;
+
+    sget-object v1, Lnm0;->Z:[Lmm0;
+
+    invoke-virtual {p1, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, [Lmm0;
+
+    array-length v1, p1
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_1
+
+    aget-object v3, p1, v2
+
+    iget-wide v4, p0, Lnm0;->X:J
+
+    invoke-virtual {v3, v4, v5, v0}, Lmm0;->a(JLjava/lang/Object;)V
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-void
+
+    :cond_2
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    sget-object v1, Lkt0;->a:Ljava/lang/String;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, ": registering receiver"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lxyh;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lhr3;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroid/content/Context;
-
-    iget-object v1, p0, Lnm0;->f:Lko;
-
-    invoke-virtual {p0}, Lnm0;->u()Landroid/content/IntentFilter;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-static {p1}, Lt8j;->a(Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
-.method public final s()V
-    .locals 4
-
-    invoke-static {}, Lxyh;->e()Lxyh;
-
-    move-result-object v0
-
-    sget-object v1, Lkt0;->a:Ljava/lang/String;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, ": unregistering receiver"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lxyh;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lhr3;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroid/content/Context;
-
-    iget-object v1, p0, Lnm0;->f:Lko;
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
-
-    return-void
-.end method
-
-.method public final u()Landroid/content/IntentFilter;
+.method public final u()Ljava/lang/Object;
     .locals 2
 
-    iget v0, p0, Lnm0;->g:I
+    iget-object v0, p0, Lnm0;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    new-instance v0, Landroid/content/IntentFilter;
+    move-result-object v0
 
-    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
+    sget-object v1, Ltma;->a:Ltma;
 
-    const-string v1, "android.intent.action.DEVICE_STORAGE_OK"
+    if-ne v0, v1, :cond_0
 
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+    goto :goto_0
 
-    const-string v1, "android.intent.action.DEVICE_STORAGE_LOW"
+    :cond_0
+    instance-of v1, v0, Lrma;
 
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+    if-eqz v1, :cond_1
 
+    :goto_0
+    const/4 v0, 0x0
+
+    :cond_1
     return-object v0
+.end method
 
-    :pswitch_0
-    new-instance v0, Landroid/content/IntentFilter;
+.method public final v(Lmm0;)V
+    .locals 7
 
-    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
+    :goto_0
+    iget-object v0, p0, Lnm0;->b:Ljava/util/concurrent/atomic/AtomicReference;
 
-    const-string v1, "android.intent.action.BATTERY_OKAY"
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+    move-result-object v1
 
-    const-string v1, "android.intent.action.BATTERY_LOW"
+    check-cast v1, [Lmm0;
 
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+    array-length v2, v1
 
-    return-object v0
+    if-nez v2, :cond_0
 
-    :pswitch_1
-    new-instance v0, Landroid/content/IntentFilter;
+    goto :goto_4
 
-    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
+    :cond_0
+    const/4 v3, 0x0
 
-    const-string v1, "android.os.action.CHARGING"
+    move v4, v3
 
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+    :goto_1
+    if-ge v4, v2, :cond_2
 
-    const-string v1, "android.os.action.DISCHARGING"
+    aget-object v5, v1, v4
 
-    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+    if-ne v5, p1, :cond_1
 
-    return-object v0
+    goto :goto_2
 
-    nop
+    :cond_1
+    add-int/lit8 v4, v4, 0x1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    goto :goto_1
+
+    :cond_2
+    const/4 v4, -0x1
+
+    :goto_2
+    if-gez v4, :cond_3
+
+    goto :goto_4
+
+    :cond_3
+    const/4 v5, 0x1
+
+    if-ne v2, v5, :cond_4
+
+    sget-object v2, Lnm0;->Y:[Lmm0;
+
+    goto :goto_3
+
+    :cond_4
+    add-int/lit8 v6, v2, -0x1
+
+    new-array v6, v6, [Lmm0;
+
+    invoke-static {v1, v3, v6, v3, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    add-int/lit8 v3, v4, 0x1
+
+    sub-int/2addr v2, v4
+
+    sub-int/2addr v2, v5
+
+    invoke-static {v1, v3, v6, v4, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    move-object v2, v6
+
+    :cond_5
+    :goto_3
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_6
+
+    :goto_4
+    return-void
+
+    :cond_6
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v3
+
+    if-eq v3, v1, :cond_5
+
+    goto :goto_0
 .end method

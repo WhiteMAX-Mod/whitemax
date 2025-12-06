@@ -1,36 +1,31 @@
-.class public interface abstract Lw3g;
-.super Ljava/lang/Object;
+.class public final Lw3g;
+.super Li3;
 .source "SourceFile"
 
 
+# instance fields
+.field public final c:Z
+
+
+# direct methods
+.method public constructor <init>(Lv3g;Z)V
+    .locals 1
+
+    const/16 v0, 0x10
+
+    invoke-direct {p0, v0, p1}, Li3;-><init>(ILjava/lang/Object;)V
+
+    iput-boolean p2, p0, Lw3g;->c:Z
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract a(Lx3g;)V
-.end method
+.method public final i0()Z
+    .locals 1
 
-.method public abstract b()V
-.end method
+    iget-boolean v0, p0, Lw3g;->c:Z
 
-.method public abstract c(Lx3g;)V
-.end method
-
-.method public d(Lx3g;)V
-    .locals 0
-
-    invoke-interface {p0, p1}, Lw3g;->a(Lx3g;)V
-
-    return-void
-.end method
-
-.method public e(Lx3g;)V
-    .locals 0
-
-    invoke-interface {p0, p1}, Lw3g;->c(Lx3g;)V
-
-    return-void
-.end method
-
-.method public abstract f()V
-.end method
-
-.method public abstract h(Lx3g;)V
+    return v0
 .end method

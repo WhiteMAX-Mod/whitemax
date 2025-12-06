@@ -1,23 +1,8 @@
-.class public abstract Lpm0;
+.class public interface abstract Lpm0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/lang/String;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const-string v0, "BatteryNotLowTracker"
-
-    invoke-static {v0}, Lxyh;->l(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lpm0;->a:Ljava/lang/String;
-
-    return-void
+# virtual methods
+.method public abstract accept(Ljava/lang/Object;Ljava/lang/Object;)V
 .end method

@@ -1,14 +1,14 @@
 .class public Lcom/google/firebase/messaging/FirebaseMessagingService;
-.super Lgd5;
+.super Lgg5;
 .source "SourceFile"
 
 
 # static fields
-.field public static final Z:Ljava/util/ArrayDeque;
+.field public static final Y:Ljava/util/ArrayDeque;
 
 
 # instance fields
-.field public Y:Lxid;
+.field public X:Lfud;
 
 
 # direct methods
@@ -21,7 +21,7 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayDeque;-><init>(I)V
 
-    sput-object v0, Lcom/google/firebase/messaging/FirebaseMessagingService;->Z:Ljava/util/ArrayDeque;
+    sput-object v0, Lcom/google/firebase/messaging/FirebaseMessagingService;->Y:Ljava/util/ArrayDeque;
 
     return-void
 .end method
@@ -29,7 +29,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lgd5;-><init>()V
+    invoke-direct {p0}, Lgg5;-><init>()V
 
     return-void
 .end method
@@ -128,7 +128,7 @@
     goto :goto_1
 
     :cond_3
-    sget-object v5, Lcom/google/firebase/messaging/FirebaseMessagingService;->Z:Ljava/util/ArrayDeque;
+    sget-object v5, Lcom/google/firebase/messaging/FirebaseMessagingService;->Y:Ljava/util/ArrayDeque;
 
     invoke-virtual {v5, v4}, Ljava/util/ArrayDeque;->contains(Ljava/lang/Object;)Z
 
@@ -312,7 +312,7 @@
     goto :goto_4
 
     :pswitch_2
-    invoke-static {p1}, Leli;->d(Landroid/content/Intent;)V
+    invoke-static {p1}, Lqwi;->b(Landroid/content/Intent;)V
 
     invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
@@ -329,34 +329,38 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
 
-    invoke-static {v0}, Li5;->D(Landroid/os/Bundle;)Z
+    invoke-static {v0}, Lusd;->m(Landroid/os/Bundle;)Z
 
     move-result v4
 
     if-eqz v4, :cond_f
 
-    new-instance v4, Li5;
+    new-instance v4, Lusd;
 
-    invoke-direct {v4, v0}, Li5;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v4, v0}, Lusd;-><init>(Landroid/os/Bundle;)V
 
-    new-instance v5, Lea4;
+    new-instance v5, Lpc4;
 
     const-string v9, "Firebase-Messaging-Network-Io"
 
-    invoke-direct {v5, v9, v8}, Lea4;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v5, v9, v8}, Lpc4;-><init>(Ljava/lang/String;I)V
 
     invoke-static {v5}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
 
     move-result-object v5
 
-    new-instance v8, Lyni;
+    new-instance v8, Ljkc;
 
-    const/4 v9, 0x6
+    invoke-direct {v8}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v8, p0, v4, v5, v9}, Lyni;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    iput-object v5, v8, Ljkc;->a:Ljava/lang/Object;
+
+    iput-object p0, v8, Ljkc;->b:Ljava/lang/Object;
+
+    iput-object v4, v8, Ljkc;->c:Ljava/lang/Object;
 
     :try_start_0
-    invoke-virtual {v8}, Lyni;->v()Z
+    invoke-virtual {v8}, Ljkc;->q()Z
 
     move-result v4
     :try_end_0
@@ -371,7 +375,7 @@
     :cond_e
     invoke-interface {v5}, Ljava/util/concurrent/ExecutorService;->shutdown()V
 
-    invoke-static {p1}, Leli;->f(Landroid/content/Intent;)Z
+    invoke-static {p1}, Lqwi;->e(Landroid/content/Intent;)Z
 
     move-result v4
 
@@ -383,7 +387,7 @@
 
     move-result-object v5
 
-    invoke-static {v4, v5}, Leli;->e(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-static {v4, v5}, Lqwi;->c(Ljava/lang/String;Landroid/os/Bundle;)V
 
     goto :goto_3
 
@@ -396,11 +400,11 @@
 
     :cond_f
     :goto_3
-    new-instance v4, Lq9d;
+    new-instance v4, Lskd;
 
-    invoke-direct {v4, v0}, Lq9d;-><init>(Landroid/os/Bundle;)V
+    invoke-direct {v4, v0}, Lskd;-><init>(Landroid/os/Bundle;)V
 
-    invoke-virtual {p0, v4}, Lcom/google/firebase/messaging/FirebaseMessagingService;->d(Lq9d;)V
+    invoke-virtual {p0, v4}, Lcom/google/firebase/messaging/FirebaseMessagingService;->d(Lskd;)V
 
     goto :goto_4
 
@@ -409,26 +413,26 @@
 
     :cond_10
     :goto_4
-    iget-object v0, p0, Lcom/google/firebase/messaging/FirebaseMessagingService;->Y:Lxid;
+    iget-object v0, p0, Lcom/google/firebase/messaging/FirebaseMessagingService;->X:Lfud;
 
     if-nez v0, :cond_11
 
-    new-instance v0, Lxid;
+    new-instance v0, Lfud;
 
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v4
 
-    invoke-direct {v0, v4}, Lxid;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v4}, Lfud;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/google/firebase/messaging/FirebaseMessagingService;->Y:Lxid;
+    iput-object v0, p0, Lcom/google/firebase/messaging/FirebaseMessagingService;->X:Lfud;
 
     :cond_11
-    iget-object v0, p0, Lcom/google/firebase/messaging/FirebaseMessagingService;->Y:Lxid;
+    iget-object v0, p0, Lcom/google/firebase/messaging/FirebaseMessagingService;->X:Lfud;
 
-    iget-object v4, v0, Lxid;->c:Lmla;
+    iget-object v4, v0, Lfud;->c:Lfua;
 
-    invoke-virtual {v4}, Lmla;->h()I
+    invoke-virtual {v4}, Lfua;->h()I
 
     move-result v4
 
@@ -482,30 +486,30 @@
     invoke-virtual {v4, v1, p1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
     :cond_14
-    iget-object p1, v0, Lxid;->b:Landroid/content/Context;
+    iget-object p1, v0, Lfud;->b:Landroid/content/Context;
 
-    invoke-static {p1}, Ld1j;->d(Landroid/content/Context;)Ld1j;
+    invoke-static {p1}, Luaj;->e(Landroid/content/Context;)Luaj;
 
     move-result-object p1
 
-    new-instance v0, Lswi;
+    new-instance v0, Lm6j;
 
     monitor-enter p1
 
     :try_start_1
-    iget v1, p1, Ld1j;->b:I
+    iget v1, p1, Luaj;->b:I
 
     add-int/lit8 v2, v1, 0x1
 
-    iput v2, p1, Ld1j;->b:I
+    iput v2, p1, Luaj;->b:I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     monitor-exit p1
 
-    invoke-direct {v0, v1, v6, v4, v7}, Lswi;-><init>(IILandroid/os/Bundle;I)V
+    invoke-direct {v0, v1, v6, v4, v7}, Lm6j;-><init>(IILandroid/os/Bundle;I)V
 
-    invoke-virtual {p1, v0}, Ld1j;->e(Lswi;)Le2j;
+    invoke-virtual {p1, v0}, Luaj;->f(Lm6j;)Lybj;
 
     return-void
 
@@ -526,11 +530,9 @@
 
     invoke-direct {p1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p1}, Lxj7;->d(Ljava/lang/Exception;)Le2j;
+    invoke-static {p1}, Ln5e;->e(Ljava/lang/Exception;)Lybj;
 
     return-void
-
-    nop
 
     :sswitch_data_0
     .sparse-switch
@@ -555,7 +557,7 @@
     return-void
 .end method
 
-.method public d(Lq9d;)V
+.method public d(Lskd;)V
     .locals 0
 
     return-void

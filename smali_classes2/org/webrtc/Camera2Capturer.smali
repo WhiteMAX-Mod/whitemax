@@ -10,7 +10,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;)V
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;Lorg/webrtc/CameraVideoCapturer$CameraConfigurationProvider;)V
     .locals 1
 
     .line 1
@@ -18,7 +18,7 @@
 
     invoke-direct {v0, p1}, Lorg/webrtc/Camera2Enumerator;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p0, p2, p3, v0}, Lorg/webrtc/CameraCapturer;-><init>(Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;Lorg/webrtc/CameraEnumerator;)V
+    invoke-direct {p0, p2, p3, v0, p4}, Lorg/webrtc/CameraCapturer;-><init>(Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;Lorg/webrtc/CameraEnumerator;Lorg/webrtc/CameraVideoCapturer$CameraConfigurationProvider;)V
 
     .line 2
     iput-object p1, p0, Lorg/webrtc/Camera2Capturer;->context:Landroid/content/Context;
@@ -37,18 +37,28 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;)V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;Lorg/webrtc/CameraVideoCapturer$CameraConfigurationProvider;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;)V
+    .locals 6
 
     .line 4
-    new-instance v0, Lorg/webrtc/Camera2Enumerator;
+    new-instance v3, Lorg/webrtc/Camera2Enumerator;
 
-    invoke-direct {v0, p1}, Lorg/webrtc/Camera2Enumerator;-><init>(Landroid/content/Context;)V
+    invoke-direct {v3, p1}, Lorg/webrtc/Camera2Enumerator;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p0, p2, p3, v0, p4}, Lorg/webrtc/CameraCapturer;-><init>(Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;Lorg/webrtc/CameraEnumerator;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;)V
+    move-object v0, p0
+
+    move-object v1, p2
+
+    move-object v2, p3
+
+    move-object v4, p4
+
+    move-object v5, p5
+
+    invoke-direct/range {v0 .. v5}, Lorg/webrtc/CameraCapturer;-><init>(Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;Lorg/webrtc/CameraEnumerator;Lorg/webrtc/CameraVideoCapturer$CameraConfigurationProvider;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;)V
 
     .line 5
-    iput-object p1, p0, Lorg/webrtc/Camera2Capturer;->context:Landroid/content/Context;
+    iput-object p1, v0, Lorg/webrtc/Camera2Capturer;->context:Landroid/content/Context;
 
     .line 6
     const-string p2, "camera"
@@ -59,7 +69,7 @@
 
     check-cast p1, Landroid/hardware/camera2/CameraManager;
 
-    iput-object p1, p0, Lorg/webrtc/Camera2Capturer;->cameraManager:Landroid/hardware/camera2/CameraManager;
+    iput-object p1, v0, Lorg/webrtc/Camera2Capturer;->cameraManager:Landroid/hardware/camera2/CameraManager;
 
     return-void
 .end method
@@ -74,12 +84,12 @@
     return-void
 .end method
 
-.method public createCameraSession(Lorg/webrtc/CameraSession$CreateSessionCallback;Lorg/webrtc/CameraSession$Events;Landroid/content/Context;Lorg/webrtc/SurfaceTextureHelper;Ljava/lang/String;III)V
-    .locals 10
+.method public createCameraSession(Lorg/webrtc/CameraSession$CreateSessionCallback;Lorg/webrtc/CameraSession$Events;Lorg/webrtc/CameraSession$ConfigurationProvider;Landroid/content/Context;Lorg/webrtc/SurfaceTextureHelper;Ljava/lang/String;III)V
+    .locals 11
 
-    iget-object v3, p0, Lorg/webrtc/Camera2Capturer;->cameraManager:Landroid/hardware/camera2/CameraManager;
+    iget-object v4, p0, Lorg/webrtc/Camera2Capturer;->cameraManager:Landroid/hardware/camera2/CameraManager;
 
-    iget-object v6, p0, Lorg/webrtc/CameraCapturer;->captureFormatHelper:Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;
+    iget-object v7, p0, Lorg/webrtc/CameraCapturer;->captureFormatHelper:Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;
 
     move-object v0, p1
 
@@ -87,17 +97,19 @@
 
     move-object v2, p3
 
-    move-object v4, p4
+    move-object v3, p4
 
-    move-object v5, p5
+    move-object/from16 v5, p5
 
-    move/from16 v7, p6
+    move-object/from16 v6, p6
 
     move/from16 v8, p7
 
     move/from16 v9, p8
 
-    invoke-static/range {v0 .. v9}, Lorg/webrtc/Camera2Session;->create(Lorg/webrtc/CameraSession$CreateSessionCallback;Lorg/webrtc/CameraSession$Events;Landroid/content/Context;Landroid/hardware/camera2/CameraManager;Lorg/webrtc/SurfaceTextureHelper;Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;III)V
+    move/from16 v10, p9
+
+    invoke-static/range {v0 .. v10}, Lorg/webrtc/Camera2Session;->create(Lorg/webrtc/CameraSession$CreateSessionCallback;Lorg/webrtc/CameraSession$Events;Lorg/webrtc/CameraSession$ConfigurationProvider;Landroid/content/Context;Landroid/hardware/camera2/CameraManager;Lorg/webrtc/SurfaceTextureHelper;Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;III)V
 
     return-void
 .end method

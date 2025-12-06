@@ -1,56 +1,51 @@
-.class public final synthetic Lnke;
-.super Ljava/lang/Object;
+.class public final Lnke;
+.super Lq44;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Ltw;
 
-.field public final synthetic b:Lrke;
+.field public Y:I
+
+.field public d:Ltw;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrke;I)V
+.method public constructor <init>(Ltw;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lnke;->a:I
+    iput-object p1, p0, Lnke;->X:Ltw;
 
-    iput-object p1, p0, Lnke;->b:Lrke;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget p1, p0, Lnke;->a:I
+    iput-object p1, p0, Lnke;->o:Ljava/lang/Object;
 
-    packed-switch p1, :pswitch_data_0
+    iget p1, p0, Lnke;->Y:I
 
-    iget-object p1, p0, Lnke;->b:Lrke;
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+    or-int/2addr p1, v0
 
-    return-void
+    iput p1, p0, Lnke;->Y:I
 
-    :pswitch_0
-    iget-object p1, p0, Lnke;->b:Lrke;
+    iget-object p1, p0, Lnke;->X:Ltw;
 
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+    const/4 v0, 0x0
 
-    return-void
+    invoke-virtual {p1, v0, p0}, Ltw;->b(Lxac;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    nop
+    move-result-object p1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

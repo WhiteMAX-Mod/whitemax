@@ -1,141 +1,80 @@
-.class public final synthetic Lz86;
+.class public final Lz86;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lji6;
+.implements Lt98;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Landroidx/recyclerview/widget/RecyclerView;
+# static fields
+.field public static final a:Lz86;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/recyclerview/widget/RecyclerView;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lz86;->a:I
+    new-instance v0, Lz86;
 
-    iput-object p1, p0, Lz86;->b:Landroidx/recyclerview/widget/RecyclerView;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lz86;->a:Lz86;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lz86;->a:I
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Lz86;->b:Landroidx/recyclerview/widget/RecyclerView;
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
-
-    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
-
-    move-result-object v0
-
-    instance-of v2, v0, Landroidx/recyclerview/widget/LinearLayoutManager;
-
-    if-eqz v2, :cond_0
-
-    check-cast v0, Landroidx/recyclerview/widget/LinearLayoutManager;
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    const/4 v0, 0x0
+    instance-of p1, p1, Lz86;
 
-    :goto_0
-    const/4 v2, -0x1
+    if-nez p1, :cond_1
 
-    if-eqz v0, :cond_1
+    const/4 p1, 0x0
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/LinearLayoutManager;->V0()I
-
-    move-result v3
-
-    goto :goto_1
+    return p1
 
     :cond_1
-    move v3, v2
+    return v0
+.end method
 
-    :goto_1
-    if-eqz v0, :cond_2
+.method public final getItemId()J
+    .locals 2
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/LinearLayoutManager;->X0()I
+    const-wide v0, 0x7ffffffffffffffdL
 
-    move-result v0
+    return-wide v0
+.end method
 
-    goto :goto_2
+.method public final hashCode()I
+    .locals 1
 
-    :cond_2
-    move v0, v2
+    const v0, 0xb62c3a2
 
-    :goto_2
-    if-eq v3, v2, :cond_3
+    return v0
+.end method
 
-    if-eq v0, v2, :cond_3
+.method public final m()I
+    .locals 1
 
-    sub-int/2addr v0, v3
+    const/16 v0, 0x8
 
-    invoke-static {v0}, Ljava/lang/Math;->abs(I)I
+    return v0
+.end method
 
-    move-result v0
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    add-int/lit8 v0, v0, 0x1
-
-    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lt6d;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_3
-
-    new-instance v2, Ljava/lang/Object;
-
-    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
-
-    invoke-virtual {v1, v3, v0, v2}, Lt6d;->o(IILjava/lang/Object;)V
-
-    :cond_3
-    sget-object v0, Lccg;->a:Lccg;
+    const-string v0, "FolderEditDeleteItem"
 
     return-object v0
-
-    :pswitch_0
-    sget-object v0, Lone/me/chats/picker/contacts/PickerContactsListWidget;->x0:[Ltr7;
-
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lev7;->d(Landroid/content/Context;)Lb1f;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1
-    sget-object v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->q0:[Ltr7;
-
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lev7;->d(Landroid/content/Context;)Lb1f;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

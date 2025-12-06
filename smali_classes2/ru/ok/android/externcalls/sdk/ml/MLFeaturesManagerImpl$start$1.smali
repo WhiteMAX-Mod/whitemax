@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lsr3;
+.implements Lgu3;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lsr3;"
+        "Lgu3;"
     }
 .end annotation
 
@@ -33,7 +33,7 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/ml/model/MLModelCheckResult;",
         "it",
-        "Lccg;",
+        "Lqqg;",
         "accept",
         "(Lru/ok/android/externcalls/sdk/ml/model/MLModelCheckResult;)V",
         "<anonymous>"
@@ -79,20 +79,43 @@
     .locals 4
 
     .line 2
+    instance-of v0, p1, Lru/ok/android/externcalls/sdk/ml/model/MLModelCheckResult$Disabled;
+
+    if-eqz v0, :cond_0
+
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl$start$1;->this$0:Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0}, Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl;->access$setKwsParams(Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl;Ljava/io/File;)V
+
+    return-void
+
+    .line 3
+    :cond_0
+    instance-of v0, p1, Lru/ok/android/externcalls/sdk/ml/model/MLModelCheckResult$Enabled;
+
+    if-eqz v0, :cond_1
+
+    .line 4
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl$start$1;->this$0:Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl;
 
-    invoke-interface {p1}, Lru/ok/android/externcalls/sdk/ml/model/MLModelCheckResult;->getFile()Ljava/io/File;
+    move-object v1, p1
+
+    check-cast v1, Lru/ok/android/externcalls/sdk/ml/model/MLModelCheckResult$Enabled;
+
+    invoke-interface {v1}, Lru/ok/android/externcalls/sdk/ml/model/MLModelCheckResult$Enabled;->getFile()Ljava/io/File;
 
     move-result-object v1
 
     invoke-static {v0, v1}, Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl;->access$setKwsParams(Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl;Ljava/io/File;)V
 
-    .line 3
-    instance-of v0, p1, Lru/ok/android/externcalls/sdk/ml/model/MLModelCheckResult$UpdatedModel;
+    .line 5
+    instance-of v0, p1, Lru/ok/android/externcalls/sdk/ml/model/MLModelCheckResult$Enabled$UpdatedModel;
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
-    .line 4
+    .line 6
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl$start$1;->this$0:Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl;
 
     invoke-static {v0}, Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl;->access$getConversationStats$p(Lru/ok/android/externcalls/sdk/ml/MLFeaturesManagerImpl;)Lru/ok/android/externcalls/sdk/stat/ConversationStats;
@@ -101,18 +124,18 @@
 
     iget-object v0, v0, Lru/ok/android/externcalls/sdk/stat/ConversationStats;->mlDownloadStat:Lru/ok/android/externcalls/sdk/stat/mldownload/MLDownloadStat;
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/ml/model/MLModelCheckResult$UpdatedModel;
+    check-cast p1, Lru/ok/android/externcalls/sdk/ml/model/MLModelCheckResult$Enabled$UpdatedModel;
 
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/ml/model/MLModelCheckResult$UpdatedModel;->getVersion()Ljava/lang/String;
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/ml/model/MLModelCheckResult$Enabled$UpdatedModel;->getVersion()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/ml/model/MLModelCheckResult$UpdatedModel;->getDownloadDurationMs()J
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/ml/model/MLModelCheckResult$Enabled$UpdatedModel;->getDownloadDurationMs()J
 
     move-result-wide v2
 
     invoke-virtual {v0, v1, v2, v3}, Lru/ok/android/externcalls/sdk/stat/mldownload/MLDownloadStat;->readyToUse(Ljava/lang/String;J)V
 
-    :cond_0
+    :cond_1
     return-void
 .end method

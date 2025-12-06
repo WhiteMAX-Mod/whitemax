@@ -1,112 +1,55 @@
 .class public final Lujg;
-.super Landroid/graphics/drawable/Drawable$ConstantState;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/graphics/drawable/Drawable$ConstantState;
+.field public final a:Ljava/lang/String;
+
+.field public final b:F
+
+.field public final c:F
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:F
+
+.field public final g:F
+
+.field public final h:I
+
+.field public final i:F
+
+.field public final j:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/drawable/Drawable$ConstantState;)V
+.method public constructor <init>(Ljava/lang/String;FFIIFFIFI)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lujg;->a:Landroid/graphics/drawable/Drawable$ConstantState;
+    iput-object p1, p0, Lujg;->a:Ljava/lang/String;
+
+    iput p2, p0, Lujg;->b:F
+
+    iput p3, p0, Lujg;->c:F
+
+    iput p4, p0, Lujg;->d:I
+
+    iput p5, p0, Lujg;->e:I
+
+    iput p6, p0, Lujg;->f:F
+
+    iput p7, p0, Lujg;->g:F
+
+    iput p8, p0, Lujg;->h:I
+
+    iput p9, p0, Lujg;->i:F
+
+    iput p10, p0, Lujg;->j:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final canApplyTheme()Z
-    .locals 1
-
-    iget-object v0, p0, Lujg;->a:Landroid/graphics/drawable/Drawable$ConstantState;
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable$ConstantState;->canApplyTheme()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public getChangingConfigurations()I
-    .locals 1
-
-    iget-object v0, p0, Lujg;->a:Landroid/graphics/drawable/Drawable$ConstantState;
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable$ConstantState;->getChangingConfigurations()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final newDrawable()Landroid/graphics/drawable/Drawable;
-    .locals 2
-
-    .line 1
-    new-instance v0, Lvjg;
-
-    invoke-direct {v0}, Lvjg;-><init>()V
-
-    .line 2
-    iget-object v1, p0, Lujg;->a:Landroid/graphics/drawable/Drawable$ConstantState;
-
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/graphics/drawable/VectorDrawable;
-
-    iput-object v1, v0, Lmjg;->a:Landroid/graphics/drawable/Drawable;
-
-    return-object v0
-.end method
-
-.method public final newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
-    .locals 2
-
-    .line 3
-    new-instance v0, Lvjg;
-
-    invoke-direct {v0}, Lvjg;-><init>()V
-
-    .line 4
-    iget-object v1, p0, Lujg;->a:Landroid/graphics/drawable/Drawable$ConstantState;
-
-    invoke-virtual {v1, p1}, Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/graphics/drawable/VectorDrawable;
-
-    iput-object p1, v0, Lmjg;->a:Landroid/graphics/drawable/Drawable;
-
-    return-object v0
-.end method
-
-.method public final newDrawable(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
-    .locals 2
-
-    .line 5
-    new-instance v0, Lvjg;
-
-    invoke-direct {v0}, Lvjg;-><init>()V
-
-    .line 6
-    iget-object v1, p0, Lujg;->a:Landroid/graphics/drawable/Drawable$ConstantState;
-
-    .line 7
-    invoke-virtual {v1, p1, p2}, Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/graphics/drawable/VectorDrawable;
-
-    iput-object p1, v0, Lmjg;->a:Landroid/graphics/drawable/Drawable;
-
-    return-object v0
 .end method

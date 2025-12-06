@@ -1,21 +1,23 @@
 .class public final Lqoa;
-.super Lroa;
+.super Lid0;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Lqoa;
+.field public static final b:Lqoa;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
     new-instance v0, Lqoa;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    sget-object v1, Lqqg;->a:Lqqg;
 
-    sput-object v0, Lqoa;->a:Lqoa;
+    invoke-direct {v0, v1}, Lcda;-><init>(Ljava/lang/Object;)V
+
+    sput-object v0, Lqoa;->b:Lqoa;
 
     return-void
 .end method
@@ -47,7 +49,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x581272ac
+    const v0, -0x36e4154d
 
     return v0
 .end method
@@ -55,7 +57,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "Squircle"
+    const-string v0, "OpenSettings"
 
     return-object v0
 .end method

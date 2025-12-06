@@ -1,175 +1,355 @@
-.class public abstract Lbza;
-.super Ljava/lang/Object;
+.class public final Lbza;
+.super Landroid/widget/TextView;
 .source "SourceFile"
 
 
-# static fields
-.field public static final A:I
+# instance fields
+.field public final synthetic a:I
 
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
-
-.field public static final z:I
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 5
 
-    sget v0, Letc;->oneme_notifications_and_sounds_settings_toolbar_title:I
+    const/4 v0, 0x0
 
-    sput v0, Lbza;->a:I
+    iput v0, p0, Lbza;->a:I
 
-    sget v0, Letc;->oneme_notifications_settings_chat_enable_notifications_button:I
+    .line 1
+    invoke-direct {p0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    sput v0, Lbza;->b:I
+    const/4 p1, -0x1
 
-    sget v0, Letc;->oneme_notifications_settings_chat_enabled_section_title:I
+    .line 2
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    sput v0, Lbza;->c:I
+    move-result-object p1
 
-    sget v0, Letc;->oneme_notifications_settings_chat_settings_button:I
+    const/4 v0, 0x1
 
-    sput v0, Lbza;->d:I
+    int-to-float v1, v0
 
-    sget v0, Letc;->oneme_notifications_settings_chat_toolbar_title:I
+    .line 3
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
 
-    sput v0, Lbza;->e:I
+    move-result-object v2
 
-    sget v0, Letc;->oneme_notifications_settings_chat_type_all_button:I
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    sput v0, Lbza;->f:I
+    move-result-object v2
 
-    sget v0, Letc;->oneme_notifications_settings_chat_type_pin_reply_button:I
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
 
-    sput v0, Lbza;->g:I
+    mul-float/2addr v1, v2
 
-    sget v0, Letc;->oneme_notifications_settings_default_ringtone_title:I
+    invoke-static {v1}, Lkti;->d(F)I
 
-    sput v0, Lbza;->h:I
+    move-result v1
 
-    sget v0, Letc;->oneme_notifications_settings_dialog_enable_notifications_button:I
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    sput v0, Lbza;->i:I
+    move-result-object v1
 
-    sget v0, Letc;->oneme_notifications_settings_dialog_settings_button:I
+    const/16 v2, 0xc
 
-    sput v0, Lbza;->j:I
+    int-to-float v2, v2
 
-    sget v0, Letc;->oneme_notifications_settings_dialog_toolbar_title:I
+    .line 4
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
 
-    sput v0, Lbza;->k:I
+    move-result-object v3
 
-    sget v0, Letc;->oneme_notifications_settings_enable_all_notifications:I
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    sput v0, Lbza;->l:I
+    move-result-object v3
 
-    sget v0, Letc;->oneme_notifications_settings_open_settings_button_description:I
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
 
-    sput v0, Lbza;->m:I
+    mul-float/2addr v3, v2
 
-    sget v0, Letc;->oneme_notifications_settings_open_settings_button_ringtone:I
+    invoke-static {v3}, Lkti;->d(F)I
 
-    sput v0, Lbza;->n:I
+    move-result v3
 
-    sget v0, Letc;->oneme_notifications_settings_open_settings_button_title:I
+    .line 5
+    invoke-static {p1, p1, v1, v3}, Luga;->e(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;I)Landroid/graphics/drawable/GradientDrawable;
 
-    sput v0, Lbza;->o:I
+    move-result-object p1
 
-    sget v0, Letc;->oneme_notifications_settings_open_settings_call_ringtone_title:I
+    iput-object p1, p0, Lbza;->b:Ljava/lang/Object;
 
-    sput v0, Lbza;->p:I
+    const/16 v1, 0x28
 
-    sget v0, Letc;->oneme_notifications_settings_open_settings_calls_vibration:I
+    int-to-float v1, v1
 
-    sput v0, Lbza;->q:I
+    .line 6
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
 
-    sget v0, Letc;->oneme_notifications_settings_other_new_user_button:I
+    move-result-object v3
 
-    sput v0, Lbza;->r:I
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    sget v0, Letc;->oneme_notifications_settings_other_settings_button:I
+    move-result-object v3
 
-    sput v0, Lbza;->s:I
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
 
-    sget v0, Letc;->oneme_notifications_settings_other_toolbar_title:I
+    mul-float/2addr v1, v3
 
-    sput v0, Lbza;->t:I
+    invoke-static {v1}, Lkti;->d(F)I
 
-    sget v0, Letc;->oneme_notifications_settings_reset_default_button:I
+    move-result v1
 
-    sput v0, Lbza;->u:I
+    .line 7
+    invoke-virtual {p0, v1}, Landroid/widget/TextView;->setMinHeight(I)V
 
-    sget v0, Letc;->oneme_notifications_settings_reset_settings_button:I
+    const/16 v1, 0x11
 
-    sput v0, Lbza;->v:I
+    .line 8
+    invoke-virtual {p0, v1}, Landroid/widget/TextView;->setGravity(I)V
 
-    sget v0, Letc;->oneme_notifications_settings_show_content_button:I
+    const/4 v1, 0x4
 
-    sput v0, Lbza;->w:I
+    .line 9
+    invoke-virtual {p0, v1}, Landroid/view/View;->setTextAlignment(I)V
 
-    sget v0, Letc;->oneme_notifications_settings_toolbar_title:I
+    const/16 v1, 0xa
 
-    sput v0, Lbza;->x:I
+    int-to-float v1, v1
 
-    sget v0, Letc;->oneme_notifications_settings_type_off:I
+    .line 10
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
 
-    sput v0, Lbza;->y:I
+    move-result-object v3
 
-    sget v0, Letc;->oneme_notifications_settings_type_on:I
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    sput v0, Lbza;->z:I
+    move-result-object v3
 
-    sget v0, Letc;->oneme_notifications_settings_type_reply:I
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
 
-    sput v0, Lbza;->A:I
+    mul-float/2addr v1, v3
+
+    invoke-static {v1}, Lkti;->d(F)I
+
+    move-result v1
+
+    .line 11
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
+
+    move-result v3
+
+    .line 12
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
+
+    move-result v4
+
+    .line 13
+    invoke-virtual {p0, v3, v1, v4, v1}, Landroid/view/View;->setPadding(IIII)V
+
+    .line 14
+    sget-object v1, Ldpg;->N:Lt5g;
+
+    .line 15
+    invoke-static {v1, p0}, Lt5g;->d(Lt5g;Landroid/widget/TextView;)V
+
+    .line 16
+    new-instance v1, Lu74;
+
+    .line 17
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v3
+
+    invoke-static {v2}, Lkti;->d(F)I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    .line 18
+    invoke-direct {v1, v2}, Lu74;-><init>(F)V
+
+    invoke-virtual {p0, v1}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
+
+    .line 19
+    invoke-virtual {p0, v0}, Landroid/view/View;->setClipToOutline(Z)V
+
+    .line 20
+    invoke-virtual {p0, p1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Lroe;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lbza;->a:I
+
+    iput-object p2, p0, Lbza;->b:Ljava/lang/Object;
+
+    const/4 p2, 0x0
+
+    .line 21
+    invoke-direct {p0, p1, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    .line 22
+    sget p1, Lqab;->i:I
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setId(I)V
+
+    .line 23
+    new-instance p1, Lkt3;
+
+    const/4 p2, -0x2
+
+    invoke-direct {p1, p2, p2}, Lkt3;-><init>(II)V
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 24
+    sget-object p1, Ldpg;->f:Lt5g;
+
+    .line 25
+    invoke-static {p1, p0}, Lt5g;->d(Lt5g;Landroid/widget/TextView;)V
+
+    const/4 p1, 0x0
+
+    .line 26
+    invoke-virtual {p0, p1, p1, p1, p1}, Landroid/view/View;->setPadding(IIII)V
+
+    const/4 p1, 0x2
+
+    .line 27
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setMaxLines(I)V
+
+    .line 28
+    sget-object p1, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onDraw(Landroid/graphics/Canvas;)V
+    .locals 1
+
+    iget v0, p0, Lbza;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1}, Landroid/widget/TextView;->onDraw(Landroid/graphics/Canvas;)V
+
+    return-void
+
+    :pswitch_0
+    invoke-super {p0, p1}, Landroid/widget/TextView;->onDraw(Landroid/graphics/Canvas;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public onSizeChanged(IIII)V
+    .locals 2
+
+    iget v0, p0, Lbza;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/view/View;->onSizeChanged(IIII)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p3, p0, Lbza;->b:Ljava/lang/Object;
+
+    check-cast p3, Lroe;
+
+    iget-object p4, p3, Lroe;->X0:Lhoe;
+
+    sget-object v0, Lhoe;->Y:Lhoe;
+
+    const/4 v1, 0x0
+
+    if-ne p4, v0, :cond_1
+
+    invoke-static {p3}, Lroe;->D(Lroe;)Landroid/graphics/Matrix;
+
+    move-result-object p4
+
+    invoke-virtual {p4}, Landroid/graphics/Matrix;->reset()V
+
+    int-to-float p1, p1
+
+    int-to-float p2, p2
+
+    invoke-virtual {p4, p1, p2}, Landroid/graphics/Matrix;->setScale(FF)V
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p4, p1, p1}, Landroid/graphics/Matrix;->postTranslate(FF)Z
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/graphics/Paint;->getShader()Landroid/graphics/Shader;
+
+    move-result-object p1
+
+    instance-of p2, p1, Landroid/graphics/LinearGradient;
+
+    if-eqz p2, :cond_0
+
+    move-object v1, p1
+
+    check-cast v1, Landroid/graphics/LinearGradient;
+
+    :cond_0
+    if-eqz v1, :cond_2
+
+    invoke-static {p3}, Lroe;->D(Lroe;)Landroid/graphics/Matrix;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Landroid/graphics/Shader;->setLocalMatrix(Landroid/graphics/Matrix;)V
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p0}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
+
+    :cond_2
+    :goto_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

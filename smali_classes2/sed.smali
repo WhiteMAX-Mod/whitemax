@@ -1,55 +1,43 @@
-.class public abstract Lsed;
+.class public abstract synthetic Lsed;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lji7;
+
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
-# instance fields
-.field public a:Ljava/lang/ref/SoftReference;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
 
-
-# virtual methods
-.method public final a(Lr5;)Ljava/lang/Object;
-    .locals 2
-
-    iget-object v0, p0, Lsed;->a:Ljava/lang/ref/SoftReference;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/ref/SoftReference;->get()Ljava/lang/Object;
+    invoke-static {}, Ltdd;->values()[Ltdd;
 
     move-result-object v0
 
-    goto :goto_0
+    array-length v0, v0
 
-    :cond_0
-    move-object v0, v1
+    new-array v0, v0, [I
 
-    :goto_0
-    if-eqz v0, :cond_1
+    const/4 v1, 0x1
 
-    return-object v0
+    const/4 v2, 0x0
 
-    :cond_1
-    invoke-virtual {p0, p1}, Lsed;->b(Lr5;)Ljava/lang/Object;
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-object p1
+    :catch_0
+    const/4 v2, 0x2
 
-    if-eqz p1, :cond_2
+    :try_start_1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    new-instance v1, Ljava/lang/ref/SoftReference;
+    :catch_1
+    sput-object v0, Lsed;->$EnumSwitchMapping$0:[I
 
-    invoke-direct {v1, p1}, Ljava/lang/ref/SoftReference;-><init>(Ljava/lang/Object;)V
-
-    :cond_2
-    iput-object v1, p0, Lsed;->a:Ljava/lang/ref/SoftReference;
-
-    return-object p1
-.end method
-
-.method public abstract b(Lr5;)Ljava/lang/Object;
+    return-void
 .end method

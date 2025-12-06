@@ -48,7 +48,7 @@
     :cond_0
     const-string p2, "Camera error: "
 
-    invoke-static {p1, p2}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, p2}, Lho7;->f(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -61,7 +61,7 @@
 
     const-string v1, "error: "
 
-    invoke-static {v1, p2}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p2}, Lwy1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 

@@ -1,96 +1,123 @@
 .class public final Lhmh;
-.super Ljava/lang/Object;
+.super Ldtf;
 .source "SourceFile"
+
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field public final synthetic X:Ltmh;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/ArrayList;)V
+.method public constructor <init>(Ltmh;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lhmh;->X:Ltmh;
 
-    iput-object p1, p0, Lhmh;->a:Ljava/util/ArrayList;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Lf84;
 
-    goto :goto_1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v0, p1, Lhmh;
+    invoke-virtual {p0, p1, p2}, Lhmh;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-nez v0, :cond_1
+    move-result-object p1
 
-    goto :goto_0
-
-    :cond_1
     check-cast p1, Lhmh;
 
-    iget-object v0, p0, Lhmh;->a:Ljava/util/ArrayList;
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    iget-object p1, p1, Lhmh;->a:Ljava/util/ArrayList;
+    invoke-virtual {p1, p2}, Lhmh;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    move-result-object p1
 
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-object p1
 .end method
 
-.method public final hashCode()I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    iget-object v0, p0, Lhmh;->a:Ljava/util/ArrayList;
+    new-instance p1, Lhmh;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    iget-object v0, p0, Lhmh;->X:Ltmh;
 
-    move-result v0
+    invoke-direct {p1, v0, p2}, Lhmh;-><init>(Ltmh;Lkotlin/coroutines/Continuation;)V
 
-    return v0
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Lhmh;->o:I
 
-    const-string v1, "Widget(contents="
+    const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-eqz v0, :cond_1
 
-    iget-object v1, p0, Lhmh;->a:Ljava/util/ArrayList;
+    if-ne v0, v1, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    const-string v1, ")"
+    return-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lhmh;->X:Ltmh;
+
+    iget-object v0, p1, Ltmh;->h:Lk18;
+
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
+    move-object v2, v0
+
+    check-cast v2, Lqlh;
+
+    iget-wide v3, p1, Ltmh;->a:J
+
+    iget-wide v5, p1, Ltmh;->b:J
+
+    iput v1, p0, Lhmh;->o:I
+
+    move-object v7, p0
+
+    invoke-virtual/range {v2 .. v7}, Lqlh;->a(JJLdtf;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lg84;->a:Lg84;
+
+    if-ne p1, v0, :cond_2
+
     return-object v0
+
+    :cond_2
+    return-object p1
 .end method

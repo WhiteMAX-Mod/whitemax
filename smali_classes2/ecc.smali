@@ -1,222 +1,105 @@
-.class public final synthetic Lecc;
+.class public final Lecc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lli6;
+.implements Lhcc;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ladc;
-
-.field public final synthetic c:Z
+.field public final a:Landroid/net/Uri;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ladc;ZI)V
+.method public constructor <init>(Landroid/net/Uri;)V
     .locals 0
 
-    iput p3, p0, Lecc;->a:I
-
-    iput-object p1, p0, Lecc;->b:Ladc;
-
-    iput-boolean p2, p0, Lecc;->c:Z
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lecc;->a:Landroid/net/Uri;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lecc;->a:I
+    if-ne p0, p1, :cond_0
 
-    check-cast p1, Le3b;
+    goto :goto_1
 
-    packed-switch v0, :pswitch_data_0
+    :cond_0
+    instance-of v0, p1, Lecc;
 
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p1
-
-    iget-object v0, p0, Lecc;->b:Ladc;
-
-    if-eqz p1, :cond_3
-
-    const/4 v1, 0x1
-
-    if-eq p1, v1, :cond_3
-
-    const/4 v1, 0x2
-
-    if-eq p1, v1, :cond_2
-
-    const/4 v1, 0x3
-
-    if-eq p1, v1, :cond_1
-
-    const/4 v1, 0x4
-
-    if-ne p1, v1, :cond_0
+    if-nez v0, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
     :cond_1
-    iget-boolean p1, p0, Lecc;->c:Z
+    check-cast p1, Lecc;
 
-    invoke-virtual {v0, p1}, Ladc;->I(Z)V
+    iget-object v0, p0, Lecc;->a:Landroid/net/Uri;
 
-    goto :goto_1
+    iget-object p1, p1, Lecc;->a:Landroid/net/Uri;
 
-    :cond_2
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
     :goto_0
     const/4 p1, 0x0
 
-    iput-boolean p1, v0, Ladc;->T0:Z
+    return p1
 
-    goto :goto_1
-
-    :cond_3
-    invoke-virtual {v0}, Ladc;->J()V
-
+    :cond_2
     :goto_1
-    sget-object p1, Lccg;->a:Lccg;
+    const/4 p1, 0x1
 
-    return-object p1
+    return p1
+.end method
 
-    :pswitch_0
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+.method public final hashCode()I
+    .locals 2
 
-    move-result p1
+    iget-object v0, p0, Lecc;->a:Landroid/net/Uri;
 
-    iget-object v0, p0, Lecc;->b:Ladc;
+    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
 
-    if-eqz p1, :cond_7
+    move-result v0
 
-    const/4 v1, 0x1
+    mul-int/lit8 v0, v0, 0x1f
 
-    if-eq p1, v1, :cond_7
+    const v1, 0x71f5c476
 
-    const/4 v1, 0x2
+    add-int/2addr v0, v1
 
-    if-eq p1, v1, :cond_6
+    return v0
+.end method
 
-    const/4 v1, 0x3
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    if-eq p1, v1, :cond_5
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x4
+    const-string v1, "ShareMedia(localUrl="
 
-    if-ne p1, v1, :cond_4
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    goto :goto_2
+    iget-object v1, p0, Lecc;->a:Landroid/net/Uri;
 
-    :cond_4
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    const-string v1, ", mimetype=image/*)"
 
-    throw p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_5
-    iget-boolean p1, p0, Lecc;->c:Z
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v0, p1}, Ladc;->E(Z)V
+    move-result-object v0
 
-    goto :goto_3
-
-    :cond_6
-    :goto_2
-    const/4 p1, 0x0
-
-    iput-boolean p1, v0, Ladc;->T0:Z
-
-    goto :goto_3
-
-    :cond_7
-    invoke-virtual {v0}, Ladc;->J()V
-
-    invoke-virtual {v0}, Ladc;->s()V
-
-    :goto_3
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
-
-    :pswitch_1
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p1
-
-    iget-object v0, p0, Lecc;->b:Ladc;
-
-    if-eqz p1, :cond_b
-
-    const/4 v1, 0x1
-
-    if-eq p1, v1, :cond_b
-
-    const/4 v1, 0x2
-
-    if-eq p1, v1, :cond_a
-
-    const/4 v1, 0x3
-
-    if-eq p1, v1, :cond_9
-
-    const/4 v1, 0x4
-
-    if-ne p1, v1, :cond_8
-
-    goto :goto_4
-
-    :cond_8
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_9
-    iget-boolean p1, p0, Lecc;->c:Z
-
-    invoke-virtual {v0, p1}, Ladc;->G(Z)V
-
-    goto :goto_5
-
-    :cond_a
-    :goto_4
-    const/4 p1, 0x0
-
-    iput-boolean p1, v0, Ladc;->T0:Z
-
-    goto :goto_5
-
-    :cond_b
-    invoke-virtual {v0}, Ladc;->s()V
-
-    :goto_5
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

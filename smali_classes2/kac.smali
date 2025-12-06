@@ -1,88 +1,39 @@
 .class public final Lkac;
-.super Lpd0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Ljava/lang/String;
+.field public final a:J
+
+.field public final b:J
+
+.field public final c:J
+
+.field public final d:J
+
+.field public final e:J
+
+.field public final f:J
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 1
+.method public constructor <init>(JJJJJJ)V
+    .locals 0
 
-    const/16 v0, 0xf
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0}, Lpd0;-><init>(I)V
+    iput-wide p1, p0, Lkac;->a:J
 
-    iput-object p1, p0, Lkac;->b:Ljava/lang/String;
+    iput-wide p3, p0, Lkac;->b:J
+
+    iput-wide p5, p0, Lkac;->c:J
+
+    iput-wide p7, p0, Lkac;->d:J
+
+    iput-wide p9, p0, Lkac;->e:J
+
+    iput-wide p11, p0, Lkac;->f:J
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lkac;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lkac;
-
-    iget-object v1, p0, Lkac;->b:Ljava/lang/String;
-
-    iget-object p1, p1, Lkac;->b:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lkac;->b:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "OpenExternalLink(link="
-
-    const-string v1, ")"
-
-    iget-object v2, p0, Lkac;->b:Ljava/lang/String;
-
-    invoke-static {v0, v2, v1}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

@@ -1,61 +1,100 @@
-.class public abstract Lyta;
-.super Ljava/lang/Object;
+.class public Lyta;
+.super Landroid/widget/TextView;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lzta;
-
-.field public static final b:Lzta;
+# instance fields
+.field public a:Lkgh;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
-    new-instance v0, Lzta;
+    const/4 v0, 0x0
 
-    sget v1, Lrjd;->i:I
+    const/4 v1, 0x0
 
-    new-instance v2, Lorf;
-
-    invoke-direct {v2, v1}, Lorf;-><init>(I)V
-
-    sget v1, Lpjd;->y0:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-string v3, "BY"
-
-    const/16 v4, 0x177
-
-    invoke-direct {v0, v3, v4, v2, v1}, Lzta;-><init>(Ljava/lang/String;ILorf;Ljava/lang/Integer;)V
-
-    sput-object v0, Lyta;->a:Lzta;
-
-    new-instance v0, Lzta;
-
-    sget v1, Lrjd;->y0:I
-
-    new-instance v2, Lorf;
-
-    invoke-direct {v2, v1}, Lorf;-><init>(I)V
-
-    sget v1, Lpjd;->z0:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-string v3, "RU"
-
-    const/4 v4, 0x7
-
-    invoke-direct {v0, v3, v4, v2, v1}, Lzta;-><init>(Ljava/lang/String;ILorf;Ljava/lang/Integer;)V
-
-    sput-object v0, Lyta;->b:Lzta;
+    invoke-direct {p0, p1, v0, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final getObserverSpanListener()Lkgh;
+    .locals 1
+
+    iget-object v0, p0, Lyta;->a:Lkgh;
+
+    return-object v0
+.end method
+
+.method public final onWindowVisibilityChanged(I)V
+    .locals 1
+
+    invoke-super {p0, p1}, Landroid/view/View;->onWindowVisibilityChanged(I)V
+
+    if-eqz p1, :cond_1
+
+    const/16 v0, 0x8
+
+    if-eq p1, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p1, p0, Lyta;->a:Lkgh;
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1, p0}, Lkgh;->onViewDetachedFromWindow(Landroid/view/View;)V
+
+    return-void
+
+    :cond_1
+    iget-object p1, p0, Lyta;->a:Lkgh;
+
+    if-eqz p1, :cond_2
+
+    invoke-static {p0}, Lkgh;->a(Landroid/widget/TextView;)V
+
+    :cond_2
+    :goto_0
+    return-void
+.end method
+
+.method public final setObserverSpanListener(Lkgh;)V
+    .locals 0
+
+    iput-object p1, p0, Lyta;->a:Lkgh;
+
+    return-void
+.end method
+
+.method public final verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+    .locals 1
+
+    instance-of v0, p1, Landroid/graphics/drawable/Animatable;
+
+    if-nez v0, :cond_1
+
+    invoke-super {p0, p1}, Landroid/widget/TextView;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
 .end method

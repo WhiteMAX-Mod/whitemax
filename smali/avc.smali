@@ -3,60 +3,38 @@
 
 
 # static fields
-.field public static RecyclerView:[I = null
+.field public static externalRouteEnabledDrawable:I = 0x7f0403a4
 
-.field public static RecyclerView_android_clipToPadding:I = 0x1
+.field public static externalRouteEnabledDrawableStatic:I = 0x7f0403a5
 
-.field public static RecyclerView_android_descendantFocusability:I = 0x2
+.field public static mediaRouteAudioTrackDrawable:I = 0x7f040652
 
-.field public static RecyclerView_android_orientation:I = 0x0
+.field public static mediaRouteBodyTextAppearance:I = 0x7f040653
 
-.field public static RecyclerView_fastScrollEnabled:I = 0x3
+.field public static mediaRouteButtonStyle:I = 0x7f040654
 
-.field public static RecyclerView_fastScrollHorizontalThumbDrawable:I = 0x4
+.field public static mediaRouteButtonTint:I = 0x7f040655
 
-.field public static RecyclerView_fastScrollHorizontalTrackDrawable:I = 0x5
+.field public static mediaRouteCloseDrawable:I = 0x7f040656
 
-.field public static RecyclerView_fastScrollVerticalThumbDrawable:I = 0x6
+.field public static mediaRouteControlPanelThemeOverlay:I = 0x7f040657
 
-.field public static RecyclerView_fastScrollVerticalTrackDrawable:I = 0x7
+.field public static mediaRouteDefaultIconDrawable:I = 0x7f040658
 
-.field public static RecyclerView_layoutManager:I = 0x8
+.field public static mediaRouteDividerColor:I = 0x7f040659
 
-.field public static RecyclerView_reverseLayout:I = 0x9
+.field public static mediaRouteHeaderTextAppearance:I = 0x7f04065a
 
-.field public static RecyclerView_spanCount:I = 0xa
+.field public static mediaRoutePauseDrawable:I = 0x7f04065b
 
-.field public static RecyclerView_stackFromEnd:I = 0xb
+.field public static mediaRoutePlayDrawable:I = 0x7f04065c
 
+.field public static mediaRouteSpeakerGroupIconDrawable:I = 0x7f04065d
 
-# direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.field public static mediaRouteSpeakerIconDrawable:I = 0x7f04065e
 
-    const/16 v0, 0xc
+.field public static mediaRouteStopDrawable:I = 0x7f04065f
 
-    new-array v0, v0, [I
+.field public static mediaRouteTheme:I = 0x7f040660
 
-    fill-array-data v0, :array_0
-
-    sput-object v0, Lavc;->RecyclerView:[I
-
-    return-void
-
-    :array_0
-    .array-data 4
-        0x10100c4
-        0x10100eb
-        0x10100f1
-        0x7f0403b0
-        0x7f0403b1
-        0x7f0403b2
-        0x7f0403b3
-        0x7f0403b4
-        0x7f040597
-        0x7f04071e
-        0x7f040791
-        0x7f0407d6
-    .end array-data
-.end method
+.field public static mediaRouteTvIconDrawable:I = 0x7f040661

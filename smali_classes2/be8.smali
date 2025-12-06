@@ -1,21 +1,19 @@
 .class public final Lbe8;
-.super Ldq;
+.super Lce8;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lbe8;
+# instance fields
+.field public final a:Ljava/util/List;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/util/List;)V
+    .locals 0
 
-    new-instance v0, Lbe8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ldq;-><init>()V
-
-    sput-object v0, Lbe8;->a:Lbe8;
+    iput-object p1, p0, Lbe8;->a:Ljava/util/List;
 
     return-void
 .end method

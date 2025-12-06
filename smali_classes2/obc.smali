@@ -1,61 +1,102 @@
 .class public final Lobc;
-.super Lxbc;
+.super Lyb4;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lobc;
+# instance fields
+.field public v0:Ljava/util/List;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+# virtual methods
+.method public final E(Lytd;I)V
+    .locals 7
 
-    new-instance v0, Lobc;
+    iget-object v0, p0, Lobc;->v0:Ljava/util/List;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p2, v0}, Lue3;->J(ILjava/util/List;)Ljava/lang/Object;
 
-    sput-object v0, Lobc;->a:Lobc;
+    move-result-object p2
+
+    check-cast p2, Lcbc;
+
+    if-nez p2, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v1, Lone/me/profile/screens/avatars/ProfileAvatarWidget;
+
+    invoke-direct {v1, p2}, Lone/me/profile/screens/avatars/ProfileAvatarWidget;-><init>(Lcbc;)V
+
+    new-instance v0, Lbud;
+
+    const/4 v5, 0x0
+
+    const/4 v6, -0x1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    invoke-direct/range {v0 .. v6}, Lbud;-><init>(Lc54;Ljava/lang/String;Lh54;Lh54;ZI)V
+
+    invoke-virtual {p1, v0}, Lytd;->S(Lbud;)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final j()I
     .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lobc;->v0:Ljava/util/List;
 
-    if-ne p0, p1, :cond_0
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
 
     return v0
+.end method
+
+.method public final k(I)J
+    .locals 2
+
+    iget-object v0, p0, Lobc;->v0:Ljava/util/List;
+
+    invoke-static {p1, v0}, Lue3;->J(ILjava/util/List;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcbc;
+
+    if-eqz p1, :cond_0
+
+    iget-wide v0, p1, Lcbc;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    goto :goto_0
 
     :cond_0
-    instance-of p1, p1, Lobc;
-
-    if-nez p1, :cond_1
-
     const/4 p1, 0x0
 
-    return p1
+    :goto_0
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
+
+    move-result p1
+
+    goto :goto_1
 
     :cond_1
-    return v0
-.end method
+    const/4 p1, 0x0
 
-.method public final hashCode()I
-    .locals 1
+    :goto_1
+    int-to-long v0, p1
 
-    const v0, -0x399cc60
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "OpenCameraPermission"
-
-    return-object v0
+    return-wide v0
 .end method

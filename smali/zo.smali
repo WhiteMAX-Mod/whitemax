@@ -1,379 +1,230 @@
 .class public final Lzo;
-.super Leh8;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/widget/AdapterView$OnItemClickListener;
 
 
 # instance fields
-.field public final X:Lyo;
+.field public final synthetic a:I
 
-.field public Y:Landroid/graphics/drawable/Drawable;
-
-.field public Z:Landroid/content/res/ColorStateList;
-
-.field public q0:Landroid/graphics/PorterDuff$Mode;
-
-.field public r0:Z
-
-.field public s0:Z
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lyo;)V
-    .locals 1
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    invoke-direct {p0, p1}, Leh8;-><init>(Landroid/widget/AbsSeekBar;)V
+    iput p1, p0, Lzo;->a:I
 
-    const/4 v0, 0x0
+    iput-object p2, p0, Lzo;->b:Ljava/lang/Object;
 
-    iput-object v0, p0, Lzo;->Z:Landroid/content/res/ColorStateList;
-
-    iput-object v0, p0, Lzo;->q0:Landroid/graphics/PorterDuff$Mode;
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lzo;->r0:Z
-
-    iput-boolean v0, p0, Lzo;->s0:Z
-
-    iput-object p1, p0, Lzo;->X:Lyo;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final k(Landroid/util/AttributeSet;I)V
+.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 9
 
-    invoke-super {p0, p1, p2}, Leh8;->k(Landroid/util/AttributeSet;I)V
+    iget p1, p0, Lzo;->a:I
 
-    iget-object v0, p0, Lzo;->X:Lyo;
+    packed-switch p1, :pswitch_data_0
 
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    iget-object p1, p0, Lzo;->b:Ljava/lang/Object;
 
-    move-result-object v1
+    check-cast p1, Landroidx/appcompat/widget/e;
 
-    sget-object v2, Lvvc;->AppCompatSeekBar:[I
+    const/4 p2, 0x0
 
-    invoke-static {v1, p1, v2, p2}, Ldgd;->r(Landroid/content/Context;Landroid/util/AttributeSet;[II)Ldgd;
+    const/4 p4, 0x0
 
-    move-result-object v7
+    invoke-virtual {p1, p3, p2, p4}, Landroidx/appcompat/widget/e;->onItemClicked(IILjava/lang/String;)Z
 
-    iget-object v1, v7, Ldgd;->b:Ljava/lang/Object;
+    return-void
 
-    move-object v8, v1
+    :pswitch_0
+    iget-object p1, p0, Lzo;->b:Ljava/lang/Object;
 
-    check-cast v8, Landroid/content/res/TypedArray;
+    check-cast p1, Lzp8;
 
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    sget-object v2, Lvvc;->AppCompatSeekBar:[I
-
-    iget-object v3, v7, Ldgd;->b:Ljava/lang/Object;
-
-    move-object v4, v3
-
-    check-cast v4, Landroid/content/res/TypedArray;
-
-    const/4 v6, 0x0
-
-    move-object v3, p1
-
-    move v5, p2
-
-    invoke-static/range {v0 .. v6}, Lhzg;->m(Landroid/view/View;Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
-
-    sget p1, Lvvc;->AppCompatSeekBar_android_thumb:I
-
-    invoke-virtual {v7, p1}, Ldgd;->l(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {v0, p1}, Landroid/widget/AbsSeekBar;->setThumb(Landroid/graphics/drawable/Drawable;)V
-
-    :cond_0
-    sget p1, Lvvc;->AppCompatSeekBar_tickMark:I
-
-    invoke-virtual {v7, p1}, Ldgd;->k(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    iget-object p2, p0, Lzo;->Y:Landroid/graphics/drawable/Drawable;
-
-    if-eqz p2, :cond_1
+    iget-object v0, p1, Lzp8;->o:Lca8;
 
     const/4 v1, 0x0
 
-    invoke-virtual {p2, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+    if-gez p3, :cond_1
 
-    :cond_1
-    iput-object p1, p0, Lzo;->Y:Landroid/graphics/drawable/Drawable;
+    iget-object v2, v0, Lca8;->J0:Loo;
 
-    if-eqz p1, :cond_3
+    invoke-virtual {v2}, Landroid/widget/PopupWindow;->isShowing()Z
 
-    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+    move-result v2
 
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutDirection()I
+    if-nez v2, :cond_0
 
-    move-result p2
-
-    invoke-static {p1, p2}, Lw05;->b(Landroid/graphics/drawable/Drawable;I)Z
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->isStateful()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_2
-
-    invoke-virtual {v0}, Landroid/view/View;->getDrawableState()[I
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Landroid/graphics/drawable/Drawable;->setState([I)Z
-
-    :cond_2
-    invoke-virtual {p0}, Lzo;->q()V
-
-    :cond_3
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
-
-    sget p1, Lvvc;->AppCompatSeekBar_tickMarkTintMode:I
-
-    invoke-virtual {v8, p1}, Landroid/content/res/TypedArray;->hasValue(I)Z
-
-    move-result p1
-
-    const/4 p2, 0x1
-
-    if-eqz p1, :cond_4
-
-    sget p1, Lvvc;->AppCompatSeekBar_tickMarkTintMode:I
-
-    const/4 v0, -0x1
-
-    invoke-virtual {v8, p1, v0}, Landroid/content/res/TypedArray;->getInt(II)I
-
-    move-result p1
-
-    iget-object v0, p0, Lzo;->q0:Landroid/graphics/PorterDuff$Mode;
-
-    invoke-static {p1, v0}, Lf15;->c(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuff$Mode;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lzo;->q0:Landroid/graphics/PorterDuff$Mode;
-
-    iput-boolean p2, p0, Lzo;->s0:Z
-
-    :cond_4
-    sget p1, Lvvc;->AppCompatSeekBar_tickMarkTint:I
-
-    invoke-virtual {v8, p1}, Landroid/content/res/TypedArray;->hasValue(I)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_5
-
-    sget p1, Lvvc;->AppCompatSeekBar_tickMarkTint:I
-
-    invoke-virtual {v7, p1}, Ldgd;->i(I)Landroid/content/res/ColorStateList;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lzo;->Z:Landroid/content/res/ColorStateList;
-
-    iput-boolean p2, p0, Lzo;->r0:Z
-
-    :cond_5
-    invoke-virtual {v7}, Ldgd;->s()V
-
-    invoke-virtual {p0}, Lzo;->q()V
-
-    return-void
-.end method
-
-.method public final q()V
-    .locals 2
-
-    iget-object v0, p0, Lzo;->Y:Landroid/graphics/drawable/Drawable;
-
-    if-eqz v0, :cond_3
-
-    iget-boolean v1, p0, Lzo;->r0:Z
-
-    if-nez v1, :cond_0
-
-    iget-boolean v1, p0, Lzo;->s0:Z
-
-    if-eqz v1, :cond_3
-
-    :cond_0
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lzo;->Y:Landroid/graphics/drawable/Drawable;
-
-    iget-boolean v1, p0, Lzo;->r0:Z
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Lzo;->Z:Landroid/content/res/ColorStateList;
-
-    invoke-static {v0, v1}, Lv05;->h(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
-
-    :cond_1
-    iget-boolean v0, p0, Lzo;->s0:Z
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lzo;->Y:Landroid/graphics/drawable/Drawable;
-
-    iget-object v1, p0, Lzo;->q0:Landroid/graphics/PorterDuff$Mode;
-
-    invoke-static {v0, v1}, Lv05;->i(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
-
-    :cond_2
-    iget-object v0, p0, Lzo;->Y:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->isStateful()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lzo;->Y:Landroid/graphics/drawable/Drawable;
-
-    iget-object v1, p0, Lzo;->X:Lyo;
-
-    invoke-virtual {v1}, Landroid/view/View;->getDrawableState()[I
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
-
-    :cond_3
-    return-void
-.end method
-
-.method public final r(Landroid/graphics/Canvas;)V
-    .locals 7
-
-    iget-object v0, p0, Lzo;->Y:Landroid/graphics/drawable/Drawable;
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lzo;->X:Lyo;
-
-    invoke-virtual {v0}, Landroid/widget/ProgressBar;->getMax()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    if-le v1, v2, :cond_3
-
-    iget-object v3, p0, Lzo;->Y:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
-
-    move-result v3
-
-    iget-object v4, p0, Lzo;->Y:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v4}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
-
-    move-result v4
-
-    if-ltz v3, :cond_0
-
-    div-int/lit8 v3, v3, 0x2
+    move-object v2, v1
 
     goto :goto_0
 
     :cond_0
-    move v3, v2
+    iget-object v2, v0, Lca8;->c:Lq55;
 
-    :goto_0
-    if-ltz v4, :cond_1
+    invoke-virtual {v2}, Landroid/widget/AdapterView;->getSelectedItem()Ljava/lang/Object;
 
-    div-int/lit8 v2, v4, 0x2
+    move-result-object v2
+
+    goto :goto_0
 
     :cond_1
-    iget-object v4, p0, Lzo;->Y:Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p1}, Landroid/widget/AutoCompleteTextView;->getAdapter()Landroid/widget/ListAdapter;
 
-    neg-int v5, v3
+    move-result-object v2
 
-    neg-int v6, v2
+    invoke-interface {v2, p3}, Landroid/widget/Adapter;->getItem(I)Ljava/lang/Object;
 
-    invoke-virtual {v4, v5, v6, v3, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+    move-result-object v2
 
-    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
+    :goto_0
+    invoke-static {p1, v2}, Lzp8;->b(Lzp8;Ljava/lang/Object;)V
 
-    move-result v2
+    invoke-virtual {p1}, Landroid/widget/AutoCompleteTextView;->getOnItemClickListener()Landroid/widget/AdapterView$OnItemClickListener;
 
-    invoke-virtual {v0}, Landroid/view/View;->getPaddingLeft()I
+    move-result-object v3
 
-    move-result v3
+    if-eqz v3, :cond_7
 
-    sub-int/2addr v2, v3
+    if-eqz p2, :cond_3
 
-    invoke-virtual {v0}, Landroid/view/View;->getPaddingRight()I
+    if-gez p3, :cond_2
 
-    move-result v3
+    goto :goto_2
 
-    sub-int/2addr v2, v3
-
-    int-to-float v2, v2
-
-    int-to-float v3, v1
-
-    div-float/2addr v2, v3
-
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
-
-    move-result v3
-
-    invoke-virtual {v0}, Landroid/view/View;->getPaddingLeft()I
-
-    move-result v4
-
-    int-to-float v4, v4
-
-    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
-
-    move-result v0
-
-    div-int/lit8 v0, v0, 0x2
-
-    int-to-float v0, v0
-
-    invoke-virtual {p1, v4, v0}, Landroid/graphics/Canvas;->translate(FF)V
-
-    const/4 v0, 0x0
-
+    :cond_2
     :goto_1
-    if-gt v0, v1, :cond_2
+    move-object v5, p2
 
-    iget-object v4, p0, Lzo;->Y:Landroid/graphics/drawable/Drawable;
+    move v6, p3
 
-    invoke-virtual {v4, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+    move-wide v7, p4
 
-    const/4 v4, 0x0
+    goto :goto_6
 
-    invoke-virtual {p1, v2, v4}, Landroid/graphics/Canvas;->translate(FF)V
+    :cond_3
+    :goto_2
+    iget-object p1, v0, Lca8;->J0:Loo;
 
-    add-int/lit8 v0, v0, 0x1
+    invoke-virtual {p1}, Landroid/widget/PopupWindow;->isShowing()Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    move-object p2, v1
+
+    goto :goto_3
+
+    :cond_4
+    iget-object p1, v0, Lca8;->c:Lq55;
+
+    invoke-virtual {p1}, Landroid/widget/AdapterView;->getSelectedView()Landroid/view/View;
+
+    move-result-object p1
+
+    move-object p2, p1
+
+    :goto_3
+    iget-object p1, v0, Lca8;->J0:Loo;
+
+    invoke-virtual {p1}, Landroid/widget/PopupWindow;->isShowing()Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    const/4 p1, -0x1
+
+    :goto_4
+    move p3, p1
+
+    goto :goto_5
+
+    :cond_5
+    iget-object p1, v0, Lca8;->c:Lq55;
+
+    invoke-virtual {p1}, Landroid/widget/AdapterView;->getSelectedItemPosition()I
+
+    move-result p1
+
+    goto :goto_4
+
+    :goto_5
+    iget-object p1, v0, Lca8;->J0:Loo;
+
+    invoke-virtual {p1}, Landroid/widget/PopupWindow;->isShowing()Z
+
+    move-result p1
+
+    if-nez p1, :cond_6
+
+    const-wide/high16 p4, -0x8000000000000000L
 
     goto :goto_1
 
-    :cond_2
-    invoke-virtual {p1, v3}, Landroid/graphics/Canvas;->restoreToCount(I)V
+    :cond_6
+    iget-object p1, v0, Lca8;->c:Lq55;
 
-    :cond_3
+    invoke-virtual {p1}, Landroid/widget/AdapterView;->getSelectedItemId()J
+
+    move-result-wide p4
+
+    goto :goto_1
+
+    :goto_6
+    iget-object v4, v0, Lca8;->c:Lq55;
+
+    invoke-interface/range {v3 .. v8}, Landroid/widget/AdapterView$OnItemClickListener;->onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+
+    :cond_7
+    invoke-virtual {v0}, Lca8;->dismiss()V
+
     return-void
+
+    :pswitch_1
+    iget-object p1, p0, Lzo;->b:Ljava/lang/Object;
+
+    check-cast p1, Lbp;
+
+    iget-object p4, p1, Lbp;->Q0:Lep;
+
+    invoke-virtual {p4, p3}, Landroid/widget/AdapterView;->setSelection(I)V
+
+    invoke-virtual {p4}, Landroid/widget/AdapterView;->getOnItemClickListener()Landroid/widget/AdapterView$OnItemClickListener;
+
+    move-result-object p5
+
+    if-eqz p5, :cond_8
+
+    iget-object p5, p1, Lbp;->N0:Lyo;
+
+    invoke-virtual {p5, p3}, Lyo;->getItemId(I)J
+
+    move-result-wide v0
+
+    invoke-virtual {p4, p2, p3, v0, v1}, Landroid/widget/AdapterView;->performItemClick(Landroid/view/View;IJ)Z
+
+    :cond_8
+    invoke-virtual {p1}, Lca8;->dismiss()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

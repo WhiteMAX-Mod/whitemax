@@ -1,30 +1,36 @@
 .class public final Lyna;
-.super Lsgf;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Lsm6;
 
 
 # instance fields
-.field public X:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic Y:Lone/me/android/OneMeApplication;
+.field public final synthetic Y:Lone/me/android/notifications/NotificationsImagesProvider;
 
-.field public final synthetic Z:Laoa;
+.field public final synthetic Z:Landroid/net/Uri;
+
+.field public o:I
+
+.field public final synthetic s0:Lc1f;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/android/OneMeApplication;Laoa;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lone/me/android/notifications/NotificationsImagesProvider;Landroid/net/Uri;Lc1f;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lyna;->Y:Lone/me/android/OneMeApplication;
+    iput-object p1, p0, Lyna;->Y:Lone/me/android/notifications/NotificationsImagesProvider;
 
-    iput-object p2, p0, Lyna;->Z:Laoa;
+    iput-object p2, p0, Lyna;->Z:Landroid/net/Uri;
+
+    iput-object p3, p0, Lyna;->s0:Lc1f;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p4}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -34,17 +40,17 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lq54;
+    check-cast p1, Lf84;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p0, p1, p2}, Lyna;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1, p2}, Lyna;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
     check-cast p1, Lyna;
 
-    sget-object p2, Lccg;->a:Lccg;
+    sget-object p2, Lqqg;->a:Lqqg;
 
     invoke-virtual {p1, p2}, Lyna;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -53,36 +59,66 @@
     return-object p1
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 4
 
-    new-instance p1, Lyna;
+    new-instance v0, Lyna;
 
-    iget-object v0, p0, Lyna;->Y:Lone/me/android/OneMeApplication;
+    iget-object v1, p0, Lyna;->Z:Landroid/net/Uri;
 
-    iget-object v1, p0, Lyna;->Z:Laoa;
+    iget-object v2, p0, Lyna;->s0:Lc1f;
 
-    invoke-direct {p1, v0, v1, p2}, Lyna;-><init>(Lone/me/android/OneMeApplication;Laoa;Lkotlin/coroutines/Continuation;)V
+    iget-object v3, p0, Lyna;->Y:Lone/me/android/notifications/NotificationsImagesProvider;
 
-    return-object p1
+    invoke-direct {v0, v3, v1, v2, p2}, Lyna;-><init>(Lone/me/android/notifications/NotificationsImagesProvider;Landroid/net/Uri;Lc1f;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lyna;->X:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
+    .locals 6
 
-    iget v0, p0, Lyna;->X:I
+    iget v0, p0, Lyna;->o:I
 
-    sget-object v1, Lccg;->a:Lccg;
+    const-string v1, "fetchAndGetCachedFileSync fail"
 
-    const/4 v2, 0x1
+    iget-object v2, p0, Lyna;->Y:Lone/me/android/notifications/NotificationsImagesProvider;
 
-    if-eqz v0, :cond_1
+    const/4 v3, 0x2
 
-    if-ne v0, v2, :cond_0
+    const/4 v4, 0x1
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    sget-object v5, Lg84;->a:Lg84;
 
-    return-object v1
+    if-eqz v0, :cond_2
+
+    if-eq v0, v4, :cond_1
+
+    if-ne v0, v3, :cond_0
+
+    iget-object v0, p0, Lyna;->X:Ljava/lang/Object;
+
+    check-cast v0, Lf84;
+
+    :try_start_0
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_4
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_3
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_5
 
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
@@ -94,60 +130,107 @@
     throw p1
 
     :cond_1
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    iget-object v0, p0, Lyna;->X:Ljava/lang/Object;
 
-    sget-object p1, Ll05;->s0:Lk82;
+    check-cast v0, Lf84;
 
-    iget-object v0, p0, Lyna;->Y:Lone/me/android/OneMeApplication;
+    :try_start_1
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    :try_end_1
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    invoke-virtual {p1, v0}, Lk82;->e(Landroid/content/Context;)Ll05;
+    goto :goto_1
 
-    move-result-object p1
-
-    new-instance v3, Lqd8;
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x1
-
-    const-class v6, Laoa;
-
-    iget-object v7, p0, Lyna;->Z:Laoa;
-
-    const-string v8, "weakActivities"
-
-    const-string v9, "getWeakActivities()Ljava/util/concurrent/CopyOnWriteArrayList;"
-
-    invoke-direct/range {v3 .. v9}, Lqd8;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
-
-    iput v2, p0, Lyna;->X:I
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Lf63;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, p1, v3, v2}, Lf63;-><init>(Ll05;Lqd8;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v0, p0}, Ldxi;->c(Lzi6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lr54;->a:Lr54;
-
-    if-ne p1, v0, :cond_2
+    :catchall_1
+    move-exception p1
 
     goto :goto_0
 
+    :catch_1
+    move-exception p1
+
+    goto :goto_6
+
     :cond_2
-    move-object p1, v1
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lyna;->X:Ljava/lang/Object;
+
+    move-object v0, p1
+
+    check-cast v0, Lf84;
+
+    iget-object p1, p0, Lyna;->Z:Landroid/net/Uri;
+
+    :try_start_2
+    iput-object v0, p0, Lyna;->X:Ljava/lang/Object;
+
+    iput v4, p0, Lyna;->o:I
+
+    invoke-static {v2, p1, p0}, Lone/me/android/notifications/NotificationsImagesProvider;->b(Lone/me/android/notifications/NotificationsImagesProvider;Landroid/net/Uri;Lyna;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_2
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_2 .. :try_end_2} :catch_1
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    if-ne p1, v5, :cond_3
+
+    goto :goto_2
 
     :goto_0
-    if-ne p1, v0, :cond_3
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-object v0
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4, v1, p1}, Lwqi;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_3
-    return-object v1
+    :goto_1
+    iget-object p1, p0, Lyna;->s0:Lc1f;
+
+    :try_start_3
+    iput-object v0, p0, Lyna;->X:Ljava/lang/Object;
+
+    iput v3, p0, Lyna;->o:I
+
+    invoke-static {v2, v0, p1, p0}, Lone/me/android/notifications/NotificationsImagesProvider;->a(Lone/me/android/notifications/NotificationsImagesProvider;Lf84;Lc1f;Lq44;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_3
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    if-ne p1, v5, :cond_4
+
+    :goto_2
+    return-object v5
+
+    :goto_3
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0, v1, p1}, Lwqi;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const/4 p1, 0x0
+
+    :cond_4
+    :goto_4
+    return-object p1
+
+    :goto_5
+    throw p1
+
+    :goto_6
+    throw p1
 .end method

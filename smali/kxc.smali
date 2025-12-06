@@ -1,26 +1,46 @@
 .class public abstract Lkxc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lhw0;
 
 
 # static fields
-.field public static final a:Lalb;
+.field public static common_full_open_on_phone:I = 0x7f080324
 
+.field public static common_google_signin_btn_icon_dark:I = 0x7f080325
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.field public static common_google_signin_btn_icon_dark_focused:I = 0x7f080326
 
-    new-instance v0, Lalb;
+.field public static common_google_signin_btn_icon_dark_normal:I = 0x7f080327
 
-    const/4 v1, 0x7
+.field public static common_google_signin_btn_icon_dark_normal_background:I = 0x7f080328
 
-    invoke-direct {v0, v1}, Lalb;-><init>(I)V
+.field public static common_google_signin_btn_icon_disabled:I = 0x7f080329
 
-    sput-object v0, Lkxc;->a:Lalb;
+.field public static common_google_signin_btn_icon_light:I = 0x7f08032a
 
-    return-void
-.end method
+.field public static common_google_signin_btn_icon_light_focused:I = 0x7f08032b
+
+.field public static common_google_signin_btn_icon_light_normal:I = 0x7f08032c
+
+.field public static common_google_signin_btn_icon_light_normal_background:I = 0x7f08032d
+
+.field public static common_google_signin_btn_text_dark:I = 0x7f08032e
+
+.field public static common_google_signin_btn_text_dark_focused:I = 0x7f08032f
+
+.field public static common_google_signin_btn_text_dark_normal:I = 0x7f080330
+
+.field public static common_google_signin_btn_text_dark_normal_background:I = 0x7f080331
+
+.field public static common_google_signin_btn_text_disabled:I = 0x7f080332
+
+.field public static common_google_signin_btn_text_light:I = 0x7f080333
+
+.field public static common_google_signin_btn_text_light_focused:I = 0x7f080334
+
+.field public static common_google_signin_btn_text_light_normal:I = 0x7f080335
+
+.field public static common_google_signin_btn_text_light_normal_background:I = 0x7f080336
+
+.field public static googleg_disabled_color_18:I = 0x7f0804e9
+
+.field public static googleg_standard_color_18:I = 0x7f0804ea

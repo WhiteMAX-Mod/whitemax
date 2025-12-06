@@ -4,23 +4,11 @@
 
 
 # virtual methods
-.method public abstract onConnect(Lnoe;)V
+.method public abstract g(JZ)V
 .end method
 
-.method public abstract onConnected(Lnoe;)V
-.end method
+.method public l(J)V
+    .locals 0
 
-.method public abstract onFailedByException(Lnoe;Ljava/lang/Throwable;)V
-.end method
-
-.method public abstract onFailedByPings(Lnoe;)V
-.end method
-
-.method public abstract onMessageReceived(Lnoe;)V
-.end method
-
-.method public abstract onRestart(Lnoe;)V
-.end method
-
-.method public abstract onTimeout(Lnoe;)V
+    return-void
 .end method

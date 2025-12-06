@@ -1,31 +1,37 @@
-.class public final Llbi;
+.class public abstract Llbi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lowi;
-
-.field public final b:Landroid/content/Context;
+# static fields
+.field public static final a:Lpai;
 
 
 # direct methods
-.method public constructor <init>(Lowi;Landroid/content/Context;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lpai;
 
-    new-instance v0, Landroid/os/Handler;
+    const/4 v1, 0x0
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    invoke-direct {v0, v1}, Lpai;-><init>(I)V
 
-    move-result-object v1
+    sput-object v0, Llbi;->a:Lpai;
 
-    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    new-instance v0, Lcom/google/android/gms/common/api/Scope;
 
-    iput-object p1, p0, Llbi;->a:Lowi;
+    const/4 v1, 0x1
 
-    iput-object p2, p0, Llbi;->b:Landroid/content/Context;
+    const-string v2, "profile"
+
+    invoke-direct {v0, v1, v2}, Lcom/google/android/gms/common/api/Scope;-><init>(ILjava/lang/String;)V
+
+    new-instance v0, Lcom/google/android/gms/common/api/Scope;
+
+    const-string v2, "email"
+
+    invoke-direct {v0, v1, v2}, Lcom/google/android/gms/common/api/Scope;-><init>(ILjava/lang/String;)V
 
     return-void
 .end method

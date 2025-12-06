@@ -1,290 +1,408 @@
-.class public final Ljug;
-.super Lsgf;
+.class public final synthetic Ljug;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lfj6;
+.implements Lcm6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public synthetic Y:Lvpg;
-
-.field public synthetic Z:Lupg;
-
-.field public synthetic q0:Z
-
-.field public synthetic r0:Z
-
-.field public final synthetic s0:Lpug;
+.field public final synthetic b:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
 
 
 # direct methods
-.method public constructor <init>(Lpug;Ly16;)V
+.method public synthetic constructor <init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;I)V
     .locals 0
 
-    iput-object p1, p0, Ljug;->s0:Lpug;
+    iput p2, p0, Ljug;->a:I
 
-    const/4 p1, 0x5
+    iput-object p1, p0, Ljug;->b:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ly16;)Ljava/lang/Object;
-    .locals 2
+.method public final invoke()Ljava/lang/Object;
+    .locals 17
 
-    check-cast p1, Lvpg;
+    move-object/from16 v0, p0
 
-    check-cast p2, Lupg;
+    iget v1, v0, Ljug;->a:I
 
-    check-cast p3, Ljava/lang/Boolean;
+    packed-switch v1, :pswitch_data_0
 
-    invoke-virtual {p3}, Ljava/lang/Boolean;->booleanValue()Z
+    iget-object v1, v0, Ljug;->b:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
 
-    move-result p3
+    invoke-virtual {v1}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
 
-    check-cast p4, Ljava/lang/Boolean;
+    move-result-object v1
 
-    invoke-virtual {p4}, Ljava/lang/Boolean;->booleanValue()Z
+    check-cast v1, Ly4e;
 
-    move-result p4
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lw5;
 
-    new-instance v0, Ljug;
+    move-result-object v1
 
-    iget-object v1, p0, Ljug;->s0:Lpug;
+    const/16 v2, 0xd8
 
-    invoke-direct {v0, v1, p5}, Ljug;-><init>(Lpug;Ly16;)V
+    invoke-virtual {v1, v2}, Lw5;->c(I)Ljava/lang/Object;
 
-    iput-object p1, v0, Ljug;->Y:Lvpg;
+    move-result-object v1
 
-    iput-object p2, v0, Ljug;->Z:Lupg;
+    check-cast v1, Ldkb;
 
-    iput-boolean p3, v0, Ljug;->q0:Z
+    return-object v1
 
-    iput-boolean p4, v0, Ljug;->r0:Z
+    :pswitch_0
+    iget-object v1, v0, Ljug;->b:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
 
-    sget-object p1, Lccg;->a:Lccg;
+    invoke-virtual {v1}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
 
-    invoke-virtual {v0, p1}, Ljug;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object p1
+    check-cast v1, Ly4e;
 
-    return-object p1
-.end method
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lw5;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
+    move-result-object v1
 
-    iget-object v0, p0, Ljug;->s0:Lpug;
+    const/16 v2, 0x1a2
 
-    iget-object v1, v0, Lpug;->w0:Lx0f;
+    invoke-virtual {v1, v2}, Lw5;->c(I)Ljava/lang/Object;
 
-    iget-object v2, v0, Lpug;->c:Lulf;
+    move-result-object v1
 
-    iget v3, p0, Ljug;->X:I
+    check-cast v1, Lq97;
 
-    const/4 v4, 0x1
+    return-object v1
 
-    if-eqz v3, :cond_1
+    :pswitch_1
+    iget-object v1, v0, Ljug;->b:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
 
-    if-ne v3, v4, :cond_0
+    invoke-virtual {v1}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
 
-    iget-boolean v0, p0, Ljug;->q0:Z
+    move-result-object v1
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    check-cast v1, Ly4e;
 
-    goto :goto_1
+    invoke-virtual {v1}, Ly4e;->c()Lve2;
+
+    move-result-object v1
+
+    return-object v1
+
+    :pswitch_2
+    iget-object v1, v0, Ljug;->b:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
+
+    invoke-virtual {v1}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
+
+    move-result-object v1
+
+    check-cast v1, Ly4e;
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lw5;
+
+    move-result-object v1
+
+    const/16 v2, 0x8f
+
+    invoke-virtual {v1, v2}, Lw5;->c(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqi9;
+
+    return-object v1
+
+    :pswitch_3
+    iget-object v1, v0, Ljug;->b:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
+
+    invoke-virtual {v1}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
+
+    move-result-object v1
+
+    check-cast v1, Ly4e;
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lw5;
+
+    move-result-object v1
+
+    const/16 v2, 0x89
+
+    invoke-virtual {v1, v2}, Lw5;->c(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqx5;
+
+    return-object v1
+
+    :pswitch_4
+    iget-object v1, v0, Ljug;->b:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
+
+    invoke-virtual {v1}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->c()Llug;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Llug;->hashCode()I
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    return-object v1
+
+    :pswitch_5
+    iget-object v1, v0, Ljug;->b:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
+
+    invoke-virtual {v1}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
+
+    move-result-object v1
+
+    check-cast v1, Ly4e;
+
+    invoke-virtual {v1}, Ly4e;->e()Lqw5;
+
+    move-result-object v1
+
+    return-object v1
+
+    :pswitch_6
+    iget-object v1, v0, Ljug;->b:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
+
+    invoke-virtual {v1}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
+
+    move-result-object v1
+
+    check-cast v1, Ly4e;
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lw5;
+
+    move-result-object v1
+
+    const/16 v2, 0x9
+
+    invoke-virtual {v1, v2}, Lw5;->c(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lyi5;
+
+    return-object v1
+
+    :pswitch_7
+    iget-object v1, v0, Ljug;->b:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
+
+    invoke-virtual {v1}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
+
+    move-result-object v1
+
+    check-cast v1, Ly4e;
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lw5;
+
+    move-result-object v1
+
+    const/16 v2, 0xed
+
+    invoke-virtual {v1, v2}, Lw5;->c(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Llv5;
+
+    return-object v1
+
+    :pswitch_8
+    iget-object v1, v0, Ljug;->b:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
+
+    invoke-virtual {v1}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
+
+    move-result-object v1
+
+    check-cast v1, Ly4e;
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lw5;
+
+    move-result-object v1
+
+    const/16 v2, 0x165
+
+    invoke-virtual {v1, v2}, Lw5;->c(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lmw5;
+
+    return-object v1
+
+    :pswitch_9
+    iget-object v1, v0, Ljug;->b:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
+
+    invoke-virtual {v1}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
+
+    move-result-object v1
+
+    check-cast v1, Ly4e;
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lw5;
+
+    move-result-object v1
+
+    const/16 v2, 0x18f
+
+    invoke-virtual {v1, v2}, Lw5;->c(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lu6b;
+
+    return-object v1
+
+    :pswitch_a
+    iget-object v1, v0, Ljug;->b:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
+
+    invoke-virtual {v1}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
+
+    move-result-object v1
+
+    check-cast v1, Ly4e;
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lw5;
+
+    move-result-object v1
+
+    const/16 v2, 0xaa
+
+    invoke-virtual {v1, v2}, Lw5;->c(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, La3g;
+
+    return-object v1
+
+    :pswitch_b
+    new-instance v2, Llug;
+
+    iget-object v1, v0, Ljug;->b:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
+
+    invoke-virtual {v1}, Lma8;->getInputData()Lyd4;
+
+    move-result-object v1
+
+    const-string v3, "requestId"
+
+    const-wide/16 v4, 0x0
+
+    invoke-virtual {v1, v3, v4, v5}, Lyd4;->d(Ljava/lang/String;J)J
+
+    move-result-wide v6
+
+    const-string v3, "externalUrl"
+
+    invoke-virtual {v1, v3}, Lyd4;->e(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v8, ""
+
+    if-nez v3, :cond_0
+
+    move-object v3, v8
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const-string v9, "attachLocalId"
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-virtual {v1, v9}, Lyd4;->e(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result-object v9
 
-    throw p1
+    if-nez v9, :cond_1
+
+    move-object v9, v8
 
     :cond_1
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    const-string v10, "messageId"
 
-    iget-object p1, p0, Ljug;->Y:Lvpg;
+    invoke-virtual {v1, v10, v4, v5}, Lyd4;->d(Ljava/lang/String;J)J
 
-    iget-object v3, p0, Ljug;->Z:Lupg;
+    move-result-wide v10
 
-    iget-boolean v5, p0, Ljug;->q0:Z
+    const-string v12, "chatId"
 
-    iget-boolean v6, p0, Ljug;->r0:Z
+    invoke-virtual {v1, v12, v4, v5}, Lyd4;->d(Ljava/lang/String;J)J
 
-    instance-of v7, v3, Lrpg;
+    move-result-wide v4
 
-    const/4 v8, 0x0
+    const-string v12, "stickerId"
 
-    if-eqz v7, :cond_4
+    invoke-virtual {v1, v12}, Lyd4;->e(Ljava/lang/String;)Ljava/lang/String;
 
-    check-cast v3, Lrpg;
+    move-result-object v1
 
-    iget-object p1, v3, Lrpg;->a:Ljava/util/List;
+    if-nez v1, :cond_2
 
-    sget-object v5, Lpug;->A0:[Ltr7;
+    move-wide v13, v4
 
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+    move-object v5, v3
 
-    move-result v5
+    move-wide v3, v6
 
-    if-eqz v5, :cond_2
+    move-object v6, v9
+
+    move-wide v15, v10
+
+    move-object v11, v8
+
+    move-wide v9, v13
+
+    move-wide v7, v15
 
     goto :goto_0
 
     :cond_2
-    move-object v5, v2
+    move-wide v13, v10
 
-    check-cast v5, Lqta;
+    move-object v11, v1
 
-    invoke-virtual {v5}, Lqta;->b()Lk54;
+    move-wide v15, v4
 
-    move-result-object v5
+    move-object v5, v3
 
-    new-instance v7, Liug;
+    move-wide v3, v6
 
-    invoke-direct {v7, v0, p1, v8}, Liug;-><init>(Lpug;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
+    move-object v6, v9
 
-    iget-object p1, v0, Lxzg;->a:Lkotlinx/coroutines/internal/ContextScope;
+    move-wide v7, v13
 
-    sget-object v9, Lt54;->b:Lt54;
-
-    invoke-static {p1, v5, v9, v7}, Ltki;->c(Lq54;Li54;Lt54;Lzi6;)Lcye;
-
-    move-result-object p1
-
-    iget-object v5, v0, Lpug;->x0:Lw0e;
-
-    sget-object v7, Lpug;->A0:[Ltr7;
-
-    const/4 v9, 0x0
-
-    aget-object v7, v7, v9
-
-    invoke-virtual {v5, v0, v7, p1}, Lw0e;->P(Ljava/lang/Object;Ltr7;Ljava/lang/Object;)V
+    move-wide v9, v15
 
     :goto_0
-    iget-object p1, v3, Lrpg;->a:Ljava/util/List;
-
-    iput-object v8, p0, Ljug;->Y:Lvpg;
-
-    iput-boolean v6, p0, Ljug;->q0:Z
-
-    iput v4, p0, Ljug;->X:I
-
-    check-cast v2, Lqta;
-
-    invoke-virtual {v2}, Lqta;->b()Lk54;
-
-    move-result-object v2
-
-    new-instance v3, Lhug;
-
-    invoke-direct {v3, v0, p1, v8}, Lhug;-><init>(Lpug;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v2, v3, p0}, Ltki;->h(Li54;Lzi6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lr54;->a:Lr54;
-
-    if-ne p1, v0, :cond_3
-
-    return-object v0
-
-    :cond_3
-    move v0, v6
-
-    :goto_1
-    check-cast p1, Lqmg;
-
-    new-instance v2, Leug;
-
-    invoke-virtual {v1}, Lx0f;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/graphics/Bitmap;
-
-    invoke-direct {v2, p1, v0, v1}, Leug;-><init>(Lqmg;ZLandroid/graphics/Bitmap;)V
+    invoke-direct/range {v2 .. v11}, Llug;-><init>(JLjava/lang/String;Ljava/lang/String;JJLjava/lang/String;)V
 
     return-object v2
 
-    :cond_4
-    sget-object v2, Lspg;->a:Lspg;
-
-    invoke-static {v3, v2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_5
-
-    new-instance p1, Leug;
-
-    invoke-virtual {v1}, Lx0f;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/graphics/Bitmap;
-
-    invoke-direct {p1, v8, v6, v0}, Leug;-><init>(Lqmg;ZLandroid/graphics/Bitmap;)V
-
-    return-object p1
-
-    :cond_5
-    sget-object v1, Ltpg;->a:Ltpg;
-
-    invoke-static {v3, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_7
-
-    iget-object v0, v0, Lpug;->b:Lwpg;
-
-    check-cast v0, Lhtg;
-
-    invoke-virtual {v0}, Lhtg;->p()Lq12;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_6
-
-    check-cast v0, Led6;
-
-    iget-object v0, v0, Led6;->a:Lq12;
-
-    invoke-interface {v0}, Lq12;->h()I
-
-    move-result v0
-
-    if-nez v0, :cond_6
-
-    new-instance p1, Lcug;
-
-    invoke-direct {p1, v5}, Lcug;-><init>(Z)V
-
-    return-object p1
-
-    :cond_6
-    new-instance v0, Lbug;
-
-    invoke-direct {v0, p1, v5}, Lbug;-><init>(Lvpg;Z)V
-
-    return-object v0
-
-    :cond_7
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

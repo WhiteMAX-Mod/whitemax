@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <androidx.appcompat.widget.AppCompatTextView android:ellipsize="end" android:id="@id/row_contact_base__tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:fontFamily="sans-serif-medium" style="@style/Typography.Headline1" />
-    <androidx.appcompat.widget.AppCompatTextView android:ellipsize="end" android:id="@id/row_contact_base__tv_last_seen" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:singleLine="true" android:fontFamily="sans-serif" style="@style/Typography.Paragraph" />
-</LinearLayout>

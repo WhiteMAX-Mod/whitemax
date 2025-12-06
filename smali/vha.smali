@@ -1,137 +1,64 @@
-.class public abstract Lvha;
+.class public final Lvha;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lrf9;
+
 
 # static fields
-.field public static final a:[Ljava/lang/Object;
-
-.field public static final b:Lb1a;
+.field public static a:Lvha;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static declared-synchronized b()Lvha;
     .locals 2
 
-    const/4 v0, 0x0
+    const-class v0, Lvha;
 
-    new-array v1, v0, [Ljava/lang/Object;
+    monitor-enter v0
 
-    sput-object v1, Lvha;->a:[Ljava/lang/Object;
+    :try_start_0
+    sget-object v1, Lvha;->a:Lvha;
 
-    new-instance v1, Lb1a;
+    if-nez v1, :cond_0
 
-    invoke-direct {v1, v0}, Lb1a;-><init>(I)V
+    new-instance v1, Lvha;
 
-    sput-object v1, Lvha;->b:Lb1a;
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    sput-object v1, Lvha;->a:Lvha;
 
-.method public static final a(ILjava/util/List;)V
-    .locals 4
+    goto :goto_0
 
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    :catchall_0
+    move-exception v1
 
-    move-result p1
-
-    if-ltz p0, :cond_0
-
-    if-ge p0, p1, :cond_0
-
-    return-void
+    goto :goto_1
 
     :cond_0
-    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+    :goto_0
+    sget-object v1, Lvha;->a:Lvha;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const-string v1, " is out of bounds. The list has "
+    monitor-exit v0
 
-    const-string v2, " elements."
+    return-object v1
 
-    const-string v3, "Index "
+    :goto_1
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-static {v3, p0, v1, p1, v2}, Ley1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    throw v1
 .end method
 
-.method public static final b(Ljava/util/List;II)V
-    .locals 3
 
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result p0
-
-    if-gt p1, p2, :cond_2
-
-    if-ltz p1, :cond_1
-
-    if-gt p2, p0, :cond_0
+# virtual methods
+.method public final a(Lqf9;)V
+    .locals 0
 
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "toIndex ("
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p2, ") is more than than the list size ("
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const/16 p0, 0x29
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {p1, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    new-instance p0, Ljava/lang/IndexOutOfBoundsException;
-
-    const-string p2, "fromIndex ("
-
-    const-string v0, ") is less than 0."
-
-    invoke-static {p1, p2, v0}, Ley1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, ") is greater than toIndex ("
-
-    const-string v1, ")."
-
-    const-string v2, "Indices are out of order. fromIndex ("
-
-    invoke-static {v2, p1, v0, p2, v1}, Ley1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method

@@ -1,57 +1,93 @@
 .class public final Lbn9;
-.super Ly14;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lpb9;
-
-.field public Y:Le20;
-
-.field public Z:Lla2;
-
-.field public o:Ljn9;
-
-.field public synthetic q0:Ljava/lang/Object;
-
-.field public final synthetic r0:Ljn9;
-
-.field public s0:I
-
-
-# direct methods
-.method public constructor <init>(Ljn9;Ly14;)V
-    .locals 0
-
-    iput-object p1, p0, Lbn9;->r0:Ljn9;
-
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.field public a:Lq9b;
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a()Lwr8;
+    .locals 4
 
-    iput-object p1, p0, Lbn9;->q0:Ljava/lang/Object;
+    invoke-virtual {p0}, Lbn9;->b()Lm2f;
 
-    iget p1, p0, Lbn9;->s0:I
+    move-result-object v0
 
-    const/high16 v0, -0x80000000
+    new-instance v1, Lp89;
 
-    or-int/2addr p1, v0
+    const/16 v2, 0x8
 
-    iput p1, p0, Lbn9;->s0:I
+    invoke-direct {v1, v2}, Lp89;-><init>(I)V
 
-    iget-object p1, p0, Lbn9;->r0:Ljn9;
+    new-instance v2, Lwr8;
 
-    const/4 v0, 0x0
+    const/4 v3, 0x1
 
-    invoke-static {p1, v0, p0}, Ljn9;->u(Ljn9;Lpb9;Ly14;)Ljava/lang/Object;
+    invoke-direct {v2, v0, v1, v3}, Lwr8;-><init>(Ljava/lang/Object;Ltm6;I)V
 
-    move-result-object p1
+    new-instance v0, Lvef;
 
-    return-object p1
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1}, Lvef;-><init>(I)V
+
+    new-instance v1, Lvr8;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v1, v2, v0, v3}, Lvr8;-><init>(Ljava/lang/Object;Ltm6;I)V
+
+    new-instance v0, Lp89;
+
+    const/16 v2, 0x9
+
+    invoke-direct {v0, v2}, Lp89;-><init>(I)V
+
+    new-instance v2, Lora;
+
+    const/4 v3, 0x5
+
+    invoke-direct {v2, v1, v0, v3}, Lora;-><init>(Lvqa;Ltm6;I)V
+
+    invoke-virtual {v2}, Lvqa;->s()Lzqa;
+
+    move-result-object v0
+
+    new-instance v1, Lp89;
+
+    const/16 v2, 0xa
+
+    invoke-direct {v1, v2}, Lp89;-><init>(I)V
+
+    new-instance v2, Lwr8;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, v0, v1, v3}, Lwr8;-><init>(Ljava/lang/Object;Ltm6;I)V
+
+    return-object v2
+.end method
+
+.method public final b()Lm2f;
+    .locals 3
+
+    iget-object v0, p0, Lbn9;->a:Lq9b;
+
+    invoke-virtual {v0}, Lq9b;->w()Lwk3;
+
+    move-result-object v0
+
+    new-instance v1, Lp89;
+
+    const/16 v2, 0xd
+
+    invoke-direct {v1, v2}, Lp89;-><init>(I)V
+
+    invoke-virtual {v0, v1}, Le2f;->h(Ltm6;)Lm2f;
+
+    move-result-object v0
+
+    return-object v0
 .end method

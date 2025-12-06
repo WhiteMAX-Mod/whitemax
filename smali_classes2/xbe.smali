@@ -1,9 +1,6 @@
-.class public final Lxbe;
+.class public abstract Lxbe;
 .super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lcce;
 
 
 # instance fields
@@ -19,4 +16,14 @@
     iput-object p1, p0, Lxbe;->a:Ljava/lang/String;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public a()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lxbe;->a:Ljava/lang/String;
+
+    return-object v0
 .end method

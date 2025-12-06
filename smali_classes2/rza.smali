@@ -1,511 +1,823 @@
-.class public abstract Lrza;
-.super Ljava/lang/Object;
+.class public final Lrza;
+.super Landroid/widget/LinearLayout;
 .source "SourceFile"
+
+# interfaces
+.implements Lu6g;
 
 
 # static fields
-.field public static final A:I
+.field public static final synthetic t0:[Lyy7;
 
-.field public static final A0:I
 
-.field public static final B:I
+# instance fields
+.field public final a:Ljava/lang/Object;
 
-.field public static final B0:I
+.field public final b:Ljava/lang/Object;
 
-.field public static final C:I
+.field public c:Lem6;
 
-.field public static final C0:I
+.field public final d:Lqza;
 
-.field public static final D:I
+.field public final o:Lqza;
 
-.field public static final D0:I
-
-.field public static final E:I
-
-.field public static final E0:I
-
-.field public static final F:I
-
-.field public static final G:I
-
-.field public static final H:I
-
-.field public static final I:I
-
-.field public static final J:I
-
-.field public static final K:I
-
-.field public static final L:I
-
-.field public static final M:I
-
-.field public static final N:I
-
-.field public static final O:I
-
-.field public static final P:I
-
-.field public static final Q:I
-
-.field public static final R:I
-
-.field public static final S:I
-
-.field public static final T:I
-
-.field public static final U:I
-
-.field public static final V:I
-
-.field public static final W:I
-
-.field public static final X:I
-
-.field public static final Y:I
-
-.field public static final Z:I
-
-.field public static final a:I
-
-.field public static final a0:I
-
-.field public static final b:I
-
-.field public static final b0:I
-
-.field public static final c:I
-
-.field public static final c0:I
-
-.field public static final d:I
-
-.field public static final d0:I
-
-.field public static final e:I
-
-.field public static final e0:I
-
-.field public static final f:I
-
-.field public static final f0:I
-
-.field public static final g:I
-
-.field public static final g0:I
-
-.field public static final h:I
-
-.field public static final h0:I
-
-.field public static final i:I
-
-.field public static final i0:I
-
-.field public static final j:I
-
-.field public static final j0:I
-
-.field public static final k:I
-
-.field public static final k0:I
-
-.field public static final l:I
-
-.field public static final l0:I
-
-.field public static final m:I
-
-.field public static final m0:I
-
-.field public static final n:I
-
-.field public static final n0:I
-
-.field public static final o:I
-
-.field public static final o0:I
-
-.field public static final p:I
-
-.field public static final p0:I
-
-.field public static final q:I
-
-.field public static final q0:I
-
-.field public static final r:I
-
-.field public static final r0:I
-
-.field public static final s:I
-
-.field public static final s0:I
-
-.field public static final t:I
-
-.field public static final t0:I
-
-.field public static final u:I
-
-.field public static final u0:I
-
-.field public static final v:I
-
-.field public static final v0:I
-
-.field public static final w:I
-
-.field public static final w0:I
-
-.field public static final x:I
-
-.field public static final x0:I
-
-.field public static final y:I
-
-.field public static final y0:I
-
-.field public static final z:I
-
-.field public static final z0:I
+.field public final s0:Lqza;
 
 
 # direct methods
 .method static constructor <clinit>()V
+    .locals 6
+
+    new-instance v0, Lz8a;
+
+    const-string v1, "customTheme"
+
+    const-string v2, "getCustomTheme()Lone/me/sdk/design/OneMeTheme;"
+
+    const-class v3, Lrza;
+
+    invoke-direct {v0, v3, v1, v2}, Lz8a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v1, Lvid;->a:Lwid;
+
+    const-string v2, "mode"
+
+    const-string v4, "getMode()Lone/me/sdk/uikit/common/buttontool/OneMeButtonTool$Mode;"
+
+    invoke-static {v1, v3, v2, v4}, Lu45;->h(Lwid;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lz8a;
+
+    move-result-object v1
+
+    new-instance v2, Lz8a;
+
+    const-string v4, "appearance"
+
+    const-string v5, "getAppearance()Lone/me/sdk/uikit/common/buttontool/OneMeButtonTool$Appearance;"
+
+    invoke-direct {v2, v3, v4, v5}, Lz8a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v3, 0x3
+
+    new-array v3, v3, [Lyy7;
+
+    const/4 v4, 0x0
+
+    aput-object v0, v3, v4
+
+    const/4 v0, 0x1
+
+    aput-object v1, v3, v0
+
+    const/4 v0, 0x2
+
+    aput-object v2, v3, v0
+
+    sput-object v3, Lrza;->t0:[Lyy7;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 3
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    new-instance v0, Lns2;
+
+    const/16 v1, 0x18
+
+    invoke-direct {v0, p1, v1}, Lns2;-><init>(Landroid/content/Context;I)V
+
+    const/4 v1, 0x3
+
+    invoke-static {v1, v0}, Lipi;->b(ILcm6;)Lk18;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lrza;->a:Ljava/lang/Object;
+
+    new-instance v0, Lns2;
+
+    const/16 v2, 0x19
+
+    invoke-direct {v0, p1, v2}, Lns2;-><init>(Landroid/content/Context;I)V
+
+    invoke-static {v1, v0}, Lipi;->b(ILcm6;)Lk18;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lrza;->b:Ljava/lang/Object;
+
+    new-instance p1, Ldga;
+
+    const/16 v0, 0x8
+
+    invoke-direct {p1, v0}, Ldga;-><init>(I)V
+
+    iput-object p1, p0, Lrza;->c:Lem6;
+
+    new-instance p1, Lqza;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, p0, v0}, Lqza;-><init>(Lrza;I)V
+
+    iput-object p1, p0, Lrza;->d:Lqza;
+
+    new-instance p1, Lqza;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p1, p0, v0}, Lqza;-><init>(Lrza;I)V
+
+    iput-object p1, p0, Lrza;->o:Lqza;
+
+    new-instance p1, Lqza;
+
+    const/4 v0, 0x2
+
+    invoke-direct {p1, p0, v0}, Lqza;-><init>(Lrza;I)V
+
+    iput-object p1, p0, Lrza;->s0:Lqza;
+
+    new-instance p1, Landroid/view/ViewGroup$LayoutParams;
+
+    const/4 v0, -0x2
+
+    invoke-direct {p1, v0, v0}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    const/16 p1, 0x11
+
+    invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->setGravity(I)V
+
+    invoke-virtual {p0}, Lrza;->getAppearance()Lnza;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p0, p1}, Lrza;->c(Landroid/view/View;Lnza;)V
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setClipToOutline(Z)V
+
+    new-instance v0, Lu74;
+
+    const/16 v1, 0x10
+
+    int-to-float v1, v1
+
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, v2
+
+    invoke-static {v1}, Lkti;->d(F)I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    invoke-direct {v0, v1}, Lu74;-><init>(F)V
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setClickable(Z)V
+
+    invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->setOrientation(I)V
+
+    invoke-direct {p0}, Lrza;->getIconView()Landroid/widget/ImageView;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public static final synthetic a(Lrza;)Landroidx/appcompat/widget/AppCompatTextView;
+    .locals 0
+
+    invoke-direct {p0}, Lrza;->getTextView()Landroidx/appcompat/widget/AppCompatTextView;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method private final getCurrentTheme()Lyeb;
     .locals 1
 
-    sget v0, Lmoc;->profile_avatar_select_screen:I
+    invoke-virtual {p0}, Lrza;->getCustomTheme()Lyeb;
 
-    sput v0, Lrza;->a:I
+    move-result-object v0
 
-    sget v0, Lmoc;->profile_change_inactive_ttl_delete_1_month:I
+    if-nez v0, :cond_0
 
-    sput v0, Lrza;->b:I
+    sget-object v0, La93;->s0:Lv1a;
 
-    sget v0, Lmoc;->profile_change_inactive_ttl_delete_3_month:I
+    invoke-virtual {v0, p0}, Lv1a;->y(Landroid/view/View;)Lyeb;
 
-    sput v0, Lrza;->c:I
+    move-result-object v0
 
-    sget v0, Lmoc;->profile_change_inactive_ttl_delete_6_month:I
+    :cond_0
+    return-object v0
+.end method
 
-    sput v0, Lrza;->d:I
+.method private final getIconView()Landroid/widget/ImageView;
+    .locals 1
 
-    sget v0, Lmoc;->profile_confirmation_sheet_cancel:I
+    iget-object v0, p0, Lrza;->a:Ljava/lang/Object;
 
-    sput v0, Lrza;->e:I
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
-    sget v0, Lmoc;->profile_delete_contact_confirmation_sheet_confirm:I
+    move-result-object v0
 
-    sput v0, Lrza;->f:I
+    check-cast v0, Landroid/widget/ImageView;
 
-    sget v0, Lmoc;->profile_edit_admin_chat_type:I
+    return-object v0
+.end method
 
-    sput v0, Lrza;->g:I
+.method private final getTextView()Landroidx/appcompat/widget/AppCompatTextView;
+    .locals 1
 
-    sget v0, Lmoc;->profile_edit_admin_clear_channel_history:I
+    iget-object v0, p0, Lrza;->b:Ljava/lang/Object;
 
-    sput v0, Lrza;->h:I
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
-    sget v0, Lmoc;->profile_edit_admin_clear_channel_history_cancel:I
+    move-result-object v0
 
-    sput v0, Lrza;->i:I
+    check-cast v0, Landroidx/appcompat/widget/AppCompatTextView;
 
-    sget v0, Lmoc;->profile_edit_admin_clear_channel_history_confirm:I
+    return-object v0
+.end method
 
-    sput v0, Lrza;->j:I
 
-    sget v0, Lmoc;->profile_edit_admin_clear_chat_history:I
+# virtual methods
+.method public final b()V
+    .locals 0
 
-    sput v0, Lrza;->k:I
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
-    sget v0, Lmoc;->profile_edit_admin_clear_chat_history_cancel:I
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
 
-    sput v0, Lrza;->l:I
+    return-void
+.end method
 
-    sget v0, Lmoc;->profile_edit_admin_clear_chat_history_confirm:I
+.method public final c(Landroid/view/View;Lnza;)V
+    .locals 4
 
-    sput v0, Lrza;->m:I
+    sget-object v0, La93;->s0:Lv1a;
 
-    sget v0, Lmoc;->profile_edit_admin_close_channel:I
+    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
 
-    sput v0, Lrza;->n:I
+    move-result p2
 
-    sget v0, Lmoc;->profile_edit_admin_close_channel_cancel:I
+    const/high16 v1, -0x10000
 
-    sput v0, Lrza;->o:I
+    if-eqz p2, :cond_1
 
-    sget v0, Lmoc;->profile_edit_admin_close_channel_certain_confirm:I
+    const/4 v2, 0x1
 
-    sput v0, Lrza;->p:I
+    if-ne p2, v2, :cond_0
 
-    sget v0, Lmoc;->profile_edit_admin_close_channel_confirm:I
+    invoke-virtual {v0, p1}, Lv1a;->y(Landroid/view/View;)Lyeb;
 
-    sput v0, Lrza;->q:I
+    move-result-object p2
 
-    sget v0, Lmoc;->profile_edit_admin_close_chat:I
+    invoke-direct {p0}, Lrza;->getCurrentTheme()Lyeb;
 
-    sput v0, Lrza;->r:I
+    move-result-object v0
 
-    sget v0, Lmoc;->profile_edit_admin_close_chat_cancel:I
+    invoke-interface {v0}, Lyeb;->c()Lfdf;
 
-    sput v0, Lrza;->s:I
+    move-result-object v0
 
-    sget v0, Lmoc;->profile_edit_admin_close_chat_certain_confirm:I
+    iget-object v0, v0, Lfdf;->a:Lddf;
 
-    sput v0, Lrza;->t:I
+    iget-object v0, v0, Lddf;->a:Lcdf;
 
-    sget v0, Lmoc;->profile_edit_admin_close_chat_confirm:I
+    iget v0, v0, Lcdf;->e:I
 
-    sput v0, Lrza;->u:I
+    invoke-interface {p2}, Lyeb;->c()Lfdf;
 
-    sget v0, Lmoc;->profile_edit_admin_leave_channel:I
+    move-result-object p2
 
-    sput v0, Lrza;->v:I
+    iget-object p2, p2, Lfdf;->a:Lddf;
 
-    sget v0, Lmoc;->profile_edit_admin_leave_channel_and_change_owner_confirm:I
+    iget-object p2, p2, Lddf;->a:Lcdf;
 
-    sput v0, Lrza;->w:I
+    iget p2, p2, Lcdf;->e:I
 
-    sget v0, Lmoc;->profile_edit_admin_leave_channel_cancel:I
+    new-instance v2, Landroid/graphics/drawable/RippleDrawable;
 
-    sput v0, Lrza;->x:I
+    invoke-static {p2}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
-    sget v0, Lmoc;->profile_edit_admin_leave_channel_confirm:I
+    move-result-object p2
 
-    sput v0, Lrza;->y:I
+    new-instance v3, Landroid/graphics/drawable/ColorDrawable;
 
-    sget v0, Lmoc;->profile_edit_admin_leave_chat:I
+    invoke-direct {v3, v0}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
-    sput v0, Lrza;->z:I
+    new-instance v0, Landroid/graphics/drawable/ColorDrawable;
 
-    sget v0, Lmoc;->profile_edit_admin_leave_chat_and_change_owner_confirm:I
+    invoke-direct {v0, v1}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
-    sput v0, Lrza;->A:I
+    invoke-direct {v2, p2, v3, v0}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    sget v0, Lmoc;->profile_edit_admin_leave_chat_cancel:I
+    goto :goto_0
 
-    sput v0, Lrza;->B:I
+    :cond_0
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    sget v0, Lmoc;->profile_edit_admin_leave_chat_confirm:I
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    sput v0, Lrza;->C:I
+    throw p1
 
-    sget v0, Lmoc;->profile_edit_admin_move_rights:I
+    :cond_1
+    invoke-virtual {v0, p1}, Lv1a;->y(Landroid/view/View;)Lyeb;
 
-    sput v0, Lrza;->D:I
+    invoke-direct {p0}, Lrza;->getCurrentTheme()Lyeb;
 
-    sget v0, Lmoc;->profile_edit_admin_participants_permission:I
+    move-result-object p2
 
-    sput v0, Lrza;->E:I
+    invoke-interface {p2}, Lyeb;->b()Lbf0;
 
-    sget v0, Lmoc;->profile_edit_admin_permissions_change_chat_info:I
+    move-result-object p2
 
-    sput v0, Lrza;->F:I
+    iget p2, p2, Lbf0;->h:I
 
-    sget v0, Lmoc;->profile_edit_admin_permissions_change_owner_cancel_action:I
+    invoke-direct {p0}, Lrza;->getCurrentTheme()Lyeb;
 
-    sput v0, Lrza;->G:I
+    move-result-object v0
 
-    sget v0, Lmoc;->profile_edit_admin_permissions_change_owner_change_action:I
+    invoke-interface {v0}, Lyeb;->c()Lfdf;
 
-    sput v0, Lrza;->H:I
+    move-result-object v0
 
-    sget v0, Lmoc;->profile_edit_admin_permissions_control_admin:I
+    iget-object v0, v0, Lfdf;->a:Lddf;
 
-    sput v0, Lrza;->I:I
+    iget-object v0, v0, Lddf;->a:Lcdf;
 
-    sget v0, Lmoc;->profile_edit_admin_permissions_delete_from_admins_cancel_action:I
+    iget v0, v0, Lcdf;->i:I
 
-    sput v0, Lrza;->J:I
+    new-instance v2, Landroid/graphics/drawable/RippleDrawable;
 
-    sget v0, Lmoc;->profile_edit_admin_permissions_delete_from_admins_delete_action:I
+    invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
-    sput v0, Lrza;->K:I
+    move-result-object v0
 
-    sget v0, Lmoc;->profile_edit_admin_permissions_delete_messages:I
+    new-instance v3, Landroid/graphics/drawable/ColorDrawable;
 
-    sput v0, Lrza;->L:I
+    invoke-direct {v3, p2}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
-    sget v0, Lmoc;->profile_edit_admin_permissions_edit_chat_link:I
+    new-instance p2, Landroid/graphics/drawable/ColorDrawable;
 
-    sput v0, Lrza;->M:I
+    invoke-direct {p2, v1}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
-    sget v0, Lmoc;->profile_edit_admin_permissions_edit_chat_members:I
+    invoke-direct {v2, v0, v3, p2}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    sput v0, Lrza;->N:I
+    :goto_0
+    invoke-virtual {p1, v2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    sget v0, Lmoc;->profile_edit_admin_permissions_edit_messages:I
+    return-void
+.end method
 
-    sput v0, Lrza;->O:I
+.method public final getAppearance()Lnza;
+    .locals 2
 
-    sget v0, Lmoc;->profile_edit_admin_permissions_pin_messages:I
+    sget-object v0, Lrza;->t0:[Lyy7;
 
-    sput v0, Lrza;->P:I
+    const/4 v1, 0x2
 
-    sget v0, Lmoc;->profile_edit_admin_permissions_recycler_view:I
+    aget-object v0, v0, v1
 
-    sput v0, Lrza;->Q:I
+    iget-object v0, p0, Lrza;->s0:Lqza;
 
-    sget v0, Lmoc;->profile_edit_admin_permissions_send_messages:I
+    iget-object v0, v0, Li3;->b:Ljava/lang/Object;
 
-    sput v0, Lrza;->R:I
+    check-cast v0, Lnza;
 
-    sget v0, Lmoc;->profile_edit_admin_permissions_toolbar_view:I
+    return-object v0
+.end method
 
-    sput v0, Lrza;->S:I
+.method public final getCustomTheme()Lyeb;
+    .locals 2
 
-    sget v0, Lmoc;->profile_edit_appbar_layout:I
+    sget-object v0, Lrza;->t0:[Lyy7;
 
-    sput v0, Lrza;->T:I
+    const/4 v1, 0x0
 
-    sget v0, Lmoc;->profile_edit_avatar:I
+    aget-object v0, v0, v1
 
-    sput v0, Lrza;->U:I
+    iget-object v0, p0, Lrza;->d:Lqza;
 
-    sget v0, Lmoc;->profile_edit_change_avatar_cancel:I
+    iget-object v0, v0, Li3;->b:Ljava/lang/Object;
 
-    sput v0, Lrza;->V:I
+    check-cast v0, Lyeb;
 
-    sget v0, Lmoc;->profile_edit_change_avatar_remove_current:I
+    return-object v0
+.end method
 
-    sput v0, Lrza;->W:I
+.method public final getIconTintResolver()Lem6;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lem6;"
+        }
+    .end annotation
 
-    sget v0, Lmoc;->profile_edit_change_avatar_select_neuro_avatar:I
+    iget-object v0, p0, Lrza;->c:Lem6;
 
-    sput v0, Lrza;->X:I
+    return-object v0
+.end method
 
-    sget v0, Lmoc;->profile_edit_change_avatar_upload_from_camera:I
+.method public final getMode()Loza;
+    .locals 2
 
-    sput v0, Lrza;->Y:I
+    sget-object v0, Lrza;->t0:[Lyy7;
 
-    sget v0, Lmoc;->profile_edit_change_avatar_upload_from_gallery:I
+    const/4 v1, 0x1
 
-    sput v0, Lrza;->Z:I
+    aget-object v0, v0, v1
 
-    sget v0, Lmoc;->profile_edit_collapsible_container_layout:I
+    iget-object v0, p0, Lrza;->o:Lqza;
 
-    sput v0, Lrza;->a0:I
+    iget-object v0, v0, Li3;->b:Ljava/lang/Object;
 
-    sget v0, Lmoc;->profile_edit_confirm_exit_button:I
+    check-cast v0, Loza;
 
-    sput v0, Lrza;->b0:I
+    return-object v0
+.end method
 
-    sget v0, Lmoc;->profile_edit_confirm_save_button:I
+.method public final onMeasure(II)V
+    .locals 1
 
-    sput v0, Lrza;->c0:I
+    invoke-super {p0, p1, p2}, Landroid/widget/LinearLayout;->onMeasure(II)V
 
-    sget v0, Lmoc;->profile_edit_contact_delete_action:I
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
 
-    sput v0, Lrza;->d0:I
+    move-result p1
 
-    sget v0, Lmoc;->profile_edit_delete_profile_button:I
+    const/16 p2, 0x3c
 
-    sput v0, Lrza;->e0:I
+    int-to-float p2, p2
 
-    sget v0, Lmoc;->profile_edit_delete_profile_cancel_button:I
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
 
-    sput v0, Lrza;->f0:I
+    move-result-object v0
 
-    sget v0, Lmoc;->profile_edit_invite_by_link:I
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    sput v0, Lrza;->g0:I
+    move-result-object v0
 
-    sget v0, Lmoc;->profile_edit_link_private:I
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
 
-    sput v0, Lrza;->h0:I
+    mul-float/2addr p2, v0
 
-    sget v0, Lmoc;->profile_edit_link_public:I
+    invoke-static {p2}, Lkti;->d(F)I
 
-    sput v0, Lrza;->i0:I
+    move-result p2
 
-    sget v0, Lmoc;->profile_edit_logout_confirm_action:I
+    invoke-static {p1, p2}, Ljava/lang/Math;->max(II)I
 
-    sput v0, Lrza;->j0:I
+    move-result p1
 
-    sget v0, Lmoc;->profile_edit_member_permissions_add_user:I
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
-    sput v0, Lrza;->k0:I
+    move-result p2
 
-    sget v0, Lmoc;->profile_edit_member_permissions_call_to_chat:I
+    if-ge p2, p1, :cond_0
 
-    sput v0, Lrza;->l0:I
+    invoke-virtual {p0, p1, p1}, Landroid/view/View;->setMeasuredDimension(II)V
 
-    sget v0, Lmoc;->profile_edit_member_permissions_change_photo:I
+    return-void
 
-    sput v0, Lrza;->m0:I
+    :cond_0
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
-    sget v0, Lmoc;->profile_edit_member_permissions_pin_message:I
+    move-result p2
 
-    sput v0, Lrza;->n0:I
+    invoke-virtual {p0, p2, p1}, Landroid/view/View;->setMeasuredDimension(II)V
 
-    sget v0, Lmoc;->profile_edit_member_permissions_see_private_link:I
+    return-void
+.end method
 
-    sput v0, Lrza;->o0:I
+.method public final onThemeChanged(Lyeb;)V
+    .locals 2
 
-    sget v0, Lmoc;->profile_edit_oneme_toolbar:I
+    iget-object p1, p0, Lrza;->c:Lem6;
 
-    sput v0, Lrza;->p0:I
+    invoke-direct {p0}, Lrza;->getCurrentTheme()Lyeb;
 
-    sget v0, Lmoc;->profile_edit_recycler_view:I
+    move-result-object v0
 
-    sput v0, Lrza;->q0:I
+    invoke-interface {p1, v0}, Lem6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget v0, Lmoc;->profile_edit_selectable_item_checkbox:I
+    move-result-object p1
 
-    sput v0, Lrza;->r0:I
+    check-cast p1, Ljava/lang/Number;
 
-    sget v0, Lmoc;->profile_edit_selectable_item_subtitle:I
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
 
-    sput v0, Lrza;->s0:I
+    move-result p1
 
-    sget v0, Lmoc;->profile_edit_selectable_item_title:I
+    invoke-direct {p0}, Lrza;->getIconView()Landroid/widget/ImageView;
 
-    sput v0, Lrza;->t0:I
+    move-result-object v0
 
-    sget v0, Lmoc;->profile_edit_short_link:I
+    invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
-    sput v0, Lrza;->u0:I
+    move-result-object v1
 
-    sget v0, Lmoc;->profile_edit_short_link_input_button:I
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
 
-    sput v0, Lrza;->v0:I
+    invoke-direct {p0}, Lrza;->getIconView()Landroid/widget/ImageView;
 
-    sget v0, Lmoc;->profile_edit_short_link_recycler:I
+    move-result-object v0
 
-    sput v0, Lrza;->w0:I
+    invoke-virtual {v0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
-    sget v0, Lmoc;->profile_edit_short_link_toolbar:I
+    move-result-object v0
 
-    sput v0, Lrza;->x0:I
+    if-eqz v0, :cond_0
 
-    sget v0, Lmoc;->profile_edit_shortlink_action_copy:I
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setTint(I)V
 
-    sput v0, Lrza;->y0:I
+    :cond_0
+    invoke-virtual {p0}, Lrza;->getAppearance()Lnza;
 
-    sget v0, Lmoc;->profile_edit_shortlink_action_qr_code:I
+    move-result-object p1
 
-    sput v0, Lrza;->z0:I
+    invoke-virtual {p0, p0, p1}, Lrza;->c(Landroid/view/View;Lnza;)V
 
-    sget v0, Lmoc;->profile_edit_shortlink_action_refresh_link:I
+    invoke-direct {p0}, Lrza;->getTextView()Landroidx/appcompat/widget/AppCompatTextView;
 
-    sput v0, Lrza;->A0:I
+    move-result-object p1
 
-    sget v0, Lmoc;->profile_edit_shortlink_action_share:I
+    invoke-direct {p0}, Lrza;->getCurrentTheme()Lyeb;
 
-    sput v0, Lrza;->B0:I
+    move-result-object v0
 
-    sget v0, Lmoc;->profile_edit_shortlink_action_share_external:I
+    invoke-interface {v0}, Lyeb;->getText()Lu3g;
 
-    sput v0, Lrza;->C0:I
+    move-result-object v0
 
-    sget v0, Lmoc;->profile_edit_shortlink_confirm_button:I
+    iget v0, v0, Lu3g;->e:I
 
-    sput v0, Lrza;->D0:I
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    sget v0, Lmoc;->profile_edit_shortlink_confirm_update:I
+    return-void
+.end method
 
-    sput v0, Lrza;->E0:I
+.method public final setAppearance(Lnza;)V
+    .locals 2
 
+    sget-object v0, Lrza;->t0:[Lyy7;
+
+    const/4 v1, 0x2
+
+    aget-object v0, v0, v1
+
+    iget-object v1, p0, Lrza;->s0:Lqza;
+
+    invoke-virtual {v1, p0, v0, p1}, Li3;->O(Ljava/lang/Object;Lyy7;Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final setCustomTheme(Lyeb;)V
+    .locals 2
+
+    sget-object v0, Lrza;->t0:[Lyy7;
+
+    const/4 v1, 0x0
+
+    aget-object v0, v0, v1
+
+    iget-object v1, p0, Lrza;->d:Lqza;
+
+    invoke-virtual {v1, p0, v0, p1}, Li3;->O(Ljava/lang/Object;Lyy7;Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public setEnabled(Z)V
+    .locals 0
+
+    invoke-super {p0, p1}, Landroid/view/View;->setEnabled(Z)V
+
+    if-eqz p1, :cond_0
+
+    const/high16 p1, 0x3f800000    # 1.0f
+
+    goto :goto_0
+
+    :cond_0
+    const p1, 0x3ef5c28f    # 0.48f
+
+    :goto_0
+    invoke-virtual {p0, p1}, Landroid/view/View;->setAlpha(F)V
+
+    return-void
+.end method
+
+.method public final setIcon(I)V
+    .locals 1
+
+    .line 5
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    .line 6
+    invoke-static {v0, p1}, Lr34;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    .line 7
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    .line 8
+    invoke-virtual {p0, p1}, Lrza;->setIcon(Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+.end method
+
+.method public final setIcon(Landroid/graphics/drawable/Drawable;)V
+    .locals 2
+
+    .line 1
+    invoke-direct {p0}, Lrza;->getIconView()Landroid/widget/ImageView;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    if-ne v0, p1, :cond_0
+
+    return-void
+
+    :cond_0
+    if-eqz p1, :cond_1
+
+    .line 2
+    iget-object v0, p0, Lrza;->c:Lem6;
+
+    sget-object v1, La93;->s0:Lv1a;
+
+    invoke-virtual {v1, p0}, Lv1a;->y(Landroid/view/View;)Lyeb;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Lem6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setTint(I)V
+
+    .line 3
+    :cond_1
+    invoke-direct {p0}, Lrza;->getIconView()Landroid/widget/ImageView;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 4
+    invoke-virtual {p0}, Lrza;->b()V
+
+    return-void
+.end method
+
+.method public final setIconTintResolver(Lem6;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lem6;",
+            ")V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lrza;->c:Lem6;
+
+    return-void
+.end method
+
+.method public final setMode(Loza;)V
+    .locals 2
+
+    sget-object v0, Lrza;->t0:[Lyy7;
+
+    const/4 v1, 0x1
+
+    aget-object v0, v0, v1
+
+    iget-object v1, p0, Lrza;->o:Lqza;
+
+    invoke-virtual {v1, p0, v0, p1}, Li3;->O(Ljava/lang/Object;Lyy7;Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final setText(I)V
+    .locals 1
+
+    .line 6
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lrza;->setText(Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public final setText(Ljava/lang/CharSequence;)V
+    .locals 2
+
+    .line 1
+    invoke-virtual {p0}, Lrza;->getMode()Loza;
+
+    move-result-object v0
+
+    sget-object v1, Loza;->b:Loza;
+
+    if-ne v0, v1, :cond_2
+
+    invoke-direct {p0}, Lrza;->getTextView()Landroidx/appcompat/widget/AppCompatTextView;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroidx/appcompat/widget/AppCompatTextView;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    invoke-static {v0, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    .line 2
+    :cond_0
+    invoke-direct {p0}, Lrza;->getTextView()Landroidx/appcompat/widget/AppCompatTextView;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 3
+    invoke-direct {p0}, Lrza;->getTextView()Landroidx/appcompat/widget/AppCompatTextView;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p1
+
+    if-nez p1, :cond_1
+
+    .line 4
+    invoke-direct {p0}, Lrza;->getTextView()Landroidx/appcompat/widget/AppCompatTextView;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    .line 5
+    :cond_1
+    invoke-virtual {p0}, Lrza;->b()V
+
+    :cond_2
+    :goto_0
     return-void
 .end method

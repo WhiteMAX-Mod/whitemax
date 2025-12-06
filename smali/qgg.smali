@@ -1,161 +1,76 @@
-.class public final synthetic Lqgg;
-.super Ljava/lang/Object;
+.class public final Lqgg;
+.super Lj0e;
 .source "SourceFile"
 
-# interfaces
-.implements Lqif;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lrgg;
-
-.field public final synthetic c:Lhc0;
+# static fields
+.field public static final c:Lqgg;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrgg;Lhc0;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p3, p0, Lqgg;->a:I
+    new-instance v0, Lqgg;
 
-    iput-object p1, p0, Lqgg;->b:Lrgg;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lqgg;->c:Lhc0;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lqgg;->c:Lqgg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 4
+.method public final a()Lh0e;
+    .locals 1
 
-    iget v0, p0, Lqgg;->a:I
+    new-instance v0, Lpgg;
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lqgg;->b:Lrgg;
-
-    iget-object v0, v0, Lrgg;->c:Lmf5;
-
-    check-cast v0, Lvkd;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Lek9;
-
-    const/16 v2, 0x16
-
-    iget-object v3, p0, Lqgg;->c:Lhc0;
-
-    invoke-direct {v1, v0, v2, v3}, Lek9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v1}, Lvkd;->o(Ltkd;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Iterable;
+    invoke-direct {v0}, Lpgg;-><init>()V
 
     return-object v0
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lqgg;->c:Lhc0;
+.method public final b(Ljava/lang/Runnable;)Lpy4;
+    .locals 0
 
-    iget-object v1, p0, Lqgg;->b:Lrgg;
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    iget-object v1, v1, Lrgg;->c:Lmf5;
+    sget-object p1, Lcd5;->a:Lcd5;
 
-    check-cast v1, Lvkd;
+    return-object p1
+.end method
 
-    invoke-virtual {v1}, Lvkd;->m()Landroid/database/sqlite/SQLiteDatabase;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
+.method public final c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lpy4;
+    .locals 0
 
     :try_start_0
-    invoke-static {v2, v0}, Lvkd;->n(Landroid/database/sqlite/SQLiteDatabase;Lhc0;)Ljava/lang/Long;
+    invoke-virtual {p4, p2, p3}, Ljava/util/concurrent/TimeUnit;->sleep(J)V
 
-    move-result-object v0
+    const-string p2, "run is null"
 
-    if-nez v0, :cond_0
+    invoke-static {p1, p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {v1}, Lvkd;->m()Landroid/database/sqlite/SQLiteDatabase;
+    :catch_0
+    move-exception p1
 
-    move-result-object v1
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    const-string v3, "SELECT 1 FROM events WHERE context_id = ? LIMIT 1"
+    move-result-object p2
 
-    invoke-virtual {v0}, Ljava/lang/Long;->toString()Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/lang/Thread;->interrupt()V
 
-    move-result-object v0
-
-    filled-new-array {v0}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v3, v0}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :try_start_1
-    invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :try_start_2
-    invoke-interface {v0}, Landroid/database/Cursor;->close()V
-
-    move-object v0, v1
+    invoke-static {p1}, Lt8j;->a(Ljava/lang/Throwable;)V
 
     :goto_0
-    invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    sget-object p1, Lcd5;->a:Lcd5;
 
-    invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
-
-    return-object v0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
-    :catchall_1
-    move-exception v1
-
-    :try_start_3
-    invoke-interface {v0}, Landroid/database/Cursor;->close()V
-
-    throw v1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :goto_1
-    invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
-
-    throw v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

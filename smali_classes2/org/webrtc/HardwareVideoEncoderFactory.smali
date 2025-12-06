@@ -303,7 +303,7 @@
 
     if-lt v0, v1, :cond_0
 
-    invoke-static {p1}, La15;->A(Landroid/media/MediaCodecInfo;)Z
+    invoke-static {p1}, Ly35;->A(Landroid/media/MediaCodecInfo;)Z
 
     move-result p1
 

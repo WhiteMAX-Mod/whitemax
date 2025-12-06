@@ -1,61 +1,27 @@
-.class public abstract Lfq3;
-.super Ljava/lang/Object;
+.class public final Lfq3;
+.super Lxfh;
 .source "SourceFile"
 
 
+# instance fields
+.field public final b:Lzi1;
+
+.field public final c:Lqv1;
+
+.field public final d:Lks1;
+
+
 # direct methods
-.method public static a()Z
-    .locals 4
+.method public constructor <init>(Lzi1;Lqv1;Lks1;)V
+    .locals 0
 
-    invoke-static {}, Lorg/conscrypt/Conscrypt;->version()Lorg/conscrypt/Conscrypt$Version;
+    invoke-direct {p0}, Lxfh;-><init>()V
 
-    move-result-object v0
+    iput-object p1, p0, Lfq3;->b:Lzi1;
 
-    invoke-virtual {v0}, Lorg/conscrypt/Conscrypt$Version;->major()I
+    iput-object p2, p0, Lfq3;->c:Lqv1;
 
-    move-result v1
+    iput-object p3, p0, Lfq3;->d:Lks1;
 
-    const/4 v2, 0x2
-
-    const/4 v3, 0x1
-
-    if-eq v1, v2, :cond_0
-
-    invoke-virtual {v0}, Lorg/conscrypt/Conscrypt$Version;->major()I
-
-    move-result v0
-
-    if-le v0, v2, :cond_2
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Lorg/conscrypt/Conscrypt$Version;->minor()I
-
-    move-result v1
-
-    if-eq v1, v3, :cond_1
-
-    invoke-virtual {v0}, Lorg/conscrypt/Conscrypt$Version;->minor()I
-
-    move-result v0
-
-    if-le v0, v3, :cond_2
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v0}, Lorg/conscrypt/Conscrypt$Version;->patch()I
-
-    move-result v0
-
-    if-ltz v0, :cond_2
-
-    :goto_0
-    return v3
-
-    :cond_2
-    const/4 v0, 0x0
-
-    return v0
+    return-void
 .end method

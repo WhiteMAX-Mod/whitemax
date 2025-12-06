@@ -2,23 +2,58 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Luk5;
 
+# instance fields
+.field public final a:I
 
-# static fields
-.field public static final a:Ltk5;
+.field public final b:Ljava/lang/String;
+
+.field public final c:I
+
+.field public final d:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(ILjava/lang/String;II)V
+    .locals 0
 
-    new-instance v0, Ltk5;
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    .line 7
+    iput-object p2, p0, Ltk5;->b:Ljava/lang/String;
 
-    sput-object v0, Ltk5;->a:Ltk5;
+    .line 8
+    iput p1, p0, Ltk5;->a:I
+
+    .line 9
+    iput p3, p0, Ltk5;->c:I
+
+    .line 10
+    iput p4, p0, Ltk5;->d:I
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Ltk5;->b:Ljava/lang/String;
+
+    .line 3
+    iput p2, p0, Ltk5;->a:I
+
+    .line 4
+    iput p3, p0, Ltk5;->c:I
+
+    const/4 p1, -0x1
+
+    .line 5
+    iput p1, p0, Ltk5;->d:I
 
     return-void
 .end method

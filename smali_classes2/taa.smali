@@ -1,58 +1,147 @@
 .class public final Ltaa;
-.super Lpmf;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Ltaa;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public c:Lru3;
+.field public final a:I
+
+.field public final b:Z
+
+.field public final c:Z
 
 
-# virtual methods
-.method public final d(Lpf9;Ljava/lang/String;)V
-    .locals 1
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-    const-string v0, "contact"
+    new-instance v0, Lpq8;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const/16 v1, 0xe
 
-    move-result p2
+    invoke-direct {v0, v1}, Lpq8;-><init>(I)V
 
-    if-eqz p2, :cond_0
-
-    invoke-static {p1}, Lru3;->g(Lpf9;)Lru3;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ltaa;->c:Lru3;
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p1}, Lpf9;->y()V
+    sput-object v0, Ltaa;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public constructor <init>(Landroid/os/Parcel;)V
     .locals 3
 
-    iget-object v0, p0, Ltaa;->c:Lru3;
+    .line 5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    .line 6
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    const-string v2, "{contact="
+    move-result v0
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iput v0, p0, Ltaa;->a:I
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    .line 7
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
-    const-string v0, "}"
+    move-result v0
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v1, 0x0
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/4 v2, 0x1
 
-    move-result-object v0
+    if-eqz v0, :cond_0
 
-    return-object v0
+    move v0, v2
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v1
+
+    :goto_0
+    iput-boolean v0, p0, Ltaa;->b:Z
+
+    .line 8
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    move v1, v2
+
+    :cond_1
+    iput-boolean v1, p0, Ltaa;->c:Z
+
+    return-void
+.end method
+
+.method public constructor <init>(Lsaa;)V
+    .locals 1
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iget v0, p1, Lsaa;->a:I
+
+    iput v0, p0, Ltaa;->a:I
+
+    .line 3
+    iget-boolean v0, p1, Lsaa;->b:Z
+
+    iput-boolean v0, p0, Ltaa;->b:Z
+
+    .line 4
+    iget-boolean p1, p1, Lsaa;->c:Z
+
+    iput-boolean p1, p0, Ltaa;->c:Z
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    iget p2, p0, Ltaa;->a:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-boolean p2, p0, Ltaa;->b:Z
+
+    int-to-byte p2, p2
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
+
+    iget-boolean p2, p0, Ltaa;->c:Z
+
+    int-to-byte p2, p2
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
+
+    return-void
 .end method

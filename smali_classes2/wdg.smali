@@ -1,73 +1,114 @@
-.class public final enum Lwdg;
-.super Ljava/lang/Enum;
+.class public final Lwdg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnLayoutChangeListener;
 
-# static fields
-.field public static final enum a:Lwdg;
 
-.field public static final enum b:Lwdg;
+# instance fields
+.field public final synthetic a:Landroid/view/View;
 
-.field public static final synthetic c:[Lwdg;
+.field public final synthetic b:Landroid/graphics/Rect;
+
+.field public final synthetic c:I
+
+.field public final synthetic d:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Landroid/view/View;Landroid/graphics/Rect;II)V
+    .locals 0
 
-    new-instance v0, Lwdg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "UNKNOWN"
+    iput-object p1, p0, Lwdg;->a:Landroid/view/View;
 
-    const/4 v2, 0x0
+    iput-object p2, p0, Lwdg;->b:Landroid/graphics/Rect;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput p3, p0, Lwdg;->c:I
 
-    sput-object v0, Lwdg;->a:Lwdg;
-
-    new-instance v1, Lwdg;
-
-    const-string v2, "NOT_ENOUGH_VIDEO_TRACKS"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lwdg;->b:Lwdg;
-
-    filled-new-array {v0, v1}, [Lwdg;
-
-    move-result-object v0
-
-    sput-object v0, Lwdg;->c:[Lwdg;
+    iput p4, p0, Lwdg;->d:I
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lwdg;
-    .locals 1
 
-    const-class v0, Lwdg;
+# virtual methods
+.method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
-    move-result-object p0
+    iget-object p1, p0, Lwdg;->a:Landroid/view/View;
 
-    check-cast p0, Lwdg;
+    iget-object p2, p0, Lwdg;->b:Landroid/graphics/Rect;
 
-    return-object p0
-.end method
+    invoke-virtual {p1, p2}, Landroid/view/View;->getHitRect(Landroid/graphics/Rect;)V
 
-.method public static values()[Lwdg;
-    .locals 1
+    invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
 
-    sget-object v0, Lwdg;->c:[Lwdg;
+    move-result p3
 
-    invoke-virtual {v0}, [Lwdg;->clone()Ljava/lang/Object;
+    iget p4, p0, Lwdg;->c:I
 
-    move-result-object v0
+    if-ge p3, p4, :cond_0
 
-    check-cast v0, [Lwdg;
+    invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
 
-    return-object v0
+    move-result p3
+
+    sub-int/2addr p4, p3
+
+    iget p3, p2, Landroid/graphics/Rect;->left:I
+
+    div-int/lit8 p4, p4, 0x2
+
+    sub-int/2addr p3, p4
+
+    iput p3, p2, Landroid/graphics/Rect;->left:I
+
+    iget p3, p2, Landroid/graphics/Rect;->right:I
+
+    add-int/2addr p3, p4
+
+    iput p3, p2, Landroid/graphics/Rect;->right:I
+
+    :cond_0
+    invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
+
+    move-result p3
+
+    iget p4, p0, Lwdg;->d:I
+
+    if-ge p3, p4, :cond_1
+
+    invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
+
+    move-result p3
+
+    sub-int/2addr p4, p3
+
+    iget p3, p2, Landroid/graphics/Rect;->top:I
+
+    div-int/lit8 p4, p4, 0x2
+
+    sub-int/2addr p3, p4
+
+    iput p3, p2, Landroid/graphics/Rect;->top:I
+
+    iget p3, p2, Landroid/graphics/Rect;->bottom:I
+
+    add-int/2addr p3, p4
+
+    iput p3, p2, Landroid/graphics/Rect;->bottom:I
+
+    :cond_1
+    new-instance p3, Len5;
+
+    invoke-direct {p3, p2, p1}, Len5;-><init>(Landroid/graphics/Rect;Landroid/view/View;)V
+
+    invoke-virtual {p1, p3}, Landroid/view/View;->setTouchDelegate(Landroid/view/TouchDelegate;)V
+
+    return-void
 .end method

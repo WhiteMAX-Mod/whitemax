@@ -1,7 +1,17 @@
-.class public final Ldf5;
-.super Lkotlinx/coroutines/internal/ThreadSafeHeap;
+.class public interface abstract Ldf5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public b:J
+# virtual methods
+.method public abstract a()I
+.end method
+
+.method public abstract b()I
+.end method
+
+.method public abstract c()Ljava/util/List;
+.end method
+
+.method public abstract d()Ljava/util/List;
+.end method

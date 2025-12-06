@@ -1,80 +1,130 @@
-.class public final Lc4i;
-.super Ljava/lang/Object;
+.class public Lc4i;
+.super Lb4i;
 .source "SourceFile"
 
-# interfaces
-.implements Ltha;
 
+# instance fields
+.field public n:Lco7;
 
-# static fields
-.field public static final a:Lc4i;
+.field public o:Lco7;
+
+.field public p:Lco7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lg4i;Landroid/view/WindowInsets;)V
+    .locals 0
 
-    new-instance v0, Lc4i;
+    invoke-direct {p0, p1, p2}, Lb4i;-><init>(Lg4i;Landroid/view/WindowInsets;)V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x0
 
-    sput-object v0, Lc4i;->a:Lc4i;
+    iput-object p1, p0, Lc4i;->n:Lco7;
 
-    new-instance v0, Ltwh;
+    iput-object p1, p0, Lc4i;->o:Lco7;
 
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ltwh;-><init>(I)V
-
-    const-class v1, Lmxh;
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
+    iput-object p1, p0, Lc4i;->p:Lco7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public g()Lco7;
+    .locals 1
 
-    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget-object v0, p0, Lc4i;->o:Lco7;
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lz3i;->c:Landroid/view/WindowInsets;
+
+    invoke-static {v0}, Lyhh;->q(Landroid/view/WindowInsets;)Landroid/graphics/Insets;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lco7;->c(Landroid/graphics/Insets;)Lco7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lc4i;->o:Lco7;
+
+    :cond_0
+    iget-object v0, p0, Lc4i;->o:Lco7;
+
+    return-object v0
+.end method
+
+.method public i()Lco7;
+    .locals 1
+
+    iget-object v0, p0, Lc4i;->n:Lco7;
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lz3i;->c:Landroid/view/WindowInsets;
+
+    invoke-static {v0}, Lyhh;->u(Landroid/view/WindowInsets;)Landroid/graphics/Insets;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lco7;->c(Landroid/graphics/Insets;)Lco7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lc4i;->n:Lco7;
+
+    :cond_0
+    iget-object v0, p0, Lc4i;->n:Lco7;
+
+    return-object v0
+.end method
+
+.method public k()Lco7;
+    .locals 1
+
+    iget-object v0, p0, Lc4i;->p:Lco7;
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lz3i;->c:Landroid/view/WindowInsets;
+
+    invoke-static {v0}, Lyhh;->b(Landroid/view/WindowInsets;)Landroid/graphics/Insets;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lco7;->c(Landroid/graphics/Insets;)Lco7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lc4i;->p:Lco7;
+
+    :cond_0
+    iget-object v0, p0, Lc4i;->p:Lco7;
+
+    return-object v0
+.end method
+
+.method public l(IIII)Lg4i;
+    .locals 1
+
+    iget-object v0, p0, Lz3i;->c:Landroid/view/WindowInsets;
+
+    invoke-static {v0, p1, p2, p3, p4}, Lyhh;->i(Landroid/view/WindowInsets;IIII)Landroid/view/WindowInsets;
 
     move-result-object p1
 
-    throw p1
+    const/4 p2, 0x0
+
+    invoke-static {p2, p1}, Lg4i;->h(Landroid/view/View;Landroid/view/WindowInsets;)Lg4i;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public r(Lco7;)V
+    .locals 0
+
+    return-void
 .end method

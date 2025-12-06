@@ -1,126 +1,200 @@
 .class public final Laoa;
-.super Lca5;
+.super Loj0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArrayList;
+.field public final synthetic a:I
 
-.field public final synthetic b:Lone/me/android/OneMeApplication;
+.field public final synthetic b:Ll42;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/android/OneMeApplication;)V
+.method public synthetic constructor <init>(Ll42;I)V
     .locals 0
 
+    iput p2, p0, Laoa;->a:I
+
+    iput-object p1, p0, Laoa;->b:Ll42;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Laoa;->b:Lone/me/android/OneMeApplication;
-
-    new-instance p1, Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-direct {p1}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
-
-    iput-object p1, p0, Laoa;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 0
+.method public final c()V
+    .locals 3
 
-    sget-object p2, Lone/me/android/OneMeApplication;->r0:Lwna;
+    iget v0, p0, Laoa;->a:I
 
-    invoke-static {p1}, Lwna;->a(Landroid/app/Activity;)Z
+    packed-switch v0, :pswitch_data_0
 
-    move-result p2
+    iget-object v0, p0, Laoa;->b:Ll42;
 
-    if-eqz p2, :cond_0
-
-    new-instance p2, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Laoa;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {p1, p2}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onActivityDestroyed(Landroid/app/Activity;)V
-    .locals 2
-
-    new-instance v0, Ler;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p1, v1}, Ler;-><init>(Landroid/app/Activity;I)V
-
-    new-instance p1, Lz5;
-
-    const/16 v1, 0x8
-
-    invoke-direct {p1, v1, v0}, Lz5;-><init>(ILjava/lang/Object;)V
-
-    iget-object v0, p0, Laoa;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->removeIf(Ljava/util/function/Predicate;)Z
-
-    return-void
-.end method
-
-.method public final onActivityResumed(Landroid/app/Activity;)V
-    .locals 2
-
-    sget-object v0, Lone/me/android/OneMeApplication;->r0:Lwna;
-
-    invoke-static {p1}, Lwna;->a(Landroid/app/Activity;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    sget-object p1, Ll05;->s0:Lk82;
-
-    iget-object v0, p0, Laoa;->b:Lone/me/android/OneMeApplication;
-
-    invoke-virtual {p1, v0}, Lk82;->e(Landroid/content/Context;)Ll05;
-
-    move-result-object p1
-
-    iget-object p1, p1, Ll05;->q0:Ljava/lang/Object;
-
-    check-cast p1, Lx0f;
-
-    :cond_0
-    invoke-virtual {p1}, Lx0f;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v1, v0
-
-    check-cast v1, Ljava/lang/Number;
-
-    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
+    invoke-virtual {v0}, Ll42;->r()Z
 
     move-result v1
 
-    add-int/lit8 v1, v1, 0x1
+    if-eqz v1, :cond_0
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    new-instance v1, Ljava/lang/Throwable;
 
-    move-result-object v1
+    const-string v2, "Cancelled with fresco pipeline"
 
-    invoke-virtual {p1, v0, v1}, Lx0f;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-direct {v1, v2}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
 
-    move-result v0
+    invoke-virtual {v0, v1}, Ll42;->h(Ljava/lang/Throwable;)Z
 
-    if-eqz v0, :cond_0
+    :cond_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Laoa;->b:Ll42;
+
+    invoke-virtual {v0}, Ll42;->r()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    new-instance v1, Ljava/util/concurrent/CancellationException;
+
+    const-string v2, "Cancelled with fresco pipeline"
+
+    invoke-direct {v1, v2}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Ll42;->h(Ljava/lang/Throwable;)Z
 
     :cond_1
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final e(Lpe4;)V
+    .locals 3
+
+    iget v0, p0, Laoa;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object p1, p0, Laoa;->b:Ll42;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Ll42;->resumeWith(Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Laoa;->b:Ll42;
+
+    invoke-virtual {v0}, Ll42;->r()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    check-cast p1, Lr0;
+
+    invoke-virtual {p1}, Lr0;->b()Ljava/lang/Throwable;
+
+    move-result-object p1
+
+    const-string v2, "Fetch failed"
+
+    invoke-direct {v1, v2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    new-instance p1, Lipd;
+
+    invoke-direct {p1, v1}, Lipd;-><init>(Ljava/lang/Throwable;)V
+
+    invoke-virtual {v0, p1}, Ll42;->resumeWith(Ljava/lang/Object;)V
+
+    :cond_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final f(Lr0;)V
+    .locals 3
+
+    iget v0, p0, Laoa;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p1}, Lr0;->g()Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Laoa;->b:Ll42;
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {v2, v1}, Ll42;->resumeWith(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-interface {p1}, Lpe4;->d()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lvc3;
+
+    invoke-static {p1}, Lvc3;->y(Lvc3;)Lvc3;
+
+    move-result-object p1
+
+    if-nez p1, :cond_1
+
+    invoke-virtual {v2, v1}, Ll42;->resumeWith(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p1}, Lvc3;->Z()Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v2, p1}, Ll42;->resumeWith(Ljava/lang/Object;)V
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Laoa;->b:Ll42;
+
+    invoke-virtual {p1}, Ll42;->r()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    sget-object v0, Lqqg;->a:Lqqg;
+
+    invoke-virtual {p1, v0}, Ll42;->resumeWith(Ljava/lang/Object;)V
+
+    :cond_2
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

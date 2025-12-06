@@ -1,20 +1,23 @@
-.class public interface abstract Lvl5;
+.class public abstract Lvl5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract d(JJ)V
-.end method
+# direct methods
+.method public static a()Lm4c;
+    .locals 3
 
-.method public abstract g(Lzl5;)V
-.end method
+    new-instance v0, Lm4c;
 
-.method public abstract h(Lxl5;)Z
-.end method
+    invoke-static {}, Lz19;->f()Landroid/media/metrics/LogSessionId;
 
-.method public abstract i(Lxl5;Lq7;)I
-.end method
+    move-result-object v1
 
-.method public abstract release()V
+    new-instance v2, Ll4c;
+
+    invoke-direct {v2, v1}, Ll4c;-><init>(Landroid/media/metrics/LogSessionId;)V
+
+    invoke-direct {v0, v2}, Lm4c;-><init>(Ll4c;)V
+
+    return-object v0
 .end method

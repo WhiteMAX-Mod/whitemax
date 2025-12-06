@@ -1,234 +1,185 @@
-.class public final Lkj2;
+.class public abstract Lkj2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:J
+# static fields
+.field public static final a:Ljava/lang/Object;
 
-.field public final b:Lnje;
-
-.field public final c:Lkotlinx/coroutines/internal/ContextScope;
+.field public static b:Ljava/util/concurrent/ExecutorService;
 
 
 # direct methods
-.method public constructor <init>(JLpw0;Lulf;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/lang/Object;
 
-    iput-wide p1, p0, Lkj2;->a:J
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x0
-
-    const/4 p2, 0x7
-
-    invoke-static {p1, p1, p2}, Loje;->b(III)Lnje;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lkj2;->b:Lnje;
-
-    check-cast p4, Lqta;
-
-    invoke-virtual {p4}, Lqta;->a()Lk54;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ldxi;->a(Li54;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lkj2;->c:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-virtual {p3, p0}, Lpw0;->d(Ljava/lang/Object;)V
+    sput-object v0, Lkj2;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(Lij2;)V
-    .locals 3
-
-    new-instance v0, Ljj2;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, p1, v1}, Ljj2;-><init>(Lkj2;Lij2;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x3
-
-    iget-object v2, p0, Lkj2;->c:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v2, v1, v1, v0, p1}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
-
-    return-void
-.end method
-
-.method public final onEvent(Ldeg;)V
+.method public static final a(Lg8g;Lum6;Ljava/lang/Throwable;Lq44;)Ljava/lang/Object;
     .locals 4
-    .annotation runtime Lzbf;
-    .end annotation
 
-    .line 11
-    iget-wide v0, p1, Ldeg;->b:J
-
-    .line 12
-    iget-wide v2, p0, Lkj2;->a:J
-
-    cmp-long v0, v0, v2
+    instance-of v0, p3, Ll46;
 
     if-eqz v0, :cond_0
 
-    return-void
+    move-object v0, p3
 
-    .line 13
-    :cond_0
-    new-instance v0, Lhj2;
+    check-cast v0, Ll46;
 
-    .line 14
-    iget-wide v1, p1, Ldeg;->c:J
+    iget v1, v0, Ll46;->X:I
 
-    .line 15
-    invoke-direct {v0, v1, v2}, Lhj2;-><init>(J)V
+    const/high16 v2, -0x80000000
 
-    invoke-virtual {p0, v0}, Lkj2;->a(Lij2;)V
+    and-int v3, v1, v2
 
-    return-void
-.end method
+    if-eqz v3, :cond_0
 
-.method public final onEvent(Llab;)V
-    .locals 4
-    .annotation runtime Lzbf;
-    .end annotation
+    sub-int/2addr v1, v2
 
-    .line 6
-    iget-wide v0, p1, Llab;->b:J
-
-    .line 7
-    iget-wide v2, p0, Lkj2;->a:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    .line 8
-    :cond_0
-    new-instance v0, Ldj2;
-
-    .line 9
-    iget-wide v1, p1, Llab;->o:J
-
-    .line 10
-    invoke-direct {v0, v1, v2}, Ldj2;-><init>(J)V
-
-    invoke-virtual {p0, v0}, Lkj2;->a(Lij2;)V
-
-    return-void
-.end method
-
-.method public final onEvent(Lme7;)V
-    .locals 4
-    .annotation runtime Lzbf;
-    .end annotation
-
-    .line 1
-    iget-wide v0, p1, Lme7;->b:J
-
-    .line 2
-    iget-wide v2, p0, Lkj2;->a:J
-
-    cmp-long v0, v0, v2
-
-    if-nez v0, :cond_1
-
-    iget-boolean v0, p1, Lme7;->Y:Z
-
-    if-eqz v0, :cond_0
+    iput v1, v0, Ll46;->X:I
 
     goto :goto_0
 
-    .line 3
     :cond_0
-    new-instance v0, Ldj2;
+    new-instance v0, Ll46;
 
-    .line 4
-    iget-wide v1, p1, Lme7;->c:J
+    invoke-direct {v0, p3}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    .line 5
-    invoke-direct {v0, v1, v2}, Ldj2;-><init>(J)V
+    :goto_0
+    iget-object p3, v0, Ll46;->o:Ljava/lang/Object;
 
-    invoke-virtual {p0, v0}, Lkj2;->a(Lij2;)V
+    iget v1, v0, Ll46;->X:I
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_2
+
+    if-ne v1, v2, :cond_1
+
+    iget-object p2, v0, Ll46;->d:Ljava/lang/Throwable;
+
+    :try_start_0
+    invoke-static {p3}, Lg8j;->b(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_2
 
     :cond_1
-    :goto_0
-    return-void
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_2
+    invoke-static {p3}, Lg8j;->b(Ljava/lang/Object;)V
+
+    :try_start_1
+    iput-object p2, v0, Ll46;->d:Ljava/lang/Throwable;
+
+    iput v2, v0, Ll46;->X:I
+
+    invoke-interface {p1, p0, p2, v0}, Lum6;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    sget-object p1, Lg84;->a:Lg84;
+
+    if-ne p0, p1, :cond_3
+
+    return-object p1
+
+    :cond_3
+    :goto_1
+    sget-object p0, Lqqg;->a:Lqqg;
+
+    return-object p0
+
+    :goto_2
+    if-eqz p2, :cond_4
+
+    if-eq p2, p0, :cond_4
+
+    invoke-static {p0, p2}, Lsaj;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    :cond_4
+    throw p0
 .end method
 
-.method public final onEvent(Lrx4;)V
-    .locals 3
-    .annotation runtime Lzbf;
-    .end annotation
+.method public static b(Ly5c;J)V
+    .locals 5
 
-    .line 16
-    new-instance v0, Lej2;
+    const-wide/16 v0, 0x0
 
-    iget-wide v1, p1, Lrx4;->X:J
+    cmp-long v2, p1, v0
 
-    iget-object p1, p1, Lrx4;->o:Ljava/lang/String;
+    if-ltz v2, :cond_0
 
-    invoke-direct {v0, v1, v2, p1}, Lej2;-><init>(JLjava/lang/String;)V
+    const/4 v2, 0x1
 
-    invoke-virtual {p0, v0}, Lkj2;->a(Lij2;)V
+    goto :goto_0
 
-    return-void
-.end method
-
-.method public final onEvent(Ltx4;)V
-    .locals 3
-    .annotation runtime Lzbf;
-    .end annotation
-
-    .line 17
-    new-instance v0, Lfj2;
-
-    iget-wide v1, p1, Ltx4;->o:J
-
-    invoke-direct {v0, v1, v2}, Lfj2;-><init>(J)V
-
-    invoke-virtual {p0, v0}, Lkj2;->a(Lij2;)V
-
-    return-void
-.end method
-
-.method public final onEvent(Lww9;)V
-    .locals 4
-    .annotation runtime Lzbf;
-    .end annotation
-
-    .line 18
-    iget-wide v0, p1, Lww9;->b:J
-
-    iget-wide v2, p0, Lkj2;->a:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    .line 19
     :cond_0
-    new-instance v0, Lgj2;
+    const/4 v2, 0x0
 
-    iget-object p1, p1, Lww9;->X:Ljava/util/List;
+    :goto_0
+    if-eqz v2, :cond_3
 
-    invoke-direct {v0, p1}, Lgj2;-><init>(Ljava/util/List;)V
+    :goto_1
+    cmp-long v2, p1, v0
 
-    invoke-virtual {p0, v0}, Lkj2;->a(Lij2;)V
+    if-lez v2, :cond_2
 
+    invoke-virtual {p0, p1, p2}, Ly5c;->skip(J)J
+
+    move-result-wide v2
+
+    cmp-long v4, v2, v0
+
+    if-lez v4, :cond_1
+
+    :goto_2
+    sub-long/2addr p1, v2
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p0}, Ly5c;->read()I
+
+    move-result v2
+
+    const/4 v3, -0x1
+
+    if-eq v2, v3, :cond_2
+
+    const-wide/16 v2, 0x1
+
+    goto :goto_2
+
+    :cond_2
     return-void
+
+    :cond_3
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw p0
 .end method

@@ -1,49 +1,30 @@
-.class public final Luo6;
-.super Ly14;
+.class public abstract Luo6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lvo6;
-
-.field public Z:I
-
-.field public o:Lvo6;
-
-
-# direct methods
-.method public constructor <init>(Lvo6;Ly14;)V
+# virtual methods
+.method public a(Loo6;)[Ljava/lang/String;
     .locals 0
 
-    iput-object p1, p0, Luo6;->Y:Lvo6;
+    const/4 p1, 0x0
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
+    return-object p1
 .end method
 
+.method public abstract b()Ljava/lang/String;
+.end method
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public abstract c()Ll4;
+.end method
 
-    iput-object p1, p0, Luo6;->X:Ljava/lang/Object;
+.method public abstract d()Ljava/util/List;
+.end method
 
-    iget p1, p0, Luo6;->Z:I
+.method public e(Loo6;)Ljava/lang/String;
+    .locals 0
 
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Luo6;->Z:I
-
-    iget-object p1, p0, Luo6;->Y:Lvo6;
-
-    invoke-virtual {p1, p0}, Lvo6;->d(Ly14;)Ljava/lang/Object;
-
-    move-result-object p1
+    iget-object p1, p1, Loo6;->a:Ljava/lang/String;
 
     return-object p1
 .end method

@@ -1,134 +1,107 @@
-.class public final Lmdi;
-.super Lrdi;
+.class public abstract Lmdi;
+.super Lpci;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/Set;
+
+
+# instance fields
+.field public transient b:Lzci;
 
 
 # virtual methods
-.method public final L0(JLjava/lang/Object;)D
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v0, p0, Lrdi;->b:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    check-cast v0, Lsun/misc/Unsafe;
+    if-eq p1, p0, :cond_3
 
-    invoke-virtual {v0, p3, p1, p2}, Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J
+    if-ne p1, p0, :cond_0
 
-    move-result-wide p1
-
-    invoke-static {p1, p2}, Ljava/lang/Double;->longBitsToDouble(J)D
-
-    move-result-wide p1
-
-    return-wide p1
-.end method
-
-.method public final M0(JLjava/lang/Object;)F
-    .locals 1
-
-    iget-object v0, p0, Lrdi;->b:Ljava/lang/Object;
-
-    check-cast v0, Lsun/misc/Unsafe;
-
-    invoke-virtual {v0, p3, p1, p2}, Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Float;->intBitsToFloat(I)F
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final N0(Ljava/lang/Object;JZ)V
-    .locals 1
-
-    sget-boolean v0, Ludi;->g:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p1, p2, p3, p4}, Ludi;->c(Ljava/lang/Object;JB)V
-
-    return-void
+    return v0
 
     :cond_0
-    invoke-static {p1, p2, p3, p4}, Ludi;->d(Ljava/lang/Object;JB)V
+    instance-of v1, p1, Ljava/util/Set;
 
-    return-void
-.end method
+    const/4 v2, 0x0
 
-.method public final O0(Ljava/lang/Object;JB)V
-    .locals 1
+    if-eqz v1, :cond_2
 
-    sget-boolean v0, Ludi;->g:Z
+    check-cast p1, Ljava/util/Set;
 
-    if-eqz v0, :cond_0
+    :try_start_0
+    invoke-interface {p0}, Ljava/util/Set;->size()I
 
-    invoke-static {p1, p2, p3, p4}, Ludi;->c(Ljava/lang/Object;JB)V
+    move-result v1
 
-    return-void
+    invoke-interface {p1}, Ljava/util/Set;->size()I
 
-    :cond_0
-    invoke-static {p1, p2, p3, p4}, Ludi;->d(Ljava/lang/Object;JB)V
+    move-result v3
 
-    return-void
-.end method
+    if-ne v1, v3, :cond_2
 
-.method public final P0(Ljava/lang/Object;JD)V
-    .locals 6
-
-    invoke-static {p4, p5}, Ljava/lang/Double;->doubleToLongBits(D)J
-
-    move-result-wide v4
-
-    iget-object p4, p0, Lrdi;->b:Ljava/lang/Object;
-
-    move-object v0, p4
-
-    check-cast v0, Lsun/misc/Unsafe;
-
-    move-object v1, p1
-
-    move-wide v2, p2
-
-    invoke-virtual/range {v0 .. v5}, Lsun/misc/Unsafe;->putLong(Ljava/lang/Object;JJ)V
-
-    return-void
-.end method
-
-.method public final Q0(Ljava/lang/Object;JF)V
-    .locals 1
-
-    invoke-static {p4}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result p4
-
-    iget-object v0, p0, Lrdi;->b:Ljava/lang/Object;
-
-    check-cast v0, Lsun/misc/Unsafe;
-
-    invoke-virtual {v0, p1, p2, p3, p4}, Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V
-
-    return-void
-.end method
-
-.method public final R0(JLjava/lang/Object;)Z
-    .locals 1
-
-    sget-boolean v0, Ludi;->g:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p1, p2, p3}, Ludi;->m(JLjava/lang/Object;)Z
+    invoke-interface {p0, p1}, Ljava/util/Set;->containsAll(Ljava/util/Collection;)Z
 
     move-result p1
+    :try_end_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return p1
+    if-nez p1, :cond_1
+
+    return v2
+
+    :cond_1
+    return v0
+
+    :catch_0
+    :cond_2
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+
+    move-result v3
+
+    goto :goto_1
 
     :cond_0
-    invoke-static {p1, p2, p3}, Ludi;->n(JLjava/lang/Object;)Z
+    move v3, v1
 
-    move-result p1
+    :goto_1
+    add-int/2addr v2, v3
 
-    return p1
+    goto :goto_0
+
+    :cond_1
+    return v2
 .end method

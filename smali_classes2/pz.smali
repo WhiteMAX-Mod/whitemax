@@ -1,59 +1,53 @@
-.class public abstract synthetic Lpz;
-.super Ljava/lang/Object;
+.class public final Lpz;
+.super Lq44;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lrz;
+
+.field public Z:I
+
+.field public d:Ljdc;
+
+.field public o:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lrz;Lq44;)V
+    .locals 0
 
-    invoke-static {}, La20;->values()[La20;
+    iput-object p1, p0, Lpz;->Y:Lrz;
 
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x2
-
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    const/4 v1, 0x3
-
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    const/4 v2, 0x4
-
-    :try_start_2
-    aput v1, v0, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    const/4 v1, 0x5
-
-    :try_start_3
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    sput-object v0, Lpz;->$EnumSwitchMapping$0:[I
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lpz;->X:Ljava/lang/Object;
+
+    iget p1, p0, Lpz;->Z:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lpz;->Z:I
+
+    iget-object p1, p0, Lpz;->Y:Lrz;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lrz;->a(Lgo8;Lq44;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

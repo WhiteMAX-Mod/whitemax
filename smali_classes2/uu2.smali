@@ -1,48 +1,93 @@
 .class public final Luu2;
-.super Ly14;
+.super Ldtf;
+.source "SourceFile"
+
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic X:Lone/me/chatscreen/ChatScreen;
 
-.field public final synthetic Y:Lfo1;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public synthetic o:Z
 
 
 # direct methods
-.method public constructor <init>(Lfo1;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/ChatScreen;)V
     .locals 0
 
-    iput-object p1, p0, Luu2;->Y:Lfo1;
+    iput-object p2, p0, Luu2;->X:Lone/me/chatscreen/ChatScreen;
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Luu2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Luu2;
+
+    sget-object p2, Lqqg;->a:Lqqg;
+
+    invoke-virtual {p1, p2}, Luu2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Luu2;
+
+    iget-object v1, p0, Luu2;->X:Lone/me/chatscreen/ChatScreen;
+
+    invoke-direct {v0, p2, v1}, Luu2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/ChatScreen;)V
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    iput-boolean p1, v0, Luu2;->o:Z
+
+    return-object v0
+.end method
+
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iput-object p1, p0, Luu2;->o:Ljava/lang/Object;
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    iget p1, p0, Luu2;->X:I
+    iget-boolean p1, p0, Luu2;->o:Z
 
-    const/high16 v0, -0x80000000
+    if-eqz p1, :cond_0
 
-    or-int/2addr p1, v0
+    iget-object p1, p0, Luu2;->X:Lone/me/chatscreen/ChatScreen;
 
-    iput p1, p0, Luu2;->X:I
+    invoke-virtual {p1}, Lc54;->getRouter()Lytd;
 
-    iget-object p1, p0, Luu2;->Y:Lfo1;
+    move-result-object v0
 
-    const/4 v0, 0x0
+    invoke-virtual {v0, p1}, Lytd;->B(Lc54;)Z
 
-    invoke-virtual {p1, v0, p0}, Lfo1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
+    :cond_0
+    sget-object p1, Lqqg;->a:Lqqg;
 
     return-object p1
 .end method

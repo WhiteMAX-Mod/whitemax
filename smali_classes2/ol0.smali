@@ -1,25 +1,19 @@
-.class public abstract synthetic Lol0;
+.class public final synthetic Lol0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:Lzd5;
+# instance fields
+.field public final synthetic a:Lvgb;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lvgb;)V
+    .locals 0
 
-    invoke-static {}, Lll0;->values()[Lll0;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
-
-    new-instance v1, Lzd5;
-
-    invoke-direct {v1, v0}, Lzd5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lol0;->a:Lzd5;
+    iput-object p1, p0, Lol0;->a:Lvgb;
 
     return-void
 .end method

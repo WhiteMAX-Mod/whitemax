@@ -1,178 +1,290 @@
-.class public final Lqvi;
-.super Lcom/google/android/gms/common/internal/a;
+.class public abstract Lqvi;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final H0:Li70;
-
-
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;Lcq3;Li70;Louh;Louh;)V
-    .locals 8
+.method public static varargs a([Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+    .locals 5
 
-    const/16 v3, 0x44
+    array-length v0, p0
 
-    const/4 v7, 0x0
+    const/4 v1, 0x0
 
-    move-object v0, p0
+    move v2, v1
 
-    move-object v1, p1
+    move v3, v2
 
-    move-object v2, p2
+    :goto_0
+    if-ge v2, v0, :cond_0
 
-    move-object v4, p3
+    aget-object v4, p0, v2
 
-    move-object v5, p5
+    invoke-virtual {v4}, Ljava/nio/Buffer;->remaining()I
 
-    move-object v6, p6
+    move-result v4
 
-    invoke-direct/range {v0 .. v7}, Lcom/google/android/gms/common/internal/a;-><init>(Landroid/content/Context;Landroid/os/Looper;ILcq3;Lbs6;Lcs6;I)V
+    add-int/2addr v3, v4
 
-    new-instance p1, Ld09;
+    add-int/lit8 v2, v2, 0x1
 
-    if-nez p4, :cond_0
-
-    sget-object p4, Li70;->c:Li70;
-
-    :cond_0
-    const/4 p2, 0x4
-
-    const/4 p3, 0x0
-
-    invoke-direct {p1, p2, p3}, Ld09;-><init>(IZ)V
-
-    sget-object p2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    iput-object p2, p1, Ld09;->b:Ljava/lang/Object;
-
-    invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-boolean p2, p4, Li70;->a:Z
-
-    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p2
-
-    iput-object p2, p1, Ld09;->b:Ljava/lang/Object;
-
-    iget-object p2, p4, Li70;->b:Ljava/lang/String;
-
-    iput-object p2, p1, Ld09;->c:Ljava/lang/Object;
-
-    const/16 p2, 0x10
-
-    new-array p2, p2, [B
-
-    sget-object p3, Lf0i;->a:Ljava/util/Random;
-
-    invoke-virtual {p3, p2}, Ljava/util/Random;->nextBytes([B)V
-
-    const/16 p3, 0xb
-
-    invoke-static {p2, p3}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
-
-    move-result-object p2
-
-    iput-object p2, p1, Ld09;->c:Ljava/lang/Object;
-
-    new-instance p2, Li70;
-
-    invoke-direct {p2, p1}, Li70;-><init>(Ld09;)V
-
-    iput-object p2, v0, Lqvi;->H0:Li70;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final g()I
-    .locals 1
-
-    const v0, 0xc35000
-
-    return v0
-.end method
-
-.method public final l(Landroid/os/IBinder;)Landroid/os/IInterface;
-    .locals 3
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
+    goto :goto_0
 
     :cond_0
-    const-string v0, "com.google.android.gms.auth.api.credentials.internal.ICredentialsService"
+    invoke-static {v3}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
-    invoke-interface {p1, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+    move-result-object v0
 
-    move-result-object v1
+    array-length v2, p0
 
-    instance-of v2, v1, Li2j;
+    :goto_1
+    if-ge v1, v2, :cond_1
 
-    if-eqz v2, :cond_1
+    aget-object v3, p0, v1
 
-    check-cast v1, Li2j;
+    invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
-    return-object v1
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1
 
     :cond_1
-    new-instance v1, Li2j;
-
-    const/4 v2, 0x5
-
-    invoke-direct {v1, p1, v0, v2}, Lguh;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
-
-    return-object v1
-.end method
-
-.method public final n()Landroid/os/Bundle;
-    .locals 4
-
-    iget-object v0, p0, Lqvi;->H0:Li70;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Landroid/os/Bundle;
-
-    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
-
-    const-string v2, "consumer_package"
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v2, v3}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v2, "force_save_dialog"
-
-    iget-boolean v3, v0, Li70;->a:Z
-
-    invoke-virtual {v1, v2, v3}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
-
-    const-string v2, "log_session_id"
-
-    iget-object v0, v0, Li70;->b:Ljava/lang/String;
-
-    invoke-virtual {v1, v2, v0}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v1
-.end method
-
-.method public final p()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "com.google.android.gms.auth.api.credentials.internal.ICredentialsService"
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
 
     return-object v0
 .end method
 
-.method public final q()Ljava/lang/String;
+.method public static b(IIIIIILoh9;)V
+    .locals 4
+
+    invoke-static {p0, p1}, Ljava/lang/Math;->min(II)I
+
+    move-result p0
+
+    div-int/lit8 p1, p0, 0x2
+
+    int-to-float v0, p0
+
+    int-to-float v1, p3
+
+    int-to-float v2, p2
+
+    div-float v3, v1, v2
+
+    mul-float/2addr v3, v0
+
+    float-to-int v0, v3
+
+    if-lt p0, p1, :cond_0
+
+    if-lt v0, p4, :cond_0
+
+    if-gt v0, p5, :cond_0
+
+    invoke-static {p0, v0, p2, p3, p6}, Lqvi;->c(IIIILoh9;)V
+
+    return-void
+
+    :cond_0
+    if-ge v0, p4, :cond_1
+
+    invoke-static {p0, p4, p2, p3, p6}, Lqvi;->c(IIIILoh9;)V
+
+    return-void
+
+    :cond_1
+    int-to-float p0, p5
+
+    div-float/2addr v2, v1
+
+    mul-float/2addr v2, p0
+
+    float-to-int p0, v2
+
+    if-lt p0, p1, :cond_2
+
+    if-lt p5, p4, :cond_2
+
+    invoke-static {p0, p5, p2, p3, p6}, Lqvi;->c(IIIILoh9;)V
+
+    return-void
+
+    :cond_2
+    invoke-static {p1, p5, p2, p3, p6}, Lqvi;->c(IIIILoh9;)V
+
+    return-void
+.end method
+
+.method public static c(IIIILoh9;)V
     .locals 1
 
-    const-string v0, "com.google.android.gms.auth.api.credentials.service.START"
+    if-le p2, p3, :cond_0
+
+    int-to-float v0, p0
+
+    int-to-float p3, p3
+
+    int-to-float p2, p2
+
+    div-float/2addr p3, p2
+
+    mul-float/2addr p3, v0
+
+    float-to-int p2, p3
+
+    move p3, p2
+
+    move p2, p0
+
+    goto :goto_0
+
+    :cond_0
+    int-to-float v0, p1
+
+    int-to-float p2, p2
+
+    int-to-float p3, p3
+
+    div-float/2addr p2, p3
+
+    mul-float/2addr p2, v0
+
+    float-to-int p2, p2
+
+    move p3, p1
+
+    :goto_0
+    iput p0, p4, Loh9;->a:I
+
+    iput p1, p4, Loh9;->b:I
+
+    iput p2, p4, Loh9;->c:I
+
+    iput p3, p4, Loh9;->d:I
+
+    return-void
+.end method
+
+.method public static d(Ljava/lang/String;Ljava/util/List;)Ljava/nio/ByteBuffer;
+    .locals 4
+
+    const/16 v0, 0x8
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v3
+
+    if-ge v2, v3, :cond_0
+
+    invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v3}, Ljava/nio/Buffer;->remaining()I
+
+    move-result v3
+
+    add-int/2addr v0, v3
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
+
+    sget-object v0, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object p0
+
+    const/4 v0, 0x4
+
+    invoke-virtual {v2, p0, v1, v0}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
+
+    :goto_1
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result p0
+
+    if-ge v1, p0, :cond_1
+
+    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v2, p0}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
+
+    return-object v2
+.end method
+
+.method public static e(Ljava/lang/String;Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+    .locals 1
+
+    sget-object v0, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object p0
+
+    invoke-static {p1, p0}, Lqvi;->f(Ljava/nio/ByteBuffer;[B)Ljava/nio/ByteBuffer;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static f(Ljava/nio/ByteBuffer;[B)Ljava/nio/ByteBuffer;
+    .locals 3
+
+    invoke-virtual {p0}, Ljava/nio/Buffer;->remaining()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, 0x8
+
+    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Ljava/nio/Buffer;->remaining()I
+
+    move-result v1
+
+    add-int/lit8 v1, v1, 0x8
+
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x4
+
+    invoke-virtual {v0, p1, v1, v2}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0, p0}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
 
     return-object v0
 .end method

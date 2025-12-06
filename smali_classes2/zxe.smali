@@ -1,94 +1,156 @@
-.class public final Lzxe;
+.class public final synthetic Lzxe;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lfjd;
+.implements Lcm6;
 
 
 # instance fields
-.field public a:Ljava/util/ArrayList;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/location/map/show/ShowLocationScreen;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lone/me/location/map/show/ShowLocationScreen;I)V
+    .locals 0
+
+    iput p2, p0, Lzxe;->a:I
+
+    iput-object p1, p0, Lzxe;->b:Lone/me/location/map/show/ShowLocationScreen;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final invoke()Ljava/lang/Object;
+    .locals 9
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Lzxe;->a:I
 
-    const/4 p1, 0x1
+    const/4 v1, 0x1
 
-    return p1
+    iget-object v2, p0, Lzxe;->b:Lone/me/location/map/show/ShowLocationScreen;
 
-    :cond_0
-    if-eqz p1, :cond_2
+    packed-switch v0, :pswitch_data_0
 
-    const-class v0, Lzxe;
+    new-instance v3, Llye;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-instance v4, Lcom/google/android/gms/maps/model/LatLng;
 
-    move-result-object v1
+    iget-object v0, v2, Lone/me/location/map/show/ShowLocationScreen;->b:Lhs;
 
-    if-eq v0, v1, :cond_1
+    sget-object v5, Lone/me/location/map/show/ShowLocationScreen;->B0:[Lyy7;
 
-    goto :goto_0
+    const/4 v6, 0x0
 
-    :cond_1
-    check-cast p1, Lzxe;
+    aget-object v6, v5, v6
 
-    iget-object v0, p0, Lzxe;->a:Ljava/util/ArrayList;
-
-    iget-object p1, p1, Lzxe;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_2
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lzxe;->a:Ljava/util/ArrayList;
-
-    filled-new-array {v0}, [Ljava/lang/Object;
+    invoke-virtual {v0, v2}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->doubleValue()D
+
+    move-result-wide v6
+
+    iget-object v0, v2, Lone/me/location/map/show/ShowLocationScreen;->c:Lhs;
+
+    aget-object v1, v5, v1
+
+    invoke-virtual {v0, v2}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->doubleValue()D
+
+    move-result-wide v0
+
+    invoke-direct {v4, v6, v7, v0, v1}, Lcom/google/android/gms/maps/model/LatLng;-><init>(DD)V
+
+    iget-object v0, v2, Lone/me/location/map/show/ShowLocationScreen;->d:Lhs;
+
+    const/4 v1, 0x2
+
+    aget-object v1, v5, v1
+
+    invoke-virtual {v0, v2}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->floatValue()F
 
     move-result v0
 
-    return v0
-.end method
+    iget-object v1, v2, Lone/me/location/map/show/ShowLocationScreen;->o:Lhs;
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    const/4 v6, 0x3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    aget-object v6, v5, v6
 
-    const-string v1, "StalledParticipantsNotification{participantIds="
+    invoke-virtual {v1, v2}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v1
 
-    iget-object v1, p0, Lzxe;->a:Ljava/util/ArrayList;
+    move-object v6, v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    check-cast v6, Ljava/lang/Long;
 
-    const/16 v1, 0x7d
+    iget-object v1, v2, Lone/me/location/map/show/ShowLocationScreen;->X:Lhs;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    const/4 v7, 0x4
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    aget-object v7, v5, v7
 
-    move-result-object v0
+    invoke-virtual {v1, v2}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v7, v1
+
+    check-cast v7, Ljava/lang/Long;
+
+    iget-object v1, v2, Lone/me/location/map/show/ShowLocationScreen;->Y:Lhs;
+
+    const/4 v8, 0x5
+
+    aget-object v5, v5, v8
+
+    invoke-virtual {v1, v2}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v8, v1
+
+    check-cast v8, Ljava/lang/Long;
+
+    move v5, v0
+
+    invoke-direct/range {v3 .. v8}, Llye;-><init>(Lcom/google/android/gms/maps/model/LatLng;FLjava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;)V
+
+    return-object v3
+
+    :pswitch_0
+    sget-object v0, Lone/me/location/map/show/ShowLocationScreen;->B0:[Lyy7;
+
+    new-instance v0, Ls2i;
+
+    invoke-direct {v0, v2, v1}, Ls2i;-><init>(Lone/me/sdk/arch/Widget;I)V
 
     return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

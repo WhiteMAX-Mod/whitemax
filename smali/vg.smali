@@ -1,115 +1,182 @@
-.class public abstract Lvg;
+.class public final Lvg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/animation/Animator$AnimatorListener;
 
-# static fields
-.field public static final a:Landroid/view/animation/LinearInterpolator;
 
-.field public static final b:Lln5;
+# instance fields
+.field public final synthetic a:Landroid/view/View;
 
-.field public static final c:Lkn5;
+.field public final synthetic b:Ljava/lang/String;
 
-.field public static final d:Lkn5;
+.field public final synthetic c:F
 
-.field public static final e:Landroid/view/animation/DecelerateInterpolator;
+.field public final synthetic d:F
+
+.field public final synthetic e:Z
+
+.field public final synthetic f:Lem6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Landroid/view/View;Ljava/lang/String;FFZLem6;)V
+    .locals 1
 
-    new-instance v0, Landroid/view/animation/LinearInterpolator;
+    sget v0, Lj0b;->a:I
 
-    invoke-direct {v0}, Landroid/view/animation/LinearInterpolator;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lvg;->a:Landroid/view/animation/LinearInterpolator;
+    iput-object p1, p0, Lvg;->a:Landroid/view/View;
 
-    new-instance v0, Lln5;
+    iput-object p2, p0, Lvg;->b:Ljava/lang/String;
 
-    invoke-direct {v0}, Lln5;-><init>()V
+    iput p3, p0, Lvg;->c:F
 
-    sput-object v0, Lvg;->b:Lln5;
+    iput p4, p0, Lvg;->d:F
 
-    new-instance v0, Lkn5;
+    iput-boolean p5, p0, Lvg;->e:Z
 
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lkn5;-><init>(I)V
-
-    sput-object v0, Lvg;->c:Lkn5;
-
-    new-instance v0, Lkn5;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lkn5;-><init>(I)V
-
-    sput-object v0, Lvg;->d:Lkn5;
-
-    new-instance v0, Landroid/view/animation/DecelerateInterpolator;
-
-    invoke-direct {v0}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
-
-    sput-object v0, Lvg;->e:Landroid/view/animation/DecelerateInterpolator;
+    iput-object p6, p0, Lvg;->f:Lem6;
 
     return-void
 .end method
 
-.method public static a(FFF)F
-    .locals 0
 
-    invoke-static {p1, p0, p2, p0}, Laab;->h(FFFF)F
+# virtual methods
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 3
 
-    move-result p0
+    iget p1, p0, Lvg;->d:F
 
-    return p0
-.end method
+    iget-object v0, p0, Lvg;->a:Landroid/view/View;
 
-.method public static b(FFFFF)F
-    .locals 1
+    invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
 
-    cmpg-float v0, p4, p2
+    iget-boolean p1, p0, Lvg;->e:Z
 
-    if-gtz v0, :cond_0
+    const/4 v1, 0x0
 
-    return p0
+    if-eqz p1, :cond_0
+
+    move p1, v1
+
+    goto :goto_0
 
     :cond_0
-    cmpl-float v0, p4, p3
+    const/16 p1, 0x8
 
-    if-ltz v0, :cond_1
+    :goto_0
+    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
 
-    return p1
+    iget-object p1, p0, Lvg;->f:Lem6;
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    const/4 v1, 0x1
 
     :cond_1
-    sub-float/2addr p4, p2
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    sub-float/2addr p3, p2
+    move-result-object v1
 
-    div-float/2addr p4, p3
+    invoke-interface {p1, v1}, Lem6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {p0, p1, p4}, Lvg;->a(FFF)F
+    :cond_2
+    sget p1, Lj0b;->m:I
 
-    move-result p0
+    const/4 v1, 0x0
 
-    return p0
+    invoke-virtual {v0, p1, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    return-void
 .end method
 
-.method public static c(IFI)I
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 3
+
+    iget p1, p0, Lvg;->d:F
+
+    iget-object v0, p0, Lvg;->a:Landroid/view/View;
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
+
+    iget-boolean p1, p0, Lvg;->e:Z
+
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_0
+
+    move p1, v1
+
+    goto :goto_0
+
+    :cond_0
+    const/16 p1, 0x8
+
+    :goto_0
+    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object p1, p0, Lvg;->f:Lem6;
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    const/4 v1, 0x1
+
+    :cond_1
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    invoke-interface {p1, v1}, Lem6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_2
+    sget p1, Lj0b;->m:I
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, p1, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
     .locals 0
 
-    sub-int/2addr p2, p0
+    return-void
+.end method
 
-    int-to-float p2, p2
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 2
 
-    mul-float/2addr p1, p2
+    sget p1, Lj0b;->m:I
 
-    invoke-static {p1}, Ljava/lang/Math;->round(F)I
+    iget-object v0, p0, Lvg;->b:Ljava/lang/String;
 
-    move-result p1
+    iget-object v1, p0, Lvg;->a:Landroid/view/View;
 
-    add-int/2addr p1, p0
+    invoke-virtual {v1, p1, v0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
-    return p1
+    iget p1, p0, Lvg;->c:F
+
+    invoke-virtual {v1, p1}, Landroid/view/View;->setAlpha(F)V
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v1, p1}, Landroid/view/View;->setVisibility(I)V
+
+    return-void
 .end method

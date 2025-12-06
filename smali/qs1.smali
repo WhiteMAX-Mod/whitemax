@@ -3,26 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lji6;
+.implements Lcm6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Landroid/content/Context;
-
-.field public final synthetic c:Lus1;
+.field public final synthetic b:Lvs1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;Lus1;I)V
+.method public synthetic constructor <init>(Lvs1;I)V
     .locals 0
 
-    iput p3, p0, Lqs1;->a:I
+    iput p2, p0, Lqs1;->a:I
 
-    iput-object p1, p0, Lqs1;->b:Landroid/content/Context;
-
-    iput-object p2, p0, Lqs1;->c:Lus1;
+    iput-object p1, p0, Lqs1;->b:Lvs1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,80 +34,94 @@
 
     packed-switch v0, :pswitch_data_0
 
-    new-instance v0, Lct1;
+    new-instance v0, Landroid/graphics/drawable/GradientDrawable;
 
-    iget-object v1, p0, Lqs1;->b:Landroid/content/Context;
+    sget-object v1, Landroid/graphics/drawable/GradientDrawable$Orientation;->TOP_BOTTOM:Landroid/graphics/drawable/GradientDrawable$Orientation;
 
-    invoke-direct {v0, v1}, Lct1;-><init>(Landroid/content/Context;)V
+    sget-object v2, La93;->s0:Lv1a;
 
-    new-instance v1, Lwq3;
+    iget-object v3, p0, Lqs1;->b:Lvs1;
 
-    const/4 v2, -0x1
+    invoke-virtual {v2, v3}, Lv1a;->B(Landroid/view/View;)Lh5b;
 
-    invoke-direct {v1, v2, v2}, Lwq3;-><init>(II)V
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    iget-object v2, v2, Lh5b;->c:Lyeb;
 
-    const/4 v1, 0x0
+    invoke-interface {v2}, Lyeb;->b()Lbf0;
 
-    invoke-static {v0, v1}, Lmzg;->E(Landroid/view/ViewGroup;Z)V
+    move-result-object v2
 
-    new-instance v1, Lpid;
+    iget v2, v2, Lbf0;->f:I
 
-    const/16 v2, 0x13
+    const/4 v3, 0x0
 
-    iget-object v3, p0, Lqs1;->c:Lus1;
+    filled-new-array {v2, v3, v3}, [I
 
-    invoke-direct {v1, v2, v3}, Lpid;-><init>(ILjava/lang/Object;)V
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Lct1;->setListener(Lat1;)V
-
-    new-instance v1, Los1;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, v3, v2}, Los1;-><init>(Lus1;I)V
-
-    invoke-virtual {v0, v1}, Lct1;->setVideoLayoutUpdatesControllerProvider(Lji6;)V
+    invoke-direct {v0, v1, v2}, Landroid/graphics/drawable/GradientDrawable;-><init>(Landroid/graphics/drawable/GradientDrawable$Orientation;[I)V
 
     return-object v0
 
     :pswitch_0
-    iget-object v0, p0, Lqs1;->b:Landroid/content/Context;
+    new-instance v0, Landroid/graphics/drawable/ShapeDrawable;
 
-    iget-object v1, p0, Lqs1;->c:Lus1;
+    new-instance v1, Landroid/graphics/drawable/shapes/OvalShape;
 
-    invoke-static {v0, v1}, Lus1;->z(Landroid/content/Context;Lus1;)Landroid/view/View;
+    invoke-direct {v1}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
+
+    move-result-object v1
+
+    sget-object v2, La93;->s0:Lv1a;
+
+    iget-object v3, p0, Lqs1;->b:Lvs1;
+
+    invoke-virtual {v2, v3}, Lv1a;->B(Landroid/view/View;)Lh5b;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lh5b;->c:Lyeb;
+
+    invoke-interface {v2}, Lyeb;->b()Lbf0;
+
+    move-result-object v2
+
+    iget v2, v2, Lbf0;->l:I
+
+    invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
 
     return-object v0
 
     :pswitch_1
-    iget-object v0, p0, Lqs1;->b:Landroid/content/Context;
+    iget-object v0, p0, Lqs1;->b:Lvs1;
 
-    iget-object v1, p0, Lqs1;->c:Lus1;
+    iget-object v0, v0, Lvs1;->h1:Lcm6;
 
-    invoke-static {v0, v1}, Lus1;->y(Landroid/content/Context;Lus1;)Landroid/widget/ImageView;
+    if-eqz v0, :cond_0
 
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_2
-    iget-object v0, p0, Lqs1;->b:Landroid/content/Context;
-
-    iget-object v1, p0, Lqs1;->c:Lus1;
-
-    invoke-static {v0, v1}, Lus1;->x(Landroid/content/Context;Lus1;)Lowc;
+    invoke-interface {v0}, Lcm6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
+    check-cast v0, Lx4h;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
     return-object v0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch

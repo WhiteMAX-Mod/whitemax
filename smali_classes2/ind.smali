@@ -1,21 +1,23 @@
 .class public final Lind;
-.super Lnnd;
+.super Lcda;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Lind;
+.field public static final b:Lind;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
     new-instance v0, Lind;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    sget-object v1, Lqqg;->a:Lqqg;
 
-    sput-object v0, Lind;->a:Lind;
+    invoke-direct {v0, v1}, Lcda;-><init>(Ljava/lang/Object;)V
+
+    sput-object v0, Lind;->b:Lind;
 
     return-void
 .end method
@@ -47,7 +49,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x1c165701
+    const v0, -0x35532629    # -5663979.5f
 
     return v0
 .end method
@@ -55,7 +57,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "CameraPermissionDenied"
+    const-string v0, "RequestStoragePermissions"
 
     return-object v0
 .end method

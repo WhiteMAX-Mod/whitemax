@@ -1,178 +1,263 @@
-.class public abstract Lnr4;
+.class public final synthetic Lnr4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements La4h;
 
-# static fields
-.field public static final a:Ljava/lang/ThreadLocal;
 
-.field public static final b:Ljava/lang/ThreadLocal;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lrr4;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lrr4;I)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/ThreadLocal;
+    iput p2, p0, Lnr4;->a:I
 
-    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
+    iput-object p1, p0, Lnr4;->b:Lrr4;
 
-    sput-object v0, Lnr4;->a:Ljava/lang/ThreadLocal;
-
-    new-instance v0, Ljava/lang/ThreadLocal;
-
-    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
-
-    sput-object v0, Lnr4;->b:Ljava/lang/ThreadLocal;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static a(Landroid/view/ViewParent;Landroid/view/View;Landroid/graphics/Matrix;)V
-    .locals 2
 
-    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+# virtual methods
+.method public final run()V
+    .locals 9
 
-    move-result-object v0
+    iget v0, p0, Lnr4;->a:I
 
-    instance-of v1, v0, Landroid/view/View;
+    const/4 v1, 0x0
 
-    if-eqz v1, :cond_0
+    iget-object v2, p0, Lnr4;->b:Lrr4;
 
-    if-eq v0, p0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast v0, Landroid/view/View;
+    sget v0, Lrr4;->y:I
 
-    invoke-static {p0, v0, p2}, Lnr4;->a(Landroid/view/ViewParent;Landroid/view/View;Landroid/graphics/Matrix;)V
+    invoke-virtual {v2}, Lrr4;->b()V
 
-    invoke-virtual {v0}, Landroid/view/View;->getScrollX()I
-
-    move-result p0
-
-    neg-int p0, p0
-
-    int-to-float p0, p0
-
-    invoke-virtual {v0}, Landroid/view/View;->getScrollY()I
-
-    move-result v0
-
-    neg-int v0, v0
-
-    int-to-float v0, v0
-
-    invoke-virtual {p2, p0, v0}, Landroid/graphics/Matrix;->preTranslate(FF)Z
-
-    :cond_0
-    invoke-virtual {p1}, Landroid/view/View;->getLeft()I
-
-    move-result p0
-
-    int-to-float p0, p0
-
-    invoke-virtual {p1}, Landroid/view/View;->getTop()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    invoke-virtual {p2, p0, v0}, Landroid/graphics/Matrix;->preTranslate(FF)Z
-
-    invoke-virtual {p1}, Landroid/view/View;->getMatrix()Landroid/graphics/Matrix;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/graphics/Matrix;->isIdentity()Z
-
-    move-result p0
-
-    if-nez p0, :cond_1
-
-    invoke-virtual {p1}, Landroid/view/View;->getMatrix()Landroid/graphics/Matrix;
-
-    move-result-object p0
-
-    invoke-virtual {p2, p0}, Landroid/graphics/Matrix;->preConcat(Landroid/graphics/Matrix;)Z
-
-    :cond_1
     return-void
-.end method
 
-.method public static b(Landroid/view/ViewGroup;Landroid/view/View;Landroid/graphics/Rect;)V
-    .locals 3
+    :pswitch_0
+    iget-object v0, v2, Lrr4;->k:Lrz5;
 
-    sget-object v0, Lnr4;->a:Ljava/lang/ThreadLocal;
+    iget-object v2, v2, Lrr4;->u:Lemd;
 
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+    sget-object v3, Lzxg;->a:Ljava/lang/String;
 
-    move-result-object v1
+    iget v3, v2, Lemd;->j:I
 
-    check-cast v1, Landroid/graphics/Matrix;
+    const/4 v4, 0x1
 
-    if-nez v1, :cond_0
+    if-nez v3, :cond_0
 
-    new-instance v1, Landroid/graphics/Matrix;
-
-    invoke-direct {v1}, Landroid/graphics/Matrix;-><init>()V
-
-    invoke-virtual {v0, v1}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+    move v3, v4
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v1}, Landroid/graphics/Matrix;->reset()V
+    move v3, v1
 
     :goto_0
-    invoke-static {p0, p1, v1}, Lnr4;->a(Landroid/view/ViewParent;Landroid/view/View;Landroid/graphics/Matrix;)V
+    iget-object v5, v2, Lemd;->i:[Lh9g;
 
-    sget-object p0, Lnr4;->b:Ljava/lang/ThreadLocal;
+    if-eqz v3, :cond_1
 
-    invoke-virtual {p0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+    const-wide v6, -0x7fffffffffffffffL    # -4.9E-324
 
-    move-result-object p1
-
-    check-cast p1, Landroid/graphics/RectF;
-
-    if-nez p1, :cond_1
-
-    new-instance p1, Landroid/graphics/RectF;
-
-    invoke-direct {p1}, Landroid/graphics/RectF;-><init>()V
-
-    invoke-virtual {p0, p1}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+    goto :goto_1
 
     :cond_1
-    invoke-virtual {p1, p2}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
+    aget-object v3, v5, v1
 
-    invoke-virtual {v1, p1}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
+    iget-wide v6, v3, Lh9g;->b:J
 
-    iget p0, p1, Landroid/graphics/RectF;->left:F
+    :goto_1
+    iget-object v3, v0, Lrz5;->k:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
-    const/high16 v0, 0x3f000000    # 0.5f
+    iput-wide v6, v0, Lrz5;->A:J
 
-    add-float/2addr p0, v0
+    move v6, v1
 
-    float-to-int p0, p0
+    :goto_2
+    invoke-virtual {v3}, Ljava/util/concurrent/ConcurrentLinkedQueue;->size()I
 
-    iget v1, p1, Landroid/graphics/RectF;->top:F
+    move-result v7
 
-    add-float/2addr v1, v0
+    if-ge v6, v7, :cond_2
 
-    float-to-int v1, v1
+    invoke-interface {v3}, Ljava/util/Queue;->remove()Ljava/lang/Object;
 
-    iget v2, p1, Landroid/graphics/RectF;->right:F
+    move-result-object v7
 
-    add-float/2addr v2, v0
+    check-cast v7, Lh9g;
 
-    float-to-int v2, v2
+    iget-object v8, v0, Lrz5;->u:Lqu6;
 
-    iget p1, p1, Landroid/graphics/RectF;->bottom:F
+    iget-object v7, v7, Lh9g;->a:Ltu6;
 
-    add-float/2addr p1, v0
+    invoke-interface {v8, v7}, Lqu6;->o(Ltu6;)V
 
-    float-to-int p1, p1
+    add-int/lit8 v6, v6, 0x1
 
-    invoke-virtual {p2, p0, v1, v2, p1}, Landroid/graphics/Rect;->set(IIII)V
+    goto :goto_2
+
+    :cond_2
+    iget v0, v2, Lemd;->j:I
+
+    if-nez v0, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    aget-object v0, v5, v1
+
+    iget-object v1, v2, Ltj0;->c:Lru6;
+
+    iget-object v3, v0, Lh9g;->a:Ltu6;
+
+    iget-wide v6, v0, Lh9g;->b:J
+
+    invoke-interface {v1, v3, v6, v7}, Lru6;->w(Ltu6;J)V
+
+    iget v0, v2, Lemd;->j:I
+
+    if-le v0, v4, :cond_4
+
+    aget-object v0, v5, v4
+
+    iget-object v1, v2, Ltj0;->c:Lru6;
+
+    iget-object v2, v0, Lh9g;->a:Ltu6;
+
+    iget-wide v3, v0, Lh9g;->b:J
+
+    invoke-interface {v1, v2, v3, v4}, Lru6;->w(Ltu6;J)V
+
+    :cond_4
+    :goto_3
+    return-void
+
+    :pswitch_1
+    const-string v0, "Error releasing GL objects"
+
+    iget-object v3, v2, Lrr4;->e:Landroid/opengl/EGLDisplay;
+
+    iget-object v4, v2, Lrr4;->c:Lxo8;
+
+    iget-boolean v5, v2, Lrr4;->d:Z
+
+    iget-object v6, v2, Lrr4;->l:Ljava/util/ArrayList;
+
+    const-string v7, "DefaultFrameProcessor"
+
+    :try_start_0
+    iget-object v8, v2, Lrr4;->f:Lx20;
+
+    invoke-virtual {v8}, Lx20;->b()V
+
+    :goto_4
+    invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
+
+    move-result v8
+
+    if-ge v1, v8, :cond_5
+
+    invoke-virtual {v6, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Lsu6;
+
+    invoke-interface {v8}, Lsu6;->release()V
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_4
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_8
+
+    :catch_0
+    move-exception v1
+
+    goto :goto_5
+
+    :cond_5
+    iget-object v1, v2, Lrr4;->k:Lrz5;
+
+    invoke-virtual {v1}, Lrz5;->release()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_6
+
+    :goto_5
+    :try_start_1
+    const-string v2, "Error releasing shader program"
+
+    invoke-static {v7, v2, v1}, La8i;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :goto_6
+    if-eqz v5, :cond_6
+
+    :try_start_2
+    invoke-virtual {v4, v3}, Lxo8;->K(Landroid/opengl/EGLDisplay;)V
+    :try_end_2
+    .catch Landroidx/media3/common/util/GlUtil$GlException; {:try_start_2 .. :try_end_2} :catch_1
+
+    goto :goto_7
+
+    :catch_1
+    move-exception v1
+
+    invoke-static {v7, v0, v1}, La8i;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_6
+    :goto_7
+    return-void
+
+    :goto_8
+    if-eqz v5, :cond_7
+
+    :try_start_3
+    invoke-virtual {v4, v3}, Lxo8;->K(Landroid/opengl/EGLDisplay;)V
+    :try_end_3
+    .catch Landroidx/media3/common/util/GlUtil$GlException; {:try_start_3 .. :try_end_3} :catch_2
+
+    goto :goto_9
+
+    :catch_2
+    move-exception v2
+
+    invoke-static {v7, v0, v2}, La8i;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_7
+    :goto_9
+    throw v1
+
+    :pswitch_2
+    invoke-virtual {v2}, Lrr4;->b()V
 
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

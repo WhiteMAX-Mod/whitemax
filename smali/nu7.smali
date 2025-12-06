@@ -1,129 +1,105 @@
 .class public final Lnu7;
-.super Ljava/lang/Object;
+.super Ldu7;
 .source "SourceFile"
-
-# interfaces
-.implements Lcfc;
 
 
 # instance fields
-.field public volatile a:Ljava/util/Set;
+.field public final synthetic b:I
 
-.field public volatile b:Ljava/util/Set;
+.field public final c:Lnbe;
+
+.field public final synthetic d:Lsu7;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lsu7;Lnbe;I)V
+    .locals 0
+
+    iput p3, p0, Lnu7;->b:I
+
+    iput-object p1, p0, Lnu7;->d:Lsu7;
+
+    invoke-direct {p0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;-><init>()V
+
+    iput-object p2, p0, Lnu7;->c:Lnbe;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 3
+.method public final c()Z
+    .locals 1
 
-    iget-object v0, p0, Lnu7;->b:Ljava/util/Set;
+    iget v0, p0, Lnu7;->b:I
 
-    if-nez v0, :cond_2
+    packed-switch v0, :pswitch_data_0
 
-    monitor-enter p0
+    const/4 v0, 0x0
 
-    :try_start_0
-    iget-object v0, p0, Lnu7;->b:Ljava/util/Set;
+    return v0
 
-    if-nez v0, :cond_1
+    :pswitch_0
+    const/4 v0, 0x0
 
-    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
+    return v0
 
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+    nop
 
-    invoke-static {v0}, Ljava/util/Collections;->newSetFromMap(Ljava/util/Map;)Ljava/util/Set;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final d(Ljava/lang/Throwable;)V
+    .locals 2
+
+    iget p1, p0, Lnu7;->b:I
+
+    packed-switch p1, :pswitch_data_0
+
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    iget-object v0, p0, Lnu7;->c:Lnbe;
+
+    check-cast v0, Lmbe;
+
+    iget-object v1, p0, Lnu7;->d:Lsu7;
+
+    invoke-virtual {v0, v1, p1}, Lmbe;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lnu7;->d:Lsu7;
+
+    invoke-virtual {p1}, Lsu7;->getState$kotlinx_coroutines_core()Ljava/lang/Object;
 
     move-result-object v0
 
-    iput-object v0, p0, Lnu7;->b:Ljava/util/Set;
+    instance-of v1, v0, Lzk3;
 
-    monitor-enter p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+    if-eqz v1, :cond_0
 
-    :try_start_1
-    iget-object v0, p0, Lnu7;->a:Ljava/util/Set;
+    goto :goto_0
 
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    :cond_0
+    invoke-static {v0}, Ltu7;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    iget-object v1, p0, Lnu7;->c:Lnbe;
 
-    move-result v1
+    check-cast v1, Lmbe;
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v1, p1, v0}, Lmbe;->g(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    return-void
 
-    move-result-object v1
-
-    check-cast v1, Lcfc;
-
-    iget-object v2, p0, Lnu7;->b:Ljava/util/Set;
-
-    invoke-interface {v1}, Lcfc;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-interface {v2, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
-    :cond_0
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lnu7;->a:Ljava/util/Set;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :try_start_2
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    goto :goto_2
-
-    :goto_1
-    :try_start_3
-    monitor-exit p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :try_start_4
-    throw v0
-
-    :catchall_1
-    move-exception v0
-
-    goto :goto_3
-
-    :cond_1
-    :goto_2
-    monitor-exit p0
-
-    goto :goto_4
-
-    :goto_3
-    monitor-exit p0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
-
-    throw v0
-
-    :cond_2
-    :goto_4
-    iget-object v0, p0, Lnu7;->b:Ljava/util/Set;
-
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -7,8 +7,8 @@
 .method public abstract a()Ljava/util/Comparator;
 .end method
 
-.method public abstract b()Lli6;
+.method public abstract b()Lem6;
 .end method
 
-.method public abstract c()Lji6;
+.method public abstract c()Lcm6;
 .end method

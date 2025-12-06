@@ -1,171 +1,128 @@
 .class public final Lpeg;
-.super Ljava/lang/Object;
+.super Lu08;
 .source "SourceFile"
+
+# interfaces
+.implements Lcm6;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:J
-
-.field public c:J
+.field public final synthetic b:Lqeg;
 
 
 # direct methods
-.method public synthetic constructor <init>(JJ)V
-    .locals 7
-
-    const-wide/16 v5, 0x0
-
-    move-object v0, p0
-
-    move-wide v1, p1
-
-    move-wide v3, p3
-
-    .line 1
-    invoke-direct/range {v0 .. v6}, Lpeg;-><init>(JJJ)V
-
-    return-void
-.end method
-
-.method public constructor <init>(JJJ)V
+.method public synthetic constructor <init>(Lqeg;I)V
     .locals 0
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lpeg;->a:I
 
-    .line 3
-    iput-wide p1, p0, Lpeg;->a:J
+    iput-object p1, p0, Lpeg;->b:Lqeg;
 
-    .line 4
-    iput-wide p3, p0, Lpeg;->b:J
+    const/4 p1, 0x0
 
-    .line 5
-    iput-wide p5, p0, Lpeg;->c:J
+    invoke-direct {p0, p1}, Lu08;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final invoke()Ljava/lang/Object;
+    .locals 6
 
-    const/4 v0, 0x1
+    iget v0, p0, Lpeg;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lpeg;->b:Lqeg;
 
-    :cond_0
-    instance-of v1, p1, Lpeg;
+    iget-object v0, v0, Lqeg;->a:Ljava/lang/String;
 
-    const/4 v2, 0x0
+    :try_start_0
+    invoke-static {v0}, Lnfi;->e(Ljava/lang/String;)Lseg;
 
-    if-nez v1, :cond_1
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    return v2
+    goto :goto_0
 
-    :cond_1
-    check-cast p1, Lpeg;
+    :catch_0
+    const-string v1, "Could not find manifest for library "
 
-    iget-wide v3, p0, Lpeg;->a:J
-
-    iget-wide v5, p1, Lpeg;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-wide v3, p0, Lpeg;->b:J
-
-    iget-wide v5, p1, Lpeg;->b:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-wide v3, p0, Lpeg;->c:J
-
-    iget-wide v5, p1, Lpeg;->c:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-wide v0, p0, Lpeg;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-wide v2, p0, Lpeg;->b:J
-
-    invoke-static {v0, v1, v2, v3}, Lrtg;->c(IIJ)I
-
-    move-result v0
-
-    iget-wide v1, p0, Lpeg;->c:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 8
-
-    iget-wide v0, p0, Lpeg;->b:J
-
-    iget-wide v2, p0, Lpeg;->a:J
-
-    add-long/2addr v0, v2
-
-    iget-wide v4, p0, Lpeg;->c:J
-
-    add-long/2addr v4, v2
-
-    const-string v6, "Chunk["
-
-    const-string v7, " -> "
-
-    invoke-static {v2, v3, v6, v7}, Ldy1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v0, " (position: "
-
-    const-string v1, ")]"
-
-    invoke-static {v4, v5, v0, v1, v2}, Lu15;->j(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
+    const-string v1, "Tracer"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 v0, 0x0
+
+    :goto_0
     return-object v0
+
+    :pswitch_0
+    new-instance v0, Lmeg;
+
+    iget-object v1, p0, Lpeg;->b:Lqeg;
+
+    iget-object v2, v1, Lqeg;->a:Ljava/lang/String;
+
+    invoke-virtual {v1}, Lqeg;->a()Lseg;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    invoke-interface {v3}, Lbl0;->versionName()Ljava/lang/String;
+
+    move-result-object v3
+
+    if-nez v3, :cond_1
+
+    :cond_0
+    const-string v3, "NA"
+
+    :cond_1
+    invoke-virtual {v1}, Lqeg;->a()Lseg;
+
+    move-result-object v4
+
+    const/4 v5, 0x0
+
+    if-eqz v4, :cond_2
+
+    invoke-interface {v4}, Lbl0;->buildUuid()Ljava/lang/String;
+
+    move-result-object v4
+
+    goto :goto_1
+
+    :cond_2
+    move-object v4, v5
+
+    :goto_1
+    invoke-virtual {v1}, Lqeg;->a()Lseg;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_3
+
+    invoke-interface {v1}, Lbl0;->environment()Ljava/lang/String;
+
+    move-result-object v5
+
+    :cond_3
+    invoke-direct {v0, v2, v3, v4, v5}, Lmeg;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

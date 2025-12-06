@@ -1,104 +1,63 @@
 .class public final Lxo7;
-.super Ltw5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final g:Lwoa;
+.field public final a:Landroid/content/Context;
 
-.field public final h:Z
-
-.field public final i:Z
-
-.field public final j:Z
+.field public final b:Llv4;
 
 
 # direct methods
-.method public constructor <init>(Lwoa;ZZZLavf;Lx71;Lfwc;)V
+.method public constructor <init>(Landroid/content/Context;Llv4;)V
     .locals 0
 
-    invoke-direct {p0, p5, p6, p7}, Ltw5;-><init>(Lavf;Lx71;Lfwc;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxo7;->g:Lwoa;
+    iput-object p1, p0, Lxo7;->a:Landroid/content/Context;
 
-    iput-boolean p2, p0, Lxo7;->h:Z
-
-    iput-boolean p3, p0, Lxo7;->i:Z
-
-    iput-boolean p4, p0, Lxo7;->j:Z
+    iput-object p2, p0, Lxo7;->b:Llv4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 0
+.method public final a(J)[B
+    .locals 2
 
-    invoke-virtual {p0}, Ltw5;->h()V
+    const/16 v0, 0x8
 
-    return-void
-.end method
-
-.method public final d(La2f;)V
-    .locals 1
-
-    iget-object v0, p0, Lxo7;->g:Lwoa;
-
-    invoke-virtual {v0}, Lwoa;->invoke()Ljava/lang/Object;
+    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Boolean;
+    invoke-virtual {v0, p1, p2}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    iget-object p1, p0, Lxo7;->b:Llv4;
 
-    move-result v0
+    invoke-virtual {p1}, Llv4;->a()Ljava/lang/String;
 
-    if-nez v0, :cond_1
+    move-result-object p1
 
-    iget-boolean v0, p0, Lxo7;->h:Z
+    sget-object p2, Llb2;->a:Ljava/nio/charset/Charset;
 
-    if-nez v0, :cond_1
+    invoke-virtual {p1, p2}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
-    iget-boolean v0, p0, Lxo7;->i:Z
+    move-result-object p1
 
-    if-eqz v0, :cond_1
+    sget-object p2, Lone/me/callssdk/CallsSdkInitializer;->INSTANCE:Lone/me/callssdk/CallsSdkInitializer;
 
-    iget-boolean v0, p0, Lxo7;->j:Z
+    iget-object v1, p0, Lxo7;->a:Landroid/content/Context;
 
-    if-nez v0, :cond_0
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
 
-    goto :goto_0
+    move-result-object v0
 
-    :cond_0
-    invoke-super {p0, p1}, Ltw5;->d(La2f;)V
+    invoke-virtual {p2, v1, v0, p1}, Lone/me/callssdk/CallsSdkInitializer;->initializeSessionSeed(Landroid/content/Context;[B[B)[B
 
-    :cond_1
-    :goto_0
-    return-void
-.end method
+    move-result-object p1
 
-.method public final e()V
-    .locals 0
-
-    invoke-virtual {p0}, Ltw5;->h()V
-
-    return-void
-.end method
-
-.method public final f()I
-    .locals 1
-
-    const/4 v0, 0x7
-
-    return v0
-.end method
-
-.method public final g()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "JoinP2PFirstDataStat"
-
-    return-object v0
+    return-object p1
 .end method

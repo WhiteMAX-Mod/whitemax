@@ -1,80 +1,276 @@
-.class public abstract Lbzg;
-.super Ljava/lang/Object;
+.class public final Lbzg;
+.super Lezg;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Landroid/view/View;)Landroid/view/View$AccessibilityDelegate;
-    .locals 0
+# instance fields
+.field public d:Llk6;
 
-    invoke-virtual {p0}, Landroid/view/View;->getAccessibilityDelegate()Landroid/view/View$AccessibilityDelegate;
+.field public e:F
 
-    move-result-object p0
+.field public f:Llk6;
 
-    return-object p0
+.field public g:F
+
+.field public h:F
+
+.field public i:F
+
+.field public j:F
+
+.field public k:F
+
+.field public l:Landroid/graphics/Paint$Cap;
+
+.field public m:Landroid/graphics/Paint$Join;
+
+.field public n:F
+
+
+# virtual methods
+.method public final a()Z
+    .locals 1
+
+    iget-object v0, p0, Lbzg;->f:Llk6;
+
+    invoke-virtual {v0}, Llk6;->L()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lbzg;->d:Llk6;
+
+    invoke-virtual {v0}, Llk6;->L()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    return v0
 .end method
 
-.method public static b(Landroid/view/View;)Landroid/view/contentcapture/ContentCaptureSession;
-    .locals 0
+.method public final b([I)Z
+    .locals 6
 
-    invoke-virtual {p0}, Landroid/view/View;->getContentCaptureSession()Landroid/view/contentcapture/ContentCaptureSession;
+    iget-object v0, p0, Lbzg;->f:Llk6;
 
-    move-result-object p0
+    invoke-virtual {v0}, Llk6;->L()Z
 
-    return-object p0
+    move-result v1
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, v0, Llk6;->d:Ljava/lang/Object;
+
+    check-cast v1, Landroid/content/res/ColorStateList;
+
+    invoke-virtual {v1}, Landroid/content/res/ColorStateList;->getDefaultColor()I
+
+    move-result v4
+
+    invoke-virtual {v1, p1, v4}, Landroid/content/res/ColorStateList;->getColorForState([II)I
+
+    move-result v1
+
+    iget v4, v0, Llk6;->b:I
+
+    if-eq v1, v4, :cond_0
+
+    iput v1, v0, Llk6;->b:I
+
+    move v0, v2
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v3
+
+    :goto_0
+    iget-object v1, p0, Lbzg;->d:Llk6;
+
+    invoke-virtual {v1}, Llk6;->L()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    iget-object v4, v1, Llk6;->d:Ljava/lang/Object;
+
+    check-cast v4, Landroid/content/res/ColorStateList;
+
+    invoke-virtual {v4}, Landroid/content/res/ColorStateList;->getDefaultColor()I
+
+    move-result v5
+
+    invoke-virtual {v4, p1, v5}, Landroid/content/res/ColorStateList;->getColorForState([II)I
+
+    move-result p1
+
+    iget v4, v1, Llk6;->b:I
+
+    if-eq p1, v4, :cond_1
+
+    iput p1, v1, Llk6;->b:I
+
+    goto :goto_1
+
+    :cond_1
+    move v2, v3
+
+    :goto_1
+    or-int p1, v0, v2
+
+    return p1
 .end method
 
-.method public static c(Landroid/view/View;)Ljava/util/List;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/view/View;",
-            ")",
-            "Ljava/util/List<",
-            "Landroid/graphics/Rect;",
-            ">;"
-        }
-    .end annotation
+.method public getFillAlpha()F
+    .locals 1
 
-    invoke-virtual {p0}, Landroid/view/View;->getSystemGestureExclusionRects()Ljava/util/List;
+    iget v0, p0, Lbzg;->h:F
 
-    move-result-object p0
-
-    return-object p0
+    return v0
 .end method
 
-.method public static d(Landroid/view/View;Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
+.method public getFillColor()I
+    .locals 1
+
+    iget-object v0, p0, Lbzg;->f:Llk6;
+
+    iget v0, v0, Llk6;->b:I
+
+    return v0
+.end method
+
+.method public getStrokeAlpha()F
+    .locals 1
+
+    iget v0, p0, Lbzg;->g:F
+
+    return v0
+.end method
+
+.method public getStrokeColor()I
+    .locals 1
+
+    iget-object v0, p0, Lbzg;->d:Llk6;
+
+    iget v0, v0, Llk6;->b:I
+
+    return v0
+.end method
+
+.method public getStrokeWidth()F
+    .locals 1
+
+    iget v0, p0, Lbzg;->e:F
+
+    return v0
+.end method
+
+.method public getTrimPathEnd()F
+    .locals 1
+
+    iget v0, p0, Lbzg;->j:F
+
+    return v0
+.end method
+
+.method public getTrimPathOffset()F
+    .locals 1
+
+    iget v0, p0, Lbzg;->k:F
+
+    return v0
+.end method
+
+.method public getTrimPathStart()F
+    .locals 1
+
+    iget v0, p0, Lbzg;->i:F
+
+    return v0
+.end method
+
+.method public setFillAlpha(F)V
     .locals 0
 
-    invoke-virtual/range {p0 .. p6}, Landroid/view/View;->saveAttributeDataForStyleable(Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
+    iput p1, p0, Lbzg;->h:F
 
     return-void
 .end method
 
-.method public static e(Landroid/view/View;Lh04;)V
-    .locals 0
+.method public setFillColor(I)V
+    .locals 1
 
-    const/4 p1, 0x0
+    iget-object v0, p0, Lbzg;->f:Llk6;
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setContentCaptureSession(Landroid/view/contentcapture/ContentCaptureSession;)V
+    iput p1, v0, Llk6;->b:I
 
     return-void
 .end method
 
-.method public static f(Landroid/view/View;Ljava/util/List;)V
+.method public setStrokeAlpha(F)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/view/View;",
-            "Ljava/util/List<",
-            "Landroid/graphics/Rect;",
-            ">;)V"
-        }
-    .end annotation
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setSystemGestureExclusionRects(Ljava/util/List;)V
+    iput p1, p0, Lbzg;->g:F
+
+    return-void
+.end method
+
+.method public setStrokeColor(I)V
+    .locals 1
+
+    iget-object v0, p0, Lbzg;->d:Llk6;
+
+    iput p1, v0, Llk6;->b:I
+
+    return-void
+.end method
+
+.method public setStrokeWidth(F)V
+    .locals 0
+
+    iput p1, p0, Lbzg;->e:F
+
+    return-void
+.end method
+
+.method public setTrimPathEnd(F)V
+    .locals 0
+
+    iput p1, p0, Lbzg;->j:F
+
+    return-void
+.end method
+
+.method public setTrimPathOffset(F)V
+    .locals 0
+
+    iput p1, p0, Lbzg;->k:F
+
+    return-void
+.end method
+
+.method public setTrimPathStart(F)V
+    .locals 0
+
+    iput p1, p0, Lbzg;->i:F
 
     return-void
 .end method

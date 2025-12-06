@@ -1,82 +1,93 @@
 .class public final Ll6c;
-.super Lsgf;
+.super Landroid/view/View$BaseSavedState;
 .source "SourceFile"
 
-# interfaces
-.implements Lzi6;
+
+# static fields
+.field public static final CREATOR:Lk6c;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:I
 
-.field public final synthetic Y:Lu6c;
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Lu6c;Lkotlin/coroutines/Continuation;)V
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lk6c;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Ll6c;->CREATOR:Lk6c;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 1
+
+    .line 4
+    invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
+
+    .line 5
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Ll6c;->a:I
+
+    .line 6
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
+    move-result p1
+
+    if-lez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    iput-boolean p1, p0, Ll6c;->b:Z
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcelable;IZ)V
     .locals 0
 
-    iput-object p1, p0, Ll6c;->Y:Lu6c;
+    .line 1
+    invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    const/4 p1, 0x2
+    .line 2
+    iput p2, p0, Ll6c;->a:I
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    .line 3
+    iput-boolean p3, p0, Ll6c;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    check-cast p1, Lh6c;
+    invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget p2, p0, Ll6c;->a:I
 
-    invoke-virtual {p0, p1, p2}, Ll6c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    move-result-object p1
+    iget-boolean p2, p0, Ll6c;->b:Z
 
-    check-cast p1, Ll6c;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
 
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Ll6c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Ll6c;
-
-    iget-object v1, p0, Ll6c;->Y:Lu6c;
-
-    invoke-direct {v0, v1, p2}, Ll6c;-><init>(Lu6c;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Ll6c;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ll6c;->X:Ljava/lang/Object;
-
-    check-cast p1, Lh6c;
-
-    iget-object v0, p0, Ll6c;->Y:Lu6c;
-
-    iget-object v0, v0, Lu6c;->w0:Lxe5;
-
-    invoke-static {v0, p1}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
-
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
+    return-void
 .end method

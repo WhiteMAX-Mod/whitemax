@@ -1,89 +1,176 @@
-.class public abstract Ld14;
+.class public final Ld14;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:I
+
+.field public final b:Z
+
+
 # direct methods
-.method public static a(Landroid/content/Context;Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;I)Landroid/content/Intent;
-    .locals 6
+.method public constructor <init>(I)V
+    .locals 1
 
-    and-int/lit8 v0, p5, 0x4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz v0, :cond_1
+    iput p1, p0, Ld14;->a:I
 
-    if-nez p3, :cond_1
+    const/4 v0, 0x2
 
-    new-instance p3, Ljava/lang/StringBuilder;
+    if-eq p1, v0, :cond_1
 
-    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
+    const/4 v0, 0x3
 
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    if-ne p1, v0, :cond_0
 
-    move-result-object p5
-
-    invoke-virtual {p3, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p5, ".DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-
-    invoke-virtual {p3, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p3
-
-    invoke-static {p0, p3}, Lpui;->a(Landroid/content/Context;Ljava/lang/String;)I
-
-    move-result p5
-
-    if-nez p5, :cond_0
-
-    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
-
-    move-result-object p0
-
-    return-object p0
+    goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/RuntimeException;
+    const/4 p1, 0x0
 
-    const-string p1, "Permission "
-
-    const-string p2, " is required by your application to receive broadcasts, please add it to your manifest"
-
-    invoke-static {p1, p3, p2}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    goto :goto_1
 
     :cond_1
-    and-int/lit8 v5, p5, 0x1
+    :goto_0
+    const/4 p1, 0x1
 
-    move-object v0, p0
+    :goto_1
+    iput-boolean p1, p0, Ld14;->b:Z
 
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    move-object v4, p4
-
-    invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;I)Landroid/content/Intent;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method
 
-.method public static b(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;
-    .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/content/Context;->startForegroundService(Landroid/content/Intent;)Landroid/content/ComponentName;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    move-result-object p0
+    const/4 v0, 0x1
 
-    return-object p0
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ld14;
+
+    if-nez v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Ld14;
+
+    iget v1, p0, Ld14;->a:I
+
+    iget p1, p1, Ld14;->a:I
+
+    if-eq v1, p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget v0, p0, Ld14;->a:I
+
+    invoke-static {v0}, Laz1;->v(I)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    const/4 v1, 0x0
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ContactsBannerListItem(bannerType="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Ld14;->a:I
+
+    packed-switch v1, :pswitch_data_0
+
+    const-string v1, "null"
+
+    goto :goto_0
+
+    :pswitch_0
+    const-string v1, "PERMIT_MIC_COMPACT"
+
+    goto :goto_0
+
+    :pswitch_1
+    const-string v1, "PERMIT_MIC_MIDDLE"
+
+    goto :goto_0
+
+    :pswitch_2
+    const-string v1, "PERMIT_NOTIFICATIONS_CONTACTS_COMPACT"
+
+    goto :goto_0
+
+    :pswitch_3
+    const-string v1, "PERMIT_NOTIFICATIONS_CONTACTS_MIDDLE"
+
+    goto :goto_0
+
+    :pswitch_4
+    const-string v1, "PERMIT_PHONE_BOOK_CONTACTS_MIDDLE"
+
+    goto :goto_0
+
+    :pswitch_5
+    const-string v1, "PERMIT_PHONE_BOOK_CONTACTS_COMPACT"
+
+    goto :goto_0
+
+    :pswitch_6
+    const-string v1, "PERMIT_PHONE_BOOK_CONTACTS_BIG"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isCloseable=false)"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

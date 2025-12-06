@@ -1,91 +1,45 @@
 .class public final Lfs8;
-.super Ljava/lang/Object;
+.super Lc3;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:J
+.field public final b:Lgu3;
 
-.field public b:J
+.field public final c:Lgu3;
 
-.field public c:Z
-
-.field public d:Z
-
-.field public e:Z
-
-.field public f:Z
+.field public final d:Lp6;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Lor8;Lgu3;Lgu3;Lp6;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lc3;-><init>(Lor8;)V
 
-    const-wide/high16 v0, -0x8000000000000000L
+    iput-object p2, p0, Lfs8;->b:Lgu3;
 
-    iput-wide v0, p0, Lfs8;->b:J
+    iput-object p3, p0, Lfs8;->c:Lgu3;
+
+    iput-object p4, p0, Lfs8;->d:Lp6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(J)V
+.method public final f(Lbs8;)V
     .locals 2
 
-    const-wide/high16 v0, -0x8000000000000000L
+    new-instance v0, Ltk3;
 
-    cmp-long v0, p1, v0
+    const/4 v1, 0x2
 
-    if-eqz v0, :cond_1
+    invoke-direct {v0, p1, v1, p0}, Ltk3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    const-wide/16 v0, 0x0
+    iget-object p1, p0, Lc3;->a:Lor8;
 
-    cmp-long v0, p1, v0
-
-    if-ltz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 v0, 0x1
-
-    :goto_1
-    invoke-static {v0}, Lsgi;->d(Z)V
-
-    iput-wide p1, p0, Lfs8;->b:J
-
-    return-void
-.end method
-
-.method public final b(J)V
-    .locals 2
-
-    const-wide/16 v0, 0x0
-
-    cmp-long v0, p1, v0
-
-    if-ltz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-static {v0}, Lsgi;->d(Z)V
-
-    iput-wide p1, p0, Lfs8;->a:J
+    invoke-virtual {p1, v0}, Lor8;->e(Lbs8;)V
 
     return-void
 .end method

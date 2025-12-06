@@ -1,129 +1,148 @@
 .class public final Lq6c;
-.super Lsgf;
+.super Landroid/widget/LinearLayout;
 .source "SourceFile"
-
-# interfaces
-.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic X:Landroid/content/Intent;
-
-.field public final synthetic Y:Lu6c;
+.field public final a:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Intent;Lu6c;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Z)V
+    .locals 3
 
-    iput-object p1, p0, Lq6c;->X:Landroid/content/Intent;
+    invoke-direct {p0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    iput-object p2, p0, Lq6c;->Y:Lu6c;
+    iput-boolean p2, p0, Lq6c;->a:Z
 
-    const/4 p1, 0x2
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
 
-    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p2
+
+    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
+
+    const/high16 v0, 0x41400000    # 12.0f
+
+    mul-float/2addr p2, v0
+
+    invoke-virtual {p0, p2}, Landroid/view/View;->setElevation(F)V
+
+    new-instance p2, Lu74;
+
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, v0
+
+    invoke-direct {p2, v1}, Lu74;-><init>(F)V
+
+    invoke-virtual {p0, p2}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
+
+    const/4 p2, 0x1
+
+    invoke-virtual {p0, p2}, Landroid/widget/LinearLayout;->setOrientation(I)V
+
+    const/4 p2, 0x4
+
+    int-to-float p2, p2
+
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, p2
+
+    invoke-static {v0}, Lkti;->d(F)I
+
+    move-result v0
+
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p2, v1
+
+    invoke-static {p2}, Lkti;->d(F)I
+
+    move-result p2
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
+
+    move-result v2
+
+    invoke-virtual {p0, v1, v0, v2, p2}, Landroid/view/View;->setPadding(IIII)V
+
+    new-instance p2, Lkga;
+
+    const/4 v0, 0x0
+
+    const/16 v1, 0xb
+
+    invoke-direct {p2, p1, v0, v1}, Lkga;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
+
+    invoke-static {p2, p0}, Ltqi;->c(Lum6;Landroid/view/View;)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public static final synthetic a(Lq6c;)Lyeb;
     .locals 0
 
-    check-cast p1, Lq54;
+    invoke-direct {p0}, Lq6c;->getCurrentTheme()Lyeb;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result-object p0
 
-    invoke-virtual {p0, p1, p2}, Lq6c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lq6c;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lq6c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object p0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method private final getCurrentTheme()Lyeb;
     .locals 2
 
-    new-instance p1, Lq6c;
+    sget-object v0, La93;->s0:Lv1a;
 
-    iget-object v0, p0, Lq6c;->X:Landroid/content/Intent;
+    iget-boolean v1, p0, Lq6c;->a:Z
 
-    iget-object v1, p0, Lq6c;->Y:Lu6c;
+    if-eqz v1, :cond_0
 
-    invoke-direct {p1, v0, v1, p2}, Lq6c;-><init>(Landroid/content/Intent;Lu6c;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0, p0}, Lv1a;->B(Landroid/view/View;)Lh5b;
 
-    return-object p1
-.end method
+    move-result-object v0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lq6c;->X:Landroid/content/Intent;
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    const-class v0, Landroid/graphics/RectF;
-
-    const-string v1, "ru.ok.tamtam.extra.CROPPED_RECT"
-
-    invoke-static {p1, v1, v0}, La1i;->b(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/os/Parcelable;
-
-    :goto_0
-    check-cast p1, Landroid/graphics/RectF;
-
-    sget-object v0, Lccg;->a:Lccg;
-
-    if-nez p1, :cond_1
+    iget-object v0, v0, Lh5b;->c:Lyeb;
 
     return-object v0
 
-    :cond_1
-    sget-object v1, Lu6c;->z0:[Ltr7;
+    :cond_0
+    invoke-virtual {v0, p0}, Lv1a;->y(Landroid/view/View;)Lyeb;
 
-    iget-object v1, p0, Lq6c;->Y:Lu6c;
-
-    invoke-virtual {v1}, Lu6c;->s()Liv5;
-
-    move-result-object v2
-
-    iget-object v3, v1, Lu6c;->y0:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Liv5;->p(Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2, p1}, Lu6c;->t(Ljava/lang/String;Landroid/graphics/RectF;)V
+    move-result-object v0
 
     return-object v0
 .end method

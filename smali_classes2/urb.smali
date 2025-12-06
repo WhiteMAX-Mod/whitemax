@@ -1,89 +1,39 @@
-.class public final enum Lurb;
-.super Ljava/lang/Enum;
+.class public final Lurb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic b:[Lurb;
-
-.field public static final synthetic c:Lzd5;
-
-
 # instance fields
-.field public final a:I
+.field public final a:Landroid/app/Application;
+
+.field public final b:Lpsb;
+
+.field public final c:Ljt5;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
-
-    new-instance v0, Lurb;
-
-    const-string v1, "CALL"
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    invoke-direct {v0, v1, v2, v3}, Lurb;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lurb;
-
-    const-string v2, "VIDEO"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v1, v2, v3, v4}, Lurb;-><init>(Ljava/lang/String;II)V
-
-    filled-new-array {v0, v1}, [Lurb;
-
-    move-result-object v0
-
-    sput-object v0, Lurb;->b:[Lurb;
-
-    new-instance v1, Lzd5;
-
-    invoke-direct {v1, v0}, Lzd5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lurb;->c:Lzd5;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput p3, p0, Lurb;->a:I
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lurb;
+.method public constructor <init>(Landroid/app/Application;)V
     .locals 1
 
-    const-class v0, Lurb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iput-object p1, p0, Lurb;->a:Landroid/app/Application;
 
-    move-result-object p0
+    new-instance p1, Lpsb;
 
-    check-cast p0, Lurb;
+    sget-object v0, Lqsb;->f:[Ljava/lang/String;
 
-    return-object p0
-.end method
+    invoke-direct {p1, v0}, Lpsb;-><init>([Ljava/lang/String;)V
 
-.method public static values()[Lurb;
-    .locals 1
+    iput-object p1, p0, Lurb;->b:Lpsb;
 
-    sget-object v0, Lurb;->b:[Lurb;
+    new-instance p1, Ljt5;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    move-result-object v0
+    invoke-direct {p1, v0, p0}, Ljt5;-><init>(ILjava/lang/Object;)V
 
-    check-cast v0, [Lurb;
+    iput-object p1, p0, Lurb;->c:Ljt5;
 
-    return-object v0
+    return-void
 .end method

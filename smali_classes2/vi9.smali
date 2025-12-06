@@ -1,146 +1,57 @@
 .class public final Lvi9;
-.super Ljava/lang/Object;
+.super Lq44;
 .source "SourceFile"
-
-# interfaces
-.implements Laj9;
 
 
 # instance fields
-.field public final a:J
+.field public X:Z
 
-.field public final b:Lppg;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lwi9;
+
+.field public d:Lwi9;
+
+.field public o:Ljava/util/List;
+
+.field public s0:I
 
 
 # direct methods
-.method public constructor <init>(JLppg;)V
+.method public constructor <init>(Lwi9;Lq44;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lvi9;->Z:Lwi9;
 
-    iput-wide p1, p0, Lvi9;->a:J
-
-    iput-object p3, p0, Lvi9;->b:Lppg;
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Lppg;
-    .locals 1
-
-    iget-object v0, p0, Lvi9;->b:Lppg;
-
-    return-object v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lvi9;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lvi9;
-
-    iget-wide v3, p0, Lvi9;->a:J
-
-    iget-wide v5, p1, Lvi9;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lvi9;->b:Lppg;
-
-    iget-object p1, p1, Lvi9;->b:Lppg;
-
-    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    iget-wide v0, p0, Lvi9;->a:J
+    iput-object p1, p0, Lvi9;->Y:Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    iget p1, p0, Lvi9;->s0:I
 
-    move-result v0
+    const/high16 v0, -0x80000000
 
-    mul-int/lit8 v0, v0, 0x1f
+    or-int/2addr p1, v0
 
-    iget-object v1, p0, Lvi9;->b:Lppg;
+    iput p1, p0, Lvi9;->s0:I
 
-    invoke-virtual {v1}, Lppg;->hashCode()I
+    const/4 p1, 0x0
 
-    move-result v1
+    const/4 v0, 0x0
 
-    add-int/2addr v1, v0
+    iget-object v1, p0, Lvi9;->Z:Lwi9;
 
-    return v1
-.end method
+    invoke-virtual {v1, p0, v0, p1}, Lwi9;->a(Lq44;Ljava/util/List;Z)Ljava/lang/Object;
 
-.method public final j()J
-    .locals 2
+    move-result-object p1
 
-    iget-wide v0, p0, Lvi9;->a:J
-
-    return-wide v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "OnPauseRequested(messageId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lvi9;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", model="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lvi9;->b:Lppg;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

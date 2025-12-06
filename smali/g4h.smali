@@ -1,35 +1,18 @@
-.class public final Lg4h;
+.class public abstract Lg4h;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
+.field public a:J
 
-.field public final b:I
+.field public b:J
 
-.field public final c:I
+.field public c:D
 
-.field public final d:I
-
-.field public final e:[B
+.field public d:Landroid/util/Range;
 
 
-# direct methods
-.method public synthetic constructor <init>(IIIII[B)V
-    .locals 0
-
-    iput p2, p0, Lg4h;->a:I
-
-    iput p3, p0, Lg4h;->b:I
-
-    iput p4, p0, Lg4h;->c:I
-
-    iput p5, p0, Lg4h;->d:I
-
-    iput-object p6, p0, Lg4h;->e:[B
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
+# virtual methods
+.method public abstract a()V
 .end method

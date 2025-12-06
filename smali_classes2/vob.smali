@@ -1,90 +1,123 @@
 .class public final Lvob;
-.super Lsgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzi6;
+
+# static fields
+.field public static final b:Ljava/lang/String;
 
 
 # instance fields
-.field public final synthetic X:Lxob;
-
-.field public final synthetic Y:Ljava/lang/String;
+.field public final a:Landroid/content/Context;
 
 
 # direct methods
-.method public constructor <init>(Lxob;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+.method static constructor <clinit>()V
+    .locals 3
+
+    sget-object v0, Ljava/io/File;->separator:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, "copy"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "media"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lvob;->b:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    iput-object p1, p0, Lvob;->X:Lxob;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lvob;->Y:Ljava/lang/String;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lvob;->a:Landroid/content/Context;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Ljava/lang/String;
+    .locals 5
 
-    check-cast p1, Lq54;
+    iget-object v0, p0, Lvob;->a:Landroid/content/Context;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {v0}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
 
-    invoke-virtual {p0, p1, p2}, Lvob;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result-object v0
 
-    move-result-object p1
+    invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;
 
-    check-cast p1, Lvob;
+    move-result-object v0
 
-    sget-object p2, Lccg;->a:Lccg;
+    sget-object v1, Lvob;->b:Ljava/lang/String;
 
-    invoke-virtual {p1, p2}, Lvob;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Laz1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    return-object p2
-.end method
+    move-result-object v0
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    :try_start_0
+    new-instance v1, Ljava/io/File;
 
-    new-instance p1, Lvob;
+    invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lvob;->X:Lxob;
+    invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
-    iget-object v1, p0, Lvob;->Y:Ljava/lang/String;
+    move-result v2
 
-    invoke-direct {p1, v0, v1, p2}, Lvob;-><init>(Lxob;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+    if-nez v2, :cond_0
 
-    return-object p1
-.end method
+    invoke-virtual {v1}, Ljava/io/File;->mkdirs()Z
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    return-object v0
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    :catch_0
+    move-exception v1
 
-    iget-object p1, p0, Lvob;->X:Lxob;
+    goto :goto_0
 
-    iget-object p1, p1, Lxob;->o:Lzz3;
+    :cond_0
+    return-object v0
 
-    iget-object p1, p1, Lzz3;->g:Lwif;
+    :goto_0
+    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    invoke-virtual {p1}, Lwif;->getValue()Ljava/lang/Object;
+    move-result-object v2
 
-    move-result-object p1
+    const-string v3, "Failed to create dir="
 
-    check-cast p1, Lj1a;
+    const-string v4, " due to: "
 
-    iget-object v0, p0, Lvob;->Y:Ljava/lang/String;
+    invoke-static {v3, v0, v4, v2}, Lwy1;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-interface {p1, v0}, Lj1a;->setValue(Ljava/lang/Object;)V
+    move-result-object v2
 
-    sget-object p1, Lccg;->a:Lccg;
+    const/4 v3, 0x0
 
-    return-object p1
+    new-array v3, v3, [Ljava/lang/Object;
+
+    const-string v4, "PathHelper"
+
+    invoke-static {v4, v1, v2, v3}, Lwqi;->g(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-object v0
 .end method

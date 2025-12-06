@@ -1,222 +1,225 @@
 .class public final Lgci;
-.super Ljava/lang/Object;
+.super Ll4;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/Map$Entry;
-.implements Ljava/lang/Comparable;
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lgci;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final a:Ljava/lang/Comparable;
+.field public final a:I
 
-.field public b:Ljava/lang/Object;
+.field public final b:Landroid/os/IBinder;
 
-.field public final synthetic c:Ldci;
+.field public final c:Les3;
+
+.field public final d:Z
+
+.field public final o:Z
 
 
 # direct methods
-.method public constructor <init>(Ldci;Ljava/lang/Comparable;Ljava/lang/Object;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lobh;
+
+    const/16 v1, 0x13
+
+    invoke-direct {v0, v1}, Lobh;-><init>(I)V
+
+    sput-object v0, Lgci;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(ILandroid/os/IBinder;Les3;ZZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgci;->c:Ldci;
+    iput p1, p0, Lgci;->a:I
 
-    iput-object p2, p0, Lgci;->a:Ljava/lang/Comparable;
+    iput-object p2, p0, Lgci;->b:Landroid/os/IBinder;
 
-    iput-object p3, p0, Lgci;->b:Ljava/lang/Object;
+    iput-object p3, p0, Lgci;->c:Les3;
+
+    iput-boolean p4, p0, Lgci;->d:Z
+
+    iput-boolean p5, p0, Lgci;->o:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic compareTo(Ljava/lang/Object;)I
-    .locals 1
-
-    check-cast p1, Lgci;
-
-    iget-object p1, p1, Lgci;->a:Ljava/lang/Comparable;
-
-    iget-object v0, p0, Lgci;->a:Ljava/lang/Comparable;
-
-    invoke-interface {v0, p1}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
-
-    move-result p1
-
-    return p1
-.end method
-
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 6
 
-    const/4 v0, 0x1
-
-    if-ne p1, p0, :cond_0
-
-    goto :goto_2
-
-    :cond_0
-    instance-of v1, p1, Ljava/util/Map$Entry;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
+    if-nez p1, :cond_0
 
     goto :goto_3
 
+    :cond_0
+    if-ne p0, p1, :cond_1
+
+    goto :goto_2
+
     :cond_1
-    check-cast p1, Ljava/util/Map$Entry;
+    instance-of v0, p1, Lgci;
 
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    if-nez v0, :cond_2
 
-    move-result-object v1
+    goto :goto_3
 
-    iget-object v3, p0, Lgci;->a:Ljava/lang/Comparable;
+    :cond_2
+    check-cast p1, Lgci;
+
+    iget-object v0, p0, Lgci;->c:Les3;
+
+    iget-object v1, p1, Lgci;->c:Les3;
+
+    invoke-virtual {v0, v1}, Les3;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    const/4 v0, 0x2
+
+    const-string v1, "com.google.android.gms.common.internal.IAccountAccessor"
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Lgci;->b:Landroid/os/IBinder;
 
     if-nez v3, :cond_3
 
-    if-eqz v1, :cond_2
-
-    move v1, v2
-
-    goto :goto_0
-
-    :cond_2
-    move v1, v0
+    move-object v4, v2
 
     goto :goto_0
 
     :cond_3
-    invoke-virtual {v3, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    sget v4, Lx5;->d:I
 
-    move-result v1
+    invoke-interface {v3, v1}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
-    :goto_0
-    if-eqz v1, :cond_6
+    move-result-object v4
 
-    iget-object v1, p0, Lgci;->b:Ljava/lang/Object;
+    instance-of v5, v4, Lsa7;
 
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    if-eqz v5, :cond_4
 
-    move-result-object p1
+    check-cast v4, Lsa7;
 
-    if-nez v1, :cond_5
-
-    if-eqz p1, :cond_4
-
-    move p1, v2
-
-    goto :goto_1
+    goto :goto_0
 
     :cond_4
-    move p1, v0
+    new-instance v4, Lubj;
+
+    invoke-direct {v4, v3, v1, v0}, Loai;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+
+    :goto_0
+    iget-object p1, p1, Lgci;->b:Landroid/os/IBinder;
+
+    if-nez p1, :cond_5
 
     goto :goto_1
 
     :cond_5
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    sget v2, Lx5;->d:I
 
-    move-result p1
+    invoke-interface {p1, v1}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
-    :goto_1
-    if-eqz p1, :cond_6
+    move-result-object v2
 
-    :goto_2
-    return v0
+    instance-of v3, v2, Lsa7;
 
-    :cond_6
-    :goto_3
-    return v2
-.end method
+    if-eqz v3, :cond_6
 
-.method public final synthetic getKey()Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lgci;->a:Ljava/lang/Comparable;
-
-    return-object v0
-.end method
-
-.method public final getValue()Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lgci;->b:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lgci;->a:Ljava/lang/Comparable;
-
-    if-nez v1, :cond_0
-
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    iget-object v2, p0, Lgci;->b:Ljava/lang/Object;
-
-    if-nez v2, :cond_1
+    check-cast v2, Lsa7;
 
     goto :goto_1
 
-    :cond_1
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    :cond_6
+    new-instance v2, Lubj;
+
+    invoke-direct {v2, p1, v1, v0}, Loai;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+
+    :goto_1
+    invoke-static {v4, v2}, Lsyi;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_7
+
+    :goto_2
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_7
+    :goto_3
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 4
+
+    const/16 v0, 0x4f45
+
+    invoke-static {p1, v0}, La9j;->k(Landroid/os/Parcel;I)I
 
     move-result v0
 
-    :goto_1
-    xor-int/2addr v0, v1
+    const/4 v1, 0x1
 
-    return v0
-.end method
+    const/4 v2, 0x4
 
-.method public final setValue(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    invoke-static {p1, v1, v2}, La9j;->m(Landroid/os/Parcel;II)V
 
-    iget-object v0, p0, Lgci;->c:Ldci;
+    iget v1, p0, Lgci;->a:I
 
-    invoke-virtual {v0}, Ldci;->g()V
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget-object v0, p0, Lgci;->b:Ljava/lang/Object;
+    const/4 v1, 0x2
 
-    iput-object p1, p0, Lgci;->b:Ljava/lang/Object;
+    iget-object v3, p0, Lgci;->b:Landroid/os/IBinder;
 
-    return-object v0
-.end method
+    invoke-static {p1, v1, v3}, La9j;->e(Landroid/os/Parcel;ILandroid/os/IBinder;)V
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    const/4 v1, 0x3
 
-    iget-object v0, p0, Lgci;->a:Ljava/lang/Comparable;
+    iget-object v3, p0, Lgci;->c:Les3;
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p1, v1, v3, p2}, La9j;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
-    move-result-object v0
+    invoke-static {p1, v2, v2}, La9j;->m(Landroid/os/Parcel;II)V
 
-    iget-object v1, p0, Lgci;->b:Ljava/lang/Object;
+    iget-boolean p2, p0, Lgci;->d:Z
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    move-result-object v1
+    const/4 p2, 0x5
 
-    const-string v2, "="
+    invoke-static {p1, p2, v2}, La9j;->m(Landroid/os/Parcel;II)V
 
-    invoke-static {v0, v2, v1}, Lu15;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-boolean p2, p0, Lgci;->o:Z
 
-    move-result-object v0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    return-object v0
+    invoke-static {p1, v0}, La9j;->l(Landroid/os/Parcel;I)V
+
+    return-void
 .end method

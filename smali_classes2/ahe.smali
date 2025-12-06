@@ -1,305 +1,419 @@
 .class public final Lahe;
-.super Ljava/lang/Object;
+.super Lghe;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/opengl/GLSurfaceView$Renderer;
 
 
 # instance fields
-.field public X:Ljava/nio/FloatBuffer;
+.field public final t0:Ljava/lang/String;
 
-.field public Y:J
+.field public final u0:J
 
-.field public Z:I
+.field public final v0:I
 
-.field public a:I
+.field public final w0:Ljava/lang/String;
 
-.field public b:I
-
-.field public c:I
-
-.field public o:I
-
-.field public q0:I
+.field public final x0:Ljava/lang/String;
 
 
 # direct methods
-.method public static a(ILjava/lang/String;)I
+.method public constructor <init>(Lzge;)V
     .locals 2
 
-    invoke-static {p0}, Landroid/opengl/GLES20;->glCreateShader(I)I
+    invoke-direct {p0, p1}, Lghe;-><init>(Lfhe;)V
 
-    move-result p0
+    iget-object v0, p1, Lzge;->g:Ljava/lang/String;
 
-    invoke-static {p0, p1}, Landroid/opengl/GLES20;->glShaderSource(ILjava/lang/String;)V
+    iput-object v0, p0, Lahe;->t0:Ljava/lang/String;
 
-    invoke-static {p0}, Landroid/opengl/GLES20;->glCompileShader(I)V
+    iget-wide v0, p1, Lzge;->h:J
 
-    const/4 p1, 0x1
+    iput-wide v0, p0, Lahe;->u0:J
 
-    new-array p1, p1, [I
+    iget v0, p1, Lzge;->i:I
 
-    const v0, 0x8b81
+    iput v0, p0, Lahe;->v0:I
 
-    const/4 v1, 0x0
+    iget-object v0, p1, Lzge;->j:Ljava/lang/String;
 
-    invoke-static {p0, v0, p1, v1}, Landroid/opengl/GLES20;->glGetShaderiv(II[II)V
+    iput-object v0, p0, Lahe;->w0:Ljava/lang/String;
 
-    aget p1, p1, v1
+    iget-object p1, p1, Lzge;->k:Ljava/lang/String;
 
-    if-eqz p1, :cond_0
+    iput-object p1, p0, Lahe;->x0:Ljava/lang/String;
 
-    return p0
-
-    :cond_0
-    invoke-static {p0}, Landroid/opengl/GLES20;->glGetShaderInfoLog(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p0}, Landroid/opengl/GLES20;->glDeleteShader(I)V
-
-    new-instance p0, Ljava/lang/RuntimeException;
-
-    const-string v0, "Error compiling shader: "
-
-    invoke-static {v0, p1}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final onDrawFrame(Ljavax/microedition/khronos/opengles/GL10;)V
-    .locals 6
+.method public final v()Lri9;
+    .locals 14
 
-    const/16 p1, 0x4000
+    new-instance v0, Lx10;
 
-    invoke-static {p1}, Landroid/opengl/GLES20;->glClear(I)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    new-instance v1, La10;
 
-    move-result-wide v0
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    iget-wide v2, p0, Lahe;->Y:J
+    iget-wide v2, p0, Lahe;->u0:J
 
-    sub-long/2addr v0, v2
+    const-wide/16 v4, 0x0
 
-    long-to-float p1, v0
+    cmp-long v6, v2, v4
 
-    const/high16 v0, 0x447a0000    # 1000.0f
+    if-eqz v6, :cond_0
 
-    div-float/2addr p1, v0
+    move-wide v7, v2
 
-    iget v0, p0, Lahe;->b:I
-
-    invoke-static {v0, p1}, Landroid/opengl/GLES20;->glUniform1f(IF)V
-
-    iget p1, p0, Lahe;->c:I
-
-    iget v0, p0, Lahe;->Z:I
-
-    int-to-float v0, v0
-
-    iget v1, p0, Lahe;->q0:I
-
-    int-to-float v1, v1
-
-    invoke-static {p1, v0, v1}, Landroid/opengl/GLES20;->glUniform2f(IFF)V
-
-    iget p1, p0, Lahe;->o:I
-
-    invoke-static {p1}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
-
-    iget v0, p0, Lahe;->o:I
-
-    iget-object p1, p0, Lahe;->X:Ljava/nio/FloatBuffer;
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x0
+    goto :goto_0
 
     :cond_0
-    move-object v5, p1
+    move-wide v7, v4
 
-    const/4 v1, 0x2
+    :goto_0
+    iput-wide v7, v1, La10;->b:J
 
-    const/16 v2, 0x1406
+    iget-object v7, p0, Lahe;->t0:Ljava/lang/String;
 
-    const/4 v3, 0x0
+    invoke-static {v7}, Ll8g;->c(Ljava/lang/CharSequence;)Z
 
-    const/4 v4, 0x0
+    move-result v8
 
-    invoke-static/range {v0 .. v5}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
+    const/4 v9, 0x0
 
-    const/4 p1, 0x0
+    if-nez v8, :cond_1
 
-    const/4 v0, 0x4
+    goto/16 :goto_8
 
-    const/4 v1, 0x5
+    :cond_1
+    if-lez v6, :cond_9
 
-    invoke-static {v1, p1, v0}, Landroid/opengl/GLES20;->glDrawArrays(III)V
+    iget-object v6, p0, Lhge;->a:Lige;
 
-    iget p1, p0, Lahe;->o:I
+    if-eqz v6, :cond_2
 
-    invoke-static {p1}, Landroid/opengl/GLES20;->glDisableVertexAttribArray(I)V
+    goto :goto_1
 
-    return-void
-.end method
+    :cond_2
+    move-object v6, v9
 
-.method public final onSurfaceChanged(Ljavax/microedition/khronos/opengles/GL10;II)V
-    .locals 0
+    :goto_1
+    iget-object v6, v6, Lige;->z:Lk18;
 
-    const/4 p1, 0x0
+    invoke-interface {v6}, Lk18;->getValue()Ljava/lang/Object;
 
-    invoke-static {p1, p1, p2, p3}, Landroid/opengl/GLES20;->glViewport(IIII)V
+    move-result-object v6
 
-    iput p2, p0, Lahe;->Z:I
+    check-cast v6, Lu6b;
 
-    iput p3, p0, Lahe;->q0:I
+    iget-object v7, p0, Lhge;->a:Lige;
 
-    return-void
-.end method
+    if-eqz v7, :cond_3
 
-.method public final onSurfaceCreated(Ljavax/microedition/khronos/opengles/GL10;Ljavax/microedition/khronos/egl/EGLConfig;)V
-    .locals 2
+    goto :goto_2
 
-    const/16 p1, 0x8
+    :cond_3
+    move-object v7, v9
 
-    new-array p1, p1, [F
+    :goto_2
+    iget-object v7, v7, Lige;->i:Lk18;
 
-    fill-array-data p1, :array_0
+    invoke-interface {v7}, Lk18;->getValue()Ljava/lang/Object;
 
-    const/16 p2, 0x20
+    move-result-object v7
 
-    invoke-static {p2}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+    check-cast v7, Lqv3;
 
-    move-result-object p2
+    iget-object v8, p0, Lhge;->a:Lige;
 
-    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
+    if-eqz v8, :cond_4
+
+    goto :goto_3
+
+    :cond_4
+    move-object v8, v9
+
+    :goto_3
+    iget-object v8, v8, Lige;->B:Lk18;
+
+    invoke-interface {v8}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Lcsd;
+
+    iget-object v6, v6, Lu6b;->e:Lhc8;
+
+    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v10
+
+    filled-new-array {v10}, [Ljava/lang/Object;
+
+    move-result-object v10
+
+    const-string v11, "hc8"
+
+    const-string v12, "getVcfByContactId: contactId %d"
+
+    invoke-static {v11, v12, v10}, Lwqi;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    :try_start_0
+    iget-object v10, v6, Lhc8;->c:Ljava/lang/Object;
+
+    check-cast v10, Liya;
+
+    iget-object v10, v10, Liya;->a:Lk18;
+
+    invoke-interface {v10}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v10
+
+    check-cast v10, Lqsb;
+
+    sget-object v12, Lqsb;->f:[Ljava/lang/String;
+
+    invoke-virtual {v10, v12}, Lqsb;->c([Ljava/lang/String;)Z
+
+    move-result v10
+
+    if-nez v10, :cond_5
+
+    const-string v4, "getVcfByContactId: no permissions for contacts"
+
+    invoke-static {v11, v4, v9}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_4
+    move-object v7, v9
+
+    goto :goto_6
+
+    :catch_0
+    move-exception v4
+
+    goto :goto_5
+
+    :cond_5
+    if-nez v7, :cond_6
+
+    const-string v10, "Contact controller is null"
+
+    invoke-static {v11, v10, v9}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_6
+    const/4 v10, 0x0
+
+    invoke-virtual {v7, v2, v3, v10}, Lqv3;->i(JZ)Lku3;
+
+    move-result-object v7
+
+    if-nez v7, :cond_7
+
+    const-string v4, "getVcfByContactId: no contact found for id %d"
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v5
+
+    filled-new-array {v5}, [Ljava/lang/Object;
+
+    move-result-object v5
+
+    invoke-static {v11, v4, v5}, Lwqi;->f(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_4
+
+    :cond_7
+    invoke-virtual {v7}, Lku3;->q()J
+
+    move-result-wide v12
+
+    cmp-long v4, v12, v4
+
+    if-gtz v4, :cond_8
+
+    const-string v4, "getVcfByContactId: no server phone for contact id %d"
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v5
+
+    filled-new-array {v5}, [Ljava/lang/Object;
+
+    move-result-object v5
+
+    invoke-static {v11, v4, v5}, Lwqi;->f(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_4
+
+    :cond_8
+    invoke-virtual {v7}, Lku3;->q()J
+
+    move-result-wide v4
+
+    invoke-virtual {v6, v4, v5, v8}, Lhc8;->F(JLcsd;)Ljava/lang/String;
+
+    move-result-object v2
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-object v7, v2
+
+    goto :goto_6
+
+    :goto_5
+    sget-object v5, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    const-string v6, "getVcfByContactId: exception for contactId "
+
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v11, v2, v4}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_4
+
+    :goto_6
+    invoke-static {v7}, Ll8g;->c(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_9
+
+    goto :goto_8
+
+    :cond_9
+    iget v2, p0, Lahe;->v0:I
+
+    if-lez v2, :cond_b
+
+    iget-object v3, p0, Lhge;->a:Lige;
+
+    if-eqz v3, :cond_a
+
+    goto :goto_7
+
+    :cond_a
+    move-object v3, v9
+
+    :goto_7
+    iget-object v3, v3, Lige;->z:Lk18;
+
+    invoke-interface {v3}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lu6b;
+
+    iget-object v3, v3, Lu6b;->e:Lhc8;
+
+    invoke-virtual {v3, v2}, Lhc8;->E(I)Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v7}, Ll8g;->c(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_b
+
+    goto :goto_8
+
+    :cond_b
+    move-object v7, v9
+
+    :goto_8
+    iput-object v7, v1, La10;->a:Ljava/lang/String;
+
+    iget-object v2, p0, Lahe;->x0:Ljava/lang/String;
+
+    invoke-static {v2}, Ll8g;->c(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_c
+
+    move-object v2, v9
+
+    :cond_c
+    iput-object v2, v1, La10;->h:Ljava/lang/String;
+
+    iget-object v2, p0, Lahe;->w0:Ljava/lang/String;
+
+    invoke-static {v2}, Ll8g;->c(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_d
+
+    move-object v3, v9
+
+    goto :goto_9
+
+    :cond_d
+    move-object v3, v2
+
+    :goto_9
+    iput-object v3, v1, La10;->c:Ljava/lang/String;
+
+    invoke-static {v2}, Ll8g;->c(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_e
+
+    goto :goto_a
+
+    :cond_e
+    move-object v9, v2
+
+    :goto_a
+    iput-object v9, v1, La10;->d:Ljava/lang/String;
+
+    new-instance v2, La10;
+
+    invoke-direct {v2, v1}, La10;-><init>(La10;)V
+
+    new-instance v1, Lx00;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    iput-object v2, v1, Lx00;->s:La10;
+
+    sget-object v2, Ls10;->u0:Ls10;
+
+    iput-object v2, v1, Lx00;->a:Ls10;
+
+    invoke-virtual {v1}, Lx00;->a()Lw10;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lx10;->a:Ljava/util/List;
+
+    invoke-virtual {v0}, Lx10;->c()Ljdc;
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+    new-instance v1, Lri9;
 
-    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->asFloatBuffer()Ljava/nio/FloatBuffer;
+    invoke-direct {v1}, Lri9;-><init>()V
 
-    move-result-object p2
+    iput-object v0, v1, Lri9;->n:Ljdc;
 
-    invoke-virtual {p2, p1}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p2, p1}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
-
-    iput-object p2, p0, Lahe;->X:Ljava/nio/FloatBuffer;
-
-    const p2, 0x8b31
-
-    const-string v0, "\n            attribute vec4 vPosition;\n            void main() {\n                gl_Position = vPosition;\n            }\n        "
-
-    invoke-static {p2, v0}, Lahe;->a(ILjava/lang/String;)I
-
-    move-result p2
-
-    const v0, 0x8b30
-
-    const-string v1, "\n            #define PI 3.14159\n            \n            precision mediump float;\n            \n            uniform float time;\n            uniform vec2 resolution;\n            \n            // \u0423\u043d\u0438\u0444\u043e\u0440\u043c\u044b \u0434\u043b\u044f \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u043e\u0432\n            const float numBeams = 128.0;        // \u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u043b\u0443\u0447\u0435\u0439\n            const float tunnelStretch = 0.05;   // \u0420\u0430\u0441\u0442\u044f\u0436\u0435\u043d\u0438\u0435 \u0442\u0443\u043d\u043d\u0435\u043b\u044f\n            const float offsetFreq = 215.4;      // \u0427\u0430\u0441\u0442\u043e\u0442\u0430 \u0441\u043c\u0435\u0449\u0435\u043d\u0438\u044f\n            const float speedFreq = 33.1;       // \u0427\u0430\u0441\u0442\u043e\u0442\u0430 \u0441\u043a\u043e\u0440\u043e\u0441\u0442\u0438\n            const float trailStart = 6.0;      // \u041d\u0430\u0447\u0430\u043b\u043e \u043b\u0443\u0447\u0430\n            const float trailEnd = 33.0;        // \u041a\u043e\u043d\u0435\u0446 \u043b\u0443\u0447\u0430\n            const float amplitude = 5.0;       // \u0410\u043c\u043f\u043b\u0438\u0442\u0443\u0434\u0430 \u043b\u0443\u0447\u0435\u0439\n            const vec3 color1 = vec3(1.55, 0.65, 2.25);           // \u041f\u0435\u0440\u0432\u044b\u0439 \u0446\u0432\u0435\u0442\n            const vec3 color2 = vec3(0.55, 0.75, 1.225);           // \u0412\u0442\u043e\u0440\u043e\u0439 \u0446\u0432\u0435\u0442\n            const vec3 color3 = vec3(0.85, 0.25, 1.425);           // \u0422\u0440\u0435\u0442\u0438\u0439 \u0446\u0432\u0435\u0442\n            const float timeMultiplier = 0.4;  // \u041c\u043d\u043e\u0436\u0438\u0442\u0435\u043b\u044c \u0432\u0440\u0435\u043c\u0435\u043d\u0438\n            const float distanceOffset = 0.078;  // \u0421\u043c\u0435\u0449\u0435\u043d\u0438\u0435 \u0440\u0430\u0441\u0441\u0442\u043e\u044f\u043d\u0438\u044f\n            \n            \n            const float nebulaIntensity = 0.5; // \u0418\u043d\u0442\u0435\u043d\u0441\u0438\u0432\u043d\u043e\u0441\u0442\u044c \u0442\u0443\u043c\u0430\u043d\u043d\u043e\u0441\u0442\u0438\n            const vec3 nebulaColor1 = vec3(0.2, 0.0, 0.5);     // \u041f\u0435\u0440\u0432\u044b\u0439 \u0446\u0432\u0435\u0442 \u0442\u0443\u043c\u0430\u043d\u043d\u043e\u0441\u0442\u0438\n            const vec3 nebulaColor2 = vec3(0.8, 0.2, 1.0);     // \u0412\u0442\u043e\u0440\u043e\u0439 \u0446\u0432\u0435\u0442 \u0442\u0443\u043c\u0430\u043d\u043d\u043e\u0441\u0442\u0438\n            const float nebulaSpeed = 0.1;     // \u0421\u043a\u043e\u0440\u043e\u0441\u0442\u044c \u0434\u0432\u0438\u0436\u0435\u043d\u0438\u044f \u0442\u0443\u043c\u0430\u043d\u043d\u043e\u0441\u0442\u0438\n            const float nebulaScale = 1.0;     // \u041c\u0430\u0441\u0448\u0442\u0430\u0431 \u0442\u0443\u043c\u0430\u043d\u043d\u043e\u0441\u0442\u0438\n            \n            // \u041f\u0441\u0435\u0432\u0434\u043e\u0441\u043b\u0443\u0447\u0430\u0439\u043d\u0430\u044f \u0444\u0443\u043d\u043a\u0446\u0438\u044f\n            float hash(vec2 p) {\n                return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453);\n            }\n            \n            // \u0418\u043d\u0442\u0435\u0440\u043f\u043e\u043b\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0439 \u0448\u0443\u043c\n            float noise(vec2 p) {\n                vec2 i = floor(p);\n                vec2 f = fract(p);\n            \n                float a = hash(i);\n                float b = hash(i + vec2(1.0, 0.0));\n                float c = hash(i + vec2(0.0, 1.0));\n                float d = hash(i + vec2(1.0, 1.0));\n            \n                vec2 u = f * f * (3.0 - 2.0 * f);\n            \n                return mix(a, b, u.x) +\n                    (c - a) * u.y * (1.0 - u.x) +\n                    (d - b) * u.x * u.y;\n            }\n            \n            // \u0424\u0440\u0430\u043a\u0442\u0430\u043b\u044c\u043d\u044b\u0439 \u0448\u0443\u043c\n            float fbm(vec2 p) {\n                float value = 0.0;\n                float amplitude = 0.5;\n                for (int i = 0; i < 4; i++) {\n                    value += amplitude * noise(p);\n                    p *= 2.0;\n                    amplitude *= 0.5;\n                }\n                return value;\n            }\n            \n            // \u0424\u043e\u0440\u043c\u0438\u0440\u0443\u0435\u043c \u043b\u0443\u0447\u0438\n            float vDrop(vec2 uv, float t) {\n                uv.x = uv.x * numBeams;\n                float dx = fract(uv.x);\n                uv.x = floor(uv.x);\n                uv.y *= tunnelStretch;\n                float o = sin(uv.x * offsetFreq);\n                float s = cos(uv.x * speedFreq) * 0.3 + 0.2;\n                float trail = mix(trailStart, trailEnd, s);\n                float yv = fract(uv.y + t * s + o) * trail;\n                yv = 1.0 / yv;\n                yv = smoothstep(0.0, 1.0, yv * yv);\n                yv = sin(yv * PI) * (s * amplitude);\n                float d2 = sin(dx * PI);\n                return yv * (d2 * d2);\n            }\n            \n            void main() {\n                // \u041d\u043e\u0440\u043c\u0430\u043b\u0438\u0437\u0443\u0435\u043c \u043a\u043e\u043e\u0440\u0434\u0438\u043d\u0430\u0442\u044b \u0441 \u0443\u0447\u0435\u0442\u043e\u043c \u0441\u043e\u043e\u0442\u043d\u043e\u0448\u0435\u043d\u0438\u044f \u0441\u0442\u043e\u0440\u043e\u043d\n                vec2 uv = (gl_FragCoord.xy / resolution.xy) * 2.0 - 1.0;\n                uv.x *= resolution.x / resolution.y; // \u041a\u043e\u0440\u0440\u0435\u043a\u0442\u0438\u0440\u0443\u0435\u043c \u043f\u043e \u0441\u043e\u043e\u0442\u043d\u043e\u0448\u0435\u043d\u0438\u044e \u0441\u0442\u043e\u0440\u043e\u043d\n            \n                float d = length(uv) + distanceOffset;\n                vec2 uvPolar = vec2(atan(uv.x, uv.y) / PI, 2.5 / d);\n            \n                float t = time * timeMultiplier;\n                vec3 col = color1 * vDrop(uvPolar, t);\n                col += color2 * vDrop(uvPolar, t + 0.33);\n                col += color3 * vDrop(uvPolar, t + 0.66);\n            \n                col *= d * d;\n            \n                // \u0412\u044b\u0447\u0438\u0441\u043b\u0435\u043d\u0438\u0435 \u043a\u043e\u043e\u0440\u0434\u0438\u043d\u0430\u0442 \u0434\u043b\u044f \u0442\u0443\u043c\u0430\u043d\u043d\u043e\u0441\u0442\u0438\n                vec2 nebulaUV = uv * nebulaScale + vec2(0.0, t * nebulaSpeed);\n            \n                float nebulaValue = fbm(nebulaUV) * nebulaIntensity;\n                vec3 nebulaColor = mix(nebulaColor1, nebulaColor2, nebulaValue);\n            \n                col += nebulaColor * nebulaValue;\n            \n                gl_FragColor = vec4(col, 1.0);\n            }\n        "
-
-    invoke-static {v0, v1}, Lahe;->a(ILjava/lang/String;)I
-
-    move-result v0
-
-    invoke-static {}, Landroid/opengl/GLES20;->glCreateProgram()I
-
-    move-result v1
-
-    invoke-static {v1, p2}, Landroid/opengl/GLES20;->glAttachShader(II)V
-
-    invoke-static {v1, v0}, Landroid/opengl/GLES20;->glAttachShader(II)V
-
-    invoke-static {v1}, Landroid/opengl/GLES20;->glLinkProgram(I)V
-
-    const/4 p2, 0x1
-
-    new-array p2, p2, [I
-
-    const v0, 0x8b82
-
-    invoke-static {v1, v0, p2, p1}, Landroid/opengl/GLES20;->glGetProgramiv(II[II)V
-
-    aget p1, p2, p1
-
-    if-eqz p1, :cond_0
-
-    iput v1, p0, Lahe;->a:I
-
-    invoke-static {v1}, Landroid/opengl/GLES20;->glUseProgram(I)V
-
-    iget p1, p0, Lahe;->a:I
-
-    const-string p2, "time"
-
-    invoke-static {p1, p2}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
-
-    move-result p1
-
-    iput p1, p0, Lahe;->b:I
-
-    iget p1, p0, Lahe;->a:I
-
-    const-string p2, "resolution"
-
-    invoke-static {p1, p2}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
-
-    move-result p1
-
-    iput p1, p0, Lahe;->c:I
-
-    iget p1, p0, Lahe;->a:I
-
-    const-string p2, "vPosition"
-
-    invoke-static {p1, p2}, Landroid/opengl/GLES20;->glGetAttribLocation(ILjava/lang/String;)I
-
-    move-result p1
-
-    iput p1, p0, Lahe;->o:I
-
-    return-void
-
-    :cond_0
-    invoke-static {v1}, Landroid/opengl/GLES20;->glGetProgramInfoLog(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v1}, Landroid/opengl/GLES20;->glDeleteProgram(I)V
-
-    new-instance p2, Ljava/lang/RuntimeException;
-
-    const-string v0, "Error linking program: "
-
-    invoke-static {v0, p1}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw p2
-
-    :array_0
-    .array-data 4
-        -0x40800000    # -1.0f
-        -0x40800000    # -1.0f
-        0x3f800000    # 1.0f
-        -0x40800000    # -1.0f
-        -0x40800000    # -1.0f
-        0x3f800000    # 1.0f
-        0x3f800000    # 1.0f
-        0x3f800000    # 1.0f
-    .end array-data
+    return-object v1
 .end method

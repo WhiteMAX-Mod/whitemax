@@ -1,134 +1,213 @@
 .class public final La5h;
-.super Ljava/lang/Object;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Lji7;
+.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Landroid/graphics/drawable/Drawable;
+
+.field public o:Landroid/animation/AnimatorSet;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Landroid/graphics/drawable/Drawable;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p1, p0, La5h;->a:I
+    iput-object p1, p0, La5h;->Z:Landroid/graphics/drawable/Drawable;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lr5;)Ljava/lang/Object;
-    .locals 8
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, La5h;->a:I
+    check-cast p1, Lf84;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    sget-object p1, Lkkh;->a:Lkkh;
-
-    return-object p1
-
-    :pswitch_0
-    const-class v0, Lxp7;
-
-    invoke-virtual {p1, v0}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lxp7;
-
-    sget-object v1, Lt8;->Y:Lt8;
-
-    invoke-static {v0, v1}, Lpbi;->a(Lxp7;Lli6;)Lkq7;
-
-    move-result-object v0
-
-    new-instance v1, Lgjh;
-
-    const-class v2, Lk8h;
-
-    invoke-virtual {p1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+    invoke-virtual {p0, p1, p2}, La5h;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    invoke-direct {v1, v0, p1}, Lgjh;-><init>(Lkq7;Liu7;)V
+    check-cast p1, La5h;
 
-    return-object v1
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    :pswitch_1
-    new-instance v2, Lx7h;
+    invoke-virtual {p1, p2}, La5h;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-class v0, Lxp7;
+    move-result-object p1
 
-    invoke-virtual {p1, v0}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    return-object p1
+.end method
 
-    move-result-object v0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    move-object v3, v0
+    new-instance v0, La5h;
 
-    check-cast v3, Lxp7;
+    iget-object v1, p0, La5h;->Z:Landroid/graphics/drawable/Drawable;
 
-    const-class v0, Lk8h;
+    invoke-direct {v0, v1, p2}, La5h;-><init>(Landroid/graphics/drawable/Drawable;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+    iput-object p1, v0, La5h;->Y:Ljava/lang/Object;
 
-    move-result-object v4
+    return-object v0
+.end method
 
-    const-class v0, Loe3;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
 
-    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+    iget v0, p0, La5h;->X:I
 
-    move-result-object v5
+    const/4 v1, 0x2
 
-    const-class v0, Lqs4;
+    const/4 v2, 0x1
 
-    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+    const-wide/16 v3, 0x12c
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v2, :cond_0
+
+    iget-object v0, p0, La5h;->o:Landroid/animation/AnimatorSet;
+
+    iget-object v5, p0, La5h;->Y:Ljava/lang/Object;
+
+    check-cast v5, Lf84;
+
+    :try_start_0
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, La5h;->Y:Ljava/lang/Object;
+
+    check-cast p1, Lf84;
+
+    const/16 v0, 0xff
+
+    const/4 v5, 0x0
+
+    filled-new-array {v0, v5}, [I
 
     move-result-object v6
 
-    const-class v0, Ldq5;
+    iget-object v7, p0, La5h;->Z:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {p1, v0}, Lr5;->d(Ljava/lang/Class;)Lwif;
+    const-string v8, "alpha"
 
-    move-result-object v7
+    invoke-static {v7, v8, v6}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Ljava/lang/String;[I)Landroid/animation/ObjectAnimator;
 
-    invoke-direct/range {v2 .. v7}, Lx7h;-><init>(Lxp7;Liu7;Liu7;Liu7;Liu7;)V
+    move-result-object v6
 
-    return-object v2
+    invoke-virtual {v6, v3, v4}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    :pswitch_2
-    new-instance v0, Lr8h;
+    filled-new-array {v5, v0}, [I
 
-    const-class v1, Lxp7;
+    move-result-object v0
 
-    invoke-virtual {p1, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {v7, v8, v0}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Ljava/lang/String;[I)Landroid/animation/ObjectAnimator;
 
-    move-result-object v1
+    move-result-object v0
 
-    check-cast v1, Lxp7;
+    invoke-virtual {v0, v3, v4}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    const-class v2, Lk8h;
+    new-instance v7, Landroid/animation/AnimatorSet;
 
-    invoke-virtual {p1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+    invoke-direct {v7}, Landroid/animation/AnimatorSet;-><init>()V
+
+    new-array v8, v1, [Landroid/animation/Animator;
+
+    aput-object v6, v8, v5
+
+    aput-object v0, v8, v2
+
+    invoke-virtual {v7, v8}, Landroid/animation/AnimatorSet;->playSequentially([Landroid/animation/Animator;)V
+
+    move-object v5, p1
+
+    move-object v0, v7
+
+    :cond_2
+    :goto_0
+    :try_start_1
+    invoke-static {v5}, Ld7j;->f(Lf84;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
+
+    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
+
+    int-to-long v6, v1
+
+    mul-long/2addr v6, v3
+
+    const-wide/16 v8, 0x3e8
+
+    add-long/2addr v6, v8
+
+    iput-object v5, p0, La5h;->Y:Ljava/lang/Object;
+
+    iput-object v0, p0, La5h;->o:Landroid/animation/AnimatorSet;
+
+    iput v2, p0, La5h;->X:I
+
+    invoke-static {v6, v7, p0}, Ls8j;->c(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-direct {v0, v1, p1}, Lr8h;-><init>(Lxp7;Liu7;)V
+    sget-object v6, Lg84;->a:Lg84;
 
-    return-object v0
+    if-ne p1, v6, :cond_2
 
-    nop
+    return-object v6
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_3
+    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
+
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
+
+    :goto_1
+    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
+
+    throw p1
 .end method

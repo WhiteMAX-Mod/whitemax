@@ -2,18 +2,17 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcz6;
+
 
 # static fields
-.field public static final synthetic a:Lbz6;
-
-.field public static final b:Lsf3;
-
-.field public static final c:Lhz4;
+.field public static final a:Lbz6;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
     new-instance v0, Lbz6;
 
@@ -21,35 +20,45 @@
 
     sput-object v0, Lbz6;->a:Lbz6;
 
-    const/4 v0, 0x2
-
-    new-array v0, v0, [Lli6;
-
-    sget-object v1, Lzy6;->a:Lzy6;
-
-    const/4 v2, 0x0
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Laz6;->a:Laz6;
-
-    const/4 v2, 0x1
-
-    aput-object v1, v0, v2
-
-    invoke-static {v0}, Lwui;->a([Lli6;)Lsf3;
-
-    move-result-object v0
-
-    sput-object v0, Lbz6;->b:Lsf3;
-
-    new-instance v0, Lhz4;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1}, Lhz4;-><init>(I)V
-
-    sput-object v0, Lbz6;->c:Lhz4;
-
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lbz6;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x5493c731
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Empty"
+
+    return-object v0
 .end method

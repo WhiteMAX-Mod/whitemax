@@ -1,23 +1,22 @@
-.class public interface abstract Lcb5;
+.class public abstract Lcb5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/AutoCloseable;
 
+# direct methods
+.method public static a()Ljava/util/Set;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Set<",
+            "[I>;"
+        }
+    .end annotation
 
-# virtual methods
-.method public abstract A()Landroid/media/MediaCodec$BufferInfo;
-.end method
+    invoke-static {}, Lfaj;->a()Ljava/util/Set;
 
-.method public abstract C()Z
-.end method
+    move-result-object v0
 
-.method public abstract U()J
-.end method
-
-.method public abstract r()Ljava/nio/ByteBuffer;
-.end method
-
-.method public abstract size()J
+    return-object v0
 .end method

@@ -1,115 +1,54 @@
 .class public final Liv9;
-.super Lkv9;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Le88;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:Lone/me/messages/list/ui/MessagesListWidget;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 1
-
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+.method public constructor <init>(Lone/me/messages/list/ui/MessagesListWidget;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Liv9;->a:J
+    iput-object p1, p0, Liv9;->a:Lone/me/messages/list/ui/MessagesListWidget;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 5
+.method public final a(Lcj9;)V
+    .locals 3
 
-    const/4 v0, 0x1
+    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->b1:[Lyy7;
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Liv9;->a:Lone/me/messages/list/ui/MessagesListWidget;
 
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Liv9;
-
-    if-nez v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Liv9;
-
-    iget-wide v1, p0, Liv9;->a:J
-
-    iget-wide v3, p1, Liv9;->a:J
-
-    cmp-long p1, v1, v3
-
-    if-eqz p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    sget-object p1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Liv9;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    sget-object v1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Defined(position="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v2, p0, Liv9;->a:J
-
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v2, ", timeUnit="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ")"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->K0()Lvu9;
 
     move-result-object v0
 
-    return-object v0
+    const-wide/16 v1, 0x0
+
+    invoke-virtual {v0, p1, v1, v2}, Lvu9;->H(Lcj9;J)V
+
+    return-void
+.end method
+
+.method public final b(Ljava/lang/String;Li88;Landroid/text/style/ClickableSpan;)V
+    .locals 2
+
+    iget-object p3, p0, Liv9;->a:Lone/me/messages/list/ui/MessagesListWidget;
+
+    const-wide/16 v0, 0x0
+
+    invoke-static {p3, p1, p2, v0, v1}, Lone/me/messages/list/ui/MessagesListWidget;->y0(Lone/me/messages/list/ui/MessagesListWidget;Ljava/lang/String;Li88;J)V
+
+    return-void
 .end method

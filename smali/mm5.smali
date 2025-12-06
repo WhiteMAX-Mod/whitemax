@@ -2,56 +2,60 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lrs1;
-
 
 # instance fields
-.field public final synthetic a:Lqid;
+.field public a:Z
+
+.field public b:Lz2c;
+
+.field public c:I
+
+.field public d:Z
+
+.field public e:I
+
+.field public f:Z
+
+.field public g:I
 
 
 # direct methods
-.method public constructor <init>(Lqid;)V
+.method public constructor <init>(Lz2c;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmm5;->a:Lqid;
+    iput-object p1, p0, Lmm5;->b:Lz2c;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final B(Lmi1;)V
+.method public final a(I)V
     .locals 2
 
-    iget-object p1, p0, Lmm5;->a:Lqid;
+    iget-boolean v0, p0, Lmm5;->a:Z
 
-    invoke-static {p1}, Lnw1;->a(Lqid;)Z
+    if-lez p1, :cond_0
 
-    move-result p1
+    const/4 v1, 0x1
 
-    if-nez p1, :cond_0
-
-    sget-object p1, Lig1;->c:Lig1;
-
-    invoke-virtual {p1}, Lrdi;->q0()Lag4;
-
-    move-result-object p1
-
-    const-string v0, "PIP"
-
-    const-string v1, ":call-active?place="
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, v1}, Lag4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    goto :goto_0
 
     :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    or-int/2addr v0, v1
+
+    iput-boolean v0, p0, Lmm5;->a:Z
+
+    iget v0, p0, Lmm5;->c:I
+
+    add-int/2addr v0, p1
+
+    iput v0, p0, Lmm5;->c:I
+
     return-void
 .end method

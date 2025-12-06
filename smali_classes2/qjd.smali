@@ -1,643 +1,334 @@
-.class public abstract Lqjd;
+.class public final synthetic Lqjd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
-# static fields
-.field public static final A:I
 
-.field public static final A0:I
+# instance fields
+.field public final synthetic a:I
 
-.field public static final B:I
-
-.field public static final B0:I
-
-.field public static final C:I
-
-.field public static final C0:I
-
-.field public static final D:I
-
-.field public static final D0:I
-
-.field public static final E:I
-
-.field public static final E0:I
-
-.field public static final F:I
-
-.field public static final F0:I
-
-.field public static final G:I
-
-.field public static final G0:I
-
-.field public static final H:I
-
-.field public static final H0:I
-
-.field public static final I:I
-
-.field public static final I0:I
-
-.field public static final J:I
-
-.field public static final J0:I
-
-.field public static final K:I
-
-.field public static final K0:I
-
-.field public static final L:I
-
-.field public static final L0:I
-
-.field public static final M:I
-
-.field public static final M0:I
-
-.field public static final N:I
-
-.field public static final N0:I
-
-.field public static final O:I
-
-.field public static final O0:I
-
-.field public static final P:I
-
-.field public static final P0:I
-
-.field public static final Q:I
-
-.field public static final Q0:I
-
-.field public static final R:I
-
-.field public static final R0:I
-
-.field public static final S:I
-
-.field public static final S0:I
-
-.field public static final T:I
-
-.field public static final T0:I
-
-.field public static final U:I
-
-.field public static final U0:I
-
-.field public static final V:I
-
-.field public static final V0:I
-
-.field public static final W:I
-
-.field public static final W0:I
-
-.field public static final X:I
-
-.field public static final X0:I
-
-.field public static final Y:I
-
-.field public static final Y0:I
-
-.field public static final Z:I
-
-.field public static final Z0:I
-
-.field public static final a:I
-
-.field public static final a0:I
-
-.field public static final a1:I
-
-.field public static final b:I
-
-.field public static final b0:I
-
-.field public static final c:I
-
-.field public static final c0:I
-
-.field public static final d:I
-
-.field public static final d0:I
-
-.field public static final e:I
-
-.field public static final e0:I
-
-.field public static final f:I
-
-.field public static final f0:I
-
-.field public static final g:I
-
-.field public static final g0:I
-
-.field public static final h:I
-
-.field public static final h0:I
-
-.field public static final i:I
-
-.field public static final i0:I
-
-.field public static final j:I
-
-.field public static final j0:I
-
-.field public static final k:I
-
-.field public static final k0:I
-
-.field public static final l:I
-
-.field public static final l0:I
-
-.field public static final m:I
-
-.field public static final m0:I
-
-.field public static final n:I
-
-.field public static final n0:I
-
-.field public static final o:I
-
-.field public static final o0:I
-
-.field public static final p:I
-
-.field public static final p0:I
-
-.field public static final q:I
-
-.field public static final q0:I
-
-.field public static final r:I
-
-.field public static final r0:I
-
-.field public static final s:I
-
-.field public static final s0:I
-
-.field public static final t:I
-
-.field public static final t0:I
-
-.field public static final u:I
-
-.field public static final u0:I
-
-.field public static final v:I
-
-.field public static final v0:I
-
-.field public static final w:I
-
-.field public static final w0:I
-
-.field public static final x:I
-
-.field public static final x0:I
-
-.field public static final y:I
-
-.field public static final y0:I
-
-.field public static final z:I
-
-.field public static final z0:I
+.field public final synthetic b:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;I)V
+    .locals 0
 
-    sget v0, Ltpc;->oneme_action_complaint:I
+    iput p2, p0, Lqjd;->a:I
 
-    sput v0, Lqjd;->a:I
+    iput-object p1, p0, Lqjd;->b:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
 
-    sget v0, Ltpc;->oneme_bottom_bar_item_counter:I
-
-    sput v0, Lqjd;->b:I
-
-    sget v0, Ltpc;->oneme_bottom_bar_item_dot:I
-
-    sput v0, Lqjd;->c:I
-
-    sget v0, Ltpc;->oneme_bottom_bar_item_icon:I
-
-    sput v0, Lqjd;->d:I
-
-    sget v0, Ltpc;->oneme_bottom_bar_item_label:I
-
-    sput v0, Lqjd;->e:I
-
-    sget v0, Ltpc;->oneme_button_counter_id:I
-
-    sput v0, Lqjd;->f:I
-
-    sget v0, Ltpc;->oneme_button_end_imageview_id:I
-
-    sput v0, Lqjd;->g:I
-
-    sget v0, Ltpc;->oneme_button_progress_bar_id:I
-
-    sput v0, Lqjd;->h:I
-
-    sget v0, Ltpc;->oneme_button_start_imageview_id:I
-
-    sput v0, Lqjd;->i:I
-
-    sget v0, Ltpc;->oneme_button_text_promo_textview_id:I
-
-    sput v0, Lqjd;->j:I
-
-    sget v0, Ltpc;->oneme_button_textview_id:I
-
-    sput v0, Lqjd;->k:I
-
-    sget v0, Ltpc;->oneme_cell_simple_alias:I
-
-    sput v0, Lqjd;->l:I
-
-    sget v0, Ltpc;->oneme_cell_simple_audio:I
-
-    sput v0, Lqjd;->m:I
-
-    sget v0, Ltpc;->oneme_cell_simple_avatar:I
-
-    sput v0, Lqjd;->n:I
-
-    sget v0, Ltpc;->oneme_cell_simple_button:I
-
-    sput v0, Lqjd;->o:I
-
-    sget v0, Ltpc;->oneme_cell_simple_checkbox:I
-
-    sput v0, Lqjd;->p:I
-
-    sget v0, Ltpc;->oneme_cell_simple_first_trailing_icon:I
-
-    sput v0, Lqjd;->q:I
-
-    sget v0, Ltpc;->oneme_cell_simple_icon_info:I
-
-    sput v0, Lqjd;->r:I
-
-    sget v0, Ltpc;->oneme_cell_simple_message:I
-
-    sput v0, Lqjd;->s:I
-
-    sget v0, Ltpc;->oneme_cell_simple_name:I
-
-    sput v0, Lqjd;->t:I
-
-    sget v0, Ltpc;->oneme_cell_simple_second_trailing_icon:I
-
-    sput v0, Lqjd;->u:I
-
-    sget v0, Ltpc;->oneme_cell_simple_video:I
-
-    sput v0, Lqjd;->v:I
-
-    sget v0, Ltpc;->oneme_compact_banner_background:I
-
-    sput v0, Lqjd;->w:I
-
-    sget v0, Ltpc;->oneme_compact_banner_close_button:I
-
-    sput v0, Lqjd;->x:I
-
-    sget v0, Ltpc;->oneme_compact_banner_image:I
-
-    sput v0, Lqjd;->y:I
-
-    sget v0, Ltpc;->oneme_compact_banner_image_container:I
-
-    sput v0, Lqjd;->z:I
-
-    sget v0, Ltpc;->oneme_compact_banner_subtitle:I
-
-    sput v0, Lqjd;->A:I
-
-    sget v0, Ltpc;->oneme_compact_banner_title:I
-
-    sput v0, Lqjd;->B:I
-
-    sget v0, Ltpc;->oneme_confirmation_sheet_cancel:I
-
-    sput v0, Lqjd;->C:I
-
-    sget v0, Ltpc;->oneme_contact_call_cell_avatar:I
-
-    sput v0, Lqjd;->D:I
-
-    sget v0, Ltpc;->oneme_contact_call_cell_description:I
-
-    sput v0, Lqjd;->E:I
-
-    sget v0, Ltpc;->oneme_contact_call_cell_stub_audio_call_button:I
-
-    sput v0, Lqjd;->F:I
-
-    sget v0, Ltpc;->oneme_contact_call_cell_stub_time_text:I
-
-    sput v0, Lqjd;->G:I
-
-    sget v0, Ltpc;->oneme_contact_call_cell_stub_video_call_button:I
-
-    sput v0, Lqjd;->H:I
-
-    sget v0, Ltpc;->oneme_contact_call_cell_title:I
-
-    sput v0, Lqjd;->I:I
-
-    sget v0, Ltpc;->oneme_contact_cell_shimmer:I
-
-    sput v0, Lqjd;->J:I
-
-    sget v0, Ltpc;->oneme_contact_cell_shimmer_avatar:I
-
-    sput v0, Lqjd;->K:I
-
-    sget v0, Ltpc;->oneme_contact_cell_shimmer_container:I
-
-    sput v0, Lqjd;->L:I
-
-    sget v0, Ltpc;->oneme_contact_cell_shimmer_content_container:I
-
-    sput v0, Lqjd;->M:I
-
-    sget v0, Ltpc;->oneme_contact_cell_shimmer_subtitle:I
-
-    sput v0, Lqjd;->N:I
-
-    sget v0, Ltpc;->oneme_contact_cell_shimmer_title:I
-
-    sput v0, Lqjd;->O:I
-
-    sget v0, Ltpc;->oneme_description_field_with_limit:I
-
-    sput v0, Lqjd;->P:I
-
-    sget v0, Ltpc;->oneme_left_icon_button:I
-
-    sput v0, Lqjd;->Q:I
-
-    sget v0, Ltpc;->oneme_login_country_codes:I
-
-    sput v0, Lqjd;->R:I
-
-    sget v0, Ltpc;->oneme_login_phone_edit_text:I
-
-    sput v0, Lqjd;->S:I
-
-    sget v0, Ltpc;->oneme_message_input_edit_text:I
-
-    sput v0, Lqjd;->T:I
-
-    sget v0, Ltpc;->oneme_message_input_left_inner_icon:I
-
-    sput v0, Lqjd;->U:I
-
-    sget v0, Ltpc;->oneme_message_input_left_outer_icon:I
-
-    sput v0, Lqjd;->V:I
-
-    sget v0, Ltpc;->oneme_message_input_right_inner_icon:I
-
-    sput v0, Lqjd;->W:I
-
-    sget v0, Ltpc;->oneme_message_input_right_outer_icon:I
-
-    sput v0, Lqjd;->X:I
-
-    sget v0, Ltpc;->oneme_message_input_right_video_msg_icon:I
-
-    sput v0, Lqjd;->Y:I
-
-    sget v0, Ltpc;->oneme_message_input_view_id:I
-
-    sput v0, Lqjd;->Z:I
-
-    sget v0, Ltpc;->oneme_middle_banner_close_button:I
-
-    sput v0, Lqjd;->a0:I
-
-    sget v0, Ltpc;->oneme_middle_banner_image:I
-
-    sput v0, Lqjd;->b0:I
-
-    sget v0, Ltpc;->oneme_middle_banner_image_container:I
-
-    sput v0, Lqjd;->c0:I
-
-    sget v0, Ltpc;->oneme_middle_banner_subtitle:I
-
-    sput v0, Lqjd;->d0:I
-
-    sget v0, Ltpc;->oneme_middle_banner_title:I
-
-    sput v0, Lqjd;->e0:I
-
-    sget v0, Ltpc;->oneme_mini_player_close:I
-
-    sput v0, Lqjd;->f0:I
-
-    sget v0, Ltpc;->oneme_mini_player_playback:I
-
-    sput v0, Lqjd;->g0:I
-
-    sget v0, Ltpc;->oneme_mini_player_progress:I
-
-    sput v0, Lqjd;->h0:I
-
-    sget v0, Ltpc;->oneme_mini_player_speed:I
-
-    sput v0, Lqjd;->i0:I
-
-    sget v0, Ltpc;->oneme_mini_player_subtitle:I
-
-    sput v0, Lqjd;->j0:I
-
-    sget v0, Ltpc;->oneme_mini_player_title:I
-
-    sput v0, Lqjd;->k0:I
-
-    sget v0, Ltpc;->oneme_notification_stack__counter_id:I
-
-    sput v0, Lqjd;->l0:I
-
-    sget v0, Ltpc;->oneme_notification_stack__mention_id:I
-
-    sput v0, Lqjd;->m0:I
-
-    sget v0, Ltpc;->oneme_notification_stack__reaction_id:I
-
-    sput v0, Lqjd;->n0:I
-
-    sget v0, Ltpc;->oneme_notifications_confirmation_sheet_1_day:I
-
-    sput v0, Lqjd;->o0:I
-
-    sget v0, Ltpc;->oneme_notifications_confirmation_sheet_1_hour:I
-
-    sput v0, Lqjd;->p0:I
-
-    sget v0, Ltpc;->oneme_notifications_confirmation_sheet_4_hour:I
-
-    sput v0, Lqjd;->q0:I
-
-    sget v0, Ltpc;->oneme_notifications_confirmation_sheet_forever:I
-
-    sput v0, Lqjd;->r0:I
-
-    sget v0, Ltpc;->oneme_picker_confirm_cancel:I
-
-    sput v0, Lqjd;->s0:I
-
-    sget v0, Ltpc;->oneme_picker_confirm_close:I
-
-    sput v0, Lqjd;->t0:I
-
-    sget v0, Ltpc;->oneme_right_primary_icon_button:I
-
-    sput v0, Lqjd;->u0:I
-
-    sget v0, Ltpc;->oneme_right_secondary_icon_button:I
-
-    sput v0, Lqjd;->v0:I
-
-    sget v0, Ltpc;->oneme_right_third_icon_button:I
-
-    sput v0, Lqjd;->w0:I
-
-    sget v0, Ltpc;->oneme_search_view_back_button:I
-
-    sput v0, Lqjd;->x0:I
-
-    sget v0, Ltpc;->oneme_search_view_edit_text:I
-
-    sput v0, Lqjd;->y0:I
-
-    sget v0, Ltpc;->oneme_search_view_erase_button:I
-
-    sput v0, Lqjd;->z0:I
-
-    sget v0, Ltpc;->oneme_search_view_icon:I
-
-    sput v0, Lqjd;->A0:I
-
-    sget v0, Ltpc;->oneme_search_view_search_button:I
-
-    sput v0, Lqjd;->B0:I
-
-    sget v0, Ltpc;->oneme_tab_item__start_imageview_id:I
-
-    sput v0, Lqjd;->C0:I
-
-    sget v0, Ltpc;->oneme_tab_item_end_imageview_id:I
-
-    sput v0, Lqjd;->D0:I
-
-    sget v0, Ltpc;->oneme_tab_item_textview_id:I
-
-    sput v0, Lqjd;->E0:I
-
-    sget v0, Ltpc;->oneme_toolbar_close_button:I
-
-    sput v0, Lqjd;->F0:I
-
-    sget v0, Ltpc;->oneme_toolbar_menu_button:I
-
-    sput v0, Lqjd;->G0:I
-
-    sget v0, Ltpc;->oneme_toolbar_more_action_add_to_folder:I
-
-    sput v0, Lqjd;->H0:I
-
-    sget v0, Ltpc;->oneme_toolbar_more_action_complain_channel:I
-
-    sput v0, Lqjd;->I0:I
-
-    sget v0, Ltpc;->oneme_toolbar_more_action_notifications_disabled:I
-
-    sput v0, Lqjd;->J0:I
-
-    sget v0, Ltpc;->oneme_toolbar_more_action_notifications_enabled:I
-
-    sput v0, Lqjd;->K0:I
-
-    sget v0, Ltpc;->oneme_toolbar_more_action_search:I
-
-    sput v0, Lqjd;->L0:I
-
-    sget v0, Ltpc;->oneme_toolbar_more_action_send_logs:I
-
-    sput v0, Lqjd;->M0:I
-
-    sget v0, Ltpc;->oneme_toolbar_more_action_share_channel:I
-
-    sput v0, Lqjd;->N0:I
-
-    sget v0, Ltpc;->oneme_toolbar_overflow_menu_button:I
-
-    sput v0, Lqjd;->O0:I
-
-    sget v0, Ltpc;->oneme_toolbar_popup:I
-
-    sput v0, Lqjd;->P0:I
-
-    sget v0, Ltpc;->oneme_toolbar_selection_view:I
-
-    sput v0, Lqjd;->Q0:I
-
-    sget v0, Ltpc;->oneme_toolbar_subtitle:I
-
-    sput v0, Lqjd;->R0:I
-
-    sget v0, Ltpc;->oneme_toolbar_title:I
-
-    sput v0, Lqjd;->S0:I
-
-    sget v0, Ltpc;->oneme_toolbar_title_avatar:I
-
-    sput v0, Lqjd;->T0:I
-
-    sget v0, Ltpc;->oneme_toolbar_title_dropdown:I
-
-    sput v0, Lqjd;->U0:I
-
-    sget v0, Ltpc;->oneme_tooltip_animation_fade:I
-
-    sput v0, Lqjd;->V0:I
-
-    sget v0, Ltpc;->oneme_tooltip_view_close:I
-
-    sput v0, Lqjd;->W0:I
-
-    sget v0, Ltpc;->oneme_tooltip_view_icon:I
-
-    sput v0, Lqjd;->X0:I
-
-    sget v0, Ltpc;->oneme_tooltip_view_subtitle:I
-
-    sput v0, Lqjd;->Y0:I
-
-    sget v0, Ltpc;->oneme_tooltip_view_title:I
-
-    sput v0, Lqjd;->Z0:I
-
-    sget v0, Ltpc;->oneme_viewpager2_recyclerview:I
-
-    sput v0, Lqjd;->a1:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 14
+
+    iget p1, p0, Lqjd;->a:I
+
+    const/4 v0, 0x0
+
+    const-string v1, "BottomSheetWidget"
+
+    const/4 v2, 0x6
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x1
+
+    iget-object v5, p0, Lqjd;->b:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
+
+    packed-switch p1, :pswitch_data_0
+
+    sget-object p1, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->D0:[Lyy7;
+
+    invoke-virtual {v5}, Lc54;->getView()Landroid/view/View;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_3
+
+    new-instance v6, Landroid/graphics/Rect;
+
+    invoke-direct {v6}, Landroid/graphics/Rect;-><init>()V
+
+    iget-object v7, v5, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->v0:Lbbd;
+
+    sget-object v8, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->D0:[Lyy7;
+
+    aget-object v2, v8, v2
+
+    invoke-interface {v7, v5, v2}, Lbbd;->D(Ljava/lang/Object;Lyy7;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/TextView;
+
+    invoke-virtual {v2, v6}, Landroid/view/View;->getGlobalVisibleRect(Landroid/graphics/Rect;)Z
+
+    sget-object v2, Lone/me/sdk/bottomsheet/BottomSheetWidget;->B0:[Lyy7;
+
+    new-instance v8, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;
+
+    iget-object v2, v5, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->d:Ljava/lang/String;
+
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+
+    move-result p1
+
+    iget v6, v6, Landroid/graphics/Rect;->bottom:I
+
+    sub-int/2addr p1, v6
+
+    const/16 v6, 0x10
+
+    int-to-float v6, v6
+
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v7
+
+    iget v7, v7, Landroid/util/DisplayMetrics;->density:F
+
+    invoke-static {v6, v7, p1}, Lu45;->q(FFI)I
+
+    move-result p1
+
+    invoke-direct {v8, v2, p1, v3}, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;-><init>(Ljava/lang/String;ILtk4;)V
+
+    invoke-virtual {v8, v5}, Lone/me/sdk/arch/Widget;->setTargetController(Lc54;)V
+
+    move-object p1, v5
+
+    :goto_0
+    invoke-virtual {p1}, Lc54;->getParentController()Lc54;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {p1}, Lc54;->getParentController()Lc54;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    :cond_0
+    instance-of v2, p1, Leud;
+
+    if-eqz v2, :cond_1
+
+    check-cast p1, Leud;
+
+    goto :goto_1
+
+    :cond_1
+    move-object p1, v3
+
+    :goto_1
+    if-eqz p1, :cond_2
+
+    check-cast p1, Lone/me/android/root/RootController;
+
+    invoke-virtual {p1}, Lone/me/android/root/RootController;->E0()Lytd;
+
+    move-result-object v3
+
+    :cond_2
+    invoke-virtual {v8, v5}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->N0(Lone/me/sdk/arch/Widget;)V
+
+    if-eqz v3, :cond_3
+
+    new-instance v7, Lbud;
+
+    const/4 v12, 0x0
+
+    const/4 v13, -0x1
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x0
+
+    invoke-direct/range {v7 .. v13}, Lbud;-><init>(Lc54;Ljava/lang/String;Lh54;Lh54;ZI)V
+
+    invoke-static {v0, v7, v4, v1}, Laz1;->u(ZLbud;ZLjava/lang/String;)V
+
+    invoke-virtual {v3, v7}, Lytd;->H(Lbud;)V
+
+    :cond_3
+    return-void
+
+    :pswitch_0
+    sget-object p1, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->D0:[Lyy7;
+
+    invoke-virtual {v5}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->z0()Lnjd;
+
+    move-result-object p1
+
+    if-nez p1, :cond_4
+
+    goto :goto_5
+
+    :cond_4
+    invoke-virtual {v5}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->A0()Loga;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Loga;->u()Ljava/util/List;
+
+    move-result-object p1
+
+    sget v6, Lt3d;->oneme_login_neuro_avatars_bottomsheet_title:I
+
+    invoke-static {v6, v3, v3, v2}, Laz1;->e(ILandroid/os/Bundle;Lf1e;I)Loq3;
+
+    move-result-object v2
+
+    check-cast p1, Lo98;
+
+    invoke-virtual {p1, v0}, Lo98;->listIterator(I)Ljava/util/ListIterator;
+
+    move-result-object p1
+
+    :goto_2
+    move-object v6, p1
+
+    check-cast v6, Lm98;
+
+    invoke-virtual {v6}, Lm98;->hasNext()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_5
+
+    invoke-virtual {v6}, Lm98;->next()Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lpq3;
+
+    filled-new-array {v6}, [Lpq3;
+
+    move-result-object v6
+
+    invoke-virtual {v2, v6}, Loq3;->a([Lpq3;)V
+
+    goto :goto_2
+
+    :cond_5
+    sget-object p1, Lone/me/sdk/bottomsheet/BottomSheetWidget;->B0:[Lyy7;
+
+    invoke-virtual {v2}, Loq3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v5}, Lone/me/sdk/arch/Widget;->setTargetController(Lc54;)V
+
+    move-object p1, v5
+
+    :goto_3
+    invoke-virtual {p1}, Lc54;->getParentController()Lc54;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_6
+
+    invoke-virtual {p1}, Lc54;->getParentController()Lc54;
+
+    move-result-object p1
+
+    goto :goto_3
+
+    :cond_6
+    instance-of v2, p1, Leud;
+
+    if-eqz v2, :cond_7
+
+    check-cast p1, Leud;
+
+    goto :goto_4
+
+    :cond_7
+    move-object p1, v3
+
+    :goto_4
+    if-eqz p1, :cond_8
+
+    check-cast p1, Lone/me/android/root/RootController;
+
+    invoke-virtual {p1}, Lone/me/android/root/RootController;->E0()Lytd;
+
+    move-result-object v3
+
+    :cond_8
+    invoke-virtual {v7, v5}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->N0(Lone/me/sdk/arch/Widget;)V
+
+    if-eqz v3, :cond_9
+
+    new-instance v6, Lbud;
+
+    const/4 v11, 0x0
+
+    const/4 v12, -0x1
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    invoke-direct/range {v6 .. v12}, Lbud;-><init>(Lc54;Ljava/lang/String;Lh54;Lh54;ZI)V
+
+    invoke-static {v0, v6, v4, v1}, Laz1;->u(ZLbud;ZLjava/lang/String;)V
+
+    invoke-virtual {v3, v6}, Lytd;->H(Lbud;)V
+
+    :cond_9
+    :goto_5
+    return-void
+
+    :pswitch_1
+    sget-object p1, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->D0:[Lyy7;
+
+    invoke-virtual {v5, v4}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->B0(Z)V
+
+    invoke-virtual {v5}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->A0()Loga;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Loga;->w()V
+
+    return-void
+
+    :pswitch_2
+    sget-object p1, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->D0:[Lyy7;
+
+    invoke-virtual {v5, v4}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->B0(Z)V
+
+    invoke-virtual {v5}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->A0()Loga;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Loga;->w()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

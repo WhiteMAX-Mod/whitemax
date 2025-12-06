@@ -1,19 +1,23 @@
-.class public final Lbtd;
+.class public interface abstract Lbtd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:Lr5;
+# static fields
+.field public static final V:Ldcf;
 
 
 # direct methods
-.method public constructor <init>(Lr5;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ldcf;
 
-    iput-object p1, p0, Lbtd;->a:Lr5;
+    const/4 v1, 0x3
+
+    invoke-direct {v0, v1}, Ldcf;-><init>(I)V
+
+    sput-object v0, Lbtd;->V:Ldcf;
 
     return-void
 .end method

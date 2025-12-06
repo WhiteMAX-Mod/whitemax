@@ -4,20 +4,24 @@
 
 
 # instance fields
-.field public final a:Lq7b;
+.field public final a:Ljava/lang/String;
 
-.field public final b:Landroid/view/Surface;
+.field public final b:J
+
+.field public final c:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lq7b;Landroid/view/Surface;)V
+.method public constructor <init>(JLjava/lang/String;Ljava/util/List;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Liad;->a:Lq7b;
+    iput-object p3, p0, Liad;->a:Ljava/lang/String;
 
-    iput-object p2, p0, Liad;->b:Landroid/view/Surface;
+    iput-wide p1, p0, Liad;->b:J
+
+    iput-object p4, p0, Liad;->c:Ljava/util/List;
 
     return-void
 .end method
@@ -25,46 +29,126 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    .locals 7
 
-    instance-of v0, p1, Liad;
+    const/4 v0, 0x1
 
-    if-eqz v0, :cond_0
+    if-ne p0, p1, :cond_0
 
-    check-cast p1, Liad;
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    const/4 p1, 0x0
+    instance-of v1, p1, Liad;
 
-    :goto_0
-    if-nez p1, :cond_1
+    const/4 v2, 0x0
 
-    const/4 p1, 0x0
+    if-nez v1, :cond_1
 
-    return p1
+    return v2
 
     :cond_1
-    iget-object v0, p0, Liad;->a:Lq7b;
+    check-cast p1, Liad;
 
-    iget-object p1, p1, Liad;->a:Lq7b;
+    iget-object v1, p0, Liad;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iget-object v3, p1, Liad;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Liad;->b:J
+
+    iget-wide v5, p1, Liad;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Liad;->c:Ljava/util/List;
+
+    iget-object p1, p1, Liad;->c:Ljava/util/List;
+
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    return p1
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
 .end method
 
 .method public final hashCode()I
-    .locals 1
+    .locals 4
 
-    iget-object v0, p0, Liad;->a:Lq7b;
+    iget-object v0, p0, Liad;->a:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    return v0
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Liad;->b:J
+
+    invoke-static {v0, v1, v2, v3}, La9h;->a(IIJ)I
+
+    move-result v0
+
+    iget-object v1, p0, Liad;->c:Ljava/util/List;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "ReactionsSectionEntity(id="
+
+    const-string v1, ", updateTime="
+
+    iget-wide v2, p0, Liad;->b:J
+
+    iget-object v4, p0, Liad;->a:Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v4, v1}, Lxrf;->q(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", reactions="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Liad;->c:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

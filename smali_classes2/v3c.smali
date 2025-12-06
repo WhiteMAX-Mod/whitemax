@@ -1,40 +1,21 @@
 .class public final Lv3c;
-.super Ljava/lang/Object;
+.super Lxp;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/util/List;
-
-.field public final b:Z
+# static fields
+.field public static final a:Lv3c;
 
 
 # direct methods
-.method public synthetic constructor <init>()V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
-    .line 4
-    sget-object v0, Lka5;->a:Lka5;
+    new-instance v0, Lv3c;
 
-    const/4 v1, 0x0
+    invoke-direct {v0}, Lxp;-><init>()V
 
-    .line 5
-    invoke-direct {p0, v0, v1}, Lv3c;-><init>(Ljava/util/List;Z)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/util/List;Z)V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-object p1, p0, Lv3c;->a:Ljava/util/List;
-
-    .line 3
-    iput-boolean p2, p0, Lv3c;->b:Z
+    sput-object v0, Lv3c;->a:Lv3c;
 
     return-void
 .end method

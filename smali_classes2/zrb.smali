@@ -1,130 +1,144 @@
 .class public final Lzrb;
-.super Ljava/lang/Object;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Ldsb;
+.implements Lum6;
 
 
 # instance fields
-.field public final a:Ljava/lang/CharSequence;
+.field public synthetic X:Landroidx/appcompat/widget/AppCompatImageView;
 
-.field public final b:J
+.field public synthetic Y:Lyeb;
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/CharSequence;J)V
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lzrb;->o:I
 
-    iput-object p1, p0, Lzrb;->a:Ljava/lang/CharSequence;
-
-    iput-wide p2, p0, Lzrb;->b:J
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    const/4 v0, 0x1
+    iget v0, p0, Lzrb;->o:I
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Landroidx/appcompat/widget/AppCompatImageView;
 
-    return v0
+    check-cast p2, Lyeb;
 
-    :cond_0
-    instance-of v1, p1, Lzrb;
+    check-cast p3, Lkotlin/coroutines/Continuation;
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Lzrb;
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, p3, v2}, Lzrb;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, v0, Lzrb;->X:Landroidx/appcompat/widget/AppCompatImageView;
+
+    iput-object p2, v0, Lzrb;->Y:Lyeb;
+
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    invoke-virtual {v0, p1}, Lzrb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_0
+    new-instance v0, Lzrb;
+
+    const/4 v1, 0x3
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    invoke-direct {v0, v1, p3, v2}, Lzrb;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    return v2
+    iput-object p1, v0, Lzrb;->X:Landroidx/appcompat/widget/AppCompatImageView;
 
-    :cond_1
-    check-cast p1, Lzrb;
+    iput-object p2, v0, Lzrb;->Y:Lyeb;
 
-    iget-object v1, p0, Lzrb;->a:Ljava/lang/CharSequence;
+    sget-object p1, Lqqg;->a:Lqqg;
 
-    iget-object v3, p1, Lzrb;->a:Ljava/lang/CharSequence;
+    invoke-virtual {v0, p1}, Lzrb;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    return-object p1
 
-    move-result v1
+    nop
 
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-wide v3, p0, Lzrb;->b:J
-
-    iget-wide v5, p1, Lzrb;->b:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lzrb;->a:Ljava/lang/CharSequence;
+    iget v0, p0, Lzrb;->o:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    mul-int/lit8 v0, v0, 0x1f
+    iget-object p1, p0, Lzrb;->X:Landroidx/appcompat/widget/AppCompatImageView;
 
-    iget-wide v1, p0, Lzrb;->b:J
+    iget-object v0, p0, Lzrb;->Y:Lyeb;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Abbreviation(abbreviation="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lzrb;->a:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", avatarSourceId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lzrb;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v0}, Lyeb;->getIcon()Lnb7;
 
     move-result-object v0
 
-    return-object v0
+    iget v0, v0, Lnb7;->j:I
+
+    invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
+
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
+
+    :pswitch_0
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lzrb;->X:Landroidx/appcompat/widget/AppCompatImageView;
+
+    iget-object v0, p0, Lzrb;->Y:Lyeb;
+
+    invoke-interface {v0}, Lyeb;->b()Lbf0;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lbf0;->a:Laf0;
+
+    iget v0, v0, Laf0;->n:I
+
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setColorFilter(I)V
+
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

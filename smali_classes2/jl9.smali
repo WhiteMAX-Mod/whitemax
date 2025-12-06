@@ -1,135 +1,174 @@
 .class public final Ljl9;
-.super Lsgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Ljava/lang/Cloneable;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public a:Ljava/nio/charset/CodingErrorAction;
 
-.field public final synthetic Y:Ljn9;
+.field public b:Ljava/nio/charset/CodingErrorAction;
 
-.field public final synthetic Z:J
+.field public c:I
 
+.field public d:I
 
-# direct methods
-.method public constructor <init>(Ljn9;JLkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Ljl9;->Y:Ljn9;
-
-    iput-wide p2, p0, Ljl9;->Z:J
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.field public o:I
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lu44;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ljl9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ljl9;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Ljl9;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 4
+.method public final clone()Ljava/lang/Object;
+    .locals 2
 
     new-instance v0, Ljl9;
 
-    iget-object v1, p0, Ljl9;->Y:Ljn9;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iget-wide v2, p0, Ljl9;->Z:J
+    sget-object v1, Ljava/nio/charset/CodingErrorAction;->REPLACE:Ljava/nio/charset/CodingErrorAction;
 
-    invoke-direct {v0, v1, v2, v3, p2}, Ljl9;-><init>(Ljn9;JLkotlin/coroutines/Continuation;)V
+    iput-object v1, v0, Ljl9;->a:Ljava/nio/charset/CodingErrorAction;
 
-    iput-object p1, v0, Ljl9;->X:Ljava/lang/Object;
+    iput-object v1, v0, Ljl9;->b:Ljava/nio/charset/CodingErrorAction;
+
+    const v1, 0x7fffffff
+
+    iput v1, v0, Ljl9;->c:I
+
+    const/16 v1, 0x2000
+
+    iput v1, v0, Ljl9;->d:I
+
+    iput v1, v0, Ljl9;->o:I
+
+    iget-object v1, p0, Ljl9;->a:Ljava/nio/charset/CodingErrorAction;
+
+    iput-object v1, v0, Ljl9;->a:Ljava/nio/charset/CodingErrorAction;
+
+    iget-object v1, p0, Ljl9;->b:Ljava/nio/charset/CodingErrorAction;
+
+    iput-object v1, v0, Ljl9;->b:Ljava/nio/charset/CodingErrorAction;
+
+    iget v1, p0, Ljl9;->c:I
+
+    iput v1, v0, Ljl9;->c:I
+
+    iget v1, p0, Ljl9;->d:I
+
+    iput v1, v0, Ljl9;->d:I
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    instance-of v0, p1, Ljl9;
 
-    iget-object p1, p0, Ljl9;->X:Ljava/lang/Object;
-
-    check-cast p1, Lu44;
-
-    instance-of v0, p1, Lt44;
-
-    const/4 v1, 0x6
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Lome;
-
-    check-cast p1, Lt44;
-
-    iget-object p1, p1, Lt44;->a:Ltrf;
-
-    invoke-direct {v0, p1, v3, v2, v1}, Lome;-><init>(Ltrf;ILorf;I)V
+    if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    instance-of v0, p1, Ls44;
+    check-cast p1, Ljl9;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, p0, Ljl9;->a:Ljava/nio/charset/CodingErrorAction;
+
+    iget-object v1, p1, Ljl9;->a:Ljava/nio/charset/CodingErrorAction;
+
+    if-ne v0, v1, :cond_1
+
+    iget-object v0, p0, Ljl9;->b:Ljava/nio/charset/CodingErrorAction;
+
+    iget-object v1, p1, Ljl9;->b:Ljava/nio/charset/CodingErrorAction;
+
+    if-ne v0, v1, :cond_1
+
+    iget v0, p0, Ljl9;->c:I
+
+    iget v1, p1, Ljl9;->c:I
+
+    if-ne v0, v1, :cond_1
+
+    iget v0, p0, Ljl9;->o:I
+
+    iget v1, p1, Ljl9;->o:I
+
+    if-ne v0, v1, :cond_1
+
+    iget v0, p0, Ljl9;->d:I
+
+    iget p1, p1, Ljl9;->d:I
+
+    if-ne v0, p1, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Ljl9;->a:Ljava/nio/charset/CodingErrorAction;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v1
+
+    :goto_0
+    const/16 v2, 0x3e0
+
+    add-int/2addr v2, v0
+
+    mul-int/lit8 v2, v2, 0x1f
+
+    iget-object v0, p0, Ljl9;->b:Ljava/nio/charset/CodingErrorAction;
 
     if-eqz v0, :cond_1
 
-    new-instance v0, Lome;
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    check-cast p1, Ls44;
-
-    iget-object p1, p1, Ls44;->a:Ltrf;
-
-    invoke-direct {v0, p1, v3, v2, v1}, Lome;-><init>(Ltrf;ILorf;I)V
-
-    :goto_0
-    iget-object p1, p0, Ljl9;->Y:Ljn9;
-
-    iget-object v1, p1, Ljn9;->D1:Lxe5;
-
-    invoke-static {v1, v0}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
-
-    iget-object p1, p1, Ljn9;->G1:Ls0a;
-
-    iget-wide v0, p0, Ljl9;->Z:J
-
-    invoke-virtual {p1, v0, v1}, Ls0a;->l(J)V
-
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
+    move-result v1
 
     :cond_1
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    add-int/2addr v2, v1
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    mul-int/lit8 v2, v2, 0x1f
 
-    throw p1
+    iget v0, p0, Ljl9;->c:I
+
+    add-int/2addr v2, v0
+
+    mul-int/lit8 v2, v2, 0x1f
+
+    iget v0, p0, Ljl9;->d:I
+
+    add-int/2addr v2, v0
+
+    mul-int/lit8 v2, v2, 0x1f
+
+    iget v0, p0, Ljl9;->o:I
+
+    add-int/2addr v2, v0
+
+    return v2
 .end method

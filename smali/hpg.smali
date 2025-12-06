@@ -1,60 +1,65 @@
 .class public final Lhpg;
-.super Lsgf;
+.super Le9c;
 .source "SourceFile"
-
-# interfaces
-.implements Lzi6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public a:[B
+
+.field public b:I
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Ljava/lang/Object;
+    .locals 2
 
-    check-cast p1, Ljava/util/Collection;
+    iget-object v0, p0, Lhpg;->a:[B
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget v1, p0, Lhpg;->b:I
 
-    invoke-virtual {p0, p1, p2}, Lhpg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([BI)[B
+
+    move-result-object v0
+
+    new-instance v1, Lgpg;
+
+    invoke-direct {v1, v0}, Lgpg;-><init>([B)V
+
+    return-object v1
+.end method
+
+.method public final b(I)V
+    .locals 2
+
+    iget-object v0, p0, Lhpg;->a:[B
+
+    array-length v1, v0
+
+    if-ge v1, p1, :cond_1
+
+    array-length v1, v0
+
+    mul-int/lit8 v1, v1, 0x2
+
+    if-ge p1, v1, :cond_0
+
+    move p1, v1
+
+    :cond_0
+    invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([BI)[B
 
     move-result-object p1
 
-    check-cast p1, Lhpg;
+    iput-object p1, p0, Lhpg;->a:[B
 
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lhpg;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    :cond_1
+    return-void
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final d()I
+    .locals 1
 
-    new-instance v0, Lhpg;
+    iget v0, p0, Lhpg;->b:I
 
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lhpg;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lhpg;->X:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/Collection;
-
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
+    return v0
 .end method

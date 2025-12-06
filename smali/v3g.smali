@@ -1,10 +1,8 @@
-.class public abstract Lv3g;
-.super La4g;
+.class public interface abstract Lv3g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ls45;
 
-
-# instance fields
-.field public a:J
+# virtual methods
+.method public abstract m(ILjava/lang/CharSequence;)I
+.end method

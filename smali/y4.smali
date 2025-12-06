@@ -1,285 +1,414 @@
-.class public abstract synthetic Ly4;
-.super Ljava/lang/Object;
+.class public final Ly4;
+.super Landroid/view/View$AccessibilityDelegate;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Lz4;
+
+
 # direct methods
-.method public static bridge synthetic A(Landroid/window/OnBackInvokedDispatcher;Landroid/window/OnBackInvokedCallback;)V
+.method public constructor <init>(Lz4;)V
     .locals 0
 
-    invoke-interface {p0, p1}, Landroid/window/OnBackInvokedDispatcher;->unregisterOnBackInvokedCallback(Landroid/window/OnBackInvokedCallback;)V
+    invoke-direct {p0}, Landroid/view/View$AccessibilityDelegate;-><init>()V
+
+    iput-object p1, p0, Ly4;->a:Lz4;
 
     return-void
 .end method
 
-.method public static bridge synthetic B(Lmg;)Z
-    .locals 0
 
-    invoke-static {p0}, Landroid/animation/ValueAnimator;->unregisterDurationScaleChangeListener(Landroid/animation/ValueAnimator$DurationScaleChangeListener;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic C(Landroid/media/AudioManager;Landroid/media/AudioAttributes;)Ljava/util/List;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/AudioManager;->getDirectProfilesForAttributes(Landroid/media/AudioAttributes;)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic D(Lmg;)Z
-    .locals 0
-
-    invoke-static {p0}, Landroid/animation/ValueAnimator;->registerDurationScaleChangeListener(Landroid/animation/ValueAnimator$DurationScaleChangeListener;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic a()F
+# virtual methods
+.method public final dispatchPopulateAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
     .locals 1
 
-    invoke-static {}, Landroid/animation/ValueAnimator;->getDurationScale()F
+    iget-object v0, p0, Ly4;->a:Lz4;
 
-    move-result v0
+    invoke-virtual {v0, p1, p2}, Lz4;->a(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
 
-    return v0
+    move-result p1
+
+    return p1
 .end method
 
-.method public static bridge synthetic b(III)I
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Landroid/hardware/DataSpace;->pack(III)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic c(Landroid/content/pm/PackageManager;Ljava/lang/String;Landroid/content/pm/PackageManager$ApplicationInfoFlags;)Landroid/content/pm/ApplicationInfo;
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;Landroid/content/pm/PackageManager$ApplicationInfoFlags;)Landroid/content/pm/ApplicationInfo;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic d(J)Landroid/content/pm/PackageManager$ApplicationInfoFlags;
-    .locals 0
-
-    invoke-static {p0, p1}, Landroid/content/pm/PackageManager$ApplicationInfoFlags;->of(J)Landroid/content/pm/PackageManager$ApplicationInfoFlags;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic e(J)Landroid/content/pm/PackageManager$PackageInfoFlags;
-    .locals 0
-
-    invoke-static {p0, p1}, Landroid/content/pm/PackageManager$PackageInfoFlags;->of(J)Landroid/content/pm/PackageManager$PackageInfoFlags;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic f()Landroid/graphics/Bitmap$Config;
+.method public final getAccessibilityNodeProvider(Landroid/view/View;)Landroid/view/accessibility/AccessibilityNodeProvider;
     .locals 1
 
-    sget-object v0, Landroid/graphics/Bitmap$Config;->RGBA_1010102:Landroid/graphics/Bitmap$Config;
+    iget-object v0, p0, Ly4;->a:Lz4;
 
-    return-object v0
+    invoke-virtual {v0, p1}, Lz4;->b(Landroid/view/View;)Ly6i;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p1, Ly6i;->b:Ljava/lang/Object;
+
+    check-cast p1, Landroid/view/accessibility/AccessibilityNodeProvider;
+
+    return-object p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return-object p1
 .end method
 
-.method public static bridge synthetic g()Landroid/hardware/camera2/CameraCharacteristics$Key;
+.method public final onInitializeAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
     .locals 1
 
-    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->REQUEST_AVAILABLE_DYNAMIC_RANGE_PROFILES:Landroid/hardware/camera2/CameraCharacteristics$Key;
+    iget-object v0, p0, Ly4;->a:Lz4;
 
-    return-object v0
-.end method
-
-.method public static bridge synthetic h(Ljava/lang/Object;)Landroid/hardware/camera2/params/DynamicRangeProfiles;
-    .locals 0
-
-    check-cast p0, Landroid/hardware/camera2/params/DynamicRangeProfiles;
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic i(Landroid/media/metrics/MediaMetricsManager;)Landroid/media/metrics/EditingSession;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/metrics/MediaMetricsManager;->createEditingSession()Landroid/media/metrics/EditingSession;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic j(Landroid/media/metrics/EditingSession;)Landroid/media/metrics/LogSessionId;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/metrics/EditingSession;->getSessionId()Landroid/media/metrics/LogSessionId;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic k()Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-    .locals 1
-
-    sget-object v0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_SHOW_TEXT_SUGGESTIONS:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-
-    return-object v0
-.end method
-
-.method public static bridge synthetic l(Ljava/lang/Object;)Landroid/window/OnBackInvokedCallback;
-    .locals 0
-
-    check-cast p0, Landroid/window/OnBackInvokedCallback;
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic m(Lgi3;)Landroid/window/OnBackInvokedDispatcher;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/Dialog;->getOnBackInvokedDispatcher()Landroid/window/OnBackInvokedDispatcher;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic n(Landroid/app/Activity;)Landroid/window/OnBackInvokedDispatcher;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getOnBackInvokedDispatcher()Landroid/window/OnBackInvokedDispatcher;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic o(Landroid/view/View;)Landroid/window/OnBackInvokedDispatcher;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/View;->findOnBackInvokedDispatcher()Landroid/window/OnBackInvokedDispatcher;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic p(Ljava/lang/Object;)Landroid/window/OnBackInvokedDispatcher;
-    .locals 0
-
-    check-cast p0, Landroid/window/OnBackInvokedDispatcher;
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic q(Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
-
-    sget-object v0, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
-
-    invoke-static {p0, v0}, Ljava/net/URLDecoder;->decode(Ljava/lang/String;Ljava/nio/charset/Charset;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic r(Ljava/security/interfaces/XECPublicKey;)Ljava/math/BigInteger;
-    .locals 0
-
-    invoke-interface {p0}, Ljava/security/interfaces/XECPublicKey;->getU()Ljava/math/BigInteger;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic s(Ljava/security/PublicKey;)Ljava/security/interfaces/XECPublicKey;
-    .locals 0
-
-    check-cast p0, Ljava/security/interfaces/XECPublicKey;
-
-    return-object p0
-.end method
-
-.method public static synthetic t(Ljava/security/spec/AlgorithmParameterSpec;Ljava/math/BigInteger;)Ljava/security/spec/XECPublicKeySpec;
-    .locals 1
-
-    new-instance v0, Ljava/security/spec/XECPublicKeySpec;
-
-    invoke-direct {v0, p0, p1}, Ljava/security/spec/XECPublicKeySpec;-><init>(Ljava/security/spec/AlgorithmParameterSpec;Ljava/math/BigInteger;)V
-
-    return-object v0
-.end method
-
-.method public static bridge synthetic u(Landroid/media/AudioManager;Landroid/media/AudioAttributes;)Ljava/util/List;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/AudioManager;->getAudioDevicesForAttributes(Landroid/media/AudioAttributes;)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic v(Landroid/hardware/camera2/params/DynamicRangeProfiles;)Ljava/util/Set;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/hardware/camera2/params/DynamicRangeProfiles;->getSupportedProfiles()Ljava/util/Set;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic w()V
-    .locals 1
-
-    new-instance v0, Ljava/security/spec/XECPublicKeySpec;
+    invoke-virtual {v0, p1, p2}, Lz4;->c(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
 
     return-void
 .end method
 
-.method public static bridge synthetic x(Landroid/media/metrics/EditingSession;)V
-    .locals 0
+.method public final onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
+    .locals 11
 
-    invoke-virtual {p0}, Landroid/media/metrics/EditingSession;->close()V
+    new-instance v0, Lm5;
 
+    invoke-direct {v0, p2}, Lm5;-><init>(Landroid/view/accessibility/AccessibilityNodeInfo;)V
+
+    sget-object v1, Lhfh;->a:Ljava/util/WeakHashMap;
+
+    sget v1, Lgzc;->tag_screen_reader_focusable:I
+
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/4 v3, 0x0
+
+    const/16 v4, 0x1c
+
+    const-class v5, Ljava/lang/Boolean;
+
+    if-lt v2, v4, :cond_0
+
+    invoke-static {p1}, Lafh;->d(Landroid/view/View;)Z
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1, v1}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v5, v1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    move-object v1, v3
+
+    :goto_0
+    check-cast v1, Ljava/lang/Boolean;
+
+    const/4 v2, 0x0
+
+    const/4 v6, 0x1
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    move v1, v6
+
+    goto :goto_1
+
+    :cond_2
+    move v1, v2
+
+    :goto_1
+    sget v7, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const-string v8, "androidx.view.accessibility.AccessibilityNodeInfoCompat.BOOLEAN_PROPERTY_KEY"
+
+    if-lt v7, v4, :cond_3
+
+    invoke-static {p2, v1}, Lb5;->x(Landroid/view/accessibility/AccessibilityNodeInfo;Z)V
+
+    goto :goto_2
+
+    :cond_3
+    invoke-virtual {p2}, Landroid/view/accessibility/AccessibilityNodeInfo;->getExtras()Landroid/os/Bundle;
+
+    move-result-object v9
+
+    if-eqz v9, :cond_4
+
+    invoke-virtual {v9, v8, v2}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
+
+    move-result v10
+
+    and-int/lit8 v10, v10, -0x2
+
+    or-int/2addr v1, v10
+
+    invoke-virtual {v9, v8, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    :cond_4
+    :goto_2
+    sget v1, Lgzc;->tag_accessibility_heading:I
+
+    sget v9, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    if-lt v9, v4, :cond_5
+
+    invoke-static {p1}, Lafh;->c(Landroid/view/View;)Z
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    goto :goto_3
+
+    :cond_5
+    invoke-virtual {p1, v1}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v5, v1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_6
+
+    goto :goto_3
+
+    :cond_6
+    move-object v1, v3
+
+    :goto_3
+    check-cast v1, Ljava/lang/Boolean;
+
+    if-eqz v1, :cond_7
+
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_7
+
+    goto :goto_4
+
+    :cond_7
+    move v6, v2
+
+    :goto_4
+    if-lt v7, v4, :cond_8
+
+    invoke-static {p2, v6}, Lb5;->D(Landroid/view/accessibility/AccessibilityNodeInfo;Z)V
+
+    goto :goto_6
+
+    :cond_8
+    invoke-virtual {p2}, Landroid/view/accessibility/AccessibilityNodeInfo;->getExtras()Landroid/os/Bundle;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_a
+
+    invoke-virtual {v1, v8, v2}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
+
+    move-result v5
+
+    and-int/lit8 v5, v5, -0x3
+
+    if-eqz v6, :cond_9
+
+    const/4 v6, 0x2
+
+    goto :goto_5
+
+    :cond_9
+    move v6, v2
+
+    :goto_5
+    or-int/2addr v5, v6
+
+    invoke-virtual {v1, v8, v5}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    :cond_a
+    :goto_6
+    invoke-static {p1}, Lhfh;->e(Landroid/view/View;)Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    if-lt v7, v4, :cond_b
+
+    invoke-static {p2, v1}, Lb5;->w(Landroid/view/accessibility/AccessibilityNodeInfo;Ljava/lang/CharSequence;)V
+
+    goto :goto_7
+
+    :cond_b
+    invoke-virtual {p2}, Landroid/view/accessibility/AccessibilityNodeInfo;->getExtras()Landroid/os/Bundle;
+
+    move-result-object v4
+
+    const-string v5, "androidx.view.accessibility.AccessibilityNodeInfoCompat.PANE_TITLE_KEY"
+
+    invoke-virtual {v4, v5, v1}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    :goto_7
+    sget v1, Lgzc;->tag_state_description:I
+
+    sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v5, 0x1e
+
+    if-lt v4, v5, :cond_c
+
+    invoke-static {p1}, Lcfh;->b(Landroid/view/View;)Ljava/lang/CharSequence;
+
+    move-result-object v3
+
+    goto :goto_8
+
+    :cond_c
+    invoke-virtual {p1, v1}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    const-class v4, Ljava/lang/CharSequence;
+
+    invoke-virtual {v4, v1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_d
+
+    move-object v3, v1
+
+    :cond_d
+    :goto_8
+    check-cast v3, Ljava/lang/CharSequence;
+
+    if-lt v7, v5, :cond_e
+
+    invoke-static {p2, v3}, Lh5;->c(Landroid/view/accessibility/AccessibilityNodeInfo;Ljava/lang/CharSequence;)V
+
+    goto :goto_9
+
+    :cond_e
+    invoke-virtual {p2}, Landroid/view/accessibility/AccessibilityNodeInfo;->getExtras()Landroid/os/Bundle;
+
+    move-result-object v1
+
+    const-string v4, "androidx.view.accessibility.AccessibilityNodeInfoCompat.STATE_DESCRIPTION_KEY"
+
+    invoke-virtual {v1, v4, v3}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    :goto_9
+    iget-object v1, p0, Ly4;->a:Lz4;
+
+    invoke-virtual {v1, p1, v0}, Lz4;->d(Landroid/view/View;Lm5;)V
+
+    invoke-virtual {p2}, Landroid/view/accessibility/AccessibilityNodeInfo;->getText()Ljava/lang/CharSequence;
+
+    sget p2, Lgzc;->tag_accessibility_actions:I
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/util/List;
+
+    if-nez p1, :cond_f
+
+    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    :cond_f
+    :goto_a
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result p2
+
+    if-ge v2, p2, :cond_10
+
+    invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lg5;
+
+    invoke-virtual {v0, p2}, Lm5;->b(Lg5;)V
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_a
+
+    :cond_10
     return-void
 .end method
 
-.method public static bridge synthetic y(Landroid/window/OnBackInvokedDispatcher;ILandroid/window/OnBackInvokedCallback;)V
-    .locals 0
-
-    invoke-interface {p0, p1, p2}, Landroid/window/OnBackInvokedDispatcher;->registerOnBackInvokedCallback(ILandroid/window/OnBackInvokedCallback;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic z(Landroid/window/OnBackInvokedDispatcher;Lgo;)V
+.method public final onPopulateAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
     .locals 1
 
-    const v0, 0xf4240
+    iget-object v0, p0, Ly4;->a:Lz4;
 
-    invoke-interface {p0, v0, p1}, Landroid/window/OnBackInvokedDispatcher;->registerOnBackInvokedCallback(ILandroid/window/OnBackInvokedCallback;)V
+    invoke-virtual {v0, p1, p2}, Lz4;->e(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+
+    return-void
+.end method
+
+.method public final onRequestSendAccessibilityEvent(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
+    .locals 1
+
+    iget-object v0, p0, Ly4;->a:Lz4;
+
+    invoke-virtual {v0, p1, p2, p3}, Lz4;->f(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final performAccessibilityAction(Landroid/view/View;ILandroid/os/Bundle;)Z
+    .locals 1
+
+    iget-object v0, p0, Ly4;->a:Lz4;
+
+    invoke-virtual {v0, p1, p2, p3}, Lz4;->g(Landroid/view/View;ILandroid/os/Bundle;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final sendAccessibilityEvent(Landroid/view/View;I)V
+    .locals 1
+
+    iget-object v0, p0, Ly4;->a:Lz4;
+
+    invoke-virtual {v0, p1, p2}, Lz4;->h(Landroid/view/View;I)V
+
+    return-void
+.end method
+
+.method public final sendAccessibilityEventUnchecked(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+    .locals 1
+
+    iget-object v0, p0, Ly4;->a:Lz4;
+
+    invoke-virtual {v0, p1, p2}, Lz4;->i(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
 
     return-void
 .end method

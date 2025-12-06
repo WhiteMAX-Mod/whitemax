@@ -1,94 +1,137 @@
-.class public final enum Ln8h;
-.super Ljava/lang/Enum;
+.class public final Ln8h;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Lkch;
+.implements Lsm6;
 
 
-# static fields
-.field public static final synthetic a:[Ln8h;
+# instance fields
+.field public final synthetic X:Lq8h;
 
-.field public static final synthetic b:Lzd5;
+.field public final synthetic o:[B
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>([BLq8h;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Ln8h;
+    iput-object p1, p0, Ln8h;->o:[B
 
-    const-string v1, "CHANGE_SCREEN_BRIGHTNESS"
+    iput-object p2, p0, Ln8h;->X:Lq8h;
 
-    const/4 v2, 0x0
+    const/4 p1, 0x2
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    filled-new-array {v0}, [Ln8h;
-
-    move-result-object v0
-
-    sput-object v0, Ln8h;->a:[Ln8h;
-
-    new-instance v1, Lzd5;
-
-    invoke-direct {v1, v0}, Lzd5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Ln8h;->b:Lzd5;
+    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ln8h;
-    .locals 1
-
-    const-class v0, Ln8h;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Ln8h;
-
-    return-object p0
-.end method
-
-.method public static values()[Ln8h;
-    .locals 1
-
-    sget-object v0, Ln8h;->a:[Ln8h;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ln8h;
-
-    return-object v0
-.end method
-
 
 # virtual methods
-.method public final a()Ljava/lang/Integer;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x0
+    check-cast p1, Lf84;
 
-    return-object v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Ln8h;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Ln8h;
+
+    sget-object p2, Lqqg;->a:Lqqg;
+
+    invoke-virtual {p1, p2}, Ln8h;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final c()Ljava/lang/String;
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const-string v0, "WebAppChangeScreenBrightness"
+    new-instance p1, Ln8h;
 
-    return-object v0
+    iget-object v0, p0, Ln8h;->o:[B
+
+    iget-object v1, p0, Ln8h;->X:Lq8h;
+
+    invoke-direct {p1, v0, v1, p2}, Ln8h;-><init>([BLq8h;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
 .end method
 
-.method public final d()Ljava/lang/String;
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    const-string v0, "change_screen_brightness"
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    return-object v0
+    iget-object p1, p0, Ln8h;->o:[B
+
+    const/4 v0, 0x2
+
+    invoke-static {p1, v0}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "data:"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    sget-object v1, Luz9;->d:Luz9;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ";base64,"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p1
+
+    iget-object v0, p0, Ln8h;->X:Lq8h;
+
+    iget-object v0, v0, Lq8h;->q:Ltcf;
+
+    :cond_0
+    invoke-virtual {v0}, Ltcf;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v2, v1
+
+    check-cast v2, Lf8h;
+
+    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    const/4 v4, 0x5
+
+    const/4 v5, 0x0
+
+    invoke-static {v2, v5, v3, v5, v4}, Lf8h;->a(Lf8h;Landroid/util/Size;Ljava/lang/String;Ljava/lang/String;I)Lf8h;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Ltcf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

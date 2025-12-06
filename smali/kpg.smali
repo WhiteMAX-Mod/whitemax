@@ -1,48 +1,105 @@
 .class public final Lkpg;
-.super Ly14;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Comparable;
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Ljpg;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Ljpg;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Lkpg;->Y:Ljpg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput p1, p0, Lkpg;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 2
+
+    check-cast p1, Lkpg;
+
+    iget p1, p1, Lkpg;->a:I
+
+    iget v0, p0, Lkpg;->a:I
+
+    const/high16 v1, -0x80000000
+
+    xor-int/2addr v0, v1
+
+    xor-int/2addr p1, v1
+
+    invoke-static {v0, p1}, Lfni;->b(II)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iput-object p1, p0, Lkpg;->o:Ljava/lang/Object;
+    instance-of v0, p1, Lkpg;
 
-    iget p1, p0, Lkpg;->X:I
+    if-nez v0, :cond_0
 
-    const/high16 v0, -0x80000000
+    goto :goto_0
 
-    or-int/2addr p1, v0
+    :cond_0
+    check-cast p1, Lkpg;
 
-    iput p1, p0, Lkpg;->X:I
+    iget p1, p1, Lkpg;->a:I
 
-    iget-object p1, p0, Lkpg;->Y:Ljpg;
+    iget v0, p0, Lkpg;->a:I
 
-    const/4 v0, 0x0
+    if-eq v0, p1, :cond_1
 
-    invoke-virtual {p1, v0, p0}, Ljpg;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :goto_0
+    const/4 p1, 0x0
 
-    move-result-object p1
+    return p1
 
-    return-object p1
+    :cond_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget v0, p0, Lkpg;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    iget v0, p0, Lkpg;->a:I
+
+    int-to-long v0, v0
+
+    const-wide v2, 0xffffffffL
+
+    and-long/2addr v0, v2
+
+    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

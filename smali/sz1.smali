@@ -1,121 +1,175 @@
-.class public final enum Lsz1;
-.super Ljava/lang/Enum;
+.class public final Lsz1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final enum X:Lsz1;
+.field public static final j:J
 
-.field public static final enum Y:Lsz1;
+.field public static final k:J
 
-.field public static final synthetic Z:[Lsz1;
 
-.field public static final enum a:Lsz1;
+# instance fields
+.field public final a:I
 
-.field public static final enum b:Lsz1;
+.field public final b:Ljava/util/concurrent/Executor;
 
-.field public static final enum c:Lsz1;
+.field public final c:Ljava/util/concurrent/ScheduledExecutorService;
 
-.field public static final enum o:Lsz1;
+.field public final d:Lry1;
+
+.field public final e:Lcs0;
+
+.field public final f:Z
+
+.field public g:J
+
+.field public final h:Ljava/util/ArrayList;
+
+.field public final i:Lqz1;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 8
+    .locals 3
 
-    new-instance v0, Lsz1;
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    const-string v1, "UNKNOWN"
+    const-wide/16 v1, 0x1
 
-    const/4 v2, 0x0
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    move-result-wide v1
 
-    sput-object v0, Lsz1;->a:Lsz1;
+    sput-wide v1, Lsz1;->j:J
 
-    new-instance v1, Lsz1;
+    const-wide/16 v1, 0x5
 
-    const-string v2, "INACTIVE"
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
 
-    const/4 v3, 0x1
+    move-result-wide v0
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lsz1;->b:Lsz1;
-
-    new-instance v2, Lsz1;
-
-    const-string v3, "SEARCHING"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lsz1;->c:Lsz1;
-
-    new-instance v3, Lsz1;
-
-    const-string v4, "FLASH_REQUIRED"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lsz1;->o:Lsz1;
-
-    new-instance v4, Lsz1;
-
-    const-string v5, "CONVERGED"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lsz1;->X:Lsz1;
-
-    new-instance v5, Lsz1;
-
-    const-string v6, "LOCKED"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v5, Lsz1;->Y:Lsz1;
-
-    filled-new-array/range {v0 .. v5}, [Lsz1;
-
-    move-result-object v0
-
-    sput-object v0, Lsz1;->Z:[Lsz1;
+    sput-wide v0, Lsz1;->k:J
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lsz1;
-    .locals 1
+.method public constructor <init>(ILqee;La07;Lry1;ZLcs0;)V
+    .locals 2
 
-    const-class v0, Lsz1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    sget-wide v0, Lsz1;->j:J
 
-    move-result-object p0
+    iput-wide v0, p0, Lsz1;->g:J
 
-    check-cast p0, Lsz1;
+    new-instance v0, Ljava/util/ArrayList;
 
-    return-object p0
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lsz1;->h:Ljava/util/ArrayList;
+
+    new-instance v0, Lqz1;
+
+    invoke-direct {v0, p0}, Lqz1;-><init>(Lsz1;)V
+
+    iput-object v0, p0, Lsz1;->i:Lqz1;
+
+    iput p1, p0, Lsz1;->a:I
+
+    iput-object p2, p0, Lsz1;->b:Ljava/util/concurrent/Executor;
+
+    iput-object p3, p0, Lsz1;->c:Ljava/util/concurrent/ScheduledExecutorService;
+
+    iput-object p4, p0, Lsz1;->d:Lry1;
+
+    iput-boolean p5, p0, Lsz1;->f:Z
+
+    iput-object p6, p0, Lsz1;->e:Lcs0;
+
+    return-void
 .end method
 
-.method public static values()[Lsz1;
-    .locals 1
 
-    sget-object v0, Lsz1;->Z:[Lsz1;
+# virtual methods
+.method public final a(I)Lha8;
+    .locals 4
 
-    invoke-virtual {v0}, [Lsz1;->clone()Ljava/lang/Object;
+    iget-object v0, p0, Lsz1;->h:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v0
+
+    sget-object v1, Lag7;->c:Lag7;
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lsz1;->i:Lqz1;
+
+    invoke-virtual {v0}, Lqz1;->b()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Lvz1;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lvz1;-><init>(Luz1;)V
+
+    iget-object v1, p0, Lsz1;->d:Lry1;
+
+    invoke-virtual {v1, v0}, Lry1;->p(Lqy1;)V
+
+    new-instance v2, Lmy1;
+
+    const/4 v3, 0x6
+
+    invoke-direct {v2, v1, v3, v0}, Lmy1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    iget-object v1, v1, Lry1;->c:Lqee;
+
+    iget-object v0, v0, Lvz1;->b:Lwu1;
+
+    iget-object v3, v0, Lwu1;->b:Lvu1;
+
+    invoke-virtual {v3, v2, v1}, Lk4;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+
+    move-object v1, v0
+
+    :cond_0
+    invoke-static {v1}, Lsn6;->a(Lha8;)Lsn6;
 
     move-result-object v0
 
-    check-cast v0, [Lsz1;
+    new-instance v1, Lad0;
 
-    return-object v0
+    const/4 v2, 0x1
+
+    invoke-direct {v1, p0, p1, v2}, Lad0;-><init>(Ljava/lang/Object;II)V
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p1, p0, Lsz1;->b:Ljava/util/concurrent/Executor;
+
+    invoke-static {v0, v1, p1}, Lwsf;->l(Lha8;Lyu;Ljava/util/concurrent/Executor;)Lq72;
+
+    move-result-object v0
+
+    new-instance v1, Lxtd;
+
+    const/16 v2, 0x1a
+
+    invoke-direct {v1, v2, p0}, Lxtd;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {v0, v1, p1}, Lwsf;->l(Lha8;Lyu;Ljava/util/concurrent/Executor;)Lq72;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_1
+    return-object v1
 .end method

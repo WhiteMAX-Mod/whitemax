@@ -1,193 +1,174 @@
 .class public final Lvsb;
-.super Ljava/lang/Object;
+.super Lo2;
 .source "SourceFile"
-
-# interfaces
-.implements Lhw0;
 
 
 # static fields
-.field public static final o:Lvsb;
+.field public static final c:Lvsb;
 
 
 # instance fields
-.field public final a:F
+.field public final a:Luig;
 
-.field public final b:F
-
-.field public final c:I
+.field public final b:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 3
 
     new-instance v0, Lvsb;
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    sget-object v1, Luig;->e:Luig;
 
-    invoke-direct {v0, v1, v1}, Lvsb;-><init>(FF)V
+    const/4 v2, 0x0
 
-    sput-object v0, Lvsb;->o:Lvsb;
+    invoke-direct {v0, v1, v2}, Lvsb;-><init>(Luig;I)V
+
+    sput-object v0, Lvsb;->c:Lvsb;
 
     return-void
 .end method
 
-.method public constructor <init>(FF)V
-    .locals 4
+.method public constructor <init>(Luig;I)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lvsb;->a:Luig;
 
-    cmpl-float v1, p1, v0
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    if-lez v1, :cond_0
-
-    move v1, v3
-
-    goto :goto_0
-
-    :cond_0
-    move v1, v2
-
-    :goto_0
-    invoke-static {v1}, Lzg8;->c(Z)V
-
-    cmpl-float v0, p2, v0
-
-    if-lez v0, :cond_1
-
-    move v2, v3
-
-    :cond_1
-    invoke-static {v2}, Lzg8;->c(Z)V
-
-    iput p1, p0, Lvsb;->a:F
-
-    iput p2, p0, Lvsb;->b:F
-
-    const/high16 p2, 0x447a0000    # 1000.0f
-
-    mul-float/2addr p1, p2
-
-    invoke-static {p1}, Ljava/lang/Math;->round(F)I
-
-    move-result p1
-
-    iput p1, p0, Lvsb;->c:I
+    iput p2, p0, Lvsb;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final containsKey(Ljava/lang/Object;)Z
+    .locals 3
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
-    if-ne p0, p1, :cond_0
+    if-nez p1, :cond_0
 
-    return v0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_2
-
-    const-class v2, Lvsb;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
+    move v1, v0
 
     goto :goto_0
 
-    :cond_1
-    check-cast p1, Lvsb;
-
-    iget v2, p0, Lvsb;->a:F
-
-    iget v3, p1, Lvsb;->a:F
-
-    cmpl-float v2, v2, v3
-
-    if-nez v2, :cond_2
-
-    iget v2, p0, Lvsb;->b:F
-
-    iget p1, p1, Lvsb;->b:F
-
-    cmpl-float p1, v2, p1
-
-    if-nez p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget v0, p0, Lvsb;->a:F
-
-    invoke-static {v0}, Ljava/lang/Float;->floatToRawIntBits(F)I
-
-    move-result v0
-
-    add-int/lit16 v0, v0, 0x20f
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lvsb;->b:F
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToRawIntBits(F)I
+    :cond_0
+    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
-    add-int/2addr v1, v0
+    :goto_0
+    iget-object v2, p0, Lvsb;->a:Luig;
 
-    return v1
+    invoke-virtual {v2, v1, v0, p1}, Luig;->d(IILjava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    if-ne p1, p0, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    instance-of v0, p1, Ljava/util/Map;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_1
+
+    return v1
+
+    :cond_1
+    move-object v0, p1
+
+    check-cast v0, Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->size()I
+
+    move-result v2
+
+    iget v3, p0, Lvsb;->b:I
+
+    if-eq v3, v2, :cond_2
+
+    return v1
+
+    :cond_2
+    instance-of v1, v0, Lvsb;
+
+    iget-object v2, p0, Lvsb;->a:Luig;
+
+    if-eqz v1, :cond_3
+
+    check-cast p1, Lvsb;
+
+    iget-object p1, p1, Lvsb;->a:Luig;
+
+    sget-object v0, Lxf3;->o:Lxf3;
+
+    invoke-virtual {v2, p1, v0}, Luig;->g(Luig;Lsm6;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_3
+    instance-of v0, v0, Lxsb;
+
+    if-eqz v0, :cond_4
+
+    check-cast p1, Lxsb;
+
+    iget-object p1, p1, Lxsb;->c:Luig;
+
+    sget-object v0, Lxf3;->X:Lxf3;
+
+    invoke-virtual {v2, p1, v0}, Luig;->g(Luig;Lsm6;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_4
+    invoke-super {p0, p1}, Lo2;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    iget v0, p0, Lvsb;->a:F
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    if-nez p1, :cond_0
 
-    move-result-object v0
+    move v1, v0
 
-    iget v1, p0, Lvsb;->b:F
+    goto :goto_0
 
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    :cond_0
+    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
 
-    move-result-object v1
+    move-result v1
 
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
+    :goto_0
+    iget-object v2, p0, Lvsb;->a:Luig;
 
-    move-result-object v0
+    invoke-virtual {v2, v1, v0, p1}, Luig;->h(IILjava/lang/Object;)Ljava/lang/Object;
 
-    sget v1, Llig;->a:I
+    move-result-object p1
 
-    sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    const-string v2, "PlaybackParameters(speed=%.2f, pitch=%.2f)"
-
-    invoke-static {v1, v2, v0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

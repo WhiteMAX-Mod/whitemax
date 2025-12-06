@@ -1,45 +1,102 @@
 .class public final Lpg;
-.super Landroid/util/IntProperty;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/animation/Animation$AnimationListener;
 
 
 # instance fields
-.field public a:I
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;I)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Landroid/util/IntProperty;-><init>(Ljava/lang/String;)V
+    iput p1, p0, Lpg;->a:I
 
-    iput p2, p0, Lpg;->a:I
+    iput-object p2, p0, Lpg;->b:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a(Landroid/view/animation/Animation;)V
     .locals 0
 
-    check-cast p1, Landroid/graphics/drawable/ShapeDrawable;
+    return-void
+.end method
+
+.method public final onAnimationEnd(Landroid/view/animation/Animation;)V
+    .locals 1
 
     iget p1, p0, Lpg;->a:I
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    packed-switch p1, :pswitch_data_0
 
-    move-result-object p1
+    iget-object p1, p0, Lpg;->b:Ljava/lang/Object;
 
-    return-object p1
-.end method
+    check-cast p1, Landroid/view/View;
 
-.method public final setValue(Ljava/lang/Object;I)V
-    .locals 0
+    const/4 v0, 0x0
 
-    check-cast p1, Landroid/graphics/drawable/ShapeDrawable;
+    invoke-virtual {p1, v0}, Landroid/view/View;->setAnimation(Landroid/view/animation/Animation;)V
 
-    iput p2, p0, Lpg;->a:I
+    const/16 v0, 0x8
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
     return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lpg;->b:Ljava/lang/Object;
+
+    check-cast p1, Lfqi;
+
+    invoke-virtual {p1}, Lfqi;->f()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onAnimationRepeat(Landroid/view/animation/Animation;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onAnimationStart(Landroid/view/animation/Animation;)V
+    .locals 0
+
+    iget p1, p0, Lpg;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lpg;->b:Ljava/lang/Object;
+
+    check-cast p1, Lfqi;
+
+    invoke-virtual {p1}, Lfqi;->g()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,26 +1,20 @@
-.class public interface abstract Lb0d;
+.class public abstract Lb0d;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# virtual methods
-.method public abstract g(Lwe9;Z)V
-.end method
+# static fields
+.field public static oneme_settings_ringtone_section_bottom_vh:I = 0x7f0a07fc
 
-.method public abstract l(Lvt0;Z)V
-.end method
+.field public static oneme_settings_ringtone_section_custom_add:I = 0x7f0a07fd
 
-.method public abstract r(Z)V
-.end method
+.field public static oneme_settings_ringtone_section_default:I = 0x7f0a07fe
 
-.method public abstract setChipObserver(Leyc;)V
-.end method
+.field public static oneme_settings_ringtone_section_header_vh:I = 0x7f0a07ff
 
-.method public abstract setIsIncoming(Z)V
-.end method
+.field public static oneme_settings_ringtone_section_item_vh:I = 0x7f0a0800
 
-.method public abstract setOnClickListener(Lli6;)V
-.end method
+.field public static oneme_settings_ringtone_section_system:I = 0x7f0a0801
 
-.method public abstract setStackFromEnd(Z)V
-.end method
+.field public static oneme_settings_ringtone_settings_list:I = 0x7f0a0802
+
+.field public static oneme_settings_ringtone_title:I = 0x7f0a0803

@@ -2,13 +2,18 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lyig;
+
+# static fields
+.field public static final a:Lwha;
 
 
-# virtual methods
-.method public abstract d()J
-.end method
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.method public abstract i()Ljava/math/BigInteger;
+    sget-object v0, Lwha;->x0:Lwha;
+
+    sput-object v0, Llha;->a:Lwha;
+
+    return-void
 .end method

@@ -1,56 +1,98 @@
-.class public abstract Lttc;
+.class public final synthetic Lttc;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcm6;
 
 
-# static fields
-.field public static oneme_settings_media_action_always:I = 0x7f13097f
+# instance fields
+.field public final synthetic a:I
 
-.field public static oneme_settings_media_action_disabled:I = 0x7f130980
+.field public final synthetic b:Lytc;
 
-.field public static oneme_settings_media_action_dont_load:I = 0x7f130981
 
-.field public static oneme_settings_media_action_video_quality_1080:I = 0x7f130982
+# direct methods
+.method public synthetic constructor <init>(Lytc;I)V
+    .locals 0
 
-.field public static oneme_settings_media_action_video_quality_480:I = 0x7f130983
+    iput p2, p0, Lttc;->a:I
 
-.field public static oneme_settings_media_action_video_quality_720:I = 0x7f130984
+    iput-object p1, p0, Lttc;->b:Lytc;
 
-.field public static oneme_settings_media_action_wifi:I = 0x7f130985
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_settings_media_animoji:I = 0x7f130986
+    return-void
+.end method
 
-.field public static oneme_settings_media_caching:I = 0x7f130987
 
-.field public static oneme_settings_media_gif:I = 0x7f130988
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-.field public static oneme_settings_media_gif_play:I = 0x7f130989
+    iget v0, p0, Lttc;->a:I
 
-.field public static oneme_settings_media_gif_title:I = 0x7f13098a
+    packed-switch v0, :pswitch_data_0
 
-.field public static oneme_settings_media_load_media_in_roaming:I = 0x7f13098b
+    sget v0, Livd;->m0:I
 
-.field public static oneme_settings_media_photo:I = 0x7f13098c
+    iget-object v1, p0, Lttc;->b:Lytc;
 
-.field public static oneme_settings_media_photo_title:I = 0x7f13098d
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-.field public static oneme_settings_media_playlist:I = 0x7f13098e
+    move-result-object v1
 
-.field public static oneme_settings_media_screen_autoloading_section:I = 0x7f13098f
+    invoke-static {v1, v0}, Lr34;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-.field public static oneme_settings_media_screen_autoplaying_section:I = 0x7f130990
+    move-result-object v0
 
-.field public static oneme_settings_media_screen_datapressing_section:I = 0x7f130991
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
-.field public static oneme_settings_media_screen_toolbar_title:I = 0x7f130992
+    move-result-object v0
 
-.field public static oneme_settings_media_video:I = 0x7f130993
+    return-object v0
 
-.field public static oneme_settings_media_video_messages:I = 0x7f130994
+    :pswitch_0
+    sget v0, Livd;->k0:I
 
-.field public static oneme_settings_media_video_messages_title:I = 0x7f130995
+    iget-object v1, p0, Lttc;->b:Lytc;
 
-.field public static oneme_settings_media_video_quality:I = 0x7f130996
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-.field public static oneme_settings_media_video_quality_title:I = 0x7f130997
+    move-result-object v1
 
-.field public static oneme_settings_media_video_title:I = 0x7f130998
+    invoke-static {v1, v0}, Lr34;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    sget v0, Livd;->l0:I
+
+    iget-object v1, p0, Lttc;->b:Lytc;
+
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1, v0}, Lr34;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method

@@ -1,45 +1,21 @@
-.class public abstract Lxo0;
+.class public final Lxo0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Lkb7;
+
+
 # direct methods
-.method public static a(Landroid/content/Context;I)Landroid/content/Context;
+.method public constructor <init>(Lkb7;)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/content/Context;->createDeviceContext(I)Landroid/content/Context;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    invoke-static {p1}, Ls5j;->g(Ljava/lang/Object;)V
 
-    return-object p0
-.end method
+    iput-object p1, p0, Lxo0;->a:Lkb7;
 
-.method public static b(Landroid/content/Context;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/content/Context;->getDeviceId()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static c(Landroid/content/Context;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/content/Context;->getDeviceId()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static d(Landroid/graphics/Bitmap;)Z
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/graphics/Bitmap;->hasGainmap()Z
-
-    move-result p0
-
-    return p0
+    return-void
 .end method

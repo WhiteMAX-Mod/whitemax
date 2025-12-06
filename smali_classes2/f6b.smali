@@ -1,65 +1,60 @@
-.class public final Lf6b;
-.super Ljava/lang/Object;
+.class public final synthetic Lf6b;
+.super Ly8;
 .source "SourceFile"
 
 # interfaces
-.implements Li6b;
-.implements Lk6b;
+.implements Lum6;
 
 
 # static fields
-.field public static final a:Lf6b;
+.field public static final Z:Lf6b;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 5
 
     new-instance v0, Lf6b;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
 
-    sput-object v0, Lf6b;->a:Lf6b;
+    const/4 v2, 0x4
+
+    const/4 v3, 0x3
+
+    const-class v4, Limb;
+
+    invoke-direct {v0, v3, v4, v1, v2}, Ly8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
+
+    sput-object v0, Lf6b;->Z:Lf6b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const/4 v0, 0x1
+    check-cast p1, Ljava/lang/Number;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
 
-    return v0
+    move-result p1
 
-    :cond_0
-    instance-of p1, p1, Lf6b;
+    check-cast p2, Ljava/lang/Boolean;
 
-    if-nez p1, :cond_1
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
-    const/4 p1, 0x0
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    return p1
+    new-instance p3, Limb;
 
-    :cond_1
-    return v0
-.end method
+    new-instance v0, Ljava/lang/Integer;
 
-.method public final hashCode()I
-    .locals 1
+    invoke-direct {v0, p1}, Ljava/lang/Integer;-><init>(I)V
 
-    const v0, -0x1e39b9c2
+    invoke-direct {p3, v0, p2}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Empty"
-
-    return-object v0
+    return-object p3
 .end method

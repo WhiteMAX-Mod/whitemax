@@ -10,7 +10,7 @@
 
 .field public c:Ljava/lang/ref/WeakReference;
 
-.field public o:Landroid/view/LayoutInflater;
+.field public d:Landroid/view/LayoutInflater;
 
 
 # direct methods
@@ -23,13 +23,13 @@
 
     iput v0, p0, Landroidx/appcompat/widget/ViewStubCompat;->a:I
 
-    sget-object v1, Lvvc;->ViewStubCompat:[I
+    sget-object v1, Lo6d;->ViewStubCompat:[I
 
     invoke-virtual {p1, p2, v1, v0, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    sget p2, Lvvc;->ViewStubCompat_android_inflatedId:I
+    sget p2, Lo6d;->ViewStubCompat_android_inflatedId:I
 
     const/4 v1, -0x1
 
@@ -39,7 +39,7 @@
 
     iput p2, p0, Landroidx/appcompat/widget/ViewStubCompat;->b:I
 
-    sget p2, Lvvc;->ViewStubCompat_android_layout:I
+    sget p2, Lo6d;->ViewStubCompat_android_layout:I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -47,7 +47,7 @@
 
     iput p2, p0, Landroidx/appcompat/widget/ViewStubCompat;->a:I
 
-    sget p2, Lvvc;->ViewStubCompat_android_id:I
+    sget p2, Lo6d;->ViewStubCompat_android_id:I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -87,7 +87,7 @@
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    iget-object v1, p0, Landroidx/appcompat/widget/ViewStubCompat;->o:Landroid/view/LayoutInflater;
+    iget-object v1, p0, Landroidx/appcompat/widget/ViewStubCompat;->d:Landroid/view/LayoutInflater;
 
     if-eqz v1, :cond_0
 
@@ -190,7 +190,7 @@
 .method public getLayoutInflater()Landroid/view/LayoutInflater;
     .locals 1
 
-    iget-object v0, p0, Landroidx/appcompat/widget/ViewStubCompat;->o:Landroid/view/LayoutInflater;
+    iget-object v0, p0, Landroidx/appcompat/widget/ViewStubCompat;->d:Landroid/view/LayoutInflater;
 
     return-object v0
 .end method
@@ -224,7 +224,7 @@
 .method public setLayoutInflater(Landroid/view/LayoutInflater;)V
     .locals 0
 
-    iput-object p1, p0, Landroidx/appcompat/widget/ViewStubCompat;->o:Landroid/view/LayoutInflater;
+    iput-object p1, p0, Landroidx/appcompat/widget/ViewStubCompat;->d:Landroid/view/LayoutInflater;
 
     return-void
 .end method
@@ -237,7 +237,7 @@
     return-void
 .end method
 
-.method public setOnInflateListener(Lg1h;)V
+.method public setOnInflateListener(Lhhh;)V
     .locals 0
 
     return-void

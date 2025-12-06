@@ -1,383 +1,432 @@
-.class public final Lyz4;
-.super Lym;
+.class public final synthetic Lyz4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ltib;
-.implements Lrnf;
+.implements Lcm6;
 
 
 # instance fields
-.field public final X:J
+.field public final synthetic a:I
 
-.field public final Y:Ljava/lang/String;
-
-.field public final o:J
+.field public final synthetic b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
 
 
 # direct methods
-.method public constructor <init>(JJJ)V
+.method public synthetic constructor <init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lym;-><init>(J)V
+    iput p2, p0, Lyz4;->a:I
 
-    iput-wide p3, p0, Lyz4;->o:J
+    iput-object p1, p0, Lyz4;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
 
-    iput-wide p5, p0, Lyz4;->X:J
-
-    const-class p1, Lyz4;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lyz4;->Y:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()I
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
 
-    const/4 v0, 0x1
+    iget v0, p0, Lyz4;->a:I
 
-    return v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final d(Lpmf;)V
-    .locals 12
+    iget-object v0, p0, Lyz4;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
 
-    const-string v1, "onSuccess: "
+    move-result-object v0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    check-cast v0, Ly4e;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object p1
+    const/16 v1, 0x8f
 
-    iget-object v0, p0, Lyz4;->Y:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
 
-    invoke-static {v0, p1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v0
 
-    invoke-virtual {p0}, Lym;->m()Lsd2;
+    check-cast v0, Lqi9;
 
-    move-result-object p1
+    return-object v0
 
-    iget-wide v1, p0, Lyz4;->o:J
+    :pswitch_0
+    iget-object v0, p0, Lyz4;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
 
-    invoke-virtual {p1, v1, v2}, Lsd2;->C(J)Lla2;
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
 
-    move-result-object p1
+    move-result-object v0
 
-    const/4 v1, 0x0
+    check-cast v0, Ly4e;
 
-    if-nez p1, :cond_0
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
 
-    const-string p1, "no chat, ignore!"
+    move-result-object v0
 
-    invoke-static {v0, p1, v1}, Ltei;->i(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
+    const/16 v1, 0x89
 
-    return-void
+    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
 
-    :cond_0
-    iget-object p1, p1, Lla2;->b:Lne2;
+    move-result-object v0
 
-    iget-object v2, p1, Lne2;->c0:Lpua;
+    check-cast v0, Lqx5;
 
-    if-eqz v2, :cond_3
+    return-object v0
 
-    iget-wide v2, p1, Lne2;->d0:J
+    :pswitch_1
+    iget-object v0, p0, Lyz4;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
 
-    const-wide/16 v4, 0x0
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
 
-    cmp-long p1, v2, v4
+    move-result-object v0
 
-    if-nez p1, :cond_1
+    check-cast v0, Ly4e;
 
-    const-string p1, "local draft not yet sync, ignore!"
+    invoke-virtual {v0}, Ly4e;->e()Lqw5;
 
-    invoke-static {v0, p1, v1}, Ltei;->i(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
+    move-result-object v0
 
-    return-void
+    return-object v0
 
-    :cond_1
-    iget-wide v4, p0, Lyz4;->X:J
+    :pswitch_2
+    iget-object v0, p0, Lyz4;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
 
-    cmp-long p1, v2, v4
+    iget-wide v1, v0, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->a:J
 
-    if-gez p1, :cond_2
+    iget-wide v3, v0, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->b:J
 
-    invoke-virtual {p0}, Lym;->m()Lsd2;
+    xor-long v0, v1, v3
 
-    move-result-object v6
+    long-to-int v0, v0
 
-    const/4 v11, 0x0
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-wide v9, p0, Lyz4;->X:J
+    const v1, 0x388797ff
 
-    iget-wide v7, p0, Lyz4;->o:J
+    add-int/2addr v0, v1
 
-    invoke-virtual/range {v6 .. v11}, Lsd2;->k(JJLpua;)V
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    sub-long/2addr v4, v2
+    move-result-object v0
 
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    return-object v0
 
-    move-result-object p1
+    :pswitch_3
+    iget-object v0, p0, Lyz4;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
 
-    filled-new-array {p1}, [Ljava/lang/Object;
+    invoke-virtual {v0}, Lma8;->getApplicationContext()Landroid/content/Context;
 
-    move-result-object p1
+    move-result-object v1
 
-    const/4 v2, 0x1
+    invoke-static {v1}, Lc5i;->d(Landroid/content/Context;)Lc5i;
 
-    invoke-static {p1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object p1
+    invoke-virtual {v0}, Lma8;->getId()Ljava/util/UUID;
 
-    const-string v2, "chat has server draft older than current DRAFT_DISCARD server time, diff = %d, clear it"
+    move-result-object v0
 
-    invoke-static {v0, v1, v2, p1}, Ltei;->o(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-virtual {v1, v0}, Lc5i;->c(Ljava/util/UUID;)Landroid/app/PendingIntent;
 
-    :cond_2
-    return-void
+    move-result-object v0
 
-    :cond_3
-    const-string p1, "draft already is null, ignore!"
+    return-object v0
 
-    invoke-static {v0, p1, v1}, Ltei;->i(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
+    :pswitch_4
+    iget-object v0, p0, Lyz4;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
 
-    invoke-virtual {p0}, Lym;->m()Lsd2;
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
+
+    move-result-object v0
+
+    check-cast v0, Ly4e;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Lsxd;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
 
     move-result-object v2
 
-    const/4 v7, 0x0
+    const/16 v3, 0x1bb
 
-    iget-wide v5, p0, Lyz4;->X:J
+    invoke-virtual {v2, v3}, Lw5;->c(I)Ljava/lang/Object;
 
-    iget-wide v3, p0, Lyz4;->o:J
+    move-result-object v2
 
-    invoke-virtual/range {v2 .. v7}, Lsd2;->k(JJLpua;)V
+    check-cast v2, Ld1e;
 
-    return-void
-.end method
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
 
-.method public final e(Lzlf;)V
-    .locals 0
+    move-result-object v3
 
-    iget-object p1, p1, Lzlf;->b:Ljava/lang/String;
+    const/16 v4, 0x8
 
-    invoke-static {p1}, Lp0j;->a(Ljava/lang/String;)Z
+    invoke-virtual {v3, v4}, Lw5;->c(I)Ljava/lang/Object;
 
-    move-result p1
+    move-result-object v3
 
-    if-nez p1, :cond_0
+    check-cast v3, Llzf;
 
-    invoke-virtual {p0}, Lyz4;->f()V
+    check-cast v3, Lq2b;
 
-    :cond_0
-    return-void
-.end method
+    invoke-virtual {v3}, Lq2b;->b()Lz74;
 
-.method public final f()V
-    .locals 3
+    move-result-object v3
 
-    const-string v0, "onMaxFailCount"
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lyz4;->Y:Ljava/lang/String;
-
-    invoke-static {v2, v0, v1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-virtual {p0}, Lym;->s()Ljpf;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
 
     move-result-object v0
 
-    iget-wide v1, p0, Lym;->a:J
+    const/16 v4, 0x1bc
 
-    invoke-virtual {v0, v1, v2}, Ljpf;->d(J)V
-
-    return-void
-.end method
-
-.method public final g()[B
-    .locals 3
-
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$DraftDiscard;
-
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$DraftDiscard;-><init>()V
-
-    iget-wide v1, p0, Lym;->a:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$DraftDiscard;->requestId:J
-
-    iget-wide v1, p0, Lyz4;->o:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$DraftDiscard;->chatId:J
-
-    iget-wide v1, p0, Lyz4;->X:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$DraftDiscard;->serverTime:J
-
-    invoke-static {v0}, Lee9;->toByteArray(Lee9;)[B
+    invoke-virtual {v0, v4}, Lw5;->c(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    check-cast v0, Lvob;
 
-.method public final getId()J
-    .locals 2
-
-    iget-wide v0, p0, Lym;->a:J
-
-    return-wide v0
-.end method
-
-.method public final getType()Luib;
-    .locals 1
-
-    sget-object v0, Luib;->V0:Luib;
-
-    return-object v0
-.end method
-
-.method public final h()I
-    .locals 1
-
-    const v0, 0xf4240
-
-    return v0
-.end method
-
-.method public final i()Lmmf;
-    .locals 10
-
-    invoke-virtual {p0}, Lym;->m()Lsd2;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lyz4;->o:J
-
-    invoke-virtual {v0, v1, v2}, Lsd2;->C(J)Lla2;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lyz4;->Y:Ljava/lang/String;
-
-    const-string v2, "createRequest: No chat. return null"
-
-    invoke-static {v0, v2}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v0}, Lsxd;-><init>(Ld1e;Lz74;Lvob;)V
 
     return-object v1
 
-    :cond_0
-    invoke-virtual {v0}, Lla2;->O()Z
+    :pswitch_5
+    iget-object v0, p0, Lyz4;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
 
-    move-result v2
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
 
-    const-wide/16 v3, 0x0
+    move-result-object v0
 
-    if-eqz v2, :cond_3
+    check-cast v0, Ly4e;
 
-    invoke-virtual {v0}, Lla2;->n()Lwr3;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
 
-    move-result-object v2
+    move-result-object v0
 
-    if-eqz v2, :cond_1
+    const/16 v1, 0x186
 
-    invoke-virtual {v2}, Lwr3;->p()J
+    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
 
-    move-result-wide v5
+    move-result-object v0
 
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    check-cast v0, Lzz;
 
-    move-result-object v2
+    return-object v0
 
-    goto :goto_0
+    :pswitch_6
+    iget-object v0, p0, Lyz4;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
 
-    :cond_1
-    move-object v2, v1
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
 
-    :goto_0
-    if-eqz v2, :cond_2
+    move-result-object v0
 
-    invoke-virtual {v2}, Ljava/lang/Number;->longValue()J
+    check-cast v0, Ly4e;
 
-    move-result-wide v5
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
 
-    goto :goto_1
+    move-result-object v0
 
-    :cond_2
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    const/16 v1, 0x8b
 
-    const-string v1, "Required value was null."
+    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    throw v0
+    check-cast v0, Lur3;
 
-    :cond_3
-    move-wide v5, v3
+    return-object v0
 
-    :goto_1
-    new-instance v2, Lcg2;
+    :pswitch_7
+    iget-object v0, p0, Lyz4;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
 
-    cmp-long v7, v5, v3
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
 
-    if-nez v7, :cond_4
+    move-result-object v0
 
-    iget-object v0, v0, Lla2;->b:Lne2;
+    check-cast v0, Ly4e;
 
-    iget-wide v8, v0, Lne2;->a:J
+    invoke-virtual {v0}, Ly4e;->j()Llzf;
 
-    goto :goto_2
+    move-result-object v0
 
-    :cond_4
-    move-wide v8, v3
+    return-object v0
 
-    :goto_2
-    const/16 v0, 0x17
+    :pswitch_8
+    iget-object v0, p0, Lyz4;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
 
-    invoke-direct {v2, v1, v0}, Lcg2;-><init>(Lm8b;I)V
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
 
-    if-eqz v7, :cond_5
+    move-result-object v0
 
-    const-string v0, "userId"
+    check-cast v0, Ly4e;
 
-    invoke-virtual {v2, v5, v6, v0}, Lmmf;->u(JLjava/lang/String;)V
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
 
-    :cond_5
-    cmp-long v0, v8, v3
+    move-result-object v0
 
-    if-eqz v0, :cond_6
+    const/16 v1, 0x165
 
-    const-string v0, "chatId"
+    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
 
-    invoke-virtual {v2, v8, v9, v0}, Lmmf;->u(JLjava/lang/String;)V
+    move-result-object v0
 
-    :cond_6
-    iget-wide v0, p0, Lyz4;->X:J
+    check-cast v0, Lmw5;
 
-    cmp-long v3, v0, v3
+    return-object v0
 
-    if-eqz v3, :cond_7
+    :pswitch_9
+    iget-object v0, p0, Lyz4;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
 
-    const-string v3, "time"
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
 
-    invoke-virtual {v2, v0, v1, v3}, Lmmf;->u(JLjava/lang/String;)V
+    move-result-object v0
 
-    :cond_7
-    return-object v2
+    check-cast v0, Ly4e;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
+
+    move-result-object v0
+
+    const/16 v1, 0x31
+
+    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ltw0;
+
+    return-object v0
+
+    :pswitch_a
+    iget-object v0, p0, Lyz4;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
+
+    move-result-object v0
+
+    check-cast v0, Ly4e;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
+
+    move-result-object v0
+
+    const/16 v1, 0x4f
+
+    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lhwa;
+
+    return-object v0
+
+    :pswitch_b
+    iget-object v0, p0, Lyz4;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
+
+    move-result-object v0
+
+    check-cast v0, Ly4e;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
+
+    move-result-object v0
+
+    const/16 v1, 0x18f
+
+    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lu6b;
+
+    return-object v0
+
+    :pswitch_c
+    iget-object v0, p0, Lyz4;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
+
+    move-result-object v0
+
+    check-cast v0, Ly4e;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
+
+    move-result-object v0
+
+    const/16 v1, 0x1b8
+
+    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lctf;
+
+    return-object v0
+
+    :pswitch_d
+    iget-object v0, p0, Lyz4;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
+
+    move-result-object v0
+
+    check-cast v0, Ly4e;
+
+    invoke-virtual {v0}, Ly4e;->c()Lve2;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_e
+    iget-object v0, p0, Lyz4;->b:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lgzf;
+
+    move-result-object v0
+
+    check-cast v0, Ly4e;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
+
+    move-result-object v0
+
+    const/16 v1, 0x6d
+
+    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lw63;
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

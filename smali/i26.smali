@@ -2,183 +2,92 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lq36;
-.implements Lvv4;
-
 
 # instance fields
-.field public X:Z
+.field public a:I
 
-.field public final a:Lsqe;
+.field public b:Z
 
-.field public final b:Ltm0;
+.field public c:I
 
-.field public final c:Ljava/lang/Object;
+.field public d:I
 
-.field public o:Lgcf;
+.field public e:I
 
+.field public f:I
 
-# direct methods
-.method public constructor <init>(Lsqe;Ljava/lang/Object;Ltm0;)V
-    .locals 0
+.field public g:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public h:I
 
-    iput-object p1, p0, Li26;->a:Lsqe;
-
-    iput-object p3, p0, Li26;->b:Ltm0;
-
-    iput-object p2, p0, Li26;->c:Ljava/lang/Object;
-
-    return-void
-.end method
+.field public i:Z
 
 
 # virtual methods
-.method public final b()V
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-boolean v0, p0, Li26;->X:Z
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_0
+    const-string v1, "LayoutState{mAvailable="
 
-    return-void
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :cond_0
-    const/4 v0, 0x1
+    iget v1, p0, Li26;->a:I
 
-    iput-boolean v0, p0, Li26;->X:Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    sget-object v0, Ljcf;->a:Ljcf;
+    const-string v1, ", mFlexLinePosition="
 
-    iput-object v0, p0, Li26;->o:Lgcf;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Li26;->a:Lsqe;
+    iget v1, p0, Li26;->c:I
 
-    iget-object v1, p0, Li26;->c:Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-interface {v0, v1}, Lsqe;->a(Ljava/lang/Object;)V
+    const-string v1, ", mPosition="
 
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final d(Ljava/lang/Object;)V
-    .locals 2
+    iget v1, p0, Li26;->d:I
 
-    iget-boolean v0, p0, Li26;->X:Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_0
+    const-string v1, ", mOffset="
 
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Li26;->b:Ltm0;
+    iget v1, p0, Li26;->e:I
 
-    iget-object v1, p0, Li26;->c:Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-interface {v0, v1, p1}, Ltm0;->accept(Ljava/lang/Object;Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const-string v1, ", mScrollingOffset="
 
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :catchall_0
-    move-exception p1
+    iget v1, p0, Li26;->f:I
 
-    invoke-static {p1}, Lq0j;->b(Ljava/lang/Throwable;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Li26;->o:Lgcf;
+    const-string v1, ", mLastScrollDelta="
 
-    invoke-interface {v0}, Lgcf;->cancel()V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, p1}, Li26;->onError(Ljava/lang/Throwable;)V
+    iget v1, p0, Li26;->g:I
 
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-.method public final e(Lgcf;)V
-    .locals 2
+    const-string v1, ", mItemDirection=1, mLayoutDirection="
 
-    iget-object v0, p0, Li26;->o:Lgcf;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, p1}, Ljcf;->f(Lgcf;Lgcf;)Z
+    iget v1, p0, Li26;->h:I
 
-    move-result v0
+    const/16 v2, 0x7d
 
-    if-eqz v0, :cond_0
+    invoke-static {v0, v1, v2}, Lxc0;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
 
-    iput-object p1, p0, Li26;->o:Lgcf;
+    move-result-object v0
 
-    iget-object v0, p0, Li26;->a:Lsqe;
-
-    invoke-interface {v0, p0}, Lsqe;->c(Lvv4;)V
-
-    const-wide v0, 0x7fffffffffffffffL
-
-    invoke-interface {p1, v0, v1}, Lgcf;->i(J)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final g()V
-    .locals 1
-
-    iget-object v0, p0, Li26;->o:Lgcf;
-
-    invoke-interface {v0}, Lgcf;->cancel()V
-
-    sget-object v0, Ljcf;->a:Ljcf;
-
-    iput-object v0, p0, Li26;->o:Lgcf;
-
-    return-void
-.end method
-
-.method public final h()Z
-    .locals 2
-
-    iget-object v0, p0, Li26;->o:Lgcf;
-
-    sget-object v1, Ljcf;->a:Ljcf;
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
-
-    iget-boolean v0, p0, Li26;->X:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p1}, Liyi;->a(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_0
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Li26;->X:Z
-
-    sget-object v0, Ljcf;->a:Ljcf;
-
-    iput-object v0, p0, Li26;->o:Lgcf;
-
-    iget-object v0, p0, Li26;->a:Lsqe;
-
-    invoke-interface {v0, p1}, Lsqe;->onError(Ljava/lang/Throwable;)V
-
-    return-void
+    return-object v0
 .end method

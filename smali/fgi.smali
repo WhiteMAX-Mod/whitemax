@@ -1,80 +1,145 @@
-.class public final Lfgi;
+.class public abstract Lfgi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ltha;
 
+# instance fields
+.field public transient a:Lmfi;
 
-# static fields
-.field public static final a:Lfgi;
+.field public transient b:Ls2;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>()V
+    .locals 0
 
-    new-instance v0, Lfgi;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lfgi;->a:Lfgi;
-
-    new-instance v0, Lr8i;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lr8i;-><init>(I)V
-
-    const-class v1, Lm9i;
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final a()Ljava/util/Map;
+    .locals 4
 
-    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget-object v0, p0, Lfgi;->b:Ls2;
+
+    if-nez v0, :cond_0
+
+    move-object v0, p0
+
+    check-cast v0, Lhgi;
+
+    new-instance v1, Ls2;
+
+    iget-object v2, v0, Lhgi;->c:Lwi3;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v0, v2, v3}, Ls2;-><init>(Ljava/io/Serializable;Ljava/util/Map;I)V
+
+    iput-object v1, p0, Lfgi;->b:Ls2;
+
+    return-object v1
+
+    :cond_0
+    return-object v0
+.end method
+
+.method public final b()Ljava/util/Set;
+    .locals 3
+
+    iget-object v0, p0, Lfgi;->a:Lmfi;
+
+    if-nez v0, :cond_0
+
+    move-object v0, p0
+
+    check-cast v0, Lhgi;
+
+    new-instance v1, Lmfi;
+
+    iget-object v2, v0, Lhgi;->c:Lwi3;
+
+    invoke-direct {v1, v0, v2}, Lmfi;-><init>(Lhgi;Ljava/util/Map;)V
+
+    iput-object v1, p0, Lfgi;->a:Lmfi;
+
+    return-object v1
+
+    :cond_0
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    if-ne p1, p0, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    instance-of v0, p1, Lfgi;
+
+    if-nez v0, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    check-cast p1, Lfgi;
+
+    invoke-virtual {p0}, Lfgi;->a()Ljava/util/Map;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Lfgi;->a()Ljava/util/Map;
 
     move-result-object p1
 
-    throw p1
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    invoke-virtual {p0}, Lfgi;->a()Ljava/util/Map;
+
+    move-result-object v0
+
+    check-cast v0, Ls2;
+
+    iget-object v0, v0, Ls2;->b:Ljava/util/Map;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    invoke-virtual {p0}, Lfgi;->a()Ljava/util/Map;
+
+    move-result-object v0
+
+    check-cast v0, Ls2;
+
+    iget-object v0, v0, Ls2;->b:Ljava/util/Map;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

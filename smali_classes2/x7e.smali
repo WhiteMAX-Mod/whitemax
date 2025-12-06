@@ -2,147 +2,32 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lvo1;
-
 
 # instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public a:Lqha;
 
+.field public b:Ljava/lang/String;
 
-# direct methods
-.method public constructor <init>()V
-    .locals 1
+.field public c:Ljava/lang/String;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public d:Ljava/util/List;
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public e:Ljava/util/List;
 
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+.field public f:Ljava/util/List;
 
-    iput-object v0, p0, Lx7e;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public g:J
 
-    return-void
-.end method
+.field public h:I
 
+.field public i:Z
 
-# virtual methods
-.method public final onCurrentParticipantActiveRoomChanged(Lro1;)V
-    .locals 2
+.field public j:J
 
-    iget-object v0, p0, Lx7e;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public k:Ljava/util/List;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+.field public l:Ljava/util/List;
 
-    move-result-object v0
+.field public m:Ljava/lang/String;
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lvo1;
-
-    invoke-interface {v1, p1}, Lvo1;->onCurrentParticipantActiveRoomChanged(Lro1;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onCurrentParticipantInvitedToRoom(Lso1;)V
-    .locals 2
-
-    iget-object v0, p0, Lx7e;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lvo1;
-
-    invoke-interface {v1, p1}, Lvo1;->onCurrentParticipantInvitedToRoom(Lso1;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onRoomRemoved(Lto1;)V
-    .locals 2
-
-    iget-object v0, p0, Lx7e;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lvo1;
-
-    invoke-interface {v1, p1}, Lvo1;->onRoomRemoved(Lto1;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onRoomUpdated(Luo1;)V
-    .locals 2
-
-    iget-object v0, p0, Lx7e;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lvo1;
-
-    invoke-interface {v1, p1}, Lvo1;->onRoomUpdated(Luo1;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
+.field public n:Ljava/util/List;

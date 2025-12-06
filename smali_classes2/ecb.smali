@@ -1,41 +1,109 @@
-.class public final Lecb;
-.super Ljava/lang/Object;
+.class public final enum Lecb;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lnlf;
+# static fields
+.field public static final synthetic X:[Lecb;
 
-.field public final b:Lgcb;
+.field public static final enum a:Lecb;
 
-.field public final c:J
+.field public static final enum b:Lecb;
+
+.field public static final enum c:Lecb;
+
+.field public static final enum d:Lecb;
+
+.field public static final enum o:Lecb;
 
 
 # direct methods
-.method public constructor <init>(Lnlf;Lgcb;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 7
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lecb;
 
-    iput-object p1, p0, Lecb;->a:Lnlf;
+    const-string v1, "TIMEOUT"
 
-    iput-object p2, p0, Lecb;->b:Lgcb;
+    const/4 v2, 0x0
 
-    sget p1, Lvr7;->a:I
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sget p1, Lu35;->o:I
+    sput-object v0, Lecb;->a:Lecb;
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    new-instance v1, Lecb;
 
-    move-result-wide p1
+    const-string v2, "SWIPE"
 
-    sget-object v0, Lz35;->c:Lz35;
+    const/4 v3, 0x1
 
-    invoke-static {p1, p2, v0}, Ltzi;->e(JLz35;)J
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    move-result-wide p1
+    sput-object v1, Lecb;->b:Lecb;
 
-    iput-wide p1, p0, Lecb;->c:J
+    new-instance v2, Lecb;
+
+    const-string v3, "MANUAL"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lecb;->c:Lecb;
+
+    new-instance v3, Lecb;
+
+    const-string v4, "ROOT_VIEW_DETACHED"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lecb;->d:Lecb;
+
+    new-instance v4, Lecb;
+
+    const-string v5, "RIGHT_ELEMENT_CLICK"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lecb;->o:Lecb;
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Lecb;
+
+    move-result-object v0
+
+    sput-object v0, Lecb;->X:[Lecb;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lecb;
+    .locals 1
+
+    const-class v0, Lecb;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lecb;
+
+    return-object p0
+.end method
+
+.method public static values()[Lecb;
+    .locals 1
+
+    sget-object v0, Lecb;->X:[Lecb;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lecb;
+
+    return-object v0
 .end method

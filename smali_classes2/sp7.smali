@@ -1,67 +1,47 @@
 .class public final Lsp7;
-.super Ltp7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final d:Lsp7;
+# instance fields
+.field public final a:Lytd;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lytd;)V
+    .locals 0
 
-    new-instance v0, Lsp7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x6
-
-    const/4 v2, 0x0
-
-    const-string v3, "unknown"
-
-    invoke-direct {v0, v3, v1, v2}, Ltp7;-><init>(Ljava/lang/String;ILup7;)V
-
-    sput-object v0, Lsp7;->d:Lsp7;
+    iput-object p1, p0, Lsp7;->a:Lytd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a(Lbud;Ljava/lang/String;)V
     .locals 1
 
-    const/4 v0, 0x1
+    invoke-virtual {p1, p2}, Lbud;->d(Ljava/lang/String;)V
 
-    if-ne p0, p1, :cond_0
+    new-instance p2, Lp67;
 
-    return v0
+    const/4 v0, 0x0
 
-    :cond_0
-    instance-of p1, p1, Lsp7;
+    invoke-direct {p2, v0}, Lp67;-><init>(I)V
 
-    if-nez p1, :cond_1
+    invoke-virtual {p1, p2}, Lbud;->c(Lh54;)V
 
-    const/4 p1, 0x0
+    new-instance p2, Lp67;
 
-    return p1
+    invoke-direct {p2, v0}, Lp67;-><init>(I)V
 
-    :cond_1
-    return v0
-.end method
+    invoke-virtual {p1, p2}, Lbud;->a(Lh54;)V
 
-.method public final hashCode()I
-    .locals 1
+    iget-object p2, p0, Lsp7;->a:Lytd;
 
-    const v0, -0x2c724b44
+    invoke-virtual {p2, p1}, Lytd;->H(Lbud;)V
 
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "UnknownError"
-
-    return-object v0
+    return-void
 .end method

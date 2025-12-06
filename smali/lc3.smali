@@ -1,49 +1,27 @@
 .class public final Llc3;
-.super Ly14;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lmc3;
+.field public final a:Ljava/lang/reflect/Method;
 
-.field public Y:I
+.field public final b:Ljava/lang/reflect/Method;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:Ljava/lang/reflect/Method;
 
 
 # direct methods
-.method public constructor <init>(Lmc3;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Ljava/lang/reflect/Method;Ljava/lang/reflect/Method;Ljava/lang/reflect/Method;)V
     .locals 0
 
-    iput-object p1, p0, Llc3;->X:Lmc3;
+    iput-object p1, p0, Llc3;->a:Ljava/lang/reflect/Method;
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Llc3;->b:Ljava/lang/reflect/Method;
+
+    iput-object p3, p0, Llc3;->c:Ljava/lang/reflect/Method;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Llc3;->o:Ljava/lang/Object;
-
-    iget p1, p0, Llc3;->Y:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Llc3;->Y:I
-
-    iget-object p1, p0, Llc3;->X:Lmc3;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lmc3;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

@@ -1,51 +1,40 @@
-.class public abstract synthetic Lsfh;
+.class public final synthetic Lsfh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lb48;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
 
+# virtual methods
+.method public final d(Lj48;Lk38;)V
+    .locals 2
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x3
+    const-string v1, "shared.ViewLifecycle/"
 
-    invoke-static {v0}, Ldy1;->y(I)[I
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object v1
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    array-length v1, v1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    new-array v1, v1, [I
+    move-result-object p1
 
-    const/4 v2, 0x1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v3, 0x0
+    const-string v1, "onStateChanged "
 
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :catch_0
-    const/4 v3, 0x2
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :try_start_1
-    aput v3, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :catch_1
-    :try_start_2
-    aput v0, v1, v3
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    move-result-object p2
 
-    :catch_2
-    sput-object v1, Lsfh;->$EnumSwitchMapping$0:[I
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method

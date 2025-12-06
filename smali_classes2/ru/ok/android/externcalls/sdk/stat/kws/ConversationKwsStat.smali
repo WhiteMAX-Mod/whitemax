@@ -12,16 +12,16 @@
         "Lru/ok/android/externcalls/sdk/stat/kws/ConversationKwsStat;",
         "",
         "Lkotlin/Function0;",
-        "Lx71;",
+        "Lm81;",
         "getEventualStatSender",
         "<init>",
-        "(Lji6;)V",
+        "(Lcm6;)V",
         "",
         "confidence",
-        "Lccg;",
+        "Lqqg;",
         "onKeyword",
         "(F)V",
-        "Lji6;",
+        "Lcm6;",
         "calls-sdk_release"
     }
     k = 0x1
@@ -35,29 +35,29 @@
 
 
 # instance fields
-.field private final getEventualStatSender:Lji6;
+.field private final getEventualStatSender:Lcm6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lji6;"
+            "Lcm6;"
         }
     .end annotation
 .end field
 
 
 # direct methods
-.method public constructor <init>(Lji6;)V
+.method public constructor <init>(Lcm6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lji6;",
+            "Lcm6;",
             ")V"
         }
     .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/kws/ConversationKwsStat;->getEventualStatSender:Lji6;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/kws/ConversationKwsStat;->getEventualStatSender:Lcm6;
 
     return-void
 .end method
@@ -67,13 +67,13 @@
 .method public final onKeyword(F)V
     .locals 4
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/kws/ConversationKwsStat;->getEventualStatSender:Lji6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/kws/ConversationKwsStat;->getEventualStatSender:Lcm6;
 
-    invoke-interface {v0}, Lji6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lcm6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lx71;
+    check-cast v0, Lm81;
 
     if-eqz v0, :cond_0
 
@@ -83,7 +83,7 @@
 
     mul-float/2addr p1, v1
 
-    invoke-static {p1}, Lfhi;->b(F)I
+    invoke-static {p1}, Lkti;->d(F)I
 
     move-result p1
 
@@ -103,11 +103,11 @@
 
     move-result-object v1
 
-    check-cast v0, Ly71;
+    check-cast v0, Ln81;
 
     const-string v2, "bad_call_detected_by_audio_spotter"
 
-    invoke-virtual {v0, v2, p1, v1}, Ly71;->c(Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;)V
+    invoke-virtual {v0, v2, p1, v1}, Ln81;->c(Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;)V
 
     :cond_0
     return-void

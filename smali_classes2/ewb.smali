@@ -1,26 +1,117 @@
 .class public final Lewb;
-.super Ljava/lang/Object;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable$Creator;
+.implements Lsm6;
+
+
+# instance fields
+.field public final synthetic o:Lgwb;
+
+
+# direct methods
+.method public constructor <init>(Lgwb;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lewb;->o:Lgwb;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 1
-
-    new-instance v0, Lfwb;
-
-    invoke-direct {v0, p1}, Lfwb;-><init>(Landroid/os/Parcel;)V
-
-    return-object v0
-.end method
-
-.method public final newArray(I)[Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    new-array p1, p1, [Lfwb;
+    check-cast p1, Lf84;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lewb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lewb;
+
+    sget-object p2, Lqqg;->a:Lqqg;
+
+    invoke-virtual {p1, p2}, Lewb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lewb;
+
+    iget-object v0, p0, Lewb;->o:Lgwb;
+
+    invoke-direct {p1, v0, p2}, Lewb;-><init>(Lgwb;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lewb;->o:Lgwb;
+
+    iget-object v0, p1, Lgwb;->s0:Lci5;
+
+    new-instance v1, Ltvb;
+
+    iget-object p1, p1, Lgwb;->Y:Ltcf;
+
+    invoke-virtual {p1}, Ltcf;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lyvb;
+
+    iget-object v2, v2, Lyvb;->c:Ljava/lang/Double;
+
+    const-wide/16 v3, 0x0
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v2}, Ljava/lang/Double;->doubleValue()D
+
+    move-result-wide v5
+
+    goto :goto_0
+
+    :cond_0
+    move-wide v5, v3
+
+    :goto_0
+    invoke-virtual {p1}, Ltcf;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lyvb;
+
+    iget-object p1, p1, Lyvb;->d:Ljava/lang/Double;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Ljava/lang/Double;->doubleValue()D
+
+    move-result-wide v3
+
+    :cond_1
+    invoke-direct {v1, v5, v6, v3, v4}, Ltvb;-><init>(DD)V
+
+    invoke-static {v0, v1}, Lxfh;->r(Lci5;Ljava/lang/Object;)V
+
+    sget-object p1, Lqqg;->a:Lqqg;
 
     return-object p1
 .end method

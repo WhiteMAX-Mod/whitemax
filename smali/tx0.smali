@@ -1,67 +1,74 @@
-.class public abstract Ltx0;
+.class public final Ltx0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lzy7;
+
 
 # static fields
-.field public static final a:Ljava/util/UUID;
+.field public static final a:Ltx0;
 
-.field public static final b:Ljava/util/UUID;
-
-.field public static final c:Ljava/util/UUID;
-
-.field public static final d:Ljava/util/UUID;
+.field public static final b:Lj9c;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 3
 
-    new-instance v0, Ljava/util/UUID;
+    new-instance v0, Ltx0;
 
-    const-wide/16 v1, 0x0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1, v2, v1, v2}, Ljava/util/UUID;-><init>(JJ)V
+    sput-object v0, Ltx0;->a:Ltx0;
 
-    sput-object v0, Ltx0;->a:Ljava/util/UUID;
+    new-instance v0, Lj9c;
 
-    new-instance v0, Ljava/util/UUID;
+    const-string v1, "kotlin.Byte"
 
-    const-wide v1, 0x1077efecc0b24d02L
+    sget-object v2, Lh9c;->c:Lh9c;
 
-    const-wide v3, -0x531cc3e1ad1d04b5L    # -1.8442503140481377E-92
+    invoke-direct {v0, v1, v2}, Lj9c;-><init>(Ljava/lang/String;Li9c;)V
 
-    invoke-direct {v0, v1, v2, v3, v4}, Ljava/util/UUID;-><init>(JJ)V
-
-    sput-object v0, Ltx0;->b:Ljava/util/UUID;
-
-    new-instance v0, Ljava/util/UUID;
-
-    const-wide v1, -0x1d8e62a7567a4c37L    # -1.6229728350858627E166
-
-    const-wide v3, 0x781ab030af78d30eL    # 3.524813189889319E270
-
-    invoke-direct {v0, v1, v2, v3, v4}, Ljava/util/UUID;-><init>(JJ)V
-
-    new-instance v0, Ljava/util/UUID;
-
-    const-wide v1, -0x121074568629b532L    # -3.563403477674908E221
-
-    const-wide v3, -0x5c37d8232ae2de13L
-
-    invoke-direct {v0, v1, v2, v3, v4}, Ljava/util/UUID;-><init>(JJ)V
-
-    sput-object v0, Ltx0;->c:Ljava/util/UUID;
-
-    new-instance v0, Ljava/util/UUID;
-
-    const-wide v1, -0x65fb0f8667bfbd7aL
-
-    const-wide v3, -0x546d19a41f77a06bL    # -8.640911267670052E-99
-
-    invoke-direct {v0, v1, v2, v3, v4}, Ljava/util/UUID;-><init>(JJ)V
-
-    sput-object v0, Ltx0;->d:Ljava/util/UUID;
+    sput-object v0, Ltx0;->b:Lj9c;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
+    .locals 0
+
+    check-cast p2, Ljava/lang/Number;
+
+    invoke-virtual {p2}, Ljava/lang/Number;->byteValue()B
+
+    move-result p2
+
+    invoke-virtual {p1, p2}, Lkotlinx/serialization/json/internal/b;->d(B)V
+
+    return-void
+.end method
+
+.method public final b(Llh4;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-interface {p1}, Llh4;->z()B
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final d()Lree;
+    .locals 1
+
+    sget-object v0, Ltx0;->b:Lj9c;
+
+    return-object v0
 .end method

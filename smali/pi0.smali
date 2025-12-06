@@ -4,17 +4,17 @@
 
 
 # virtual methods
-.method public abstract b()I
+.method public abstract d()I
 .end method
 
-.method public abstract c()Landroid/graphics/Rect;
-.end method
-
-.method public abstract g()Ljava/lang/String;
+.method public abstract f()Landroid/graphics/Rect;
 .end method
 
 .method public abstract getFormat()I
 .end method
 
-.method public abstract h()[Landroid/graphics/Point;
+.method public abstract h()Ljava/lang/String;
+.end method
+
+.method public abstract l()[Landroid/graphics/Point;
 .end method

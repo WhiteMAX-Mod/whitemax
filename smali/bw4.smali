@@ -1,70 +1,92 @@
 .class public final Lbw4;
-.super Ljava/lang/Object;
+.super Lq08;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/concurrent/Future;
 
 
 # instance fields
-.field public final a:Lvv4;
+.field public final synthetic c:Lai6;
+
+.field public final synthetic d:Landroidx/fragment/app/DialogFragment;
 
 
 # direct methods
-.method public constructor <init>(Lvv4;)V
+.method public constructor <init>(Landroidx/fragment/app/DialogFragment;Lai6;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lbw4;->a:Lvv4;
+    iput-object p1, p0, Lbw4;->d:Landroidx/fragment/app/DialogFragment;
+
+    iput-object p2, p0, Lbw4;->c:Lai6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final cancel(Z)Z
-    .locals 0
+.method public final d(I)Landroid/view/View;
+    .locals 2
 
-    iget-object p1, p0, Lbw4;->a:Lvv4;
+    iget-object v0, p0, Lbw4;->c:Lai6;
 
-    invoke-interface {p1}, Lvv4;->g()V
+    invoke-virtual {v0}, Lai6;->e()Z
 
-    const/4 p1, 0x0
+    move-result v1
 
-    return p1
-.end method
+    if-eqz v1, :cond_0
 
-.method public final get()Ljava/lang/Object;
-    .locals 1
+    invoke-virtual {v0, p1}, Lai6;->d(I)Landroid/view/View;
 
-    .line 1
-    const/4 v0, 0x0
+    move-result-object p1
 
-    return-object v0
-.end method
+    return-object p1
 
-.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-    .locals 0
+    :cond_0
+    iget-object v0, p0, Lbw4;->d:Landroidx/fragment/app/DialogFragment;
 
-    .line 2
+    iget-object v0, v0, Landroidx/fragment/app/DialogFragment;->t1:Landroid/app/Dialog;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0, p1}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_1
     const/4 p1, 0x0
 
     return-object p1
 .end method
 
-.method public final isCancelled()Z
+.method public final e()Z
     .locals 1
 
+    iget-object v0, p0, Lbw4;->c:Lai6;
+
+    invoke-virtual {v0}, Lai6;->e()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lbw4;->d:Landroidx/fragment/app/DialogFragment;
+
+    iget-boolean v0, v0, Landroidx/fragment/app/DialogFragment;->x1:Z
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
     const/4 v0, 0x0
 
     return v0
-.end method
 
-.method public final isDone()Z
-    .locals 1
-
-    const/4 v0, 0x0
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
 
     return v0
 .end method

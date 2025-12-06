@@ -1,3 +1,3 @@
-.class public interface abstract Lvx3;
-.super Ljava/lang/Object;
+.class public abstract Lvx3;
+.super Lxh5;
 .source "SourceFile"

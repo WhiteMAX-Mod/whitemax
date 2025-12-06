@@ -3,183 +3,187 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lwgb;
+.implements Ljd;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Lqgb;
-
-.field public final c:Let;
+.field public final synthetic a:Lvgb;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lqgb;Let;)V
+.method public constructor <init>(Lvgb;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ltgb;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Ltgb;->b:Lqgb;
-
-    iput-object p3, p0, Ltgb;->c:Let;
+    iput-object p1, p0, Ltgb;->a:Lvgb;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 1
+.method public final E(Lid;Ljava/lang/String;)V
+    .locals 0
 
-    iget-object v0, p0, Ltgb;->a:Ljava/lang/String;
+    iget-object p1, p0, Ltgb;->a:Lvgb;
 
-    return-object v0
+    iput-object p2, p1, Lrl0;->h:Ljava/lang/String;
+
+    return-void
 .end method
 
-.method public final b()Ljava/util/Map;
-    .locals 1
+.method public final H(Lub8;Lg19;)V
+    .locals 4
 
-    iget-object v0, p0, Ltgb;->c:Let;
+    iget-object v0, p0, Ltgb;->a:Lvgb;
 
-    return-object v0
+    iget-object v1, v0, Lrl0;->l:Lzg6;
+
+    iget-object p1, p1, Lub8;->a:Lze4;
+
+    invoke-static {p1}, Lc8j;->c(Lze4;)Lrgb;
+
+    move-result-object v2
+
+    sget-object v3, Lbf4;->a:Lvsb;
+
+    iget p2, p2, Lg19;->a:I
+
+    invoke-static {p2}, Lbf4;->a(I)Lbhb;
+
+    move-result-object p2
+
+    invoke-virtual {v1, v0, v2, p2}, Lzg6;->b(Lghb;Lrgb;Lbhb;)V
+
+    iget-object p1, p1, Lze4;->a:Landroid/net/Uri;
+
+    invoke-virtual {p1}, Landroid/net/Uri;->getHost()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, v0, Lvgb;->L:Ljava/lang/String;
+
+    return-void
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final K0(Lid;Ljava/lang/String;)V
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    iget-object p1, p0, Ltgb;->a:Lvgb;
 
-    goto :goto_1
+    iput-object p2, p1, Lrl0;->g:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public final R(Lub8;Lg19;)V
+    .locals 3
+
+    iget-object v0, p2, Lg19;->g:Ljava/lang/Object;
+
+    check-cast v0, Lhf6;
+
+    iget v1, p2, Lg19;->b:I
+
+    const/4 v2, 0x1
+
+    if-eq v1, v2, :cond_1
+
+    const/4 v2, 0x2
+
+    if-eq v1, v2, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    instance-of v0, p1, Ltgb;
+    if-eqz v0, :cond_1
 
-    if-nez v0, :cond_1
-
-    goto :goto_0
+    invoke-static {v0}, Lrui;->b(Lhf6;)Lv3h;
 
     :cond_1
-    check-cast p1, Ltgb;
-
-    iget-object v0, p0, Ltgb;->a:Ljava/lang/String;
-
-    iget-object v1, p1, Ltgb;->a:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Ltgb;->b:Lqgb;
-
-    iget-object v1, p1, Ltgb;->b:Lqgb;
-
-    invoke-static {v0, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Ltgb;->c:Let;
-
-    iget-object p1, p1, Ltgb;->c:Let;
-
-    invoke-virtual {v0, p1}, Lzoe;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
     :goto_0
-    const/4 p1, 0x0
+    iget-object v0, p0, Ltgb;->a:Lvgb;
 
-    return p1
+    iget-object v1, v0, Lrl0;->l:Lzg6;
 
-    :cond_4
-    :goto_1
-    const/4 p1, 0x1
+    iget-object p1, p1, Lub8;->a:Lze4;
 
-    return p1
+    invoke-static {p1}, Lc8j;->c(Lze4;)Lrgb;
+
+    move-result-object p1
+
+    sget-object v2, Lbf4;->a:Lvsb;
+
+    iget p2, p2, Lg19;->a:I
+
+    invoke-static {p2}, Lbf4;->a(I)Lbhb;
+
+    move-result-object p2
+
+    invoke-virtual {v1, v0, p1, p2}, Lzg6;->d(Lghb;Lrgb;Lbhb;)V
+
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final d0(Lid;Lub8;Lg19;Ljava/io/IOException;Z)V
+    .locals 1
 
-    iget-object v0, p0, Ltgb;->a:Ljava/lang/String;
+    iget-object p1, p0, Ltgb;->a:Lvgb;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    iget-object p5, p1, Lrl0;->l:Lzg6;
 
-    move-result v0
+    iget-object p2, p2, Lub8;->a:Lze4;
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-static {p2}, Lc8j;->c(Lze4;)Lrgb;
 
-    iget-object v1, p0, Ltgb;->b:Lqgb;
+    move-result-object p2
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    sget-object v0, Lbf4;->a:Lvsb;
 
-    move-result v1
+    iget p3, p3, Lg19;->a:I
 
-    add-int/2addr v1, v0
+    invoke-static {p3}, Lbf4;->a(I)Lbhb;
 
-    mul-int/lit8 v1, v1, 0x1f
+    move-result-object p3
 
-    iget-object v0, p0, Ltgb;->c:Let;
+    invoke-virtual {p5, p1, p2, p3, p4}, Lzg6;->c(Lghb;Lrgb;Lbhb;Ljava/io/IOException;)V
 
-    invoke-virtual {v0}, Lzoe;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final o0(Lid;Ljava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object p1, p0, Ltgb;->a:Lvgb;
 
-    const-string v1, "FailMetric(traceId="
+    const/4 p2, 0x0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iput-object p2, p1, Lrl0;->g:Ljava/lang/String;
 
-    iget-object v1, p0, Ltgb;->a:Ljava/lang/String;
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final z(Lid;Ljava/lang/String;)V
+    .locals 0
 
-    const-string v1, ", errorType="
+    iget-object p1, p0, Ltgb;->a:Lvgb;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 p2, 0x0
 
-    iget-object v1, p0, Ltgb;->b:Lqgb;
+    iput-object p2, p1, Lrl0;->h:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    const-string v1, ", localProperties="
+.method public final z0(Lid;IJJ)V
+    .locals 0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object p1, p0, Ltgb;->a:Lvgb;
 
-    iget-object v1, p0, Ltgb;->c:Let;
+    iget-object p2, p1, Lrl0;->l:Lzg6;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, p1}, Lzg6;->a(Lghb;)V
 
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

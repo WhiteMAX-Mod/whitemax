@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lr65;
+.implements Lp95;
 
 
 # instance fields
@@ -11,13 +11,13 @@
 
 .field public final b:Landroid/view/View;
 
-.field public final c:Lt65;
+.field public final c:Lr95;
 
-.field public o:Z
+.field public d:Z
 
-.field public final q0:Landroid/graphics/Rect;
+.field public final o:Landroid/graphics/Rect;
 
-.field public final r0:Landroid/graphics/Rect;
+.field public final s0:Landroid/graphics/Rect;
 
 
 # direct methods
@@ -30,15 +30,15 @@
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object p1, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->q0:Landroid/graphics/Rect;
+    iput-object p1, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->o:Landroid/graphics/Rect;
 
     new-instance p1, Landroid/graphics/Rect;
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object p1, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->r0:Landroid/graphics/Rect;
+    iput-object p1, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->s0:Landroid/graphics/Rect;
 
-    new-instance p1, Lt65;
+    new-instance p1, Lr95;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -50,33 +50,33 @@
 
     invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object p2, p1, Lt65;->a:Ljava/util/ArrayList;
+    iput-object p2, p1, Lr95;->a:Ljava/util/ArrayList;
 
     new-instance p2, Landroid/graphics/Matrix;
 
     invoke-direct {p2}, Landroid/graphics/Matrix;-><init>()V
 
-    iput-object p2, p1, Lt65;->o:Landroid/graphics/Matrix;
+    iput-object p2, p1, Lr95;->d:Landroid/graphics/Matrix;
 
     new-instance p2, Landroid/graphics/Matrix;
 
     invoke-direct {p2}, Landroid/graphics/Matrix;-><init>()V
 
-    iput-object p2, p1, Lt65;->q0:Landroid/graphics/Matrix;
+    iput-object p2, p1, Lr95;->o:Landroid/graphics/Matrix;
 
     const/16 p2, 0x9
 
     new-array p2, p2, [F
 
-    iput-object p2, p1, Lt65;->t0:[F
+    iput-object p2, p1, Lr95;->u0:[F
 
     const/high16 p2, 0x40400000    # 3.0f
 
-    iput p2, p1, Lt65;->u0:F
+    iput p2, p1, Lr95;->v0:F
 
     const/4 p2, 0x0
 
-    iput-boolean p2, p1, Lt65;->w0:Z
+    iput-boolean p2, p1, Lr95;->x0:Z
 
     new-instance p2, Landroid/view/ScaleGestureDetector;
 
@@ -86,9 +86,9 @@
 
     invoke-direct {p2, v0, p1}, Landroid/view/ScaleGestureDetector;-><init>(Landroid/content/Context;Landroid/view/ScaleGestureDetector$OnScaleGestureListener;)V
 
-    iput-object p2, p1, Lt65;->b:Landroid/view/ScaleGestureDetector;
+    iput-object p2, p1, Lr95;->b:Landroid/view/ScaleGestureDetector;
 
-    iput-object p1, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->c:Lt65;
+    iput-object p1, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->c:Lr95;
 
     new-instance p1, Landroid/widget/FrameLayout$LayoutParams;
 
@@ -96,15 +96,15 @@
 
     invoke-direct {p1, p2, p2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    iget-object p2, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->c:Lt65;
+    iget-object p2, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->c:Lr95;
 
     invoke-virtual {p2, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    iget-object p1, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->c:Lt65;
+    iget-object p1, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->c:Lr95;
 
-    invoke-virtual {p1, p0}, Lt65;->setBoundingListener(Lr65;)V
+    invoke-virtual {p1, p0}, Lr95;->setBoundingListener(Lp95;)V
 
-    iget-object p1, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->c:Lt65;
+    iget-object p1, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->c:Lr95;
 
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -161,10 +161,10 @@
 
 
 # virtual methods
-.method public getEditorSurfaceView()Lt65;
+.method public getEditorSurfaceView()Lr95;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->c:Lt65;
+    iget-object v0, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->c:Lr95;
 
     return-object v0
 .end method
@@ -172,11 +172,11 @@
 .method public final onLayout(ZIIII)V
     .locals 4
 
-    iget-object p1, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->c:Lt65;
+    iget-object p1, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->c:Lr95;
 
     invoke-virtual {p1, p2, p3, p4, p5}, Landroid/view/View;->layout(IIII)V
 
-    iget-boolean p1, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->o:Z
+    iget-boolean p1, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->d:Z
 
     if-nez p1, :cond_0
 
@@ -250,11 +250,11 @@
 .method public final onMeasure(II)V
     .locals 4
 
-    iget-object v0, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->c:Lt65;
+    iget-object v0, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->c:Lr95;
 
     invoke-virtual {v0, p1, p2}, Landroid/view/View;->measure(II)V
 
-    iget-boolean v0, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->o:Z
+    iget-boolean v0, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->d:Z
 
     if-eqz v0, :cond_1
 
@@ -335,14 +335,14 @@
 .method public setDrawStickerEnabled(Z)V
     .locals 3
 
-    iget-boolean v0, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->o:Z
+    iget-boolean v0, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->d:Z
 
     if-ne v0, p1, :cond_0
 
     return-void
 
     :cond_0
-    iput-boolean p1, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->o:Z
+    iput-boolean p1, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->d:Z
 
     const/16 v0, 0x8
 
@@ -362,7 +362,7 @@
 
     invoke-virtual {v2, p1}, Landroid/view/View;->setVisibility(I)V
 
-    iget-boolean p1, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->o:Z
+    iget-boolean p1, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->d:Z
 
     if-eqz p1, :cond_2
 

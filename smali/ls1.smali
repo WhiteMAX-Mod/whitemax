@@ -1,49 +1,75 @@
-.class public final Lls1;
-.super Ly14;
+.class public final synthetic Lls1;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lem6;
 
 
 # instance fields
-.field public final synthetic X:Lms1;
+.field public final synthetic a:I
 
-.field public Y:I
+.field public final synthetic b:Lvs1;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic c:Ljava/lang/CharSequence;
 
 
 # direct methods
-.method public constructor <init>(Lms1;Ly14;)V
+.method public synthetic constructor <init>(Lvs1;Ljava/lang/CharSequence;I)V
     .locals 0
 
-    iput-object p1, p0, Lls1;->X:Lms1;
+    iput p3, p0, Lls1;->a:I
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lls1;->b:Lvs1;
+
+    iput-object p2, p0, Lls1;->c:Ljava/lang/CharSequence;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iput-object p1, p0, Lls1;->o:Ljava/lang/Object;
+    iget v0, p0, Lls1;->a:I
 
-    iget p1, p0, Lls1;->Y:I
+    check-cast p1, Ljava/lang/Boolean;
 
-    const/high16 v0, -0x80000000
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    or-int/2addr p1, v0
+    iget-object p1, p0, Lls1;->b:Lvs1;
 
-    iput p1, p0, Lls1;->Y:I
+    packed-switch v0, :pswitch_data_0
 
-    iget-object p1, p0, Lls1;->X:Lms1;
+    iget-object v0, p0, Lls1;->c:Ljava/lang/CharSequence;
 
-    const-wide/16 v0, 0x0
+    invoke-static {p1, v0}, Lvs1;->J(Lvs1;Ljava/lang/CharSequence;)V
 
-    invoke-virtual {p1, v0, v1, p0}, Lms1;->c(JLy14;)Ljava/lang/Object;
-
-    move-result-object p1
+    :goto_0
+    sget-object p1, Lqqg;->a:Lqqg;
 
     return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lls1;->c:Ljava/lang/CharSequence;
+
+    invoke-static {p1, v0}, Lvs1;->x(Lvs1;Ljava/lang/CharSequence;)V
+
+    goto :goto_0
+
+    :pswitch_1
+    iget-object v0, p0, Lls1;->c:Ljava/lang/CharSequence;
+
+    invoke-static {p1, v0}, Lvs1;->L(Lvs1;Ljava/lang/CharSequence;)V
+
+    goto :goto_0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

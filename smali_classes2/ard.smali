@@ -1,36 +1,24 @@
-.class public final synthetic Lard;
+.class public final Lard;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
-.field public final synthetic X:Ljava/lang/Object;
-
 .field public final synthetic a:I
 
-.field public final synthetic b:J
-
-.field public final synthetic c:Ljava/lang/Object;
-
-.field public final synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Ldrd;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;JI)V
+.method public synthetic constructor <init>(Ldrd;I)V
     .locals 0
 
-    iput p6, p0, Lard;->a:I
+    iput p2, p0, Lard;->a:I
 
-    iput-object p1, p0, Lard;->c:Ljava/lang/Object;
-
-    iput-object p2, p0, Lard;->o:Ljava/lang/Object;
-
-    iput-object p3, p0, Lard;->X:Ljava/lang/Object;
-
-    iput-wide p4, p0, Lard;->b:J
+    iput-object p1, p0, Lard;->b:Ldrd;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -39,159 +27,121 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 8
+.method public final call()Ljava/lang/Object;
+    .locals 4
 
     iget v0, p0, Lard;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lard;->c:Ljava/lang/Object;
+    iget-object v0, p0, Lard;->b:Ldrd;
 
-    check-cast v0, Lcom/my/tracker/obfuscated/t;
+    iget-object v1, v0, Ldrd;->f:Lcrd;
 
-    iget-object v1, p0, Lard;->o:Ljava/lang/Object;
+    iget-object v0, v0, Ldrd;->a:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
 
-    check-cast v1, Ljava/lang/String;
+    invoke-virtual {v1}, Lj3;->a()Lvk6;
 
-    iget-object v2, p0, Lard;->X:Ljava/lang/Object;
-
-    check-cast v2, Ljava/lang/String;
-
-    iget-wide v3, p0, Lard;->b:J
-
-    invoke-static {v0, v1, v2, v3, v4}, Lcom/my/tracker/obfuscated/t;->e(Lcom/my/tracker/obfuscated/t;Ljava/lang/String;Ljava/lang/String;J)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lard;->c:Ljava/lang/Object;
-
-    move-object v2, v0
-
-    check-cast v2, Lbrd;
-
-    iget-object v0, p0, Lard;->o:Ljava/lang/Object;
-
-    check-cast v0, Lhi1;
-
-    iget-object v1, p0, Lard;->X:Ljava/lang/Object;
-
-    check-cast v1, Landroid/util/Size;
-
-    iget-wide v3, p0, Lard;->b:J
-
-    monitor-enter v2
+    move-result-object v2
 
     :try_start_0
-    iget-object v5, v2, Lbrd;->d:Ljava/util/LinkedHashSet;
-
-    invoke-interface {v5, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result v5
+    invoke-virtual {v0}, Llrd;->c()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-eqz v5, :cond_0
-
-    monitor-exit v2
-
-    goto :goto_1
-
-    :cond_0
     :try_start_1
-    iget-object v5, v2, Lbrd;->c:Ljava/util/LinkedHashMap;
+    invoke-virtual {v2}, Lvk6;->w()I
 
-    invoke-virtual {v5, v0}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/lang/Long;
-
-    if-eqz v5, :cond_1
-
-    invoke-virtual {v5}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v5
-
-    sub-long/2addr v3, v5
-
-    const-string v5, "width"
-
-    invoke-virtual {v1}, Landroid/util/Size;->getWidth()I
-
-    move-result v6
-
-    invoke-static {v6}, Lru/ok/android/externcalls/analytics/events/EventItemValueKt;->toEventItemValue(I)Lru/ok/android/externcalls/analytics/events/EventItemValue;
-
-    move-result-object v6
-
-    new-instance v7, Ltcb;
-
-    invoke-direct {v7, v5, v6}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    const-string v5, "height"
-
-    invoke-virtual {v1}, Landroid/util/Size;->getHeight()I
-
-    move-result v1
-
-    invoke-static {v1}, Lru/ok/android/externcalls/analytics/events/EventItemValueKt;->toEventItemValue(I)Lru/ok/android/externcalls/analytics/events/EventItemValue;
-
-    move-result-object v1
-
-    new-instance v6, Ltcb;
-
-    invoke-direct {v6, v5, v1}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v7, v6}, [Ltcb;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lzg8;->j([Ltcb;)Ljava/util/Map;
-
-    move-result-object v5
-
-    invoke-static {}, Lie;->a()Lxod;
-
-    move-result-object v7
-
-    new-instance v1, Llg2;
-
-    const/4 v6, 0x4
-
-    invoke-direct/range {v1 .. v6}, Llg2;-><init>(Ljava/lang/Object;JLjava/lang/Object;I)V
-
-    invoke-virtual {v7, v1}, Lxod;->b(Ljava/lang/Runnable;)Lvv4;
-
-    iget-object v1, v2, Lbrd;->c:Ljava/util/LinkedHashMap;
-
-    invoke-interface {v1, v0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v1, v2, Lbrd;->d:Ljava/util/LinkedHashSet;
-
-    invoke-interface {v1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Llrd;->q()V
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    goto :goto_0
+    :try_start_2
+    invoke-virtual {v0}, Llrd;->k()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    invoke-virtual {v1, v2}, Lj3;->r(Lvk6;)V
+
+    sget-object v0, Lqqg;->a:Lqqg;
+
+    return-object v0
 
     :catchall_0
     move-exception v0
 
-    goto :goto_2
+    goto :goto_0
 
-    :cond_1
+    :catchall_1
+    move-exception v3
+
+    :try_start_3
+    invoke-virtual {v0}, Llrd;->k()V
+
+    throw v3
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
     :goto_0
-    monitor-exit v2
-
-    :goto_1
-    return-void
-
-    :goto_2
-    monitor-exit v2
+    invoke-virtual {v1, v2}, Lj3;->r(Lvk6;)V
 
     throw v0
+
+    :pswitch_0
+    iget-object v0, p0, Lard;->b:Ldrd;
+
+    iget-object v1, v0, Ldrd;->d:Lhq9;
+
+    iget-object v0, v0, Ldrd;->a:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
+
+    invoke-virtual {v1}, Lj3;->a()Lvk6;
+
+    move-result-object v2
+
+    :try_start_4
+    invoke-virtual {v0}, Llrd;->c()V
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+
+    :try_start_5
+    invoke-virtual {v2}, Lvk6;->w()I
+
+    invoke-virtual {v0}, Llrd;->q()V
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_3
+
+    :try_start_6
+    invoke-virtual {v0}, Llrd;->k()V
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_2
+
+    invoke-virtual {v1, v2}, Lj3;->r(Lvk6;)V
+
+    sget-object v0, Lqqg;->a:Lqqg;
+
+    return-object v0
+
+    :catchall_2
+    move-exception v0
+
+    goto :goto_1
+
+    :catchall_3
+    move-exception v3
+
+    :try_start_7
+    invoke-virtual {v0}, Llrd;->k()V
+
+    throw v3
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_2
+
+    :goto_1
+    invoke-virtual {v1, v2}, Lj3;->r(Lvk6;)V
+
+    throw v0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

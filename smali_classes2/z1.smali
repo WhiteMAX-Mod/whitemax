@@ -3,11 +3,11 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lyig;
+.implements Llyg;
 
 
 # static fields
-.field public static final o:[C
+.field public static final d:[C
 
 
 # instance fields
@@ -28,7 +28,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lz1;->o:[C
+    sput-object v0, Lz1;->d:[C
 
     return-void
 .end method
@@ -43,49 +43,49 @@
     return-void
 .end method
 
-.method public static B(ILjava/lang/StringBuilder;)V
+.method public static A(Ljava/lang/StringBuilder;I)V
     .locals 2
 
     const-string v0, "\\u"
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    shr-int/lit8 v0, p0, 0xc
-
-    and-int/lit8 v0, v0, 0xf
-
-    sget-object v1, Lz1;->o:[C
-
-    aget-char v0, v1, v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    shr-int/lit8 v0, p0, 0x8
+    shr-int/lit8 v0, p1, 0xc
 
     and-int/lit8 v0, v0, 0xf
 
+    sget-object v1, Lz1;->d:[C
+
     aget-char v0, v1, v0
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    shr-int/lit8 v0, p0, 0x4
+    shr-int/lit8 v0, p1, 0x8
 
     and-int/lit8 v0, v0, 0xf
 
     aget-char v0, v1, v0
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    and-int/lit8 p0, p0, 0xf
+    shr-int/lit8 v0, p1, 0x4
 
-    aget-char p0, v1, p0
+    and-int/lit8 v0, v0, 0xf
 
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    aget-char v0, v1, v0
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    and-int/lit8 p1, p1, 0xf
+
+    aget-char p1, v1, p1
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     return-void
 .end method
 
-.method public static y(Ljava/lang/StringBuilder;Ljava/lang/String;)V
+.method public static x(Ljava/lang/StringBuilder;Ljava/lang/String;)V
     .locals 4
 
     const-string v0, "\""
@@ -112,7 +112,7 @@
     packed-switch v2, :pswitch_data_0
 
     :pswitch_0
-    invoke-static {v2, p0}, Lz1;->B(ILjava/lang/StringBuilder;)V
+    invoke-static {p0, v2}, Lz1;->A(Ljava/lang/StringBuilder;I)V
 
     goto :goto_1
 
@@ -191,7 +191,7 @@
 
     if-gt v2, v3, :cond_4
 
-    invoke-static {v2, p0}, Lz1;->B(ILjava/lang/StringBuilder;)V
+    invoke-static {p0, v2}, Lz1;->A(Ljava/lang/StringBuilder;I)V
 
     goto :goto_1
 
@@ -223,7 +223,70 @@
 
 
 # virtual methods
-.method public final A()V
+.method public final a()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Lz1;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lz1;->x(Ljava/lang/StringBuilder;Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lz1;->b:Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0}, Lz1;->z()V
+
+    :cond_0
+    iget-object v0, p0, Lz1;->b:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final y()Ljava/lang/String;
+    .locals 2
+
+    iget-object v0, p0, Lz1;->b:Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0}, Lz1;->z()V
+
+    :cond_0
+    iget-object v0, p0, Lz1;->c:Ljava/nio/charset/CharacterCodingException;
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lz1;->b:Ljava/lang/String;
+
+    return-object v0
+
+    :cond_1
+    new-instance v0, Lorg/msgpack/core/MessageStringCodingException;
+
+    iget-object v1, p0, Lz1;->c:Ljava/nio/charset/CharacterCodingException;
+
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
+.end method
+
+.method public final z()V
     .locals 4
 
     iget-object v0, p0, Lz1;->a:[B
@@ -248,7 +311,7 @@
 
     :cond_0
     :try_start_1
-    sget-object v1, Lje9;->a:Ljava/nio/charset/Charset;
+    sget-object v1, Lkl9;->a:Ljava/nio/charset/Charset;
 
     invoke-virtual {v1}, Ljava/nio/charset/Charset;->newDecoder()Ljava/nio/charset/CharsetDecoder;
 
@@ -293,7 +356,7 @@
     move-exception v1
 
     :try_start_2
-    sget-object v2, Lje9;->a:Ljava/nio/charset/Charset;
+    sget-object v2, Lkl9;->a:Ljava/nio/charset/Charset;
 
     invoke-virtual {v2}, Ljava/nio/charset/Charset;->newDecoder()Ljava/nio/charset/CharsetDecoder;
 
@@ -355,67 +418,4 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     throw v1
-.end method
-
-.method public final a()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p0}, Lz1;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lz1;->y(Ljava/lang/StringBuilder;Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lz1;->b:Ljava/lang/String;
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0}, Lz1;->A()V
-
-    :cond_0
-    iget-object v0, p0, Lz1;->b:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final z()Ljava/lang/String;
-    .locals 2
-
-    iget-object v0, p0, Lz1;->b:Ljava/lang/String;
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0}, Lz1;->A()V
-
-    :cond_0
-    iget-object v0, p0, Lz1;->c:Ljava/nio/charset/CharacterCodingException;
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lz1;->b:Ljava/lang/String;
-
-    return-object v0
-
-    :cond_1
-    new-instance v0, Lorg/msgpack/core/MessageStringCodingException;
-
-    iget-object v1, p0, Lz1;->c:Ljava/nio/charset/CharacterCodingException;
-
-    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
 .end method

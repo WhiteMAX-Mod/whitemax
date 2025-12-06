@@ -1,163 +1,129 @@
 .class public final Ldl8;
-.super Ljava/lang/Object;
+.super Ly0f;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+# instance fields
+.field public final o:Lpo9;
 
-    const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
+# direct methods
+.method public constructor <init>(Ljava/util/concurrent/ScheduledExecutorService;Lpo9;)V
+    .locals 0
 
-    return v0
+    invoke-direct {p0, p1}, Ly0f;-><init>(Ljava/util/concurrent/Executor;)V
 
-    :cond_0
-    instance-of v1, p1, Ldl8;
+    iput-object p2, p0, Ldl8;->o:Lpo9;
 
-    if-nez v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Ldl8;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-wide/high16 v1, 0x405e000000000000L    # 120.0
-
-    invoke-static {v1, v2, v1, v2}, Ljava/lang/Double;->compare(DD)I
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const-wide v1, 0x3fa47ae147ae147bL    # 0.04
-
-    invoke-static {v1, v2, v1, v2}, Ljava/lang/Double;->compare(DD)I
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    invoke-static {v1, v2, v1, v2}, Ljava/lang/Double;->compare(DD)I
-
-    move-result p1
-
-    if-eqz p1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    const-wide v1, 0x408f400000000000L    # 1000.0
-
-    invoke-static {v1, v2, v1, v2}, Ljava/lang/Double;->compare(DD)I
-
-    move-result p1
-
-    if-eqz p1, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    const-wide v1, 0x4085e00000000000L    # 700.0
-
-    invoke-static {v1, v2, v1, v2}, Ljava/lang/Double;->compare(DD)I
-
-    move-result p1
-
-    if-eqz p1, :cond_6
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_6
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 3
 
-    const-wide/high16 v0, 0x405e000000000000L    # 120.0
+# virtual methods
+.method public final t(Landroid/view/ViewGroup;I)Lmid;
+    .locals 5
 
-    invoke-static {v0, v1}, Ljava/lang/Double;->hashCode(D)I
+    new-instance p2, Len0;
 
-    move-result v0
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    mul-int/lit8 v0, v0, 0x1f
+    move-result-object p1
 
-    const-wide v1, 0x3fa47ae147ae147bL    # 0.04
+    new-instance v0, Landroid/widget/TextView;
 
-    invoke-static {v0, v1, v2}, Lzed;->a(ID)I
+    invoke-direct {v0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    move-result v0
+    invoke-direct {p2, v0}, Len0;-><init>(Landroid/view/View;)V
 
-    invoke-static {v0, v1, v2}, Lzed;->a(ID)I
+    const/4 p1, 0x6
 
-    move-result v0
+    int-to-float p1, p1
 
-    const-wide v1, 0x408f400000000000L    # 1000.0
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
 
-    invoke-static {v0, v1, v2}, Lzed;->a(ID)I
+    move-result-object v1
 
-    move-result v0
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    const-wide v1, 0x4085e00000000000L    # 700.0
+    move-result-object v1
 
-    invoke-static {v0, v1, v2}, Lzed;->a(ID)I
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
 
-    move-result v0
+    mul-float/2addr p1, v1
 
-    const/16 v1, 0x1f4
+    invoke-static {p1}, Lkti;->d(F)I
 
-    invoke-static {v1, v0}, Lcgi;->a(II)I
+    move-result p1
 
-    move-result v0
+    const/16 v1, 0x8
 
-    const/16 v1, 0x12c
+    int-to-float v1, v1
 
-    invoke-static {v1, v0}, Lcgi;->a(II)I
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
 
-    move-result v0
+    move-result-object v2
 
-    const/4 v1, 0x1
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    invoke-static {v0, v1}, Lzg8;->a(IZ)I
+    move-result-object v2
 
-    move-result v0
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
 
-    const/4 v2, 0x0
+    mul-float/2addr v1, v2
 
-    invoke-static {v0, v2}, Lzg8;->a(IZ)I
-
-    move-result v0
-
-    invoke-static {v0, v2}, Lzg8;->a(IZ)I
-
-    move-result v0
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-static {v1}, Lkti;->d(F)I
 
     move-result v1
 
-    add-int/2addr v1, v0
+    new-instance v2, Lxhd;
 
-    return v1
-.end method
+    const/4 v3, -0x2
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    const/4 v4, -0x1
 
-    const-string v0, "BadNetworkCondition(rttThreshold=120.0, lostPacketsLimitForRttBelowLowBound=0.04, lostPacketsLimitForRttAboveLowBound=0.04, rttEnterLevel2Mode=1000.0, rttLeaveLevel2Mode=700.0, videoBitrateLevel1K=500, videoBitrateLevel2K=300, preferHardwareVPXEncoder=true, limitFrameSize=false, limitBitrate=false, setTemporalLayers=true)"
+    invoke-direct {v2, v3, v4}, Lxhd;-><init>(II)V
 
-    return-object v0
+    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    invoke-virtual {v0, v1, p1, v1, p1}, Landroid/widget/TextView;->setPaddingRelative(IIII)V
+
+    sget-object p1, Ldpg;->G:Lt5g;
+
+    invoke-static {p1, v0}, Lt5g;->d(Lt5g;Landroid/widget/TextView;)V
+
+    new-instance p1, Lkg6;
+
+    const/16 v1, 0x9
+
+    iget-object v2, p0, Ldl8;->o:Lpo9;
+
+    invoke-direct {p1, p2, v1, v2}, Lkg6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {v0, p1}, Lf8j;->e(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+
+    const/16 p1, 0x10
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setGravity(I)V
+
+    const/4 p1, 0x1
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setMaxLines(I)V
+
+    sget-object p1, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
+
+    new-instance p1, Lx9;
+
+    const/4 v1, 0x3
+
+    const/16 v2, 0x16
+
+    const/4 v3, 0x0
+
+    invoke-direct {p1, v1, v3, v2}, Lx9;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    invoke-static {p1, v0}, Ltqi;->c(Lum6;Landroid/view/View;)V
+
+    return-object p2
 .end method

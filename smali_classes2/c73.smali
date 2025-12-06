@@ -1,187 +1,213 @@
-.class public final Lc73;
-.super Landroid/graphics/drawable/Drawable;
+.class public final synthetic Lc73;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lcm6;
 
 
 # instance fields
-.field public final a:Landroid/graphics/Paint;
+.field public final synthetic a:I
 
-.field public b:F
+.field public final synthetic b:Lone/me/chats/tab/ChatsTabWidget;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method public synthetic constructor <init>(Lone/me/chats/tab/ChatsTabWidget;I)V
+    .locals 0
 
-    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
+    iput p2, p0, Lc73;->a:I
 
-    new-instance v0, Landroid/graphics/Paint;
+    iput-object p1, p0, Lc73;->b:Lone/me/chats/tab/ChatsTabWidget;
 
-    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
-
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v2, 0x40000000    # 2.0f
-
-    mul-float/2addr v1, v2
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
-
-    sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
-
-    sget-object v1, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
-
-    sget-object v1, Landroid/graphics/Paint$Join;->ROUND:Landroid/graphics/Paint$Join;
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeJoin(Landroid/graphics/Paint$Join;)V
-
-    iput-object v0, p0, Lc73;->a:Landroid/graphics/Paint;
-
-    const/high16 v0, 0x43b40000    # 360.0f
-
-    iput v0, p0, Lc73;->b:F
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final draw(Landroid/graphics/Canvas;)V
-    .locals 10
+.method public final invoke()Ljava/lang/Object;
+    .locals 9
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    iget v0, p0, Lc73;->a:I
 
-    move-result-object v0
+    const/4 v1, 0x1
 
-    iget v0, v0, Landroid/graphics/Rect;->left:I
+    iget-object v2, p0, Lc73;->b:Lone/me/chats/tab/ChatsTabWidget;
 
-    int-to-float v2, v0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    sget-object v0, Lone/me/chats/tab/ChatsTabWidget;->F0:[Lyy7;
 
-    move-result-object v0
-
-    iget v0, v0, Landroid/graphics/Rect;->top:I
-
-    int-to-float v3, v0
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    :goto_0
+    invoke-virtual {v2}, Lc54;->getParentController()Lc54;
 
     move-result-object v0
 
-    iget v0, v0, Landroid/graphics/Rect;->right:I
+    if-eqz v0, :cond_0
 
-    int-to-float v4, v0
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/graphics/Rect;->bottom:I
-
-    int-to-float v5, v0
-
-    iget v7, p0, Lc73;->b:F
-
-    const/4 v8, 0x0
-
-    iget-object v9, p0, Lc73;->a:Landroid/graphics/Paint;
-
-    const/high16 v6, -0x3d4c0000    # -90.0f
-
-    move-object v1, p1
-
-    invoke-virtual/range {v1 .. v9}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
-
-    return-void
-.end method
-
-.method public final getOpacity()I
-    .locals 1
-
-    const/4 v0, -0x3
-
-    return v0
-.end method
-
-.method public final onBoundsChange(Landroid/graphics/Rect;)V
-    .locals 3
-
-    const/4 v0, 0x2
-
-    int-to-float v0, v0
-
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v0
-
-    invoke-static {v1}, Lfhi;->b(F)I
-
-    move-result v1
-
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+    invoke-virtual {v2}, Lc54;->getParentController()Lc54;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    goto :goto_0
 
-    move-result-object v2
+    :cond_0
+    instance-of v0, v2, Leud;
 
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+    const/4 v3, 0x0
 
-    mul-float/2addr v0, v2
+    if-eqz v0, :cond_1
 
-    invoke-static {v0}, Lfhi;->b(F)I
+    check-cast v2, Leud;
+
+    goto :goto_1
+
+    :cond_1
+    move-object v2, v3
+
+    :goto_1
+    if-eqz v2, :cond_2
+
+    check-cast v2, Lone/me/android/root/RootController;
+
+    invoke-virtual {v2}, Lone/me/android/root/RootController;->E0()Lytd;
+
+    move-result-object v3
+
+    :cond_2
+    if-eqz v3, :cond_3
+
+    invoke-virtual {v3}, Lytd;->n()Z
 
     move-result v0
 
-    invoke-virtual {p1, v1, v0}, Landroid/graphics/Rect;->inset(II)V
+    if-ne v0, v1, :cond_3
 
-    invoke-super {p0, p1}, Landroid/graphics/drawable/Drawable;->onBoundsChange(Landroid/graphics/Rect;)V
+    goto :goto_2
 
-    return-void
-.end method
+    :cond_3
+    const/4 v1, 0x0
 
-.method public final setAlpha(I)V
-    .locals 1
+    :goto_2
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    iget-object v0, p0, Lc73;->a:Landroid/graphics/Paint;
+    move-result-object v0
 
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
+    return-object v0
 
-    return-void
-.end method
+    :pswitch_0
+    new-instance v0, Lqc6;
 
-.method public final setColorFilter(Landroid/graphics/ColorFilter;)V
-    .locals 1
+    new-instance v1, Lt5c;
 
-    iget-object v0, p0, Lc73;->a:Landroid/graphics/Paint;
+    iget v3, v2, Lone/me/chats/tab/ChatsTabWidget;->B0:I
 
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
+    iget v4, v2, Lone/me/chats/tab/ChatsTabWidget;->C0:I
 
-    return-void
+    invoke-direct {v1}, Landroidx/recyclerview/widget/b;-><init>()V
+
+    sget v5, Lc03;->a:I
+
+    mul-int v6, v3, v4
+
+    invoke-virtual {v1, v5, v6}, Landroidx/recyclerview/widget/b;->setMaxRecycledViews(II)V
+
+    sget v5, Lc03;->b:I
+
+    mul-int/lit8 v4, v4, 0x5
+
+    invoke-virtual {v1, v5, v4}, Landroidx/recyclerview/widget/b;->setMaxRecycledViews(II)V
+
+    sget v4, Li1b;->u:I
+
+    int-to-double v5, v3
+
+    const-wide/high16 v7, 0x3ff8000000000000L    # 1.5
+
+    mul-double/2addr v5, v7
+
+    invoke-static {v5, v6}, Lkti;->c(D)I
+
+    move-result v3
+
+    invoke-virtual {v1, v4, v3}, Landroidx/recyclerview/widget/b;->setMaxRecycledViews(II)V
+
+    sget v3, Li1b;->v:I
+
+    invoke-static {v5, v6}, Lkti;->c(D)I
+
+    move-result v4
+
+    invoke-virtual {v1, v3, v4}, Landroidx/recyclerview/widget/b;->setMaxRecycledViews(II)V
+
+    sget v3, Ls5b;->c:I
+
+    const/4 v4, 0x3
+
+    invoke-virtual {v1, v3, v4}, Landroidx/recyclerview/widget/b;->setMaxRecycledViews(II)V
+
+    new-instance v3, Lf8a;
+
+    invoke-direct {v3}, Lf8a;-><init>()V
+
+    sget-object v3, Lqc6;->z0:Lrha;
+
+    invoke-direct {v0, v2, v1, v3}, Lqc6;-><init>(Lc54;Landroidx/recyclerview/widget/b;Lpc6;)V
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, v2, Lone/me/chats/tab/ChatsTabWidget;->Y:Lk18;
+
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lmj1;
+
+    iget-object v8, v2, Lc54;->lifecycleOwner:Lj48;
+
+    new-instance v6, Ls2i;
+
+    invoke-direct {v6, v2, v1}, Ls2i;-><init>(Lone/me/sdk/arch/Widget;I)V
+
+    new-instance v7, Lc73;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v7, v2, v1}, Lc73;-><init>(Lone/me/chats/tab/ChatsTabWidget;I)V
+
+    new-instance v3, Lox1;
+
+    iget-object v4, v0, Lmj1;->a:Lqsb;
+
+    sget-object v0, Llx1;->a:Llx1;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
+
+    move-result-object v0
+
+    const/16 v1, 0x79
+
+    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v5, v0
+
+    check-cast v5, Lesb;
+
+    invoke-direct/range {v3 .. v8}, Lox1;-><init>(Lqsb;Lesb;Ls2i;Lcm6;Lj48;)V
+
+    return-object v3
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -2,146 +2,146 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbx7;
-
 
 # instance fields
-.field public final a:La76;
+.field public final a:Z
 
-.field public final b:Lfx7;
+.field public final b:Z
+
+.field public final c:Z
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/lang/String;
+
+.field public final f:Z
+
+.field public final g:I
 
 
 # direct methods
-.method public constructor <init>(Lfx7;La76;)V
+.method public constructor <init>(ILjava/lang/String;Ljava/lang/String;ZZZZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Llw7;->b:Lfx7;
+    iput-boolean p4, p0, Llw7;->a:Z
 
-    iput-object p2, p0, Llw7;->a:La76;
+    iput-boolean p5, p0, Llw7;->b:Z
+
+    iput-boolean p6, p0, Llw7;->c:Z
+
+    iput-object p2, p0, Llw7;->d:Ljava/lang/String;
+
+    iput-object p3, p0, Llw7;->e:Ljava/lang/String;
+
+    iput-boolean p7, p0, Llw7;->f:Z
+
+    iput p1, p0, Llw7;->g:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onDestroy(Lfx7;)V
-    .locals 5
-    .annotation runtime Luma;
-        value = .enum Lgw7;->ON_DESTROY:Lgw7;
-    .end annotation
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-object v0, p0, Llw7;->a:La76;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v1, v0, La76;->a:Ljava/lang/Object;
+    const-string v1, "JsonConfiguration(encodeDefaults=false, ignoreUnknownKeys="
 
-    monitor-enter v1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :try_start_0
-    invoke-virtual {v0, p1}, La76;->k(Lfx7;)Llw7;
+    iget-boolean v1, p0, Llw7;->a:Z
 
-    move-result-object v2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    if-nez v2, :cond_0
+    const-string v1, ", isLenient="
 
-    monitor-exit v1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
+    iget-boolean v1, p0, Llw7;->b:Z
 
-    :catchall_0
-    move-exception p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    goto :goto_1
+    const-string v1, ", allowStructuredMapKeys=false, prettyPrint=false, explicitNulls="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Llw7;->c:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", prettyPrintIndent=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Llw7;->d:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', coerceInputValues=false, useArrayPolymorphism=false, classDiscriminator=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Llw7;->e:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', allowSpecialFloatingPointValues=false, useAlternativeNames="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Llw7;->f:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", namingStrategy=null, decodeEnumsCaseInsensitive=false, allowTrailingComma=false, allowComments=false, classDiscriminatorMode="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 v1, 0x1
+
+    iget v2, p0, Llw7;->g:I
+
+    if-eq v2, v1, :cond_2
+
+    const/4 v1, 0x2
+
+    if-eq v2, v1, :cond_1
+
+    const/4 v1, 0x3
+
+    if-eq v2, v1, :cond_0
+
+    const-string v1, "null"
+
+    goto :goto_0
 
     :cond_0
-    invoke-virtual {v0, p1}, La76;->p(Lfx7;)V
-
-    iget-object p1, v0, La76;->c:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/HashMap;
-
-    invoke-virtual {p1, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/util/Set;
-
-    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lva0;
-
-    iget-object v4, v0, La76;->b:Ljava/lang/Object;
-
-    check-cast v4, Ljava/util/HashMap;
-
-    invoke-virtual {v4, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v1, "POLYMORPHIC"
 
     goto :goto_0
 
     :cond_1
-    iget-object p1, v0, La76;->c:Ljava/lang/Object;
+    const-string v1, "ALL_JSON_OBJECTS"
 
-    check-cast p1, Ljava/util/HashMap;
+    goto :goto_0
 
-    invoke-virtual {p1, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_2
+    const-string v1, "NONE"
 
-    iget-object p1, v2, Llw7;->b:Lfx7;
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {p1}, Lfx7;->x()Lhx7;
+    const/16 v1, 0x29
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v2}, Lhx7;->f(Lbx7;)V
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    monitor-exit v1
+    move-result-object v0
 
-    return-void
-
-    :goto_1
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
-.end method
-
-.method public onStart(Lfx7;)V
-    .locals 1
-    .annotation runtime Luma;
-        value = .enum Lgw7;->ON_START:Lgw7;
-    .end annotation
-
-    iget-object v0, p0, Llw7;->a:La76;
-
-    invoke-virtual {v0, p1}, La76;->o(Lfx7;)V
-
-    return-void
-.end method
-
-.method public onStop(Lfx7;)V
-    .locals 1
-    .annotation runtime Luma;
-        value = .enum Lgw7;->ON_STOP:Lgw7;
-    .end annotation
-
-    iget-object v0, p0, Llw7;->a:La76;
-
-    invoke-virtual {v0, p1}, La76;->p(Lfx7;)V
-
-    return-void
+    return-object v0
 .end method

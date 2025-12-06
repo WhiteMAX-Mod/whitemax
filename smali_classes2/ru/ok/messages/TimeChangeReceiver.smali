@@ -48,61 +48,57 @@
 .method public static a(Landroid/content/Context;)V
     .locals 11
 
-    invoke-static {}, Lfn;->b()Lej3;
+    invoke-static {}, Lzm;->a()Lqm3;
 
     move-result-object p0
 
-    check-cast p0, Lssa;
+    check-cast p0, Lt1b;
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object p0
-
-    const-class v0, Lwoh;
-
-    invoke-virtual {p0, v0}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lw5;
 
     move-result-object p0
 
-    check-cast p0, Lwoh;
+    const/16 v0, 0xa9
 
-    new-instance v0, Li7b;
+    invoke-virtual {p0, v0}, Lw5;->c(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lg5i;
+
+    new-instance v0, Lngb;
 
     const-class v1, Lru/ok/messages/TimeChangeReceiver$TaskTimeChangeWorker;
 
-    invoke-direct {v0, v1}, Li7b;-><init>(Ljava/lang/Class;)V
+    invoke-direct {v0, v1}, Lngb;-><init>(Ljava/lang/Class;)V
 
     sget-object v1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    sget-object v2, Lgg0;->a:Lgg0;
+    sget-object v2, Leg0;->a:Leg0;
 
     const-wide/16 v3, 0x2710
 
-    invoke-virtual {v0, v2, v3, v4, v1}, Landroidx/work/WorkRequest$Builder;->setBackoffCriteria(Lgg0;JLjava/util/concurrent/TimeUnit;)Landroidx/work/WorkRequest$Builder;
+    invoke-virtual {v0, v2, v3, v4, v1}, Landroidx/work/WorkRequest$Builder;->setBackoffCriteria(Leg0;JLjava/util/concurrent/TimeUnit;)Landroidx/work/WorkRequest$Builder;
 
     move-result-object v0
 
-    check-cast v0, Li7b;
+    check-cast v0, Lngb;
 
     invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
 
     move-result-object v2
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v3
-
-    invoke-static {v3, v4, v2}, Lbd4;->h(JLjava/util/TimeZone;)Lbd4;
+    invoke-static {v2}, Lmf4;->n(Ljava/util/TimeZone;)Lmf4;
 
     move-result-object v2
 
-    new-instance v3, Lbd4;
+    new-instance v3, Lmf4;
 
-    iget-object v4, v2, Lbd4;->a:Ljava/lang/Integer;
+    iget-object v4, v2, Lmf4;->a:Ljava/lang/Integer;
 
-    iget-object v5, v2, Lbd4;->b:Ljava/lang/Integer;
+    iget-object v5, v2, Lmf4;->b:Ljava/lang/Integer;
 
-    iget-object v6, v2, Lbd4;->c:Ljava/lang/Integer;
+    iget-object v6, v2, Lmf4;->c:Ljava/lang/Integer;
 
     const/4 v9, 0x0
 
@@ -112,7 +108,7 @@
 
     const/4 v8, 0x0
 
-    invoke-direct/range {v3 .. v10}, Lbd4;-><init>(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V
+    invoke-direct/range {v3 .. v10}, Lmf4;-><init>(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V
 
     const/4 v2, 0x1
 
@@ -120,7 +116,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v3, v2}, Lbd4;->n(Ljava/lang/Integer;)Lbd4;
+    invoke-virtual {v3, v2}, Lmf4;->p(Ljava/lang/Integer;)Lmf4;
 
     move-result-object v2
 
@@ -128,11 +124,7 @@
 
     move-result-object v3
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v4
-
-    invoke-static {v4, v5, v3}, Lbd4;->h(JLjava/util/TimeZone;)Lbd4;
+    invoke-static {v3}, Lmf4;->n(Ljava/util/TimeZone;)Lmf4;
 
     move-result-object v3
 
@@ -140,7 +132,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v2, v4}, Lbd4;->i(Ljava/util/TimeZone;)J
+    invoke-virtual {v2, v4}, Lmf4;->j(Ljava/util/TimeZone;)J
 
     move-result-wide v4
 
@@ -148,7 +140,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v3, v2}, Lbd4;->i(Ljava/util/TimeZone;)J
+    invoke-virtual {v3, v2}, Lmf4;->j(Ljava/util/TimeZone;)J
 
     move-result-wide v2
 
@@ -169,13 +161,13 @@
 
     move-result-object v0
 
-    check-cast v0, Li7b;
+    check-cast v0, Lngb;
 
     invoke-virtual {v0}, Landroidx/work/WorkRequest$Builder;->build()Landroidx/work/WorkRequest;
 
     move-result-object v0
 
-    check-cast v0, Lj7b;
+    check-cast v0, Logb;
 
     invoke-virtual {v0}, Landroidx/work/WorkRequest;->getId()Ljava/util/UUID;
 
@@ -199,15 +191,15 @@
 
     const-string v3, "ru.ok.messages.TimeChangeReceiver"
 
-    invoke-static {v3, v2}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object v2, Loh5;->c:Loh5;
+    sget-object v2, Luk5;->c:Luk5;
 
-    invoke-virtual {p0, v1, v2, v0}, Lwoh;->b(Ljava/lang/String;Loh5;Lj7b;)Lnx7;
+    invoke-virtual {p0, v1, v2, v0}, Lg5i;->b(Ljava/lang/String;Luk5;Logb;)Lq48;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lnx7;->c()Lmk3;
+    invoke-virtual {p0}, Lq48;->c()Lxn3;
 
     return-void
 .end method
@@ -217,41 +209,41 @@
 .method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 
-    invoke-static {}, Lfn;->b()Lej3;
+    invoke-static {}, Lzm;->a()Lqm3;
 
     move-result-object p1
 
-    check-cast p1, Lssa;
+    check-cast p1, Lt1b;
 
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object p1
-
-    const-class p2, Lwoh;
-
-    invoke-virtual {p1, p2}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lw5;
 
     move-result-object p1
 
-    check-cast p1, Lwoh;
+    const/16 p2, 0xa9
 
-    new-instance p2, Li7b;
+    invoke-virtual {p1, p2}, Lw5;->c(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lg5i;
+
+    new-instance p2, Lngb;
 
     const-class v0, Lru/ok/messages/TimeChangeReceiver$TaskTimeChangeWorker;
 
-    invoke-direct {p2, v0}, Li7b;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p2, v0}, Lngb;-><init>(Ljava/lang/Class;)V
 
     const-wide/16 v0, 0x2710
 
     sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    sget-object v3, Lgg0;->a:Lgg0;
+    sget-object v3, Leg0;->a:Leg0;
 
-    invoke-virtual {p2, v3, v0, v1, v2}, Landroidx/work/WorkRequest$Builder;->setBackoffCriteria(Lgg0;JLjava/util/concurrent/TimeUnit;)Landroidx/work/WorkRequest$Builder;
+    invoke-virtual {p2, v3, v0, v1, v2}, Landroidx/work/WorkRequest$Builder;->setBackoffCriteria(Leg0;JLjava/util/concurrent/TimeUnit;)Landroidx/work/WorkRequest$Builder;
 
     move-result-object p2
 
-    check-cast p2, Li7b;
+    check-cast p2, Lngb;
 
     const-string v0, "TIME_CHANGE"
 
@@ -259,13 +251,13 @@
 
     move-result-object p2
 
-    check-cast p2, Li7b;
+    check-cast p2, Lngb;
 
     invoke-virtual {p2}, Landroidx/work/WorkRequest$Builder;->build()Landroidx/work/WorkRequest;
 
     move-result-object p2
 
-    check-cast p2, Lj7b;
+    check-cast p2, Logb;
 
     invoke-virtual {p2}, Landroidx/work/WorkRequest;->getId()Ljava/util/UUID;
 
@@ -289,15 +281,15 @@
 
     const-string v2, "ru.ok.messages.TimeChangeReceiver"
 
-    invoke-static {v2, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object v1, Loh5;->a:Loh5;
+    sget-object v1, Luk5;->a:Luk5;
 
-    invoke-virtual {p1, v0, v1, p2}, Lwoh;->b(Ljava/lang/String;Loh5;Lj7b;)Lnx7;
+    invoke-virtual {p1, v0, v1, p2}, Lg5i;->b(Ljava/lang/String;Luk5;Logb;)Lq48;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lnx7;->c()Lmk3;
+    invoke-virtual {p1}, Lq48;->c()Lxn3;
 
     return-void
 .end method

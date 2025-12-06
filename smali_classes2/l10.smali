@@ -3,123 +3,144 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic p:I
-
-
 # instance fields
-.field public final a:Lk10;
+.field public a:J
 
-.field public final b:J
+.field public b:J
 
-.field public final c:Ljava/util/ArrayList;
+.field public c:J
 
-.field public final d:Ljava/lang/String;
+.field public d:J
 
-.field public final e:Ljava/lang/String;
+.field public e:I
 
-.field public final f:Ljava/lang/String;
-
-.field public final g:Ljava/lang/String;
-
-.field public final h:Lv10;
-
-.field public final i:Ljava/lang/String;
-
-.field public final j:Ljava/lang/String;
-
-.field public final k:Z
-
-.field public final l:I
-
-.field public final m:J
-
-.field public final n:J
-
-.field public final o:Ljava/lang/String;
+.field public f:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lj10;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    invoke-virtual {v0}, Lj10;->a()Ll10;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lj10;)V
+.method public constructor <init>(Ll10;)V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p1, Lj10;->a:Lk10;
+    iget-wide v0, p1, Ll10;->a:J
 
-    iput-object v0, p0, Ll10;->a:Lk10;
+    iput-wide v0, p0, Ll10;->a:J
 
-    iget-wide v0, p1, Lj10;->b:J
+    iget-wide v0, p1, Ll10;->b:J
 
     iput-wide v0, p0, Ll10;->b:J
 
-    new-instance v0, Ljava/util/ArrayList;
+    iget-wide v0, p1, Ll10;->c:J
 
-    iget-object v1, p1, Lj10;->c:Ljava/util/Collection;
+    iput-wide v0, p0, Ll10;->c:J
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    iget-wide v0, p1, Ll10;->d:J
 
-    iput-object v0, p0, Ll10;->c:Ljava/util/ArrayList;
+    iput-wide v0, p0, Ll10;->d:J
 
-    iget-object v0, p1, Lj10;->d:Ljava/lang/String;
+    iget v0, p1, Ll10;->e:I
 
-    iput-object v0, p0, Ll10;->d:Ljava/lang/String;
+    iput v0, p0, Ll10;->e:I
 
-    iget-object v0, p1, Lj10;->e:Ljava/lang/String;
+    iget-object p1, p1, Ll10;->f:Ljava/lang/Object;
 
-    iput-object v0, p0, Ll10;->e:Ljava/lang/String;
+    check-cast p1, Ljava/lang/String;
 
-    iget-object v0, p1, Lj10;->f:Ljava/lang/String;
+    iput-object p1, p0, Ll10;->f:Ljava/lang/Object;
 
-    iput-object v0, p0, Ll10;->f:Ljava/lang/String;
+    return-void
+.end method
 
-    iget-object v0, p1, Lj10;->g:Ljava/lang/String;
 
-    iput-object v0, p0, Ll10;->g:Ljava/lang/String;
+# virtual methods
+.method public a()V
+    .locals 1
 
-    iget-object v0, p1, Lj10;->h:Lv10;
+    iget-object v0, p0, Ll10;->f:Ljava/lang/Object;
 
-    iput-object v0, p0, Ll10;->h:Lv10;
+    check-cast v0, Lg60;
 
-    iget-object v0, p1, Lj10;->i:Ljava/lang/String;
+    if-eqz v0, :cond_0
 
-    iput-object v0, p0, Ll10;->i:Ljava/lang/String;
+    const/4 v0, 0x0
 
-    iget-object v0, p1, Lj10;->j:Ljava/lang/String;
+    invoke-virtual {p0, v0}, Ll10;->b(I)V
 
-    iput-object v0, p0, Ll10;->j:Ljava/lang/String;
+    :cond_0
+    return-void
+.end method
 
-    iget-boolean v0, p1, Lj10;->k:Z
+.method public b(I)V
+    .locals 6
 
-    iput-boolean v0, p0, Ll10;->k:Z
+    iput p1, p0, Ll10;->e:I
 
-    iget v0, p1, Lj10;->l:I
+    const-wide/16 v0, 0x2710
 
-    iput v0, p0, Ll10;->l:I
+    if-eqz p1, :cond_3
 
-    iget-wide v0, p1, Lj10;->m:J
+    const/4 v2, 0x1
 
-    iput-wide v0, p0, Ll10;->m:J
+    if-eq p1, v2, :cond_2
 
-    iget-wide v0, p1, Lj10;->n:J
+    const/4 v0, 0x2
 
-    iput-wide v0, p0, Ll10;->n:J
+    if-eq p1, v0, :cond_1
 
-    iget-object p1, p1, Lj10;->o:Ljava/lang/String;
+    const/4 v0, 0x3
 
-    iput-object p1, p0, Ll10;->o:Ljava/lang/String;
+    if-eq p1, v0, :cond_1
+
+    const/4 v0, 0x4
+
+    if-ne p1, v0, :cond_0
+
+    const-wide/32 v0, 0x7a120
+
+    iput-wide v0, p0, Ll10;->b:J
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw p1
+
+    :cond_1
+    const-wide/32 v0, 0x989680
+
+    iput-wide v0, p0, Ll10;->b:J
+
+    return-void
+
+    :cond_2
+    iput-wide v0, p0, Ll10;->b:J
+
+    return-void
+
+    :cond_3
+    const-wide/16 v2, 0x0
+
+    iput-wide v2, p0, Ll10;->c:J
+
+    const-wide/16 v2, -0x1
+
+    iput-wide v2, p0, Ll10;->d:J
+
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v2
+
+    const-wide/16 v4, 0x3e8
+
+    div-long/2addr v2, v4
+
+    iput-wide v2, p0, Ll10;->a:J
+
+    iput-wide v0, p0, Ll10;->b:J
 
     return-void
 .end method

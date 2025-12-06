@@ -2,137 +2,42 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lem;
-
 
 # static fields
-.field public static final b:Landroid/net/Uri;
+.field public static final b:Lyid;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Landroid/content/Context;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    const-string v0, "auth.anonymLogin"
+    new-instance v0, Lyid;
 
-    invoke-static {v0}, Lcn;->a(Ljava/lang/String;)Landroid/net/Uri;
+    const-string v1, "main-([0-9]+)\\.txt"
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Lyid;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lzk;->b:Landroid/net/Uri;
+    sput-object v0, Lzk;->b:Lyid;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;I)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lzk;->a:Ljava/lang/String;
+    iput-object p1, p0, Lzk;->a:Landroid/content/Context;
 
-    return-void
-.end method
+    const/4 p1, 0x1
 
+    const/16 v0, 0x64
 
-# virtual methods
-.method public final getConfigExtractor()Lam;
-    .locals 1
-
-    sget-object v0, La50;->a:La50;
-
-    return-object v0
-.end method
-
-.method public final getOkParser()Lpq7;
-    .locals 1
-
-    sget-object v0, Lk82;->b:Lk82;
-
-    return-object v0
-.end method
-
-.method public final getScope()Ltm;
-    .locals 1
-
-    sget-object v0, Ltm;->b:Ltm;
-
-    return-object v0
-.end method
-
-.method public final getScopeAfter()Lum;
-    .locals 1
-
-    sget-object v0, Lum;->b:Lum;
-
-    return-object v0
-.end method
-
-.method public final getUri()Landroid/net/Uri;
-    .locals 1
-
-    sget-object v0, Lzk;->b:Landroid/net/Uri;
-
-    return-object v0
-.end method
-
-.method public final writeParams(Lcr7;)V
-    .locals 2
-
-    const-string v0, "session_data"
-
-    invoke-interface {p1, v0}, Lcr7;->b0(Ljava/lang/String;)Lcr7;
-
-    invoke-interface {p1}, Lcr7;->s()V
-
-    const-string v0, "device_id"
-
-    invoke-interface {p1, v0}, Lcr7;->b0(Ljava/lang/String;)Lcr7;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lzk;->a:Ljava/lang/String;
-
-    invoke-interface {v0, v1}, Lcr7;->h(Ljava/lang/String;)V
-
-    const-string v0, "version"
-
-    invoke-interface {p1, v0}, Lcr7;->b0(Ljava/lang/String;)Lcr7;
-
-    move-result-object v0
-
-    const/4 v1, 0x2
-
-    check-cast v0, Le2;
-
-    invoke-virtual {v0, v1}, Le2;->m(I)V
-
-    const-string v0, "client_version"
-
-    invoke-interface {p1, v0}, Lcr7;->b0(Ljava/lang/String;)Lcr7;
-
-    move-result-object v0
-
-    const-string v1, "android_8"
-
-    invoke-interface {v0, v1}, Lcr7;->h(Ljava/lang/String;)V
-
-    const-string v0, "client_type"
-
-    invoke-interface {p1, v0}, Lcr7;->b0(Ljava/lang/String;)Lcr7;
-
-    move-result-object v0
-
-    const-string v1, "SDK_ANDROID"
-
-    invoke-interface {v0, v1}, Lcr7;->h(Ljava/lang/String;)V
-
-    invoke-interface {p1}, Lcr7;->q()V
+    invoke-static {p2, p1, v0}, Ln7j;->c(III)I
 
     return-void
 .end method

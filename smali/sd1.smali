@@ -1,114 +1,82 @@
-.class public final synthetic Lsd1;
-.super Ljava/lang/Object;
+.class public final Lsd1;
+.super Lud1;
 .source "SourceFile"
-
-# interfaces
-.implements Lyhd;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
+.field public final a:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;I)V
+.method public constructor <init>(Z)V
     .locals 0
 
-    iput p2, p0, Lsd1;->a:I
-
-    iput-object p1, p0, Lsd1;->b:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p1, p0, Lsd1;->a:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget v0, p0, Lsd1;->a:I
+    const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    if-ne p0, p1, :cond_0
 
-    sget-object v2, Lzk8;->b:Lzk8;
-
-    const/4 v3, 0x1
-
-    iget-object v4, p0, Lsd1;->b:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
-
-    packed-switch v0, :pswitch_data_0
-
-    sget-object v0, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->z0:[Ltr7;
-
-    invoke-virtual {v4}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->G0()Lqd1;
-
-    move-result-object v0
-
-    invoke-virtual {v4}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->G0()Lqd1;
-
-    move-result-object v4
-
-    iget-object v4, v4, Lqd1;->v0:Lx0f;
-
-    invoke-virtual {v4}, Lx0f;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljd1;
-
-    iget-object v4, v4, Ljd1;->c:Lzk8;
-
-    if-ne v4, v2, :cond_0
-
-    move v1, v3
+    return v0
 
     :cond_0
-    xor-int/2addr v1, v3
+    instance-of v1, p1, Lsd1;
 
-    invoke-virtual {v0, v1}, Lqd1;->t(Z)V
+    const/4 v2, 0x0
 
-    return-void
+    if-nez v1, :cond_1
 
-    :pswitch_0
-    sget-object v0, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->z0:[Ltr7;
+    return v2
 
-    invoke-virtual {v4}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->G0()Lqd1;
+    :cond_1
+    check-cast p1, Lsd1;
+
+    iget-boolean v1, p0, Lsd1;->a:Z
+
+    iget-boolean p1, p1, Lsd1;->a:Z
+
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-boolean v0, p0, Lsd1;->a:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "TalkingState(isEnabled="
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Lsd1;->a:Z
+
+    invoke-static {v0, v1, v2}, Lxrf;->p(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v4}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->G0()Lqd1;
-
-    move-result-object v4
-
-    iget-object v4, v4, Lqd1;->v0:Lx0f;
-
-    invoke-virtual {v4}, Lx0f;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljd1;
-
-    iget-object v4, v4, Ljd1;->b:Lzk8;
-
-    if-ne v4, v2, :cond_1
-
-    move v1, v3
-
-    :cond_1
-    xor-int/2addr v1, v3
-
-    invoke-virtual {v0, v1}, Lqd1;->s(Z)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

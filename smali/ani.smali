@@ -2,69 +2,177 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ltha;
 
+# instance fields
+.field public final a:Lu6j;
 
-# static fields
-.field public static final a:Lani;
+.field public final b:Ljava/lang/Boolean;
+
+.field public final c:Lsbj;
+
+.field public final d:Lcji;
+
+.field public final e:Lcji;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lv6d;)V
+    .locals 1
 
-    new-instance v0, Lani;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p1, Lv6d;->b:Ljava/lang/Object;
 
-    sput-object v0, Lani;->a:Lani;
+    check-cast v0, Lu6j;
 
-    new-instance v0, Lr8i;
+    iput-object v0, p0, Lani;->a:Lu6j;
 
-    const/4 v1, 0x1
+    iget-object v0, p1, Lv6d;->c:Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Lr8i;-><init>(I)V
+    check-cast v0, Ljava/lang/Boolean;
 
-    const-class v1, Lm9i;
+    iput-object v0, p0, Lani;->b:Ljava/lang/Boolean;
 
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+    iget-object v0, p1, Lv6d;->d:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast v0, Lsbj;
 
-    const/4 v2, 0x2
+    iput-object v0, p0, Lani;->c:Lsbj;
 
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
+    iget-object v0, p1, Lv6d;->o:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast v0, Lcji;
 
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+    iput-object v0, p0, Lani;->d:Lcji;
 
-    move-result-object v0
+    iget-object p1, p1, Lv6d;->X:Ljava/lang/Object;
 
-    const/4 v2, 0x3
+    check-cast p1, Lcji;
 
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
+    iput-object p1, p0, Lani;->e:Lcji;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    if-ne p1, p0, :cond_0
 
-    move-result-object p1
+    goto :goto_0
 
-    throw p1
+    :cond_0
+    instance-of v0, p1, Lani;
+
+    if-nez v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    check-cast p1, Lani;
+
+    iget-object v0, p0, Lani;->a:Lu6j;
+
+    iget-object v1, p1, Lani;->a:Lu6j;
+
+    invoke-static {v0, v1}, Lsyi;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    const/4 v0, 0x0
+
+    invoke-static {v0, v0}, Lsyi;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lani;->b:Ljava/lang/Boolean;
+
+    iget-object v2, p1, Lani;->b:Ljava/lang/Boolean;
+
+    invoke-static {v1, v2}, Lsyi;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-static {v0, v0}, Lsyi;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lani;->c:Lsbj;
+
+    iget-object v1, p1, Lani;->c:Lsbj;
+
+    invoke-static {v0, v1}, Lsyi;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lani;->d:Lcji;
+
+    iget-object v1, p1, Lani;->d:Lcji;
+
+    invoke-static {v0, v1}, Lsyi;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lani;->e:Lcji;
+
+    iget-object p1, p1, Lani;->e:Lcji;
+
+    invoke-static {v0, p1}, Lsyi;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 7
+
+    iget-object v5, p0, Lani;->d:Lcji;
+
+    iget-object v6, p0, Lani;->e:Lcji;
+
+    iget-object v0, p0, Lani;->a:Lu6j;
+
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Lani;->b:Ljava/lang/Boolean;
+
+    const/4 v3, 0x0
+
+    iget-object v4, p0, Lani;->c:Lsbj;
+
+    filled-new-array/range {v0 .. v6}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
 .end method

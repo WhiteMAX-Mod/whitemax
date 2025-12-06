@@ -3,20 +3,18 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ltha;
+.implements Lpqa;
 
 
 # static fields
 .field public static final a:Lq80;
 
-.field public static final b:Lbr5;
-
-.field public static final c:Lbr5;
+.field public static final b:Lwu5;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 3
 
     new-instance v0, Lq80;
 
@@ -24,21 +22,29 @@
 
     sput-object v0, Lq80;->a:Lq80;
 
-    const-string v0, "clientType"
+    new-instance v0, Lly;
 
-    invoke-static {v0}, Lbr5;->c(Ljava/lang/String;)Lbr5;
+    const/4 v1, 0x1
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Lly;-><init>(I)V
 
-    sput-object v0, Lq80;->b:Lbr5;
+    const-class v1, Lbpc;
 
-    const-string v0, "androidClientInfo"
-
-    invoke-static {v0}, Lbr5;->c(Ljava/lang/String;)Lbr5;
+    invoke-static {v1, v0}, Laz1;->o(Ljava/lang/Class;Lly;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    sput-object v0, Lq80;->c:Lbr5;
+    new-instance v1, Lwu5;
+
+    invoke-static {v0}, Laz1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v2, "storageMetrics"
+
+    invoke-direct {v1, v2, v0}, Lwu5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v1, Lq80;->b:Lwu5;
 
     return-void
 .end method
@@ -46,27 +52,17 @@
 
 # virtual methods
 .method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 2
+    .locals 1
 
-    check-cast p1, Lv83;
+    check-cast p1, Ljv6;
 
-    check-cast p2, Luha;
+    check-cast p2, Lqqa;
 
-    check-cast p1, Ly90;
+    sget-object v0, Lq80;->b:Lwu5;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object p1, p1, Ljv6;->a:Lxkf;
 
-    sget-object v0, Lu83;->a:Lu83;
-
-    sget-object v1, Lq80;->b:Lbr5;
-
-    invoke-interface {p2, v1, v0}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
-
-    sget-object v0, Lq80;->c:Lbr5;
-
-    iget-object p1, p1, Ly90;->a:Lj90;
-
-    invoke-interface {p2, v0, p1}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
+    invoke-interface {p2, v0, p1}, Lqqa;->a(Lwu5;Ljava/lang/Object;)Lqqa;
 
     return-void
 .end method

@@ -1,147 +1,175 @@
 .class public final Laq7;
-.super Ljava/lang/Object;
+.super Ldtf;
 .source "SourceFile"
+
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public final a:Z
+.field public final synthetic X:Lcm6;
 
-.field public final b:Z
-
-.field public final c:Z
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:Ljava/lang/String;
-
-.field public final f:Z
-
-.field public final g:I
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/String;Ljava/lang/String;ZZZZ)V
+.method public constructor <init>(Lcm6;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Laq7;->X:Lcm6;
 
-    iput-boolean p4, p0, Laq7;->a:Z
+    const/4 p1, 0x2
 
-    iput-boolean p5, p0, Laq7;->b:Z
-
-    iput-boolean p6, p0, Laq7;->c:Z
-
-    iput-object p2, p0, Laq7;->d:Ljava/lang/String;
-
-    iput-object p3, p0, Laq7;->e:Ljava/lang/String;
-
-    iput-boolean p7, p0, Laq7;->f:Z
-
-    iput p1, p0, Laq7;->g:I
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast p1, Lf84;
 
-    const-string v1, "JsonConfiguration(encodeDefaults=false, ignoreUnknownKeys="
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p0, p1, p2}, Laq7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-boolean v1, p0, Laq7;->a:Z
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    check-cast p1, Laq7;
 
-    const-string v1, ", isLenient="
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p2}, Laq7;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-boolean v1, p0, Laq7;->b:Z
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    return-object p1
+.end method
 
-    const-string v1, ", allowStructuredMapKeys=false, prettyPrint=false, explicitNulls="
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v0, Laq7;
 
-    iget-boolean v1, p0, Laq7;->c:Z
+    iget-object v1, p0, Laq7;->X:Lcm6;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1, p2}, Laq7;-><init>(Lcm6;Lkotlin/coroutines/Continuation;)V
 
-    const-string v1, ", prettyPrintIndent=\'"
+    iput-object p1, v0, Laq7;->o:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-object v0
+.end method
 
-    iget-object v1, p0, Laq7;->d:Ljava/lang/String;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    const-string v1, "\', coerceInputValues=false, useArrayPolymorphism=false, classDiscriminator=\'"
+    iget-object p1, p0, Laq7;->o:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast p1, Lf84;
 
-    iget-object v1, p0, Laq7;->e:Ljava/lang/String;
+    invoke-interface {p1}, Lf84;->getCoroutineContext()Lx74;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    const-string v1, "\', allowSpecialFloatingPointValues=false, useAlternativeNames="
+    iget-object v0, p0, Laq7;->X:Lcm6;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :try_start_0
+    new-instance v1, Lt7g;
 
-    iget-boolean v1, p0, Laq7;->f:Z
+    invoke-direct {v1}, Lt7g;-><init>()V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Leoi;->e(Lx74;)Lqt7;
 
-    const-string v1, ", namingStrategy=null, decodeEnumsCaseInsensitive=false, allowTrailingComma=false, allowComments=false, classDiscriminatorMode="
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v2, 0x1
 
-    const/4 v1, 0x1
+    invoke-static {p1, v2, v1}, Leoi;->i(Lqt7;ZLdu7;)Lsy4;
 
-    iget v2, p0, Laq7;->g:I
+    move-result-object p1
 
-    if-eq v2, v1, :cond_2
+    iput-object p1, v1, Lt7g;->c:Lsy4;
 
-    const/4 v1, 0x2
-
-    if-eq v2, v1, :cond_1
-
-    const/4 v1, 0x3
-
-    if-eq v2, v1, :cond_0
-
-    const-string v1, "null"
-
-    goto :goto_0
+    sget-object p1, Lt7g;->d:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
     :cond_0
-    const-string v1, "POLYMORPHIC"
+    invoke-virtual {p1, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->get(Ljava/lang/Object;)I
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    const/4 p1, 0x2
+
+    if-eq v2, p1, :cond_3
+
+    const/4 p1, 0x3
+
+    if-ne v2, p1, :cond_1
 
     goto :goto_0
 
     :cond_1
-    const-string v1, "ALL_JSON_OBJECTS"
+    invoke-static {v2}, Lt7g;->f(I)V
 
-    goto :goto_0
+    const/4 p1, 0x0
+
+    throw p1
 
     :cond_2
-    const-string v1, "NONE"
+    const/4 v3, 0x0
 
+    invoke-virtual {p1, v1, v2, v3}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->compareAndSet(Ljava/lang/Object;II)Z
+
+    move-result v2
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+
+    if-eqz v2, :cond_0
+
+    :cond_3
     :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :try_start_1
+    invoke-interface {v0}, Lcm6;->invoke()Ljava/lang/Object;
 
-    const/16 v1, 0x29
+    move-result-object p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    :try_start_2
+    invoke-virtual {v1}, Lt7g;->e()V
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    return-object p1
 
-    move-result-object v0
+    :catch_0
+    move-exception p1
 
-    return-object v0
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v1}, Lt7g;->e()V
+
+    throw p1
+    :try_end_2
+    .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
+
+    :goto_1
+    new-instance v0, Ljava/util/concurrent/CancellationException;
+
+    const-string v1, "Blocking call was interrupted due to parent cancellation"
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+
+    move-result-object p1
+
+    throw p1
 .end method

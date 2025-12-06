@@ -1,82 +1,87 @@
-.class public final Lt35;
+.class public abstract Lt35;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lqp0;
-
-
-# instance fields
-.field public final a:Ljava/util/Set;
-
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/IdentityHashMap;
-
-    invoke-direct {v0}, Ljava/util/IdentityHashMap;-><init>()V
-
-    invoke-static {v0}, Ljava/util/Collections;->newSetFromMap(Ljava/util/Map;)Ljava/util/Set;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lt35;->a:Ljava/util/Set;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Ln89;)V
+.method public static a(Landroid/graphics/drawable/Drawable;Landroid/content/res/Resources$Theme;)V
     .locals 0
 
-    return-void
-.end method
-
-.method public final c(Ljava/lang/Object;)V
-    .locals 1
-
-    check-cast p1, Landroid/graphics/Bitmap;
-
-    iget-object v0, p0, Lt35;->a:Ljava/util/Set;
-
-    invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
-
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
+    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->applyTheme(Landroid/content/res/Resources$Theme;)V
 
     return-void
 .end method
 
-.method public final get(I)Ljava/lang/Object;
-    .locals 4
+.method public static b(Landroid/graphics/drawable/Drawable;)Z
+    .locals 0
 
-    int-to-double v0, p1
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->canApplyTheme()Z
 
-    const-wide/high16 v2, 0x4000000000000000L    # 2.0
+    move-result p0
 
-    div-double/2addr v0, v2
+    return p0
+.end method
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->ceil(D)D
+.method public static c(Landroid/graphics/drawable/Drawable;)Landroid/graphics/ColorFilter;
+    .locals 0
 
-    move-result-wide v0
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getColorFilter()Landroid/graphics/ColorFilter;
 
-    double-to-int p1, v0
+    move-result-object p0
 
-    sget-object v0, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
+    return-object p0
+.end method
 
-    const/4 v1, 0x1
+.method public static d(Landroid/graphics/drawable/Drawable;Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lorg/xmlpull/v1/XmlPullParserException;,
+            Ljava/io/IOException;
+        }
+    .end annotation
 
-    invoke-static {v1, p1, v0}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->inflate(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)V
 
-    move-result-object p1
+    return-void
+.end method
 
-    iget-object v0, p0, Lt35;->a:Ljava/util/Set;
+.method public static e(Landroid/graphics/drawable/Drawable;FF)V
+    .locals 0
 
-    invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1, p2}, Landroid/graphics/drawable/Drawable;->setHotspot(FF)V
 
-    return-object p1
+    return-void
+.end method
+
+.method public static f(Landroid/graphics/drawable/Drawable;IIII)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->setHotspotBounds(IIII)V
+
+    return-void
+.end method
+
+.method public static g(Landroid/graphics/drawable/Drawable;I)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setTint(I)V
+
+    return-void
+.end method
+
+.method public static h(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setTintList(Landroid/content/res/ColorStateList;)V
+
+    return-void
+.end method
+
+.method public static i(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setTintMode(Landroid/graphics/PorterDuff$Mode;)V
+
+    return-void
 .end method

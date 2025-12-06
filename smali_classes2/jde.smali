@@ -1,101 +1,75 @@
 .class public final Ljde;
-.super Lkde;
+.super Lq44;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/net/Uri;
+.field public X:Lvl9;
+
+.field public Y:J
+
+.field public Z:J
+
+.field public d:Lkde;
+
+.field public o:Lx8d;
+
+.field public s0:J
+
+.field public t0:J
+
+.field public synthetic u0:Ljava/lang/Object;
+
+.field public final synthetic v0:Lkde;
+
+.field public w0:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/net/Uri;)V
+.method public constructor <init>(Lkde;Lq44;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ljde;->v0:Lkde;
 
-    iput-object p1, p0, Ljde;->a:Landroid/net/Uri;
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 12
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Ljde;->u0:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Ljde;->w0:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of v1, p1, Ljde;
+    or-int/2addr p1, v0
 
-    const/4 v2, 0x0
+    iput p1, p0, Ljde;->w0:I
 
-    if-nez v1, :cond_1
+    const/4 v9, 0x0
 
-    return v2
+    const/4 v10, 0x0
 
-    :cond_1
-    check-cast p1, Ljde;
+    iget-object v0, p0, Ljde;->v0:Lkde;
 
-    iget-object v1, p0, Ljde;->a:Landroid/net/Uri;
+    const-wide/16 v1, 0x0
 
-    iget-object p1, p1, Ljde;->a:Landroid/net/Uri;
+    const-wide/16 v3, 0x0
 
-    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const-wide/16 v5, 0x0
 
-    move-result p1
+    const-wide/16 v7, 0x0
 
-    if-nez p1, :cond_2
+    move-object v11, p0
 
-    return v2
+    invoke-virtual/range {v0 .. v11}, Lkde;->a(JJJJLx8d;Lvl9;Lq44;)Ljava/lang/Object;
 
-    :cond_2
-    return v0
-.end method
+    move-result-object p1
 
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Ljde;->a:Landroid/net/Uri;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_0
-    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShowInviteDialog(qrCodeUri="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ljde;->a:Landroid/net/Uri;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

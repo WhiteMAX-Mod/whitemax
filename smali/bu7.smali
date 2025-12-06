@@ -1,856 +1,479 @@
-.class public final Lbu7;
-.super Ljava/lang/Object;
+.class public abstract Lbu7;
+.super Landroid/app/Service;
 .source "SourceFile"
 
-# interfaces
-.implements Ld75;
+
+# static fields
+.field static final DEBUG:Z = false
+
+.field static final TAG:Ljava/lang/String; = "JobIntentService"
+
+.field static final sClassWorkEnqueuer:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap<",
+            "Landroid/content/ComponentName;",
+            "Lau7;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field static final sLock:Ljava/lang/Object;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field final mCompatQueue:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList<",
+            "Lvt7;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public final b:I
+.field mCompatWorkEnqueuer:Lau7;
 
-.field public final c:Ledb;
+.field mCurProcessor:Ltt7;
 
-.field public final d:Lu52;
+.field mDestroyed:Z
 
-.field public e:Lw1g;
+.field mInterruptIfStopped:Z
 
-.field public f:Ljava/lang/String;
+.field mJobImpl:Lut7;
 
-.field public g:Lmb6;
-
-.field public h:I
-
-.field public i:I
-
-.field public j:I
-
-.field public k:I
-
-.field public l:J
-
-.field public m:Z
-
-.field public n:I
-
-.field public o:I
-
-.field public p:I
-
-.field public q:Z
-
-.field public r:J
-
-.field public s:I
-
-.field public t:J
-
-.field public u:I
-
-.field public v:Ljava/lang/String;
+.field mStopped:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/lang/Object;
 
-    iput-object p1, p0, Lbu7;->a:Ljava/lang/String;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput p2, p0, Lbu7;->b:I
+    sput-object v0, Lbu7;->sLock:Ljava/lang/Object;
 
-    new-instance p1, Ledb;
+    new-instance v0, Ljava/util/HashMap;
 
-    const/16 p2, 0x400
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    invoke-direct {p1, p2}, Ledb;-><init>(I)V
-
-    iput-object p1, p0, Lbu7;->c:Ledb;
-
-    new-instance p2, Lu52;
-
-    iget-object p1, p1, Ledb;->a:[B
-
-    array-length v0, p1
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x0
-
-    invoke-direct {p2, p1, v0, v1, v2}, Lu52;-><init>([BIIB)V
-
-    iput-object p2, p0, Lbu7;->d:Lu52;
-
-    const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
-
-    iput-wide p1, p0, Lbu7;->l:J
+    sput-object v0, Lbu7;->sClassWorkEnqueuer:Ljava/util/HashMap;
 
     return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Landroid/app/Service;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lbu7;->mInterruptIfStopped:Z
+
+    iput-boolean v0, p0, Lbu7;->mStopped:Z
+
+    iput-boolean v0, p0, Lbu7;->mDestroyed:Z
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lbu7;->mCompatQueue:Ljava/util/ArrayList;
+
+    return-void
+.end method
+
+.method public static enqueueWork(Landroid/content/Context;Landroid/content/ComponentName;ILandroid/content/Intent;)V
+    .locals 2
+
+    if-eqz p3, :cond_0
+
+    .line 2
+    sget-object v0, Lbu7;->sLock:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    const/4 v1, 0x1
+
+    .line 3
+    :try_start_0
+    invoke-static {p0, p1, v1, p2}, Lbu7;->getWorkEnqueuer(Landroid/content/Context;Landroid/content/ComponentName;ZI)Lau7;
+
+    move-result-object p0
+
+    .line 4
+    invoke-virtual {p0, p2}, Lau7;->a(I)V
+
+    .line 5
+    check-cast p0, Lzt7;
+
+    .line 6
+    iget-object p1, p0, Lzt7;->d:Landroid/app/job/JobScheduler;
+
+    iget-object p0, p0, Lzt7;->c:Landroid/app/job/JobInfo;
+
+    new-instance p2, Landroid/app/job/JobWorkItem;
+
+    invoke-direct {p2, p3}, Landroid/app/job/JobWorkItem;-><init>(Landroid/content/Intent;)V
+
+    invoke-virtual {p1, p0, p2}, Landroid/app/job/JobScheduler;->enqueue(Landroid/app/job/JobInfo;Landroid/app/job/JobWorkItem;)I
+
+    .line 7
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+
+    .line 8
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string p1, "work must not be null"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static enqueueWork(Landroid/content/Context;Ljava/lang/Class;ILandroid/content/Intent;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Ljava/lang/Class<",
+            "*>;I",
+            "Landroid/content/Intent;",
+            ")V"
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Landroid/content/ComponentName;
+
+    invoke-direct {v0, p0, p1}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-static {p0, v0, p2, p3}, Lbu7;->enqueueWork(Landroid/content/Context;Landroid/content/ComponentName;ILandroid/content/Intent;)V
+
+    return-void
+.end method
+
+.method public static getWorkEnqueuer(Landroid/content/Context;Landroid/content/ComponentName;ZI)Lau7;
+    .locals 2
+
+    sget-object v0, Lbu7;->sClassWorkEnqueuer:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lau7;
+
+    if-nez v1, :cond_1
+
+    if-eqz p2, :cond_0
+
+    new-instance p2, Lzt7;
+
+    invoke-direct {p2, p0, p1, p3}, Lzt7;-><init>(Landroid/content/Context;Landroid/content/ComponentName;I)V
+
+    invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string p1, "Can\'t be here without a job id"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    return-object v1
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 3
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lbu7;->h:I
-
-    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
-
-    iput-wide v1, p0, Lbu7;->l:J
-
-    iput-boolean v0, p0, Lbu7;->m:Z
-
-    return-void
+.method public abstract dequeueWork()Lwt7;
 .end method
 
-.method public final d(Ledb;)V
-    .locals 23
+.method public doStopCurrentWork()Z
+    .locals 2
 
-    move-object/from16 v0, p0
+    iget-object v0, p0, Lbu7;->mCurProcessor:Ltt7;
 
-    iget-object v1, v0, Lbu7;->e:Lw1g;
+    if-eqz v0, :cond_0
 
-    invoke-static {v1}, Lsgi;->j(Ljava/lang/Object;)V
+    iget-boolean v1, p0, Lbu7;->mInterruptIfStopped:Z
+
+    invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->cancel(Z)Z
 
     :cond_0
-    :goto_0
-    invoke-virtual/range {p1 .. p1}, Ledb;->a()I
+    const/4 v0, 0x1
 
-    move-result v1
+    iput-boolean v0, p0, Lbu7;->mStopped:Z
 
-    if-lez v1, :cond_1e
+    invoke-virtual {p0}, Lbu7;->onStopCurrentWork()Z
 
-    iget v1, v0, Lbu7;->h:I
+    move-result v0
 
-    const/16 v2, 0x56
+    return v0
+.end method
 
-    const/4 v3, 0x1
+.method public ensureProcessorRunningLocked(Z)V
+    .locals 2
 
-    if-eqz v1, :cond_1d
+    iget-object p1, p0, Lbu7;->mCurProcessor:Ltt7;
 
-    const/4 v4, 0x2
+    if-nez p1, :cond_0
 
-    const/4 v5, 0x0
+    new-instance p1, Ltt7;
 
-    if-eq v1, v3, :cond_1b
+    invoke-direct {p1, p0}, Ltt7;-><init>(Lbu7;)V
 
-    iget-object v2, v0, Lbu7;->c:Ledb;
+    iput-object p1, p0, Lbu7;->mCurProcessor:Ltt7;
 
-    const/16 v6, 0x8
-
-    const/4 v7, 0x3
-
-    iget-object v8, v0, Lbu7;->d:Lu52;
-
-    if-eq v1, v4, :cond_19
-
-    if-ne v1, v7, :cond_18
-
-    invoke-virtual/range {p1 .. p1}, Ledb;->a()I
-
-    move-result v1
-
-    iget v9, v0, Lbu7;->j:I
-
-    iget v10, v0, Lbu7;->i:I
-
-    sub-int/2addr v9, v10
-
-    invoke-static {v1, v9}, Ljava/lang/Math;->min(II)I
-
-    move-result v1
-
-    iget-object v9, v8, Lu52;->d:[B
-
-    iget v10, v0, Lbu7;->i:I
-
-    move-object/from16 v11, p1
-
-    invoke-virtual {v11, v10, v9, v1}, Ledb;->h(I[BI)V
-
-    iget v9, v0, Lbu7;->i:I
-
-    add-int/2addr v9, v1
-
-    iput v9, v0, Lbu7;->i:I
-
-    iget v1, v0, Lbu7;->j:I
-
-    if-ne v9, v1, :cond_0
-
-    invoke-virtual {v8, v5}, Lu52;->q(I)V
-
-    invoke-virtual {v8}, Lu52;->h()Z
-
-    move-result v1
-
-    const/4 v9, 0x0
-
-    if-nez v1, :cond_f
-
-    iput-boolean v3, v0, Lbu7;->m:Z
-
-    invoke-virtual {v8, v3}, Lu52;->i(I)I
-
-    move-result v1
-
-    if-ne v1, v3, :cond_1
-
-    invoke-virtual {v8, v3}, Lu52;->i(I)I
-
-    move-result v10
-
-    goto :goto_1
-
-    :cond_1
-    move v10, v5
-
-    :goto_1
-    iput v10, v0, Lbu7;->n:I
-
-    if-nez v10, :cond_e
-
-    if-ne v1, v3, :cond_2
-
-    invoke-virtual {v8, v4}, Lu52;->i(I)I
-
-    move-result v10
-
-    add-int/2addr v10, v3
-
-    mul-int/2addr v10, v6
-
-    invoke-virtual {v8, v10}, Lu52;->i(I)I
-
-    :cond_2
-    invoke-virtual {v8}, Lu52;->h()Z
-
-    move-result v10
-
-    if-eqz v10, :cond_d
-
-    const/4 v10, 0x6
-
-    invoke-virtual {v8, v10}, Lu52;->i(I)I
-
-    move-result v12
-
-    iput v12, v0, Lbu7;->o:I
-
-    const/4 v12, 0x4
-
-    invoke-virtual {v8, v12}, Lu52;->i(I)I
-
-    move-result v13
-
-    invoke-virtual {v8, v7}, Lu52;->i(I)I
-
-    move-result v14
-
-    if-nez v13, :cond_c
-
-    if-nez v14, :cond_c
-
-    if-nez v1, :cond_3
-
-    invoke-virtual {v8}, Lu52;->g()I
-
-    move-result v13
-
-    invoke-virtual {v8}, Lu52;->b()I
-
-    move-result v14
-
-    invoke-static {v8, v3}, Ltq;->y(Lu52;Z)Le;
-
-    move-result-object v15
-
-    iget-object v5, v15, Le;->c:Ljava/lang/String;
-
-    iput-object v5, v0, Lbu7;->v:Ljava/lang/String;
-
-    iget v5, v15, Le;->a:I
-
-    iput v5, v0, Lbu7;->s:I
-
-    iget v5, v15, Le;->b:I
-
-    iput v5, v0, Lbu7;->u:I
-
-    invoke-virtual {v8}, Lu52;->b()I
-
-    move-result v5
-
-    sub-int/2addr v14, v5
-
-    invoke-virtual {v8, v13}, Lu52;->q(I)V
-
-    add-int/lit8 v5, v14, 0x7
-
-    div-int/2addr v5, v6
-
-    new-array v5, v5, [B
-
-    invoke-virtual {v8, v14, v5}, Lu52;->j(I[B)V
-
-    new-instance v13, Ljb6;
-
-    invoke-direct {v13}, Ljb6;-><init>()V
-
-    iget-object v14, v0, Lbu7;->f:Ljava/lang/String;
-
-    iput-object v14, v13, Ljb6;->a:Ljava/lang/String;
-
-    const-string v14, "video/mp2t"
-
-    invoke-static {v14}, Lfs9;->n(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v14
-
-    iput-object v14, v13, Ljb6;->l:Ljava/lang/String;
-
-    const-string v14, "audio/mp4a-latm"
-
-    invoke-static {v14}, Lfs9;->n(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v14
-
-    iput-object v14, v13, Ljb6;->m:Ljava/lang/String;
-
-    iget-object v14, v0, Lbu7;->v:Ljava/lang/String;
-
-    iput-object v14, v13, Ljb6;->j:Ljava/lang/String;
-
-    iget v14, v0, Lbu7;->u:I
-
-    iput v14, v13, Ljb6;->E:I
-
-    iget v14, v0, Lbu7;->s:I
-
-    iput v14, v13, Ljb6;->F:I
-
-    invoke-static {v5}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v5
-
-    iput-object v5, v13, Ljb6;->p:Ljava/util/List;
-
-    iget-object v5, v0, Lbu7;->a:Ljava/lang/String;
-
-    iput-object v5, v13, Ljb6;->d:Ljava/lang/String;
-
-    iget v5, v0, Lbu7;->b:I
-
-    iput v5, v13, Ljb6;->f:I
-
-    new-instance v5, Lmb6;
-
-    invoke-direct {v5, v13}, Lmb6;-><init>(Ljb6;)V
-
-    iget-object v13, v0, Lbu7;->g:Lmb6;
-
-    invoke-virtual {v5, v13}, Lmb6;->equals(Ljava/lang/Object;)Z
-
-    move-result v13
-
-    if-nez v13, :cond_4
-
-    iput-object v5, v0, Lbu7;->g:Lmb6;
-
-    iget v13, v5, Lmb6;->G:I
-
-    int-to-long v13, v13
-
-    const-wide/32 v16, 0x3d090000
-
-    div-long v13, v16, v13
-
-    iput-wide v13, v0, Lbu7;->t:J
-
-    iget-object v13, v0, Lbu7;->e:Lw1g;
-
-    invoke-interface {v13, v5}, Lw1g;->d(Lmb6;)V
-
-    goto :goto_2
-
-    :cond_3
-    invoke-virtual {v8, v4}, Lu52;->i(I)I
-
-    move-result v5
-
-    add-int/2addr v5, v3
-
-    mul-int/2addr v5, v6
-
-    invoke-virtual {v8, v5}, Lu52;->i(I)I
-
-    move-result v5
-
-    int-to-long v13, v5
-
-    long-to-int v5, v13
-
-    invoke-virtual {v8}, Lu52;->b()I
-
-    move-result v13
-
-    invoke-static {v8, v3}, Ltq;->y(Lu52;Z)Le;
-
-    move-result-object v14
-
-    iget-object v15, v14, Le;->c:Ljava/lang/String;
-
-    iput-object v15, v0, Lbu7;->v:Ljava/lang/String;
-
-    iget v15, v14, Le;->a:I
-
-    iput v15, v0, Lbu7;->s:I
-
-    iget v14, v14, Le;->b:I
-
-    iput v14, v0, Lbu7;->u:I
-
-    invoke-virtual {v8}, Lu52;->b()I
-
-    move-result v14
-
-    sub-int/2addr v13, v14
-
-    sub-int/2addr v5, v13
-
-    invoke-virtual {v8, v5}, Lu52;->t(I)V
-
-    :cond_4
-    :goto_2
-    invoke-virtual {v8, v7}, Lu52;->i(I)I
-
-    move-result v5
-
-    iput v5, v0, Lbu7;->p:I
-
-    if-eqz v5, :cond_9
-
-    if-eq v5, v3, :cond_8
-
-    if-eq v5, v7, :cond_7
-
-    if-eq v5, v12, :cond_7
-
-    const/4 v7, 0x5
-
-    if-eq v5, v7, :cond_7
-
-    if-eq v5, v10, :cond_6
-
-    const/4 v7, 0x7
-
-    if-ne v5, v7, :cond_5
-
-    goto :goto_3
-
-    :cond_5
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v1}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw v1
-
-    :cond_6
-    :goto_3
-    invoke-virtual {v8, v3}, Lu52;->t(I)V
-
-    goto :goto_4
-
-    :cond_7
-    invoke-virtual {v8, v10}, Lu52;->t(I)V
-
-    goto :goto_4
-
-    :cond_8
-    const/16 v5, 0x9
-
-    invoke-virtual {v8, v5}, Lu52;->t(I)V
-
-    goto :goto_4
-
-    :cond_9
-    invoke-virtual {v8, v6}, Lu52;->t(I)V
-
-    :goto_4
-    invoke-virtual {v8}, Lu52;->h()Z
-
-    move-result v5
-
-    iput-boolean v5, v0, Lbu7;->q:Z
-
-    const-wide/16 v12, 0x0
-
-    iput-wide v12, v0, Lbu7;->r:J
-
-    if-eqz v5, :cond_b
-
-    if-ne v1, v3, :cond_a
-
-    invoke-virtual {v8, v4}, Lu52;->i(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v3
-
-    mul-int/2addr v1, v6
-
-    invoke-virtual {v8, v1}, Lu52;->i(I)I
-
-    move-result v1
-
-    int-to-long v4, v1
-
-    iput-wide v4, v0, Lbu7;->r:J
-
-    goto :goto_5
-
-    :cond_a
-    invoke-virtual {v8}, Lu52;->h()Z
-
-    move-result v1
-
-    iget-wide v4, v0, Lbu7;->r:J
-
-    shl-long/2addr v4, v6
-
-    invoke-virtual {v8, v6}, Lu52;->i(I)I
-
-    move-result v7
-
-    int-to-long v12, v7
-
-    add-long/2addr v4, v12
-
-    iput-wide v4, v0, Lbu7;->r:J
-
-    if-nez v1, :cond_a
-
-    :cond_b
-    :goto_5
-    invoke-virtual {v8}, Lu52;->h()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_10
-
-    invoke-virtual {v8, v6}, Lu52;->t(I)V
-
-    goto :goto_6
-
-    :cond_c
-    invoke-static {v9, v9}, Landroidx/media3/common/ParserException;->a(Ljava/lang/RuntimeException;Ljava/lang/String;)Landroidx/media3/common/ParserException;
-
-    move-result-object v1
-
-    throw v1
-
-    :cond_d
-    invoke-static {v9, v9}, Landroidx/media3/common/ParserException;->a(Ljava/lang/RuntimeException;Ljava/lang/String;)Landroidx/media3/common/ParserException;
-
-    move-result-object v1
-
-    throw v1
-
-    :cond_e
-    invoke-static {v9, v9}, Landroidx/media3/common/ParserException;->a(Ljava/lang/RuntimeException;Ljava/lang/String;)Landroidx/media3/common/ParserException;
-
-    move-result-object v1
-
-    throw v1
-
-    :cond_f
-    iget-boolean v1, v0, Lbu7;->m:Z
-
-    if-nez v1, :cond_10
-
-    goto :goto_a
-
-    :cond_10
-    :goto_6
-    iget v1, v0, Lbu7;->n:I
-
-    if-nez v1, :cond_17
-
-    iget v1, v0, Lbu7;->o:I
-
-    if-nez v1, :cond_16
-
-    iget v1, v0, Lbu7;->p:I
-
-    if-nez v1, :cond_15
+    sget-object v0, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
 
     const/4 v1, 0x0
 
-    :goto_7
-    invoke-virtual {v8, v6}, Lu52;->i(I)I
+    new-array v1, v1, [Ljava/lang/Void;
 
-    move-result v4
+    invoke-virtual {p1, v0, v1}, Landroid/os/AsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    add-int/2addr v1, v4
-
-    const/16 v5, 0xff
-
-    if-eq v4, v5, :cond_14
-
-    invoke-virtual {v8}, Lu52;->g()I
-
-    move-result v4
-
-    and-int/lit8 v5, v4, 0x7
-
-    if-nez v5, :cond_11
-
-    shr-int/lit8 v4, v4, 0x3
-
-    invoke-virtual {v2, v4}, Ledb;->J(I)V
-
-    const/4 v4, 0x0
-
-    goto :goto_8
-
-    :cond_11
-    iget-object v4, v2, Ledb;->a:[B
-
-    mul-int/lit8 v5, v1, 0x8
-
-    invoke-virtual {v8, v5, v4}, Lu52;->j(I[B)V
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v2, v4}, Ledb;->J(I)V
-
-    :goto_8
-    iget-object v5, v0, Lbu7;->e:Lw1g;
-
-    invoke-interface {v5, v2, v1, v4}, Lw1g;->b(Ledb;II)V
-
-    iget-wide v4, v0, Lbu7;->l:J
-
-    const-wide v6, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long v2, v4, v6
-
-    if-eqz v2, :cond_12
-
-    goto :goto_9
-
-    :cond_12
-    const/4 v3, 0x0
-
-    :goto_9
-    invoke-static {v3}, Lsgi;->i(Z)V
-
-    iget-object v2, v0, Lbu7;->e:Lw1g;
-
-    iget-wide v3, v0, Lbu7;->l:J
-
-    const/16 v21, 0x0
-
-    const/16 v22, 0x0
-
-    const/16 v19, 0x1
-
-    move/from16 v20, v1
-
-    move-object/from16 v16, v2
-
-    move-wide/from16 v17, v3
-
-    invoke-interface/range {v16 .. v22}, Lw1g;->a(JIIILu1g;)V
-
-    iget-wide v1, v0, Lbu7;->l:J
-
-    iget-wide v3, v0, Lbu7;->t:J
-
-    add-long/2addr v1, v3
-
-    iput-wide v1, v0, Lbu7;->l:J
-
-    iget-boolean v1, v0, Lbu7;->q:Z
-
-    if-eqz v1, :cond_13
-
-    iget-wide v1, v0, Lbu7;->r:J
-
-    long-to-int v1, v1
-
-    invoke-virtual {v8, v1}, Lu52;->t(I)V
-
-    :cond_13
-    :goto_a
-    const/4 v4, 0x0
-
-    iput v4, v0, Lbu7;->h:I
-
-    goto/16 :goto_0
-
-    :cond_14
-    move/from16 v20, v1
-
-    goto :goto_7
-
-    :cond_15
-    invoke-static {v9, v9}, Landroidx/media3/common/ParserException;->a(Ljava/lang/RuntimeException;Ljava/lang/String;)Landroidx/media3/common/ParserException;
-
-    move-result-object v1
-
-    throw v1
-
-    :cond_16
-    invoke-static {v9, v9}, Landroidx/media3/common/ParserException;->a(Ljava/lang/RuntimeException;Ljava/lang/String;)Landroidx/media3/common/ParserException;
-
-    move-result-object v1
-
-    throw v1
-
-    :cond_17
-    invoke-static {v9, v9}, Landroidx/media3/common/ParserException;->a(Ljava/lang/RuntimeException;Ljava/lang/String;)Landroidx/media3/common/ParserException;
-
-    move-result-object v1
-
-    throw v1
-
-    :cond_18
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v1}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw v1
-
-    :cond_19
-    move-object/from16 v11, p1
-
-    iget v1, v0, Lbu7;->k:I
-
-    and-int/lit16 v1, v1, -0xe1
-
-    shl-int/2addr v1, v6
-
-    invoke-virtual {v11}, Ledb;->x()I
-
-    move-result v3
-
-    or-int/2addr v1, v3
-
-    iput v1, v0, Lbu7;->j:I
-
-    iget-object v3, v2, Ledb;->a:[B
-
-    array-length v3, v3
-
-    if-le v1, v3, :cond_1a
-
-    invoke-virtual {v2, v1}, Ledb;->G(I)V
-
-    iget-object v1, v2, Ledb;->a:[B
-
-    invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    array-length v2, v1
-
-    invoke-virtual {v8, v2, v1}, Lu52;->o(I[B)V
-
-    :cond_1a
-    const/4 v4, 0x0
-
-    iput v4, v0, Lbu7;->i:I
-
-    iput v7, v0, Lbu7;->h:I
-
-    goto/16 :goto_0
-
-    :cond_1b
-    move-object/from16 v11, p1
-
-    invoke-virtual {v11}, Ledb;->x()I
-
-    move-result v1
-
-    and-int/lit16 v3, v1, 0xe0
-
-    const/16 v5, 0xe0
-
-    if-ne v3, v5, :cond_1c
-
-    iput v1, v0, Lbu7;->k:I
-
-    iput v4, v0, Lbu7;->h:I
-
-    goto/16 :goto_0
-
-    :cond_1c
-    if-eq v1, v2, :cond_0
-
-    const/4 v4, 0x0
-
-    iput v4, v0, Lbu7;->h:I
-
-    goto/16 :goto_0
-
-    :cond_1d
-    move-object/from16 v11, p1
-
-    invoke-virtual {v11}, Ledb;->x()I
-
-    move-result v1
-
-    if-ne v1, v2, :cond_0
-
-    iput v3, v0, Lbu7;->h:I
-
-    goto/16 :goto_0
-
-    :cond_1e
+    :cond_0
     return-void
 .end method
 
-.method public final e(Z)V
+.method public isStopped()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lbu7;->mStopped:Z
+
+    return v0
+.end method
+
+.method public onBind(Landroid/content/Intent;)Landroid/os/IBinder;
     .locals 0
 
-    return-void
-.end method
+    iget-object p1, p0, Lbu7;->mJobImpl:Lut7;
 
-.method public final f(Lam5;Lq5g;)V
-    .locals 2
+    if-eqz p1, :cond_0
 
-    invoke-virtual {p2}, Lq5g;->a()V
-
-    invoke-virtual {p2}, Lq5g;->b()V
-
-    iget v0, p2, Lq5g;->e:I
-
-    const/4 v1, 0x1
-
-    invoke-interface {p1, v0, v1}, Lam5;->B(II)Lw1g;
+    invoke-interface {p1}, Lut7;->a()Landroid/os/IBinder;
 
     move-result-object p1
 
-    iput-object p1, p0, Lbu7;->e:Lw1g;
+    return-object p1
 
-    invoke-virtual {p2}, Lq5g;->b()V
+    :cond_0
+    const/4 p1, 0x0
 
-    iget-object p1, p2, Lq5g;->f:Ljava/lang/String;
+    return-object p1
+.end method
 
-    iput-object p1, p0, Lbu7;->f:Ljava/lang/String;
+.method public onCreate()V
+    .locals 1
+
+    invoke-super {p0}, Landroid/app/Service;->onCreate()V
+
+    new-instance v0, Lyt7;
+
+    invoke-direct {v0, p0}, Lyt7;-><init>(Lbu7;)V
+
+    iput-object v0, p0, Lbu7;->mJobImpl:Lut7;
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lbu7;->mCompatWorkEnqueuer:Lau7;
 
     return-void
 .end method
 
-.method public final h(IJ)V
+.method public onDestroy()V
+    .locals 2
+
+    invoke-super {p0}, Landroid/app/Service;->onDestroy()V
+
+    iget-object v0, p0, Lbu7;->mCompatQueue:Ljava/util/ArrayList;
+
+    if-eqz v0, :cond_0
+
+    monitor-enter v0
+
+    const/4 v1, 0x1
+
+    :try_start_0
+    iput-boolean v1, p0, Lbu7;->mDestroyed:Z
+
+    iget-object v1, p0, Lbu7;->mCompatWorkEnqueuer:Lau7;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+
+    :cond_0
+    return-void
+.end method
+
+.method public abstract onHandleWork(Landroid/content/Intent;)V
+.end method
+
+.method public onStartCommand(Landroid/content/Intent;II)I
+    .locals 2
+
+    iget-object p2, p0, Lbu7;->mCompatQueue:Ljava/util/ArrayList;
+
+    if-eqz p2, :cond_1
+
+    iget-object p2, p0, Lbu7;->mCompatWorkEnqueuer:Lau7;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p2, p0, Lbu7;->mCompatQueue:Ljava/util/ArrayList;
+
+    monitor-enter p2
+
+    :try_start_0
+    iget-object v0, p0, Lbu7;->mCompatQueue:Ljava/util/ArrayList;
+
+    new-instance v1, Lvt7;
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Landroid/content/Intent;
+
+    invoke-direct {p1}, Landroid/content/Intent;-><init>()V
+
+    :goto_0
+    invoke-direct {v1, p0, p1, p3}, Lvt7;-><init>(Lbu7;Landroid/content/Intent;I)V
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p0, p1}, Lbu7;->ensureProcessorRunningLocked(Z)V
+
+    monitor-exit p2
+
+    const/4 p1, 0x3
+
+    return p1
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit p2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+
+    :cond_1
+    const/4 p1, 0x2
+
+    return p1
+.end method
+
+.method public onStopCurrentWork()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public processorFinished()V
+    .locals 2
+
+    iget-object v0, p0, Lbu7;->mCompatQueue:Ljava/util/ArrayList;
+
+    if-eqz v0, :cond_2
+
+    monitor-enter v0
+
+    const/4 v1, 0x0
+
+    :try_start_0
+    iput-object v1, p0, Lbu7;->mCurProcessor:Ltt7;
+
+    iget-object v1, p0, Lbu7;->mCompatQueue:Ljava/util/ArrayList;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    if-lez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v1}, Lbu7;->ensureProcessorRunningLocked(Z)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_0
+    iget-boolean v1, p0, Lbu7;->mDestroyed:Z
+
+    if-nez v1, :cond_1
+
+    iget-object v1, p0, Lbu7;->mCompatWorkEnqueuer:Lau7;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :cond_1
+    :goto_0
+    monitor-exit v0
+
+    return-void
+
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+
+    :cond_2
+    return-void
+.end method
+
+.method public setInterruptIfStopped(Z)V
     .locals 0
 
-    iput-wide p2, p0, Lbu7;->l:J
+    iput-boolean p1, p0, Lbu7;->mInterruptIfStopped:Z
 
     return-void
 .end method

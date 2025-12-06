@@ -1,141 +1,84 @@
 .class public final Lmif;
-.super Lpmf;
+.super Ld2f;
 .source "SourceFile"
+
+# interfaces
+.implements Lj8e;
 
 
 # instance fields
-.field public c:Ljava/util/List;
-
-.field public o:Ljava/util/Map;
+.field public E0:Lh8e;
 
 
 # direct methods
-.method public constructor <init>(Lpf9;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
-    invoke-direct {p0, p1}, Lpmf;-><init>(Lpf9;)V
+    new-instance v0, Lroe;
 
-    iget-object p1, p0, Lmif;->c:Ljava/util/List;
+    const/4 v1, 0x0
 
-    if-nez p1, :cond_0
+    invoke-direct {v0, p1, v1}, Lroe;-><init>(Landroid/content/Context;I)V
 
-    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    invoke-direct {p0, v0}, Lmid;-><init>(Landroid/view/View;)V
 
-    iput-object p1, p0, Lmif;->c:Ljava/util/List;
-
-    :cond_0
-    iget-object p1, p0, Lmif;->o:Ljava/util/Map;
-
-    if-nez p1, :cond_1
-
-    sget-object p1, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
-
-    iput-object p1, p0, Lmif;->o:Ljava/util/Map;
-
-    :cond_1
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lpf9;Ljava/lang/String;)V
-    .locals 5
+.method public final b(Lqif;)V
+    .locals 3
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, p0, Lmid;->a:Landroid/view/View;
 
-    const-string v0, "phones"
+    if-eqz p1, :cond_0
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    new-instance v1, Lwfe;
 
-    move-result v0
+    const/16 v2, 0xe
 
-    if-nez v0, :cond_1
+    invoke-direct {v1, p0, v2, p1}, Lwfe;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    const-string v0, "contacts"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    invoke-virtual {p1}, Lpf9;->y()V
+    invoke-static {v0, v1}, Lf8j;->e(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     return-void
 
     :cond_0
-    invoke-static {p1}, Lzz;->d(Lpf9;)Lzz;
+    check-cast v0, Lroe;
 
-    move-result-object p1
+    const/4 p1, 0x0
 
-    iput-object p1, p0, Lmif;->c:Ljava/util/List;
+    invoke-virtual {v0, p1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    return-void
-
-    :cond_1
-    new-instance p2, Ljava/util/HashMap;
-
-    invoke-direct {p2}, Ljava/util/HashMap;-><init>()V
-
-    iput-object p2, p0, Lmif;->o:Ljava/util/Map;
-
-    invoke-static {p1}, Lg0i;->n(Lpf9;)I
-
-    move-result p2
-
-    const/4 v0, 0x0
-
-    :goto_0
-    if-ge v0, p2, :cond_2
-
-    iget-object v1, p0, Lmif;->o:Ljava/util/Map;
-
-    invoke-virtual {p1}, Lpf9;->u0()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p1}, Lpf9;->r0()J
-
-    move-result-wide v3
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_2
     return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final z(Lt98;)V
+    .locals 1
 
-    iget-object v0, p0, Lmif;->c:Ljava/util/List;
+    instance-of v0, p1, Lg8e;
 
-    invoke-static {v0}, Lhuh;->c(Ljava/util/Collection;)I
+    if-nez v0, :cond_0
 
-    move-result v0
+    return-void
 
-    iget-object v1, p0, Lmif;->o:Ljava/util/Map;
+    :cond_0
+    move-object v0, p1
 
-    invoke-static {v1}, Lhuh;->d(Ljava/util/Map;)I
+    check-cast v0, Lh8e;
 
-    move-result v1
+    iput-object v0, p0, Lmif;->E0:Lh8e;
 
-    const-string v2, ", phones="
+    iget-object v0, p0, Lmid;->a:Landroid/view/View;
 
-    const-string v3, "}"
+    check-cast v0, Lroe;
 
-    const-string v4, "{contacts="
+    check-cast p1, Lg8e;
 
-    invoke-static {v4, v0, v2, v1, v3}, Ley1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    iget-object p1, p1, Lg8e;->a:Ltoe;
 
-    move-result-object v0
+    invoke-virtual {v0, p1}, Lroe;->setModelItem(Lioe;)V
 
-    return-object v0
+    return-void
 .end method

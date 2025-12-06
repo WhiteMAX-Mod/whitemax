@@ -1,56 +1,114 @@
-.class public final Lo06;
-.super Ly14;
+.class public final synthetic Lo06;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lvva;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Liz5;
-
-.field public Z:Liz5;
-
-.field public synthetic o:Ljava/lang/Object;
-
-.field public q0:Lvy5;
-
-.field public r0:Ljava/lang/Throwable;
-
-.field public s0:J
+.field public final synthetic b:Lcom/google/firebase/messaging/FirebaseMessaging;
 
 
 # direct methods
-.method public constructor <init>(Liz5;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lcom/google/firebase/messaging/FirebaseMessaging;I)V
     .locals 0
 
-    iput-object p1, p0, Lo06;->Y:Liz5;
+    iput p2, p0, Lo06;->a:I
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lo06;->b:Lcom/google/firebase/messaging/FirebaseMessaging;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(Ljava/lang/Object;)V
+    .locals 2
 
-    iput-object p1, p0, Lo06;->o:Ljava/lang/Object;
+    iget v0, p0, Lo06;->a:I
 
-    iget p1, p0, Lo06;->X:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lo06;->b:Lcom/google/firebase/messaging/FirebaseMessaging;
 
-    or-int/2addr p1, v0
+    check-cast p1, Lyc3;
 
-    iput p1, p0, Lo06;->X:I
+    sget-object v1, Lcom/google/firebase/messaging/FirebaseMessaging;->k:Ln4e;
 
-    iget-object p1, p0, Lo06;->Y:Liz5;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v0, 0x0
+    if-eqz p1, :cond_0
 
-    invoke-virtual {p1, v0, p0}, Liz5;->d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget-object p1, p1, Lyc3;->a:Landroid/content/Intent;
 
-    move-result-object p1
+    invoke-static {p1}, Lqwi;->b(Landroid/content/Intent;)V
 
-    return-object p1
+    invoke-virtual {v0}, Lcom/google/firebase/messaging/FirebaseMessaging;->g()V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lo06;->b:Lcom/google/firebase/messaging/FirebaseMessaging;
+
+    check-cast p1, Ljdg;
+
+    iget-object v0, v0, Lcom/google/firebase/messaging/FirebaseMessaging;->e:Ldl6;
+
+    invoke-virtual {v0}, Ldl6;->i()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p1, Ljdg;->h:Lhdg;
+
+    invoke-virtual {v0}, Lhdg;->a()Lgdg;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    monitor-enter p1
+
+    :try_start_0
+    iget-boolean v0, p1, Ljdg;->g:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p1
+
+    if-nez v0, :cond_1
+
+    const-wide/16 v0, 0x0
+
+    invoke-virtual {p1, v0, v1}, Ljdg;->f(J)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+
+    :cond_1
+    :goto_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

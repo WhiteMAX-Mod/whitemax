@@ -1,128 +1,45 @@
-.class public final Lg8b;
-.super Loo4;
+.class public final synthetic Lg8b;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/text/InputFilter;
 
 
 # instance fields
-.field public final l:Le8b;
+.field public final synthetic a:Lj8b;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Le8b;Lnf4;)V
-    .locals 4
+.method public synthetic constructor <init>(Lj8b;)V
+    .locals 0
 
-    invoke-static {}, Lob3;->b()Lu18;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
-
-    iget-boolean v1, p3, Lnf4;->b:Z
-
-    if-eqz v1, :cond_0
-
-    const-string v1, "video/av01"
-
-    invoke-virtual {v0, v1}, Lu18;->add(Ljava/lang/Object;)Z
-
-    :cond_0
-    iget-boolean v1, p3, Lnf4;->a:Z
-
-    if-eqz v1, :cond_1
-
-    const-string v1, "video/x-vnd.on2.vp9"
-
-    invoke-virtual {v0, v1}, Lu18;->add(Ljava/lang/Object;)Z
-
-    :cond_1
-    const-string v1, "video/avc"
-
-    invoke-virtual {v0, v1}, Lu18;->add(Ljava/lang/Object;)Z
-
-    invoke-static {v0}, Lob3;->a(Ljava/util/List;)Lu18;
-
-    move-result-object v0
-
-    invoke-static {}, Lob3;->b()Lu18;
-
-    move-result-object v1
-
-    iget-boolean p3, p3, Lnf4;->c:Z
-
-    if-eqz p3, :cond_2
-
-    const-string p3, "audio/opus"
-
-    invoke-virtual {v1, p3}, Lu18;->add(Ljava/lang/Object;)Z
-
-    :cond_2
-    const-string p3, "audio/mp4a-latm"
-
-    invoke-virtual {v1, p3}, Lu18;->add(Ljava/lang/Object;)Z
-
-    const-string p3, "audio/mp4"
-
-    invoke-virtual {v1, p3}, Lu18;->add(Ljava/lang/Object;)Z
-
-    invoke-static {v1}, Lob3;->a(Ljava/util/List;)Lu18;
-
-    move-result-object p3
-
-    new-instance v1, Lzn4;
-
-    invoke-direct {v1}, Lzn4;-><init>()V
-
-    const/4 v2, 0x0
-
-    new-array v3, v2, [Ljava/lang/String;
-
-    invoke-virtual {v0, v3}, Lu18;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ljava/lang/String;
-
-    array-length v3, v0
-
-    invoke-static {v0, v3}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ljava/lang/String;
-
-    invoke-static {v0}, Lec7;->l([Ljava/lang/Object;)Lz8d;
-
-    move-result-object v0
-
-    iput-object v0, v1, Lg2g;->m:Lec7;
-
-    new-array v0, v2, [Ljava/lang/String;
-
-    invoke-virtual {p3, v0}, Lu18;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, [Ljava/lang/String;
-
-    array-length v0, p3
-
-    invoke-static {p3, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, [Ljava/lang/String;
-
-    invoke-static {p3}, Lec7;->l([Ljava/lang/Object;)Lz8d;
-
-    move-result-object p3
-
-    iput-object p3, v1, Lg2g;->t:Lec7;
-
-    new-instance p3, Lbo4;
-
-    invoke-direct {p3, v1}, Lbo4;-><init>(Lzn4;)V
-
-    invoke-direct {p0, p1, p3, p2}, Loo4;-><init>(Landroid/content/Context;Li2g;Lgy9;)V
-
-    iput-object p2, p0, Lg8b;->l:Le8b;
+    iput-object p1, p0, Lg8b;->a:Lj8b;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final filter(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
+    .locals 0
+
+    iget-object p2, p0, Lg8b;->a:Lj8b;
+
+    iget-object p2, p2, Lj8b;->d:Lyid;
+
+    invoke-virtual {p2, p1}, Lyid;->a(Ljava/lang/CharSequence;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    return-object p1
+
+    :cond_0
+    const-string p1, ""
+
+    return-object p1
 .end method

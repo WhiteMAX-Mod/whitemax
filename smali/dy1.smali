@@ -1,592 +1,1234 @@
-.class public abstract synthetic Ldy1;
+.class public final Ldy1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:[I
+# instance fields
+.field public final a:F
+
+.field public final b:F
+
+.field public final c:F
+
+.field public final d:F
+
+.field public final e:F
+
+.field public final f:F
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(FFFFFF)V
+    .locals 0
 
-    const/16 v0, 0x27
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-array v0, v0, [I
+    iput p1, p0, Ldy1;->a:F
 
-    fill-array-data v0, :array_0
+    iput p2, p0, Ldy1;->b:F
 
-    sput-object v0, Ldy1;->a:[I
+    iput p3, p0, Ldy1;->c:F
+
+    iput p4, p0, Ldy1;->d:F
+
+    iput p5, p0, Ldy1;->e:F
+
+    iput p6, p0, Ldy1;->f:F
 
     return-void
-
-    :array_0
-    .array-data 4
-        0x1
-        0x2
-        0x3
-        0x4
-        0x5
-        0x6
-        0x7
-        0x8
-        0x9
-        0xa
-        0xb
-        0xc
-        0xd
-        0xe
-        0xf
-        0x10
-        0x11
-        0x12
-        0x13
-        0x14
-        0x15
-        0x16
-        0x17
-        0x18
-        0x19
-        0x1a
-        0x1b
-        0x1c
-        0x1d
-        0x1e
-        0x1f
-        0x20
-        0x21
-        0x22
-        0x23
-        0x24
-        0x25
-        0x26
-        0x27
-    .end array-data
 .end method
 
-.method public static synthetic a(I)Ljava/lang/Integer;
-    .locals 0
+.method public static a(I)Ldy1;
+    .locals 26
 
-    if-nez p0, :cond_0
+    sget-object v0, Liih;->k:Liih;
 
-    const/4 p0, 0x0
+    invoke-static/range {p0 .. p0}, Landroid/graphics/Color;->red(I)I
 
-    return-object p0
+    move-result v1
+
+    invoke-static {v1}, Lwb4;->c(I)F
+
+    move-result v1
+
+    invoke-static/range {p0 .. p0}, Landroid/graphics/Color;->green(I)I
+
+    move-result v2
+
+    invoke-static {v2}, Lwb4;->c(I)F
+
+    move-result v2
+
+    invoke-static/range {p0 .. p0}, Landroid/graphics/Color;->blue(I)I
+
+    move-result v3
+
+    invoke-static {v3}, Lwb4;->c(I)F
+
+    move-result v3
+
+    sget-object v4, Lwb4;->d:[[F
+
+    const/4 v5, 0x0
+
+    aget-object v6, v4, v5
+
+    aget v7, v6, v5
+
+    mul-float/2addr v7, v1
+
+    const/4 v8, 0x1
+
+    aget v9, v6, v8
+
+    mul-float/2addr v9, v2
+
+    add-float/2addr v9, v7
+
+    const/4 v7, 0x2
+
+    aget v6, v6, v7
+
+    mul-float/2addr v6, v3
+
+    add-float/2addr v6, v9
+
+    aget-object v9, v4, v8
+
+    aget v10, v9, v5
+
+    mul-float/2addr v10, v1
+
+    aget v11, v9, v8
+
+    mul-float/2addr v11, v2
+
+    add-float/2addr v11, v10
+
+    aget v9, v9, v7
+
+    mul-float/2addr v9, v3
+
+    add-float/2addr v9, v11
+
+    aget-object v4, v4, v7
+
+    aget v10, v4, v5
+
+    mul-float/2addr v1, v10
+
+    aget v10, v4, v8
+
+    mul-float/2addr v2, v10
+
+    add-float/2addr v2, v1
+
+    aget v1, v4, v7
+
+    mul-float/2addr v3, v1
+
+    add-float/2addr v3, v2
+
+    sget-object v1, Lwb4;->a:[[F
+
+    aget-object v2, v1, v5
+
+    aget v4, v2, v5
+
+    mul-float/2addr v4, v6
+
+    aget v10, v2, v8
+
+    mul-float/2addr v10, v9
+
+    add-float/2addr v10, v4
+
+    aget v2, v2, v7
+
+    mul-float/2addr v2, v3
+
+    add-float/2addr v2, v10
+
+    aget-object v4, v1, v8
+
+    aget v10, v4, v5
+
+    mul-float/2addr v10, v6
+
+    aget v11, v4, v8
+
+    mul-float/2addr v11, v9
+
+    add-float/2addr v11, v10
+
+    aget v4, v4, v7
+
+    mul-float/2addr v4, v3
+
+    add-float/2addr v4, v11
+
+    aget-object v1, v1, v7
+
+    aget v10, v1, v5
+
+    mul-float/2addr v6, v10
+
+    aget v10, v1, v8
+
+    mul-float/2addr v9, v10
+
+    add-float/2addr v9, v6
+
+    aget v1, v1, v7
+
+    mul-float/2addr v3, v1
+
+    add-float/2addr v3, v9
+
+    iget-object v1, v0, Liih;->g:[F
+
+    iget v6, v0, Liih;->i:F
+
+    iget v9, v0, Liih;->d:F
+
+    iget v10, v0, Liih;->a:F
+
+    aget v5, v1, v5
+
+    mul-float/2addr v5, v2
+
+    aget v2, v1, v8
+
+    mul-float/2addr v2, v4
+
+    aget v1, v1, v7
+
+    mul-float/2addr v1, v3
+
+    iget v3, v0, Liih;->h:F
+
+    invoke-static {v5}, Ljava/lang/Math;->abs(F)F
+
+    move-result v4
+
+    mul-float/2addr v4, v3
+
+    float-to-double v7, v4
+
+    const-wide/high16 v11, 0x4059000000000000L    # 100.0
+
+    div-double/2addr v7, v11
+
+    const-wide v13, 0x3fdae147ae147ae1L    # 0.42
+
+    invoke-static {v7, v8, v13, v14}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v7
+
+    double-to-float v4, v7
+
+    invoke-static {v2}, Ljava/lang/Math;->abs(F)F
+
+    move-result v7
+
+    mul-float/2addr v7, v3
+
+    float-to-double v7, v7
+
+    div-double/2addr v7, v11
+
+    invoke-static {v7, v8, v13, v14}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v7
+
+    double-to-float v7, v7
+
+    invoke-static {v1}, Ljava/lang/Math;->abs(F)F
+
+    move-result v8
+
+    mul-float/2addr v8, v3
+
+    move-wide v15, v11
+
+    float-to-double v11, v8
+
+    div-double/2addr v11, v15
+
+    invoke-static {v11, v12, v13, v14}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v11
+
+    double-to-float v3, v11
+
+    invoke-static {v5}, Ljava/lang/Math;->signum(F)F
+
+    move-result v5
+
+    const/high16 v8, 0x43c80000    # 400.0f
+
+    mul-float/2addr v5, v8
+
+    mul-float/2addr v5, v4
+
+    const v11, 0x41d90a3d    # 27.13f
+
+    add-float/2addr v4, v11
+
+    div-float/2addr v5, v4
+
+    invoke-static {v2}, Ljava/lang/Math;->signum(F)F
+
+    move-result v2
+
+    mul-float/2addr v2, v8
+
+    mul-float/2addr v2, v7
+
+    add-float/2addr v7, v11
+
+    div-float/2addr v2, v7
+
+    invoke-static {v1}, Ljava/lang/Math;->signum(F)F
+
+    move-result v1
+
+    mul-float/2addr v1, v8
+
+    mul-float/2addr v1, v3
+
+    add-float/2addr v3, v11
+
+    div-float/2addr v1, v3
+
+    const-wide/high16 v3, 0x4026000000000000L    # 11.0
+
+    float-to-double v7, v5
+
+    mul-double/2addr v7, v3
+
+    const-wide/high16 v3, -0x3fd8000000000000L    # -12.0
+
+    float-to-double v11, v2
+
+    mul-double/2addr v11, v3
+
+    add-double/2addr v11, v7
+
+    float-to-double v3, v1
+
+    add-double/2addr v11, v3
+
+    double-to-float v7, v11
+
+    const/high16 v8, 0x41300000    # 11.0f
+
+    div-float/2addr v7, v8
+
+    add-float v8, v5, v2
+
+    float-to-double v11, v8
+
+    const-wide/high16 v13, 0x4000000000000000L    # 2.0
+
+    mul-double/2addr v3, v13
+
+    sub-double/2addr v11, v3
+
+    double-to-float v3, v11
+
+    const/high16 v4, 0x41100000    # 9.0f
+
+    div-float/2addr v3, v4
+
+    const/high16 v4, 0x41a00000    # 20.0f
+
+    mul-float v8, v5, v4
+
+    mul-float/2addr v2, v4
+
+    add-float/2addr v8, v2
+
+    const/high16 v11, 0x41a80000    # 21.0f
+
+    mul-float/2addr v11, v1
+
+    add-float/2addr v11, v8
+
+    div-float/2addr v11, v4
+
+    const/high16 v8, 0x42200000    # 40.0f
+
+    mul-float/2addr v5, v8
+
+    add-float/2addr v5, v2
+
+    add-float/2addr v5, v1
+
+    div-float/2addr v5, v4
+
+    float-to-double v1, v3
+
+    move-wide/from16 v17, v13
+
+    float-to-double v13, v7
+
+    invoke-static {v1, v2, v13, v14}, Ljava/lang/Math;->atan2(DD)D
+
+    move-result-wide v1
+
+    double-to-float v1, v1
+
+    const/high16 v2, 0x43340000    # 180.0f
+
+    mul-float/2addr v1, v2
+
+    const v4, 0x40490fdb    # (float)Math.PI
+
+    div-float/2addr v1, v4
+
+    const/4 v8, 0x0
+
+    cmpg-float v8, v1, v8
+
+    const/high16 v12, 0x43b40000    # 360.0f
+
+    if-gez v8, :cond_0
+
+    add-float/2addr v1, v12
+
+    goto :goto_0
 
     :cond_0
-    add-int/lit8 p0, p0, -0x1
+    cmpl-float v8, v1, v12
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    if-ltz v8, :cond_1
 
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic b(II)I
-    .locals 0
-
-    if-eqz p0, :cond_0
-
-    if-eqz p1, :cond_0
-
-    sub-int/2addr p0, p1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    throw p0
-.end method
-
-.method public static synthetic c(II)Z
-    .locals 0
-
-    if-eqz p0, :cond_1
-
-    if-ne p0, p1, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
+    sub-float/2addr v1, v12
 
     :cond_1
-    const/4 p0, 0x0
+    :goto_0
+    mul-float/2addr v4, v1
 
-    throw p0
-.end method
+    div-float/2addr v4, v2
 
-.method public static synthetic d(I)Ljava/lang/String;
-    .locals 0
+    iget v2, v0, Liih;->b:F
 
-    packed-switch p0, :pswitch_data_0
+    mul-float/2addr v5, v2
 
-    const/4 p0, 0x0
+    div-float/2addr v5, v10
 
-    throw p0
+    float-to-double v13, v5
 
-    :pswitch_0
-    const-string p0, "REACTION"
+    iget v2, v0, Liih;->j:F
 
-    return-object p0
+    mul-float/2addr v2, v9
 
-    :pswitch_1
-    const-string p0, "ANIMOJI_SET"
+    move/from16 p0, v3
 
-    return-object p0
+    float-to-double v2, v2
 
-    :pswitch_2
-    const-string p0, "ANIMOJI"
+    invoke-static {v13, v14, v2, v3}, Ljava/lang/Math;->pow(DD)D
 
-    return-object p0
+    move-result-wide v2
 
-    :pswitch_3
-    const-string p0, "BACKGROUND"
+    double-to-float v2, v2
 
-    return-object p0
+    const/high16 v3, 0x42c80000    # 100.0f
 
-    :pswitch_4
-    const-string p0, "RECENT"
+    mul-float/2addr v2, v3
 
-    return-object p0
+    div-float v3, v2, v3
 
-    :pswitch_5
-    const-string p0, "FAVORITE_STICKER_SET"
+    float-to-double v13, v3
 
-    return-object p0
+    invoke-static {v13, v14}, Ljava/lang/Math;->sqrt(D)D
 
-    :pswitch_6
-    const-string p0, "FAVORITE_STICKER"
+    const/high16 v3, 0x40800000    # 4.0f
 
-    return-object p0
+    add-float/2addr v10, v3
 
-    :pswitch_7
-    const-string p0, "STICKER_SET"
+    float-to-double v13, v1
 
-    return-object p0
+    const-wide v19, 0x403423d70a3d70a4L    # 20.14
 
-    :pswitch_8
-    const-string p0, "STICKER"
+    cmpg-double v3, v13, v19
 
-    return-object p0
+    if-gez v3, :cond_2
 
-    :pswitch_9
-    const-string p0, "UNKNOWN"
+    add-float/2addr v12, v1
 
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public static e(ILandroid/os/Bundle;Lupd;I)Leo3;
-    .locals 1
-
-    new-instance v0, Lorf;
-
-    invoke-direct {v0, p0}, Lorf;-><init>(I)V
-
-    invoke-static {v0, p1, p2, p3}, Levi;->a(Ltrf;Landroid/os/Bundle;Lupd;I)Leo3;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static f(Lurf;Landroid/widget/TextView;Lk82;Landroid/widget/TextView;)Leqf;
-    .locals 0
-
-    invoke-static {p0, p1}, Lurf;->d(Lurf;Landroid/widget/TextView;)V
-
-    invoke-virtual {p2, p3}, Lk82;->n(Landroid/view/View;)Lv5b;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Lv5b;->getText()Leqf;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
-    .locals 0
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance p0, Ljava/lang/ClassCastException;
-
-    invoke-direct {p0}, Ljava/lang/ClassCastException;-><init>()V
-
-    return-object p0
-.end method
-
-.method public static h(Ljava/lang/String;Lyf4;)Ljava/lang/String;
-    .locals 1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0, p0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static j(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-    .locals 1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    return-object v0
-.end method
-
-.method public static m(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    .locals 1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    return-object v0
-.end method
-
-.method public static n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-    .locals 1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0, p0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    return-object v0
-.end method
-
-.method public static o(Ljava/lang/Class;Lsy;)Ljava/util/HashMap;
-    .locals 1
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    invoke-virtual {v0, p0, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public static p(Ljava/util/HashMap;)Ljava/util/Map;
-    .locals 1
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0, p0}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
-
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static q(FFLmla;)V
-    .locals 0
-
-    mul-float/2addr p0, p1
-
-    invoke-static {p0}, Lfhi;->b(F)I
-
-    move-result p0
-
-    invoke-virtual {p2, p0}, Lmla;->e(I)V
-
-    return-void
-.end method
-
-.method public static r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
-    .locals 0
-
-    invoke-virtual {p4, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p4, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p4, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    return-void
-.end method
-
-.method public static s(Ljava/lang/String;IILjava/lang/String;)V
-    .locals 1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0, p1}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p3, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
-.end method
-
-.method public static t(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
-    .locals 0
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    return-void
-.end method
-
-.method public static u(ZLtid;ZLjava/lang/String;)V
-    .locals 1
-
-    new-instance v0, Lupe;
-
-    invoke-direct {v0, p0}, Lupe;-><init>(Z)V
-
-    invoke-virtual {p1, v0}, Ltid;->c(Lq24;)V
-
-    new-instance p0, Lupe;
-
-    invoke-direct {p0, p2}, Lupe;-><init>(Z)V
-
-    invoke-virtual {p1, p0}, Ltid;->a(Lq24;)V
-
-    invoke-virtual {p1, p3}, Ltid;->d(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public static synthetic v(I)I
-    .locals 0
-
-    if-eqz p0, :cond_0
-
-    add-int/lit8 p0, p0, -0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    throw p0
-.end method
-
-.method public static synthetic w(I)Ljava/lang/String;
-    .locals 0
-
-    packed-switch p0, :pswitch_data_0
-
-    const-string p0, "null"
-
-    return-object p0
-
-    :pswitch_0
-    const-string p0, "REACTION"
-
-    return-object p0
-
-    :pswitch_1
-    const-string p0, "ANIMOJI_SET"
-
-    return-object p0
-
-    :pswitch_2
-    const-string p0, "ANIMOJI"
-
-    return-object p0
-
-    :pswitch_3
-    const-string p0, "BACKGROUND"
-
-    return-object p0
-
-    :pswitch_4
-    const-string p0, "RECENT"
-
-    return-object p0
-
-    :pswitch_5
-    const-string p0, "FAVORITE_STICKER_SET"
-
-    return-object p0
-
-    :pswitch_6
-    const-string p0, "FAVORITE_STICKER"
-
-    return-object p0
-
-    :pswitch_7
-    const-string p0, "STICKER_SET"
-
-    return-object p0
-
-    :pswitch_8
-    const-string p0, "STICKER"
-
-    return-object p0
-
-    :pswitch_9
-    const-string p0, "UNKNOWN"
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public static synthetic x(I)Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_2
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x3
-
-    if-eq p0, v0, :cond_0
-
-    const-string p0, "null"
-
-    return-object p0
-
-    :cond_0
-    const-string p0, "RELEASED"
-
-    return-object p0
-
-    :cond_1
-    const-string p0, "STARTED"
-
-    return-object p0
+    goto :goto_1
 
     :cond_2
-    const-string p0, "CONFIGURED"
+    move v12, v1
 
-    return-object p0
+    :goto_1
+    float-to-double v12, v12
+
+    const-wide v19, 0x400921fb54442d18L    # Math.PI
+
+    mul-double v12, v12, v19
+
+    const-wide v19, 0x4066800000000000L    # 180.0
+
+    div-double v12, v12, v19
+
+    add-double v12, v12, v17
+
+    invoke-static {v12, v13}, Ljava/lang/Math;->cos(D)D
+
+    move-result-wide v12
+
+    const-wide v17, 0x400e666666666666L    # 3.8
+
+    add-double v12, v12, v17
+
+    double-to-float v3, v12
+
+    const/high16 v5, 0x3e800000    # 0.25f
+
+    mul-float/2addr v3, v5
+
+    const v5, 0x45706276
+
+    mul-float/2addr v3, v5
+
+    iget v5, v0, Liih;->e:F
+
+    mul-float/2addr v3, v5
+
+    iget v5, v0, Liih;->c:F
+
+    mul-float/2addr v3, v5
+
+    mul-float/2addr v7, v7
+
+    mul-float v5, p0, p0
+
+    add-float/2addr v5, v7
+
+    float-to-double v7, v5
+
+    invoke-static {v7, v8}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v7
+
+    double-to-float v5, v7
+
+    mul-float/2addr v3, v5
+
+    const v5, 0x3e9c28f6    # 0.305f
+
+    add-float/2addr v11, v5
+
+    div-float/2addr v3, v11
+
+    iget v0, v0, Liih;->f:F
+
+    float-to-double v7, v0
+
+    const-wide v11, 0x3fd28f5c28f5c28fL    # 0.29
+
+    invoke-static {v11, v12, v7, v8}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v7
+
+    const-wide v11, 0x3ffa3d70a3d70a3dL    # 1.64
+
+    sub-double/2addr v11, v7
+
+    const-wide v7, 0x3fe75c28f5c28f5cL    # 0.73
+
+    invoke-static {v11, v12, v7, v8}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v7
+
+    double-to-float v0, v7
+
+    float-to-double v7, v3
+
+    const-wide v11, 0x3feccccccccccccdL    # 0.9
+
+    invoke-static {v7, v8, v11, v12}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v7
+
+    double-to-float v3, v7
+
+    mul-float/2addr v0, v3
+
+    float-to-double v7, v2
+
+    div-double/2addr v7, v15
+
+    invoke-static {v7, v8}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v7
+
+    double-to-float v3, v7
+
+    mul-float v21, v0, v3
+
+    mul-float v6, v6, v21
+
+    mul-float/2addr v0, v9
+
+    div-float/2addr v0, v10
+
+    float-to-double v7, v0
+
+    invoke-static {v7, v8}, Ljava/lang/Math;->sqrt(D)D
+
+    const v0, 0x3fd9999a    # 1.7f
+
+    mul-float/2addr v0, v2
+
+    const v3, 0x3be56042    # 0.007f
+
+    mul-float/2addr v3, v2
+
+    const/high16 v5, 0x3f800000    # 1.0f
+
+    add-float/2addr v3, v5
+
+    div-float v23, v0, v3
+
+    const v0, 0x3cbac711    # 0.0228f
+
+    mul-float/2addr v6, v0
+
+    add-float/2addr v6, v5
+
+    float-to-double v5, v6
+
+    invoke-static {v5, v6}, Ljava/lang/Math;->log(D)D
+
+    move-result-wide v5
+
+    double-to-float v0, v5
+
+    const v3, 0x422f7048
+
+    mul-float/2addr v0, v3
+
+    float-to-double v3, v4
+
+    invoke-static {v3, v4}, Ljava/lang/Math;->cos(D)D
+
+    move-result-wide v5
+
+    double-to-float v5, v5
+
+    mul-float v24, v0, v5
+
+    invoke-static {v3, v4}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v3
+
+    double-to-float v3, v3
+
+    mul-float v25, v0, v3
+
+    new-instance v19, Ldy1;
+
+    move/from16 v20, v1
+
+    move/from16 v22, v2
+
+    invoke-direct/range {v19 .. v25}, Ldy1;-><init>(FFFFFF)V
+
+    return-object v19
 .end method
 
-.method public static synthetic y(I)[I
-    .locals 3
+.method public static b(FFF)Ldy1;
+    .locals 12
 
-    new-array v0, p0, [I
+    sget-object v0, Liih;->k:Liih;
 
-    sget-object v1, Ldy1;->a:[I
+    iget v1, v0, Liih;->d:F
+
+    float-to-double v1, p0
+
+    const-wide/high16 v3, 0x4059000000000000L    # 100.0
+
+    div-double/2addr v1, v3
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->sqrt(D)D
+
+    iget v3, v0, Liih;->a:F
+
+    const/high16 v4, 0x40800000    # 4.0f
+
+    add-float/2addr v3, v4
+
+    iget v4, v0, Liih;->i:F
+
+    mul-float/2addr v4, p1
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v1
+
+    double-to-float v1, v1
+
+    div-float v1, p1, v1
+
+    iget v0, v0, Liih;->d:F
+
+    mul-float/2addr v1, v0
+
+    div-float/2addr v1, v3
+
+    float-to-double v0, v1
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
+
+    const v0, 0x40490fdb    # (float)Math.PI
+
+    mul-float/2addr v0, p2
+
+    const/high16 v1, 0x43340000    # 180.0f
+
+    div-float/2addr v0, v1
+
+    const v1, 0x3fd9999a    # 1.7f
+
+    mul-float/2addr v1, p0
+
+    const v2, 0x3be56042    # 0.007f
+
+    mul-float/2addr v2, p0
+
+    const/high16 v3, 0x3f800000    # 1.0f
+
+    add-float/2addr v2, v3
+
+    div-float v9, v1, v2
+
+    const-wide v1, 0x3f9758e219652bd4L    # 0.0228
+
+    float-to-double v3, v4
+
+    mul-double/2addr v3, v1
+
+    const-wide/high16 v1, 0x3ff0000000000000L    # 1.0
+
+    add-double/2addr v3, v1
+
+    invoke-static {v3, v4}, Ljava/lang/Math;->log(D)D
+
+    move-result-wide v1
+
+    double-to-float v1, v1
+
+    const v2, 0x422f7048
+
+    mul-float/2addr v1, v2
+
+    float-to-double v2, v0
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->cos(D)D
+
+    move-result-wide v4
+
+    double-to-float v0, v4
+
+    mul-float v10, v1, v0
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v2
+
+    double-to-float v0, v2
+
+    mul-float v11, v1, v0
+
+    new-instance v5, Ldy1;
+
+    move v8, p0
+
+    move v7, p1
+
+    move v6, p2
+
+    invoke-direct/range {v5 .. v11}, Ldy1;-><init>(FFFFFF)V
+
+    return-object v5
+.end method
+
+
+# virtual methods
+.method public final c(Liih;)I
+    .locals 19
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    iget v2, v0, Ldy1;->b:F
+
+    float-to-double v3, v2
+
+    const-wide/16 v5, 0x0
+
+    cmpl-double v3, v3, v5
+
+    const-wide/high16 v7, 0x4059000000000000L    # 100.0
+
+    iget v4, v0, Ldy1;->c:F
+
+    if-eqz v3, :cond_1
+
+    float-to-double v9, v4
+
+    cmpl-double v3, v9, v5
+
+    if-nez v3, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    div-double/2addr v9, v7
+
+    invoke-static {v9, v10}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v9
+
+    double-to-float v3, v9
+
+    div-float/2addr v2, v3
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 v2, 0x0
+
+    :goto_1
+    float-to-double v2, v2
+
+    iget v9, v1, Liih;->f:F
+
+    iget v10, v1, Liih;->h:F
+
+    float-to-double v11, v9
+
+    const-wide v13, 0x3fd28f5c28f5c28fL    # 0.29
+
+    invoke-static {v13, v14, v11, v12}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v11
+
+    const-wide v13, 0x3ffa3d70a3d70a3dL    # 1.64
+
+    sub-double/2addr v13, v11
+
+    const-wide v11, 0x3fe75c28f5c28f5cL    # 0.73
+
+    invoke-static {v13, v14, v11, v12}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v11
+
+    div-double/2addr v2, v11
+
+    const-wide v11, 0x3ff1c71c71c71c72L    # 1.1111111111111112
+
+    invoke-static {v2, v3, v11, v12}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v2
+
+    double-to-float v2, v2
+
+    iget v3, v0, Ldy1;->a:F
+
+    const v9, 0x40490fdb    # (float)Math.PI
+
+    mul-float/2addr v3, v9
+
+    const/high16 v9, 0x43340000    # 180.0f
+
+    div-float/2addr v3, v9
+
+    float-to-double v11, v3
+
+    const-wide/high16 v13, 0x4000000000000000L    # 2.0
+
+    add-double/2addr v13, v11
+
+    invoke-static {v13, v14}, Ljava/lang/Math;->cos(D)D
+
+    move-result-wide v13
+
+    const-wide v15, 0x400e666666666666L    # 3.8
+
+    add-double/2addr v13, v15
+
+    double-to-float v3, v13
+
+    const/high16 v9, 0x3e800000    # 0.25f
+
+    mul-float/2addr v3, v9
+
+    iget v9, v1, Liih;->a:F
+
+    float-to-double v13, v4
+
+    div-double/2addr v13, v7
+
+    iget v4, v1, Liih;->d:F
+
+    float-to-double v7, v4
+
+    const-wide/high16 v15, 0x3ff0000000000000L    # 1.0
+
+    div-double/2addr v15, v7
+
+    iget v4, v1, Liih;->j:F
+
+    float-to-double v7, v4
+
+    div-double v7, v15, v7
+
+    invoke-static {v13, v14, v7, v8}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v7
+
+    double-to-float v4, v7
+
+    mul-float/2addr v9, v4
+
+    const v4, 0x45706276
+
+    mul-float/2addr v3, v4
+
+    iget v4, v1, Liih;->e:F
+
+    mul-float/2addr v3, v4
+
+    iget v4, v1, Liih;->c:F
+
+    mul-float/2addr v3, v4
+
+    iget v4, v1, Liih;->b:F
+
+    div-float/2addr v9, v4
+
+    invoke-static {v11, v12}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v7
+
+    double-to-float v4, v7
+
+    invoke-static {v11, v12}, Ljava/lang/Math;->cos(D)D
+
+    move-result-wide v7
+
+    double-to-float v7, v7
+
+    const v8, 0x3e9c28f6    # 0.305f
+
+    add-float/2addr v8, v9
+
+    const/high16 v11, 0x41b80000    # 23.0f
+
+    mul-float/2addr v8, v11
+
+    mul-float/2addr v8, v2
+
+    mul-float/2addr v3, v11
+
+    const/high16 v11, 0x41300000    # 11.0f
+
+    mul-float/2addr v11, v2
+
+    mul-float/2addr v11, v7
+
+    add-float/2addr v11, v3
+
+    const/high16 v3, 0x42d80000    # 108.0f
+
+    mul-float/2addr v2, v3
+
+    mul-float/2addr v2, v4
+
+    add-float/2addr v2, v11
+
+    div-float/2addr v8, v2
+
+    mul-float/2addr v7, v8
+
+    mul-float/2addr v8, v4
+
+    const/high16 v2, 0x43e60000    # 460.0f
+
+    mul-float/2addr v9, v2
+
+    const v2, 0x43e18000    # 451.0f
+
+    mul-float/2addr v2, v7
+
+    add-float/2addr v2, v9
+
+    const/high16 v3, 0x43900000    # 288.0f
+
+    mul-float/2addr v3, v8
+
+    add-float/2addr v3, v2
+
+    const v2, 0x44af6000    # 1403.0f
+
+    div-float/2addr v3, v2
+
+    const v4, 0x445ec000    # 891.0f
+
+    mul-float/2addr v4, v7
+
+    sub-float v4, v9, v4
+
+    const v11, 0x43828000    # 261.0f
+
+    mul-float/2addr v11, v8
+
+    sub-float/2addr v4, v11
+
+    div-float/2addr v4, v2
+
+    const/high16 v11, 0x435c0000    # 220.0f
+
+    mul-float/2addr v7, v11
+
+    sub-float/2addr v9, v7
+
+    const v7, 0x45c4e000    # 6300.0f
+
+    mul-float/2addr v8, v7
+
+    sub-float/2addr v9, v8
+
+    div-float/2addr v9, v2
+
+    invoke-static {v3}, Ljava/lang/Math;->abs(F)F
+
+    move-result v2
+
+    float-to-double v7, v2
+
+    const-wide v11, 0x403b2147ae147ae1L    # 27.13
+
+    mul-double/2addr v7, v11
+
+    invoke-static {v3}, Ljava/lang/Math;->abs(F)F
+
+    move-result v2
+
+    float-to-double v13, v2
+
+    const-wide/high16 v15, 0x4079000000000000L    # 400.0
+
+    sub-double v13, v15, v13
+
+    div-double/2addr v7, v13
+
+    invoke-static {v5, v6, v7, v8}, Ljava/lang/Math;->max(DD)D
+
+    move-result-wide v7
+
+    double-to-float v2, v7
+
+    invoke-static {v3}, Ljava/lang/Math;->signum(F)F
+
+    move-result v3
+
+    const/high16 v7, 0x42c80000    # 100.0f
+
+    div-float/2addr v7, v10
+
+    mul-float/2addr v3, v7
+
+    float-to-double v13, v2
+
+    move-wide/from16 v17, v11
+
+    const-wide v11, 0x40030c30c30c30c3L    # 2.380952380952381
+
+    invoke-static {v13, v14, v11, v12}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v13
+
+    double-to-float v2, v13
+
+    mul-float/2addr v3, v2
+
+    invoke-static {v4}, Ljava/lang/Math;->abs(F)F
+
+    move-result v2
+
+    float-to-double v13, v2
+
+    mul-double v13, v13, v17
+
+    invoke-static {v4}, Ljava/lang/Math;->abs(F)F
+
+    move-result v2
+
+    float-to-double v11, v2
+
+    sub-double v10, v15, v11
+
+    div-double/2addr v13, v10
+
+    invoke-static {v5, v6, v13, v14}, Ljava/lang/Math;->max(DD)D
+
+    move-result-wide v10
+
+    double-to-float v2, v10
+
+    invoke-static {v4}, Ljava/lang/Math;->signum(F)F
+
+    move-result v4
+
+    mul-float/2addr v4, v7
+
+    float-to-double v10, v2
+
+    const-wide v12, 0x40030c30c30c30c3L    # 2.380952380952381
+
+    invoke-static {v10, v11, v12, v13}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v10
+
+    double-to-float v2, v10
+
+    mul-float/2addr v4, v2
+
+    invoke-static {v9}, Ljava/lang/Math;->abs(F)F
+
+    move-result v2
+
+    float-to-double v10, v2
+
+    mul-double v10, v10, v17
+
+    invoke-static {v9}, Ljava/lang/Math;->abs(F)F
+
+    move-result v2
+
+    float-to-double v12, v2
+
+    sub-double/2addr v15, v12
+
+    div-double/2addr v10, v15
+
+    invoke-static {v5, v6, v10, v11}, Ljava/lang/Math;->max(DD)D
+
+    move-result-wide v5
+
+    double-to-float v2, v5
+
+    invoke-static {v9}, Ljava/lang/Math;->signum(F)F
+
+    move-result v5
+
+    mul-float/2addr v5, v7
+
+    float-to-double v6, v2
+
+    const-wide v12, 0x40030c30c30c30c3L    # 2.380952380952381
+
+    invoke-static {v6, v7, v12, v13}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v6
+
+    double-to-float v2, v6
+
+    mul-float/2addr v5, v2
+
+    iget-object v1, v1, Liih;->g:[F
 
     const/4 v2, 0x0
 
-    invoke-static {v1, v2, v0, v2, p0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    aget v6, v1, v2
 
-    return-object v0
+    div-float/2addr v3, v6
+
+    const/4 v6, 0x1
+
+    aget v7, v1, v6
+
+    div-float/2addr v4, v7
+
+    const/4 v7, 0x2
+
+    aget v1, v1, v7
+
+    div-float/2addr v5, v1
+
+    sget-object v1, Lwb4;->b:[[F
+
+    aget-object v8, v1, v2
+
+    aget v9, v8, v2
+
+    mul-float/2addr v9, v3
+
+    aget v10, v8, v6
+
+    mul-float/2addr v10, v4
+
+    add-float/2addr v10, v9
+
+    aget v8, v8, v7
+
+    mul-float/2addr v8, v5
+
+    add-float/2addr v8, v10
+
+    aget-object v9, v1, v6
+
+    aget v10, v9, v2
+
+    mul-float/2addr v10, v3
+
+    aget v11, v9, v6
+
+    mul-float/2addr v11, v4
+
+    add-float/2addr v11, v10
+
+    aget v9, v9, v7
+
+    mul-float/2addr v9, v5
+
+    add-float/2addr v9, v11
+
+    aget-object v1, v1, v7
+
+    aget v2, v1, v2
+
+    mul-float/2addr v3, v2
+
+    aget v2, v1, v6
+
+    mul-float/2addr v4, v2
+
+    add-float/2addr v4, v3
+
+    aget v1, v1, v7
+
+    mul-float/2addr v5, v1
+
+    add-float/2addr v5, v4
+
+    float-to-double v10, v8
+
+    float-to-double v12, v9
+
+    float-to-double v14, v5
+
+    invoke-static/range {v10 .. v15}, Lrf3;->b(DDD)I
+
+    move-result v1
+
+    return v1
 .end method

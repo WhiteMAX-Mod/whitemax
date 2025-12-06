@@ -1,105 +1,42 @@
-.class public final Luli;
-.super Lf4;
+.class public abstract Luli;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Luli;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
-# instance fields
-.field public X:Ljava/lang/String;
-
-.field public Y:Lbji;
-
-.field public Z:Lbji;
-
-.field public a:Ljava/lang/String;
-
-.field public b:Ljava/lang/String;
-
-.field public c:Ljava/lang/String;
-
-.field public o:Ljava/lang/String;
+.field public static final synthetic a:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    new-instance v0, Lgti;
+    const-class v0, Luli;
 
-    const/4 v1, 0x7
-
-    invoke-direct {v0, v1}, Lgti;-><init>(I)V
-
-    sput-object v0, Luli;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     return-void
 .end method
 
+.method public static a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+    .locals 1
 
-# virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 3
-
-    const/16 v0, 0x4f45
-
-    invoke-static {p1, v0}, Llyi;->t(Landroid/os/Parcel;I)I
+    invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    const/4 v1, 0x2
+    if-nez v0, :cond_0
 
-    iget-object v2, p0, Luli;->a:Ljava/lang/String;
+    const/4 p0, 0x0
 
-    invoke-static {p1, v1, v2}, Llyi;->p(Landroid/os/Parcel;ILjava/lang/String;)V
+    return-object p0
 
-    const/4 v1, 0x3
+    :cond_0
+    invoke-interface {p1, p0}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
 
-    iget-object v2, p0, Luli;->b:Ljava/lang/String;
+    move-result-object p0
 
-    invoke-static {p1, v1, v2}, Llyi;->p(Landroid/os/Parcel;ILjava/lang/String;)V
+    check-cast p0, Landroid/os/Parcelable;
 
-    const/4 v1, 0x4
-
-    iget-object v2, p0, Luli;->c:Ljava/lang/String;
-
-    invoke-static {p1, v1, v2}, Llyi;->p(Landroid/os/Parcel;ILjava/lang/String;)V
-
-    const/4 v1, 0x5
-
-    iget-object v2, p0, Luli;->o:Ljava/lang/String;
-
-    invoke-static {p1, v1, v2}, Llyi;->p(Landroid/os/Parcel;ILjava/lang/String;)V
-
-    const/4 v1, 0x6
-
-    iget-object v2, p0, Luli;->X:Ljava/lang/String;
-
-    invoke-static {p1, v1, v2}, Llyi;->p(Landroid/os/Parcel;ILjava/lang/String;)V
-
-    const/4 v1, 0x7
-
-    iget-object v2, p0, Luli;->Y:Lbji;
-
-    invoke-static {p1, v1, v2, p2}, Llyi;->o(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
-
-    const/16 v1, 0x8
-
-    iget-object v2, p0, Luli;->Z:Lbji;
-
-    invoke-static {p1, v1, v2, p2}, Llyi;->o(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
-
-    invoke-static {p1, v0}, Llyi;->u(Landroid/os/Parcel;I)V
-
-    return-void
+    return-object p0
 .end method

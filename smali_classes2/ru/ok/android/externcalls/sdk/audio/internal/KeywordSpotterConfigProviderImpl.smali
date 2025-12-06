@@ -33,10 +33,10 @@
         "Lru/ok/android/externcalls/sdk/audio/internal/KeywordSpotterConfigProvider;",
         "Lru/ok/android/externcalls/sdk/api/RemoteSettings;",
         "settings",
-        "Lfwc;",
+        "Ly6d;",
         "log",
         "<init>",
-        "(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lfwc;)V",
+        "(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Ly6d;)V",
         "",
         "config",
         "parseConfig",
@@ -76,14 +76,14 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/audio/internal/KeywordSpotterConfigProviderImpl$Companion;-><init>(Lki4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/audio/internal/KeywordSpotterConfigProviderImpl$Companion;-><init>(Ltk4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/audio/internal/KeywordSpotterConfigProviderImpl;->Companion:Lru/ok/android/externcalls/sdk/audio/internal/KeywordSpotterConfigProviderImpl$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lfwc;)V
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Ly6d;)V
     .locals 6
 
     new-instance v4, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManager$KeywordSpotterConfig;
@@ -92,7 +92,7 @@
 
     const/4 v1, 0x1
 
-    invoke-direct {v4, v0, v1, v0}, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManager$KeywordSpotterConfig;-><init>(Ljava/lang/Long;ILki4;)V
+    invoke-direct {v4, v0, v1, v0}, Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManager$KeywordSpotterConfig;-><init>(Ljava/lang/Long;ILtk4;)V
 
     const-string v5, "KeywordSpotterManagerImpl"
 
@@ -104,7 +104,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/config/BaseConfigProvider;-><init>(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lfwc;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/config/BaseConfigProvider;-><init>(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Ly6d;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/String;)V
 
     return-void
 .end method

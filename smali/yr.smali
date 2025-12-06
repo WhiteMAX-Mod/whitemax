@@ -1,91 +1,23 @@
-.class public final synthetic Lyr;
-.super Ljava/lang/Object;
+.class public final Lyr;
+.super Li3;
 .source "SourceFile"
 
-# interfaces
-.implements Llj6;
 
-
-# instance fields
-.field public final synthetic a:Lgs;
+# static fields
+.field public static final c:Lyr;
 
 
 # direct methods
-.method public constructor <init>(Lgs;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lyr;
 
-    iput-object p1, p0, Lyr;->a:Lgs;
+    const/16 v1, 0xb
+
+    invoke-direct {v0, v1}, Li3;-><init>(I)V
+
+    sput-object v0, Lyr;->c:Lyr;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    instance-of v0, p1, Lyr;
-
-    if-eqz v0, :cond_0
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p0}, Lyr;->getFunctionDelegate()Lej6;
-
-    move-result-object v0
-
-    check-cast p1, Llj6;
-
-    invoke-interface {p1}, Llj6;->getFunctionDelegate()Lej6;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final getFunctionDelegate()Lej6;
-    .locals 7
-
-    new-instance v0, Loj6;
-
-    const-string v6, "selectTheme(Lone/me/appearancesettings/multitheme/model/ThemeItem;)V"
-
-    const/4 v2, 0x0
-
-    const/4 v1, 0x1
-
-    const-class v3, Lgs;
-
-    iget-object v4, p0, Lyr;->a:Lgs;
-
-    const-string v5, "selectTheme"
-
-    invoke-direct/range {v0 .. v6}, Lnj6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    invoke-virtual {p0}, Lyr;->getFunctionDelegate()Lej6;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
 .end method

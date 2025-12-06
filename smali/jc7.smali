@@ -1,43 +1,27 @@
 .class public final Ljc7;
-.super Ljava/util/HashMap;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public a:I
+
+.field public b:Z
+
+.field public c:I
+
+
 # direct methods
-.method public static a(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
-    .locals 2
+.method public synthetic constructor <init>(IIZ)V
+    .locals 0
 
-    new-instance v0, Ljava/util/HashMap;
+    iput p1, p0, Ljc7;->a:I
 
-    const/4 v1, 0x1
+    iput-boolean p3, p0, Ljc7;->b:Z
 
-    invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(I)V
+    iput p2, p0, Ljc7;->c:I
 
-    invoke-virtual {v0, p0, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
-    .locals 2
-
-    new-instance v0, Ljava/util/HashMap;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(I)V
-
-    invoke-virtual {v0, p0, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v0, p2, p3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

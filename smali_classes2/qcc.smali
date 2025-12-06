@@ -1,102 +1,62 @@
-.class public final Lqcc;
-.super Lsgf;
+.class public final synthetic Lqcc;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Lem6;
 
 
 # instance fields
-.field public final synthetic X:Ladc;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Landroid/graphics/RectF;
+.field public final synthetic b:Liqb;
 
 
 # direct methods
-.method public constructor <init>(Ladc;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Liqb;I)V
     .locals 0
 
-    iput-object p1, p0, Lqcc;->X:Ladc;
+    iput p2, p0, Lqcc;->a:I
 
-    iput-object p2, p0, Lqcc;->Y:Landroid/graphics/RectF;
+    iput-object p1, p0, Lqcc;->b:Liqb;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    check-cast p1, Lq54;
+    iget v0, p0, Lqcc;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    sget-object v1, Lqqg;->a:Lqqg;
 
-    invoke-virtual {p0, p1, p2}, Lqcc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v2, p0, Lqcc;->b:Liqb;
 
-    move-result-object p1
+    check-cast p1, Landroid/view/View;
 
-    check-cast p1, Lqcc;
+    packed-switch v0, :pswitch_data_0
 
-    sget-object p2, Lccg;->a:Lccg;
+    sget-object v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->t0:[Lyy7;
 
-    invoke-virtual {p1, p2}, Lqcc;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, p1}, Liqb;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p2
-.end method
+    return-object v1
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    :pswitch_0
+    sget-object v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->t0:[Lyy7;
 
-    new-instance p1, Lqcc;
+    invoke-virtual {v2, p1}, Liqb;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v0, p0, Lqcc;->X:Ladc;
+    return-object v1
 
-    iget-object v1, p0, Lqcc;->Y:Landroid/graphics/RectF;
+    nop
 
-    invoke-direct {p1, v0, v1, p2}, Lqcc;-><init>(Ladc;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    sget-object p1, Ladc;->U0:[Ltr7;
-
-    iget-object p1, p0, Lqcc;->X:Ladc;
-
-    invoke-virtual {p1}, Ladc;->w()Liv5;
-
-    move-result-object v0
-
-    iget-object v1, p1, Ladc;->R0:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Liv5;->p(Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lqcc;->Y:Landroid/graphics/RectF;
-
-    invoke-virtual {p1, v0, v1}, Ladc;->z(Ljava/lang/String;Landroid/graphics/RectF;)V
-
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

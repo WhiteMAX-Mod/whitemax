@@ -1,143 +1,93 @@
 .class public final Lc1e;
-.super Lsgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzi6;
 
+# static fields
+.field public static final synthetic a:Lc1e;
 
-# instance fields
-.field public X:I
+.field public static final b:Ljava/lang/String;
 
-.field public final synthetic Y:Lr1e;
-
-.field public final synthetic Z:Lapb;
+.field public static final c:[Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lr1e;Lapb;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    iput-object p1, p0, Lc1e;->Y:Lr1e;
+    new-instance v0, Lc1e;
 
-    iput-object p2, p0, Lc1e;->Z:Lapb;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    sput-object v0, Lc1e;->a:Lc1e;
 
-    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    const-class v0, Ld1e;
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lq54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lc1e;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lc1e;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lc1e;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lc1e;
-
-    iget-object v0, p0, Lc1e;->Y:Lr1e;
-
-    iget-object v1, p0, Lc1e;->Z:Lapb;
-
-    invoke-direct {p1, v0, v1, p2}, Lc1e;-><init>(Lr1e;Lapb;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Lc1e;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    return-object p1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lc1e;->Y:Lr1e;
-
-    iget-object p1, p1, Lr1e;->c:Ljava/lang/Object;
-
-    check-cast p1, Liu7;
-
-    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ld33;
-
-    iget-object v0, p0, Lc1e;->Z:Lapb;
-
-    iget-wide v2, v0, Lapb;->a:J
-
-    iput v1, p0, Lc1e;->X:I
-
-    check-cast p1, Ld43;
-
-    iget-object v0, p1, Ld43;->c:Liu7;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lctd;
+    sput-object v0, Lc1e;->b:Ljava/lang/String;
 
-    invoke-virtual {v0}, Lctd;->a()J
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    move-result-wide v0
+    const-string v1, "android.permission.WRITE_EXTERNAL_STORAGE"
 
-    xor-long/2addr v0, v2
+    const-string v2, "android.permission.READ_EXTERNAL_STORAGE"
 
-    invoke-virtual {p1, v0, v1, p0}, Ld43;->T(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    const/4 v3, 0x2
 
-    move-result-object p1
+    const/4 v4, 0x1
 
-    sget-object v0, Lr54;->a:Lr54;
+    const/4 v5, 0x0
 
-    if-ne p1, v0, :cond_2
+    const/16 v6, 0x1d
 
-    return-object v0
+    if-lt v0, v6, :cond_2
+
+    if-ne v0, v6, :cond_0
+
+    new-array v0, v3, [Ljava/lang/String;
+
+    aput-object v2, v0, v5
+
+    aput-object v1, v0, v4
+
+    goto :goto_0
+
+    :cond_0
+    const/16 v1, 0x21
+
+    if-lt v0, v1, :cond_1
+
+    new-array v0, v3, [Ljava/lang/String;
+
+    const-string v1, "android.permission.READ_MEDIA_IMAGES"
+
+    aput-object v1, v0, v5
+
+    const-string v1, "android.permission.READ_MEDIA_VIDEO"
+
+    aput-object v1, v0, v4
+
+    goto :goto_0
+
+    :cond_1
+    new-array v0, v4, [Ljava/lang/String;
+
+    aput-object v2, v0, v5
+
+    goto :goto_0
 
     :cond_2
-    return-object p1
+    new-array v0, v3, [Ljava/lang/String;
+
+    aput-object v2, v0, v5
+
+    aput-object v1, v0, v4
+
+    :goto_0
+    sput-object v0, Lc1e;->c:[Ljava/lang/String;
+
+    return-void
 .end method

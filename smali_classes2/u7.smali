@@ -2,98 +2,180 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final d:Ljava/util/List;
+# interfaces
+.implements Landroid/app/Application$ActivityLifecycleCallbacks;
 
 
 # instance fields
-.field public final a:Ly71;
+.field public final a:Ljava/util/ArrayList;
 
-.field public final b:Lw7;
-
-.field public final c:Lyoh;
+.field public final b:Llqc;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>()V
+    .locals 1
 
-    const-string v0, "libvpx"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "unknown"
+    new-instance v0, Ljava/util/ArrayList;
 
-    const-string v2, ""
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    const-string v3, "null"
+    iput-object v0, p0, Lu7;->a:Ljava/util/ArrayList;
 
-    filled-new-array {v2, v3, v0, v1}, [Ljava/lang/String;
+    new-instance v0, Llqc;
 
-    move-result-object v0
+    invoke-direct {v0}, Llqc;-><init>()V
 
-    invoke-static {v0}, Lob3;->e([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    sput-object v0, Lu7;->d:Ljava/util/List;
+    iput-object v0, p0, Lu7;->b:Llqc;
 
     return-void
 .end method
 
-.method public constructor <init>(Ly71;Lavf;)V
-    .locals 9
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
+    .locals 0
 
-    iput-object p1, p0, Lu7;->a:Ly71;
+    new-instance p2, Ljava/lang/ref/WeakReference;
 
-    new-instance v8, Lw7;
+    invoke-direct {p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    new-instance v0, Lvl9;
+    iget-object p1, p0, Lu7;->a:Ljava/util/ArrayList;
 
-    const/4 v6, 0x0
+    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const/16 v7, 0x10
+    return-void
+.end method
 
-    const/4 v1, 0x2
+.method public final onActivityDestroyed(Landroid/app/Activity;)V
+    .locals 4
 
-    const-class v3, Lu7;
+    iget-object v0, p0, Lu7;->a:Ljava/util/ArrayList;
 
-    const-string v4, "onVideoCodec"
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    const-string v5, "onVideoCodec(Lru/ok/android/webrtc/stat/codec/ActiveEncodersStats$NamedCodecInfo;J)V"
+    move-result-object v1
 
-    move-object v2, p0
+    :cond_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-direct/range {v0 .. v7}, Lvl9;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    move-result v2
 
-    invoke-direct {v8}, Ljava/lang/Object;-><init>()V
+    if-eqz v2, :cond_1
 
-    iput-object p2, v8, Lw7;->c:Ljava/lang/Object;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    iput-object v0, v8, Lw7;->d:Ljava/io/Serializable;
+    move-result-object v2
 
-    iput-object v8, p0, Lu7;->b:Lw7;
+    check-cast v2, Ljava/lang/ref/WeakReference;
 
-    new-instance v8, Lyoh;
+    invoke-virtual {v2}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    new-instance v0, Loh9;
+    move-result-object v3
 
-    const/16 v7, 0x15
+    if-ne v3, p1, :cond_0
 
-    const/4 v1, 0x1
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    const-class v3, Lu7;
+    :cond_1
+    return-void
+.end method
 
-    const-string v4, "onAudioCodec"
+.method public final onActivityPaused(Landroid/app/Activity;)V
+    .locals 0
 
-    const-string v5, "onAudioCodec(Lru/ok/android/webrtc/stat/codec/ActiveEncodersStats$NamedCodecInfo;)V"
+    return-void
+.end method
 
-    invoke-direct/range {v0 .. v7}, Loh9;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+.method public final onActivityPostResumed(Landroid/app/Activity;)V
+    .locals 1
 
-    invoke-direct {v8, v1, v0}, Lyoh;-><init>(ILjava/lang/Object;)V
+    iget-object v0, p0, Lu7;->b:Llqc;
 
-    iput-object v8, p0, Lu7;->c:Lyoh;
+    invoke-virtual {v0, p1}, Llqc;->f(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final onActivityResumed(Landroid/app/Activity;)V
+    .locals 4
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "CSPDialogActivity"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/ViewGroup;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const-string v2, "id"
+
+    invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v3, "tvTitle"
+
+    invoke-virtual {v1, v3, v2, p1}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/TextView;
+
+    if-eqz p1, :cond_0
+
+    sget v0, Lmvd;->e2:I
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(I)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onActivityStarted(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onActivityStopped(Landroid/app/Activity;)V
+    .locals 0
 
     return-void
 .end method

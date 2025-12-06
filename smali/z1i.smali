@@ -4,106 +4,238 @@
 
 
 # static fields
-.field public static final synthetic a:I
+.field public static final a:Ljava/util/regex/Pattern;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    const-class v0, Lz1i;
+    const-string v0, "^NOTE([ \t].*)?$"
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Lz1i;->a:Ljava/util/regex/Pattern;
 
     return-void
 .end method
 
-.method public static a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+.method public static a(Lumb;)Z
     .locals 1
 
-    invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result v0
+    sget-object v0, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
-    if-nez v0, :cond_0
-
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_0
-    invoke-interface {p1, p0}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lumb;->k(Ljava/nio/charset/Charset;)Ljava/lang/String;
 
     move-result-object p0
 
-    check-cast p0, Landroid/os/Parcelable;
+    if-eqz p0, :cond_0
 
-    return-object p0
-.end method
+    const-string v0, "WEBVTT"
 
-.method public static b(Landroid/os/Parcel;)V
-    .locals 2
-
-    invoke-virtual {p0}, Landroid/os/Parcel;->dataAvail()I
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p0
 
-    if-gtz p0, :cond_0
+    if-eqz p0, :cond_0
 
-    return-void
+    const/4 p0, 0x1
+
+    return p0
 
     :cond_0
-    new-instance v0, Landroid/os/BadParcelableException;
+    const/4 p0, 0x0
 
-    const-string v1, "Parcel data not fully consumed, unread size: "
+    return p0
+.end method
 
-    invoke-static {p0, v1}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
+.method public static b(Ljava/lang/String;)F
+    .locals 2
+
+    const-string v0, "%"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x1
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-direct {v0, p0}, Landroid/os/BadParcelableException;-><init>(Ljava/lang/String;)V
+    invoke-static {p0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
-    throw v0
+    move-result p0
+
+    const/high16 v0, 0x42c80000    # 100.0f
+
+    div-float/2addr p0, v0
+
+    return p0
+
+    :cond_0
+    new-instance p0, Ljava/lang/NumberFormatException;
+
+    const-string v0, "Percentages must end with %"
+
+    invoke-direct {p0, v0}, Ljava/lang/NumberFormatException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method
 
-.method public static c(Landroid/os/Parcel;Landroid/os/Parcelable;)V
-    .locals 2
+.method public static c(Ljava/lang/String;)J
+    .locals 9
+
+    sget-object v0, Lzxg;->a:Ljava/lang/String;
+
+    const-string v0, "\\."
+
+    const/4 v1, 0x2
+
+    invoke-virtual {p0, v0, v1}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
+
+    move-result-object p0
 
     const/4 v0, 0x0
 
-    if-nez p1, :cond_0
+    aget-object v2, p0, v0
 
-    invoke-virtual {p0, v0}, Landroid/os/Parcel;->writeInt(I)V
+    const-string v3, ":"
 
-    return-void
+    const/4 v4, -0x1
+
+    invoke-virtual {v2, v3, v4}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
+
+    move-result-object v2
+
+    array-length v3, v2
+
+    const-wide/16 v4, 0x0
+
+    :goto_0
+    if-ge v0, v3, :cond_0
+
+    aget-object v6, v2, v0
+
+    const-wide/16 v7, 0x3c
+
+    mul-long/2addr v4, v7
+
+    invoke-static {v6}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide v6
+
+    add-long/2addr v4, v6
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
 
     :cond_0
-    const/4 v1, 0x1
+    const-wide/16 v2, 0x3e8
 
-    invoke-virtual {p0, v1}, Landroid/os/Parcel;->writeInt(I)V
+    mul-long/2addr v4, v2
 
-    invoke-interface {p1, p0, v0}, Landroid/os/Parcelable;->writeToParcel(Landroid/os/Parcel;I)V
+    array-length v0, p0
 
-    return-void
+    if-ne v0, v1, :cond_2
+
+    const/4 v0, 0x1
+
+    aget-object p0, p0, v0
+
+    invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    const/4 v1, 0x3
+
+    if-ne v0, v1, :cond_1
+
+    invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide v0
+
+    add-long/2addr v4, v0
+
+    goto :goto_1
+
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Expected 3 decimal places, got: "
+
+    invoke-virtual {v1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_2
+    :goto_1
+    mul-long/2addr v4, v2
+
+    return-wide v4
 .end method
 
-.method public static d(Landroid/os/Parcel;Landroid/os/IInterface;)V
-    .locals 0
+.method public static d(Lumb;)V
+    .locals 2
 
-    if-nez p1, :cond_0
+    iget v0, p0, Lumb;->b:I
 
-    const/4 p1, 0x0
+    invoke-static {p0}, Lz1i;->a(Lumb;)Z
 
-    invoke-virtual {p0, p1}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+    move-result v1
+
+    if-eqz v1, :cond_0
 
     return-void
 
     :cond_0
-    invoke-interface {p1}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
+    invoke-virtual {p0, v0}, Lumb;->J(I)V
 
-    move-result-object p1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, p1}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+    const-string v1, "Expected WEBVTT. Got "
 
-    return-void
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    sget-object v1, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
+
+    invoke-virtual {p0, v1}, Lumb;->k(Ljava/nio/charset/Charset;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const/4 v0, 0x0
+
+    invoke-static {v0, p0}, Landroidx/media3/common/ParserException;->a(Ljava/lang/RuntimeException;Ljava/lang/String;)Landroidx/media3/common/ParserException;
+
+    move-result-object p0
+
+    throw p0
 .end method

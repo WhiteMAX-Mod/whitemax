@@ -1,73 +1,61 @@
-.class public abstract Lzxa;
-.super Ljava/lang/Object;
+.class public final Lzxa;
+.super Lozi;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
+.field public static final a:Lzxa;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Latc;->media_picker_default_toolbar_title:I
+    new-instance v0, Lzxa;
 
-    sput v0, Lzxa;->a:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sget v0, Latc;->media_picker_default_toolbar_title_only_photo:I
-
-    sput v0, Lzxa;->b:I
-
-    sget v0, Latc;->media_picker_empty_media_data:I
-
-    sput v0, Lzxa;->c:I
-
-    sget v0, Latc;->media_type_picker__permissions_dialog__button:I
-
-    sput v0, Lzxa;->d:I
-
-    sget v0, Latc;->media_type_picker__permissions_dialog__gallery_camera_subtitle:I
-
-    sput v0, Lzxa;->e:I
-
-    sget v0, Latc;->media_type_picker__permissions_dialog__gallery_camera_title:I
-
-    sput v0, Lzxa;->f:I
-
-    sget v0, Latc;->media_type_picker__permissions_dialog__gallery_subtitle:I
-
-    sput v0, Lzxa;->g:I
-
-    sget v0, Latc;->media_type_picker__permissions_dialog__gallery_title:I
-
-    sput v0, Lzxa;->h:I
-
-    sget v0, Latc;->media_type_picker__permissions_dialog__subtitle:I
-
-    sput v0, Lzxa;->i:I
-
-    sget v0, Latc;->media_type_picker__permissions_dialog__title:I
-
-    sput v0, Lzxa;->j:I
+    sput-object v0, Lzxa;->a:Lzxa;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lzxa;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x5bcc451e
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "None"
+
+    return-object v0
 .end method

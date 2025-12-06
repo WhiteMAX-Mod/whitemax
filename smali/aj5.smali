@@ -1,19 +1,11 @@
 .class public final Laj5;
-.super Ljava/lang/Object;
+.super Ljava/lang/Throwable;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:Lkj5;
-
-
-# direct methods
-.method public constructor <init>(Lkj5;)V
+# virtual methods
+.method public final fillInStackTrace()Ljava/lang/Throwable;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Laj5;->a:Lkj5;
-
-    return-void
+    return-object p0
 .end method

@@ -1,5 +1,5 @@
 .class public final Lru/ok/tamtam/nano/Tasks$CritLog;
-.super Lee9;
+.super Lfl9;
 .source "SourceFile"
 
 
@@ -38,7 +38,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lee9;-><init>()V
+    invoke-direct {p0}, Lfl9;-><init>()V
 
     invoke-virtual {p0}, Lru/ok/tamtam/nano/Tasks$CritLog;->clear()Lru/ok/tamtam/nano/Tasks$CritLog;
 
@@ -52,7 +52,7 @@
 
     if-nez v0, :cond_1
 
-    sget-object v0, Lij7;->b:Ljava/lang/Object;
+    sget-object v0, Lkp7;->b:Ljava/lang/Object;
 
     monitor-enter v0
 
@@ -94,7 +94,7 @@
     return-object v0
 .end method
 
-.method public static parseFrom(Loa3;)Lru/ok/tamtam/nano/Tasks$CritLog;
+.method public static parseFrom(Lgd3;)Lru/ok/tamtam/nano/Tasks$CritLog;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -107,7 +107,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$CritLog;-><init>()V
 
-    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Tasks$CritLog;->mergeFrom(Loa3;)Lru/ok/tamtam/nano/Tasks$CritLog;
+    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Tasks$CritLog;->mergeFrom(Lgd3;)Lru/ok/tamtam/nano/Tasks$CritLog;
 
     move-result-object p0
 
@@ -127,7 +127,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$CritLog;-><init>()V
 
-    invoke-static {v0, p0}, Lee9;->mergeFrom(Lee9;[B)Lee9;
+    invoke-static {v0, p0}, Lfl9;->mergeFrom(Lfl9;[B)Lfl9;
 
     move-result-object p0
 
@@ -157,13 +157,13 @@
 
     iput-object v0, p0, Lru/ok/tamtam/nano/Tasks$CritLog;->event:Ljava/lang/String;
 
-    sget-object v0, Lzbi;->e:[B
+    sget-object v0, Lcoi;->e:[B
 
     iput-object v0, p0, Lru/ok/tamtam/nano/Tasks$CritLog;->params:[B
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lee9;->cachedSize:I
+    iput v0, p0, Lfl9;->cachedSize:I
 
     return-object p0
 .end method
@@ -181,7 +181,7 @@
 
     const/4 v4, 0x1
 
-    invoke-static {v4, v0, v1}, Lpa3;->h(IJ)I
+    invoke-static {v4, v0, v1}, Lhd3;->h(IJ)I
 
     move-result v0
 
@@ -199,7 +199,7 @@
 
     const/4 v1, 0x2
 
-    invoke-static {v1, v4, v5}, Lpa3;->h(IJ)I
+    invoke-static {v1, v4, v5}, Lhd3;->h(IJ)I
 
     move-result v1
 
@@ -214,7 +214,7 @@
 
     const/4 v1, 0x3
 
-    invoke-static {v1, v4, v5}, Lpa3;->h(IJ)I
+    invoke-static {v1, v4, v5}, Lhd3;->h(IJ)I
 
     move-result v1
 
@@ -229,7 +229,7 @@
 
     const/4 v1, 0x4
 
-    invoke-static {v1, v4, v5}, Lpa3;->h(IJ)I
+    invoke-static {v1, v4, v5}, Lhd3;->h(IJ)I
 
     move-result v1
 
@@ -250,7 +250,7 @@
 
     iget-object v3, p0, Lru/ok/tamtam/nano/Tasks$CritLog;->type:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lpa3;->l(ILjava/lang/String;)I
+    invoke-static {v1, v3}, Lhd3;->l(ILjava/lang/String;)I
 
     move-result v1
 
@@ -269,7 +269,7 @@
 
     iget-object v2, p0, Lru/ok/tamtam/nano/Tasks$CritLog;->event:Ljava/lang/String;
 
-    invoke-static {v1, v2}, Lpa3;->l(ILjava/lang/String;)I
+    invoke-static {v1, v2}, Lhd3;->l(ILjava/lang/String;)I
 
     move-result v1
 
@@ -278,7 +278,7 @@
     :cond_5
     iget-object v1, p0, Lru/ok/tamtam/nano/Tasks$CritLog;->params:[B
 
-    sget-object v2, Lzbi;->e:[B
+    sget-object v2, Lcoi;->e:[B
 
     invoke-static {v1, v2}, Ljava/util/Arrays;->equals([B[B)Z
 
@@ -290,7 +290,7 @@
 
     iget-object v2, p0, Lru/ok/tamtam/nano/Tasks$CritLog;->params:[B
 
-    invoke-static {v1, v2}, Lpa3;->b(I[B)I
+    invoke-static {v1, v2}, Lhd3;->b(I[B)I
 
     move-result v1
 
@@ -302,7 +302,7 @@
     return v0
 .end method
 
-.method public bridge synthetic mergeFrom(Loa3;)Lee9;
+.method public bridge synthetic mergeFrom(Lgd3;)Lfl9;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -311,14 +311,14 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Tasks$CritLog;->mergeFrom(Loa3;)Lru/ok/tamtam/nano/Tasks$CritLog;
+    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Tasks$CritLog;->mergeFrom(Lgd3;)Lru/ok/tamtam/nano/Tasks$CritLog;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public mergeFrom(Loa3;)Lru/ok/tamtam/nano/Tasks$CritLog;
+.method public mergeFrom(Lgd3;)Lru/ok/tamtam/nano/Tasks$CritLog;
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -329,7 +329,7 @@
     .line 2
     :cond_0
     :goto_0
-    invoke-virtual {p1}, Loa3;->s()I
+    invoke-virtual {p1}, Lgd3;->s()I
 
     move-result v0
 
@@ -364,7 +364,7 @@
     if-eq v0, v1, :cond_1
 
     .line 3
-    invoke-virtual {p1, v0}, Loa3;->u(I)Z
+    invoke-virtual {p1, v0}, Lgd3;->u(I)Z
 
     move-result v0
 
@@ -374,7 +374,7 @@
 
     .line 4
     :cond_1
-    invoke-virtual {p1}, Loa3;->g()[B
+    invoke-virtual {p1}, Lgd3;->g()[B
 
     move-result-object v0
 
@@ -384,7 +384,7 @@
 
     .line 5
     :cond_2
-    invoke-virtual {p1}, Loa3;->r()Ljava/lang/String;
+    invoke-virtual {p1}, Lgd3;->r()Ljava/lang/String;
 
     move-result-object v0
 
@@ -394,7 +394,7 @@
 
     .line 6
     :cond_3
-    invoke-virtual {p1}, Loa3;->r()Ljava/lang/String;
+    invoke-virtual {p1}, Lgd3;->r()Ljava/lang/String;
 
     move-result-object v0
 
@@ -404,7 +404,7 @@
 
     .line 7
     :cond_4
-    invoke-virtual {p1}, Loa3;->q()J
+    invoke-virtual {p1}, Lgd3;->q()J
 
     move-result-wide v0
 
@@ -415,7 +415,7 @@
 
     .line 9
     :cond_5
-    invoke-virtual {p1}, Loa3;->q()J
+    invoke-virtual {p1}, Lgd3;->q()J
 
     move-result-wide v0
 
@@ -426,7 +426,7 @@
 
     .line 11
     :cond_6
-    invoke-virtual {p1}, Loa3;->q()J
+    invoke-virtual {p1}, Lgd3;->q()J
 
     move-result-wide v0
 
@@ -437,7 +437,7 @@
 
     .line 13
     :cond_7
-    invoke-virtual {p1}, Loa3;->q()J
+    invoke-virtual {p1}, Lgd3;->q()J
 
     move-result-wide v0
 
@@ -451,7 +451,7 @@
     return-object p0
 .end method
 
-.method public writeTo(Lpa3;)V
+.method public writeTo(Lhd3;)V
     .locals 5
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -469,7 +469,7 @@
 
     const/4 v4, 0x1
 
-    invoke-virtual {p1, v4, v0, v1}, Lpa3;->x(IJ)V
+    invoke-virtual {p1, v4, v0, v1}, Lhd3;->x(IJ)V
 
     :cond_0
     iget-wide v0, p0, Lru/ok/tamtam/nano/Tasks$CritLog;->time:J
@@ -480,7 +480,7 @@
 
     const/4 v4, 0x2
 
-    invoke-virtual {p1, v4, v0, v1}, Lpa3;->x(IJ)V
+    invoke-virtual {p1, v4, v0, v1}, Lhd3;->x(IJ)V
 
     :cond_1
     iget-wide v0, p0, Lru/ok/tamtam/nano/Tasks$CritLog;->userId:J
@@ -491,7 +491,7 @@
 
     const/4 v4, 0x3
 
-    invoke-virtual {p1, v4, v0, v1}, Lpa3;->x(IJ)V
+    invoke-virtual {p1, v4, v0, v1}, Lhd3;->x(IJ)V
 
     :cond_2
     iget-wide v0, p0, Lru/ok/tamtam/nano/Tasks$CritLog;->sessionId:J
@@ -502,7 +502,7 @@
 
     const/4 v2, 0x4
 
-    invoke-virtual {p1, v2, v0, v1}, Lpa3;->x(IJ)V
+    invoke-virtual {p1, v2, v0, v1}, Lhd3;->x(IJ)V
 
     :cond_3
     iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$CritLog;->type:Ljava/lang/String;
@@ -519,7 +519,7 @@
 
     iget-object v2, p0, Lru/ok/tamtam/nano/Tasks$CritLog;->type:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, v2}, Lpa3;->E(ILjava/lang/String;)V
+    invoke-virtual {p1, v0, v2}, Lhd3;->E(ILjava/lang/String;)V
 
     :cond_4
     iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$CritLog;->event:Ljava/lang/String;
@@ -534,12 +534,12 @@
 
     iget-object v1, p0, Lru/ok/tamtam/nano/Tasks$CritLog;->event:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, v1}, Lpa3;->E(ILjava/lang/String;)V
+    invoke-virtual {p1, v0, v1}, Lhd3;->E(ILjava/lang/String;)V
 
     :cond_5
     iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$CritLog;->params:[B
 
-    sget-object v1, Lzbi;->e:[B
+    sget-object v1, Lcoi;->e:[B
 
     invoke-static {v0, v1}, Ljava/util/Arrays;->equals([B[B)Z
 
@@ -551,7 +551,7 @@
 
     iget-object v1, p0, Lru/ok/tamtam/nano/Tasks$CritLog;->params:[B
 
-    invoke-virtual {p1, v0, v1}, Lpa3;->s(I[B)V
+    invoke-virtual {p1, v0, v1}, Lhd3;->s(I[B)V
 
     :cond_6
     return-void

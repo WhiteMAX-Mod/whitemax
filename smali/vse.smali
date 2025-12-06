@@ -2,184 +2,155 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Leh0;
+
+# static fields
+.field public static final i:[I
+
+.field public static final j:[F
+
+.field public static final k:[I
+
+.field public static final l:[F
 
 
 # instance fields
-.field public final a:Ljava/util/ArrayDeque;
+.field public final a:Landroid/graphics/Paint;
 
-.field public final b:Lzvd;
+.field public final b:Landroid/graphics/Paint;
 
-.field public final c:Lcjf;
+.field public final c:Landroid/graphics/Paint;
 
-.field public d:D
+.field public final d:I
 
-.field public e:D
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:Landroid/graphics/Path;
+
+.field public final h:Landroid/graphics/Paint;
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lzvd;
+    const/4 v0, 0x3
 
-    const/4 v1, 0x2
+    new-array v1, v0, [I
 
-    invoke-direct {v0, v1}, Lzvd;-><init>(I)V
+    sput-object v1, Lvse;->i:[I
+
+    new-array v0, v0, [F
+
+    fill-array-data v0, :array_0
+
+    sput-object v0, Lvse;->j:[F
+
+    const/4 v0, 0x4
+
+    new-array v1, v0, [I
+
+    sput-object v1, Lvse;->k:[I
+
+    new-array v0, v0, [F
+
+    fill-array-data v0, :array_1
+
+    sput-object v0, Lvse;->l:[F
+
+    return-void
+
+    nop
+
+    :array_0
+    .array-data 4
+        0x0
+        0x3f000000    # 0.5f
+        0x3f800000    # 1.0f
+    .end array-data
+
+    :array_1
+    .array-data 4
+        0x0
+        0x0
+        0x3f000000    # 0.5f
+        0x3f800000    # 1.0f
+    .end array-data
+.end method
+
+.method public constructor <init>()V
+    .locals 4
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v1, Ljava/util/ArrayDeque;
+    new-instance v0, Landroid/graphics/Path;
 
-    invoke-direct {v1}, Ljava/util/ArrayDeque;-><init>()V
+    invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
-    iput-object v1, p0, Lvse;->a:Ljava/util/ArrayDeque;
+    iput-object v0, p0, Lvse;->g:Landroid/graphics/Path;
 
-    iput-object v0, p0, Lvse;->b:Lzvd;
+    new-instance v0, Landroid/graphics/Paint;
 
-    sget-object v0, Lcjf;->a:Lcjf;
+    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Lvse;->c:Lcjf;
+    iput-object v0, p0, Lvse;->h:Landroid/graphics/Paint;
 
-    return-void
-.end method
+    new-instance v1, Landroid/graphics/Paint;
 
+    invoke-direct {v1}, Landroid/graphics/Paint;-><init>()V
 
-# virtual methods
-.method public final a(JJ)V
-    .locals 7
+    iput-object v1, p0, Lvse;->a:Landroid/graphics/Paint;
 
-    :goto_0
-    iget-object v0, p0, Lvse;->b:Lzvd;
+    const/16 v2, 0x44
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/high16 v3, -0x1000000
 
-    iget-object v0, p0, Lvse;->a:Ljava/util/ArrayDeque;
+    invoke-static {v3, v2}, Lrf3;->i(II)I
 
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->size()I
+    move-result v2
 
-    move-result v1
+    iput v2, p0, Lvse;->d:I
 
-    int-to-long v1, v1
+    const/16 v2, 0x14
 
-    const-wide/16 v3, 0xa
+    invoke-static {v3, v2}, Lrf3;->i(II)I
 
-    cmp-long v1, v1, v3
+    move-result v2
 
-    if-ltz v1, :cond_0
+    iput v2, p0, Lvse;->e:I
 
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->remove()Ljava/lang/Object;
+    const/4 v2, 0x0
 
-    move-result-object v0
+    invoke-static {v3, v2}, Lrf3;->i(II)I
 
-    check-cast v0, Luse;
+    move-result v3
 
-    iget-wide v1, p0, Lvse;->d:D
+    iput v3, p0, Lvse;->f:I
 
-    iget-wide v3, v0, Luse;->a:J
+    iget v3, p0, Lvse;->d:I
 
-    long-to-double v3, v3
+    invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setColor(I)V
 
-    iget-wide v5, v0, Luse;->b:D
+    invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setColor(I)V
 
-    mul-double/2addr v3, v5
+    new-instance v0, Landroid/graphics/Paint;
 
-    sub-double/2addr v1, v3
+    const/4 v1, 0x4
 
-    iput-wide v1, p0, Lvse;->d:D
+    invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
 
-    iget-wide v0, p0, Lvse;->e:D
+    iput-object v0, p0, Lvse;->b:Landroid/graphics/Paint;
 
-    sub-double/2addr v0, v5
+    sget-object v1, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
-    iput-wide v0, p0, Lvse;->e:D
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    goto :goto_0
+    new-instance v1, Landroid/graphics/Paint;
 
-    :cond_0
-    long-to-double v1, p1
+    invoke-direct {v1, v0}, Landroid/graphics/Paint;-><init>(Landroid/graphics/Paint;)V
 
-    invoke-static {v1, v2}, Ljava/lang/Math;->sqrt(D)D
-
-    move-result-wide v1
-
-    const-wide/32 v3, 0x7a1200
-
-    mul-long/2addr p1, v3
-
-    div-long/2addr p1, p3
-
-    new-instance p3, Luse;
-
-    iget-object p4, p0, Lvse;->c:Lcjf;
-
-    invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    invoke-direct {p3, p1, p2, v1, v2}, Luse;-><init>(JD)V
-
-    invoke-virtual {v0, p3}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
-
-    iget-wide p3, p0, Lvse;->d:D
-
-    long-to-double p1, p1
-
-    mul-double/2addr p1, v1
-
-    add-double/2addr p1, p3
-
-    iput-wide p1, p0, Lvse;->d:D
-
-    iget-wide p1, p0, Lvse;->e:D
-
-    add-double/2addr p1, v1
-
-    iput-wide p1, p0, Lvse;->e:D
-
-    return-void
-.end method
-
-.method public final b()J
-    .locals 4
-
-    iget-object v0, p0, Lvse;->a:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const-wide/high16 v0, -0x8000000000000000L
-
-    return-wide v0
-
-    :cond_0
-    iget-wide v0, p0, Lvse;->d:D
-
-    iget-wide v2, p0, Lvse;->e:D
-
-    div-double/2addr v0, v2
-
-    double-to-long v0, v0
-
-    return-wide v0
-.end method
-
-.method public final reset()V
-    .locals 2
-
-    iget-object v0, p0, Lvse;->a:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->clear()V
-
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lvse;->d:D
-
-    iput-wide v0, p0, Lvse;->e:D
+    iput-object v1, p0, Lvse;->c:Landroid/graphics/Paint;
 
     return-void
 .end method

@@ -1,63 +1,89 @@
 .class public final Ltzf;
-.super Luzf;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Luzf;
 
 
 # instance fields
-.field public final synthetic b:I
-
-.field public final c:J
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(JI)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    iput p3, p0, Ltzf;->b:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    packed-switch p3, :pswitch_data_0
-
-    sget-object p3, Lszf;->b:Lszf;
-
-    invoke-direct {p0, p3}, Luzf;-><init>(Lszf;)V
-
-    iput-wide p1, p0, Ltzf;->c:J
+    iput-object p1, p0, Ltzf;->a:Ljava/lang/String;
 
     return-void
+.end method
 
-    :pswitch_0
-    sget-object p3, Lszf;->X:Lszf;
 
-    invoke-direct {p0, p3}, Luzf;-><init>(Lszf;)V
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iput-wide p1, p0, Ltzf;->c:J
+    const/4 v0, 0x1
 
-    return-void
+    if-ne p0, p1, :cond_0
 
-    :pswitch_1
-    sget-object p3, Lszf;->o:Lszf;
+    return v0
 
-    invoke-direct {p0, p3}, Luzf;-><init>(Lszf;)V
+    :cond_0
+    instance-of v1, p1, Ltzf;
 
-    iput-wide p1, p0, Ltzf;->c:J
+    const/4 v2, 0x0
 
-    return-void
+    if-nez v1, :cond_1
 
-    :pswitch_2
-    sget-object p3, Lszf;->c:Lszf;
+    return v2
 
-    invoke-direct {p0, p3}, Luzf;-><init>(Lszf;)V
+    :cond_1
+    check-cast p1, Ltzf;
 
-    iput-wide p1, p0, Ltzf;->c:J
+    iget-object v1, p0, Ltzf;->a:Ljava/lang/String;
 
-    return-void
+    iget-object p1, p1, Ltzf;->a:Ljava/lang/String;
 
-    nop
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Ltzf;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "Text(text="
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Ltzf;->a:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Lho7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

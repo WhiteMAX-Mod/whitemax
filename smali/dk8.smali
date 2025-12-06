@@ -1,77 +1,61 @@
-.class public final Ldk8;
-.super Luj8;
+.class public abstract Ldk8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:Ln8a;
 
-.field public final b:Ljava/lang/Object;
-
-.field public final c:Laj6;
+.field public static final b:[J
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;Laj6;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p3, p0, Ldk8;->a:I
+    new-instance v0, Ln8a;
 
-    iput-object p1, p0, Ldk8;->b:Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    iput-object p2, p0, Ldk8;->c:Laj6;
+    invoke-direct {v0, v1}, Ln8a;-><init>(I)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Ldk8;->a:Ln8a;
+
+    new-array v0, v1, [J
+
+    sput-object v0, Ldk8;->b:[J
 
     return-void
 .end method
 
+.method public static final a()Ln8a;
+    .locals 2
 
-# virtual methods
-.method public final f(Lnk8;)V
-    .locals 4
+    new-instance v0, Ln8a;
 
-    iget v0, p0, Ldk8;->a:I
+    const/4 v1, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0, v1}, Ln8a;-><init>(Ljava/lang/Object;)V
 
-    iget-object v0, p0, Ldk8;->b:Ljava/lang/Object;
+    return-object v0
+.end method
 
-    check-cast v0, Lwpe;
+.method public static final b(J)Ln8a;
+    .locals 3
 
-    new-instance v1, Ldu1;
+    new-instance v0, Ln8a;
 
-    iget-object v2, p0, Ldk8;->c:Laj6;
+    const/4 v1, 0x1
 
-    const/16 v3, 0x9
+    invoke-direct {v0, v1}, Ln8a;-><init>(I)V
 
-    invoke-direct {v1, p1, v3, v2}, Ldu1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-virtual {v0, p0, p1}, Ln8a;->e(J)I
 
-    invoke-virtual {v0, v1}, Lwpe;->k(Lsqe;)V
+    move-result v1
 
-    return-void
+    iget-object v2, v0, Ln8a;->b:[J
 
-    :pswitch_0
-    iget-object v0, p0, Ldk8;->b:Ljava/lang/Object;
+    aput-wide p0, v2, v1
 
-    check-cast v0, Lek8;
-
-    new-instance v1, Ldu1;
-
-    iget-object v2, p0, Ldk8;->c:Laj6;
-
-    check-cast v2, Lgng;
-
-    const/4 v3, 0x3
-
-    invoke-direct {v1, p1, v3, v2}, Ldu1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v1}, Luj8;->a(Lnk8;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

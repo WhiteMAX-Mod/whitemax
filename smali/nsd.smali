@@ -1,134 +1,86 @@
 .class public final Lnsd;
-.super Ljava/lang/Object;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lnsd;
-
-
 # instance fields
-.field public final a:Lpc7;
+.field public final synthetic a:Ljn1;
+
+.field public final synthetic b:Z
+
+.field public final synthetic c:Lone/me/android/root/RootController;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Litb;
-
-    const/16 v1, 0x1a
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Litb;-><init>(IZ)V
-
-    const/4 v1, 0x1
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const/4 v2, 0x5
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    const/4 v3, 0x2
-
-    filled-new-array {v1, v2}, [Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-static {v3, v1}, Lpc7;->j(I[Ljava/lang/Object;)Lpc7;
-
-    move-result-object v1
-
-    iput-object v1, v0, Litb;->b:Ljava/lang/Object;
-
-    new-instance v1, Lnsd;
-
-    invoke-direct {v1, v0}, Lnsd;-><init>(Litb;)V
-
-    sput-object v1, Lnsd;->b:Lnsd;
-
-    return-void
-.end method
-
-.method public constructor <init>(Litb;)V
+.method public constructor <init>(Ljn1;ZLone/me/android/root/RootController;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lnsd;->a:Ljn1;
 
-    iget-object p1, p1, Litb;->b:Ljava/lang/Object;
+    iput-boolean p2, p0, Lnsd;->b:Z
 
-    check-cast p1, Lpc7;
+    iput-object p3, p0, Lnsd;->c:Lone/me/android/root/RootController;
 
-    iput-object p1, p0, Lnsd;->a:Lpc7;
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
     .locals 1
 
-    instance-of v0, p1, Lnsd;
+    sget-object p1, Lone/me/android/root/RootController;->s0:[Lyy7;
 
-    if-nez v0, :cond_0
+    iget-object p1, p0, Lnsd;->c:Lone/me/android/root/RootController;
 
-    goto :goto_0
+    iget-boolean v0, p0, Lnsd;->b:Z
 
-    :cond_0
-    check-cast p1, Lnsd;
+    invoke-virtual {p1, v0}, Lone/me/android/root/RootController;->D0(Z)V
 
-    iget-object v0, p0, Lnsd;->a:Lpc7;
-
-    iget-object p1, p1, Lnsd;->a:Lpc7;
-
-    invoke-virtual {v0, p1}, Lpc7;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 7
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 1
+
+    sget-object p1, Lone/me/android/root/RootController;->s0:[Lyy7;
+
+    iget-object p1, p0, Lnsd;->c:Lone/me/android/root/RootController;
+
+    iget-boolean v0, p0, Lnsd;->b:Z
+
+    invoke-virtual {p1, v0}, Lone/me/android/root/RootController;->D0(Z)V
+
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 3
+
+    iget-boolean p1, p0, Lnsd;->b:Z
+
+    iget-object v0, p0, Lnsd;->a:Ljn1;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0, p1}, Ljn1;->c(Z)V
+
+    :cond_0
+    sget-object v0, Lone/me/android/root/RootController;->s0:[Lyy7;
+
+    iget-object v0, p0, Lnsd;->c:Lone/me/android/root/RootController;
+
+    invoke-virtual {v0}, Lone/me/android/root/RootController;->I0()Lf82;
+
+    move-result-object v1
 
     const/4 v2, 0x0
 
-    sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    invoke-virtual {v1, v2}, Landroid/view/View;->setTranslationY(F)V
 
-    iget-object v0, p0, Lnsd;->a:Lpc7;
+    invoke-virtual {v0, p1}, Lone/me/android/root/RootController;->K0(Z)V
 
-    const/4 v1, 0x0
-
-    move-object v4, v3
-
-    move-object v5, v3
-
-    move-object v6, v3
-
-    filled-new-array/range {v0 .. v6}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
+    return-void
 .end method

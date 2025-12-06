@@ -1,19 +1,20 @@
-.class public final Lqe7;
+.class public interface abstract Lqe7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lpe7;
+# virtual methods
+.method public abstract a()I
+.end method
 
+.method public abstract b()Landroid/graphics/Matrix;
+.end method
 
-# direct methods
-.method public constructor <init>(Lpe7;)V
-    .locals 0
+.method public abstract d(Lgk5;)V
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract e()Lryf;
+.end method
 
-    iput-object p1, p0, Lqe7;->a:Lpe7;
-
-    return-void
+.method public abstract getTimestamp()J
 .end method

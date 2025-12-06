@@ -1,59 +1,49 @@
 .class public final Lu74;
-.super Ly14;
+.super Landroid/view/ViewOutlineProvider;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Ljava/lang/String;
-
-.field public Y:Ln84;
-
-.field public Z:J
-
-.field public o:Ln84;
-
-.field public synthetic q0:Ljava/lang/Object;
-
-.field public final synthetic r0:Ln84;
-
-.field public s0:I
+.field public a:F
 
 
 # direct methods
-.method public constructor <init>(Ln84;Ly14;)V
+.method public constructor <init>(F)V
     .locals 0
 
-    iput-object p1, p0, Lu74;->r0:Ln84;
+    invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput p1, p0, Lu74;->a:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
+    .locals 6
 
-    iput-object p1, p0, Lu74;->q0:Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
-    iget p1, p0, Lu74;->s0:I
+    move-result v3
 
-    const/high16 v0, -0x80000000
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
-    or-int/2addr p1, v0
+    move-result v4
 
-    iput p1, p0, Lu74;->s0:I
+    iget v5, p0, Lu74;->a:F
 
-    const-wide/16 v0, 0x0
+    const/4 v1, 0x0
 
-    const/4 p1, 0x0
+    const/4 v2, 0x0
 
-    iget-object v2, p0, Lu74;->r0:Ln84;
+    move-object v0, p2
 
-    invoke-virtual {v2, v0, v1, p1, p0}, Ln84;->G(JLjava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Outline;->setRoundRect(IIIIF)V
 
-    move-result-object p1
+    const/4 p2, 0x1
 
-    return-object p1
+    invoke-virtual {p1, p2}, Landroid/view/View;->setClipToOutline(Z)V
+
+    return-void
 .end method

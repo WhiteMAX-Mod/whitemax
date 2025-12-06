@@ -1,50 +1,21 @@
-.class public interface abstract Lvq7;
-.super Ljava/lang/Object;
+.class public final Lvq7;
+.super Lxp;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Closeable;
+
+# static fields
+.field public static final a:Lvq7;
 
 
-# virtual methods
-.method public abstract B()Ljava/lang/String;
-.end method
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.method public abstract R()Ljava/lang/String;
-.end method
+    new-instance v0, Lvq7;
 
-.method public abstract W()Z
-.end method
+    invoke-direct {v0}, Lxp;-><init>()V
 
-.method public abstract a0()Ljava/lang/String;
-.end method
+    sput-object v0, Lvq7;->a:Lvq7;
 
-.method public abstract hasNext()Z
-.end method
-
-.method public abstract name()Ljava/lang/String;
-.end method
-
-.method public abstract peek()I
-.end method
-
-.method public abstract q()V
-.end method
-
-.method public abstract s()V
-.end method
-
-.method public abstract t()V
-.end method
-
-.method public abstract u()V
-.end method
-
-.method public abstract w()J
-.end method
-
-.method public abstract y()V
-.end method
-
-.method public abstract z()I
+    return-void
 .end method

@@ -1,53 +1,110 @@
-.class public final Lcba;
+.class public final synthetic Lcba;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic b:[Ltr7;
+# interfaces
+.implements Lp6;
 
 
 # instance fields
-.field public final a:Lpw4;
+.field public final synthetic a:I
+
+.field public final synthetic b:Leba;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public synthetic constructor <init>(Leba;I)V
+    .locals 0
 
-    new-instance v0, Leec;
+    iput p2, p0, Lcba;->a:I
 
-    const-class v1, Lcba;
+    iput-object p1, p0, Lcba;->b:Leba;
 
-    const-string v2, "liveLocationManager"
-
-    const-string v3, "getLiveLocationManager()Lru/ok/tamtam/location/live/manager/LiveLocationManager;"
-
-    const/4 v4, 0x0
-
-    invoke-direct {v0, v1, v2, v3, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sget-object v1, Lz7d;->a:La8d;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Ltr7;
-
-    aput-object v0, v1, v4
-
-    sput-object v1, Lcba;->b:[Ltr7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Lpw4;)V
-    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final run()V
+    .locals 2
 
-    iput-object p1, p0, Lcba;->a:Lpw4;
+    iget v0, p0, Lcba;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Ldk0;
+
+    const/16 v1, 0x1b
+
+    invoke-direct {v0, v1}, Ldk0;-><init>(I)V
+
+    iget-object v1, p0, Lcba;->b:Leba;
+
+    invoke-virtual {v1, v0}, Lj3;->j(Lju3;)V
 
     return-void
+
+    :pswitch_0
+    new-instance v0, Lbba;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lbba;-><init>(I)V
+
+    iget-object v1, p0, Lcba;->b:Leba;
+
+    invoke-virtual {v1, v0}, Lj3;->j(Lju3;)V
+
+    return-void
+
+    :pswitch_1
+    new-instance v0, Ldk0;
+
+    const/16 v1, 0x1c
+
+    invoke-direct {v0, v1}, Ldk0;-><init>(I)V
+
+    iget-object v1, p0, Lcba;->b:Leba;
+
+    invoke-virtual {v1, v0}, Lj3;->j(Lju3;)V
+
+    return-void
+
+    :pswitch_2
+    new-instance v0, Lbba;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1}, Lbba;-><init>(I)V
+
+    iget-object v1, p0, Lcba;->b:Leba;
+
+    invoke-virtual {v1, v0}, Lj3;->j(Lju3;)V
+
+    return-void
+
+    :pswitch_3
+    new-instance v0, Lbba;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lbba;-><init>(I)V
+
+    iget-object v1, p0, Lcba;->b:Leba;
+
+    invoke-virtual {v1, v0}, Lj3;->j(Lju3;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

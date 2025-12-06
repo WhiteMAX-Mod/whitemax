@@ -1,115 +1,75 @@
 .class public final Li1i;
-.super Lf4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Li1i;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # instance fields
-.field public final X:Z
+.field public a:Ljava/lang/String;
 
-.field public final a:Z
+.field public b:Ljava/lang/String;
 
-.field public final b:[B
+.field public c:Ljava/util/Set;
 
-.field public final c:Z
+.field public d:Ljava/lang/String;
 
-.field public final o:F
+.field public e:Ljava/lang/String;
+
+.field public f:I
+
+.field public g:Z
+
+.field public h:I
+
+.field public i:Z
+
+.field public j:I
+
+.field public k:I
+
+.field public l:I
+
+.field public m:I
+
+.field public n:I
+
+.field public o:F
+
+.field public p:I
+
+.field public q:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public static a(Ljava/lang/String;IILjava/lang/String;)I
+    .locals 1
 
-    new-instance v0, Lp0i;
+    invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
 
-    const/4 v1, 0x5
+    move-result v0
 
-    invoke-direct {v0, v1}, Lp0i;-><init>(I)V
+    if-nez v0, :cond_2
 
-    sput-object v0, Li1i;->CREATOR:Landroid/os/Parcelable$Creator;
+    const/4 v0, -0x1
 
-    return-void
-.end method
+    if-ne p1, v0, :cond_0
 
-.method public constructor <init>(Z[BZFZ)V
-    .locals 0
+    goto :goto_0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    :cond_0
+    invoke-virtual {p0, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iput-boolean p1, p0, Li1i;->a:Z
+    move-result p0
 
-    iput-object p2, p0, Li1i;->b:[B
+    if-eqz p0, :cond_1
 
-    iput-boolean p3, p0, Li1i;->c:Z
+    add-int/2addr p1, p2
 
-    iput p4, p0, Li1i;->o:F
+    return p1
 
-    iput-boolean p5, p0, Li1i;->X:Z
+    :cond_1
+    return v0
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 3
-
-    const/16 p2, 0x4f45
-
-    invoke-static {p1, p2}, Llyi;->t(Landroid/os/Parcel;I)I
-
-    move-result p2
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x4
-
-    invoke-static {p1, v0, v1}, Llyi;->v(Landroid/os/Parcel;II)V
-
-    iget-boolean v0, p0, Li1i;->a:Z
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/4 v0, 0x2
-
-    iget-object v2, p0, Li1i;->b:[B
-
-    invoke-static {p1, v0, v2}, Llyi;->l(Landroid/os/Parcel;I[B)V
-
-    const/4 v0, 0x3
-
-    invoke-static {p1, v0, v1}, Llyi;->v(Landroid/os/Parcel;II)V
-
-    iget-boolean v0, p0, Li1i;->c:Z
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-static {p1, v1, v1}, Llyi;->v(Landroid/os/Parcel;II)V
-
-    iget v0, p0, Li1i;->o:F
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
-
-    const/4 v0, 0x5
-
-    invoke-static {p1, v0, v1}, Llyi;->v(Landroid/os/Parcel;II)V
-
-    iget-boolean v0, p0, Li1i;->X:Z
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-static {p1, p2}, Llyi;->u(Landroid/os/Parcel;I)V
-
-    return-void
+    :cond_2
+    :goto_0
+    return p1
 .end method

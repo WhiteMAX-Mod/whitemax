@@ -1,74 +1,75 @@
-.class public final synthetic Lun3;
-.super Ljava/lang/Object;
+.class public final Lun3;
+.super Lh3;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lsm6;
 
-.field public final synthetic b:Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;
+.field public final synthetic b:Lvn3;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;I)V
+.method public constructor <init>(Lvn3;Lsm6;)V
     .locals 0
 
-    iput p2, p0, Lun3;->a:I
+    iput-object p1, p0, Lun3;->b:Lvn3;
 
-    iput-object p1, p0, Lun3;->b:Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;
+    invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lun3;->a:Lsm6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final add(Ljava/lang/Object;)Z
+    .locals 1
+
+    sget-object p1, Lwn3;->a:Lkotlinx/coroutines/internal/Symbol;
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "not implemented"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final getSize()I
+    .locals 1
+
+    iget-object v0, p0, Lun3;->b:Lvn3;
+
+    invoke-virtual {v0}, Lvn3;->getSize()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final iterator()Ljava/util/Iterator;
     .locals 3
 
-    iget p1, p0, Lun3;->a:I
+    sget-object v0, Lvn3;->c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    const/4 v0, 0x1
+    iget-object v1, p0, Lun3;->b:Lvn3;
 
-    iget-object v1, p0, Lun3;->b:Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    packed-switch p1, :pswitch_data_0
+    move-result-object v0
 
-    sget p1, Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;->B0:I
+    check-cast v0, Lsn3;
 
-    invoke-virtual {v1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->I0(Z)V
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-void
+    new-instance v1, Lrn3;
 
-    :pswitch_0
-    sget p1, Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;->B0:I
+    iget-object v2, p0, Lun3;->a:Lsm6;
 
-    iget-object p1, v1, Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;->A0:Liu7;
+    invoke-direct {v1, v0, v2}, Lrn3;-><init>(Lsn3;Lsm6;)V
 
-    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lvn3;
-
-    iget-object v2, p1, Lvn3;->o:Lwr1;
-
-    iget-object p1, p1, Lvn3;->b:Lmi1;
-
-    invoke-virtual {v2, p1}, Lwr1;->g(Lmi1;)V
-
-    invoke-virtual {v1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->I0(Z)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v1
 .end method

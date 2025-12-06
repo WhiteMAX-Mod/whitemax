@@ -1,183 +1,691 @@
 .class public final Lfme;
-.super Lsgf;
+.super Lid0;
 .source "SourceFile"
 
-# interfaces
-.implements Lzi6;
+
+# static fields
+.field public static final f:Lfme;
+
+.field public static final g:Lfme;
+
+.field public static final h:Lfme;
+
+.field public static final i:Lfme;
+
+.field public static final j:Lfme;
+
+.field public static final k:Lfme;
+
+.field public static final l:Lfme;
+
+.field public static final m:Lfme;
+
+.field public static final n:Lhme;
+
+.field public static final o:Lhme;
+
+.field public static final p:Lhme;
 
 
 # instance fields
-.field public X:I
+.field public final b:Ls5g;
 
-.field public final synthetic Y:Ljme;
+.field public final c:Ljava/util/List;
+
+.field public final d:Lf1e;
+
+.field public final e:Landroid/os/Bundle;
 
 
 # direct methods
-.method public constructor <init>(Ljme;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 16
 
-    iput-object p1, p0, Lfme;->Y:Ljme;
+    sget v0, Lnbb;->y:I
 
-    const/4 p1, 0x2
+    new-instance v2, Ln5g;
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v2, v0}, Ln5g;-><init>(I)V
+
+    new-instance v0, Leme;
+
+    sget v7, Lmvd;->O:I
+
+    new-instance v1, Ln5g;
+
+    invoke-direct {v1, v7}, Ln5g;-><init>(I)V
+
+    sget v3, Lkbb;->n:I
+
+    const/4 v8, 0x0
+
+    invoke-direct {v0, v3, v1, v8}, Leme;-><init>(ILn5g;Z)V
+
+    new-instance v1, Leme;
+
+    sget v3, Lmvd;->J0:I
+
+    new-instance v4, Ln5g;
+
+    invoke-direct {v4, v3}, Ln5g;-><init>(I)V
+
+    sget v3, Lkbb;->o:I
+
+    invoke-direct {v1, v3, v4, v8}, Leme;-><init>(ILn5g;Z)V
+
+    filled-new-array {v0, v1}, [Leme;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lve3;->j([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v3
+
+    new-instance v1, Lfme;
+
+    const/4 v5, 0x0
+
+    const/16 v6, 0x8
+
+    sget-object v4, Lf1e;->C1:Lf1e;
+
+    invoke-direct/range {v1 .. v6}, Lfme;-><init>(Ls5g;Ljava/util/List;Lf1e;Landroid/os/Bundle;I)V
+
+    sput-object v1, Lfme;->f:Lfme;
+
+    new-instance v9, Lfme;
+
+    sget v0, Lnbb;->x:I
+
+    new-instance v10, Ln5g;
+
+    invoke-direct {v10, v0}, Ln5g;-><init>(I)V
+
+    new-instance v0, Leme;
+
+    sget v1, Lnbb;->w:I
+
+    new-instance v2, Ln5g;
+
+    invoke-direct {v2, v1}, Ln5g;-><init>(I)V
+
+    sget v1, Lkbb;->p:I
+
+    invoke-direct {v0, v1, v2, v8}, Leme;-><init>(ILn5g;Z)V
+
+    new-instance v1, Leme;
+
+    sget v2, Lmvd;->p:I
+
+    new-instance v3, Ln5g;
+
+    invoke-direct {v3, v2}, Ln5g;-><init>(I)V
+
+    sget v4, Lkbb;->q:I
+
+    invoke-direct {v1, v4, v3, v8}, Leme;-><init>(ILn5g;Z)V
+
+    filled-new-array {v0, v1}, [Leme;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lve3;->j([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v11
+
+    const/4 v13, 0x0
+
+    const/16 v14, 0xc
+
+    const/4 v12, 0x0
+
+    invoke-direct/range {v9 .. v14}, Lfme;-><init>(Ls5g;Ljava/util/List;Lf1e;Landroid/os/Bundle;I)V
+
+    sput-object v9, Lfme;->g:Lfme;
+
+    sget v0, Lnbb;->t:I
+
+    new-instance v10, Ln5g;
+
+    invoke-direct {v10, v0}, Ln5g;-><init>(I)V
+
+    new-instance v0, Leme;
+
+    sget v1, Lmvd;->b:I
+
+    new-instance v3, Ln5g;
+
+    invoke-direct {v3, v1}, Ln5g;-><init>(I)V
+
+    sget v4, Lkbb;->h:I
+
+    invoke-direct {v0, v4, v3, v8}, Leme;-><init>(ILn5g;Z)V
+
+    new-instance v3, Leme;
+
+    new-instance v4, Ln5g;
+
+    invoke-direct {v4, v7}, Ln5g;-><init>(I)V
+
+    sget v5, Lkbb;->i:I
+
+    invoke-direct {v3, v5, v4, v8}, Leme;-><init>(ILn5g;Z)V
+
+    filled-new-array {v0, v3}, [Leme;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lve3;->j([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v11
+
+    new-instance v9, Lfme;
+
+    const/16 v14, 0x8
+
+    sget-object v12, Lf1e;->A1:Lf1e;
+
+    invoke-direct/range {v9 .. v14}, Lfme;-><init>(Ls5g;Ljava/util/List;Lf1e;Landroid/os/Bundle;I)V
+
+    sput-object v9, Lfme;->h:Lfme;
+
+    sget v0, Lnbb;->C:I
+
+    new-instance v10, Ln5g;
+
+    invoke-direct {v10, v0}, Ln5g;-><init>(I)V
+
+    new-instance v0, Leme;
+
+    new-instance v3, Ln5g;
+
+    invoke-direct {v3, v1}, Ln5g;-><init>(I)V
+
+    sget v4, Lkbb;->t:I
+
+    invoke-direct {v0, v4, v3, v8}, Leme;-><init>(ILn5g;Z)V
+
+    new-instance v3, Leme;
+
+    new-instance v4, Ln5g;
+
+    invoke-direct {v4, v7}, Ln5g;-><init>(I)V
+
+    sget v5, Lkbb;->u:I
+
+    invoke-direct {v3, v5, v4, v8}, Leme;-><init>(ILn5g;Z)V
+
+    filled-new-array {v0, v3}, [Leme;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lve3;->j([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v11
+
+    new-instance v9, Lfme;
+
+    sget-object v12, Lf1e;->D1:Lf1e;
+
+    invoke-direct/range {v9 .. v14}, Lfme;-><init>(Ls5g;Ljava/util/List;Lf1e;Landroid/os/Bundle;I)V
+
+    sput-object v9, Lfme;->i:Lfme;
+
+    sget v0, Lnbb;->s:I
+
+    new-instance v10, Ln5g;
+
+    invoke-direct {v10, v0}, Ln5g;-><init>(I)V
+
+    new-instance v0, Leme;
+
+    new-instance v3, Ln5g;
+
+    invoke-direct {v3, v1}, Ln5g;-><init>(I)V
+
+    sget v1, Lkbb;->f:I
+
+    invoke-direct {v0, v1, v3, v8}, Leme;-><init>(ILn5g;Z)V
+
+    new-instance v1, Leme;
+
+    new-instance v3, Ln5g;
+
+    invoke-direct {v3, v7}, Ln5g;-><init>(I)V
+
+    sget v4, Lkbb;->g:I
+
+    invoke-direct {v1, v4, v3, v8}, Leme;-><init>(ILn5g;Z)V
+
+    filled-new-array {v0, v1}, [Leme;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lve3;->j([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v11
+
+    new-instance v9, Lfme;
+
+    sget-object v12, Lf1e;->B1:Lf1e;
+
+    invoke-direct/range {v9 .. v14}, Lfme;-><init>(Ls5g;Ljava/util/List;Lf1e;Landroid/os/Bundle;I)V
+
+    sput-object v9, Lfme;->j:Lfme;
+
+    new-instance v10, Lfme;
+
+    sget v0, Lnbb;->v:I
+
+    new-instance v11, Ln5g;
+
+    invoke-direct {v11, v0}, Ln5g;-><init>(I)V
+
+    new-instance v0, Leme;
+
+    sget v1, Lnbb;->u:I
+
+    new-instance v3, Ln5g;
+
+    invoke-direct {v3, v1}, Ln5g;-><init>(I)V
+
+    sget v1, Lkbb;->m:I
+
+    const/4 v4, 0x1
+
+    invoke-direct {v0, v1, v3, v4}, Leme;-><init>(ILn5g;Z)V
+
+    new-instance v1, Leme;
+
+    new-instance v3, Ln5g;
+
+    invoke-direct {v3, v2}, Ln5g;-><init>(I)V
+
+    sget v2, Lkbb;->l:I
+
+    invoke-direct {v1, v2, v3, v8}, Leme;-><init>(ILn5g;Z)V
+
+    filled-new-array {v0, v1}, [Leme;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lve3;->j([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v12
+
+    const/4 v14, 0x0
+
+    const/16 v15, 0xc
+
+    invoke-direct/range {v10 .. v15}, Lfme;-><init>(Ls5g;Ljava/util/List;Lf1e;Landroid/os/Bundle;I)V
+
+    sput-object v10, Lfme;->k:Lfme;
+
+    new-instance v0, Lfme;
+
+    sget v1, Lnbb;->B:I
+
+    move v2, v1
+
+    new-instance v1, Ln5g;
+
+    invoke-direct {v1, v2}, Ln5g;-><init>(I)V
+
+    new-instance v2, Leme;
+
+    sget v3, Lnbb;->A:I
+
+    new-instance v4, Ln5g;
+
+    invoke-direct {v4, v3}, Ln5g;-><init>(I)V
+
+    sget v3, Lkbb;->s:I
+
+    invoke-direct {v2, v3, v4, v8}, Leme;-><init>(ILn5g;Z)V
+
+    new-instance v3, Leme;
+
+    sget v4, Lnbb;->z:I
+
+    new-instance v5, Ln5g;
+
+    invoke-direct {v5, v4}, Ln5g;-><init>(I)V
+
+    sget v4, Lkbb;->r:I
+
+    invoke-direct {v3, v4, v5, v8}, Leme;-><init>(ILn5g;Z)V
+
+    filled-new-array {v2, v3}, [Leme;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lve3;->j([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v2
+
+    const/4 v4, 0x0
+
+    const/16 v5, 0xc
+
+    const/4 v3, 0x0
+
+    invoke-direct/range {v0 .. v5}, Lfme;-><init>(Ls5g;Ljava/util/List;Lf1e;Landroid/os/Bundle;I)V
+
+    sput-object v0, Lfme;->l:Lfme;
+
+    new-instance v1, Lfme;
+
+    sget v0, Lnbb;->a:I
+
+    new-instance v2, Ln5g;
+
+    invoke-direct {v2, v0}, Ln5g;-><init>(I)V
+
+    new-instance v0, Leme;
+
+    sget v3, Lnbb;->h:I
+
+    new-instance v4, Ln5g;
+
+    invoke-direct {v4, v3}, Ln5g;-><init>(I)V
+
+    sget v3, Lkbb;->j:I
+
+    invoke-direct {v0, v3, v4, v8}, Leme;-><init>(ILn5g;Z)V
+
+    new-instance v3, Leme;
+
+    sget v4, Lnbb;->j:I
+
+    new-instance v5, Ln5g;
+
+    invoke-direct {v5, v4}, Ln5g;-><init>(I)V
+
+    sget v4, Lkbb;->k:I
+
+    invoke-direct {v3, v4, v5, v8}, Leme;-><init>(ILn5g;Z)V
+
+    filled-new-array {v0, v3}, [Leme;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lve3;->j([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v3
+
+    const/4 v5, 0x0
+
+    sget-object v4, Lf1e;->G1:Lf1e;
+
+    invoke-direct/range {v1 .. v6}, Lfme;-><init>(Ls5g;Ljava/util/List;Lf1e;Landroid/os/Bundle;I)V
+
+    sput-object v1, Lfme;->m:Lfme;
+
+    new-instance v0, Lhme;
+
+    sget v1, Lnbb;->J:I
+
+    new-instance v2, Ln5g;
+
+    invoke-direct {v2, v1}, Ln5g;-><init>(I)V
+
+    sget v1, Lyud;->O1:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-direct {v0, v2, v1}, Lhme;-><init>(Ln5g;Ljava/lang/Integer;)V
+
+    sput-object v0, Lfme;->n:Lhme;
+
+    new-instance v0, Lhme;
+
+    sget v1, Lnbb;->I:I
+
+    new-instance v2, Ln5g;
+
+    invoke-direct {v2, v1}, Ln5g;-><init>(I)V
+
+    sget v1, Livd;->a1:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-direct {v0, v2, v1}, Lhme;-><init>(Ln5g;Ljava/lang/Integer;)V
+
+    sput-object v0, Lfme;->o:Lhme;
+
+    new-instance v0, Lhme;
+
+    sget v1, Lnbb;->H:I
+
+    new-instance v2, Ln5g;
+
+    invoke-direct {v2, v1}, Ln5g;-><init>(I)V
+
+    sget v1, Livd;->p1:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-direct {v0, v2, v1}, Lhme;-><init>(Ln5g;Ljava/lang/Integer;)V
+
+    sput-object v0, Lfme;->p:Lhme;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ls5g;Ljava/util/List;Lf1e;Landroid/os/Bundle;I)V
+    .locals 2
+
+    and-int/lit8 v0, p5, 0x4
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    move-object p3, v1
+
+    :cond_0
+    and-int/lit8 p5, p5, 0x8
+
+    if-eqz p5, :cond_1
+
+    move-object p4, v1
+
+    :cond_1
+    const/16 p5, 0x11
+
+    invoke-direct {p0, p5}, Lid0;-><init>(I)V
+
+    iput-object p1, p0, Lfme;->b:Ls5g;
+
+    iput-object p2, p0, Lfme;->c:Ljava/util/List;
+
+    iput-object p3, p0, Lfme;->d:Lf1e;
+
+    iput-object p4, p0, Lfme;->e:Landroid/os/Bundle;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p1, Lq54;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lfme;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lfme;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lfme;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lfme;
-
-    iget-object v0, p0, Lfme;->Y:Ljme;
-
-    invoke-direct {p1, v0, p2}, Lfme;-><init>(Ljme;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    iget v0, p0, Lfme;->X:I
-
-    const/4 v1, 0x2
-
-    const/4 v2, 0x1
-
-    iget-object v3, p0, Lfme;->Y:Ljme;
-
-    sget-object v4, Lr54;->a:Lr54;
-
-    if-eqz v0, :cond_2
-
-    if-eq v0, v2, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    goto :goto_2
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of v1, p1, Lfme;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v2, 0x0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_1
 
-    throw p1
+    return v2
 
     :cond_1
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    check-cast p1, Lfme;
+
+    iget-object v1, p0, Lfme;->b:Ls5g;
+
+    iget-object v3, p1, Lfme;->b:Ls5g;
+
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lfme;->c:Ljava/util/List;
+
+    iget-object v3, p1, Lfme;->c:Ljava/util/List;
+
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lfme;->d:Lf1e;
+
+    iget-object v3, p1, Lfme;->d:Lf1e;
+
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lfme;->e:Landroid/os/Bundle;
+
+    iget-object p1, p1, Lfme;->e:Landroid/os/Bundle;
+
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    return v2
+
+    :cond_5
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-object v0, p0, Lfme;->b:Ls5g;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lfme;->c:Ljava/util/List;
+
+    invoke-static {v2, v0, v1}, Lxrf;->l(Ljava/util/List;II)I
+
+    move-result v0
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Lfme;->d:Lf1e;
+
+    if-nez v3, :cond_0
+
+    move v3, v2
 
     goto :goto_0
 
-    :cond_2
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    :cond_0
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
 
-    iget-object p1, v3, Ljme;->Y:Liu7;
+    move-result v3
 
-    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+    :goto_0
+    add-int/2addr v0, v3
 
-    move-result-object p1
+    mul-int/2addr v0, v1
 
-    check-cast p1, Lrp6;
+    iget-object v1, p0, Lfme;->e:Landroid/os/Bundle;
 
-    iput v2, p0, Lfme;->X:I
-
-    invoke-virtual {p1, p0}, Lrp6;->a(Lsgf;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v4, :cond_3
+    if-nez v1, :cond_1
 
     goto :goto_1
 
-    :cond_3
-    :goto_0
-    check-cast p1, Lq78;
+    :cond_1
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    if-eqz p1, :cond_4
-
-    invoke-static {v3, p1}, Ljme;->r(Ljme;Lq78;)V
-
-    iget-object v0, v3, Ljme;->A0:Lxe5;
-
-    new-instance v1, Ltle;
-
-    iget-wide v2, p1, Lq78;->a:D
-
-    iget-wide v4, p1, Lq78;->b:D
-
-    const/4 v6, 0x0
-
-    invoke-direct/range {v1 .. v6}, Ltle;-><init>(DDLjava/lang/Float;)V
-
-    invoke-static {v0, v1}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
-
-    goto :goto_2
-
-    :cond_4
-    iput v1, p0, Lfme;->X:I
-
-    iget-object p1, v3, Ljme;->v0:Liu7;
-
-    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lulf;
-
-    check-cast p1, Lqta;
-
-    invoke-virtual {p1}, Lqta;->c()Lce8;
-
-    move-result-object p1
-
-    new-instance v0, Lime;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v3, v1}, Lime;-><init>(Ljme;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {p1, v0, p0}, Ltki;->h(Li54;Lzi6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v4, :cond_5
+    move-result v2
 
     :goto_1
-    return-object v4
+    add-int/2addr v0, v2
 
-    :cond_5
-    :goto_2
-    sget-object p1, Lccg;->a:Lccg;
+    return v0
+.end method
 
-    return-object p1
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "OpenConfirmationDialog(title="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lfme;->b:Ls5g;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", buttons="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lfme;->c:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", statScreen="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lfme;->d:Lf1e;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", payload="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lfme;->e:Landroid/os/Bundle;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

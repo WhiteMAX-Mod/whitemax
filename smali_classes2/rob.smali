@@ -1,64 +1,43 @@
-.class public final synthetic Lrob;
+.class public abstract Lrob;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Landroidx/recyclerview/widget/RecyclerView;
+# static fields
+.field public static final a:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/recyclerview/widget/RecyclerView;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p2, p0, Lrob;->a:I
+    new-instance v0, Lzfb;
 
-    iput-object p1, p0, Lrob;->b:Landroidx/recyclerview/widget/RecyclerView;
+    const/4 v1, 0x7
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1}, Lzfb;-><init>(I)V
+
+    const/4 v1, 0x3
+
+    invoke-static {v1, v0}, Lipi;->b(ILcm6;)Lk18;
+
+    move-result-object v0
+
+    sput-object v0, Lrob;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final run()V
+.method public static final a()Landroid/graphics/Paint;
     .locals 1
 
-    iget v0, p0, Lrob;->a:I
+    sget-object v0, Lrob;->a:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
-    iget-object v0, p0, Lrob;->b:Landroidx/recyclerview/widget/RecyclerView;
+    move-result-object v0
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
+    check-cast v0, Landroid/graphics/Paint;
 
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lrob;->b:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lrob;->b:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

@@ -1,51 +1,77 @@
-.class public final Lfgg;
-.super Ly14;
+.class public abstract Lfgg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Lq1a;
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Llgg;
-
-.field public o:Llgg;
-
-.field public q0:I
+# static fields
+.field public static final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Llgg;Ly14;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Lfgg;->Z:Llgg;
+    new-instance v0, Llk6;
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/4 v1, 0x4
+
+    invoke-direct {v0, v1}, Llk6;-><init>(I)V
+
+    const v1, 0x9c40
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    sget-object v2, Lfk6;->c:Lfk6;
+
+    invoke-virtual {v0, v2, v1}, Llk6;->T(Ljava/lang/Object;Ljava/lang/Object;)Llk6;
+
+    sget-object v2, Lfk6;->d:Lfk6;
+
+    invoke-virtual {v0, v2, v1}, Llk6;->T(Ljava/lang/Object;Ljava/lang/Object;)Llk6;
+
+    sget-object v2, Lfk6;->o:Lfk6;
+
+    invoke-virtual {v0, v2, v1}, Llk6;->T(Ljava/lang/Object;Ljava/lang/Object;)Llk6;
+
+    const v1, 0x26160
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    sget-object v2, Lfk6;->X:Lfk6;
+
+    invoke-virtual {v0, v2, v1}, Llk6;->T(Ljava/lang/Object;Ljava/lang/Object;)Llk6;
+
+    sget-object v2, Lfk6;->Y:Lfk6;
+
+    invoke-virtual {v0, v2, v1}, Llk6;->T(Ljava/lang/Object;Ljava/lang/Object;)Llk6;
+
+    const v1, 0x493e0
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    sget-object v2, Lfk6;->Z:Lfk6;
+
+    invoke-virtual {v0, v2, v1}, Llk6;->T(Ljava/lang/Object;Ljava/lang/Object;)Llk6;
+
+    sget-object v2, Lfk6;->s0:Lfk6;
+
+    invoke-virtual {v0, v2, v1}, Llk6;->T(Ljava/lang/Object;Ljava/lang/Object;)Llk6;
+
+    sget-object v2, Lfk6;->t0:Lfk6;
+
+    invoke-virtual {v0, v2, v1}, Llk6;->T(Ljava/lang/Object;Ljava/lang/Object;)Llk6;
+
+    sget-object v2, Lfk6;->u0:Lfk6;
+
+    invoke-virtual {v0, v2, v1}, Llk6;->T(Ljava/lang/Object;Ljava/lang/Object;)Llk6;
+
+    invoke-virtual {v0}, Llk6;->u()Lah7;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lfgg;->Y:Ljava/lang/Object;
-
-    iget p1, p0, Lfgg;->q0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lfgg;->q0:I
-
-    iget-object p1, p0, Lfgg;->Z:Llgg;
-
-    invoke-virtual {p1, p0}, Llgg;->a(Ly14;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

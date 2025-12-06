@@ -1,84 +1,60 @@
 .class public final Lw2j;
-.super Lwxi;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpqa;
 
-# instance fields
-.field public final transient c:Lu5i;
 
-.field public final transient o:Ln3j;
+# static fields
+.field public static final a:Lw2j;
 
 
 # direct methods
-.method public constructor <init>(Lu5i;Ln3j;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+    new-instance v0, Lw2j;
 
-    iput-object p1, p0, Lw2j;->c:Lu5i;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lw2j;->o:Ln3j;
+    sput-object v0, Lw2j;->a:Lw2j;
+
+    new-instance v0, Lmli;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lmli;-><init>(I)V
+
+    const-class v1, Lemi;
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a([Ljava/lang/Object;)I
-    .locals 1
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    iget-object v0, p0, Lw2j;->o:Ln3j;
-
-    invoke-virtual {v0, p1}, Lmui;->a([Ljava/lang/Object;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final contains(Ljava/lang/Object;)Z
-    .locals 1
-
-    iget-object v0, p0, Lw2j;->c:Lu5i;
-
-    invoke-virtual {v0, p1}, Lu5i;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
     move-result-object p1
 
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final synthetic iterator()Ljava/util/Iterator;
-    .locals 2
-
-    iget-object v0, p0, Lw2j;->o:Ln3j;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lmui;->g(I)Lasi;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final size()I
-    .locals 1
-
-    iget-object v0, p0, Lw2j;->c:Lu5i;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v0, 0x1
-
-    return v0
+    throw p1
 .end method

@@ -1,88 +1,144 @@
 .class public final Lxj9;
-.super Lsgf;
+.super Landroid/text/method/LinkMovementMethod;
 .source "SourceFile"
 
-# interfaces
-.implements Lzi6;
 
-
-# instance fields
-.field public final synthetic X:Lhu7;
-
-.field public final synthetic Y:Lwif;
+# static fields
+.field public static final a:Lxj9;
 
 
 # direct methods
-.method public constructor <init>(Lhu7;Lwif;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lxj9;->X:Lhu7;
+    new-instance v0, Lxj9;
 
-    iput-object p2, p0, Lxj9;->Y:Lwif;
+    invoke-direct {v0}, Landroid/text/method/LinkMovementMethod;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lxj9;->a:Lxj9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onTouchEvent(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z
+    .locals 5
 
-    check-cast p1, Lq54;
+    invoke-virtual {p3}, Landroid/view/MotionEvent;->getAction()I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result v0
 
-    invoke-virtual {p0, p1, p2}, Lxj9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/4 v1, 0x0
 
-    move-result-object p1
+    const/4 v2, 0x1
 
-    check-cast p1, Lxj9;
+    if-eq v0, v2, :cond_0
 
-    sget-object p2, Lccg;->a:Lccg;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p1, p2}, Lxj9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    return v1
 
-    return-object p2
-.end method
+    :cond_0
+    invoke-virtual {p3}, Landroid/view/MotionEvent;->getX()F
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    move-result v3
 
-    new-instance p1, Lxj9;
+    float-to-int v3, v3
 
-    iget-object v0, p0, Lxj9;->X:Lhu7;
+    invoke-virtual {p3}, Landroid/view/MotionEvent;->getY()F
 
-    iget-object v1, p0, Lxj9;->Y:Lwif;
+    move-result p3
 
-    invoke-direct {p1, v0, v1, p2}, Lxj9;-><init>(Lhu7;Lwif;Lkotlin/coroutines/Continuation;)V
+    float-to-int p3, p3
 
-    return-object p1
-.end method
+    invoke-virtual {p1}, Landroid/widget/TextView;->getTotalPaddingLeft()I
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    move-result v4
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    sub-int/2addr v3, v4
 
-    iget-object p1, p0, Lxj9;->X:Lhu7;
+    invoke-virtual {p1}, Landroid/widget/TextView;->getTotalPaddingTop()I
 
-    iget-object p1, p1, Lhu7;->b:Llf9;
+    move-result v4
 
-    iget-object v0, p0, Lxj9;->Y:Lwif;
+    sub-int/2addr p3, v4
 
-    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/view/View;->getScrollX()I
 
-    move-result-object v0
+    move-result v4
 
-    check-cast v0, Landroid/text/Layout;
+    add-int/2addr v4, v3
 
-    invoke-virtual {p1, v0}, Llf9;->b(Landroid/text/Layout;)V
+    invoke-virtual {p1}, Landroid/view/View;->getScrollY()I
 
-    sget-object p1, Lccg;->a:Lccg;
+    move-result v3
 
-    return-object p1
+    add-int/2addr v3, p3
+
+    invoke-virtual {p1}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
+
+    move-result-object p3
+
+    invoke-virtual {p3, v3}, Landroid/text/Layout;->getLineForVertical(I)I
+
+    move-result v3
+
+    int-to-float v4, v4
+
+    invoke-virtual {p3, v3, v4}, Landroid/text/Layout;->getOffsetForHorizontal(IF)I
+
+    move-result p3
+
+    const-class v3, Landroid/text/style/ClickableSpan;
+
+    invoke-interface {p2, p3, p3, v3}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, [Landroid/text/style/ClickableSpan;
+
+    array-length v3, p3
+
+    if-nez v3, :cond_1
+
+    move v3, v2
+
+    goto :goto_0
+
+    :cond_1
+    move v3, v1
+
+    :goto_0
+    if-nez v3, :cond_4
+
+    aget-object p3, p3, v1
+
+    if-eqz v0, :cond_3
+
+    if-eq v0, v2, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {p3, p1}, Landroid/text/style/ClickableSpan;->onClick(Landroid/view/View;)V
+
+    goto :goto_1
+
+    :cond_3
+    invoke-interface {p2, p3}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
+
+    move-result p1
+
+    invoke-interface {p2, p3}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
+
+    move-result p3
+
+    invoke-static {p2, p1, p3}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;II)V
+
+    :goto_1
+    return v2
+
+    :cond_4
+    return v1
 .end method

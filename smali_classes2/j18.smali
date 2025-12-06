@@ -1,33 +1,23 @@
 .class public final Lj18;
-.super Ln18;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:Landroid/net/Uri;
+.field public final a:Lpm9;
 
-.field public final Y:Ljava/lang/String;
+.field public final b:Lpm9;
 
 
 # direct methods
-.method public constructor <init>(Landroid/net/Uri;Ljava/lang/String;)V
-    .locals 9
+.method public constructor <init>(Lpm9;Lpm9;)V
+    .locals 0
 
-    const-wide/16 v5, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-wide/16 v7, 0x0
+    iput-object p1, p0, Lj18;->a:Lpm9;
 
-    const-wide/16 v1, 0x0
-
-    const-wide/16 v3, 0x0
-
-    move-object v0, p0
-
-    invoke-direct/range {v0 .. v8}, Ln18;-><init>(JJJJ)V
-
-    iput-object p1, v0, Lj18;->X:Landroid/net/Uri;
-
-    iput-object p2, v0, Lj18;->Y:Ljava/lang/String;
+    iput-object p2, p0, Lj18;->b:Lpm9;
 
     return-void
 .end method

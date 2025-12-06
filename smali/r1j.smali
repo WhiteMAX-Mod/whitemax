@@ -1,179 +1,60 @@
-.class public abstract Lr1j;
+.class public final Lr1j;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpqa;
+
+
+# static fields
+.field public static final a:Lr1j;
+
 
 # direct methods
-.method public static a(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
-    .locals 9
+.method static constructor <clinit>()V
+    .locals 3
 
-    const-string v1, "getDataColumn: _data - ["
+    new-instance v0, Lr1j;
 
-    const-string v0, "_data"
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    filled-new-array {v0}, [Ljava/lang/String;
+    sput-object v0, Lr1j;->a:Lr1j;
 
-    move-result-object v4
+    new-instance v0, Lmli;
 
-    const/4 v8, 0x0
+    const/4 v1, 0x1
 
-    :try_start_0
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-direct {v0, v1}, Lmli;-><init>(I)V
 
-    move-result-object v2
+    const-class v1, Lemi;
 
-    const/4 v7, 0x0
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    move-object v3, p1
+    move-result-object v0
 
-    move-object v5, p2
+    const/4 v2, 0x2
 
-    move-object v6, p3
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    invoke-virtual/range {v2 .. v7}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    move-result-object v0
 
-    move-result-object p0
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    if-eqz p0, :cond_0
+    move-result-object v0
 
-    :try_start_1
-    invoke-interface {p0}, Landroid/database/Cursor;->moveToFirst()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
-
-    move-result p1
-
-    invoke-interface {p0, p1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object p1
-    :try_end_1
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
-
-    return-object p1
-
-    :catchall_0
-    move-exception v0
-
-    move-object p1, v0
-
-    move-object v8, p0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v0
-
-    move-object p1, v0
-
-    goto :goto_0
-
-    :cond_0
-    if-eqz p0, :cond_1
-
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
-
-    return-object v8
-
-    :catchall_1
-    move-exception v0
-
-    move-object p1, v0
-
-    goto :goto_1
-
-    :catch_1
-    move-exception v0
-
-    move-object p1, v0
-
-    move-object p0, v8
-
-    :goto_0
-    :try_start_2
-    const-string p2, "FileUtils"
-
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
-
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance p3, Ljava/lang/StringBuilder;
-
-    invoke-direct {p3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, "]"
-
-    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p2, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    if-eqz p0, :cond_1
-
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
-
-    :cond_1
-    return-object v8
-
-    :goto_1
-    if-eqz v8, :cond_2
-
-    invoke-interface {v8}, Landroid/database/Cursor;->close()V
-
-    :cond_2
-    throw p1
-.end method
-
-.method public static final b(Lzcg;)V
-    .locals 2
-
-    new-instance v0, Lzsd;
-
-    const/16 v1, 0x1d
-
-    invoke-direct {v0, v1}, Lzsd;-><init>(I)V
-
-    const-class v1, Lvs7;
-
-    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
-
-    new-instance v0, Lrsd;
-
-    const/16 v1, 0xd
-
-    invoke-direct {v0, v1}, Lrsd;-><init>(I)V
-
-    const-class v1, Lp6f;
-
-    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
-
-    new-instance v0, Lrsd;
-
-    const/16 v1, 0xe
-
-    invoke-direct {v0, v1}, Lrsd;-><init>(I)V
-
-    const-class v1, Lu6f;
-
-    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

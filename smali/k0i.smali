@@ -1,67 +1,254 @@
 .class public final Lk0i;
-.super Lf4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lk0i;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # instance fields
-.field public final a:Li1i;
+.field public final a:Z
+
+.field public final b:Ljava/lang/Integer;
+
+.field public final c:Z
+
+.field public final d:Ljava/lang/Integer;
+
+.field public final e:Z
+
+.field public final f:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lnwh;
-
-    const/16 v1, 0x1c
-
-    invoke-direct {v0, v1}, Lnwh;-><init>(I)V
-
-    sput-object v0, Lk0i;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Li1i;)V
+.method public constructor <init>(ZLjava/lang/Integer;ZLjava/lang/Integer;ZZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lk0i;->a:Li1i;
+    iput-boolean p1, p0, Lk0i;->a:Z
+
+    iput-object p2, p0, Lk0i;->b:Ljava/lang/Integer;
+
+    iput-boolean p3, p0, Lk0i;->c:Z
+
+    iput-object p4, p0, Lk0i;->d:Ljava/lang/Integer;
+
+    iput-boolean p5, p0, Lk0i;->e:Z
+
+    iput-boolean p6, p0, Lk0i;->f:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    const/16 v0, 0x4f45
+    if-eq p0, p1, :cond_1
 
-    invoke-static {p1, v0}, Llyi;->t(Landroid/os/Parcel;I)I
+    instance-of v0, p1, Lk0i;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lk0i;
+
+    iget-boolean v0, p0, Lk0i;->a:Z
+
+    iget-boolean v1, p1, Lk0i;->a:Z
+
+    if-ne v0, v1, :cond_0
+
+    iget-object v0, p0, Lk0i;->b:Ljava/lang/Integer;
+
+    iget-object v1, p1, Lk0i;->b:Ljava/lang/Integer;
+
+    invoke-static {v0, v1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
-    const/4 v1, 0x1
+    if-eqz v0, :cond_0
 
-    iget-object v2, p0, Lk0i;->a:Li1i;
+    iget-boolean v0, p0, Lk0i;->c:Z
 
-    invoke-static {p1, v1, v2, p2}, Llyi;->o(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
+    iget-boolean v1, p1, Lk0i;->c:Z
 
-    invoke-static {p1, v0}, Llyi;->u(Landroid/os/Parcel;I)V
+    if-ne v0, v1, :cond_0
 
-    return-void
+    iget-object v0, p0, Lk0i;->d:Ljava/lang/Integer;
+
+    iget-object v1, p1, Lk0i;->d:Ljava/lang/Integer;
+
+    invoke-static {v0, v1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-boolean v0, p0, Lk0i;->e:Z
+
+    iget-boolean v1, p1, Lk0i;->e:Z
+
+    if-ne v0, v1, :cond_0
+
+    iget-boolean v0, p0, Lk0i;->f:Z
+
+    iget-boolean p1, p1, Lk0i;->f:Z
+
+    if-ne v0, p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    const/4 v0, 0x1
+
+    iget-boolean v1, p0, Lk0i;->a:Z
+
+    if-eqz v1, :cond_0
+
+    move v1, v0
+
+    :cond_0
+    mul-int/lit8 v1, v1, 0x1f
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Lk0i;->b:Ljava/lang/Integer;
+
+    if-eqz v3, :cond_1
+
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+
+    move-result v3
+
+    goto :goto_0
+
+    :cond_1
+    move v3, v2
+
+    :goto_0
+    add-int/2addr v1, v3
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-boolean v3, p0, Lk0i;->c:Z
+
+    if-eqz v3, :cond_2
+
+    move v3, v0
+
+    :cond_2
+    add-int/2addr v1, v3
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v3, p0, Lk0i;->d:Ljava/lang/Integer;
+
+    if-eqz v3, :cond_3
+
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    :cond_3
+    add-int/2addr v1, v2
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-boolean v2, p0, Lk0i;->e:Z
+
+    if-eqz v2, :cond_4
+
+    move v2, v0
+
+    :cond_4
+    add-int/2addr v1, v2
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-boolean v2, p0, Lk0i;->f:Z
+
+    if-eqz v2, :cond_5
+
+    goto :goto_1
+
+    :cond_5
+    move v0, v2
+
+    :goto_1
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "WebSocketExtensions(perMessageDeflate="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-boolean v1, p0, Lk0i;->a:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", clientMaxWindowBits="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lk0i;->b:Ljava/lang/Integer;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", clientNoContextTakeover="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lk0i;->c:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", serverMaxWindowBits="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lk0i;->d:Ljava/lang/Integer;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", serverNoContextTakeover="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lk0i;->e:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", unknownValues="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lk0i;->f:Z
+
+    const-string v2, ")"
+
+    invoke-static {v0, v1, v2}, Laz1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

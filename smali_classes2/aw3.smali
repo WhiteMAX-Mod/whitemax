@@ -1,121 +1,71 @@
 .class public final Law3;
-.super Lsgf;
+.super Lpj0;
 .source "SourceFile"
-
-# interfaces
-.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic X:Ljw3;
+.field public final b:Lzv3;
+
+.field public c:Lb8c;
 
 
 # direct methods
-.method public constructor <init>(Ljw3;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JLzv3;)V
+    .locals 1
+
+    .line 1
+    sget-object v0, Lb8c;->c:Lb8c;
+
+    invoke-direct {p0, p1, p2, p3, v0}, Law3;-><init>(JLzv3;Lb8c;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(JLzv3;Lb8c;)V
     .locals 0
 
-    iput-object p1, p0, Law3;->X:Ljw3;
+    .line 2
+    invoke-direct {p0, p1, p2}, Lpj0;-><init>(J)V
 
-    const/4 p1, 0x2
+    .line 3
+    iput-object p3, p0, Law3;->b:Lzv3;
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    .line 4
+    iput-object p4, p0, Law3;->c:Lb8c;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    check-cast p1, Lq54;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const-string v1, "ContactDb{data="
 
-    invoke-virtual {p0, p1, p2}, Law3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object p1
+    iget-object v1, p0, Law3;->b:Lzv3;
 
-    check-cast p1, Law3;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    sget-object p2, Lccg;->a:Lccg;
+    const-string v1, ", presence="
 
-    invoke-virtual {p1, p2}, Law3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p2
-.end method
+    iget-object v1, p0, Law3;->c:Lb8c;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    new-instance p1, Law3;
+    const/16 v1, 0x7d
 
-    iget-object v0, p0, Law3;->X:Ljw3;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-direct {p1, v0, p2}, Law3;-><init>(Ljw3;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Law3;->X:Ljw3;
-
-    iget-object v0, p1, Ljw3;->x0:Liu7;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lj4e;
-
-    check-cast v0, Lwtd;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->account-nickname-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Lwtd;->j(Ljava/lang/Enum;Z)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget v0, Lusa;->j:I
-
-    goto :goto_0
-
-    :cond_0
-    sget v0, Lusa;->i:I
-
-    :goto_0
-    iget-object p1, p1, Ljw3;->G0:Lx0f;
-
-    :cond_1
-    invoke-virtual {p1}, Lx0f;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v2, v1
-
-    check-cast v2, Ltrf;
-
-    new-instance v2, Lorf;
-
-    invoke-direct {v2, v0}, Lorf;-><init>(I)V
-
-    invoke-virtual {p1, v1, v2}, Lx0f;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
+    return-object v0
 .end method

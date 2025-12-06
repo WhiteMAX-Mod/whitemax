@@ -1,247 +1,123 @@
 .class public final Lkz4;
-.super Ljava/lang/Thread;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljavax/inject/Provider;
+
+
+# static fields
+.field public static final c:Ljava/lang/Object;
 
 
 # instance fields
-.field public final X:I
+.field public volatile a:Lzkb;
 
-.field public volatile Y:Liz4;
-
-.field public volatile Z:Z
-
-.field public final a:Lsz4;
-
-.field public final b:Lvz4;
-
-.field public final c:Lpz4;
-
-.field public final o:Z
-
-.field public q0:Ljava/lang/Exception;
-
-.field public r0:J
+.field public volatile b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lsz4;Lvz4;Lpz4;ZILiz4;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
+    new-instance v0, Ljava/lang/Object;
 
-    iput-object p1, p0, Lkz4;->a:Lsz4;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lkz4;->b:Lvz4;
-
-    iput-object p3, p0, Lkz4;->c:Lpz4;
-
-    iput-boolean p4, p0, Lkz4;->o:Z
-
-    iput p5, p0, Lkz4;->X:I
-
-    iput-object p6, p0, Lkz4;->Y:Liz4;
-
-    const-wide/16 p1, -0x1
-
-    iput-wide p1, p0, Lkz4;->r0:J
+    sput-object v0, Lkz4;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Z)V
-    .locals 0
+.method public final get()Ljava/lang/Object;
+    .locals 5
 
-    if-eqz p1, :cond_0
+    iget-object v0, p0, Lkz4;->b:Ljava/lang/Object;
 
-    const/4 p1, 0x0
+    sget-object v1, Lkz4;->c:Ljava/lang/Object;
 
-    iput-object p1, p0, Lkz4;->Y:Liz4;
+    if-ne v0, v1, :cond_3
 
-    :cond_0
-    iget-boolean p1, p0, Lkz4;->Z:Z
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lkz4;->Z:Z
-
-    iget-object p1, p0, Lkz4;->b:Lvz4;
-
-    invoke-interface {p1}, Lvz4;->cancel()V
-
-    invoke-virtual {p0}, Ljava/lang/Thread;->interrupt()V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final b(JJF)V
-    .locals 1
-
-    iget-object v0, p0, Lkz4;->c:Lpz4;
-
-    iput-wide p3, v0, Lpz4;->a:J
-
-    iget-object p3, p0, Lkz4;->c:Lpz4;
-
-    iput p5, p3, Lpz4;->b:F
-
-    iget-wide p3, p0, Lkz4;->r0:J
-
-    cmp-long p3, p1, p3
-
-    if-eqz p3, :cond_0
-
-    iput-wide p1, p0, Lkz4;->r0:J
-
-    iget-object p3, p0, Lkz4;->Y:Liz4;
-
-    if-eqz p3, :cond_0
-
-    const/16 p4, 0x20
-
-    shr-long p4, p1, p4
-
-    long-to-int p4, p4
-
-    long-to-int p1, p1
-
-    const/16 p2, 0xb
-
-    invoke-virtual {p3, p2, p4, p1, p0}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final run()V
-    .locals 8
+    monitor-enter p0
 
     :try_start_0
-    iget-boolean v0, p0, Lkz4;->o:Z
+    iget-object v0, p0, Lkz4;->b:Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    if-ne v0, v1, :cond_2
 
-    iget-object v0, p0, Lkz4;->b:Lvz4;
+    iget-object v0, p0, Lkz4;->a:Lzkb;
 
-    invoke-interface {v0}, Lvz4;->remove()V
+    invoke-virtual {v0}, Lzkb;->get()Ljava/lang/Object;
 
-    goto :goto_2
+    move-result-object v0
 
-    :catch_0
-    move-exception v0
+    iget-object v2, p0, Lkz4;->b:Ljava/lang/Object;
 
-    goto :goto_1
+    if-eq v2, v1, :cond_1
 
-    :cond_0
-    const/4 v0, 0x0
-
-    const-wide/16 v1, -0x1
-
-    move v3, v0
-
-    :cond_1
-    :goto_0
-    iget-boolean v4, p0, Lkz4;->Z:Z
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    if-nez v4, :cond_4
-
-    :try_start_1
-    iget-object v4, p0, Lkz4;->b:Lvz4;
-
-    invoke-interface {v4, p0}, Lvz4;->a(Lkz4;)V
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_2
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-
-    goto :goto_2
-
-    :catch_1
-    move-exception v4
-
-    :try_start_2
-    iget-boolean v5, p0, Lkz4;->Z:Z
-
-    if-nez v5, :cond_1
-
-    iget-object v5, p0, Lkz4;->c:Lpz4;
-
-    iget-wide v5, v5, Lpz4;->a:J
-
-    cmp-long v7, v5, v1
-
-    if-eqz v7, :cond_2
-
-    move v3, v0
-
-    move-wide v1, v5
-
-    :cond_2
-    add-int/lit8 v5, v3, 0x1
-
-    iget v6, p0, Lkz4;->X:I
-
-    if-gt v5, v6, :cond_3
-
-    mul-int/lit16 v3, v3, 0x3e8
-
-    const/16 v4, 0x1388
-
-    invoke-static {v3, v4}, Ljava/lang/Math;->min(II)I
-
-    move-result v3
-
-    int-to-long v3, v3
-
-    invoke-static {v3, v4}, Ljava/lang/Thread;->sleep(J)V
-
-    move v3, v5
+    if-ne v2, v0, :cond_0
 
     goto :goto_0
 
-    :cond_3
-    throw v4
-    :try_end_2
-    .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    :cond_0
+    new-instance v1, Ljava/lang/IllegalStateException;
 
-    :goto_1
-    iput-object v0, p0, Lkz4;->q0:Ljava/lang/Exception;
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "Scoped provider was invoked recursively returning different results: "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, " & "
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ". This is likely due to a circular dependency."
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_1
+    :goto_0
+    iput-object v0, p0, Lkz4;->b:Ljava/lang/Object;
+
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lkz4;->a:Lzkb;
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception v0
 
     goto :goto_2
 
-    :catch_2
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    :cond_2
+    :goto_1
+    monitor-exit p0
 
-    move-result-object v0
+    return-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
-
-    :cond_4
     :goto_2
-    iget-object v0, p0, Lkz4;->Y:Liz4;
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-eqz v0, :cond_5
+    throw v0
 
-    const/16 v1, 0xa
-
-    invoke-virtual {v0, v1, p0}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
-
-    :cond_5
-    return-void
+    :cond_3
+    return-object v0
 .end method

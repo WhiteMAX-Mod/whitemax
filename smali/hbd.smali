@@ -1,78 +1,96 @@
-.class public abstract Lhbd;
+.class public final Lhbd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lmcf;
+.implements Lo42;
+.implements Lpn6;
+
+
+# instance fields
+.field public final synthetic a:Lmcf;
+
 
 # direct methods
-.method public static a(Landroid/app/Activity;Lgw7;)V
-    .locals 1
+.method public constructor <init>(Lf9a;)V
+    .locals 0
 
-    instance-of v0, p0, Lfx7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz v0, :cond_0
+    iput-object p1, p0, Lhbd;->a:Lmcf;
 
-    check-cast p0, Lfx7;
-
-    invoke-interface {p0}, Lfx7;->x()Lhx7;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0, p1}, Lhx7;->d(Lgw7;)V
-
-    :cond_0
     return-void
 .end method
 
-.method public static b(Landroid/app/Activity;)V
-    .locals 3
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+# virtual methods
+.method public final b()Ljava/util/List;
+    .locals 1
 
-    const/16 v1, 0x1d
+    iget-object v0, p0, Lhbd;->a:Lmcf;
 
-    if-lt v0, v1, :cond_0
-
-    sget-object v0, Ljbd$a;->Companion:Libd;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Ljbd$a;
-
-    invoke-direct {v0}, Ljbd$a;-><init>()V
-
-    invoke-static {p0, v0}, Lcad;->l(Landroid/app/Activity;Ljbd$a;)V
-
-    :cond_0
-    invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
-
-    move-result-object p0
-
-    const-string v0, "androidx.lifecycle.LifecycleDispatcher.report_fragment_tag"
-
-    invoke-virtual {p0, v0}, Landroid/app/FragmentManager;->findFragmentByTag(Ljava/lang/String;)Landroid/app/Fragment;
-
-    move-result-object v1
-
-    if-nez v1, :cond_1
-
-    invoke-virtual {p0}, Landroid/app/FragmentManager;->beginTransaction()Landroid/app/FragmentTransaction;
-
-    move-result-object v1
-
-    new-instance v2, Ljbd;
-
-    invoke-direct {v2}, Landroid/app/Fragment;-><init>()V
-
-    invoke-virtual {v1, v2, v0}, Landroid/app/FragmentTransaction;->add(Landroid/app/Fragment;Ljava/lang/String;)Landroid/app/FragmentTransaction;
+    invoke-interface {v0}, Lfve;->b()Ljava/util/List;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/app/FragmentTransaction;->commit()I
+    return-object v0
+.end method
 
-    invoke-virtual {p0}, Landroid/app/FragmentManager;->executePendingTransactions()Z
+.method public final d(Lz26;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lhbd;->a:Lmcf;
+
+    invoke-interface {v0, p1, p2}, Lx26;->d(Lz26;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final e(Lx74;II)Lx26;
+    .locals 2
+
+    sget-object v0, Lucf;->a:Lkotlinx/coroutines/internal/Symbol;
+
+    const/4 v0, 0x2
+
+    if-ltz p2, :cond_0
+
+    if-ge p2, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, -0x2
+
+    if-ne p2, v1, :cond_1
+
+    :goto_0
+    if-ne p3, v0, :cond_1
+
+    move-object p1, p0
+
+    goto :goto_1
 
     :cond_1
-    return-void
+    invoke-static {p0, p1, p2, p3}, Lkve;->e(Lfve;Lx74;II)Lx26;
+
+    move-result-object p1
+
+    :goto_1
+    return-object p1
+.end method
+
+.method public final getValue()Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lhbd;->a:Lmcf;
+
+    invoke-interface {v0}, Lmcf;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
 .end method

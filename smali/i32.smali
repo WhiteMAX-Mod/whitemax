@@ -1,103 +1,33 @@
 .class public final Li32;
-.super Lxe0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Z
+.field public a:Lm22;
 
-.field public final synthetic c:Lsoh;
+.field public final b:Lqee;
 
-.field public final synthetic o:Ljava/lang/String;
+.field public final c:Lao6;
+
+.field public final d:Lyy1;
 
 
 # direct methods
-.method public constructor <init>(Lsoh;Ljava/lang/String;Z)V
-    .locals 0
+.method public constructor <init>(Lqee;Lao6;Lyy1;)V
+    .locals 1
 
-    iput-object p1, p0, Li32;->c:Lsoh;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Li32;->o:Ljava/lang/String;
+    const/4 v0, 0x0
 
-    iput-boolean p3, p0, Li32;->X:Z
+    iput-object v0, p0, Li32;->a:Lm22;
 
-    invoke-direct {p0}, Lxe0;-><init>()V
+    iput-object p1, p0, Li32;->b:Lqee;
+
+    iput-object p2, p0, Li32;->c:Lao6;
+
+    iput-object p3, p0, Li32;->d:Lyy1;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final c()V
-    .locals 4
-
-    iget-object v0, p0, Li32;->c:Lsoh;
-
-    iget-object v1, v0, Lsoh;->c:Landroidx/work/impl/WorkDatabase;
-
-    invoke-virtual {v1}, Lfgd;->c()V
-
-    :try_start_0
-    invoke-virtual {v1}, Landroidx/work/impl/WorkDatabase;->x()Ljph;
-
-    move-result-object v2
-
-    iget-object v3, p0, Li32;->o:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ljph;->o(Ljava/lang/String;)Ljava/util/ArrayList;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/String;
-
-    invoke-static {v0, v3}, Lxe0;->b(Lsoh;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
-    :cond_0
-    invoke-virtual {v1}, Lfgd;->q()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v1}, Lfgd;->k()V
-
-    iget-boolean v1, p0, Li32;->X:Z
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, v0, Lsoh;->b:Lhm3;
-
-    iget-object v2, v0, Lsoh;->c:Landroidx/work/impl/WorkDatabase;
-
-    iget-object v0, v0, Lsoh;->e:Ljava/util/List;
-
-    invoke-static {v1, v2, v0}, Llpd;->a(Lhm3;Landroidx/work/impl/WorkDatabase;Ljava/util/List;)V
-
-    :cond_1
-    return-void
-
-    :goto_1
-    invoke-virtual {v1}, Lfgd;->k()V
-
-    throw v0
 .end method

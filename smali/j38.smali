@@ -1,56 +1,123 @@
-.class public final Lj38;
+.class public abstract synthetic Lj38;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lfla;
 
-
-# instance fields
-.field public final a:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field public final b:Lxha;
-
-.field public final c:Ljava/util/concurrent/Executor;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;Lxha;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Lk38;->values()[Lk38;
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+    move-result-object v0
 
-    const/4 v1, 0x1
+    array-length v0, v0
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+    new-array v0, v0, [I
 
-    iput-object v0, p0, Lj38;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+    :try_start_0
+    sget-object v1, Lk38;->ON_CREATE:Lk38;
 
-    iput-object p1, p0, Lj38;->c:Ljava/util/concurrent/Executor;
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    iput-object p2, p0, Lj38;->b:Lxha;
+    move-result v1
 
-    return-void
-.end method
+    const/4 v2, 0x1
 
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-# virtual methods
-.method public final a(Ljava/lang/Object;)V
-    .locals 2
+    :catch_0
+    :try_start_1
+    sget-object v1, Lk38;->ON_STOP:Lk38;
 
-    check-cast p1, Lk38;
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    new-instance v0, Lqv5;
+    move-result v1
 
-    const/16 v1, 0x15
+    const/4 v2, 0x2
 
-    invoke-direct {v0, p0, v1, p1}, Lqv5;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    iget-object p1, p0, Lj38;->c:Ljava/util/concurrent/Executor;
+    :catch_1
+    :try_start_2
+    sget-object v1, Lk38;->ON_START:Lk38;
 
-    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    :try_start_3
+    sget-object v1, Lk38;->ON_PAUSE:Lk38;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    :try_start_4
+    sget-object v1, Lk38;->ON_RESUME:Lk38;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    :try_start_5
+    sget-object v1, Lk38;->ON_DESTROY:Lk38;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x6
+
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+
+    :catch_5
+    :try_start_6
+    sget-object v1, Lk38;->ON_ANY:Lk38;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x7
+
+    aput v2, v0, v1
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+
+    :catch_6
+    sput-object v0, Lj38;->$EnumSwitchMapping$0:[I
 
     return-void
 .end method

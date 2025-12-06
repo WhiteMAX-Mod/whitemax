@@ -1,712 +1,158 @@
 .class public final Lj39;
-.super Lk39;
+.super Ldtf;
 .source "SourceFile"
+
+# interfaces
+.implements Lsm6;
+
+
+# instance fields
+.field public final synthetic X:Lone/me/mediapicker/MediaPickerScreen;
+
+.field public synthetic o:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/mediapicker/MediaPickerScreen;)V
+    .locals 0
+
+    iput-object p2, p0, Lj39;->X:Lone/me/mediapicker/MediaPickerScreen;
+
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 21
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    move-object/from16 v0, p0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-wide v1, v0, Lk39;->a:J
+    invoke-virtual {p0, p1, p2}, Lj39;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-wide v3, v0, Lk39;->b:J
+    move-result-object p1
 
-    sub-long v5, v3, v1
+    check-cast p1, Lj39;
 
-    long-to-float v5, v5
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    const/high16 v6, 0x447a0000    # 1000.0f
+    invoke-virtual {p1, p2}, Lj39;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    div-float/2addr v5, v6
+    return-object p2
+.end method
 
-    invoke-static {v1, v2, v3, v4}, Lo94;->c(JJ)Ljava/lang/String;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    move-result-object v1
+    new-instance v0, Lj39;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lj39;->X:Lone/me/mediapicker/MediaPickerScreen;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v0, p2, v1}, Lj39;-><init>(Lkotlin/coroutines/Continuation;Lone/me/mediapicker/MediaPickerScreen;)V
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iput-object p1, v0, Lj39;->o:Ljava/lang/Object;
 
-    const-string v1, ", "
+    return-object v0
+.end method
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    const-string v1, " s"
+    iget-object p1, p0, Lj39;->o:Ljava/lang/Object;
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast p1, Llp6;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    instance-of v0, p1, Lhp6;
 
-    move-result-object v1
+    if-eqz v0, :cond_2
 
-    iget-object v2, v0, Lk39;->d:Ll39;
+    sget-object v0, Lone/me/mediapicker/MediaPickerScreen;->B0:[Lyy7;
 
-    iget-object v3, v2, Ll39;->f:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object v0, p0, Lj39;->X:Lone/me/mediapicker/MediaPickerScreen;
 
-    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Lone/me/mediapicker/MediaPickerScreen;->B0()Lr39;
 
-    move-result-object v3
+    move-result-object v0
 
-    check-cast v3, Lek5;
+    check-cast p1, Lhp6;
 
-    iget-object v4, v2, Ll39;->c:Ljava/util/ArrayList;
+    iget-object p1, p1, Lhp6;->c:Lvd8;
 
-    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
+    iget-object v1, v0, Lr39;->b:Lxo6;
 
-    move-result v7
+    iget-boolean v1, v1, Lxo6;->t0:Z
 
-    const-wide/16 v8, 0x0
+    if-eqz v1, :cond_1
 
-    const/4 v10, 0x0
+    iget-object v1, v0, Lr39;->u0:Lx9f;
 
-    :goto_0
-    const-wide v11, -0x7fffffffffffffffL    # -4.9E-324
+    if-eqz v1, :cond_0
 
-    if-ge v10, v7, :cond_1
+    invoke-virtual {v1}, Lo0;->isActive()Z
 
-    invoke-virtual {v4, v10}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    move-result v1
 
-    move-result-object v13
+    const/4 v2, 0x1
 
-    check-cast v13, Lxr8;
+    if-ne v1, v2, :cond_0
 
-    iget-wide v13, v13, Lxr8;->b:J
-
-    cmp-long v15, v13, v11
-
-    if-nez v15, :cond_0
-
-    move-wide v8, v11
-
-    goto :goto_1
+    goto :goto_0
 
     :cond_0
-    add-long/2addr v8, v13
+    iget-object v1, v0, Lr39;->o:Lk18;
 
-    add-int/lit8 v10, v10, 0x1
+    invoke-interface {v1}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Llzf;
+
+    check-cast v1, Lq2b;
+
+    invoke-virtual {v1}, Lq2b;->b()Lz74;
+
+    move-result-object v1
+
+    new-instance v2, Lp39;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v0, p1, v3}, Lp39;-><init>(Lr39;Lvd8;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x2
+
+    invoke-static {v0, v1, v2, p1}, Lxfh;->o(Lxfh;Lx74;Lsm6;I)Lx9f;
+
+    move-result-object p1
+
+    iput-object p1, v0, Lr39;->u0:Lx9f;
 
     goto :goto_0
 
     :cond_1
-    :goto_1
-    invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iget-object v0, v0, Lr39;->v0:Lci5;
 
-    move-result-object v4
+    new-instance v1, Lf39;
 
-    cmp-long v7, v8, v11
+    iget-object p1, p1, Lvd8;->b:Landroid/net/Uri;
 
-    if-eqz v7, :cond_2
+    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
-    goto :goto_2
+    move-result-object p1
+
+    invoke-direct {v1, p1}, Lf39;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v0, v1}, Lxfh;->r(Lci5;Ljava/lang/Object;)V
 
     :cond_2
-    const/4 v4, 0x0
+    :goto_0
+    sget-object p1, Lqqg;->a:Lqqg;
 
-    :goto_2
-    const v7, 0x49742400    # 1000000.0f
-
-    if-eqz v4, :cond_3
-
-    invoke-virtual {v4}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v9
-
-    long-to-float v4, v9
-
-    div-float/2addr v4, v7
-
-    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v4
-
-    goto :goto_3
-
-    :cond_3
-    const/4 v4, 0x0
-
-    :goto_3
-    const/4 v9, 0x0
-
-    cmpg-float v10, v5, v9
-
-    if-nez v10, :cond_4
-
-    goto :goto_4
-
-    :cond_4
-    iget-wide v11, v3, Lek5;->b:J
-
-    long-to-float v3, v11
-
-    const/high16 v9, 0x44800000    # 1024.0f
-
-    mul-float/2addr v9, v5
-
-    div-float v9, v3, v9
-
-    :goto_4
-    if-eqz v4, :cond_6
-
-    if-nez v10, :cond_5
-
-    const/4 v4, 0x0
-
-    :cond_5
-    if-eqz v4, :cond_6
-
-    invoke-virtual {v4}, Ljava/lang/Number;->floatValue()F
-
-    move-result v3
-
-    div-float/2addr v3, v5
-
-    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v3
-
-    goto :goto_5
-
-    :cond_6
-    const/4 v3, 0x0
-
-    :goto_5
-    iget-object v4, v2, Ll39;->a:Ld39;
-
-    iget-object v4, v4, Ld39;->b:Ljava/util/ArrayList;
-
-    invoke-static {v4}, Lo94;->g(Ljava/util/ArrayList;)Ljava/lang/String;
-
-    move-result-object v4
-
-    iget-object v5, v2, Ll39;->c:Ljava/util/ArrayList;
-
-    invoke-static {v5}, Lo94;->d(Ljava/util/List;)Ljava/lang/String;
-
-    move-result-object v5
-
-    iget-object v10, v0, Lk39;->c:Ld39;
-
-    iget-object v11, v10, Ld39;->c:Ljava/lang/String;
-
-    invoke-static {v10}, Lo94;->e(Ld39;)Ljava/lang/String;
-
-    move-result-object v10
-
-    iget-object v12, v0, Lk39;->c:Ld39;
-
-    const-string v13, "                  "
-
-    invoke-static {v12, v13}, Lo94;->f(Ld39;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v12
-
-    iget-object v13, v2, Ll39;->f:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v13}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v13
-
-    check-cast v13, Lek5;
-
-    new-instance v14, Ljava/lang/StringBuilder;
-
-    invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
-
-    if-eqz v13, :cond_7
-
-    const-string v15, "\n                  duration="
-
-    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move v15, v6
-
-    move/from16 v16, v7
-
-    iget-wide v6, v13, Lek5;->a:J
-
-    long-to-float v6, v6
-
-    div-float/2addr v6, v15
-
-    invoke-virtual {v14, v6}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v6, " s\n                  file_size="
-
-    invoke-virtual {v14, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v6, v13, Lek5;->b:J
-
-    invoke-virtual {v14, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v6, " bytes\n                  optimization="
-
-    invoke-virtual {v14, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v6, v13, Lek5;->o:I
-
-    invoke-virtual {v14, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    goto :goto_6
-
-    :cond_7
-    move v15, v6
-
-    move/from16 v16, v7
-
-    const-string v6, "\n                  duration=?\n                  file_size=?\n                  optimization=?"
-
-    invoke-virtual {v14, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :goto_6
-    invoke-virtual {v14}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    iget-object v7, v2, Ll39;->f:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v7}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Lek5;
-
-    new-instance v13, Ljava/lang/StringBuilder;
-
-    const-string v14, "\n                      encoder="
-
-    invoke-direct {v13, v14}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v8, "?"
-
-    move/from16 v18, v15
-
-    if-eqz v7, :cond_8
-
-    iget-object v15, v7, Lek5;->f:Ljava/lang/String;
-
-    if-nez v15, :cond_9
-
-    :cond_8
-    move-object v15, v8
-
-    :cond_9
-    invoke-virtual {v13, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v15, "\n                      channels="
-
-    invoke-virtual {v13, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    if-eqz v7, :cond_a
-
-    iget v15, v7, Lek5;->d:I
-
-    invoke-static {v15}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v15
-
-    goto :goto_7
-
-    :cond_a
-    move-object v15, v8
-
-    :goto_7
-    invoke-virtual {v13, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v15, "\n                      sample_rate="
-
-    invoke-virtual {v13, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    if-eqz v7, :cond_b
-
-    iget v15, v7, Lek5;->e:I
-
-    invoke-static {v15}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v15
-
-    goto :goto_8
-
-    :cond_b
-    move-object v15, v8
-
-    :goto_8
-    invoke-virtual {v13, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v15, "\n                      bitrate="
-
-    invoke-virtual {v13, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    if-eqz v7, :cond_c
-
-    iget v7, v7, Lek5;->c:I
-
-    if-lez v7, :cond_c
-
-    int-to-float v7, v7
-
-    div-float v7, v7, v18
-
-    invoke-virtual {v13, v7}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v7, " Kbps"
-
-    invoke-virtual {v13, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    goto :goto_9
-
-    :cond_c
-    invoke-virtual {v13, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :goto_9
-    invoke-virtual {v13}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    iget-object v13, v2, Ll39;->f:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v13}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v13
-
-    check-cast v13, Lek5;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0, v14}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    if-eqz v13, :cond_d
-
-    iget-object v14, v13, Lek5;->m:Ljava/lang/String;
-
-    if-nez v14, :cond_e
-
-    :cond_d
-    move-object v14, v8
-
-    :cond_e
-    invoke-virtual {v0, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v14, "\n                      frames="
-
-    invoke-virtual {v0, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    if-eqz v13, :cond_f
-
-    iget v14, v13, Lek5;->l:I
-
-    invoke-static {v14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v14
-
-    goto :goto_a
-
-    :cond_f
-    move-object v14, v8
-
-    :goto_a
-    invoke-virtual {v0, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v14, "\n                      size="
-
-    invoke-virtual {v0, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    if-eqz v13, :cond_10
-
-    iget v14, v13, Lek5;->k:I
-
-    invoke-static {v14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v14
-
-    goto :goto_b
-
-    :cond_10
-    move-object v14, v8
-
-    :goto_b
-    invoke-virtual {v0, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v14, 0x78
-
-    invoke-virtual {v0, v14}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    if-eqz v13, :cond_11
-
-    iget v14, v13, Lek5;->j:I
-
-    invoke-static {v14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v14
-
-    goto :goto_c
-
-    :cond_11
-    move-object v14, v8
-
-    :goto_c
-    invoke-virtual {v0, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v14, "\n                      bitrate_mode="
-
-    invoke-virtual {v0, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v14, v2, Ll39;->d:I
-
-    move-object/from16 v18, v3
-
-    const-string v3, "?("
-
-    move/from16 v19, v9
-
-    const-string v9, ")"
-
-    if-eqz v14, :cond_15
-
-    move-object/from16 v20, v6
-
-    const/4 v6, 0x1
-
-    if-eq v14, v6, :cond_14
-
-    const/4 v6, 0x2
-
-    if-eq v14, v6, :cond_13
-
-    const/4 v6, 0x3
-
-    if-eq v14, v6, :cond_12
-
-    invoke-static {v14, v3, v9}, Ley1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v6
-
-    goto :goto_d
-
-    :cond_12
-    const-string v6, "CBR-FD("
-
-    invoke-static {v14, v6, v9}, Ley1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v6
-
-    goto :goto_d
-
-    :cond_13
-    const-string v6, "CBR("
-
-    invoke-static {v14, v6, v9}, Ley1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v6
-
-    goto :goto_d
-
-    :cond_14
-    const-string v6, "VBR("
-
-    invoke-static {v14, v6, v9}, Ley1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v6
-
-    goto :goto_d
-
-    :cond_15
-    move-object/from16 v20, v6
-
-    const-string v6, "CQ("
-
-    invoke-static {v14, v6, v9}, Ley1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v6
-
-    :goto_d
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    if-eqz v13, :cond_16
-
-    iget v6, v13, Lek5;->h:I
-
-    if-lez v6, :cond_16
-
-    int-to-float v6, v6
-
-    div-float v6, v6, v16
-
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v6, " Mbps"
-
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    goto :goto_e
-
-    :cond_16
-    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :goto_e
-    const-string v6, "\n                      hdr_mode="
-
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v2, v2, Ll39;->e:I
-
-    if-eqz v2, :cond_1a
-
-    const/4 v6, 0x1
-
-    if-eq v2, v6, :cond_19
-
-    const/4 v6, 0x2
-
-    if-eq v2, v6, :cond_18
-
-    const/4 v6, 0x3
-
-    if-eq v2, v6, :cond_17
-
-    invoke-static {v2, v3, v9}, Ley1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    goto :goto_f
-
-    :cond_17
-    const-string v3, "exp_HDR-as-SDR("
-
-    invoke-static {v2, v3, v9}, Ley1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    goto :goto_f
-
-    :cond_18
-    const-string v3, "HDR-to-SDR_gl("
-
-    invoke-static {v2, v3, v9}, Ley1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    goto :goto_f
-
-    :cond_19
-    const-string v3, "HDR-to-SDR_mc("
-
-    invoke-static {v2, v3, v9}, Ley1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    goto :goto_f
-
-    :cond_1a
-    const-string v3, "Keep-HDR("
-
-    invoke-static {v2, v3, v9}, Ley1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    :goto_f
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, "\n                      hdr="
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    if-eqz v13, :cond_1b
-
-    iget-object v2, v13, Lek5;->i:Lyb3;
-
-    move-object/from16 v17, v2
-
-    goto :goto_10
-
-    :cond_1b
-    const/16 v17, 0x0
-
-    :goto_10
-    invoke-static/range {v17 .. v17}, Lyb3;->g(Lyb3;)Z
-
-    move-result v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    if-nez v18, :cond_1c
-
-    move-object v3, v8
-
-    goto :goto_11
-
-    :cond_1c
-    move-object/from16 v3, v18
-
-    :goto_11
-    const-string v2, "\n              }\n              inputMedias={"
-
-    const-string v6, "\n              }\n              out="
-
-    const-string v8, "\n            MediaTransformResult.Success(\n              in={"
-
-    invoke-static {v8, v4, v2, v5, v6}, Ley1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v4, "\n              request={"
-
-    const-string v5, "\n                  settings={"
-
-    invoke-static {v2, v11, v4, v10, v5}, Li57;->q(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v4, "\n                  }\n              }\n              took="
-
-    const-string v5, "\n              out={"
-
-    invoke-static {v2, v12, v4, v1, v5}, Li57;->q(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "\n                  audio={"
-
-    const-string v4, "\n                  }\n                  video={"
-
-    move-object/from16 v5, v20
-
-    invoke-static {v2, v5, v1, v7, v4}, Li57;->q(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "\n                  }\n              }\n              transform_speed="
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move/from16 v9, v19
-
-    invoke-virtual {v2, v9}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v0, " Mbytes/s\n              transform_speed="
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, " s/s\n            )\n        "
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Labf;->j(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

@@ -1,99 +1,67 @@
-.class public final synthetic Ly91;
-.super Ljava/lang/Object;
+.class public final Ly91;
+.super Lki4;
 .source "SourceFile"
 
-# interfaces
-.implements Lji6;
 
+# static fields
+.field public static final b:Ly91;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final c:Lgi4;
 
-.field public final synthetic b:Z
+.field public static final d:Lgi4;
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public static final e:Lgi4;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;Z)V
-    .locals 0
-
-    iput p1, p0, Ly91;->a:I
-
-    iput-object p2, p0, Ly91;->c:Ljava/lang/Object;
-
-    iput-boolean p3, p0, Ly91;->b:Z
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 6
 
-    iget v0, p0, Ly91;->a:I
+    new-instance v0, Ly91;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0}, Lki4;-><init>()V
 
-    iget-object v0, p0, Ly91;->c:Ljava/lang/Object;
+    sput-object v0, Ly91;->b:Ly91;
 
-    check-cast v0, Lgr1;
+    const/4 v1, 0x0
 
-    iget-boolean v1, p0, Ly91;->b:Z
+    new-array v2, v1, [Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lgr1;->w(Lgr1;Z)V
+    const-string v3, ":calls-history"
 
-    :goto_0
-    sget-object v0, Lccg;->a:Lccg;
+    const/4 v4, 0x0
 
-    return-object v0
+    const/16 v5, 0xe
 
-    :pswitch_0
-    iget-object v0, p0, Ly91;->c:Ljava/lang/Object;
+    invoke-static {v0, v3, v2, v4, v5}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
 
-    check-cast v0, Llz6;
+    move-result-object v2
 
-    sget-object v1, Lo91;->c:Lo91;
+    sput-object v2, Ly91;->c:Lgi4;
 
-    check-cast v0, Ljz6;
+    const-string v2, ":call-history-info"
 
-    iget-wide v2, v0, Ljz6;->a:J
+    new-array v1, v1, [Ljava/lang/String;
 
-    invoke-virtual {v1}, Lrdi;->q0()Lag4;
+    invoke-static {v0, v2, v1, v4, v5}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
+
+    move-result-object v1
+
+    sput-object v1, Ly91;->d:Lgi4;
+
+    const-string v1, "chat_id"
+
+    filled-new-array {v1}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, ":call-presettings"
+
+    invoke-static {v0, v2, v1, v4, v5}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
 
     move-result-object v0
 
-    const-string v1, ":call-user?opponent_id="
+    sput-object v0, Ly91;->e:Lgi4;
 
-    const-string v4, "&video_enabled="
-
-    iget-boolean v5, p0, Ly91;->b:Z
-
-    invoke-static {v2, v3, v1, v4, v5}, Lfd0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "&microphone_enabled=true"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Lag4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

@@ -1,61 +1,61 @@
-.class public abstract Lh2b;
-.super Ljava/lang/Object;
+.class public final Lh2b;
+.super Lq44;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:J
+# instance fields
+.field public X:Llz;
 
-.field public static final b:J
+.field public Y:Lz00;
 
-.field public static final c:J
+.field public Z:Z
 
-.field public static final d:J
+.field public d:Lo2b;
 
-.field public static final e:J
+.field public o:Lsi9;
 
-.field public static final f:J
+.field public synthetic s0:Ljava/lang/Object;
+
+.field public final synthetic t0:Lo2b;
+
+.field public u0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lo2b;Lq44;)V
+    .locals 0
 
-    sget v0, Lepc;->oneme_settings_media_item_gif:I
+    iput-object p1, p0, Lh2b;->t0:Lo2b;
 
-    int-to-long v0, v0
-
-    sput-wide v0, Lh2b;->a:J
-
-    sget v0, Lepc;->oneme_settings_media_item_load_in_roaming:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lh2b;->b:J
-
-    sget v0, Lepc;->oneme_settings_media_item_photo:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lh2b;->c:J
-
-    sget v0, Lepc;->oneme_settings_media_item_playlist_enabled:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lh2b;->d:J
-
-    sget v0, Lepc;->oneme_settings_media_item_video_messages:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lh2b;->e:J
-
-    sget v0, Lepc;->oneme_settings_media_screen_autoloading_section_header:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lh2b;->f:J
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iput-object p1, p0, Lh2b;->s0:Ljava/lang/Object;
+
+    iget p1, p0, Lh2b;->u0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lh2b;->u0:I
+
+    const/4 p1, 0x0
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lh2b;->t0:Lo2b;
+
+    invoke-virtual {v1, p1, p1, v0, p0}, Lo2b;->b(Lsi9;Llz;ZLq44;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

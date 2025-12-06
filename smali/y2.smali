@@ -1,288 +1,136 @@
-.class public abstract Ly2;
-.super Ljava/lang/Object;
+.class public Ly2;
+.super Lt2;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Map$Entry;
+.implements Ljava/util/SortedSet;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic d:Ly6a;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Ly6a;Ljava/util/SortedMap;)V
     .locals 0
 
-    .line 1
-    iput p1, p0, Ly2;->a:I
+    iput-object p1, p0, Ly2;->d:Ly6a;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(ZI)V
-    .locals 0
-
-    .line 2
-    iput p2, p0, Ly2;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lt2;-><init>(Lk2;Ljava/util/Map;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public a()Ljava/util/SortedMap;
+    .locals 1
 
-    iget v0, p0, Ly2;->a:I
+    iget-object v0, p0, Lt2;->b:Ljava/util/Map;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast v0, Ljava/util/SortedMap;
 
-    instance-of v0, p1, Ljava/util/Map$Entry;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Ljava/util/Map$Entry;
-
-    invoke-interface {p0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-static {v0, v2}, Lmhi;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Lmhi;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 v1, 0x1
-
-    :cond_0
-    return v1
-
-    :pswitch_0
-    instance-of v0, p1, Ljava/util/Map$Entry;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_1
-
-    check-cast p1, Ljava/util/Map$Entry;
-
-    invoke-interface {p0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-static {v0, v2}, Ldni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Ldni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    const/4 v1, 0x1
-
-    :cond_1
-    return v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final comparator()Ljava/util/Comparator;
+    .locals 1
 
-    iget v0, p0, Ly2;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-interface {p0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    invoke-virtual {p0}, Ly2;->a()Ljava/util/SortedMap;
 
     move-result-object v0
 
-    invoke-interface {p0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    if-nez v0, :cond_0
-
-    move v0, v2
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    :goto_0
-    if-nez v1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    :goto_1
-    xor-int/2addr v0, v2
-
-    return v0
-
-    :pswitch_0
-    invoke-interface {p0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-interface {p0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    if-nez v0, :cond_2
-
-    move v0, v2
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    :goto_2
-    if-nez v1, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    :goto_3
-    xor-int/2addr v0, v2
-
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    iget v0, p0, Ly2;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-interface {p0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {p0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "="
-
-    invoke-static {v0, v2, v1}, Lu15;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0}, Ljava/util/SortedMap;->comparator()Ljava/util/Comparator;
 
     move-result-object v0
 
     return-object v0
+.end method
 
-    :pswitch_0
-    new-instance v0, Ljava/lang/StringBuilder;
+.method public final first()Ljava/lang/Object;
+    .locals 1
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {p0}, Ly2;->a()Ljava/util/SortedMap;
 
-    invoke-interface {p0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-interface {p0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v0}, Ljava/util/SortedMap;->firstKey()Ljava/lang/Object;
 
     move-result-object v0
 
     return-object v0
+.end method
 
-    nop
+.method public headSet(Ljava/lang/Object;)Ljava/util/SortedSet;
+    .locals 2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    new-instance v0, Ly2;
+
+    invoke-virtual {p0}, Ly2;->a()Ljava/util/SortedMap;
+
+    move-result-object v1
+
+    invoke-interface {v1, p1}, Ljava/util/SortedMap;->headMap(Ljava/lang/Object;)Ljava/util/SortedMap;
+
+    move-result-object p1
+
+    iget-object v1, p0, Ly2;->d:Ly6a;
+
+    invoke-direct {v0, v1, p1}, Ly2;-><init>(Ly6a;Ljava/util/SortedMap;)V
+
+    return-object v0
+.end method
+
+.method public final last()Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Ly2;->a()Ljava/util/SortedMap;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/SortedMap;->lastKey()Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public subSet(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/SortedSet;
+    .locals 2
+
+    new-instance v0, Ly2;
+
+    invoke-virtual {p0}, Ly2;->a()Ljava/util/SortedMap;
+
+    move-result-object v1
+
+    invoke-interface {v1, p1, p2}, Ljava/util/SortedMap;->subMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/SortedMap;
+
+    move-result-object p1
+
+    iget-object p2, p0, Ly2;->d:Ly6a;
+
+    invoke-direct {v0, p2, p1}, Ly2;-><init>(Ly6a;Ljava/util/SortedMap;)V
+
+    return-object v0
+.end method
+
+.method public tailSet(Ljava/lang/Object;)Ljava/util/SortedSet;
+    .locals 2
+
+    new-instance v0, Ly2;
+
+    invoke-virtual {p0}, Ly2;->a()Ljava/util/SortedMap;
+
+    move-result-object v1
+
+    invoke-interface {v1, p1}, Ljava/util/SortedMap;->tailMap(Ljava/lang/Object;)Ljava/util/SortedMap;
+
+    move-result-object p1
+
+    iget-object v1, p0, Ly2;->d:Ly6a;
+
+    invoke-direct {v0, v1, p1}, Ly2;-><init>(Ly6a;Ljava/util/SortedMap;)V
+
+    return-object v0
 .end method

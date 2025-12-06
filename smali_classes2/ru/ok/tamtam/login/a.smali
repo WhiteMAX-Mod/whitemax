@@ -1,30 +1,30 @@
 .class public final Lru/ok/tamtam/login/a;
-.super Lsgf;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Lsm6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic X:Lru/ok/tamtam/login/LoginEventsByBus;
 
-.field public final synthetic Y:Lru/ok/tamtam/login/LoginEventsByBus;
+.field public final synthetic Y:Lph8;
 
-.field public final synthetic Z:Lfa8;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/login/LoginEventsByBus;Lfa8;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lru/ok/tamtam/login/LoginEventsByBus;Lph8;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lru/ok/tamtam/login/a;->Y:Lru/ok/tamtam/login/LoginEventsByBus;
+    iput-object p1, p0, Lru/ok/tamtam/login/a;->X:Lru/ok/tamtam/login/LoginEventsByBus;
 
-    iput-object p2, p0, Lru/ok/tamtam/login/a;->Z:Lfa8;
+    iput-object p2, p0, Lru/ok/tamtam/login/a;->Y:Lph8;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -34,17 +34,17 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lq54;
+    check-cast p1, Lf84;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p0, p1, p2}, Lru/ok/tamtam/login/a;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1, p2}, Lru/ok/tamtam/login/a;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
     check-cast p1, Lru/ok/tamtam/login/a;
 
-    sget-object p2, Lccg;->a:Lccg;
+    sget-object p2, Lqqg;->a:Lqqg;
 
     invoke-virtual {p1, p2}, Lru/ok/tamtam/login/a;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -53,16 +53,16 @@
     return-object p1
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
     new-instance p1, Lru/ok/tamtam/login/a;
 
-    iget-object v0, p0, Lru/ok/tamtam/login/a;->Y:Lru/ok/tamtam/login/LoginEventsByBus;
+    iget-object v0, p0, Lru/ok/tamtam/login/a;->X:Lru/ok/tamtam/login/LoginEventsByBus;
 
-    iget-object v1, p0, Lru/ok/tamtam/login/a;->Z:Lfa8;
+    iget-object v1, p0, Lru/ok/tamtam/login/a;->Y:Lph8;
 
-    invoke-direct {p1, v0, v1, p2}, Lru/ok/tamtam/login/a;-><init>(Lru/ok/tamtam/login/LoginEventsByBus;Lfa8;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p1, v0, v1, p2}, Lru/ok/tamtam/login/a;-><init>(Lru/ok/tamtam/login/LoginEventsByBus;Lph8;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
@@ -70,7 +70,7 @@
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    iget v0, p0, Lru/ok/tamtam/login/a;->X:I
+    iget v0, p0, Lru/ok/tamtam/login/a;->o:I
 
     const/4 v1, 0x1
 
@@ -78,7 +78,7 @@
 
     if-ne v0, v1, :cond_0
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -92,21 +92,21 @@
     throw p1
 
     :cond_1
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lru/ok/tamtam/login/a;->Y:Lru/ok/tamtam/login/LoginEventsByBus;
+    iget-object p1, p0, Lru/ok/tamtam/login/a;->X:Lru/ok/tamtam/login/LoginEventsByBus;
 
-    iget-object p1, p1, Lru/ok/tamtam/login/LoginEventsByBus;->a:Lnje;
+    iget-object p1, p1, Lru/ok/tamtam/login/LoginEventsByBus;->a:Ljve;
 
-    iput v1, p0, Lru/ok/tamtam/login/a;->X:I
+    iput v1, p0, Lru/ok/tamtam/login/a;->o:I
 
-    iget-object v0, p0, Lru/ok/tamtam/login/a;->Z:Lfa8;
+    iget-object v0, p0, Lru/ok/tamtam/login/a;->Y:Lph8;
 
-    invoke-virtual {p1, v0, p0}, Lnje;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Ljve;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    sget-object v0, Lr54;->a:Lr54;
+    sget-object v0, Lg84;->a:Lg84;
 
     if-ne p1, v0, :cond_2
 
@@ -114,7 +114,7 @@
 
     :cond_2
     :goto_0
-    sget-object p1, Lccg;->a:Lccg;
+    sget-object p1, Lqqg;->a:Lqqg;
 
     return-object p1
 .end method

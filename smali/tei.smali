@@ -4,747 +4,982 @@
 
 
 # static fields
-.field public static volatile a:Lmxa;
+.field public static final a:[Ljava/lang/String;
 
 
 # direct methods
-.method public static final a()Z
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 193
 
-    sget-object v0, Ltei;->a:Lmxa;
+    const-string v191, "Garage Rock"
 
-    if-eqz v0, :cond_0
+    const-string v192, "Psybient"
 
-    iget-object v0, v0, Lmxa;->d:Lx0f;
+    const-string v1, "Blues"
 
-    invoke-virtual {v0}, Lx0f;->getValue()Ljava/lang/Object;
+    const-string v2, "Classic Rock"
+
+    const-string v3, "Country"
+
+    const-string v4, "Dance"
+
+    const-string v5, "Disco"
+
+    const-string v6, "Funk"
+
+    const-string v7, "Grunge"
+
+    const-string v8, "Hip-Hop"
+
+    const-string v9, "Jazz"
+
+    const-string v10, "Metal"
+
+    const-string v11, "New Age"
+
+    const-string v12, "Oldies"
+
+    const-string v13, "Other"
+
+    const-string v14, "Pop"
+
+    const-string v15, "R&B"
+
+    const-string v16, "Rap"
+
+    const-string v17, "Reggae"
+
+    const-string v18, "Rock"
+
+    const-string v19, "Techno"
+
+    const-string v20, "Industrial"
+
+    const-string v21, "Alternative"
+
+    const-string v22, "Ska"
+
+    const-string v23, "Death Metal"
+
+    const-string v24, "Pranks"
+
+    const-string v25, "Soundtrack"
+
+    const-string v26, "Euro-Techno"
+
+    const-string v27, "Ambient"
+
+    const-string v28, "Trip-Hop"
+
+    const-string v29, "Vocal"
+
+    const-string v30, "Jazz+Funk"
+
+    const-string v31, "Fusion"
+
+    const-string v32, "Trance"
+
+    const-string v33, "Classical"
+
+    const-string v34, "Instrumental"
+
+    const-string v35, "Acid"
+
+    const-string v36, "House"
+
+    const-string v37, "Game"
+
+    const-string v38, "Sound Clip"
+
+    const-string v39, "Gospel"
+
+    const-string v40, "Noise"
+
+    const-string v41, "AlternRock"
+
+    const-string v42, "Bass"
+
+    const-string v43, "Soul"
+
+    const-string v44, "Punk"
+
+    const-string v45, "Space"
+
+    const-string v46, "Meditative"
+
+    const-string v47, "Instrumental Pop"
+
+    const-string v48, "Instrumental Rock"
+
+    const-string v49, "Ethnic"
+
+    const-string v50, "Gothic"
+
+    const-string v51, "Darkwave"
+
+    const-string v52, "Techno-Industrial"
+
+    const-string v53, "Electronic"
+
+    const-string v54, "Pop-Folk"
+
+    const-string v55, "Eurodance"
+
+    const-string v56, "Dream"
+
+    const-string v57, "Southern Rock"
+
+    const-string v58, "Comedy"
+
+    const-string v59, "Cult"
+
+    const-string v60, "Gangsta"
+
+    const-string v61, "Top 40"
+
+    const-string v62, "Christian Rap"
+
+    const-string v63, "Pop/Funk"
+
+    const-string v64, "Jungle"
+
+    const-string v65, "Native American"
+
+    const-string v66, "Cabaret"
+
+    const-string v67, "New Wave"
+
+    const-string v68, "Psychadelic"
+
+    const-string v69, "Rave"
+
+    const-string v70, "Showtunes"
+
+    const-string v71, "Trailer"
+
+    const-string v72, "Lo-Fi"
+
+    const-string v73, "Tribal"
+
+    const-string v74, "Acid Punk"
+
+    const-string v75, "Acid Jazz"
+
+    const-string v76, "Polka"
+
+    const-string v77, "Retro"
+
+    const-string v78, "Musical"
+
+    const-string v79, "Rock & Roll"
+
+    const-string v80, "Hard Rock"
+
+    const-string v81, "Folk"
+
+    const-string v82, "Folk-Rock"
+
+    const-string v83, "National Folk"
+
+    const-string v84, "Swing"
+
+    const-string v85, "Fast Fusion"
+
+    const-string v86, "Bebob"
+
+    const-string v87, "Latin"
+
+    const-string v88, "Revival"
+
+    const-string v89, "Celtic"
+
+    const-string v90, "Bluegrass"
+
+    const-string v91, "Avantgarde"
+
+    const-string v92, "Gothic Rock"
+
+    const-string v93, "Progressive Rock"
+
+    const-string v94, "Psychedelic Rock"
+
+    const-string v95, "Symphonic Rock"
+
+    const-string v96, "Slow Rock"
+
+    const-string v97, "Big Band"
+
+    const-string v98, "Chorus"
+
+    const-string v99, "Easy Listening"
+
+    const-string v100, "Acoustic"
+
+    const-string v101, "Humour"
+
+    const-string v102, "Speech"
+
+    const-string v103, "Chanson"
+
+    const-string v104, "Opera"
+
+    const-string v105, "Chamber Music"
+
+    const-string v106, "Sonata"
+
+    const-string v107, "Symphony"
+
+    const-string v108, "Booty Bass"
+
+    const-string v109, "Primus"
+
+    const-string v110, "Porn Groove"
+
+    const-string v111, "Satire"
+
+    const-string v112, "Slow Jam"
+
+    const-string v113, "Club"
+
+    const-string v114, "Tango"
+
+    const-string v115, "Samba"
+
+    const-string v116, "Folklore"
+
+    const-string v117, "Ballad"
+
+    const-string v118, "Power Ballad"
+
+    const-string v119, "Rhythmic Soul"
+
+    const-string v120, "Freestyle"
+
+    const-string v121, "Duet"
+
+    const-string v122, "Punk Rock"
+
+    const-string v123, "Drum Solo"
+
+    const-string v124, "A capella"
+
+    const-string v125, "Euro-House"
+
+    const-string v126, "Dance Hall"
+
+    const-string v127, "Goa"
+
+    const-string v128, "Drum & Bass"
+
+    const-string v129, "Club-House"
+
+    const-string v130, "Hardcore"
+
+    const-string v131, "Terror"
+
+    const-string v132, "Indie"
+
+    const-string v133, "BritPop"
+
+    const-string v134, "Afro-Punk"
+
+    const-string v135, "Polsk Punk"
+
+    const-string v136, "Beat"
+
+    const-string v137, "Christian Gangsta Rap"
+
+    const-string v138, "Heavy Metal"
+
+    const-string v139, "Black Metal"
+
+    const-string v140, "Crossover"
+
+    const-string v141, "Contemporary Christian"
+
+    const-string v142, "Christian Rock"
+
+    const-string v143, "Merengue"
+
+    const-string v144, "Salsa"
+
+    const-string v145, "Thrash Metal"
+
+    const-string v146, "Anime"
+
+    const-string v147, "Jpop"
+
+    const-string v148, "Synthpop"
+
+    const-string v149, "Abstract"
+
+    const-string v150, "Art Rock"
+
+    const-string v151, "Baroque"
+
+    const-string v152, "Bhangra"
+
+    const-string v153, "Big beat"
+
+    const-string v154, "Breakbeat"
+
+    const-string v155, "Chillout"
+
+    const-string v156, "Downtempo"
+
+    const-string v157, "Dub"
+
+    const-string v158, "EBM"
+
+    const-string v159, "Eclectic"
+
+    const-string v160, "Electro"
+
+    const-string v161, "Electroclash"
+
+    const-string v162, "Emo"
+
+    const-string v163, "Experimental"
+
+    const-string v164, "Garage"
+
+    const-string v165, "Global"
+
+    const-string v166, "IDM"
+
+    const-string v167, "Illbient"
+
+    const-string v168, "Industro-Goth"
+
+    const-string v169, "Jam Band"
+
+    const-string v170, "Krautrock"
+
+    const-string v171, "Leftfield"
+
+    const-string v172, "Lounge"
+
+    const-string v173, "Math Rock"
+
+    const-string v174, "New Romantic"
+
+    const-string v175, "Nu-Breakz"
+
+    const-string v176, "Post-Punk"
+
+    const-string v177, "Post-Rock"
+
+    const-string v178, "Psytrance"
+
+    const-string v179, "Shoegaze"
+
+    const-string v180, "Space Rock"
+
+    const-string v181, "Trop Rock"
+
+    const-string v182, "World Music"
+
+    const-string v183, "Neoclassical"
+
+    const-string v184, "Audiobook"
+
+    const-string v185, "Audio theatre"
+
+    const-string v186, "Neue Deutsche Welle"
+
+    const-string v187, "Podcast"
+
+    const-string v188, "Indie-Rock"
+
+    const-string v189, "G-Funk"
+
+    const-string v190, "Dubstep"
+
+    filled-new-array/range {v1 .. v192}, [Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public static final b(Landroid/animation/Animator;)V
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/animation/Animator;->removeAllListeners()V
-
-    invoke-virtual {p0}, Landroid/animation/Animator;->cancel()V
+    sput-object v0, Ltei;->a:[Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static final c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 7
+.method public static final a(IILynd;)Z
+    .locals 2
 
-    sget-object v0, Ltei;->a:Lmxa;
+    const v0, 0x3faaaaab
 
-    if-eqz v0, :cond_1
+    if-nez p2, :cond_0
 
-    sget-object v1, Lc98;->o:Lc98;
+    int-to-float p0, p0
 
-    if-nez p1, :cond_0
+    mul-float/2addr p0, v0
 
-    const-string p1, ""
+    float-to-int p0, p0
+
+    int-to-float p0, p0
+
+    const/high16 p2, 0x45000000    # 2048.0f
+
+    cmpl-float p0, p0, p2
+
+    if-ltz p0, :cond_1
+
+    int-to-float p0, p1
+
+    mul-float/2addr p0, v0
+
+    float-to-int p0, p0
+
+    const/16 p1, 0x800
+
+    if-lt p0, p1, :cond_1
+
+    goto :goto_0
 
     :cond_0
-    move-object v3, p1
+    int-to-float p0, p0
 
-    const/4 v4, 0x0
+    mul-float/2addr p0, v0
 
-    const/16 v6, 0x8
+    float-to-int p0, p0
 
-    move-object v2, p0
+    iget v1, p2, Lynd;->a:I
 
-    move-object v5, p2
+    if-lt p0, v1, :cond_1
 
-    invoke-static/range {v0 .. v6}, Lmxa;->f(Lmxa;Lc98;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
+    int-to-float p0, p1
+
+    mul-float/2addr p0, v0
+
+    float-to-int p0, p0
+
+    iget p1, p2, Lynd;->b:I
+
+    if-lt p0, p1, :cond_1
+
+    :goto_0
+    const/4 p0, 0x1
+
+    return p0
 
     :cond_1
-    return-void
+    const/4 p0, 0x0
+
+    return p0
 .end method
 
-.method public static final varargs d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    .locals 7
+.method public static final b(Lce5;Lynd;)Z
+    .locals 2
 
-    sget-object v1, Lc98;->o:Lc98;
+    if-nez p0, :cond_0
 
-    sget-object v0, Ltei;->a:Lmxa;
+    const/4 p0, 0x0
 
-    if-nez v0, :cond_0
-
-    return-void
+    return p0
 
     :cond_0
-    array-length v2, p2
+    invoke-virtual {p0}, Lce5;->i0()V
 
-    if-nez v2, :cond_1
+    iget v0, p0, Lce5;->c:I
 
-    const/4 p2, 0x0
+    const/16 v1, 0x5a
 
-    invoke-virtual {v0, v1, p0, p1, p2}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    if-eq v0, v1, :cond_1
 
-    return-void
+    const/16 v1, 0x10e
 
-    :cond_1
-    const/4 v5, 0x0
+    if-eq v0, v1, :cond_1
 
-    const/16 v6, 0x10
+    invoke-virtual {p0}, Lce5;->i0()V
 
-    move-object v2, p0
+    iget v0, p0, Lce5;->o:I
 
-    move-object v3, p1
+    invoke-virtual {p0}, Lce5;->i0()V
 
-    move-object v4, p2
+    iget p0, p0, Lce5;->X:I
 
-    invoke-static/range {v0 .. v6}, Lmxa;->f(Lmxa;Lc98;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
-
-    return-void
-.end method
-
-.method public static synthetic e(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    new-array v0, v0, [Ljava/lang/Object;
-
-    invoke-static {p0, p1, v0}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public static final f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 7
-
-    sget-object v0, Ltei;->a:Lmxa;
-
-    if-eqz v0, :cond_1
-
-    sget-object v1, Lc98;->Z:Lc98;
-
-    if-nez p1, :cond_0
-
-    const-string p1, ""
-
-    :cond_0
-    move-object v3, p1
-
-    const/4 v4, 0x0
-
-    const/16 v6, 0x8
-
-    move-object v2, p0
-
-    move-object v5, p2
-
-    invoke-static/range {v0 .. v6}, Lmxa;->f(Lmxa;Lc98;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public static final varargs g(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    .locals 7
-
-    sget-object v0, Ltei;->a:Lmxa;
-
-    if-eqz v0, :cond_0
-
-    sget-object v1, Lc98;->Z:Lc98;
-
-    const/4 v5, 0x0
-
-    const/16 v6, 0x10
-
-    move-object v2, p0
-
-    move-object v3, p1
-
-    move-object v4, p2
-
-    invoke-static/range {v0 .. v6}, Lmxa;->f(Lmxa;Lc98;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public static final varargs h(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-    .locals 6
-
-    sget-object v0, Ltei;->a:Lmxa;
-
-    if-eqz v0, :cond_0
-
-    sget-object v1, Lc98;->Z:Lc98;
-
-    move-object v2, p0
-
-    move-object v5, p1
-
-    move-object v3, p2
-
-    move-object v4, p3
-
-    invoke-virtual/range {v0 .. v5}, Lmxa;->e(Lc98;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public static final i(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
-    .locals 7
-
-    sget-object v0, Ltei;->a:Lmxa;
-
-    if-eqz v0, :cond_1
-
-    sget-object v1, Lc98;->X:Lc98;
-
-    if-nez p1, :cond_0
-
-    const-string p1, ""
-
-    :cond_0
-    move-object v3, p1
-
-    const/4 v4, 0x0
-
-    const/16 v6, 0x8
-
-    move-object v2, p0
-
-    move-object v5, p2
-
-    invoke-static/range {v0 .. v6}, Lmxa;->f(Lmxa;Lc98;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public static final varargs j(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    .locals 7
-
-    sget-object v1, Lc98;->X:Lc98;
-
-    sget-object v0, Ltei;->a:Lmxa;
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    array-length v2, p2
-
-    if-nez v2, :cond_1
-
-    const/4 p2, 0x0
-
-    invoke-virtual {v0, v1, p0, p1, p2}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_1
-    const/4 v5, 0x0
-
-    const/16 v6, 0x10
-
-    move-object v2, p0
-
-    move-object v3, p1
-
-    move-object v4, p2
-
-    invoke-static/range {v0 .. v6}, Lmxa;->f(Lmxa;Lc98;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
-
-    return-void
-.end method
-
-.method public static final varargs k(Lc98;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    .locals 7
-
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+    invoke-static {v0, p0, p1}, Ltei;->a(IILynd;)Z
 
     move-result p0
 
-    if-eqz p0, :cond_6
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_5
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_4
-
-    const/4 v0, 0x3
-
-    if-eq p0, v0, :cond_3
-
-    const/4 v0, 0x4
-
-    if-eq p0, v0, :cond_2
-
-    const/4 v0, 0x5
-
-    if-ne p0, v0, :cond_1
-
-    array-length p0, p3
-
-    invoke-static {p3, p0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v4
-
-    sget-object v0, Ltei;->a:Lmxa;
-
-    if-eqz v0, :cond_0
-
-    sget-object v1, Lc98;->q0:Lc98;
-
-    const/4 v5, 0x0
-
-    const/16 v6, 0x10
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    invoke-static/range {v0 .. v6}, Lmxa;->f(Lmxa;Lc98;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
-
-    :cond_0
-    return-void
+    return p0
 
     :cond_1
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+    invoke-virtual {p0}, Lce5;->i0()V
 
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    iget v0, p0, Lce5;->X:I
 
-    throw p0
+    invoke-virtual {p0}, Lce5;->i0()V
 
-    :cond_2
-    move-object v2, p1
+    iget p0, p0, Lce5;->o:I
 
-    move-object v3, p2
+    invoke-static {v0, p0, p1}, Ltei;->a(IILynd;)Z
 
-    array-length p0, p3
+    move-result p0
 
-    invoke-static {p3, p0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-static {v2, v3, p0}, Ltei;->g(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_3
-    move-object v2, p1
-
-    move-object v3, p2
-
-    array-length p0, p3
-
-    invoke-static {p3, p0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-static {v2, v3, p0}, Ltei;->q(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_4
-    move-object v2, p1
-
-    move-object v3, p2
-
-    array-length p0, p3
-
-    invoke-static {p3, p0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-static {v2, v3, p0}, Ltei;->j(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_5
-    move-object v2, p1
-
-    move-object v3, p2
-
-    array-length p0, p3
-
-    invoke-static {p3, p0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-static {v2, v3, p0}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_6
-    move-object v2, p1
-
-    move-object v3, p2
-
-    array-length p0, p3
-
-    invoke-static {p3, p0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-static {v2, v3, p0}, Ltei;->m(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-void
+    return p0
 .end method
 
-.method public static final l(Lzcg;)V
-    .locals 4
+.method public static c(ILqyg;)Leg3;
+    .locals 3
 
-    new-instance v0, Ltbf;
+    invoke-virtual {p1}, Lqyg;->f()I
 
-    const/16 v1, 0x15
+    move-result v0
 
-    invoke-direct {v0, v1}, Ltbf;-><init>(I)V
+    invoke-virtual {p1}, Lqyg;->f()I
 
-    const-class v1, Lxp7;
+    move-result v1
 
-    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+    const v2, 0x64617461
 
-    new-instance v0, Lnee;
+    if-ne v1, v2, :cond_0
 
-    const/16 v1, 0x17
+    const/16 p0, 0x8
 
-    invoke-direct {v0, v1}, Lnee;-><init>(I)V
+    invoke-virtual {p1, p0}, Lqyg;->F(I)V
 
-    const-class v1, Lvf4;
+    add-int/lit8 v0, v0, -0x10
 
-    invoke-virtual {p0, v1, v0}, Lzcg;->c(Ljava/lang/Class;Lji7;)V
+    invoke-virtual {p1, v0}, Lqyg;->o(I)Ljava/lang/String;
 
-    new-instance v0, Ltbf;
+    move-result-object p0
 
-    const/16 v1, 0x16
+    new-instance p1, Leg3;
 
-    invoke-direct {v0, v1}, Ltbf;-><init>(I)V
+    const-string v0, "und"
 
-    const-class v1, Lnp7;
+    invoke-direct {p1, v0, p0, p0}, Leg3;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+    return-object p1
 
-    new-instance v0, Ltbf;
+    :cond_0
+    invoke-static {p0}, Loy;->h(I)Ljava/lang/String;
 
-    const/16 v1, 0x17
+    move-result-object p0
 
-    invoke-direct {v0, v1}, Ltbf;-><init>(I)V
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    const-class v1, Loe3;
+    move-result-object p0
 
-    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
 
-    new-instance v0, Lrsd;
+    move-result p1
 
-    const/16 v1, 0x12
+    const-string v0, "Failed to parse comment attribute: "
 
-    invoke-direct {v0, v1}, Lrsd;-><init>(I)V
+    if-eqz p1, :cond_1
 
-    const-class v1, Lpp6;
+    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+    move-result-object p0
 
-    new-instance v0, Lrsd;
+    goto :goto_0
 
-    const/16 v1, 0x13
+    :cond_1
+    new-instance p0, Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Lrsd;-><init>(I)V
+    invoke-direct {p0, v0}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
-    const-class v1, Ljq6;
+    :goto_0
+    const-string p1, "MetadataUtil"
 
-    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+    invoke-static {p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    new-instance v0, Lrsd;
+    const/4 p0, 0x0
 
-    const/16 v1, 0x14
+    return-object p0
+.end method
 
-    invoke-direct {v0, v1}, Lrsd;-><init>(I)V
+.method public static d(Lqyg;)Lxm;
+    .locals 5
 
-    const-class v1, Lb5h;
+    invoke-virtual {p0}, Lqyg;->f()I
 
-    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+    move-result v0
 
-    new-instance v0, Lnee;
+    invoke-virtual {p0}, Lqyg;->f()I
 
-    const/16 v1, 0x18
+    move-result v1
 
-    invoke-direct {v0, v1}, Lnee;-><init>(I)V
+    const v2, 0x64617461
 
-    const-class v1, Lms4;
+    const-string v3, "MetadataUtil"
 
-    invoke-virtual {p0, v1, v0}, Lzcg;->c(Ljava/lang/Class;Lji7;)V
+    const/4 v4, 0x0
 
-    new-instance v0, Lnee;
+    if-ne v1, v2, :cond_3
 
-    const/16 v2, 0x19
+    invoke-virtual {p0}, Lqyg;->f()I
 
-    invoke-direct {v0, v2}, Lnee;-><init>(I)V
+    move-result v1
 
-    const-class v2, Lvp7;
+    const v2, 0xffffff
 
-    invoke-virtual {p0, v2, v0}, Lzcg;->c(Ljava/lang/Class;Lji7;)V
+    and-int/2addr v1, v2
 
-    new-instance v0, Lnee;
+    const/16 v2, 0xd
 
-    const/16 v3, 0x1a
+    if-ne v1, v2, :cond_0
 
-    invoke-direct {v0, v3}, Lnee;-><init>(I)V
+    const-string v2, "image/jpeg"
 
-    invoke-virtual {p0, v2, v0}, Lzcg;->c(Ljava/lang/Class;Lji7;)V
+    goto :goto_0
 
-    new-instance v0, Lnee;
+    :cond_0
+    const/16 v2, 0xe
 
-    const/16 v3, 0x1b
+    if-ne v1, v2, :cond_1
 
-    invoke-direct {v0, v3}, Lnee;-><init>(I)V
+    const-string v2, "image/png"
 
-    invoke-virtual {p0, v2, v0}, Lzcg;->c(Ljava/lang/Class;Lji7;)V
+    goto :goto_0
 
-    new-instance v0, Lnee;
+    :cond_1
+    move-object v2, v4
 
-    const/16 v3, 0x1c
+    :goto_0
+    if-nez v2, :cond_2
 
-    invoke-direct {v0, v3}, Lnee;-><init>(I)V
+    const/16 p0, 0x29
 
-    invoke-virtual {p0, v2, v0}, Lzcg;->c(Ljava/lang/Class;Lji7;)V
+    const-string v0, "Unrecognized cover art flags: "
 
-    new-instance v0, Lnee;
+    invoke-static {v0, p0, v1, v3}, Laz1;->s(Ljava/lang/String;IILjava/lang/String;)V
 
-    const/16 v3, 0x1d
+    return-object v4
 
-    invoke-direct {v0, v3}, Lnee;-><init>(I)V
+    :cond_2
+    const/4 v1, 0x4
 
-    invoke-virtual {p0, v2, v0}, Lzcg;->c(Ljava/lang/Class;Lji7;)V
+    invoke-virtual {p0, v1}, Lqyg;->F(I)V
 
-    new-instance v0, La5h;
+    add-int/lit8 v0, v0, -0x10
+
+    new-array v1, v0, [B
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, v3}, La5h;-><init>(I)V
+    invoke-virtual {p0, v3, v1, v0}, Lqyg;->e(I[BI)V
 
-    invoke-virtual {p0, v2, v0}, Lzcg;->c(Ljava/lang/Class;Lji7;)V
+    new-instance p0, Lxm;
 
-    new-instance v0, La5h;
+    const/4 v0, 0x3
 
-    const/4 v3, 0x2
+    invoke-direct {p0, v2, v4, v0, v1}, Lxm;-><init>(Ljava/lang/String;Ljava/lang/String;I[B)V
 
-    invoke-direct {v0, v3}, La5h;-><init>(I)V
+    return-object p0
 
-    const-class v3, Lgjh;
+    :cond_3
+    const-string p0, "Failed to parse cover art attribute"
 
-    invoke-virtual {p0, v3, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+    invoke-static {v3, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    new-instance v0, La5h;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v0, v3}, La5h;-><init>(I)V
-
-    invoke-virtual {p0, v2, v0}, Lzcg;->c(Ljava/lang/Class;Lji7;)V
-
-    new-instance v0, Lnee;
-
-    const/16 v3, 0x12
-
-    invoke-direct {v0, v3}, Lnee;-><init>(I)V
-
-    invoke-virtual {p0, v2, v0}, Lzcg;->c(Ljava/lang/Class;Lji7;)V
-
-    new-instance v0, Lnee;
-
-    const/16 v3, 0x13
-
-    invoke-direct {v0, v3}, Lnee;-><init>(I)V
-
-    invoke-virtual {p0, v2, v0}, Lzcg;->c(Ljava/lang/Class;Lji7;)V
-
-    new-instance v0, Lnee;
-
-    const/16 v3, 0x14
-
-    invoke-direct {v0, v3}, Lnee;-><init>(I)V
-
-    invoke-virtual {p0, v2, v0}, Lzcg;->c(Ljava/lang/Class;Lji7;)V
-
-    new-instance v0, Lnee;
-
-    const/16 v2, 0x15
-
-    invoke-direct {v0, v2}, Lnee;-><init>(I)V
-
-    invoke-virtual {p0, v1, v0}, Lzcg;->c(Ljava/lang/Class;Lji7;)V
-
-    new-instance v0, Lnee;
-
-    const/16 v2, 0x16
-
-    invoke-direct {v0, v2}, Lnee;-><init>(I)V
-
-    invoke-virtual {p0, v1, v0}, Lzcg;->c(Ljava/lang/Class;Lji7;)V
-
-    return-void
+    return-object v4
 .end method
 
-.method public static final varargs m(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    .locals 7
+.method public static e(ILqyg;Ljava/lang/String;)Lg4g;
+    .locals 4
 
-    sget-object v1, Lc98;->c:Lc98;
+    invoke-virtual {p1}, Lqyg;->f()I
 
-    sget-object v0, Ltei;->a:Lmxa;
+    move-result v0
 
-    if-nez v0, :cond_0
+    invoke-virtual {p1}, Lqyg;->f()I
 
-    return-void
+    move-result v1
+
+    const v2, 0x64617461
+
+    const/4 v3, 0x0
+
+    if-ne v1, v2, :cond_1
+
+    const/16 v1, 0x16
+
+    if-lt v0, v1, :cond_1
+
+    const/16 v0, 0xa
+
+    invoke-virtual {p1, v0}, Lqyg;->F(I)V
+
+    invoke-virtual {p1}, Lqyg;->x()I
+
+    move-result v0
+
+    if-lez v0, :cond_1
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    const/16 v1, 0xb
+
+    invoke-direct {p0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1}, Lqyg;->x()I
+
+    move-result p1
+
+    if-lez p1, :cond_0
+
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, 0xc
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, "/"
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
 
     :cond_0
-    array-length v2, p2
+    new-instance p1, Lg4g;
 
-    if-nez v2, :cond_1
+    invoke-direct {p1, p2, v3, p0}, Lg4g;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    const/4 p2, 0x0
-
-    invoke-virtual {v0, v1, p0, p1, p2}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
+    return-object p1
 
     :cond_1
-    const/4 v5, 0x0
+    invoke-static {p0}, Loy;->h(I)Ljava/lang/String;
 
-    const/16 v6, 0x10
+    move-result-object p0
 
-    move-object v2, p0
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-object v3, p1
+    move-result-object p0
 
-    move-object v4, p2
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
 
-    invoke-static/range {v0 .. v6}, Lmxa;->f(Lmxa;Lc98;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
+    move-result p1
 
-    return-void
+    const-string p2, "Failed to parse index/count attribute: "
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p2, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    goto :goto_0
+
+    :cond_2
+    new-instance p0, Ljava/lang/String;
+
+    invoke-direct {p0, p2}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    :goto_0
+    const-string p1, "MetadataUtil"
+
+    invoke-static {p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-object v3
 .end method
 
-.method public static synthetic n(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
+.method public static f(ILqyg;Ljava/lang/String;)Lg4g;
+    .locals 4
 
-    const/4 v0, 0x0
+    invoke-virtual {p1}, Lqyg;->f()I
 
-    new-array v0, v0, [Ljava/lang/Object;
+    move-result v0
 
-    invoke-static {p0, p1, v0}, Ltei;->m(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-virtual {p1}, Lqyg;->f()I
 
-    return-void
-.end method
+    move-result v1
 
-.method public static final varargs o(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
-    .locals 7
+    const v2, 0x64617461
 
-    sget-object v1, Lc98;->Y:Lc98;
+    const/4 v3, 0x0
 
-    sget-object v0, Ltei;->a:Lmxa;
+    if-ne v1, v2, :cond_0
 
-    if-nez v0, :cond_0
+    const/16 p0, 0x8
 
-    return-void
+    invoke-virtual {p1, p0}, Lqyg;->F(I)V
+
+    add-int/lit8 v0, v0, -0x10
+
+    invoke-virtual {p1, v0}, Lqyg;->o(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance p1, Lg4g;
+
+    invoke-direct {p1, p2, v3, p0}, Lg4g;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object p1
 
     :cond_0
-    array-length v2, p3
+    invoke-static {p0}, Loy;->h(I)Ljava/lang/String;
 
-    if-nez v2, :cond_1
+    move-result-object p0
 
-    const/4 v4, 0x0
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    const/16 v6, 0x8
+    move-result-object p0
 
-    move-object v2, p0
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
 
-    move-object v5, p1
+    move-result p1
 
-    move-object v3, p2
+    const-string p2, "Failed to parse text attribute: "
 
-    invoke-static/range {v0 .. v6}, Lmxa;->f(Lmxa;Lc98;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
+    if-eqz p1, :cond_1
 
-    return-void
+    invoke-virtual {p2, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    goto :goto_0
 
     :cond_1
-    move-object v2, p0
+    new-instance p0, Ljava/lang/String;
 
-    move-object v5, p1
+    invoke-direct {p0, p2}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
-    move-object v3, p2
+    :goto_0
+    const-string p1, "MetadataUtil"
 
-    move-object v4, p3
+    invoke-static {p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual/range {v0 .. v5}, Lmxa;->e(Lc98;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;)V
-
-    return-void
+    return-object v3
 .end method
 
-.method public static final p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 7
+.method public static g(ILjava/lang/String;Lqyg;ZZ)Lmc7;
+    .locals 0
 
-    sget-object v0, Ltei;->a:Lmxa;
+    invoke-static {p2}, Ltei;->h(Lqyg;)I
 
-    if-eqz v0, :cond_0
+    move-result p2
 
-    sget-object v1, Lc98;->Y:Lc98;
+    if-eqz p4, :cond_0
 
-    const/4 v4, 0x0
+    const/4 p4, 0x1
 
-    const/16 v6, 0x8
+    invoke-static {p4, p2}, Ljava/lang/Math;->min(II)I
 
-    move-object v2, p0
-
-    move-object v3, p1
-
-    move-object v5, p2
-
-    invoke-static/range {v0 .. v6}, Lmxa;->f(Lmxa;Lc98;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
+    move-result p2
 
     :cond_0
-    return-void
-.end method
+    const/4 p4, 0x0
 
-.method public static final varargs q(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    .locals 1
+    if-ltz p2, :cond_2
 
-    array-length v0, p2
+    if-eqz p3, :cond_1
 
-    invoke-static {p2, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+    new-instance p0, Lg4g;
+
+    invoke-static {p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object p2
 
-    const/4 v0, 0x0
+    invoke-direct {p0, p1, p4, p2}, Lg4g;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {p0, v0, p1, p2}, Ltei;->o(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
+    return-object p0
 
-    return-void
+    :cond_1
+    new-instance p0, Leg3;
+
+    const-string p3, "und"
+
+    invoke-static {p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p0, p3, p1, p2}, Leg3;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object p0
+
+    :cond_2
+    invoke-static {p0}, Loy;->h(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    const-string p2, "Failed to parse uint8 attribute: "
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p2, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    goto :goto_0
+
+    :cond_3
+    new-instance p0, Ljava/lang/String;
+
+    invoke-direct {p0, p2}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    :goto_0
+    const-string p1, "MetadataUtil"
+
+    invoke-static {p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-object p4
 .end method
 
-.method public static synthetic r(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
+.method public static h(Lqyg;)I
+    .locals 2
 
-    const/4 v0, 0x0
+    const/4 v0, 0x4
 
-    new-array v0, v0, [Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lqyg;->F(I)V
 
-    invoke-static {p0, p1, v0}, Ltei;->q(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-virtual {p0}, Lqyg;->f()I
 
-    return-void
+    move-result v0
+
+    const v1, 0x64617461
+
+    if-ne v0, v1, :cond_0
+
+    const/16 v0, 0x8
+
+    invoke-virtual {p0, v0}, Lqyg;->F(I)V
+
+    invoke-virtual {p0}, Lqyg;->s()I
+
+    move-result p0
+
+    return p0
+
+    :cond_0
+    const-string p0, "MetadataUtil"
+
+    const-string v0, "Failed to parse uint8 attribute value"
+
+    invoke-static {p0, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 p0, -0x1
+
+    return p0
 .end method

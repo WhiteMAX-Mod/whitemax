@@ -1,70 +1,181 @@
 .class public final Lg7i;
-.super Ljava/lang/Object;
+.super Lphd;
 .source "SourceFile"
 
-# interfaces
-.implements Ltha;
 
-
-# static fields
-.field public static final a:Lg7i;
+# instance fields
+.field public final d:Lcom/google/android/material/datepicker/MaterialCalendar;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lcom/google/android/material/datepicker/MaterialCalendar;)V
+    .locals 0
 
-    new-instance v0, Lg7i;
+    invoke-direct {p0}, Lphd;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lg7i;->a:Lg7i;
-
-    new-instance v0, Ltwh;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ltwh;-><init>(I)V
-
-    const-class v1, Lmxh;
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
+    iput-object p1, p0, Lg7i;->d:Lcom/google/android/material/datepicker/MaterialCalendar;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final j()I
+    .locals 1
 
-    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget-object v0, p0, Lg7i;->d:Lcom/google/android/material/datepicker/MaterialCalendar;
+
+    iget-object v0, v0, Lcom/google/android/material/datepicker/MaterialCalendar;->k1:Lmz0;
+
+    iget v0, v0, Lmz0;->X:I
+
+    return v0
+.end method
+
+.method public final r(Lmid;I)V
+    .locals 4
+
+    check-cast p1, Lf7i;
+
+    iget-object v0, p0, Lg7i;->d:Lcom/google/android/material/datepicker/MaterialCalendar;
+
+    iget-object v1, v0, Lcom/google/android/material/datepicker/MaterialCalendar;->k1:Lmz0;
+
+    iget-object v1, v1, Lmz0;->a:Lg2a;
+
+    iget v1, v1, Lg2a;->c:I
+
+    add-int/2addr v1, p2
+
+    iget-object p1, p1, Lf7i;->E0:Landroid/widget/TextView;
+
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object p2
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    filled-new-array {v2}, [Ljava/lang/Object;
+
+    move-result-object v2
+
+    const-string v3, "%d"
+
+    invoke-static {p2, v3, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p2
+
+    invoke-static {}, Lvxg;->b()Ljava/util/Calendar;
+
+    move-result-object v2
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v2, v3}, Ljava/util/Calendar;->get(I)I
+
+    move-result v2
+
+    if-ne v2, v1, :cond_0
+
+    sget v2, Ls2d;->mtrl_picker_navigate_to_current_year_description:I
+
+    invoke-virtual {p2, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    filled-new-array {v2}, [Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-static {p2, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p2
+
+    goto :goto_0
+
+    :cond_0
+    sget v2, Ls2d;->mtrl_picker_navigate_to_year_description:I
+
+    invoke-virtual {p2, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    filled-new-array {v2}, [Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-static {p2, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p2
+
+    :goto_0
+    invoke-virtual {p1, p2}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
+
+    iget-object p1, v0, Lcom/google/android/material/datepicker/MaterialCalendar;->n1:Li5i;
+
+    invoke-static {}, Lvxg;->b()Ljava/util/Calendar;
+
+    move-result-object p2
+
+    invoke-virtual {p2, v3}, Ljava/util/Calendar;->get(I)I
+
+    move-result p2
+
+    if-ne p2, v1, :cond_1
+
+    iget-object p1, p1, Li5i;->b:Ljava/lang/Object;
+
+    goto :goto_1
+
+    :cond_1
+    iget-object p1, p1, Li5i;->a:Ljava/lang/Object;
+
+    :goto_1
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method public final t(Landroid/view/ViewGroup;I)Lmid;
+    .locals 2
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p2
+
+    invoke-static {p2}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object p2
+
+    sget v0, Lk1d;->mtrl_calendar_year:I
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p2, v0, p1, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object p1
 
-    throw p1
+    check-cast p1, Landroid/widget/TextView;
+
+    new-instance p2, Lf7i;
+
+    invoke-direct {p2, p1}, Lf7i;-><init>(Landroid/widget/TextView;)V
+
+    return-object p2
 .end method

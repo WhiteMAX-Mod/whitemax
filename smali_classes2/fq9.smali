@@ -1,55 +1,57 @@
-.class public final Lfq9;
-.super Ly14;
+.class public abstract Lfq9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Lla2;
+# static fields
+.field public static final a:Lk18;
 
-.field public Y:Ldk9;
+.field public static final b:Lk18;
 
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Lhq9;
-
-.field public final synthetic q0:Lhq9;
-
-.field public r0:I
+.field public static final c:Lk18;
 
 
 # direct methods
-.method public constructor <init>(Lhq9;Ly14;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Lfq9;->q0:Lhq9;
+    sget-object v0, Lgq9;->a:Lgq9;
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
+
+    move-result-object v1
+
+    const/16 v2, 0x66
+
+    invoke-virtual {v1, v2}, Lw5;->d(I)Lbwf;
+
+    move-result-object v1
+
+    sput-object v1, Lfq9;->a:Lk18;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
+
+    move-result-object v1
+
+    const/16 v2, 0xe4
+
+    invoke-virtual {v1, v2}, Lw5;->d(I)Lbwf;
+
+    move-result-object v1
+
+    sput-object v1, Lfq9;->b:Lk18;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
+
+    move-result-object v0
+
+    const/16 v1, 0x20a
+
+    invoke-virtual {v0, v1}, Lw5;->d(I)Lbwf;
+
+    move-result-object v0
+
+    sput-object v0, Lfq9;->c:Lk18;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lfq9;->Z:Ljava/lang/Object;
-
-    iget p1, p0, Lfq9;->r0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lfq9;->r0:I
-
-    iget-object p1, p0, Lfq9;->q0:Lhq9;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, v0, p0}, Lhq9;->e(Lla2;Ldk9;Ly14;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

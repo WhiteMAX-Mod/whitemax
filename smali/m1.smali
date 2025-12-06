@@ -1,10 +1,10 @@
 .class public final Lm1;
-.super Lxci;
+.super Lwoi;
 .source "SourceFile"
 
 
 # virtual methods
-.method public final d(Lx1;Lg1;Lg1;)Z
+.method public final a(Lx1;Lg1;Lg1;)Z
     .locals 1
 
     monitor-enter p1
@@ -42,7 +42,7 @@
     throw p2
 .end method
 
-.method public final e(Lx1;Ljava/lang/Object;Ljava/lang/Object;)Z
+.method public final b(Lx1;Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 1
 
     monitor-enter p1
@@ -80,7 +80,7 @@
     throw p2
 .end method
 
-.method public final f(Lx1;Lv1;Lv1;)Z
+.method public final c(Lx1;Lv1;Lv1;)Z
     .locals 1
 
     monitor-enter p1
@@ -118,7 +118,7 @@
     throw p2
 .end method
 
-.method public final g(Lx1;)Lg1;
+.method public final e(Lx1;)Lg1;
     .locals 2
 
     sget-object v0, Lg1;->d:Lg1;
@@ -153,7 +153,7 @@
     throw v0
 .end method
 
-.method public final h(Lx1;)Lv1;
+.method public final f(Lx1;)Lv1;
     .locals 2
 
     sget-object v0, Lv1;->c:Lv1;
@@ -188,7 +188,7 @@
     throw v0
 .end method
 
-.method public final k(Lv1;Lv1;)V
+.method public final g(Lv1;Lv1;)V
     .locals 0
 
     iput-object p2, p1, Lv1;->b:Lv1;
@@ -196,7 +196,7 @@
     return-void
 .end method
 
-.method public final l(Lv1;Ljava/lang/Thread;)V
+.method public final h(Lv1;Ljava/lang/Thread;)V
     .locals 0
 
     iput-object p2, p1, Lv1;->a:Ljava/lang/Thread;

@@ -23,7 +23,7 @@
         "(Lone/me/sdk/richvector/internal/element/ElementHolder;)V",
         "Lone/me/sdk/richvector/internal/element/GroupElement;",
         "element",
-        "Lccg;",
+        "Lqqg;",
         "addGroup",
         "(Lone/me/sdk/richvector/internal/element/GroupElement;)V",
         "Lone/me/sdk/richvector/internal/element/PathElement;",
@@ -151,7 +151,7 @@
     move-result-object v0
 
     .line 7
-    invoke-static {v0}, Lob3;->d(Ljava/util/List;)I
+    invoke-static {v0}, Lve3;->i(Ljava/util/List;)I
 
     move-result v1
 
@@ -163,7 +163,7 @@
 
     .line 8
     :goto_0
-    invoke-static {v3, v0}, Lnb3;->E(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v3, v0}, Lue3;->J(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -182,7 +182,7 @@
 
     const/4 v8, 0x0
 
-    invoke-direct {v6, v4, v8, v7, v8}, Lone/me/sdk/richvector/internal/element/GroupElement;-><init>(Lone/me/sdk/richvector/internal/element/GroupElement;Lone/me/sdk/richvector/internal/element/GroupElement;ILki4;)V
+    invoke-direct {v6, v4, v8, v7, v8}, Lone/me/sdk/richvector/internal/element/GroupElement;-><init>(Lone/me/sdk/richvector/internal/element/GroupElement;Lone/me/sdk/richvector/internal/element/GroupElement;ILtk4;)V
 
     invoke-virtual {v5, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -200,7 +200,7 @@
     move-result-object v0
 
     .line 11
-    invoke-static {v0}, Lob3;->d(Ljava/util/List;)I
+    invoke-static {v0}, Lve3;->i(Ljava/util/List;)I
 
     move-result v1
 
@@ -210,7 +210,7 @@
 
     .line 12
     :goto_1
-    invoke-static {v3, v0}, Lnb3;->E(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v3, v0}, Lue3;->J(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -243,7 +243,7 @@
     move-result-object p1
 
     .line 15
-    invoke-static {p1}, Lob3;->d(Ljava/util/List;)I
+    invoke-static {p1}, Lve3;->i(Ljava/util/List;)I
 
     move-result v0
 
@@ -251,7 +251,7 @@
 
     .line 16
     :goto_2
-    invoke-static {v2, p1}, Lnb3;->E(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v2, p1}, Lue3;->J(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -326,7 +326,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lob3;->d(Ljava/util/List;)I
+    invoke-static {v0}, Lve3;->i(Ljava/util/List;)I
 
     move-result v1
 
@@ -337,7 +337,7 @@
     move v3, v2
 
     :goto_0
-    invoke-static {v3, v0}, Lnb3;->E(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v3, v0}, Lue3;->J(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -363,7 +363,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lob3;->d(Ljava/util/List;)I
+    invoke-static {v0}, Lve3;->i(Ljava/util/List;)I
 
     move-result v1
 
@@ -372,7 +372,7 @@
     move v3, v2
 
     :goto_1
-    invoke-static {v3, v0}, Lnb3;->E(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v3, v0}, Lue3;->J(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -394,14 +394,14 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lob3;->d(Ljava/util/List;)I
+    invoke-static {v0}, Lve3;->i(Ljava/util/List;)I
 
     move-result v1
 
     if-ltz v1, :cond_5
 
     :goto_2
-    invoke-static {v2, v0}, Lnb3;->E(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v2, v0}, Lue3;->J(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -454,7 +454,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -538,7 +538,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -622,7 +622,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -753,7 +753,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lob3;->d(Ljava/util/List;)I
+    invoke-static {v0}, Lve3;->i(Ljava/util/List;)I
 
     move-result v1
 
@@ -764,7 +764,7 @@
     move v3, v2
 
     :goto_0
-    invoke-static {v3, v0}, Lnb3;->E(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v3, v0}, Lue3;->J(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -786,14 +786,14 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lob3;->d(Ljava/util/List;)I
+    invoke-static {v0}, Lve3;->i(Ljava/util/List;)I
 
     move-result v1
 
     if-ltz v1, :cond_3
 
     :goto_1
-    invoke-static {v2, v0}, Lnb3;->E(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v2, v0}, Lue3;->J(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object v3
 

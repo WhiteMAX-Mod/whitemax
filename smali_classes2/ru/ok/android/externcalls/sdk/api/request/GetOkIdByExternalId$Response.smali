@@ -53,10 +53,10 @@
 # static fields
 .field public static final Companion:Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Response$Companion;
 
-.field private static final PARSER:Lpq7;
+.field private static final PARSER:Lox7;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lpq7;"
+            "Lox7;"
         }
     .end annotation
 .end field
@@ -78,17 +78,17 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Response$Companion;-><init>(Lki4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Response$Companion;-><init>(Ltk4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Response;->Companion:Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Response$Companion;
 
-    new-instance v1, Ld46;
+    new-instance v1, Lsl6;
 
-    const/4 v2, 0x6
+    const/4 v2, 0x1
 
-    invoke-direct {v1, v2, v0}, Ld46;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, v0}, Lsl6;-><init>(ILjava/lang/Object;)V
 
-    sput-object v1, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Response;->PARSER:Lpq7;
+    sput-object v1, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Response;->PARSER:Lox7;
 
     return-void
 .end method
@@ -109,7 +109,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Response;-><init>(JLjava/lang/String;Ljava/lang/String;ILki4;)V
+    invoke-direct/range {v0 .. v6}, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Response;-><init>(JLjava/lang/String;Ljava/lang/String;ILtk4;)V
 
     return-void
 .end method
@@ -132,7 +132,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(JLjava/lang/String;Ljava/lang/String;ILki4;)V
+.method public synthetic constructor <init>(JLjava/lang/String;Ljava/lang/String;ILtk4;)V
     .locals 1
 
     and-int/lit8 p6, p5, 0x1
@@ -164,10 +164,10 @@
     return-void
 .end method
 
-.method public static final synthetic access$getPARSER$cp()Lpq7;
+.method public static final synthetic access$getPARSER$cp()Lox7;
     .locals 1
 
-    sget-object v0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Response;->PARSER:Lpq7;
+    sget-object v0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Response;->PARSER:Lox7;
 
     return-object v0
 .end method

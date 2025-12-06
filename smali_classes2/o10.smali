@@ -4,41 +4,66 @@
 
 
 # instance fields
-.field public a:Lq78;
+.field public a:J
 
-.field public b:J
+.field public b:Ljava/lang/String;
 
-.field public c:J
+.field public c:Ljava/lang/String;
 
-.field public d:J
+.field public d:Ljava/lang/String;
 
-.field public e:Ljava/util/List;
+.field public e:Ljava/lang/String;
 
-.field public f:Ljava/lang/String;
+.field public f:Lk10;
 
-.field public g:F
+.field public g:Lw10;
 
 .field public h:Z
 
-.field public i:Lq10;
+.field public i:Z
 
 
-# virtual methods
-.method public final a()Lp10;
-    .locals 1
+# direct methods
+.method public constructor <init>(Lo10;)V
+    .locals 2
 
-    iget-object v0, p0, Lo10;->a:Lq78;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-nez v0, :cond_0
+    iget-wide v0, p1, Lo10;->a:J
 
-    sget-object v0, Lq78;->Z:Lq78;
+    iput-wide v0, p0, Lo10;->a:J
 
-    iput-object v0, p0, Lo10;->a:Lq78;
+    iget-object v0, p1, Lo10;->b:Ljava/lang/String;
 
-    :cond_0
-    new-instance v0, Lp10;
+    iput-object v0, p0, Lo10;->b:Ljava/lang/String;
 
-    invoke-direct {v0, p0}, Lp10;-><init>(Lo10;)V
+    iget-object v0, p1, Lo10;->c:Ljava/lang/String;
 
-    return-object v0
+    iput-object v0, p0, Lo10;->c:Ljava/lang/String;
+
+    iget-object v0, p1, Lo10;->d:Ljava/lang/String;
+
+    iput-object v0, p0, Lo10;->d:Ljava/lang/String;
+
+    iget-object v0, p1, Lo10;->e:Ljava/lang/String;
+
+    iput-object v0, p0, Lo10;->e:Ljava/lang/String;
+
+    iget-object v0, p1, Lo10;->f:Lk10;
+
+    iput-object v0, p0, Lo10;->f:Lk10;
+
+    iget-object v0, p1, Lo10;->g:Lw10;
+
+    iput-object v0, p0, Lo10;->g:Lw10;
+
+    iget-boolean v0, p1, Lo10;->h:Z
+
+    iput-boolean v0, p0, Lo10;->h:Z
+
+    iget-boolean p1, p1, Lo10;->i:Z
+
+    iput-boolean p1, p0, Lo10;->i:Z
+
+    return-void
 .end method

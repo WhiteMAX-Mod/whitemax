@@ -1,84 +1,400 @@
-.class public abstract Llqc;
-.super Ljava/lang/Object;
+.class public final Llqc;
+.super Lsnf;
+.source "SourceFile"
 
 
 # static fields
-.field public static abc_action_bar_title_item:I = 0x7f0d0000
+.field public static final c:[Lkqc;
 
-.field public static abc_action_bar_up_container:I = 0x7f0d0001
+.field public static final d:[Lkqc;
 
-.field public static abc_action_menu_item_layout:I = 0x7f0d0002
 
-.field public static abc_action_menu_layout:I = 0x7f0d0003
+# instance fields
+.field public final a:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public static abc_action_mode_bar:I = 0x7f0d0004
+.field public b:Ljava/lang/Throwable;
 
-.field public static abc_action_mode_close_item_material:I = 0x7f0d0005
 
-.field public static abc_activity_chooser_view:I = 0x7f0d0006
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-.field public static abc_activity_chooser_view_list_item:I = 0x7f0d0007
+    const/4 v0, 0x0
 
-.field public static abc_alert_dialog_button_bar_material:I = 0x7f0d0008
+    new-array v1, v0, [Lkqc;
 
-.field public static abc_alert_dialog_material:I = 0x7f0d0009
+    sput-object v1, Llqc;->c:[Lkqc;
 
-.field public static abc_alert_dialog_title_material:I = 0x7f0d000a
+    new-array v0, v0, [Lkqc;
 
-.field public static abc_cascading_menu_item_layout:I = 0x7f0d000b
+    sput-object v0, Llqc;->d:[Lkqc;
 
-.field public static abc_dialog_title_material:I = 0x7f0d000c
+    return-void
+.end method
 
-.field public static abc_expanded_menu_layout:I = 0x7f0d000d
+.method public constructor <init>()V
+    .locals 2
 
-.field public static abc_list_menu_item_checkbox:I = 0x7f0d000e
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static abc_list_menu_item_icon:I = 0x7f0d000f
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public static abc_list_menu_item_layout:I = 0x7f0d0010
+    sget-object v1, Llqc;->d:[Lkqc;
 
-.field public static abc_list_menu_item_radio:I = 0x7f0d0011
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
 
-.field public static abc_popup_menu_header_item_layout:I = 0x7f0d0012
+    iput-object v0, p0, Llqc;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public static abc_popup_menu_item_layout:I = 0x7f0d0013
+    return-void
+.end method
 
-.field public static abc_screen_content_include:I = 0x7f0d0014
 
-.field public static abc_screen_simple:I = 0x7f0d0015
+# virtual methods
+.method public final b()V
+    .locals 5
 
-.field public static abc_screen_simple_overlay_action_mode:I = 0x7f0d0016
+    iget-object v0, p0, Llqc;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public static abc_screen_toolbar:I = 0x7f0d0017
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-.field public static abc_search_dropdown_item_icons_2line:I = 0x7f0d0018
+    move-result-object v1
 
-.field public static abc_search_view:I = 0x7f0d0019
+    sget-object v2, Llqc;->c:[Lkqc;
 
-.field public static abc_select_dialog_material:I = 0x7f0d001a
+    if-ne v1, v2, :cond_0
 
-.field public static abc_tooltip:I = 0x7f0d001b
+    goto :goto_1
 
-.field public static custom_dialog:I = 0x7f0d0033
+    :cond_0
+    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static fingerprint_dialog_layout:I = 0x7f0d005d
+    move-result-object v0
 
-.field public static notification_action:I = 0x7f0d00e1
+    check-cast v0, [Lkqc;
 
-.field public static notification_action_tombstone:I = 0x7f0d00e2
+    array-length v1, v0
 
-.field public static notification_template_custom_big:I = 0x7f0d00e9
+    const/4 v2, 0x0
 
-.field public static notification_template_icon_group:I = 0x7f0d00ea
+    :goto_0
+    if-ge v2, v1, :cond_2
 
-.field public static notification_template_part_chronometer:I = 0x7f0d00ee
+    aget-object v3, v0, v2
 
-.field public static notification_template_part_time:I = 0x7f0d00ef
+    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-.field public static select_dialog_item_material:I = 0x7f0d0168
+    move-result v4
 
-.field public static select_dialog_multichoice_material:I = 0x7f0d0169
+    if-nez v4, :cond_1
 
-.field public static select_dialog_singlechoice_material:I = 0x7f0d016a
+    iget-object v3, v3, Lkqc;->a:Lvta;
 
-.field public static support_simple_spinner_dropdown_item:I = 0x7f0d016e
+    invoke-interface {v3}, Lvta;->b()V
+
+    :cond_1
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    :goto_1
+    return-void
+.end method
+
+.method public final c(Lpy4;)V
+    .locals 2
+
+    iget-object v0, p0, Llqc;->a:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    sget-object v1, Llqc;->c:[Lkqc;
+
+    if-ne v0, v1, :cond_0
+
+    invoke-interface {p1}, Lpy4;->dispose()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final f(Ljava/lang/Object;)V
+    .locals 5
+
+    const-string v0, "onNext called with a null value."
+
+    invoke-static {p1, v0}, Lbj5;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object v0, p0, Llqc;->a:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lkqc;
+
+    array-length v1, v0
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_1
+
+    aget-object v3, v0, v2
+
+    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v4
+
+    if-nez v4, :cond_0
+
+    iget-object v3, v3, Lkqc;->a:Lvta;
+
+    invoke-interface {v3, p1}, Lvta;->f(Ljava/lang/Object;)V
+
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-void
+.end method
+
+.method public final o(Lvta;)V
+    .locals 6
+
+    new-instance v0, Lkqc;
+
+    invoke-direct {v0, p1, p0}, Lkqc;-><init>(Lvta;Llqc;)V
+
+    invoke-interface {p1, v0}, Lvta;->c(Lpy4;)V
+
+    :goto_0
+    iget-object v1, p0, Llqc;->a:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, [Lkqc;
+
+    sget-object v3, Llqc;->c:[Lkqc;
+
+    if-ne v2, v3, :cond_1
+
+    iget-object v0, p0, Llqc;->b:Ljava/lang/Throwable;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p1, v0}, Lvta;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_0
+    invoke-interface {p1}, Lvta;->b()V
+
+    return-void
+
+    :cond_1
+    array-length v3, v2
+
+    add-int/lit8 v4, v3, 0x1
+
+    new-array v4, v4, [Lkqc;
+
+    const/4 v5, 0x0
+
+    invoke-static {v2, v5, v4, v5, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    aput-object v0, v4, v3
+
+    :cond_2
+    invoke-virtual {v1, v2, v4}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_4
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p0, v0}, Llqc;->t(Lkqc;)V
+
+    :cond_3
+    return-void
+
+    :cond_4
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v3
+
+    if-eq v3, v2, :cond_2
+
+    goto :goto_0
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 5
+
+    const-string v0, "onError called with a null Throwable."
+
+    invoke-static {p1, v0}, Lbj5;->b(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object v0, p0, Llqc;->a:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    sget-object v2, Llqc;->c:[Lkqc;
+
+    if-ne v1, v2, :cond_0
+
+    invoke-static {p1}, Lt8j;->a(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_0
+    iput-object p1, p0, Llqc;->b:Ljava/lang/Throwable;
+
+    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lkqc;
+
+    array-length v1, v0
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_2
+
+    aget-object v3, v0, v2
+
+    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    invoke-static {p1}, Lt8j;->a(Ljava/lang/Throwable;)V
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v3, v3, Lkqc;->a:Lvta;
+
+    invoke-interface {v3, p1}, Lvta;->onError(Ljava/lang/Throwable;)V
+
+    :goto_1
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    return-void
+.end method
+
+.method public final t(Lkqc;)V
+    .locals 7
+
+    :goto_0
+    iget-object v0, p0, Llqc;->a:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, [Lkqc;
+
+    sget-object v2, Llqc;->c:[Lkqc;
+
+    if-eq v1, v2, :cond_7
+
+    sget-object v2, Llqc;->d:[Lkqc;
+
+    if-ne v1, v2, :cond_0
+
+    goto :goto_4
+
+    :cond_0
+    array-length v3, v1
+
+    const/4 v4, 0x0
+
+    move v5, v4
+
+    :goto_1
+    if-ge v5, v3, :cond_2
+
+    aget-object v6, v1, v5
+
+    if-ne v6, p1, :cond_1
+
+    goto :goto_2
+
+    :cond_1
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_1
+
+    :cond_2
+    const/4 v5, -0x1
+
+    :goto_2
+    if-gez v5, :cond_3
+
+    goto :goto_4
+
+    :cond_3
+    const/4 v6, 0x1
+
+    if-ne v3, v6, :cond_4
+
+    goto :goto_3
+
+    :cond_4
+    add-int/lit8 v2, v3, -0x1
+
+    new-array v2, v2, [Lkqc;
+
+    invoke-static {v1, v4, v2, v4, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    add-int/lit8 v4, v5, 0x1
+
+    sub-int/2addr v3, v5
+
+    sub-int/2addr v3, v6
+
+    invoke-static {v1, v4, v2, v5, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    :cond_5
+    :goto_3
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_6
+
+    goto :goto_4
+
+    :cond_6
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v3
+
+    if-eq v3, v1, :cond_5
+
+    goto :goto_0
+
+    :cond_7
+    :goto_4
+    return-void
+.end method

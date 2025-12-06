@@ -2,157 +2,128 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/os/Parcelable;
+
 
 # static fields
-.field public static final c:Lv45;
-
-.field public static final d:Lv45;
-
-.field public static final e:Lv45;
-
-.field public static final f:Lv45;
-
-.field public static final g:Lv45;
-
-.field public static final h:Lv45;
-
-.field public static final i:Lv45;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lv45;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final a:I
+.field public a:I
 
-.field public final b:I
+.field public final b:Ljava/util/UUID;
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
+
+.field public final o:[B
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 2
 
-    new-instance v0, Lv45;
+    new-instance v0, Lwf4;
 
-    const/4 v1, 0x0
+    const/16 v1, 0x8
 
-    invoke-direct {v0, v1, v1}, Lv45;-><init>(II)V
+    invoke-direct {v0, v1}, Lwf4;-><init>(I)V
 
-    sput-object v0, Lv45;->c:Lv45;
-
-    new-instance v0, Lv45;
-
-    const/4 v1, 0x1
-
-    const/16 v2, 0x8
-
-    invoke-direct {v0, v1, v2}, Lv45;-><init>(II)V
-
-    sput-object v0, Lv45;->d:Lv45;
-
-    new-instance v0, Lv45;
-
-    const/4 v1, 0x3
-
-    const/16 v3, 0xa
-
-    invoke-direct {v0, v1, v3}, Lv45;-><init>(II)V
-
-    sput-object v0, Lv45;->e:Lv45;
-
-    new-instance v0, Lv45;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1, v3}, Lv45;-><init>(II)V
-
-    sput-object v0, Lv45;->f:Lv45;
-
-    new-instance v0, Lv45;
-
-    const/4 v1, 0x5
-
-    invoke-direct {v0, v1, v3}, Lv45;-><init>(II)V
-
-    sput-object v0, Lv45;->g:Lv45;
-
-    new-instance v0, Lv45;
-
-    const/4 v1, 0x6
-
-    invoke-direct {v0, v1, v3}, Lv45;-><init>(II)V
-
-    sput-object v0, Lv45;->h:Lv45;
-
-    new-instance v0, Lv45;
-
-    invoke-direct {v0, v1, v2}, Lv45;-><init>(II)V
-
-    sput-object v0, Lv45;->i:Lv45;
+    sput-object v0, Lv45;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public constructor <init>(II)V
-    .locals 0
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 5
 
+    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lv45;->a:I
+    .line 9
+    new-instance v0, Ljava/util/UUID;
 
-    iput p2, p0, Lv45;->b:I
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v1
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v3
+
+    invoke-direct {v0, v1, v2, v3, v4}, Ljava/util/UUID;-><init>(JJ)V
+
+    iput-object v0, p0, Lv45;->b:Ljava/util/UUID;
+
+    .line 10
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lv45;->c:Ljava/lang/String;
+
+    .line 11
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sget v1, Lxxg;->a:I
+
+    iput-object v0, p0, Lv45;->d:Ljava/lang/String;
+
+    .line 12
+    invoke-virtual {p1}, Landroid/os/Parcel;->createByteArray()[B
+
+    move-result-object p1
+
+    iput-object p1, p0, Lv45;->o:[B
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/util/UUID;Ljava/lang/String;Ljava/lang/String;[B)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 3
+    iput-object p1, p0, Lv45;->b:Ljava/util/UUID;
+
+    .line 4
+    iput-object p2, p0, Lv45;->c:Ljava/lang/String;
+
+    .line 5
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 6
+    iput-object p3, p0, Lv45;->d:Ljava/lang/String;
+
+    .line 7
+    iput-object p4, p0, Lv45;->o:[B
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 3
+.method public final describeContents()I
+    .locals 1
 
-    invoke-virtual {p0}, Lv45;->b()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget v0, p0, Lv45;->a:I
-
-    const/4 v1, 0x1
-
-    if-eq v0, v1, :cond_0
-
-    iget v0, p0, Lv45;->b:I
-
-    const/16 v2, 0xa
-
-    if-ne v0, v2, :cond_0
-
-    return v1
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final b()Z
-    .locals 2
-
-    iget v0, p0, Lv45;->a:I
-
-    if-eqz v0, :cond_0
-
-    const/4 v1, 0x2
-
-    if-eq v0, v1, :cond_0
-
-    iget v0, p0, Lv45;->b:I
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
     const/4 v0, 0x0
 
     return v0
@@ -161,146 +132,155 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    const/4 v0, 0x1
+    instance-of v0, p1, Lv45;
 
-    if-ne p1, p0, :cond_0
+    const/4 v1, 0x0
 
-    return v0
+    if-nez v0, :cond_0
+
+    return v1
 
     :cond_0
-    instance-of v1, p1, Lv45;
+    const/4 v0, 0x1
 
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_1
-
-    check-cast p1, Lv45;
-
-    iget v1, p0, Lv45;->a:I
-
-    iget v3, p1, Lv45;->a:I
-
-    if-ne v1, v3, :cond_1
-
-    iget v1, p0, Lv45;->b:I
-
-    iget p1, p1, Lv45;->b:I
-
-    if-ne v1, p1, :cond_1
+    if-ne p1, p0, :cond_1
 
     return v0
 
     :cond_1
-    return v2
+    check-cast p1, Lv45;
+
+    iget-object v2, p0, Lv45;->c:Ljava/lang/String;
+
+    iget-object v3, p1, Lv45;->c:Ljava/lang/String;
+
+    invoke-static {v2, v3}, Lxxg;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lv45;->d:Ljava/lang/String;
+
+    iget-object v3, p1, Lv45;->d:Ljava/lang/String;
+
+    invoke-static {v2, v3}, Lxxg;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lv45;->b:Ljava/util/UUID;
+
+    iget-object v3, p1, Lv45;->b:Ljava/util/UUID;
+
+    invoke-static {v2, v3}, Lxxg;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lv45;->o:[B
+
+    iget-object p1, p1, Lv45;->o:[B
+
+    invoke-static {v2, p1}, Ljava/util/Arrays;->equals([B[B)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v1
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 3
 
     iget v0, p0, Lv45;->a:I
 
-    const v1, 0xf4243
+    if-nez v0, :cond_1
 
-    xor-int/2addr v0, v1
+    iget-object v0, p0, Lv45;->b:Ljava/util/UUID;
+
+    invoke-virtual {v0}, Ljava/util/UUID;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
 
     mul-int/2addr v0, v1
 
-    iget v1, p0, Lv45;->b:I
+    iget-object v2, p0, Lv45;->c:Ljava/lang/String;
 
-    xor-int/2addr v0, v1
+    if-nez v2, :cond_0
+
+    const/4 v2, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    :goto_0
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lv45;->d:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lu45;->e(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-object v1, p0, Lv45;->o:[B
+
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    iput v1, p0, Lv45;->a:I
+
+    :cond_1
+    iget v0, p0, Lv45;->a:I
 
     return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object p2, p0, Lv45;->b:Ljava/util/UUID;
 
-    const-string v1, "DynamicRange@"
+    invoke-virtual {p2}, Ljava/util/UUID;->getMostSignificantBits()J
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-wide v0
 
-    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    move-result v1
+    invoke-virtual {p2}, Ljava/util/UUID;->getLeastSignificantBits()J
 
-    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+    move-result-wide v0
 
-    move-result-object v1
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object p2, p0, Lv45;->c:Ljava/lang/String;
 
-    const-string v1, "{encoding="
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object p2, p0, Lv45;->d:Ljava/lang/String;
 
-    iget v1, p0, Lv45;->a:I
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    packed-switch v1, :pswitch_data_0
+    iget-object p2, p0, Lv45;->o:[B
 
-    const-string v1, "<Unknown>"
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    goto :goto_0
-
-    :pswitch_0
-    const-string v1, "DOLBY_VISION"
-
-    goto :goto_0
-
-    :pswitch_1
-    const-string v1, "HDR10_PLUS"
-
-    goto :goto_0
-
-    :pswitch_2
-    const-string v1, "HDR10"
-
-    goto :goto_0
-
-    :pswitch_3
-    const-string v1, "HLG"
-
-    goto :goto_0
-
-    :pswitch_4
-    const-string v1, "HDR_UNSPECIFIED"
-
-    goto :goto_0
-
-    :pswitch_5
-    const-string v1, "SDR"
-
-    goto :goto_0
-
-    :pswitch_6
-    const-string v1, "UNSPECIFIED"
-
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", bitDepth="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lv45;->b:I
-
-    const-string v2, "}"
-
-    invoke-static {v0, v1, v2}, Li57;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

@@ -1,6 +1,7 @@
 .class public final Logi;
-.super Lguh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ltli;
+
+# instance fields
+.field public a:I

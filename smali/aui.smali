@@ -1,60 +1,169 @@
 .class public final Laui;
-.super Ljava/lang/Object;
+.super Lcom/google/android/gms/common/api/internal/BasePendingResult;
 .source "SourceFile"
 
-# interfaces
-.implements Ltha;
 
-
-# static fields
-.field public static final a:Laui;
+# instance fields
+.field public final synthetic k:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lyai;I)V
+    .locals 0
 
-    new-instance v0, Laui;
+    iput p2, p0, Laui;->k:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string p2, "GoogleApiClient must not be null"
 
-    sput-object v0, Laui;->a:Laui;
+    invoke-static {p1, p2}, Ls5j;->h(Ljava/lang/Object;Ljava/lang/String;)V
 
-    new-instance v0, Lr8i;
+    invoke-direct {p0, p1}, Lcom/google/android/gms/common/api/internal/BasePendingResult;-><init>(Lyai;)V
 
-    const/4 v1, 0x1
+    const-string p1, "Api must not be null"
 
-    invoke-direct {v0, v1}, Lr8i;-><init>(I)V
+    sget-object p2, Lf70;->a:Lxo8;
 
-    const-class v1, Lm9i;
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
+    invoke-static {p2, p1}, Ls5j;->h(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final synthetic c(Lcom/google/android/gms/common/api/Status;)Lmpd;
+    .locals 1
 
-    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget v0, p0, Laui;->k:I
+
+    return-object p1
+.end method
+
+.method public final g(Lfl;)V
+    .locals 6
+
+    iget v0, p0, Laui;->k:I
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Lwli;
+
+    invoke-virtual {p1}, Lcom/google/android/gms/common/internal/a;->o()Landroid/os/IInterface;
+
+    move-result-object v0
+
+    check-cast v0, Lzbj;
+
+    new-instance v3, Ln0j;
+
+    invoke-direct {v3, p0, v2}, Ln0j;-><init>(Laui;I)V
+
+    iget-object p1, p1, Lwli;->I0:Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v4
+
+    iget-object v5, v0, Loai;->e:Ljava/lang/String;
+
+    invoke-virtual {v4, v5}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    sget v5, Luli;->a:I
+
+    invoke-virtual {v4, v3}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+
+    if-nez p1, :cond_0
+
+    invoke-virtual {v4, v1}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v4, v2}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-interface {p1, v4, v1}, Landroid/os/Parcelable;->writeToParcel(Landroid/os/Parcel;I)V
+
+    :goto_0
+    const/16 p1, 0x67
+
+    invoke-virtual {v0, v4, p1}, Loai;->V(Landroid/os/Parcel;I)V
+
+    return-void
+
+    :pswitch_0
+    check-cast p1, Lwli;
+
+    invoke-virtual {p1}, Lcom/google/android/gms/common/internal/a;->o()Landroid/os/IInterface;
+
+    move-result-object v0
+
+    check-cast v0, Lzbj;
+
+    new-instance v3, Ln0j;
+
+    invoke-direct {v3, p0, v1}, Ln0j;-><init>(Laui;I)V
+
+    iget-object p1, p1, Lwli;->I0:Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v4
+
+    iget-object v5, v0, Loai;->e:Ljava/lang/String;
+
+    invoke-virtual {v4, v5}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    sget v5, Luli;->a:I
+
+    invoke-virtual {v4, v3}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+
+    if-nez p1, :cond_1
+
+    invoke-virtual {v4, v1}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v4, v2}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-interface {p1, v4, v1}, Landroid/os/Parcelable;->writeToParcel(Landroid/os/Parcel;I)V
+
+    :goto_1
+    const/16 p1, 0x66
+
+    invoke-virtual {v0, v4, p1}, Loai;->V(Landroid/os/Parcel;I)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final h(Lcom/google/android/gms/common/api/Status;)V
+    .locals 2
+
+    invoke-virtual {p1}, Lcom/google/android/gms/common/api/Status;->b()Z
+
+    move-result v0
+
+    xor-int/lit8 v0, v0, 0x1
+
+    const-string v1, "Failed result must not be success"
+
+    invoke-static {v1, v0}, Ls5j;->a(Ljava/lang/String;Z)V
+
+    invoke-virtual {p0, p1}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->c(Lcom/google/android/gms/common/api/Status;)Lmpd;
 
     move-result-object p1
 
-    throw p1
+    invoke-virtual {p0, p1}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->f(Lmpd;)V
+
+    return-void
 .end method

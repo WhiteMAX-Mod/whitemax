@@ -1,49 +1,23 @@
-.class public final Lrga;
-.super Ly14;
+.class public final synthetic Lrga;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Luga;
+.field public final synthetic a:Lsga;
 
-.field public Y:I
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Landroid/content/Context;
 
 
 # direct methods
-.method public constructor <init>(Luga;Ly14;)V
+.method public synthetic constructor <init>(Lsga;Landroid/content/Context;)V
     .locals 0
 
-    iput-object p1, p0, Lrga;->X:Luga;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lrga;->a:Lsga;
+
+    iput-object p2, p0, Lrga;->b:Landroid/content/Context;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lrga;->o:Ljava/lang/Object;
-
-    iget p1, p0, Lrga;->Y:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lrga;->Y:I
-
-    iget-object p1, p0, Lrga;->X:Luga;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Luga;->h(Ljava/util/List;Ly14;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

@@ -1,84 +1,196 @@
-.class public final synthetic Ln2f;
+.class public final Ln2f;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lone;
+.implements Lws8;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:J
 
-.field public final synthetic b:Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;
+.field public final b:Ljava/lang/String;
 
-.field public final synthetic c:Lli6;
+.field public final c:Lod7;
+
+.field public final d:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;Lli6;I)V
+.method public constructor <init>(JLjava/lang/String;Lod7;Z)V
     .locals 0
 
-    iput p3, p0, Ln2f;->a:I
-
-    iput-object p1, p0, Ln2f;->b:Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;
-
-    iput-object p2, p0, Ln2f;->c:Lli6;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Ln2f;->a:J
+
+    iput-object p3, p0, Ln2f;->b:Ljava/lang/String;
+
+    iput-object p4, p0, Ln2f;->c:Lod7;
+
+    iput-boolean p5, p0, Ln2f;->d:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onResponse(Lorg/json/JSONObject;)V
-    .locals 2
+.method public final d()Z
+    .locals 1
 
-    iget v0, p0, Ln2f;->a:I
+    iget-boolean v0, p0, Ln2f;->d:Z
 
-    packed-switch v0, :pswitch_data_0
+    return v0
+.end method
 
-    iget-object v0, p0, Ln2f;->b:Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget-object v1, p0, Ln2f;->c:Lli6;
+    const/4 v0, 0x1
 
-    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;->b(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;Lli6;Lorg/json/JSONObject;)V
+    if-ne p0, p1, :cond_0
 
-    return-void
+    return v0
 
-    :pswitch_0
-    iget-object v0, p0, Ln2f;->b:Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;
+    :cond_0
+    instance-of v1, p1, Ln2f;
 
-    iget-object v1, p0, Ln2f;->c:Lli6;
+    const/4 v2, 0x0
 
-    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;->a(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;Lli6;Lorg/json/JSONObject;)V
+    if-nez v1, :cond_1
 
-    return-void
+    return v2
 
-    :pswitch_1
-    iget-object v0, p0, Ln2f;->b:Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;
+    :cond_1
+    check-cast p1, Ln2f;
 
-    iget-object v1, p0, Ln2f;->c:Lli6;
+    iget-wide v3, p0, Ln2f;->a:J
 
-    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;->c(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;Lli6;Lorg/json/JSONObject;)V
+    iget-wide v5, p1, Ln2f;->a:J
 
-    return-void
+    cmp-long v1, v3, v5
 
-    :pswitch_2
-    iget-object v0, p0, Ln2f;->b:Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;
+    if-eqz v1, :cond_2
 
-    iget-object v1, p0, Ln2f;->c:Lli6;
+    return v2
 
-    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;->g(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;Lli6;Lorg/json/JSONObject;)V
+    :cond_2
+    iget-object v1, p0, Ln2f;->b:Ljava/lang/String;
 
-    return-void
+    iget-object v3, p1, Ln2f;->b:Ljava/lang/String;
 
-    nop
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Ln2f;->c:Lod7;
+
+    iget-object v3, p1, Ln2f;->c:Lod7;
+
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-boolean v1, p0, Ln2f;->d:Z
+
+    iget-boolean p1, p1, Ln2f;->d:Z
+
+    if-eq v1, p1, :cond_5
+
+    return v2
+
+    :cond_5
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-wide v0, p0, Ln2f;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Ln2f;->b:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lu45;->e(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-object v2, p0, Ln2f;->c:Lod7;
+
+    invoke-virtual {v2}, Lod7;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-boolean v0, p0, Ln2f;->d:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    add-int/2addr v0, v2
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "SingleImageAttach(messageId="
+
+    const-string v1, ", attachId="
+
+    iget-wide v2, p0, Ln2f;->a:J
+
+    iget-object v4, p0, Ln2f;->b:Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v1, v4}, Lho7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", imageAttach="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ln2f;->c:Lod7;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isMediaOrderedFirst="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Ln2f;->d:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

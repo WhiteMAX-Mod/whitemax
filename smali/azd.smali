@@ -1,258 +1,279 @@
-.class public abstract Lazd;
-.super Ljava/lang/Object;
+.class public final Lazd;
+.super Ldpd;
 .source "SourceFile"
 
+# interfaces
+.implements Lsm6;
 
-# static fields
-.field public static final a:Liyd;
 
-.field public static final b:I
+# instance fields
+.field public X:I
 
-.field public static final c:[Ljava/util/concurrent/atomic/AtomicReference;
+.field public Y:I
+
+.field public Z:I
+
+.field public c:Lc9a;
+
+.field public d:[J
+
+.field public o:I
+
+.field public s0:J
+
+.field public t0:I
+
+.field public synthetic u0:Ljava/lang/Object;
+
+.field public final synthetic v0:Lc9a;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lc9a;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Liyd;
+    iput-object p1, p0, Lazd;->v0:Lc9a;
 
-    const/4 v6, 0x0
+    const/4 p1, 0x2
 
-    new-array v1, v6, [B
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    invoke-direct/range {v0 .. v5}, Liyd;-><init>([BIIZZ)V
-
-    sput-object v0, Lazd;->a:Liyd;
-
-    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Runtime;->availableProcessors()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x2
-
-    add-int/lit8 v0, v0, -0x1
-
-    invoke-static {v0}, Ljava/lang/Integer;->highestOneBit(I)I
-
-    move-result v0
-
-    sput v0, Lazd;->b:I
-
-    new-array v1, v0, [Ljava/util/concurrent/atomic/AtomicReference;
-
-    :goto_0
-    if-ge v6, v0, :cond_0
-
-    new-instance v2, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {v2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    aput-object v2, v1, v6
-
-    add-int/lit8 v6, v6, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    sput-object v1, Lazd;->c:[Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-direct {p0, p1, p2}, Ldpd;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static final a(Liyd;)V
-    .locals 6
 
-    iget-object v0, p0, Liyd;->f:Liyd;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-nez v0, :cond_6
+    check-cast p1, Lfee;
 
-    iget-object v0, p0, Liyd;->g:Liyd;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-nez v0, :cond_6
+    invoke-virtual {p0, p1, p2}, Lazd;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-boolean v0, p0, Liyd;->d:Z
+    move-result-object p1
 
-    if-eqz v0, :cond_0
+    check-cast p1, Lazd;
 
-    goto :goto_1
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    :cond_0
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    invoke-virtual {p1, p2}, Lazd;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    invoke-virtual {v0}, Ljava/lang/Thread;->getId()J
+    return-object p1
+.end method
 
-    move-result-wide v0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    sget v2, Lazd;->b:I
+    new-instance v0, Lazd;
 
-    int-to-long v2, v2
+    iget-object v1, p0, Lazd;->v0:Lc9a;
 
-    const-wide/16 v4, 0x1
+    invoke-direct {v0, v1, p2}, Lazd;-><init>(Lc9a;Lkotlin/coroutines/Continuation;)V
 
-    sub-long/2addr v2, v4
+    iput-object p1, v0, Lazd;->u0:Ljava/lang/Object;
 
-    and-long/2addr v0, v2
+    return-object v0
+.end method
 
-    long-to-int v0, v0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 19
 
-    sget-object v1, Lazd;->c:[Ljava/util/concurrent/atomic/AtomicReference;
+    move-object/from16 v0, p0
 
-    aget-object v0, v1, v0
+    iget v1, v0, Lazd;->t0:I
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Liyd;
-
-    sget-object v2, Lazd;->a:Liyd;
-
-    if-ne v1, v2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_2
+    const/16 v3, 0x8
 
-    iget v3, v1, Liyd;->c:I
+    const/4 v4, 0x1
 
-    goto :goto_0
+    if-eqz v1, :cond_1
 
-    :cond_2
-    move v3, v2
+    if-ne v1, v4, :cond_0
+
+    iget v1, v0, Lazd;->Z:I
+
+    iget v5, v0, Lazd;->Y:I
+
+    iget-wide v6, v0, Lazd;->s0:J
+
+    iget v8, v0, Lazd;->X:I
+
+    iget v9, v0, Lazd;->o:I
+
+    iget-object v10, v0, Lazd;->d:[J
+
+    iget-object v11, v0, Lazd;->c:Lc9a;
+
+    iget-object v12, v0, Lazd;->u0:Ljava/lang/Object;
+
+    check-cast v12, Lfee;
+
+    invoke-static/range {p1 .. p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    goto/16 :goto_2
+
+    :cond_0
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_1
+    invoke-static/range {p1 .. p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object v1, v0, Lazd;->u0:Ljava/lang/Object;
+
+    check-cast v1, Lfee;
+
+    iget-object v5, v0, Lazd;->v0:Lc9a;
+
+    iget-object v6, v5, Lc9a;->a:[J
+
+    array-length v7, v6
+
+    add-int/lit8 v7, v7, -0x2
+
+    if-ltz v7, :cond_5
+
+    move v8, v2
 
     :goto_0
-    const/high16 v4, 0x10000
+    aget-wide v9, v6, v8
 
-    if-lt v3, v4, :cond_3
+    not-long v11, v9
+
+    const/4 v13, 0x7
+
+    shl-long/2addr v11, v13
+
+    and-long/2addr v11, v9
+
+    const-wide v13, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
+
+    and-long/2addr v11, v13
+
+    cmp-long v11, v11, v13
+
+    if-eqz v11, :cond_4
+
+    sub-int v11, v8, v7
+
+    not-int v11, v11
+
+    ushr-int/lit8 v11, v11, 0x1f
+
+    rsub-int/lit8 v11, v11, 0x8
+
+    move v12, v11
+
+    move-object v11, v5
+
+    move v5, v12
+
+    move-object v12, v1
+
+    move v1, v2
+
+    move-wide/from16 v17, v9
+
+    move-object v10, v6
+
+    move v9, v7
+
+    move-wide/from16 v6, v17
+
+    :goto_1
+    if-ge v1, v5, :cond_3
+
+    const-wide/16 v13, 0xff
+
+    and-long/2addr v13, v6
+
+    const-wide/16 v15, 0x80
+
+    cmp-long v13, v13, v15
+
+    if-gez v13, :cond_2
+
+    shl-int/lit8 v2, v8, 0x3
+
+    add-int/2addr v2, v1
+
+    new-instance v3, Lsn8;
+
+    iget-object v13, v11, Lc9a;->b:[Ljava/lang/Object;
+
+    aget-object v13, v13, v2
+
+    iget-object v14, v11, Lc9a;->c:[Ljava/lang/Object;
+
+    aget-object v2, v14, v2
+
+    const/4 v14, 0x1
+
+    invoke-direct {v3, v13, v14, v2}, Lsn8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    iput-object v12, v0, Lazd;->u0:Ljava/lang/Object;
+
+    iput-object v11, v0, Lazd;->c:Lc9a;
+
+    iput-object v10, v0, Lazd;->d:[J
+
+    iput v9, v0, Lazd;->o:I
+
+    iput v8, v0, Lazd;->X:I
+
+    iput-wide v6, v0, Lazd;->s0:J
+
+    iput v5, v0, Lazd;->Y:I
+
+    iput v1, v0, Lazd;->Z:I
+
+    iput v4, v0, Lazd;->t0:I
+
+    invoke-virtual {v12, v3, v0}, Lfee;->b(Ljava/lang/Object;Ldpd;)V
+
+    sget-object v1, Lg84;->a:Lg84;
+
+    return-object v1
+
+    :cond_2
+    :goto_2
+    shr-long/2addr v6, v3
+
+    add-int/2addr v1, v4
 
     goto :goto_1
 
     :cond_3
-    iput-object v1, p0, Liyd;->f:Liyd;
+    if-ne v5, v3, :cond_5
 
-    iput v2, p0, Liyd;->b:I
+    move v7, v9
 
-    add-int/lit16 v3, v3, 0x2000
+    move-object v6, v10
 
-    iput v3, p0, Liyd;->c:I
+    move-object v5, v11
+
+    move-object v1, v12
 
     :cond_4
-    invoke-virtual {v0, v1, p0}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-eq v8, v7, :cond_5
 
-    move-result v2
+    add-int/lit8 v8, v8, 0x1
 
-    if-eqz v2, :cond_5
-
-    :goto_1
-    return-void
+    goto :goto_0
 
     :cond_5
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    sget-object v1, Lqqg;->a:Lqqg;
 
-    move-result-object v2
-
-    if-eq v2, v1, :cond_4
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Liyd;->f:Liyd;
-
-    return-void
-
-    :cond_6
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Failed requirement."
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public static final b()Liyd;
-    .locals 6
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Thread;->getId()J
-
-    move-result-wide v0
-
-    sget v2, Lazd;->b:I
-
-    int-to-long v2, v2
-
-    const-wide/16 v4, 0x1
-
-    sub-long/2addr v2, v4
-
-    and-long/2addr v0, v2
-
-    long-to-int v0, v0
-
-    sget-object v1, Lazd;->c:[Ljava/util/concurrent/atomic/AtomicReference;
-
-    aget-object v0, v1, v0
-
-    sget-object v1, Lazd;->a:Liyd;
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Liyd;
-
-    if-ne v2, v1, :cond_0
-
-    new-instance v0, Liyd;
-
-    invoke-direct {v0}, Liyd;-><init>()V
-
-    return-object v0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    if-nez v2, :cond_1
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
-
-    new-instance v0, Liyd;
-
-    invoke-direct {v0}, Liyd;-><init>()V
-
-    return-object v0
-
-    :cond_1
-    iget-object v3, v2, Liyd;->f:Liyd;
-
-    invoke-virtual {v0, v3}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
-
-    iput-object v1, v2, Liyd;->f:Liyd;
-
-    const/4 v0, 0x0
-
-    iput v0, v2, Liyd;->c:I
-
-    return-object v2
+    return-object v1
 .end method

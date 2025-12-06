@@ -1,154 +1,171 @@
 .class public final Lkf8;
-.super Lpw0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final i:Landroid/os/Handler;
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:Z
+
+.field public final d:Z
+
+.field public final e:J
+
+.field public final f:Z
+
+.field public final g:Z
+
+.field public final h:Z
+
+.field public final i:Z
+
+.field public final j:Z
+
+.field public final k:Z
+
+.field public final l:J
+
+.field public final m:J
+
+.field public final n:J
+
+.field public final o:Z
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Ljf8;)V
     .locals 2
 
-    invoke-direct {p0}, Lpw0;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Landroid/os/Handler;
+    iget v0, p1, Ljf8;->a:I
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    iput v0, p0, Lkf8;->a:I
 
-    move-result-object v1
+    iget v0, p1, Ljf8;->b:I
 
-    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    iput v0, p0, Lkf8;->b:I
 
-    iput-object v0, p0, Lkf8;->i:Landroid/os/Handler;
+    iget-boolean v0, p1, Ljf8;->c:Z
 
-    return-void
-.end method
+    iput-boolean v0, p0, Lkf8;->c:Z
 
-.method public static synthetic g(Lkf8;Ljava/lang/Object;)V
-    .locals 0
+    iget-boolean v0, p1, Ljf8;->d:Z
 
-    invoke-super {p0, p1}, Lpw0;->c(Ljava/lang/Object;)V
+    iput-boolean v0, p0, Lkf8;->d:Z
 
-    return-void
-.end method
+    iget-wide v0, p1, Ljf8;->e:J
 
-.method public static synthetic h(Lkf8;Ljava/lang/Object;)V
-    .locals 0
+    iput-wide v0, p0, Lkf8;->e:J
 
-    invoke-super {p0, p1}, Lpw0;->d(Ljava/lang/Object;)V
+    iget-boolean v0, p1, Ljf8;->f:Z
 
-    return-void
-.end method
+    iput-boolean v0, p0, Lkf8;->f:Z
 
-.method public static synthetic i(Lkf8;Ljava/lang/Object;)V
-    .locals 0
+    iget-boolean v0, p1, Ljf8;->g:Z
 
-    invoke-super {p0, p1}, Lpw0;->f(Ljava/lang/Object;)V
+    iput-boolean v0, p0, Lkf8;->g:Z
+
+    iget-boolean v0, p1, Ljf8;->h:Z
+
+    iput-boolean v0, p0, Lkf8;->h:Z
+
+    iget-boolean v0, p1, Ljf8;->i:Z
+
+    iput-boolean v0, p0, Lkf8;->i:Z
+
+    iget-boolean v0, p1, Ljf8;->j:Z
+
+    iput-boolean v0, p0, Lkf8;->j:Z
+
+    iget-boolean v0, p1, Ljf8;->k:Z
+
+    iput-boolean v0, p0, Lkf8;->k:Z
+
+    iget-wide v0, p1, Ljf8;->l:J
+
+    iput-wide v0, p0, Lkf8;->l:J
+
+    iget-wide v0, p1, Ljf8;->m:J
+
+    iput-wide v0, p0, Lkf8;->m:J
+
+    iget-wide v0, p1, Ljf8;->n:J
+
+    iput-wide v0, p0, Lkf8;->n:J
+
+    iget-boolean p1, p1, Ljf8;->o:Z
+
+    iput-boolean p1, p0, Lkf8;->o:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Ljava/lang/Object;)V
-    .locals 2
+.method public final a(Ljava/util/ArrayList;)Lkp8;
+    .locals 6
 
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+    const-wide/16 v0, -0x1
+
+    iget-wide v2, p0, Lkf8;->e:J
+
+    cmp-long v0, v2, v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    :cond_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
-    if-ne v0, v1, :cond_0
+    check-cast v1, Lkp8;
 
-    invoke-super {p0, p1}, Lpw0;->c(Ljava/lang/Object;)V
+    iget-wide v4, v1, Lkp8;->c:J
 
-    return-void
+    cmp-long v4, v4, v2
 
-    :cond_0
-    new-instance v0, Ljf8;
+    if-nez v4, :cond_0
 
+    goto :goto_0
+
+    :cond_1
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, p1, v1}, Ljf8;-><init>(Lkf8;Ljava/lang/Object;I)V
+    :goto_0
+    if-nez v1, :cond_2
 
-    iget-object p1, p0, Lkf8;->i:Landroid/os/Handler;
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
-    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    move-result v0
 
-    return-void
-.end method
+    const/4 v2, 0x1
 
-.method public final d(Ljava/lang/Object;)V
-    .locals 2
+    if-ne v0, v2, :cond_2
 
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    move-result-object p1
 
-    move-result-object v1
+    check-cast p1, Lkp8;
 
-    if-ne v0, v1, :cond_0
+    return-object p1
 
-    :try_start_0
-    invoke-super {p0, p1}, Lpw0;->d(Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    return-void
-
-    :cond_0
-    new-instance v0, Ljf8;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p0, p1, v1}, Ljf8;-><init>(Lkf8;Ljava/lang/Object;I)V
-
-    iget-object p1, p0, Lkf8;->i:Landroid/os/Handler;
-
-    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-.end method
-
-.method public final f(Ljava/lang/Object;)V
-    .locals 2
-
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
-
-    move-result-object v0
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    if-ne v0, v1, :cond_0
-
-    :try_start_0
-    invoke-super {p0, p1}, Lpw0;->f(Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    return-void
-
-    :cond_0
-    new-instance v0, Ljf8;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, p0, p1, v1}, Ljf8;-><init>(Lkf8;Ljava/lang/Object;I)V
-
-    iget-object p1, p0, Lkf8;->i:Landroid/os/Handler;
-
-    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
+    :cond_2
+    return-object v1
 .end method

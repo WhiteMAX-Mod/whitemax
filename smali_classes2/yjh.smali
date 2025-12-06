@@ -1,181 +1,102 @@
-.class public abstract synthetic Lyjh;
+.class public final synthetic Lyjh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/messages/list/ui/view/WarningLinkBottomSheet;
+
 
 # direct methods
-.method public static bridge synthetic a(Landroid/media/AudioAttributes;)I
+.method public synthetic constructor <init>(Lone/me/messages/list/ui/view/WarningLinkBottomSheet;I)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/media/AudioAttributes;->getAllowedCapturePolicy()I
+    iput p2, p0, Lyjh;->a:I
 
-    move-result p0
+    iput-object p1, p0, Lyjh;->b:Lone/me/messages/list/ui/view/WarningLinkBottomSheet;
 
-    return p0
-.end method
-
-.method public static bridge synthetic b(Landroid/view/WindowInsets;)Landroid/graphics/Insets;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/WindowInsets;->getTappableElementInsets()Landroid/graphics/Insets;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic c(Landroid/media/AudioAttributes$Builder;I)Landroid/media/AudioAttributes$Builder;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/AudioAttributes$Builder;->setAllowedCapturePolicy(I)Landroid/media/AudioAttributes$Builder;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic d(Landroid/media/projection/MediaProjection;)Landroid/media/AudioPlaybackCaptureConfiguration$Builder;
-    .locals 1
-
-    new-instance v0, Landroid/media/AudioPlaybackCaptureConfiguration$Builder;
-
-    invoke-direct {v0, p0}, Landroid/media/AudioPlaybackCaptureConfiguration$Builder;-><init>(Landroid/media/projection/MediaProjection;)V
-
-    return-object v0
-.end method
-
-.method public static bridge synthetic e(Landroid/media/AudioPlaybackCaptureConfiguration$Builder;)Landroid/media/AudioPlaybackCaptureConfiguration;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/AudioPlaybackCaptureConfiguration$Builder;->build()Landroid/media/AudioPlaybackCaptureConfiguration;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic f()Landroid/view/WindowInsets$Builder;
-    .locals 1
-
-    new-instance v0, Landroid/view/WindowInsets$Builder;
-
-    invoke-direct {v0}, Landroid/view/WindowInsets$Builder;-><init>()V
-
-    return-object v0
-.end method
-
-.method public static synthetic g(Landroid/view/WindowInsets;)Landroid/view/WindowInsets$Builder;
-    .locals 1
-
-    new-instance v0, Landroid/view/WindowInsets$Builder;
-
-    invoke-direct {v0, p0}, Landroid/view/WindowInsets$Builder;-><init>(Landroid/view/WindowInsets;)V
-
-    return-object v0
-.end method
-
-.method public static bridge synthetic h(Landroid/view/WindowInsets$Builder;)Landroid/view/WindowInsets;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/WindowInsets$Builder;->build()Landroid/view/WindowInsets;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic i(Landroid/view/WindowInsets;IIII)Landroid/view/WindowInsets;
-    .locals 0
-
-    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/view/WindowInsets;->inset(IIII)Landroid/view/WindowInsets;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic j()V
-    .locals 1
-
-    new-instance v0, Landroid/media/AudioPlaybackCaptureConfiguration$Builder;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static bridge synthetic k(Landroid/media/AudioPlaybackCaptureConfiguration$Builder;)V
-    .locals 1
 
-    const/16 v0, 0xe
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
-    invoke-virtual {p0, v0}, Landroid/media/AudioPlaybackCaptureConfiguration$Builder;->addMatchingUsage(I)Landroid/media/AudioPlaybackCaptureConfiguration$Builder;
+    iget p1, p0, Lyjh;->a:I
 
-    return-void
-.end method
+    const/4 v0, 0x0
 
-.method public static bridge synthetic l(Landroid/media/AudioRecord$Builder;Landroid/media/AudioPlaybackCaptureConfiguration;)V
-    .locals 0
+    const/4 v1, 0x1
 
-    invoke-virtual {p0, p1}, Landroid/media/AudioRecord$Builder;->setAudioPlaybackCaptureConfig(Landroid/media/AudioPlaybackCaptureConfiguration;)Landroid/media/AudioRecord$Builder;
+    iget-object v2, p0, Lyjh;->b:Lone/me/messages/list/ui/view/WarningLinkBottomSheet;
 
-    return-void
-.end method
+    packed-switch p1, :pswitch_data_0
 
-.method public static bridge synthetic m(Landroid/view/WindowInsets$Builder;Landroid/graphics/Insets;)V
-    .locals 0
+    sget-object p1, Lone/me/messages/list/ui/view/WarningLinkBottomSheet;->I0:[Lyy7;
 
-    invoke-virtual {p0, p1}, Landroid/view/WindowInsets$Builder;->setSystemWindowInsets(Landroid/graphics/Insets;)Landroid/view/WindowInsets$Builder;
+    iget-object p1, v2, Lone/me/messages/list/ui/view/WarningLinkBottomSheet;->E0:Lk18;
 
-    return-void
-.end method
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
 
-.method public static bridge synthetic n(Landroid/view/WindowInsets;)Landroid/graphics/Insets;
-    .locals 0
+    move-result-object p1
 
-    invoke-virtual {p0}, Landroid/view/WindowInsets;->getMandatorySystemGestureInsets()Landroid/graphics/Insets;
+    check-cast p1, Lzjh;
 
-    move-result-object p0
+    const/4 v3, 0x2
 
-    return-object p0
-.end method
+    invoke-virtual {p1, v1, v3}, Lzjh;->a(II)V
 
-.method public static bridge synthetic o(Landroid/view/WindowInsets$Builder;Landroid/graphics/Insets;)V
-    .locals 0
+    iput-boolean v0, v2, Lone/me/messages/list/ui/view/WarningLinkBottomSheet;->H0:Z
 
-    invoke-virtual {p0, p1}, Landroid/view/WindowInsets$Builder;->setStableInsets(Landroid/graphics/Insets;)Landroid/view/WindowInsets$Builder;
+    invoke-virtual {v2, v1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->E0(Z)V
 
     return-void
-.end method
 
-.method public static bridge synthetic p(Landroid/view/WindowInsets;)Landroid/graphics/Insets;
-    .locals 0
+    :pswitch_0
+    iget-object p1, v2, Lone/me/messages/list/ui/view/WarningLinkBottomSheet;->C0:Ljava/lang/String;
 
-    invoke-virtual {p0}, Landroid/view/WindowInsets;->getSystemGestureInsets()Landroid/graphics/Insets;
+    if-nez p1, :cond_0
 
-    move-result-object p0
+    goto :goto_0
 
-    return-object p0
-.end method
+    :cond_0
+    iget-object v3, v2, Lone/me/messages/list/ui/view/WarningLinkBottomSheet;->D0:Lk18;
 
-.method public static bridge synthetic q(Landroid/view/WindowInsets$Builder;Landroid/graphics/Insets;)V
-    .locals 0
+    invoke-interface {v3}, Lk18;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p0, p1}, Landroid/view/WindowInsets$Builder;->setSystemGestureInsets(Landroid/graphics/Insets;)Landroid/view/WindowInsets$Builder;
+    move-result-object v3
 
+    check-cast v3, Lvu9;
+
+    invoke-virtual {v3, p1}, Lvu9;->G(Ljava/lang/String;)V
+
+    iget-object p1, v2, Lone/me/messages/list/ui/view/WarningLinkBottomSheet;->E0:Lk18;
+
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lzjh;
+
+    invoke-virtual {p1, v1, v1}, Lzjh;->a(II)V
+
+    iput-boolean v0, v2, Lone/me/messages/list/ui/view/WarningLinkBottomSheet;->H0:Z
+
+    invoke-virtual {v2, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->E0(Z)V
+
+    :goto_0
     return-void
-.end method
 
-.method public static bridge synthetic r(Landroid/view/WindowInsets$Builder;Landroid/graphics/Insets;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/view/WindowInsets$Builder;->setMandatorySystemGestureInsets(Landroid/graphics/Insets;)Landroid/view/WindowInsets$Builder;
-
-    return-void
-.end method
-
-.method public static bridge synthetic s(Landroid/view/WindowInsets$Builder;Landroid/graphics/Insets;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/view/WindowInsets$Builder;->setTappableElementInsets(Landroid/graphics/Insets;)Landroid/view/WindowInsets$Builder;
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

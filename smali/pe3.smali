@@ -1,99 +1,218 @@
-.class public abstract Lpe3;
+.class public final Lpe3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lhn;
 
-# static fields
-.field public static final a:Ljava/util/concurrent/atomic/AtomicInteger;
+
+# instance fields
+.field public final synthetic a:Lre3;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lre3;)V
+    .locals 0
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v1
-
-    long-to-int v1, v1
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    sput-object v0, Lpe3;->a:Ljava/util/concurrent/atomic/AtomicInteger;
+    iput-object p1, p0, Lpe3;->a:Lre3;
 
     return-void
 .end method
 
-.method public static a(Landroid/content/res/Resources;I)Z
-    .locals 5
 
-    const-string v0, "FirebaseMessaging"
+# virtual methods
+.method public final c0(Lin;I)V
+    .locals 11
 
-    const-string v1, "Adaptive icons cannot be used in notifications. Ignoring icon id: "
+    iget-object p1, p0, Lpe3;->a:Lre3;
 
-    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+    iget-object v0, p1, Lre3;->x0:Lne3;
 
-    const/16 v3, 0x1a
+    iput p2, p1, Lre3;->L0:I
 
-    const/4 v4, 0x1
+    iget-object v1, p1, Lre3;->N0:Lg4i;
 
-    if-eq v2, v3, :cond_0
-
-    return v4
-
-    :cond_0
     const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    if-eqz v1, :cond_0
 
-    :try_start_0
-    invoke-virtual {p0, p1, v2}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1}, Lg4i;->d()I
 
-    move-result-object p0
+    move-result v1
 
-    instance-of p0, p0, Landroid/graphics/drawable/AdaptiveIconDrawable;
+    goto :goto_0
 
-    if-eqz p0, :cond_1
+    :cond_0
+    move v1, v2
 
-    new-instance p0, Ljava/lang/StringBuilder;
+    :goto_0
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
 
-    invoke-direct {p0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result v3
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move v4, v2
 
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :goto_1
+    if-ge v4, v3, :cond_3
 
-    move-result-object p0
+    invoke-virtual {p1, v4}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
-    invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_0
-    .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object v5
 
-    return v3
+    invoke-virtual {v5}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v6
+
+    check-cast v6, Loe3;
+
+    invoke-static {v5}, Lre3;->b(Landroid/view/View;)Lmgh;
+
+    move-result-object v7
+
+    iget v8, v6, Loe3;->a:I
+
+    const/4 v9, 0x1
+
+    if-eq v8, v9, :cond_2
+
+    const/4 v5, 0x2
+
+    if-eq v8, v5, :cond_1
+
+    goto :goto_2
 
     :cond_1
-    return v4
+    neg-int v5, p2
 
-    :catch_0
-    new-instance p0, Ljava/lang/StringBuilder;
+    int-to-float v5, v5
 
-    const-string v1, "Couldn\'t find resource "
+    iget v6, v6, Loe3;->b:F
 
-    invoke-direct {p0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    mul-float/2addr v5, v6
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-static {v5}, Ljava/lang/Math;->round(F)I
 
-    const-string p1, ", treating it as an invalid icon"
+    move-result v5
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v5}, Lmgh;->b(I)Z
 
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    goto :goto_2
 
-    move-result-object p0
+    :cond_2
+    neg-int v6, p2
 
-    invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v5}, Lre3;->b(Landroid/view/View;)Lmgh;
 
-    return v3
+    move-result-object v8
+
+    invoke-virtual {v5}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v9
+
+    check-cast v9, Loe3;
+
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+
+    move-result v10
+
+    iget v8, v8, Lmgh;->b:I
+
+    sub-int/2addr v10, v8
+
+    invoke-virtual {v5}, Landroid/view/View;->getHeight()I
+
+    move-result v5
+
+    sub-int/2addr v10, v5
+
+    iget v5, v9, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
+
+    sub-int/2addr v10, v5
+
+    invoke-static {v6, v2, v10}, Ldui;->e(III)I
+
+    move-result v5
+
+    invoke-virtual {v7, v5}, Lmgh;->b(I)Z
+
+    :goto_2
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_1
+
+    :cond_3
+    invoke-virtual {p1}, Lre3;->d()V
+
+    iget-object v2, p1, Lre3;->C0:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v2, :cond_4
+
+    if-lez v1, :cond_4
+
+    sget-object v2, Lhfh;->a:Ljava/util/WeakHashMap;
+
+    invoke-virtual {p1}, Landroid/view/View;->postInvalidateOnAnimation()V
+
+    :cond_4
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+
+    move-result v2
+
+    sget-object v3, Lhfh;->a:Ljava/util/WeakHashMap;
+
+    invoke-virtual {p1}, Landroid/view/View;->getMinimumHeight()I
+
+    move-result v3
+
+    sub-int v3, v2, v3
+
+    sub-int/2addr v3, v1
+
+    invoke-virtual {p1}, Lre3;->getScrimVisibleHeightTrigger()I
+
+    move-result v1
+
+    sub-int/2addr v2, v1
+
+    int-to-float v1, v2
+
+    int-to-float v2, v3
+
+    div-float/2addr v1, v2
+
+    const/high16 v4, 0x3f800000    # 1.0f
+
+    invoke-static {v4, v1}, Ljava/lang/Math;->min(FF)F
+
+    move-result v1
+
+    iput v1, v0, Lne3;->d:F
+
+    const/high16 v5, 0x3f000000    # 0.5f
+
+    invoke-static {v4, v1, v5, v1}, Lutb;->i(FFFF)F
+
+    move-result v1
+
+    iput v1, v0, Lne3;->e:F
+
+    iget p1, p1, Lre3;->L0:I
+
+    add-int/2addr p1, v3
+
+    iput p1, v0, Lne3;->f:I
+
+    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
+
+    move-result p1
+
+    int-to-float p1, p1
+
+    div-float/2addr p1, v2
+
+    invoke-virtual {v0, p1}, Lne3;->p(F)V
+
+    return-void
 .end method

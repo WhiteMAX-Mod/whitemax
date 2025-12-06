@@ -3,76 +3,120 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lhz2;
+.implements Lem6;
 
 
-# static fields
-.field public static final a:Lfz2;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final b:Lw00;
+.field public final synthetic b:Lcda;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;Lcda;I)V
+    .locals 0
 
-    new-instance v0, Lfz2;
+    iput p3, p0, Lfz2;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lfz2;->b:Lcda;
 
-    sput-object v0, Lfz2;->a:Lfz2;
-
-    sget-object v0, Lsd2;->H:Lw00;
-
-    sput-object v0, Lfz2;->b:Lw00;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    const/4 v0, 0x1
+    iget v0, p0, Lfz2;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    check-cast p1, Luaf;
 
-    :cond_0
-    instance-of p1, p1, Lfz2;
+    invoke-virtual {p1}, Luaf;->M0()V
 
-    if-nez p1, :cond_1
+    iget-object v0, p0, Lfz2;->b:Lcda;
 
-    const/4 p1, 0x0
+    check-cast v0, Luy2;
 
-    return p1
+    iget-wide v0, v0, Luy2;->b:J
 
-    :cond_1
-    return v0
-.end method
+    const-string v2, ":start-conversation/add-subscribers?id="
 
-.method public final getComparator()Ljava/util/Comparator;
-    .locals 1
+    invoke-static {v0, v1, v2}, Lvb9;->e(JLjava/lang/String;)Ljava/lang/String;
 
-    sget-object v0, Lfz2;->b:Lw00;
+    move-result-object v0
 
-    return-object v0
-.end method
+    invoke-virtual {p1}, Li3;->p0()Lii4;
 
-.method public final hashCode()I
-    .locals 1
+    move-result-object p1
 
-    const v0, -0xdf5b48b
+    const/4 v1, 0x0
 
-    return v0
-.end method
+    invoke-virtual {p1, v0, v1}, Lii4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    sget-object p1, Lqqg;->a:Lqqg;
 
-    const-string v0, "All"
+    return-object p1
 
-    return-object v0
+    :pswitch_0
+    check-cast p1, Luaf;
+
+    invoke-virtual {p1}, Luaf;->M0()V
+
+    iget-object v0, p0, Lfz2;->b:Lcda;
+
+    check-cast v0, Lvy2;
+
+    iget-wide v0, v0, Lvy2;->b:J
+
+    const-string v2, ":profile/edit/link?id="
+
+    const-string v3, "&type=local_chat&flow=create"
+
+    invoke-static {v0, v1, v2, v3}, La9h;->d(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Li3;->p0()Lii4;
+
+    move-result-object p1
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, v1}, Lii4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
+
+    :pswitch_1
+    check-cast p1, Luaf;
+
+    invoke-virtual {p1}, Luaf;->M0()V
+
+    iget-object v0, p0, Lfz2;->b:Lcda;
+
+    check-cast v0, Lwy2;
+
+    iget-wide v0, v0, Lwy2;->b:J
+
+    invoke-virtual {p1, v0, v1}, Luaf;->L0(J)Lei4;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Li3;->s0(Lei4;)V
+
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

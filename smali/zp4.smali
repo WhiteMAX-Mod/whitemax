@@ -1,31 +1,37 @@
-.class public final Lzp4;
-.super Ly14;
+.class public abstract Lzp4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:I
+# direct methods
+.method public static a(Landroid/os/Looper;)Landroid/os/Handler;
+    .locals 0
 
-.field public synthetic o:Ljava/lang/Object;
+    invoke-static {p0}, Landroid/os/Handler;->createAsync(Landroid/os/Looper;)Landroid/os/Handler;
 
+    move-result-object p0
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    return-object p0
+.end method
+
+.method public static b(Landroid/os/Looper;)Landroid/os/Handler;
+    .locals 0
+
+    invoke-static {p0}, Landroid/os/Handler;->createAsync(Landroid/os/Looper;)Landroid/os/Handler;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static c(Landroid/os/Handler;Lp32;J)Z
     .locals 1
 
-    iput-object p1, p0, Lzp4;->o:Ljava/lang/Object;
+    const-string v0, "retry_token"
 
-    iget p1, p0, Lzp4;->X:I
+    invoke-virtual {p0, p1, v0, p2, p3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;Ljava/lang/Object;J)Z
 
-    const/high16 v0, -0x80000000
+    move-result p0
 
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lzp4;->X:I
-
-    invoke-static {p0}, Lqyi;->a(Ly14;)V
-
-    sget-object p1, Lr54;->a:Lr54;
-
-    return-object p1
+    return p0
 .end method

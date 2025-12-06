@@ -1,82 +1,136 @@
 .class public final Lode;
-.super Lsgf;
+.super Ln2;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
-
-
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/settings/SettingsListScreen;
+.implements Lqde;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/SettingsListScreen;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    iput-object p2, p0, Lode;->Y:Lone/me/settings/SettingsListScreen;
+    new-instance v0, Lllc;
 
-    const/4 p2, 0x2
+    const/16 v1, 0xd
 
-    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1}, Lllc;-><init>(I)V
+
+    invoke-direct {p0, v0}, Ln2;-><init>(Lem6;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final j0()I
+    .locals 3
 
-    check-cast p1, Ljava/util/List;
+    iget-object v0, p0, Ln2;->c:Ljava/lang/Object;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-static {v0}, Ldqi;->r(Lk18;)Z
 
-    invoke-virtual {p0, p1, p2}, Lode;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Ln2;->N()I
+
+    move-result v0
+
+    const/4 v1, 0x4
+
+    int-to-float v1, v1
+
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    invoke-static {v1, v2, v0}, Lu45;->c(FFI)I
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final setAlias(Landroid/text/Layout;)V
+    .locals 1
+
+    if-nez p1, :cond_1
+
+    iget-object p1, p0, Ln2;->c:Ljava/lang/Object;
+
+    invoke-interface {p1}, Lk18;->e()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lode;
+    check-cast p1, Lpde;
 
-    sget-object p2, Lccg;->a:Lccg;
+    const/16 v0, 0x8
 
-    invoke-virtual {p1, p2}, Lode;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    return-object p2
+    :cond_0
+    return-void
+
+    :cond_1
+    invoke-virtual {p0}, Ln2;->T()Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lpde;
+
+    invoke-virtual {v0, p1}, Lpde;->setLayout(Landroid/text/Layout;)V
+
+    invoke-virtual {p0}, Ln2;->T()Landroid/view/View;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+
+    invoke-virtual {p0}, Ln2;->y()V
+
+    return-void
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final setAliasColor(I)V
     .locals 2
 
-    new-instance v0, Lode;
+    iget-object v0, p0, Ln2;->c:Ljava/lang/Object;
 
-    iget-object v1, p0, Lode;->Y:Lone/me/settings/SettingsListScreen;
+    invoke-interface {v0}, Lk18;->e()Z
 
-    invoke-direct {v0, p2, v1}, Lode;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/SettingsListScreen;)V
+    move-result v1
 
-    iput-object p1, v0, Lode;->X:Ljava/lang/Object;
+    if-eqz v1, :cond_0
 
-    return-object v0
-.end method
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    move-result-object v0
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    check-cast v0, Lpde;
 
-    iget-object p1, p0, Lode;->X:Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lpde;->setTextColor(I)V
 
-    check-cast p1, Ljava/util/List;
-
-    iget-object v0, p0, Lode;->Y:Lone/me/settings/SettingsListScreen;
-
-    iget-object v0, v0, Lone/me/settings/SettingsListScreen;->x0:Lvce;
-
-    invoke-virtual {v0, p1}, Lr18;->E(Ljava/util/List;)V
-
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
+    :cond_0
+    return-void
 .end method

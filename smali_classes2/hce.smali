@@ -1,120 +1,53 @@
 .class public final Lhce;
-.super Ljava/lang/Object;
+.super Lmid;
 .source "SourceFile"
 
-# interfaces
-.implements Lice;
+
+# static fields
+.field public static final synthetic K0:I
 
 
 # instance fields
-.field public final a:I
+.field public final E0:Lmu8;
+
+.field public final F0:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+
+.field public final G0:Landroidx/appcompat/widget/AppCompatImageView;
+
+.field public H0:Lece;
+
+.field public I0:Landroid/net/Uri;
+
+.field public J0:Landroid/net/Uri;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Lmu8;Lone/me/sdk/uikit/common/views/OneMeDraweeView;Landroidx/appcompat/widget/AppCompatImageView;Landroidx/appcompat/widget/AppCompatImageView;Landroid/widget/FrameLayout;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p5}, Lmid;-><init>(Landroid/view/View;)V
 
-    iput p1, p0, Lhce;->a:I
+    iput-object p1, p0, Lhce;->E0:Lmu8;
+
+    iput-object p2, p0, Lhce;->F0:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+
+    iput-object p4, p0, Lhce;->G0:Landroidx/appcompat/widget/AppCompatImageView;
+
+    new-instance p1, Lgce;
+
+    const/4 p4, 0x0
+
+    invoke-direct {p1, p0, p4}, Lgce;-><init>(Lhce;I)V
+
+    invoke-static {p2, p1}, Lf8j;->e(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+
+    new-instance p1, Lgce;
+
+    const/4 p2, 0x1
+
+    invoke-direct {p1, p0, p2}, Lgce;-><init>(Lhce;I)V
+
+    invoke-static {p3, p1}, Lf8j;->e(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lhce;
-
-    if-nez v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lhce;
-
-    iget v1, p0, Lhce;->a:I
-
-    iget p1, p1, Lhce;->a:I
-
-    if-eq v1, p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Lhce;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    const/4 v2, 0x0
-
-    invoke-static {v0, v1, v2}, Lrtg;->d(IIZ)I
-
-    move-result v0
-
-    sget-object v1, Lsta;->a:Lsta;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Count(count="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lhce;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", animated=false, appearance="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget-object v1, Lsta;->a:Lsta;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

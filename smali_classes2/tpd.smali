@@ -1,29 +1,33 @@
-.class public interface abstract Ltpd;
+.class public final Ltpd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()Lcs9;
-.end method
+# instance fields
+.field public final a:Ljava/util/Random;
 
-.method public abstract c(Landroid/content/ContentResolver;Landroid/net/Uri;)V
-.end method
+.field public b:F
 
-.method public abstract getHeight()Ljava/lang/Integer;
-.end method
 
-.method public abstract getWidth()Ljava/lang/Integer;
-.end method
+# direct methods
+.method public constructor <init>()V
+    .locals 3
 
-.method public abstract h()Landroid/net/Uri;
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract i()Ljava/lang/String;
-.end method
+    new-instance v0, Ljava/util/Random;
 
-.method public abstract k()Ljava/lang/Integer;
-.end method
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-.method public abstract o(Ljava/io/File;)V
+    move-result-wide v1
+
+    invoke-direct {v0, v1, v2}, Ljava/util/Random;-><init>(J)V
+
+    iput-object v0, p0, Ltpd;->a:Ljava/util/Random;
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Ltpd;->b:F
+
+    return-void
 .end method

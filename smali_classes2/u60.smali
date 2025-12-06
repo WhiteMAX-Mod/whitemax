@@ -1,96 +1,129 @@
 .class public final Lu60;
-.super Lw60;
+.super Ldtf;
 .source "SourceFile"
+
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field public final synthetic X:I
+
+.field public final synthetic Y:F
+
+.field public final synthetic Z:F
+
+.field public final synthetic o:Lw60;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/ArrayList;)V
+.method public constructor <init>(Lw60;IFFLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lu60;->o:Lw60;
 
-    iput-object p1, p0, Lu60;->a:Ljava/util/ArrayList;
+    iput p2, p0, Lu60;->X:I
+
+    iput p3, p0, Lu60;->Y:F
+
+    iput p4, p0, Lu60;->Z:F
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p5}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Lf84;
 
-    goto :goto_1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v0, p1, Lu60;
+    invoke-virtual {p0, p1, p2}, Lu60;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-nez v0, :cond_1
+    move-result-object p1
 
-    goto :goto_0
-
-    :cond_1
     check-cast p1, Lu60;
 
-    iget-object v0, p0, Lu60;->a:Ljava/util/ArrayList;
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    iget-object p1, p1, Lu60;->a:Ljava/util/ArrayList;
+    invoke-virtual {p1, p2}, Lu60;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 6
 
-    iget-object v0, p0, Lu60;->a:Ljava/util/ArrayList;
+    new-instance v0, Lu60;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    iget v3, p0, Lu60;->Y:F
 
-    move-result v0
+    iget v4, p0, Lu60;->Z:F
 
-    return v0
-.end method
+    iget-object v1, p0, Lu60;->o:Lw60;
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    iget v2, p0, Lu60;->X:I
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    move-object v5, p2
 
-    const-string v1, "Pause(peaks="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lu60;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    invoke-direct/range {v0 .. v5}, Lu60;-><init>(Lw60;IFFLkotlin/coroutines/Continuation;)V
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    new-instance p1, Ljava/lang/Integer;
+
+    iget v0, p0, Lu60;->X:I
+
+    invoke-direct {p1, v0}, Ljava/lang/Integer;-><init>(I)V
+
+    iget-object v1, p0, Lu60;->o:Lw60;
+
+    iput-object p1, v1, Lw60;->i:Ljava/lang/Integer;
+
+    new-instance p1, Ljava/lang/Float;
+
+    iget v2, p0, Lu60;->Y:F
+
+    invoke-direct {p1, v2}, Ljava/lang/Float;-><init>(F)V
+
+    iput-object p1, v1, Lw60;->l:Ljava/lang/Float;
+
+    new-instance p1, Ljava/lang/Float;
+
+    iget v2, p0, Lu60;->Z:F
+
+    invoke-direct {p1, v2}, Ljava/lang/Float;-><init>(F)V
+
+    iput-object p1, v1, Lw60;->m:Ljava/lang/Float;
+
+    iget-object p1, v1, Lw60;->j:Ljs;
+
+    new-instance v2, Ljs;
+
+    invoke-direct {v2, v0}, Ljs;-><init>(I)V
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {v2, p1}, Ljs;->addAll(Ljava/util/Collection;)Z
+
+    :cond_0
+    iput-object v2, v1, Lw60;->j:Ljs;
+
+    invoke-virtual {v1}, Lw60;->a()V
+
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

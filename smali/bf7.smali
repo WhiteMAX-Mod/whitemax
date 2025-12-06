@@ -1,106 +1,228 @@
-.class public final Lbf7;
-.super Landroid/animation/AnimatorListenerAdapter;
+.class public interface abstract Lbf7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lebd;
 
-# instance fields
-.field public final synthetic a:I
 
-.field public final synthetic b:Landroid/widget/TextView;
+# static fields
+.field public static final A:Ls90;
 
-.field public final synthetic c:I
+.field public static final B:Ls90;
 
-.field public final synthetic d:Landroid/widget/TextView;
+.field public static final C:Ls90;
 
-.field public final synthetic e:Ldf7;
+.field public static final D:Ls90;
+
+.field public static final E:Ls90;
+
+.field public static final F:Ls90;
+
+.field public static final G:Ls90;
+
+.field public static final H:Ls90;
+
+.field public static final I:Ls90;
+
+.field public static final z:Ls90;
 
 
 # direct methods
-.method public constructor <init>(Ldf7;ILandroid/widget/TextView;ILandroid/widget/TextView;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p1, p0, Lbf7;->e:Ldf7;
+    new-instance v0, Ls90;
 
-    iput p2, p0, Lbf7;->a:I
+    const-string v1, "camerax.core.imageOutput.targetAspectRatio"
 
-    iput-object p3, p0, Lbf7;->b:Landroid/widget/TextView;
+    const-class v2, Lgt;
 
-    iput p4, p0, Lbf7;->c:I
+    const/4 v3, 0x0
 
-    iput-object p5, p0, Lbf7;->d:Landroid/widget/TextView;
+    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    sput-object v0, Lbf7;->z:Ls90;
 
+    new-instance v0, Ls90;
+
+    const-string v1, "camerax.core.imageOutput.targetRotation"
+
+    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lbf7;->A:Ls90;
+
+    new-instance v0, Ls90;
+
+    const-string v1, "camerax.core.imageOutput.appTargetRotation"
+
+    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lbf7;->B:Ls90;
+
+    new-instance v0, Ls90;
+
+    const-string v1, "camerax.core.imageOutput.mirrorMode"
+
+    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lbf7;->C:Ls90;
+
+    new-instance v0, Ls90;
+
+    const-string v1, "camerax.core.imageOutput.targetResolution"
+
+    const-class v2, Landroid/util/Size;
+
+    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lbf7;->D:Ls90;
+
+    new-instance v0, Ls90;
+
+    const-string v1, "camerax.core.imageOutput.defaultResolution"
+
+    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lbf7;->E:Ls90;
+
+    new-instance v0, Ls90;
+
+    const-string v1, "camerax.core.imageOutput.maxResolution"
+
+    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lbf7;->F:Ls90;
+
+    new-instance v0, Ls90;
+
+    const-string v1, "camerax.core.imageOutput.supportedResolutions"
+
+    const-class v2, Ljava/util/List;
+
+    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lbf7;->G:Ls90;
+
+    new-instance v0, Ls90;
+
+    const-string v1, "camerax.core.imageOutput.resolutionSelector"
+
+    const-class v4, Laod;
+
+    invoke-direct {v0, v1, v4, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lbf7;->H:Ls90;
+
+    new-instance v0, Ls90;
+
+    const-string v1, "camerax.core.imageOutput.customOrderedResolutions"
+
+    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lbf7;->I:Ls90;
+
+    return-void
+.end method
+
+.method public static F(Lbf7;)V
+    .locals 4
+
+    sget-object v0, Lbf7;->z:Ls90;
+
+    invoke-interface {p0, v0}, Lebd;->i(Ls90;)Z
+
+    move-result v0
+
+    sget-object v1, Lbf7;->D:Ls90;
+
+    const/4 v2, 0x0
+
+    invoke-interface {p0, v1, v2}, Lebd;->d(Ls90;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/util/Size;
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_2
+
+    if-nez v1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Cannot use both setTargetResolution and setTargetAspectRatio on the same config."
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_2
+    :goto_1
+    sget-object v3, Lbf7;->H:Ls90;
+
+    invoke-interface {p0, v3, v2}, Lebd;->d(Ls90;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Laod;
+
+    if-eqz p0, :cond_4
+
+    if-nez v0, :cond_3
+
+    if-nez v1, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Cannot use setTargetResolution or setTargetAspectRatio with setResolutionSelector on the same config."
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_4
+    :goto_2
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 3
-
-    iget p1, p0, Lbf7;->a:I
-
-    iget-object v0, p0, Lbf7;->e:Ldf7;
-
-    iput p1, v0, Ldf7;->n:I
-
-    const/4 p1, 0x0
-
-    iput-object p1, v0, Ldf7;->l:Landroid/animation/AnimatorSet;
-
-    iget-object v1, p0, Lbf7;->b:Landroid/widget/TextView;
-
-    if-eqz v1, :cond_0
-
-    const/4 v2, 0x4
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
-
-    iget v1, p0, Lbf7;->c:I
-
-    const/4 v2, 0x1
-
-    if-ne v1, v2, :cond_0
-
-    iget-object v0, v0, Ldf7;->r:Landroidx/appcompat/widget/AppCompatTextView;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    :cond_0
-    iget-object p1, p0, Lbf7;->d:Landroid/widget/TextView;
-
-    if-eqz p1, :cond_1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationY(F)V
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/animation/Animator;)V
+.method public G(I)I
     .locals 1
 
-    iget-object p1, p0, Lbf7;->d:Landroid/widget/TextView;
+    sget-object v0, Lbf7;->A:Ls90;
 
-    if-eqz p1, :cond_0
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const/4 v0, 0x0
+    move-result-object p1
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+    invoke-interface {p0, v0, p1}, Lebd;->d(Ls90;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v0, 0x0
+    move-result-object p1
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+    check-cast p1, Ljava/lang/Integer;
 
-    :cond_0
-    return-void
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    return p1
 .end method

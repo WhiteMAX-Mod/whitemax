@@ -1,75 +1,121 @@
-.class public abstract synthetic Lmoe;
+.class public final synthetic Lmoe;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final synthetic a:Lroe;
+
+.field public final synthetic b:Looe;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Lroe;Looe;)V
+    .locals 0
 
-    const/4 v0, 0x6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Ldy1;->y(I)[I
+    iput-object p1, p0, Lmoe;->a:Lroe;
 
-    move-result-object v1
+    iput-object p2, p0, Lmoe;->b:Looe;
 
-    array-length v1, v1
+    return-void
+.end method
 
-    new-array v1, v1, [I
 
-    const/4 v2, 0x1
+# virtual methods
+.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    .locals 3
 
-    const/4 v3, 0x0
+    invoke-virtual {p1}, Landroid/view/View;->isPressed()Z
 
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    move-result p1
 
-    :catch_0
-    const/4 v3, 0x2
+    if-eqz p1, :cond_4
 
-    :try_start_1
-    aput v3, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    iget-object p1, p0, Lmoe;->a:Lroe;
 
-    :catch_1
-    const/4 v2, 0x3
+    invoke-virtual {p1}, Lroe;->getModelItem()Lioe;
 
-    :try_start_2
-    aput v2, v1, v3
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    move-result-object v0
 
-    :catch_2
-    const/4 v3, 0x4
+    invoke-interface {v0}, Lioe;->d()Lfoe;
 
-    :try_start_3
-    aput v3, v1, v2
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    move-result-object v0
 
-    :catch_3
-    const/4 v2, 0x5
+    instance-of v0, v0, Ldoe;
 
-    :try_start_4
-    aput v2, v1, v3
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    if-eqz v0, :cond_3
 
-    :catch_4
-    :try_start_5
-    aput v0, v1, v2
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+    invoke-virtual {p1}, Lroe;->getModelItem()Lioe;
 
-    :catch_5
-    sput-object v1, Lmoe;->$EnumSwitchMapping$0:[I
+    move-result-object v0
 
+    invoke-interface {v0}, Lioe;->d()Lfoe;
+
+    move-result-object v0
+
+    instance-of v1, v0, Ldoe;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Ldoe;
+
+    goto :goto_0
+
+    :cond_0
+    move-object v0, v2
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    iget-boolean v0, v0, Ldoe;->a:Z
+
+    if-ne v0, p2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p1}, Lroe;->getModelItem()Lioe;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lioe;->d()Lfoe;
+
+    move-result-object v0
+
+    instance-of v1, v0, Ldoe;
+
+    if-eqz v1, :cond_2
+
+    move-object v2, v0
+
+    check-cast v2, Ldoe;
+
+    :cond_2
+    if-eqz v2, :cond_3
+
+    iput-boolean p2, v2, Ldoe;->a:Z
+
+    :cond_3
+    :goto_1
+    invoke-virtual {p1}, Lroe;->getModelItem()Lioe;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lt98;->getItemId()J
+
+    move-result-wide v0
+
+    iget-object p1, p0, Lmoe;->b:Looe;
+
+    invoke-interface {p1, v0, v1, p2}, Looe;->g(JZ)V
+
+    :cond_4
     return-void
 .end method

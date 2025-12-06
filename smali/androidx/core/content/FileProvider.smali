@@ -4,11 +4,11 @@
 
 
 # static fields
-.field public static final X:Ljava/io/File;
+.field public static final X:Ljava/util/HashMap;
 
-.field public static final Y:Ljava/util/HashMap;
+.field public static final d:[Ljava/lang/String;
 
-.field public static final o:[Ljava/lang/String;
+.field public static final o:Ljava/io/File;
 
 
 # instance fields
@@ -16,7 +16,7 @@
 
 .field public b:Ljava/lang/String;
 
-.field public c:Lkt5;
+.field public c:Lgx5;
 
 
 # direct methods
@@ -31,7 +31,7 @@
 
     move-result-object v0
 
-    sput-object v0, Landroidx/core/content/FileProvider;->o:[Ljava/lang/String;
+    sput-object v0, Landroidx/core/content/FileProvider;->d:[Ljava/lang/String;
 
     new-instance v0, Ljava/io/File;
 
@@ -39,13 +39,13 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Landroidx/core/content/FileProvider;->X:Ljava/io/File;
+    sput-object v0, Landroidx/core/content/FileProvider;->o:Ljava/io/File;
 
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Landroidx/core/content/FileProvider;->Y:Ljava/util/HashMap;
+    sput-object v0, Landroidx/core/content/FileProvider;->X:Ljava/util/HashMap;
 
     return-void
 .end method
@@ -103,10 +103,10 @@
     return-object p0
 .end method
 
-.method public static c(Landroid/content/Context;Ljava/lang/String;)Lkt5;
+.method public static c(Landroid/content/Context;Ljava/lang/String;)Lgx5;
     .locals 2
 
-    sget-object v0, Landroidx/core/content/FileProvider;->Y:Ljava/util/HashMap;
+    sget-object v0, Landroidx/core/content/FileProvider;->X:Ljava/util/HashMap;
 
     monitor-enter v0
 
@@ -115,14 +115,14 @@
 
     move-result-object v1
 
-    check-cast v1, Lkt5;
+    check-cast v1, Lgx5;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-nez v1, :cond_0
 
     :try_start_1
-    invoke-static {p0, p1}, Landroidx/core/content/FileProvider;->e(Landroid/content/Context;Ljava/lang/String;)Lkt5;
+    invoke-static {p0, p1}, Landroidx/core/content/FileProvider;->e(Landroid/content/Context;Ljava/lang/String;)Lgx5;
 
     move-result-object v1
     :try_end_1
@@ -179,7 +179,7 @@
 .method public static d(Landroid/content/Context;Ljava/io/File;Ljava/lang/String;)Landroid/net/Uri;
     .locals 4
 
-    invoke-static {p0, p2}, Landroidx/core/content/FileProvider;->c(Landroid/content/Context;Ljava/lang/String;)Lkt5;
+    invoke-static {p0, p2}, Landroidx/core/content/FileProvider;->c(Landroid/content/Context;Ljava/lang/String;)Lgx5;
 
     move-result-object p0
 
@@ -190,7 +190,7 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object p2, p0, Lkt5;->b:Ljava/util/HashMap;
+    iget-object p2, p0, Lgx5;->b:Ljava/util/HashMap;
 
     invoke-virtual {p2}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
@@ -226,7 +226,7 @@
 
     move-result-object v2
 
-    invoke-static {p1, v2}, Lkt5;->a(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {p1, v2}, Lgx5;->a(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v3
 
@@ -342,7 +342,7 @@
 
     move-result-object p2
 
-    iget-object p0, p0, Lkt5;->a:Ljava/lang/String;
+    iget-object p0, p0, Lgx5;->a:Ljava/lang/String;
 
     invoke-virtual {p2, p0}, Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
@@ -363,7 +363,7 @@
 
     const-string p2, "Failed to find configured root that contains "
 
-    invoke-static {p2, p1}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, p1}, Lwy1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -391,12 +391,12 @@
     throw p0
 .end method
 
-.method public static e(Landroid/content/Context;Ljava/lang/String;)Lkt5;
+.method public static e(Landroid/content/Context;Ljava/lang/String;)Lgx5;
     .locals 7
 
-    new-instance v0, Lkt5;
+    new-instance v0, Lgx5;
 
-    invoke-direct {v0, p1}, Lkt5;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Lgx5;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -464,7 +464,7 @@
 
     if-eqz v5, :cond_1
 
-    sget-object v3, Landroidx/core/content/FileProvider;->X:Ljava/io/File;
+    sget-object v3, Landroidx/core/content/FileProvider;->o:Ljava/io/File;
 
     goto :goto_1
 
@@ -564,7 +564,7 @@
 
     if-eqz v1, :cond_7
 
-    invoke-static {p0}, Ljt5;->a(Landroid/content/Context;)[Ljava/io/File;
+    invoke-static {p0}, Lfx5;->a(Landroid/content/Context;)[Ljava/io/File;
 
     move-result-object v1
 
@@ -606,7 +606,7 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object v3, v0, Lkt5;->b:Ljava/util/HashMap;
+    iget-object v3, v0, Lgx5;->b:Ljava/util/HashMap;
 
     invoke-virtual {v3, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -659,7 +659,7 @@
 
     const-string v0, "Couldn\'t find meta-data for provider with authority "
 
-    invoke-static {v0, p1}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1}, Lwy1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -706,7 +706,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    sget-object v0, Landroidx/core/content/FileProvider;->Y:Ljava/util/HashMap;
+    sget-object v0, Landroidx/core/content/FileProvider;->X:Ljava/util/HashMap;
 
     monitor-enter v0
 
@@ -755,7 +755,7 @@
     throw p1
 .end method
 
-.method public final b()Lkt5;
+.method public final b()Lgx5;
     .locals 3
 
     iget-object v0, p0, Landroidx/core/content/FileProvider;->a:Ljava/lang/Object;
@@ -769,7 +769,7 @@
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Landroidx/core/content/FileProvider;->c:Lkt5;
+    iget-object v1, p0, Landroidx/core/content/FileProvider;->c:Lgx5;
 
     if-nez v1, :cond_0
 
@@ -779,11 +779,11 @@
 
     iget-object v2, p0, Landroidx/core/content/FileProvider;->b:Ljava/lang/String;
 
-    invoke-static {v1, v2}, Landroidx/core/content/FileProvider;->c(Landroid/content/Context;Ljava/lang/String;)Lkt5;
+    invoke-static {v1, v2}, Landroidx/core/content/FileProvider;->c(Landroid/content/Context;Ljava/lang/String;)Lgx5;
 
     move-result-object v1
 
-    iput-object v1, p0, Landroidx/core/content/FileProvider;->c:Lkt5;
+    iput-object v1, p0, Landroidx/core/content/FileProvider;->c:Lgx5;
 
     goto :goto_0
 
@@ -794,7 +794,7 @@
 
     :cond_0
     :goto_0
-    iget-object v1, p0, Landroidx/core/content/FileProvider;->c:Lkt5;
+    iget-object v1, p0, Landroidx/core/content/FileProvider;->c:Lgx5;
 
     monitor-exit v0
 
@@ -818,11 +818,11 @@
 .method public final delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
     .locals 0
 
-    invoke-virtual {p0}, Landroidx/core/content/FileProvider;->b()Lkt5;
+    invoke-virtual {p0}, Landroidx/core/content/FileProvider;->b()Lgx5;
 
     move-result-object p2
 
-    invoke-virtual {p2, p1}, Lkt5;->b(Landroid/net/Uri;)Ljava/io/File;
+    invoke-virtual {p2, p1}, Lgx5;->b(Landroid/net/Uri;)Ljava/io/File;
 
     move-result-object p1
 
@@ -836,11 +836,11 @@
 .method public final getType(Landroid/net/Uri;)Ljava/lang/String;
     .locals 2
 
-    invoke-virtual {p0}, Landroidx/core/content/FileProvider;->b()Lkt5;
+    invoke-virtual {p0}, Landroidx/core/content/FileProvider;->b()Lgx5;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lkt5;->b(Landroid/net/Uri;)Ljava/io/File;
+    invoke-virtual {v0, p1}, Lgx5;->b(Landroid/net/Uri;)Ljava/io/File;
 
     move-result-object p1
 
@@ -915,11 +915,11 @@
 .method public final openFile(Landroid/net/Uri;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
     .locals 1
 
-    invoke-virtual {p0}, Landroidx/core/content/FileProvider;->b()Lkt5;
+    invoke-virtual {p0}, Landroidx/core/content/FileProvider;->b()Lgx5;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lkt5;->b(Landroid/net/Uri;)Ljava/io/File;
+    invoke-virtual {v0, p1}, Lgx5;->b(Landroid/net/Uri;)Ljava/io/File;
 
     move-result-object p1
 
@@ -998,7 +998,7 @@
 
     const-string v0, "Invalid mode: "
 
-    invoke-static {v0, p2}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p2}, Lwy1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -1021,11 +1021,11 @@
 .method public final query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     .locals 7
 
-    invoke-virtual {p0}, Landroidx/core/content/FileProvider;->b()Lkt5;
+    invoke-virtual {p0}, Landroidx/core/content/FileProvider;->b()Lgx5;
 
     move-result-object p3
 
-    invoke-virtual {p3, p1}, Lkt5;->b(Landroid/net/Uri;)Ljava/io/File;
+    invoke-virtual {p3, p1}, Lgx5;->b(Landroid/net/Uri;)Ljava/io/File;
 
     move-result-object p3
 
@@ -1037,7 +1037,7 @@
 
     if-nez p2, :cond_0
 
-    sget-object p2, Landroidx/core/content/FileProvider;->o:[Ljava/lang/String;
+    sget-object p2, Landroidx/core/content/FileProvider;->d:[Ljava/lang/String;
 
     :cond_0
     array-length p4, p2

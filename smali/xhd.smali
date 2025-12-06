@@ -1,109 +1,145 @@
-.class public final Lxhd;
-.super Ljava/lang/Object;
+.class public Lxhd;
+.super Landroid/view/ViewGroup$MarginLayoutParams;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
+.field public a:Lmid;
 
-.field public final b:I
+.field public final b:Landroid/graphics/Rect;
+
+.field public c:Z
+
+.field public d:Z
 
 
 # direct methods
 .method public constructor <init>(II)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 5
+    invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
 
-    iput p1, p0, Lxhd;->a:I
+    .line 6
+    new-instance p1, Landroid/graphics/Rect;
 
-    iput p2, p0, Lxhd;->b:I
+    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
+
+    iput-object p1, p0, Lxhd;->b:Landroid/graphics/Rect;
+
+    const/4 p1, 0x1
+
+    .line 7
+    iput-boolean p1, p0, Lxhd;->c:Z
+
+    const/4 p1, 0x0
+
+    .line 8
+    iput-boolean p1, p0, Lxhd;->d:Z
 
     return-void
 .end method
 
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .line 1
+    invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    const/4 v0, 0x1
+    .line 2
+    new-instance p1, Landroid/graphics/Rect;
 
-    if-ne p0, p1, :cond_0
+    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
-    return v0
+    iput-object p1, p0, Lxhd;->b:Landroid/graphics/Rect;
 
-    :cond_0
-    instance-of v1, p1, Lxhd;
+    const/4 p1, 0x1
 
-    const/4 v2, 0x0
+    .line 3
+    iput-boolean p1, p0, Lxhd;->c:Z
 
-    if-nez v1, :cond_1
+    const/4 p1, 0x0
 
-    return v2
+    .line 4
+    iput-boolean p1, p0, Lxhd;->d:Z
 
-    :cond_1
-    check-cast p1, Lxhd;
-
-    iget v1, p0, Lxhd;->a:I
-
-    iget v3, p1, Lxhd;->a:I
-
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget v1, p0, Lxhd;->b:I
-
-    iget p1, p1, Lxhd;->b:I
-
-    if-eq v1, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public constructor <init>(Landroid/view/ViewGroup$LayoutParams;)V
+    .locals 0
 
-    iget v0, p0, Lxhd;->a:I
+    .line 13
+    invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    .line 14
+    new-instance p1, Landroid/graphics/Rect;
 
-    move-result v0
+    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
-    mul-int/lit8 v0, v0, 0x1f
+    iput-object p1, p0, Lxhd;->b:Landroid/graphics/Rect;
 
-    iget v1, p0, Lxhd;->b:I
+    const/4 p1, 0x1
 
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+    .line 15
+    iput-boolean p1, p0, Lxhd;->c:Z
 
-    move-result v1
+    const/4 p1, 0x0
 
-    add-int/2addr v1, v0
+    .line 16
+    iput-boolean p1, p0, Lxhd;->d:Z
 
-    return v1
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public constructor <init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
+    .locals 0
 
-    const-string v0, ", height="
+    .line 9
+    invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
 
-    const-string v1, ")"
+    .line 10
+    new-instance p1, Landroid/graphics/Rect;
 
-    const-string v2, "IconSize(width="
+    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
-    iget v3, p0, Lxhd;->a:I
+    iput-object p1, p0, Lxhd;->b:Landroid/graphics/Rect;
 
-    iget v4, p0, Lxhd;->b:I
+    const/4 p1, 0x1
 
-    invoke-static {v2, v3, v0, v4, v1}, Ley1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    .line 11
+    iput-boolean p1, p0, Lxhd;->c:Z
 
-    move-result-object v0
+    const/4 p1, 0x0
 
-    return-object v0
+    .line 12
+    iput-boolean p1, p0, Lxhd;->d:Z
+
+    return-void
+.end method
+
+.method public constructor <init>(Lxhd;)V
+    .locals 0
+
+    .line 17
+    invoke-direct {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 18
+    new-instance p1, Landroid/graphics/Rect;
+
+    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
+
+    iput-object p1, p0, Lxhd;->b:Landroid/graphics/Rect;
+
+    const/4 p1, 0x1
+
+    .line 19
+    iput-boolean p1, p0, Lxhd;->c:Z
+
+    const/4 p1, 0x0
+
+    .line 20
+    iput-boolean p1, p0, Lxhd;->d:Z
+
+    return-void
 .end method

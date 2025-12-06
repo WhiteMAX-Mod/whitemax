@@ -2,67 +2,87 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmz1;
-.implements Lihg;
+
+# static fields
+.field public static final a:Lr12;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lr12;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Ls12;->a:Lr12;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public a()Lq12;
-    .locals 1
-
-    invoke-interface {p0}, Ls12;->n()Lq12;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public c(Lq02;)V
+.method public a()V
     .locals 0
 
     return-void
 .end method
 
-.method public abstract e()Lzha;
+.method public abstract b(F)Lha8;
 .end method
 
-.method public abstract f()Lx02;
+.method public abstract c(Lao3;)V
 .end method
 
-.method public g()Lo02;
-    .locals 1
-
-    sget-object v0, Lr02;->a:Lq02;
-
-    return-object v0
+.method public abstract d(F)Lha8;
 .end method
 
-.method public i(Z)V
+.method public abstract e()Landroid/graphics/Rect;
+.end method
+
+.method public abstract f(I)V
+.end method
+
+.method public g(Lde7;)V
     .locals 0
 
     return-void
 .end method
 
-.method public abstract j(Ljava/util/ArrayList;)V
+.method public abstract h(Lz95;)Lha8;
 .end method
 
-.method public abstract k(Ljava/util/ArrayList;)V
+.method public abstract i(Ljava/util/ArrayList;II)Lha8;
 .end method
 
-.method public l()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
+.method public abstract j(Ldie;)V
 .end method
 
-.method public m(Z)V
+.method public abstract k(Z)Lha8;
+.end method
+
+.method public l(II)Lha8;
+    .locals 0
+
+    new-instance p1, Lq12;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {p1}, Lwsf;->f(Ljava/lang/Object;)Lag7;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public abstract m()Lao3;
+.end method
+
+.method public abstract n()V
+.end method
+
+.method public o()V
     .locals 0
 
     return-void
-.end method
-
-.method public abstract n()Lq12;
 .end method

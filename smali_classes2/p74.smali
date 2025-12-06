@@ -1,380 +1,1531 @@
-.class public final synthetic Lp74;
+.class public final Lp74;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lji6;
+.implements Ljava/util/List;
+.implements Ljava/util/RandomAccess;
+.implements Ljava/lang/Cloneable;
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final synthetic X:Ljava/lang/Object;
+.field public final transient a:Ljava/util/concurrent/locks/ReentrantLock;
 
-.field public final synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Object;
-
-.field public final synthetic c:Ljava/lang/Object;
-
-.field public final synthetic o:Ljava/lang/Object;
+.field public volatile transient b:[Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Liu7;Liu7;Liu7;Liu7;Liu7;)V
+.method public constructor <init>()V
     .locals 1
-
-    .line 2
-    const/4 v0, 0x4
-
-    iput v0, p0, Lp74;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lp74;->c:Ljava/lang/Object;
+    new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
 
-    iput-object p2, p0, Lp74;->o:Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
-    iput-object p3, p0, Lp74;->b:Ljava/lang/Object;
+    iput-object v0, p0, Lp74;->a:Ljava/util/concurrent/locks/ReentrantLock;
 
-    iput-object p4, p0, Lp74;->X:Ljava/lang/Object;
-
-    iput-object p5, p0, Lp74;->Y:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-    .locals 0
-
-    .line 3
-    iput p6, p0, Lp74;->a:I
-
-    iput-object p1, p0, Lp74;->b:Ljava/lang/Object;
-
-    iput-object p2, p0, Lp74;->c:Ljava/lang/Object;
-
-    iput-object p3, p0, Lp74;->o:Ljava/lang/Object;
-
-    iput-object p4, p0, Lp74;->X:Ljava/lang/Object;
-
-    iput-object p5, p0, Lp74;->Y:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ln84;Liu7;Lulf;Ll54;Liu7;)V
-    .locals 1
-
-    .line 1
     const/4 v0, 0x0
 
-    iput v0, p0, Lp74;->a:I
+    new-array v0, v0, [Ljava/lang/Object;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lp74;->b:Ljava/lang/Object;
-
-    iput-object p2, p0, Lp74;->c:Ljava/lang/Object;
-
-    iput-object p3, p0, Lp74;->X:Ljava/lang/Object;
-
-    iput-object p4, p0, Lp74;->Y:Ljava/lang/Object;
-
-    iput-object p5, p0, Lp74;->o:Ljava/lang/Object;
+    iput-object v0, p0, Lp74;->b:[Ljava/lang/Object;
 
     return-void
 .end method
 
+.method public static a(Lp74;II)V
+    .locals 5
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 13
+    iget-object v0, p0, Lp74;->a:Ljava/util/concurrent/locks/ReentrantLock;
 
-    iget v0, p0, Lp74;->a:I
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
-    packed-switch v0, :pswitch_data_0
+    :try_start_0
+    iget-object v1, p0, Lp74;->b:[Ljava/lang/Object;
 
-    iget-object v0, p0, Lp74;->c:Ljava/lang/Object;
+    array-length v2, v1
 
-    check-cast v0, Liu7;
+    if-ltz p1, :cond_1
 
-    iget-object v1, p0, Lp74;->o:Ljava/lang/Object;
+    if-gt p2, v2, :cond_1
 
-    check-cast v1, Liu7;
+    if-lt p2, p1, :cond_1
 
-    iget-object v2, p0, Lp74;->b:Ljava/lang/Object;
+    sub-int v3, p2, p1
 
-    move-object v6, v2
+    sub-int v3, v2, v3
 
-    check-cast v6, Liu7;
+    sub-int/2addr v2, p2
 
-    iget-object v2, p0, Lp74;->X:Ljava/lang/Object;
+    if-nez v2, :cond_0
 
-    move-object v7, v2
+    invoke-static {v1, v3}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
-    check-cast v7, Liu7;
+    move-result-object p1
 
-    iget-object v2, p0, Lp74;->Y:Ljava/lang/Object;
+    iput-object p1, p0, Lp74;->b:[Ljava/lang/Object;
 
-    move-object v8, v2
+    goto :goto_0
 
-    check-cast v8, Liu7;
+    :catchall_0
+    move-exception p0
 
-    new-instance v3, Lqk1;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v4, v0
-
-    check-cast v4, Landroid/content/Context;
-
-    invoke-interface {v1}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v5, v0
-
-    check-cast v5, Lj4e;
-
-    invoke-direct/range {v3 .. v8}, Lqk1;-><init>(Landroid/content/Context;Lj4e;Liu7;Liu7;Liu7;)V
-
-    return-object v3
-
-    :pswitch_0
-    iget-object v0, p0, Lp74;->b:Ljava/lang/Object;
-
-    check-cast v0, Lpad;
-
-    iget-object v1, p0, Lp74;->c:Ljava/lang/Object;
-
-    check-cast v1, Ly7d;
-
-    iget-object v2, p0, Lp74;->o:Ljava/lang/Object;
-
-    check-cast v2, Landroid/os/Handler;
-
-    iget-object v3, p0, Lp74;->X:Ljava/lang/Object;
-
-    check-cast v3, Lir4;
-
-    iget-object v4, p0, Lp74;->Y:Ljava/lang/Object;
-
-    check-cast v4, Lq7b;
-
-    new-instance v5, Lnad;
-
-    iget-object v6, v0, Lpad;->o:Lcqe;
-
-    const/4 v7, 0x0
-
-    if-nez v6, :cond_0
-
-    move-object v6, v7
+    goto :goto_1
 
     :cond_0
-    iget-object v8, v0, Lpad;->X:Lq4e;
+    new-array v3, v3, [Ljava/lang/Object;
 
-    if-nez v8, :cond_1
+    const/4 v4, 0x0
+
+    invoke-static {v1, v4, v3, v4, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    invoke-static {v1, p2, v3, p1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iput-object v3, p0, Lp74;->b:[Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :goto_0
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    return-void
+
+    :cond_1
+    :try_start_1
+    new-instance p0, Ljava/lang/IndexOutOfBoundsException;
+
+    invoke-direct {p0}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+
+    throw p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :goto_1
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    throw p0
+.end method
+
+.method public static b(ILjava/lang/Object;[Ljava/lang/Object;)I
+    .locals 2
+
+    const/4 v0, 0x0
+
+    if-nez p1, :cond_1
+
+    :goto_0
+    if-ge v0, p0, :cond_3
+
+    aget-object p1, p2, v0
+
+    if-nez p1, :cond_0
+
+    return v0
+
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
     :cond_1
-    move-object v7, v8
+    :goto_1
+    if-ge v0, p0, :cond_3
 
-    :goto_0
-    invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
+    aget-object v1, p2, v0
 
-    move-result-object v8
+    invoke-virtual {p1, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    new-instance v9, Ls79;
+    move-result v1
 
-    const/4 v10, 0x1
+    if-eqz v1, :cond_2
 
-    invoke-direct {v9, v1, v10}, Ls79;-><init>(Ly7d;I)V
+    return v0
 
-    new-instance v10, Ltna;
+    :cond_2
+    add-int/lit8 v0, v0, 0x1
 
-    const/16 v11, 0x17
+    goto :goto_1
 
-    invoke-direct {v10, v2, v11, v3}, Ltna;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    :cond_3
+    const/4 p0, -0x1
 
-    new-instance v11, Lla;
+    return p0
+.end method
 
-    const/16 v12, 0x1d
 
-    invoke-direct {v11, v2, v12, v3}, Lla;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+# virtual methods
+.method public final add(ILjava/lang/Object;)V
+    .locals 5
 
-    invoke-direct/range {v5 .. v11}, Lnad;-><init>(Lcqe;Lq4e;Landroid/os/Looper;Ls79;Ltna;Lla;)V
+    .line 10
+    const-string v0, "Index: "
 
-    iget-object v6, v0, Lpad;->Y:Ljava/util/LinkedHashMap;
+    iget-object v1, p0, Lp74;->a:Ljava/util/concurrent/locks/ReentrantLock;
 
-    invoke-interface {v6, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 11
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
-    iget-object v0, v0, Lpad;->Z:Ljava/util/LinkedHashSet;
+    .line 12
+    :try_start_0
+    iget-object v2, p0, Lp74;->b:[Ljava/lang/Object;
 
-    iget-object v4, v5, Lnad;->h:Lhsb;
+    .line 13
+    array-length v3, v2
 
-    invoke-interface {v0, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    if-gt p1, v3, :cond_1
 
-    iget-object v0, v5, Lnad;->h:Lhsb;
+    if-ltz p1, :cond_1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sub-int v0, v3, p1
 
-    new-instance v4, Lkpe;
+    if-nez v0, :cond_0
 
-    invoke-direct {v4}, Lkpe;-><init>()V
+    add-int/lit8 v3, v3, 0x1
 
-    iput-object v4, v0, Lhsb;->f:Lkpe;
-
-    new-instance v0, Lvxb;
-
-    const/16 v4, 0x11
-
-    invoke-direct {v0, v3, v4, v1}, Lvxb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v2, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    sget-object v0, Lccg;->a:Lccg;
-
-    return-object v0
-
-    :pswitch_1
-    iget-object v0, p0, Lp74;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljn9;
-
-    iget-object v1, p0, Lp74;->c:Ljava/lang/Object;
-
-    move-object v5, v1
-
-    check-cast v5, Liu7;
-
-    iget-object v1, p0, Lp74;->o:Ljava/lang/Object;
-
-    move-object v6, v1
-
-    check-cast v6, Liu7;
-
-    iget-object v1, p0, Lp74;->X:Ljava/lang/Object;
-
-    move-object v7, v1
-
-    check-cast v7, Liu7;
-
-    iget-object v1, p0, Lp74;->Y:Ljava/lang/Object;
-
-    move-object v8, v1
-
-    check-cast v8, Liu7;
-
-    new-instance v2, Lag9;
-
-    iget-object v3, v0, Ljn9;->w1:Ln0d;
-
-    iget-object v4, v0, Ljn9;->Y:Lulf;
-
-    invoke-direct/range {v2 .. v8}, Lag9;-><init>(Ln0d;Lulf;Liu7;Liu7;Liu7;Liu7;)V
-
-    return-object v2
-
-    :pswitch_2
-    iget-object v0, p0, Lp74;->b:Ljava/lang/Object;
-
-    check-cast v0, Lsd6;
-
-    iget-object v1, p0, Lp74;->c:Ljava/lang/Object;
-
-    check-cast v1, La8b;
-
-    iget-object v2, p0, Lp74;->o:Ljava/lang/Object;
-
-    check-cast v2, Lx7b;
-
-    iget-object v3, p0, Lp74;->X:Ljava/lang/Object;
-
-    check-cast v3, Lh22;
-
-    iget-object v4, p0, Lp74;->Y:Ljava/lang/Object;
-
-    check-cast v4, Lh22;
-
-    iget-object v0, v0, Lsd6;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    .line 14
+    invoke-static {v2, v3}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
     move-result-object v0
 
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
+    add-int/lit8 v3, v3, 0x1
+
+    .line 15
+    new-array v3, v3, [Ljava/lang/Object;
+
+    const/4 v4, 0x0
+
+    .line 16
+    invoke-static {v2, v4, v3, v4, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    add-int/lit8 v4, p1, 0x1
+
+    .line 17
+    invoke-static {v2, p1, v3, v4, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    move-object v0, v3
+
+    .line 18
+    :goto_0
+    aput-object p2, v0, p1
+
+    .line 19
+    iput-object v0, p0, Lp74;->b:[Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 20
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    return-void
+
+    .line 21
+    :cond_1
+    :try_start_1
+    new-instance p2, Ljava/lang/IndexOutOfBoundsException;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, ", Size: "
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 22
     :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    .line 23
+    throw p1
+.end method
+
+.method public final add(Ljava/lang/Object;)Z
+    .locals 4
+
+    .line 1
+    iget-object v0, p0, Lp74;->a:Ljava/util/concurrent/locks/ReentrantLock;
+
+    .line 2
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    .line 3
+    :try_start_0
+    iget-object v1, p0, Lp74;->b:[Ljava/lang/Object;
+
+    .line 4
+    array-length v2, v1
+
+    add-int/lit8 v3, v2, 0x1
+
+    .line 5
+    invoke-static {v1, v3}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v1
+
+    .line 6
+    aput-object p1, v1, v2
+
+    .line 7
+    iput-object v1, p0, Lp74;->b:[Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 8
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    .line 9
+    throw p1
+.end method
+
+.method public final addAll(ILjava/util/Collection;)Z
+    .locals 6
+
+    .line 12
+    const-string v0, "Index: "
+
+    invoke-interface {p2}, Ljava/util/Collection;->toArray()[Ljava/lang/Object;
+
+    move-result-object p2
+
+    .line 13
+    iget-object v1, p0, Lp74;->a:Ljava/util/concurrent/locks/ReentrantLock;
+
+    .line 14
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    .line 15
+    :try_start_0
+    iget-object v2, p0, Lp74;->b:[Ljava/lang/Object;
+
+    .line 16
+    array-length v3, v2
+
+    if-gt p1, v3, :cond_2
+
+    if-ltz p1, :cond_2
+
+    .line 17
+    array-length v0, p2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    const/4 v4, 0x0
+
+    if-nez v0, :cond_0
+
+    .line 18
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    return v4
+
+    :cond_0
+    sub-int v0, v3, p1
+
+    if-nez v0, :cond_1
+
+    .line 19
+    :try_start_1
+    array-length v0, p2
+
+    add-int/2addr v3, v0
+
+    invoke-static {v2, v3}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    .line 20
+    :cond_1
+    array-length v5, p2
+
+    add-int/2addr v3, v5
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    .line 21
+    invoke-static {v2, v4, v3, v4, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 22
+    array-length v5, p2
+
+    add-int/2addr v5, p1
+
+    invoke-static {v2, p1, v3, v5, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    move-object v0, v3
+
+    .line 23
+    :goto_0
+    array-length v2, p2
+
+    invoke-static {p2, v4, v0, p1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 24
+    iput-object v0, p0, Lp74;->b:[Ljava/lang/Object;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 25
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    const/4 p1, 0x1
+
+    return p1
+
+    .line 26
+    :cond_2
+    :try_start_2
+    new-instance p2, Ljava/lang/IndexOutOfBoundsException;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, ", Size: "
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    .line 27
+    :goto_1
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    .line 28
+    throw p1
+.end method
+
+.method public final addAll(Ljava/util/Collection;)Z
+    .locals 5
+
+    .line 1
+    invoke-interface {p1}, Ljava/util/Collection;->toArray()[Ljava/lang/Object;
+
+    move-result-object p1
+
+    .line 2
+    array-length v0, p1
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return v1
+
+    .line 3
+    :cond_0
+    iget-object v0, p0, Lp74;->a:Ljava/util/concurrent/locks/ReentrantLock;
+
+    .line 4
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    .line 5
+    :try_start_0
+    iget-object v2, p0, Lp74;->b:[Ljava/lang/Object;
+
+    .line 6
+    array-length v3, v2
+
+    .line 7
+    array-length v4, p1
+
+    add-int/2addr v4, v3
+
+    invoke-static {v2, v4}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v2
+
+    .line 8
+    array-length v4, p1
+
+    invoke-static {p1, v1, v2, v3, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 9
+    iput-object v2, p0, Lp74;->b:[Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 10
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    .line 11
+    throw p1
+.end method
+
+.method public final c(Ljava/util/Comparator;)V
+    .locals 4
+
+    iget-object v0, p0, Lp74;->a:Ljava/util/concurrent/locks/ReentrantLock;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lp74;->b:[Ljava/lang/Object;
+
+    array-length v1, v1
+
+    iget-object v2, p0, Lp74;->b:[Ljava/lang/Object;
+
+    invoke-virtual {v2}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    invoke-static {v2, v3, v1, p1}, Ljava/util/Arrays;->sort([Ljava/lang/Object;IILjava/util/Comparator;)V
+
+    iput-object v2, p0, Lp74;->b:[Ljava/lang/Object;
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+.end method
+
+.method public final clear()V
+    .locals 2
+
+    iget-object v0, p0, Lp74;->a:Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    const/4 v1, 0x0
+
+    :try_start_0
+    new-array v1, v1, [Ljava/lang/Object;
+
+    iput-object v1, p0, Lp74;->b:[Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    throw v1
+.end method
+
+.method public final clone()Ljava/lang/Object;
+    .locals 1
+
+    :try_start_0
+    invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lp74;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :try_end_0
+    .catch Ljava/lang/CloneNotSupportedException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    :catch_0
+    new-instance v0, Ljava/lang/InternalError;
+
+    invoke-direct {v0}, Ljava/lang/InternalError;-><init>()V
+
+    throw v0
+.end method
+
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 2
+
+    iget-object v0, p0, Lp74;->b:[Ljava/lang/Object;
+
+    array-length v1, v0
+
+    invoke-static {v1, p1, v0}, Lp74;->b(ILjava/lang/Object;[Ljava/lang/Object;)I
+
+    move-result p1
+
+    if-ltz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final containsAll(Ljava/util/Collection;)Z
+    .locals 3
+
+    iget-object v0, p0, Lp74;->b:[Ljava/lang/Object;
+
+    array-length v1, v0
+
+    invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-static {v1, v2, v0}, Lp74;->b(ILjava/lang/Object;[Ljava/lang/Object;)I
+
+    move-result v2
+
+    if-gez v2, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p1, p0, :cond_0
+
+    goto :goto_3
+
+    :cond_0
+    instance-of v1, p1, Ljava/util/List;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    goto :goto_2
+
+    :cond_1
+    check-cast p1, Ljava/util/List;
+
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    iget-object v1, p0, Lp74;->b:[Ljava/lang/Object;
+
+    array-length v3, v1
+
+    move v4, v2
+
+    :goto_0
+    if-ge v4, v3, :cond_5
+
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v5
 
-    if-eqz v5, :cond_2
+    if-eqz v5, :cond_6
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    aget-object v5, v1, v4
 
-    move-result-object v5
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    check-cast v5, Ly7b;
+    move-result-object v6
 
-    invoke-interface {v5, v1, v2, v3, v4}, Ly7b;->q(La8b;Lx7b;Lh22;Lh22;)V
+    if-nez v5, :cond_3
+
+    if-nez v6, :cond_2
+
+    move v5, v0
 
     goto :goto_1
 
     :cond_2
-    sget-object v0, Lccg;->a:Lccg;
+    move v5, v2
+
+    goto :goto_1
+
+    :cond_3
+    invoke-virtual {v5, v6}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    :goto_1
+    if-nez v5, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_0
+
+    :cond_5
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_7
+
+    :cond_6
+    :goto_2
+    return v2
+
+    :cond_7
+    :goto_3
+    return v0
+.end method
+
+.method public final get(I)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lp74;->b:[Ljava/lang/Object;
+
+    aget-object p1, v0, p1
+
+    return-object p1
+.end method
+
+.method public final hashCode()I
+    .locals 6
+
+    iget-object v0, p0, Lp74;->b:[Ljava/lang/Object;
+
+    array-length v1, v0
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    move v4, v3
+
+    :goto_0
+    if-ge v4, v1, :cond_1
+
+    aget-object v5, v0, v4
+
+    mul-int/lit8 v2, v2, 0x1f
+
+    if-nez v5, :cond_0
+
+    move v5, v3
+
+    goto :goto_1
+
+    :cond_0
+    invoke-virtual {v5}, Ljava/lang/Object;->hashCode()I
+
+    move-result v5
+
+    :goto_1
+    add-int/2addr v2, v5
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return v2
+.end method
+
+.method public final indexOf(Ljava/lang/Object;)I
+    .locals 2
+
+    iget-object v0, p0, Lp74;->b:[Ljava/lang/Object;
+
+    array-length v1, v0
+
+    invoke-static {v1, p1, v0}, Lp74;->b(ILjava/lang/Object;[Ljava/lang/Object;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final isEmpty()Z
+    .locals 1
+
+    iget-object v0, p0, Lp74;->b:[Ljava/lang/Object;
+
+    array-length v0, v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final iterator()Ljava/util/Iterator;
+    .locals 3
+
+    new-instance v0, Lm74;
+
+    iget-object v1, p0, Lp74;->b:[Ljava/lang/Object;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v2, v1}, Lm74;-><init>(I[Ljava/lang/Object;)V
 
     return-object v0
+.end method
 
-    :pswitch_3
-    iget-object v0, p0, Lp74;->b:Ljava/lang/Object;
+.method public final lastIndexOf(Ljava/lang/Object;)I
+    .locals 3
 
-    check-cast v0, Ln84;
+    iget-object v0, p0, Lp74;->b:[Ljava/lang/Object;
 
-    iget-object v1, p0, Lp74;->c:Ljava/lang/Object;
+    array-length v1, v0
 
-    move-object v4, v1
+    add-int/lit8 v1, v1, -0x1
 
-    check-cast v4, Liu7;
+    if-nez p1, :cond_1
 
-    iget-object v1, p0, Lp74;->X:Ljava/lang/Object;
+    :goto_0
+    if-ltz v1, :cond_3
 
-    move-object v5, v1
+    aget-object p1, v0, v1
 
-    check-cast v5, Lulf;
+    if-nez p1, :cond_0
 
-    iget-object v1, p0, Lp74;->Y:Ljava/lang/Object;
+    return v1
 
-    move-object v6, v1
+    :cond_0
+    add-int/lit8 v1, v1, -0x1
 
-    check-cast v6, Ll54;
+    goto :goto_0
 
-    iget-object v1, p0, Lp74;->o:Ljava/lang/Object;
+    :cond_1
+    :goto_1
+    if-ltz v1, :cond_3
 
-    move-object v7, v1
+    aget-object v2, v0, v1
 
-    check-cast v7, Liu7;
+    invoke-virtual {p1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    new-instance v2, Lz46;
+    move-result v2
 
-    new-instance v3, Lcg7;
+    if-eqz v2, :cond_2
 
-    invoke-direct {v3, v0}, Lcg7;-><init>(Ljava/lang/Object;)V
+    return v1
 
-    invoke-direct/range {v2 .. v7}, Lz46;-><init>(Lcg7;Liu7;Lulf;Ll54;Liu7;)V
+    :cond_2
+    add-int/lit8 v1, v1, -0x1
+
+    goto :goto_1
+
+    :cond_3
+    const/4 p1, -0x1
+
+    return p1
+.end method
+
+.method public final listIterator()Ljava/util/ListIterator;
+    .locals 3
+
+    .line 11
+    new-instance v0, Lm74;
+
+    .line 12
+    iget-object v1, p0, Lp74;->b:[Ljava/lang/Object;
+
+    const/4 v2, 0x0
+
+    .line 13
+    invoke-direct {v0, v2, v1}, Lm74;-><init>(I[Ljava/lang/Object;)V
+
+    return-object v0
+.end method
+
+.method public final listIterator(I)Ljava/util/ListIterator;
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lp74;->b:[Ljava/lang/Object;
+
+    .line 2
+    array-length v1, v0
+
+    if-ltz p1, :cond_0
+
+    if-gt p1, v1, :cond_0
+
+    .line 3
+    new-instance v1, Lm74;
+
+    invoke-direct {v1, p1, v0}, Lm74;-><init>(I[Ljava/lang/Object;)V
+
+    return-object v1
+
+    .line 4
+    :cond_0
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+
+    const-string v1, "Index: "
+
+    .line 5
+    invoke-static {p1, v1}, Lho7;->f(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 6
+    invoke-direct {v0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final remove(I)Ljava/lang/Object;
+    .locals 6
+
+    .line 1
+    iget-object v0, p0, Lp74;->a:Ljava/util/concurrent/locks/ReentrantLock;
+
+    .line 2
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    .line 3
+    :try_start_0
+    iget-object v1, p0, Lp74;->b:[Ljava/lang/Object;
+
+    .line 4
+    array-length v2, v1
+
+    .line 5
+    aget-object v3, v1, p1
+
+    sub-int v4, v2, p1
+
+    add-int/lit8 v4, v4, -0x1
+
+    if-nez v4, :cond_0
+
+    add-int/lit8 v2, v2, -0x1
+
+    .line 6
+    invoke-static {v1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    .line 7
+    iput-object p1, p0, Lp74;->b:[Ljava/lang/Object;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
+    add-int/lit8 v2, v2, -0x1
+
+    .line 8
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v5, 0x0
+
+    .line 9
+    invoke-static {v1, v5, v2, v5, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    add-int/lit8 v5, p1, 0x1
+
+    .line 10
+    invoke-static {v1, v5, v2, p1, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 11
+    iput-object v2, p0, Lp74;->b:[Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 12
+    :goto_0
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    return-object v3
+
+    :goto_1
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    .line 13
+    throw p1
+.end method
+
+.method public final remove(Ljava/lang/Object;)Z
+    .locals 9
+
+    .line 14
+    iget-object v0, p0, Lp74;->a:Ljava/util/concurrent/locks/ReentrantLock;
+
+    .line 15
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    .line 16
+    :try_start_0
+    iget-object v1, p0, Lp74;->b:[Ljava/lang/Object;
+
+    .line 17
+    array-length v2, v1
+
+    const/4 v3, 0x0
+
+    if-eqz v2, :cond_7
+
+    add-int/lit8 v4, v2, -0x1
+
+    .line 18
+    new-array v5, v4, [Ljava/lang/Object;
+
+    move v6, v3
+
+    :goto_0
+    const/4 v7, 0x1
+
+    if-ge v6, v4, :cond_4
+
+    .line 19
+    aget-object v8, v1, v6
+
+    if-nez p1, :cond_1
+
+    if-nez v8, :cond_0
+
+    move v8, v7
+
+    goto :goto_1
+
+    :cond_0
+    move v8, v3
+
+    goto :goto_1
+
+    .line 20
+    :cond_1
+    invoke-virtual {p1, v8}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    :goto_1
+    if-eqz v8, :cond_3
+
+    add-int/2addr v6, v7
+
+    :goto_2
+    if-ge v6, v2, :cond_2
+
+    add-int/lit8 p1, v6, -0x1
+
+    .line 21
+    aget-object v3, v1, v6
+
+    aput-object v3, v5, p1
+
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_4
+
+    .line 22
+    :cond_2
+    iput-object v5, p0, Lp74;->b:[Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 23
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    return v7
+
+    .line 24
+    :cond_3
+    :try_start_1
+    aget-object v7, v1, v6
+
+    aput-object v7, v5, v6
+
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_0
+
+    .line 25
+    :cond_4
+    aget-object v1, v1, v4
+
+    if-nez p1, :cond_6
+
+    if-nez v1, :cond_5
+
+    move p1, v7
+
+    goto :goto_3
+
+    :cond_5
+    move p1, v3
+
+    goto :goto_3
+
+    .line 26
+    :cond_6
+    invoke-virtual {p1, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    :goto_3
+    if-eqz p1, :cond_7
+
+    .line 27
+    iput-object v5, p0, Lp74;->b:[Ljava/lang/Object;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 28
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    return v7
+
+    :cond_7
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    return v3
+
+    :goto_4
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    .line 29
+    throw p1
+.end method
+
+.method public final removeAll(Ljava/util/Collection;)Z
+    .locals 9
+
+    iget-object v0, p0, Lp74;->a:Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    :try_start_0
+    iget-object v1, p0, Lp74;->b:[Ljava/lang/Object;
+
+    array-length v2, v1
+
+    const/4 v3, 0x0
+
+    if-eqz v2, :cond_2
+
+    new-array v4, v2, [Ljava/lang/Object;
+
+    move v5, v3
+
+    move v6, v5
+
+    :goto_0
+    if-ge v5, v2, :cond_1
+
+    aget-object v7, v1, v5
+
+    invoke-interface {p1, v7}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-nez v8, :cond_0
+
+    add-int/lit8 v8, v6, 0x1
+
+    aput-object v7, v4, v6
+
+    move v6, v8
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_0
+    :goto_1
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    if-eq v6, v2, :cond_2
+
+    invoke-static {v4, v6}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lp74;->b:[Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_2
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    return v3
+
+    :goto_2
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    throw p1
+.end method
+
+.method public final retainAll(Ljava/util/Collection;)Z
+    .locals 9
+
+    iget-object v0, p0, Lp74;->a:Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    :try_start_0
+    iget-object v1, p0, Lp74;->b:[Ljava/lang/Object;
+
+    array-length v2, v1
+
+    const/4 v3, 0x0
+
+    if-eqz v2, :cond_2
+
+    new-array v4, v2, [Ljava/lang/Object;
+
+    move v5, v3
+
+    move v6, v5
+
+    :goto_0
+    if-ge v5, v2, :cond_1
+
+    aget-object v7, v1, v5
+
+    invoke-interface {p1, v7}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_0
+
+    add-int/lit8 v8, v6, 0x1
+
+    aput-object v7, v4, v6
+
+    move v6, v8
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_0
+    :goto_1
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    if-eq v6, v2, :cond_2
+
+    invoke-static {v4, v6}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lp74;->b:[Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_2
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    return v3
+
+    :goto_2
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    throw p1
+.end method
+
+.method public final set(ILjava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget-object v0, p0, Lp74;->a:Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    :try_start_0
+    iget-object v1, p0, Lp74;->b:[Ljava/lang/Object;
+
+    aget-object v2, v1, p1
+
+    if-eq v2, p2, :cond_0
+
+    array-length v3, v1
+
+    invoke-static {v1, v3}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v1
+
+    aput-object p2, v1, p1
+
+    iput-object v1, p0, Lp74;->b:[Ljava/lang/Object;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
+    iput-object v1, p0, Lp74;->b:[Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :goto_0
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
     return-object v2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :goto_1
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    throw p1
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget-object v0, p0, Lp74;->b:[Ljava/lang/Object;
+
+    array-length v0, v0
+
+    return v0
+.end method
+
+.method public final sort(Ljava/util/Comparator;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lp74;->c(Ljava/util/Comparator;)V
+
+    return-void
+.end method
+
+.method public final subList(II)Ljava/util/List;
+    .locals 2
+
+    iget-object v0, p0, Lp74;->a:Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    :try_start_0
+    iget-object v1, p0, Lp74;->b:[Ljava/lang/Object;
+
+    array-length v1, v1
+
+    if-ltz p1, :cond_0
+
+    if-gt p2, v1, :cond_0
+
+    if-gt p1, p2, :cond_0
+
+    new-instance v1, Ln74;
+
+    invoke-direct {v1, p0, p1, p2}, Ln74;-><init>(Lp74;II)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    return-object v1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_0
+
+    :cond_0
+    :try_start_1
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+
+    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+
+    throw p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :goto_0
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    throw p1
+.end method
+
+.method public final toArray()[Ljava/lang/Object;
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lp74;->b:[Ljava/lang/Object;
+
+    .line 2
+    array-length v1, v0
+
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    .locals 3
+
+    .line 3
+    iget-object v0, p0, Lp74;->b:[Ljava/lang/Object;
+
+    .line 4
+    array-length v1, v0
+
+    .line 5
+    array-length v2, p1
+
+    if-ge v2, v1, :cond_0
+
+    .line 6
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p1
+
+    invoke-static {v0, v1, p1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;ILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    const/4 v2, 0x0
+
+    .line 7
+    invoke-static {v0, v2, p1, v2, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 8
+    array-length v0, p1
+
+    if-le v0, v1, :cond_1
+
+    const/4 v0, 0x0
+
+    .line 9
+    aput-object v0, p1, v1
+
+    :cond_1
+    return-object p1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lp74;->b:[Ljava/lang/Object;
+
+    invoke-static {v0}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

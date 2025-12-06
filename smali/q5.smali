@@ -1,8 +1,3 @@
-.class public interface abstract Lq5;
-.super Ljava/lang/Object;
+.class public abstract Lq5;
+.super Lipi;
 .source "SourceFile"
-
-
-# virtual methods
-.method public abstract f(Landroid/view/View;)Z
-.end method

@@ -1,107 +1,185 @@
-.class public final enum Lgaf;
-.super Ljava/lang/Enum;
+.class public final Lgaf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic c:[Lgaf;
-
-
 # instance fields
-.field public final a:I
+.field public final a:Lk18;
 
-.field public final b:Ljava/lang/String;
+.field public final b:Lk18;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lk18;Lk18;)V
+    .locals 0
 
-    new-instance v0, Lgaf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Lgaf;->a:Lk18;
 
-    const-string v2, "CIB"
+    iput-object p2, p0, Lgaf;->b:Lk18;
 
-    const-string v3, "ClientInitiatedBidirectional"
+    return-void
+.end method
 
-    invoke-direct {v0, v3, v1, v1, v2}, Lgaf;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
-    new-instance v1, Lgaf;
+# virtual methods
+.method public final a(JLjava/lang/String;Lq44;)Ljava/lang/Object;
+    .locals 4
+
+    instance-of v0, p4, Lfaf;
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p4
+
+    check-cast v0, Lfaf;
+
+    iget v1, v0, Lfaf;->Z:I
+
+    const/high16 v2, -0x80000000
+
+    and-int v3, v1, v2
+
+    if-eqz v3, :cond_0
+
+    sub-int/2addr v1, v2
+
+    iput v1, v0, Lfaf;->Z:I
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lfaf;
+
+    invoke-direct {v0, p0, p4}, Lfaf;-><init>(Lgaf;Lq44;)V
+
+    :goto_0
+    iget-object p4, v0, Lfaf;->X:Ljava/lang/Object;
+
+    iget v1, v0, Lfaf;->Z:I
 
     const/4 v2, 0x1
 
-    const-string v3, "SIB"
+    if-eqz v1, :cond_2
 
-    const-string v4, "ServerInitiatedBidirectional"
+    if-ne v1, v2, :cond_1
 
-    invoke-direct {v1, v4, v2, v2, v3}, Lgaf;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    iget-object p3, v0, Lfaf;->o:Ljava/lang/String;
 
-    new-instance v2, Lgaf;
+    iget-object p1, v0, Lfaf;->d:Lgaf;
 
-    const/4 v3, 0x2
+    invoke-static {p4}, Lg8j;->b(Ljava/lang/Object;)V
 
-    const-string v4, "CIU"
+    goto :goto_1
 
-    const-string v5, "ClientInitiatedUnidirectional"
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-direct {v2, v5, v3, v3, v4}, Lgaf;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
 
-    new-instance v3, Lgaf;
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    const/4 v4, 0x3
+    throw p1
 
-    const-string v5, "SIU"
+    :cond_2
+    invoke-static {p4}, Lg8j;->b(Ljava/lang/Object;)V
 
-    const-string v6, "ServerInitiatedUnidirectional"
+    iget-object p4, p0, Lgaf;->b:Lk18;
 
-    invoke-direct {v3, v6, v4, v4, v5}, Lgaf;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    invoke-interface {p4}, Lk18;->getValue()Ljava/lang/Object;
 
-    filled-new-array {v0, v1, v2, v3}, [Lgaf;
+    move-result-object p4
 
-    move-result-object v0
+    check-cast p4, Lw63;
 
-    sput-object v0, Lgaf;->c:[Lgaf;
+    iput-object p0, v0, Lfaf;->d:Lgaf;
 
-    return-void
-.end method
+    iput-object p3, v0, Lfaf;->o:Ljava/lang/String;
 
-.method public constructor <init>(Ljava/lang/String;IILjava/lang/String;)V
-    .locals 0
+    iput v2, v0, Lfaf;->Z:I
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-virtual {p4, p1, p2, v0}, Lw63;->r(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    iput p3, p0, Lgaf;->a:I
+    move-result-object p4
 
-    iput-object p4, p0, Lgaf;->b:Ljava/lang/String;
+    sget-object p1, Lg84;->a:Lg84;
 
-    return-void
-.end method
+    if-ne p4, p1, :cond_3
 
-.method public static valueOf(Ljava/lang/String;)Lgaf;
-    .locals 1
+    return-object p1
 
-    const-class v0, Lgaf;
+    :cond_3
+    move-object p1, p0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    :goto_1
+    check-cast p4, Lpb2;
 
-    move-result-object p0
+    invoke-virtual {p4}, Lpb2;->n()Lku3;
 
-    check-cast p0, Lgaf;
+    move-result-object p2
 
-    return-object p0
-.end method
+    sget-object v0, Lqqg;->a:Lqqg;
 
-.method public static values()[Lgaf;
-    .locals 1
+    if-eqz p2, :cond_4
 
-    sget-object v0, Lgaf;->c:[Lgaf;
+    invoke-virtual {p2}, Lku3;->A()Z
 
-    invoke-virtual {v0}, [Lgaf;->clone()Ljava/lang/Object;
+    move-result p2
 
-    move-result-object v0
+    if-nez p2, :cond_5
 
-    check-cast v0, [Lgaf;
+    :cond_4
+    invoke-virtual {p4}, Lpb2;->k0()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_6
+
+    :cond_5
+    return-object v0
+
+    :cond_6
+    sget p2, Ld10;->p:I
+
+    new-instance p2, Lb10;
+
+    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
+
+    sget-object v1, Lc10;->u0:Lc10;
+
+    iput-object v1, p2, Lb10;->a:Lc10;
+
+    if-eqz p3, :cond_7
+
+    iput-object p3, p2, Lb10;->o:Ljava/lang/String;
+
+    :cond_7
+    invoke-virtual {p2}, Lb10;->a()Ld10;
+
+    move-result-object p2
+
+    iget-wide p3, p4, Lpb2;->a:J
+
+    new-instance v1, Llge;
+
+    invoke-direct {v1, p3, p4, p2, v2}, Llge;-><init>(JLjava/lang/Object;I)V
+
+    new-instance p2, Lmge;
+
+    const/4 p3, 0x0
+
+    invoke-direct {p2, v1, p3}, Lmge;-><init>(Llge;B)V
+
+    iget-object p1, p1, Lgaf;->a:Lk18;
+
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lc6i;
+
+    invoke-virtual {p1, p2}, Lc6i;->b(Lhge;)V
 
     return-object v0
 .end method

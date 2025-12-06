@@ -1,64 +1,29 @@
-.class public final Lo9a;
+.class public abstract Lo9a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lp89;
-
 
 # static fields
-.field public static a:Lo9a;
+.field public static final a:Lkotlinx/coroutines/internal/Symbol;
 
 
 # direct methods
-.method public static declared-synchronized b()Lo9a;
+.method static constructor <clinit>()V
     .locals 2
 
-    const-class v0, Lo9a;
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-    monitor-enter v0
+    const-string v1, "NO_OWNER"
 
-    :try_start_0
-    sget-object v1, Lo9a;->a:Lo9a;
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
 
-    if-nez v1, :cond_0
+    sput-object v0, Lo9a;->a:Lkotlinx/coroutines/internal/Symbol;
 
-    new-instance v1, Lo9a;
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+    const-string v1, "ALREADY_LOCKED_BY_OWNER"
 
-    sput-object v1, Lo9a;->a:Lo9a;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    sget-object v1, Lo9a;->a:Lo9a;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return-object v1
-
-    :goto_1
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
-.end method
-
-
-# virtual methods
-.method public final a(Lo89;)V
-    .locals 0
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method

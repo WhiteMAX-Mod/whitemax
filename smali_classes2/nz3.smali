@@ -1,199 +1,159 @@
 .class public final Lnz3;
-.super Lsgf;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Lbj6;
+.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic X:I
+.field public final synthetic X:Lone/me/contactlist/ContactListWidget;
 
-.field public synthetic Y:Landroid/view/View;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+.method public constructor <init>(Lone/me/contactlist/ContactListWidget;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p3, p0, Lnz3;->X:I
+    iput-object p1, p0, Lnz3;->X:Lone/me/contactlist/ContactListWidget;
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lnx3;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lnz3;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lnz3;
+
+    sget-object p2, Lqqg;->a:Lqqg;
+
+    invoke-virtual {p1, p2}, Lnz3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget v0, p0, Lnz3;->X:I
+    new-instance v0, Lnz3;
 
-    check-cast p1, Landroid/view/View;
+    iget-object v1, p0, Lnz3;->X:Lone/me/contactlist/ContactListWidget;
 
-    check-cast p2, Lv5b;
+    invoke-direct {v0, v1, p2}, Lnz3;-><init>(Lone/me/contactlist/ContactListWidget;Lkotlin/coroutines/Continuation;)V
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    iput-object p1, v0, Lnz3;->o:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
-
-    new-instance p2, Lnz3;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x2
-
-    invoke-direct {p2, v0, p3, v1}, Lnz3;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p2, Lnz3;->Y:Landroid/view/View;
-
-    sget-object p1, Lccg;->a:Lccg;
-
-    invoke-virtual {p2, p1}, Lnz3;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_0
-    new-instance p2, Lnz3;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x1
-
-    invoke-direct {p2, v0, p3, v1}, Lnz3;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p2, Lnz3;->Y:Landroid/view/View;
-
-    sget-object p1, Lccg;->a:Lccg;
-
-    invoke-virtual {p2, p1}, Lnz3;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_1
-    new-instance p2, Lnz3;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x0
-
-    invoke-direct {p2, v0, p3, v1}, Lnz3;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p2, Lnz3;->Y:Landroid/view/View;
-
-    sget-object p1, Lccg;->a:Lccg;
-
-    invoke-virtual {p2, p1}, Lnz3;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    .locals 6
 
-    iget v0, p0, Lnz3;->X:I
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    packed-switch v0, :pswitch_data_0
+    iget-object p1, p0, Lnz3;->o:Ljava/lang/Object;
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    check-cast p1, Lnx3;
 
-    iget-object p1, p0, Lnz3;->Y:Landroid/view/View;
+    iget-object v0, p0, Lnz3;->X:Lone/me/contactlist/ContactListWidget;
 
-    invoke-virtual {p1}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
+    iget-object v1, v0, Lone/me/contactlist/ContactListWidget;->Z:Lb0i;
 
-    move-result-object v0
+    iget-object v2, v0, Lone/me/contactlist/ContactListWidget;->Y:Lji0;
 
-    instance-of v1, v0, Landroid/graphics/drawable/GradientDrawable;
+    iget-object v3, v0, Lone/me/contactlist/ContactListWidget;->X:Lb0i;
 
-    if-eqz v1, :cond_0
+    sget-object v4, Lone/me/contactlist/ContactListWidget;->O0:[Lyy7;
 
-    check-cast v0, Landroid/graphics/drawable/GradientDrawable;
+    invoke-virtual {v0}, Lone/me/contactlist/ContactListWidget;->F0()V
+
+    invoke-virtual {v0}, Lone/me/contactlist/ContactListWidget;->A0()Ljava/lang/CharSequence;
+
+    move-result-object v4
+
+    sget-object v5, Lqqg;->a:Lqqg;
+
+    if-eqz v4, :cond_1
+
+    invoke-interface {v4}, Ljava/lang/CharSequence;->length()I
+
+    move-result v4
+
+    if-nez v4, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    iget-object v0, p1, Lnx3;->a:Ljava/util/List;
 
-    :goto_0
-    if-eqz v0, :cond_1
+    invoke-virtual {v3, v0}, Ll98;->E(Ljava/util/List;)V
 
-    sget-object v1, Ll05;->s0:Lk82;
+    iget-object v0, p1, Lnx3;->b:Ljava/util/List;
 
-    invoke-virtual {v1, p1}, Lk82;->n(Landroid/view/View;)Lv5b;
+    invoke-virtual {v2, v0}, Ll98;->E(Ljava/util/List;)V
 
-    move-result-object p1
+    iget-object p1, p1, Lnx3;->c:Ljava/util/List;
 
-    invoke-interface {p1}, Lv5b;->getText()Leqf;
+    invoke-virtual {v1, p1}, Ll98;->E(Ljava/util/List;)V
 
-    move-result-object p1
-
-    iget p1, p1, Leqf;->b:I
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
+    return-object v5
 
     :cond_1
-    sget-object p1, Lccg;->a:Lccg;
+    :goto_0
+    invoke-virtual {v0}, Lone/me/contactlist/ContactListWidget;->C0()Lzy3;
 
-    return-object p1
+    move-result-object p1
 
-    :pswitch_0
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    iget-object p1, p1, Lzy3;->C0:Lhbd;
 
-    iget-object p1, p0, Lnz3;->Y:Landroid/view/View;
+    iget-object p1, p1, Lhbd;->a:Lmcf;
 
-    sget-object v0, Ll05;->s0:Lk82;
+    invoke-interface {p1}, Lmcf;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Lk82;->n(Landroid/view/View;)Lv5b;
+    move-result-object p1
 
-    move-result-object v0
+    check-cast p1, Lnx3;
 
-    invoke-interface {v0}, Lv5b;->i()Lkbf;
+    iget-object p1, p1, Lnx3;->a:Ljava/util/List;
 
-    move-result-object v0
+    invoke-virtual {v3, p1}, Ll98;->E(Ljava/util/List;)V
 
-    iget-object v0, v0, Lkbf;->b:Lpbf;
+    sget-object p1, Lhd5;->a:Lhd5;
 
-    iget v0, v0, Lpbf;->c:I
+    invoke-virtual {v2, p1}, Ll98;->E(Ljava/util/List;)V
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+    invoke-virtual {v0}, Lone/me/contactlist/ContactListWidget;->C0()Lzy3;
 
-    sget-object p1, Lccg;->a:Lccg;
+    move-result-object p1
 
-    return-object p1
+    iget-object p1, p1, Lzy3;->C0:Lhbd;
 
-    :pswitch_1
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    iget-object p1, p1, Lhbd;->a:Lmcf;
 
-    iget-object p1, p0, Lnz3;->Y:Landroid/view/View;
+    invoke-interface {p1}, Lmcf;->getValue()Ljava/lang/Object;
 
-    sget-object v0, Ll05;->s0:Lk82;
+    move-result-object p1
 
-    invoke-virtual {v0, p1}, Lk82;->n(Landroid/view/View;)Lv5b;
+    check-cast p1, Lnx3;
 
-    move-result-object v0
+    iget-object p1, p1, Lnx3;->c:Ljava/util/List;
 
-    invoke-interface {v0}, Lv5b;->b()Lff0;
+    invoke-virtual {v1, p1}, Ll98;->E(Ljava/util/List;)V
 
-    move-result-object v0
-
-    iget v0, v0, Lff0;->l:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
-
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v5
 .end method

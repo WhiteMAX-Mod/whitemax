@@ -4,141 +4,165 @@
 
 
 # direct methods
-.method public static a(Landroid/view/inputmethod/EditorInfo;Ljava/lang/CharSequence;II)V
-    .locals 2
+.method public static a(ZZZZZZZZZZZZ)J
+    .locals 4
 
-    iget-object v0, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
+    if-eqz p11, :cond_0
 
-    if-nez v0, :cond_0
-
-    new-instance v0, Landroid/os/Bundle;
-
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
-
-    iput-object v0, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
-
-    :cond_0
-    if-eqz p1, :cond_1
-
-    new-instance v0, Landroid/text/SpannableStringBuilder;
-
-    invoke-direct {v0, p1}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
+    const-wide/16 v0, 0x1
 
     goto :goto_0
 
+    :cond_0
+    const-wide/16 v0, 0x0
+
+    :goto_0
+    if-eqz p0, :cond_1
+
+    const-wide/16 v2, 0x2
+
+    or-long/2addr v0, v2
+
     :cond_1
+    if-eqz p1, :cond_2
+
+    const-wide/16 p0, 0x4
+
+    or-long/2addr v0, p0
+
+    :cond_2
+    if-eqz p2, :cond_3
+
+    const-wide/16 p0, 0x8
+
+    or-long/2addr v0, p0
+
+    :cond_3
+    if-eqz p3, :cond_4
+
+    const-wide/16 p0, 0x10
+
+    or-long/2addr v0, p0
+
+    :cond_4
+    if-eqz p4, :cond_5
+
+    const-wide/16 p0, 0x20
+
+    or-long/2addr v0, p0
+
+    :cond_5
+    if-eqz p5, :cond_6
+
+    const-wide/16 p0, 0x40
+
+    or-long/2addr v0, p0
+
+    :cond_6
+    if-eqz p6, :cond_7
+
+    const-wide/16 p0, 0x80
+
+    or-long/2addr v0, p0
+
+    :cond_7
+    if-eqz p7, :cond_8
+
+    const-wide/16 p0, 0x100
+
+    or-long/2addr v0, p0
+
+    :cond_8
+    if-eqz p8, :cond_9
+
+    const-wide/16 p0, 0x200
+
+    or-long/2addr v0, p0
+
+    :cond_9
+    if-eqz p9, :cond_a
+
+    const-wide/16 p0, 0x400
+
+    or-long/2addr v0, p0
+
+    :cond_a
+    if-eqz p10, :cond_b
+
+    const-wide/16 p0, 0x800
+
+    or-long/2addr p0, v0
+
+    return-wide p0
+
+    :cond_b
+    return-wide v0
+.end method
+
+.method public static final b(Lvgb;Lg2h;)J
+    .locals 5
+
+    instance-of v0, p1, Lcn3;
+
+    const-wide/16 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Lvgb;->f()I
+
+    move-result p0
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    if-lez p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
     const/4 v0, 0x0
 
     :goto_0
-    iget-object p1, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
+    if-eqz v0, :cond_1
 
-    const-string v1, "androidx.core.view.inputmethod.EditorInfoCompat.CONTENT_SURROUNDING_TEXT"
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
+    move-result p0
 
-    iget-object p1, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
+    check-cast p1, Lcn3;
 
-    const-string v0, "androidx.core.view.inputmethod.EditorInfoCompat.CONTENT_SELECTION_HEAD"
+    iget-object v0, p1, Lcn3;->a:Ljava/util/List;
 
-    invoke-virtual {p1, v0, p2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    iget-object p0, p0, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
+    move-result v0
 
-    const-string p1, "androidx.core.view.inputmethod.EditorInfoCompat.CONTENT_SELECTION_END"
+    invoke-static {p0, v0}, Ljava/lang/Math;->min(II)I
 
-    invoke-virtual {p0, p1, p3}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+    move-result p0
 
-    return-void
-.end method
+    const/4 v0, 0x0
 
-.method public static b(Le20;)Ljava/lang/String;
-    .locals 4
+    :goto_1
+    if-ge v0, p0, :cond_1
 
-    const/4 v0, 0x5
+    iget-object v3, p1, Lcn3;->a:Ljava/util/List;
 
-    :goto_0
-    iget-object v1, p0, Le20;->g:Lw10;
+    invoke-interface {v3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    iget-object v2, p0, Le20;->a:La20;
+    move-result-object v3
 
-    if-nez v2, :cond_0
+    check-cast v3, Lbn3;
 
-    const/4 v2, -0x1
+    iget-wide v3, v3, Lbn3;->d:J
+
+    add-long/2addr v1, v3
+
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    :cond_0
-    sget-object v3, Lbje;->$EnumSwitchMapping$0:[I
-
-    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v2
-
-    aget v2, v3, v2
-
-    :goto_1
-    const/4 v3, 0x1
-
-    if-eq v2, v3, :cond_6
-
-    const/4 v3, 0x2
-
-    if-eq v2, v3, :cond_5
-
-    const/4 p0, 0x3
-
-    const/4 v3, 0x0
-
-    if-eq v2, p0, :cond_1
-
-    goto :goto_2
-
     :cond_1
-    iget-object p0, v1, Lw10;->f:Ls10;
-
-    if-eqz p0, :cond_2
-
-    if-eqz p0, :cond_4
-
-    invoke-virtual {p0}, Ls10;->a()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_2
-    iget-object p0, v1, Lw10;->g:Le20;
-
-    if-eqz p0, :cond_4
-
-    if-gez v0, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    if-eqz p0, :cond_4
-
-    add-int/lit8 v0, v0, -0x1
-
-    goto :goto_0
-
-    :cond_4
-    :goto_2
-    return-object v3
-
-    :cond_5
-    iget-object p0, p0, Le20;->d:Ld20;
-
-    iget-object p0, p0, Ld20;->d:Ljava/lang/String;
-
-    return-object p0
-
-    :cond_6
-    iget-object p0, p0, Le20;->b:Ls10;
-
-    invoke-virtual {p0}, Ls10;->a()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-wide v1
 .end method

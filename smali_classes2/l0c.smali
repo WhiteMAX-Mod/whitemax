@@ -1,105 +1,193 @@
-.class public abstract Ll0c;
+.class public final synthetic Ll0c;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;
+
 
 # direct methods
-.method public static a([B)Lm0c;
-    .locals 14
+.method public synthetic constructor <init>(Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;I)V
+    .locals 0
 
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$Profile;
+    iput p2, p0, Ll0c;->a:I
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$Profile;-><init>()V
+    iput-object p1, p0, Ll0c;->b:Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;
 
-    :try_start_0
-    invoke-static {v0, p0}, Lee9;->mergeFrom(Lee9;[B)Lee9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    return-void
+.end method
 
-    check-cast p0, Lru/ok/tamtam/nano/Tasks$Profile;
-    :try_end_0
-    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$Profile;->crop:Lru/ok/tamtam/nano/Tasks$Rect;
+# virtual methods
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 6
 
-    if-eqz v0, :cond_0
+    iget v0, p0, Ll0c;->a:I
 
-    new-instance v1, Lv10;
+    iget-object v1, p0, Ll0c;->b:Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;
 
-    iget v2, v0, Lru/ok/tamtam/nano/Tasks$Rect;->left:F
+    packed-switch v0, :pswitch_data_0
 
-    iget v3, v0, Lru/ok/tamtam/nano/Tasks$Rect;->top:F
+    sget v0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->J0:I
 
-    iget v4, v0, Lru/ok/tamtam/nano/Tasks$Rect;->right:F
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget v5, v0, Lru/ok/tamtam/nano/Tasks$Rect;->bottom:F
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    const/4 v6, 0x2
+    move-result-object p1
 
-    invoke-direct/range {v1 .. v6}, Lv10;-><init>(FFFFI)V
+    check-cast p1, Ljava/lang/Float;
 
-    :goto_0
-    move-object v10, v1
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    goto :goto_1
+    move-result p1
+
+    iput p1, v1, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->C0:F
+
+    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_0
+    sget v0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->J0:I
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Float;
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    iput p1, v1, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->B0:F
+
+    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_1
+    sget v0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->J0:I
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Float;
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    iput p1, v1, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->y0:F
+
+    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_2
+    sget v0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->J0:I
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Float;
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    iput p1, v1, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->x0:F
+
+    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_3
+    sget v0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->J0:I
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Float;
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    iput p1, v1, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->o:F
+
+    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_4
+    sget v0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->J0:I
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Float;
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    iget-object v0, v1, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->v0:Landroid/graphics/Paint;
+
+    const/high16 v2, 0x437f0000    # 255.0f
+
+    mul-float/2addr v2, p1
+
+    float-to-int v2, v2
+
+    invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setAlpha(I)V
+
+    float-to-double v2, p1
+
+    const-wide/16 v4, 0x0
+
+    cmpl-double p1, v2, v4
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, v1, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->u0:Z
 
     :cond_0
-    const/4 v1, 0x0
+    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
 
-    goto :goto_0
+    return-void
 
-    :goto_1
-    new-instance v2, Lm0c;
-
-    iget-wide v3, p0, Lru/ok/tamtam/nano/Tasks$Profile;->requestId:J
-
-    iget-object v5, p0, Lru/ok/tamtam/nano/Tasks$Profile;->firstName:Ljava/lang/String;
-
-    iget-object v6, p0, Lru/ok/tamtam/nano/Tasks$Profile;->lastName:Ljava/lang/String;
-
-    iget-object v7, p0, Lru/ok/tamtam/nano/Tasks$Profile;->photoToken:Ljava/lang/String;
-
-    iget-wide v8, p0, Lru/ok/tamtam/nano/Tasks$Profile;->photoId:J
-
-    iget-object v11, p0, Lru/ok/tamtam/nano/Tasks$Profile;->description:Ljava/lang/String;
-
-    iget-object v12, p0, Lru/ok/tamtam/nano/Tasks$Profile;->link:Ljava/lang/String;
-
-    iget-object p0, p0, Lru/ok/tamtam/nano/Tasks$Profile;->avatarType:Ljava/lang/String;
-
-    const-string v0, "PRESET_AVATAR"
-
-    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    const/4 p0, 0x1
-
-    :goto_2
-    move v13, p0
-
-    goto :goto_3
-
-    :cond_1
-    const/4 p0, 0x2
-
-    goto :goto_2
-
-    :goto_3
-    invoke-direct/range {v2 .. v13}, Lm0c;-><init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;JLv10;Ljava/lang/String;Ljava/lang/String;I)V
-
-    return-object v2
-
-    :catch_0
-    move-exception v0
-
-    move-object p0, v0
-
-    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
-
-    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

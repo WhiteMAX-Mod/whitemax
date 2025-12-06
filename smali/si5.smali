@@ -2,166 +2,68 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljog;
-.implements Ld22;
-.implements Lpub;
-
 
 # instance fields
-.field public a:Ljog;
+.field public final a:[Lmi5;
 
-.field public b:Ld22;
+.field public final b:[J
 
-.field public c:Ljog;
+.field public final c:Ljava/lang/String;
 
-.field public o:Ld22;
+.field public final d:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;[J[Lmi5;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lsi5;->c:Ljava/lang/String;
+
+    iput-object p2, p0, Lsi5;->d:Ljava/lang/String;
+
+    iput-object p3, p0, Lsi5;->b:[J
+
+    iput-object p4, p0, Lsi5;->a:[Lmi5;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(ILjava/lang/Object;)V
-    .locals 1
+.method public final a()Ljava/lang/String;
+    .locals 4
 
-    const/4 v0, 0x7
+    const/4 v0, 0x1
 
-    if-eq p1, v0, :cond_3
+    iget-object v1, p0, Lsi5;->c:Ljava/lang/String;
 
-    const/16 v0, 0x8
+    invoke-static {v0, v1}, Lu45;->f(ILjava/lang/String;)I
 
-    if-eq p1, v0, :cond_2
+    move-result v0
 
-    const/16 v0, 0x2710
+    iget-object v2, p0, Lsi5;->d:Ljava/lang/String;
 
-    if-eq p1, v0, :cond_0
+    invoke-static {v0, v2}, Lu45;->f(ILjava/lang/String;)I
 
-    return-void
+    move-result v0
 
-    :cond_0
-    check-cast p2, Lzve;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    if-nez p2, :cond_1
+    invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    const/4 p1, 0x0
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput-object p1, p0, Lsi5;->c:Ljog;
+    const-string v0, "/"
 
-    iput-object p1, p0, Lsi5;->o:Ld22;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_1
-    invoke-virtual {p2}, Lzve;->getVideoFrameMetadataListener()Ljog;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v0
 
-    iput-object p1, p0, Lsi5;->c:Ljog;
-
-    invoke-virtual {p2}, Lzve;->getCameraMotionListener()Ld22;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lsi5;->o:Ld22;
-
-    return-void
-
-    :cond_2
-    check-cast p2, Ld22;
-
-    iput-object p2, p0, Lsi5;->b:Ld22;
-
-    return-void
-
-    :cond_3
-    check-cast p2, Ljog;
-
-    iput-object p2, p0, Lsi5;->a:Ljog;
-
-    return-void
-.end method
-
-.method public final b(J[F)V
-    .locals 1
-
-    iget-object v0, p0, Lsi5;->o:Ld22;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0, p1, p2, p3}, Ld22;->b(J[F)V
-
-    :cond_0
-    iget-object v0, p0, Lsi5;->b:Ld22;
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0, p1, p2, p3}, Ld22;->b(J[F)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final c()V
-    .locals 1
-
-    iget-object v0, p0, Lsi5;->o:Ld22;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Ld22;->c()V
-
-    :cond_0
-    iget-object v0, p0, Lsi5;->b:Ld22;
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0}, Ld22;->c()V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final d(JJLkb6;Landroid/media/MediaFormat;)V
-    .locals 8
-
-    iget-object v0, p0, Lsi5;->c:Ljog;
-
-    if-eqz v0, :cond_0
-
-    move-wide v1, p1
-
-    move-wide v3, p3
-
-    move-object v5, p5
-
-    move-object v6, p6
-
-    invoke-interface/range {v0 .. v6}, Ljog;->d(JJLkb6;Landroid/media/MediaFormat;)V
-
-    move-object v7, v6
-
-    move-object v6, v5
-
-    move-wide v4, v3
-
-    move-wide v2, v1
-
-    goto :goto_0
-
-    :cond_0
-    move-wide v2, p1
-
-    move-wide v4, p3
-
-    move-object v6, p5
-
-    move-object v7, p6
-
-    :goto_0
-    iget-object v1, p0, Lsi5;->a:Ljog;
-
-    if-eqz v1, :cond_1
-
-    invoke-interface/range {v1 .. v7}, Ljog;->d(JJLkb6;Landroid/media/MediaFormat;)V
-
-    :cond_1
-    return-void
+    return-object v0
 .end method

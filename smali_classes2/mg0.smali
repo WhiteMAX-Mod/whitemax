@@ -22,49 +22,8 @@
     return-void
 .end method
 
-.method public static a(ZLfwc;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
-
-    if-eqz p0, :cond_0
-
-    const-string p0, "["
-
-    const-string v0, "]: "
-
-    invoke-static {p0, p2, v0, p3}, Lfd0;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string p2, "BadNetworkIndicatorConfig"
-
-    invoke-interface {p1, p2, p0}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    return-void
-.end method
-
 
 # virtual methods
-.method public final b(Lfwc;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
-
-    iget-boolean v0, p0, Lmg0;->a:Z
-
-    invoke-static {v0, p1, p2, p3}, Lmg0;->a(ZLfwc;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final c(Lfwc;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
-
-    iget-boolean v0, p0, Lmg0;->b:Z
-
-    invoke-static {v0, p1, p2, p3}, Lmg0;->a(ZLfwc;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
@@ -132,17 +91,17 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    const-string v0, ", debugVerboseLogging="
+    const-string v0, ", producerCommandV3="
 
     const-string v1, ")"
 
-    const-string v2, "DebugLoggingConfig(debugLogging="
+    const-string v2, "SignalingConfig(dcReportNetworkStatEnabled="
 
     iget-boolean v3, p0, Lmg0;->a:Z
 
     iget-boolean v4, p0, Lmg0;->b:Z
 
-    invoke-static {v2, v3, v0, v4, v1}, Lfd0;->g(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v3, v0, v4, v1}, Lxc0;->g(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Comparator;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:I
+.field public final synthetic b:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public synthetic constructor <init>(II)V
+.method public synthetic constructor <init>(Ljava/lang/Runnable;I)V
     .locals 0
 
     iput p2, p0, Lg30;->a:I
 
-    iput p1, p0, Lg30;->b:I
+    iput-object p1, p0, Lg30;->b:Ljava/lang/Runnable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,111 +27,127 @@
 
 
 # virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 3
+.method public final run()V
+    .locals 4
 
     iget v0, p0, Lg30;->a:I
 
+    const-string v1, "failed to execute fresco task"
+
+    const-string v2, "Fresco"
+
+    iget-object v3, p0, Lg30;->b:Ljava/lang/Runnable;
+
     packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Landroid/util/Size;
+    invoke-static {v3}, Lcom/my/tracker/core/o/g;->d(Ljava/lang/Runnable;)V
 
-    check-cast p2, Landroid/util/Size;
-
-    invoke-static {p1}, Lcse;->a(Landroid/util/Size;)I
-
-    move-result p1
-
-    iget v0, p0, Lg30;->b:I
-
-    sub-int/2addr p1, v0
-
-    invoke-static {p1}, Ljava/lang/Math;->abs(I)I
-
-    move-result p1
-
-    invoke-static {p2}, Lcse;->a(Landroid/util/Size;)I
-
-    move-result p2
-
-    sub-int/2addr p2, v0
-
-    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
-
-    move-result p2
-
-    sub-int/2addr p1, p2
-
-    return p1
+    return-void
 
     :pswitch_0
-    check-cast p1, Ljava/lang/Integer;
+    invoke-static {v3}, Lafg;->a(Ljava/lang/Runnable;)V
 
-    check-cast p2, Ljava/lang/Integer;
+    return-void
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    :pswitch_1
+    sget-object v0, Lone/me/rlottie/RLottieDrawable;->gson:Lcom/google/gson/Gson;
 
-    move-result v0
+    invoke-static {v3}, Lie;->d(Ljava/lang/Runnable;)V
 
-    iget v1, p0, Lg30;->b:I
+    return-void
 
-    sub-int/2addr v0, v1
+    :pswitch_2
+    sget-object v0, Lone/me/rlottie/RLottieDrawable;->gson:Lcom/google/gson/Gson;
 
-    invoke-static {v0}, Ljava/lang/Math;->abs(I)I
+    invoke-static {v3}, Lie;->d(Ljava/lang/Runnable;)V
 
-    move-result v0
+    return-void
 
-    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    sub-int/2addr v2, v1
-
-    invoke-static {v2}, Ljava/lang/Math;->abs(I)I
-
-    move-result v1
-
-    sub-int/2addr v0, v1
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
-
-    move-result p2
-
-    sub-int/2addr p1, p2
-
-    int-to-float p1, p1
-
-    invoke-static {p1}, Ljava/lang/Math;->signum(F)F
-
-    move-result p1
-
-    :goto_0
-    float-to-int p1, p1
-
-    goto :goto_1
-
-    :cond_0
-    int-to-float p1, v0
-
-    invoke-static {p1}, Ljava/lang/Math;->signum(F)F
-
-    move-result p1
+    :pswitch_3
+    :try_start_0
+    invoke-interface {v3}, Ljava/lang/Runnable;->run()V
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
+    :catch_0
+    move-exception v0
+
+    invoke-static {v2, v1, v0}, Lwqi;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_0
+    return-void
+
+    :catch_1
+    move-exception v0
+
+    throw v0
+
+    :pswitch_4
+    :try_start_1
+    invoke-interface {v3}, Ljava/lang/Runnable;->run()V
+    :try_end_1
+    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_3
+    .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_2
+
+    goto :goto_1
+
+    :catch_2
+    move-exception v0
+
+    invoke-static {v2, v1, v0}, Lwqi;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
     :goto_1
-    return p1
+    return-void
+
+    :catch_3
+    move-exception v0
+
+    throw v0
+
+    :pswitch_5
+    :try_start_2
+    invoke-interface {v3}, Ljava/lang/Runnable;->run()V
+    :try_end_2
+    .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_5
+    .catch Ljava/lang/IllegalStateException; {:try_start_2 .. :try_end_2} :catch_4
+
+    goto :goto_2
+
+    :catch_4
+    move-exception v0
+
+    invoke-static {v2, v1, v0}, Lwqi;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_2
+    return-void
+
+    :catch_5
+    move-exception v0
+
+    throw v0
+
+    :pswitch_6
+    const/16 v0, -0x10
+
+    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
+
+    invoke-interface {v3}, Ljava/lang/Runnable;->run()V
+
+    return-void
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

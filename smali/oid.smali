@@ -1,67 +1,120 @@
 .class public final Loid;
-.super Ljava/lang/Object;
+.super Lz4;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lda;
+.field public final d:Landroidx/recyclerview/widget/RecyclerView;
 
-.field public final b:Ljava/net/Proxy;
-
-.field public final c:Ljava/net/InetSocketAddress;
+.field public final e:Lnid;
 
 
 # direct methods
-.method public constructor <init>(Lda;Ljava/net/Proxy;Ljava/net/InetSocketAddress;)V
+.method public constructor <init>(Landroidx/recyclerview/widget/RecyclerView;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lz4;-><init>()V
 
-    iput-object p1, p0, Loid;->a:Lda;
+    iput-object p1, p0, Loid;->d:Landroidx/recyclerview/widget/RecyclerView;
 
-    iput-object p2, p0, Loid;->b:Ljava/net/Proxy;
+    iget-object p1, p0, Loid;->e:Lnid;
 
-    iput-object p3, p0, Loid;->c:Ljava/net/InetSocketAddress;
+    if-eqz p1, :cond_0
+
+    iput-object p1, p0, Loid;->e:Lnid;
+
+    return-void
+
+    :cond_0
+    new-instance p1, Lnid;
+
+    invoke-direct {p1, p0}, Lnid;-><init>(Loid;)V
+
+    iput-object p1, p0, Loid;->e:Lnid;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final c(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+    .locals 1
+
+    invoke-super {p0, p1, p2}, Lz4;->c(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+
+    instance-of v0, p1, Landroidx/recyclerview/widget/RecyclerView;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Loid;->d:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->X()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    check-cast p1, Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/a;->b0(Landroid/view/accessibility/AccessibilityEvent;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final d(Landroid/view/View;Lm5;)V
     .locals 2
 
-    instance-of v0, p1, Loid;
+    iget-object v0, p0, Lz4;->a:Landroid/view/View$AccessibilityDelegate;
 
-    if-eqz v0, :cond_0
+    iget-object v1, p2, Lm5;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
 
-    check-cast p1, Loid;
+    invoke-virtual {v0, p1, v1}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    iget-object v0, p1, Loid;->a:Lda;
+    iget-object p1, p0, Loid;->d:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object v1, p0, Loid;->a:Lda;
-
-    invoke-static {v0, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->X()Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
-    iget-object v0, p1, Loid;->b:Ljava/net/Proxy;
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
 
-    iget-object v1, p0, Loid;->b:Ljava/net/Proxy;
-
-    invoke-static {v0, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
+    move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object p1, p1, Loid;->c:Ljava/net/InetSocketAddress;
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
 
-    iget-object v0, p0, Loid;->c:Ljava/net/InetSocketAddress;
+    move-result-object p1
 
-    invoke-static {p1, v0}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object v0, p1, Landroidx/recyclerview/widget/a;->b:Landroidx/recyclerview/widget/RecyclerView;
+
+    iget-object v1, v0, Landroidx/recyclerview/widget/RecyclerView;->c:Ldid;
+
+    iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView;->r1:Liid;
+
+    invoke-virtual {p1, v1, v0, p2}, Landroidx/recyclerview/widget/a;->c0(Ldid;Liid;Lm5;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final g(Landroid/view/View;ILandroid/os/Bundle;)Z
+    .locals 2
+
+    invoke-super {p0, p1, p2, p3}, Lz4;->g(Landroid/view/View;ILandroid/os/Bundle;)Z
 
     move-result p1
 
@@ -72,65 +125,38 @@
     return p1
 
     :cond_0
-    const/4 p1, 0x0
+    iget-object p1, p0, Loid;->d:Landroidx/recyclerview/widget/RecyclerView;
 
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Loid;->a:Lda;
-
-    invoke-virtual {v0}, Lda;->hashCode()I
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->X()Z
 
     move-result v0
 
-    add-int/lit16 v0, v0, 0x20f
+    if-nez v0, :cond_1
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Loid;->b:Ljava/net/Proxy;
-
-    invoke-virtual {v1}, Ljava/net/Proxy;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Loid;->c:Ljava/net/InetSocketAddress;
-
-    invoke-virtual {v0}, Ljava/net/InetSocketAddress;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Route{"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Loid;->c:Ljava/net/InetSocketAddress;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
 
     move-result-object v0
 
-    return-object v0
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+
+    move-result-object p1
+
+    iget-object v0, p1, Landroidx/recyclerview/widget/a;->b:Landroidx/recyclerview/widget/RecyclerView;
+
+    iget-object v1, v0, Landroidx/recyclerview/widget/RecyclerView;->c:Ldid;
+
+    iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView;->r1:Liid;
+
+    invoke-virtual {p1, v1, v0, p2, p3}, Landroidx/recyclerview/widget/a;->r0(Ldid;Liid;ILandroid/os/Bundle;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return p1
 .end method

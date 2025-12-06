@@ -1,86 +1,92 @@
 .class public final Lj26;
-.super Lwpe;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lvj6;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lj26;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final a:Lf26;
+.field public a:I
 
-.field public final b:Lsj6;
-
-.field public final c:Ltm0;
+.field public b:I
 
 
 # direct methods
-.method public constructor <init>(Lf26;Lsj6;Ltm0;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lwf4;
 
-    iput-object p1, p0, Lj26;->a:Lf26;
+    const/16 v1, 0xd
 
-    iput-object p2, p0, Lj26;->b:Lsj6;
+    invoke-direct {v0, v1}, Lwf4;-><init>(I)V
 
-    iput-object p3, p0, Lj26;->c:Ltm0;
+    sput-object v0, Lj26;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Lf26;
-    .locals 5
+.method public final describeContents()I
+    .locals 1
 
-    new-instance v0, Lh26;
+    const/4 v0, 0x0
 
-    iget-object v1, p0, Lj26;->c:Ltm0;
+    return v0
+.end method
 
-    const/4 v2, 0x0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-object v3, p0, Lj26;->a:Lf26;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lj26;->b:Lsj6;
+    const-string v1, "SavedState{mAnchorPosition="
 
-    invoke-direct {v0, v3, v4, v1, v2}, Lh26;-><init>(Lf26;Lsj6;Ljava/lang/Object;I)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lj26;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mAnchorOffset="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lj26;->b:I
+
+    const/16 v2, 0x7d
+
+    invoke-static {v0, v1, v2}, Lxc0;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method
 
-.method public final l(Lsqe;)V
-    .locals 3
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    :try_start_0
-    iget-object v0, p0, Lj26;->b:Lsj6;
+    iget p2, p0, Lj26;->a:I
 
-    iget-object v0, v0, Lsj6;->a:Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    const-string v1, "The initialSupplier returned a null value"
+    iget p2, p0, Lj26;->b:I
 
-    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    new-instance v1, Li26;
-
-    iget-object v2, p0, Lj26;->c:Ltm0;
-
-    invoke-direct {v1, p1, v0, v2}, Li26;-><init>(Lsqe;Ljava/lang/Object;Ltm0;)V
-
-    iget-object p1, p0, Lj26;->a:Lf26;
-
-    invoke-virtual {p1, v1}, Lf26;->c(Lq36;)V
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    invoke-static {v0}, Lq0j;->b(Ljava/lang/Throwable;)V
-
-    invoke-static {v0, p1}, Lfa5;->d(Ljava/lang/Throwable;Lsqe;)V
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void
 .end method

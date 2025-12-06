@@ -1,360 +1,186 @@
 .class public final Lied;
-.super Ljava/lang/Object;
+.super Ldtf;
 .source "SourceFile"
+
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public final a:Lt6d;
+.field public final synthetic X:Lzed;
 
-.field public b:I
-
-.field public c:I
-
-.field public final d:Lli6;
-
-.field public final e:Ljava/lang/ref/WeakReference;
-
-.field public final f:Lhx7;
-
-.field public g:Z
-
-.field public h:Lpm7;
-
-.field public final i:Lged;
-
-.field public final j:Lwk;
-
-.field public final k:Ljava/lang/String;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lt6d;Landroidx/recyclerview/widget/RecyclerView;Lli6;)V
-    .locals 3
+.method public constructor <init>(Lzed;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lied;->X:Lzed;
 
-    iput-object p1, p0, Lied;->a:Lt6d;
+    const/4 p1, 0x2
 
-    const/4 p1, -0x1
-
-    iput p1, p0, Lied;->b:I
-
-    const/4 p1, 0x0
-
-    iput p1, p0, Lied;->c:I
-
-    iput-object p3, p0, Lied;->d:Lli6;
-
-    new-instance p1, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {p1, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object p1, p0, Lied;->e:Ljava/lang/ref/WeakReference;
-
-    new-instance p1, Lged;
-
-    const/4 p3, 0x0
-
-    invoke-direct {p1, p3, p0}, Lged;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, p0, Lied;->i:Lged;
-
-    new-instance p1, Lwk;
-
-    const/4 p3, 0x7
-
-    invoke-direct {p1, p3, p0}, Lwk;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, p0, Lied;->j:Lwk;
-
-    const-class p3, Lied;
-
-    invoke-virtual {p3}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p3
-
-    iput-object p3, p0, Lied;->k:Ljava/lang/String;
-
-    invoke-virtual {p2, p1}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
-
-    invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    :goto_0
-    instance-of p3, p1, Landroid/content/ContextWrapper;
-
-    const/4 v0, 0x0
-
-    if-eqz p3, :cond_1
-
-    instance-of p3, p1, Lfx7;
-
-    if-eqz p3, :cond_0
-
-    check-cast p1, Lfx7;
-
-    goto :goto_1
-
-    :cond_0
-    check-cast p1, Landroid/content/ContextWrapper;
-
-    invoke-virtual {p1}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    :cond_1
-    move-object p1, v0
-
-    :goto_1
-    if-nez p1, :cond_3
-
-    iget-object p1, p0, Lied;->k:Ljava/lang/String;
-
-    sget-object p3, Ltei;->a:Lmxa;
-
-    if-nez p3, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    sget-object v1, Lc98;->o:Lc98;
-
-    invoke-virtual {p3, v1}, Lmxa;->b(Lc98;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_5
-
-    const-string v2, "registerLifecycleObserver findLifecycleOwner() is null"
-
-    invoke-virtual {p3, v1, p1, v2, v0}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_2
-
-    :cond_3
-    invoke-interface {p1}, Lfx7;->x()Lhx7;
-
-    move-result-object p3
-
-    iput-object p3, p0, Lied;->f:Lhx7;
-
-    if-eqz p3, :cond_4
-
-    iget-object v0, p0, Lied;->i:Lged;
-
-    invoke-virtual {p3, v0}, Lhx7;->a(Lbx7;)V
-
-    :cond_4
-    invoke-interface {p1}, Lfx7;->x()Lhx7;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lhx7;->d:Lhw7;
-
-    sget-object p3, Lhw7;->o:Lhw7;
-
-    invoke-virtual {p1, p3}, Lhw7;->a(Lhw7;)Z
-
-    move-result p1
-
-    xor-int/lit8 p1, p1, 0x1
-
-    iput-boolean p1, p0, Lied;->g:Z
-
-    :cond_5
-    :goto_2
-    iget-object p1, p0, Lied;->j:Lwk;
-
-    invoke-virtual {p1, p2}, Lwk;->onViewAttachedToWindow(Landroid/view/View;)V
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroidx/recyclerview/widget/RecyclerView;)V
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lied;->k:Ljava/lang/String;
+    check-cast p1, Lred;
 
-    sget-object v1, Ltei;->a:Lmxa;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v3, Lc98;->o:Lc98;
-
-    invoke-virtual {v1, v3}, Lmxa;->b(Lc98;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    const-string v4, "attachAdapter"
-
-    invoke-virtual {v1, v3, v0, v4, v2}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    iget-object v0, p0, Lied;->a:Lt6d;
-
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lt6d;
-
-    move-result-object v1
-
-    if-eq v1, v0, :cond_2
-
-    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lt6d;)V
-
-    :cond_2
-    iget v0, p0, Lied;->b:I
-
-    const/4 v1, -0x1
-
-    if-eq v0, v1, :cond_4
-
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
-
-    move-result-object v0
-
-    instance-of v1, v0, Landroidx/recyclerview/widget/LinearLayoutManager;
-
-    if-eqz v1, :cond_3
-
-    check-cast v0, Landroidx/recyclerview/widget/LinearLayoutManager;
-
-    goto :goto_1
-
-    :cond_3
-    move-object v0, v2
-
-    :goto_1
-    if-eqz v0, :cond_4
-
-    iget v1, p0, Lied;->b:I
-
-    iget v3, p0, Lied;->c:I
-
-    invoke-virtual {v0, v1, v3}, Landroidx/recyclerview/widget/LinearLayoutManager;->m1(II)V
-
-    :cond_4
-    iget-object v0, p0, Lied;->h:Lpm7;
-
-    if-eqz v0, :cond_5
-
-    invoke-virtual {v0, p1}, Lpm7;->a(Landroidx/recyclerview/widget/RecyclerView;)V
-
-    return-void
-
-    :cond_5
-    iget-object v0, p0, Lied;->d:Lli6;
-
-    if-eqz v0, :cond_6
-
-    invoke-interface {v0, p1}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lied;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    move-object v2, p1
+    check-cast p1, Lied;
 
-    check-cast v2, Lpm7;
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    :cond_6
-    iput-object v2, p0, Lied;->h:Lpm7;
+    invoke-virtual {p1, p2}, Lied;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-void
+    return-object p2
 .end method
 
-.method public final b(Landroidx/recyclerview/widget/RecyclerView;)V
-    .locals 5
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object v0, p0, Lied;->k:Ljava/lang/String;
+    new-instance v0, Lied;
 
-    sget-object v1, Ltei;->a:Lmxa;
+    iget-object v1, p0, Lied;->X:Lzed;
 
-    const/4 v2, 0x0
+    invoke-direct {v0, v1, p2}, Lied;-><init>(Lzed;Lkotlin/coroutines/Continuation;)V
 
-    if-nez v1, :cond_0
+    iput-object p1, v0, Lied;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lied;->o:Ljava/lang/Object;
+
+    check-cast p1, Lred;
+
+    iget-object v0, p0, Lied;->X:Lzed;
+
+    iget-object v1, v0, Lzed;->c:Lfed;
+
+    instance-of v2, p1, Lped;
+
+    const/4 v3, 0x1
+
+    if-nez v2, :cond_1
+
+    instance-of v2, p1, Lned;
+
+    if-eqz v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    sget-object v3, Lc98;->o:Lc98;
-
-    invoke-virtual {v1, v3}, Lmxa;->b(Lc98;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    const-string v4, "detachAdapter"
-
-    invoke-virtual {v1, v3, v0, v4, v2}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
-
-    move-result-object v0
-
-    instance-of v1, v0, Landroidx/recyclerview/widget/LinearLayoutManager;
-
-    if-eqz v1, :cond_2
-
-    check-cast v0, Landroidx/recyclerview/widget/LinearLayoutManager;
+    const/4 v2, 0x0
 
     goto :goto_1
 
-    :cond_2
-    move-object v0, v2
+    :cond_1
+    :goto_0
+    move v2, v3
 
     :goto_1
-    if-eqz v0, :cond_4
+    iget-object v4, v1, Lfed;->o:Ltcf;
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/LinearLayoutManager;->V0()I
+    :cond_2
+    invoke-virtual {v4}, Ltcf;->getValue()Ljava/lang/Object;
 
-    move-result v0
+    move-result-object v5
 
-    iput v0, p0, Lied;->b:I
+    move-object v6, v5
 
-    const/4 v0, 0x0
+    check-cast v6, Ljava/lang/Boolean;
 
-    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v6
+
+    invoke-virtual {v4, v5, v6}, Ltcf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2
+
+    invoke-virtual {v0}, Lzed;->E()Z
+
+    move-result v5
+
+    iget-object v6, v1, Lfed;->Y:Ltcf;
+
+    :cond_3
+    invoke-virtual {v6}, Ltcf;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object v4, v2
+
+    check-cast v4, Ljava/lang/Boolean;
+
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v4
+
+    invoke-virtual {v6, v2, v4}, Ltcf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    iget-object v0, v0, Lzed;->b:Ltdd;
+
+    sget-object v2, Ltdd;->a:Ltdd;
+
+    if-ne v0, v2, :cond_5
+
+    instance-of p1, p1, Lqed;
+
+    xor-int/2addr p1, v3
+
+    iget-object v0, v1, Lfed;->s0:Ltcf;
+
+    :cond_4
+    invoke-virtual {v0}, Ltcf;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    if-eqz v1, :cond_3
+    move-object v2, v1
 
-    invoke-virtual {v1}, Landroid/view/View;->getTop()I
+    check-cast v2, Ljava/lang/Boolean;
 
-    move-result v0
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :cond_3
-    iput v0, p0, Lied;->c:I
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    :cond_4
-    iget-object v0, p0, Lied;->h:Lpm7;
+    move-result-object v2
 
-    if-eqz v0, :cond_5
+    invoke-virtual {v0, v1, v2}, Ltcf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, p1}, Lpm7;->b(Landroidx/recyclerview/widget/RecyclerView;)V
+    move-result v1
+
+    if-eqz v1, :cond_4
 
     :cond_5
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lt6d;
+    sget-object p1, Lqqg;->a:Lqqg;
 
-    move-result-object v0
-
-    if-eqz v0, :cond_6
-
-    invoke-virtual {p1, v2}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lt6d;)V
-
-    :cond_6
-    return-void
+    return-object p1
 .end method

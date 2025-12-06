@@ -1,198 +1,135 @@
 .class public final Lxg2;
-.super Lym;
+.super Lml2;
 .source "SourceFile"
 
-# interfaces
-.implements Lrnf;
-.implements Ltib;
+
+# static fields
+.field public static final synthetic G0:[Lyy7;
 
 
 # instance fields
-.field public final X:J
+.field public E0:Lxz;
 
-.field public final o:J
+.field public final F0:Lt9f;
 
 
 # direct methods
-.method public constructor <init>(JJJ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0, p1, p2}, Lym;-><init>(J)V
+    new-instance v0, Lz8a;
 
-    iput-wide p3, p0, Lxg2;->o:J
+    const-string v1, "updateJob"
 
-    iput-wide p5, p0, Lxg2;->X:J
+    const-string v2, "getUpdateJob()Lkotlinx/coroutines/Job;"
+
+    const-class v3, Lxg2;
+
+    invoke-direct {v0, v3, v1, v2}, Lz8a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v1, Lvid;->a:Lwid;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Lyy7;
+
+    const/4 v2, 0x0
+
+    aput-object v0, v1, v2
+
+    sput-object v1, Lxg2;->G0:[Lyy7;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
+
+    new-instance v0, Lil2;
+
+    invoke-direct {v0, p1}, Lil2;-><init>(Landroid/content/Context;)V
+
+    invoke-direct {p0, v0}, Lmid;-><init>(Landroid/view/View;)V
+
+    invoke-static {}, Lc7j;->c()Lt9f;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lxg2;->F0:Lt9f;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()I
-    .locals 3
+.method public final F(Lyb9;Lem6;Lsm6;)V
+    .locals 0
 
-    invoke-virtual {p0}, Lym;->m()Lsd2;
+    check-cast p1, Ltb9;
 
-    move-result-object v0
+    invoke-virtual {p0, p1}, Lxg2;->G(Ltb9;)V
 
-    iget-wide v1, p0, Lxg2;->o:J
-
-    invoke-virtual {v0, v1, v2}, Lsd2;->C(J)Lla2;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x3
-
-    return v0
-.end method
-
-.method public final d(Lpmf;)V
-    .locals 5
-
-    invoke-virtual {p0}, Lym;->l()Lpw0;
-
-    move-result-object p1
-
-    new-instance v0, Lyg2;
-
-    iget-wide v1, p0, Lym;->a:J
-
-    iget-wide v3, p0, Lxg2;->o:J
-
-    invoke-direct {v0, v1, v2, v3, v4}, Lyg2;-><init>(JJ)V
-
-    invoke-virtual {p1, v0}, Lpw0;->c(Ljava/lang/Object;)V
+    invoke-super {p0, p1, p2, p3}, Lml2;->F(Lyb9;Lem6;Lsm6;)V
 
     return-void
 .end method
 
-.method public final e(Lzlf;)V
-    .locals 5
-
-    iget-object p1, p1, Lzlf;->b:Ljava/lang/String;
-
-    invoke-static {p1}, Lp0j;->a(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    const-string v0, "chat.not.found"
-
-    invoke-static {p1, v0}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p0}, Lym;->l()Lpw0;
-
-    move-result-object p1
-
-    new-instance v0, Lyg2;
-
-    iget-wide v1, p0, Lym;->a:J
-
-    iget-wide v3, p0, Lxg2;->o:J
-
-    invoke-direct {v0, v1, v2, v3, v4}, Lyg2;-><init>(JJ)V
-
-    invoke-virtual {p1, v0}, Lpw0;->c(Ljava/lang/Object;)V
-
-    :cond_0
-    invoke-virtual {p0}, Lxg2;->f()V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final f()V
-    .locals 3
-
-    invoke-virtual {p0}, Lym;->s()Ljpf;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lym;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljpf;->d(J)V
-
-    return-void
-.end method
-
-.method public final g()[B
-    .locals 3
-
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$ChannelLeave;
-
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ChannelLeave;-><init>()V
-
-    iget-wide v1, p0, Lym;->a:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChannelLeave;->requestId:J
-
-    iget-wide v1, p0, Lxg2;->o:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChannelLeave;->chatId:J
-
-    iget-wide v1, p0, Lxg2;->X:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChannelLeave;->chatServerId:J
-
-    invoke-static {v0}, Lee9;->toByteArray(Lee9;)[B
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getId()J
-    .locals 2
-
-    iget-wide v0, p0, Lym;->a:J
-
-    return-wide v0
-.end method
-
-.method public final getType()Luib;
-    .locals 1
-
-    sget-object v0, Luib;->x0:Luib;
-
-    return-object v0
-.end method
-
-.method public final h()I
-    .locals 1
-
-    const v0, 0xf4240
-
-    return v0
-.end method
-
-.method public final i()Lmmf;
+.method public final G(Ltb9;)V
     .locals 4
 
-    new-instance v0, Lcg2;
+    iget-object v0, p0, Lmid;->a:Landroid/view/View;
+
+    check-cast v0, Lil2;
+
+    iget-wide v1, p1, Ltb9;->a:J
+
+    long-to-int v1, v1
+
+    invoke-virtual {v0, v1}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
+
+    iget-object v1, p1, Ltb9;->o:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lil2;->setTitle(Ljava/lang/CharSequence;)V
+
+    invoke-static {v0}, Ltfh;->b(Landroid/view/View;)Lx38;
+
+    move-result-object v1
+
+    new-instance v2, Lwg2;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, p1, p0, v0, v3}, Lwg2;-><init>(Ltb9;Lxg2;Lil2;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x1
+
+    sget-object v0, Li84;->b:Li84;
+
+    invoke-static {v1, v3, v0, v2, p1}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
+
+    move-result-object p1
+
+    sget-object v0, Lxg2;->G0:[Lyy7;
 
     const/4 v1, 0x0
 
-    const/4 v2, 0x3
+    aget-object v0, v0, v1
 
-    invoke-direct {v0, v1, v2}, Lcg2;-><init>(Lm8b;I)V
+    iget-object v1, p0, Lxg2;->F0:Lt9f;
 
-    const-string v1, "chatId"
+    invoke-virtual {v1, p0, v0, p1}, Lt9f;->O(Ljava/lang/Object;Lyy7;Ljava/lang/Object;)V
 
-    iget-wide v2, p0, Lxg2;->X:J
+    return-void
+.end method
 
-    invoke-virtual {v0, v2, v3, v1}, Lmmf;->u(JLjava/lang/String;)V
+.method public final bridge synthetic z(Lt98;)V
+    .locals 0
 
-    return-object v0
+    check-cast p1, Ltb9;
+
+    invoke-virtual {p0, p1}, Lxg2;->G(Ltb9;)V
+
+    return-void
 .end method

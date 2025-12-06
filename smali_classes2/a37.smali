@@ -3,62 +3,112 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ld37;
+.implements Lz27;
 
 
-# static fields
-.field public static final a:La37;
+# instance fields
+.field public final a:Lk18;
+
+.field public final b:Ljava/util/LinkedHashSet;
+
+.field public c:Z
+
+.field public d:Lx27;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lk18;)V
+    .locals 0
 
-    new-instance v0, La37;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, La37;->a:Lk18;
 
-    sput-object v0, La37;->a:La37;
+    new-instance p1, Ljava/util/LinkedHashSet;
+
+    invoke-direct {p1}, Ljava/util/LinkedHashSet;-><init>()V
+
+    iput-object p1, p0, La37;->b:Ljava/util/LinkedHashSet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a(Lx27;)V
+    .locals 12
 
-    const/4 v0, 0x1
+    iput-object p1, p0, La37;->d:Lx27;
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, La37;->b:Ljava/util/LinkedHashSet;
 
-    return v0
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    move v2, v1
 
     :cond_0
-    instance-of p1, p1, La37;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    if-nez p1, :cond_1
+    move-result v3
 
-    const/4 p1, 0x0
+    if-eqz v3, :cond_1
 
-    return p1
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ly27;
+
+    new-instance v4, Lrw;
+
+    const/4 v10, 0x0
+
+    const/16 v11, 0x18
+
+    const/4 v5, 0x2
+
+    const-class v7, La37;
+
+    const-string v8, "processText"
+
+    const-string v9, "processText(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;"
+
+    move-object v6, p0
+
+    invoke-direct/range {v4 .. v11}, Lrw;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+
+    check-cast v3, Lbi9;
+
+    invoke-virtual {v3, p1, v4}, Lbi9;->O(Lx27;Lsm6;)Z
+
+    move-result v3
+
+    if-nez v2, :cond_0
+
+    move v2, v3
+
+    goto :goto_0
 
     :cond_1
-    return v0
-.end method
+    move-object v6, p0
 
-.method public final hashCode()I
-    .locals 1
+    if-nez p1, :cond_2
 
-    const v0, -0x5b5c259
+    goto :goto_1
 
-    return v0
-.end method
+    :cond_2
+    if-nez v2, :cond_3
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    const/4 v1, 0x1
 
-    const-string v0, "Close"
+    :cond_3
+    :goto_1
+    iput-boolean v1, v6, La37;->c:Z
 
-    return-object v0
+    return-void
 .end method

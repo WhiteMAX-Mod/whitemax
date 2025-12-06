@@ -12,7 +12,7 @@
     return-void
 .end method
 
-.method public static read(Lpkg;)Landroidx/media/AudioAttributesCompat;
+.method public static read(Le0h;)Landroidx/media/AudioAttributesCompat;
     .locals 3
 
     new-instance v0, Landroidx/media/AudioAttributesCompat;
@@ -23,7 +23,7 @@
 
     const/4 v2, 0x1
 
-    invoke-virtual {p0, v2}, Lpkg;->e(I)Z
+    invoke-virtual {p0, v2}, Le0h;->e(I)Z
 
     move-result v2
 
@@ -32,7 +32,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Lpkg;->h()Lrkg;
+    invoke-virtual {p0}, Le0h;->h()Lg0h;
 
     move-result-object v1
 
@@ -44,7 +44,7 @@
     return-object v0
 .end method
 
-.method public static write(Landroidx/media/AudioAttributesCompat;Lpkg;)V
+.method public static write(Landroidx/media/AudioAttributesCompat;Le0h;)V
     .locals 1
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -53,9 +53,9 @@
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Lpkg;->i(I)V
+    invoke-virtual {p1, v0}, Le0h;->i(I)V
 
-    invoke-virtual {p1, p0}, Lpkg;->l(Lrkg;)V
+    invoke-virtual {p1, p0}, Le0h;->l(Lg0h;)V
 
     return-void
 .end method

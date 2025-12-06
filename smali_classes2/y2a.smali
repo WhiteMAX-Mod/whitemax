@@ -1,130 +1,84 @@
 .class public final Ly2a;
-.super Lf3;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lyw4;
 
 
 # instance fields
-.field public X:Ltw4;
-
-.field public Y:Ltw4;
-
-.field public final o:Ldh;
+.field public final a:J
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lru/ok/messages/video/widgets/doubleTap/DoubleTapVideoViewWrapper;Ldh;)V
+.method public constructor <init>(J)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lf3;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Ly2a;->o:Ldh;
-
-    invoke-virtual {p0, p2}, Lf3;->i(Landroid/view/View;)V
-
-    invoke-virtual {p2, p0}, Lru/ok/messages/video/widgets/doubleTap/DoubleTapVideoViewWrapper;->setTouchEventListener(Lyw4;)V
+    iput-wide p1, p0, Ly2a;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final B(Lx2a;)V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget-boolean v0, p1, Lx2a;->c:Z
+    const/4 v0, 0x1
 
-    iget v1, p1, Lx2a;->a:I
+    if-ne p0, p1, :cond_0
 
-    if-nez v0, :cond_0
-
-    iget-object p1, p0, Ly2a;->X:Ltw4;
-
-    invoke-virtual {p1}, Ltw4;->a()V
-
-    iget-object p1, p0, Ly2a;->Y:Ltw4;
-
-    invoke-virtual {p1}, Ltw4;->a()V
-
-    return-void
+    return v0
 
     :cond_0
-    iget-boolean p1, p1, Lx2a;->b:Z
+    instance-of v1, p1, Ly2a;
 
-    if-eqz p1, :cond_1
+    const/4 v2, 0x0
 
-    iget-object p1, p0, Ly2a;->X:Ltw4;
+    if-nez v1, :cond_1
 
-    invoke-virtual {p1}, Ltw4;->a()V
-
-    iget-object p1, p0, Ly2a;->Y:Ltw4;
-
-    invoke-virtual {p1}, Ltw4;->b()V
-
-    iget-object p1, p0, Ly2a;->Y:Ltw4;
-
-    invoke-virtual {p1, v1}, Ltw4;->c(I)V
-
-    return-void
+    return v2
 
     :cond_1
-    iget-object p1, p0, Ly2a;->X:Ltw4;
+    check-cast p1, Ly2a;
 
-    invoke-virtual {p1}, Ltw4;->b()V
+    iget-wide v3, p0, Ly2a;->a:J
 
-    iget-object p1, p0, Ly2a;->X:Ltw4;
+    iget-wide v5, p1, Ly2a;->a:J
 
-    invoke-virtual {p1, v1}, Ltw4;->c(I)V
+    cmp-long p1, v3, v5
 
-    iget-object p1, p0, Ly2a;->Y:Ltw4;
+    if-eqz p1, :cond_2
 
-    invoke-virtual {p1}, Ltw4;->a()V
+    return v2
 
-    return-void
+    :cond_2
+    return v0
 .end method
 
-.method public final k()V
+.method public final hashCode()I
     .locals 2
 
-    iget-object v0, p0, Lf3;->c:Ljava/lang/Object;
+    iget-wide v0, p0, Ly2a;->a:J
 
-    check-cast v0, Landroid/view/View;
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    sget v1, Lvpc;->double_tap_video_view_wrapper__arrows_view_left:I
+    move-result v0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    return v0
+.end method
 
-    move-result-object v0
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    check-cast v0, Ltw4;
+    const-string v0, "MovieId(id="
 
-    iput-object v0, p0, Ly2a;->X:Ltw4;
+    const-string v1, ")"
 
-    iget-object v0, p0, Lf3;->c:Ljava/lang/Object;
+    iget-wide v2, p0, Ly2a;->a:J
 
-    check-cast v0, Landroid/view/View;
-
-    sget v1, Lvpc;->double_tap_video_view_wrapper__arrows_view_right:I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-static {v2, v3, v0, v1}, La9h;->d(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Ltw4;
-
-    iput-object v0, p0, Ly2a;->Y:Ltw4;
-
-    iget-object v0, p0, Ly2a;->X:Ltw4;
-
-    iget-object v1, p0, Ly2a;->o:Ldh;
-
-    invoke-virtual {v0, v1}, Ltw4;->setAnimations(Ldh;)V
-
-    iget-object v0, p0, Ly2a;->Y:Ltw4;
-
-    invoke-virtual {v0, v1}, Ltw4;->setAnimations(Ldh;)V
-
-    return-void
+    return-object v0
 .end method

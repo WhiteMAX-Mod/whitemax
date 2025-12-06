@@ -1,147 +1,115 @@
 .class public final Lx2a;
-.super Ljava/lang/Object;
+.super Lgxi;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lx2a;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # instance fields
-.field public final a:I
-
-.field public final b:Z
-
-.field public final c:Z
+.field public final a:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lvk8;
-
-    const/16 v1, 0xd
-
-    invoke-direct {v0, v1}, Lvk8;-><init>(I)V
-
-    sput-object v0, Lx2a;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 3
-
-    .line 5
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 6
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    iput v0, p0, Lx2a;->a:I
-
-    .line 7
-    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_0
-
-    move v0, v2
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v1
-
-    :goto_0
-    iput-boolean v0, p0, Lx2a;->b:Z
-
-    .line 8
-    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    move v1, v2
-
-    :cond_1
-    iput-boolean v1, p0, Lx2a;->c:Z
-
-    return-void
-.end method
-
-.method public constructor <init>(Lw2a;)V
+.method public constructor <init>(J)V
     .locals 1
 
-    .line 1
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iget v0, p1, Lw2a;->a:I
-
-    iput v0, p0, Lx2a;->a:I
-
-    .line 3
-    iget-boolean v0, p1, Lw2a;->b:Z
-
-    iput-boolean v0, p0, Lx2a;->b:Z
-
-    .line 4
-    iget-boolean p1, p1, Lw2a;->c:Z
-
-    iput-boolean p1, p0, Lx2a;->c:Z
+    iput-wide p1, p0, Lx2a;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 5
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lx2a;
+
+    if-nez v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lx2a;
+
+    iget-wide v1, p0, Lx2a;->a:J
+
+    iget-wide v3, p1, Lx2a;->a:J
+
+    cmp-long p1, v1, v3
+
+    if-eqz p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    sget-object p1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
     return v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+.method public final hashCode()I
+    .locals 2
 
-    iget p2, p0, Lx2a;->a:I
+    iget-wide v0, p0, Lx2a;->a:J
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    iget-boolean p2, p0, Lx2a;->b:Z
+    move-result v0
 
-    int-to-byte p2, p2
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    iget-boolean p2, p0, Lx2a;->c:Z
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    int-to-byte p2, p2
+    move-result v1
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
+    add-int/2addr v1, v0
 
-    return-void
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Value(value="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v2, p0, Lx2a;->a:J
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v2, ", timeUnit="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,208 +1,1036 @@
-.class public final Lutb;
-.super Lsgf;
+.class public abstract synthetic Lutb;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lzi6;
-
-
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:La76;
 
 
 # direct methods
-.method public constructor <init>(La76;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public static final a(I)Z
+    .locals 1
 
-    iput-object p1, p0, Lutb;->Y:La76;
+    const/4 v0, 0x4
 
-    const/4 p1, 0x2
+    if-eq p0, v0, :cond_1
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v0, 0x5
 
-    return-void
-.end method
+    if-eq p0, v0, :cond_1
 
+    const/4 v0, 0x6
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    if-eq p0, v0, :cond_1
 
-    check-cast p1, Lws9;
+    const/4 v0, 0x7
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-eq p0, v0, :cond_1
 
-    invoke-virtual {p0, p1, p2}, Lutb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/16 v0, 0x8
 
-    move-result-object p1
-
-    check-cast p1, Lutb;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lutb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lutb;
-
-    iget-object v1, p0, Lutb;->Y:La76;
-
-    invoke-direct {v0, v1, p2}, Lutb;-><init>(La76;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lutb;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    iget-object v0, p0, Lutb;->Y:La76;
-
-    iget-object v1, v0, La76;->a:Ljava/lang/Object;
-
-    check-cast v1, Ln50;
-
-    iget-object v2, v0, La76;->b:Ljava/lang/Object;
-
-    check-cast v2, Lksg;
-
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lutb;->X:Ljava/lang/Object;
-
-    check-cast p1, Lws9;
-
-    instance-of v3, p1, Lvs9;
-
-    if-eqz v3, :cond_0
-
-    check-cast p1, Lvs9;
+    if-ne p0, v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 p0, 0x0
 
-    :goto_0
-    if-eqz p1, :cond_1
-
-    iget p1, p1, Lvs9;->e:I
-
-    goto :goto_1
+    return p0
 
     :cond_1
-    const/4 p1, 0x0
+    :goto_0
+    const/4 p0, 0x1
 
-    :goto_1
-    const/4 v3, -0x1
+    return p0
+.end method
 
-    if-nez p1, :cond_2
+.method public static b(I)I
+    .locals 3
 
-    move p1, v3
+    const/4 v0, 0x1
 
-    goto :goto_2
+    if-eqz p0, :cond_2
+
+    const/4 v1, 0x2
+
+    if-eq p0, v0, :cond_1
+
+    if-ne p0, v1, :cond_0
+
+    const/4 p0, 0x3
+
+    return p0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "unknown value "
+
+    const-string v2, " for PhoneType"
+
+    invoke-static {p0, v1, v2}, Lwy1;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    return v1
 
     :cond_2
-    sget-object v4, Lttb;->$EnumSwitchMapping$0:[I
+    return v0
+.end method
 
-    invoke-static {p1}, Ldy1;->v(I)I
+.method public static synthetic d(I)Ljava/lang/String;
+    .locals 1
 
-    move-result p1
+    const/4 v0, 0x1
 
-    aget p1, v4, p1
+    if-eq p0, v0, :cond_2
 
-    :goto_2
-    if-eq p1, v3, :cond_a
+    const/4 v0, 0x2
 
-    const/4 v3, 0x1
+    if-eq p0, v0, :cond_1
 
-    if-eq p1, v3, :cond_7
+    const/4 v0, 0x3
 
-    const/4 v3, 0x2
+    if-ne p0, v0, :cond_0
 
-    if-ne p1, v3, :cond_6
+    const-string p0, "RUSTORE"
 
-    iget-object p1, v1, Ln50;->c:Lqz9;
+    return-object p0
 
-    check-cast p1, Lg0a;
+    :cond_0
+    const/4 p0, 0x0
 
-    iget-boolean v3, p1, Lg0a;->x:Z
+    throw p0
 
-    if-nez v3, :cond_3
+    :cond_1
+    const-string p0, "GCM"
 
-    iget-boolean p1, p1, Lg0a;->w:Z
+    return-object p0
 
-    if-eqz p1, :cond_4
+    :cond_2
+    const-string p0, "HUAWEI"
+
+    return-object p0
+.end method
+
+.method public static synthetic e(I)I
+    .locals 0
+
+    packed-switch p0, :pswitch_data_0
+
+    const/4 p0, 0x0
+
+    throw p0
+
+    :pswitch_0
+    const/16 p0, 0x11
+
+    return p0
+
+    :pswitch_1
+    const/16 p0, 0x100
+
+    return p0
+
+    :pswitch_2
+    const/16 p0, 0x10
+
+    return p0
+
+    :pswitch_3
+    const/16 p0, 0xf
+
+    return p0
+
+    :pswitch_4
+    const/16 p0, 0xe
+
+    return p0
+
+    :pswitch_5
+    const/16 p0, 0xd
+
+    return p0
+
+    :pswitch_6
+    const/16 p0, 0xc
+
+    return p0
+
+    :pswitch_7
+    const/16 p0, 0xb
+
+    return p0
+
+    :pswitch_8
+    const/16 p0, 0xa
+
+    return p0
+
+    :pswitch_9
+    const/16 p0, 0x9
+
+    return p0
+
+    :pswitch_a
+    const/16 p0, 0x8
+
+    return p0
+
+    :pswitch_b
+    const/4 p0, 0x7
+
+    return p0
+
+    :pswitch_c
+    const/4 p0, 0x6
+
+    return p0
+
+    :pswitch_d
+    const/4 p0, 0x5
+
+    return p0
+
+    :pswitch_e
+    const/4 p0, 0x4
+
+    return p0
+
+    :pswitch_f
+    const/4 p0, 0x3
+
+    return p0
+
+    :pswitch_10
+    const/4 p0, 0x2
+
+    return p0
+
+    :pswitch_11
+    const/4 p0, 0x1
+
+    return p0
+
+    :pswitch_12
+    const/4 p0, 0x0
+
+    return p0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static synthetic f(I)Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x2
+
+    if-ne p0, v0, :cond_0
+
+    const-string p0, "reactions_bubble"
+
+    return-object p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    throw p0
+
+    :cond_1
+    const-string p0, "context_menu"
+
+    return-object p0
+.end method
+
+.method public static synthetic g(I)Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_4
+
+    const/4 v0, 0x2
+
+    if-eq p0, v0, :cond_3
+
+    const/4 v0, 0x3
+
+    if-eq p0, v0, :cond_2
+
+    const/4 v0, 0x4
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x5
+
+    if-ne p0, v0, :cond_0
+
+    const-string p0, "unknown"
+
+    return-object p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    throw p0
+
+    :cond_1
+    const-string p0, "location"
+
+    return-object p0
+
+    :cond_2
+    const-string p0, "contact"
+
+    return-object p0
 
     :cond_3
-    invoke-virtual {v1}, Ln50;->b()V
+    const-string p0, "image"
+
+    return-object p0
 
     :cond_4
-    if-eqz v2, :cond_5
+    const-string p0, "message"
 
-    iput-object v2, v0, La76;->c:Ljava/lang/Object;
+    return-object p0
+.end method
 
-    goto :goto_4
+.method public static synthetic h(I)Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_4
+
+    const/4 v0, 0x2
+
+    if-eq p0, v0, :cond_3
+
+    const/4 v0, 0x3
+
+    if-eq p0, v0, :cond_2
+
+    const/4 v0, 0x4
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x5
+
+    if-ne p0, v0, :cond_0
+
+    const-string p0, "unknown"
+
+    return-object p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    throw p0
+
+    :cond_1
+    const-string p0, "location"
+
+    return-object p0
+
+    :cond_2
+    const-string p0, "contact"
+
+    return-object p0
+
+    :cond_3
+    const-string p0, "image"
+
+    return-object p0
+
+    :cond_4
+    const-string p0, "message"
+
+    return-object p0
+.end method
+
+.method public static i(FFFF)F
+    .locals 0
+
+    sub-float/2addr p0, p1
+
+    mul-float/2addr p0, p2
+
+    add-float/2addr p0, p3
+
+    return p0
+.end method
+
+.method public static j(FFII)I
+    .locals 0
+
+    mul-float/2addr p0, p1
+
+    invoke-static {p0}, Lkti;->d(F)I
+
+    move-result p0
+
+    add-int/2addr p0, p2
+
+    add-int/2addr p0, p3
+
+    return p0
+.end method
+
+.method public static k(III)I
+    .locals 0
+
+    invoke-static {p0}, Laz1;->v(I)I
+
+    move-result p0
+
+    add-int/2addr p0, p1
+
+    mul-int/2addr p0, p2
+
+    return p0
+.end method
+
+.method public static l(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, p3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static m(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .locals 1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    return-object v0
+.end method
+
+.method public static n(Ljava/lang/StringBuilder;JLjava/lang/String;I)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, p4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    return-void
+.end method
+
+.method public static synthetic o(I)Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_3
+
+    const/4 v0, 0x2
+
+    if-eq p0, v0, :cond_2
+
+    const/4 v0, 0x3
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x4
+
+    if-eq p0, v0, :cond_0
+
+    const-string p0, "null"
+
+    return-object p0
+
+    :cond_0
+    const-string p0, "PHONE_CONFIRM"
+
+    return-object p0
+
+    :cond_1
+    const-string p0, "PHONE_REBINDING"
+
+    return-object p0
+
+    :cond_2
+    const-string p0, "PHONE_BINDING"
+
+    return-object p0
+
+    :cond_3
+    const-string p0, "UNKNOWN"
+
+    return-object p0
+.end method
+
+.method public static synthetic p(I)Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_2
+
+    const/4 v0, 0x2
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x3
+
+    if-eq p0, v0, :cond_0
+
+    const-string p0, "null"
+
+    return-object p0
+
+    :cond_0
+    const-string p0, "INVALID"
+
+    return-object p0
+
+    :cond_1
+    const-string p0, "VALID"
+
+    return-object p0
+
+    :cond_2
+    const-string p0, "UNKNOWN"
+
+    return-object p0
+.end method
+
+.method public static synthetic q(I)Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x2
+
+    if-eq p0, v0, :cond_0
+
+    const-string p0, "null"
+
+    return-object p0
+
+    :cond_0
+    const-string p0, "Server"
+
+    return-object p0
+
+    :cond_1
+    const-string p0, "Client"
+
+    return-object p0
+.end method
+
+.method public static synthetic r(I)Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_4
+
+    const/4 v0, 0x2
+
+    if-eq p0, v0, :cond_3
+
+    const/4 v0, 0x3
+
+    if-eq p0, v0, :cond_2
+
+    const/4 v0, 0x4
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x5
+
+    if-eq p0, v0, :cond_0
+
+    const-string p0, "null"
+
+    return-object p0
+
+    :cond_0
+    const-string p0, "UNSPECIFIED"
+
+    return-object p0
+
+    :cond_1
+    const-string p0, "FROM_DEFAULT_COUNTRY"
+
+    return-object p0
+
+    :cond_2
+    const-string p0, "FROM_NUMBER_WITHOUT_PLUS_SIGN"
+
+    return-object p0
+
+    :cond_3
+    const-string p0, "FROM_NUMBER_WITH_IDD"
+
+    return-object p0
+
+    :cond_4
+    const-string p0, "FROM_NUMBER_WITH_PLUS_SIGN"
+
+    return-object p0
+.end method
+
+.method public static synthetic s(I)Ljava/lang/String;
+    .locals 0
+
+    packed-switch p0, :pswitch_data_0
+
+    const-string p0, "null"
+
+    return-object p0
+
+    :pswitch_0
+    const-string p0, "VERSION_NEGOTIATION_ERROR"
+
+    return-object p0
+
+    :pswitch_1
+    const-string p0, "CRYPTO_ERROR"
+
+    return-object p0
+
+    :pswitch_2
+    const-string p0, "NO_VIABLE_PATH"
+
+    return-object p0
+
+    :pswitch_3
+    const-string p0, "AEAD_LIMIT_REACHED"
+
+    return-object p0
+
+    :pswitch_4
+    const-string p0, "KEY_UPDATE_ERROR"
+
+    return-object p0
+
+    :pswitch_5
+    const-string p0, "CRYPTO_BUFFER_EXCEEDED"
+
+    return-object p0
+
+    :pswitch_6
+    const-string p0, "APPLICATION_ERROR"
+
+    return-object p0
+
+    :pswitch_7
+    const-string p0, "INVALID_TOKEN"
+
+    return-object p0
+
+    :pswitch_8
+    const-string p0, "PROTOCOL_VIOLATION"
+
+    return-object p0
+
+    :pswitch_9
+    const-string p0, "CONNECTION_ID_LIMIT_ERROR"
+
+    return-object p0
+
+    :pswitch_a
+    const-string p0, "TRANSPORT_PARAMETER_ERROR"
+
+    return-object p0
+
+    :pswitch_b
+    const-string p0, "FRAME_ENCODING_ERROR"
+
+    return-object p0
+
+    :pswitch_c
+    const-string p0, "FINAL_SIZE_ERROR"
+
+    return-object p0
+
+    :pswitch_d
+    const-string p0, "STREAM_STATE_ERROR"
+
+    return-object p0
+
+    :pswitch_e
+    const-string p0, "STREAM_LIMIT_ERROR"
+
+    return-object p0
+
+    :pswitch_f
+    const-string p0, "FLOW_CONTROL_ERROR"
+
+    return-object p0
+
+    :pswitch_10
+    const-string p0, "CONNECTION_REFUSED"
+
+    return-object p0
+
+    :pswitch_11
+    const-string p0, "INTERNAL_ERROR"
+
+    return-object p0
+
+    :pswitch_12
+    const-string p0, "NO_ERROR"
+
+    return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static synthetic t(I)Ljava/lang/String;
+    .locals 0
+
+    packed-switch p0, :pswitch_data_0
+
+    const-string p0, "null"
+
+    return-object p0
+
+    :pswitch_0
+    const-string p0, "ERROR_SOURCE"
+
+    return-object p0
+
+    :pswitch_1
+    const-string p0, "ERROR_ENCODER"
+
+    return-object p0
+
+    :pswitch_2
+    const-string p0, "ENABLED"
+
+    return-object p0
+
+    :pswitch_3
+    const-string p0, "DISABLED"
+
+    return-object p0
+
+    :pswitch_4
+    const-string p0, "IDLING"
+
+    return-object p0
+
+    :pswitch_5
+    const-string p0, "INITIALIZING"
+
+    return-object p0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static synthetic u(Ljava/lang/String;)I
+    .locals 2
+
+    if-eqz p0, :cond_4
+
+    const-string v0, "UNKNOWN"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const-string v0, "PHONE_BINDING"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 p0, 0x2
+
+    return p0
+
+    :cond_1
+    const-string v0, "PHONE_REBINDING"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    const/4 p0, 0x3
+
+    return p0
+
+    :cond_2
+    const-string v0, "PHONE_CONFIRM"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    const/4 p0, 0x4
+
+    return p0
+
+    :cond_3
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "No enum constant ru.ok.tamtam.api.commands.base.PhoneBindTokenType."
+
+    invoke-virtual {v1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_4
+    new-instance p0, Ljava/lang/NullPointerException;
+
+    const-string v0, "Name is null"
+
+    invoke-direct {p0, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static synthetic v(Ljava/lang/String;)I
+    .locals 2
+
+    if-eqz p0, :cond_a
+
+    const-string v0, "CRASH"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const-string v0, "NON_FATAL"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 p0, 0x2
+
+    return p0
+
+    :cond_1
+    const-string v0, "FATAL"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    const/4 p0, 0x3
+
+    return p0
+
+    :cond_2
+    const-string v0, "ERROR"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    const/4 p0, 0x4
+
+    return p0
+
+    :cond_3
+    const-string v0, "WARNING"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    const/4 p0, 0x5
+
+    return p0
+
+    :cond_4
+    const-string v0, "NOTICE"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    const/4 p0, 0x6
+
+    return p0
 
     :cond_5
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    const-string v0, "INFO"
 
-    const-string v0, "Required value was null."
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    move-result v0
 
-    throw p1
+    if-eqz v0, :cond_6
+
+    const/4 p0, 0x7
+
+    return p0
 
     :cond_6
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    const-string v0, "DEBUG"
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    throw p1
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    const/16 p0, 0x8
+
+    return p0
 
     :cond_7
-    iget-object p1, v2, Lksg;->b:Ljsg;
+    const-string v0, "MINIDUMP"
 
-    iget-object v4, p1, Ljsg;->e:Lvvg;
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    if-eqz v4, :cond_8
+    move-result v0
 
-    invoke-interface {v4}, Lvvg;->d()Z
+    if-eqz v0, :cond_8
 
-    move-result v4
+    const/16 p0, 0x9
 
-    if-ne v4, v3, :cond_8
-
-    goto :goto_3
+    return p0
 
     :cond_8
-    iget-object p1, p1, Ljsg;->e:Lvvg;
+    const-string v0, "ANR"
 
-    if-eqz p1, :cond_9
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-interface {p1}, Lvvg;->y0()Z
+    move-result v0
 
-    move-result p1
+    if-eqz v0, :cond_9
 
-    if-ne p1, v3, :cond_9
+    const/16 p0, 0xa
 
-    :goto_3
-    invoke-virtual {v2}, Lksg;->b()V
+    return p0
 
     :cond_9
-    iput-object v1, v0, La76;->c:Ljava/lang/Object;
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "No enum constant ru.ok.tracer.crash.report.ReportType."
+
+    invoke-virtual {v1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 
     :cond_a
-    :goto_4
-    sget-object p1, Lccg;->a:Lccg;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    return-object p1
+    const-string v0, "Name is null"
+
+    invoke-direct {p0, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method

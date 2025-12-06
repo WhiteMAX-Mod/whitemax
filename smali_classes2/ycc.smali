@@ -1,112 +1,96 @@
 .class public final Lycc;
-.super Lsgf;
+.super Lddc;
 .source "SourceFile"
-
-# interfaces
-.implements Lzi6;
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Ladc;
+.field public final b:Lp5g;
 
 
 # direct methods
-.method public constructor <init>(Ladc;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lp5g;)V
     .locals 0
 
-    iput-object p1, p0, Lycc;->Y:Ladc;
+    invoke-direct {p0}, Lddc;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lycc;->b:Lp5g;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lq54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lycc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lycc;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lycc;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    new-instance p1, Lycc;
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lycc;->Y:Ladc;
+    goto :goto_1
 
-    invoke-direct {p1, v0, p2}, Lycc;-><init>(Ladc;Lkotlin/coroutines/Continuation;)V
+    :cond_0
+    instance-of v0, p1, Lycc;
 
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lycc;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    if-nez v0, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
     :cond_1
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    check-cast p1, Lycc;
 
-    iget-object p1, p0, Lycc;->Y:Ladc;
+    iget-object v0, p0, Lycc;->b:Lp5g;
 
-    iget-object p1, p1, Ladc;->Q0:Lk0c;
+    iget-object p1, p1, Lycc;->b:Lp5g;
 
-    iput v1, p0, Lycc;->X:I
+    invoke-virtual {v0, p1}, Lp5g;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {p1, p0}, Lk0c;->B(Lycc;)Ljava/lang/Object;
+    move-result p1
 
-    move-result-object p1
+    if-nez p1, :cond_2
 
-    sget-object v0, Lr54;->a:Lr54;
+    :goto_0
+    const/4 p1, 0x0
 
-    if-ne p1, v0, :cond_2
-
-    return-object v0
+    return p1
 
     :cond_2
-    :goto_0
-    sget-object p1, Lccg;->a:Lccg;
+    :goto_1
+    const/4 p1, 0x1
 
-    return-object p1
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lycc;->b:Lp5g;
+
+    invoke-virtual {v0}, Lp5g;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShareLinkToChat(text="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lycc;->b:Lp5g;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

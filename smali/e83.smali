@@ -1,118 +1,139 @@
-.class public final synthetic Le83;
-.super Ljava/lang/Object;
+.class public final Le83;
+.super Lh2f;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnFocusChangeListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic c:I
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic d:Ljava/lang/Object;
 
 
 # direct methods
 .method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    iput p1, p0, Le83;->a:I
+    iput p1, p0, Le83;->c:I
 
-    iput-object p2, p0, Le83;->b:Ljava/lang/Object;
+    iput-object p2, p0, Le83;->d:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final onFocusChange(Landroid/view/View;Z)V
+.method private final f(I)V
     .locals 0
 
-    iget p1, p0, Le83;->a:I
+    return-void
+.end method
+
+
+# virtual methods
+.method public final c(I)V
+    .locals 1
+
+    iget p1, p0, Le83;->c:I
 
     packed-switch p1, :pswitch_data_0
 
-    iget-object p1, p0, Le83;->b:Ljava/lang/Object;
+    iget-object p1, p0, Le83;->d:Ljava/lang/Object;
 
-    check-cast p1, Lzg7;
+    check-cast p1, La4g;
 
-    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    const/4 v0, 0x1
 
-    move-result-object p2
+    iput-boolean v0, p1, La4g;->e:Z
 
-    invoke-virtual {p1, p2}, Lzg7;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p1, p1, La4g;->f:Ljava/lang/ref/WeakReference;
 
-    return-void
+    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    :pswitch_0
-    iget-object p1, p0, Le83;->b:Ljava/lang/Object;
+    move-result-object p1
 
-    check-cast p1, Ljza;
+    check-cast p1, Lz3g;
 
-    if-nez p2, :cond_0
+    if-eqz p1, :cond_0
 
-    const/4 p2, 0x0
-
-    iput-boolean p2, p1, Ljza;->q0:Z
+    invoke-interface {p1}, Lz3g;->a()V
 
     :cond_0
+    :pswitch_0
     return-void
-
-    :pswitch_1
-    iget-object p1, p0, Le83;->b:Ljava/lang/Object;
-
-    check-cast p1, Lli6;
-
-    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p2
-
-    invoke-interface {p1, p2}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_2
-    iget-object p1, p0, Le83;->b:Ljava/lang/Object;
-
-    check-cast p1, Lf35;
-
-    iput-boolean p2, p1, Lf35;->l:Z
-
-    invoke-virtual {p1}, Lnc5;->q()V
-
-    if-nez p2, :cond_1
-
-    const/4 p2, 0x0
-
-    invoke-virtual {p1, p2}, Lf35;->t(Z)V
-
-    iput-boolean p2, p1, Lf35;->m:Z
-
-    :cond_1
-    return-void
-
-    :pswitch_3
-    iget-object p1, p0, Le83;->b:Ljava/lang/Object;
-
-    check-cast p1, Lh83;
-
-    invoke-virtual {p1}, Lh83;->u()Z
-
-    move-result p2
-
-    invoke-virtual {p1, p2}, Lh83;->t(Z)V
-
-    return-void
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final d(Landroid/graphics/Typeface;Z)V
+    .locals 1
+
+    iget p1, p0, Le83;->c:I
+
+    packed-switch p1, :pswitch_data_0
+
+    if-eqz p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p1, p0, Le83;->d:Ljava/lang/Object;
+
+    check-cast p1, La4g;
+
+    const/4 p2, 0x1
+
+    iput-boolean p2, p1, La4g;->e:Z
+
+    iget-object p1, p1, La4g;->f:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lz3g;
+
+    if-eqz p1, :cond_1
+
+    invoke-interface {p1}, Lz3g;->a()V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Le83;->d:Ljava/lang/Object;
+
+    check-cast p1, Lcom/google/android/material/chip/Chip;
+
+    iget-object p2, p1, Lcom/google/android/material/chip/Chip;->o:Li83;
+
+    iget-boolean v0, p2, Li83;->N1:Z
+
+    if-eqz v0, :cond_2
+
+    iget-object p2, p2, Li83;->P0:Ljava/lang/CharSequence;
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {p1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+
+    move-result-object p2
+
+    :goto_1
+    invoke-virtual {p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
+
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
         :pswitch_0
     .end packed-switch
 .end method

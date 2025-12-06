@@ -1,287 +1,357 @@
-.class public final Lob9;
+.class public final synthetic Lob9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcm6;
+
 
 # instance fields
-.field public A:J
+.field public final synthetic a:I
 
-.field public B:I
-
-.field public C:J
-
-.field public D:Ljava/util/List;
-
-.field public E:Lwe9;
-
-.field public F:Leq4;
-
-.field public G:I
-
-.field public H:I
-
-.field public a:J
-
-.field public b:J
-
-.field public c:J
-
-.field public d:J
-
-.field public e:J
-
-.field public f:J
-
-.field public g:Ljava/lang/String;
-
-.field public h:J
-
-.field public i:Lub9;
-
-.field public j:Lef9;
-
-.field public k:J
-
-.field public l:Ljava/lang/String;
-
-.field public m:Ljava/lang/String;
-
-.field public n:Lh78;
-
-.field public o:I
-
-.field public p:J
-
-.field public q:Lpb9;
-
-.field public r:Ljava/lang/String;
-
-.field public s:Ljava/lang/String;
-
-.field public t:Ljava/lang/String;
-
-.field public u:Z
-
-.field public v:I
-
-.field public w:I
-
-.field public x:J
-
-.field public y:J
-
-.field public z:Lpb9;
+.field public final synthetic b:Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;I)V
+    .locals 0
+
+    iput p2, p0, Lob9;->a:I
+
+    iput-object p1, p0, Lob9;->b:Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lob9;->F:Leq4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lpb9;
-    .locals 52
+.method public final invoke()Ljava/lang/Object;
+    .locals 14
 
-    move-object/from16 v0, p0
+    iget v0, p0, Lob9;->a:I
 
-    new-instance v1, Lpb9;
+    const/4 v1, 0x0
 
-    iget-wide v2, v0, Lob9;->a:J
+    const/4 v2, 0x0
 
-    iget-wide v4, v0, Lob9;->b:J
+    const/4 v3, 0x1
 
-    iget-wide v6, v0, Lob9;->h:J
+    iget-object v4, p0, Lob9;->b:Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;
 
-    iget-wide v8, v0, Lob9;->c:J
+    packed-switch v0, :pswitch_data_0
 
-    iget-wide v10, v0, Lob9;->d:J
+    sget-object v0, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->X:[Lyy7;
 
-    iget-wide v12, v0, Lob9;->e:J
+    new-instance v0, Lwa9;
 
-    iget-wide v14, v0, Lob9;->f:J
+    invoke-virtual {v4}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    move-object/from16 v16, v1
+    move-result-object v5
 
-    iget-object v1, v0, Lob9;->g:Ljava/lang/String;
+    invoke-direct {v0, v5}, Lwa9;-><init>(Landroid/content/Context;)V
 
-    move-object/from16 v17, v1
+    invoke-virtual {v4}, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->y0()Lgb9;
 
-    iget-object v1, v0, Lob9;->i:Lub9;
+    move-result-object v5
 
-    move-object/from16 v18, v1
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v1, v0, Lob9;->j:Lef9;
+    iget-object v6, v5, Lgb9;->Y:Lk18;
 
-    move-wide/from16 v19, v2
+    invoke-static {}, Lve3;->d()Lo98;
 
-    move-object v3, v1
+    move-result-object v7
 
-    iget-wide v1, v0, Lob9;->k:J
+    sget-object v8, Ljb9;->a:Ljb9;
 
-    move-wide/from16 v21, v1
+    invoke-virtual {v7, v8}, Lo98;->add(Ljava/lang/Object;)Z
 
-    iget-object v1, v0, Lob9;->l:Ljava/lang/String;
+    iget-object v8, v5, Lgb9;->Z:Lk18;
 
-    iget-object v2, v0, Lob9;->m:Ljava/lang/String;
+    invoke-interface {v8}, Lk18;->getValue()Ljava/lang/Object;
 
-    move-object/from16 v23, v1
+    move-result-object v8
 
-    iget-object v1, v0, Lob9;->n:Lh78;
+    check-cast v8, Lw63;
 
-    move-object/from16 v24, v1
+    iget-wide v9, v5, Lgb9;->c:J
 
-    iget v1, v0, Lob9;->o:I
+    invoke-virtual {v8, v9, v10}, Lw63;->j(J)Lhbd;
 
-    move/from16 v26, v1
+    move-result-object v5
 
-    move-object/from16 v25, v2
+    iget-object v5, v5, Lhbd;->a:Lmcf;
 
-    iget-wide v1, v0, Lob9;->p:J
+    invoke-interface {v5}, Lmcf;->getValue()Ljava/lang/Object;
 
-    move-wide/from16 v27, v1
+    move-result-object v5
 
-    iget-object v1, v0, Lob9;->q:Lpb9;
+    check-cast v5, Lpb2;
 
-    iget-object v2, v0, Lob9;->r:Ljava/lang/String;
+    if-nez v5, :cond_0
 
-    move-object/from16 v29, v1
+    goto :goto_2
 
-    iget-object v1, v0, Lob9;->s:Ljava/lang/String;
+    :cond_0
+    iget-object v8, v5, Lpb2;->b:Lrf2;
 
-    move-object/from16 v30, v1
+    iget-wide v8, v8, Lrf2;->a:J
 
-    iget-object v1, v0, Lob9;->t:Ljava/lang/String;
+    const-wide/16 v10, 0x0
 
-    move-object/from16 v31, v1
+    cmp-long v8, v8, v10
 
-    iget v1, v0, Lob9;->G:I
+    if-eqz v8, :cond_1
 
-    move/from16 v32, v1
+    move v8, v3
 
-    iget-boolean v1, v0, Lob9;->u:Z
+    goto :goto_0
 
-    move/from16 v33, v1
+    :cond_1
+    move v8, v2
 
-    iget v1, v0, Lob9;->v:I
+    :goto_0
+    invoke-virtual {v5}, Lpb2;->Q()Z
 
-    move/from16 v34, v1
+    move-result v9
 
-    iget v1, v0, Lob9;->w:I
+    if-eqz v9, :cond_2
 
-    move/from16 v35, v1
+    invoke-virtual {v5}, Lpb2;->K()Z
 
-    iget v1, v0, Lob9;->H:I
+    move-result v5
 
-    move/from16 v37, v1
+    if-nez v5, :cond_2
 
-    move-object/from16 v36, v2
+    goto :goto_1
 
-    iget-wide v1, v0, Lob9;->x:J
+    :cond_2
+    move v3, v2
 
-    move-wide/from16 v38, v1
+    :goto_1
+    invoke-interface {v6}, Lk18;->getValue()Ljava/lang/Object;
 
-    iget-wide v1, v0, Lob9;->y:J
+    move-result-object v5
 
-    move-wide/from16 v40, v1
+    check-cast v5, Lage;
 
-    iget-object v1, v0, Lob9;->z:Lpb9;
+    check-cast v5, Ll5c;
 
-    move-object/from16 v42, v1
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-wide v1, v0, Lob9;->A:J
+    sget-object v9, Lru/ok/tamtam/android/prefs/PmsKey;->money-transfer-botid:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    move-wide/from16 v43, v1
+    invoke-virtual {v5, v9, v10, v11}, Ll5c;->m(Ljava/lang/Enum;J)J
 
-    iget v1, v0, Lob9;->B:I
+    move-result-wide v12
 
-    move/from16 v45, v1
+    cmp-long v5, v12, v10
 
-    iget-wide v1, v0, Lob9;->C:J
+    if-eqz v5, :cond_3
 
-    move-wide/from16 v46, v1
+    if-eqz v3, :cond_3
 
-    iget-object v1, v0, Lob9;->D:Ljava/util/List;
+    if-eqz v8, :cond_3
 
-    iget-object v2, v0, Lob9;->E:Lwe9;
+    sget-object v3, Llb9;->a:Llb9;
 
-    move-object/from16 v48, v1
+    invoke-virtual {v7, v3}, Lo98;->add(Ljava/lang/Object;)Z
 
-    iget-object v1, v0, Lob9;->F:Leq4;
+    :cond_3
+    :goto_2
+    invoke-interface {v6}, Lk18;->getValue()Ljava/lang/Object;
 
-    move-object/from16 v49, v48
+    move-result-object v3
 
-    move-object/from16 v48, v1
+    check-cast v3, Lage;
 
-    move-object/from16 v1, v16
+    check-cast v3, Ll5c;
 
-    move-object/from16 v16, v17
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-object/from16 v17, v18
+    sget-object v5, Lru/ok/tamtam/android/prefs/PmsKey;->send-location-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    move-object/from16 v18, v3
+    invoke-virtual {v3, v5, v2}, Ll5c;->j(Ljava/lang/Enum;Z)Z
 
-    move-wide/from16 v50, v46
+    move-result v2
 
-    move-object/from16 v47, v2
+    if-eqz v2, :cond_4
 
-    move-wide/from16 v2, v19
+    sget-object v2, Lkb9;->a:Lkb9;
 
-    move-wide/from16 v19, v21
+    invoke-virtual {v7, v2}, Lo98;->add(Ljava/lang/Object;)Z
 
-    move-object/from16 v21, v23
+    :cond_4
+    sget-object v2, Lhb9;->a:Lhb9;
 
-    move-object/from16 v23, v24
+    invoke-virtual {v7, v2}, Lo98;->add(Ljava/lang/Object;)Z
 
-    move-object/from16 v22, v25
+    sget-object v2, Lib9;->a:Lib9;
 
-    move/from16 v24, v26
+    invoke-virtual {v7, v2}, Lo98;->add(Ljava/lang/Object;)Z
 
-    move-wide/from16 v25, v27
+    invoke-static {v7}, Lve3;->a(Ljava/util/List;)Lo98;
 
-    move-object/from16 v27, v29
+    move-result-object v2
 
-    move-object/from16 v29, v30
+    invoke-virtual {v0, v2}, Lwa9;->setState(Ljava/util/List;)V
 
-    move-object/from16 v30, v31
+    new-instance v5, Ljx0;
 
-    move/from16 v31, v32
+    invoke-virtual {v4}, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->y0()Lgb9;
 
-    move/from16 v32, v33
+    move-result-object v7
 
-    move/from16 v33, v34
+    const/4 v11, 0x0
 
-    move/from16 v34, v35
+    const/16 v12, 0x1a
 
-    move-object/from16 v28, v36
+    const/4 v6, 0x1
 
-    move/from16 v35, v37
+    const-class v8, Lgb9;
 
-    move-wide/from16 v36, v38
+    const-string v9, "onButtonClicked"
 
-    move-wide/from16 v38, v40
+    const-string v10, "onButtonClicked(Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerViewState$Button;)V"
 
-    move-object/from16 v40, v42
+    invoke-direct/range {v5 .. v12}, Ljx0;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    move-wide/from16 v41, v43
+    invoke-virtual {v0, v5}, Lwa9;->setOnClickListener(Lem6;)V
 
-    move/from16 v43, v45
+    invoke-virtual {v0}, Landroid/view/View;->isAttachedToWindow()Z
 
-    move-wide/from16 v44, v50
+    move-result v2
 
-    move-object/from16 v46, v49
+    const/16 v3, 0x8
 
-    invoke-direct/range {v1 .. v48}, Lpb9;-><init>(JJJJJJJLjava/lang/String;Lub9;Lef9;JLjava/lang/String;Ljava/lang/String;Lh78;IJLpb9;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZIIIJJLpb9;JIJLjava/util/List;Lwe9;Leq4;)V
+    if-eqz v2, :cond_6
 
-    move-object/from16 v16, v1
+    invoke-virtual {v0}, Landroid/view/View;->getRootWindowInsets()Landroid/view/WindowInsets;
 
-    return-object v16
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lg4i;->h(Landroid/view/View;Landroid/view/WindowInsets;)Lg4i;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lg4i;->a:Le4i;
+
+    const/4 v2, 0x2
+
+    invoke-virtual {v1, v2}, Le4i;->f(I)Lco7;
+
+    move-result-object v1
+
+    iget v1, v1, Lco7;->d:I
+
+    if-lez v1, :cond_5
+
+    int-to-float v1, v2
+
+    :goto_3
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, v2
+
+    invoke-static {v1}, Lkti;->d(F)I
+
+    move-result v1
+
+    goto :goto_4
+
+    :cond_5
+    int-to-float v1, v3
+
+    goto :goto_3
+
+    :goto_4
+    invoke-virtual {v0}, Landroid/view/View;->getPaddingLeft()I
+
+    move-result v2
+
+    invoke-virtual {v0}, Landroid/view/View;->getPaddingTop()I
+
+    move-result v3
+
+    invoke-virtual {v0}, Landroid/view/View;->getPaddingRight()I
+
+    move-result v4
+
+    invoke-virtual {v0, v2, v3, v4, v1}, Landroid/view/View;->setPadding(IIII)V
+
+    goto :goto_5
+
+    :cond_6
+    new-instance v1, Lr40;
+
+    invoke-direct {v1, v0, v3, v0}, Lr40;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    :goto_5
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Lgb9;
+
+    iget-object v5, v4, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->b:Lhs;
+
+    sget-object v6, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->X:[Lyy7;
+
+    aget-object v3, v6, v3
+
+    invoke-virtual {v5, v4}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lb1e;
+
+    iget-object v3, v3, Lb1e;->a:Ljava/lang/String;
+
+    const-class v5, Leb9;
+
+    invoke-virtual {v4, v3, v5, v1}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Lcm6;)Lk18;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Leb9;
+
+    iget-object v3, v4, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->a:Lhs;
+
+    aget-object v2, v6, v2
+
+    invoke-virtual {v3, v4}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Number;
+
+    invoke-virtual {v2}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v2
+
+    invoke-direct {v0, v1, v2, v3}, Lgb9;-><init>(Leb9;J)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

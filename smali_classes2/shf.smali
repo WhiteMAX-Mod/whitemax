@@ -1,52 +1,70 @@
-.class public final Lshf;
-.super Ly14;
+.class public final synthetic Lshf;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/util/function/UnaryOperator;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public Y:Lvy5;
-
-.field public final synthetic Z:Lkw8;
-
-.field public synthetic o:Ljava/lang/Object;
-
-.field public q0:Loeg;
+.field public final synthetic b:Lzgf;
 
 
 # direct methods
-.method public constructor <init>(Lkw8;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lzgf;I)V
     .locals 0
 
-    iput-object p1, p0, Lshf;->Z:Lkw8;
+    iput p2, p0, Lshf;->a:I
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lshf;->b:Lzgf;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    iput-object p1, p0, Lshf;->o:Ljava/lang/Object;
+    iget v0, p0, Lshf;->a:I
 
-    iget p1, p0, Lshf;->X:I
+    check-cast p1, Lrhf;
 
-    const/high16 v0, -0x80000000
+    packed-switch v0, :pswitch_data_0
 
-    or-int/2addr p1, v0
+    iget-object v0, p0, Lshf;->b:Lzgf;
 
-    iput p1, p0, Lshf;->X:I
+    iget-wide v0, v0, Lzgf;->b:J
 
-    iget-object p1, p0, Lshf;->Z:Lkw8;
+    iget-object p1, p1, Lrhf;->a:Ljava/lang/String;
 
-    const/4 v0, 0x0
+    new-instance v2, Lrhf;
 
-    invoke-virtual {p1, v0, p0}, Lkw8;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-direct {v2, p1, v0, v1}, Lrhf;-><init>(Ljava/lang/String;J)V
 
-    move-result-object p1
+    return-object v2
 
-    return-object p1
+    :pswitch_0
+    iget-object v0, p0, Lshf;->b:Lzgf;
+
+    iget-wide v0, v0, Lzgf;->b:J
+
+    iget-object p1, p1, Lrhf;->a:Ljava/lang/String;
+
+    new-instance v2, Lrhf;
+
+    invoke-direct {v2, p1, v0, v1}, Lrhf;-><init>(Ljava/lang/String;J)V
+
+    return-object v2
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

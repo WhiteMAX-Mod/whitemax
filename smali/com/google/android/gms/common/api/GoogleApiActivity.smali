@@ -61,7 +61,7 @@
 
     if-eqz p1, :cond_3
 
-    invoke-static {p0}, Lds6;->f(Landroid/content/Context;)Lds6;
+    invoke-static {p0}, Lxv6;->e(Landroid/content/Context;)Lxv6;
 
     move-result-object p1
 
@@ -74,13 +74,13 @@
     goto :goto_0
 
     :cond_0
-    new-instance p2, Lrp3;
+    new-instance p2, Les3;
 
     const/16 v0, 0xd
 
     const/4 v1, 0x0
 
-    invoke-direct {p2, v0, v1}, Lrp3;-><init>(ILandroid/app/PendingIntent;)V
+    invoke-direct {p2, v0, v1}, Les3;-><init>(ILandroid/app/PendingIntent;)V
 
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
@@ -92,12 +92,12 @@
 
     move-result p3
 
-    invoke-virtual {p1, p2, p3}, Lds6;->g(Lrp3;I)V
+    invoke-virtual {p1, p2, p3}, Lxv6;->f(Les3;I)V
 
     goto :goto_0
 
     :cond_1
-    iget-object p1, p1, Lds6;->v0:Lhu9;
+    iget-object p1, p1, Lxv6;->w0:Ly1a;
 
     const/4 p2, 0x3
 
@@ -292,17 +292,17 @@
 
     if-eqz p1, :cond_4
 
-    invoke-static {p0}, Lds6;->f(Landroid/content/Context;)Lds6;
+    invoke-static {p0}, Lxv6;->e(Landroid/content/Context;)Lxv6;
 
     move-result-object p1
 
-    new-instance v0, Lrp3;
+    new-instance v0, Les3;
 
     const/16 v2, 0x16
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, v2, v3}, Lrp3;-><init>(ILandroid/app/PendingIntent;)V
+    invoke-direct {v0, v2, v3}, Les3;-><init>(ILandroid/app/PendingIntent;)V
 
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
@@ -316,7 +316,7 @@
 
     move-result v2
 
-    invoke-virtual {p1, v0, v2}, Lds6;->g(Lrp3;I)V
+    invoke-virtual {p1, v0, v2}, Lxv6;->f(Les3;I)V
 
     goto :goto_4
 
@@ -329,7 +329,7 @@
 
     const-string v5, "."
 
-    invoke-static {v3, p1, v5}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, p1, v5}, Lho7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -362,15 +362,15 @@
     :cond_6
     move-object v4, p0
 
-    invoke-static {v0}, Lzui;->i(Ljava/lang/Object;)V
+    invoke-static {v0}, Ls5j;->g(Ljava/lang/Object;)V
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
 
-    sget-object v0, Lzr6;->d:Lzr6;
+    sget-object v0, Ltv6;->d:Ltv6;
 
-    invoke-virtual {v0, p0, p1, p0}, Lzr6;->d(Lcom/google/android/gms/common/api/GoogleApiActivity;ILcom/google/android/gms/common/api/GoogleApiActivity;)V
+    invoke-virtual {v0, p0, p1, p0}, Ltv6;->d(Lcom/google/android/gms/common/api/GoogleApiActivity;ILcom/google/android/gms/common/api/GoogleApiActivity;)V
 
     iput v1, v4, Lcom/google/android/gms/common/api/GoogleApiActivity;->a:I
 

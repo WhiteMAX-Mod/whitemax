@@ -1,59 +1,181 @@
-.class public interface abstract Lpz8;
+.class public abstract Lpz8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Llw0;
+
+
+# static fields
+.field public static final X:Lzb8;
+
+
+# instance fields
+.field public final a:J
+
+.field public final b:J
+
+.field public final c:Z
+
+.field public final d:Z
+
+.field public final o:Z
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lnz8;
+
+    invoke-direct {v0}, Lnz8;-><init>()V
+
+    invoke-virtual {v0}, Lnz8;->a()Lrz8;
+
+    new-instance v0, Lzb8;
+
+    const/16 v1, 0x1c
+
+    invoke-direct {v0, v1}, Lzb8;-><init>(I)V
+
+    sput-object v0, Lpz8;->X:Lzb8;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lnz8;)V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iget-wide v0, p1, Lnz8;->a:J
+
+    iput-wide v0, p0, Lpz8;->a:J
+
+    iget-wide v0, p1, Lnz8;->b:J
+
+    iput-wide v0, p0, Lpz8;->b:J
+
+    iget-boolean v0, p1, Lnz8;->c:Z
+
+    iput-boolean v0, p0, Lpz8;->c:Z
+
+    iget-boolean v0, p1, Lnz8;->d:Z
+
+    iput-boolean v0, p0, Lpz8;->d:Z
+
+    iget-boolean p1, p1, Lnz8;->e:Z
+
+    iput-boolean p1, p0, Lpz8;->o:Z
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public b(I)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    return-void
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lpz8;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lpz8;
+
+    iget-wide v3, p0, Lpz8;->a:J
+
+    iget-wide v5, p1, Lpz8;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-nez v1, :cond_2
+
+    iget-wide v3, p0, Lpz8;->b:J
+
+    iget-wide v5, p1, Lpz8;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-nez v1, :cond_2
+
+    iget-boolean v1, p0, Lpz8;->c:Z
+
+    iget-boolean v3, p1, Lpz8;->c:Z
+
+    if-ne v1, v3, :cond_2
+
+    iget-boolean v1, p0, Lpz8;->d:Z
+
+    iget-boolean v3, p1, Lpz8;->d:Z
+
+    if-ne v1, v3, :cond_2
+
+    iget-boolean v1, p0, Lpz8;->o:Z
+
+    iget-boolean p1, p1, Lpz8;->o:Z
+
+    if-ne v1, p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v2
 .end method
 
-.method public c(ILandroid/app/PendingIntent;)V
-    .locals 0
+.method public final hashCode()I
+    .locals 5
 
-    return-void
-.end method
+    iget-wide v0, p0, Lpz8;->a:J
 
-.method public e(ILk6e;)V
-    .locals 0
+    const/16 v2, 0x20
 
-    return-void
-.end method
+    ushr-long v3, v0, v2
 
-.method public f(ILxv7;)V
-    .locals 0
+    xor-long/2addr v0, v3
 
-    return-void
-.end method
+    long-to-int v0, v0
 
-.method public h(ILktb;)V
-    .locals 0
+    mul-int/lit8 v0, v0, 0x1f
 
-    return-void
-.end method
+    iget-wide v3, p0, Lpz8;->b:J
 
-.method public i(ILl7e;)V
-    .locals 0
+    ushr-long v1, v3, v2
 
-    return-void
-.end method
+    xor-long/2addr v1, v3
 
-.method public j(ILmub;Lktb;ZZ)V
-    .locals 0
+    long-to-int v1, v1
 
-    return-void
-.end method
+    add-int/2addr v0, v1
 
-.method public k(ILj7e;ZZI)V
-    .locals 0
+    mul-int/lit8 v0, v0, 0x1f
 
-    return-void
-.end method
+    iget-boolean v1, p0, Lpz8;->c:Z
 
-.method public onDisconnected()V
-    .locals 0
+    add-int/2addr v0, v1
 
-    return-void
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lpz8;->d:Z
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lpz8;->o:Z
+
+    add-int/2addr v0, v1
+
+    return v0
 .end method

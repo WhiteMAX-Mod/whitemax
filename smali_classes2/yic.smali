@@ -1,128 +1,112 @@
-.class public final synthetic Lyic;
-.super Ljava/lang/Object;
+.class public final Lyic;
+.super Lmjc;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final synthetic X:F
-
-.field public final synthetic Y:Landroid/view/View;
-
-.field public final synthetic a:I
-
-.field public final synthetic b:F
-
-.field public final synthetic c:F
-
-.field public final synthetic o:F
+.field public final a:Luh2;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/view/View;FFFFI)V
+.method public constructor <init>(Luh2;)V
     .locals 0
 
-    iput p6, p0, Lyic;->a:I
-
-    iput-object p1, p0, Lyic;->Y:Landroid/view/View;
-
-    iput p2, p0, Lyic;->b:F
-
-    iput p3, p0, Lyic;->c:F
-
-    iput p4, p0, Lyic;->o:F
-
-    iput p5, p0, Lyic;->X:F
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lyic;->a:Luh2;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 7
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget v0, p0, Lyic;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lyic;->Y:Landroid/view/View;
+    return v0
 
-    check-cast v0, Lqqg;
+    :cond_0
+    instance-of v1, p1, Lyic;
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
+    const/4 v2, 0x0
 
-    move-result p1
+    if-nez v1, :cond_1
 
-    iget v1, p0, Lyic;->c:F
+    return v2
 
-    iget v2, p0, Lyic;->b:F
+    :cond_1
+    check-cast p1, Lyic;
 
-    invoke-static {v1, v2, p1, v2}, Laab;->h(FFFF)F
+    iget-object v1, p0, Lyic;->a:Luh2;
 
-    move-result v1
+    iget-object p1, p1, Lyic;->a:Luh2;
 
-    iput v1, v0, Lqqg;->F0:F
-
-    iget v1, p0, Lyic;->X:F
-
-    iget v2, p0, Lyic;->o:F
-
-    invoke-static {v1, v2, p1, v2}, Laab;->h(FFFF)F
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    iput p1, v0, Lqqg;->E0:F
+    if-nez p1, :cond_2
 
-    iget-object v1, v0, Lqqg;->t0:Landroid/graphics/Paint;
+    return v2
 
-    invoke-virtual {v1, p1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+    :cond_2
+    return v0
+.end method
 
-    iget-object p1, v0, Lqqg;->o:Landroid/graphics/Paint;
+.method public final getItemId()J
+    .locals 2
 
-    iget v1, v0, Lqqg;->E0:F
+    const/16 v0, 0x4000
 
-    invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+    int-to-long v0, v0
 
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    return-wide v0
+.end method
 
-    return-void
+.method public final hashCode()I
+    .locals 1
 
-    :pswitch_0
-    iget-object v0, p0, Lyic;->Y:Landroid/view/View;
+    iget-object v0, p0, Lyic;->a:Luh2;
 
-    move-object v1, v0
+    invoke-virtual {v0}, Luh2;->hashCode()I
 
-    check-cast v1, Lcjc;
+    move-result v0
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    return v0
+.end method
 
-    move-result-object p1
+.method public final m()I
+    .locals 1
 
-    check-cast p1, Ljava/lang/Float;
+    const/16 v0, 0x4000
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    return v0
+.end method
 
-    move-result v6
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget v2, p0, Lyic;->b:F
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget v3, p0, Lyic;->c:F
+    const-string v1, "ChatLinkItem(model="
 
-    iget v4, p0, Lyic;->o:F
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v5, p0, Lyic;->X:F
+    iget-object v1, p0, Lyic;->a:Luh2;
 
-    invoke-static/range {v1 .. v6}, Lcjc;->c(Lcjc;FFFFF)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-void
+    const-string v1, ")"
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

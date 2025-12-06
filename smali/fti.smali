@@ -1,137 +1,90 @@
 .class public final Lfti;
-.super Lmui;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpqa;
 
-# instance fields
-.field public final synthetic X:Lmui;
 
-.field public final transient c:I
-
-.field public final transient o:I
+# static fields
+.field public static final a:Lfti;
 
 
 # direct methods
-.method public constructor <init>(Lmui;II)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Lfti;->X:Lmui;
+    new-instance v0, Lfti;
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput p2, p0, Lfti;->c:I
+    sput-object v0, Lfti;->a:Lfti;
 
-    iput p3, p0, Lfti;->o:I
+    new-instance v0, Lmli;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lmli;-><init>(I)V
+
+    const-class v1, Lemi;
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x4
+
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x5
+
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()I
-    .locals 2
-
-    iget-object v0, p0, Lfti;->X:Lmui;
-
-    invoke-virtual {v0}, Luni;->d()I
-
-    move-result v0
-
-    iget v1, p0, Lfti;->c:I
-
-    add-int/2addr v0, v1
-
-    iget v1, p0, Lfti;->o:I
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final d()I
-    .locals 2
-
-    iget-object v0, p0, Lfti;->X:Lmui;
-
-    invoke-virtual {v0}, Luni;->d()I
-
-    move-result v0
-
-    iget v1, p0, Lfti;->c:I
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final e()[Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lfti;->X:Lmui;
-
-    invoke-virtual {v0}, Luni;->e()[Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final f(II)Lmui;
-    .locals 1
-
-    iget v0, p0, Lfti;->o:I
-
-    invoke-static {p1, p2, v0}, Lpji;->e(III)V
-
-    iget v0, p0, Lfti;->c:I
-
-    add-int/2addr p1, v0
-
-    add-int/2addr p2, v0
-
-    iget-object v0, p0, Lfti;->X:Lmui;
-
-    invoke-virtual {v0, p1, p2}, Lmui;->f(II)Lmui;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final get(I)Ljava/lang/Object;
-    .locals 1
-
-    iget v0, p0, Lfti;->o:I
-
-    invoke-static {p1, v0}, Lpji;->d(II)V
-
-    iget v0, p0, Lfti;->c:I
-
-    add-int/2addr p1, v0
-
-    iget-object v0, p0, Lfti;->X:Lmui;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final size()I
-    .locals 1
-
-    iget v0, p0, Lfti;->o:I
-
-    return v0
-.end method
-
-.method public final bridge synthetic subList(II)Ljava/util/List;
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    invoke-virtual {p0, p1, p2}, Lfti;->f(II)Lmui;
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
     move-result-object p1
 
-    return-object p1
+    throw p1
 .end method

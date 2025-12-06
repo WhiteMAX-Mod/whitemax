@@ -1,86 +1,80 @@
 .class public final Lt5e;
-.super Lq5e;
+.super Ldtf;
 .source "SourceFile"
+
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic g:I
+.field public final synthetic X:Lone/me/chatscreen/search/SearchMessageBottomWidget;
 
-.field public final h:Ljava/lang/String;
-
-.field public i:Z
-
-.field public final j:Ljava/lang/Object;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Le20;)V
-    .locals 1
+.method public constructor <init>(Lone/me/chatscreen/search/SearchMessageBottomWidget;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lt5e;->X:Lone/me/chatscreen/search/SearchMessageBottomWidget;
 
-    iput v0, p0, Lt5e;->g:I
+    const/4 p1, 0x2
 
-    .line 5
-    invoke-direct {p0, p1, p2}, Lq5e;-><init>(J)V
-
-    .line 6
-    iput-object p3, p0, Lt5e;->h:Ljava/lang/String;
-
-    .line 7
-    iput-object p4, p0, Lt5e;->j:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(JLjava/lang/String;ZLjava/util/List;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lt5e;->g:I
-
-    .line 1
-    invoke-direct {p0, p1, p2}, Lq5e;-><init>(J)V
-
-    .line 2
-    iput-object p3, p0, Lt5e;->h:Ljava/lang/String;
-
-    .line 3
-    iput-boolean p4, p0, Lt5e;->i:Z
-
-    .line 4
-    iput-object p5, p0, Lt5e;->j:Ljava/lang/Object;
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lr5e;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lei4;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lt5e;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lt5e;
+
+    sget-object p2, Lqqg;->a:Lqqg;
+
+    invoke-virtual {p1, p2}, Lt5e;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lt5e;
+
+    iget-object v1, p0, Lt5e;->X:Lone/me/chatscreen/search/SearchMessageBottomWidget;
+
+    invoke-direct {v0, v1, p2}, Lt5e;-><init>(Lone/me/chatscreen/search/SearchMessageBottomWidget;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lt5e;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lt5e;->g:I
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    packed-switch v0, :pswitch_data_0
+    iget-object p1, p0, Lt5e;->o:Ljava/lang/Object;
 
-    new-instance v0, Lv5e;
+    check-cast p1, Lei4;
 
-    invoke-direct {v0, p0}, Lv5e;-><init>(Lt5e;)V
+    sget-object v0, Lk6e;->c:Lk6e;
 
-    return-object v0
+    invoke-virtual {v0, p1}, Li3;->s0(Lei4;)V
 
-    :pswitch_0
-    new-instance v0, Lu5e;
+    sget-object p1, Lqqg;->a:Lqqg;
 
-    invoke-direct {v0, p0}, Lu5e;-><init>(Lt5e;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

@@ -4,5 +4,8 @@
 
 
 # virtual methods
-.method public abstract accept(Ljava/lang/Object;)V
+.method public abstract a()V
+.end method
+
+.method public abstract b()V
 .end method

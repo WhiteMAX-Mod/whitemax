@@ -1,372 +1,169 @@
-.class public final Lm89;
-.super Ljava/io/OutputStream;
+.class public final synthetic Lm89;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lw89;
+.implements Lx89;
 
 
 # instance fields
-.field public final a:Lk89;
+.field public final synthetic a:I
 
-.field public b:Lhi4;
+.field public final synthetic b:Lz89;
 
-.field public c:I
+.field public final synthetic c:I
 
 
 # direct methods
-.method public constructor <init>(Lk89;)V
-    .locals 2
+.method public synthetic constructor <init>(Lz89;II)V
+    .locals 0
 
-    .line 8
-    iget-object v0, p1, Lk89;->s0:[I
+    iput p3, p0, Lm89;->a:I
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Lm89;->b:Lz89;
 
-    .line 9
-    aget v0, v0, v1
+    iput p2, p0, Lm89;->c:I
 
-    .line 10
-    invoke-direct {p0, p1, v0}, Lm89;-><init>(Lk89;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-.end method
-
-.method public constructor <init>(Lk89;I)V
-    .locals 1
-
-    .line 1
-    invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
-
-    if-lez p2, :cond_0
-
-    .line 2
-    iput-object p1, p0, Lm89;->a:Lk89;
-
-    const/4 v0, 0x0
-
-    .line 3
-    iput v0, p0, Lm89;->c:I
-
-    .line 4
-    invoke-virtual {p1, p2}, Lok0;->get(I)Ljava/lang/Object;
-
-    move-result-object p2
-
-    .line 5
-    sget-object v0, Lda3;->Y:Lnx3;
-
-    invoke-static {p2, p1, v0}, Lda3;->k0(Ljava/lang/Object;Ladd;Lca3;)Lhi4;
-
-    move-result-object p1
-
-    .line 6
-    iput-object p1, p0, Lm89;->b:Lhi4;
-
-    return-void
-
-    .line 7
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "Check failed."
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final close()V
-    .locals 1
+.method public b(La5c;Lu69;Ljava/util/List;)V
+    .locals 4
 
-    iget-object v0, p0, Lm89;->b:Lhi4;
+    iget v0, p0, Lm89;->a:I
 
-    invoke-static {v0}, Lda3;->P(Lda3;)V
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lm89;->b:Lhi4;
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Lm89;->c:I
-
-    invoke-virtual {p0}, Lm89;->m()V
-
-    return-void
-.end method
-
-.method public final m()V
-    .locals 1
-
-    :try_start_0
-    invoke-super {p0}, Ljava/io/OutputStream;->close()V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    invoke-static {v0}, Lv1f;->c(Ljava/lang/Throwable;)V
-
-    const/4 v0, 0x0
-
-    throw v0
-.end method
-
-.method public final n()Ll89;
-    .locals 3
-
-    iget-object v0, p0, Lm89;->b:Lhi4;
-
-    invoke-static {v0}, Lda3;->i0(Lda3;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    new-instance v0, Ll89;
-
-    iget-object v1, p0, Lm89;->b:Lhi4;
-
-    if-eqz v1, :cond_0
-
-    iget v2, p0, Lm89;->c:I
-
-    invoke-direct {v0, v2, v1}, Ll89;-><init>(ILhi4;)V
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "Required value was null."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    new-instance v0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream$InvalidStreamException;
-
-    invoke-direct {v0}, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream$InvalidStreamException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final write(I)V
-    .locals 2
-
-    int-to-byte p1, p1
-
-    const/4 v0, 0x1
-
-    .line 1
-    new-array v0, v0, [B
-
-    const/4 v1, 0x0
-
-    aput-byte p1, v0, v1
-
-    .line 2
-    invoke-virtual {p0, v0}, Ljava/io/OutputStream;->write([B)V
-
-    return-void
-.end method
-
-.method public final write([BII)V
-    .locals 5
-
-    if-ltz p2, :cond_6
-
-    if-ltz p3, :cond_6
-
-    add-int v0, p2, p3
-
-    .line 3
-    array-length v1, p1
-
-    if-gt v0, v1, :cond_6
-
-    .line 4
-    iget-object v0, p0, Lm89;->b:Lhi4;
-
-    invoke-static {v0}, Lda3;->i0(Lda3;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    .line 5
-    iget v0, p0, Lm89;->c:I
-
-    add-int/2addr v0, p3
-
-    .line 6
-    iget-object v1, p0, Lm89;->b:Lhi4;
-
-    invoke-static {v1}, Lda3;->i0(Lda3;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    .line 7
-    iget-object v1, p0, Lm89;->b:Lhi4;
-
-    const-string v2, "Required value was null."
-
-    if-eqz v1, :cond_3
-
-    .line 8
-    invoke-virtual {v1}, Lda3;->Z()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lj89;
-
-    invoke-interface {v1}, Lj89;->getSize()I
-
-    move-result v1
-
-    if-gt v0, v1, :cond_0
-
-    goto :goto_0
-
-    .line 9
-    :cond_0
-    iget-object v1, p0, Lm89;->a:Lk89;
-
-    invoke-virtual {v1, v0}, Lok0;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lj89;
-
-    .line 10
-    iget-object v3, p0, Lm89;->b:Lhi4;
-
-    if-eqz v3, :cond_2
-
-    .line 11
-    invoke-virtual {v3}, Lda3;->Z()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lj89;
-
-    iget v4, p0, Lm89;->c:I
-
-    invoke-interface {v3, v0, v4}, Lj89;->n(Lj89;I)V
-
-    .line 12
-    iget-object v3, p0, Lm89;->b:Lhi4;
-
-    invoke-virtual {v3}, Lda3;->close()V
-
-    .line 13
-    sget-object v3, Lda3;->Y:Lnx3;
-
-    invoke-static {v0, v1, v3}, Lda3;->k0(Ljava/lang/Object;Ladd;Lca3;)Lhi4;
-
-    move-result-object v0
-
-    .line 14
-    iput-object v0, p0, Lm89;->b:Lhi4;
-
-    .line 15
-    :goto_0
-    iget-object v0, p0, Lm89;->b:Lhi4;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Lda3;->Z()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lj89;
+    iget-object v0, p0, Lm89;->b:Lz89;
 
     iget v1, p0, Lm89;->c:I
 
-    invoke-interface {v0, v1, p2, p3, p1}, Lj89;->Q(III[B)I
+    invoke-virtual {v0, p2, p1, v1}, Lz89;->U(Lu69;La5c;I)I
 
-    .line 16
-    iget p1, p0, Lm89;->c:I
+    move-result p2
 
-    add-int/2addr p1, p3
-
-    iput p1, p0, Lm89;->c:I
+    invoke-virtual {p1, p2, p3}, La5c;->b(ILjava/util/List;)V
 
     return-void
 
-    .line 17
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
+    :pswitch_0
+    iget-object v0, p0, Lm89;->b:Lz89;
 
-    invoke-direct {p1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    throw p1
+    invoke-interface {p3}, Ljava/util/List;->size()I
 
-    .line 18
-    :cond_2
-    new-instance p1, Ljava/lang/IllegalStateException;
+    move-result v1
 
-    invoke-direct {p1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget v2, p0, Lm89;->c:I
 
-    throw p1
+    const/4 v3, 0x1
 
-    .line 19
-    :cond_3
-    new-instance p1, Ljava/lang/IllegalStateException;
+    if-ne v1, v3, :cond_0
 
-    invoke-direct {p1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, p2, p1, v2}, Lz89;->U(Lu69;La5c;I)I
 
-    throw p1
+    move-result p2
 
-    .line 20
-    :cond_4
-    new-instance p1, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream$InvalidStreamException;
+    const/4 v0, 0x0
 
-    invoke-direct {p1}, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream$InvalidStreamException;-><init>()V
+    invoke-interface {p3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    throw p1
+    move-result-object p3
 
-    .line 21
-    :cond_5
-    new-instance p1, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream$InvalidStreamException;
+    check-cast p3, Lk09;
 
-    invoke-direct {p1}, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream$InvalidStreamException;-><init>()V
+    invoke-virtual {p1}, La5c;->m0()V
 
-    throw p1
+    iget-object p1, p1, La5c;->a:Lem5;
 
-    .line 22
-    :cond_6
-    new-instance v0, Ljava/lang/ArrayIndexOutOfBoundsException;
+    add-int/lit8 v0, p2, 0x1
 
-    .line 23
-    array-length p1, p1
+    invoke-static {p3}, Lwg7;->m(Ljava/lang/Object;)Lzjd;
 
-    const-string v1, "; regionStart="
+    move-result-object p3
 
-    const-string v2, "; regionLength="
+    invoke-virtual {p1, p3, p2, v0}, Lem5;->l1(Ljava/util/List;II)V
 
-    .line 24
-    const-string v3, "length="
+    goto :goto_0
 
-    invoke-static {v3, p1, v1, p2, v2}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    invoke-virtual {v0, p2, p1, v2}, Lz89;->U(Lu69;La5c;I)I
 
-    move-result-object p1
+    move-result v1
 
-    .line 25
-    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    add-int/2addr v2, v3
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0, p2, p1, v2}, Lz89;->U(Lu69;La5c;I)I
 
-    move-result-object p1
+    move-result p2
 
-    .line 26
-    invoke-direct {v0, p1}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1, p3, v1, p2}, La5c;->V(Ljava/util/List;II)V
 
-    throw v0
+    :goto_0
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lm89;->b:Lz89;
+
+    iget v1, p0, Lm89;->c:I
+
+    invoke-virtual {v0, p2, p1, v1}, Lz89;->U(Lu69;La5c;I)I
+
+    move-result p2
+
+    invoke-virtual {p1, p2, p3}, La5c;->b(ILjava/util/List;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public h(La5c;Lu69;)V
+    .locals 2
+
+    iget v0, p0, Lm89;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lm89;->b:Lz89;
+
+    iget v1, p0, Lm89;->c:I
+
+    invoke-virtual {v0, p2, p1, v1}, Lz89;->U(Lu69;La5c;I)I
+
+    move-result p2
+
+    invoke-virtual {p1, p2}, La5c;->U(I)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lm89;->b:Lz89;
+
+    iget v1, p0, Lm89;->c:I
+
+    invoke-virtual {v0, p2, p1, v1}, Lz89;->U(Lu69;La5c;I)I
+
+    move-result p2
+
+    invoke-virtual {p1, p2}, La5c;->Z(I)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

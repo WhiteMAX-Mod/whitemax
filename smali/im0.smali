@@ -1,166 +1,204 @@
 .class public final Lim0;
-.super Lgf4;
+.super Lht3;
 .source "SourceFile"
 
 
 # instance fields
-.field public r0:J
+.field public final synthetic f:I
 
-.field public s0:I
 
-.field public t0:I
+# direct methods
+.method public synthetic constructor <init>(Lvt3;I)V
+    .locals 0
+
+    iput p2, p0, Lim0;->f:I
+
+    invoke-direct {p0, p1}, Lht3;-><init>(Lvt3;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final A(Lgf4;)Z
-    .locals 5
+.method public final a(Lr5i;)Z
+    .locals 2
 
-    const/high16 v0, 0x40000000    # 2.0f
+    iget v0, p0, Lim0;->f:I
 
-    invoke-virtual {p1, v0}, Lvy;->i(I)Z
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    iget-object p1, p1, Lr5i;->j:Lbu3;
 
-    const/4 v1, 0x1
+    iget-boolean p1, p1, Lbu3;->e:Z
 
-    xor-int/2addr v0, v1
+    return p1
 
-    invoke-static {v0}, Lzg8;->c(Z)V
+    :pswitch_0
+    iget-object p1, p1, Lr5i;->j:Lbu3;
 
-    const/high16 v0, 0x10000000
+    iget p1, p1, Lbu3;->a:I
 
-    invoke-virtual {p1, v0}, Lvy;->i(I)Z
+    const/4 v0, 0x3
 
-    move-result v0
+    if-eq p1, v0, :cond_1
 
-    xor-int/2addr v0, v1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-static {v0}, Lzg8;->c(Z)V
+    const/16 v1, 0x1e
 
-    const/4 v0, 0x4
+    if-lt v0, v1, :cond_0
 
-    invoke-virtual {p1, v0}, Lvy;->i(I)Z
+    const/4 v0, 0x6
 
-    move-result v0
-
-    xor-int/2addr v0, v1
-
-    invoke-static {v0}, Lzg8;->c(Z)V
-
-    iget v0, p0, Lim0;->s0:I
-
-    const/high16 v2, -0x80000000
-
-    if-lez v0, :cond_2
-
-    iget v3, p0, Lim0;->t0:I
-
-    if-lt v0, v3, :cond_0
+    if-ne p1, v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p1, v2}, Lvy;->i(I)Z
+    const/4 p1, 0x0
 
-    move-result v0
-
-    invoke-virtual {p0, v2}, Lvy;->i(I)Z
-
-    move-result v3
-
-    if-eq v0, v3, :cond_1
-
-    goto :goto_0
+    goto :goto_1
 
     :cond_1
-    iget-object v0, p1, Lgf4;->o:Ljava/nio/ByteBuffer;
-
-    if-eqz v0, :cond_2
-
-    iget-object v3, p0, Lgf4;->o:Ljava/nio/ByteBuffer;
-
-    if-eqz v3, :cond_2
-
-    invoke-virtual {v3}, Ljava/nio/Buffer;->position()I
-
-    move-result v3
-
-    invoke-virtual {v0}, Ljava/nio/Buffer;->remaining()I
-
-    move-result v0
-
-    add-int/2addr v0, v3
-
-    const v3, 0x2ee000
-
-    if-le v0, v3, :cond_2
-
     :goto_0
+    const/4 p1, 0x1
+
+    :goto_1
+    return p1
+
+    :pswitch_1
+    iget-object p1, p1, Lr5i;->j:Lbu3;
+
+    iget p1, p1, Lbu3;->a:I
+
+    const/4 v0, 0x2
+
+    if-ne p1, v0, :cond_2
+
+    const/4 p1, 0x1
+
+    goto :goto_2
+
+    :cond_2
     const/4 p1, 0x0
+
+    :goto_2
+    return p1
+
+    :pswitch_2
+    iget-object p1, p1, Lr5i;->j:Lbu3;
+
+    iget-boolean p1, p1, Lbu3;->d:Z
 
     return p1
 
-    :cond_2
-    iget v0, p0, Lim0;->s0:I
+    :pswitch_3
+    iget-object p1, p1, Lr5i;->j:Lbu3;
 
-    add-int/lit8 v3, v0, 0x1
+    iget-boolean p1, p1, Lbu3;->b:Z
 
-    iput v3, p0, Lim0;->s0:I
+    return p1
 
-    if-nez v0, :cond_3
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    iget-wide v3, p1, Lgf4;->Y:J
+.method public final b(Ljava/lang/Object;)Z
+    .locals 1
 
-    iput-wide v3, p0, Lgf4;->Y:J
+    iget v0, p0, Lim0;->f:I
 
-    invoke-virtual {p1, v1}, Lvy;->i(I)Z
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    :goto_0
+    xor-int/lit8 p1, p1, 0x1
+
+    return p1
+
+    :pswitch_0
+    check-cast p1, Lgea;
+
+    iget-boolean v0, p1, Lgea;->a:Z
+
+    if-eqz v0, :cond_1
+
+    iget-boolean p1, p1, Lgea;->c:Z
+
+    if-eqz p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    goto :goto_2
+
+    :cond_1
+    :goto_1
+    const/4 p1, 0x1
+
+    :goto_2
+    return p1
+
+    :pswitch_1
+    check-cast p1, Lgea;
+
+    iget-boolean v0, p1, Lgea;->a:Z
 
     if-eqz v0, :cond_3
 
-    iput v1, p0, Lvy;->b:I
+    iget-boolean p1, p1, Lgea;->b:Z
+
+    if-nez p1, :cond_2
+
+    goto :goto_3
+
+    :cond_2
+    const/4 p1, 0x0
+
+    goto :goto_4
 
     :cond_3
-    invoke-virtual {p1, v2}, Lvy;->i(I)Z
+    :goto_3
+    const/4 p1, 0x1
 
-    move-result v0
+    :goto_4
+    return p1
 
-    if-eqz v0, :cond_4
+    :pswitch_2
+    check-cast p1, Ljava/lang/Boolean;
 
-    iput v2, p0, Lvy;->b:I
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    :cond_4
-    iget-object v0, p1, Lgf4;->o:Ljava/nio/ByteBuffer;
+    move-result p1
 
-    if-eqz v0, :cond_5
+    goto :goto_0
 
-    invoke-virtual {v0}, Ljava/nio/Buffer;->remaining()I
+    :pswitch_3
+    check-cast p1, Ljava/lang/Boolean;
 
-    move-result v2
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-virtual {p0, v2}, Lgf4;->y(I)V
+    move-result p1
 
-    iget-object v2, p0, Lgf4;->o:Ljava/nio/ByteBuffer;
+    goto :goto_0
 
-    invoke-virtual {v2, v0}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
-
-    :cond_5
-    iget-wide v2, p1, Lgf4;->Y:J
-
-    iput-wide v2, p0, Lim0;->r0:J
-
-    return v1
-.end method
-
-.method public final w()V
-    .locals 1
-
-    invoke-super {p0}, Lgf4;->w()V
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lim0;->s0:I
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,228 +1,70 @@
 .class public final Laqi;
-.super Lsri;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpqa;
 
-# instance fields
-.field public final synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:I
-
-.field public final synthetic c:Lvof;
-
-.field public final synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final a:Laqi;
 
 
 # direct methods
-.method public constructor <init>(Lowi;Lvof;Ljava/lang/String;Lvof;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    const/4 v0, 0x0
+    new-instance v0, Laqi;
 
-    iput v0, p0, Laqi;->b:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    iput-object p1, p0, Laqi;->X:Ljava/lang/Object;
+    sput-object v0, Laqi;->a:Laqi;
 
-    iput-object p3, p0, Laqi;->o:Ljava/lang/Object;
+    new-instance v0, Ltci;
 
-    iput-object p4, p0, Laqi;->c:Lvof;
+    const/4 v1, 0x1
 
-    invoke-direct {p0, p2}, Lsri;-><init>(Lvof;)V
+    invoke-direct {v0, v1}, Ltci;-><init>(I)V
 
-    return-void
-.end method
+    const-class v1, Lhdi;
 
-.method public constructor <init>(Ly2j;Lvof;Lvof;Laqi;)V
-    .locals 1
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
 
-    const/4 v0, 0x1
+    move-result-object v0
 
-    iput v0, p0, Laqi;->b:I
+    const/4 v2, 0x2
 
-    .line 2
-    iput-object p1, p0, Laqi;->X:Ljava/lang/Object;
+    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
 
-    iput-object p3, p0, Laqi;->c:Lvof;
+    move-result-object v0
 
-    iput-object p4, p0, Laqi;->o:Ljava/lang/Object;
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
 
-    invoke-direct {p0, p2}, Lsri;-><init>(Lvof;)V
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 7
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    iget v0, p0, Laqi;->b:I
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p1
 
-    iget-object v0, p0, Laqi;->X:Ljava/lang/Object;
-
-    check-cast v0, Ly2j;
-
-    iget-object v0, v0, Ly2j;->f:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Laqi;->X:Ljava/lang/Object;
-
-    check-cast v1, Ly2j;
-
-    iget-object v2, p0, Laqi;->c:Lvof;
-
-    iget-object v3, v1, Ly2j;->e:Ljava/util/HashSet;
-
-    invoke-virtual {v3, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    iget-object v3, v2, Lvof;->a:Le2j;
-
-    new-instance v4, Lfqe;
-
-    const/16 v5, 0x9
-
-    invoke-direct {v4, v1, v5, v2}, Lfqe;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v3, v4}, Le2j;->i(Lrma;)Le2j;
-
-    iget-object v1, p0, Laqi;->X:Ljava/lang/Object;
-
-    check-cast v1, Ly2j;
-
-    iget-object v1, v1, Ly2j;->k:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
-
-    move-result v1
-
-    if-lez v1, :cond_0
-
-    iget-object v1, p0, Laqi;->X:Ljava/lang/Object;
-
-    check-cast v1, Ly2j;
-
-    iget-object v1, v1, Ly2j;->b:Low4;
-
-    const-string v2, "Already connected to the service."
-
-    const/4 v3, 0x0
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    invoke-virtual {v1, v2, v3}, Low4;->c(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    iget-object v1, p0, Laqi;->X:Ljava/lang/Object;
-
-    check-cast v1, Ly2j;
-
-    iget-object v2, p0, Laqi;->o:Ljava/lang/Object;
-
-    check-cast v2, Laqi;
-
-    invoke-static {v1, v2}, Ly2j;->b(Ly2j;Laqi;)V
-
-    monitor-exit v0
-
-    return-void
-
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-
-    :pswitch_0
-    iget-object v0, p0, Laqi;->c:Lvof;
-
-    iget-object v1, p0, Laqi;->X:Ljava/lang/Object;
-
-    check-cast v1, Lowi;
-
-    iget-object v2, p0, Laqi;->o:Ljava/lang/Object;
-
-    check-cast v2, Ljava/lang/String;
-
-    :try_start_1
-    iget-object v3, v1, Lowi;->a:Ly2j;
-
-    iget-object v3, v3, Ly2j;->m:Lu8i;
-
-    iget-object v4, v1, Lowi;->b:Ljava/lang/String;
-
-    invoke-static {v1, v2}, Lowi;->a(Lowi;Ljava/lang/String;)Landroid/os/Bundle;
-
-    move-result-object v5
-
-    new-instance v6, Lnvi;
-
-    invoke-direct {v6, v1, v0, v2}, Lnvi;-><init>(Lowi;Lvof;Ljava/lang/String;)V
-
-    invoke-interface {v3, v4, v5, v6}, Lu8i;->A(Ljava/lang/String;Landroid/os/Bundle;Lnvi;)V
-    :try_end_1
-    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
-
-    goto :goto_2
-
-    :catch_0
-    move-exception v1
-
-    sget-object v3, Lowi;->e:Low4;
-
-    filled-new-array {v2}, [Ljava/lang/Object;
-
-    move-result-object v2
-
-    const-string v4, "requestUpdateInfo(%s)"
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v5, "PlayCore"
-
-    const/4 v6, 0x6
-
-    invoke-static {v5, v6}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_1
-
-    iget-object v3, v3, Low4;->a:Ljava/lang/String;
-
-    invoke-static {v3, v4, v2}, Low4;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v5, v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :cond_1
-    new-instance v2, Ljava/lang/RuntimeException;
-
-    invoke-direct {v2, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    invoke-virtual {v0, v2}, Lvof;->c(Ljava/lang/Exception;)Z
-
-    :goto_2
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

@@ -1,74 +1,113 @@
-.class public abstract Lb4i;
-.super Lj3i;
+.class public Lb4i;
+.super La4i;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/Set;
 
+# direct methods
+.method public constructor <init>(Lg4i;Landroid/view/WindowInsets;)V
+    .locals 0
 
-# instance fields
-.field public transient b:Lv3i;
+    invoke-direct {p0, p1, p2}, La4i;-><init>(Lg4i;Landroid/view/WindowInsets;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public a()Lg4i;
     .locals 2
 
-    if-ne p1, p0, :cond_0
+    iget-object v0, p0, Lz3i;->c:Landroid/view/WindowInsets;
 
-    const/4 p1, 0x1
+    invoke-static {v0}, Li7c;->k(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
 
-    return p1
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-static {v1, v0}, Lg4i;->h(Landroid/view/View;Landroid/view/WindowInsets;)Lg4i;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public e()Ljy4;
+    .locals 2
+
+    iget-object v0, p0, Lz3i;->c:Landroid/view/WindowInsets;
+
+    invoke-static {v0}, Li7c;->j(Landroid/view/WindowInsets;)Landroid/view/DisplayCutout;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return-object v0
 
     :cond_0
-    if-ne p0, p1, :cond_1
+    new-instance v1, Ljy4;
 
-    goto :goto_0
+    invoke-direct {v1, v0}, Ljy4;-><init>(Landroid/view/DisplayCutout;)V
+
+    return-object v1
+.end method
+
+.method public equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lb4i;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
 
     :cond_1
-    instance-of v0, p1, Ljava/util/Set;
+    check-cast p1, Lb4i;
 
-    if-eqz v0, :cond_2
+    iget-object v1, p0, Lz3i;->c:Landroid/view/WindowInsets;
 
-    check-cast p1, Ljava/util/Set;
+    iget-object v3, p1, Lz3i;->c:Landroid/view/WindowInsets;
 
-    :try_start_0
-    invoke-interface {p0}, Ljava/util/Set;->size()I
-
-    move-result v0
-
-    invoke-interface {p1}, Ljava/util/Set;->size()I
+    invoke-static {v1, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-ne v0, v1, :cond_2
+    if-eqz v1, :cond_2
 
-    invoke-interface {p0, p1}, Ljava/util/Set;->containsAll(Ljava/util/Collection;)Z
+    iget-object v1, p0, Lz3i;->g:Lco7;
+
+    iget-object p1, p1, Lz3i;->g:Lco7;
+
+    invoke-static {v1, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
-    :try_end_0
-    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
 
     if-eqz p1, :cond_2
 
-    :goto_0
-    const/4 p1, 0x1
+    return v0
 
-    goto :goto_1
-
-    :catch_0
     :cond_2
-    const/4 p1, 0x0
-
-    :goto_1
-    return p1
+    return v2
 .end method
 
-.method public final hashCode()I
+.method public hashCode()I
     .locals 1
 
-    invoke-static {p0}, Lfji;->d(Ljava/util/Set;)I
+    iget-object v0, p0, Lz3i;->c:Landroid/view/WindowInsets;
+
+    invoke-virtual {v0}, Landroid/view/WindowInsets;->hashCode()I
 
     move-result v0
 

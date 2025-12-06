@@ -1,29 +1,19 @@
-.class public final Lkv3;
+.class public final synthetic Lkv3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:Lkv3;
-
-.field public static final b:Ljv3;
+# instance fields
+.field public final synthetic a:Lqv3;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lqv3;)V
+    .locals 0
 
-    new-instance v0, Lkv3;
+    iput-object p1, p0, Lkv3;->a:Lqv3;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lkv3;->a:Lkv3;
-
-    new-instance v0, Ljv3;
-
-    invoke-direct {v0}, Ljv3;-><init>()V
-
-    sput-object v0, Lkv3;->b:Ljv3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

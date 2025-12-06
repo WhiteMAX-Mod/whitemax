@@ -33,12 +33,12 @@
         "Lru/ok/android/externcalls/sdk/ml/config/MLFeaturesConfigProvider;",
         "Lru/ok/android/externcalls/sdk/api/RemoteSettings;",
         "settings",
-        "Lfwc;",
+        "Ly6d;",
         "log",
         "",
         "configKey",
         "<init>",
-        "(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lfwc;Ljava/lang/String;)V",
+        "(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Ly6d;Ljava/lang/String;)V",
         "config",
         "parseConfig",
         "(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;",
@@ -63,6 +63,11 @@
 
 .field private static final Companion:Lru/ok/android/externcalls/sdk/ml/config/KwsFeaturesConfigProviderImpl$Companion;
 
+.field public static final ENABLED_KEY:Ljava/lang/String; = "use"
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end field
+
 .field public static final LOG_TAG:Ljava/lang/String; = "MLFeaturesConfigProviderImpl"
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
@@ -82,27 +87,31 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/ml/config/KwsFeaturesConfigProviderImpl$Companion;-><init>(Lki4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/ml/config/KwsFeaturesConfigProviderImpl$Companion;-><init>(Ltk4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/ml/config/KwsFeaturesConfigProviderImpl;->Companion:Lru/ok/android/externcalls/sdk/ml/config/KwsFeaturesConfigProviderImpl$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lfwc;Ljava/lang/String;)V
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Ly6d;Ljava/lang/String;)V
     .locals 6
 
-    new-instance v4, Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;
+    new-instance v0, Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;
 
-    const/4 v0, 0x0
+    const/4 v4, 0x7
 
-    const/4 v1, 0x3
+    const/4 v5, 0x0
 
-    invoke-direct {v4, v0, v0, v1, v0}, Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;-><init>(Ljava/lang/String;Ljava/lang/String;ILki4;)V
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;-><init>(Ljava/lang/String;Ljava/lang/String;ZILtk4;)V
 
     const-string v5, "MLFeaturesConfigProviderImpl"
-
-    move-object v0, p0
 
     move-object v1, p1
 
@@ -110,7 +119,11 @@
 
     move-object v3, p3
 
-    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/config/BaseConfigProvider;-><init>(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Lfwc;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/String;)V
+    move-object v4, v0
+
+    move-object v0, p0
+
+    invoke-direct/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/config/BaseConfigProvider;-><init>(Lru/ok/android/externcalls/sdk/api/RemoteSettings;Ly6d;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -129,7 +142,7 @@
 .end method
 
 .method public parseConfig(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;
-    .locals 3
+    .locals 5
 
     .line 2
     new-instance v0, Lorg/json/JSONObject;
@@ -142,19 +155,30 @@
     .line 4
     const-string v1, "url"
 
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    const-string v2, ""
+
+    invoke-static {v0, v1, v2}, Lru/ok/android/externcalls/sdk/ext/JsonExtKt;->getStringOrDefault(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     .line 5
-    const-string v2, "cs"
+    const-string v3, "cs"
 
-    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v3, v2}, Lru/ok/android/externcalls/sdk/ext/JsonExtKt;->getStringOrDefault(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v2
 
     .line 6
-    invoke-direct {p1, v1, v0}, Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    const-string v3, "use"
+
+    const/4 v4, 0x1
+
+    invoke-static {v0, v3, v4}, Lru/ok/android/externcalls/sdk/ext/JsonExtKt;->getBooleanOrDefault(Lorg/json/JSONObject;Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    .line 7
+    invoke-direct {p1, v1, v2, v0}, Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;-><init>(Ljava/lang/String;Ljava/lang/String;Z)V
 
     return-object p1
 .end method

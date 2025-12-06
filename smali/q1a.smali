@@ -1,391 +1,269 @@
 .class public final Lq1a;
-.super Li1e;
+.super Lmc7;
 .source "SourceFile"
-
-# interfaces
-.implements Ln1a;
 
 
 # static fields
-.field public static final synthetic h:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lq1a;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field private volatile synthetic owner$volatile:Ljava/lang/Object;
+.field public final X:[I
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final o:[I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
-    const-class v0, Ljava/lang/Object;
+    new-instance v0, Lpq8;
 
-    const-string v1, "owner$volatile"
+    const/16 v1, 0xb
 
-    const-class v2, Lq1a;
+    invoke-direct {v0, v1}, Lpq8;-><init>(I)V
 
-    invoke-static {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    move-result-object v0
-
-    sput-object v0, Lq1a;->h:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    sput-object v0, Lq1a;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public constructor <init>()V
+.method public constructor <init>(III[I[I)V
     .locals 1
 
-    const/4 v0, 0x1
+    .line 1
+    const-string v0, "MLLT"
 
-    invoke-direct {p0, v0}, Li1e;-><init>(I)V
+    invoke-direct {p0, v0}, Lmc7;-><init>(Ljava/lang/String;)V
 
-    sget-object v0, Lr1a;->a:Lkotlinx/coroutines/internal/Symbol;
+    .line 2
+    iput p1, p0, Lq1a;->b:I
 
-    iput-object v0, p0, Lq1a;->owner$volatile:Ljava/lang/Object;
+    .line 3
+    iput p2, p0, Lq1a;->c:I
+
+    .line 4
+    iput p3, p0, Lq1a;->d:I
+
+    .line 5
+    iput-object p4, p0, Lq1a;->o:[I
+
+    .line 6
+    iput-object p5, p0, Lq1a;->X:[I
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 2
+
+    .line 7
+    const-string v0, "MLLT"
+
+    invoke-direct {p0, v0}, Lmc7;-><init>(Ljava/lang/String;)V
+
+    .line 8
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Lq1a;->b:I
+
+    .line 9
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Lq1a;->c:I
+
+    .line 10
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Lq1a;->d:I
+
+    .line 11
+    invoke-virtual {p1}, Landroid/os/Parcel;->createIntArray()[I
+
+    move-result-object v0
+
+    sget v1, Lxxg;->a:I
+
+    iput-object v0, p0, Lq1a;->o:[I
+
+    .line 12
+    invoke-virtual {p1}, Landroid/os/Parcel;->createIntArray()[I
+
+    move-result-object p1
+
+    iput-object p1, p0, Lq1a;->X:[I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 4
+.method public final describeContents()I
+    .locals 1
 
-    invoke-virtual {p0}, Lq1a;->e()Z
+    const/4 v0, 0x0
 
-    move-result v0
-
-    sget-object v1, Lccg;->a:Lccg;
-
-    if-eqz v0, :cond_0
-
-    goto :goto_2
-
-    :cond_0
-    invoke-static {p1}, Lj1i;->g(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lhni;->b(Lkotlin/coroutines/Continuation;)Lo32;
-
-    move-result-object p1
-
-    :try_start_0
-    new-instance v0, Lp1a;
-
-    invoke-direct {v0, p0, p1}, Lp1a;-><init>(Lq1a;Lo32;)V
-
-    :cond_1
-    sget-object v2, Li1e;->g:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
-
-    invoke-virtual {v2, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->getAndDecrement(Ljava/lang/Object;)I
-
-    move-result v2
-
-    iget v3, p0, Li1e;->a:I
-
-    if-gt v2, v3, :cond_1
-
-    if-lez v2, :cond_2
-
-    iget-object v2, p0, Li1e;->b:Lfs0;
-
-    invoke-virtual {v0, v1, v2}, Lp1a;->f(Ljava/lang/Object;Lbj6;)V
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p0, v0}, Li1e;->b(Ln3h;)Z
-
-    move-result v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz v2, :cond_1
-
-    :goto_0
-    invoke-virtual {p1}, Lo32;->n()Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lr54;->a:Lr54;
-
-    if-ne p1, v0, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    move-object p1, v1
-
-    :goto_1
-    if-ne p1, v0, :cond_4
-
-    return-object p1
-
-    :cond_4
-    :goto_2
-    return-object v1
-
-    :catchall_0
-    move-exception v0
-
-    invoke-virtual {p1}, Lo32;->v()V
-
-    throw v0
+    return v0
 .end method
 
-.method public final e()Z
-    .locals 5
-
-    :cond_0
-    :goto_0
-    sget-object v0, Li1e;->g:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
-
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->get(Ljava/lang/Object;)I
-
-    move-result v1
-
-    iget v2, p0, Li1e;->a:I
-
-    if-le v1, v2, :cond_2
-
-    :cond_1
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->get(Ljava/lang/Object;)I
-
-    move-result v1
-
-    if-le v1, v2, :cond_0
-
-    invoke-virtual {v0, p0, v1, v2}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->compareAndSet(Ljava/lang/Object;II)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    if-gtz v1, :cond_3
-
-    move v0, v3
-
-    goto :goto_1
-
-    :cond_3
-    add-int/lit8 v4, v1, -0x1
-
-    invoke-virtual {v0, p0, v1, v4}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->compareAndSet(Ljava/lang/Object;II)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lq1a;->h:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p0, v1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->set(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    move v0, v2
-
-    :goto_1
-    if-eqz v0, :cond_6
-
-    if-eq v0, v3, :cond_5
-
-    const/4 v1, 0x2
-
-    if-eq v0, v1, :cond_4
-
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "unexpected"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_4
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "This mutex is already locked by the specified owner: null"
-
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_5
-    return v2
-
-    :cond_6
-    return v3
-.end method
-
-.method public final f(Ljava/lang/Object;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
     :cond_0
-    :goto_0
-    sget-object v0, Li1e;->g:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
-
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->get(Ljava/lang/Object;)I
-
-    move-result v0
-
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+    if-eqz p1, :cond_2
 
-    move-result v0
+    const-class v2, Lq1a;
 
-    if-nez v0, :cond_4
-
-    sget-object v0, Lq1a;->h:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    sget-object v2, Lr1a;->a:Lkotlinx/coroutines/internal/Symbol;
-
-    if-eq v1, v2, :cond_0
-
-    if-eq v1, p1, :cond_2
-
-    if-nez p1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v2, "This mutex is locked by "
-
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", but "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p1, " is expected"
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_2
-    :goto_1
-    invoke-virtual {v0, p0, v1, v2}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    invoke-virtual {p0}, Li1e;->c()V
-
-    return-void
-
-    :cond_3
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v3
 
-    if-eq v3, v1, :cond_2
+    if-eq v2, v3, :cond_1
 
     goto :goto_0
 
-    :cond_4
-    new-instance p1, Ljava/lang/IllegalStateException;
+    :cond_1
+    check-cast p1, Lq1a;
 
-    const-string v0, "This mutex is not locked"
+    iget v2, p0, Lq1a;->b:I
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget v3, p1, Lq1a;->b:I
 
-    throw p1
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lq1a;->c:I
+
+    iget v3, p1, Lq1a;->c:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lq1a;->d:I
+
+    iget v3, p1, Lq1a;->d:I
+
+    if-ne v2, v3, :cond_2
+
+    iget-object v2, p0, Lq1a;->o:[I
+
+    iget-object v3, p1, Lq1a;->o:[I
+
+    invoke-static {v2, v3}, Ljava/util/Arrays;->equals([I[I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lq1a;->X:[I
+
+    iget-object p1, p1, Lq1a;->X:[I
+
+    invoke-static {v2, p1}, Ljava/util/Arrays;->equals([I[I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final hashCode()I
+    .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const/16 v0, 0x20f
 
-    const-string v1, "Mutex@"
+    iget v1, p0, Lq1a;->b:I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    add-int/2addr v0, v1
 
-    invoke-static {p0}, Lse4;->d(Ljava/lang/Object;)Ljava/lang/String;
+    mul-int/lit8 v0, v0, 0x1f
 
-    move-result-object v1
+    iget v1, p0, Lq1a;->c:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    add-int/2addr v0, v1
 
-    const-string v1, "[isLocked="
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v1, p0, Lq1a;->d:I
 
-    sget-object v1, Li1e;->g:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+    add-int/2addr v0, v1
 
-    invoke-virtual {v1, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->get(Ljava/lang/Object;)I
+    mul-int/lit8 v0, v0, 0x1f
 
-    move-result v1
+    iget-object v1, p0, Lq1a;->o:[I
 
-    const/4 v2, 0x0
-
-    invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([I)I
 
     move-result v1
 
-    if-nez v1, :cond_0
+    add-int/2addr v1, v0
 
-    const/4 v2, 0x1
+    mul-int/lit8 v1, v1, 0x1f
 
-    :cond_0
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lq1a;->X:[I
 
-    const-string v1, ",owner="
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v0
 
-    sget-object v1, Lq1a;->h:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    add-int/2addr v0, v1
 
-    invoke-virtual {v1, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    return v0
+.end method
 
-    move-result-object v1
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget p2, p0, Lq1a;->b:I
 
-    const/16 v1, 0x5d
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    iget p2, p0, Lq1a;->c:I
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    move-result-object v0
+    iget p2, p0, Lq1a;->d:I
 
-    return-object v0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object p2, p0, Lq1a;->o:[I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeIntArray([I)V
+
+    iget-object p2, p0, Lq1a;->X:[I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeIntArray([I)V
+
+    return-void
 .end method

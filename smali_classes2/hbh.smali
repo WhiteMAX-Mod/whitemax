@@ -3,17 +3,21 @@
 .source "SourceFile"
 
 
-# virtual methods
-.method public final serializer()Lur7;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lur7;"
-        }
-    .end annotation
+# instance fields
+.field public a:Z
 
-    sget-object v0, Lgbh;->a:Lgbh;
+.field public b:Z
 
-    return-object v0
-.end method
+.field public c:Z
+
+.field public d:Z
+
+.field public e:J
+
+.field public f:J
+
+.field public g:J
+
+.field public h:Lf2h;
+
+.field public i:Z

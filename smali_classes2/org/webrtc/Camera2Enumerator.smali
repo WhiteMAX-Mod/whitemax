@@ -781,14 +781,22 @@
 
 
 # virtual methods
-.method public createCapturer(Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;)Lorg/webrtc/CameraVideoCapturer;
-    .locals 2
+.method public createCapturer(Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;Lorg/webrtc/CameraVideoCapturer$CameraConfigurationProvider;)Lorg/webrtc/CameraVideoCapturer;
+    .locals 6
 
     new-instance v0, Lorg/webrtc/Camera2Capturer;
 
     iget-object v1, p0, Lorg/webrtc/Camera2Enumerator;->context:Landroid/content/Context;
 
-    invoke-direct {v0, v1, p1, p2, p3}, Lorg/webrtc/Camera2Capturer;-><init>(Landroid/content/Context;Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;)V
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-object v5, p3
+
+    move-object v4, p4
+
+    invoke-direct/range {v0 .. v5}, Lorg/webrtc/Camera2Capturer;-><init>(Landroid/content/Context;Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;Lorg/webrtc/CameraVideoCapturer$CameraConfigurationProvider;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;)V
 
     return-object v0
 .end method

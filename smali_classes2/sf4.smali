@@ -1,62 +1,64 @@
 .class public final synthetic Lsf4;
-.super Loj6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lli6;
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final a:Lsf4;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lru/ok/tamtam/messages/scheduled/DateTimePicker;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public synthetic constructor <init>(Lru/ok/tamtam/messages/scheduled/DateTimePicker;I)V
+    .locals 0
 
-    new-instance v0, Lsf4;
+    iput p2, p0, Lsf4;->a:I
 
-    const-string v4, "isNotEmpty(Ljava/lang/CharSequence;)Z"
+    iput-object p1, p0, Lsf4;->b:Lru/ok/tamtam/messages/scheduled/DateTimePicker;
 
-    const/4 v5, 0x1
-
-    const/4 v1, 0x1
-
-    const-class v2, Lzaf;
-
-    const-string v3, "isNotEmpty"
-
-    invoke-direct/range {v0 .. v5}, Loj6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sput-object v0, Lsf4;->a:Lsf4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 1
 
-    check-cast p1, Ljava/lang/String;
+    iget v0, p0, Lsf4;->a:I
 
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    packed-switch v0, :pswitch_data_0
 
-    move-result p1
+    iget-object v0, p0, Lsf4;->b:Lru/ok/tamtam/messages/scheduled/DateTimePicker;
 
-    if-lez p1, :cond_0
+    invoke-static {v0}, Lru/ok/tamtam/messages/scheduled/DateTimePicker;->w(Lru/ok/tamtam/messages/scheduled/DateTimePicker;)V
 
-    const/4 p1, 0x1
+    return-void
 
-    goto :goto_0
+    :pswitch_0
+    iget-object v0, p0, Lsf4;->b:Lru/ok/tamtam/messages/scheduled/DateTimePicker;
 
-    :cond_0
-    const/4 p1, 0x0
+    invoke-static {v0}, Lru/ok/tamtam/messages/scheduled/DateTimePicker;->x(Lru/ok/tamtam/messages/scheduled/DateTimePicker;)V
 
-    :goto_0
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    return-void
 
-    move-result-object p1
+    :pswitch_1
+    iget-object v0, p0, Lsf4;->b:Lru/ok/tamtam/messages/scheduled/DateTimePicker;
 
-    return-object p1
+    invoke-static {v0}, Lru/ok/tamtam/messages/scheduled/DateTimePicker;->v(Lru/ok/tamtam/messages/scheduled/DateTimePicker;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

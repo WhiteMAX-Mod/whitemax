@@ -1,3 +1,15 @@
-.class public final Lddc;
-.super Lc9e;
+.class public abstract Lddc;
+.super Lcda;
 .source "SourceFile"
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    sget-object v0, Lqqg;->a:Lqqg;
+
+    invoke-direct {p0, v0}, Lcda;-><init>(Ljava/lang/Object;)V
+
+    return-void
+.end method

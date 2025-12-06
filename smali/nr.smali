@@ -3,96 +3,89 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lli6;
+.implements Len6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+.field public final synthetic a:Lxr;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;I)V
+.method public constructor <init>(Lxr;)V
     .locals 0
 
-    iput p2, p0, Lnr;->a:I
-
-    iput-object p1, p0, Lnr;->b:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lnr;->a:Lxr;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lnr;->a:I
+    instance-of v0, p1, Lnr;
 
-    iget-object v1, p0, Lnr;->b:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+    if-eqz v0, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz p1, :cond_0
 
-    check-cast p1, Ljava/lang/Integer;
+    invoke-virtual {p0}, Lnr;->getFunctionDelegate()Lxm6;
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    move-result-object v0
+
+    check-cast p1, Len6;
+
+    invoke-interface {p1}, Len6;->getFunctionDelegate()Lxm6;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    iget-object v0, v1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->Z:Li76;
-
-    invoke-virtual {v0}, Li76;->j()I
-
-    move-result v1
-
-    if-gtz v1, :cond_0
-
-    const/4 p1, 0x0
-
-    goto :goto_0
+    return p1
 
     :cond_0
-    invoke-virtual {v0, p1}, Lr18;->C(I)Ljava/lang/Object;
+    const/4 p1, 0x0
 
-    move-result-object p1
+    return p1
+.end method
 
-    check-cast p1, Ly18;
+.method public final getFunctionDelegate()Lxm6;
+    .locals 7
 
-    check-cast p1, Lhtf;
+    new-instance v0, Lhn6;
 
-    iget-boolean p1, p1, Lhtf;->a:Z
+    const-string v6, "selectTheme(Lone/me/appearancesettings/multitheme/model/ThemeItem;)V"
 
-    :goto_0
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    const/4 v2, 0x0
 
-    move-result-object p1
+    const/4 v1, 0x1
 
-    return-object p1
+    const-class v3, Lxr;
 
-    :pswitch_0
-    check-cast p1, Landroid/view/View;
+    iget-object v4, p0, Lnr;->a:Lxr;
 
-    sget-object p1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->q0:[Ltr7;
+    const-string v5, "selectTheme"
 
-    invoke-virtual {v1}, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->C0()Lgs;
+    invoke-direct/range {v0 .. v6}, Lgn6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object p1
+    return-object v0
+.end method
 
-    iget-object p1, p1, Lgs;->E0:Lxe5;
+.method public final hashCode()I
+    .locals 1
 
-    sget-object v0, Ls93;->b:Ls93;
+    invoke-virtual {p0}, Lnr;->getFunctionDelegate()Lxm6;
 
-    invoke-static {p1, v0}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
+    move-result-object v0
 
-    sget-object p1, Lccg;->a:Lccg;
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    return-object p1
+    move-result v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method

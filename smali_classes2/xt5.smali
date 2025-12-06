@@ -2,120 +2,396 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lbbd;
+
 
 # instance fields
-.field public final a:Lpw0;
+.field public final synthetic a:I
 
-.field public final b:Lnje;
+.field public final synthetic b:Lgu5;
 
-.field public final c:Lkotlinx/coroutines/internal/ContextScope;
+.field public final synthetic c:Lru/ok/tamtam/android/prefs/PmsKey;
 
 
 # direct methods
-.method public constructor <init>(Lpw0;Lulf;)V
-    .locals 2
+.method public synthetic constructor <init>(Lgu5;Lru/ok/tamtam/android/prefs/PmsKey;I)V
+    .locals 0
+
+    iput p3, p0, Lxt5;->a:I
+
+    iput-object p1, p0, Lxt5;->b:Lgu5;
+
+    iput-object p2, p0, Lxt5;->c:Lru/ok/tamtam/android/prefs/PmsKey;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lxt5;->a:Lpw0;
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x7
-
-    invoke-static {v0, v0, v1}, Loje;->b(III)Lnje;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lxt5;->b:Lnje;
-
-    check-cast p2, Lqta;
-
-    invoke-virtual {p2}, Lqta;->c()Lce8;
-
-    move-result-object p2
-
-    invoke-static {p2}, Ldxi;->a(Li54;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lxt5;->c:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-virtual {p1, p0}, Lpw0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Lbv5;)V
-    .locals 3
-    .annotation runtime Lzbf;
-    .end annotation
+.method public final D(Ljava/lang/Object;Lyy7;)Ljava/lang/Object;
+    .locals 4
 
-    .line 1
-    sget-object v0, Lurh;->i:Ld57;
+    iget p1, p0, Lxt5;->a:I
 
-    iget-object p1, p1, Lbv5;->c:Ld57;
+    packed-switch p1, :pswitch_data_0
 
-    .line 2
-    invoke-virtual {v0, p1}, Ld57;->equals(Ljava/lang/Object;)Z
+    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    move-result p1
+    iget-object p2, p0, Lxt5;->b:Lgu5;
 
-    if-nez p1, :cond_0
+    iget-object v0, p0, Lxt5;->c:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    return-void
+    invoke-virtual {p2, v0}, Lf5e;->m(Lru/ok/tamtam/android/prefs/PmsKey;)Z
 
-    .line 3
+    move-result v1
+
+    const-class v2, Ljava/lang/Boolean;
+
+    if-eqz v1, :cond_0
+
+    iget-object p2, p2, Lc4;->g:Ln18;
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2}, Lvid;->a(Ljava/lang/Class;)Lca3;
+
+    move-result-object v1
+
+    invoke-static {p2, v0, p1, v1}, Lkaj;->b(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lca3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    goto :goto_0
+
     :cond_0
-    new-instance p1, Lvt5;
+    iget-object p2, p2, Lf5e;->h:Ll5c;
 
-    const/4 v0, 0x0
+    iget-object v1, p2, Ll5c;->h:Lgn5;
 
-    invoke-direct {p1, p0, v0}, Lvt5;-><init>(Lxt5;Lkotlin/coroutines/Continuation;)V
+    iget-object v1, v1, Lc4;->g:Ln18;
 
-    const/4 v1, 0x3
+    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
-    iget-object v2, p0, Lxt5;->c:Lkotlinx/coroutines/internal/ContextScope;
+    move-result-object v3
 
-    invoke-static {v2, v0, v0, p1, v1}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
+    invoke-virtual {v1, v3}, Ln18;->contains(Ljava/lang/String;)Z
 
-    return-void
-.end method
+    move-result v1
 
-.method public final onEvent(Ls1e;)V
-    .locals 3
-    .annotation runtime Lzbf;
-    .end annotation
+    if-eqz v1, :cond_1
 
-    .line 4
-    const-string v0, "file.local.max.size.reached"
+    iget-object p2, p2, Ll5c;->h:Lgn5;
 
-    iget-object p1, p1, Lxj0;->b:Ljava/lang/String;
+    :cond_1
+    iget-object p2, p2, Lc4;->g:Ln18;
 
-    .line 5
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
-    move-result p1
+    move-result-object v0
 
-    if-nez p1, :cond_0
+    invoke-static {v2}, Lvid;->a(Ljava/lang/Class;)Lca3;
 
-    return-void
+    move-result-object v1
 
-    .line 6
-    :cond_0
-    new-instance p1, Lwt5;
+    invoke-static {p2, v0, p1, v1}, Lkaj;->b(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lca3;)Ljava/lang/Object;
 
-    const/4 v0, 0x0
+    move-result-object p1
 
-    invoke-direct {p1, p0, v0}, Lwt5;-><init>(Lxt5;Lkotlin/coroutines/Continuation;)V
+    :goto_0
+    return-object p1
 
-    const/4 v1, 0x3
+    :pswitch_0
+    const-wide/16 p1, 0x0
 
-    iget-object v2, p0, Lxt5;->c:Lkotlinx/coroutines/internal/ContextScope;
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-static {v2, v0, v0, p1, v1}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
+    move-result-object p1
 
-    return-void
+    iget-object p2, p0, Lxt5;->b:Lgu5;
+
+    iget-object v0, p0, Lxt5;->c:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    invoke-virtual {p2, v0}, Lf5e;->m(Lru/ok/tamtam/android/prefs/PmsKey;)Z
+
+    move-result v1
+
+    const-class v2, Ljava/lang/Long;
+
+    if-eqz v1, :cond_2
+
+    iget-object p2, p2, Lc4;->g:Ln18;
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2}, Lvid;->a(Ljava/lang/Class;)Lca3;
+
+    move-result-object v1
+
+    invoke-static {p2, v0, p1, v1}, Lkaj;->b(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lca3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    goto :goto_1
+
+    :cond_2
+    iget-object p2, p2, Lf5e;->h:Ll5c;
+
+    iget-object v1, p2, Ll5c;->h:Lgn5;
+
+    iget-object v1, v1, Lc4;->g:Ln18;
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Ln18;->contains(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    iget-object p2, p2, Ll5c;->h:Lgn5;
+
+    :cond_3
+    iget-object p2, p2, Lc4;->g:Ln18;
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2}, Lvid;->a(Ljava/lang/Class;)Lca3;
+
+    move-result-object v1
+
+    invoke-static {p2, v0, p1, v1}, Lkaj;->b(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lca3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    :goto_1
+    return-object p1
+
+    :pswitch_1
+    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    iget-object p2, p0, Lxt5;->b:Lgu5;
+
+    iget-object v0, p0, Lxt5;->c:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    invoke-virtual {p2, v0}, Lf5e;->m(Lru/ok/tamtam/android/prefs/PmsKey;)Z
+
+    move-result v1
+
+    const-class v2, Ljava/lang/Boolean;
+
+    if-eqz v1, :cond_4
+
+    iget-object p2, p2, Lc4;->g:Ln18;
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2}, Lvid;->a(Ljava/lang/Class;)Lca3;
+
+    move-result-object v1
+
+    invoke-static {p2, v0, p1, v1}, Lkaj;->b(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lca3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    goto :goto_2
+
+    :cond_4
+    iget-object p2, p2, Lf5e;->h:Ll5c;
+
+    iget-object v1, p2, Ll5c;->h:Lgn5;
+
+    iget-object v1, v1, Lc4;->g:Ln18;
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Ln18;->contains(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    iget-object p2, p2, Ll5c;->h:Lgn5;
+
+    :cond_5
+    iget-object p2, p2, Lc4;->g:Ln18;
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2}, Lvid;->a(Ljava/lang/Class;)Lca3;
+
+    move-result-object v1
+
+    invoke-static {p2, v0, p1, v1}, Lkaj;->b(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lca3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    :goto_2
+    return-object p1
+
+    :pswitch_2
+    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    iget-object p2, p0, Lxt5;->b:Lgu5;
+
+    iget-object v0, p0, Lxt5;->c:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    invoke-virtual {p2, v0}, Lf5e;->m(Lru/ok/tamtam/android/prefs/PmsKey;)Z
+
+    move-result v1
+
+    const-class v2, Ljava/lang/Boolean;
+
+    if-eqz v1, :cond_6
+
+    iget-object p2, p2, Lc4;->g:Ln18;
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2}, Lvid;->a(Ljava/lang/Class;)Lca3;
+
+    move-result-object v1
+
+    invoke-static {p2, v0, p1, v1}, Lkaj;->b(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lca3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    goto :goto_3
+
+    :cond_6
+    iget-object p2, p2, Lf5e;->h:Ll5c;
+
+    iget-object v1, p2, Ll5c;->h:Lgn5;
+
+    iget-object v1, v1, Lc4;->g:Ln18;
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Ln18;->contains(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_7
+
+    iget-object p2, p2, Ll5c;->h:Lgn5;
+
+    :cond_7
+    iget-object p2, p2, Lc4;->g:Ln18;
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2}, Lvid;->a(Ljava/lang/Class;)Lca3;
+
+    move-result-object v1
+
+    invoke-static {p2, v0, p1, v1}, Lkaj;->b(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lca3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    :goto_3
+    return-object p1
+
+    :pswitch_3
+    const-wide/16 p1, 0x0
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    iget-object p2, p0, Lxt5;->b:Lgu5;
+
+    iget-object v0, p0, Lxt5;->c:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    invoke-virtual {p2, v0}, Lf5e;->m(Lru/ok/tamtam/android/prefs/PmsKey;)Z
+
+    move-result v1
+
+    const-class v2, Ljava/lang/Long;
+
+    if-eqz v1, :cond_8
+
+    iget-object p2, p2, Lc4;->g:Ln18;
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2}, Lvid;->a(Ljava/lang/Class;)Lca3;
+
+    move-result-object v1
+
+    invoke-static {p2, v0, p1, v1}, Lkaj;->b(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lca3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    goto :goto_4
+
+    :cond_8
+    iget-object p2, p2, Lf5e;->h:Ll5c;
+
+    iget-object v1, p2, Ll5c;->h:Lgn5;
+
+    iget-object v1, v1, Lc4;->g:Ln18;
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Ln18;->contains(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_9
+
+    iget-object p2, p2, Ll5c;->h:Lgn5;
+
+    :cond_9
+    iget-object p2, p2, Lc4;->g:Ln18;
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2}, Lvid;->a(Ljava/lang/Class;)Lca3;
+
+    move-result-object v1
+
+    invoke-static {p2, v0, p1, v1}, Lkaj;->b(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Object;Lca3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    :goto_4
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

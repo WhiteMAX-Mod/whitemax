@@ -15,11 +15,11 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lrkg;Landroid/os/Bundle;)V
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lg0h;Landroid/os/Bundle;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2, p3, p4}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi22;-><init>(Landroid/content/Context;Ljava/lang/String;Lrkg;Landroid/os/Bundle;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi22;-><init>(Landroid/content/Context;Ljava/lang/String;Lg0h;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -35,20 +35,20 @@
 
 
 # virtual methods
-.method public final getCurrentControllerInfo()Lx09;
+.method public final getCurrentControllerInfo()Lc89;
     .locals 5
 
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mSessionFwk:Landroid/media/session/MediaSession;
 
-    invoke-static {v0}, Lv4;->g(Landroid/media/session/MediaSession;)Landroid/media/session/MediaSessionManager$RemoteUserInfo;
+    invoke-static {v0}, Lb5;->i(Landroid/media/session/MediaSession;)Landroid/media/session/MediaSessionManager$RemoteUserInfo;
 
     move-result-object v0
 
-    new-instance v1, Lx09;
+    new-instance v1, Lc89;
 
     invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Lv4;->q(Landroid/media/session/MediaSessionManager$RemoteUserInfo;)Ljava/lang/String;
+    invoke-static {v0}, Lb5;->q(Landroid/media/session/MediaSessionManager$RemoteUserInfo;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -60,23 +60,23 @@
 
     if-nez v2, :cond_0
 
-    new-instance v2, Lb19;
+    new-instance v2, Lg89;
 
-    invoke-static {v0}, Lv4;->q(Landroid/media/session/MediaSessionManager$RemoteUserInfo;)Ljava/lang/String;
+    invoke-static {v0}, Lb5;->q(Landroid/media/session/MediaSessionManager$RemoteUserInfo;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v0}, Lv4;->b(Landroid/media/session/MediaSessionManager$RemoteUserInfo;)I
+    invoke-static {v0}, Lb5;->b(Landroid/media/session/MediaSessionManager$RemoteUserInfo;)I
 
     move-result v4
 
-    invoke-static {v0}, Lv4;->x(Landroid/media/session/MediaSessionManager$RemoteUserInfo;)I
+    invoke-static {v0}, Lb5;->z(Landroid/media/session/MediaSessionManager$RemoteUserInfo;)I
 
     move-result v0
 
-    invoke-direct {v2, v3, v4, v0}, Lc19;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v2, v3, v4, v0}, Lh89;-><init>(Ljava/lang/String;II)V
 
-    iput-object v2, v1, Lx09;->a:Lc19;
+    iput-object v2, v1, Lc89;->a:Lh89;
 
     return-object v1
 
@@ -99,7 +99,7 @@
     throw v0
 .end method
 
-.method public setCurrentControllerInfo(Lx09;)V
+.method public setCurrentControllerInfo(Lc89;)V
     .locals 0
 
     return-void

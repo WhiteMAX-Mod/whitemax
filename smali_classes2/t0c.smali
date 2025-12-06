@@ -1,85 +1,77 @@
-.class public final Lt0c;
+.class public final synthetic Lt0c;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lv0c;
+.implements Ldcb;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:Lx0c;
+
+.field public final synthetic b:Lpb2;
+
+.field public final synthetic c:J
+
+.field public final synthetic d:J
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public synthetic constructor <init>(Lx0c;Lpb2;JJ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lt0c;->a:I
+    iput-object p1, p0, Lt0c;->a:Lx0c;
+
+    iput-object p2, p0, Lt0c;->b:Lpb2;
+
+    iput-wide p3, p0, Lt0c;->c:J
+
+    iput-wide p5, p0, Lt0c;->d:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final l(Lecb;)V
+    .locals 9
 
-    const/4 v0, 0x1
+    sget-object v0, Lecb;->o:Lecb;
 
-    if-ne p0, p1, :cond_0
+    if-ne p1, v0, :cond_0
 
-    return v0
+    iget-object v2, p0, Lt0c;->a:Lx0c;
 
-    :cond_0
-    instance-of v1, p1, Lt0c;
+    iget-object p1, v2, Lx0c;->d:Lf84;
 
-    const/4 v2, 0x0
+    iget-object v0, v2, Lx0c;->b:Llzf;
 
-    if-nez v1, :cond_1
+    check-cast v0, Lq2b;
 
-    return v2
-
-    :cond_1
-    check-cast p1, Lt0c;
-
-    iget v1, p0, Lt0c;->a:I
-
-    iget p1, p1, Lt0c;->a:I
-
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Lt0c;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "SetMainPhoto(index="
-
-    const-string v1, ")"
-
-    iget v2, p0, Lt0c;->a:I
-
-    invoke-static {v2, v0, v1}, Ley1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Lq2b;->b()Lz74;
 
     move-result-object v0
 
-    return-object v0
+    new-instance v1, Lu0c;
+
+    const/4 v8, 0x0
+
+    iget-object v3, p0, Lt0c;->b:Lpb2;
+
+    iget-wide v4, p0, Lt0c;->c:J
+
+    iget-wide v6, p0, Lt0c;->d:J
+
+    invoke-direct/range {v1 .. v8}, Lu0c;-><init>(Lx0c;Lpb2;JJLkotlin/coroutines/Continuation;)V
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x0
+
+    invoke-static {p1, v0, v3, v1, v2}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
+
+    :cond_0
+    return-void
 .end method

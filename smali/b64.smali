@@ -1,74 +1,64 @@
-.class public final Lb64;
-.super Lsgf;
+.class public final synthetic Lb64;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Lcm6;
 
 
 # instance fields
-.field public final synthetic X:Ljava/util/concurrent/Callable;
+.field public final synthetic a:I
+
+.field public final synthetic b:Le64;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Le64;I)V
     .locals 0
 
-    iput-object p1, p0, Lb64;->X:Ljava/util/concurrent/Callable;
+    iput p2, p0, Lb64;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lb64;->b:Le64;
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    check-cast p1, Lq54;
+    iget v0, p0, Lb64;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lb64;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    new-instance v0, Lc64;
 
-    move-result-object p1
+    const/4 v1, 0x0
 
-    check-cast p1, Lb64;
+    iget-object v2, p0, Lb64;->b:Le64;
 
-    sget-object p2, Lccg;->a:Lccg;
+    invoke-direct {v0, v2, v1}, Lc64;-><init>(Le64;I)V
 
-    invoke-virtual {p1, p2}, Lb64;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    return-object v0
 
-    move-result-object p1
+    :pswitch_0
+    new-instance v0, Lc64;
 
-    return-object p1
-.end method
+    const/4 v1, 0x1
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    iget-object v2, p0, Lb64;->b:Le64;
 
-    new-instance p1, Lb64;
+    invoke-direct {v0, v2, v1}, Lc64;-><init>(Le64;I)V
 
-    iget-object v0, p0, Lb64;->X:Ljava/util/concurrent/Callable;
+    return-object v0
 
-    invoke-direct {p1, v0, p2}, Lb64;-><init>(Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)V
+    nop
 
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lb64;->X:Ljava/util/concurrent/Callable;
-
-    invoke-interface {p1}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

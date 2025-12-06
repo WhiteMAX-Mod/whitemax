@@ -93,7 +93,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(IIZLki4;)V
+.method public synthetic constructor <init>(IIZLtk4;)V
     .locals 0
 
     .line 1

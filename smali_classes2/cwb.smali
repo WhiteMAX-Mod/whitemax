@@ -1,85 +1,142 @@
-.class public abstract Lcwb;
-.super Ljava/lang/Object;
+.class public final Lcwb;
+.super Ldtf;
 .source "SourceFile"
+
+# interfaces
+.implements Lsm6;
+
+
+# instance fields
+.field public final synthetic X:Lgwb;
+
+.field public final synthetic Y:D
+
+.field public final synthetic Z:D
+
+.field public o:I
+
+
+# direct methods
+.method public constructor <init>(Lgwb;DDLkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lcwb;->X:Lgwb;
+
+    iput-wide p2, p0, Lcwb;->Y:D
+
+    iput-wide p4, p0, Lcwb;->Z:D
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p6}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a()I
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lf84;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lcwb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lcwb;
+
+    sget-object p2, Lqqg;->a:Lqqg;
+
+    invoke-virtual {p1, p2}, Lcwb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public b()I
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 7
 
-    const/4 v0, 0x1
+    new-instance v0, Lcwb;
 
-    return v0
-.end method
+    iget-wide v2, p0, Lcwb;->Y:D
 
-.method public abstract c()I
-.end method
+    iget-wide v4, p0, Lcwb;->Z:D
 
-.method public d()Landroid/view/View;
-    .locals 1
+    iget-object v1, p0, Lcwb;->X:Lgwb;
 
-    const/4 v0, 0x0
+    move-object v6, p2
+
+    invoke-direct/range {v0 .. v6}, Lcwb;-><init>(Lgwb;DDLkotlin/coroutines/Continuation;)V
 
     return-object v0
 .end method
 
-.method public abstract e()I
-.end method
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-.method public abstract f()Landroid/view/View;
-.end method
+    iget v0, p0, Lcwb;->o:I
 
-.method public g(Lgwb;Lgwb;)Lgwb;
-    .locals 0
+    const/4 v1, 0x1
 
-    return-object p2
-.end method
+    if-eqz v0, :cond_1
 
-.method public h()V
-    .locals 0
+    if-ne v0, v1, :cond_0
 
-    return-void
-.end method
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-.method public i()V
-    .locals 0
+    goto :goto_0
 
-    return-void
-.end method
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-.method public j()Z
-    .locals 1
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    const/4 v0, 0x1
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    return v0
-.end method
+    throw p1
 
-.method public k()V
-    .locals 0
+    :cond_1
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    return-void
-.end method
+    iget-object p1, p0, Lcwb;->X:Lgwb;
 
-.method public l(Lgwb;)V
-    .locals 0
+    iget-object p1, p1, Lgwb;->u0:Ljve;
 
-    return-void
-.end method
+    new-instance v0, Ljava/lang/Double;
 
-.method public m(I)V
-    .locals 0
+    iget-wide v2, p0, Lcwb;->Y:D
 
-    return-void
-.end method
+    invoke-direct {v0, v2, v3}, Ljava/lang/Double;-><init>(D)V
 
-.method public n(Lgwb;FF)Z
-    .locals 0
+    new-instance v2, Ljava/lang/Double;
 
-    const/4 p1, 0x1
+    iget-wide v3, p0, Lcwb;->Z:D
 
-    return p1
+    invoke-direct {v2, v3, v4}, Ljava/lang/Double;-><init>(D)V
+
+    new-instance v3, Limb;
+
+    invoke-direct {v3, v0, v2}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    iput v1, p0, Lcwb;->o:I
+
+    invoke-virtual {p1, v3, p0}, Ljve;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lg84;->a:Lg84;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

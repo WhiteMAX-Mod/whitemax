@@ -1,44 +1,66 @@
-.class public final Lmad;
-.super Landroid/os/Handler;
+.class public final synthetic Lmad;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Liu3;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:Lvad;
 
-.field public final synthetic b:Lnad;
+.field public final synthetic b:Lk18;
+
+.field public final synthetic c:Lk18;
 
 
 # direct methods
-.method public constructor <init>(Lnad;Landroid/os/Looper;)V
+.method public synthetic constructor <init>(Lvad;Lk18;Lk18;)V
     .locals 0
 
-    iput-object p1, p0, Lmad;->b:Lnad;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    iput-object p1, p0, Lmad;->a:Lvad;
 
-    const/4 p1, 0x1
+    iput-object p2, p0, Lmad;->b:Lk18;
 
-    iput p1, p0, Lmad;->a:I
+    iput-object p3, p0, Lmad;->c:Lk18;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final handleMessage(Landroid/os/Message;)V
-    .locals 1
+.method public final accept(Ljava/lang/Object;)V
+    .locals 6
 
-    iget p1, p1, Landroid/os/Message;->what:I
+    check-cast p1, [J
 
-    iget v0, p0, Lmad;->a:I
+    iget-object v0, p0, Lmad;->a:Lvad;
 
-    if-ne p1, v0, :cond_0
+    iget-object v1, v0, Lxfh;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    iget-object p1, p0, Lmad;->b:Lnad;
+    iget-object v2, p0, Lmad;->b:Lk18;
 
-    invoke-virtual {p1}, Lnad;->b()V
+    invoke-interface {v2}, Lk18;->getValue()Ljava/lang/Object;
 
-    :cond_0
+    move-result-object v2
+
+    check-cast v2, Lkl4;
+
+    iget-object v2, v2, Lkl4;->a:Lz74;
+
+    new-instance v3, Lrad;
+
+    iget-object v4, p0, Lmad;->c:Lk18;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v3, v4, v0, p1, v5}, Lrad;-><init>(Lk18;Lvad;[JLkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x2
+
+    invoke-static {v1, v2, v5, v3, p1}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
+
     return-void
 .end method

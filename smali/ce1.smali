@@ -1,156 +1,91 @@
 .class public final Lce1;
-.super Ljava/lang/Object;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Lee1;
+.implements Lsm6;
 
 
-# static fields
-.field public static final X:Lsce;
-
-.field public static final a:Lce1;
-
-.field public static final b:J
-
-.field public static final c:Lorf;
-
-.field public static final o:Lqu7;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Lce1;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lce1;->a:Lce1;
-
-    sget-wide v0, Lara;->d:J
-
-    sput-wide v0, Lce1;->b:J
-
-    sget v0, Ldkd;->M2:I
-
-    new-instance v1, Lorf;
-
-    invoke-direct {v1, v0}, Lorf;-><init>(I)V
-
-    sput-object v1, Lce1;->c:Lorf;
-
-    new-instance v0, Lqu7;
-
-    sget v1, Lyqa;->i:I
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x6
-
-    invoke-direct {v0, v1, v2, v3}, Lqu7;-><init>(III)V
-
-    sput-object v0, Lce1;->o:Lqu7;
-
-    sget-object v0, Lsce;->a:Lsce;
-
-    sput-object v0, Lce1;->X:Lsce;
-
-    return-void
-.end method
+# instance fields
+.field public synthetic o:Ljava/lang/Object;
 
 
 # virtual methods
-.method public final e()Lsu7;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    sget-object v0, Lce1;->o:Lqu7;
+    check-cast p1, [Lku3;
 
-    return-object v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lce1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lce1;
+
+    sget-object p2, Lqqg;->a:Lqqg;
+
+    invoke-virtual {p1, p2}, Lce1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lce1;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final getItemId()J
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    sget-wide v0, Lce1;->b:J
+    new-instance v0, Lce1;
 
-    return-wide v0
-.end method
+    const/4 v1, 0x2
 
-.method public final getTitle()Ltrf;
-    .locals 1
+    invoke-direct {v0, v1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    sget-object v0, Lce1;->c:Lorf;
+    iput-object p1, v0, Lce1;->o:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final getType()Lsce;
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    sget-object v0, Lce1;->X:Lsce;
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    return-object v0
-.end method
+    iget-object p1, p0, Lce1;->o:Ljava/lang/Object;
 
-.method public final hashCode()I
-    .locals 1
+    check-cast p1, [Lku3;
 
-    const v0, 0x1f0af277
+    array-length v0, p1
 
-    return v0
-.end method
+    const/4 v1, 0x0
 
-.method public final m()I
-    .locals 1
+    move v2, v1
 
-    sget v0, Lzqa;->m:I
+    :goto_0
+    if-ge v2, v0, :cond_0
 
-    return v0
-.end method
+    aget-object v3, p1, v2
 
-.method public final t()I
-    .locals 1
+    if-eqz v3, :cond_1
 
-    const/4 v0, 0x1
+    invoke-virtual {v3}, Lku3;->B()Z
 
-    return v0
-.end method
+    move-result v3
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    if-nez v3, :cond_1
 
-    const-string v0, "SendToChat"
+    add-int/lit8 v2, v2, 0x1
 
-    return-object v0
-.end method
+    goto :goto_0
 
-.method public final u()I
-    .locals 1
+    :cond_0
+    const/4 v1, 0x1
 
-    const/4 v0, 0x2
+    :cond_1
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    return v0
+    move-result-object p1
+
+    return-object p1
 .end method

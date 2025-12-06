@@ -1,49 +1,68 @@
 .class public final Ltua;
-.super Ly14;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lem6;
 
 
 # instance fields
-.field public final synthetic X:Lvua;
+.field public final synthetic a:I
 
-.field public Y:I
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lmbd;
 
 
 # direct methods
-.method public constructor <init>(Lvua;Ly14;)V
+.method public synthetic constructor <init>(Lmbd;I)V
     .locals 0
 
-    iput-object p1, p0, Ltua;->X:Lvua;
+    iput p2, p0, Ltua;->a:I
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ltua;->b:Lmbd;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iput-object p1, p0, Ltua;->o:Ljava/lang/Object;
+    iget v0, p0, Ltua;->a:I
 
-    iget p1, p0, Ltua;->Y:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    check-cast p1, Ljava/lang/Throwable;
 
-    or-int/2addr p1, v0
+    iget-object p1, p0, Ltua;->b:Lmbd;
 
-    iput p1, p0, Ltua;->Y:I
+    invoke-virtual {p1}, Lmbd;->d()V
 
-    iget-object p1, p0, Ltua;->X:Lvua;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, v0, p0}, Lvua;->a(Landroid/content/Context;Loh9;Ly14;)V
-
-    sget-object p1, Lr54;->a:Lr54;
+    sget-object p1, Lqqg;->a:Lqqg;
 
     return-object p1
+
+    :pswitch_0
+    check-cast p1, Ljava/lang/Throwable;
+
+    :try_start_0
+    iget-object p1, p0, Ltua;->b:Lmbd;
+
+    invoke-virtual {p1}, Lmbd;->d()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

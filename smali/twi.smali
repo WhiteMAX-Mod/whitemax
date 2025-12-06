@@ -1,73 +1,156 @@
 .class public final Ltwi;
-.super Lguh;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lpqa;
+
+
+# static fields
+.field public static final a:Ltwi;
+
+.field public static final b:Lwu5;
+
+.field public static final c:Lwu5;
+
+.field public static final d:Lwu5;
+
+.field public static final e:Lwu5;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
+
+    new-instance v0, Ltwi;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Ltwi;->a:Ltwi;
+
+    new-instance v0, Lmli;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lmli;-><init>(I)V
+
+    const-class v1, Lemi;
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lwu5;
+
+    invoke-static {v0}, Laz1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "imageFormat"
+
+    invoke-direct {v2, v3, v0}, Lwu5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ltwi;->b:Lwu5;
+
+    new-instance v0, Lmli;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v2}, Lmli;-><init>(I)V
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lwu5;
+
+    invoke-static {v0}, Laz1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "originalImageSize"
+
+    invoke-direct {v2, v3, v0}, Lwu5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ltwi;->c:Lwu5;
+
+    new-instance v0, Lmli;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v2}, Lmli;-><init>(I)V
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lwu5;
+
+    invoke-static {v0}, Laz1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "compressedImageSize"
+
+    invoke-direct {v2, v3, v0}, Lwu5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ltwi;->d:Lwu5;
+
+    new-instance v0, Lmli;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v0, v2}, Lmli;-><init>(I)V
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v1, Lwu5;
+
+    invoke-static {v0}, Laz1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v2, "isOdmlImage"
+
+    invoke-direct {v1, v2, v0}, Lwu5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v1, Ltwi;->e:Lwu5;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final Z(Lwha;Ljava/lang/String;ILwha;)Lz67;
-    .locals 1
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 2
 
-    invoke-virtual {p0}, Lguh;->W()Landroid/os/Parcel;
+    check-cast p1, Ly5j;
 
-    move-result-object v0
+    check-cast p2, Lqqa;
 
-    invoke-static {v0, p1}, Lx1i;->c(Landroid/os/Parcel;Landroid/os/IInterface;)V
+    sget-object v0, Ltwi;->b:Lwu5;
 
-    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    iget-object v1, p1, Ly5j;->a:Lx5j;
 
-    invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-interface {p2, v0, v1}, Lqqa;->a(Lwu5;Ljava/lang/Object;)Lqqa;
 
-    invoke-static {v0, p4}, Lx1i;->c(Landroid/os/Parcel;Landroid/os/IInterface;)V
+    sget-object v0, Ltwi;->c:Lwu5;
 
-    const/4 p1, 0x2
+    iget-object p1, p1, Ly5j;->b:Ljava/lang/Integer;
 
-    invoke-virtual {p0, v0, p1}, Lguh;->E(Landroid/os/Parcel;I)Landroid/os/Parcel;
+    invoke-interface {p2, v0, p1}, Lqqa;->a(Lwu5;Ljava/lang/Object;)Lqqa;
 
-    move-result-object p1
+    sget-object p1, Ltwi;->d:Lwu5;
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+    const/4 v0, 0x0
 
-    move-result-object p2
+    invoke-interface {p2, p1, v0}, Lqqa;->a(Lwu5;Ljava/lang/Object;)Lqqa;
 
-    invoke-static {p2}, Lwha;->Z(Landroid/os/IBinder;)Lz67;
+    sget-object p1, Ltwi;->e:Lwu5;
 
-    move-result-object p2
+    invoke-interface {p2, p1, v0}, Lqqa;->a(Lwu5;Ljava/lang/Object;)Lqqa;
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
-
-    return-object p2
-.end method
-
-.method public final a0(Lwha;Ljava/lang/String;ILwha;)Lz67;
-    .locals 1
-
-    invoke-virtual {p0}, Lguh;->W()Landroid/os/Parcel;
-
-    move-result-object v0
-
-    invoke-static {v0, p1}, Lx1i;->c(Landroid/os/Parcel;Landroid/os/IInterface;)V
-
-    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p3}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-static {v0, p4}, Lx1i;->c(Landroid/os/Parcel;Landroid/os/IInterface;)V
-
-    const/4 p1, 0x3
-
-    invoke-virtual {p0, v0, p1}, Lguh;->E(Landroid/os/Parcel;I)Landroid/os/Parcel;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lwha;->Z(Landroid/os/IBinder;)Lz67;
-
-    move-result-object p2
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
-
-    return-object p2
+    return-void
 .end method

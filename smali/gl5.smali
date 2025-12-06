@@ -1,86 +1,147 @@
 .class public final Lgl5;
-.super Lxzg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:Lxe5;
+.field public final a:Landroid/content/Context;
 
-.field public Y:Lcye;
+.field public final b:Lkwf;
 
-.field public final b:Liu7;
+.field public final c:Leo4;
 
-.field public final c:Liu7;
+.field public final d:Lk30;
 
-.field public final o:Ljava/lang/String;
+.field public e:Lcrf;
+
+.field public f:Lcrf;
+
+.field public final g:Lk30;
+
+.field public final h:Landroid/os/Looper;
+
+.field public final i:Lj20;
+
+.field public final j:I
+
+.field public final k:Z
+
+.field public final l:Lj9e;
+
+.field public final m:Lyn4;
+
+.field public final n:J
+
+.field public o:Z
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method public constructor <init>(Landroid/content/Context;Lfde;)V
+    .locals 6
 
-    sget-object v0, Lxk5;->a:Lxk5;
+    new-instance v0, Leo4;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+    const/4 v1, 0x5
 
-    move-result-object v1
+    invoke-direct {v0, v1, p2}, Leo4;-><init>(ILjava/lang/Object;)V
 
-    const-class v2, Lunf;
+    new-instance p2, Lk30;
 
-    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+    const/4 v1, 0x4
 
-    move-result-object v1
+    invoke-direct {p2, p1, v1}, Lk30;-><init>(Landroid/content/Context;I)V
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+    new-instance v1, Lk30;
 
-    move-result-object v0
+    const/4 v2, 0x6
 
-    const-class v2, Lulf;
+    invoke-direct {v1, p1, v2}, Lk30;-><init>(Landroid/content/Context;I)V
 
-    invoke-virtual {v0, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+    new-instance v2, Lte4;
 
-    move-result-object v0
+    const/4 v3, 0x3
 
-    invoke-direct {p0}, Lxzg;-><init>()V
+    invoke-direct {v2, v3}, Lte4;-><init>(I)V
 
-    iput-object v1, p0, Lgl5;->b:Liu7;
+    new-instance v3, Lk30;
 
-    iput-object v0, p0, Lgl5;->c:Liu7;
+    const/16 v4, 0x8
 
-    const-class v0, Lgl5;
+    invoke-direct {v3, p1, v4}, Lk30;-><init>(Landroid/content/Context;I)V
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    iput-object p1, p0, Lgl5;->a:Landroid/content/Context;
 
-    iput-object v0, p0, Lgl5;->o:Ljava/lang/String;
+    iput-object v0, p0, Lgl5;->c:Leo4;
 
-    new-instance v0, Lxe5;
+    iput-object p2, p0, Lgl5;->d:Lk30;
 
-    const/4 v1, 0x0
+    iput-object v1, p0, Lgl5;->e:Lcrf;
 
-    invoke-direct {v0, v1}, Lxe5;-><init>(I)V
+    iput-object v2, p0, Lgl5;->f:Lcrf;
 
-    iput-object v0, p0, Lgl5;->X:Lxe5;
+    iput-object v3, p0, Lgl5;->g:Lk30;
 
-    return-void
-.end method
+    sget p1, Lxxg;->a:I
 
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
-# virtual methods
-.method public final q()V
-    .locals 2
+    move-result-object p1
 
-    iget-object v0, p0, Lgl5;->Y:Lcye;
+    if-eqz p1, :cond_0
 
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, v1}, Llo7;->cancel(Ljava/util/concurrent/CancellationException;)V
+    goto :goto_0
 
     :cond_0
-    iput-object v1, p0, Lgl5;->Y:Lcye;
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object p1
+
+    :goto_0
+    iput-object p1, p0, Lgl5;->h:Landroid/os/Looper;
+
+    sget-object p1, Lj20;->Y:Lj20;
+
+    iput-object p1, p0, Lgl5;->i:Lj20;
+
+    const/4 p1, 0x1
+
+    iput p1, p0, Lgl5;->j:I
+
+    iput-boolean p1, p0, Lgl5;->k:Z
+
+    sget-object p1, Lj9e;->c:Lj9e;
+
+    iput-object p1, p0, Lgl5;->l:Lj9e;
+
+    const-wide/16 p1, 0x14
+
+    invoke-static {p1, p2}, Lxxg;->B(J)J
+
+    move-result-wide v2
+
+    const-wide/16 p1, 0x1f4
+
+    invoke-static {p1, p2}, Lxxg;->B(J)J
+
+    move-result-wide v4
+
+    new-instance v0, Lyn4;
+
+    const/4 v1, 0x0
+
+    invoke-direct/range {v0 .. v5}, Lyn4;-><init>(IJJ)V
+
+    iput-object v0, p0, Lgl5;->m:Lyn4;
+
+    sget-object p1, Lkwf;->a:Lkwf;
+
+    iput-object p1, p0, Lgl5;->b:Lkwf;
+
+    const-wide/16 p1, 0x7d0
+
+    iput-wide p1, p0, Lgl5;->n:J
 
     return-void
 .end method

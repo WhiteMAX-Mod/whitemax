@@ -1,174 +1,147 @@
-.class public final synthetic Lsc9;
+.class public final Lsc9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lji6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:J
 
-.field public final synthetic b:Lgd9;
+.field public final b:J
+
+.field public final c:Ltw0;
+
+.field public final d:Ljve;
+
+.field public final e:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lgd9;I)V
+.method public constructor <init>(JJLtw0;Llzf;)V
     .locals 0
 
-    iput p2, p0, Lsc9;->a:I
-
-    iput-object p1, p0, Lsc9;->b:Lgd9;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lsc9;->a:J
+
+    iput-wide p3, p0, Lsc9;->b:J
+
+    iput-object p5, p0, Lsc9;->c:Ltw0;
+
+    const/4 p1, 0x0
+
+    const/4 p2, 0x7
+
+    invoke-static {p1, p1, p2}, Lkve;->b(III)Ljve;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lsc9;->d:Ljve;
+
+    check-cast p6, Lq2b;
+
+    invoke-virtual {p6}, Lq2b;->a()Lz74;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ld7j;->a(Lx74;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lsc9;->e:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-virtual {p5, p0}, Ltw0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
+.method public final onEvent(Litg;)V
+    .locals 4
+    .annotation runtime Lvnf;
+    .end annotation
 
-    iget v0, p0, Lsc9;->a:I
+    .line 1
+    iget-wide v0, p1, Litg;->b:J
 
-    iget-object v1, p0, Lsc9;->b:Lgd9;
+    .line 2
+    iget-wide v2, p0, Lsc9;->b:J
 
-    packed-switch v0, :pswitch_data_0
+    cmp-long v0, v0, v2
 
-    sget-object v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->J0:[Ltr7;
+    if-nez v0, :cond_1
 
-    iget-object v0, v1, Lgd9;->o:Ldd9;
+    .line 3
+    iget-wide v0, p1, Litg;->c:J
 
-    sget v1, Laqc;->text_change_is_programmatic_tag:I
+    .line 4
+    iget-wide v2, p0, Lsc9;->a:J
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
-
-    move-result-object v0
+    cmp-long v0, v0, v2
 
     if-eqz v0, :cond_0
 
-    const/4 v0, 0x1
+    .line 5
+    iget-boolean p1, p1, Litg;->d:Z
+
+    if-nez p1, :cond_0
 
     goto :goto_0
 
+    .line 6
     :cond_0
+    new-instance p1, Lrc9;
+
     const/4 v0, 0x0
 
+    invoke-direct {p1, p0, v0}, Lrc9;-><init>(Lsc9;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v1, 0x3
+
+    iget-object v2, p0, Lsc9;->e:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v0, v0, p1, v1}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
+
+    :cond_1
     :goto_0
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    return-void
+.end method
+
+.method public final onEvent(Ln73;)V
+    .locals 3
+    .annotation runtime Lvnf;
+    .end annotation
+
+    .line 7
+    iget-object p1, p1, Ln73;->b:Ljava/util/Collection;
+
+    iget-wide v0, p0, Lsc9;->b:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    return-object v0
+    invoke-interface {p1, v0}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
-    :pswitch_0
-    sget v0, Lpjd;->m0:I
+    move-result p1
 
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    if-nez p1, :cond_0
 
-    move-result-object v1
+    return-void
 
-    invoke-static {v1, v0}, La14;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    .line 8
+    :cond_0
+    new-instance p1, Lqc9;
 
-    move-result-object v0
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+    invoke-direct {p1, p0, v0}, Lqc9;-><init>(Lsc9;Lkotlin/coroutines/Continuation;)V
 
-    move-result-object v0
+    const/4 v1, 0x3
 
-    return-object v0
+    iget-object v2, p0, Lsc9;->e:Lkotlinx/coroutines/internal/ContextScope;
 
-    :pswitch_1
-    invoke-static {v1}, Lgd9;->b(Lgd9;)Landroid/graphics/drawable/LayerDrawable;
+    invoke-static {v2, v0, v0, p1, v1}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
 
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_2
-    sget v0, Lpjd;->Q0:I
-
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-static {v1, v0}, La14;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_3
-    sget v0, Lpjd;->b0:I
-
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-static {v1, v0}, La14;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_4
-    sget v0, Lpjd;->d0:I
-
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-static {v1, v0}, La14;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_5
-    sget v0, Lpjd;->U0:I
-
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-static {v1, v0}, La14;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_6
-    invoke-static {v1}, Lgd9;->c(Lgd9;)Landroid/graphics/drawable/LayerDrawable;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

@@ -1,153 +1,140 @@
 .class public final Lhf0;
-.super Lsgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Lk95;
 
 
 # instance fields
-.field public final synthetic X:Lif0;
+.field public final a:Landroid/graphics/drawable/Drawable;
 
-.field public final synthetic Y:Landroid/content/Context;
+.field public final b:Landroid/graphics/Rect;
 
-.field public final synthetic Z:Lkjg;
+.field public c:I
+
+.field public d:I
 
 
 # direct methods
-.method public constructor <init>(Lif0;Landroid/content/Context;Lkjg;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroid/graphics/drawable/Drawable;)V
+    .locals 1
 
-    iput-object p1, p0, Lhf0;->X:Lif0;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lhf0;->Y:Landroid/content/Context;
+    new-instance v0, Landroid/graphics/Rect;
 
-    iput-object p3, p0, Lhf0;->Z:Lkjg;
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object v0, p0, Lhf0;->b:Landroid/graphics/Rect;
 
-    invoke-direct {p0, p1, p4}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lhf0;->a:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result v0
+
+    iput v0, p0, Lhf0;->c:I
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+
+    move-result p1
+
+    iput p1, p0, Lhf0;->d:I
+
+    return-void
+.end method
+
+.method public static a(Lhf0;IILandroid/graphics/Rect;)V
+    .locals 4
+
+    int-to-float v0, p1
+
+    iget v1, p0, Lhf0;->d:I
+
+    int-to-float v2, v1
+
+    iget p0, p0, Lhf0;->c:I
+
+    int-to-float v3, p0
+
+    div-float/2addr v2, v3
+
+    mul-float/2addr v2, v0
+
+    float-to-int v0, v2
+
+    if-le v0, p2, :cond_0
+
+    int-to-float v0, p2
+
+    int-to-float p0, p0
+
+    int-to-float v1, v1
+
+    div-float/2addr p0, v1
+
+    mul-float/2addr p0, v0
+
+    float-to-int p0, p0
+
+    move v0, p2
+
+    goto :goto_0
+
+    :cond_0
+    move p0, p1
+
+    :goto_0
+    sub-int/2addr p2, v0
+
+    int-to-float p2, p2
+
+    const/high16 v1, 0x40000000    # 2.0f
+
+    div-float/2addr p2, v1
+
+    float-to-int p2, p2
+
+    sub-int/2addr p1, p0
+
+    int-to-float p1, p1
+
+    div-float/2addr p1, v1
+
+    float-to-int p1, p1
+
+    add-int/2addr p0, p1
+
+    add-int/2addr v0, p2
+
+    invoke-virtual {p3, p1, p2, p0, v0}, Landroid/graphics/Rect;->set(IIII)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lq54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lhf0;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lhf0;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lhf0;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final draw(Landroid/graphics/Canvas;)V
     .locals 3
 
-    new-instance p1, Lhf0;
-
-    iget-object v0, p0, Lhf0;->Y:Landroid/content/Context;
-
-    iget-object v1, p0, Lhf0;->Z:Lkjg;
-
-    iget-object v2, p0, Lhf0;->X:Lif0;
-
-    invoke-direct {p1, v2, v0, v1, p2}, Lhf0;-><init>(Lif0;Landroid/content/Context;Lkjg;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lhf0;->X:Lif0;
-
-    iget-object v0, p1, Lif0;->b:Liu7;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lss4;
-
-    invoke-virtual {v0}, Lss4;->a()Z
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->getWidth()I
 
     move-result v0
 
-    const/4 v1, 0x0
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->getHeight()I
 
-    if-eqz v0, :cond_0
+    move-result v1
 
-    return-object v1
+    iget-object v2, p0, Lhf0;->b:Landroid/graphics/Rect;
 
-    :cond_0
-    iget-object v0, p0, Lhf0;->Y:Landroid/content/Context;
+    invoke-static {p0, v0, v1, v2}, Lhf0;->a(Lhf0;IILandroid/graphics/Rect;)V
 
-    iget-object v2, p0, Lhf0;->Z:Lkjg;
+    iget-object v0, p0, Lhf0;->a:Landroid/graphics/drawable/Drawable;
 
-    iget-object v3, v2, Lkjg;->a:Ljava/lang/String;
+    invoke-virtual {v0, v2}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    :try_start_0
-    invoke-virtual {v0}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->available()I
-
-    move-result v3
-
-    new-array v3, v3, [B
-
-    invoke-virtual {v0, v3}, Ljava/io/InputStream;->read([B)I
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
-
-    invoke-static {p1, v3, v2}, Lif0;->a(Lif0;[BLkjg;)Lxhf;
-
-    move-result-object p1
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object p1
-
-    :catch_0
-    move-exception p1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v2, "load assets failed: "
-
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "BackgroundDataLoader"
-
-    invoke-static {v0, p1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v1
+    return-void
 .end method

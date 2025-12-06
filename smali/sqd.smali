@@ -1,188 +1,230 @@
-.class public final Lsqd;
-.super Lsgf;
+.class public abstract Lsqd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzi6;
 
+# static fields
+.field public static final a:[I
 
-# instance fields
-.field public X:I
+.field public static final b:[I
 
-.field public final synthetic Y:Ltqd;
+.field public static final c:[I
 
-.field public final synthetic Z:J
+.field public static final d:[I
+
+.field public static final e:[I
+
+.field public static final f:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(JLtqd;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p3, p0, Lsqd;->Y:Ltqd;
+    const v0, 0x10100a7
 
-    iput-wide p1, p0, Lsqd;->Z:J
+    filled-new-array {v0}, [I
 
-    const/4 p1, 0x2
+    move-result-object v1
 
-    invoke-direct {p0, p1, p4}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v1, Lsqd;->a:[I
+
+    const v1, 0x101009c
+
+    filled-new-array {v1}, [I
+
+    move-result-object v1
+
+    sput-object v1, Lsqd;->b:[I
+
+    const v1, 0x10100a1
+
+    filled-new-array {v1, v0}, [I
+
+    move-result-object v2
+
+    sput-object v2, Lsqd;->c:[I
+
+    filled-new-array {v1}, [I
+
+    move-result-object v1
+
+    sput-object v1, Lsqd;->d:[I
+
+    const v1, 0x101009e
+
+    filled-new-array {v1, v0}, [I
+
+    move-result-object v0
+
+    sput-object v0, Lsqd;->e:[I
+
+    const-class v0, Lsqd;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lsqd;->f:Ljava/lang/String;
 
     return-void
 .end method
 
+.method public static a(Landroid/content/res/ColorStateList;[I)I
+    .locals 1
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    if-eqz p0, :cond_0
 
-    check-cast p1, Lq54;
+    invoke-virtual {p0}, Landroid/content/res/ColorStateList;->getDefaultColor()I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result v0
 
-    invoke-virtual {p0, p1, p2}, Lsqd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1, v0}, Landroid/content/res/ColorStateList;->getColorForState([II)I
 
-    move-result-object p1
-
-    check-cast p1, Lsqd;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lsqd;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object p1, Lr54;->a:Lr54;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance p1, Lsqd;
-
-    iget-object v0, p0, Lsqd;->Y:Ltqd;
-
-    iget-wide v1, p0, Lsqd;->Z:J
-
-    invoke-direct {p1, v1, v2, v0, p2}, Lsqd;-><init>(JLtqd;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
-
-    iget-object v0, p0, Lsqd;->Y:Ltqd;
-
-    iget-object v1, v0, Ltqd;->u0:Lwif;
-
-    iget v2, p0, Lsqd;->X:I
-
-    const/4 v3, 0x2
-
-    const/4 v4, 0x1
-
-    sget-object v5, Lr54;->a:Lr54;
-
-    if-eqz v2, :cond_2
-
-    if-eq v2, v4, :cond_1
-
-    if-ne v2, v3, :cond_0
+    move-result p0
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const/4 p0, 0x0
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    :goto_0
+    invoke-static {p0}, Landroid/graphics/Color;->alpha(I)I
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result p1
 
-    throw p1
+    mul-int/lit8 p1, p1, 0x2
+
+    const/16 v0, 0xff
+
+    invoke-static {p1, v0}, Ljava/lang/Math;->min(II)I
+
+    move-result p1
+
+    invoke-static {p0, p1}, Lrf3;->i(II)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static b(Landroid/content/res/ColorStateList;)Landroid/content/res/ColorStateList;
+    .locals 3
+
+    const/4 v0, 0x0
+
+    if-eqz p0, :cond_1
+
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v2, 0x1b
+
+    if-gt v1, v2, :cond_0
+
+    invoke-virtual {p0}, Landroid/content/res/ColorStateList;->getDefaultColor()I
+
+    move-result v1
+
+    invoke-static {v1}, Landroid/graphics/Color;->alpha(I)I
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    sget-object v1, Lsqd;->e:[I
+
+    invoke-virtual {p0, v1, v0}, Landroid/content/res/ColorStateList;->getColorForState([II)I
+
+    move-result v0
+
+    invoke-static {v0}, Landroid/graphics/Color;->alpha(I)I
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lsqd;->f:Ljava/lang/String;
+
+    const-string v1, "Use a non-transparent color for the default color as it will be used to finish ripple animations."
+
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    return-object p0
 
     :cond_1
+    invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static c([I)Z
+    .locals 8
+
+    array-length v0, p0
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    move v3, v2
+
+    move v4, v3
+
     :goto_0
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    const/4 v5, 0x1
+
+    if-ge v2, v0, :cond_4
+
+    aget v6, p0, v2
+
+    const v7, 0x101009e
+
+    if-ne v6, v7, :cond_0
+
+    move v3, v5
+
+    goto :goto_2
+
+    :cond_0
+    const v7, 0x101009c
+
+    if-ne v6, v7, :cond_1
+
+    :goto_1
+    move v4, v5
+
+    goto :goto_2
+
+    :cond_1
+    const v7, 0x10100a7
+
+    if-ne v6, v7, :cond_2
 
     goto :goto_1
 
     :cond_2
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    const v7, 0x1010367
 
-    invoke-virtual {v1}, Lwif;->getValue()Ljava/lang/Object;
+    if-ne v6, v7, :cond_3
 
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v6
-
-    iput v4, p0, Lsqd;->X:I
-
-    invoke-static {v6, v7, p0}, Lqyi;->b(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v5, :cond_3
-
-    goto :goto_2
+    goto :goto_1
 
     :cond_3
-    :goto_1
-    iget-object p1, v0, Ltqd;->x0:Lx0f;
+    :goto_2
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
 
     :cond_4
-    invoke-virtual {p1}, Lx0f;->getValue()Ljava/lang/Object;
+    if-eqz v3, :cond_5
 
-    move-result-object v2
+    if-eqz v4, :cond_5
 
-    move-object v4, v2
+    return v5
 
-    check-cast v4, Ljava/lang/Long;
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v6
-
-    iget-wide v8, p0, Lsqd;->Z:J
-
-    sub-long/2addr v6, v8
-
-    const/16 v4, 0x3e8
-
-    int-to-long v8, v4
-
-    div-long/2addr v6, v8
-
-    new-instance v4, Ljava/lang/Long;
-
-    invoke-direct {v4, v6, v7}, Ljava/lang/Long;-><init>(J)V
-
-    invoke-virtual {p1, v2, v4}, Lx0f;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_4
-
-    invoke-virtual {v1}, Lwif;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v6
-
-    iput v3, p0, Lsqd;->X:I
-
-    invoke-static {v6, v7, p0}, Lqyi;->b(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v5, :cond_3
-
-    :goto_2
-    return-object v5
+    :cond_5
+    return v1
 .end method

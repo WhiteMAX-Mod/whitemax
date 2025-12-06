@@ -1,5 +1,5 @@
 .class public final Lhm1;
-.super Lqm1;
+.super Len1;
 .source "SourceFile"
 
 
@@ -13,7 +13,7 @@
 
     new-instance v0, Lhm1;
 
-    invoke-direct {v0}, Lqm1;-><init>()V
+    invoke-direct {v0}, Len1;-><init>()V
 
     sput-object v0, Lhm1;->D:Lhm1;
 
@@ -47,7 +47,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x3c8f4613
+    const v0, 0x1dacb1bc
 
     return v0
 .end method
@@ -55,7 +55,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "RecordStartDialog"
+    const-string v0, "CallFinished"
 
     return-object v0
 .end method

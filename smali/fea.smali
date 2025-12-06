@@ -1,48 +1,65 @@
-.class public abstract Lfea;
-.super Ljava/lang/Object;
+.class public final Lfea;
+.super Lht3;
 .source "SourceFile"
 
 
 # direct methods
-.method public static a(Landroid/app/NotificationManager;)Ljava/util/List;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/app/NotificationManager;",
-            ")",
-            "Ljava/util/List<",
-            "Landroid/service/notification/StatusBarNotification;",
-            ">;"
-        }
-    .end annotation
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-virtual {p0}, Landroid/app/NotificationManager;->getActiveNotifications()[Landroid/service/notification/StatusBarNotification;
+    const-string v0, "NetworkNotRoamingCtrlr"
 
-    move-result-object p0
+    invoke-static {v0}, Lcei;->m(Ljava/lang/String;)Ljava/lang/String;
 
-    if-nez p0, :cond_0
-
-    new-instance p0, Ljava/util/ArrayList;
-
-    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
-
-    return-object p0
-
-    :cond_0
-    invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method
 
-.method public static b(Landroid/app/NotificationManager;)I
-    .locals 0
 
-    invoke-virtual {p0}, Landroid/app/NotificationManager;->getCurrentInterruptionFilter()I
+# virtual methods
+.method public final a(Lr5i;)Z
+    .locals 1
 
-    move-result p0
+    iget-object p1, p1, Lr5i;->j:Lbu3;
 
-    return p0
+    iget p1, p1, Lbu3;->a:I
+
+    const/4 v0, 0x4
+
+    if-ne p1, v0, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final b(Ljava/lang/Object;)Z
+    .locals 1
+
+    check-cast p1, Lgea;
+
+    iget-boolean v0, p1, Lgea;->a:Z
+
+    if-eqz v0, :cond_1
+
+    iget-boolean p1, p1, Lgea;->d:Z
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
 .end method

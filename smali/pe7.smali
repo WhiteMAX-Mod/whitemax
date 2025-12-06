@@ -4,8 +4,11 @@
 
 
 # virtual methods
-.method public abstract b()Lq9a;
+.method public abstract getExtras()Ljava/util/Map;
 .end method
 
-.method public abstract isActive()Z
+.method public abstract getHeight()I
+.end method
+
+.method public abstract getWidth()I
 .end method

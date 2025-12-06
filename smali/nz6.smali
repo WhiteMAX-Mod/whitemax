@@ -1,96 +1,173 @@
 .class public final Lnz6;
-.super Lsz6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final g:[B
+
+.field public static final h:[B
+
+
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
+
+.field public b:Z
+
+.field public c:I
+
+.field public d:I
+
+.field public e:I
+
+.field public f:[B
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method static synthetic constructor <clinit>()V
+    .locals 2
+
+    const/4 v0, 0x3
+
+    new-array v1, v0, [B
+
+    fill-array-data v1, :array_0
+
+    sput-object v1, Lnz6;->g:[B
+
+    new-array v0, v0, [B
+
+    fill-array-data v0, :array_1
+
+    sput-object v0, Lnz6;->h:[B
+
+    return-void
+
+    :array_0
+    .array-data 1
+        0x0t
+        0x0t
+        0x1t
+    .end array-data
+
+    :array_1
+    .array-data 1
+        0x0t
+        0x0t
+        0x1t
+    .end array-data
+.end method
+
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     iput p1, p0, Lnz6;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a(I[BI)V
+    .locals 3
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Lnz6;->a:I
 
-    goto :goto_1
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    instance-of v0, p1, Lnz6;
+    iget-boolean v0, p0, Lnz6;->b:Z
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_0
 
     goto :goto_0
 
-    :cond_1
-    check-cast p1, Lnz6;
+    :cond_0
+    sub-int/2addr p3, p1
 
-    iget v0, p0, Lnz6;->a:I
+    iget-object v0, p0, Lnz6;->f:[B
 
-    iget p1, p1, Lnz6;->a:I
+    array-length v1, v0
 
-    if-eq v0, p1, :cond_2
+    iget v2, p0, Lnz6;->d:I
 
-    :goto_0
-    const/4 p1, 0x0
+    add-int/2addr v2, p3
 
-    return p1
+    if-ge v1, v2, :cond_1
 
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
+    mul-int/lit8 v2, v2, 0x2
 
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Lnz6;->a:I
-
-    invoke-static {v0}, Ldy1;->v(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "CallType(callMediaType="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lnz6;->a:I
-
-    invoke-static {v1}, Lu15;->u(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v2}, Ljava/util/Arrays;->copyOf([BI)[B
 
     move-result-object v0
 
-    return-object v0
+    iput-object v0, p0, Lnz6;->f:[B
+
+    :cond_1
+    iget-object v0, p0, Lnz6;->f:[B
+
+    iget v1, p0, Lnz6;->d:I
+
+    invoke-static {p2, p1, v0, v1, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget p1, p0, Lnz6;->d:I
+
+    add-int/2addr p1, p3
+
+    iput p1, p0, Lnz6;->d:I
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-boolean v0, p0, Lnz6;->b:Z
+
+    if-nez v0, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    sub-int/2addr p3, p1
+
+    iget-object v0, p0, Lnz6;->f:[B
+
+    array-length v1, v0
+
+    iget v2, p0, Lnz6;->d:I
+
+    add-int/2addr v2, p3
+
+    if-ge v1, v2, :cond_3
+
+    mul-int/lit8 v2, v2, 0x2
+
+    invoke-static {v0, v2}, Ljava/util/Arrays;->copyOf([BI)[B
+
+    move-result-object v0
+
+    iput-object v0, p0, Lnz6;->f:[B
+
+    :cond_3
+    iget-object v0, p0, Lnz6;->f:[B
+
+    iget v1, p0, Lnz6;->d:I
+
+    invoke-static {p2, p1, v0, v1, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget p1, p0, Lnz6;->d:I
+
+    add-int/2addr p1, p3
+
+    iput p1, p0, Lnz6;->d:I
+
+    :goto_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -3,22 +3,23 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lgu3;
+.implements Ltm6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ls2h;
+.field public final synthetic b:Ll2h;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ls2h;I)V
+.method public synthetic constructor <init>(Ll2h;I)V
     .locals 0
 
     iput p2, p0, Lq2h;->a:I
 
-    iput-object p1, p0, Lq2h;->b:Ls2h;
+    iput-object p1, p0, Lq2h;->b:Ll2h;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,166 +28,152 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 7
+.method public accept(Ljava/lang/Object;)V
+    .locals 2
 
-    iget v0, p0, Lq2h;->a:I
+    check-cast p1, Ljava/lang/Throwable;
 
-    const/4 v1, 0x1
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
-    iget-object v2, p0, Lq2h;->b:Ls2h;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "removeFromRepository: failed conversionData = "
 
-    iget-object v0, v2, Ls2h;->a:Liu7;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    iget-object v1, p0, Lq2h;->b:Ll2h;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lt2h;
+    const-string v1, "u2h"
 
-    iget-object v2, v2, Ls2h;->e:Liu7;
+    invoke-static {v1, v0, p1}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-interface {v2}, Liu7;->getValue()Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object v2
+.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
 
-    check-cast v2, Lrib;
+    iget v0, p0, Lq2h;->a:I
 
-    sget-object v3, Lrib;->d:[Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v4, 0x0
+    move-object v2, p1
 
-    aget-object v5, v3, v4
+    check-cast v2, Lo2h;
 
-    iget-object v6, v2, Lrib;->c:Ld09;
+    iget-object p1, p0, Lq2h;->b:Ll2h;
 
-    iget-object v6, v6, Ld09;->c:Ljava/lang/Object;
+    iget-object v3, p1, Ll2h;->a:Ljava/lang/String;
 
-    check-cast v6, Lwif;
+    iget-object p1, p1, Ll2h;->b:Lp2h;
 
-    invoke-virtual {v6}, Lwif;->getValue()Ljava/lang/Object;
+    iget-object v4, p1, Lp2h;->a:Lgsc;
+
+    iget v5, p1, Lp2h;->b:F
+
+    iget v6, p1, Lp2h;->c:F
+
+    iget-boolean v7, p1, Lp2h;->d:Z
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Leuf;
+
+    const/4 v8, 0x1
+
+    invoke-direct/range {v1 .. v8}, Leuf;-><init>(Ljava/lang/Object;Ljava/lang/String;Lgsc;FFZI)V
+
+    new-instance p1, Lkk3;
+
+    const/4 v0, 0x2
+
+    invoke-direct {p1, v0, v1}, Lkk3;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Lo2h;
+
+    iget-object v0, p0, Lq2h;->b:Ll2h;
+
+    iget-object v1, v0, Ll2h;->a:Ljava/lang/String;
+
+    iget-object v0, v0, Ll2h;->b:Lp2h;
+
+    iget-object v2, v0, Lp2h;->a:Lgsc;
+
+    iget v3, v0, Lp2h;->b:F
+
+    iget v4, v0, Lp2h;->c:F
+
+    iget-boolean v0, v0, Lp2h;->d:Z
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v5, 0x5
+
+    const-string v6, "SELECT * FROM video_conversions WHERE source_uri=? AND quality=? AND start_trim_position=? AND end_trim_position=? AND mute=?"
+
+    invoke-static {v5, v6}, Ldsd;->c(ILjava/lang/String;)Ldsd;
 
     move-result-object v6
 
-    check-cast v6, Landroid/content/SharedPreferences;
+    const/4 v7, 0x1
 
-    invoke-interface {v6, v5, v4}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    if-nez v1, :cond_0
 
-    move-result v6
-
-    if-nez v6, :cond_0
-
-    iget-object v6, v2, Lrib;->a:Landroid/content/Context;
-
-    invoke-static {v6, v5}, Lc8;->b(Landroid/content/Context;Ljava/lang/String;)I
-
-    move-result v5
-
-    if-nez v5, :cond_0
-
-    const-string v5, "s2h"
-
-    const-string v6, "forceContactsSync"
-
-    invoke-static {v5, v6}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v5, v2, Lrib;->c:Ld09;
-
-    sget-object v6, Lrib;->f:[Ljava/lang/String;
-
-    invoke-virtual {v2, v6}, Lrib;->c([Ljava/lang/String;)Z
-
-    move-result v2
-
-    iget-object v5, v5, Ld09;->c:Ljava/lang/Object;
-
-    check-cast v5, Lwif;
-
-    invoke-virtual {v5}, Lwif;->getValue()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Landroid/content/SharedPreferences;
-
-    invoke-interface {v5}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v5
-
-    aget-object v3, v3, v4
-
-    invoke-interface {v5, v3, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
-
-    invoke-interface {v5}, Landroid/content/SharedPreferences$Editor;->apply()V
+    invoke-virtual {v6, v7}, Ldsd;->S(I)V
 
     goto :goto_0
 
     :cond_0
-    move v1, v4
+    invoke-virtual {v6, v7, v1}, Ldsd;->f(ILjava/lang/String;)V
 
     :goto_0
-    invoke-virtual {v0, v1}, Lt2h;->b(Z)V
+    iget v1, v2, Lgsc;->b:I
 
-    return-void
+    int-to-long v1, v1
 
-    :pswitch_0
-    iget-object v0, v2, Ls2h;->a:Liu7;
+    const/4 v7, 0x2
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v6, v7, v1, v2}, Ldsd;->k(IJ)V
 
-    move-result-object v0
+    const/4 v1, 0x3
 
-    check-cast v0, Lt2h;
+    float-to-double v2, v3
 
-    invoke-virtual {v0}, Lt2h;->a()V
+    invoke-virtual {v6, v1, v2, v3}, Ldsd;->g(ID)V
 
-    iget-object v0, v2, Ls2h;->c:Liu7;
+    const/4 v1, 0x4
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    float-to-double v2, v4
 
-    move-result-object v0
+    invoke-virtual {v6, v1, v2, v3}, Ldsd;->g(ID)V
 
-    check-cast v0, Lslf;
+    int-to-long v0, v0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v6, v5, v0, v1}, Ldsd;->k(IJ)V
 
-    const-string v2, "slf"
+    new-instance v0, Ljad;
 
-    const-string v3, "syncAll"
+    const/16 v1, 0x12
 
-    invoke-static {v2, v3}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, p1, v1, v6}, Ljad;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    sget-object v2, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    new-instance p1, Lyr8;
 
-    iget-object v3, v0, Lslf;->e:Lxod;
+    invoke-direct {p1, v0}, Lyr8;-><init>(Ljava/util/concurrent/Callable;)V
 
-    new-instance v4, Lhj;
-
-    const/4 v5, 0x4
-
-    invoke-direct {v4, v0, v2, v1, v5}, Lhj;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
-
-    invoke-virtual {v3, v4}, Lxod;->b(Ljava/lang/Runnable;)Lvv4;
-
-    return-void
-
-    :pswitch_1
-    sget-object v0, Lnzb;->r0:Lnzb;
-
-    iget-object v0, v0, Lnzb;->Y:Lhx7;
-
-    iget-object v1, v2, Ls2h;->m:Lr2h;
-
-    invoke-virtual {v0, v1}, Lhx7;->a(Lbx7;)V
-
-    return-void
-
-    nop
+    return-object p1
 
     :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
+    .packed-switch 0x1
         :pswitch_0
     .end packed-switch
 .end method

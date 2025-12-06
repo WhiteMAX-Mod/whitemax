@@ -1,61 +1,65 @@
-.class public final synthetic Lmp4;
-.super Ljava/lang/Object;
+.class public final Lmp4;
+.super Lu7f;
 .source "SourceFile"
-
-# interfaces
-.implements Lhu1;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lnp4;
+.field public final c:Lnp4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lnp4;I)V
+.method public constructor <init>(Lnp4;)V
     .locals 0
 
-    iput p2, p0, Lmp4;->a:I
-
-    iput-object p1, p0, Lmp4;->b:Lnp4;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lmp4;->c:Lnp4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Lgu1;)Ljava/lang/String;
-    .locals 2
+.method public final a(Landroid/view/ViewGroup;)V
+    .locals 3
 
-    iget v0, p0, Lmp4;->a:I
+    iget-object v0, p0, Lmp4;->c:Lnp4;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, v0, Li3;->b:Ljava/lang/Object;
 
-    iget-object v0, p0, Lmp4;->b:Lnp4;
+    check-cast v1, Lv7f;
 
-    iget-object v1, v0, Lnp4;->a:Ljava/lang/Object;
+    iget-object v2, v1, Lv7f;->c:Landroidx/fragment/app/a;
 
-    monitor-enter v1
+    iget-object v2, v2, Landroidx/fragment/app/a;->S0:Landroid/view/View;
 
-    :try_start_0
-    iput-object p1, v0, Lnp4;->f:Lgu1;
+    invoke-virtual {v2}, Landroid/view/View;->clearAnimation()V
 
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {p1, v2}, Landroid/view/ViewGroup;->endViewTransition(Landroid/view/View;)V
+
+    iget-object p1, v0, Li3;->b:Ljava/lang/Object;
+
+    check-cast p1, Lv7f;
+
+    invoke-virtual {p1, p0}, Lv7f;->c(Lu7f;)V
+
+    const/4 p1, 0x2
+
+    invoke-static {p1}, Landroidx/fragment/app/c;->K(I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
 
     new-instance p1, Ljava/lang/StringBuilder;
 
-    const-string v1, "DeferrableSurface-close("
+    const-string v0, "Animation from operation "
 
-    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v0, ")"
+    const-string v0, " has been cancelled."
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -63,41 +67,100 @@
 
     move-result-object p1
 
-    return-object p1
+    const-string v0, "FragmentManager"
 
-    :catchall_0
-    move-exception p1
+    invoke-static {v0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :try_start_1
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    :cond_0
+    return-void
+.end method
 
-    throw p1
+.method public final b(Landroid/view/ViewGroup;)V
+    .locals 5
 
-    :pswitch_0
-    iget-object v0, p0, Lmp4;->b:Lnp4;
+    iget-object v0, p0, Lmp4;->c:Lnp4;
 
-    iget-object v1, v0, Lnp4;->a:Ljava/lang/Object;
+    iget-object v1, v0, Li3;->b:Ljava/lang/Object;
 
-    monitor-enter v1
+    check-cast v1, Lv7f;
 
-    :try_start_2
-    iput-object p1, v0, Lnp4;->d:Lgu1;
+    invoke-virtual {v0}, Li3;->B0()Z
 
-    monitor-exit v1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v1, p0}, Lv7f;->c(Lu7f;)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    iget-object v3, v1, Lv7f;->c:Landroidx/fragment/app/a;
+
+    iget-object v3, v3, Landroidx/fragment/app/a;->S0:Landroid/view/View;
+
+    invoke-virtual {v0, v2}, Lnp4;->L0(Landroid/content/Context;)Lxo8;
+
+    move-result-object v0
+
+    const-string v2, "Required value was null."
+
+    if-eqz v0, :cond_4
+
+    iget-object v0, v0, Lxo8;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/animation/Animation;
+
+    if-eqz v0, :cond_3
+
+    iget v2, v1, Lv7f;->a:I
+
+    const/4 v4, 0x1
+
+    if-eq v2, v4, :cond_1
+
+    invoke-virtual {v3, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
+
+    invoke-virtual {v1, p0}, Lv7f;->c(Lu7f;)V
+
+    return-void
+
+    :cond_1
+    invoke-virtual {p1, v3}, Landroid/view/ViewGroup;->startViewTransition(Landroid/view/View;)V
+
+    new-instance v2, Lfi6;
+
+    invoke-direct {v2, v0, p1, v3}, Lfi6;-><init>(Landroid/view/animation/Animation;Landroid/view/ViewGroup;Landroid/view/View;)V
+
+    new-instance v0, Llp4;
+
+    invoke-direct {v0, v1, p1, v3, p0}, Llp4;-><init>(Lv7f;Landroid/view/ViewGroup;Landroid/view/View;Lmp4;)V
+
+    invoke-virtual {v2, v0}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
+
+    invoke-virtual {v3, v2}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
+
+    const/4 p1, 0x2
+
+    invoke-static {p1}, Landroidx/fragment/app/c;->K(I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
 
     new-instance p1, Ljava/lang/StringBuilder;
 
-    const-string v1, "DeferrableSurface-termination("
+    const-string v0, "Animation from operation "
 
-    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v0, ")"
+    const-string v0, " has started."
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -105,22 +168,24 @@
 
     move-result-object p1
 
-    return-object p1
+    const-string v0, "FragmentManager"
 
-    :catchall_1
-    move-exception p1
+    invoke-static {v0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :try_start_3
-    monitor-exit v1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    :cond_2
+    return-void
+
+    :cond_3
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p1
 
-    nop
+    :cond_4
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-direct {p1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

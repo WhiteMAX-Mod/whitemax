@@ -1,69 +1,125 @@
 .class public final Lj9h;
-.super Ldg4;
+.super Ln9h;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lj9h;
+# instance fields
+.field public final a:Lh5h;
 
-.field public static final c:Lyf4;
-
-.field public static final d:Lyf4;
-
-.field public static final e:Lyf4;
+.field public final b:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Lh5h;Z)V
+    .locals 0
 
-    new-instance v0, Lj9h;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ldg4;-><init>()V
+    iput-object p1, p0, Lj9h;->a:Lh5h;
 
-    sput-object v0, Lj9h;->b:Lj9h;
+    iput-boolean p2, p0, Lj9h;->b:Z
 
-    const-string v1, "bot_id"
+    return-void
+.end method
 
-    filled-new-array {v1}, [Ljava/lang/String;
 
-    move-result-object v2
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    const-string v3, ":webapp:root"
+    const/4 v0, 0x1
 
-    const/4 v4, 0x0
+    if-ne p0, p1, :cond_0
 
-    const/16 v5, 0xe
+    return v0
 
-    invoke-static {v0, v3, v2, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
-
-    move-result-object v2
-
-    sput-object v2, Lj9h;->c:Lyf4;
+    :cond_0
+    instance-of v1, p1, Lj9h;
 
     const/4 v2, 0x0
 
-    new-array v2, v2, [Ljava/lang/String;
+    if-nez v1, :cond_1
 
-    const-string v3, ":settings/webapps"
+    return v2
 
-    invoke-static {v0, v3, v2, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+    :cond_1
+    check-cast p1, Lj9h;
 
-    move-result-object v2
+    iget-object v1, p0, Lj9h;->a:Lh5h;
 
-    sput-object v2, Lj9h;->d:Lyf4;
+    iget-object v3, p1, Lj9h;->a:Lh5h;
 
-    const-string v2, ":settings/webapp"
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    filled-new-array {v1}, [Ljava/lang/String;
+    move-result v1
 
-    move-result-object v1
+    if-nez v1, :cond_2
 
-    invoke-static {v0, v2, v1, v4, v5}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Lj9h;->b:Z
+
+    iget-boolean p1, p1, Lj9h;->b:Z
+
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lj9h;->a:Lh5h;
+
+    invoke-virtual {v0}, Lh5h;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lj9h;->b:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "BackCamera(torchState="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lj9h;->a:Lh5h;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isTimerVisible="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lj9h;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lj9h;->e:Lyf4;
-
-    return-void
+    return-object v0
 .end method

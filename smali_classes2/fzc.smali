@@ -1,97 +1,294 @@
-.class public final Lfzc;
+.class public abstract Lfzc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroidx/recyclerview/widget/RecyclerView;
+# static fields
+.field public static profile_add_admins_empty_search_view:I = 0x7f0a0900
 
-.field public final b:Lzk9;
+.field public static profile_add_admins_from_contacts_list:I = 0x7f0a0901
 
-.field public final c:Ld0d;
+.field public static profile_add_admins_tab_chat_members:I = 0x7f0a0902
 
-.field public final d:Ljn9;
+.field public static profile_add_admins_tab_contacts:I = 0x7f0a0903
 
-.field public final e:Ljava/util/concurrent/ExecutorService;
+.field public static profile_add_admins_tabs:I = 0x7f0a0904
 
-.field public f:Lozc;
+.field public static profile_add_admins_toolbar:I = 0x7f0a0905
 
-.field public final g:Landroid/graphics/Rect;
+.field public static profile_add_admins_view_pager:I = 0x7f0a0906
 
-.field public final h:Lsc5;
+.field public static profile_add_chat_member_action:I = 0x7f0a0907
 
+.field public static profile_add_members_show_history_cancel_action:I = 0x7f0a0908
 
-# direct methods
-.method public constructor <init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;Lzk9;Ld0d;Ljn9;Luy9;Ljava/util/concurrent/ExecutorService;)V
-    .locals 0
+.field public static profile_add_members_show_history_negative_action:I = 0x7f0a0909
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static profile_add_members_show_history_positive_action:I = 0x7f0a090a
 
-    iput-object p1, p0, Lfzc;->a:Landroidx/recyclerview/widget/RecyclerView;
+.field public static profile_add_members_toolbar:I = 0x7f0a090b
 
-    iput-object p2, p0, Lfzc;->b:Lzk9;
+.field public static profile_audio_button:I = 0x7f0a090c
 
-    iput-object p3, p0, Lfzc;->c:Ld0d;
+.field public static profile_block_user_confirmation_sheet_confirm:I = 0x7f0a090e
 
-    iput-object p4, p0, Lfzc;->d:Ljn9;
+.field public static profile_change_avatar_upload_from_camera:I = 0x7f0a090f
 
-    iput-object p6, p0, Lfzc;->e:Ljava/util/concurrent/ExecutorService;
+.field public static profile_change_avatar_upload_from_gallery:I = 0x7f0a0910
 
-    new-instance p1, Landroid/graphics/Rect;
+.field public static profile_change_owner_cancel_action:I = 0x7f0a0914
 
-    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
+.field public static profile_change_owner_change_action:I = 0x7f0a0915
 
-    iput-object p1, p0, Lfzc;->g:Landroid/graphics/Rect;
+.field public static profile_change_owner_chat_confirmation_sheet_confirm:I = 0x7f0a0916
 
-    new-instance p1, Lsc5;
+.field public static profile_change_owner_members_list_container:I = 0x7f0a0917
 
-    const/4 p2, 0x4
+.field public static profile_change_owner_toolbar:I = 0x7f0a0918
 
-    invoke-direct {p1, p2, p0}, Lsc5;-><init>(ILjava/lang/Object;)V
+.field public static profile_channel_link_view_hint:I = 0x7f0a0919
 
-    iput-object p1, p0, Lfzc;->h:Lsc5;
+.field public static profile_channel_link_view_link:I = 0x7f0a091a
 
-    return-void
-.end method
+.field public static profile_channel_link_view_share_icon:I = 0x7f0a091b
 
+.field public static profile_channel_link_view_share_qr_code:I = 0x7f0a091c
 
-# virtual methods
-.method public final a()V
-    .locals 3
+.field public static profile_clear_history_confirmation_sheet_confirm_for_all:I = 0x7f0a091d
 
-    iget-object v0, p0, Lfzc;->f:Lozc;
+.field public static profile_clear_history_confirmation_sheet_confirm_for_yourself:I = 0x7f0a091e
 
-    const/4 v1, 0x0
+.field public static profile_confirmation_sheet_cancel:I = 0x7f0a091f
 
-    if-eqz v0, :cond_1
+.field public static profile_contact_avatars_image_view:I = 0x7f0a0920
 
-    invoke-virtual {v0}, Landroid/widget/PopupWindow;->dismiss()V
+.field public static profile_contact_avatars_progress_indicator:I = 0x7f0a0921
 
-    iget-object v2, v0, Lozc;->Z:Landroid/animation/ValueAnimator;
+.field public static profile_contact_avatars_toolbar:I = 0x7f0a0922
 
-    if-eqz v2, :cond_0
+.field public static profile_contact_avatars_viewpager:I = 0x7f0a0923
 
-    invoke-virtual {v2}, Landroid/animation/ValueAnimator;->cancel()V
+.field public static profile_debug_info_action_copy:I = 0x7f0a0924
 
-    :cond_0
-    iput-object v1, v0, Lozc;->Z:Landroid/animation/ValueAnimator;
+.field public static profile_debug_info_button:I = 0x7f0a0925
 
-    iput-object v1, v0, Lozc;->c:Lezc;
+.field public static profile_debug_profile_info_btn:I = 0x7f0a0926
 
-    iput-object v1, v0, Lozc;->X:Landroid/view/View;
+.field public static profile_debug_profile_new_media_list_btn:I = 0x7f0a0927
 
-    iput-object v1, v0, Lozc;->o:Landroid/graphics/Rect;
+.field public static profile_delete_channel_confirmation_sheet_confirm:I = 0x7f0a0928
 
-    iput-object v1, v0, Lozc;->q0:Ljava/lang/Long;
+.field public static profile_delete_chat_confirmation_sheet_confirm:I = 0x7f0a0929
 
-    :cond_1
-    iput-object v1, p0, Lfzc;->f:Lozc;
+.field public static profile_delete_chat_with_bot_confirm_with_suspend:I = 0x7f0a092a
 
-    iget-object v0, p0, Lfzc;->a:Landroidx/recyclerview/widget/RecyclerView;
+.field public static profile_delete_chat_with_bot_confirm_without_suspend:I = 0x7f0a092b
 
-    iget-object v1, p0, Lfzc;->h:Lsc5;
+.field public static profile_delete_chat_with_bot_official_confirm_with_suspend:I = 0x7f0a092c
 
-    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->s0(Lf7d;)V
+.field public static profile_dot_divider_view:I = 0x7f0a092e
 
-    return-void
-.end method
+.field public static profile_invite_by_link_action:I = 0x7f0a0980
+
+.field public static profile_invite_chatlinkview_avatar_view:I = 0x7f0a0981
+
+.field public static profile_invite_chatlinkview_confirm_update:I = 0x7f0a0982
+
+.field public static profile_invite_chatlinkview_copy_iv:I = 0x7f0a0983
+
+.field public static profile_invite_chatlinkview_link_tv:I = 0x7f0a0984
+
+.field public static profile_invite_chatlinkview_more_actions_button:I = 0x7f0a0985
+
+.field public static profile_invite_chatlinkview_refresh_button:I = 0x7f0a0986
+
+.field public static profile_invite_chatlinkview_title_tv:I = 0x7f0a0987
+
+.field public static profile_invite_configure_type:I = 0x7f0a0988
+
+.field public static profile_invite_create_link_error_confirm:I = 0x7f0a0989
+
+.field public static profile_invite_qr_code:I = 0x7f0a098a
+
+.field public static profile_invite_send_link:I = 0x7f0a098b
+
+.field public static profile_invite_share_link:I = 0x7f0a098c
+
+.field public static profile_leave_chat_and_move_rights_confirmation_sheet_confirm:I = 0x7f0a098d
+
+.field public static profile_leave_chat_confirmation_sheet_confirm:I = 0x7f0a098e
+
+.field public static profile_link_action_copy:I = 0x7f0a098f
+
+.field public static profile_link_button:I = 0x7f0a0990
+
+.field public static profile_link_view:I = 0x7f0a0991
+
+.field public static profile_media_action_copy_link:I = 0x7f0a0993
+
+.field public static profile_media_action_delete_all:I = 0x7f0a0994
+
+.field public static profile_media_action_delete_self:I = 0x7f0a0995
+
+.field public static profile_media_action_forward:I = 0x7f0a0996
+
+.field public static profile_media_action_goto_message:I = 0x7f0a0997
+
+.field public static profile_media_action_open_link:I = 0x7f0a0998
+
+.field public static profile_media_action_save:I = 0x7f0a0999
+
+.field public static profile_media_action_share_link:I = 0x7f0a099a
+
+.field public static profile_media_action_show_delete_confirmation:I = 0x7f0a099b
+
+.field public static profile_media_file_content_ll:I = 0x7f0a099c
+
+.field public static profile_media_file_download_state_icon:I = 0x7f0a099d
+
+.field public static profile_media_file_icon:I = 0x7f0a099e
+
+.field public static profile_media_file_preview:I = 0x7f0a099f
+
+.field public static profile_media_link_content_ll:I = 0x7f0a09a0
+
+.field public static profile_media_link_preview:I = 0x7f0a09a1
+
+.field public static profile_media_list_empty_view:I = 0x7f0a09a2
+
+.field public static profile_media_list_rv:I = 0x7f0a09a3
+
+.field public static profile_media_tabs:I = 0x7f0a09a4
+
+.field public static profile_media_tabs_linearlayout:I = 0x7f0a09a5
+
+.field public static profile_media_tabs_pager:I = 0x7f0a09a6
+
+.field public static profile_media_tabs_pinbars_container:I = 0x7f0a09a7
+
+.field public static profile_media_toolbar:I = 0x7f0a09a8
+
+.field public static profile_media_view_type_audio:I = 0x7f0a09a9
+
+.field public static profile_media_view_type_file:I = 0x7f0a09aa
+
+.field public static profile_media_view_type_link:I = 0x7f0a09ab
+
+.field public static profile_media_view_type_photo_video:I = 0x7f0a09ac
+
+.field public static profile_media_view_type_video_msg:I = 0x7f0a09ad
+
+.field public static profile_members_list_action_delete_from_admin:I = 0x7f0a09ae
+
+.field public static profile_members_list_action_delete_from_channel:I = 0x7f0a09af
+
+.field public static profile_members_list_action_delete_from_chat:I = 0x7f0a09b0
+
+.field public static profile_members_list_action_select:I = 0x7f0a09b1
+
+.field public static profile_members_list_add_admin_to_chat_action:I = 0x7f0a09b2
+
+.field public static profile_members_list_add_to_channel_action:I = 0x7f0a09b3
+
+.field public static profile_members_list_add_to_chat_action:I = 0x7f0a09b4
+
+.field public static profile_members_list_container:I = 0x7f0a09b5
+
+.field public static profile_members_list_container_admin:I = 0x7f0a09b6
+
+.field public static profile_members_list_delete_from_admin_btn:I = 0x7f0a09b7
+
+.field public static profile_members_list_delete_from_admin_btn_cancel:I = 0x7f0a09b8
+
+.field public static profile_members_list_delete_from_channel_btn:I = 0x7f0a09b9
+
+.field public static profile_members_list_delete_from_chat_btn:I = 0x7f0a09ba
+
+.field public static profile_members_list_delete_from_chat_btn_cancel:I = 0x7f0a09bb
+
+.field public static profile_members_list_delete_from_chat_btn_with_clean:I = 0x7f0a09bc
+
+.field public static profile_members_list_invite_by_link_action:I = 0x7f0a09bd
+
+.field public static profile_members_list_toolbar:I = 0x7f0a09be
+
+.field public static profile_members_list_toolbar_admin:I = 0x7f0a09bf
+
+.field public static profile_more_action_add_to_folder:I = 0x7f0a09c0
+
+.field public static profile_more_action_block:I = 0x7f0a09c1
+
+.field public static profile_more_action_clear_history:I = 0x7f0a09c2
+
+.field public static profile_more_action_delete_channel:I = 0x7f0a09c3
+
+.field public static profile_more_action_delete_chat:I = 0x7f0a09c4
+
+.field public static profile_more_action_delete_chat_and_suspend_bot:I = 0x7f0a09c5
+
+.field public static profile_more_action_delete_chat_and_suspend_bot_official:I = 0x7f0a09c6
+
+.field public static profile_more_action_leave_channel:I = 0x7f0a09c7
+
+.field public static profile_more_action_leave_chat:I = 0x7f0a09c8
+
+.field public static profile_more_action_report:I = 0x7f0a09c9
+
+.field public static profile_more_action_suspend_bot:I = 0x7f0a09ca
+
+.field public static profile_more_action_suspend_bot_official:I = 0x7f0a09cb
+
+.field public static profile_notifications_confirmation_sheet_1_day:I = 0x7f0a09cc
+
+.field public static profile_notifications_confirmation_sheet_1_hour:I = 0x7f0a09cd
+
+.field public static profile_notifications_confirmation_sheet_4_hour:I = 0x7f0a09ce
+
+.field public static profile_notifications_confirmation_sheet_forever:I = 0x7f0a09cf
+
+.field public static profile_notifs_disabled_button:I = 0x7f0a09d0
+
+.field public static profile_notifs_enabled_button:I = 0x7f0a09d1
+
+.field public static profile_open_all_chat_members_action:I = 0x7f0a09d3
+
+.field public static profile_phone_number_action_copy:I = 0x7f0a09d4
+
+.field public static profile_phone_number_action_tt_video_call:I = 0x7f0a09d5
+
+.field public static profile_phone_number_action_tt_voice_call:I = 0x7f0a09d6
+
+.field public static profile_phone_number_action_voice_call:I = 0x7f0a09d7
+
+.field public static profile_phone_number_button:I = 0x7f0a09d8
+
+.field public static profile_screen_appbarlayout:I = 0x7f0a09d9
+
+.field public static profile_screen_avatar_view:I = 0x7f0a09da
+
+.field public static profile_screen_collapsiblecontainerlinearlayout:I = 0x7f0a09db
+
+.field public static profile_screen_coordinator_layout:I = 0x7f0a09dc
+
+.field public static profile_screen_expandedsubtitle_view:I = 0x7f0a09dd
+
+.field public static profile_screen_expandedtitle_view:I = 0x7f0a09de
+
+.field public static profile_screen_memberlist_container:I = 0x7f0a09df
+
+.field public static profile_screen_onemetoolbar:I = 0x7f0a09e0
+
+.field public static profile_screen_recyclerview:I = 0x7f0a09e1
+
+.field public static profile_search_button:I = 0x7f0a09e2
+
+.field public static profile_start_bot_button:I = 0x7f0a09e4
+
+.field public static profile_start_chat_button:I = 0x7f0a09e5
+
+.field public static profile_unblock_button:I = 0x7f0a09e6
+
+.field public static profile_video_button:I = 0x7f0a09e7
+
+.field public static rkn_bottom_sheet_subtitle:I = 0x7f0a0a0b
+
+.field public static rkn_bottom_sheet_title:I = 0x7f0a0a0c

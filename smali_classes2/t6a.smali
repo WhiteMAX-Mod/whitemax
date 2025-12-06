@@ -1,169 +1,256 @@
-.class public final Lt6a;
-.super Lsgf;
+.class public final synthetic Lt6a;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Lem6;
 
 
 # instance fields
-.field public final synthetic X:Landroid/content/Intent;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lv6a;
+.field public final synthetic b:Lv6a;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Intent;Lv6a;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lv6a;I)V
     .locals 0
 
-    iput-object p1, p0, Lt6a;->X:Landroid/content/Intent;
+    iput p2, p0, Lt6a;->a:I
 
-    iput-object p2, p0, Lt6a;->Y:Lv6a;
+    iput-object p1, p0, Lt6a;->b:Lv6a;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    check-cast p1, Lq54;
+    iget v0, p0, Lt6a;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    check-cast p1, Ljava/lang/Integer;
 
-    invoke-virtual {p0, p1, p2}, Lt6a;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lt6a;->b:Lv6a;
+
+    iget-object v0, v0, Lv6a;->b:Ljr9;
+
+    invoke-virtual {v0, p1}, Ljr9;->M(I)Lone/me/messages/list/loader/MessageModel;
 
     move-result-object p1
 
-    check-cast p1, Lt6a;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lt6a;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lt6a;
-
-    iget-object v0, p0, Lt6a;->X:Landroid/content/Intent;
-
-    iget-object v1, p0, Lt6a;->Y:Lv6a;
-
-    invoke-direct {p1, v0, v1, p2}, Lt6a;-><init>(Landroid/content/Intent;Lv6a;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
-
-    sget-object v0, Lccg;->a:Lccg;
-
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lt6a;->X:Landroid/content/Intent;
-
-    const/4 v1, 0x0
-
     if-nez p1, :cond_0
-
-    move-object p1, v1
 
     goto :goto_0
 
     :cond_0
-    const-class v2, Landroid/graphics/RectF;
+    iget p1, p1, Lone/me/messages/list/loader/MessageModel;->K0:I
 
-    const-string v3, "ru.ok.tamtam.extra.CROPPED_RECT"
+    if-nez p1, :cond_1
 
-    invoke-static {p1, v3, v2}, La1i;->b(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/os/Parcelable;
-
-    :goto_0
-    move-object v5, p1
-
-    check-cast v5, Landroid/graphics/RectF;
-
-    if-nez v5, :cond_1
-
-    goto :goto_2
+    goto :goto_0
 
     :cond_1
-    iget-object p1, p0, Lt6a;->X:Landroid/content/Intent;
+    invoke-static {p1}, Lfn9;->e(I)Z
+
+    move-result p1
 
     if-nez p1, :cond_2
 
-    move-object p1, v1
+    const/4 p1, 0x1
 
     goto :goto_1
 
     :cond_2
-    const-class v2, Landroid/graphics/Rect;
-
-    const-string v3, "ru.ok.tamtam.extra.CROPPED_ABSOLUTE"
-
-    invoke-static {p1, v3, v2}, La1i;->b(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/os/Parcelable;
+    :goto_0
+    const/4 p1, 0x0
 
     :goto_1
-    move-object v7, p1
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    check-cast v7, Landroid/graphics/Rect;
+    move-result-object p1
 
-    if-nez v7, :cond_3
+    return-object p1
 
-    :goto_2
-    return-object v0
+    :pswitch_0
+    iget-object v0, p0, Lt6a;->b:Lv6a;
+
+    iget-object v0, v0, Lv6a;->b:Ljr9;
+
+    invoke-virtual {v0, p1}, Ljr9;->M(I)Lone/me/messages/list/loader/MessageModel;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    if-nez p1, :cond_3
+
+    goto :goto_5
 
     :cond_3
-    iget-object p1, p0, Lt6a;->Y:Lv6a;
+    iget-object v1, p1, Lone/me/messages/list/loader/MessageModel;->t0:Llz;
 
-    invoke-virtual {p1}, Lv6a;->a()Liv5;
+    iget-object v1, v1, Llz;->b:Lm00;
 
-    move-result-object p1
+    instance-of v2, v1, Lb5h;
 
-    iget-object v2, p0, Lt6a;->Y:Lv6a;
+    if-eqz v2, :cond_4
 
-    iget-object v2, v2, Lv6a;->m:Ljava/lang/String;
+    check-cast v1, Lb5h;
 
-    invoke-virtual {p1, v2}, Liv5;->p(Ljava/lang/String;)Ljava/io/File;
+    goto :goto_2
 
-    move-result-object p1
+    :cond_4
+    const/4 v1, 0x0
 
-    invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    :goto_2
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_6
+
+    invoke-virtual {v1}, Lb5h;->e()Lw8h;
 
     move-result-object v3
 
-    iget-object v4, p0, Lt6a;->Y:Lv6a;
+    if-eqz v3, :cond_6
 
-    iget-object p1, v4, Lv6a;->h:Lkotlinx/coroutines/internal/ContextScope;
+    iget-wide v4, v3, Lw8h;->b:J
 
-    new-instance v2, Lr6a;
+    iget-wide v6, v1, Lb5h;->a:J
 
-    const/4 v8, 0x0
+    cmp-long v1, v4, v6
 
-    const/4 v6, 0x1
+    if-nez v1, :cond_6
 
-    invoke-direct/range {v2 .. v8}, Lr6a;-><init>(Ljava/lang/String;Lv6a;Landroid/graphics/RectF;ILandroid/graphics/Rect;Lkotlin/coroutines/Continuation;)V
+    iget-object v1, v3, Lw8h;->o:Lv8h;
 
-    const/4 v3, 0x3
+    sget-object v3, Lv8h;->a:Lv8h;
 
-    invoke-static {p1, v1, v1, v2, v3}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
+    if-eq v1, v3, :cond_6
 
-    return-object v0
+    sget-object v3, Lv8h;->o:Lv8h;
+
+    if-eq v1, v3, :cond_6
+
+    sget-object v3, Lv8h;->X:Lv8h;
+
+    if-ne v1, v3, :cond_5
+
+    goto :goto_3
+
+    :cond_5
+    move v1, v2
+
+    goto :goto_4
+
+    :cond_6
+    :goto_3
+    move v1, v0
+
+    :goto_4
+    iget-boolean v3, p1, Lone/me/messages/list/loader/MessageModel;->F0:Z
+
+    if-nez v3, :cond_7
+
+    if-eqz v1, :cond_9
+
+    :cond_7
+    invoke-virtual {p1}, Lone/me/messages/list/loader/MessageModel;->l()Z
+
+    move-result v1
+
+    if-nez v1, :cond_9
+
+    iget-object p1, p1, Lone/me/messages/list/loader/MessageModel;->z0:Lv32;
+
+    if-eqz p1, :cond_8
+
+    goto :goto_5
+
+    :cond_8
+    move v0, v2
+
+    :cond_9
+    :goto_5
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_1
+    iget-object v0, p0, Lt6a;->b:Lv6a;
+
+    iget-object v1, v0, Lv6a;->b:Ljr9;
+
+    invoke-virtual {v1}, Ll98;->j()I
+
+    move-result v2
+
+    if-le v2, p1, :cond_b
+
+    if-ltz p1, :cond_b
+
+    invoke-virtual {v1, p1}, Ljr9;->M(I)Lone/me/messages/list/loader/MessageModel;
+
+    move-result-object p1
+
+    if-nez p1, :cond_a
+
+    goto :goto_6
+
+    :cond_a
+    iget-object v0, v0, Lv6a;->c:Lp6a;
+
+    iget-wide v1, p1, Lone/me/messages/list/loader/MessageModel;->a:J
+
+    iget-object p1, v0, Lp6a;->g:Lhbd;
+
+    iget-object p1, p1, Lhbd;->a:Lmcf;
+
+    invoke-interface {p1}, Lmcf;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lg6a;
+
+    iget-object p1, p1, Lg6a;->a:Ljava/util/Set;
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    invoke-interface {p1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    goto :goto_7
+
+    :cond_b
+    :goto_6
+    const/4 p1, 0x0
+
+    :goto_7
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

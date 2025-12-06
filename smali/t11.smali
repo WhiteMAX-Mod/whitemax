@@ -1,88 +1,69 @@
-.class public final synthetic Lt11;
-.super Ljava/lang/Object;
+.class public final Lt11;
+.super Lq44;
 .source "SourceFile"
-
-# interfaces
-.implements Lji6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Lf9a;
 
-.field public final synthetic b:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
+.field public Y:Ljava/lang/Object;
+
+.field public Z:Lqa;
+
+.field public d:Lv11;
+
+.field public o:Lxs;
+
+.field public s0:Ljava/lang/Object;
+
+.field public t0:Ljava/lang/Object;
+
+.field public u0:Ljava/util/Iterator;
+
+.field public v0:Lus;
+
+.field public w0:J
+
+.field public synthetic x0:Ljava/lang/Object;
+
+.field public final synthetic y0:Lv11;
+
+.field public z0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;I)V
+.method public constructor <init>(Lv11;Lq44;)V
     .locals 0
 
-    iput p2, p0, Lt11;->a:I
+    iput-object p1, p0, Lt11;->y0:Lv11;
 
-    iput-object p1, p0, Lt11;->b:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 8
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lt11;->a:I
+    iput-object p1, p0, Lt11;->x0:Ljava/lang/Object;
 
-    iget-object v1, p0, Lt11;->b:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
+    iget p1, p0, Lt11;->z0:I
 
-    packed-switch v0, :pswitch_data_0
+    const/high16 v0, -0x80000000
 
-    sget-object v0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->r0:[Ltr7;
+    or-int/2addr p1, v0
 
-    new-instance v0, Lu11;
+    iput p1, p0, Lt11;->z0:I
 
-    invoke-direct {v0, v1}, Lu11;-><init>(Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;)V
+    iget-object p1, p0, Lt11;->y0:Lv11;
 
-    return-object v0
+    const/4 v0, 0x0
 
-    :pswitch_0
-    sget-object v0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->r0:[Ltr7;
+    invoke-static {p1, v0, p0}, Lv11;->a(Lv11;Lxs;Lq44;)Ljava/lang/Object;
 
-    new-instance v4, Lpid;
+    move-result-object p1
 
-    const/16 v0, 0xa
-
-    invoke-direct {v4, v0, v1}, Lpid;-><init>(ILjava/lang/Object;)V
-
-    new-instance v2, Lpxd;
-
-    sget-object v0, Ll05;->s0:Lk82;
-
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Lk82;->p(Landroid/content/Context;)Lewa;
-
-    move-result-object v0
-
-    iget-object v3, v0, Lewa;->c:Lv5b;
-
-    new-instance v5, Ll;
-
-    const/16 v0, 0x10
-
-    invoke-direct {v5, v0, v1}, Ll;-><init>(ILjava/lang/Object;)V
-
-    const/4 v6, 0x0
-
-    const/16 v7, 0x14
-
-    invoke-direct/range {v2 .. v7}, Lpxd;-><init>(Lv5b;Lnxd;Ll;Lrfd;I)V
-
-    return-object v2
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

@@ -1,30 +1,24 @@
 .class public final Lxug;
-.super Lsgf;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Lsm6;
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
-
-.field public final synthetic Z:Landroid/view/View;
+.field public final synthetic o:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
+.method public constructor <init>(Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p3, p0, Lxug;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
-
-    iput-object p1, p0, Lxug;->Z:Landroid/view/View;
+    iput-object p1, p0, Lxug;->o:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -34,17 +28,17 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lq54;
+    check-cast p1, Lf84;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p0, p1, p2}, Lxug;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1, p2}, Lxug;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
     check-cast p1, Lxug;
 
-    sget-object p2, Lccg;->a:Lccg;
+    sget-object p2, Lqqg;->a:Lqqg;
 
     invoke-virtual {p1, p2}, Lxug;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -53,89 +47,63 @@
     return-object p1
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
     new-instance p1, Lxug;
 
-    iget-object v0, p0, Lxug;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    iget-object v0, p0, Lxug;->o:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
 
-    iget-object v1, p0, Lxug;->Z:Landroid/view/View;
-
-    invoke-direct {p1, v1, p2, v0}, Lxug;-><init>(Landroid/view/View;Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
+    invoke-direct {p1, v0, p2}, Lxug;-><init>(Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    .locals 4
 
-    iget v0, p0, Lxug;->X:I
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    sget-object v1, Lccg;->a:Lccg;
+    :try_start_0
+    new-instance p1, Ljava/io/File;
 
-    const/4 v2, 0x1
+    iget-object v0, p0, Lxug;->o:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
 
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    return-object v1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lxug;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
-
-    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lfx7;
+    invoke-virtual {v0}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->b()Lum9;
 
     move-result-object v0
 
-    new-instance v3, Lwug;
+    iget-object v0, v0, Lum9;->b:Ljava/lang/String;
 
-    iget-object v4, p0, Lxug;->Z:Landroid/view/View;
+    invoke-direct {p1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    const/4 v5, 0x0
+    invoke-virtual {p1}, Ljava/io/File;->length()J
 
-    invoke-direct {v3, v4, v5, p1}, Lwug;-><init>(Landroid/view/View;Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
+    move-result-wide v0
 
-    iput v2, p0, Lxug;->X:I
+    const-wide/16 v2, 0x400
 
-    invoke-interface {v0}, Lfx7;->x()Lhx7;
-
-    move-result-object p1
-
-    sget-object v0, Lhw7;->X:Lhw7;
-
-    invoke-static {p1, v0, v3, p0}, Lpxi;->c(Lhx7;Lhw7;Lzi6;Lsgf;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lr54;->a:Lr54;
-
-    if-ne p1, v0, :cond_2
+    div-long/2addr v0, v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    :cond_2
-    move-object p1, v1
+    :catchall_0
+    move-exception p1
+
+    const-string v0, "UploadFileAttachWorker"
+
+    const-string v1, "fileSize fail!"
+
+    invoke-static {v0, v1, p1}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const-wide/16 v0, 0x0
 
     :goto_0
-    if-ne p1, v0, :cond_3
+    new-instance p1, Ljava/lang/Long;
 
-    return-object v0
+    invoke-direct {p1, v0, v1}, Ljava/lang/Long;-><init>(J)V
 
-    :cond_3
-    return-object v1
+    return-object p1
 .end method

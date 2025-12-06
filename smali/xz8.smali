@@ -1,141 +1,212 @@
-.class public Lxz8;
+.class public final Lxz8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Llw0;
+
+
+# static fields
+.field public static final X:Lxz8;
+
 
 # instance fields
-.field public final a:Landroid/media/session/MediaSession;
+.field public final a:J
 
-.field public final b:Lwz8;
+.field public final b:J
 
-.field public final c:Lc09;
+.field public final c:J
 
-.field public final d:Ljava/lang/Object;
+.field public final d:F
 
-.field public final e:Landroid/os/Bundle;
-
-.field public final f:Landroid/os/RemoteCallbackList;
-
-.field public g:Lzsb;
-
-.field public h:Ljava/util/List;
-
-.field public i:Lou8;
-
-.field public j:I
-
-.field public k:I
-
-.field public l:Lvz8;
-
-.field public m:Lw09;
+.field public final o:F
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 9
+
+    new-instance v0, Lxz8;
+
+    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
+
+    const v7, -0x800001
+
+    move-wide v3, v1
+
+    move-wide v5, v1
+
+    move v8, v7
+
+    invoke-direct/range {v0 .. v8}, Lxz8;-><init>(JJJFF)V
+
+    sput-object v0, Lxz8;->X:Lxz8;
+
+    return-void
+.end method
+
+.method public constructor <init>(JJJFF)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/lang/Object;
+    iput-wide p1, p0, Lxz8;->a:J
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-wide p3, p0, Lxz8;->b:J
 
-    iput-object v0, p0, Lxz8;->d:Ljava/lang/Object;
+    iput-wide p5, p0, Lxz8;->c:J
 
-    new-instance v0, Landroid/os/RemoteCallbackList;
+    iput p7, p0, Lxz8;->d:F
 
-    invoke-direct {v0}, Landroid/os/RemoteCallbackList;-><init>()V
-
-    iput-object v0, p0, Lxz8;->f:Landroid/os/RemoteCallbackList;
-
-    invoke-virtual {p0, p1, p2, p3}, Lxz8;->a(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/media/session/MediaSession;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lxz8;->a:Landroid/media/session/MediaSession;
-
-    new-instance p2, Lwz8;
-
-    invoke-direct {p2, p0}, Lwz8;-><init>(Lxz8;)V
-
-    iput-object p2, p0, Lxz8;->b:Lwz8;
-
-    new-instance v0, Lc09;
-
-    invoke-virtual {p1}, Landroid/media/session/MediaSession;->getSessionToken()Landroid/media/session/MediaSession$Token;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1, p2}, Lc09;-><init>(Landroid/media/session/MediaSession$Token;Ls67;)V
-
-    iput-object v0, p0, Lxz8;->c:Lc09;
-
-    iput-object p3, p0, Lxz8;->e:Landroid/os/Bundle;
-
-    const/4 p2, 0x3
-
-    invoke-virtual {p1, p2}, Landroid/media/session/MediaSession;->setFlags(I)V
+    iput p8, p0, Lxz8;->o:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/media/session/MediaSession;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    new-instance p3, Landroid/media/session/MediaSession;
+    const/4 v0, 0x1
 
-    invoke-direct {p3, p1, p2}, Landroid/media/session/MediaSession;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    if-ne p0, p1, :cond_0
 
-    return-object p3
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lxz8;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lxz8;
+
+    iget-wide v3, p0, Lxz8;->a:J
+
+    iget-wide v5, p1, Lxz8;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-nez v1, :cond_2
+
+    iget-wide v3, p0, Lxz8;->b:J
+
+    iget-wide v5, p1, Lxz8;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-nez v1, :cond_2
+
+    iget-wide v3, p0, Lxz8;->c:J
+
+    iget-wide v5, p1, Lxz8;->c:J
+
+    cmp-long v1, v3, v5
+
+    if-nez v1, :cond_2
+
+    iget v1, p0, Lxz8;->d:F
+
+    iget v3, p1, Lxz8;->d:F
+
+    cmpl-float v1, v1, v3
+
+    if-nez v1, :cond_2
+
+    iget v1, p0, Lxz8;->o:F
+
+    iget p1, p1, Lxz8;->o:F
+
+    cmpl-float p1, v1, p1
+
+    if-nez p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v2
 .end method
 
-.method public b()Lw09;
-    .locals 2
+.method public final hashCode()I
+    .locals 7
 
-    iget-object v0, p0, Lxz8;->d:Ljava/lang/Object;
+    iget-wide v0, p0, Lxz8;->a:J
 
-    monitor-enter v0
+    const/16 v2, 0x20
 
-    :try_start_0
-    iget-object v1, p0, Lxz8;->m:Lw09;
+    ushr-long v3, v0, v2
 
-    monitor-exit v0
+    xor-long/2addr v0, v3
 
-    return-object v1
+    long-to-int v0, v0
 
-    :catchall_0
-    move-exception v1
+    mul-int/lit8 v0, v0, 0x1f
 
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-wide v3, p0, Lxz8;->b:J
 
-    throw v1
-.end method
+    ushr-long v5, v3, v2
 
-.method public c(Lw09;)V
-    .locals 1
+    xor-long/2addr v3, v5
 
-    iget-object v0, p0, Lxz8;->d:Ljava/lang/Object;
+    long-to-int v1, v3
 
-    monitor-enter v0
+    add-int/2addr v0, v1
 
-    :try_start_0
-    iput-object p1, p0, Lxz8;->m:Lw09;
+    mul-int/lit8 v0, v0, 0x1f
 
-    monitor-exit v0
+    iget-wide v3, p0, Lxz8;->c:J
 
-    return-void
+    ushr-long v1, v3, v2
 
-    :catchall_0
-    move-exception p1
+    xor-long/2addr v1, v3
 
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    long-to-int v1, v1
 
-    throw p1
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lxz8;->d:F
+
+    const/4 v2, 0x0
+
+    cmpl-float v3, v1, v2
+
+    const/4 v4, 0x0
+
+    if-eqz v3, :cond_0
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v1
+
+    goto :goto_0
+
+    :cond_0
+    move v1, v4
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lxz8;->o:F
+
+    cmpl-float v2, v1, v2
+
+    if-eqz v2, :cond_1
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v4
+
+    :cond_1
+    add-int/2addr v0, v4
+
+    return v0
 .end method

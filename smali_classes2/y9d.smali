@@ -1,68 +1,106 @@
 .class public final Ly9d;
-.super Lpmf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public c:Li0c;
+.field public final a:Landroidx/recyclerview/widget/RecyclerView;
+
+.field public final b:Lds9;
+
+.field public final c:Lyad;
+
+.field public final d:Lvu9;
+
+.field public final e:Ljava/util/concurrent/ExecutorService;
+
+.field public f:Lhad;
+
+.field public final g:Landroid/graphics/Rect;
+
+.field public final h:Lrf5;
 
 
 # direct methods
-.method public constructor <init>(Lpf9;)V
+.method public constructor <init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;Lds9;Lyad;Lvu9;Lp6a;Ljava/util/concurrent/ExecutorService;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lpmf;-><init>(Lpf9;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ly9d;->a:Landroidx/recyclerview/widget/RecyclerView;
+
+    iput-object p2, p0, Ly9d;->b:Lds9;
+
+    iput-object p3, p0, Ly9d;->c:Lyad;
+
+    iput-object p4, p0, Ly9d;->d:Lvu9;
+
+    iput-object p6, p0, Ly9d;->e:Ljava/util/concurrent/ExecutorService;
+
+    new-instance p1, Landroid/graphics/Rect;
+
+    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
+
+    iput-object p1, p0, Ly9d;->g:Landroid/graphics/Rect;
+
+    new-instance p1, Lrf5;
+
+    const/4 p2, 0x4
+
+    invoke-direct {p1, p2, p0}, Lrf5;-><init>(ILjava/lang/Object;)V
+
+    iput-object p1, p0, Ly9d;->h:Lrf5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lpf9;Ljava/lang/String;)V
-    .locals 1
-
-    const-string v0, "profile"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    invoke-static {p1}, Livi;->a(Lpf9;)Li0c;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ly9d;->c:Li0c;
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p1}, Lpf9;->y()V
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final a()V
     .locals 3
 
-    iget-object v0, p0, Ly9d;->c:Li0c;
+    iget-object v0, p0, Ly9d;->f:Lhad;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const/4 v1, 0x0
 
-    const-string v2, "{profile="
+    if-eqz v0, :cond_2
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0}, Landroid/widget/PopupWindow;->dismiss()V
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v2, v0, Lhad;->Z:Landroid/animation/AnimatorSet;
 
-    const-string v0, "}"
+    if-eqz v2, :cond_0
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Landroid/animation/AnimatorSet;->cancel()V
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_0
+    iput-object v1, v0, Lhad;->Z:Landroid/animation/AnimatorSet;
 
-    move-result-object v0
+    iget-object v2, v0, Lhad;->Y:Landroid/animation/ValueAnimator;
 
-    return-object v0
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v2}, Landroid/animation/ValueAnimator;->cancel()V
+
+    :cond_1
+    iput-object v1, v0, Lhad;->Y:Landroid/animation/ValueAnimator;
+
+    iput-object v1, v0, Lhad;->c:Lx9d;
+
+    iput-object v1, v0, Lhad;->o:Landroid/view/View;
+
+    iput-object v1, v0, Lhad;->d:Landroid/graphics/Rect;
+
+    iput-object v1, v0, Lhad;->s0:Ljava/lang/Long;
+
+    :cond_2
+    iput-object v1, p0, Ly9d;->f:Lhad;
+
+    iget-object v0, p0, Ly9d;->a:Landroidx/recyclerview/widget/RecyclerView;
+
+    iget-object v1, p0, Ly9d;->h:Lrf5;
+
+    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->s0(Lbid;)V
+
+    return-void
 .end method

@@ -1,5 +1,5 @@
 .class public Lru/ok/android/externcalls/analytics/internal/upload/UploadService;
-.super Lgld;
+.super Lswd;
 .source "SourceFile"
 
 
@@ -17,18 +17,18 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lun7;-><init>()V
+    invoke-direct {p0}, Lbu7;-><init>()V
 
     return-void
 .end method
 
-.method private onHandleUploadContinue(Ljava/lang/String;)V
+.method private onHandleUploadContinue(Lru/ok/android/externcalls/analytics/internal/event/EventChannel;)V
     .locals 3
 
     :try_start_0
     sget-object v0, Lru/ok/android/externcalls/analytics/internal/upload/UploadStarter;->INSTANCE:Lru/ok/android/externcalls/analytics/internal/upload/UploadStarter;
 
-    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/analytics/internal/upload/UploadStarter;->uploadContinue(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/analytics/internal/upload/UploadStarter;->uploadContinue(Lru/ok/android/externcalls/analytics/internal/event/EventChannel;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -52,13 +52,13 @@
     return-void
 .end method
 
-.method private onHandleUploadNew(Ljava/lang/String;)V
+.method private onHandleUploadNew(Lru/ok/android/externcalls/analytics/internal/event/EventChannel;)V
     .locals 3
 
     :try_start_0
     sget-object v0, Lru/ok/android/externcalls/analytics/internal/upload/UploadStarter;->INSTANCE:Lru/ok/android/externcalls/analytics/internal/upload/UploadStarter;
 
-    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/analytics/internal/upload/UploadStarter;->uploadNew(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/analytics/internal/upload/UploadStarter;->uploadNew(Lru/ok/android/externcalls/analytics/internal/event/EventChannel;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -82,9 +82,10 @@
     return-void
 .end method
 
-.method public static resumeUpload(Ljava/lang/String;)V
+.method public static resumeUpload(Lru/ok/android/externcalls/analytics/internal/event/EventChannel;)V
     .locals 3
 
+    :try_start_0
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
@@ -95,21 +96,15 @@
 
     move-result-object v0
 
-    const-string v1, "calls-sdk-analytics"
+    const-string v1, "channel"
 
-    const/4 v2, 0x0
-
-    invoke-static {v1, p0, v2}, Landroid/net/Uri;->fromParts(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
+    invoke-virtual {v0, v1, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
     move-result-object p0
 
     sget-object v0, Lru/ok/android/commons/app/ApplicationProvider;->a:Landroid/app/Application;
 
-    invoke-static {}, Lxfi;->b()Landroid/app/Application;
+    invoke-static {}, Lmri;->a()Landroid/app/Application;
 
     move-result-object v0
 
@@ -120,13 +115,33 @@
     move-result-object p0
 
     invoke-static {p0}, Lru/ok/android/externcalls/analytics/internal/upload/UploadService;->startUploadImpl(Landroid/content/Intent;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    sget-object v0, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->INSTANCE:Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;
+
+    invoke-virtual {v0}, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->getLogger()Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
+
+    move-result-object v0
+
+    const-string v1, "UploadService"
+
+    const-string v2, "Cannot resume upload"
+
+    invoke-interface {v0, v1, v2, p0}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
-.method public static startUpload(Ljava/lang/String;)V
+.method public static startUpload(Lru/ok/android/externcalls/analytics/internal/event/EventChannel;)V
     .locals 3
 
+    :try_start_0
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
@@ -137,21 +152,15 @@
 
     move-result-object v0
 
-    const-string v1, "calls-sdk-analytics"
+    const-string v1, "channel"
 
-    const/4 v2, 0x0
-
-    invoke-static {v1, p0, v2}, Landroid/net/Uri;->fromParts(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
+    invoke-virtual {v0, v1, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
     move-result-object p0
 
     sget-object v0, Lru/ok/android/commons/app/ApplicationProvider;->a:Landroid/app/Application;
 
-    invoke-static {}, Lxfi;->b()Landroid/app/Application;
+    invoke-static {}, Lmri;->a()Landroid/app/Application;
 
     move-result-object v0
 
@@ -162,6 +171,25 @@
     move-result-object p0
 
     invoke-static {p0}, Lru/ok/android/externcalls/analytics/internal/upload/UploadService;->startUploadImpl(Landroid/content/Intent;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    sget-object v0, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->INSTANCE:Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;
+
+    invoke-virtual {v0}, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->getLogger()Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
+
+    move-result-object v0
+
+    const-string v1, "UploadService"
+
+    const-string v2, "Cannot start upload"
+
+    invoke-interface {v0, v1, v2, p0}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -171,7 +199,7 @@
 
     sget-object v0, Lru/ok/android/commons/app/ApplicationProvider;->a:Landroid/app/Application;
 
-    invoke-static {}, Lxfi;->b()Landroid/app/Application;
+    invoke-static {}, Lmri;->a()Landroid/app/Application;
 
     move-result-object v0
 
@@ -188,7 +216,7 @@
 
     move-result v2
 
-    invoke-static {v0, v1, v2, p0}, Lun7;->enqueueWork(Landroid/content/Context;Ljava/lang/Class;ILandroid/content/Intent;)V
+    invoke-static {v0, v1, v2, p0}, Lbu7;->enqueueWork(Landroid/content/Context;Ljava/lang/Class;ILandroid/content/Intent;)V
     :try_end_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -219,7 +247,85 @@
 
 # virtual methods
 .method public onHandleWork(Landroid/content/Intent;)V
-    .locals 0
+    .locals 4
 
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const-string v1, "channel"
+
+    invoke-virtual {p1, v1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
+
+    move-result-object p1
+
+    check-cast p1, Lru/ok/android/externcalls/analytics/internal/event/EventChannel;
+
+    if-nez p1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    sget-object v1, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->INSTANCE:Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;
+
+    invoke-virtual {v1}, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->getLogger()Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "Handle upload work, channel="
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Lru/ok/android/externcalls/analytics/internal/event/EventChannel;->getKey()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "UploadService"
+
+    invoke-interface {v1, v3, v2}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "ru.ok.android.onelog.action.UPLOAD_NEW"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/analytics/internal/upload/UploadService;->onHandleUploadNew(Lru/ok/android/externcalls/analytics/internal/event/EventChannel;)V
+
+    return-void
+
+    :cond_3
+    const-string v1, "ru.ok.android.onelog.action.UPLOAD_CONTINUE"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/analytics/internal/upload/UploadService;->onHandleUploadContinue(Lru/ok/android/externcalls/analytics/internal/event/EventChannel;)V
+
+    :cond_4
+    :goto_0
     return-void
 .end method

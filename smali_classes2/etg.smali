@@ -1,28 +1,30 @@
 .class public final Letg;
-.super Lsgf;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic X:[B
+.field public final synthetic X:Lftg;
 
-.field public final synthetic Y:Lhtg;
+.field public final synthetic Y:I
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>([BLhtg;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lftg;ILkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Letg;->X:[B
+    iput-object p1, p0, Letg;->X:Lftg;
 
-    iput-object p2, p0, Letg;->Y:Lhtg;
+    iput p2, p0, Letg;->Y:I
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -32,106 +34,146 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lq54;
+    check-cast p1, Lf84;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p0, p1, p2}, Letg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1, p2}, Letg;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
     check-cast p1, Letg;
 
-    sget-object p2, Lccg;->a:Lccg;
+    sget-object p2, Lqqg;->a:Lqqg;
 
     invoke-virtual {p1, p2}, Letg;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p2
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
     new-instance p1, Letg;
 
-    iget-object v0, p0, Letg;->X:[B
+    iget-object v0, p0, Letg;->X:Lftg;
 
-    iget-object v1, p0, Letg;->Y:Lhtg;
+    iget v1, p0, Letg;->Y:I
 
-    invoke-direct {p1, v0, v1, p2}, Letg;-><init>([BLhtg;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p1, v0, v1, p2}, Letg;-><init>(Lftg;ILkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    .locals 9
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    iget v0, p0, Letg;->o:I
 
-    iget-object p1, p0, Letg;->X:[B
+    iget-object v1, p0, Letg;->X:Lftg;
 
-    const/4 v0, 0x2
+    const/4 v2, 0x1
 
-    invoke-static {p1, v0}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+    if-eqz v0, :cond_1
 
-    move-result-object p1
+    if-ne v0, v2, :cond_0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    const-string v1, "data:"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    sget-object v1, Lcs9;->c:Lcs9;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ";base64,"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p1
-
-    iget-object v0, p0, Letg;->Y:Lhtg;
-
-    iget-object v0, v0, Lhtg;->r:Lx0f;
+    goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Lx0f;->getValue()Ljava/lang/Object;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    move-result-object v1
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    move-object v2, v1
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    check-cast v2, Lwsg;
+    throw p1
 
-    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+    :cond_1
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    move-result-object v3
+    iget-object p1, v1, Lftg;->a:Lk18;
 
-    const/4 v4, 0x5
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lhwa;
+
+    new-instance v3, Lfh2;
+
+    new-instance v7, Lpo3;
+
+    new-instance v0, Loxg;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iget v4, p0, Letg;->Y:I
+
+    iput v4, v0, Loxg;->w:I
+
+    new-instance v4, Lqxg;
+
+    invoke-direct {v4, v0}, Lqxg;-><init>(Loxg;)V
+
+    const/16 v0, 0x17
 
     const/4 v5, 0x0
 
-    invoke-static {v2, v5, v3, v5, v4}, Lwsg;->a(Lwsg;Landroid/util/Size;Ljava/lang/String;Ljava/lang/String;I)Lwsg;
+    invoke-direct {v7, v5, v4, v0}, Lpo3;-><init>(Lus;Lqxg;I)V
 
-    move-result-object v2
+    const/4 v8, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lx0f;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const/4 v4, 0x0
 
-    move-result v1
+    const-wide/16 v5, 0x0
 
-    if-eqz v1, :cond_0
+    invoke-direct/range {v3 .. v8}, Lfh2;-><init>(Ljava/lang/String;JLpo3;Z)V
 
-    sget-object p1, Lccg;->a:Lccg;
+    iput v2, p0, Letg;->o:I
+
+    invoke-virtual {p1, v3, p0}, Lhwa;->F(Ln2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lg84;->a:Lg84;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    check-cast p1, Ldo3;
+
+    iget-object p1, p1, Ldo3;->d:Lqxg;
+
+    if-eqz p1, :cond_3
+
+    iget-object v0, v1, Lftg;->b:Lk18;
+
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lsxg;
+
+    invoke-virtual {v0, p1}, Lsxg;->t(Lqxg;)V
+
+    sget-object p1, Lqqg;->a:Lqqg;
 
     return-object p1
+
+    :cond_3
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Required value was null."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

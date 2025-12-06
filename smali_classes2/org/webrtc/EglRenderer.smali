@@ -1609,9 +1609,9 @@
 
     if-eqz v1, :cond_0
 
-    new-instance v2, Ly65;
+    new-instance v2, Lw95;
 
-    invoke-direct {v2, p0, p1, p2, p3}, Ly65;-><init>(Lorg/webrtc/EglRenderer;Lorg/webrtc/VideoFrame;J)V
+    invoke-direct {v2, p0, p1, p2, p3}, Lw95;-><init>(Lorg/webrtc/EglRenderer;Lorg/webrtc/VideoFrame;J)V
 
     invoke-virtual {v1, v2}, Lorg/webrtc/EglThread;->scheduleRenderUpdate(Lorg/webrtc/EglThread$RenderUpdate;)V
 
@@ -1666,7 +1666,7 @@
     .locals 6
 
     .line 3
-    new-instance v0, Lw65;
+    new-instance v0, Lu95;
 
     move-object v1, p0
 
@@ -1678,7 +1678,7 @@
 
     move v5, p4
 
-    invoke-direct/range {v0 .. v5}, Lw65;-><init>(Lorg/webrtc/EglRenderer;Lorg/webrtc/RendererCommon$GlDrawer;Lorg/webrtc/EglRenderer$FrameListener;FZ)V
+    invoke-direct/range {v0 .. v5}, Lu95;-><init>(Lorg/webrtc/EglRenderer;Lorg/webrtc/RendererCommon$GlDrawer;Lorg/webrtc/EglRenderer$FrameListener;FZ)V
 
     invoke-direct {p0, v0}, Lorg/webrtc/EglRenderer;->postToRenderThread(Ljava/lang/Runnable;)V
 
@@ -1728,7 +1728,7 @@
 
     move-result-object v0
 
-    new-instance v2, Lx65;
+    new-instance v2, Lv95;
 
     move-object v3, p0
 
@@ -1740,7 +1740,7 @@
 
     move v7, p4
 
-    invoke-direct/range {v2 .. v7}, Lx65;-><init>(Lorg/webrtc/EglRenderer;FFFF)V
+    invoke-direct/range {v2 .. v7}, Lv95;-><init>(Lorg/webrtc/EglRenderer;FFFF)V
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
 
@@ -2016,11 +2016,11 @@
 
     move-result-object p1
 
-    new-instance v3, Lgj4;
+    new-instance v3, Lqj4;
 
-    const/16 v5, 0x11
+    const/16 v5, 0x12
 
-    invoke-direct {v3, v5, p0}, Lgj4;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v3, v5, p0}, Lqj4;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {p1, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -2236,11 +2236,11 @@
 
     move-result-object v2
 
-    new-instance v3, Lyo4;
+    new-instance v3, Lkr4;
 
     const/16 v4, 0xd
 
-    invoke-direct {v3, p0, v4, v0}, Lyo4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v3, p0, v4, v0}, Lkr4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
 
@@ -2339,11 +2339,11 @@
 
     move-result-object v1
 
-    new-instance v2, Lyo4;
+    new-instance v2, Lkr4;
 
     const/16 v3, 0xc
 
-    invoke-direct {v2, p0, v3, p1}, Lyo4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v2, p0, v3, p1}, Lkr4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
 
@@ -2422,11 +2422,11 @@
 
     if-eq v2, v3, :cond_1
 
-    new-instance v2, Lo65;
+    new-instance v2, Lcj;
 
-    const/4 v3, 0x1
+    const/16 v3, 0x1c
 
-    invoke-direct {v2, p0, v0, p1, v3}, Lo65;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct {v2, p0, v0, p1, v3}, Lcj;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
     invoke-direct {p0, v2}, Lorg/webrtc/EglRenderer;->postToRenderThread(Ljava/lang/Runnable;)V
 

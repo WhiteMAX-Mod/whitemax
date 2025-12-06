@@ -1,152 +1,93 @@
-.class public final Ljz9;
+.class public abstract Ljz9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lepg;
-
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final b:Lpog;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Ljz9;->a:I
-
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 4
-    new-instance v0, Lftb;
-
-    .line 5
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    .line 6
-    iput-object v0, p0, Ljz9;->b:Lpog;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lpog;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Ljz9;->a:I
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-object p1, p0, Ljz9;->b:Lpog;
-
-    return-void
-.end method
+.field public a:Landroid/util/Rational;
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;Lyb3;Lny0;Lfpg;Ljava/util/concurrent/Executor;JZ)Lgpg;
-    .locals 10
+.method public final a(FFF)Liz9;
+    .locals 3
 
-    iget v0, p0, Ljz9;->a:I
+    move-object v0, p0
 
-    packed-switch v0, :pswitch_data_0
+    check-cast v0, Lb9c;
+
+    const/4 v1, 0x2
+
+    new-array v1, v1, [F
+
+    const/4 v2, 0x0
+
+    aput p1, v1, v2
+
+    const/4 p1, 0x1
+
+    aput p2, v1, p1
+
+    monitor-enter v0
 
     :try_start_0
-    const-class v0, Landroidx/media3/effect/SingleInputVideoGraph$Factory;
+    iget-object p2, v0, Lb9c;->d:Landroid/graphics/Matrix;
 
-    const-class v1, Lpog;
+    if-nez p2, :cond_0
 
-    filled-new-array {v1}, [Ljava/lang/Class;
+    sget-object p1, Lb9c;->e:Landroid/graphics/PointF;
 
-    move-result-object v1
+    monitor-exit v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+    goto :goto_0
 
-    move-result-object v0
+    :catchall_0
+    move-exception p1
 
-    iget-object v1, p0, Ljz9;->b:Lpog;
+    goto :goto_1
 
-    check-cast v1, Lftb;
+    :cond_0
+    invoke-virtual {p2, v1}, Landroid/graphics/Matrix;->mapPoints([F)V
 
-    filled-new-array {v1}, [Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v1, v0
-
-    check-cast v1, Lepg;
+    monitor-exit v0
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-object v2, p1
+    new-instance p2, Landroid/graphics/PointF;
 
-    move-object v3, p2
+    aget v0, v1, v2
 
-    move-object v4, p3
+    aget p1, v1, p1
 
-    move-object v5, p4
+    invoke-direct {p2, v0, p1}, Landroid/graphics/PointF;-><init>(FF)V
 
-    move-object v6, p5
+    move-object p1, p2
 
-    move-wide/from16 v7, p6
+    :goto_0
+    new-instance p2, Liz9;
 
-    move/from16 v9, p8
+    iget v0, p1, Landroid/graphics/PointF;->x:F
 
-    invoke-interface/range {v1 .. v9}, Lepg;->a(Landroid/content/Context;Lyb3;Lny0;Lfpg;Ljava/util/concurrent/Executor;JZ)Lgpg;
+    iget p1, p1, Landroid/graphics/PointF;->y:F
 
-    move-result-object p1
+    iget-object v1, p0, Ljz9;->a:Landroid/util/Rational;
 
-    return-object p1
+    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
 
-    :catch_0
-    move-exception v0
+    iput v0, p2, Liz9;->a:F
 
-    move-object p1, v0
+    iput p1, p2, Liz9;->b:F
 
-    new-instance p2, Ljava/lang/IllegalStateException;
+    iput p3, p2, Liz9;->c:F
 
-    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
+    iput-object v1, p2, Liz9;->d:Landroid/util/Rational;
 
-    throw p2
+    return-object p2
 
-    :pswitch_0
-    new-instance v0, Lkz9;
+    :goto_1
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    iget-object v3, p0, Ljz9;->b:Lpog;
-
-    move-object v5, p1
-
-    move-object v2, p2
-
-    move-object v1, p3
-
-    move-object v4, p4
-
-    move-object v6, p5
-
-    move/from16 v7, p8
-
-    invoke-direct/range {v0 .. v7}, Lkz9;-><init>(Lny0;Lyb3;Lpog;Lfpg;Landroid/content/Context;Ljava/util/concurrent/Executor;Z)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

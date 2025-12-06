@@ -1,235 +1,102 @@
 .class public final Lrcg;
-.super Ljava/lang/Object;
+.super Lifi;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/text/Spannable;
 
 
 # instance fields
-.field public a:Z
-
-.field public b:Landroid/text/Spannable;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Landroid/text/Spannable;)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lrcg;->a:Z
-
-    iput-object p1, p0, Lrcg;->b:Landroid/text/Spannable;
+    iput-object p1, p0, Lrcg;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 3
+.method public final b()Ljava/lang/CharSequence;
+    .locals 1
 
-    iget-object v0, p0, Lrcg;->b:Landroid/text/Spannable;
+    iget-object v0, p0, Lrcg;->a:Ljava/lang/String;
 
-    iget-boolean v1, p0, Lrcg;->a:Z
+    return-object v0
+.end method
 
-    if-nez v1, :cond_1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    if-ne p0, p1, :cond_0
 
-    const/16 v2, 0x1c
+    goto :goto_1
 
-    if-ge v1, v2, :cond_0
+    :cond_0
+    instance-of v0, p1, Lrcg;
 
-    new-instance v1, Lk82;
-
-    const/16 v2, 0xf
-
-    invoke-direct {v1, v2}, Lk82;-><init>(I)V
+    if-nez v0, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    new-instance v1, Lqcg;
+    :cond_1
+    check-cast p1, Lrcg;
 
-    const/16 v2, 0xf
+    iget-object v0, p0, Lrcg;->a:Ljava/lang/String;
 
-    invoke-direct {v1, v2}, Lk82;-><init>(I)V
+    iget-object p1, p1, Lrcg;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
 
     :goto_0
-    invoke-virtual {v1, v0}, Lk82;->w(Ljava/lang/CharSequence;)Z
+    const/4 p1, 0x0
 
-    move-result v1
+    return p1
 
-    if-eqz v1, :cond_1
-
-    new-instance v1, Landroid/text/SpannableString;
-
-    invoke-direct {v1, v0}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
-
-    iput-object v1, p0, Lrcg;->b:Landroid/text/Spannable;
-
-    :cond_1
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lrcg;->a:Z
-
-    return-void
-.end method
-
-.method public final charAt(I)C
-    .locals 1
-
-    iget-object v0, p0, Lrcg;->b:Landroid/text/Spannable;
-
-    invoke-interface {v0, p1}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result p1
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
 
     return p1
 .end method
 
-.method public final chars()Ljava/util/stream/IntStream;
+.method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lrcg;->b:Landroid/text/Spannable;
+    iget-object v0, p0, Lrcg;->a:Ljava/lang/String;
 
-    invoke-interface {v0}, Ljava/lang/CharSequence;->chars()Ljava/util/stream/IntStream;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final codePoints()Ljava/util/stream/IntStream;
-    .locals 1
-
-    iget-object v0, p0, Lrcg;->b:Landroid/text/Spannable;
-
-    invoke-interface {v0}, Ljava/lang/CharSequence;->codePoints()Ljava/util/stream/IntStream;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getSpanEnd(Ljava/lang/Object;)I
-    .locals 1
-
-    iget-object v0, p0, Lrcg;->b:Landroid/text/Spannable;
-
-    invoke-interface {v0, p1}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final getSpanFlags(Ljava/lang/Object;)I
-    .locals 1
-
-    iget-object v0, p0, Lrcg;->b:Landroid/text/Spannable;
-
-    invoke-interface {v0, p1}, Landroid/text/Spanned;->getSpanFlags(Ljava/lang/Object;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final getSpanStart(Ljava/lang/Object;)I
-    .locals 1
-
-    iget-object v0, p0, Lrcg;->b:Landroid/text/Spannable;
-
-    invoke-interface {v0, p1}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lrcg;->b:Landroid/text/Spannable;
-
-    invoke-interface {v0, p1, p2, p3}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final length()I
-    .locals 1
-
-    iget-object v0, p0, Lrcg;->b:Landroid/text/Spannable;
-
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
     return v0
 .end method
 
-.method public final nextSpanTransition(IILjava/lang/Class;)I
-    .locals 1
-
-    iget-object v0, p0, Lrcg;->b:Landroid/text/Spannable;
-
-    invoke-interface {v0, p1, p2, p3}, Landroid/text/Spanned;->nextSpanTransition(IILjava/lang/Class;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final removeSpan(Ljava/lang/Object;)V
-    .locals 1
-
-    invoke-virtual {p0}, Lrcg;->a()V
-
-    iget-object v0, p0, Lrcg;->b:Landroid/text/Spannable;
-
-    invoke-interface {v0, p1}, Landroid/text/Spannable;->removeSpan(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final setSpan(Ljava/lang/Object;III)V
-    .locals 1
-
-    invoke-virtual {p0}, Lrcg;->a()V
-
-    iget-object v0, p0, Lrcg;->b:Landroid/text/Spannable;
-
-    invoke-interface {v0, p1, p2, p3, p4}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
-
-    return-void
-.end method
-
-.method public final subSequence(II)Ljava/lang/CharSequence;
-    .locals 1
-
-    iget-object v0, p0, Lrcg;->b:Landroid/text/Spannable;
-
-    invoke-interface {v0, p1, p2}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
 .method public final toString()Ljava/lang/String;
-    .locals 1
+    .locals 2
 
-    iget-object v0, p0, Lrcg;->b:Landroid/text/Spannable;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    const-string v1, "LostConnection(text="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lrcg;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

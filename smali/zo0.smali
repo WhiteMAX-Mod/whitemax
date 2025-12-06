@@ -4,288 +4,220 @@
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public b:I
-
-.field public c:I
-
-.field public final d:I
-
-.field public e:J
-
-.field public final f:Ljava/lang/Object;
+.field public final a:Landroid/content/Context;
 
 
 # direct methods
-.method public constructor <init>(II)V
-    .locals 3
+.method public synthetic constructor <init>(Landroid/content/Context;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lzo0;->a:Landroid/content/Context;
 
-    iput v0, p0, Lzo0;->a:I
-
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v1, 0x1
-
-    if-lez p1, :cond_0
-
-    move v2, v1
-
-    goto :goto_0
-
-    :cond_0
-    move v2, v0
-
-    :goto_0
-    if-eqz v2, :cond_3
-
-    if-lez p2, :cond_1
-
-    move v0, v1
-
-    :cond_1
-    if-eqz v0, :cond_2
-
-    .line 2
-    iput p1, p0, Lzo0;->c:I
-
-    .line 3
-    iput p2, p0, Lzo0;->d:I
-
-    .line 4
-    new-instance p1, Ltvi;
-
-    invoke-direct {p1, p0}, Ltvi;-><init>(Ljava/lang/Object;)V
-
-    iput-object p1, p0, Lzo0;->f:Ljava/lang/Object;
-
-    return-void
-
-    .line 5
-    :cond_2
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    throw p1
-
-    .line 6
-    :cond_3
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    throw p1
-.end method
-
-.method public constructor <init>(IIIJLcs9;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lzo0;->a:I
-
-    .line 7
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 8
-    iput p1, p0, Lzo0;->b:I
-
-    .line 9
-    iput p2, p0, Lzo0;->c:I
-
-    .line 10
-    iput p3, p0, Lzo0;->d:I
-
-    .line 11
-    iput-wide p4, p0, Lzo0;->e:J
-
-    .line 12
-    iput-object p6, p0, Lzo0;->f:Ljava/lang/Object;
 
     return-void
 .end method
 
+.method public static a(Lhf6;)I
+    .locals 5
 
-# virtual methods
-.method public declared-synchronized a(Landroid/graphics/Bitmap;)V
-    .locals 7
-
-    monitor-enter p0
-
-    :try_start_0
-    invoke-static {p1}, Laq0;->d(Landroid/graphics/Bitmap;)I
-
-    move-result p1
-
-    iget v0, p0, Lzo0;->b:I
+    iget-object v0, p0, Lhf6;->n:Ljava/lang/String;
 
     const/4 v1, 0x0
 
-    const/4 v2, 0x1
+    if-eqz v0, :cond_9
 
-    if-lez v0, :cond_0
+    invoke-static {v0}, Lxz9;->k(Ljava/lang/String;)Z
 
-    move v0, v2
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto/16 :goto_2
+
+    :cond_0
+    iget-object p0, p0, Lhf6;->n:Ljava/lang/String;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/4 v2, 0x4
+
+    const/4 v3, 0x1
+
+    const/4 v4, -0x1
+
+    sparse-switch v0, :sswitch_data_0
 
     goto :goto_0
 
-    :cond_0
-    move v0, v1
+    :sswitch_0
+    const-string v0, "image/png"
 
-    :goto_0
-    const-string v3, "No bitmaps registered."
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-static {v3, v0}, Loi3;->c(Ljava/lang/String;Z)V
+    move-result p0
 
-    int-to-long v3, p1
+    if-nez p0, :cond_1
 
-    iget-wide v5, p0, Lzo0;->e:J
-
-    cmp-long v0, v3, v5
-
-    if-gtz v0, :cond_1
-
-    move v1, v2
+    goto :goto_0
 
     :cond_1
-    const-string v0, "Bitmap size bigger than the total registered size: %d, %d"
+    const/4 v4, 0x6
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    goto :goto_0
 
-    move-result-object p1
+    :sswitch_1
+    const-string v0, "image/bmp"
 
-    iget-wide v5, p0, Lzo0;->e:J
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    move-result p0
 
-    move-result-object v5
+    if-nez p0, :cond_2
 
-    filled-new-array {p1, v5}, [Ljava/lang/Object;
+    goto :goto_0
 
-    move-result-object p1
+    :cond_2
+    const/4 v4, 0x5
 
-    invoke-static {v1, v0, p1}, Loi3;->d(ZLjava/lang/String;[Ljava/lang/Object;)V
+    goto :goto_0
 
-    iget-wide v0, p0, Lzo0;->e:J
+    :sswitch_2
+    const-string v0, "image/webp"
 
-    sub-long/2addr v0, v3
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iput-wide v0, p0, Lzo0;->e:J
+    move-result p0
 
-    iget p1, p0, Lzo0;->b:I
+    if-nez p0, :cond_3
 
-    sub-int/2addr p1, v2
+    goto :goto_0
 
-    iput p1, p0, Lzo0;->b:I
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :cond_3
+    move v4, v2
 
-    monitor-exit p0
+    goto :goto_0
 
-    return-void
+    :sswitch_3
+    const-string v0, "image/jpeg"
 
-    :catchall_0
-    move-exception p1
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    move-result p0
 
-    throw p1
-.end method
+    if-nez p0, :cond_4
 
-.method public declared-synchronized b()I
-    .locals 1
+    goto :goto_0
 
-    monitor-enter p0
+    :cond_4
+    const/4 v4, 0x3
 
-    :try_start_0
-    iget v0, p0, Lzo0;->d:I
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    goto :goto_0
 
-    monitor-exit p0
+    :sswitch_4
+    const-string v0, "image/heif"
 
-    return v0
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    :catchall_0
-    move-exception v0
+    move-result p0
 
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    if-nez p0, :cond_5
 
-    throw v0
-.end method
+    goto :goto_0
 
-.method public toString()Ljava/lang/String;
-    .locals 4
+    :cond_5
+    const/4 v4, 0x2
 
-    iget v0, p0, Lzo0;->a:I
+    goto :goto_0
 
-    packed-switch v0, :pswitch_data_0
+    :sswitch_5
+    const-string v0, "image/heic"
 
-    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result-object v0
+    move-result p0
 
-    return-object v0
+    if-nez p0, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    move v4, v3
+
+    goto :goto_0
+
+    :sswitch_6
+    const-string v0, "image/avif"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_7
+
+    goto :goto_0
+
+    :cond_7
+    move v4, v1
+
+    :goto_0
+    packed-switch v4, :pswitch_data_0
+
+    goto :goto_1
 
     :pswitch_0
-    new-instance v0, Ljava/lang/StringBuilder;
+    sget p0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const-string v1, "VideoParams("
+    const/16 v0, 0x22
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-lt p0, v0, :cond_8
 
-    iget-object v1, p0, Lzo0;->f:Ljava/lang/Object;
+    :pswitch_1
+    invoke-static {v2, v1, v1, v1}, Ltk0;->b(IIII)I
 
-    check-cast v1, Lcs9;
+    move-result p0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    return p0
 
-    const/16 v1, 0x7c
+    :cond_8
+    :goto_1
+    invoke-static {v3, v1, v1, v1}, Ltk0;->b(IIII)I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    move-result p0
 
-    iget v2, p0, Lzo0;->b:I
+    return p0
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    :cond_9
+    :goto_2
+    invoke-static {v1, v1, v1, v1}, Ltk0;->b(IIII)I
 
-    const/16 v2, 0x78
+    move-result p0
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    return p0
 
-    iget v2, p0, Lzo0;->c:I
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    iget v2, p0, Lzo0;->d:I
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lzo0;->e:J
-
-    const-string v3, "B)"
-
-    invoke-static {v0, v1, v2, v3}, Lrv8;->g(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :sswitch_data_0
+    .sparse-switch
+        -0x58abd7ba -> :sswitch_6
+        -0x58a8e8f5 -> :sswitch_5
+        -0x58a8e8f2 -> :sswitch_4
+        -0x58a7d764 -> :sswitch_3
+        -0x58a21830 -> :sswitch_2
+        -0x3468a12f -> :sswitch_1
+        -0x34686c8b -> :sswitch_0
+    .end sparse-switch
 
     :pswitch_data_0
-    .packed-switch 0x1
+    .packed-switch 0x0
         :pswitch_0
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
     .end packed-switch
 .end method

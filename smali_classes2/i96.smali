@@ -1,98 +1,77 @@
-.class public final Li96;
-.super Lsgf;
+.class public final synthetic Li96;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Lem6;
 
 
 # instance fields
-.field public final synthetic X:Ll96;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Ljava/lang/String;
+.field public final synthetic b:Lone/me/folders/edit/FolderEditScreen;
 
 
 # direct methods
-.method public constructor <init>(Ll96;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lone/me/folders/edit/FolderEditScreen;I)V
     .locals 0
 
-    iput-object p1, p0, Li96;->X:Ll96;
+    iput p2, p0, Li96;->a:I
 
-    iput-object p2, p0, Li96;->Y:Ljava/lang/String;
+    iput-object p1, p0, Li96;->b:Lone/me/folders/edit/FolderEditScreen;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    check-cast p1, Lq54;
+    iget v0, p0, Li96;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    sget-object v1, Lqqg;->a:Lqqg;
 
-    invoke-virtual {p0, p1, p2}, Li96;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v2, p0, Li96;->b:Lone/me/folders/edit/FolderEditScreen;
 
-    move-result-object p1
+    check-cast p1, Landroid/view/View;
 
-    check-cast p1, Li96;
+    packed-switch v0, :pswitch_data_0
 
-    sget-object p2, Lccg;->a:Lccg;
+    sget-object p1, Lone/me/folders/edit/FolderEditScreen;->Z:[Lyy7;
 
-    invoke-virtual {p1, p2}, Li96;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Li96;
-
-    iget-object v0, p0, Li96;->X:Ll96;
-
-    iget-object v1, p0, Li96;->Y:Ljava/lang/String;
-
-    invoke-direct {p1, v0, v1, p2}, Li96;-><init>(Ll96;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Li96;->X:Ll96;
-
-    iget-object p1, p1, Ll96;->Z:Liu7;
-
-    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v2}, Lone/me/folders/edit/FolderEditScreen;->z0()Lca6;
 
     move-result-object p1
 
-    check-cast p1, Lc3b;
+    invoke-virtual {p1}, Lca6;->x()V
 
-    iget-object v0, p0, Li96;->Y:Ljava/lang/String;
+    invoke-virtual {v2}, Lone/me/folders/edit/FolderEditScreen;->A0()V
 
-    invoke-virtual {p1, v0}, Lc3b;->h(Ljava/lang/CharSequence;)V
+    return-object v1
 
-    new-instance v0, Lq3b;
+    :pswitch_0
+    sget-object p1, Lone/me/folders/edit/FolderEditScreen;->Z:[Lyy7;
 
-    sget v1, Lpjd;->k:I
+    invoke-virtual {v2}, Lone/me/folders/edit/FolderEditScreen;->A0()V
 
-    invoke-direct {v0, v1}, Lq3b;-><init>(I)V
+    invoke-virtual {v2}, Lc54;->getOnBackPressedDispatcher()Ljva;
 
-    invoke-virtual {p1, v0}, Lc3b;->e(Lu3b;)V
+    move-result-object p1
 
-    invoke-virtual {p1}, Lc3b;->i()Lb3b;
+    if-eqz p1, :cond_0
 
-    sget-object p1, Lccg;->a:Lccg;
+    invoke-virtual {p1}, Ljva;->d()V
 
-    return-object p1
+    :cond_0
+    return-object v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,55 +1,60 @@
-.class public abstract Lbli;
+.class public final Lbli;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpqa;
+
+
+# static fields
+.field public static final a:Lbli;
+
 
 # direct methods
-.method public static a(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    new-instance v0, Lbli;
 
-    const/16 v1, 0x22
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    if-lt v0, v1, :cond_0
+    sput-object v0, Lbli;->a:Lbli;
 
-    invoke-static {p0, p1, p2}, Ldw0;->a(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    new-instance v0, Ltci;
 
-    move-result-object p0
+    const/4 v1, 0x1
 
-    return-object p0
+    invoke-direct {v0, v1}, Ltci;-><init>(I)V
 
-    :cond_0
-    invoke-virtual {p0, p1}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+    const-class v1, Lhdi;
 
-    move-result-object p0
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
 
-    invoke-virtual {p2, p0}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
+    move-result-object v0
 
-    move-result p1
+    const/4 v2, 0x2
 
-    if-eqz p1, :cond_1
+    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
 
-    return-object p0
+    move-result-object v0
 
-    :cond_1
-    const/4 p0, 0x0
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
 
-    return-object p0
-.end method
+    move-result-object v0
 
-.method public static final b(Lzcg;)V
-    .locals 2
-
-    new-instance v0, Lbs4;
-
-    const/16 v1, 0x16
-
-    invoke-direct {v0, v1}, Lbs4;-><init>(I)V
-
-    const-class v1, Lvf4;
-
-    invoke-virtual {p0, v1, v0}, Lzcg;->c(Ljava/lang/Class;Lji7;)V
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

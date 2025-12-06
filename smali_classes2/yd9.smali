@@ -1,63 +1,51 @@
 .class public final Lyd9;
-.super Ljava/lang/Object;
+.super Lq44;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lyd9;
+# instance fields
+.field public final synthetic X:Lce9;
+
+.field public Y:I
+
+.field public d:Ljava/util/List;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lce9;Lq44;)V
+    .locals 0
 
-    new-instance v0, Lyd9;
+    iput-object p1, p0, Lyd9;->X:Lce9;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lyd9;->a:Lyd9;
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iput-object p1, p0, Lyd9;->o:Ljava/lang/Object;
 
-    const-string v1, "MessageLocation{messageId=0, contactId=0, location="
+    iget p1, p0, Lyd9;->Y:I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/high16 v0, -0x80000000
 
-    sget-object v1, Lq78;->Z:Lq78;
+    or-int/2addr p1, v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iput p1, p0, Lyd9;->Y:I
 
-    const-string v1, ", time="
+    iget-object p1, p0, Lyd9;->X:Lce9;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v0, 0x0
 
-    const-wide/16 v1, 0x0
+    invoke-static {p1, v0, v0, p0}, Lce9;->t(Lce9;Ljava/util/List;Lzc9;Lq44;)Ljava/lang/Object;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    move-result-object p1
 
-    move-result-object v1
-
-    invoke-static {v1}, Lcyi;->b(Ljava/lang/Long;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", active=false, deviceId=\'\', livePeriod=0}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

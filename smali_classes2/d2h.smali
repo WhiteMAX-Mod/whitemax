@@ -3,197 +3,497 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnAttachStateChangeListener;
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final synthetic X:Landroid/view/View;
+.field public final X:J
 
-.field public final synthetic a:I
+.field public final Y:J
 
-.field public final synthetic b:Landroid/view/View;
+.field public final Z:I
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public final a:Lgx3;
 
-.field public final synthetic o:Ljava/lang/Object;
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
+
+.field public final o:I
+
+.field public final s0:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Landroid/os/Handler;Landroid/view/View;Lcn8;)V
-    .locals 1
-
-    const/4 v0, 0x2
-
-    iput v0, p0, Ld2h;->a:I
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    iput-object p1, p0, Ld2h;->b:Landroid/view/View;
-
-    iput-object p2, p0, Ld2h;->c:Ljava/lang/Object;
-
-    iput-object p3, p0, Ld2h;->X:Landroid/view/View;
-
-    iput-object p4, p0, Ld2h;->o:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Landroid/view/View;Landroid/view/ViewTreeObserver;Lf2h;Landroid/view/View;I)V
-    .locals 0
-
-    .line 1
-    iput p5, p0, Ld2h;->a:I
-
-    iput-object p1, p0, Ld2h;->b:Landroid/view/View;
-
-    iput-object p2, p0, Ld2h;->c:Ljava/lang/Object;
-
-    iput-object p3, p0, Ld2h;->o:Ljava/lang/Object;
-
-    iput-object p4, p0, Ld2h;->X:Landroid/view/View;
+.method public constructor <init>(Lc2h;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    iget-object v0, p1, Lc2h;->a:Lgx3;
+
+    iput-object v0, p0, Ld2h;->a:Lgx3;
+
+    iget-object v0, p1, Lc2h;->b:Ljava/lang/String;
+
+    iput-object v0, p0, Ld2h;->b:Ljava/lang/String;
+
+    iget-object v0, p1, Lc2h;->c:Ljava/lang/String;
+
+    iput-object v0, p0, Ld2h;->d:Ljava/lang/String;
+
+    iget-object v0, p1, Lc2h;->d:Ljava/lang/String;
+
+    iput-object v0, p0, Ld2h;->c:Ljava/lang/String;
+
+    iget v0, p1, Lc2h;->e:I
+
+    iput v0, p0, Ld2h;->o:I
+
+    iget-wide v0, p1, Lc2h;->f:J
+
+    iput-wide v0, p0, Ld2h;->X:J
+
+    iget-byte v0, p1, Lc2h;->h:B
+
+    iput v0, p0, Ld2h;->Z:I
+
+    iget-wide v0, p1, Lc2h;->i:J
+
+    iput-wide v0, p0, Ld2h;->Y:J
+
+    iget-object p1, p1, Lc2h;->g:Ljava/util/List;
+
+    iput-object p1, p0, Ld2h;->s0:Ljava/util/List;
+
     return-void
 .end method
 
-.method private final a(Landroid/view/View;)V
-    .locals 0
+.method public static a(Ltm9;)Ld2h;
+    .locals 10
 
-    return-void
-.end method
+    invoke-static {p0}, Lefi;->m(Ltm9;)I
 
-.method private final b(Landroid/view/View;)V
-    .locals 0
+    move-result v0
 
-    return-void
-.end method
+    if-nez v0, :cond_0
 
-.method private final c(Landroid/view/View;)V
-    .locals 0
+    const/4 p0, 0x0
 
-    return-void
+    return-object p0
+
+    :cond_0
+    new-instance v1, Lc2h;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    const/4 v2, 0x0
+
+    iput-byte v2, v1, Lc2h;->h:B
+
+    const-wide/16 v3, 0x0
+
+    iput-wide v3, v1, Lc2h;->i:J
+
+    move v5, v2
+
+    :goto_0
+    if-ge v5, v0, :cond_b
+
+    invoke-virtual {p0}, Ltm9;->w0()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v6}, Ljava/lang/String;->hashCode()I
+
+    move-result v7
+
+    const/4 v8, 0x3
+
+    const/4 v9, -0x1
+
+    sparse-switch v7, :sswitch_data_0
+
+    goto/16 :goto_1
+
+    :sswitch_0
+    const-string v7, "participantsCount"
+
+    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_1
+
+    goto/16 :goto_1
+
+    :cond_1
+    const/16 v9, 0x8
+
+    goto/16 :goto_1
+
+    :sswitch_1
+    const-string v7, "previewParticipantIds"
+
+    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    const/4 v9, 0x7
+
+    goto :goto_1
+
+    :sswitch_2
+    const-string v7, "owner"
+
+    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    const/4 v9, 0x6
+
+    goto :goto_1
+
+    :sswitch_3
+    const-string v7, "type"
+
+    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    const/4 v9, 0x5
+
+    goto :goto_1
+
+    :sswitch_4
+    const-string v7, "callName"
+
+    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_5
+
+    goto :goto_1
+
+    :cond_5
+    const/4 v9, 0x4
+
+    goto :goto_1
+
+    :sswitch_5
+    const-string v7, "conferenceId"
+
+    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_6
+
+    goto :goto_1
+
+    :cond_6
+    move v9, v8
+
+    goto :goto_1
+
+    :sswitch_6
+    const-string v7, "chatId"
+
+    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_7
+
+    goto :goto_1
+
+    :cond_7
+    const/4 v9, 0x2
+
+    goto :goto_1
+
+    :sswitch_7
+    const-string v7, "joinLink"
+
+    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_8
+
+    goto :goto_1
+
+    :cond_8
+    const/4 v9, 0x1
+
+    goto :goto_1
+
+    :sswitch_8
+    const-string v7, "startAt"
+
+    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_9
+
+    goto :goto_1
+
+    :cond_9
+    move v9, v2
+
+    :goto_1
+    packed-switch v9, :pswitch_data_0
+
+    invoke-virtual {p0}, Ltm9;->v()V
+
+    goto :goto_3
+
+    :pswitch_0
+    invoke-static {p0, v2}, Lefi;->k(Ltm9;I)I
+
+    move-result v6
+
+    iput v6, v1, Lc2h;->e:I
+
+    goto :goto_3
+
+    :pswitch_1
+    invoke-static {p0}, Lsz;->d(Ltm9;)Lsz;
+
+    move-result-object v6
+
+    iput-object v6, v1, Lc2h;->g:Ljava/util/List;
+
+    goto :goto_3
+
+    :pswitch_2
+    invoke-static {p0}, Lgx3;->g(Ltm9;)Lgx3;
+
+    move-result-object v6
+
+    iput-object v6, v1, Lc2h;->a:Lgx3;
+
+    goto :goto_3
+
+    :pswitch_3
+    invoke-virtual {p0}, Ltm9;->w()Lqj9;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Lqj9;->a()I
+
+    move-result v6
+
+    if-ne v6, v8, :cond_a
+
+    invoke-virtual {p0}, Ltm9;->q0()B
+
+    move-result v6
+
+    goto :goto_2
+
+    :cond_a
+    invoke-virtual {p0}, Ltm9;->v()V
+
+    move v6, v2
+
+    :goto_2
+    iput-byte v6, v1, Lc2h;->h:B
+
+    goto :goto_3
+
+    :pswitch_4
+    invoke-static {p0}, Lefi;->o(Ltm9;)Ljava/lang/String;
+
+    move-result-object v6
+
+    iput-object v6, v1, Lc2h;->c:Ljava/lang/String;
+
+    goto :goto_3
+
+    :pswitch_5
+    invoke-static {p0}, Lefi;->o(Ltm9;)Ljava/lang/String;
+
+    move-result-object v6
+
+    iput-object v6, v1, Lc2h;->d:Ljava/lang/String;
+
+    goto :goto_3
+
+    :pswitch_6
+    invoke-static {p0, v3, v4}, Lefi;->l(Ltm9;J)J
+
+    move-result-wide v6
+
+    iput-wide v6, v1, Lc2h;->i:J
+
+    goto :goto_3
+
+    :pswitch_7
+    invoke-static {p0}, Lefi;->o(Ltm9;)Ljava/lang/String;
+
+    move-result-object v6
+
+    iput-object v6, v1, Lc2h;->b:Ljava/lang/String;
+
+    goto :goto_3
+
+    :pswitch_8
+    invoke-static {p0, v3, v4}, Lefi;->l(Ltm9;J)J
+
+    move-result-wide v6
+
+    iput-wide v6, v1, Lc2h;->f:J
+
+    :goto_3
+    add-int/lit8 v5, v5, 0x1
+
+    goto/16 :goto_0
+
+    :cond_b
+    iget-object p0, v1, Lc2h;->g:Ljava/util/List;
+
+    if-nez p0, :cond_c
+
+    sget-object p0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    iput-object p0, v1, Lc2h;->g:Ljava/util/List;
+
+    :cond_c
+    new-instance p0, Ld2h;
+
+    invoke-direct {p0, v1}, Ld2h;-><init>(Lc2h;)V
+
+    return-object p0
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x7114c3cb -> :sswitch_8
+        -0x5390a3bc -> :sswitch_7
+        -0x5128d96d -> :sswitch_6
+        -0x2f5d88a9 -> :sswitch_5
+        -0xa4cf5f7 -> :sswitch_4
+        0x368f3a -> :sswitch_3
+        0x653f2b3 -> :sswitch_2
+        0xfd1706d -> :sswitch_1
+        0x6f4e2d4f -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final onViewAttachedToWindow(Landroid/view/View;)V
-    .locals 7
+.method public final toString()Ljava/lang/String;
+    .locals 6
 
-    iget v0, p0, Ld2h;->a:I
+    iget-object v0, p0, Ld2h;->s0:Ljava/util/List;
 
-    packed-switch v0, :pswitch_data_0
-
-    :pswitch_0
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Ld2h;->o:Ljava/lang/Object;
-
-    move-object v4, v0
-
-    check-cast v4, Lf2h;
-
-    iget-object v0, p0, Ld2h;->c:Ljava/lang/Object;
-
-    move-object v3, v0
-
-    check-cast v3, Landroid/view/ViewTreeObserver;
-
-    iget-object v0, p0, Ld2h;->b:Landroid/view/View;
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
-
-    invoke-virtual {p1}, Landroid/view/View;->isAttachedToWindow()Z
+    invoke-static {v0}, Lzdi;->a(Ljava/util/Collection;)I
 
     move-result v0
 
-    iget-object v5, p0, Ld2h;->X:Landroid/view/View;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    if-nez v0, :cond_0
+    const-string v2, "VideoConference{owner="
 
-    invoke-static {v4, v5, v3}, Lky;->b(Lf2h;Landroid/view/View;Landroid/view/ViewTreeObserver;)V
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    goto :goto_0
+    iget-object v2, p0, Ld2h;->a:Lgx3;
 
-    :cond_0
-    new-instance v1, Ld2h;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/4 v6, 0x1
+    const-string v2, ", joinLink=\'"
 
-    move-object v2, p1
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct/range {v1 .. v6}, Ld2h;-><init>(Landroid/view/View;Landroid/view/ViewTreeObserver;Lf2h;Landroid/view/View;I)V
+    iget-object v2, p0, Ld2h;->b:Ljava/lang/String;
 
-    invoke-virtual {v2, v1}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_0
-    return-void
+    const-string v2, "\', conversationId=\'"
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final onViewDetachedFromWindow(Landroid/view/View;)V
-    .locals 2
+    const-string v2, "\', callName=\'"
 
-    iget p1, p0, Ld2h;->a:I
+    const-string v3, "\', participantsCount="
 
-    packed-switch p1, :pswitch_data_0
+    iget-object v4, p0, Ld2h;->c:Ljava/lang/String;
 
-    iget-object p1, p0, Ld2h;->b:Landroid/view/View;
+    iget-object v5, p0, Ld2h;->d:Ljava/lang/String;
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+    invoke-static {v1, v4, v2, v5, v3}, Lho7;->r(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object p1, p0, Ld2h;->c:Ljava/lang/Object;
+    iget v2, p0, Ld2h;->o:I
 
-    check-cast p1, Landroid/os/Handler;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x0
+    const-string v2, ", startedAt="
 
-    invoke-virtual {p1, v0}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Ld2h;->o:Ljava/lang/Object;
+    iget-wide v2, p0, Ld2h;->X:J
 
-    check-cast p1, Lcn8;
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Ld2h;->X:Landroid/view/View;
+    const-string v2, ", type="
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
+    iget v2, p0, Ld2h;->Z:I
 
-    :pswitch_0
-    iget-object p1, p0, Ld2h;->b:Landroid/view/View;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+    const-string v2, ", chatId="
 
-    iget-object p1, p0, Ld2h;->c:Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast p1, Landroid/view/ViewTreeObserver;
+    const-string v2, ", previewParticipantIds="
 
-    iget-object v0, p0, Ld2h;->o:Ljava/lang/Object;
+    iget-wide v3, p0, Ld2h;->Y:J
 
-    check-cast v0, Lf2h;
+    invoke-static {v1, v3, v4, v2, v0}, Lutb;->n(Ljava/lang/StringBuilder;JLjava/lang/String;I)V
 
-    iget-object v1, p0, Ld2h;->X:Landroid/view/View;
+    const-string v0, "}"
 
-    invoke-static {v0, v1, p1}, Lky;->b(Lf2h;Landroid/view/View;Landroid/view/ViewTreeObserver;)V
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :pswitch_1
-    return-void
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    nop
+    move-result-object v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

@@ -13,6 +13,7 @@
         Lorg/webrtc/CameraVideoCapturer$MediaRecorderHandler;,
         Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;,
         Lorg/webrtc/CameraVideoCapturer$CameraSwitchHandler;,
+        Lorg/webrtc/CameraVideoCapturer$CameraConfigurationProvider;,
         Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;
     }
 .end annotation

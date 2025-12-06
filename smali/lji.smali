@@ -1,70 +1,61 @@
 .class public final Llji;
-.super Ljava/lang/Object;
+.super Lzhi;
 .source "SourceFile"
 
-# interfaces
-.implements Ltha;
 
+# instance fields
+.field public final transient c:[Ljava/lang/Object;
 
-# static fields
-.field public static final a:Llji;
+.field public final transient d:I
+
+.field public final transient o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(I[Ljava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Llji;
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Llji;->c:[Ljava/lang/Object;
 
-    sput-object v0, Llji;->a:Llji;
+    iput p1, p0, Llji;->d:I
 
-    new-instance v0, Lr8i;
+    const/4 p1, 0x1
 
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lr8i;-><init>(I)V
-
-    const-class v1, Lm9i;
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
+    iput p1, p0, Llji;->o:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final get(I)Ljava/lang/Object;
+    .locals 1
 
-    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget v0, p0, Llji;->o:I
 
-    move-result-object p1
+    invoke-static {p1, v0}, Lrui;->c(II)V
 
-    throw p1
+    add-int/2addr p1, p1
+
+    iget v0, p0, Llji;->d:I
+
+    add-int/2addr p1, v0
+
+    iget-object v0, p0, Llji;->c:[Ljava/lang/Object;
+
+    aget-object p1, v0, p1
+
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget v0, p0, Llji;->o:I
+
+    return v0
 .end method

@@ -1,334 +1,541 @@
-.class public final Lm6g;
-.super Lsgf;
+.class public abstract Lm6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzi6;
 
+# static fields
+.field public static final a:Ljava/util/regex/Pattern;
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public static final b:Ljava/util/regex/Pattern;
 
-.field public final synthetic Y:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+.field public static final c:Ljava/util/regex/Pattern;
+
+.field public static final d:Ljava/util/regex/Pattern;
+
+.field public static final e:Ljava/util/regex/Pattern;
+
+.field public static final f:Ljava/util/regex/Pattern;
+
+.field public static final g:Ljava/util/regex/Pattern;
+
+.field public static final h:Ljava/util/regex/Pattern;
+
+.field public static final i:Ljava/util/regex/Pattern;
+
+.field public static final j:[Ljava/lang/String;
+
+.field public static final k:[Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/password/TwoFACheckPassScreen;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 24
 
-    iput-object p2, p0, Lm6g;->Y:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+    const-string v0, "@([A-Za-z0-9_-]+)"
 
-    const/4 p2, 0x2
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
-    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    move-result-object v0
+
+    sput-object v0, Lm6g;->a:Ljava/util/regex/Pattern;
+
+    const-string v1, "@([A-Za-z0-9_-]+)\\s"
+
+    invoke-static {v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    const-string v1, "@([A-Za-z0-9_-]+)\\s/"
+
+    invoke-static {v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v1
+
+    sput-object v1, Lm6g;->b:Ljava/util/regex/Pattern;
+
+    const-string v1, "[\\p{Punct}\\p{L}\\p{N}\\p{Sm}]+"
+
+    invoke-static {v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "("
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v4, "\\s)?(?<=\\s|\\p{Zs}|^)\\/[\ufeff]?[\\p{L}\\p{N}_]+"
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v2
+
+    sput-object v2, Lm6g;->c:Ljava/util/regex/Pattern;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v4, "\\s)?(?<=\\s|\\p{Zs}|^)\\/[\ufeff]?[\\p{L}\\p{N}_]+\\s("
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v4, ")?"
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v2
+
+    sput-object v2, Lm6g;->d:Ljava/util/regex/Pattern;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v5, "\\s)(?<=\\s|\\p{Zs}|^)\\/[\ufeff]?[\\p{L}\\p{N}_]+"
+
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v2
+
+    sput-object v2, Lm6g;->e:Ljava/util/regex/Pattern;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, "\\s)(?<=\\s|\\p{Zs}|^)\\/[\ufeff]?[\\p{L}\\p{N}_]+\\s("
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Lm6g;->f:Ljava/util/regex/Pattern;
+
+    const-string v0, "[\n\r]"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Lm6g;->g:Ljava/util/regex/Pattern;
+
+    const-string v0, "\\s{2,}"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Lm6g;->h:Ljava/util/regex/Pattern;
+
+    const-string v0, "\\r|[\\r\\u2028\\u2029\\u0085]"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Lm6g;->i:Ljava/util/regex/Pattern;
+
+    const-string v5, "\u2029"
+
+    const-string v6, "\u0085"
+
+    const-string v1, "\r\n"
+
+    const-string v2, "\r"
+
+    const-string v3, "\n"
+
+    const-string v4, "\u2028"
+
+    filled-new-array/range {v1 .. v6}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lm6g;->j:[Ljava/lang/String;
+
+    const-string v22, "\u205f"
+
+    const-string v23, "\u3000"
+
+    const-string v1, " "
+
+    const-string v2, "\\t"
+
+    const-string v3, "\\n"
+
+    const-string v4, "\\r"
+
+    const-string v5, "\\t"
+
+    const-string v6, "\u00a0"
+
+    const-string v7, "\u2000"
+
+    const-string v8, "\u2001"
+
+    const-string v9, "\u2002"
+
+    const-string v10, "\u2003"
+
+    const-string v11, "\u2004"
+
+    const-string v12, "\u2005"
+
+    const-string v13, "\u2006"
+
+    const-string v14, "\u2007"
+
+    const-string v15, "\u2008"
+
+    const-string v16, "\u2009"
+
+    const-string v17, "\u200a"
+
+    const-string v18, "\u200b"
+
+    const-string v19, "\u200c"
+
+    const-string v20, "\u200d"
+
+    const-string v21, "\u202f"
+
+    filled-new-array/range {v1 .. v23}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lm6g;->k:[Ljava/lang/String;
+
+    const-string v0, "[^\\p{L}\\p{Nd} ]+"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     return-void
 .end method
 
+.method public static a(Ljava/lang/String;)Ljava/lang/String;
+    .locals 3
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    invoke-static {p0}, Ll8g;->c(Ljava/lang/CharSequence;)Z
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result v0
 
-    invoke-virtual {p0, p1, p2}, Lm6g;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-eqz v0, :cond_0
 
-    move-result-object p1
-
-    check-cast p1, Lm6g;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lm6g;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lm6g;
-
-    iget-object v1, p0, Lm6g;->Y:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
-
-    invoke-direct {v0, p2, v1}, Lm6g;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/password/TwoFACheckPassScreen;)V
-
-    iput-object p1, v0, Lm6g;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 19
-
-    move-object/from16 v0, p0
-
-    invoke-static/range {p1 .. p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    iget-object v1, v0, Lm6g;->X:Ljava/lang/Object;
-
-    check-cast v1, Lp8g;
-
-    iget-object v2, v0, Lm6g;->Y:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
-
-    iget-object v3, v2, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->q0:Lh0d;
-
-    iget-object v4, v2, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->r0:Lh0d;
-
-    sget-object v5, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->s0:[Ltr7;
-
-    instance-of v5, v1, Lm8g;
-
-    const/4 v6, 0x2
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    if-eqz v5, :cond_3
-
-    sget-object v3, Lone/me/sdk/bottomsheet/BottomSheetWidget;->z0:[Ltr7;
-
-    check-cast v1, Lm8g;
-
-    iget-object v3, v1, Lm8g;->a:Lorf;
-
-    iget-object v4, v1, Lm8g;->d:Lupd;
-
-    invoke-static {v3, v8, v4, v6}, Levi;->a(Ltrf;Landroid/os/Bundle;Lupd;I)Leo3;
-
-    move-result-object v11
-
-    iget-object v3, v1, Lm8g;->b:Lorf;
-
-    invoke-virtual {v11, v3}, Leo3;->f(Ltrf;)V
-
-    iget-object v1, v1, Lm8g;->c:Ljava/util/List;
-
-    new-instance v9, Lvo2;
-
-    const/16 v15, 0x8
-
-    const/16 v16, 0xf
-
-    const/4 v10, 0x1
-
-    const-class v12, Leo3;
-
-    const-string v13, "addButton"
-
-    const-string v14, "addButton([Lone/me/sdk/bottomsheet/ConfirmationBottomSheet$Button;)Lone/me/sdk/bottomsheet/ConfirmationBottomSheet$Builder;"
-
-    invoke-direct/range {v9 .. v16}, Lvo2;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    new-instance v3, Lg4;
-
-    const/16 v4, 0x18
-
-    invoke-direct {v3, v4, v9}, Lg4;-><init>(ILjava/lang/Object;)V
-
-    invoke-interface {v1, v3}, Ljava/lang/Iterable;->forEach(Ljava/util/function/Consumer;)V
-
-    invoke-virtual {v11}, Leo3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
-
-    move-result-object v13
-
-    invoke-virtual {v13, v2}, Lone/me/sdk/arch/Widget;->setTargetController(Ll24;)V
-
-    move-object v1, v2
-
-    :goto_0
-    invoke-virtual {v1}, Ll24;->getParentController()Ll24;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_0
-
-    invoke-virtual {v1}, Ll24;->getParentController()Ll24;
-
-    move-result-object v1
+    const/4 v0, 0x0
 
     goto :goto_0
 
     :cond_0
-    instance-of v3, v1, Lwid;
+    invoke-static {p0}, Ljava/net/URI;->create(Ljava/lang/String;)Ljava/net/URI;
 
-    if-eqz v3, :cond_1
+    move-result-object v0
 
-    check-cast v1, Lwid;
+    invoke-virtual {v0}, Ljava/net/URI;->getRawPath()Ljava/lang/String;
 
-    goto :goto_1
+    move-result-object v0
+
+    :goto_0
+    if-nez v0, :cond_1
+
+    const-string p0, ""
+
+    return-object p0
 
     :cond_1
-    move-object v1, v8
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
-    :goto_1
-    if-eqz v1, :cond_2
+    move-result v1
 
-    invoke-interface {v1}, Lwid;->f0()Lqid;
+    const/4 v2, 0x2
 
-    move-result-object v8
+    if-ge v1, v2, :cond_2
+
+    return-object p0
 
     :cond_2
-    invoke-virtual {v13, v2}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->R0(Lone/me/sdk/arch/Widget;)V
+    const/4 p0, 0x1
 
-    if-eqz v8, :cond_8
+    invoke-virtual {v0, p0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
-    new-instance v12, Ltid;
+    move-result-object p0
 
-    const/16 v17, 0x0
+    return-object p0
+.end method
 
-    const/16 v18, -0x1
+.method public static b(Ljava/lang/String;)Ljava/lang/String;
+    .locals 2
 
-    const/4 v14, 0x0
+    invoke-static {p0}, Ll8g;->c(Ljava/lang/CharSequence;)Z
 
-    const/4 v15, 0x0
+    move-result v0
 
-    const/16 v16, 0x0
+    if-nez v0, :cond_0
 
-    invoke-direct/range {v12 .. v18}, Ltid;-><init>(Ll24;Ljava/lang/String;Lq24;Lq24;ZI)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x1
+    const-string v1, "@"
 
-    const-string v2, "BottomSheetWidget"
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v7, v12, v1, v2}, Ldy1;->u(ZLtid;ZLjava/lang/String;)V
+    invoke-static {p0}, Lm6g;->a(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v8, v12}, Lqid;->G(Ltid;)V
+    move-result-object p0
 
-    goto/16 :goto_3
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_3
-    instance-of v5, v1, Ln8g;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    if-eqz v5, :cond_6
+    move-result-object p0
 
-    new-instance v5, Lc3b;
+    return-object p0
 
-    invoke-direct {v5, v2}, Lc3b;-><init>(Lone/me/sdk/arch/Widget;)V
+    :cond_0
+    const-string p0, ""
 
-    new-instance v9, Lq3b;
+    return-object p0
+.end method
 
-    check-cast v1, Ln8g;
+.method public static c(Ljava/lang/String;Lf7b;)[Ljava/lang/String;
+    .locals 6
 
-    iget v10, v1, Ln8g;->b:I
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-direct {v9, v10}, Lq3b;-><init>(I)V
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-virtual {v5, v9}, Lc3b;->e(Lu3b;)V
+    const/4 v1, 0x0
 
-    iget-object v1, v1, Ln8g;->a:Ltrf;
+    move v2, v1
 
-    invoke-virtual {v5, v1}, Lc3b;->g(Ltrf;)V
+    :goto_0
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
 
-    new-instance v1, Lk3b;
+    move-result v3
 
-    sget-object v9, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->s0:[Ltr7;
+    if-ge v2, v3, :cond_9
 
-    const/4 v10, 0x3
+    invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
 
-    aget-object v11, v9, v10
+    move-result v3
 
-    invoke-interface {v4, v2, v11}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
+    invoke-static {v3}, Lo7e;->j(C)Z
 
-    move-result-object v11
+    move-result v3
 
-    check-cast v11, Landroid/view/View;
+    const/4 v4, 0x1
 
-    invoke-virtual {v11}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    if-eqz v3, :cond_0
 
-    move-result-object v11
+    goto :goto_7
 
-    instance-of v12, v11, Landroid/view/ViewGroup$MarginLayoutParams;
+    :cond_0
+    move v3, v2
 
-    if-eqz v12, :cond_4
+    :goto_1
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
 
-    move-object v8, v11
+    move-result v5
 
-    check-cast v8, Landroid/view/ViewGroup$MarginLayoutParams;
+    if-ge v3, v5, :cond_2
 
-    :cond_4
-    if-eqz v8, :cond_5
+    iget-object v5, p1, Lf7b;->j:Lqb5;
 
-    iget v8, v8, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+    invoke-interface {v5, v3, p0}, Lqb5;->a(ILjava/lang/CharSequence;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_1
 
     goto :goto_2
 
-    :cond_5
-    move v8, v7
+    :cond_1
+    add-int/lit8 v3, v3, 0x1
 
+    goto :goto_1
+
+    :cond_2
     :goto_2
-    aget-object v11, v9, v10
+    if-le v3, v2, :cond_3
 
-    invoke-interface {v4, v2, v11}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
+    invoke-virtual {p0, v2, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
-    move-result-object v4
-
-    check-cast v4, Landroid/view/View;
-
-    invoke-virtual {v4}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v4
-
-    add-int/2addr v4, v8
-
-    invoke-direct {v1, v7, v7, v4, v10}, Lk3b;-><init>(IIII)V
-
-    invoke-virtual {v5, v1}, Lc3b;->c(Lk3b;)V
-
-    invoke-virtual {v5}, Lc3b;->i()Lb3b;
-
-    aget-object v1, v9, v6
-
-    invoke-interface {v3, v2, v1}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    invoke-virtual {v1, v7}, Lone/me/sdk/uikit/common/button/OneMeButton;->setProgressEnabled(Z)V
+    move-result-object v3
 
     goto :goto_3
 
+    :cond_3
+    const/4 v3, 0x0
+
+    :goto_3
+    invoke-static {v3}, Ll8g;->c(Ljava/lang/CharSequence;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_4
+
+    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v3}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    sub-int/2addr v3, v4
+
+    add-int/2addr v2, v3
+
+    goto :goto_7
+
+    :cond_4
+    move v3, v2
+
+    :goto_4
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v5
+
+    if-ge v3, v5, :cond_7
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p0, v3}, Ljava/lang/String;->charAt(I)C
+
+    move-result v5
+
+    invoke-static {v5}, Lo7e;->j(C)Z
+
+    move-result v5
+
+    if-nez v5, :cond_6
+
+    iget-object v5, p1, Lf7b;->j:Lqb5;
+
+    invoke-interface {v5, v3, p0}, Lqb5;->a(ILjava/lang/CharSequence;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_5
+
+    goto :goto_5
+
+    :cond_5
+    move v5, v1
+
+    goto :goto_6
+
     :cond_6
-    instance-of v4, v1, Lo8g;
+    :goto_5
+    move v5, v4
 
-    if-eqz v4, :cond_7
+    :goto_6
+    if-nez v5, :cond_7
 
-    sget-object v4, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->s0:[Ltr7;
+    add-int/lit8 v3, v3, 0x1
 
-    aget-object v4, v4, v6
+    goto :goto_4
 
-    invoke-interface {v3, v2, v4}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
+    :cond_7
+    if-le v3, v2, :cond_8
+
+    invoke-virtual {p0, v2, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v2
 
-    check-cast v2, Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    check-cast v1, Lo8g;
-
-    iget-boolean v1, v1, Lo8g;->a:Z
-
-    invoke-virtual {v2, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setProgressEnabled(Z)V
-
-    goto :goto_3
-
-    :cond_7
-    instance-of v1, v1, Ll8g;
-
-    if-eqz v1, :cond_9
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_8
-    :goto_3
-    sget-object v1, Lccg;->a:Lccg;
+    move v2, v3
 
-    return-object v1
+    :goto_7
+    add-int/2addr v2, v4
+
+    goto :goto_0
 
     :cond_9
-    new-instance v1, Lkotlin/NoWhenBranchMatchedException;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
-    invoke-direct {v1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    move-result p0
 
-    throw v1
+    new-array p0, p0, [Ljava/lang/String;
+
+    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, [Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method public static d(Ljava/lang/String;)Ljava/lang/String;
+    .locals 2
+
+    invoke-static {p0}, Ll8g;->c(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-object p0
+
+    :cond_0
+    sget-object v0, Lm6g;->g:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object p0
+
+    const-string v0, " "
+
+    invoke-virtual {p0, v0}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    sget-object v1, Lm6g;->h:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v1, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object p0
+
+    invoke-virtual {p0, v0}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

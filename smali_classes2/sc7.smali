@@ -1,112 +1,56 @@
-.class public final Lsc7;
-.super Lz1;
+.class public final synthetic Lsc7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lrc7;
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;I)V
+    .locals 0
+
+    iput p2, p0, Lsc7;->a:I
+
+    iput-object p1, p0, Lsc7;->b:Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final b()I
+.method public final run()V
     .locals 1
 
-    const/4 v0, 0x5
+    iget v0, p0, Lsc7;->a:I
 
-    return v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    iget-object v0, p0, Lsc7;->b:Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->readCacheFromDisk()V
 
-    const/4 p1, 0x1
+    return-void
 
-    return p1
+    :pswitch_0
+    iget-object v0, p0, Lsc7;->b:Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;
 
-    :cond_0
-    instance-of v0, p1, Lyig;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/id/IdMappingWrapper;->writeCacheToDisk()V
 
-    const/4 v1, 0x0
+    return-void
 
-    if-nez v0, :cond_1
+    nop
 
-    return v1
-
-    :cond_1
-    check-cast p1, Lyig;
-
-    check-cast p1, La2;
-
-    invoke-interface {p1}, Lyig;->b()I
-
-    move-result v0
-
-    const/4 v2, 0x5
-
-    if-ne v0, v2, :cond_3
-
-    instance-of v0, p1, Lsc7;
-
-    iget-object v1, p0, Lz1;->a:[B
-
-    if-eqz v0, :cond_2
-
-    check-cast p1, Lsc7;
-
-    iget-object p1, p1, Lz1;->a:[B
-
-    invoke-static {v1, p1}, Ljava/util/Arrays;->equals([B[B)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_2
-    invoke-interface {p1}, Lyig;->n()Lrc7;
-
-    move-result-object p1
-
-    check-cast p1, Lz1;
-
-    iget-object p1, p1, Lz1;->a:[B
-
-    array-length v0, p1
-
-    invoke-static {p1, v0}, Ljava/util/Arrays;->copyOf([BI)[B
-
-    move-result-object p1
-
-    invoke-static {v1, p1}, Ljava/util/Arrays;->equals([B[B)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_3
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lz1;->a:[B
-
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([B)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final n()Lrc7;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final q()Lrc7;
-    .locals 0
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

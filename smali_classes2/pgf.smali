@@ -1,85 +1,123 @@
-.class public final enum Lpgf;
-.super Ljava/lang/Enum;
+.class public final Lpgf;
+.super Lfg5;
 .source "SourceFile"
 
+# interfaces
+.implements Lu6g;
 
-# static fields
-.field public static final enum a:Lpgf;
 
-.field public static final enum b:Lpgf;
-
-.field public static final enum c:Lpgf;
-
-.field public static final synthetic o:[Lpgf;
+# instance fields
+.field public d:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
-    new-instance v0, Lpgf;
+    new-instance v0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
 
-    const-string v1, "ALREADY_DOWNLOADING_BY_OTHER"
+    sget v1, Lcxc;->sticker_typing:I
 
-    const/4 v2, 0x0
+    invoke-direct {v0, p1, v1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;-><init>(Landroid/content/Context;I)V
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lpgf;->a:Lpgf;
-
-    new-instance v1, Lpgf;
-
-    const-string v2, "FINISH"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lpgf;->b:Lpgf;
-
-    new-instance v2, Lpgf;
-
-    const-string v3, "ERROR"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lpgf;->c:Lpgf;
-
-    filled-new-array {v0, v1, v2}, [Lpgf;
-
-    move-result-object v0
-
-    sput-object v0, Lpgf;->o:[Lpgf;
+    invoke-direct {p0, v0}, Lfg5;-><init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lpgf;
+
+# virtual methods
+.method public final a()V
     .locals 1
 
-    const-class v0, Lpgf;
+    iget-boolean v0, p0, Lpgf;->d:Z
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    if-nez v0, :cond_0
 
-    move-result-object p0
+    invoke-virtual {p0}, Lpgf;->start()V
 
-    check-cast p0, Lpgf;
-
-    return-object p0
+    :cond_0
+    return-void
 .end method
 
-.method public static values()[Lpgf;
+.method public final onThemeChanged(Lyeb;)V
+    .locals 2
+
+    invoke-interface {p1}, Lyeb;->getIcon()Lnb7;
+
+    move-result-object p1
+
+    iget p1, p1, Lnb7;->j:I
+
+    const-string v0, "_R_G_L_4_G_D_0_P_0"
+
+    iget-object v1, p0, Lfg5;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+
+    invoke-static {v1, v0, p1}, Lz18;->e(Lmzg;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_4_G_D_1_P_0"
+
+    invoke-static {v1, v0, p1}, Lz18;->e(Lmzg;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_4_G_D_2_P_0"
+
+    invoke-static {v1, v0, p1}, Lz18;->e(Lmzg;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_3_G_D_0_P_0"
+
+    invoke-static {v1, v0, p1}, Lz18;->e(Lmzg;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_2_G_D_0_P_0"
+
+    invoke-static {v1, v0, p1}, Lz18;->e(Lmzg;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_2_G_D_1_P_0"
+
+    invoke-static {v1, v0, p1}, Lz18;->e(Lmzg;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_2_G_D_2_P_0"
+
+    invoke-static {v1, v0, p1}, Lz18;->e(Lmzg;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_1_G_D_0_P_0"
+
+    invoke-static {v1, v0, p1}, Lz18;->e(Lmzg;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_0_G_D_0_P_0"
+
+    invoke-static {v1, v0, p1}, Lz18;->e(Lmzg;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_0_G_D_1_P_0"
+
+    invoke-static {v1, v0, p1}, Lz18;->e(Lmzg;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_0_G_D_2_P_0"
+
+    invoke-static {v1, v0, p1}, Lz18;->e(Lmzg;Ljava/lang/String;I)V
+
+    return-void
+.end method
+
+.method public final start()V
     .locals 1
 
-    sget-object v0, Lpgf;->o:[Lpgf;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iput-boolean v0, p0, Lpgf;->d:Z
 
-    move-result-object v0
+    invoke-super {p0}, Lfg5;->start()V
 
-    check-cast v0, [Lpgf;
+    return-void
+.end method
 
-    return-object v0
+.method public final stop()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lpgf;->d:Z
+
+    invoke-super {p0}, Lfg5;->stop()V
+
+    return-void
 .end method

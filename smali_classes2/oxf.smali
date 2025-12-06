@@ -1,89 +1,53 @@
-.class public final enum Loxf;
-.super Ljava/lang/Enum;
+.class public final Loxf;
+.super Lq44;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum b:Loxf;
-
-.field public static final enum c:Loxf;
-
-.field public static final synthetic o:[Loxf;
-
-
 # instance fields
-.field public final a:B
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lvxf;
+
+.field public Z:I
+
+.field public d:Lvxf;
+
+.field public o:Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Loxf;
-
-    const-string v1, "psk_ke"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2, v2}, Loxf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Loxf;->b:Loxf;
-
-    new-instance v1, Loxf;
-
-    const-string v2, "psk_dhe_ke"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3, v3}, Loxf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Loxf;->c:Loxf;
-
-    filled-new-array {v0, v1}, [Loxf;
-
-    move-result-object v0
-
-    sput-object v0, Loxf;->o:[Loxf;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public constructor <init>(Lvxf;Lq44;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p1, p0, Loxf;->Y:Lvxf;
 
-    int-to-byte p1, p3
-
-    iput-byte p1, p0, Loxf;->a:B
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Loxf;
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const-class v0, Loxf;
+    iput-object p1, p0, Loxf;->X:Ljava/lang/Object;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget p1, p0, Loxf;->Z:I
 
-    move-result-object p0
+    const/high16 v0, -0x80000000
 
-    check-cast p0, Loxf;
+    or-int/2addr p1, v0
 
-    return-object p0
-.end method
+    iput p1, p0, Loxf;->Z:I
 
-.method public static values()[Loxf;
-    .locals 1
+    iget-object p1, p0, Loxf;->Y:Lvxf;
 
-    sget-object v0, Loxf;->o:[Loxf;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, [Loxf;->clone()Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Lvxf;->f(Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;Lq44;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, [Loxf;
-
-    return-object v0
+    return-object p1
 .end method

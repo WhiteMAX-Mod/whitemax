@@ -2,38 +2,68 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loe4;
 
-# static fields
-.field public static final a:Lfn4;
+
+# instance fields
+.field public final a:Lh79;
+
+.field public b:Lwgg;
+
+.field public c:Ljava/lang/String;
+
+.field public d:I
+
+.field public e:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
-    new-instance v0, Lfn4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lh79;
 
-    sput-object v0, Lfn4;->a:Lfn4;
+    const/16 v1, 0x15
+
+    invoke-direct {v0, v1}, Lh79;-><init>(I)V
+
+    iput-object v0, p0, Lfn4;->a:Lh79;
+
+    const/16 v0, 0x1f40
+
+    iput v0, p0, Lfn4;->d:I
+
+    iput v0, p0, Lfn4;->e:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/animation/AnimatorSet;)V
-    .locals 0
+.method public final a()Lse4;
+    .locals 5
 
-    invoke-virtual {p1}, Landroid/animation/AnimatorSet;->reverse()V
+    new-instance v0, Ljn4;
 
-    return-void
-.end method
+    iget-object v1, p0, Lfn4;->c:Ljava/lang/String;
 
-.method public final b(Landroid/animation/AnimatorSet;J)V
-    .locals 0
+    iget v2, p0, Lfn4;->d:I
 
-    invoke-virtual {p1, p2, p3}, Landroid/animation/AnimatorSet;->setCurrentPlayTime(J)V
+    iget v3, p0, Lfn4;->e:I
 
-    return-void
+    iget-object v4, p0, Lfn4;->a:Lh79;
+
+    invoke-direct {v0, v1, v2, v3, v4}, Ljn4;-><init>(Ljava/lang/String;IILh79;)V
+
+    iget-object v1, p0, Lfn4;->b:Lwgg;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0, v1}, Lmj0;->I(Lwgg;)V
+
+    :cond_0
+    return-object v0
 .end method

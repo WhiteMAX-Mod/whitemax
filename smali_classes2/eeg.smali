@@ -1,127 +1,146 @@
 .class public final Leeg;
-.super Luj0;
+.super Lu08;
 .source "SourceFile"
+
+# interfaces
+.implements Lcm6;
 
 
 # instance fields
-.field public final b:J
+.field public final synthetic a:I
 
-.field public final c:Ljava/util/List;
+.field public final synthetic b:Landroid/content/Context;
 
 
 # direct methods
-.method public constructor <init>(JLjava/util/List;)V
+.method public synthetic constructor <init>(Landroid/content/Context;I)V
     .locals 0
 
-    invoke-direct {p0}, Luj0;-><init>()V
+    iput p2, p0, Leeg;->a:I
 
-    iput-wide p1, p0, Leeg;->b:J
+    iput-object p1, p0, Leeg;->b:Landroid/content/Context;
 
-    iput-object p3, p0, Leeg;->c:Ljava/util/List;
+    const/4 p1, 0x0
+
+    invoke-direct {p0, p1}, Lu08;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final invoke()Ljava/lang/Object;
+    .locals 6
 
-    const/4 v0, 0x1
+    iget v0, p0, Leeg;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    new-instance v0, Lqeg;
+
+    iget-object v1, p0, Leeg;->b:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    new-instance v2, Loeg;
+
+    invoke-direct {v2}, Loeg;-><init>()V
+
+    new-instance v3, Ln1f;
+
+    const-string v4, "xrRYkU895jUPp2YZo1sxmtFadnlX1oHyouadIxpNzAp"
+
+    invoke-direct {v3, v4}, Ln1f;-><init>(Ljava/lang/String;)V
+
+    iput-object v3, v2, Loeg;->b:Ln1f;
+
+    new-instance v3, Lxpb;
+
+    invoke-direct {v3, v2}, Lxpb;-><init>(Loeg;)V
+
+    const-string v2, "ru.ok.android.externcalls"
+
+    invoke-direct {v0, v1, v2, v3}, Lqeg;-><init>(Landroid/content/Context;Ljava/lang/String;Lxpb;)V
+
+    const-string v1, "calls-sdk-version"
+
+    const-string v2, "125.1.0.73.1"
+
+    invoke-virtual {v0, v1, v2}, Lqeg;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
+
+    :pswitch_0
+    invoke-static {}, Ld6j;->b()Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, p0, Leeg;->b:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const-string v0, "tracer"
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Leeg;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x0
+    const-string v3, "tracer-"
 
-    if-nez v1, :cond_1
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return v2
+    const/16 v3, 0x2d
 
-    :cond_1
-    check-cast p1, Leeg;
+    const/4 v4, 0x0
 
-    iget-wide v3, p0, Leeg;->b:J
+    const/16 v5, 0x3a
 
-    iget-wide v5, p1, Leeg;->b:J
+    invoke-static {v0, v5, v3, v4}, Ldnf;->p(Ljava/lang/String;CCZ)Ljava/lang/String;
 
-    cmp-long v1, v3, v5
+    move-result-object v0
 
-    if-eqz v1, :cond_2
+    invoke-static {v0}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
 
-    return v2
+    move-result-object v0
 
-    :cond_2
-    iget-object v1, p0, Leeg;->c:Ljava/util/List;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p1, Leeg;->c:Ljava/util/List;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object v0
 
-    move-result p1
+    :goto_0
+    new-instance v2, Ljava/io/File;
 
-    if-nez p1, :cond_3
+    invoke-virtual {v1}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
 
-    return v2
+    move-result-object v1
 
-    :cond_3
-    return v0
-.end method
+    invoke-direct {v2, v1, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-.method public final hashCode()I
-    .locals 2
+    invoke-static {v2}, Lnbj;->b(Ljava/io/File;)V
 
-    iget-wide v0, p0, Leeg;->b:J
+    const-string v0, "settings.data"
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Leeg;->c:Ljava/util/List;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "UpdateMessagesEvent(chatId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Leeg;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", messageIds="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Leeg;->c:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v2, v0}, Ljz5;->g(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
 
     return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

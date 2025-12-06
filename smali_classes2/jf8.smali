@@ -1,82 +1,83 @@
-.class public final synthetic Ljf8;
+.class public final Ljf8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public a:I
 
-.field public final synthetic b:Lkf8;
+.field public b:I
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public c:Z
+
+.field public d:Z
+
+.field public e:J
+
+.field public f:Z
+
+.field public g:Z
+
+.field public h:Z
+
+.field public i:Z
+
+.field public j:Z
+
+.field public k:Z
+
+.field public l:J
+
+.field public m:J
+
+.field public n:J
+
+.field public o:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lkf8;Ljava/lang/Object;I)V
-    .locals 0
-
-    iput p3, p0, Ljf8;->a:I
-
-    iput-object p1, p0, Ljf8;->b:Lkf8;
-
-    iput-object p2, p0, Ljf8;->c:Ljava/lang/Object;
+.method public constructor <init>()V
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    const/4 v0, 0x1
 
+    iput v0, p0, Ljf8;->a:I
 
-# virtual methods
-.method public final run()V
-    .locals 2
+    iput v0, p0, Ljf8;->b:I
 
-    iget v0, p0, Ljf8;->a:I
+    iput-boolean v0, p0, Ljf8;->c:Z
 
-    packed-switch v0, :pswitch_data_0
+    iput-boolean v0, p0, Ljf8;->d:Z
 
-    iget-object v0, p0, Ljf8;->b:Lkf8;
+    const-wide/16 v0, -0x1
 
-    iget-object v1, p0, Ljf8;->c:Ljava/lang/Object;
+    iput-wide v0, p0, Ljf8;->e:J
 
-    :try_start_0
-    invoke-static {v0, v1}, Lkf8;->i(Lkf8;Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 v2, 0x0
 
-    :catch_0
-    return-void
+    iput-boolean v2, p0, Ljf8;->f:Z
 
-    :pswitch_0
-    iget-object v0, p0, Ljf8;->b:Lkf8;
+    iput-boolean v2, p0, Ljf8;->g:Z
 
-    iget-object v1, p0, Ljf8;->c:Ljava/lang/Object;
+    iput-boolean v2, p0, Ljf8;->h:Z
 
-    :try_start_1
-    invoke-static {v0, v1}, Lkf8;->h(Lkf8;Ljava/lang/Object;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+    iput-boolean v2, p0, Ljf8;->i:Z
 
-    :catch_1
-    return-void
+    iput-boolean v2, p0, Ljf8;->j:Z
 
-    :pswitch_1
-    iget-object v0, p0, Ljf8;->b:Lkf8;
+    iput-boolean v2, p0, Ljf8;->k:Z
 
-    iget-object v1, p0, Ljf8;->c:Ljava/lang/Object;
+    iput-wide v0, p0, Ljf8;->l:J
 
-    invoke-static {v0, v1}, Lkf8;->g(Lkf8;Ljava/lang/Object;)V
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p0, Ljf8;->m:J
+
+    iput-wide v0, p0, Ljf8;->n:J
+
+    iput-boolean v2, p0, Ljf8;->o:Z
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

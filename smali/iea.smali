@@ -1,69 +1,121 @@
-.class public final Liea;
+.class public abstract Liea;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:I
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Landroid/app/Notification;
+# static fields
+.field public static final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Landroid/app/Notification;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "NetworkStateTracker"
 
-    iput-object p1, p0, Liea;->a:Ljava/lang/String;
+    invoke-static {v0}, Lcei;->m(Ljava/lang/String;)Ljava/lang/String;
 
-    iput p2, p0, Liea;->b:I
+    move-result-object v0
 
-    iput-object p3, p0, Liea;->c:Ljava/lang/String;
-
-    iput-object p4, p0, Liea;->d:Landroid/app/Notification;
+    sput-object v0, Liea;->a:Ljava/lang/String;
 
     return-void
 .end method
 
+.method public static final a(Landroid/net/ConnectivityManager;)Lgea;
+    .locals 8
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "NotifyTask[packageName:"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Liea;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", id:"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Liea;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", tag:"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Liea;->c:Ljava/lang/String;
-
-    const-string v2, "]"
-
-    invoke-static {v0, v1, v2}, Li57;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v0
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/net/NetworkInfo;->isConnected()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    move v3, v1
+
+    goto :goto_0
+
+    :cond_0
+    move v3, v2
+
+    :goto_0
+    :try_start_0
+    invoke-static {p0}, Lyda;->a(Landroid/net/ConnectivityManager;)Landroid/net/Network;
+
+    move-result-object v4
+
+    invoke-static {p0, v4}, Lxda;->a(Landroid/net/ConnectivityManager;Landroid/net/Network;)Landroid/net/NetworkCapabilities;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_1
+
+    const/16 v5, 0x10
+
+    invoke-static {v4, v5}, Lxda;->b(Landroid/net/NetworkCapabilities;I)Z
+
+    move-result v4
+    :try_end_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_3
+
+    :catch_0
+    move-exception v4
+
+    goto :goto_2
+
+    :cond_1
+    :goto_1
+    move v4, v2
+
+    goto :goto_3
+
+    :goto_2
+    invoke-static {}, Lcei;->g()Lcei;
+
+    move-result-object v5
+
+    sget-object v6, Liea;->a:Ljava/lang/String;
+
+    const-string v7, "Unable to validate active network"
+
+    invoke-virtual {v5, v6, v7, v4}, Lcei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_1
+
+    :goto_3
+    invoke-virtual {p0}, Landroid/net/ConnectivityManager;->isActiveNetworkMetered()Z
+
+    move-result p0
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Landroid/net/NetworkInfo;->isRoaming()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_4
+
+    :cond_2
+    move v1, v2
+
+    :goto_4
+    new-instance v0, Lgea;
+
+    invoke-direct {v0, v3, v4, p0, v1}, Lgea;-><init>(ZZZZ)V
 
     return-object v0
 .end method

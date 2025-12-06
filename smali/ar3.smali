@@ -1,237 +1,328 @@
-.class public final Lar3;
+.class public final synthetic Lar3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public a:[I
+.field public final synthetic a:I
 
-.field public b:[I
+.field public final synthetic b:Lo79;
 
-.field public c:I
+.field public final synthetic c:Lu69;
 
-.field public d:[I
 
-.field public e:[F
+# direct methods
+.method public synthetic constructor <init>(Lo79;Lu69;I)V
+    .locals 0
 
-.field public f:I
+    iput p3, p0, Lar3;->a:I
 
-.field public g:[I
+    iput-object p1, p0, Lar3;->b:Lo79;
 
-.field public h:[Ljava/lang/String;
+    iput-object p2, p0, Lar3;->c:Lu69;
 
-.field public i:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public j:[I
-
-.field public k:[Z
-
-.field public l:I
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(IF)V
-    .locals 3
+.method public final run()V
+    .locals 5
 
-    iget v0, p0, Lar3;->f:I
+    iget v0, p0, Lar3;->a:I
 
-    iget-object v1, p0, Lar3;->d:[I
+    packed-switch v0, :pswitch_data_0
 
-    array-length v2, v1
+    iget-object v0, p0, Lar3;->b:Lo79;
 
-    if-lt v0, v2, :cond_0
+    iget-object v0, v0, Lo79;->g:Lz89;
 
-    array-length v0, v1
+    new-instance v1, Lzz8;
 
-    mul-int/lit8 v0, v0, 0x2
+    const/16 v2, 0xe
 
-    invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([II)[I
+    invoke-direct {v1, v2}, Lzz8;-><init>(I)V
 
-    move-result-object v0
+    invoke-static {v1}, Lz89;->Y(Lfu3;)Lsl6;
 
-    iput-object v0, p0, Lar3;->d:[I
+    move-result-object v1
 
-    iget-object v0, p0, Lar3;->e:[F
+    iget-object v2, p0, Lar3;->c:Lu69;
 
-    array-length v1, v0
+    const/high16 v3, -0x80000000
 
-    mul-int/lit8 v1, v1, 0x2
+    const/4 v4, 0x7
 
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([FI)[F
-
-    move-result-object v0
-
-    iput-object v0, p0, Lar3;->e:[F
-
-    :cond_0
-    iget-object v0, p0, Lar3;->d:[I
-
-    iget v1, p0, Lar3;->f:I
-
-    aput p1, v0, v1
-
-    iget-object p1, p0, Lar3;->e:[F
-
-    add-int/lit8 v0, v1, 0x1
-
-    iput v0, p0, Lar3;->f:I
-
-    aput p2, p1, v1
+    invoke-virtual {v0, v2, v3, v4, v1}, Lz89;->W(Lu69;IILy89;)V
 
     return-void
-.end method
 
-.method public final b(II)V
-    .locals 3
+    :pswitch_0
+    iget-object v0, p0, Lar3;->b:Lo79;
 
-    iget v0, p0, Lar3;->c:I
+    iget-object v0, v0, Lo79;->g:Lz89;
 
-    iget-object v1, p0, Lar3;->a:[I
+    new-instance v1, Lzz8;
 
-    array-length v2, v1
+    const/16 v2, 0x12
 
-    if-lt v0, v2, :cond_0
+    invoke-direct {v1, v2}, Lzz8;-><init>(I)V
 
-    array-length v0, v1
+    invoke-static {v1}, Lz89;->Y(Lfu3;)Lsl6;
 
-    mul-int/lit8 v0, v0, 0x2
+    move-result-object v1
 
-    invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([II)[I
+    iget-object v2, p0, Lar3;->c:Lu69;
 
-    move-result-object v0
+    const/high16 v3, -0x80000000
 
-    iput-object v0, p0, Lar3;->a:[I
+    const/16 v4, 0x9
 
-    iget-object v0, p0, Lar3;->b:[I
-
-    array-length v1, v0
-
-    mul-int/lit8 v1, v1, 0x2
-
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([II)[I
-
-    move-result-object v0
-
-    iput-object v0, p0, Lar3;->b:[I
-
-    :cond_0
-    iget-object v0, p0, Lar3;->a:[I
-
-    iget v1, p0, Lar3;->c:I
-
-    aput p1, v0, v1
-
-    iget-object p1, p0, Lar3;->b:[I
-
-    add-int/lit8 v0, v1, 0x1
-
-    iput v0, p0, Lar3;->c:I
-
-    aput p2, p1, v1
+    invoke-virtual {v0, v2, v3, v4, v1}, Lz89;->W(Lu69;IILy89;)V
 
     return-void
-.end method
 
-.method public final c(ILjava/lang/String;)V
-    .locals 3
+    :pswitch_1
+    iget-object v0, p0, Lar3;->b:Lo79;
 
-    iget v0, p0, Lar3;->i:I
+    iget-object v0, v0, Lo79;->g:Lz89;
 
-    iget-object v1, p0, Lar3;->g:[I
+    new-instance v1, Lzz8;
 
-    array-length v2, v1
+    const/16 v2, 0x9
 
-    if-lt v0, v2, :cond_0
+    invoke-direct {v1, v2}, Lzz8;-><init>(I)V
 
-    array-length v0, v1
+    invoke-static {v1}, Lz89;->Y(Lfu3;)Lsl6;
 
-    mul-int/lit8 v0, v0, 0x2
+    move-result-object v1
 
-    invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([II)[I
+    iget-object v2, p0, Lar3;->c:Lu69;
 
-    move-result-object v0
+    const/high16 v3, -0x80000000
 
-    iput-object v0, p0, Lar3;->g:[I
+    const/4 v4, 0x1
 
-    iget-object v0, p0, Lar3;->h:[Ljava/lang/String;
-
-    array-length v1, v0
-
-    mul-int/lit8 v1, v1, 0x2
-
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ljava/lang/String;
-
-    iput-object v0, p0, Lar3;->h:[Ljava/lang/String;
-
-    :cond_0
-    iget-object v0, p0, Lar3;->g:[I
-
-    iget v1, p0, Lar3;->i:I
-
-    aput p1, v0, v1
-
-    iget-object p1, p0, Lar3;->h:[Ljava/lang/String;
-
-    add-int/lit8 v0, v1, 0x1
-
-    iput v0, p0, Lar3;->i:I
-
-    aput-object p2, p1, v1
+    invoke-virtual {v0, v2, v3, v4, v1}, Lz89;->W(Lu69;IILy89;)V
 
     return-void
-.end method
 
-.method public final d(IZ)V
-    .locals 3
+    :pswitch_2
+    iget-object v0, p0, Lar3;->b:Lo79;
 
-    iget v0, p0, Lar3;->l:I
+    iget-object v0, v0, Lo79;->g:Lz89;
 
-    iget-object v1, p0, Lar3;->j:[I
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    array-length v2, v1
+    new-instance v1, Ldq4;
 
-    if-lt v0, v2, :cond_0
+    const/16 v2, 0x15
 
-    array-length v0, v1
+    iget-object v3, p0, Lar3;->c:Lu69;
 
-    mul-int/lit8 v0, v0, 0x2
+    invoke-direct {v1, v0, v2, v3}, Ldq4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-static {v1, v0}, Ljava/util/Arrays;->copyOf([II)[I
+    invoke-static {v1}, Lz89;->Y(Lfu3;)Lsl6;
 
-    move-result-object v0
+    move-result-object v1
 
-    iput-object v0, p0, Lar3;->j:[I
+    const/high16 v2, -0x80000000
 
-    iget-object v0, p0, Lar3;->k:[Z
+    const/4 v4, 0x1
 
-    array-length v1, v0
-
-    mul-int/lit8 v1, v1, 0x2
-
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([ZI)[Z
-
-    move-result-object v0
-
-    iput-object v0, p0, Lar3;->k:[Z
-
-    :cond_0
-    iget-object v0, p0, Lar3;->j:[I
-
-    iget v1, p0, Lar3;->l:I
-
-    aput p1, v0, v1
-
-    iget-object p1, p0, Lar3;->k:[Z
-
-    add-int/lit8 v0, v1, 0x1
-
-    iput v0, p0, Lar3;->l:I
-
-    aput-boolean p2, p1, v1
+    invoke-virtual {v0, v3, v2, v4, v1}, Lz89;->W(Lu69;IILy89;)V
 
     return-void
+
+    :pswitch_3
+    iget-object v0, p0, Lar3;->b:Lo79;
+
+    iget-object v0, v0, Lo79;->g:Lz89;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Ldq4;
+
+    const/16 v2, 0x15
+
+    iget-object v3, p0, Lar3;->c:Lu69;
+
+    invoke-direct {v1, v0, v2, v3}, Ldq4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {v1}, Lz89;->Y(Lfu3;)Lsl6;
+
+    move-result-object v1
+
+    const/high16 v2, -0x80000000
+
+    const/4 v4, 0x1
+
+    invoke-virtual {v0, v3, v2, v4, v1}, Lz89;->W(Lu69;IILy89;)V
+
+    return-void
+
+    :pswitch_4
+    iget-object v0, p0, Lar3;->b:Lo79;
+
+    iget-object v0, v0, Lo79;->g:Lz89;
+
+    new-instance v1, Lzz8;
+
+    const/16 v2, 0x9
+
+    invoke-direct {v1, v2}, Lzz8;-><init>(I)V
+
+    invoke-static {v1}, Lz89;->Y(Lfu3;)Lsl6;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lar3;->c:Lu69;
+
+    const/high16 v3, -0x80000000
+
+    const/4 v4, 0x1
+
+    invoke-virtual {v0, v2, v3, v4, v1}, Lz89;->W(Lu69;IILy89;)V
+
+    return-void
+
+    :pswitch_5
+    iget-object v0, p0, Lar3;->b:Lo79;
+
+    iget-object v0, v0, Lo79;->g:Lz89;
+
+    new-instance v1, Lzz8;
+
+    const/16 v2, 0x18
+
+    invoke-direct {v1, v2}, Lzz8;-><init>(I)V
+
+    invoke-static {v1}, Lz89;->Y(Lfu3;)Lsl6;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lar3;->c:Lu69;
+
+    const/high16 v3, -0x80000000
+
+    const/4 v4, 0x3
+
+    invoke-virtual {v0, v2, v3, v4, v1}, Lz89;->W(Lu69;IILy89;)V
+
+    return-void
+
+    :pswitch_6
+    iget-object v0, p0, Lar3;->b:Lo79;
+
+    iget-object v0, v0, Lo79;->g:Lz89;
+
+    new-instance v1, Lzz8;
+
+    const/16 v2, 0xc
+
+    invoke-direct {v1, v2}, Lzz8;-><init>(I)V
+
+    invoke-static {v1}, Lz89;->Y(Lfu3;)Lsl6;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lar3;->c:Lu69;
+
+    const/high16 v3, -0x80000000
+
+    const/16 v4, 0xb
+
+    invoke-virtual {v0, v2, v3, v4, v1}, Lz89;->W(Lu69;IILy89;)V
+
+    return-void
+
+    :pswitch_7
+    iget-object v0, p0, Lar3;->b:Lo79;
+
+    iget-object v0, v0, Lo79;->g:Lz89;
+
+    new-instance v1, Lzz8;
+
+    const/16 v2, 0x11
+
+    invoke-direct {v1, v2}, Lzz8;-><init>(I)V
+
+    invoke-static {v1}, Lz89;->Y(Lfu3;)Lsl6;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lar3;->c:Lu69;
+
+    const/high16 v3, -0x80000000
+
+    const/16 v4, 0xc
+
+    invoke-virtual {v0, v2, v3, v4, v1}, Lz89;->W(Lu69;IILy89;)V
+
+    return-void
+
+    :pswitch_8
+    iget-object v0, p0, Lar3;->b:Lo79;
+
+    invoke-virtual {v0}, Lo79;->j()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-boolean v1, v0, Lo79;->A:Z
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lar3;->c:Lu69;
+
+    invoke-static {v1}, Lo79;->k(Lu69;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v0, v1}, Lo79;->i(Lu69;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, v0, Lo79;->A:Z
+
+    :cond_2
+    iget-object v0, v0, Lo79;->e:Lusd;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :goto_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

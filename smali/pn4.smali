@@ -1,110 +1,181 @@
 .class public final Lpn4;
-.super Lbh6;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
 
 
 # instance fields
-.field public final e:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final f:Ljava/util/concurrent/ExecutorService;
+.field public final synthetic b:Lmid;
 
-.field public volatile g:Landroid/os/Handler;
+.field public final synthetic c:Landroid/view/View;
+
+.field public final synthetic d:Landroid/view/ViewPropertyAnimator;
+
+.field public final synthetic e:Lun4;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Lun4;Lmid;Landroid/view/View;Landroid/view/ViewPropertyAnimator;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
 
-    new-instance v0, Ljava/lang/Object;
+    iput v0, p0, Lpn4;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    .line 2
+    iput-object p1, p0, Lpn4;->e:Lun4;
 
-    iput-object v0, p0, Lpn4;->e:Ljava/lang/Object;
+    iput-object p2, p0, Lpn4;->b:Lmid;
 
-    new-instance v0, Lp30;
+    iput-object p3, p0, Lpn4;->c:Landroid/view/View;
 
-    const/4 v1, 0x2
+    iput-object p4, p0, Lpn4;->d:Landroid/view/ViewPropertyAnimator;
 
-    invoke-direct {v0, v1}, Lp30;-><init>(I)V
-
-    const/4 v1, 0x4
-
-    invoke-static {v1, v0}, Ljava/util/concurrent/Executors;->newFixedThreadPool(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lpn4;->f:Ljava/util/concurrent/ExecutorService;
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
-.method public static c(Landroid/os/Looper;)Landroid/os/Handler;
-    .locals 4
+.method public constructor <init>(Lun4;Lmid;Landroid/view/ViewPropertyAnimator;Landroid/view/View;)V
+    .locals 1
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    const/4 v0, 0x0
 
-    const/16 v1, 0x1c
+    iput v0, p0, Lpn4;->a:I
 
-    if-lt v0, v1, :cond_0
+    .line 1
+    iput-object p1, p0, Lpn4;->e:Lun4;
 
-    invoke-static {p0}, Lon4;->a(Landroid/os/Looper;)Landroid/os/Handler;
+    iput-object p2, p0, Lpn4;->b:Lmid;
 
-    move-result-object p0
+    iput-object p3, p0, Lpn4;->d:Landroid/view/ViewPropertyAnimator;
 
-    return-object p0
+    iput-object p4, p0, Lpn4;->c:Landroid/view/View;
 
-    :cond_0
-    :try_start_0
-    const-class v0, Landroid/os/Handler;
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
-    const-class v1, Landroid/os/Looper;
+    return-void
+.end method
 
-    const-class v2, Landroid/os/Handler$Callback;
 
-    sget-object v3, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+# virtual methods
+.method public onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 1
 
-    filled-new-array {v1, v2, v3}, [Ljava/lang/Class;
+    iget v0, p0, Lpn4;->a:I
 
-    move-result-object v1
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationCancel(Landroid/animation/Animator;)V
 
-    move-result-object v0
+    return-void
 
-    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    :pswitch_0
+    iget-object p1, p0, Lpn4;->c:Landroid/view/View;
 
-    const/4 v2, 0x0
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    filled-new-array {p0, v2, v1}, [Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
-    move-result-object v1
+    return-void
 
-    invoke-virtual {v0, v1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+    nop
 
-    move-result-object v0
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    check-cast v0, Landroid/os/Handler;
-    :try_end_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 2
 
-    return-object v0
+    iget p1, p0, Lpn4;->a:I
 
-    :catch_0
-    new-instance v0, Landroid/os/Handler;
+    packed-switch p1, :pswitch_data_0
 
-    invoke-direct {v0, p0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    iget-object p1, p0, Lpn4;->d:Landroid/view/ViewPropertyAnimator;
 
-    return-object v0
+    const/4 v0, 0x0
 
-    :catch_1
-    new-instance v0, Landroid/os/Handler;
+    invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
-    invoke-direct {v0, p0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    iget-object p1, p0, Lpn4;->e:Lun4;
 
-    return-object v0
+    iget-object v0, p0, Lpn4;->b:Lmid;
+
+    invoke-virtual {p1, v0}, Luhd;->c(Lmid;)V
+
+    iget-object v1, p1, Lun4;->o:Ljava/util/ArrayList;
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    invoke-virtual {p1}, Lun4;->j()V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lpn4;->d:Landroid/view/ViewPropertyAnimator;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
+
+    iget-object p1, p0, Lpn4;->c:Landroid/view/View;
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+
+    iget-object p1, p0, Lpn4;->e:Lun4;
+
+    invoke-virtual {p1}, Lun4;->m()V
+
+    iget-object v0, p0, Lpn4;->b:Lmid;
+
+    invoke-virtual {p1, v0}, Luhd;->c(Lmid;)V
+
+    iget-object v1, p1, Lun4;->q:Ljava/util/ArrayList;
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    invoke-virtual {p1}, Lun4;->j()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
+
+    iget p1, p0, Lpn4;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p1, p0, Lpn4;->e:Lun4;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lpn4;->e:Lun4;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,47 +1,117 @@
 .class public final Lb4g;
-.super La4g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:Let;
+# static fields
+.field public static final d:Ljava/util/regex/Pattern;
 
-.field public final synthetic b:Lc4g;
+.field public static final e:Lhh7;
+
+.field public static final f:Lhh7;
+
+.field public static final g:Lhh7;
+
+.field public static final h:Lhh7;
+
+
+# instance fields
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Lc4g;Let;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "\\s+"
 
-    iput-object p1, p0, Lb4g;->b:Lc4g;
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
-    iput-object p2, p0, Lb4g;->a:Let;
+    move-result-object v0
+
+    sput-object v0, Lb4g;->d:Ljava/util/regex/Pattern;
+
+    const-string v0, "auto"
+
+    const-string v1, "none"
+
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const/4 v1, 0x2
+
+    invoke-static {v1, v0}, Lhh7;->i(I[Ljava/lang/Object;)Lhh7;
+
+    move-result-object v0
+
+    sput-object v0, Lb4g;->e:Lhh7;
+
+    const-string v0, "dot"
+
+    const-string v2, "sesame"
+
+    const-string v3, "circle"
+
+    filled-new-array {v0, v2, v3}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v2, v0}, Lhh7;->i(I[Ljava/lang/Object;)Lhh7;
+
+    move-result-object v0
+
+    sput-object v0, Lb4g;->f:Lhh7;
+
+    const-string v0, "filled"
+
+    const-string v3, "open"
+
+    filled-new-array {v0, v3}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lhh7;->i(I[Ljava/lang/Object;)Lhh7;
+
+    move-result-object v0
+
+    sput-object v0, Lb4g;->g:Lhh7;
+
+    const-string v0, "before"
+
+    const-string v1, "outside"
+
+    const-string v3, "after"
+
+    filled-new-array {v3, v0, v1}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Lhh7;->i(I[Ljava/lang/Object;)Lhh7;
+
+    move-result-object v0
+
+    sput-object v0, Lb4g;->h:Lhh7;
 
     return-void
 .end method
 
+.method public constructor <init>(III)V
+    .locals 0
 
-# virtual methods
-.method public final c(Lx3g;)V
-    .locals 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p0, Lb4g;->b:Lc4g;
+    iput p1, p0, Lb4g;->a:I
 
-    iget-object v0, v0, Lc4g;->b:Landroid/view/ViewGroup;
+    iput p2, p0, Lb4g;->b:I
 
-    iget-object v1, p0, Lb4g;->a:Let;
-
-    invoke-virtual {v1, v0}, Lzoe;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    invoke-virtual {p1, p0}, Lx3g;->E(Lw3g;)Lx3g;
+    iput p3, p0, Lb4g;->c:I
 
     return-void
 .end method

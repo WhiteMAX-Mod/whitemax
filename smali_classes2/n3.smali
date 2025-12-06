@@ -1,147 +1,122 @@
-.class public final Ln3;
-.super Lsgf;
+.class public final synthetic Ln3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Lcm6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lone/me/chats/picker/AbstractPickerScreen;
+.field public final synthetic b:Lone/me/chats/picker/AbstractPickerScreen;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/picker/AbstractPickerScreen;)V
+.method public synthetic constructor <init>(Lone/me/chats/picker/AbstractPickerScreen;I)V
     .locals 0
 
-    iput-object p2, p0, Ln3;->Y:Lone/me/chats/picker/AbstractPickerScreen;
+    iput p2, p0, Ln3;->a:I
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Ln3;->b:Lone/me/chats/picker/AbstractPickerScreen;
 
-    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget v0, p0, Ln3;->a:I
 
-    invoke-virtual {p0, p1, p2}, Ln3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Ln3;->b:Lone/me/chats/picker/AbstractPickerScreen;
 
-    move-result-object p1
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Ln3;
+    sget-object v0, Lone/me/chats/picker/AbstractPickerScreen;->s0:[Lyy7;
 
-    sget-object p2, Lccg;->a:Lccg;
+    new-instance v0, La2b;
 
-    invoke-virtual {p1, p2}, Ln3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    return-object p2
-.end method
+    move-result-object v2
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    invoke-direct {v0, v2}, La2b;-><init>(Landroid/content/Context;)V
 
-    new-instance v0, Ln3;
+    invoke-virtual {v0}, La2b;->getEditText()Landroid/widget/EditText;
 
-    iget-object v1, p0, Ln3;->Y:Lone/me/chats/picker/AbstractPickerScreen;
+    move-result-object v2
 
-    invoke-direct {v0, p2, v1}, Ln3;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/picker/AbstractPickerScreen;)V
+    invoke-virtual {v1}, Lone/me/chats/picker/AbstractPickerScreen;->E0()Lmcf;
 
-    iput-object p1, v0, Ln3;->X:Ljava/lang/Object;
+    move-result-object v3
 
-    return-object v0
-.end method
+    if-eqz v3, :cond_0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    check-cast v3, Ltcf;
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    invoke-virtual {v3}, Ltcf;->getValue()Ljava/lang/Object;
 
-    iget-object p1, p0, Ln3;->X:Ljava/lang/Object;
+    move-result-object v3
 
-    check-cast p1, Lpnb;
+    check-cast v3, Ls5g;
 
-    sget-object v0, Lnnb;->a:Lnnb;
+    if-eqz v3, :cond_0
 
-    invoke-static {p1, v0}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    move-result v0
+    move-result-object v4
 
-    iget-object v1, p0, Ln3;->Y:Lone/me/chats/picker/AbstractPickerScreen;
+    invoke-virtual {v3, v4}, Ls5g;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
 
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v1}, Lone/me/chats/picker/AbstractPickerScreen;->H0()Lzsa;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Lzsa;->getEditText()Landroid/widget/EditText;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    move-result-object v3
 
     goto :goto_0
 
     :cond_0
-    instance-of v0, p1, Lonb;
+    const/4 v3, 0x0
 
-    if-eqz v0, :cond_3
-
-    iget-object v0, v1, Lone/me/chats/picker/AbstractPickerScreen;->q0:Lb3b;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Lb3b;->a()V
-
-    :cond_1
-    new-instance v0, Lc3b;
-
-    invoke-direct {v0, v1}, Lc3b;-><init>(Lone/me/sdk/arch/Widget;)V
-
-    check-cast p1, Lonb;
-
-    iget-object p1, p1, Lonb;->a:Lorf;
-
-    invoke-virtual {v0, p1}, Lc3b;->g(Ltrf;)V
-
-    new-instance p1, Lq3b;
-
-    sget v2, Lzjd;->Z0:I
-
-    invoke-direct {p1, v2}, Lq3b;-><init>(I)V
-
-    invoke-virtual {v0, p1}, Lc3b;->e(Lu3b;)V
-
-    invoke-virtual {v0}, Lc3b;->i()Lb3b;
-
-    move-result-object p1
-
-    iput-object p1, v1, Lone/me/chats/picker/AbstractPickerScreen;->q0:Lb3b;
-
-    :cond_2
     :goto_0
-    sget-object p1, Lccg;->a:Lccg;
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setHint(Ljava/lang/CharSequence;)V
 
-    return-object p1
+    new-instance v2, Li5i;
 
-    :cond_3
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    invoke-direct {v2, v1, v0}, Li5i;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    invoke-virtual {v0, v2}, La2b;->setCallback(Ly1b;)V
 
-    throw p1
+    invoke-virtual {v0}, La2b;->getEditText()Landroid/widget/EditText;
+
+    move-result-object v2
+
+    new-instance v3, Lp3;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v3, v4, v1}, Lp3;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
+
+    return-object v0
+
+    :pswitch_0
+    sget-object v0, Lone/me/chats/picker/AbstractPickerScreen;->s0:[Lyy7;
+
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Lone/me/chats/picker/AbstractPickerScreen;->B0(Landroid/content/Context;)Lyfb;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

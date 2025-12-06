@@ -1,9 +1,31 @@
-.class public final Ls7b;
+.class public abstract Ls7b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Z
+# static fields
+.field public static final a:I
 
-.field public b:I
+.field public static final b:I
+
+.field public static final c:I
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    sget v0, Lx3d;->oneme_messages_settings_send_by_enter_action_title:I
+
+    sput v0, Ls7b;->a:I
+
+    sget v0, Lx3d;->oneme_messages_settings_stickers_settings_action_title:I
+
+    sput v0, Ls7b;->b:I
+
+    sget v0, Lx3d;->oneme_messages_settings_toolbar_title:I
+
+    sput v0, Ls7b;->c:I
+
+    return-void
+.end method

@@ -31,6 +31,8 @@
 
 .field private cameraName:Ljava/lang/String;
 
+.field private final cameraSessionConfigurationProvider:Lorg/webrtc/CameraSession$ConfigurationProvider;
+
 .field private final cameraSessionEventsHandler:Lorg/webrtc/CameraSession$Events;
 
 .field private cameraStatistics:Lorg/webrtc/CameraVideoCapturer$CameraStatistics;
@@ -40,6 +42,8 @@
 .field protected final captureFormatHelper:Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;
 
 .field private capturerObserver:Lorg/webrtc/CapturerObserver;
+
+.field private final configProvider:Lorg/webrtc/CameraVideoCapturer$CameraConfigurationProvider;
 
 .field private final createSessionCallback:Lorg/webrtc/CameraSession$CreateSessionCallback;
 
@@ -75,18 +79,28 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;Lorg/webrtc/CameraEnumerator;)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;Lorg/webrtc/CameraEnumerator;Lorg/webrtc/CameraVideoCapturer$CameraConfigurationProvider;)V
+    .locals 6
 
-    const/4 v0, 0x0
+    const/4 v5, 0x0
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    move-object v4, p4
 
     .line 1
-    invoke-direct {p0, p1, p2, p3, v0}, Lorg/webrtc/CameraCapturer;-><init>(Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;Lorg/webrtc/CameraEnumerator;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;)V
+    invoke-direct/range {v0 .. v5}, Lorg/webrtc/CameraCapturer;-><init>(Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;Lorg/webrtc/CameraEnumerator;Lorg/webrtc/CameraVideoCapturer$CameraConfigurationProvider;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;Lorg/webrtc/CameraEnumerator;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;)V
+.method public constructor <init>(Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;Lorg/webrtc/CameraEnumerator;Lorg/webrtc/CameraVideoCapturer$CameraConfigurationProvider;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;)V
     .locals 1
 
     .line 2
@@ -111,48 +125,58 @@
 
     invoke-direct {v0, p0}, Lorg/webrtc/CameraCapturer$3;-><init>(Lorg/webrtc/CameraCapturer;)V
 
-    iput-object v0, p0, Lorg/webrtc/CameraCapturer;->openCameraTimeoutRunnable:Ljava/lang/Runnable;
+    iput-object v0, p0, Lorg/webrtc/CameraCapturer;->cameraSessionConfigurationProvider:Lorg/webrtc/CameraSession$ConfigurationProvider;
 
     .line 6
+    new-instance v0, Lorg/webrtc/CameraCapturer$4;
+
+    invoke-direct {v0, p0}, Lorg/webrtc/CameraCapturer$4;-><init>(Lorg/webrtc/CameraCapturer;)V
+
+    iput-object v0, p0, Lorg/webrtc/CameraCapturer;->openCameraTimeoutRunnable:Ljava/lang/Runnable;
+
+    .line 7
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lorg/webrtc/CameraCapturer;->stateLock:Ljava/lang/Object;
 
-    .line 7
+    .line 8
     sget-object v0, Lorg/webrtc/CameraCapturer$SwitchState;->IDLE:Lorg/webrtc/CameraCapturer$SwitchState;
 
     iput-object v0, p0, Lorg/webrtc/CameraCapturer;->switchState:Lorg/webrtc/CameraCapturer$SwitchState;
 
     if-nez p2, :cond_0
 
-    .line 8
-    new-instance p2, Lorg/webrtc/CameraCapturer$4;
+    .line 9
+    new-instance p2, Lorg/webrtc/CameraCapturer$5;
 
-    invoke-direct {p2, p0}, Lorg/webrtc/CameraCapturer$4;-><init>(Lorg/webrtc/CameraCapturer;)V
+    invoke-direct {p2, p0}, Lorg/webrtc/CameraCapturer$5;-><init>(Lorg/webrtc/CameraCapturer;)V
 
     :cond_0
-    if-nez p4, :cond_1
-
-    .line 9
-    new-instance p4, Lorg/webrtc/CameraCapturer$5;
-
-    invoke-direct {p4, p0}, Lorg/webrtc/CameraCapturer$5;-><init>(Lorg/webrtc/CameraCapturer;)V
-
-    :cond_1
-    iput-object p4, p0, Lorg/webrtc/CameraCapturer;->captureFormatHelper:Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;
+    if-nez p5, :cond_1
 
     .line 10
-    iput-object p2, p0, Lorg/webrtc/CameraCapturer;->eventsHandler:Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;
+    new-instance p5, Lorg/webrtc/CameraCapturer$6;
+
+    invoke-direct {p5, p0}, Lorg/webrtc/CameraCapturer$6;-><init>(Lorg/webrtc/CameraCapturer;)V
+
+    :cond_1
+    iput-object p5, p0, Lorg/webrtc/CameraCapturer;->captureFormatHelper:Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;
 
     .line 11
-    iput-object p3, p0, Lorg/webrtc/CameraCapturer;->cameraEnumerator:Lorg/webrtc/CameraEnumerator;
+    iput-object p2, p0, Lorg/webrtc/CameraCapturer;->eventsHandler:Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;
 
     .line 12
-    iput-object p1, p0, Lorg/webrtc/CameraCapturer;->cameraName:Ljava/lang/String;
+    iput-object p3, p0, Lorg/webrtc/CameraCapturer;->cameraEnumerator:Lorg/webrtc/CameraEnumerator;
 
     .line 13
+    iput-object p4, p0, Lorg/webrtc/CameraCapturer;->configProvider:Lorg/webrtc/CameraVideoCapturer$CameraConfigurationProvider;
+
+    .line 14
+    iput-object p1, p0, Lorg/webrtc/CameraCapturer;->cameraName:Ljava/lang/String;
+
+    .line 15
     invoke-interface {p3}, Lorg/webrtc/CameraEnumerator;->getDeviceNames()[Ljava/lang/String;
 
     move-result-object p1
@@ -161,7 +185,7 @@
 
     move-result-object p1
 
-    .line 14
+    .line 16
     new-instance p2, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -172,14 +196,14 @@
 
     iput-object p2, p0, Lorg/webrtc/CameraCapturer;->uiThreadHandler:Landroid/os/Handler;
 
-    .line 15
+    .line 17
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result p2
 
     if-nez p2, :cond_3
 
-    .line 16
+    .line 18
     iget-object p2, p0, Lorg/webrtc/CameraCapturer;->cameraName:Ljava/lang/String;
 
     invoke-interface {p1, p2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
@@ -190,7 +214,7 @@
 
     return-void
 
-    .line 17
+    .line 19
     :cond_2
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -200,17 +224,17 @@
 
     const-string p4, " does not match any known camera device."
 
-    .line 18
-    invoke-static {p3, p2, p4}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .line 20
+    invoke-static {p3, p2, p4}, Lho7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 19
+    .line 21
     invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p1
 
-    .line 20
+    .line 22
     :cond_3
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -221,12 +245,10 @@
     throw p1
 .end method
 
-.method public static bridge synthetic A(Lorg/webrtc/CameraCapturer;)V
-    .locals 1
+.method public static bridge synthetic A(Lorg/webrtc/CameraCapturer;I)V
+    .locals 0
 
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lorg/webrtc/CameraCapturer;->sessionOpening:Z
+    iput p1, p0, Lorg/webrtc/CameraCapturer;->openAttemptsRemaining:I
 
     return-void
 .end method
@@ -236,12 +258,32 @@
 
     const/4 v0, 0x0
 
+    iput-object v0, p0, Lorg/webrtc/CameraCapturer;->pendingCameraName:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static bridge synthetic C(Lorg/webrtc/CameraCapturer;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lorg/webrtc/CameraCapturer;->sessionOpening:Z
+
+    return-void
+.end method
+
+.method public static bridge synthetic D(Lorg/webrtc/CameraCapturer;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
     iput-object v0, p0, Lorg/webrtc/CameraCapturer;->switchEventsHandler:Lorg/webrtc/CameraVideoCapturer$CameraSwitchHandler;
 
     return-void
 .end method
 
-.method public static bridge synthetic C(Lorg/webrtc/CameraCapturer;Lorg/webrtc/CameraCapturer$SwitchState;)V
+.method public static bridge synthetic E(Lorg/webrtc/CameraCapturer;Lorg/webrtc/CameraCapturer$SwitchState;)V
     .locals 0
 
     iput-object p1, p0, Lorg/webrtc/CameraCapturer;->switchState:Lorg/webrtc/CameraCapturer$SwitchState;
@@ -249,7 +291,7 @@
     return-void
 .end method
 
-.method public static bridge synthetic D(Lorg/webrtc/CameraCapturer;)V
+.method public static bridge synthetic F(Lorg/webrtc/CameraCapturer;)V
     .locals 0
 
     invoke-direct {p0}, Lorg/webrtc/CameraCapturer;->checkIsOnCameraThread()V
@@ -257,7 +299,7 @@
     return-void
 .end method
 
-.method public static bridge synthetic E(Lorg/webrtc/CameraCapturer;)V
+.method public static bridge synthetic G(Lorg/webrtc/CameraCapturer;)V
     .locals 1
 
     const/16 v0, 0x1f4
@@ -267,7 +309,7 @@
     return-void
 .end method
 
-.method public static bridge synthetic F(Lorg/webrtc/CameraCapturer;Lorg/webrtc/CameraVideoCapturer$CameraSwitchHandler;)V
+.method public static bridge synthetic H(Lorg/webrtc/CameraCapturer;Lorg/webrtc/CameraVideoCapturer$CameraSwitchHandler;)V
     .locals 1
 
     const-string v0, "No camera to switch to."
@@ -277,7 +319,7 @@
     return-void
 .end method
 
-.method public static bridge synthetic G(Lorg/webrtc/CameraCapturer;Lorg/webrtc/CameraVideoCapturer$CameraSwitchHandler;Ljava/lang/String;)V
+.method public static bridge synthetic I(Lorg/webrtc/CameraCapturer;Lorg/webrtc/CameraVideoCapturer$CameraSwitchHandler;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lorg/webrtc/CameraCapturer;->switchCameraInternal(Lorg/webrtc/CameraVideoCapturer$CameraSwitchHandler;Ljava/lang/String;)V
@@ -361,9 +403,9 @@
 
     iget-object v0, p0, Lorg/webrtc/CameraCapturer;->cameraThreadHandler:Landroid/os/Handler;
 
-    new-instance v1, Lorg/webrtc/CameraCapturer$6;
+    new-instance v1, Lorg/webrtc/CameraCapturer$7;
 
-    invoke-direct {v1, p0}, Lorg/webrtc/CameraCapturer$6;-><init>(Lorg/webrtc/CameraCapturer;)V
+    invoke-direct {v1, p0}, Lorg/webrtc/CameraCapturer$7;-><init>(Lorg/webrtc/CameraCapturer;)V
 
     int-to-long v2, p1
 
@@ -372,7 +414,15 @@
     return-void
 .end method
 
-.method public static bridge synthetic d(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraSession$Events;
+.method public static bridge synthetic d(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraSession$ConfigurationProvider;
+    .locals 0
+
+    iget-object p0, p0, Lorg/webrtc/CameraCapturer;->cameraSessionConfigurationProvider:Lorg/webrtc/CameraSession$ConfigurationProvider;
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic e(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraSession$Events;
     .locals 0
 
     iget-object p0, p0, Lorg/webrtc/CameraCapturer;->cameraSessionEventsHandler:Lorg/webrtc/CameraSession$Events;
@@ -380,7 +430,7 @@
     return-object p0
 .end method
 
-.method public static bridge synthetic e(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraVideoCapturer$CameraStatistics;
+.method public static bridge synthetic f(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraVideoCapturer$CameraStatistics;
     .locals 0
 
     iget-object p0, p0, Lorg/webrtc/CameraCapturer;->cameraStatistics:Lorg/webrtc/CameraVideoCapturer$CameraStatistics;
@@ -388,7 +438,7 @@
     return-object p0
 .end method
 
-.method public static bridge synthetic f(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CapturerObserver;
+.method public static bridge synthetic g(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CapturerObserver;
     .locals 0
 
     iget-object p0, p0, Lorg/webrtc/CameraCapturer;->capturerObserver:Lorg/webrtc/CapturerObserver;
@@ -396,7 +446,15 @@
     return-object p0
 .end method
 
-.method public static bridge synthetic g(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraSession$CreateSessionCallback;
+.method public static bridge synthetic h(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraVideoCapturer$CameraConfigurationProvider;
+    .locals 0
+
+    iget-object p0, p0, Lorg/webrtc/CameraCapturer;->configProvider:Lorg/webrtc/CameraVideoCapturer$CameraConfigurationProvider;
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic i(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraSession$CreateSessionCallback;
     .locals 0
 
     iget-object p0, p0, Lorg/webrtc/CameraCapturer;->createSessionCallback:Lorg/webrtc/CameraSession$CreateSessionCallback;
@@ -404,7 +462,7 @@
     return-object p0
 .end method
 
-.method public static bridge synthetic h(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraSession;
+.method public static bridge synthetic j(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraSession;
     .locals 0
 
     iget-object p0, p0, Lorg/webrtc/CameraCapturer;->currentSession:Lorg/webrtc/CameraSession;
@@ -412,7 +470,7 @@
     return-object p0
 .end method
 
-.method public static bridge synthetic i(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;
+.method public static bridge synthetic k(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;
     .locals 0
 
     iget-object p0, p0, Lorg/webrtc/CameraCapturer;->eventsHandler:Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;
@@ -420,7 +478,7 @@
     return-object p0
 .end method
 
-.method public static bridge synthetic j(Lorg/webrtc/CameraCapturer;)Z
+.method public static bridge synthetic l(Lorg/webrtc/CameraCapturer;)Z
     .locals 0
 
     iget-boolean p0, p0, Lorg/webrtc/CameraCapturer;->firstFrameObserved:Z
@@ -428,7 +486,7 @@
     return p0
 .end method
 
-.method public static bridge synthetic k(Lorg/webrtc/CameraCapturer;)I
+.method public static bridge synthetic m(Lorg/webrtc/CameraCapturer;)I
     .locals 0
 
     iget p0, p0, Lorg/webrtc/CameraCapturer;->framerate:I
@@ -436,7 +494,7 @@
     return p0
 .end method
 
-.method public static bridge synthetic l(Lorg/webrtc/CameraCapturer;)I
+.method public static bridge synthetic n(Lorg/webrtc/CameraCapturer;)I
     .locals 0
 
     iget p0, p0, Lorg/webrtc/CameraCapturer;->height:I
@@ -444,7 +502,7 @@
     return p0
 .end method
 
-.method public static bridge synthetic m(Lorg/webrtc/CameraCapturer;)I
+.method public static bridge synthetic o(Lorg/webrtc/CameraCapturer;)I
     .locals 0
 
     iget p0, p0, Lorg/webrtc/CameraCapturer;->openAttemptsRemaining:I
@@ -452,7 +510,7 @@
     return p0
 .end method
 
-.method public static bridge synthetic n(Lorg/webrtc/CameraCapturer;)Ljava/lang/Runnable;
+.method public static bridge synthetic p(Lorg/webrtc/CameraCapturer;)Ljava/lang/Runnable;
     .locals 0
 
     iget-object p0, p0, Lorg/webrtc/CameraCapturer;->openCameraTimeoutRunnable:Ljava/lang/Runnable;
@@ -460,7 +518,7 @@
     return-object p0
 .end method
 
-.method public static bridge synthetic o(Lorg/webrtc/CameraCapturer;)Ljava/lang/String;
+.method public static bridge synthetic q(Lorg/webrtc/CameraCapturer;)Ljava/lang/String;
     .locals 0
 
     iget-object p0, p0, Lorg/webrtc/CameraCapturer;->pendingCameraName:Ljava/lang/String;
@@ -468,26 +526,10 @@
     return-object p0
 .end method
 
-.method public static bridge synthetic p(Lorg/webrtc/CameraCapturer;)Ljava/lang/Object;
+.method public static bridge synthetic r(Lorg/webrtc/CameraCapturer;)Ljava/lang/Object;
     .locals 0
 
     iget-object p0, p0, Lorg/webrtc/CameraCapturer;->stateLock:Ljava/lang/Object;
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic q(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/SurfaceTextureHelper;
-    .locals 0
-
-    iget-object p0, p0, Lorg/webrtc/CameraCapturer;->surfaceHelper:Lorg/webrtc/SurfaceTextureHelper;
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic r(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraVideoCapturer$CameraSwitchHandler;
-    .locals 0
-
-    iget-object p0, p0, Lorg/webrtc/CameraCapturer;->switchEventsHandler:Lorg/webrtc/CameraVideoCapturer$CameraSwitchHandler;
 
     return-object p0
 .end method
@@ -507,10 +549,10 @@
     return-void
 .end method
 
-.method public static bridge synthetic s(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraCapturer$SwitchState;
+.method public static bridge synthetic s(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/SurfaceTextureHelper;
     .locals 0
 
-    iget-object p0, p0, Lorg/webrtc/CameraCapturer;->switchState:Lorg/webrtc/CameraCapturer$SwitchState;
+    iget-object p0, p0, Lorg/webrtc/CameraCapturer;->surfaceHelper:Lorg/webrtc/SurfaceTextureHelper;
 
     return-object p0
 .end method
@@ -542,7 +584,7 @@
 
     const-string v0, "Attempted to switch to unknown camera device "
 
-    invoke-static {v0, p2}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p2}, Lwy1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -630,9 +672,9 @@
 
     iget-object v2, p0, Lorg/webrtc/CameraCapturer;->cameraThreadHandler:Landroid/os/Handler;
 
-    new-instance v3, Lorg/webrtc/CameraCapturer$10;
+    new-instance v3, Lorg/webrtc/CameraCapturer$11;
 
-    invoke-direct {v3, p0, v1}, Lorg/webrtc/CameraCapturer$10;-><init>(Lorg/webrtc/CameraCapturer;Lorg/webrtc/CameraSession;)V
+    invoke-direct {v3, p0, v1}, Lorg/webrtc/CameraCapturer$11;-><init>(Lorg/webrtc/CameraCapturer;Lorg/webrtc/CameraSession;)V
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -671,7 +713,23 @@
     throw p1
 .end method
 
-.method public static bridge synthetic t(Lorg/webrtc/CameraCapturer;)Landroid/os/Handler;
+.method public static bridge synthetic t(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraVideoCapturer$CameraSwitchHandler;
+    .locals 0
+
+    iget-object p0, p0, Lorg/webrtc/CameraCapturer;->switchEventsHandler:Lorg/webrtc/CameraVideoCapturer$CameraSwitchHandler;
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic u(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraCapturer$SwitchState;
+    .locals 0
+
+    iget-object p0, p0, Lorg/webrtc/CameraCapturer;->switchState:Lorg/webrtc/CameraCapturer$SwitchState;
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic v(Lorg/webrtc/CameraCapturer;)Landroid/os/Handler;
     .locals 0
 
     iget-object p0, p0, Lorg/webrtc/CameraCapturer;->uiThreadHandler:Landroid/os/Handler;
@@ -679,7 +737,7 @@
     return-object p0
 .end method
 
-.method public static bridge synthetic u(Lorg/webrtc/CameraCapturer;)I
+.method public static bridge synthetic w(Lorg/webrtc/CameraCapturer;)I
     .locals 0
 
     iget p0, p0, Lorg/webrtc/CameraCapturer;->width:I
@@ -687,7 +745,7 @@
     return p0
 .end method
 
-.method public static bridge synthetic v(Lorg/webrtc/CameraCapturer;Lorg/webrtc/CameraVideoCapturer$CameraStatistics;)V
+.method public static bridge synthetic x(Lorg/webrtc/CameraCapturer;Lorg/webrtc/CameraVideoCapturer$CameraStatistics;)V
     .locals 0
 
     iput-object p1, p0, Lorg/webrtc/CameraCapturer;->cameraStatistics:Lorg/webrtc/CameraVideoCapturer$CameraStatistics;
@@ -695,7 +753,7 @@
     return-void
 .end method
 
-.method public static bridge synthetic w(Lorg/webrtc/CameraCapturer;Lorg/webrtc/CameraSession;)V
+.method public static bridge synthetic y(Lorg/webrtc/CameraCapturer;Lorg/webrtc/CameraSession;)V
     .locals 0
 
     iput-object p1, p0, Lorg/webrtc/CameraCapturer;->currentSession:Lorg/webrtc/CameraSession;
@@ -703,28 +761,10 @@
     return-void
 .end method
 
-.method public static bridge synthetic x(Lorg/webrtc/CameraCapturer;Z)V
+.method public static bridge synthetic z(Lorg/webrtc/CameraCapturer;Z)V
     .locals 0
 
     iput-boolean p1, p0, Lorg/webrtc/CameraCapturer;->firstFrameObserved:Z
-
-    return-void
-.end method
-
-.method public static bridge synthetic y(Lorg/webrtc/CameraCapturer;I)V
-    .locals 0
-
-    iput p1, p0, Lorg/webrtc/CameraCapturer;->openAttemptsRemaining:I
-
-    return-void
-.end method
-
-.method public static bridge synthetic z(Lorg/webrtc/CameraCapturer;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lorg/webrtc/CameraCapturer;->pendingCameraName:Ljava/lang/String;
 
     return-void
 .end method
@@ -742,7 +782,7 @@
 
     const-string v3, "@"
 
-    invoke-static {v1, p1, v2, p2, v3}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, p1, v2, p2, v3}, Lwy1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -777,7 +817,7 @@
     throw p1
 .end method
 
-.method public abstract createCameraSession(Lorg/webrtc/CameraSession$CreateSessionCallback;Lorg/webrtc/CameraSession$Events;Landroid/content/Context;Lorg/webrtc/SurfaceTextureHelper;Ljava/lang/String;III)V
+.method public abstract createCameraSession(Lorg/webrtc/CameraSession$CreateSessionCallback;Lorg/webrtc/CameraSession$Events;Lorg/webrtc/CameraSession$ConfigurationProvider;Landroid/content/Context;Lorg/webrtc/SurfaceTextureHelper;Ljava/lang/String;III)V
 .end method
 
 .method public dispose()V
@@ -915,7 +955,7 @@
 
     const-string v3, "@"
 
-    invoke-static {v1, p1, v2, p2, v3}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, p1, v2, p2, v3}, Lwy1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -1086,9 +1126,9 @@
 
     iget-object v3, p0, Lorg/webrtc/CameraCapturer;->cameraThreadHandler:Landroid/os/Handler;
 
-    new-instance v4, Lorg/webrtc/CameraCapturer$7;
+    new-instance v4, Lorg/webrtc/CameraCapturer$8;
 
-    invoke-direct {v4, p0, v2}, Lorg/webrtc/CameraCapturer$7;-><init>(Lorg/webrtc/CameraCapturer;Lorg/webrtc/CameraSession;)V
+    invoke-direct {v4, p0, v2}, Lorg/webrtc/CameraCapturer$8;-><init>(Lorg/webrtc/CameraCapturer;Lorg/webrtc/CameraSession;)V
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -1142,9 +1182,9 @@
     .line 2
     iget-object v0, p0, Lorg/webrtc/CameraCapturer;->cameraThreadHandler:Landroid/os/Handler;
 
-    new-instance v1, Lorg/webrtc/CameraCapturer$8;
+    new-instance v1, Lorg/webrtc/CameraCapturer$9;
 
-    invoke-direct {v1, p0, p1}, Lorg/webrtc/CameraCapturer$8;-><init>(Lorg/webrtc/CameraCapturer;Lorg/webrtc/CameraVideoCapturer$CameraSwitchHandler;)V
+    invoke-direct {v1, p0, p1}, Lorg/webrtc/CameraCapturer$9;-><init>(Lorg/webrtc/CameraCapturer;Lorg/webrtc/CameraVideoCapturer$CameraSwitchHandler;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -1164,9 +1204,9 @@
     .line 4
     iget-object v0, p0, Lorg/webrtc/CameraCapturer;->cameraThreadHandler:Landroid/os/Handler;
 
-    new-instance v1, Lorg/webrtc/CameraCapturer$9;
+    new-instance v1, Lorg/webrtc/CameraCapturer$10;
 
-    invoke-direct {v1, p0, p1, p2}, Lorg/webrtc/CameraCapturer$9;-><init>(Lorg/webrtc/CameraCapturer;Lorg/webrtc/CameraVideoCapturer$CameraSwitchHandler;Ljava/lang/String;)V
+    invoke-direct {v1, p0, p1, p2}, Lorg/webrtc/CameraCapturer$10;-><init>(Lorg/webrtc/CameraCapturer;Lorg/webrtc/CameraVideoCapturer$CameraSwitchHandler;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

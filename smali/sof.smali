@@ -1,44 +1,43 @@
-.class public abstract Lsof;
+.class public final Lsof;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final c:Lsof;
+
+
 # instance fields
-.field public a:Lhpf;
+.field public a:Z
 
 .field public b:J
 
-.field public final c:Ljava/lang/String;
-
-.field public final d:Z
-
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Z)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lsof;
 
-    iput-object p1, p0, Lsof;->c:Ljava/lang/String;
+    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
 
-    iput-boolean p2, p0, Lsof;->d:Z
+    const/4 v3, 0x0
 
-    const-wide/16 p1, -0x1
+    invoke-direct {v0, v1, v2, v3}, Lsof;-><init>(JZ)V
 
-    iput-wide p1, p0, Lsof;->b:J
+    sput-object v0, Lsof;->c:Lsof;
 
     return-void
 .end method
 
+.method public constructor <init>(JZ)V
+    .locals 0
 
-# virtual methods
-.method public abstract a()J
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    iput-wide p1, p0, Lsof;->b:J
 
-    iget-object v0, p0, Lsof;->c:Ljava/lang/String;
+    iput-boolean p3, p0, Lsof;->a:Z
 
-    return-object v0
+    return-void
 .end method

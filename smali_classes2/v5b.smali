@@ -1,41 +1,73 @@
-.class public interface abstract Lv5b;
+.class public abstract Lv5b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()Lzv2;
-.end method
+# static fields
+.field public static final a:I
 
-.method public abstract b()Lff0;
-.end method
+.field public static final b:I
 
-.method public abstract c()Lj1f;
-.end method
+.field public static final c:I
 
-.method public abstract d(I)I
-.end method
+.field public static final d:I
 
-.method public abstract e()Lct6;
-.end method
+.field public static final e:I
 
-.method public abstract f()Lq4;
-.end method
+.field public static final f:I
 
-.method public abstract g()Lykg;
-.end method
+.field public static final g:I
 
-.method public abstract getIcon()Ld77;
-.end method
+.field public static final h:I
 
-.method public abstract getName()Ljava/lang/String;
-.end method
+.field public static final i:I
 
-.method public abstract getText()Leqf;
-.end method
+.field public static final j:I
 
-.method public abstract h()Lcc3;
-.end method
 
-.method public abstract i()Lkbf;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    sget v0, Lowc;->add_8:I
+
+    sput v0, Lv5b;->a:I
+
+    sget v0, Lowc;->apple_outline_24:I
+
+    sput v0, Lv5b;->b:I
+
+    sget v0, Lowc;->ball_outline_24:I
+
+    sput v0, Lv5b;->c:I
+
+    sget v0, Lowc;->car_outline_24:I
+
+    sput v0, Lv5b;->d:I
+
+    sget v0, Lowc;->fire_24:I
+
+    sput v0, Lv5b;->e:I
+
+    sget v0, Lowc;->flags_outline_24:I
+
+    sput v0, Lv5b;->f:I
+
+    sget v0, Lowc;->lamp_outline_24:I
+
+    sput v0, Lv5b;->g:I
+
+    sget v0, Lowc;->paw_outline_24:I
+
+    sput v0, Lv5b;->h:I
+
+    sget v0, Lowc;->remove_outline_24:I
+
+    sput v0, Lv5b;->i:I
+
+    sget v0, Lowc;->symbols_outline_24:I
+
+    sput v0, Lv5b;->j:I
+
+    return-void
 .end method

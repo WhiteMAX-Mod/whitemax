@@ -3,138 +3,83 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic a:I
+
+
 # direct methods
-.method public static a(ZZZZ)J
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
-    if-eqz p0, :cond_0
+    const-class v0, Lxgi;
 
-    const-wide/16 v0, 0x1
+    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
-    goto :goto_0
-
-    :cond_0
-    const-wide/16 v0, 0x0
-
-    :goto_0
-    if-eqz p1, :cond_1
-
-    const-wide/16 p0, 0x2
-
-    or-long/2addr v0, p0
-
-    :cond_1
-    if-eqz p2, :cond_2
-
-    const-wide/16 p0, 0x4
-
-    or-long/2addr v0, p0
-
-    :cond_2
-    if-eqz p3, :cond_3
-
-    const-wide/16 p0, 0x8
-
-    or-long/2addr p0, v0
-
-    return-wide p0
-
-    :cond_3
-    return-wide v0
+    return-void
 .end method
 
-.method public static b(Landroid/content/Context;I)Landroid/util/TypedValue;
-    .locals 2
+.method public static a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+    .locals 1
 
-    new-instance v0, Landroid/util/TypedValue;
+    invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
-    invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
+    move-result v0
 
-    invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+    if-nez v0, :cond_0
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_0
+    invoke-interface {p1, p0}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
 
     move-result-object p0
 
-    const/4 v1, 0x1
-
-    invoke-virtual {p0, p1, v0, v1}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    return-object v0
-
-    :cond_0
-    const/4 p0, 0x0
+    check-cast p0, Landroid/os/Parcelable;
 
     return-object p0
 .end method
 
-.method public static c(ILandroid/content/Context;Z)Z
-    .locals 1
+.method public static b(Landroid/os/Parcel;)V
+    .locals 3
 
-    invoke-static {p1, p0}, Lxgi;->b(Landroid/content/Context;I)Landroid/util/TypedValue;
+    invoke-virtual {p0}, Landroid/os/Parcel;->dataAvail()I
 
-    move-result-object p0
+    move-result p0
 
-    if-eqz p0, :cond_1
+    if-gtz p0, :cond_0
 
-    iget p1, p0, Landroid/util/TypedValue;->type:I
-
-    const/16 v0, 0x12
-
-    if-ne p1, v0, :cond_1
-
-    iget p0, p0, Landroid/util/TypedValue;->data:I
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
+    return-void
 
     :cond_0
-    const/4 p0, 0x0
+    new-instance v0, Landroid/os/BadParcelableException;
 
-    return p0
+    invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-    :cond_1
-    return p2
-.end method
+    move-result-object v1
 
-.method public static d(ILandroid/content/Context;Ljava/lang/String;)Landroid/util/TypedValue;
-    .locals 1
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
 
-    invoke-static {p1, p0}, Lxgi;->b(Landroid/content/Context;I)Landroid/util/TypedValue;
+    move-result v1
 
-    move-result-object v0
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_0
+    add-int/lit8 v1, v1, 0x2d
 
-    return-object v0
+    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    const-string v1, "Parcel data not fully consumed, unread size: "
 
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, p0}, Landroid/content/res/Resources;->getResourceName(I)Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    filled-new-array {p2, p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    const-string p1, "%1$s requires a value for the %2$s attribute to be set in your app theme. You can either set the attribute in your theme or update your theme to inherit from Theme.MaterialComponents (or a descendant)."
-
-    invoke-static {p1, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0}, Landroid/os/BadParcelableException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method

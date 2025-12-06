@@ -1,168 +1,86 @@
-.class public final Lx12;
-.super Landroid/hardware/camera2/CameraManager$AvailabilityCallback;
+.class public final synthetic Lx12;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:La3e;
+.field public final synthetic a:I
 
-.field public final b:Lby1;
+.field public final synthetic b:Lxy1;
 
-.field public final c:Ljava/lang/Object;
-
-.field public d:Z
+.field public final synthetic c:Landroid/hardware/camera2/CameraDevice;
 
 
 # direct methods
-.method public constructor <init>(La3e;Lby1;)V
-    .locals 1
+.method public synthetic constructor <init>(Lxy1;Landroid/hardware/camera2/CameraDevice;I)V
+    .locals 0
 
-    invoke-direct {p0}, Landroid/hardware/camera2/CameraManager$AvailabilityCallback;-><init>()V
+    iput p3, p0, Lx12;->a:I
 
-    new-instance v0, Ljava/lang/Object;
+    iput-object p1, p0, Lx12;->b:Lxy1;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lx12;->c:Landroid/hardware/camera2/CameraDevice;
 
-    iput-object v0, p0, Lx12;->c:Ljava/lang/Object;
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lx12;->d:Z
-
-    iput-object p1, p0, Lx12;->a:La3e;
-
-    iput-object p2, p0, Lx12;->b:Lby1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onCameraAccessPrioritiesChanged()V
-    .locals 4
+.method public final run()V
+    .locals 2
 
-    iget-object v0, p0, Lx12;->c:Ljava/lang/Object;
+    iget v0, p0, Lx12;->a:I
 
-    monitor-enter v0
+    packed-switch v0, :pswitch_data_0
 
-    :try_start_0
-    iget-boolean v1, p0, Lx12;->d:Z
+    iget-object v0, p0, Lx12;->b:Lxy1;
 
-    if-nez v1, :cond_0
+    iget-object v0, v0, Lxy1;->b:Ljava/lang/Object;
 
-    iget-object v1, p0, Lx12;->a:La3e;
+    check-cast v0, Landroid/hardware/camera2/CameraDevice$StateCallback;
 
-    new-instance v2, Lzx1;
+    iget-object v1, p0, Lx12;->c:Landroid/hardware/camera2/CameraDevice;
 
-    const/4 v3, 0x5
-
-    invoke-direct {v2, v3, p0}, Lzx1;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v1, v2}, La3e;->execute(Ljava/lang/Runnable;)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit v0
+    invoke-virtual {v0, v1}, Landroid/hardware/camera2/CameraDevice$StateCallback;->onOpened(Landroid/hardware/camera2/CameraDevice;)V
 
     return-void
 
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :pswitch_0
+    iget-object v0, p0, Lx12;->b:Lxy1;
 
-    throw v1
-.end method
+    iget-object v0, v0, Lxy1;->b:Ljava/lang/Object;
 
-.method public final onCameraAvailable(Ljava/lang/String;)V
-    .locals 4
+    check-cast v0, Landroid/hardware/camera2/CameraDevice$StateCallback;
 
-    iget-object v0, p0, Lx12;->c:Ljava/lang/Object;
+    iget-object v1, p0, Lx12;->c:Landroid/hardware/camera2/CameraDevice;
 
-    monitor-enter v0
-
-    :try_start_0
-    iget-boolean v1, p0, Lx12;->d:Z
-
-    if-nez v1, :cond_0
-
-    iget-object v1, p0, Lx12;->a:La3e;
-
-    new-instance v2, Lw12;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, p0, p1, v3}, Lw12;-><init>(Lx12;Ljava/lang/String;I)V
-
-    invoke-virtual {v1, v2}, La3e;->execute(Ljava/lang/Runnable;)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit v0
+    invoke-virtual {v0, v1}, Landroid/hardware/camera2/CameraDevice$StateCallback;->onDisconnected(Landroid/hardware/camera2/CameraDevice;)V
 
     return-void
 
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :pswitch_1
+    iget-object v0, p0, Lx12;->b:Lxy1;
 
-    throw p1
-.end method
+    iget-object v0, v0, Lxy1;->b:Ljava/lang/Object;
 
-.method public final onCameraUnavailable(Ljava/lang/String;)V
-    .locals 4
+    check-cast v0, Landroid/hardware/camera2/CameraDevice$StateCallback;
 
-    iget-object v0, p0, Lx12;->c:Ljava/lang/Object;
+    iget-object v1, p0, Lx12;->c:Landroid/hardware/camera2/CameraDevice;
 
-    monitor-enter v0
-
-    :try_start_0
-    iget-boolean v1, p0, Lx12;->d:Z
-
-    if-nez v1, :cond_0
-
-    iget-object v1, p0, Lx12;->a:La3e;
-
-    new-instance v2, Lw12;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, p0, p1, v3}, Lw12;-><init>(Lx12;Ljava/lang/String;I)V
-
-    invoke-virtual {v1, v2}, La3e;->execute(Ljava/lang/Runnable;)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit v0
+    invoke-virtual {v0, v1}, Landroid/hardware/camera2/CameraDevice$StateCallback;->onClosed(Landroid/hardware/camera2/CameraDevice;)V
 
     return-void
 
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    nop
 
-    throw p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

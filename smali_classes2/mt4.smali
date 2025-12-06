@@ -2,144 +2,153 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lqfc;
+
 
 # instance fields
-.field public final a:J
-
-.field public final b:Lpw0;
-
-.field public final c:Ld33;
-
-.field public final d:Lnje;
-
-.field public final e:Lkotlinx/coroutines/internal/ContextScope;
+.field public final a:Ln5g;
 
 
 # direct methods
-.method public constructor <init>(JLpw0;Lulf;Ld33;)V
+.method public constructor <init>(Ln5g;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lmt4;->a:J
-
-    iput-object p3, p0, Lmt4;->b:Lpw0;
-
-    iput-object p5, p0, Lmt4;->c:Ld33;
-
-    const/4 p1, 0x0
-
-    const/4 p2, 0x7
-
-    invoke-static {p1, p1, p2}, Loje;->b(III)Lnje;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lmt4;->d:Lnje;
-
-    check-cast p4, Lqta;
-
-    invoke-virtual {p4}, Lqta;->c()Lce8;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lce8;->getImmediate()Lce8;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ldxi;->a(Li54;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lmt4;->e:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-virtual {p3, p0}, Lpw0;->d(Ljava/lang/Object;)V
+    iput-object p1, p0, Lmt4;->a:Ln5g;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Lr43;)V
-    .locals 4
-    .annotation runtime Lzbf;
-    .end annotation
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object p1, p1, Lr43;->b:Ljava/util/Collection;
+    if-ne p0, p1, :cond_0
 
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v0
-
-    iget-object v2, p0, Lmt4;->c:Ld33;
-
-    check-cast v2, Ld43;
-
-    invoke-virtual {v2, v0, v1}, Ld43;->N(J)Ln0d;
-
-    move-result-object v0
-
-    iget-object v0, v0, Ln0d;->a:Lq0f;
-
-    invoke-interface {v0}, Lq0f;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lla2;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
+    goto :goto_1
 
     :cond_0
-    invoke-virtual {v0}, Lla2;->n()Lwr3;
-
-    move-result-object v0
+    instance-of v0, p1, Lmt4;
 
     if-nez v0, :cond_1
 
     goto :goto_0
 
     :cond_1
-    invoke-virtual {v0}, Lwr3;->p()J
+    check-cast p1, Lmt4;
 
-    move-result-wide v0
+    iget-object v0, p0, Lmt4;->a:Ln5g;
 
-    iget-wide v2, p0, Lmt4;->a:J
+    iget-object p1, p1, Lmt4;->a:Ln5g;
 
-    cmp-long p1, v0, v2
+    invoke-virtual {v0, p1}, Ln5g;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
 
     if-nez p1, :cond_2
 
-    new-instance p1, Llt4;
+    :goto_0
+    const/4 p1, 0x0
 
-    const/4 v0, 0x0
-
-    invoke-direct {p1, p0, v0}, Llt4;-><init>(Lmt4;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v1, 0x3
-
-    iget-object v2, p0, Lmt4;->e:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v2, v0, v0, p1, v1}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
+    return p1
 
     :cond_2
-    return-void
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    const/16 v0, 0x80
+
+    int-to-long v0, v0
+
+    return-wide v0
+.end method
+
+.method public final h(Lt98;)Z
+    .locals 4
+
+    const/16 v0, 0x80
+
+    int-to-long v0, v0
+
+    invoke-interface {p1}, Lt98;->getItemId()J
+
+    move-result-wide v2
+
+    cmp-long p1, v0, v2
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lmt4;->a:Ln5g;
+
+    iget v0, v0, Ln5g;->c:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    const/16 v0, 0x80
+
+    return v0
+.end method
+
+.method public final q(Lt98;)Z
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lmt4;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "DeleteProfileItem(text="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lmt4;->a:Ln5g;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

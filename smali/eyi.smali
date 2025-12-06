@@ -1,133 +1,80 @@
-.class public abstract Leyi;
+.class public final Leyi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpqa;
+
+
+# static fields
+.field public static final a:Leyi;
+
 
 # direct methods
-.method public static final a(Lwg3;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    new-instance v0, Lo32;
+    new-instance v0, Leyi;
 
-    invoke-static {p1}, Lj1i;->g(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p1
+    sput-object v0, Leyi;->a:Leyi;
 
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1, p1}, Lo32;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    invoke-virtual {v0}, Lo32;->o()V
-
-    new-instance p1, Llkd;
-
-    const/4 v1, 0x0
-
-    invoke-direct {p1, v0, v1}, Llkd;-><init>(Lo32;I)V
-
-    invoke-virtual {p0, p1}, Lwg3;->h(Lgh3;)V
-
-    invoke-virtual {v0}, Lo32;->n()Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lr54;->a:Lr54;
-
-    if-ne p0, p1, :cond_0
-
-    return-object p0
-
-    :cond_0
-    sget-object p0, Lccg;->a:Lccg;
-
-    return-object p0
-.end method
-
-.method public static final b(Lwpe;Ly14;)Ljava/lang/Object;
-    .locals 2
-
-    new-instance v0, Lo32;
-
-    invoke-static {p1}, Lj1i;->g(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
+    new-instance v0, Lmli;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1, p1}, Lo32;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1}, Lmli;-><init>(I)V
 
-    invoke-virtual {v0}, Lo32;->o()V
+    const-class v1, Lemi;
 
-    new-instance p1, Llkd;
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    invoke-direct {p1, v0, v1}, Llkd;-><init>(Lo32;I)V
+    move-result-object v0
 
-    invoke-virtual {p0, p1}, Lwpe;->k(Lsqe;)V
+    const/4 v2, 0x2
 
-    invoke-virtual {v0}, Lo32;->n()Ljava/lang/Object;
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
-.end method
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-.method public static final c(Lyha;Ly14;)Ljava/lang/Object;
-    .locals 2
+    move-result-object v0
 
-    new-instance v0, Lo32;
+    const/4 v2, 0x3
 
-    invoke-static {p1}, Lj1i;->g(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    move-result-object p1
+    move-result-object v0
 
-    const/4 v1, 0x1
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    invoke-direct {v0, v1, p1}, Lo32;-><init>(ILkotlin/coroutines/Continuation;)V
+    move-result-object v0
 
-    invoke-virtual {v0}, Lo32;->o()V
+    const/4 v2, 0x4
 
-    new-instance p1, Lfh6;
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
-    iput-object v0, p1, Lfh6;->o:Ljava/lang/Object;
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    invoke-virtual {p0, p1}, Lyha;->a(Lela;)V
+    move-result-object v0
 
-    invoke-virtual {v0}, Lo32;->n()Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static final d(Landroid/view/View;JLandroid/view/View$OnClickListener;)V
-    .locals 1
-
-    if-eqz p3, :cond_0
-
-    new-instance v0, Lvd4;
-
-    invoke-direct {v0, p1, p2, p3}, Lvd4;-><init>(JLandroid/view/View$OnClickListener;)V
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    return-void
-
-    :cond_0
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
-.method public static synthetic e(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-    .locals 2
 
-    const-wide/16 v0, 0x12c
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    invoke-static {p0, v0, v1, p1}, Leyi;->d(Landroid/view/View;JLandroid/view/View$OnClickListener;)V
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    return-void
+    move-result-object p1
+
+    throw p1
 .end method

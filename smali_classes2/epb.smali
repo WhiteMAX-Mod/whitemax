@@ -1,78 +1,145 @@
-.class public final Lepb;
-.super Lsgf;
+.class public final enum Lepb;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lzi6;
 
+# static fields
+.field public static final enum X:Lepb;
 
-# instance fields
-.field public final synthetic X:Lone/me/chats/picker/members/PickerMembersListWidget;
+.field public static final enum Y:Lepb;
+
+.field public static final enum Z:Lepb;
+
+.field public static final enum a:Lepb;
+
+.field public static final enum b:Lepb;
+
+.field public static final enum c:Lepb;
+
+.field public static final enum d:Lepb;
+
+.field public static final enum o:Lepb;
+
+.field public static final synthetic s0:[Lepb;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/chats/picker/members/PickerMembersListWidget;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 10
 
-    iput-object p1, p0, Lepb;->X:Lone/me/chats/picker/members/PickerMembersListWidget;
+    new-instance v0, Lepb;
 
-    const/4 p1, 0x2
+    const-string v1, "NO_VALUE"
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lepb;->a:Lepb;
+
+    new-instance v1, Lepb;
+
+    const-string v2, "ENCODING_INVALID"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lepb;->b:Lepb;
+
+    new-instance v2, Lepb;
+
+    const-string v3, "ENCODING_PCM_8BIT"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lepb;->c:Lepb;
+
+    new-instance v3, Lepb;
+
+    const-string v4, "ENCODING_PCM_16BIT"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lepb;->d:Lepb;
+
+    new-instance v4, Lepb;
+
+    const-string v5, "ENCODING_PCM_16BIT_BIG_ENDIAN"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lepb;->o:Lepb;
+
+    new-instance v5, Lepb;
+
+    const-string v6, "ENCODING_PCM_24BIT"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v5, Lepb;->X:Lepb;
+
+    new-instance v6, Lepb;
+
+    const-string v7, "ENCODING_PCM_32BIT"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v6, Lepb;->Y:Lepb;
+
+    new-instance v7, Lepb;
+
+    const-string v8, "ENCODING_PCM_FLOAT"
+
+    const/4 v9, 0x7
+
+    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v7, Lepb;->Z:Lepb;
+
+    filled-new-array/range {v0 .. v7}, [Lepb;
+
+    move-result-object v0
+
+    sput-object v0, Lepb;->s0:[Lepb;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ljava/util/Set;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lepb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lepb;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lepb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public static valueOf(Ljava/lang/String;)Lepb;
     .locals 1
 
-    new-instance p1, Lepb;
+    const-class v0, Lepb;
 
-    iget-object v0, p0, Lepb;->X:Lone/me/chats/picker/members/PickerMembersListWidget;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-direct {p1, v0, p2}, Lepb;-><init>(Lone/me/chats/picker/members/PickerMembersListWidget;Lkotlin/coroutines/Continuation;)V
+    move-result-object p0
 
-    return-object p1
+    check-cast p0, Lepb;
+
+    return-object p0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public static values()[Lepb;
+    .locals 1
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    sget-object v0, Lepb;->s0:[Lepb;
 
-    sget-object p1, Lone/me/chats/picker/members/PickerMembersListWidget;->x0:[Ltr7;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    iget-object p1, p0, Lepb;->X:Lone/me/chats/picker/members/PickerMembersListWidget;
+    move-result-object v0
 
-    invoke-virtual {p1}, Lone/me/chats/picker/members/PickerMembersListWidget;->F0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    check-cast v0, [Lepb;
 
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
-
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
+    return-object v0
 .end method

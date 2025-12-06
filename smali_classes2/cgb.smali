@@ -1,238 +1,479 @@
 .class public final Lcgb;
-.super Ljava/lang/Object;
+.super Landroid/webkit/WebViewClient;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic d:I
+
+
 # instance fields
-.field public A:Z
+.field public final synthetic a:I
 
-.field public B:Lavf;
+.field public final b:Ljava/lang/Object;
 
-.field public C:Lwpd;
-
-.field public D:Lorg/webrtc/PeerConnection$IceTransportsType;
-
-.field public E:Lorg/webrtc/PeerConnection$VpnPreference;
-
-.field public F:I
-
-.field public a:Lvje;
-
-.field public b:Lsje;
-
-.field public c:Ljava/util/concurrent/ExecutorService;
-
-.field public d:Lgi1;
-
-.field public e:Landroid/content/Context;
-
-.field public f:Liwc;
-
-.field public g:Lfwc;
-
-.field public h:Z
-
-.field public i:Z
-
-.field public j:Z
-
-.field public k:Z
-
-.field public l:Z
-
-.field public m:Z
-
-.field public n:Z
-
-.field public o:[Ljava/lang/String;
-
-.field public p:[Ljava/lang/String;
-
-.field public q:Z
-
-.field public r:Z
-
-.field public s:Z
-
-.field public t:Z
-
-.field public u:Z
-
-.field public v:Z
-
-.field public w:Lbua;
-
-.field public x:Lek;
-
-.field public y:Ldj;
-
-.field public z:Lbrd;
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public constructor <init>(Ldgb;Lfgb;)V
+    .locals 1
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcgb;->h:Z
+    iput v0, p0, Lcgb;->a:I
 
-    iput-boolean v0, p0, Lcgb;->i:Z
+    iput-object p1, p0, Lcgb;->b:Ljava/lang/Object;
 
-    iput-boolean v0, p0, Lcgb;->j:Z
+    iput-object p2, p0, Lcgb;->c:Ljava/lang/Object;
 
-    iput-boolean v0, p0, Lcgb;->k:Z
+    .line 6
+    invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
 
-    iput-boolean v0, p0, Lcgb;->l:Z
+    return-void
+.end method
 
-    iput-boolean v0, p0, Lcgb;->m:Z
+.method public constructor <init>(Ls0i;)V
+    .locals 1
 
-    iput-boolean v0, p0, Lcgb;->n:Z
+    const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    iput v0, p0, Lcgb;->a:I
 
-    iput-object v1, p0, Lcgb;->o:[Ljava/lang/String;
+    .line 1
+    invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
 
-    iput-object v1, p0, Lcgb;->p:[Ljava/lang/String;
+    .line 2
+    iput-object p1, p0, Lcgb;->b:Ljava/lang/Object;
 
-    iput-boolean v0, p0, Lcgb;->q:Z
+    .line 3
+    new-instance p1, Lzfb;
 
-    iput-boolean v0, p0, Lcgb;->r:Z
+    const/4 v0, 0x2
 
-    iput-boolean v0, p0, Lcgb;->s:Z
+    invoke-direct {p1, v0}, Lzfb;-><init>(I)V
 
-    iput-boolean v0, p0, Lcgb;->t:Z
+    .line 4
+    new-instance v0, Lbwf;
 
-    iput-boolean v0, p0, Lcgb;->u:Z
+    invoke-direct {v0, p1}, Lbwf;-><init>(Lcm6;)V
 
-    iput-boolean v0, p0, Lcgb;->v:Z
-
-    const/4 v1, 0x4
-
-    iput v1, p0, Lcgb;->F:I
-
-    iput-boolean v0, p0, Lcgb;->A:Z
+    .line 5
+    iput-object v0, p0, Lcgb;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Legb;
-    .locals 4
+.method public onPageCommitVisible(Landroid/webkit/WebView;Ljava/lang/String;)V
+    .locals 9
 
-    iget-object v0, p0, Lcgb;->a:Lvje;
+    iget v0, p0, Lcgb;->a:I
 
-    if-eqz v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lcgb;->b:Lsje;
+    invoke-super {p0, p1, p2}, Landroid/webkit/WebViewClient;->onPageCommitVisible(Landroid/webkit/WebView;Ljava/lang/String;)V
 
-    if-eqz v0, :cond_0
+    return-void
 
-    iget-object v0, p0, Lcgb;->c:Ljava/util/concurrent/ExecutorService;
+    :pswitch_0
+    if-eqz p1, :cond_6
 
-    if-eqz v0, :cond_0
+    iget-object v0, p0, Lcgb;->c:Ljava/lang/Object;
 
-    iget-object v0, p0, Lcgb;->d:Lgi1;
+    check-cast v0, Lbwf;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Lbwf;->getValue()Ljava/lang/Object;
 
-    iget-object v0, p0, Lcgb;->e:Landroid/content/Context;
+    move-result-object v0
 
-    if-eqz v0, :cond_0
+    check-cast v0, Ll8d;
 
-    iget-object v0, p0, Lcgb;->f:Liwc;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcgb;->g:Lfwc;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcgb;->w:Lbua;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcgb;->B:Lavf;
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Legb;
-
-    invoke-direct {v0, p0}, Legb;-><init>(Lcgb;)V
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "failed to build peerConnectionClient"
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v2, p0, Lcgb;->a:Lvje;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, " "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v3, p0, Lcgb;->b:Lsje;
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v3, p0, Lcgb;->c:Ljava/util/concurrent/ExecutorService;
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v3, p0, Lcgb;->d:Lgi1;
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v3, p0, Lcgb;->e:Landroid/content/Context;
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v3, p0, Lcgb;->f:Liwc;
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v3, p0, Lcgb;->g:Lfwc;
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v3, p0, Lcgb;->w:Lbua;
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lcgb;->B:Lavf;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    sget v2, Lkgb;->a:I
 
+    iget-object v3, v0, Ll8d;->b:Ljava/lang/ThreadLocal;
+
+    iget-object v0, v0, Ll8d;->a:Ljava/lang/ThreadLocal;
+
+    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, [B
+
+    if-nez v4, :cond_0
+
+    const/high16 v4, 0x10000
+
+    new-array v4, v4, [B
+
+    invoke-virtual {v0, v4}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+
+    :cond_0
+    :try_start_0
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
+
+    move-result-object v1
+
+    invoke-virtual {v3}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, [B
+
+    if-nez v2, :cond_1
+
+    const/16 v2, 0x1000
+
+    new-array v2, v2, [B
+
+    invoke-virtual {v3, v2}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_4
+
+    :cond_1
+    :goto_0
+    const/4 v3, 0x0
+
+    move v5, v3
+
+    :cond_2
+    :goto_1
+    :try_start_1
+    array-length v6, v2
+
+    invoke-virtual {v1, v2, v3, v6}, Ljava/io/InputStream;->read([BII)I
+
+    move-result v6
+
+    if-ltz v6, :cond_4
+
+    array-length v7, v4
+
+    add-int v8, v5, v6
+
+    if-ge v7, v8, :cond_3
+
+    array-length v7, v4
+
+    mul-int/lit8 v7, v7, 0x2
+
+    new-array v7, v7, [B
+
+    invoke-static {v4, v3, v7, v3, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    invoke-virtual {v0, v7}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+
+    move-object v4, v7
+
+    goto :goto_2
+
+    :catchall_1
+    move-exception v0
+
+    goto :goto_3
+
+    :cond_3
+    :goto_2
+    if-lez v6, :cond_2
+
+    invoke-static {v2, v3, v4, v5, v6}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    move v5, v8
+
+    goto :goto_1
+
+    :cond_4
+    :try_start_2
+    invoke-interface {v1}, Ljava/io/Closeable;->close()V
+
+    new-instance v0, Ljava/lang/String;
+
+    sget-object v1, Llb2;->a:Ljava/nio/charset/Charset;
+
+    invoke-direct {v0, v4, v3, v5, v1}, Ljava/lang/String;-><init>([BIILjava/nio/charset/Charset;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    goto :goto_5
+
+    :goto_3
+    :try_start_3
     throw v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
+
+    :catchall_2
+    move-exception v2
+
+    :try_start_4
+    invoke-static {v1, v0}, Lr4j;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    throw v2
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    :goto_4
+    new-instance v1, Lipd;
+
+    invoke-direct {v1, v0}, Lipd;-><init>(Ljava/lang/Throwable;)V
+
+    move-object v0, v1
+
+    :goto_5
+    nop
+
+    instance-of v1, v0, Lipd;
+
+    if-eqz v1, :cond_5
+
+    const/4 v0, 0x0
+
+    :cond_5
+    check-cast v0, Ljava/lang/String;
+
+    if-eqz v0, :cond_6
+
+    new-instance v1, Lggb;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v2}, Lggb;-><init>(I)V
+
+    invoke-virtual {p1, v0, v1}, Landroid/webkit/WebView;->evaluateJavascript(Ljava/lang/String;Landroid/webkit/ValueCallback;)V
+
+    :cond_6
+    invoke-super {p0, p1, p2}, Landroid/webkit/WebViewClient;->onPageCommitVisible(Landroid/webkit/WebView;Ljava/lang/String;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
+    .locals 1
+
+    iget v0, p0, Lcgb;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1, p2}, Landroid/webkit/WebViewClient;->onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lcgb;->b:Ljava/lang/Object;
+
+    check-cast p1, Ls0i;
+
+    invoke-interface {p1}, Ls0i;->j()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V
+    .locals 1
+
+    iget v0, p0, Lcgb;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1, p2, p3}, Landroid/webkit/WebViewClient;->onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lcgb;->b:Ljava/lang/Object;
+
+    check-cast p1, Ls0i;
+
+    invoke-interface {p1, p2}, Ls0i;->q(Ljava/lang/String;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public onReceivedError(Landroid/webkit/WebView;Landroid/webkit/WebResourceRequest;Landroid/webkit/WebResourceError;)V
+    .locals 1
+
+    iget v0, p0, Lcgb;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1, p2, p3}, Landroid/webkit/WebViewClient;->onReceivedError(Landroid/webkit/WebView;Landroid/webkit/WebResourceRequest;Landroid/webkit/WebResourceError;)V
+
+    return-void
+
+    :pswitch_0
+    invoke-interface {p2}, Landroid/webkit/WebResourceRequest;->isForMainFrame()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcgb;->b:Ljava/lang/Object;
+
+    check-cast v0, Ls0i;
+
+    invoke-interface {v0}, Ls0i;->k()V
+
+    :cond_0
+    invoke-super {p0, p1, p2, p3}, Landroid/webkit/WebViewClient;->onReceivedError(Landroid/webkit/WebView;Landroid/webkit/WebResourceRequest;Landroid/webkit/WebResourceError;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public onReceivedSslError(Landroid/webkit/WebView;Landroid/webkit/SslErrorHandler;Landroid/net/http/SslError;)V
+    .locals 1
+
+    iget v0, p0, Lcgb;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1, p2, p3}, Landroid/webkit/WebViewClient;->onReceivedSslError(Landroid/webkit/WebView;Landroid/webkit/SslErrorHandler;Landroid/net/http/SslError;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lcgb;->b:Ljava/lang/Object;
+
+    check-cast p1, Ls0i;
+
+    invoke-interface {p1}, Ls0i;->h()Z
+
+    move-result p3
+
+    if-eqz p3, :cond_0
+
+    invoke-virtual {p2}, Landroid/webkit/SslErrorHandler;->proceed()V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-interface {p1}, Ls0i;->k()V
+
+    :goto_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final shouldOverrideUrlLoading(Landroid/webkit/WebView;Landroid/webkit/WebResourceRequest;)Z
+    .locals 2
+
+    iget v0, p0, Lcgb;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lcgb;->b:Ljava/lang/Object;
+
+    check-cast v0, Ls0i;
+
+    invoke-interface {p2}, Landroid/webkit/WebResourceRequest;->getUrl()Landroid/net/Uri;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ls0i;->l(Landroid/net/Uri;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-super {p0, p1, p2}, Landroid/webkit/WebViewClient;->shouldOverrideUrlLoading(Landroid/webkit/WebView;Landroid/webkit/WebResourceRequest;)Z
+
+    move-result p1
+
+    :goto_0
+    return p1
+
+    :pswitch_0
+    invoke-interface {p2}, Landroid/webkit/WebResourceRequest;->getUrl()Landroid/net/Uri;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    iget-object p2, p0, Lcgb;->b:Ljava/lang/Object;
+
+    check-cast p2, Ldgb;
+
+    iget-object p2, p2, Ldgb;->b:Ljava/lang/Object;
+
+    check-cast p2, Luvh;
+
+    iget-object p2, p2, Luvh;->Z0:Lci5;
+
+    new-instance v0, Ljuh;
+
+    invoke-direct {v0, p1}, Ljuh;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p2, v0}, Lxfh;->r(Lci5;Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lcgb;->c:Ljava/lang/Object;
+
+    check-cast p1, Lfgb;
+
+    invoke-virtual {p1}, Landroid/webkit/WebView;->destroy()V
+
+    const/4 p1, 0x1
+
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

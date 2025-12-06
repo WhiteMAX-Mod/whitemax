@@ -1,49 +1,63 @@
 .class public final Lzfc;
-.super Ly14;
+.super Lid0;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lbgc;
-
-.field public Y:I
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final b:Lzfc;
 
 
 # direct methods
-.method public constructor <init>(Lbgc;Ly14;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lzfc;->X:Lbgc;
+    new-instance v0, Lzfc;
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/16 v1, 0xe
+
+    invoke-direct {v0, v1}, Lid0;-><init>(I)V
+
+    sput-object v0, Lzfc;->b:Lzfc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iput-object p1, p0, Lzfc;->o:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Lzfc;->Y:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of p1, p1, Lzfc;
 
-    iput p1, p0, Lzfc;->Y:I
+    if-nez p1, :cond_1
 
-    iget-object p1, p0, Lzfc;->X:Lbgc;
+    const/4 p1, 0x0
 
-    const/4 v0, 0x0
+    return p1
 
-    invoke-static {p1, v0, v0, p0}, Lbgc;->w(Lbgc;Lwp5;Lip5;Ly14;)Ljava/lang/Object;
+    :cond_1
+    return v0
+.end method
 
-    move-result-object p1
+.method public final hashCode()I
+    .locals 1
 
-    return-object p1
+    const v0, 0x5c26daea
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Save"
+
+    return-object v0
 .end method

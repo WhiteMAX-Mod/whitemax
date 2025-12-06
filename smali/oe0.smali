@@ -1,40 +1,39 @@
 .class public final Loe0;
-.super Ljava/lang/Object;
+.super Lq44;
 .source "SourceFile"
-
-# interfaces
-.implements Lle0;
 
 
 # instance fields
-.field public final a:I
+.field public X:I
 
-.field public final b:I
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public final c:I
+.field public Z:I
 
+.field public d:[Ljava/lang/Object;
 
-# direct methods
-.method public constructor <init>(III)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Loe0;->a:I
-
-    iput p2, p0, Loe0;->b:I
-
-    iput p3, p0, Loe0;->c:I
-
-    return-void
-.end method
+.field public o:I
 
 
 # virtual methods
-.method public final getType()I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const v0, 0x68697661
+    iput-object p1, p0, Loe0;->Y:Ljava/lang/Object;
 
-    return v0
+    iget p1, p0, Loe0;->Z:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Loe0;->Z:I
+
+    const/4 p1, 0x0
+
+    invoke-static {p1, p0}, Lhui;->d([Lqt7;Lq44;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

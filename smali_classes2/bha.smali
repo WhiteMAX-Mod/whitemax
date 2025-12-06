@@ -1,104 +1,57 @@
 .class public final Lbha;
-.super Ljava/lang/Object;
+.super Lq28;
 .source "SourceFile"
-
-# interfaces
-.implements Lfb8;
 
 
 # instance fields
-.field public final a:Lfgd;
-
-.field public final b:Lei;
-
-.field public final c:Lej9;
-
-.field public final o:Lej9;
+.field public final l:Lpga;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
-    .locals 2
+.method public constructor <init>(Lpga;Lrje;Lk4e;Lqja;Loje;Lhya;Ltya;Lvda;Lvya;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct/range {p0 .. p9}, Lq28;-><init>(Lcb3;Lrje;Lk4e;Lqja;Loje;Lhya;Ltya;Lvda;Lvya;)V
 
-    iput-object p1, p0, Lbha;->a:Lfgd;
+    move-object p2, p1
 
-    new-instance v0, Lei;
+    move-object p1, p0
 
-    const/16 v1, 0xf
-
-    invoke-direct {v0, p1, v1}, Lei;-><init>(Lfgd;I)V
-
-    iput-object v0, p0, Lbha;->b:Lei;
-
-    new-instance v0, Lej9;
-
-    const/16 v1, 0x12
-
-    invoke-direct {v0, p1, v1}, Lej9;-><init>(Lfgd;I)V
-
-    iput-object v0, p0, Lbha;->c:Lej9;
-
-    new-instance v0, Lej9;
-
-    const/16 v1, 0x13
-
-    invoke-direct {v0, p1, v1}, Lej9;-><init>(Lfgd;I)V
-
-    iput-object v0, p0, Lbha;->o:Lej9;
+    iput-object p2, p1, Lbha;->l:Lpga;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f()V
-    .locals 2
+.method public final a()Lzhe;
+    .locals 11
 
     new-instance v0, Laha;
 
-    const/4 v1, 0x0
+    new-instance v1, Lbha;
 
-    invoke-direct {v0, p0, v1}, Laha;-><init>(Lbha;Lkotlin/coroutines/Continuation;)V
+    iget-object v9, p0, Lq28;->h:Lvda;
 
-    invoke-static {v0}, Ltki;->g(Lzi6;)Ljava/lang/Object;
+    iget-object v10, p0, Lq28;->i:Lvya;
 
-    return-void
-.end method
+    iget-object v2, p0, Lbha;->l:Lpga;
 
-.method public final w(JJLnga;)Ljava/lang/Object;
-    .locals 3
+    iget-object v3, p0, Lq28;->b:Lrje;
 
-    const/4 v0, 0x2
+    iget-object v4, p0, Lq28;->c:Lk4e;
 
-    const-string v1, "SELECT * FROM notifications_tracker_messages WHERE chat_id=? AND message_id=?"
+    iget-object v5, p0, Lq28;->d:Lqja;
 
-    invoke-static {v0, v1}, Lvgd;->c(ILjava/lang/String;)Lvgd;
+    iget-object v6, p0, Lq28;->e:Loje;
 
-    move-result-object v1
+    iget-object v7, p0, Lq28;->f:Lhya;
 
-    const/4 v2, 0x1
+    iget-object v8, p0, Lq28;->g:Ltya;
 
-    invoke-virtual {v1, v2, p1, p2}, Lvgd;->k(IJ)V
+    invoke-direct/range {v1 .. v10}, Lbha;-><init>(Lpga;Lrje;Lk4e;Lqja;Loje;Lhya;Ltya;Lvda;Lvya;)V
 
-    invoke-virtual {v1, v0, p3, p4}, Lvgd;->k(IJ)V
+    invoke-direct {v0, v1}, Laha;-><init>(Lbha;)V
 
-    new-instance p1, Landroid/os/CancellationSignal;
-
-    invoke-direct {p1}, Landroid/os/CancellationSignal;-><init>()V
-
-    new-instance p2, Lgi;
-
-    const/16 p3, 0x16
-
-    invoke-direct {p2, p0, p3, v1}, Lgi;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    iget-object p3, p0, Lbha;->a:Lfgd;
-
-    invoke-static {p3, p1, p2, p5}, Lexi;->a(Lfgd;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

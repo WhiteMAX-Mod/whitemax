@@ -1,48 +1,39 @@
 .class public final Lphf;
-.super Ly14;
+.super Lki4;
+.source "SourceFile"
 
 
-# instance fields
-.field public X:I
+# static fields
+.field public static final b:Lphf;
 
-.field public final synthetic Y:Ls3a;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public static final c:Lgi4;
 
 
 # direct methods
-.method public constructor <init>(Ls3a;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p1, p0, Lphf;->Y:Ls3a;
+    new-instance v0, Lphf;
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Lki4;-><init>()V
+
+    sput-object v0, Lphf;->b:Lphf;
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    const/16 v3, 0xe
+
+    const-string v4, ":stickers/search"
+
+    invoke-static {v0, v4, v1, v2, v3}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
+
+    move-result-object v0
+
+    sput-object v0, Lphf;->c:Lgi4;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lphf;->o:Ljava/lang/Object;
-
-    iget p1, p0, Lphf;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lphf;->X:I
-
-    iget-object p1, p0, Lphf;->Y:Ls3a;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Ls3a;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

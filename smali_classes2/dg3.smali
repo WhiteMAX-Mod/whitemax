@@ -2,64 +2,227 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Ldg3;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:I
 
-.field public final b:Liu7;
-
-.field public final c:Lwif;
-
-.field public final d:Liu7;
-
-.field public final e:Lkotlinx/coroutines/internal/ContextScope;
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Lulf;Ll54;Liu7;Liu7;Liu7;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Le8;
+
+    const/16 v1, 0x16
+
+    invoke-direct {v0, v1}, Le8;-><init>(I)V
+
+    sput-object v0, Ldg3;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(I)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x1
+
+    .line 2
+    iput v0, p0, Ldg3;->a:I
+
+    .line 3
+    iput p1, p0, Ldg3;->b:I
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 2
+
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 5
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Ldg3;->b:I
+
+    .line 6
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_1
+
+    .line 7
+    const-string v0, "ADD"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 p1, 0x1
+
+    .line 8
+    iput p1, p0, Ldg3;->a:I
+
+    return-void
+
+    .line 9
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "No enum constant ru.ok.tamtam.photoeditor.state.CommandState.Type."
+
+    invoke-virtual {v1, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string v0, "Name is null"
+
+    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+
+# virtual methods
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    if-eqz p1, :cond_3
 
     const-class v0, Ldg3;
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v0
+    move-result-object v1
 
-    iput-object v0, p0, Ldg3;->a:Ljava/lang/String;
+    if-eq v0, v1, :cond_1
 
-    iput-object p3, p0, Ldg3;->b:Liu7;
+    goto :goto_1
 
-    new-instance p3, Luz;
+    :cond_1
+    check-cast p1, Ldg3;
 
-    const/16 v0, 0xd
+    iget v0, p0, Ldg3;->b:I
 
-    invoke-direct {p3, p4, v0}, Luz;-><init>(Liu7;I)V
+    iget v1, p1, Ldg3;->b:I
 
-    new-instance p4, Lwif;
+    if-eq v0, v1, :cond_2
 
-    invoke-direct {p4, p3}, Lwif;-><init>(Lji6;)V
+    goto :goto_1
 
-    iput-object p4, p0, Ldg3;->c:Lwif;
+    :cond_2
+    iget v0, p0, Ldg3;->a:I
 
-    iput-object p5, p0, Ldg3;->d:Liu7;
+    iget p1, p1, Ldg3;->a:I
 
-    check-cast p1, Lqta;
+    if-ne v0, p1, :cond_3
 
-    invoke-virtual {p1}, Lqta;->b()Lk54;
+    :goto_0
+    const/4 p1, 0x1
 
-    move-result-object p1
+    return p1
 
-    invoke-virtual {p1, p2}, Lp0;->plus(Li54;)Li54;
+    :cond_3
+    :goto_1
+    const/4 p1, 0x0
 
-    move-result-object p1
+    return p1
+.end method
 
-    invoke-static {p1}, Ldxi;->a(Li54;)Lkotlinx/coroutines/internal/ContextScope;
+.method public final hashCode()I
+    .locals 2
 
-    move-result-object p1
+    iget v0, p0, Ldg3;->a:I
 
-    iput-object p1, p0, Ldg3;->e:Lkotlinx/coroutines/internal/ContextScope;
+    if-eqz v0, :cond_0
+
+    invoke-static {v0}, Laz1;->v(I)I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Ldg3;->b:I
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
+
+    iget p2, p0, Ldg3;->b:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget p2, p0, Ldg3;->a:I
+
+    const/4 v0, 0x1
+
+    if-ne p2, v0, :cond_0
+
+    const-string p2, "ADD"
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     return-void
+
+    :cond_0
+    const/4 p1, 0x0
+
+    throw p1
 .end method

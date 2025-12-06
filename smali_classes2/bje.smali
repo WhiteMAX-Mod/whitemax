@@ -1,51 +1,58 @@
-.class public abstract synthetic Lbje;
+.class public final Lbje;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ldp1;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>()V
+    .locals 1
 
-    invoke-static {}, La20;->values()[La20;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+
+    iput-object v0, p0, Lbje;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Li5i;)V
+    .locals 2
+
+    iget-object v0, p0, Lbje;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    array-length v0, v0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    new-array v0, v0, [I
+    move-result v1
 
-    const/4 v1, 0x1
+    if-eqz v1, :cond_0
 
-    const/4 v2, 0x2
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object v1
 
-    :catch_0
-    const/4 v1, 0x3
+    check-cast v1, Ldp1;
 
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    invoke-interface {v1, p1}, Ldp1;->a(Li5i;)V
 
-    :catch_1
-    const/4 v2, 0x6
+    goto :goto_0
 
-    :try_start_2
-    aput v1, v0, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    sput-object v0, Lbje;->$EnumSwitchMapping$0:[I
-
+    :cond_0
     return-void
 .end method

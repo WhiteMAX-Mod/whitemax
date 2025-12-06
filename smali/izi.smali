@@ -4,71 +4,75 @@
 
 
 # direct methods
-.method public static a(D)J
-    .locals 3
+.method public static a(Lmbd;Lq44;)Ljava/lang/Object;
+    .locals 2
 
-    invoke-static {p0, p1}, Lizi;->b(D)Z
+    new-instance v0, Ll42;
 
-    move-result v0
+    invoke-static {p1}, Lhni;->f(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-eqz v0, :cond_1
+    move-result-object p1
 
-    invoke-static {p0, p1}, Ljava/lang/Math;->getExponent(D)I
+    const/4 v1, 0x1
 
-    move-result v0
+    invoke-direct {v0, v1, p1}, Ll42;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    invoke-static {p0, p1}, Ljava/lang/Double;->doubleToRawLongBits(D)J
+    invoke-virtual {v0}, Ll42;->o()V
 
-    move-result-wide p0
+    new-instance p1, Ls7c;
 
-    const-wide v1, 0xfffffffffffffL
+    const/4 v1, 0x0
 
-    and-long/2addr p0, v1
+    invoke-direct {p1, v0, v1}, Ls7c;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    const/16 v1, -0x3ff
+    invoke-virtual {p0, p1}, Lmbd;->e(Lou1;)V
 
-    if-ne v0, v1, :cond_0
+    new-instance p1, Ltua;
 
-    const/4 v0, 0x1
+    const/4 v1, 0x0
 
-    shl-long/2addr p0, v0
+    invoke-direct {p1, p0, v1}, Ltua;-><init>(Lmbd;I)V
 
-    return-wide p0
+    invoke-virtual {v0, p1}, Ll42;->e(Lem6;)V
 
-    :cond_0
-    const-wide/high16 v0, 0x10000000000000L
+    invoke-virtual {v0}, Ll42;->n()Ljava/lang/Object;
 
-    or-long/2addr p0, v0
+    move-result-object p0
 
-    return-wide p0
-
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "not a normal value"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    return-object p0
 .end method
 
-.method public static b(D)Z
-    .locals 0
+.method public static final b(Lcde;Ljava/lang/Object;)V
+    .locals 2
 
-    invoke-static {p0, p1}, Ljava/lang/Math;->getExponent(D)I
+    invoke-interface {p0, p1}, Lcde;->g(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result p0
+    move-result-object v0
 
-    const/16 p1, 0x3ff
+    instance-of v1, v0, Lma2;
 
-    if-gt p0, p1, :cond_0
+    if-nez v1, :cond_0
 
-    const/4 p0, 0x1
+    check-cast v0, Lqqg;
 
-    return p0
+    return-void
 
     :cond_0
-    const/4 p0, 0x0
+    new-instance v0, Lpa2;
 
-    return p0
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, p1, v1}, Lpa2;-><init>(Lcde;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)V
+
+    sget-object p0, Lbd5;->a:Lbd5;
+
+    invoke-static {p0, v0}, Lsvi;->g(Lx74;Lsm6;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lna2;
+
+    iget-object p0, p0, Lna2;->a:Ljava/lang/Object;
+
+    return-void
 .end method

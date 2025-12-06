@@ -1,658 +1,132 @@
-.class public final Lo4d;
+.class public abstract Lo4d;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
-# interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
 
+# static fields
+.field public static oneme_settings_privace_screen_dialog_content_level_access_title:I = 0x7f1309b4
 
-# instance fields
-.field public final synthetic a:I
+.field public static oneme_settings_privacy_black_list_dialog_title:I = 0x7f1309b5
 
-.field public final synthetic b:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static oneme_settings_privacy_black_list_dialog_unblock:I = 0x7f1309b6
 
-.field public final synthetic c:Z
+.field public static oneme_settings_privacy_black_list_empty_state_desc:I = 0x7f1309b7
 
+.field public static oneme_settings_privacy_black_list_toolbar_title:I = 0x7f1309b8
 
-# direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;ZI)V
-    .locals 0
+.field public static oneme_settings_privacy_black_list_unblocked_success:I = 0x7f1309b9
 
-    iput p3, p0, Lo4d;->a:I
+.field public static oneme_settings_privacy_change_disabled_description:I = 0x7f1309ba
 
-    iput-object p1, p0, Lo4d;->b:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static oneme_settings_privacy_change_disabled_title:I = 0x7f1309bb
 
-    iput-boolean p2, p0, Lo4d;->c:Z
+.field public static oneme_settings_privacy_content_level_access:I = 0x7f1309bc
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_settings_privacy_content_level_access_all:I = 0x7f1309bd
 
-    return-void
-.end method
+.field public static oneme_settings_privacy_content_level_access_message_success:I = 0x7f1309be
 
-.method private final a(Landroid/animation/Animator;)V
-    .locals 0
+.field public static oneme_settings_privacy_content_level_access_safe:I = 0x7f1309bf
 
-    return-void
-.end method
+.field public static oneme_settings_privacy_enter_pin_code_description:I = 0x7f1309c0
 
-.method private final b(Landroid/animation/Animator;)V
-    .locals 0
+.field public static oneme_settings_privacy_enter_pin_code_title:I = 0x7f1309c1
 
-    return-void
-.end method
+.field public static oneme_settings_privacy_forgot_pin_code:I = 0x7f1309c2
 
-.method private final c(Landroid/animation/Animator;)V
-    .locals 0
+.field public static oneme_settings_privacy_forgot_pin_code_write_support:I = 0x7f1309c3
 
-    return-void
-.end method
+.field public static oneme_settings_privacy_info_header:I = 0x7f1309c4
 
-.method private final d(Landroid/animation/Animator;)V
-    .locals 0
+.field public static oneme_settings_privacy_onboarding_come_up_pin_code:I = 0x7f1309c5
 
-    return-void
-.end method
+.field public static oneme_settings_privacy_onboarding_content_subtitle:I = 0x7f1309c6
 
-.method private final e(Landroid/animation/Animator;)V
-    .locals 0
+.field public static oneme_settings_privacy_onboarding_error_pin_code_equals:I = 0x7f1309c7
 
-    return-void
-.end method
+.field public static oneme_settings_privacy_onboarding_item_1_subtitle:I = 0x7f1309c8
 
-.method private final f(Landroid/animation/Animator;)V
-    .locals 0
+.field public static oneme_settings_privacy_onboarding_item_1_title:I = 0x7f1309c9
 
-    return-void
-.end method
+.field public static oneme_settings_privacy_onboarding_item_2_subtitle:I = 0x7f1309ca
 
-.method private final g(Landroid/animation/Animator;)V
-    .locals 0
+.field public static oneme_settings_privacy_onboarding_item_2_title:I = 0x7f1309cb
 
-    return-void
-.end method
+.field public static oneme_settings_privacy_onboarding_item_3_subtitle:I = 0x7f1309cc
 
-.method private final h(Landroid/animation/Animator;)V
-    .locals 0
+.field public static oneme_settings_privacy_onboarding_item_3_title:I = 0x7f1309cd
 
-    return-void
-.end method
+.field public static oneme_settings_privacy_onboarding_item_4_subtitle:I = 0x7f1309ce
 
-.method private final i(Landroid/animation/Animator;)V
-    .locals 0
+.field public static oneme_settings_privacy_onboarding_item_4_title:I = 0x7f1309cf
 
-    return-void
-.end method
+.field public static oneme_settings_privacy_onboarding_re_enter_pin_code:I = 0x7f1309d0
 
+.field public static oneme_settings_privacy_onboarding_set_pin_code:I = 0x7f1309d1
 
-# virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
+.field public static oneme_settings_privacy_safe_files:I = 0x7f1309d2
 
-    iget p1, p0, Lo4d;->a:I
+.field public static oneme_settings_privacy_screen_add_me_to_chat:I = 0x7f1309d3
 
-    return-void
-.end method
+.field public static oneme_settings_privacy_screen_black_list:I = 0x7f1309d4
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 17
+.field public static oneme_settings_privacy_screen_black_list_description:I = 0x7f1309d5
 
-    move-object/from16 v0, p0
+.field public static oneme_settings_privacy_screen_call_me:I = 0x7f1309d6
 
-    iget v1, v0, Lo4d;->a:I
+.field public static oneme_settings_privacy_screen_current_session_online:I = 0x7f1309d7
 
-    const/16 v2, 0x8
+.field public static oneme_settings_privacy_screen_current_sessions:I = 0x7f1309d8
 
-    iget-boolean v3, v0, Lo4d;->c:Z
+.field public static oneme_settings_privacy_screen_dialog_add_chat_title:I = 0x7f1309d9
 
-    const/4 v4, 0x0
+.field public static oneme_settings_privacy_screen_dialog_call_title:I = 0x7f1309da
 
-    const/high16 v5, 0x3f800000    # 1.0f
+.field public static oneme_settings_privacy_screen_dialog_finished_session_finish_btn:I = 0x7f1309db
 
-    iget-object v6, v0, Lo4d;->b:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static oneme_settings_privacy_screen_dialog_finished_session_title:I = 0x7f1309dc
 
-    packed-switch v1, :pswitch_data_0
+.field public static oneme_settings_privacy_screen_dialog_online_never_accept_btn:I = 0x7f1309dd
 
-    sget-object v1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->f1:[Ltr7;
+.field public static oneme_settings_privacy_screen_dialog_online_never_title:I = 0x7f1309de
 
-    invoke-virtual {v6}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->M0()Landroid/view/View;
+.field public static oneme_settings_privacy_screen_dialog_online_title:I = 0x7f1309df
 
-    move-result-object v1
+.field public static oneme_settings_privacy_screen_dialog_safe_file_no_btn:I = 0x7f1309e0
 
-    invoke-virtual {v1, v5}, Landroid/view/View;->setAlpha(F)V
+.field public static oneme_settings_privacy_screen_dialog_safe_file_yes_btn:I = 0x7f1309e1
 
-    invoke-virtual {v6}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->M0()Landroid/view/View;
+.field public static oneme_settings_privacy_screen_dialog_safe_files_title:I = 0x7f1309e2
 
-    move-result-object v1
+.field public static oneme_settings_privacy_screen_dialog_seach_by_phone_title:I = 0x7f1309e3
 
-    invoke-virtual {v1, v4}, Landroid/view/View;->setTranslationX(F)V
+.field public static oneme_settings_privacy_screen_failed_close_sessions:I = 0x7f1309e4
 
-    invoke-virtual {v6}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->N0()Landroid/widget/TextView;
+.field public static oneme_settings_privacy_screen_finished_all:I = 0x7f1309e5
 
-    move-result-object v1
+.field public static oneme_settings_privacy_screen_how_can_section:I = 0x7f1309e6
 
-    invoke-virtual {v1, v5}, Landroid/view/View;->setAlpha(F)V
+.field public static oneme_settings_privacy_screen_how_session:I = 0x7f1309e7
 
-    invoke-virtual {v6}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->N0()Landroid/widget/TextView;
+.field public static oneme_settings_privacy_screen_safe_mode:I = 0x7f1309e8
 
-    move-result-object v1
+.field public static oneme_settings_privacy_screen_safe_mode_change_disabled_snackbar_title:I = 0x7f1309e9
 
-    invoke-virtual {v1, v4}, Landroid/view/View;->setTranslationX(F)V
+.field public static oneme_settings_privacy_screen_safe_mode_disabled_snackbar_title:I = 0x7f1309ea
 
-    invoke-virtual {v6}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->L0()Landroid/widget/TextView;
+.field public static oneme_settings_privacy_screen_safe_mode_enabled_snackbar_title:I = 0x7f1309eb
 
-    move-result-object v1
+.field public static oneme_settings_privacy_screen_search_by_phone:I = 0x7f1309ec
 
-    invoke-virtual {v1, v5}, Landroid/view/View;->setAlpha(F)V
+.field public static oneme_settings_privacy_screen_see_online_state:I = 0x7f1309ed
 
-    invoke-virtual {v6}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->L0()Landroid/widget/TextView;
+.field public static oneme_settings_privacy_screen_toolbar_title:I = 0x7f1309ee
 
-    move-result-object v1
+.field public static oneme_settings_privacy_screen_twofa_disabled:I = 0x7f1309ef
 
-    invoke-virtual {v1, v4}, Landroid/view/View;->setTranslationX(F)V
+.field public static oneme_settings_privacy_screen_twofa_email_warning:I = 0x7f1309f0
 
-    invoke-virtual {v6}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->P0()Landroid/view/View;
+.field public static oneme_settings_privacy_screen_twofa_enabled:I = 0x7f1309f1
 
-    move-result-object v1
+.field public static oneme_settings_privacy_screen_twofa_title:I = 0x7f1309f2
 
-    invoke-virtual {v1, v5}, Landroid/view/View;->setAlpha(F)V
-
-    invoke-virtual {v6}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Q0()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    sget-object v7, Ll05;->s0:Lk82;
-
-    invoke-virtual {v6}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->G0()Landroid/widget/ImageView;
-
-    move-result-object v8
-
-    invoke-virtual {v7, v8}, Lk82;->n(Landroid/view/View;)Lv5b;
-
-    move-result-object v7
-
-    invoke-interface {v7}, Lv5b;->a()Lzv2;
-
-    const/4 v7, -0x1
-
-    invoke-static {v1, v7}, Lbdb;->k(Landroid/graphics/drawable/Drawable;I)V
-
-    invoke-virtual {v6}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0()Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v5}, Landroid/view/View;->setScaleX(F)V
-
-    invoke-virtual {v6}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0()Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v5}, Landroid/view/View;->setScaleY(F)V
-
-    invoke-virtual {v6}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0()Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v5}, Landroid/view/View;->setAlpha(F)V
-
-    if-eqz v3, :cond_4
-
-    invoke-virtual {v6}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->M0()Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ltzg;->b(Landroid/view/View;)Ltw7;
-
-    move-result-object v3
-
-    new-instance v5, Ljg;
-
-    const/4 v7, 0x0
-
-    invoke-direct {v5, v1, v7}, Ljg;-><init>(Landroid/view/View;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v1, 0x3
-
-    invoke-static {v3, v7, v7, v5, v1}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
-
-    move-result-object v1
-
-    iget-object v3, v6, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->Z0:Lw0e;
-
-    sget-object v5, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->f1:[Ltr7;
-
-    const/16 v7, 0x11
-
-    aget-object v5, v5, v7
-
-    invoke-virtual {v3, v6, v5, v1}, Lw0e;->P(Ljava/lang/Object;Ltr7;Ljava/lang/Object;)V
-
-    new-instance v1, Landroid/animation/AnimatorSet;
-
-    invoke-direct {v1}, Landroid/animation/AnimatorSet;-><init>()V
-
-    iput-object v1, v6, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->c1:Landroid/animation/AnimatorSet;
-
-    invoke-virtual {v6}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->L0()Landroid/widget/TextView;
-
-    move-result-object v7
-
-    sget-object v8, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
-
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v5, -0x3f800000    # -4.0f
-
-    mul-float v10, v3, v5
-
-    const/4 v15, 0x2
-
-    const/16 v16, -0x1
-
-    const/4 v9, 0x0
-
-    const-wide/16 v11, 0x3e8
-
-    const-wide/16 v13, 0x3e8
-
-    invoke-static/range {v7 .. v16}, Lhei;->a(Landroid/view/View;Landroid/util/Property;FFJJII)Landroid/animation/ObjectAnimator;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
-
-    iget-object v1, v6, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->c1:Landroid/animation/AnimatorSet;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Landroid/animation/AnimatorSet;->start()V
-
-    :cond_0
-    new-instance v1, Landroid/animation/AnimatorSet;
-
-    invoke-direct {v1}, Landroid/animation/AnimatorSet;-><init>()V
-
-    iput-object v1, v6, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->d1:Landroid/animation/AnimatorSet;
-
-    iget-object v1, v6, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->P0:Ltcb;
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, v1, Ltcb;->b:Ljava/lang/Object;
-
-    check-cast v1, Ljava/lang/Number;
-
-    invoke-virtual {v1}, Ljava/lang/Number;->floatValue()F
-
-    move-result v4
-
-    :cond_1
-    move v9, v4
-
-    iget-object v1, v6, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->d1:Landroid/animation/AnimatorSet;
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v6}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->P0()Landroid/view/View;
-
-    move-result-object v7
-
-    sget-object v8, Landroid/view/View;->TRANSLATION_Y:Landroid/util/Property;
-
-    int-to-float v2, v2
-
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v3
-
-    invoke-static {v2}, Lfhi;->b(F)I
-
-    move-result v2
-
-    int-to-float v2, v2
-
-    add-float v10, v9, v2
-
-    const/4 v15, 0x2
-
-    const/16 v16, -0x1
-
-    const-wide/16 v11, 0x3e8
-
-    const-wide/16 v13, 0x3e8
-
-    invoke-static/range {v7 .. v16}, Lhei;->a(Landroid/view/View;Landroid/util/Property;FFJJII)Landroid/animation/ObjectAnimator;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
-
-    :cond_2
-    iget-object v1, v6, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->d1:Landroid/animation/AnimatorSet;
-
-    if-eqz v1, :cond_3
-
-    new-instance v2, Lgyc;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, v6, v9, v3}, Lgyc;-><init>(Ljava/lang/Object;FI)V
-
-    invoke-virtual {v1, v2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    :cond_3
-    iget-object v1, v6, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->d1:Landroid/animation/AnimatorSet;
-
-    if-eqz v1, :cond_4
-
-    invoke-virtual {v1}, Landroid/animation/AnimatorSet;->start()V
-
-    :cond_4
-    :pswitch_0
-    return-void
-
-    :pswitch_1
-    invoke-static {v6}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->C0(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {v6}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->M0()Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v4}, Landroid/view/View;->setTranslationY(F)V
-
-    invoke-virtual {v6}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->M0()Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v5}, Landroid/view/View;->setAlpha(F)V
-
-    invoke-virtual {v6}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->N0()Landroid/widget/TextView;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v4}, Landroid/view/View;->setTranslationY(F)V
-
-    invoke-virtual {v6}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->N0()Landroid/widget/TextView;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v5}, Landroid/view/View;->setAlpha(F)V
-
-    invoke-virtual {v6}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->L0()Landroid/widget/TextView;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v4}, Landroid/view/View;->setTranslationY(F)V
-
-    invoke-virtual {v6}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->L0()Landroid/widget/TextView;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v5}, Landroid/view/View;->setAlpha(F)V
-
-    invoke-virtual {v6}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->K0()Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v5}, Landroid/view/View;->setAlpha(F)V
-
-    invoke-virtual {v6}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->T0()Landroid/widget/ImageView;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v4}, Landroid/view/View;->setTranslationY(F)V
-
-    invoke-virtual {v6}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->T0()Landroid/widget/ImageView;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v5}, Landroid/view/View;->setAlpha(F)V
-
-    if-eqz v3, :cond_5
-
-    invoke-virtual {v6}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->R0()Landroid/widget/ImageView;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v4}, Landroid/view/View;->setTranslationY(F)V
-
-    invoke-virtual {v6}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->R0()Landroid/widget/ImageView;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v5}, Landroid/view/View;->setAlpha(F)V
-
-    :cond_5
-    iget-object v1, v6, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->C0:Lo4h;
-
-    if-eqz v1, :cond_6
-
-    invoke-virtual {v1}, Lo4h;->e()V
-
-    :cond_6
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
-
-    iget p1, p0, Lo4d;->a:I
-
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 5
-
-    iget p1, p0, Lo4d;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    sget-object p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->f1:[Ltr7;
-
-    iget-object p1, p0, Lo4d;->b:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
-
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->T0()Landroid/widget/ImageView;
-
-    move-result-object v0
-
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v2, 0x42400000    # 48.0f
-
-    mul-float/2addr v1, v2
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationY(F)V
-
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->T0()Landroid/widget/ImageView;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
-
-    iget-boolean v0, p0, Lo4d;->c:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->R0()Landroid/widget/ImageView;
-
-    move-result-object v3
-
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v4, v2
-
-    invoke-virtual {v3, v4}, Landroid/view/View;->setTranslationY(F)V
-
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->R0()Landroid/widget/ImageView;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Landroid/view/View;->setAlpha(F)V
-
-    :cond_0
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->R0()Landroid/widget/ImageView;
-
-    move-result-object v2
-
-    const/16 v3, 0x8
-
-    const/4 v4, 0x0
-
-    if-eqz v0, :cond_1
-
-    move v0, v4
-
-    goto :goto_0
-
-    :cond_1
-    move v0, v3
-
-    :goto_0
-    invoke-virtual {v2, v0}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->S0()Landroid/widget/ImageView;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->J0()Landroid/view/View;
-
-    move-result-object v0
-
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setScaleX(F)V
-
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->J0()Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setScaleY(F)V
-
-    iget-object v0, p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->N0:Ljava/lang/Float;
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Ljava/lang/Number;->floatValue()F
-
-    move-result v0
-
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->J0()Landroid/view/View;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v0}, Landroid/view/View;->setX(F)V
-
-    :cond_2
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->G0()Landroid/widget/ImageView;
-
-    move-result-object v0
-
-    iget-object v3, p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->F0:Ljava/lang/Object;
-
-    invoke-interface {v3}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    iget-object v0, p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->C0:Lo4h;
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {v0}, Lo4h;->getHandFreeDotView()Landroid/view/View;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v4}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {v0}, Lo4h;->getHandFreeDotView()Landroid/view/View;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v2}, Landroid/view/View;->setAlpha(F)V
-
-    invoke-virtual {v0}, Lo4h;->getHandFreeDotView()Landroid/view/View;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v2}, Landroid/view/View;->setScaleX(F)V
-
-    invoke-virtual {v0}, Lo4h;->getHandFreeDotView()Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setScaleY(F)V
-
-    :cond_3
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->K0()Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
-
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->K0()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
-
-    :pswitch_1
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+.field public static oneme_settings_privacy_screen_web_apps:I = 0x7f1309f3

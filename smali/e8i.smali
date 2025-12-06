@@ -1,157 +1,110 @@
-.class public final enum Le8i;
-.super Ljava/lang/Enum;
+.class public final synthetic Le8i;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcom/my/tracker/core/utils/Consumer;
 
-# static fields
-.field public static final enum X:Le8i;
 
-.field public static final enum Y:Le8i;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final enum Z:Le8i;
+.field public final synthetic b:J
 
-.field public static final enum a:Le8i;
+.field public final synthetic c:I
 
-.field public static final enum b:Le8i;
+.field public final synthetic d:Z
 
-.field public static final enum c:Le8i;
+.field public final synthetic e:Z
 
-.field public static final enum o:Le8i;
+.field public final synthetic f:J
 
-.field public static final enum q0:Le8i;
-
-.field public static final enum r0:Le8i;
-
-.field public static final enum s0:Le8i;
-
-.field public static final synthetic t0:[Le8i;
+.field public final synthetic g:Lcom/my/tracker/core/EngineCore$EventPacker;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 12
+.method public synthetic constructor <init>(JIZZJLcom/my/tracker/core/EngineCore$EventPacker;I)V
+    .locals 0
 
-    new-instance v0, Le8i;
+    iput p9, p0, Le8i;->a:I
 
-    const-string v1, "VOID"
+    iput-wide p1, p0, Le8i;->b:J
 
-    const/4 v2, 0x0
+    iput p3, p0, Le8i;->c:I
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-boolean p4, p0, Le8i;->d:Z
 
-    sput-object v0, Le8i;->a:Le8i;
+    iput-boolean p5, p0, Le8i;->e:Z
 
-    new-instance v1, Le8i;
+    iput-wide p6, p0, Le8i;->f:J
 
-    const-string v2, "INT"
+    iput-object p8, p0, Le8i;->g:Lcom/my/tracker/core/EngineCore$EventPacker;
 
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Le8i;->b:Le8i;
-
-    new-instance v2, Le8i;
-
-    const-string v3, "LONG"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Le8i;->c:Le8i;
-
-    new-instance v3, Le8i;
-
-    const-string v4, "FLOAT"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Le8i;->o:Le8i;
-
-    new-instance v4, Le8i;
-
-    const-string v5, "DOUBLE"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Le8i;->X:Le8i;
-
-    new-instance v5, Le8i;
-
-    const-string v6, "BOOLEAN"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v5, Le8i;->Y:Le8i;
-
-    new-instance v6, Le8i;
-
-    const-string v7, "STRING"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v6, Le8i;->Z:Le8i;
-
-    new-instance v7, Le8i;
-
-    sget-object v8, Lb5i;->b:Lx4i;
-
-    const-string v8, "BYTE_STRING"
-
-    const/4 v9, 0x7
-
-    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v7, Le8i;->q0:Le8i;
-
-    new-instance v8, Le8i;
-
-    const-string v9, "ENUM"
-
-    const/16 v10, 0x8
-
-    invoke-direct {v8, v9, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v8, Le8i;->r0:Le8i;
-
-    new-instance v9, Le8i;
-
-    const-string v10, "MESSAGE"
-
-    const/16 v11, 0x9
-
-    invoke-direct {v9, v10, v11}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v9, Le8i;->s0:Le8i;
-
-    filled-new-array/range {v0 .. v9}, [Le8i;
-
-    move-result-object v0
-
-    sput-object v0, Le8i;->t0:[Le8i;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static values()[Le8i;
-    .locals 1
 
-    sget-object v0, Le8i;->t0:[Le8i;
+# virtual methods
+.method public final accept(Ljava/lang/Object;)V
+    .locals 20
 
-    invoke-virtual {v0}, [Le8i;->clone()Ljava/lang/Object;
+    move-object/from16 v0, p0
 
-    move-result-object v0
+    iget v1, v0, Le8i;->a:I
 
-    check-cast v0, [Le8i;
+    packed-switch v1, :pswitch_data_0
 
-    return-object v0
+    iget-object v9, v0, Le8i;->g:Lcom/my/tracker/core/EngineCore$EventPacker;
+
+    move-object/from16 v10, p1
+
+    check-cast v10, Lcom/my/tracker/core/EngineCore;
+
+    iget-wide v2, v0, Le8i;->b:J
+
+    iget v4, v0, Le8i;->c:I
+
+    iget-boolean v5, v0, Le8i;->d:Z
+
+    iget-boolean v6, v0, Le8i;->e:Z
+
+    iget-wide v7, v0, Le8i;->f:J
+
+    invoke-static/range {v2 .. v10}, Lcom/my/tracker/core/b;->b(JIZZJLcom/my/tracker/core/EngineCore$EventPacker;Lcom/my/tracker/core/EngineCore;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v1, v0, Le8i;->g:Lcom/my/tracker/core/EngineCore$EventPacker;
+
+    move-object/from16 v19, p1
+
+    check-cast v19, Lcom/my/tracker/core/EngineCore;
+
+    iget-wide v11, v0, Le8i;->b:J
+
+    iget v13, v0, Le8i;->c:I
+
+    iget-boolean v14, v0, Le8i;->d:Z
+
+    iget-boolean v15, v0, Le8i;->e:Z
+
+    iget-wide v2, v0, Le8i;->f:J
+
+    move-object/from16 v18, v1
+
+    move-wide/from16 v16, v2
+
+    invoke-static/range {v11 .. v19}, Lcom/my/tracker/core/a;->b(JIZZJLcom/my/tracker/core/EngineCore$EventPacker;Lcom/my/tracker/core/EngineCore;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

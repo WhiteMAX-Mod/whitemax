@@ -1,3 +1,6 @@
-.class public interface abstract Ly4d;
+.class public abstract Ly4d;
 .super Ljava/lang/Object;
-.source "SourceFile"
+
+
+# static fields
+.field public static oneme_stickers_showcase_toolbar_title:I = 0x7f130a98

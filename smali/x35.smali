@@ -1,192 +1,284 @@
 .class public final Lx35;
-.super Lsgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Lp8g;
 
 
 # instance fields
-.field public X:J
+.field public a:I
 
-.field public Y:I
+.field public b:I
 
-.field public final synthetic Z:Ly35;
+.field public c:I
+
+.field public d:Z
+
+.field public e:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ly35;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Lx35;->Z:Ly35;
+    .line 5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    const/4 v0, -0x1
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    .line 6
+    iput v0, p0, Lx35;->a:I
+
+    .line 7
+    iput v0, p0, Lx35;->b:I
+
+    .line 8
+    iput v0, p0, Lx35;->c:I
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;IZ)V
+    .locals 1
+
+    mul-int/lit16 v0, p2, 0x100
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput v0, p0, Lx35;->a:I
+
+    iput v0, p0, Lx35;->b:I
+
+    .line 2
+    iput p2, p0, Lx35;->c:I
+
+    .line 3
+    iput-boolean p3, p0, Lx35;->d:Z
+
+    .line 4
+    iput-object p1, p0, Lx35;->e:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public a(III)Lm8g;
+    .locals 5
 
-    check-cast p1, Lq54;
+    iget v0, p0, Lx35;->c:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-boolean v1, p0, Lx35;->d:Z
 
-    invoke-virtual {p0, p1, p2}, Lx35;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v2, p0, Lx35;->e:Ljava/lang/Object;
 
-    move-result-object p1
+    check-cast v2, Ljava/lang/String;
 
-    check-cast p1, Lx35;
+    sget-object v3, Lr8g;->a:Lbwf;
 
-    sget-object p2, Lccg;->a:Lccg;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, p2}, Lx35;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v4, "https://tiles.api-maps.yandex.ru/v1/tiles/?lang=ru_RU&l=map&projection=web_mercator&maptype=future_map&"
 
-    sget-object p1, Lr54;->a:Lr54;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lx35;
-
-    iget-object v0, p0, Lx35;->Z:Ly35;
-
-    invoke-direct {p1, v0, p2}, Lx35;-><init>(Ly35;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 12
-
-    iget-object v0, p0, Lx35;->Z:Ly35;
-
-    iget-object v1, v0, Ly35;->d:Lwif;
-
-    iget v2, p0, Lx35;->Y:I
-
-    const/4 v3, 0x2
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     const/4 v4, 0x1
 
-    sget-object v5, Lr54;->a:Lr54;
+    if-eq v0, v4, :cond_0
 
-    if-eqz v2, :cond_2
+    const-string v4, "scale="
 
-    if-eq v2, v4, :cond_1
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-ne v2, v3, :cond_0
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    const/16 v0, 0x26
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    if-nez v1, :cond_1
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const-string v0, "theme=dark&"
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_1
-    :goto_0
-    iget-wide v6, p0, Lx35;->X:J
+    const-string v0, "x="
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, "&y="
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, "&z="
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, "&apikey="
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    :try_start_0
+    new-instance p2, Ljava/net/URL;
+
+    invoke-direct {p2, p1}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/net/MalformedURLException; {:try_start_0 .. :try_end_0} :catch_1
+
+    :try_start_1
+    new-instance p1, Lm8g;
+
+    iget p3, p0, Lx35;->a:I
+
+    iget v0, p0, Lx35;->b:I
+
+    invoke-virtual {p2}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Ljava/net/URLConnection;->getInputStream()Ljava/io/InputStream;
+
+    move-result-object p2
+
+    new-instance v1, Ljava/io/ByteArrayOutputStream;
+
+    invoke-direct {v1}, Ljava/io/ByteArrayOutputStream;-><init>()V
+
+    const-string v2, "from must not be null."
+
+    invoke-static {p2, v2}, Ls5j;->h(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const/16 v2, 0x1000
+
+    new-array v2, v2, [B
+
+    :goto_0
+    invoke-virtual {p2, v2}, Ljava/io/InputStream;->read([B)I
+
+    move-result v3
+
+    const/4 v4, -0x1
+
+    if-ne v3, v4, :cond_2
+
+    invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+
+    move-result-object p2
+
+    invoke-direct {p1, p3, p2, v0}, Lm8g;-><init>(I[BI)V
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
 
     goto :goto_1
 
     :cond_2
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    const/4 v4, 0x0
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    invoke-virtual {v1, v2, v4, v3}, Ljava/io/OutputStream;->write([BII)V
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    move-result-wide v6
+    goto :goto_0
 
-    invoke-virtual {v1}, Lwif;->getValue()Ljava/lang/Object;
+    :goto_1
+    throw p1
 
-    move-result-object p1
+    :catch_0
+    const/4 p1, 0x0
 
-    check-cast p1, Ljava/lang/Number;
+    return-object p1
 
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+    :catch_1
+    move-exception p1
 
-    move-result-wide v8
+    new-instance p2, Ljava/lang/AssertionError;
 
-    iput-wide v6, p0, Lx35;->X:J
+    invoke-direct {p2, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
 
-    iput v4, p0, Lx35;->Y:I
+    throw p2
+.end method
 
-    invoke-static {v8, v9, p0}, Lqyi;->b(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public b(Landroid/graphics/drawable/Drawable;)V
+    .locals 4
 
-    move-result-object p1
+    if-nez p1, :cond_0
 
-    if-ne p1, v5, :cond_3
+    goto :goto_1
 
-    goto :goto_2
+    :cond_0
+    iget v0, p0, Lx35;->a:I
+
+    const/4 v1, -0x1
+
+    if-eq v0, v1, :cond_1
+
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
+
+    :cond_1
+    iget-boolean v0, p0, Lx35;->d:Z
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lx35;->e:Ljava/lang/Object;
+
+    check-cast v0, Landroid/graphics/ColorFilter;
+
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
+
+    :cond_2
+    iget v0, p0, Lx35;->b:I
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    if-eq v0, v1, :cond_4
+
+    if-eqz v0, :cond_3
+
+    move v0, v3
+
+    goto :goto_0
 
     :cond_3
-    :goto_1
-    iget-object p1, v0, Ly35;->e:Lx0f;
+    move v0, v2
+
+    :goto_0
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setDither(Z)V
 
     :cond_4
-    invoke-virtual {p1}, Lx0f;->getValue()Ljava/lang/Object;
+    iget v0, p0, Lx35;->c:I
 
-    move-result-object v2
+    if-eq v0, v1, :cond_6
 
-    move-object v4, v2
+    if-eqz v0, :cond_5
 
-    check-cast v4, Ljava/lang/Long;
+    move v2, v3
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    :cond_5
+    invoke-virtual {p1, v2}, Landroid/graphics/drawable/Drawable;->setFilterBitmap(Z)V
 
-    move-result-wide v8
-
-    sub-long/2addr v8, v6
-
-    const/16 v4, 0x3e8
-
-    int-to-long v10, v4
-
-    div-long/2addr v8, v10
-
-    new-instance v4, Ljava/lang/Long;
-
-    invoke-direct {v4, v8, v9}, Ljava/lang/Long;-><init>(J)V
-
-    invoke-virtual {p1, v2, v4}, Lx0f;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_4
-
-    invoke-virtual {v1}, Lwif;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v8
-
-    iput-wide v6, p0, Lx35;->X:J
-
-    iput v3, p0, Lx35;->Y:I
-
-    invoke-static {v8, v9, p0}, Lqyi;->b(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v5, :cond_3
-
-    :goto_2
-    return-object v5
+    :cond_6
+    :goto_1
+    return-void
 .end method

@@ -1,77 +1,180 @@
-.class public abstract synthetic Liz2;
+.class public final Liz2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public final a:Ljava/lang/String;
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Landroid/graphics/RectF;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/RectF;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Liz2;->a:Ljava/lang/String;
+
+    iput-object p2, p0, Liz2;->b:Ljava/lang/String;
+
+    iput-object p3, p0, Liz2;->c:Landroid/graphics/RectF;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    invoke-static {}, Lub9;->values()[Lub9;
+    const/4 v0, 0x1
 
-    move-result-object v0
+    if-ne p0, p1, :cond_0
 
-    array-length v0, v0
+    return v0
 
-    new-array v0, v0, [I
-
-    const/4 v1, 0x1
-
-    :try_start_0
-    sget-object v2, Lub9;->b:Ljava/util/List;
+    :cond_0
+    instance-of v1, p1, Liz2;
 
     const/4 v2, 0x0
 
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    if-nez v1, :cond_1
 
-    :catch_0
-    const/4 v2, 0x2
+    return v2
 
-    :try_start_1
-    sget-object v3, Lub9;->b:Ljava/util/List;
+    :cond_1
+    check-cast p1, Liz2;
 
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    iget-object v1, p0, Liz2;->a:Ljava/lang/String;
 
-    :catch_1
-    const/4 v1, 0x3
+    iget-object v3, p1, Liz2;->a:Ljava/lang/String;
 
-    :try_start_2
-    sget-object v3, Lub9;->b:Ljava/util/List;
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    aput v1, v0, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    move-result v1
 
-    :catch_2
-    const/4 v2, 0x4
+    if-nez v1, :cond_2
 
-    :try_start_3
-    sget-object v3, Lub9;->b:Ljava/util/List;
+    return v2
 
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    :cond_2
+    iget-object v1, p0, Liz2;->b:Ljava/lang/String;
 
-    :catch_3
-    :try_start_4
-    sget-object v1, Lub9;->b:Ljava/util/List;
+    iget-object v3, p1, Liz2;->b:Ljava/lang/String;
 
-    const/4 v1, 0x5
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    aput v1, v0, v2
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    move-result v1
 
-    :catch_4
-    sput-object v0, Liz2;->$EnumSwitchMapping$0:[I
+    if-nez v1, :cond_3
 
-    return-void
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Liz2;->c:Landroid/graphics/RectF;
+
+    iget-object p1, p1, Liz2;->c:Landroid/graphics/RectF;
+
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Liz2;->a:Ljava/lang/String;
+
+    if-nez v1, :cond_0
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v2, p0, Liz2;->b:Ljava/lang/String;
+
+    if-nez v2, :cond_1
+
+    move v2, v0
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    :goto_1
+    add-int/2addr v1, v2
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v2, p0, Liz2;->c:Landroid/graphics/RectF;
+
+    if-nez v2, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {v2}, Landroid/graphics/RectF;->hashCode()I
+
+    move-result v0
+
+    :goto_2
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", croppedIconPath="
+
+    const-string v1, ", relativeCrop="
+
+    const-string v2, "ChatTitleIconState(newIconPath="
+
+    iget-object v3, p0, Liz2;->a:Ljava/lang/String;
+
+    iget-object v4, p0, Liz2;->b:Ljava/lang/String;
+
+    invoke-static {v2, v3, v0, v4, v1}, Lwy1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Liz2;->c:Landroid/graphics/RectF;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

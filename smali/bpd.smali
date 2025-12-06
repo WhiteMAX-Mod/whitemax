@@ -1,41 +1,23 @@
-.class public abstract Lbpd;
-.super Ldg5;
+.class public final Lbpd;
+.super Lcda;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Lp54;
+# static fields
+.field public static final b:Lbpd;
 
 
-# virtual methods
-.method public final dispatch(Li54;Ljava/lang/Runnable;)V
-    .locals 1
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-    iget-object p1, p0, Lbpd;->a:Lp54;
+    new-instance v0, Lbpd;
 
-    const/4 v0, 0x6
+    sget-object v1, Lqqg;->a:Lqqg;
 
-    invoke-static {p1, p2, v0}, Lp54;->o(Lp54;Ljava/lang/Runnable;I)V
+    invoke-direct {v0, v1}, Lcda;-><init>(Ljava/lang/Object;)V
 
-    return-void
-.end method
-
-.method public final dispatchYield(Li54;Ljava/lang/Runnable;)V
-    .locals 1
-
-    iget-object p1, p0, Lbpd;->a:Lp54;
-
-    const/4 v0, 0x2
-
-    invoke-static {p1, p2, v0}, Lp54;->o(Lp54;Ljava/lang/Runnable;I)V
+    sput-object v0, Lbpd;->b:Lbpd;
 
     return-void
-.end method
-
-.method public final n()Ljava/util/concurrent/Executor;
-    .locals 1
-
-    iget-object v0, p0, Lbpd;->a:Lp54;
-
-    return-object v0
 .end method

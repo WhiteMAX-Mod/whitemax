@@ -2,83 +2,30 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lfg4;
-
 
 # instance fields
-.field public final synthetic a:Landroid/os/Bundle;
+.field public final a:Lk18;
+
+.field public final b:Landroid/os/Handler;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Bundle;)V
-    .locals 0
+.method public constructor <init>(Lk18;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, La61;->a:Landroid/os/Bundle;
+    iput-object p1, p0, La61;->a:Lk18;
 
-    return-void
-.end method
+    new-instance p1, Landroid/os/Handler;
 
-
-# virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 6
-
-    const-string v0, "call_id"
-
-    iget-object v1, p0, La61;->a:Landroid/os/Bundle;
-
-    invoke-static {v0, v1}, Llyi;->j(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
 
-    const-string v2, "is_video"
+    invoke-direct {p1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    invoke-static {v2, v1}, Llyi;->e(Ljava/lang/String;Landroid/os/Bundle;)Z
+    iput-object p1, p0, La61;->b:Landroid/os/Handler;
 
-    move-result v2
-
-    const-string v3, "is_group"
-
-    invoke-static {v3, v1}, Llyi;->e(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    move-result v3
-
-    const-string v4, "sdk_reasons"
-
-    invoke-virtual {v1, v4}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_0
-
-    invoke-static {v4, v1}, Llyi;->j(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v4, ","
-
-    filled-new-array {v4}, [Ljava/lang/String;
-
-    move-result-object v4
-
-    const/4 v5, 0x4
-
-    invoke-static {v1, v4, v5}, Lzaf;->Y(Ljava/lang/CharSequence;[Ljava/lang/String;I)Ljava/util/List;
-
-    move-result-object v1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    new-instance v4, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
-
-    invoke-direct {v4, v0, v3, v2, v1}, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;-><init>(Ljava/lang/String;ZZLjava/util/List;)V
-
-    return-object v4
+    return-void
 .end method

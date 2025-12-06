@@ -3,141 +3,81 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ls97;
+.implements Ldi4;
 
 
-# instance fields
-.field public final a:Landroid/content/Context;
+# static fields
+.field public static final a:Lp58;
 
-.field public final b:Lce8;
+.field public static final b:Lq58;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lce8;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lp58;
 
-    iput-object p1, p0, Lp58;->a:Landroid/content/Context;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lp58;->b:Lce8;
+    sput-object v0, Lp58;->a:Lp58;
+
+    sget-object v0, Lq58;->b:Lq58;
+
+    sput-object v0, Lp58;->b:Lq58;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lfb5;ILohc;Lr97;)Laa3;
-    .locals 2
+.method public final a()Lki4;
+    .locals 1
 
-    iget-object p2, p0, Lp58;->a:Landroid/content/Context;
+    sget-object v0, Lp58;->b:Lq58;
 
-    const/4 p3, 0x0
+    return-object v0
+.end method
 
-    :try_start_0
-    iget-object p1, p1, Lfb5;->s0:Ljava/lang/String;
+.method public final b(Ljava/lang/String;Lgi4;Landroid/os/Bundle;)Lni4;
+    .locals 8
 
-    if-eqz p1, :cond_3
+    sget-object v0, Lq58;->b:Lq58;
 
-    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    iget-object v0, v0, Lki4;->a:Ljava/util/LinkedHashSet;
 
-    move-result-object p1
+    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
-    invoke-virtual {p1}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
+    move-result v0
 
-    move-result-object p1
+    if-nez v0, :cond_0
 
-    const/4 p4, 0x0
+    const/4 p1, 0x0
 
-    invoke-interface {p1, p4}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/String;
-
-    invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result p1
-
-    invoke-static {p2, p1}, La14;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    instance-of p4, p1, Lwsf;
-
-    if-eqz p4, :cond_0
-
-    move-object p4, p1
-
-    check-cast p4, Lwsf;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
+    return-object p1
 
     :cond_0
-    move-object p4, p3
+    new-instance v0, Lni4;
 
-    :goto_0
-    sget-object v0, Ll05;->s0:Lk82;
+    sget-object v5, Lli4;->c:Lli4;
 
-    if-eqz p4, :cond_1
+    new-instance v6, Lnp1;
 
-    :try_start_1
-    invoke-virtual {v0, p2}, Lk82;->e(Landroid/content/Context;)Ll05;
+    const/16 v1, 0x8
 
-    move-result-object v1
+    invoke-direct {v6, p3, v1}, Lnp1;-><init>(Landroid/os/Bundle;I)V
 
-    invoke-virtual {v1}, Ll05;->l()Lv5b;
+    const/16 v7, 0x8
 
-    move-result-object v1
+    const/4 v4, 0x0
 
-    invoke-interface {p4, v1}, Lwsf;->onThemeChanged(Lv5b;)V
+    move-object v1, p1
 
-    :cond_1
-    if-eqz p1, :cond_2
+    move-object v2, p2
 
-    new-instance p4, Lfi4;
+    move-object v3, p3
 
-    invoke-virtual {v0, p2}, Lk82;->e(Landroid/content/Context;)Ll05;
+    invoke-direct/range {v0 .. v7}, Lni4;-><init>(Ljava/lang/String;Lgi4;Landroid/os/Bundle;ILli4;Lmi4;I)V
 
-    move-result-object p2
-
-    iget-object p2, p2, Ll05;->r0:Ljava/lang/Object;
-
-    check-cast p2, Ln0d;
-
-    iget-object v0, p0, Lp58;->b:Lce8;
-
-    invoke-direct {p4, p1, p2, v0}, Lfi4;-><init>(Landroid/graphics/drawable/Drawable;Lq0f;Lce8;)V
-
-    return-object p4
-
-    :cond_2
-    return-object p3
-
-    :cond_3
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "No source in encoded image"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :goto_1
-    const-string p2, "DrawableImageDecoder"
-
-    const-string p4, "Cannot decode drawable"
-
-    invoke-static {p2, p4, p1}, Lem5;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-object p3
+    return-object v0
 .end method

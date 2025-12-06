@@ -1,247 +1,262 @@
 .class public final Lcr8;
-.super Ljava/lang/Object;
+.super Laq8;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/content/ServiceConnection;
 
 
 # instance fields
-.field public final a:Landroid/os/Bundle;
+.field public final g:F
 
-.field public final synthetic b:Ldr8;
+.field public final h:F
+
+.field public final i:F
 
 
 # direct methods
-.method public constructor <init>(Ldr8;Landroid/os/Bundle;)V
-    .locals 0
+.method public constructor <init>(Landroid/view/View;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Laq8;-><init>(Landroid/view/View;)V
 
-    iput-object p1, p0, Lcr8;->b:Ldr8;
+    invoke-virtual {p1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
-    iput-object p2, p0, Lcr8;->a:Landroid/os/Bundle;
+    move-result-object p1
+
+    sget v0, Ldwc;->m3_back_progress_side_container_max_scale_x_distance_shrink:I
+
+    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result v0
+
+    iput v0, p0, Lcr8;->g:F
+
+    sget v0, Ldwc;->m3_back_progress_side_container_max_scale_x_distance_grow:I
+
+    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result v0
+
+    iput v0, p0, Lcr8;->h:F
+
+    sget v0, Ldwc;->m3_back_progress_side_container_max_scale_y_distance:I
+
+    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result p1
+
+    iput p1, p0, Lcr8;->i:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onBindingDied(Landroid/content/ComponentName;)V
-    .locals 2
+.method public final a(FZI)V
+    .locals 10
 
-    iget-object p1, p0, Lcr8;->b:Ldr8;
+    iget-object v0, p0, Laq8;->a:Landroid/animation/TimeInterpolator;
 
-    iget-object p1, p1, Ldr8;->a:Lhq8;
+    invoke-interface {v0, p1}, Landroid/animation/TimeInterpolator;->getInterpolation(F)F
 
-    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result p1
 
-    new-instance v0, La96;
+    sget-object v0, Lhfh;->a:Ljava/util/WeakHashMap;
 
-    const/16 v1, 0xf
+    iget-object v0, p0, Laq8;->b:Landroid/view/View;
 
-    invoke-direct {v0, v1, p1}, La96;-><init>(ILjava/lang/Object;)V
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutDirection()I
 
-    invoke-virtual {p1, v0}, Lhq8;->x(Ljava/lang/Runnable;)V
+    move-result v1
 
-    return-void
-.end method
+    invoke-static {p3, v1}, Landroid/view/Gravity;->getAbsoluteGravity(II)I
 
-.method public final onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
-    .locals 8
+    move-result p3
 
-    const-string v0, "MCImplBase"
+    const/4 v1, 0x3
 
-    iget-object v1, p0, Lcr8;->b:Ldr8;
+    and-int/2addr p3, v1
 
-    iget-object v2, v1, Ldr8;->e:Lh8e;
+    const/4 v2, 0x0
 
-    iget-object v3, v1, Ldr8;->a:Lhq8;
+    const/4 v3, 0x1
 
-    const-string v4, "Service "
+    if-ne p3, v1, :cond_0
 
-    const-string v5, "Expected connection to "
+    move p3, v3
 
-    :try_start_0
-    iget-object v6, v2, Lh8e;->a:Lg8e;
+    goto :goto_0
 
-    invoke-interface {v6}, Lg8e;->getPackageName()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-nez v6, :cond_0
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    invoke-direct {p2, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, v2, Lh8e;->a:Lg8e;
-
-    invoke-interface {v1}, Lg8e;->getPackageName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, " but is connected to "
-
-    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-static {v0, p2}, Luyh;->e(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-static {v3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance p1, La96;
-
-    const/16 p2, 0xf
-
-    invoke-direct {p1, p2, v3}, La96;-><init>(ILjava/lang/Object;)V
+    :cond_0
+    move p3, v2
 
     :goto_0
-    invoke-virtual {v3, p1}, Lhq8;->x(Ljava/lang/Runnable;)V
-
-    return-void
-
-    :catchall_0
-    move-exception p1
+    if-ne p2, p3, :cond_1
 
     goto :goto_1
 
-    :cond_0
-    :try_start_1
-    invoke-static {p2}, Le19;->k(Landroid/os/IBinder;)Lv67;
-
-    move-result-object p2
-
-    if-nez p2, :cond_1
-
-    const-string p2, "Service interface is missing."
-
-    invoke-static {v0, p2}, Luyh;->e(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_1
-    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    invoke-static {v3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance p1, La96;
-
-    const/16 p2, 0xf
-
-    invoke-direct {p1, p2, v3}, La96;-><init>(ILjava/lang/Object;)V
-
-    goto :goto_0
-
     :cond_1
-    :try_start_2
-    new-instance v2, Lqp3;
-
-    iget-object v5, v1, Ldr8;->d:Landroid/content/Context;
-
-    invoke-virtual {v5}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {}, Landroid/os/Process;->myPid()I
-
-    move-result v6
-
-    iget-object v7, p0, Lcr8;->a:Landroid/os/Bundle;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-direct {v2, v5, v6, v7}, Lqp3;-><init>(Ljava/lang/String;ILandroid/os/Bundle;)V
-
-    iget-object v1, v1, Ldr8;->c:Lnr8;
-
-    invoke-virtual {v2}, Lqp3;->b()Landroid/os/Bundle;
-
-    move-result-object v2
-
-    invoke-interface {p2, v1, v2}, Lv67;->L(Ln67;Landroid/os/Bundle;)V
-    :try_end_2
-    .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    return-void
-
-    :catch_0
-    :try_start_3
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    invoke-direct {p2, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p1, " has died prematurely"
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Luyh;->m(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    invoke-static {v3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance p1, La96;
-
-    const/16 p2, 0xf
-
-    invoke-direct {p1, p2, v3}, La96;-><init>(ILjava/lang/Object;)V
-
-    goto :goto_0
+    move v3, v2
 
     :goto_1
-    invoke-static {v3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
 
-    new-instance p2, La96;
+    move-result p2
 
-    const/16 v0, 0xf
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
 
-    invoke-direct {p2, v0, v3}, La96;-><init>(ILjava/lang/Object;)V
+    move-result v1
 
-    invoke-virtual {v3, p2}, Lhq8;->x(Ljava/lang/Runnable;)V
+    int-to-float v4, p2
 
-    throw p1
-.end method
+    const/4 v5, 0x0
 
-.method public final onServiceDisconnected(Landroid/content/ComponentName;)V
-    .locals 2
+    cmpg-float v6, v4, v5
 
-    iget-object p1, p0, Lcr8;->b:Ldr8;
+    if-lez v6, :cond_8
 
-    iget-object p1, p1, Ldr8;->a:Lhq8;
+    int-to-float v1, v1
 
-    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    cmpg-float v6, v1, v5
 
-    new-instance v0, La96;
+    if-gtz v6, :cond_2
 
-    const/16 v1, 0xf
+    goto/16 :goto_7
 
-    invoke-direct {v0, v1, p1}, La96;-><init>(ILjava/lang/Object;)V
+    :cond_2
+    iget v6, p0, Lcr8;->g:F
 
-    invoke-virtual {p1, v0}, Lhq8;->x(Ljava/lang/Runnable;)V
+    div-float/2addr v6, v4
 
+    iget v7, p0, Lcr8;->h:F
+
+    div-float/2addr v7, v4
+
+    iget v8, p0, Lcr8;->i:F
+
+    div-float/2addr v8, v1
+
+    if-eqz p3, :cond_3
+
+    move v4, v5
+
+    :cond_3
+    invoke-virtual {v0, v4}, Landroid/view/View;->setPivotX(F)V
+
+    if-eqz v3, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    neg-float v7, v6
+
+    :goto_2
+    invoke-static {v5, v7, p1}, Lrg;->a(FFF)F
+
+    move-result v1
+
+    const/high16 v4, 0x3f800000    # 1.0f
+
+    add-float v6, v1, v4
+
+    invoke-virtual {v0, v6}, Landroid/view/View;->setScaleX(F)V
+
+    invoke-static {v5, v8, p1}, Lrg;->a(FFF)F
+
+    move-result p1
+
+    sub-float p1, v4, p1
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setScaleY(F)V
+
+    instance-of v7, v0, Landroid/view/ViewGroup;
+
+    if-eqz v7, :cond_8
+
+    check-cast v0, Landroid/view/ViewGroup;
+
+    :goto_3
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v7
+
+    if-ge v2, v7, :cond_8
+
+    invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v7
+
+    if-eqz p3, :cond_5
+
+    invoke-virtual {v7}, Landroid/view/View;->getRight()I
+
+    move-result v8
+
+    sub-int v8, p2, v8
+
+    invoke-virtual {v7}, Landroid/view/View;->getWidth()I
+
+    move-result v9
+
+    add-int/2addr v9, v8
+
+    int-to-float v8, v9
+
+    goto :goto_4
+
+    :cond_5
+    invoke-virtual {v7}, Landroid/view/View;->getLeft()I
+
+    move-result v8
+
+    neg-int v8, v8
+
+    int-to-float v8, v8
+
+    :goto_4
+    invoke-virtual {v7, v8}, Landroid/view/View;->setPivotX(F)V
+
+    invoke-virtual {v7}, Landroid/view/View;->getTop()I
+
+    move-result v8
+
+    neg-int v8, v8
+
+    int-to-float v8, v8
+
+    invoke-virtual {v7, v8}, Landroid/view/View;->setPivotY(F)V
+
+    if-eqz v3, :cond_6
+
+    sub-float v8, v4, v1
+
+    goto :goto_5
+
+    :cond_6
+    move v8, v4
+
+    :goto_5
+    cmpl-float v9, p1, v5
+
+    if-eqz v9, :cond_7
+
+    div-float v9, v6, p1
+
+    mul-float/2addr v9, v8
+
+    goto :goto_6
+
+    :cond_7
+    move v9, v4
+
+    :goto_6
+    invoke-virtual {v7, v8}, Landroid/view/View;->setScaleX(F)V
+
+    invoke-virtual {v7, v9}, Landroid/view/View;->setScaleY(F)V
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_3
+
+    :cond_8
+    :goto_7
     return-void
 .end method

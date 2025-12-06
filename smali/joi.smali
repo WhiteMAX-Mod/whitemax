@@ -1,99 +1,70 @@
-.class public abstract Ljoi;
+.class public final Ljoi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpqa;
+
+
+# static fields
+.field public static final a:Ljoi;
+
 
 # direct methods
-.method public static final a(Lone/me/sdk/bottomsheet/BottomSheetWidget;Ljava/lang/String;Lzi6;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    sget-object v0, Loee;->a:Loee;
+    new-instance v0, Ljoi;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Ljoi;->a:Ljoi;
+
+    new-instance v0, Ltci;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Ltci;-><init>(I)V
+
+    const-class v1, Lhdi;
+
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    const-class v1, Lc08;
+    const/4 v2, 0x2
 
-    invoke-virtual {v0, v1}, Lr5;->d(Ljava/lang/Class;)Lwif;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
+    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
 
     move-result-object v0
 
-    check-cast v0, Lc08;
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v0
 
-    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    const/4 v2, 0x3
 
-    move-result-object p1
+    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
 
-    invoke-virtual {v0, p1}, Lc08;->e(Landroid/net/Uri;)Liz5;
+    move-result-object v0
 
-    move-result-object p1
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
 
-    new-instance v0, Li11;
+    move-result-object v0
 
-    const/16 v1, 0x13
-
-    invoke-direct {v0, v1, p1}, Li11;-><init>(ILjava/lang/Object;)V
-
-    new-instance p1, Lx23;
-
-    const/16 v1, 0xa
-
-    invoke-direct {p1, v0, v1}, Lx23;-><init>(Lty5;I)V
-
-    new-instance v0, Ll;
-
-    const/16 v1, 0x1c
-
-    invoke-direct {v0, v1, p0}, Ll;-><init>(ILjava/lang/Object;)V
-
-    invoke-interface {p2, p1, v0}, Lzi6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
-.method public static final b(Lwzd;JLli6;)V
-    .locals 8
 
-    new-instance v2, Ldna;
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    invoke-direct {v2, p1, p2}, Ldna;-><init>(J)V
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    sget-object v3, Lcna;->a:Lcna;
+    move-result-object p1
 
-    const/4 p1, 0x3
-
-    invoke-static {p1, v3}, Lwag;->f(ILjava/lang/Object;)V
-
-    sget-object p1, Lzzd;->a:Lkotlinx/coroutines/internal/Symbol;
-
-    sget-object v4, Lyzd;->b:Lyzd;
-
-    new-instance v0, Luzd;
-
-    sget-object v5, Lzzd;->e:Lkotlinx/coroutines/internal/Symbol;
-
-    move-object v6, p3
-
-    check-cast v6, Lsgf;
-
-    const/4 v7, 0x0
-
-    move-object v1, p0
-
-    invoke-direct/range {v0 .. v7}, Luzd;-><init>(Lwzd;Ljava/lang/Object;Lbj6;Lbj6;Ljava/lang/Object;Lsgf;Lbj6;)V
-
-    sget-object p0, Lwzd;->Y:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    const/4 p0, 0x0
-
-    invoke-virtual {v1, v0, p0}, Lwzd;->f(Luzd;Z)V
-
-    return-void
+    throw p1
 .end method

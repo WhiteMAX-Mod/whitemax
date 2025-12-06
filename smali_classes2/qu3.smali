@@ -1,151 +1,231 @@
-.class public final enum Lqu3;
-.super Ljava/lang/Enum;
+.class public final Lqu3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Lqu3;
-
-.field public static final enum Y:Lqu3;
-
-.field public static final enum Z:Lqu3;
-
-.field public static final enum b:Lqu3;
-
-.field public static final enum c:Lqu3;
-
-.field public static final enum o:Lqu3;
-
-.field public static final synthetic q0:[Lqu3;
-
-
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Lk18;
+
+.field public final b:Lk18;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 10
-
-    new-instance v0, Lqu3;
-
-    const-string v1, "TT"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2, v1}, Lqu3;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v1, Lqu3;
-
-    const-string v2, "OFFICIAL"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3, v2}, Lqu3;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lqu3;->b:Lqu3;
-
-    new-instance v2, Lqu3;
-
-    const-string v3, "PRIVATE"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4, v3}, Lqu3;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v3, Lqu3;
-
-    const-string v4, "BOT"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5, v4}, Lqu3;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v3, Lqu3;->c:Lqu3;
-
-    new-instance v4, Lqu3;
-
-    const-string v5, "SERVICE_ACCOUNT"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6, v5}, Lqu3;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v4, Lqu3;->o:Lqu3;
-
-    new-instance v5, Lqu3;
-
-    const-string v6, "HAS_WEBAPP"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7, v6}, Lqu3;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v5, Lqu3;->X:Lqu3;
-
-    new-instance v6, Lqu3;
-
-    const-string v7, "RESTRICTED"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8, v7}, Lqu3;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v6, Lqu3;->Y:Lqu3;
-
-    new-instance v7, Lqu3;
-
-    const-string v8, "NO_FORWARD"
-
-    const/4 v9, 0x7
-
-    invoke-direct {v7, v8, v9, v8}, Lqu3;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v7, Lqu3;->Z:Lqu3;
-
-    filled-new-array/range {v0 .. v7}, [Lqu3;
-
-    move-result-object v0
-
-    sput-object v0, Lqu3;->q0:[Lqu3;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+.method public constructor <init>(Lk18;Lk18;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lqu3;->a:Ljava/lang/String;
+    iput-object p1, p0, Lqu3;->a:Lk18;
+
+    iput-object p2, p0, Lqu3;->b:Lk18;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lqu3;
-    .locals 1
 
-    const-class v0, Lqu3;
+# virtual methods
+.method public final a(Lku3;La10;)Ljava/lang/String;
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-object v0, p2, La10;->h:Ljava/lang/String;
 
-    move-result-object p0
+    iget-object v1, p2, La10;->g:Ljava/lang/String;
 
-    check-cast p0, Lqu3;
+    if-eqz p1, :cond_0
 
-    return-object p0
+    iget-object p2, p0, Lqu3;->b:Lk18;
+
+    invoke-interface {p2}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lpb3;
+
+    check-cast p2, Lw4e;
+
+    invoke-virtual {p2}, Lw4e;->n()Ljava/lang/String;
+
+    move-result-object p2
+
+    sget-object v0, Lil0;->c:Lil0;
+
+    invoke-virtual {p1, p2, v0}, Lku3;->s(Ljava/lang/String;Lil0;)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    iget-object p1, p2, La10;->d:Ljava/lang/String;
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    if-lez p1, :cond_3
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    if-lez p1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    if-lez p1, :cond_3
+
+    :goto_0
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    move-object v0, v1
+
+    :cond_2
+    invoke-static {v0}, Ltfi;->h(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_3
+    const/4 p1, 0x0
+
+    return-object p1
 .end method
 
-.method public static values()[Lqu3;
-    .locals 1
+.method public final b(La10;)Lku3;
+    .locals 4
 
-    sget-object v0, Lqu3;->q0:[Lqu3;
+    iget-wide v0, p1, La10;->b:J
 
-    invoke-virtual {v0}, [Lqu3;->clone()Ljava/lang/Object;
+    const-wide/16 v2, 0x0
 
-    move-result-object v0
+    cmp-long p1, v0, v2
 
-    check-cast v0, [Lqu3;
+    if-eqz p1, :cond_2
 
-    return-object v0
+    iget-object p1, p0, Lqu3;->a:Lk18;
+
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ll24;
+
+    iget-object p1, p1, Ll24;->a:Lqv3;
+
+    iget-object v2, p1, Lqv3;->a:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lku3;
+
+    if-eqz v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v2, 0x0
+
+    invoke-virtual {p1, v0, v1, v2}, Lqv3;->i(JZ)Lku3;
+
+    move-result-object v2
+
+    :goto_0
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v2}, Lku3;->B()Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    invoke-virtual {v2}, Lku3;->m()I
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    return-object v2
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public final c(La10;)Ljava/lang/CharSequence;
+    .locals 3
+
+    iget-object v0, p1, La10;->d:Ljava/lang/String;
+
+    invoke-virtual {p0, p1}, Lqu3;->b(La10;)Lku3;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Lku3;->o()Ljava/lang/CharSequence;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/String;
+
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-lez v2, :cond_0
+
+    invoke-virtual {v1}, Lku3;->o()Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    if-lez v1, :cond_1
+
+    sget-object v1, Lr5b;->a:Ljava/util/regex/Pattern;
+
+    iget-object p1, p1, La10;->e:Ljava/lang/String;
+
+    invoke-static {v0, p1}, Lr5b;->b(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_1
+    const-string p1, "Unknown"
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0}, Lr5b;->b(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
 .end method

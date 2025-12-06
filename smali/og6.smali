@@ -1,54 +1,102 @@
-.class public final synthetic Log6;
+.class public final Log6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/media/MediaDrm$OnEventListener;
+.implements Lwz7;
 
 
 # instance fields
-.field public final synthetic a:Lpg6;
+.field public final synthetic a:I
 
-.field public final synthetic b:Lp95;
+.field public final synthetic b:Lone/me/sdk/arch/Widget;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lpg6;Lp95;)V
+.method public synthetic constructor <init>(Lone/me/sdk/arch/Widget;I)V
     .locals 0
 
+    iput p2, p0, Log6;->a:I
+
+    iput-object p1, p0, Log6;->b:Lone/me/sdk/arch/Widget;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Log6;->a:Lpg6;
-
-    iput-object p2, p0, Log6;->b:Lp95;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Landroid/media/MediaDrm;[BII[B)V
-    .locals 0
+.method public final k()V
+    .locals 3
 
-    iget-object p1, p0, Log6;->a:Lpg6;
+    iget v0, p0, Log6;->a:I
 
-    iget-object p4, p0, Log6;->b:Lp95;
+    const/4 v1, 0x0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v2, p0, Log6;->b:Lone/me/sdk/arch/Widget;
 
-    iget-object p1, p4, Lp95;->b:Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Ljj4;
+    check-cast v2, Lone/me/sharedata/ShareDataPickerScreen;
 
-    iget-object p1, p1, Ljj4;->x:Lly;
+    iget-object v0, v2, Lone/me/sharedata/ShareDataPickerScreen;->y0:Lsn0;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0}, Lsn0;->e()Z
 
-    invoke-virtual {p1, p3, p2}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+    move-result v2
 
-    move-result-object p1
+    if-eqz v2, :cond_0
 
-    invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
+    invoke-virtual {v0}, Lsn0;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lik9;
+
+    invoke-virtual {v0, v1}, Lik9;->e(Z)V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    check-cast v2, Lone/me/chatscreen/mediabar/MediaBarWidget;
+
+    sget-object v0, Lone/me/chatscreen/mediabar/MediaBarWidget;->c1:[Lyy7;
+
+    invoke-virtual {v2}, Lone/me/chatscreen/mediabar/MediaBarWidget;->I0()Lik9;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Lik9;->e(Z)V
 
     return-void
+
+    :pswitch_1
+    check-cast v2, Lone/me/chats/forward/ForwardPickerScreen;
+
+    iget-object v0, v2, Lone/me/chats/forward/ForwardPickerScreen;->A0:Lsn0;
+
+    invoke-virtual {v0}, Lsn0;->e()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v0}, Lsn0;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lik9;
+
+    invoke-virtual {v0, v1}, Lik9;->e(Z)V
+
+    :cond_1
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,73 +1,45 @@
-.class public final synthetic Lkt8;
-.super Ljava/lang/Object;
+.class public final Lkt8;
+.super Lxfh;
 .source "SourceFile"
-
-# interfaces
-.implements Lji6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final b:Lpsb;
 
-.field public final synthetic b:Lot8;
+.field public final c:Lhbd;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lot8;I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 4
 
-    iput p2, p0, Lkt8;->a:I
+    invoke-direct {p0}, Lxfh;-><init>()V
 
-    iput-object p1, p0, Lkt8;->b:Lot8;
+    new-instance v0, Lpsb;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v1, Lqsb;->m:[Ljava/lang/String;
 
-    return-void
-.end method
+    invoke-direct {v0, v1}, Lpsb;-><init>([Ljava/lang/String;)V
 
+    iput-object v0, p0, Lkt8;->b:Lpsb;
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
+    new-instance v1, Lm11;
 
-    iget v0, p0, Lkt8;->a:I
+    const/16 v2, 0x10
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v1, v2, v0}, Lm11;-><init>(ILjava/lang/Object;)V
 
-    iget-object v0, p0, Lkt8;->b:Lot8;
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    invoke-virtual {v0}, Lot8;->a()V
+    sget-object v2, Lyve;->a:Llcj;
 
-    const/4 v1, 0x0
+    iget-object v3, p0, Lxfh;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    iput-boolean v1, v0, Lot8;->l:Z
-
-    sget-object v0, Lccg;->a:Lccg;
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lkt8;->b:Lot8;
-
-    iget-object v0, v0, Lot8;->d:Lji6;
-
-    invoke-interface {v0}, Lji6;->invoke()Ljava/lang/Object;
+    invoke-static {v1, v3, v2, v0}, Lgw0;->C(Lx26;Lf84;Lzve;Ljava/lang/Object;)Lhbd;
 
     move-result-object v0
 
-    check-cast v0, Lts7;
+    iput-object v0, p0, Lkt8;->c:Lhbd;
 
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lts7;->k()V
-
-    :cond_0
-    sget-object v0, Lccg;->a:Lccg;
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

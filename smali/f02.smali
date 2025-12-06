@@ -3,17 +3,19 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/os/Handler;
+# static fields
+.field public static final a:Lf02;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Handler;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lf02;
 
-    iput-object p1, p0, Lf02;->a:Landroid/os/Handler;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lf02;->a:Lf02;
 
     return-void
 .end method

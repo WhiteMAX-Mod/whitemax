@@ -1,115 +1,172 @@
 .class public final Lkg7;
-.super Lrdi;
+.super La2;
 .source "SourceFile"
+
+# interfaces
+.implements Llh7;
+.implements Llyg;
+
+
+# static fields
+.field public static final b:Lkg7;
+
+.field public static final c:Lkg7;
 
 
 # instance fields
-.field public final synthetic c:I
-
-.field public final synthetic o:Llg7;
+.field public final a:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Integer;Llg7;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    const/4 v0, 0x1
+    new-instance v0, Lkg7;
 
-    iput v0, p0, Lkg7;->c:I
+    const/4 v1, 0x1
 
-    iput-object p2, p0, Lkg7;->o:Llg7;
+    invoke-direct {v0, v1}, Lkg7;-><init>(Z)V
 
-    const/16 p2, 0xc
+    sput-object v0, Lkg7;->b:Lkg7;
 
-    .line 2
-    invoke-direct {p0, p2, p1}, Lrdi;-><init>(ILjava/lang/Object;)V
+    new-instance v0, Lkg7;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lkg7;-><init>(Z)V
+
+    sput-object v0, Lkg7;->c:Lkg7;
 
     return-void
 .end method
 
-.method public constructor <init>(Llg7;)V
-    .locals 1
+.method public constructor <init>(Z)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, Lkg7;->c:I
-
-    iput-object p1, p0, Lkg7;->o:Llg7;
-
-    const/16 p1, 0xc
-
-    const/4 v0, 0x0
-
-    .line 1
-    invoke-direct {p0, p1, v0}, Lrdi;-><init>(ILjava/lang/Object;)V
+    iput-boolean p1, p0, Lkg7;->a:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b0(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public final a()Ljava/lang/String;
     .locals 1
 
-    iget v0, p0, Lkg7;->c:I
+    iget-boolean v0, p0, Lkg7;->a:Z
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
 
-    invoke-static {p1, p2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object v0
 
-    move-result v0
+    return-object v0
+.end method
 
-    if-nez v0, :cond_0
+.method public final d()I
+    .locals 1
 
-    check-cast p2, Ljava/lang/Number;
+    const/4 v0, 0x2
 
-    invoke-virtual {p2}, Ljava/lang/Number;->intValue()I
+    return v0
+.end method
 
-    move-result p2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    check-cast p1, Ljava/lang/Number;
+    if-ne p1, p0, :cond_0
 
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    iget-object p1, p0, Lkg7;->o:Llg7;
-
-    iget-object v0, p1, Llg7;->d:Landroid/graphics/Paint;
-
-    invoke-virtual {v0, p2}, Landroid/graphics/Paint;->setColor(I)V
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+    goto :goto_0
 
     :cond_0
-    return-void
-
-    :pswitch_0
-    invoke-static {p1, p2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
+    instance-of v0, p1, Llyg;
 
     if-nez v0, :cond_1
 
-    check-cast p2, Landroid/graphics/drawable/Drawable;
+    goto :goto_1
 
-    check-cast p1, Landroid/graphics/drawable/Drawable;
+    :cond_1
+    check-cast p1, Llyg;
 
-    if-eqz p2, :cond_1
+    move-object v0, p1
 
-    iget-object p1, p0, Lkg7;->o:Llg7;
+    check-cast v0, La2;
 
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    invoke-interface {v0}, Llyg;->d()I
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_2
+
+    invoke-interface {p1}, Llyg;->q()Lkg7;
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
+    iget-boolean p1, p1, Lkg7;->a:Z
 
-    :cond_1
-    return-void
+    iget-boolean v0, p0, Lkg7;->a:Z
 
-    nop
+    if-ne v0, p1, :cond_2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-boolean v0, p0, Lkg7;->a:Z
+
+    if-eqz v0, :cond_0
+
+    const/16 v0, 0x4cf
+
+    return v0
+
+    :cond_0
+    const/16 v0, 0x4d5
+
+    return v0
+.end method
+
+.method public final q()Lkg7;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final t()Lkg7;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    iget-boolean v0, p0, Lkg7;->a:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

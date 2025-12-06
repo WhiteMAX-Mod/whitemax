@@ -1,120 +1,92 @@
 .class public final Lug2;
-.super Lsgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lzi6;
 
 
 # instance fields
-.field public X:I
+.field public final a:Ltw0;
 
-.field public final synthetic Y:Lvg2;
+.field public final b:J
 
-.field public final synthetic Z:Ltg2;
+.field public final c:Ljve;
+
+.field public final d:Lkotlinx/coroutines/internal/ContextScope;
+
+.field public final e:Lgbd;
 
 
 # direct methods
-.method public constructor <init>(Lvg2;Ltg2;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JLtw0;Llzf;)V
     .locals 0
 
-    iput-object p1, p0, Lug2;->Y:Lvg2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lug2;->Z:Ltg2;
+    iput-object p3, p0, Lug2;->a:Ltw0;
 
-    const/4 p1, 0x2
+    iput-wide p1, p0, Lug2;->b:J
 
-    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 p1, 0x0
+
+    const/4 p2, 0x7
+
+    invoke-static {p1, p1, p2}, Lkve;->b(III)Ljve;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lug2;->c:Ljve;
+
+    check-cast p4, Lq2b;
+
+    invoke-virtual {p4}, Lq2b;->a()Lz74;
+
+    move-result-object p2
+
+    invoke-static {p2}, Ld7j;->a(Lx74;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lug2;->d:Lkotlinx/coroutines/internal/ContextScope;
+
+    new-instance p2, Lgbd;
+
+    invoke-direct {p2, p1}, Lgbd;-><init>(Le9a;)V
+
+    iput-object p2, p0, Lug2;->e:Lgbd;
+
+    invoke-virtual {p3, p0}, Ltw0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onEvent(Lcpd;)V
+    .locals 4
+    .annotation runtime Lvnf;
+    .end annotation
 
-    check-cast p1, Lq54;
+    iget-wide v0, p0, Lug2;->b:J
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-wide v2, p1, Lcpd;->c:J
 
-    invoke-virtual {p0, p1, p2}, Lug2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    cmp-long p1, v0, v2
 
-    move-result-object p1
+    if-eqz p1, :cond_0
 
-    check-cast p1, Lug2;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lug2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lug2;
-
-    iget-object v0, p0, Lug2;->Y:Lvg2;
-
-    iget-object v1, p0, Lug2;->Z:Ltg2;
-
-    invoke-direct {p1, v0, v1, p2}, Lug2;-><init>(Lvg2;Ltg2;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lug2;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance p1, Ltg2;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v0, 0x0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, p0, v0}, Ltg2;-><init>(Lug2;Lkotlin/coroutines/Continuation;)V
 
-    throw p1
+    const/4 v1, 0x3
 
-    :cond_1
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    iget-object v2, p0, Lug2;->d:Lkotlinx/coroutines/internal/ContextScope;
 
-    iget-object p1, p0, Lug2;->Y:Lvg2;
+    invoke-static {v2, v0, v0, p1, v1}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
 
-    iget-object p1, p1, Lvg2;->a:Lnje;
-
-    iput v1, p0, Lug2;->X:I
-
-    iget-object v0, p0, Lug2;->Z:Ltg2;
-
-    invoke-virtual {p1, v0, p0}, Lnje;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lr54;->a:Lr54;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
+    return-void
 .end method

@@ -1,27 +1,21 @@
-.class public final Low1;
+.class public interface abstract Low1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Liu7;
-
-.field public final b:Liu7;
-
-.field public final c:Liu7;
-
-
 # direct methods
-.method public constructor <init>(Liu7;Liu7;Liu7;)V
+.method public static a(Low1;)Lru/ok/android/externcalls/sdk/ConversationFactory;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    check-cast p0, Ls81;
 
-    iput-object p1, p0, Low1;->a:Liu7;
+    iget-object p0, p0, Ls81;->b:Lbwf;
 
-    iput-object p2, p0, Low1;->b:Liu7;
+    invoke-virtual {p0}, Lbwf;->getValue()Ljava/lang/Object;
 
-    iput-object p3, p0, Low1;->c:Liu7;
+    move-result-object p0
 
-    return-void
+    check-cast p0, Lru/ok/android/externcalls/sdk/ConversationFactory;
+
+    return-object p0
 .end method

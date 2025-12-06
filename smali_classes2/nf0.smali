@@ -93,17 +93,17 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    const-string v0, ", default="
+    const-string v0, ", secondary="
 
     const-string v1, ")"
 
-    const-string v2, "BackgroundLocalChipsColors(active="
+    const-string v2, "BackgroundLocalTopBarColors(primary="
 
     iget v3, p0, Lnf0;->a:I
 
     iget v4, p0, Lnf0;->b:I
 
-    invoke-static {v2, v3, v0, v4, v1}, Ley1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v3, v0, v4, v1}, Lwy1;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

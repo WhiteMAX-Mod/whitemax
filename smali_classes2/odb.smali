@@ -1,58 +1,157 @@
-.class public final Lodb;
+.class public abstract Lodb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpi1;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lt4d;->oneme_startconversation_channel_add_subscribers_error:I
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+    sput v0, Lodb;->a:I
 
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+    sget v0, Lt4d;->oneme_startconversation_channel_create_error:I
 
-    iput-object v0, p0, Lodb;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    sput v0, Lodb;->b:I
 
-    return-void
-.end method
+    sget v0, Lt4d;->oneme_startconversation_channel_limit_add_subscribers_error:I
 
+    sput v0, Lodb;->c:I
 
-# virtual methods
-.method public final onStateChanged(Lhi1;Lji1;)V
-    .locals 2
+    sget v0, Lt4d;->oneme_startconversation_channel_select_subscribers_skip_button:I
 
-    iget-object v0, p0, Lodb;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    sput v0, Lodb;->d:I
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    sget v0, Lt4d;->oneme_startconversation_channel_select_subscribers_toolbar_title:I
 
-    move-result-object v0
+    sput v0, Lodb;->e:I
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    sget v0, Lt4d;->oneme_startconversation_title:I
 
-    move-result v1
+    sput v0, Lodb;->f:I
 
-    if-eqz v1, :cond_0
+    sget v0, Lt4d;->oneme_startconversations_chat_members:I
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    sput v0, Lodb;->g:I
 
-    move-result-object v1
+    sget v0, Lt4d;->oneme_startconversations_chat_titleicon_avatar_bottomsheet_title:I
 
-    check-cast v1, Lpi1;
+    sput v0, Lodb;->h:I
 
-    invoke-interface {v1, p1, p2}, Lpi1;->onStateChanged(Lhi1;Lji1;)V
+    sget v0, Lt4d;->oneme_startconversations_chat_titleicon_avatars_load_from_gallery_action:I
 
-    goto :goto_0
+    sput v0, Lodb;->i:I
 
-    :cond_0
+    sget v0, Lt4d;->oneme_startconversations_chat_titleicon_avatars_take_photo_action:I
+
+    sput v0, Lodb;->j:I
+
+    sget v0, Lt4d;->oneme_startconversations_chat_titleicon_confirm_button_title:I
+
+    sput v0, Lodb;->k:I
+
+    sget v0, Lt4d;->oneme_startconversations_chat_titleicon_confirm_button_title_channel:I
+
+    sput v0, Lodb;->l:I
+
+    sget v0, Lt4d;->oneme_startconversations_chat_titleicon_hint:I
+
+    sput v0, Lodb;->m:I
+
+    sget v0, Lt4d;->oneme_startconversations_chat_titleicon_hint_channel:I
+
+    sput v0, Lodb;->n:I
+
+    sget v0, Lt4d;->oneme_startconversations_chat_titleicon_input_description_hint:I
+
+    sput v0, Lodb;->o:I
+
+    sget v0, Lt4d;->oneme_startconversations_chat_titleicon_input_hint:I
+
+    sput v0, Lodb;->p:I
+
+    sget v0, Lt4d;->oneme_startconversations_chat_titleicon_input_hint_channel:I
+
+    sput v0, Lodb;->q:I
+
+    sget v0, Lt4d;->oneme_startconversations_chat_titleicon_toolbar_title:I
+
+    sput v0, Lodb;->r:I
+
+    sget v0, Lt4d;->oneme_startconversations_chat_titleicon_toolbar_title_channel:I
+
+    sput v0, Lodb;->s:I
+
+    sget v0, Lt4d;->oneme_startconversations_continue_create_chat:I
+
+    sput v0, Lodb;->t:I
+
+    sget v0, Lt4d;->oneme_startconversations_create_empty_chat:I
+
+    sput v0, Lodb;->u:I
+
+    sget v0, Lt4d;->oneme_startconversations_member_search_hint:I
+
+    sput v0, Lodb;->v:I
+
+    sget v0, Lt4d;->oneme_startconversations_phonebook_section_header:I
+
+    sput v0, Lodb;->w:I
+
+    sget v0, Lt4d;->oneme_startconversations_search_hint:I
+
+    sput v0, Lodb;->x:I
+
     return-void
 .end method

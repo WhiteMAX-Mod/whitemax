@@ -2,138 +2,151 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lsqb;
+
 
 # instance fields
-.field public final a:Liu7;
+.field public final a:Ljava/lang/String;
 
-.field public final b:Liu7;
-
-.field public final c:Liu7;
-
-.field public final d:Liu7;
-
-.field public final e:Lwif;
-
-.field public volatile f:Lvv4;
+.field public final b:Lc9a;
 
 
 # direct methods
-.method public constructor <init>(Liu7;Liu7;Liu7;Liu7;Lwif;)V
+.method public constructor <init>(Ljava/lang/String;Lc9a;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lnqb;->a:Liu7;
+    iput-object p1, p0, Lnqb;->a:Ljava/lang/String;
 
-    iput-object p2, p0, Lnqb;->b:Liu7;
-
-    iput-object p3, p0, Lnqb;->c:Liu7;
-
-    iput-object p4, p0, Lnqb;->d:Liu7;
-
-    iput-object p5, p0, Lnqb;->e:Lwif;
+    iput-object p2, p0, Lnqb;->b:Lc9a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 5
+.method public final a()Ljava/lang/String;
+    .locals 1
 
-    const-string v0, "nqb"
+    iget-object v0, p0, Lnqb;->a:Ljava/lang/String;
 
-    const-string v1, "schedulePing"
-
-    invoke-static {v0, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lnqb;->f:Lvv4;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lvv4;->h()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lnqb;->f:Lvv4;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lvv4;->g()V
-
-    :cond_0
-    iget-object v0, p0, Lnqb;->e:Lwif;
-
-    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lxod;
-
-    invoke-virtual {v0}, Lxod;->a()Lvod;
-
-    move-result-object v0
-
-    new-instance v1, Lrta;
-
-    const/4 v2, 0x4
-
-    invoke-direct {v1, v2, p0}, Lrta;-><init>(ILjava/lang/Object;)V
-
-    const-wide/16 v2, 0x7148
-
-    sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {v0, v1, v2, v3, v4}, Lvod;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lvv4;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lnqb;->f:Lvv4;
-
-    return-void
+    return-object v0
 .end method
 
-.method public final b()V
+.method public final b()Lc9a;
+    .locals 1
+
+    iget-object v0, p0, Lnqb;->b:Lc9a;
+
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lnqb;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lnqb;
+
+    iget-object v1, p0, Lnqb;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lnqb;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lnqb;->b:Lc9a;
+
+    iget-object p1, p1, Lnqb;->b:Lc9a;
+
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 2
 
-    const-string v0, "nqb"
+    iget-object v0, p0, Lnqb;->a:Ljava/lang/String;
 
-    const-string v1, "startInteractivePings"
-
-    invoke-static {v0, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lnqb;->c:Liu7;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljoa;
-
-    invoke-virtual {v0}, Ljoa;->d()Z
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v0, p0, Lnqb;->a:Liu7;
+    iget-object v1, p0, Lnqb;->b:Lc9a;
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v1}, Lc9a;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Lnqb;->a:Ljava/lang/String;
+
+    invoke-static {v0}, Lceg;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lll;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x1
+    const-string v2, "CancelMetric(traceId="
 
-    check-cast v0, Lmna;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lmna;->F(Z)J
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_0
-    invoke-virtual {p0}, Lnqb;->a()V
+    const-string v0, ", localProperties="
 
-    return-void
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v0, p0, Lnqb;->b:Lc9a;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

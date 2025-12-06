@@ -1,241 +1,559 @@
 .class public final Ln74;
-.super Ljava/lang/Object;
+.super Ljava/util/AbstractList;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Ln74;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Ljava/util/RandomAccess;
 
 
 # instance fields
-.field public final a:Landroid/graphics/RectF;
+.field public final a:Lp74;
 
-.field public final b:F
+.field public final b:I
 
-.field public final c:[F
+.field public c:I
+
+.field public d:[Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lh8;
-
-    const/16 v1, 0x1a
-
-    invoke-direct {v0, v1}, Lh8;-><init>(I)V
-
-    sput-object v0, Ln74;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/graphics/RectF;F[F)V
+.method public constructor <init>(Lp74;II)V
     .locals 0
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
 
-    .line 2
-    iput-object p1, p0, Ln74;->a:Landroid/graphics/RectF;
+    iput-object p1, p0, Ln74;->a:Lp74;
 
-    .line 3
-    iput p2, p0, Ln74;->b:F
+    iget-object p1, p1, Lp74;->b:[Ljava/lang/Object;
 
-    .line 4
-    iput-object p3, p0, Ln74;->c:[F
+    iput-object p1, p0, Ln74;->d:[Ljava/lang/Object;
 
-    return-void
-.end method
+    iput p2, p0, Ln74;->b:I
 
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 1
+    sub-int/2addr p3, p2
 
-    .line 5
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 6
-    const-class v0, Landroid/graphics/RectF;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/graphics/RectF;
-
-    iput-object v0, p0, Ln74;->a:Landroid/graphics/RectF;
-
-    .line 7
-    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
-
-    move-result v0
-
-    iput v0, p0, Ln74;->b:F
-
-    const/16 v0, 0x9
-
-    .line 8
-    new-array v0, v0, [F
-
-    iput-object v0, p0, Ln74;->c:[F
-
-    .line 9
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readFloatArray([F)V
+    iput p3, p0, Ln74;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final a()V
+    .locals 2
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Ln74;->a:Lp74;
 
-    return v0
+    iget-object v0, v0, Lp74;->b:[Ljava/lang/Object;
+
+    iget-object v1, p0, Ln74;->d:[Ljava/lang/Object;
+
+    if-ne v0, v1, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/util/ConcurrentModificationException;
+
+    invoke-direct {v0}, Ljava/util/ConcurrentModificationException;-><init>()V
+
+    throw v0
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
+.method public final add(ILjava/lang/Object;)V
     .locals 3
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Ln74;->a:Lp74;
+
+    iget-object v0, v0, Lp74;->a:Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    :try_start_0
+    invoke-virtual {p0}, Ln74;->a()V
+
+    if-ltz p1, :cond_0
+
+    iget v1, p0, Ln74;->c:I
+
+    if-gt p1, v1, :cond_0
+
+    iget-object v1, p0, Ln74;->a:Lp74;
+
+    iget v2, p0, Ln74;->b:I
+
+    add-int/2addr p1, v2
+
+    invoke-virtual {v1, p1, p2}, Lp74;->add(ILjava/lang/Object;)V
+
+    iget-object p1, p0, Ln74;->a:Lp74;
+
+    iget-object p1, p1, Lp74;->b:[Ljava/lang/Object;
+
+    iput-object p1, p0, Ln74;->d:[Ljava/lang/Object;
+
+    iget p1, p0, Ln74;->c:I
+
+    add-int/lit8 p1, p1, 0x1
+
+    iput p1, p0, Ln74;->c:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_0
+
+    :cond_0
+    :try_start_1
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+
+    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+
+    throw p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :goto_0
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    throw p1
+.end method
+
+.method public final b(I)V
+    .locals 4
+
+    if-ltz p1, :cond_0
+
+    iget v0, p0, Ln74;->c:I
+
+    if-ge p1, v0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
+
+    iget v1, p0, Ln74;->c:I
+
+    const-string v2, "Index: "
+
+    const-string v3, ",Size: "
+
+    invoke-static {v2, p1, v1, v3}, Lho7;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final clear()V
+    .locals 4
+
+    iget-object v0, p0, Ln74;->a:Lp74;
+
+    iget-object v0, v0, Lp74;->a:Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    :try_start_0
+    invoke-virtual {p0}, Ln74;->a()V
+
+    iget-object v1, p0, Ln74;->a:Lp74;
+
+    iget v2, p0, Ln74;->b:I
+
+    iget v3, p0, Ln74;->c:I
+
+    add-int/2addr v3, v2
+
+    invoke-static {v1, v2, v3}, Lp74;->a(Lp74;II)V
+
+    iget-object v1, p0, Ln74;->a:Lp74;
+
+    iget-object v1, v1, Lp74;->b:[Ljava/lang/Object;
+
+    iput-object v1, p0, Ln74;->d:[Ljava/lang/Object;
+
+    const/4 v1, 0x0
+
+    iput v1, p0, Ln74;->c:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    throw v1
+.end method
+
+.method public final get(I)Ljava/lang/Object;
+    .locals 3
+
+    iget-object v0, p0, Ln74;->a:Lp74;
+
+    iget-object v0, v0, Lp74;->a:Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    :try_start_0
+    invoke-virtual {p0, p1}, Ln74;->b(I)V
+
+    invoke-virtual {p0}, Ln74;->a()V
+
+    iget-object v1, p0, Ln74;->a:Lp74;
+
+    iget v2, p0, Ln74;->b:I
+
+    add-int/2addr p1, v2
+
+    iget-object v1, v1, Lp74;->b:[Ljava/lang/Object;
+
+    aget-object p1, v1, p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    throw p1
+.end method
+
+.method public final iterator()Ljava/util/Iterator;
+    .locals 6
+
+    iget-object v0, p0, Ln74;->a:Lp74;
+
+    iget-object v1, v0, Lp74;->a:Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    :try_start_0
+    invoke-virtual {p0}, Ln74;->a()V
+
+    new-instance v2, Lo74;
+
+    iget v3, p0, Ln74;->b:I
+
+    iget v4, p0, Ln74;->c:I
+
+    const/4 v5, 0x0
+
+    invoke-direct {v2, v0, v5, v3, v4}, Lo74;-><init>(Ljava/util/List;III)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    return-object v2
+
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    throw v0
+.end method
+
+.method public final listIterator(I)Ljava/util/ListIterator;
+    .locals 5
+
+    const-string v0, "Index: "
+
+    iget-object v1, p0, Ln74;->a:Lp74;
+
+    iget-object v2, v1, Lp74;->a:Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    :try_start_0
+    invoke-virtual {p0}, Ln74;->a()V
+
+    if-ltz p1, :cond_0
+
+    iget v3, p0, Ln74;->c:I
+
+    if-gt p1, v3, :cond_0
+
+    new-instance v0, Lo74;
+
+    iget v4, p0, Ln74;->b:I
+
+    invoke-direct {v0, v1, p1, v4, v3}, Lo74;-><init>(Ljava/util/List;III)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    return-object v0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_0
+
+    :cond_0
+    :try_start_1
+    new-instance v1, Ljava/lang/IndexOutOfBoundsException;
+
+    iget v3, p0, Ln74;->c:I
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, ", Size: "
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v1, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :goto_0
+    invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    throw p1
+.end method
+
+.method public final remove(I)Ljava/lang/Object;
+    .locals 3
+
+    .line 1
+    iget-object v0, p0, Ln74;->a:Lp74;
+
+    iget-object v0, v0, Lp74;->a:Ljava/util/concurrent/locks/ReentrantLock;
+
+    .line 2
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    .line 3
+    :try_start_0
+    invoke-virtual {p0, p1}, Ln74;->b(I)V
+
+    .line 4
+    invoke-virtual {p0}, Ln74;->a()V
+
+    .line 5
+    iget-object v1, p0, Ln74;->a:Lp74;
+
+    iget v2, p0, Ln74;->b:I
+
+    add-int/2addr p1, v2
+
+    invoke-virtual {v1, p1}, Lp74;->remove(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    .line 6
+    iget-object v1, p0, Ln74;->a:Lp74;
+
+    .line 7
+    iget-object v1, v1, Lp74;->b:[Ljava/lang/Object;
+
+    .line 8
+    iput-object v1, p0, Ln74;->d:[Ljava/lang/Object;
+
+    .line 9
+    iget v1, p0, Ln74;->c:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    iput v1, p0, Ln74;->c:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 10
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    .line 11
+    throw p1
+.end method
+
+.method public final remove(Ljava/lang/Object;)Z
+    .locals 1
+
+    .line 12
+    invoke-virtual {p0, p1}, Ljava/util/AbstractList;->indexOf(Ljava/lang/Object;)I
+
+    move-result p1
+
+    const/4 v0, -0x1
+
+    if-ne p1, v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    .line 13
+    :cond_0
+    invoke-virtual {p0, p1}, Ln74;->remove(I)Ljava/lang/Object;
 
     const/4 p1, 0x1
 
     return p1
-
-    :cond_0
-    const/4 v0, 0x0
-
-    if-eqz p1, :cond_4
-
-    const-class v1, Ln74;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v2
-
-    if-eq v1, v2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Ln74;
-
-    iget v1, p1, Ln74;->b:F
-
-    iget v2, p0, Ln74;->b:F
-
-    invoke-static {v1, v2}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    return v0
-
-    :cond_2
-    iget-object v1, p0, Ln74;->a:Landroid/graphics/RectF;
-
-    iget-object v2, p1, Ln74;->a:Landroid/graphics/RectF;
-
-    invoke-virtual {v1, v2}, Landroid/graphics/RectF;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v0
-
-    :cond_3
-    iget-object v0, p0, Ln74;->c:[F
-
-    iget-object p1, p1, Ln74;->c:[F
-
-    invoke-static {v0, p1}, Ljava/util/Arrays;->equals([F[F)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_4
-    :goto_0
-    return v0
 .end method
 
-.method public final hashCode()I
+.method public final set(ILjava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    iget-object v0, p0, Ln74;->a:Landroid/graphics/RectF;
+    iget-object v0, p0, Ln74;->a:Lp74;
 
-    invoke-virtual {v0}, Landroid/graphics/RectF;->hashCode()I
+    iget-object v0, v0, Lp74;->a:Ljava/util/concurrent/locks/ReentrantLock;
 
-    move-result v0
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
-    mul-int/lit8 v0, v0, 0x1f
+    :try_start_0
+    invoke-virtual {p0, p1}, Ln74;->b(I)V
 
-    const/4 v1, 0x0
+    invoke-virtual {p0}, Ln74;->a()V
 
-    iget v2, p0, Ln74;->b:F
+    iget-object v1, p0, Ln74;->a:Lp74;
 
-    cmpl-float v1, v2, v1
+    iget v2, p0, Ln74;->b:I
 
-    if-eqz v1, :cond_0
+    add-int/2addr p1, v2
 
-    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
+    invoke-virtual {v1, p1, p2}, Lp74;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    move-result v1
+    move-result-object p1
+
+    iget-object p2, p0, Ln74;->a:Lp74;
+
+    iget-object p2, p2, Lp74;->b:[Ljava/lang/Object;
+
+    iput-object p2, p0, Ln74;->d:[Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    throw p1
+.end method
+
+.method public final size()I
+    .locals 2
+
+    iget-object v0, p0, Ln74;->a:Lp74;
+
+    iget-object v0, v0, Lp74;->a:Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    :try_start_0
+    invoke-virtual {p0}, Ln74;->a()V
+
+    iget v1, p0, Ln74;->c:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    return v1
+
+    :catchall_0
+    move-exception v1
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    throw v1
+.end method
+
+.method public final subList(II)Ljava/util/List;
+    .locals 4
+
+    iget-object v0, p0, Ln74;->a:Lp74;
+
+    iget-object v1, v0, Lp74;->a:Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    :try_start_0
+    invoke-virtual {p0}, Ln74;->a()V
+
+    if-ltz p1, :cond_0
+
+    iget v2, p0, Ln74;->c:I
+
+    if-gt p2, v2, :cond_0
+
+    new-instance v2, Ln74;
+
+    iget v3, p0, Ln74;->b:I
+
+    add-int/2addr p1, v3
+
+    add-int/2addr p2, v3
+
+    invoke-direct {v2, v0, p1, p2}, Ln74;-><init>(Lp74;II)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    return-object v2
+
+    :catchall_0
+    move-exception p1
 
     goto :goto_0
 
     :cond_0
-    const/4 v1, 0x0
+    :try_start_1
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+
+    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+
+    throw p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     :goto_0
-    add-int/2addr v0, v1
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Ln74;->c:[F
-
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([F)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 1
-
-    iget-object v0, p0, Ln74;->a:Landroid/graphics/RectF;
-
-    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
-
-    iget p2, p0, Ln74;->b:F
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
-
-    iget-object p2, p0, Ln74;->c:[F
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloatArray([F)V
-
-    return-void
+    throw p1
 .end method

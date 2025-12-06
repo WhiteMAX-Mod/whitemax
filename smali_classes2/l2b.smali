@@ -1,135 +1,75 @@
-.class public abstract Ll2b;
-.super Ljava/lang/Object;
+.class public final Ll2b;
+.super Lq44;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:J
+# instance fields
+.field public X:Llz;
 
-.field public static final b:J
+.field public Y:Z
 
-.field public static final c:J
+.field public Z:Z
 
-.field public static final d:J
+.field public d:Lo2b;
 
-.field public static final e:J
+.field public o:Lsi9;
 
-.field public static final f:J
+.field public s0:Z
 
-.field public static final g:J
+.field public t0:Z
 
-.field public static final h:J
+.field public synthetic u0:Ljava/lang/Object;
 
-.field public static final i:J
+.field public final synthetic v0:Lo2b;
 
-.field public static final j:J
-
-.field public static final k:J
-
-.field public static final l:J
-
-.field public static final m:J
-
-.field public static final n:J
-
-.field public static final o:J
-
-.field public static final synthetic p:I
+.field public w0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lo2b;Lq44;)V
+    .locals 0
 
-    sget v0, Lfpc;->oneme_settings_privacy_content_level_access:I
+    iput-object p1, p0, Ll2b;->v0:Lo2b;
 
-    int-to-long v0, v0
-
-    sput-wide v0, Ll2b;->a:J
-
-    sget v0, Lfpc;->oneme_settings_privacy_info_header:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Ll2b;->b:J
-
-    sget v0, Lfpc;->oneme_settings_privacy_safe_files:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Ll2b;->c:J
-
-    sget v0, Lfpc;->oneme_settings_privacy_screen_add_me_to_chat:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Ll2b;->d:J
-
-    sget v0, Lfpc;->oneme_settings_privacy_screen_black_list:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Ll2b;->e:J
-
-    sget v0, Lfpc;->oneme_settings_privacy_screen_call_me:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Ll2b;->f:J
-
-    sget v0, Lfpc;->oneme_settings_privacy_screen_finished_sessions:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Ll2b;->g:J
-
-    sget v0, Lfpc;->oneme_settings_privacy_screen_how_session:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Ll2b;->h:J
-
-    sget v0, Lfpc;->oneme_settings_privacy_screen_safe_mode:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Ll2b;->i:J
-
-    sget v0, Lfpc;->oneme_settings_privacy_screen_search_by_phone:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Ll2b;->j:J
-
-    sget v0, Lfpc;->oneme_settings_privacy_screen_see_online_state:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Ll2b;->k:J
-
-    sget v0, Lfpc;->oneme_settings_privacy_screen_twofa:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Ll2b;->l:J
-
-    sget v0, Lfpc;->oneme_settings_privacy_screen_twofa_profile_delete:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Ll2b;->m:J
-
-    sget v0, Lfpc;->oneme_settings_privacy_screen_twofa_warning_item:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Ll2b;->n:J
-
-    sget v0, Lfpc;->oneme_settings_privacy_screen_web_apps:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Ll2b;->o:J
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
+
+    iput-object p1, p0, Ll2b;->u0:Ljava/lang/Object;
+
+    iget p1, p0, Ll2b;->w0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Ll2b;->w0:I
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    iget-object v0, p0, Ll2b;->v0:Lo2b;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    move-object v7, p0
+
+    invoke-virtual/range {v0 .. v7}, Lo2b;->f(Lsi9;Llz;ZZZZLq44;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

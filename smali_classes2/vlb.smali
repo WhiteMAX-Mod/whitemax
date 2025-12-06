@@ -1,78 +1,61 @@
-.class public final synthetic Lvlb;
-.super Ljava/lang/Object;
+.class public final Lvlb;
+.super Lzlb;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/location/map/pick/PickLocationScreen;
+# static fields
+.field public static final a:Lvlb;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/location/map/pick/PickLocationScreen;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lvlb;->a:I
+    new-instance v0, Lvlb;
 
-    iput-object p1, p0, Lvlb;->b:Lone/me/location/map/pick/PickLocationScreen;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lvlb;->a:Lvlb;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
-
-    iget p1, p0, Lvlb;->a:I
-
-    iget-object v0, p0, Lvlb;->b:Lone/me/location/map/pick/PickLocationScreen;
-
-    packed-switch p1, :pswitch_data_0
-
-    sget-object p1, Lone/me/location/map/pick/PickLocationScreen;->t0:[Ltr7;
-
-    invoke-virtual {v0}, Lone/me/location/map/pick/PickLocationScreen;->E0()Lhmb;
-
-    move-result-object p1
-
-    iget-object v0, p1, Lxzg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance v1, Lfmb;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p1, v2}, Lfmb;-><init>(Lhmb;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x3
-
-    invoke-static {v0, v2, v2, v1, p1}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
-
-    return-void
-
-    :pswitch_0
-    sget-object p1, Lone/me/location/map/pick/PickLocationScreen;->t0:[Ltr7;
-
-    invoke-virtual {v0}, Lone/me/location/map/pick/PickLocationScreen;->E0()Lhmb;
-
-    move-result-object p1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0, v0}, Lhmb;->r(ZZ)V
+    if-ne p0, p1, :cond_0
 
-    return-void
+    return v0
 
-    nop
+    :cond_0
+    instance-of p1, p1, Lvlb;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x635de3a1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Error"
+
+    return-object v0
 .end method

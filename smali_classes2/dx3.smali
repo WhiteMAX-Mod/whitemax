@@ -1,180 +1,141 @@
 .class public final Ldx3;
-.super Lt6d;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Ljava/util/List;
+.field public final a:Ljve;
 
-.field public Y:J
-
-.field public Z:Lv2a;
-
-.field public final o:Lat3;
+.field public final b:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public constructor <init>(Lat3;)V
-    .locals 1
+.method public constructor <init>(Ltw0;Llzf;)V
+    .locals 2
 
-    invoke-direct {p0}, Lt6d;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    const/4 v0, 0x0
 
-    iput-object v0, p0, Ldx3;->X:Ljava/util/List;
+    const/4 v1, 0x7
 
-    iput-object p1, p0, Ldx3;->o:Lat3;
+    invoke-static {v0, v0, v1}, Lkve;->b(III)Ljve;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ldx3;->a:Ljve;
+
+    check-cast p2, Lq2b;
+
+    invoke-virtual {p2}, Lq2b;->a()Lz74;
+
+    move-result-object p2
+
+    invoke-static {p2}, Ld7j;->a(Lx74;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p2
+
+    iput-object p2, p0, Ldx3;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-virtual {p1, p0}, Ltw0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final j()I
-    .locals 1
-
-    iget-object v0, p0, Ldx3;->X:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final k(I)J
+.method public final a()Lx26;
     .locals 2
 
-    iget-object v0, p0, Ldx3;->X:Ljava/util/List;
+    new-instance v0, Lgbd;
 
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    iget-object v1, p0, Ldx3;->a:Ljve;
 
-    move-result-object p1
+    invoke-direct {v0, v1}, Lgbd;-><init>(Le9a;)V
 
-    check-cast p1, Lrh8;
-
-    iget-wide v0, p1, Lrh8;->c:J
-
-    return-wide v0
+    return-object v0
 .end method
 
-.method public final r(Lq7d;I)V
-    .locals 10
+.method public final onEvent(Lph8;)V
+    .locals 3
+    .annotation runtime Lvnf;
+    .end annotation
 
-    check-cast p1, Lcx3;
+    .line 1
+    new-instance p1, Lzw3;
 
-    iget-object v0, p0, Ldx3;->X:Ljava/util/List;
+    const/4 v0, 0x0
 
-    invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-direct {p1, p0, v0}, Lzw3;-><init>(Ldx3;Lkotlin/coroutines/Continuation;)V
 
-    move-result-object p2
+    const/4 v1, 0x3
 
-    check-cast p2, Lrh8;
+    iget-object v2, p0, Ldx3;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    iget-object v0, p1, Lcx3;->F0:Landroid/view/View;
-
-    iget-object v1, p1, Lcx3;->D0:Landroid/widget/ImageView;
-
-    iget-object v2, p1, Lcx3;->H0:Ldx3;
-
-    iget-object v3, v2, Ldx3;->o:Lat3;
-
-    iget-object v4, p1, Lcx3;->E0:Lru/ok/messages/views/widgets/TamAvatarView;
-
-    iget-boolean v5, p2, Lrh8;->h:Z
-
-    iget-wide v6, p2, Lrh8;->b:J
-
-    const/16 v8, 0x8
-
-    const/4 v9, 0x0
-
-    if-eqz v5, :cond_1
-
-    const/4 v5, 0x4
-
-    invoke-virtual {v1, v5}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    invoke-virtual {v4, v9}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {v3, v6, v7, v9}, Lat3;->i(JZ)Lwr3;
-
-    move-result-object v1
-
-    invoke-virtual {v4, v1, v9}, Lie0;->a(Lwr3;Z)V
-
-    iget-boolean v1, p2, Lrh8;->k:Z
-
-    if-eqz v1, :cond_0
-
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    invoke-virtual {v4, v1}, Landroid/view/View;->setAlpha(F)V
-
-    goto :goto_0
-
-    :cond_0
-    const/high16 v1, 0x3f000000    # 0.5f
-
-    invoke-virtual {v4, v1}, Landroid/view/View;->setAlpha(F)V
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v1, v9}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    invoke-virtual {v4, v8}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {v3, v6, v7, v9}, Lat3;->i(JZ)Lwr3;
-
-    move-result-object v1
-
-    invoke-virtual {v4, v1, v9}, Lie0;->a(Lwr3;Z)V
-
-    :goto_0
-    iget-wide v3, p2, Lrh8;->c:J
-
-    iget-wide v1, v2, Ldx3;->Y:J
-
-    cmp-long v1, v3, v1
-
-    if-nez v1, :cond_2
-
-    invoke-virtual {v0, v9}, Landroid/view/View;->setVisibility(I)V
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {v0, v8}, Landroid/view/View;->setVisibility(I)V
-
-    :goto_1
-    iput-object p2, p1, Lcx3;->G0:Lrh8;
+    invoke-static {v2, v0, v0, p1, v1}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
 
     return-void
 .end method
 
-.method public final t(Landroid/view/ViewGroup;I)Lq7d;
-    .locals 2
+.method public final onEvent(Lt24;)V
+    .locals 3
+    .annotation runtime Lvnf;
+    .end annotation
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p2
-
-    invoke-static {p2}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object p2
-
-    sget v0, Lsqc;->row_contact_location:I
+    .line 3
+    new-instance v0, Lbx3;
 
     const/4 v1, 0x0
 
-    invoke-virtual {p2, v0, p1, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-direct {v0, p0, p1, v1}, Lbx3;-><init>(Ldx3;Lt24;Lkotlin/coroutines/Continuation;)V
 
-    move-result-object p1
+    const/4 p1, 0x3
 
-    new-instance p2, Lcx3;
+    iget-object v2, p0, Ldx3;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    invoke-direct {p2, p0, p1}, Lcx3;-><init>(Ldx3;Landroid/view/View;)V
+    invoke-static {v2, v1, v1, v0, p1}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
 
-    return-object p2
+    return-void
+.end method
+
+.method public final onEvent(Ltub;)V
+    .locals 3
+    .annotation runtime Lvnf;
+    .end annotation
+
+    .line 2
+    new-instance p1, Lax3;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, p0, v0}, Lax3;-><init>(Ldx3;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v1, 0x3
+
+    iget-object v2, p0, Ldx3;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v0, v0, p1, v1}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
+
+    return-void
+.end method
+
+.method public final onEvent(Lxsg;)V
+    .locals 3
+    .annotation runtime Lvnf;
+    .end annotation
+
+    .line 4
+    new-instance p1, Lcx3;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, p0, v0}, Lcx3;-><init>(Ldx3;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v1, 0x3
+
+    iget-object v2, p0, Ldx3;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v0, v0, p1, v1}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
+
+    return-void
 .end method

@@ -1,63 +1,199 @@
 .class public abstract Lzj0;
-.super Lqo8;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lbw8;
+.implements Lcw8;
 
 
 # instance fields
-.field public final t0:J
+.field public final synthetic a:I
 
-.field public final u0:J
+.field public final b:J
 
-.field public v0:Lzgd;
+.field public final c:J
 
-.field public w0:[I
+.field public d:J
 
 
 # direct methods
-.method public constructor <init>(Ldc4;Llc4;Lkb6;ILjava/lang/Object;JJJJJ)V
-    .locals 12
+.method public constructor <init>(IJJ)V
+    .locals 0
 
-    move-object v0, p0
+    iput p1, p0, Lzj0;->a:I
 
-    move-object v1, p1
+    packed-switch p1, :pswitch_data_0
 
-    move-object v2, p2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-object v3, p3
+    iput-wide p2, p0, Lzj0;->b:J
 
-    move/from16 v4, p4
+    iput-wide p4, p0, Lzj0;->c:J
 
-    move-object/from16 v5, p5
+    const-wide/16 p4, 0x1
 
-    move-wide/from16 v6, p6
+    sub-long/2addr p2, p4
 
-    move-wide/from16 v8, p8
-
-    move-wide/from16 v10, p14
-
-    invoke-direct/range {v0 .. v11}, Lqo8;-><init>(Ldc4;Llc4;Lkb6;ILjava/lang/Object;JJJ)V
-
-    move-wide/from16 p1, p10
-
-    iput-wide p1, p0, Lzj0;->t0:J
-
-    move-wide/from16 p1, p12
-
-    iput-wide p1, p0, Lzj0;->u0:J
+    iput-wide p2, p0, Lzj0;->d:J
 
     return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p2, p0, Lzj0;->b:J
+
+    iput-wide p4, p0, Lzj0;->c:J
+
+    const-wide/16 p4, 0x1
+
+    sub-long/2addr p2, p4
+
+    iput-wide p2, p0, Lzj0;->d:J
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final d(I)I
-    .locals 1
+.method public final c()V
+    .locals 4
 
-    iget-object v0, p0, Lzj0;->w0:[I
+    iget v0, p0, Lzj0;->a:I
 
-    invoke-static {v0}, Lzg8;->f(Ljava/lang/Object;)V
+    packed-switch v0, :pswitch_data_0
 
-    aget p1, v0, p1
+    iget-wide v0, p0, Lzj0;->d:J
 
-    return p1
+    iget-wide v2, p0, Lzj0;->b:J
+
+    cmp-long v2, v0, v2
+
+    if-ltz v2, :cond_0
+
+    iget-wide v2, p0, Lzj0;->c:J
+
+    cmp-long v0, v0, v2
+
+    if-gtz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+
+    :pswitch_0
+    iget-wide v0, p0, Lzj0;->d:J
+
+    iget-wide v2, p0, Lzj0;->b:J
+
+    cmp-long v2, v0, v2
+
+    if-ltz v2, :cond_1
+
+    iget-wide v2, p0, Lzj0;->c:J
+
+    cmp-long v0, v0, v2
+
+    if-gtz v0, :cond_1
+
+    return-void
+
+    :cond_1
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final next()Z
+    .locals 4
+
+    iget v0, p0, Lzj0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-wide v0, p0, Lzj0;->d:J
+
+    const-wide/16 v2, 0x1
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lzj0;->d:J
+
+    iget-wide v2, p0, Lzj0;->c:J
+
+    cmp-long v0, v0, v2
+
+    const/4 v1, 0x1
+
+    if-lez v0, :cond_0
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    xor-int/2addr v0, v1
+
+    return v0
+
+    :pswitch_0
+    iget-wide v0, p0, Lzj0;->d:J
+
+    const-wide/16 v2, 0x1
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lzj0;->d:J
+
+    iget-wide v2, p0, Lzj0;->c:J
+
+    cmp-long v0, v0, v2
+
+    const/4 v1, 0x1
+
+    if-lez v0, :cond_1
+
+    move v0, v1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v0, 0x0
+
+    :goto_1
+    xor-int/2addr v0, v1
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

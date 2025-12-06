@@ -35,7 +35,7 @@
         "setLottieDrawable",
         "(Lone/me/rlottie/RLottieImageView;Lone/me/rlottie/RLottieDrawable;)Z",
         "networkFetchEnabled",
-        "Lccg;",
+        "Lqqg;",
         "restartDownloadFromUrl",
         "(Lone/me/rlottie/RLottieImageView;Z)V",
         "debug",
@@ -60,11 +60,11 @@
 
     invoke-virtual {p0}, Lone/me/rlottie/RLottieImageView;->stopAnimation()V
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieImageView;->q0:Lone/me/rlottie/RLottieDrawable;
+    iget-object v0, p0, Lone/me/rlottie/RLottieImageView;->o:Lone/me/rlottie/RLottieDrawable;
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lne;->b()Z
+    invoke-static {}, Lie;->b()Z
 
     move-result v1
 
@@ -79,7 +79,7 @@
 .method public static final restartDownloadFromUrl(Lone/me/rlottie/RLottieImageView;Z)V
     .locals 0
 
-    iget-object p0, p0, Lone/me/rlottie/RLottieImageView;->q0:Lone/me/rlottie/RLottieDrawable;
+    iget-object p0, p0, Lone/me/rlottie/RLottieImageView;->o:Lone/me/rlottie/RLottieDrawable;
 
     if-eqz p0, :cond_0
 
@@ -172,7 +172,7 @@
 .method public static final setLottieDrawable(Lone/me/rlottie/RLottieImageView;Lone/me/rlottie/RLottieDrawable;)Z
     .locals 1
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieImageView;->q0:Lone/me/rlottie/RLottieDrawable;
+    iget-object v0, p0, Lone/me/rlottie/RLottieImageView;->o:Lone/me/rlottie/RLottieDrawable;
 
     if-eqz v0, :cond_0
 

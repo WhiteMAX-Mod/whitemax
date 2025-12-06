@@ -1,13 +1,22 @@
-.class public abstract Llh5;
+.class public final Llh5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lzh5;
+
+
+# instance fields
+.field public final a:Ljava/lang/Integer;
+
 
 # direct methods
-.method public static a(Landroid/media/MediaMetadataRetriever;Landroid/media/MediaDataSource;)V
+.method public constructor <init>(Ljava/lang/Integer;)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/media/MediaMetadataRetriever;->setDataSource(Landroid/media/MediaDataSource;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Llh5;->a:Ljava/lang/Integer;
 
     return-void
 .end method

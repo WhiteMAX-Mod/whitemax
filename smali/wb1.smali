@@ -1,93 +1,127 @@
 .class public final Lwb1;
-.super Ljava/lang/Object;
+.super Lid0;
 .source "SourceFile"
-
-# interfaces
-.implements Lvb1;
-.implements Lqq1;
 
 
 # instance fields
-.field public final a:Liu7;
+.field public final b:Ln41;
 
-.field public final b:Landroid/graphics/PointF;
-
-.field public final c:Ljava/lang/Object;
+.field public final c:Z
 
 
 # direct methods
-.method public constructor <init>(Liu7;Liu7;)V
-    .locals 2
+.method public constructor <init>(Ln41;Z)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
 
-    iput-object p1, p0, Lwb1;->a:Liu7;
+    invoke-direct {p0, v0}, Lid0;-><init>(I)V
 
-    new-instance v0, Luz;
+    iput-object p1, p0, Lwb1;->b:Ln41;
 
-    const/4 v1, 0x4
-
-    invoke-direct {v0, p1, v1}, Luz;-><init>(Liu7;I)V
-
-    const/4 v1, 0x3
-
-    invoke-static {v1, v0}, Lrci;->b(ILji6;)Liu7;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lwb1;->c:Ljava/lang/Object;
-
-    invoke-interface {p2}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lmw1;
-
-    invoke-virtual {p2, p0}, Lmw1;->d(Lqq1;)V
-
-    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/content/Context;
-
-    invoke-static {p1}, Lmzg;->u(Landroid/content/Context;)Landroid/graphics/PointF;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lwb1;->b:Landroid/graphics/PointF;
+    iput-boolean p2, p0, Lwb1;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onDestroyed(Lru/ok/android/externcalls/sdk/events/destroy/ConversationDestroyedInfo;)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lwb1;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lwb1;
+
+    iget-object v1, p0, Lwb1;->b:Ln41;
+
+    iget-object v3, p1, Lwb1;->b:Ln41;
+
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Lwb1;->c:Z
+
+    iget-boolean p1, p1, Lwb1;->c:Z
+
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 2
 
-    invoke-super {p0, p1}, Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;->onDestroyed(Lru/ok/android/externcalls/sdk/events/destroy/ConversationDestroyedInfo;)V
+    iget-object v0, p0, Lwb1;->b:Ln41;
 
-    iget-object p1, p0, Lwb1;->a:Liu7;
+    invoke-virtual {v0}, Ln41;->hashCode()I
 
-    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+    move-result v0
 
-    move-result-object p1
+    mul-int/lit8 v0, v0, 0x1f
 
-    check-cast p1, Landroid/content/Context;
+    iget-boolean v1, p0, Lwb1;->c:Z
 
-    invoke-static {p1}, Lmzg;->u(Landroid/content/Context;)Landroid/graphics/PointF;
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    move-result-object p1
+    move-result v1
 
-    iget v0, p1, Landroid/graphics/PointF;->x:F
+    add-int/2addr v1, v0
 
-    iget-object v1, p0, Lwb1;->b:Landroid/graphics/PointF;
+    return v1
+.end method
 
-    iput v0, v1, Landroid/graphics/PointF;->x:F
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget p1, p1, Landroid/graphics/PointF;->y:F
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iput p1, v1, Landroid/graphics/PointF;->y:F
+    const-string v1, "OpenIncomingCall(chatInfo="
 
-    return-void
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lwb1;->b:Ln41;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isVideo="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lwb1;->c:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

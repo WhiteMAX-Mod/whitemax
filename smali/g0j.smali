@@ -1,16 +1,13 @@
 .class public final Lg0j;
-.super Lmui;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lpqa;
 
 
 # static fields
-.field public static final X:Lg0j;
-
-
-# instance fields
-.field public final transient c:[Ljava/lang/Object;
-
-.field public final transient o:I
+.field public static final a:Lg0j;
 
 
 # direct methods
@@ -19,89 +16,55 @@
 
     new-instance v0, Lg0j;
 
-    const/4 v1, 0x0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    new-array v2, v1, [Ljava/lang/Object;
+    sput-object v0, Lg0j;->a:Lg0j;
 
-    invoke-direct {v0, v1, v2}, Lg0j;-><init>(I[Ljava/lang/Object;)V
+    new-instance v0, Lmli;
 
-    sput-object v0, Lg0j;->X:Lg0j;
+    const/4 v1, 0x1
 
-    return-void
-.end method
+    invoke-direct {v0, v1}, Lmli;-><init>(I)V
 
-.method public constructor <init>(I[Ljava/lang/Object;)V
-    .locals 0
+    const-class v1, Lemi;
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    iput-object p2, p0, Lg0j;->c:[Ljava/lang/Object;
+    move-result-object v0
 
-    iput p1, p0, Lg0j;->o:I
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a([Ljava/lang/Object;)I
-    .locals 3
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    iget-object v0, p0, Lg0j;->c:[Ljava/lang/Object;
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    const/4 v1, 0x0
+    move-result-object p1
 
-    iget v2, p0, Lg0j;->o:I
-
-    invoke-static {v0, v1, p1, v1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    return v2
-.end method
-
-.method public final b()I
-    .locals 1
-
-    iget v0, p0, Lg0j;->o:I
-
-    return v0
-.end method
-
-.method public final d()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final e()[Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lg0j;->c:[Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final get(I)Ljava/lang/Object;
-    .locals 1
-
-    iget v0, p0, Lg0j;->o:I
-
-    invoke-static {p1, v0}, Lpji;->d(II)V
-
-    iget-object v0, p0, Lg0j;->c:[Ljava/lang/Object;
-
-    aget-object p1, v0, p1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-object p1
-.end method
-
-.method public final size()I
-    .locals 1
-
-    iget v0, p0, Lg0j;->o:I
-
-    return v0
+    throw p1
 .end method

@@ -1,114 +1,69 @@
 .class public final Llt4;
-.super Lsgf;
+.super Lugc;
 .source "SourceFile"
-
-# interfaces
-.implements Lzi6;
-
-
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Lmt4;
 
 
 # direct methods
-.method public constructor <init>(Lmt4;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 3
 
-    iput-object p1, p0, Llt4;->Y:Lmt4;
+    new-instance v0, Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    const/4 p1, 0x2
+    const/4 v1, 0x0
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p1, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    invoke-direct {p0, v0}, Lmid;-><init>(Landroid/view/View;)V
+
+    new-instance p1, Landroid/view/ViewGroup$LayoutParams;
+
+    const/4 v1, -0x1
+
+    const/4 v2, -0x2
+
+    invoke-direct {p1, v1, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    sget-object p1, Ljza;->c:Ljza;
+
+    invoke-virtual {v0, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Ljza;)V
+
+    sget-object p1, Liza;->c:Liza;
+
+    invoke-virtual {v0, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Liza;)V
+
+    sget-object p1, Lgza;->b:Lgza;
+
+    invoke-virtual {v0, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Lgza;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lq54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Llt4;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Llt4;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Llt4;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Llt4;
-
-    iget-object v0, p0, Llt4;->Y:Lmt4;
-
-    invoke-direct {p1, v0, p2}, Llt4;-><init>(Lmt4;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final z(Lt98;)V
     .locals 2
 
-    iget v0, p0, Llt4;->X:I
+    check-cast p1, Lmt4;
 
-    const/4 v1, 0x1
+    iget-object v0, p0, Lmid;->a:Landroid/view/View;
 
-    if-eqz v0, :cond_1
+    move-object v1, v0
 
-    if-ne v0, v1, :cond_0
+    check-cast v1, Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    iget-object p1, p1, Lmt4;->a:Ln5g;
 
-    goto :goto_0
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    move-result-object v0
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Llt4;->Y:Lmt4;
-
-    iget-object p1, p1, Lmt4;->d:Lnje;
-
-    iput v1, p0, Llt4;->X:I
-
-    sget-object v0, Lkt4;->a:Lkt4;
-
-    invoke-virtual {p1, v0, p0}, Lnje;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Ls5g;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
-    sget-object v0, Lr54;->a:Lr54;
+    invoke-virtual {v1, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(Ljava/lang/CharSequence;)V
 
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
+    return-void
 .end method

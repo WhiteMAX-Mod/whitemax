@@ -2,127 +2,108 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/sdk/uikit/common/span/FitFontImageSpan;
-
-.field public final synthetic c:Landroid/widget/TextView;
-
-.field public final synthetic o:Ldx5;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/uikit/common/span/FitFontImageSpan;Landroid/widget/TextView;Ldx5;I)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    iput p4, p0, Lax5;->a:I
-
-    iput-object p1, p0, Lax5;->b:Lone/me/sdk/uikit/common/span/FitFontImageSpan;
-
-    iput-object p2, p0, Lax5;->c:Landroid/widget/TextView;
-
-    iput-object p3, p0, Lax5;->o:Ldx5;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lax5;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 9
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget v0, p0, Lax5;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v5, p0, Lax5;->b:Lone/me/sdk/uikit/common/span/FitFontImageSpan;
+    return v0
 
-    invoke-static {v5}, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->access$getShouldInvalidateSpan$p(Lone/me/sdk/uikit/common/span/FitFontImageSpan;)Z
+    :cond_0
+    instance-of v1, p1, Lax5;
 
-    move-result v0
-
-    iget-object v6, p0, Lax5;->o:Ldx5;
-
-    iget-object v3, p0, Lax5;->c:Landroid/widget/TextView;
-
-    if-eqz v0, :cond_0
-
-    new-instance v1, Lsph;
-
-    const/4 v2, 0x2
-
-    const/4 v7, 0x0
-
-    move-object v4, v3
-
-    invoke-direct/range {v1 .. v7}, Lsph;-><init>(ILjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Z)V
-
-    invoke-static {v3, v1}, Lh7b;->a(Landroid/view/View;Ljava/lang/Runnable;)Lh7b;
+    if-nez v1, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {v3}, Landroid/view/View;->invalidate()V
+    :cond_1
+    check-cast p1, Lax5;
 
-    iget-object v0, v6, Ldx5;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iget-object v1, p0, Lax5;->a:Ljava/lang/String;
 
-    const/4 v1, 0x0
+    iget-object p1, p1, Lax5;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
 
     :goto_0
-    return-void
+    const/4 p1, 0x0
 
-    :pswitch_0
-    iget-object v6, p0, Lax5;->b:Lone/me/sdk/uikit/common/span/FitFontImageSpan;
+    return p1
 
-    invoke-static {v6}, Lone/me/sdk/uikit/common/span/FitFontImageSpan;->access$getShouldInvalidateSpan$p(Lone/me/sdk/uikit/common/span/FitFontImageSpan;)Z
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lax5;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    iget-object v7, p0, Lax5;->o:Ldx5;
+    const/16 v1, 0x1f
 
-    iget-object v4, p0, Lax5;->c:Landroid/widget/TextView;
+    mul-int/2addr v0, v1
 
-    if-eqz v0, :cond_1
+    const/4 v2, 0x0
 
-    new-instance v2, Lsph;
+    invoke-static {v0, v1, v2}, La9h;->b(IIZ)I
 
-    const/4 v3, 0x2
+    move-result v0
 
-    const/4 v8, 0x0
+    const/4 v1, 0x2
 
-    move-object v5, v4
+    invoke-static {v1}, Laz1;->v(I)I
 
-    invoke-direct/range {v2 .. v8}, Lsph;-><init>(ILjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Z)V
+    move-result v1
 
-    invoke-static {v4, v2}, Lh7b;->a(Landroid/view/View;Ljava/lang/Runnable;)Lh7b;
+    add-int/2addr v1, v0
 
-    goto :goto_1
+    return v1
+.end method
 
-    :cond_1
-    invoke-virtual {v4}, Landroid/view/View;->invalidate()V
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    iget-object v0, v7, Ldx5;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+    const-string v0, "BIG_CHANGES"
 
-    const/4 v1, 0x0
+    const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    const-string v2, "FilePreferencesOptions(name="
 
-    :goto_1
-    return-void
+    iget-object v3, p0, Lax5;->a:Ljava/lang/String;
 
-    nop
+    const-string v4, ", isDebugMode=false, commitStrategy="
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-static {v2, v3, v4, v0, v1}, Lwy1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

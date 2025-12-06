@@ -2,47 +2,104 @@
 .super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/Executor;
-
 
 # static fields
-.field public static final enum a:Lqbg;
+.field public static final enum X:Lqbg;
 
-.field public static final b:Landroid/os/Handler;
+.field public static final synthetic Y:[Lqbg;
 
-.field public static final synthetic c:[Lqbg;
+.field public static final enum b:Lqbg;
+
+.field public static final enum c:Lqbg;
+
+.field public static final enum d:Lqbg;
+
+.field public static final enum o:Lqbg;
+
+
+# instance fields
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 8
 
     new-instance v0, Lqbg;
 
-    const-string v1, "INSTANCE"
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const-string v2, "TLSv1.3"
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const-string v3, "TLS_1_3"
 
-    sput-object v0, Lqbg;->a:Lqbg;
+    invoke-direct {v0, v3, v1, v2}, Lqbg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    filled-new-array {v0}, [Lqbg;
+    sput-object v0, Lqbg;->b:Lqbg;
+
+    new-instance v1, Lqbg;
+
+    const/4 v2, 0x1
+
+    const-string v3, "TLSv1.2"
+
+    const-string v4, "TLS_1_2"
+
+    invoke-direct {v1, v4, v2, v3}, Lqbg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v1, Lqbg;->c:Lqbg;
+
+    new-instance v2, Lqbg;
+
+    const/4 v3, 0x2
+
+    const-string v4, "TLSv1.1"
+
+    const-string v5, "TLS_1_1"
+
+    invoke-direct {v2, v5, v3, v4}, Lqbg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v2, Lqbg;->d:Lqbg;
+
+    new-instance v3, Lqbg;
+
+    const/4 v4, 0x3
+
+    const-string v5, "TLSv1"
+
+    const-string v6, "TLS_1_0"
+
+    invoke-direct {v3, v6, v4, v5}, Lqbg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v3, Lqbg;->o:Lqbg;
+
+    new-instance v4, Lqbg;
+
+    const/4 v5, 0x4
+
+    const-string v6, "SSLv3"
+
+    const-string v7, "SSL_3_0"
+
+    invoke-direct {v4, v7, v5, v6}, Lqbg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v4, Lqbg;->X:Lqbg;
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Lqbg;
 
     move-result-object v0
 
-    sput-object v0, Lqbg;->c:[Lqbg;
+    sput-object v0, Lqbg;->Y:[Lqbg;
 
-    new-instance v0, Landroid/os/Handler;
+    return-void
+.end method
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
 
-    move-result-object v1
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    sput-object v0, Lqbg;->b:Landroid/os/Handler;
+    iput-object p3, p0, Lqbg;->a:Ljava/lang/String;
 
     return-void
 .end method
@@ -64,7 +121,7 @@
 .method public static values()[Lqbg;
     .locals 1
 
-    sget-object v0, Lqbg;->c:[Lqbg;
+    sget-object v0, Lqbg;->Y:[Lqbg;
 
     invoke-virtual {v0}, [Lqbg;->clone()Ljava/lang/Object;
 
@@ -73,16 +130,4 @@
     check-cast v0, [Lqbg;
 
     return-object v0
-.end method
-
-
-# virtual methods
-.method public final execute(Ljava/lang/Runnable;)V
-    .locals 1
-
-    sget-object v0, Lqbg;->b:Landroid/os/Handler;
-
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
 .end method

@@ -1,26 +1,53 @@
 .class public final Lor0;
-.super Ljava/lang/Object;
+.super Lq44;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final a:Ljava/util/List;
+.field public final synthetic X:Lrr0;
 
-.field public final b:Ljava/util/Map;
+.field public Y:I
+
+.field public d:Lrr0;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;Ljava/util/Map;)V
+.method public constructor <init>(Lrr0;Lq44;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lor0;->X:Lrr0;
 
-    iput-object p1, p0, Lor0;->a:Ljava/util/List;
-
-    iput-object p2, p0, Lor0;->b:Ljava/util/Map;
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iput-object p1, p0, Lor0;->o:Ljava/lang/Object;
+
+    iget p1, p0, Lor0;->Y:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lor0;->Y:I
+
+    const-wide/16 v0, 0x0
+
+    const/4 p1, 0x0
+
+    iget-object v2, p0, Lor0;->X:Lrr0;
+
+    invoke-virtual {v2, v0, v1, p1, p0}, Lrr0;->e(JLsr0;Lq44;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

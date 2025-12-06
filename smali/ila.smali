@@ -1,23 +1,13 @@
-.class public final Lila;
+.class public abstract Lila;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
-
-.field public final b:Ljava/nio/ByteBuffer;
-
-
 # direct methods
-.method public constructor <init>(ILjava/nio/ByteBuffer;)V
+.method public static a(Landroid/app/Notification$BigPictureStyle;Landroid/graphics/drawable/Icon;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lila;->a:I
-
-    iput-object p2, p0, Lila;->b:Ljava/nio/ByteBuffer;
+    invoke-virtual {p0, p1}, Landroid/app/Notification$BigPictureStyle;->bigLargeIcon(Landroid/graphics/drawable/Icon;)Landroid/app/Notification$BigPictureStyle;
 
     return-void
 .end method

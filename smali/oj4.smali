@@ -1,19 +1,77 @@
 .class public final Loj4;
-.super Lwyi;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public a:J
+
+.field public final b:Li50;
+
+.field public final c:Lka2;
+
+.field public final synthetic d:Lpj4;
+
+
+# direct methods
+.method public constructor <init>(Lpj4;Li50;Lka2;J)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Loj4;->d:Lpj4;
+
+    iput-object p2, p0, Loj4;->b:Li50;
+
+    iput-wide p4, p0, Loj4;->a:J
+
+    iput-object p3, p0, Loj4;->c:Lka2;
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public final e(Landroid/content/pm/PackageManager;Ljava/lang/String;)[Landroid/content/pm/Signature;
-    .locals 1
+.method public final a(JLjava/nio/ByteBuffer;)V
+    .locals 3
 
-    const/16 v0, 0x40
+    iget-wide v0, p0, Loj4;->a:J
 
-    invoke-virtual {p1, p2, v0}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    cmp-long v0, p1, v0
 
-    move-result-object p1
+    if-ltz v0, :cond_0
 
-    iget-object p1, p1, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
+    const/4 v0, 0x1
 
-    return-object p1
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-static {v0}, Lhsi;->b(Z)V
+
+    iget-wide v0, p0, Loj4;->a:J
+
+    sub-long v0, p1, v0
+
+    long-to-int v0, v0
+
+    invoke-virtual {p3}, Ljava/nio/Buffer;->position()I
+
+    move-result v1
+
+    iget-object v2, p0, Loj4;->b:Li50;
+
+    iget v2, v2, Li50;->d:I
+
+    mul-int/2addr v0, v2
+
+    add-int/2addr v0, v1
+
+    invoke-virtual {p3, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    iput-wide p1, p0, Loj4;->a:J
+
+    return-void
 .end method

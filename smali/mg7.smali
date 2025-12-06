@@ -1,206 +1,259 @@
-.class public final Lmg7;
+.class public abstract Lmg7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/media/MediaCodec;
+.field public a:Z
 
-.field public final b:I
+.field public b:I
 
-.field public final c:Ljava/nio/ByteBuffer;
-
-.field public final d:Lju1;
-
-.field public final e:Lgu1;
-
-.field public final f:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field public g:J
-
-.field public h:Z
+.field public c:[Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/media/MediaCodec;I)V
-    .locals 4
+.method public constructor <init>(I)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+    const-string v0, "initialCapacity"
+
+    invoke-static {p1, v0}, Lu4j;->a(ILjava/lang/String;)V
+
+    new-array p1, p1, [Ljava/lang/Object;
+
+    iput-object p1, p0, Lmg7;->c:[Ljava/lang/Object;
+
+    const/4 p1, 0x0
+
+    iput p1, p0, Lmg7;->b:I
+
+    return-void
+.end method
+
+.method public static e()Lrs0;
+    .locals 3
+
+    new-instance v0, Lrs0;
+
+    const/4 v1, 0x6
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lrs0;-><init>(IB)V
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Lrs0;->c:Z
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+    iput v1, v0, Lrs0;->b:I
 
-    iput-object v0, p0, Lmg7;->f:Ljava/util/concurrent/atomic/AtomicBoolean;
+    return-object v0
+.end method
 
-    const-wide/16 v2, 0x0
+.method public static h(II)I
+    .locals 1
 
-    iput-wide v2, p0, Lmg7;->g:J
+    if-ltz p1, :cond_3
 
-    iput-boolean v1, p0, Lmg7;->h:Z
+    if-gt p1, p0, :cond_0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return p0
 
-    iput-object p1, p0, Lmg7;->a:Landroid/media/MediaCodec;
+    :cond_0
+    shr-int/lit8 v0, p0, 0x1
 
-    invoke-static {p2}, Ldvi;->d(I)V
+    add-int/2addr p0, v0
 
-    iput p2, p0, Lmg7;->b:I
+    add-int/lit8 p0, p0, 0x1
 
-    invoke-virtual {p1, p2}, Landroid/media/MediaCodec;->getInputBuffer(I)Ljava/nio/ByteBuffer;
+    if-ge p0, p1, :cond_1
 
-    move-result-object p1
+    add-int/lit8 p1, p1, -0x1
 
-    iput-object p1, p0, Lmg7;->c:Ljava/nio/ByteBuffer;
+    invoke-static {p1}, Ljava/lang/Integer;->highestOneBit(I)I
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+    move-result p0
 
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    shl-int/lit8 p0, p0, 0x1
 
-    new-instance p2, Lqu0;
+    :cond_1
+    if-gez p0, :cond_2
 
-    const/4 v0, 0x5
+    const p0, 0x7fffffff
 
-    invoke-direct {p2, p1, v0}, Lqu0;-><init>(Ljava/util/concurrent/atomic/AtomicReference;I)V
+    :cond_2
+    return p0
 
-    invoke-static {p2}, Lomi;->a(Lhu1;)Lju1;
+    :cond_3
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    move-result-object p2
+    const-string p1, "cannot store more than MAX_VALUE elements"
 
-    iput-object p2, p0, Lmg7;->d:Lju1;
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lgu1;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iput-object p1, p0, Lmg7;->e:Lgu1;
-
-    return-void
+    throw p0
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 9
+.method public a(Ljava/lang/Object;)V
+    .locals 3
 
-    iget-object v1, p0, Lmg7;->e:Lgu1;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v0, p0, Lmg7;->f:Ljava/util/concurrent/atomic/AtomicBoolean;
+    const/4 v0, 0x1
 
-    const/4 v2, 0x1
+    invoke-virtual {p0, v0}, Lmg7;->g(I)V
 
-    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
+    iget-object v0, p0, Lmg7;->c:[Ljava/lang/Object;
 
-    move-result v0
+    iget v1, p0, Lmg7;->b:I
 
-    if-eqz v0, :cond_0
+    add-int/lit8 v2, v1, 0x1
 
-    return-void
+    iput v2, p0, Lmg7;->b:I
 
-    :cond_0
-    :try_start_0
-    iget-object v2, p0, Lmg7;->a:Landroid/media/MediaCodec;
-
-    iget v3, p0, Lmg7;->b:I
-
-    const-wide/16 v6, 0x0
-
-    const/4 v8, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    invoke-virtual/range {v2 .. v8}, Landroid/media/MediaCodec;->queueInputBuffer(IIIJI)V
-
-    const/4 v0, 0x0
-
-    invoke-virtual {v1, v0}, Lgu1;->b(Ljava/lang/Object;)Z
-    :try_end_0
-    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v1, v0}, Lgu1;->d(Ljava/lang/Throwable;)Z
+    aput-object p1, v0, v1
 
     return-void
 .end method
 
-.method public final b()V
-    .locals 10
+.method public varargs b([Ljava/lang/Object;)V
+    .locals 4
 
-    iget-object v1, p0, Lmg7;->e:Lgu1;
+    array-length v0, p1
 
-    iget-object v0, p0, Lmg7;->c:Ljava/nio/ByteBuffer;
+    invoke-static {v0, p1}, Lpyi;->a(I[Ljava/lang/Object;)V
 
-    iget-object v2, p0, Lmg7;->f:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-virtual {p0, v0}, Lmg7;->g(I)V
 
-    const/4 v3, 0x1
+    iget-object v1, p0, Lmg7;->c:[Ljava/lang/Object;
 
-    invoke-virtual {v2, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
+    iget v2, p0, Lmg7;->b:I
 
-    move-result v2
+    const/4 v3, 0x0
 
-    if-eqz v2, :cond_0
+    invoke-static {p1, v3, v1, v2, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget p1, p0, Lmg7;->b:I
+
+    add-int/2addr p1, v0
+
+    iput p1, p0, Lmg7;->b:I
+
+    return-void
+.end method
+
+.method public abstract c(Ljava/lang/Object;)Lmg7;
+.end method
+
+.method public d(Ljava/lang/Iterable;)V
+    .locals 2
+
+    instance-of v0, p1, Ljava/util/Collection;
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p1
+
+    check-cast v0, Ljava/util/Collection;
+
+    invoke-interface {v0}, Ljava/util/Collection;->size()I
+
+    move-result v1
+
+    invoke-virtual {p0, v1}, Lmg7;->g(I)V
+
+    instance-of v1, v0, Lng7;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Lng7;
+
+    iget-object p1, p0, Lmg7;->c:[Ljava/lang/Object;
+
+    iget v1, p0, Lmg7;->b:I
+
+    invoke-virtual {v0, v1, p1}, Lng7;->b(I[Ljava/lang/Object;)I
+
+    move-result p1
+
+    iput p1, p0, Lmg7;->b:I
 
     return-void
 
     :cond_0
-    :try_start_0
-    iget-object v3, p0, Lmg7;->a:Landroid/media/MediaCodec;
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    iget v4, p0, Lmg7;->b:I
+    move-result-object p1
 
-    invoke-virtual {v0}, Ljava/nio/Buffer;->position()I
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v5
-
-    invoke-virtual {v0}, Ljava/nio/Buffer;->limit()I
-
-    move-result v6
-
-    iget-wide v7, p0, Lmg7;->g:J
-
-    iget-boolean v0, p0, Lmg7;->h:Z
+    move-result v0
 
     if-eqz v0, :cond_1
 
-    const/4 v0, 0x4
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    :goto_0
-    move v9, v0
+    move-result-object v0
 
-    goto :goto_1
-
-    :cond_1
-    const/4 v0, 0x0
+    invoke-virtual {p0, v0}, Lmg7;->c(Ljava/lang/Object;)Lmg7;
 
     goto :goto_0
 
-    :goto_1
-    invoke-virtual/range {v3 .. v9}, Landroid/media/MediaCodec;->queueInputBuffer(IIIJI)V
+    :cond_1
+    return-void
+.end method
 
-    const/4 v0, 0x0
+.method public abstract f(Lfl;Ln2g;)V
+.end method
 
-    invoke-virtual {v1, v0}, Lgu1;->b(Ljava/lang/Object;)Z
-    :try_end_0
-    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
+.method public g(I)V
+    .locals 3
 
+    iget-object v0, p0, Lmg7;->c:[Ljava/lang/Object;
+
+    array-length v1, v0
+
+    iget v2, p0, Lmg7;->b:I
+
+    add-int/2addr v2, p1
+
+    invoke-static {v1, v2}, Lmg7;->h(II)I
+
+    move-result p1
+
+    array-length v0, v0
+
+    if-gt p1, v0, :cond_1
+
+    iget-boolean v0, p0, Lmg7;->a:Z
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
     return-void
 
-    :catch_0
-    move-exception v0
+    :cond_1
+    :goto_0
+    iget-object v0, p0, Lmg7;->c:[Ljava/lang/Object;
 
-    invoke-virtual {v1, v0}, Lgu1;->d(Ljava/lang/Throwable;)Z
+    invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lmg7;->c:[Ljava/lang/Object;
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lmg7;->a:Z
 
     return-void
 .end method

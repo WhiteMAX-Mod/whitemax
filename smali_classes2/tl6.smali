@@ -1,49 +1,32 @@
 .class public final Ltl6;
-.super Lxzg;
+.super Lpsb;
 .source "SourceFile"
 
 
-# instance fields
-.field public final X:Lx0f;
-
-.field public final b:Lji6;
-
-.field public final c:Lxe5;
-
-.field public final o:Lxe5;
-
-
-# direct methods
-.method public constructor <init>(Lji6;)V
+# virtual methods
+.method public final j()Lnsb;
     .locals 1
 
-    invoke-direct {p0}, Lxzg;-><init>()V
+    iget-object v0, p0, Lpsb;->b:Lk18;
 
-    iput-object p1, p0, Ltl6;->b:Lji6;
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
-    new-instance p1, Lxe5;
+    move-result-object v0
 
-    const/4 v0, 0x0
+    check-cast v0, Lqsb;
 
-    invoke-direct {p1, v0}, Lxe5;-><init>(I)V
+    invoke-virtual {v0}, Lqsb;->b()Z
 
-    iput-object p1, p0, Ltl6;->c:Lxe5;
+    move-result v0
 
-    new-instance p1, Lxe5;
+    if-eqz v0, :cond_0
 
-    invoke-direct {p1, v0}, Lxe5;-><init>(I)V
+    sget-object v0, Lnsb;->a:Lnsb;
 
-    iput-object p1, p0, Ltl6;->o:Lxe5;
+    return-object v0
 
-    const/4 p1, 0x0
+    :cond_0
+    sget-object v0, Lnsb;->b:Lnsb;
 
-    invoke-static {p1}, Ly0f;->a(Ljava/lang/Object;)Lx0f;
-
-    invoke-static {p1}, Ly0f;->a(Ljava/lang/Object;)Lx0f;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ltl6;->X:Lx0f;
-
-    return-void
+    return-object v0
 .end method

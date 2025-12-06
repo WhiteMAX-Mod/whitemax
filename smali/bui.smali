@@ -1,60 +1,157 @@
-.class public final Lbui;
+.class public abstract Lbui;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ltha;
-
-
-# static fields
-.field public static final a:Lbui;
-
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public static final a(Ljava/lang/AutoCloseable;Ljava/lang/Throwable;)V
+    .locals 4
 
-    new-instance v0, Lbui;
+    if-eqz p0, :cond_9
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    if-nez p1, :cond_8
 
-    sput-object v0, Lbui;->a:Lbui;
+    instance-of p1, p0, Ljava/lang/AutoCloseable;
 
-    new-instance v0, Lr8i;
+    if-eqz p1, :cond_0
 
-    const/4 v1, 0x1
+    invoke-interface {p0}, Ljava/lang/AutoCloseable;->close()V
 
-    invoke-direct {v0, v1}, Lr8i;-><init>(I)V
+    goto :goto_1
 
-    const-class v1, Lm9i;
+    :cond_0
+    instance-of p1, p0, Ljava/util/concurrent/ExecutorService;
 
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+    if-eqz p1, :cond_4
 
-    move-result-object v0
+    check-cast p0, Ljava/util/concurrent/ExecutorService;
 
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    invoke-static {}, Ljava/util/concurrent/ForkJoinPool;->commonPool()Ljava/util/concurrent/ForkJoinPool;
 
     move-result-object p1
 
-    throw p1
+    if-ne p0, p1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-interface {p0}, Ljava/util/concurrent/ExecutorService;->isTerminated()Z
+
+    move-result p1
+
+    if-nez p1, :cond_9
+
+    invoke-interface {p0}, Ljava/util/concurrent/ExecutorService;->shutdown()V
+
+    const/4 v0, 0x0
+
+    :cond_2
+    :goto_0
+    if-nez p1, :cond_3
+
+    :try_start_0
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v2, 0x1
+
+    invoke-interface {p0, v2, v3, v1}, Ljava/util/concurrent/ExecutorService;->awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
+
+    move-result p1
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    if-nez v0, :cond_2
+
+    invoke-interface {p0}, Ljava/util/concurrent/ExecutorService;->shutdownNow()Ljava/util/List;
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    if-eqz v0, :cond_9
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/Thread;->interrupt()V
+
+    goto :goto_1
+
+    :cond_4
+    instance-of p1, p0, Landroid/content/res/TypedArray;
+
+    if-eqz p1, :cond_5
+
+    check-cast p0, Landroid/content/res/TypedArray;
+
+    invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
+
+    goto :goto_1
+
+    :cond_5
+    instance-of p1, p0, Landroid/media/MediaMetadataRetriever;
+
+    if-eqz p1, :cond_6
+
+    check-cast p0, Landroid/media/MediaMetadataRetriever;
+
+    invoke-virtual {p0}, Landroid/media/MediaMetadataRetriever;->release()V
+
+    goto :goto_1
+
+    :cond_6
+    instance-of p1, p0, Landroid/media/MediaDrm;
+
+    if-eqz p1, :cond_7
+
+    check-cast p0, Landroid/media/MediaDrm;
+
+    invoke-virtual {p0}, Landroid/media/MediaDrm;->release()V
+
+    goto :goto_1
+
+    :cond_7
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw p0
+
+    :cond_8
+    :try_start_1
+    invoke-static {p0}, La9h;->n(Ljava/lang/AutoCloseable;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    invoke-static {p1, p0}, Lsaj;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    :cond_9
+    :goto_1
+    return-void
+.end method
+
+.method public static b(FFF)F
+    .locals 1
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    sub-float/2addr v0, p2
+
+    mul-float/2addr v0, p0
+
+    mul-float/2addr p2, p1
+
+    add-float/2addr p2, v0
+
+    return p2
 .end method

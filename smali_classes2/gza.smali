@@ -1,45 +1,109 @@
-.class public final synthetic Lgza;
-.super Ljava/lang/Object;
+.class public final enum Lgza;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/text/InputFilter;
 
+# static fields
+.field public static final synthetic X:[Lgza;
 
-# instance fields
-.field public final synthetic a:Ljza;
+.field public static final enum a:Lgza;
+
+.field public static final enum b:Lgza;
+
+.field public static final enum c:Lgza;
+
+.field public static final enum d:Lgza;
+
+.field public static final enum o:Lgza;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljza;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lgza;
 
-    iput-object p1, p0, Lgza;->a:Ljza;
+    const-string v1, "ACCENT"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lgza;->a:Lgza;
+
+    new-instance v1, Lgza;
+
+    const-string v2, "NEGATIVE"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lgza;->b:Lgza;
+
+    new-instance v2, Lgza;
+
+    const-string v3, "NEUTRAL"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lgza;->c:Lgza;
+
+    new-instance v3, Lgza;
+
+    const-string v4, "NEUTRAL_THEMED"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lgza;->d:Lgza;
+
+    new-instance v4, Lgza;
+
+    const-string v5, "CONTRAST_STATIC"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lgza;->o:Lgza;
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Lgza;
+
+    move-result-object v0
+
+    sput-object v0, Lgza;->X:[Lgza;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lgza;
+    .locals 1
 
-# virtual methods
-.method public final filter(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
-    .locals 0
+    const-class v0, Lgza;
 
-    iget-object p2, p0, Lgza;->a:Ljza;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iget-object p2, p2, Ljza;->o:Lc8d;
+    move-result-object p0
 
-    invoke-virtual {p2, p1}, Lc8d;->a(Ljava/lang/CharSequence;)Z
+    check-cast p0, Lgza;
 
-    move-result p2
+    return-object p0
+.end method
 
-    if-eqz p2, :cond_0
+.method public static values()[Lgza;
+    .locals 1
 
-    return-object p1
+    sget-object v0, Lgza;->X:[Lgza;
 
-    :cond_0
-    const-string p1, ""
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    return-object p1
+    move-result-object v0
+
+    check-cast v0, [Lgza;
+
+    return-object v0
 .end method

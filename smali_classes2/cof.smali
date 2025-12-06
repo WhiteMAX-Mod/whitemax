@@ -4,5 +4,8 @@
 
 
 # virtual methods
-.method public abstract n(Lynf;)V
+.method public abstract cancel()V
+.end method
+
+.method public abstract g(J)V
 .end method

@@ -3,62 +3,85 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcc4;
+.implements Lo94;
 
 
 # instance fields
-.field public final a:Lcc4;
-
-.field public final b:Lyxe;
-
-.field public final c:Lsl0;
-
-.field public d:Z
-
-.field public final e:Li5;
+.field public final a:J
 
 
 # direct methods
-.method public constructor <init>(Lcc4;Lyxe;Lsl0;)V
+.method public constructor <init>(J)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lm94;->a:Lcc4;
-
-    iput-object p2, p0, Lm94;->b:Lyxe;
-
-    iput-object p3, p0, Lm94;->c:Lsl0;
-
-    new-instance p1, Li5;
-
-    const/16 p2, 0xa
-
-    invoke-direct {p1, p2, p0}, Li5;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, p0, Lm94;->e:Li5;
+    iput-wide p1, p0, Lm94;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lfc4;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lm94;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lm94;
+
+    iget-wide v3, p0, Lm94;->a:J
+
+    iget-wide v5, p1, Lm94;->a:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lm94;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
     .locals 4
 
-    new-instance v0, Ln94;
+    const-string v0, "Fail(requestId="
 
-    iget-object v1, p0, Lm94;->a:Lcc4;
+    const-string v1, ")"
 
-    invoke-interface {v1}, Lcc4;->a()Lfc4;
+    iget-wide v2, p0, Lm94;->a:J
 
-    move-result-object v1
+    invoke-static {v2, v3, v0, v1}, La9h;->d(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    iget-object v2, p0, Lm94;->e:Li5;
-
-    iget-object v3, p0, Lm94;->c:Lsl0;
-
-    invoke-direct {v0, v1, v2, v3}, Ln94;-><init>(Lfc4;Li5;Lsl0;)V
+    move-result-object v0
 
     return-object v0
 .end method

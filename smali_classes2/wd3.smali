@@ -1,53 +1,80 @@
 .class public final Lwd3;
-.super Ly14;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:Lod3;
+.field public final synthetic a:I
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final synthetic b:Lpd7;
 
-.field public final synthetic Z:Lce3;
-
-.field public o:Lce3;
-
-.field public q0:I
+.field public final synthetic c:Lld3;
 
 
 # direct methods
-.method public constructor <init>(Lce3;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lzd3;Lpd7;Lld3;I)V
     .locals 0
 
-    iput-object p1, p0, Lwd3;->Z:Lce3;
+    iput p4, p0, Lwd3;->a:I
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lwd3;->b:Lpd7;
+
+    iput-object p3, p0, Lwd3;->c:Lld3;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final run()V
+    .locals 3
 
-    iput-object p1, p0, Lwd3;->Y:Ljava/lang/Object;
+    iget v0, p0, Lwd3;->a:I
 
-    iget p1, p0, Lwd3;->q0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lwd3;->c:Lld3;
 
-    or-int/2addr p1, v0
+    sget-object v1, Lmd3;->a:Lmd3;
 
-    iput p1, p0, Lwd3;->q0:I
+    iget-object v2, p0, Lwd3;->b:Lpd7;
 
-    iget-object p1, p0, Lwd3;->Z:Lce3;
+    invoke-static {v2, v0, v1}, Lzd3;->k(Lpd7;Lld3;Lpd3;)V
 
-    const/4 v0, 0x0
+    return-void
 
-    invoke-static {p1, v0, p0}, Lce3;->a(Lce3;Lod3;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :pswitch_0
+    iget-object v0, p0, Lwd3;->c:Lld3;
 
-    move-result-object p1
+    sget-object v1, Lod3;->a:Lod3;
 
-    return-object p1
+    iget-object v2, p0, Lwd3;->b:Lpd7;
+
+    invoke-static {v2, v0, v1}, Lzd3;->k(Lpd7;Lld3;Lpd3;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lwd3;->c:Lld3;
+
+    sget-object v1, Lod3;->a:Lod3;
+
+    iget-object v2, p0, Lwd3;->b:Lpd7;
+
+    invoke-static {v2, v0, v1}, Lzd3;->k(Lpd7;Lld3;Lpd3;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

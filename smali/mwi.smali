@@ -4,62 +4,38 @@
 
 
 # direct methods
-.method public static final a(Ljava/lang/Exception;Ljava/lang/String;)Ljava/lang/StackTraceElement;
-    .locals 3
+.method public static a(JLtw0;Llzf;)Lsq9;
+    .locals 7
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
+    new-instance v0, Lsq9;
 
-    move-result-object p0
+    const-wide/16 v3, 0x0
 
-    const/4 v0, 0x0
+    move-wide v1, p0
 
-    aget-object p0, p0, v0
+    move-object v5, p2
 
-    new-instance v0, Ljava/lang/StackTraceElement;
+    move-object v6, p3
 
-    const-string v1, "_COROUTINE."
-
-    invoke-virtual {v1, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0}, Ljava/lang/StackTraceElement;->getFileName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0}, Ljava/lang/StackTraceElement;->getLineNumber()I
-
-    move-result p0
-
-    const-string v2, "_"
-
-    invoke-direct {v0, p1, v2, v1, p0}, Ljava/lang/StackTraceElement;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct/range {v0 .. v6}, Lsq9;-><init>(JJLtw0;Llzf;)V
 
     return-object v0
 .end method
 
-.method public static final b(Lzcg;)V
-    .locals 2
+.method public static b(Ljava/lang/String;)V
+    .locals 3
 
-    new-instance v0, Lgpa;
+    new-instance v0, Ljava/io/CharConversionException;
 
-    const/16 v1, 0xf
+    const-string v1, "Unsupported UCS-4 endianness ("
 
-    invoke-direct {v0, v1}, Lgpa;-><init>(I)V
+    const-string v2, ") detected"
 
-    const-class v1, Lxe9;
+    invoke-static {v1, p0, v2}, Lho7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+    move-result-object p0
 
-    new-instance v0, Lgpa;
+    invoke-direct {v0, p0}, Ljava/io/CharConversionException;-><init>(Ljava/lang/String;)V
 
-    const/16 v1, 0x10
-
-    invoke-direct {v0, v1}, Lgpa;-><init>(I)V
-
-    const-class v1, Luyc;
-
-    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
-
-    return-void
+    throw v0
 .end method

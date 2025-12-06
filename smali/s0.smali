@@ -3,11 +3,11 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvv4;
+.implements Lpy4;
 
 
 # static fields
-.field public static final X:Ljava/util/concurrent/FutureTask;
+.field public static final d:Ljava/util/concurrent/FutureTask;
 
 .field public static final o:Ljava/util/concurrent/FutureTask;
 
@@ -26,19 +26,19 @@
 
     new-instance v0, Ljava/util/concurrent/FutureTask;
 
-    sget-object v1, Louf;->b:Lzuh;
+    sget-object v1, Lpdf;->c:Lo6;
 
     const/4 v2, 0x0
 
     invoke-direct {v0, v1, v2}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/lang/Runnable;Ljava/lang/Object;)V
 
-    sput-object v0, Ls0;->o:Ljava/util/concurrent/FutureTask;
+    sput-object v0, Ls0;->d:Ljava/util/concurrent/FutureTask;
 
     new-instance v0, Ljava/util/concurrent/FutureTask;
 
     invoke-direct {v0, v1, v2}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/lang/Runnable;Ljava/lang/Object;)V
 
-    sput-object v0, Ls0;->X:Ljava/util/concurrent/FutureTask;
+    sput-object v0, Ls0;->o:Ljava/util/concurrent/FutureTask;
 
     return-void
 .end method
@@ -67,14 +67,14 @@
 
     check-cast v0, Ljava/util/concurrent/Future;
 
-    sget-object v1, Ls0;->o:Ljava/util/concurrent/FutureTask;
+    sget-object v1, Ls0;->d:Ljava/util/concurrent/FutureTask;
 
     if-ne v0, v1, :cond_1
 
     goto :goto_1
 
     :cond_1
-    sget-object v1, Ls0;->X:Ljava/util/concurrent/FutureTask;
+    sget-object v1, Ls0;->o:Ljava/util/concurrent/FutureTask;
 
     if-ne v0, v1, :cond_3
 
@@ -111,7 +111,7 @@
     return-void
 .end method
 
-.method public final g()V
+.method public final dispose()V
     .locals 3
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -120,11 +120,11 @@
 
     check-cast v0, Ljava/util/concurrent/Future;
 
-    sget-object v1, Ls0;->o:Ljava/util/concurrent/FutureTask;
+    sget-object v1, Ls0;->d:Ljava/util/concurrent/FutureTask;
 
     if-eq v0, v1, :cond_1
 
-    sget-object v1, Ls0;->X:Ljava/util/concurrent/FutureTask;
+    sget-object v1, Ls0;->o:Ljava/util/concurrent/FutureTask;
 
     if-eq v0, v1, :cond_1
 
@@ -159,7 +159,7 @@
     return-void
 .end method
 
-.method public final h()Z
+.method public final e()Z
     .locals 2
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -168,11 +168,11 @@
 
     check-cast v0, Ljava/util/concurrent/Future;
 
-    sget-object v1, Ls0;->o:Ljava/util/concurrent/FutureTask;
+    sget-object v1, Ls0;->d:Ljava/util/concurrent/FutureTask;
 
     if-eq v0, v1, :cond_1
 
-    sget-object v1, Ls0;->X:Ljava/util/concurrent/FutureTask;
+    sget-object v1, Ls0;->o:Ljava/util/concurrent/FutureTask;
 
     if-ne v0, v1, :cond_0
 
@@ -199,7 +199,7 @@
 
     check-cast v0, Ljava/util/concurrent/Future;
 
-    sget-object v1, Ls0;->o:Ljava/util/concurrent/FutureTask;
+    sget-object v1, Ls0;->d:Ljava/util/concurrent/FutureTask;
 
     if-ne v0, v1, :cond_0
 
@@ -208,7 +208,7 @@
     goto :goto_0
 
     :cond_0
-    sget-object v1, Ls0;->X:Ljava/util/concurrent/FutureTask;
+    sget-object v1, Ls0;->o:Ljava/util/concurrent/FutureTask;
 
     if-ne v0, v1, :cond_1
 

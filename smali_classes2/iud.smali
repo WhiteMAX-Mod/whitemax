@@ -1,97 +1,78 @@
-.class public final Liud;
+.class public final synthetic Liud;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljud;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Ltp2;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljud;
+
+.field public final synthetic c:J
 
 
 # direct methods
-.method public constructor <init>(Ltp2;)V
+.method public synthetic constructor <init>(Ljud;JI)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p4, p0, Liud;->a:I
 
-    iput-object p1, p0, Liud;->a:Ltp2;
+    iput-object p1, p0, Liud;->b:Ljud;
+
+    iput-wide p2, p0, Liud;->c:J
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final run()V
+    .locals 5
 
-    const/4 v0, 0x1
+    iget v0, p0, Liud;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    new-instance v0, Liud;
 
-    :cond_0
-    instance-of v1, p1, Liud;
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    iget-object v2, p0, Liud;->b:Ljud;
 
-    if-nez v1, :cond_1
+    iget-wide v3, p0, Liud;->c:J
 
-    return v2
+    invoke-direct {v0, v2, v3, v4, v1}, Liud;-><init>(Ljud;JI)V
 
-    :cond_1
-    check-cast p1, Liud;
+    iget-object v1, v2, Ljud;->f:Landroid/os/Handler;
 
-    iget-object v1, p0, Liud;->a:Ltp2;
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    iget-object p1, p1, Liud;->a:Ltp2;
+    return-void
 
-    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :pswitch_0
+    iget-object v0, p0, Liud;->b:Ljud;
 
-    move-result p1
+    iget-object v1, v0, Ljud;->m:Ljava/util/LinkedList;
 
-    if-nez p1, :cond_2
+    iget-wide v2, p0, Liud;->c:J
 
-    return v2
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    :cond_2
-    return v0
-.end method
+    move-result-object v2
 
-.method public final hashCode()I
-    .locals 1
+    invoke-virtual {v1, v2}, Ljava/util/LinkedList;->offer(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Liud;->a:Ltp2;
+    invoke-virtual {v0}, Ljud;->b()V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    return-void
 
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SearchResult(result="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Liud;->a:Ltp2;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

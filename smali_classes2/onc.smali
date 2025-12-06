@@ -1,48 +1,132 @@
-.class public abstract Lonc;
-.super Ljava/lang/Object;
+.class public final Lonc;
+.super Ldtf;
+.source "SourceFile"
+
+# interfaces
+.implements Lsm6;
 
 
-# static fields
-.field public static oneme_contactlist_action_audio_call:I = 0x7f0a0665
+# instance fields
+.field public final synthetic X:Lpnc;
 
-.field public static oneme_contactlist_action_block:I = 0x7f0a0666
+.field public o:I
 
-.field public static oneme_contactlist_action_delete:I = 0x7f0a0667
 
-.field public static oneme_contactlist_action_open_profile:I = 0x7f0a0668
+# direct methods
+.method public constructor <init>(Lpnc;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static oneme_contactlist_action_select:I = 0x7f0a0669
+    iput-object p1, p0, Lonc;->X:Lpnc;
 
-.field public static oneme_contactlist_action_share_contact:I = 0x7f0a066a
+    const/4 p1, 0x2
 
-.field public static oneme_contactlist_action_suspend_bot:I = 0x7f0a066b
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static oneme_contactlist_action_video_call:I = 0x7f0a066c
+    return-void
+.end method
 
-.field public static oneme_contactlist_action_write:I = 0x7f0a066d
 
-.field public static oneme_contactlist_confirm_block:I = 0x7f0a066e
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static oneme_contactlist_confirm_cancel:I = 0x7f0a066f
+    check-cast p1, Lf84;
 
-.field public static oneme_contactlist_confirm_delete:I = 0x7f0a0670
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static oneme_contactlist_contact_view_type:I = 0x7f0a0671
+    invoke-virtual {p0, p1, p2}, Lonc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static oneme_contactlist_container:I = 0x7f0a0672
+    move-result-object p1
 
-.field public static oneme_contactlist_empty_search_result_view_type:I = 0x7f0a0673
+    check-cast p1, Lonc;
 
-.field public static oneme_contactlist_global_contact_view_type:I = 0x7f0a0674
+    sget-object p2, Lqqg;->a:Lqqg;
 
-.field public static oneme_contactlist_menu_item_add_contact:I = 0x7f0a0675
+    invoke-virtual {p1, p2}, Lonc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static oneme_contactlist_menu_item_create_chat:I = 0x7f0a0676
+    move-result-object p1
 
-.field public static oneme_contactlist_menu_item_invite:I = 0x7f0a0677
+    return-object p1
+.end method
 
-.field public static oneme_contactlist_phonebook_contact_view_type:I = 0x7f0a0678
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-.field public static oneme_contactlist_rv:I = 0x7f0a0679
+    new-instance p1, Lonc;
 
-.field public static oneme_contactlist_toolbar:I = 0x7f0a067a
+    iget-object v0, p0, Lonc;->X:Lpnc;
+
+    invoke-direct {p1, v0, p2}, Lonc;-><init>(Lpnc;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Lonc;->o:I
+
+    iget-object v1, p0, Lonc;->X:Lpnc;
+
+    const/4 v2, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v2, :cond_0
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, v1, Lpnc;->T0:Lyac;
+
+    iput v2, p0, Lonc;->o:I
+
+    invoke-virtual {p1, p0}, Lyac;->C(Lonc;)Lqqg;
+
+    move-result-object p1
+
+    sget-object v0, Lg84;->a:Lg84;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    iget-object p1, v1, Lpnc;->E0:Lci5;
+
+    new-instance v0, Lkmc;
+
+    sget v1, Lyud;->o:I
+
+    new-instance v2, Ljava/lang/Integer;
+
+    invoke-direct {v2, v1}, Ljava/lang/Integer;-><init>(I)V
+
+    sget v1, Lx8b;->I0:I
+
+    new-instance v3, Ln5g;
+
+    invoke-direct {v3, v1}, Ln5g;-><init>(I)V
+
+    invoke-direct {v0, v3, v2}, Lkmc;-><init>(Ls5g;Ljava/lang/Integer;)V
+
+    invoke-static {p1, v0}, Lxfh;->r(Lci5;Ljava/lang/Object;)V
+
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
+.end method

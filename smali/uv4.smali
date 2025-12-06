@@ -4,40 +4,32 @@
 
 
 # instance fields
-.field public final a:Lev1;
-
-.field public final b:Liu7;
-
-.field public final c:Liu7;
-
-.field public final d:Lwif;
-
-.field public e:Lcye;
+.field public final a:Z
 
 
 # direct methods
-.method public constructor <init>(Liu7;Lev1;Liu7;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Luv4;->a:Lev1;
+    sget-object v0, Lt1b;->a:Lt1b;
 
-    iput-object p1, p0, Luv4;->b:Liu7;
+    invoke-virtual {v0}, Lt1b;->c()Leza;
 
-    iput-object p3, p0, Luv4;->c:Liu7;
+    move-result-object v1
 
-    new-instance p1, Lbq3;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/16 p2, 0x16
+    const/4 v1, 0x1
 
-    invoke-direct {p1, p2}, Lbq3;-><init>(I)V
+    iput-boolean v1, p0, Luv4;->a:Z
 
-    new-instance p2, Lwif;
+    invoke-virtual {v0}, Lt1b;->c()Leza;
 
-    invoke-direct {p2, p1}, Lwif;-><init>(Lji6;)V
+    move-result-object v0
 
-    iput-object p2, p0, Luv4;->d:Lwif;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     return-void
 .end method

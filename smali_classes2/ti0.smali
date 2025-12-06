@@ -1,439 +1,128 @@
-.class public abstract Lti0;
-.super Lnji;
+.class public final Lti0;
+.super Ldtf;
 .source "SourceFile"
 
+# interfaces
+.implements Lsm6;
 
-# static fields
-.field public static final a:[I
 
-.field public static final b:[B
+# instance fields
+.field public final synthetic X:Lui0;
 
-.field public static final c:[B
+.field public final synthetic Y:Lrj0;
+
+.field public o:I
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lui0;Lrj0;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/16 v0, 0x100
+    iput-object p1, p0, Lti0;->X:Lui0;
 
-    new-array v0, v0, [I
+    iput-object p2, p0, Lti0;->Y:Lrj0;
 
-    fill-array-data v0, :array_0
+    const/4 p1, 0x2
 
-    sput-object v0, Lti0;->a:[I
-
-    const/16 v0, 0x40
-
-    new-array v0, v0, [B
-
-    fill-array-data v0, :array_1
-
-    sput-object v0, Lti0;->b:[B
-
-    const/16 v0, 0x40
-
-    new-array v0, v0, [B
-
-    fill-array-data v0, :array_2
-
-    sput-object v0, Lti0;->c:[B
+    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
 
-    :array_0
-    .array-data 4
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        0x3e
-        -0x1
-        -0x1
-        0x34
-        0x35
-        0x36
-        0x37
-        0x38
-        0x39
-        0x3a
-        0x3b
-        0x3c
-        0x3d
-        -0x1
-        -0x1
-        -0x1
-        -0x2
-        -0x1
-        -0x1
-        -0x1
-        0x0
-        0x1
-        0x2
-        0x3
-        0x4
-        0x5
-        0x6
-        0x7
-        0x8
-        0x9
-        0xa
-        0xb
-        0xc
-        0xd
-        0xe
-        0xf
-        0x10
-        0x11
-        0x12
-        0x13
-        0x14
-        0x15
-        0x16
-        0x17
-        0x18
-        0x19
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        0x3f
-        -0x1
-        0x1a
-        0x1b
-        0x1c
-        0x1d
-        0x1e
-        0x1f
-        0x20
-        0x21
-        0x22
-        0x23
-        0x24
-        0x25
-        0x26
-        0x27
-        0x28
-        0x29
-        0x2a
-        0x2b
-        0x2c
-        0x2d
-        0x2e
-        0x2f
-        0x30
-        0x31
-        0x32
-        0x33
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-    .end array-data
 
-    :array_1
-    .array-data 1
-        0x41t
-        0x42t
-        0x43t
-        0x44t
-        0x45t
-        0x46t
-        0x47t
-        0x48t
-        0x49t
-        0x4at
-        0x4bt
-        0x4ct
-        0x4dt
-        0x4et
-        0x4ft
-        0x50t
-        0x51t
-        0x52t
-        0x53t
-        0x54t
-        0x55t
-        0x56t
-        0x57t
-        0x58t
-        0x59t
-        0x5at
-        0x61t
-        0x62t
-        0x63t
-        0x64t
-        0x65t
-        0x66t
-        0x67t
-        0x68t
-        0x69t
-        0x6at
-        0x6bt
-        0x6ct
-        0x6dt
-        0x6et
-        0x6ft
-        0x70t
-        0x71t
-        0x72t
-        0x73t
-        0x74t
-        0x75t
-        0x76t
-        0x77t
-        0x78t
-        0x79t
-        0x7at
-        0x30t
-        0x31t
-        0x32t
-        0x33t
-        0x34t
-        0x35t
-        0x36t
-        0x37t
-        0x38t
-        0x39t
-        0x2bt
-        0x2ft
-    .end array-data
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    :array_2
-    .array-data 1
-        0x41t
-        0x42t
-        0x43t
-        0x44t
-        0x45t
-        0x46t
-        0x47t
-        0x48t
-        0x49t
-        0x4at
-        0x4bt
-        0x4ct
-        0x4dt
-        0x4et
-        0x4ft
-        0x50t
-        0x51t
-        0x52t
-        0x53t
-        0x54t
-        0x55t
-        0x56t
-        0x57t
-        0x58t
-        0x59t
-        0x5at
-        0x61t
-        0x62t
-        0x63t
-        0x64t
-        0x65t
-        0x66t
-        0x67t
-        0x68t
-        0x69t
-        0x6at
-        0x6bt
-        0x6ct
-        0x6dt
-        0x6et
-        0x6ft
-        0x70t
-        0x71t
-        0x72t
-        0x73t
-        0x74t
-        0x75t
-        0x76t
-        0x77t
-        0x78t
-        0x79t
-        0x7at
-        0x30t
-        0x31t
-        0x32t
-        0x33t
-        0x34t
-        0x35t
-        0x36t
-        0x37t
-        0x38t
-        0x39t
-        0x2dt
-        0x5ft
-    .end array-data
+    check-cast p1, Lf84;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lti0;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lti0;
+
+    sget-object p2, Lqqg;->a:Lqqg;
+
+    invoke-virtual {p1, p2}, Lti0;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Lti0;
+
+    iget-object v0, p0, Lti0;->X:Lui0;
+
+    iget-object v1, p0, Lti0;->Y:Lrj0;
+
+    invoke-direct {p1, v0, v1, p2}, Lti0;-><init>(Lui0;Lrj0;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    iget v0, p0, Lti0;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lti0;->X:Lui0;
+
+    iget-object p1, p1, Lui0;->a:Ljve;
+
+    new-instance v0, Lsi0;
+
+    iget-object v2, p0, Lti0;->Y:Lrj0;
+
+    iget-wide v3, v2, Lsj0;->a:J
+
+    iget-object v2, v2, Lrj0;->b:Lpzf;
+
+    invoke-direct {v0, v3, v4, v2}, Lsi0;-><init>(JLpzf;)V
+
+    iput v1, p0, Lti0;->o:I
+
+    invoke-virtual {p1, v0, p0}, Ljve;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lg84;->a:Lg84;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

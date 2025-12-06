@@ -1,94 +1,118 @@
 .class public final Lebb;
-.super Lpk0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
-.field public final synthetic c:I
+.field public final synthetic a:I
 
-.field public d:Ljava/lang/Object;
+.field public final synthetic b:Lfbb;
 
 
 # direct methods
-.method public synthetic constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(Lfbb;I)V
+    .locals 0
 
-    .line 1
-    const/4 v0, 0x1
+    iput p2, p0, Lebb;->a:I
 
-    iput v0, p0, Lebb;->c:I
+    iput-object p1, p0, Lebb;->b:Lfbb;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/net/Uri;)V
-    .locals 1
+.method private final a(Landroid/animation/Animator;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    return-void
+.end method
 
-    iput v0, p0, Lebb;->c:I
+.method private final b(Landroid/animation/Animator;)V
+    .locals 0
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    return-void
+.end method
 
-    .line 3
-    iput-object p1, p0, Lebb;->d:Ljava/lang/Object;
+.method private final c(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final d(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final e(Landroid/animation/Animator;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Lmy0;
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
+
+    iget p1, p0, Lebb;->a:I
+
+    return-void
+.end method
+
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    iget v0, p0, Lebb;->c:I
+    iget p1, p0, Lebb;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    packed-switch p1, :pswitch_data_0
 
-    iget-object v0, p0, Lebb;->d:Ljava/lang/Object;
+    iget-object p1, p0, Lebb;->b:Lfbb;
 
-    check-cast v0, Lcpe;
+    iget-object v0, p1, Lfbb;->B0:Ljava/lang/Object;
 
-    if-nez v0, :cond_0
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
-    new-instance v0, Lcpe;
+    move-result-object v0
 
-    const-string v1, "RoundAsCirclePostprocessor#AntiAliased"
+    check-cast v0, Lw3b;
 
-    invoke-direct {v0, v1}, Lcpe;-><init>(Ljava/lang/String;)V
+    iget-object v1, p1, Lfbb;->o:Ljava/lang/String;
 
-    iput-object v0, p0, Lebb;->d:Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setHint(Ljava/lang/CharSequence;)V
+
+    sget-object v0, Ldbb;->c:Ldbb;
+
+    iput-object v0, p1, Lfbb;->z0:Ldbb;
+
+    iget-object p1, p1, Lfbb;->t0:Lcbb;
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {p1}, Lcbb;->m()V
 
     :cond_0
-    iget-object v0, p0, Lebb;->d:Ljava/lang/Object;
-
-    check-cast v0, Lcpe;
-
-    return-object v0
+    return-void
 
     :pswitch_0
-    new-instance v0, Lcpe;
+    iget-object p1, p0, Lebb;->b:Lfbb;
 
-    iget-object v1, p0, Lebb;->d:Ljava/lang/Object;
+    iget-object p1, p1, Lfbb;->B0:Ljava/lang/Object;
 
-    check-cast v1, Landroid/net/Uri;
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v1}, Landroid/net/Uri;->hashCode()I
+    move-result-object p1
 
-    move-result v1
+    check-cast p1, Landroid/view/View;
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    invoke-static {p1}, Lapi;->f(Landroid/view/View;)V
 
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lcpe;-><init>(Ljava/lang/String;)V
-
-    return-object v0
-
-    nop
+    return-void
 
     :pswitch_data_0
     .packed-switch 0x0
@@ -96,60 +120,122 @@
     .end packed-switch
 .end method
 
-.method public final c(Landroid/graphics/Bitmap;)V
-    .locals 3
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
 
-    iget v0, p0, Lebb;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    const/4 v0, 0x1
-
-    invoke-static {p1, v0}, Lcom/facebook/imagepipeline/nativecode/NativeRoundingFilter;->toCircleFast(Landroid/graphics/Bitmap;Z)V
+    iget p1, p0, Lebb;->a:I
 
     return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lebb;->d:Ljava/lang/Object;
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 5
 
-    check-cast v0, Landroid/net/Uri;
+    iget p1, p0, Lebb;->a:I
 
-    invoke-static {v0}, Lm0i;->c(Landroid/net/Uri;)Landroid/graphics/Bitmap;
+    packed-switch p1, :pswitch_data_0
 
-    move-result-object v0
+    iget-object p1, p0, Lebb;->b:Lfbb;
 
-    if-eqz v0, :cond_0
+    iget-object v0, p1, Lfbb;->B0:Ljava/lang/Object;
 
-    new-instance v1, Landroid/graphics/Canvas;
+    iget-object v1, p1, Lfbb;->D0:Ljava/lang/Object;
 
-    invoke-direct {v1, p1}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
-
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result p1
-
-    int-to-float p1, p1
-
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
+    invoke-interface {v1}, Lk18;->e()Z
 
     move-result v2
 
-    int-to-float v2, v2
+    const/16 v3, 0x8
 
-    div-float/2addr p1, v2
+    if-eqz v2, :cond_0
 
-    invoke-virtual {v1, p1, p1}, Landroid/graphics/Canvas;->scale(FF)V
+    invoke-interface {v1}, Lk18;->getValue()Ljava/lang/Object;
 
-    const/4 p1, 0x0
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/ImageView;
+
+    invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_0
+    iget-object v1, p1, Lfbb;->C0:Ljava/lang/Object;
+
+    invoke-interface {v1}, Lk18;->e()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {v1}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/appcompat/widget/AppCompatImageView;
+
+    invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_1
+    iget-object v1, p1, Lfbb;->A0:Ljava/lang/Object;
+
+    invoke-interface {v1}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/View;
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v0, v2, v2, p1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
+    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    :cond_0
+    iget-object v1, p1, Lfbb;->E0:Ljava/lang/Object;
+
+    invoke-interface {v1}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/View;
+
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lw3b;
+
+    invoke-virtual {v4}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_3
+
+    invoke-interface {v4}, Ljava/lang/CharSequence;->length()I
+
+    move-result v4
+
+    if-nez v4, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    move v3, v2
+
+    :cond_3
+    :goto_0
+    invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
+
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/View;
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+
+    sget-object v0, Ldbb;->d:Ldbb;
+
+    iput-object v0, p1, Lfbb;->z0:Ldbb;
+
+    :pswitch_0
     return-void
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x0

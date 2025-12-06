@@ -1,139 +1,88 @@
-.class public abstract Lcra;
-.super Ljava/lang/Object;
+.class public final Lcra;
+.super Le2f;
 .source "SourceFile"
 
+# interfaces
+.implements Lon6;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final a:Lvr8;
 
-.field public static final c:I
+.field public final b:Lkn6;
 
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
+.field public final c:Lycd;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lvr8;Lkn6;Lycd;)V
+    .locals 0
 
-    sget v0, Ldsc;->call_history_call_create_banner_permission_denied_subtitle:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lcra;->a:I
+    iput-object p1, p0, Lcra;->a:Lvr8;
 
-    sget v0, Ldsc;->call_history_call_create_banner_permission_denied_title:I
+    iput-object p2, p0, Lcra;->b:Lkn6;
 
-    sput v0, Lcra;->b:I
+    iput-object p3, p0, Lcra;->c:Lycd;
 
-    sget v0, Ldsc;->call_history_call_create_banner_subtitle:I
+    return-void
+.end method
 
-    sput v0, Lcra;->c:I
 
-    sget v0, Ldsc;->call_history_call_create_banner_title:I
+# virtual methods
+.method public final b()Lvqa;
+    .locals 5
 
-    sput v0, Lcra;->d:I
+    new-instance v0, Lbra;
 
-    sget v0, Ldsc;->call_history_info_copy_link:I
+    iget-object v1, p0, Lcra;->c:Lycd;
 
-    sput v0, Lcra;->e:I
+    const/4 v2, 0x0
 
-    sget v0, Ldsc;->call_history_info_create_failed:I
+    iget-object v3, p0, Lcra;->a:Lvr8;
 
-    sput v0, Lcra;->f:I
+    iget-object v4, p0, Lcra;->b:Lkn6;
 
-    sget v0, Ldsc;->call_history_info_creating:I
+    invoke-direct {v0, v3, v4, v1, v2}, Lbra;-><init>(Lvqa;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    sput v0, Lcra;->g:I
+    return-object v0
+.end method
 
-    sget v0, Ldsc;->call_history_info_join_call:I
+.method public final l(Lv2f;)V
+    .locals 4
 
-    sput v0, Lcra;->h:I
+    :try_start_0
+    iget-object v0, p0, Lcra;->b:Lkn6;
 
-    sget v0, Ldsc;->call_history_info_open_call_chat_title:I
+    iget-object v0, v0, Lkn6;->a:Ljava/lang/Object;
 
-    sput v0, Lcra;->i:I
+    const-string v1, "The initialSupplier returned a null value"
 
-    sget v0, Ldsc;->call_history_info_share:I
+    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    sput v0, Lcra;->j:I
+    new-instance v1, Lara;
 
-    sget v0, Ldsc;->call_history_info_start_call:I
+    iget-object v2, p0, Lcra;->c:Lycd;
 
-    sput v0, Lcra;->k:I
+    const/4 v3, 0x1
 
-    sget v0, Ldsc;->call_history_info_title:I
+    invoke-direct {v1, p1, v0, v2, v3}, Lara;-><init>(Ljava/lang/Object;Ljava/lang/Object;Lycd;I)V
 
-    sput v0, Lcra;->l:I
+    iget-object p1, p0, Lcra;->a:Lvr8;
 
-    sget v0, Ldsc;->call_history_info_try_load_link_again:I
+    invoke-virtual {p1, v1}, Lvqa;->a(Lvta;)V
 
-    sput v0, Lcra;->m:I
+    return-void
 
-    sget v0, Ldsc;->call_history_item_call_count_no_users:I
+    :catchall_0
+    move-exception v0
 
-    sput v0, Lcra;->n:I
+    invoke-static {v0}, Lraj;->c(Ljava/lang/Throwable;)V
 
-    sget v0, Ldsc;->call_history_item_call_link_call_description:I
-
-    sput v0, Lcra;->o:I
-
-    sget v0, Ldsc;->call_history_link_action_error:I
-
-    sput v0, Lcra;->p:I
-
-    sget v0, Ldsc;->call_history_link_coped:I
-
-    sput v0, Lcra;->q:I
-
-    sget v0, Ldsc;->call_history_link_send_title:I
-
-    sput v0, Lcra;->r:I
-
-    sget v0, Ldsc;->call_presettings_call_save_changes:I
-
-    sput v0, Lcra;->s:I
-
-    sget v0, Ldsc;->call_presettings_change_call_name_empty_error:I
-
-    sput v0, Lcra;->t:I
-
-    sget v0, Ldsc;->call_presettings_change_call_name_title:I
-
-    sput v0, Lcra;->u:I
+    invoke-static {v0, p1}, Lcd5;->d(Ljava/lang/Throwable;Lv2f;)V
 
     return-void
 .end method

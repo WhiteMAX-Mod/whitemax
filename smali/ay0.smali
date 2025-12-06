@@ -1,259 +1,67 @@
-.class public final Lay0;
+.class public abstract Lay0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic n:I
+.field public static final a:Ljava/util/UUID;
 
+.field public static final b:Ljava/util/UUID;
 
-# instance fields
-.field public final a:Z
+.field public static final c:Ljava/util/UUID;
 
-.field public final b:Z
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:Z
-
-.field public final f:Z
-
-.field public final g:Z
-
-.field public final h:I
-
-.field public final i:I
-
-.field public final j:Z
-
-.field public final k:Z
-
-.field public final l:Z
-
-.field public m:Ljava/lang/String;
+.field public static final d:Ljava/util/UUID;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
-
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    const v1, 0x7fffffff
-
-    int-to-long v1, v1
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toSeconds(J)J
-
-    return-void
-.end method
-
-.method public constructor <init>(ZZIIZZZIIZZZLjava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-boolean p1, p0, Lay0;->a:Z
-
-    iput-boolean p2, p0, Lay0;->b:Z
-
-    iput p3, p0, Lay0;->c:I
-
-    iput p4, p0, Lay0;->d:I
-
-    iput-boolean p5, p0, Lay0;->e:Z
-
-    iput-boolean p6, p0, Lay0;->f:Z
-
-    iput-boolean p7, p0, Lay0;->g:Z
-
-    iput p8, p0, Lay0;->h:I
-
-    iput p9, p0, Lay0;->i:I
-
-    iput-boolean p10, p0, Lay0;->j:Z
-
-    iput-boolean p11, p0, Lay0;->k:Z
-
-    iput-boolean p12, p0, Lay0;->l:Z
-
-    iput-object p13, p0, Lay0;->m:Ljava/lang/String;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final toString()Ljava/lang/String;
     .locals 5
 
-    iget-object v0, p0, Lay0;->m:Ljava/lang/String;
+    new-instance v0, Ljava/util/UUID;
 
-    if-nez v0, :cond_d
+    const-wide/16 v1, 0x0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1, v2, v1, v2}, Ljava/util/UUID;-><init>(JJ)V
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    sput-object v0, Lay0;->a:Ljava/util/UUID;
 
-    iget-boolean v1, p0, Lay0;->a:Z
+    new-instance v0, Ljava/util/UUID;
 
-    if-eqz v1, :cond_0
+    const-wide v1, 0x1077efecc0b24d02L
 
-    const-string v1, "no-cache, "
+    const-wide v3, -0x531cc3e1ad1d04b5L    # -1.8442503140481377E-92
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1, v2, v3, v4}, Ljava/util/UUID;-><init>(JJ)V
 
-    :cond_0
-    iget-boolean v1, p0, Lay0;->b:Z
+    sput-object v0, Lay0;->b:Ljava/util/UUID;
 
-    if-eqz v1, :cond_1
+    new-instance v0, Ljava/util/UUID;
 
-    const-string v1, "no-store, "
+    const-wide v1, -0x1d8e62a7567a4c37L    # -1.6229728350858627E166
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-wide v3, 0x781ab030af78d30eL    # 3.524813189889319E270
 
-    :cond_1
-    iget v1, p0, Lay0;->c:I
+    invoke-direct {v0, v1, v2, v3, v4}, Ljava/util/UUID;-><init>(JJ)V
 
-    const-string v2, ", "
+    new-instance v0, Ljava/util/UUID;
 
-    const/4 v3, -0x1
+    const-wide v1, -0x121074568629b532L    # -3.563403477674908E221
 
-    if-eq v1, v3, :cond_2
+    const-wide v3, -0x5c37d8232ae2de13L
 
-    const-string v4, "max-age="
+    invoke-direct {v0, v1, v2, v3, v4}, Ljava/util/UUID;-><init>(JJ)V
 
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sput-object v0, Lay0;->c:Ljava/util/UUID;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/util/UUID;
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-wide v1, -0x65fb0f8667bfbd7aL
 
-    :cond_2
-    iget v1, p0, Lay0;->d:I
+    const-wide v3, -0x546d19a41f77a06bL    # -8.640911267670052E-99
 
-    if-eq v1, v3, :cond_3
+    invoke-direct {v0, v1, v2, v3, v4}, Ljava/util/UUID;-><init>(JJ)V
 
-    const-string v4, "s-maxage="
+    sput-object v0, Lay0;->d:Ljava/util/UUID;
 
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_3
-    iget-boolean v1, p0, Lay0;->e:Z
-
-    if-eqz v1, :cond_4
-
-    const-string v1, "private, "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_4
-    iget-boolean v1, p0, Lay0;->f:Z
-
-    if-eqz v1, :cond_5
-
-    const-string v1, "public, "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_5
-    iget-boolean v1, p0, Lay0;->g:Z
-
-    if-eqz v1, :cond_6
-
-    const-string v1, "must-revalidate, "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_6
-    iget v1, p0, Lay0;->h:I
-
-    if-eq v1, v3, :cond_7
-
-    const-string v4, "max-stale="
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_7
-    iget v1, p0, Lay0;->i:I
-
-    if-eq v1, v3, :cond_8
-
-    const-string v3, "min-fresh="
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_8
-    iget-boolean v1, p0, Lay0;->j:Z
-
-    if-eqz v1, :cond_9
-
-    const-string v1, "only-if-cached, "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_9
-    iget-boolean v1, p0, Lay0;->k:Z
-
-    if-eqz v1, :cond_a
-
-    const-string v1, "no-transform, "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_a
-    iget-boolean v1, p0, Lay0;->l:Z
-
-    if-eqz v1, :cond_b
-
-    const-string v1, "immutable, "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_b
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
-
-    move-result v1
-
-    if-nez v1, :cond_c
-
-    const-string v0, ""
-
-    return-object v0
-
-    :cond_c
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
-
-    move-result v1
-
-    add-int/lit8 v1, v1, -0x2
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
-
-    move-result v2
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lay0;->m:Ljava/lang/String;
-
-    :cond_d
-    return-object v0
+    return-void
 .end method

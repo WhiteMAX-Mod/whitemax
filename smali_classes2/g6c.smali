@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lji6;
+.implements Lcm6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lqjh;
+.field public final synthetic b:Lo6c;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lqjh;I)V
+.method public synthetic constructor <init>(Lo6c;I)V
     .locals 0
 
     iput p2, p0, Lg6c;->a:I
 
-    iput-object p1, p0, Lg6c;->b:Lqjh;
+    iput-object p1, p0, Lg6c;->b:Lo6c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -34,83 +34,57 @@
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lg6c;->b:Lqjh;
+    iget-object v0, p0, Lg6c;->b:Lo6c;
 
-    iget-object v0, v0, Lqjh;->Y:Ljava/lang/Object;
+    iget-object v0, v0, Lo6c;->a:Li6c;
 
-    check-cast v0, Lone/me/profileedit/ProfileEditScreen;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->D0()Lu6c;
+    invoke-virtual {v0}, Li6c;->k()V
 
-    move-result-object v0
-
-    iget-object v0, v0, Lu6c;->b:Lc65;
-
-    const/16 v1, 0x200
-
-    invoke-virtual {v0, v1}, Lc65;->a(I)V
-
-    :goto_0
-    sget-object v0, Lccg;->a:Lccg;
+    :cond_0
+    sget-object v0, Lqqg;->a:Lqqg;
 
     return-object v0
 
     :pswitch_0
-    iget-object v0, p0, Lg6c;->b:Lqjh;
+    new-instance v0, Lf6c;
 
-    iget-object v0, v0, Lqjh;->Y:Ljava/lang/Object;
+    iget-object v1, p0, Lg6c;->b:Lo6c;
 
-    check-cast v0, Lone/me/profileedit/ProfileEditScreen;
+    iget-object v1, v1, Lo6c;->a:Li6c;
 
-    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->D0()Lu6c;
+    invoke-direct {v0, v1}, Lf6c;-><init>(Li6c;)V
 
-    move-result-object v0
-
-    iget-object v0, v0, Lu6c;->b:Lc65;
-
-    const/16 v1, 0x100
-
-    invoke-virtual {v0, v1}, Lc65;->a(I)V
-
-    goto :goto_0
+    return-object v0
 
     :pswitch_1
-    iget-object v0, p0, Lg6c;->b:Lqjh;
+    iget-object v0, p0, Lg6c;->b:Lo6c;
 
-    iget-object v0, v0, Lqjh;->Y:Ljava/lang/Object;
+    iget-object v0, v0, Lo6c;->a:Li6c;
 
-    check-cast v0, Lone/me/profileedit/ProfileEditScreen;
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->D0()Lu6c;
+    invoke-virtual {v0}, Li6c;->h()V
 
-    move-result-object v0
+    :cond_1
+    sget-object v0, Lqqg;->a:Lqqg;
 
-    iget-object v0, v0, Lu6c;->b:Lc65;
-
-    const/16 v1, 0x80
-
-    invoke-virtual {v0, v1}, Lc65;->a(I)V
-
-    goto :goto_0
+    return-object v0
 
     :pswitch_2
-    iget-object v0, p0, Lg6c;->b:Lqjh;
+    iget-object v0, p0, Lg6c;->b:Lo6c;
 
-    iget-object v0, v0, Lqjh;->Y:Ljava/lang/Object;
+    iget-object v0, v0, Lo6c;->a:Li6c;
 
-    check-cast v0, Lone/me/profileedit/ProfileEditScreen;
+    if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->D0()Lu6c;
+    invoke-virtual {v0}, Li6c;->k()V
 
-    move-result-object v0
+    :cond_2
+    sget-object v0, Lqqg;->a:Lqqg;
 
-    iget-object v0, v0, Lu6c;->b:Lc65;
-
-    const/16 v1, 0x40
-
-    invoke-virtual {v0, v1}, Lc65;->a(I)V
-
-    goto :goto_0
+    return-object v0
 
     nop
 

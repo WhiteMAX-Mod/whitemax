@@ -1,100 +1,174 @@
 .class public final Luj1;
-.super Lsgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Lt98;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Ls5g;
 
-.field public final synthetic Y:Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
+.field public final b:Ls5g;
+
+.field public final c:I
+
+.field public final d:J
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;)V
+.method public constructor <init>(Ln5g;Lr5g;)V
     .locals 0
 
-    iput-object p2, p0, Luj1;->Y:Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Luj1;->a:Ls5g;
 
-    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Luj1;->b:Ls5g;
+
+    sget p1, Lyza;->v:I
+
+    iput p1, p0, Luj1;->c:I
+
+    const-wide p1, 0x7fffffffffffffffL
+
+    iput-wide p1, p0, Luj1;->d:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Luj1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    goto :goto_1
 
-    move-result-object p1
+    :cond_0
+    instance-of v0, p1, Luj1;
 
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
     check-cast p1, Luj1;
 
-    sget-object p2, Lccg;->a:Lccg;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p1, p2}, Luj1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, p0, Luj1;->a:Ls5g;
 
-    return-object p2
+    iget-object p1, p1, Luj1;->a:Ls5g;
+
+    invoke-static {v0, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final getItemId()J
     .locals 2
 
-    new-instance v0, Luj1;
+    iget-wide v0, p0, Luj1;->d:J
 
-    iget-object v1, p0, Luj1;->Y:Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
-
-    invoke-direct {v0, p2, v1}, Luj1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;)V
-
-    iput-object p1, v0, Luj1;->X:Ljava/lang/Object;
-
-    return-object v0
+    return-wide v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final hashCode()I
+    .locals 3
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    const/4 v0, 0x4
 
-    iget-object p1, p0, Luj1;->X:Ljava/lang/Object;
+    invoke-static {v0}, Laz1;->v(I)I
 
-    check-cast p1, Ltrf;
+    move-result v0
 
-    iget-object v0, p0, Luj1;->Y:Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
+    const/16 v1, 0x1f
 
-    iget-object v1, v0, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;->G0:Lh0d;
+    mul-int/2addr v0, v1
 
-    sget-object v2, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;->K0:[Ltr7;
+    const/4 v2, 0x0
 
-    const/4 v3, 0x4
+    invoke-static {v2, v0, v1}, Lxrf;->k(III)I
 
-    aget-object v2, v2, v3
+    move-result v0
 
-    invoke-interface {v1, v0, v2}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
+    iget-object v1, p0, Luj1;->a:Ls5g;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    :cond_0
+    add-int/2addr v0, v2
+
+    return v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    iget v0, p0, Luj1;->c:I
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "CallPresettingsChangeNameItem(sectionItemType="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const/4 v1, 0x4
+
+    invoke-static {v1}, Lctd;->v(I)Ljava/lang/String;
 
     move-result-object v1
 
-    check-cast v1, Landroid/widget/TextView;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    const-string v1, ", itemSection=0, errorMessage="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Luj1;->a:Ls5g;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", text="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Luj1;->b:Ls5g;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Ltrf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    invoke-virtual {v1, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
+    return-object v0
 .end method

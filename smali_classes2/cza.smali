@@ -1,73 +1,163 @@
-.class public final enum Lcza;
-.super Ljava/lang/Enum;
+.class public final synthetic Lcza;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcm6;
 
-# static fields
-.field public static final enum a:Lcza;
 
-.field public static final enum b:Lcza;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final synthetic c:[Lcza;
+.field public final synthetic b:Ldza;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Ldza;I)V
+    .locals 0
 
-    new-instance v0, Lcza;
+    iput p2, p0, Lcza;->a:I
 
-    const-string v1, "FILED"
+    iput-object p1, p0, Lcza;->b:Ldza;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcza;->a:Lcza;
-
-    new-instance v1, Lcza;
-
-    const-string v2, "PLAIN"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lcza;->b:Lcza;
-
-    filled-new-array {v0, v1}, [Lcza;
-
-    move-result-object v0
-
-    sput-object v0, Lcza;->c:[Lcza;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lcza;
-    .locals 1
 
-    const-class v0, Lcza;
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Lcza;->a:I
 
-    move-result-object p0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p0, Lcza;
+    iget-object v0, p0, Lcza;->b:Ldza;
 
-    return-object p0
-.end method
+    iget-object v0, v0, Ldza;->a:Landroid/content/Context;
 
-.method public static values()[Lcza;
-    .locals 1
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    sget-object v0, Lcza;->c:[Lcza;
+    move-result-object v1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v2, v1, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    int-to-float v2, v2
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    div-float/2addr v2, v1
+
+    const/high16 v1, 0x44480000    # 800.0f
+
+    cmpl-float v1, v2, v1
+
+    if-lez v1, :cond_0
+
+    invoke-static {v0}, Li9j;->a(Landroid/content/Context;)Landroid/util/Size;
 
     move-result-object v0
 
-    check-cast v0, [Lcza;
+    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
+
+    move-result v0
+
+    const/16 v1, 0x64
+
+    int-to-float v1, v1
+
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    invoke-static {v1, v2, v0}, Lu45;->q(FFI)I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_0
+    const/high16 v0, 0x43b40000    # 360.0f
+
+    cmpl-float v0, v2, v0
+
+    if-lez v0, :cond_1
+
+    const/16 v0, 0x123
+
+    int-to-float v0, v0
+
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v1
+
+    invoke-static {v0}, Lkti;->d(F)I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_1
+    const/16 v0, 0xf8
+
+    int-to-float v0, v0
+
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v1
+
+    invoke-static {v0}, Lkti;->d(F)I
+
+    move-result v0
+
+    :goto_0
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
 
     return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lcza;->b:Ldza;
+
+    iget-object v0, v0, Ldza;->a:Landroid/content/Context;
+
+    invoke-static {v0}, Llni;->a(Landroid/content/Context;)Lfqg;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -3,82 +3,14 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final d:Lub0;
-
-.field public static final e:Ljava/util/Set;
-
-.field public static final f:Lnq3;
-
-
 # instance fields
 .field public final a:I
 
-.field public final b:I
-
-.field public final c:Lcc0;
+.field public final b:Landroid/view/Surface;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
-
-    new-instance v0, Lub0;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x2
-
-    const/4 v3, 0x0
-
-    invoke-direct {v0, v1, v2, v3}, Lub0;-><init>(IILcc0;)V
-
-    sput-object v0, Lub0;->d:Lub0;
-
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    const/4 v4, -0x1
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    filled-new-array {v2, v4}, [Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-static {v2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v2
-
-    invoke-direct {v0, v2}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
-
-    move-result-object v0
-
-    sput-object v0, Lub0;->e:Ljava/util/Set;
-
-    new-instance v0, Lub0;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, v2, v3}, Lub0;-><init>(IILcc0;)V
-
-    new-instance v1, Lnq3;
-
-    invoke-direct {v1, v0}, Lnq3;-><init>(Ljava/lang/Object;)V
-
-    sput-object v1, Lub0;->f:Lnq3;
-
-    return-void
-.end method
-
-.method public constructor <init>(IILcc0;)V
+.method public constructor <init>(ILandroid/view/Surface;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -87,16 +19,14 @@
 
     if-eqz p2, :cond_0
 
-    iput p2, p0, Lub0;->b:I
-
-    iput-object p3, p0, Lub0;->c:Lcc0;
+    iput-object p2, p0, Lub0;->b:Landroid/view/Surface;
 
     return-void
 
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null streamState"
+    const-string p2, "Null surface"
 
     invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
@@ -106,7 +36,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    .locals 2
 
     if-ne p1, p0, :cond_0
 
@@ -115,56 +45,39 @@
     :cond_0
     instance-of v0, p1, Lub0;
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_1
 
     check-cast p1, Lub0;
 
-    iget v0, p1, Lub0;->a:I
+    iget v0, p0, Lub0;->a:I
 
-    iget-object v1, p1, Lub0;->c:Lcc0;
+    iget v1, p1, Lub0;->a:I
 
-    iget v2, p0, Lub0;->a:I
+    if-ne v0, v1, :cond_1
 
-    if-ne v2, v0, :cond_2
+    iget-object v0, p0, Lub0;->b:Landroid/view/Surface;
 
-    iget v0, p0, Lub0;->b:I
+    iget-object p1, p1, Lub0;->b:Landroid/view/Surface;
 
-    iget p1, p1, Lub0;->b:I
-
-    invoke-static {v0, p1}, Ldy1;->c(II)Z
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_2
-
-    iget-object p1, p0, Lub0;->c:Lcc0;
-
-    if-nez p1, :cond_1
-
-    if-nez v1, :cond_2
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p1, v1}, Lcc0;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_1
 
     :goto_0
     const/4 p1, 0x1
 
     return p1
 
-    :cond_2
+    :cond_1
     const/4 p1, 0x0
 
     return p1
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 2
 
     iget v0, p0, Lub0;->a:I
 
@@ -174,41 +87,23 @@
 
     mul-int/2addr v0, v1
 
-    iget v2, p0, Lub0;->b:I
+    iget-object v1, p0, Lub0;->b:Landroid/view/Surface;
 
-    invoke-static {v2}, Ldy1;->v(I)I
-
-    move-result v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v1, p0, Lub0;->c:Lcc0;
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Lcc0;->hashCode()I
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
-    :goto_0
     xor-int/2addr v0, v1
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "StreamInfo{id="
+    const-string v1, "Result{resultCode="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -216,40 +111,11 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v1, ", streamState="
+    const-string v1, ", surface="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x1
-
-    iget v2, p0, Lub0;->b:I
-
-    if-eq v2, v1, :cond_1
-
-    const/4 v1, 0x2
-
-    if-eq v2, v1, :cond_0
-
-    const-string v1, "null"
-
-    goto :goto_0
-
-    :cond_0
-    const-string v1, "INACTIVE"
-
-    goto :goto_0
-
-    :cond_1
-    const-string v1, "ACTIVE"
-
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", inProgressTransformationInfo="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lub0;->c:Lcc0;
+    iget-object v1, p0, Lub0;->b:Landroid/view/Surface;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

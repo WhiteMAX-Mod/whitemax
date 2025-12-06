@@ -1,506 +1,307 @@
 .class public final Linb;
-.super Ljava/lang/Object;
+.super Lvt3;
 .source "SourceFile"
-
-# interfaces
-.implements Ly18;
 
 
 # instance fields
-.field public final X:Landroid/net/Uri;
+.field public final f:Ljava/util/ArrayList;
 
-.field public final Y:Z
+.field public final g:Ljava/util/ArrayList;
 
-.field public final Z:Z
+.field public final h:Ljava/util/ArrayList;
 
-.field public final a:J
+.field public final i:Ljava/util/HashMap;
 
-.field public final b:J
+.field public final j:Ljava/util/concurrent/ConcurrentHashMap;
 
-.field public final c:Ljava/lang/CharSequence;
+.field public final k:Ljava/util/concurrent/ConcurrentHashMap;
 
-.field public final o:Ltrf;
-
-.field public final q0:Lapb;
-
-.field public final r0:Ljava/lang/CharSequence;
-
-.field public final s0:Z
-
-.field public final t0:J
+.field public final l:Ljava/util/concurrent/ConcurrentHashMap;
 
 
 # direct methods
-.method public synthetic constructor <init>(JJLjava/lang/CharSequence;Lsrf;Landroid/net/Uri;ZLapb;Ljava/lang/CharSequence;)V
-    .locals 13
-
-    const/4 v8, 0x0
-
-    const/4 v12, 0x1
-
-    move-object v0, p0
-
-    move-wide v1, p1
-
-    move-wide/from16 v3, p3
-
-    move-object/from16 v5, p5
-
-    move-object/from16 v6, p6
-
-    move-object/from16 v7, p7
-
-    move/from16 v9, p8
-
-    move-object/from16 v10, p9
-
-    move-object/from16 v11, p10
-
-    .line 1
-    invoke-direct/range {v0 .. v12}, Linb;-><init>(JJLjava/lang/CharSequence;Ltrf;Landroid/net/Uri;ZZLapb;Ljava/lang/CharSequence;Z)V
-
-    return-void
-.end method
-
-.method public constructor <init>(JJLjava/lang/CharSequence;Ltrf;Landroid/net/Uri;ZZLapb;Ljava/lang/CharSequence;Z)V
+.method public constructor <init>(Lawd;Ly6d;Lppb;Ly6i;)V
     .locals 0
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2, p3, p4}, Lvt3;-><init>(Lawd;Ly6d;Lppb;Ly6i;)V
 
-    .line 3
-    iput-wide p1, p0, Linb;->a:J
+    new-instance p1, Ljava/util/ArrayList;
 
-    .line 4
-    iput-wide p3, p0, Linb;->b:J
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 5
-    iput-object p5, p0, Linb;->c:Ljava/lang/CharSequence;
+    iput-object p1, p0, Linb;->f:Ljava/util/ArrayList;
 
-    .line 6
-    iput-object p6, p0, Linb;->o:Ltrf;
+    new-instance p1, Ljava/util/ArrayList;
 
-    .line 7
-    iput-object p7, p0, Linb;->X:Landroid/net/Uri;
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 8
-    iput-boolean p8, p0, Linb;->Y:Z
+    iput-object p1, p0, Linb;->g:Ljava/util/ArrayList;
 
-    .line 9
-    iput-boolean p9, p0, Linb;->Z:Z
+    new-instance p1, Ljava/util/ArrayList;
 
-    .line 10
-    iput-object p10, p0, Linb;->q0:Lapb;
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 11
-    iput-object p11, p0, Linb;->r0:Ljava/lang/CharSequence;
+    iput-object p1, p0, Linb;->h:Ljava/util/ArrayList;
 
-    .line 12
-    iput-boolean p12, p0, Linb;->s0:Z
+    new-instance p1, Ljava/util/HashMap;
 
-    .line 13
-    iget-wide p1, p10, Lapb;->a:J
+    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
-    .line 14
-    iput-wide p1, p0, Linb;->t0:J
+    iput-object p1, p0, Linb;->i:Ljava/util/HashMap;
+
+    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    iput-object p1, p0, Linb;->j:Ljava/util/concurrent/ConcurrentHashMap;
+
+    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    iput-object p1, p0, Linb;->k:Ljava/util/concurrent/ConcurrentHashMap;
+
+    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    iput-object p1, p0, Linb;->l:Ljava/util/concurrent/ConcurrentHashMap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Linb;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Linb;
-
-    iget-wide v3, p0, Linb;->a:J
-
-    iget-wide v5, p1, Linb;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-wide v3, p0, Linb;->b:J
-
-    iget-wide v5, p1, Linb;->b:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Linb;->c:Ljava/lang/CharSequence;
-
-    iget-object v3, p1, Linb;->c:Ljava/lang/CharSequence;
-
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Linb;->o:Ltrf;
-
-    iget-object v3, p1, Linb;->o:Ltrf;
-
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object v1, p0, Linb;->X:Landroid/net/Uri;
-
-    iget-object v3, p1, Linb;->X:Landroid/net/Uri;
-
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-boolean v1, p0, Linb;->Y:Z
-
-    iget-boolean v3, p1, Linb;->Y:Z
-
-    if-eq v1, v3, :cond_7
-
-    return v2
-
-    :cond_7
-    iget-boolean v1, p0, Linb;->Z:Z
-
-    iget-boolean v3, p1, Linb;->Z:Z
-
-    if-eq v1, v3, :cond_8
-
-    return v2
-
-    :cond_8
-    iget-object v1, p0, Linb;->q0:Lapb;
-
-    iget-object v3, p1, Linb;->q0:Lapb;
-
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_9
-
-    return v2
-
-    :cond_9
-    iget-object v1, p0, Linb;->r0:Ljava/lang/CharSequence;
-
-    iget-object v3, p1, Linb;->r0:Ljava/lang/CharSequence;
-
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_a
-
-    return v2
-
-    :cond_a
-    iget-boolean v1, p0, Linb;->s0:Z
-
-    iget-boolean p1, p1, Linb;->s0:Z
-
-    if-eq v1, p1, :cond_b
-
-    return v2
-
-    :cond_b
-    return v0
-.end method
-
-.method public final getItemId()J
+.method public final a(Lti1;Lorg/webrtc/VideoFrame;)V
     .locals 2
 
-    iget-wide v0, p0, Linb;->t0:J
+    new-instance v0, Lhc8;
 
-    return-wide v0
-.end method
+    const/4 v1, 0x5
 
-.method public final h(Ly18;)Z
-    .locals 4
+    invoke-direct {v0, v1}, Lhc8;-><init>(I)V
 
-    iget-wide v0, p0, Linb;->t0:J
+    iput-object p1, v0, Lhc8;->b:Ljava/lang/Object;
 
-    invoke-interface {p1}, Ly18;->getItemId()J
+    sget-object p1, Lcdh;->b:Lcdh;
 
-    move-result-wide v2
+    iput-object p1, v0, Lhc8;->c:Ljava/lang/Object;
 
-    cmp-long p1, v0, v2
+    invoke-virtual {v0}, Lhc8;->u()Lnt1;
 
-    if-nez p1, :cond_0
+    move-result-object p1
 
-    const/4 p1, 0x1
+    iget-object v0, p0, Linb;->j:Ljava/util/concurrent/ConcurrentHashMap;
 
-    return p1
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_0
-    const/4 p1, 0x0
+    move-result-object p1
 
-    return p1
-.end method
+    check-cast p1, Ljava/util/List;
 
-.method public final hashCode()I
-    .locals 4
+    if-eqz p1, :cond_0
 
-    iget-wide v0, p0, Linb;->a:J
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-wide v2, p0, Linb;->b:J
-
-    invoke-static {v0, v1, v2, v3}, Lrtg;->c(IIJ)I
-
-    move-result v0
-
-    iget-object v2, p0, Linb;->c:Ljava/lang/CharSequence;
-
-    invoke-static {v2, v0, v1}, Lu15;->f(Ljava/lang/CharSequence;II)I
-
-    move-result v0
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Linb;->o:Ltrf;
-
-    if-nez v3, :cond_0
-
-    move v3, v2
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v3
+    move-result-object p1
 
     :goto_0
-    add-int/2addr v0, v3
-
-    mul-int/2addr v0, v1
-
-    iget-object v3, p0, Linb;->X:Landroid/net/Uri;
-
-    if-nez v3, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v3}, Landroid/net/Uri;->hashCode()I
-
-    move-result v2
-
-    :goto_1
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Linb;->Y:Z
-
-    invoke-static {v0, v1, v2}, Lrtg;->d(IIZ)I
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
-
-    iget-boolean v2, p0, Linb;->Z:Z
-
-    invoke-static {v0, v1, v2}, Lrtg;->d(IIZ)I
-
-    move-result v0
-
-    iget-object v2, p0, Linb;->q0:Lapb;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-object v0, p0, Linb;->r0:Ljava/lang/CharSequence;
-
-    invoke-static {v0, v2, v1}, Lu15;->f(Ljava/lang/CharSequence;II)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Linb;->s0:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final k(Ly18;)Ljava/lang/Object;
-    .locals 2
-
-    instance-of v0, p1, Linb;
-
-    const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Linb;
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lorg/webrtc/VideoSink;
+
+    invoke-interface {v0, p2}, Lorg/webrtc/VideoSink;->onFrame(Lorg/webrtc/VideoFrame;)V
 
     goto :goto_0
 
     :cond_0
-    move-object p1, v1
-
-    :goto_0
-    if-nez p1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    iget-boolean p1, p1, Linb;->Y:Z
-
-    iget-boolean v0, p0, Linb;->Y:Z
-
-    if-eq v0, p1, :cond_2
-
-    new-instance v0, Lhnb;
-
-    invoke-direct {v0, p1}, Lhnb;-><init>(Z)V
-
-    return-object v0
-
-    :cond_2
-    :goto_1
-    return-object v1
+    return-void
 .end method
 
-.method public final m()I
+.method public final d()V
     .locals 1
 
-    const/4 v0, 0x0
+    invoke-static {}, Lw0a;->f()V
 
-    return v0
+    iget-object v0, p0, Linb;->j:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
+
+    iget-object v0, p0, Linb;->i:Ljava/util/HashMap;
+
+    invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
+
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final e(Lti1;Ljava/lang/String;)V
+    .locals 3
 
-    const-string v0, "PickerChatListItem(id="
+    invoke-static {}, Lw0a;->f()V
 
-    const-string v1, ", avatarSourceId="
+    iget-object p2, p0, Linb;->i:Ljava/util/HashMap;
 
-    iget-wide v2, p0, Linb;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Ldy1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-wide v1, p0, Linb;->b:J
+    check-cast v0, Ljava/util/Set;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    if-nez v0, :cond_0
 
-    const-string v1, ", name="
+    return-void
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Linb;->c:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", subtitle="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Linb;->o:Ltrf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", avatar="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Linb;->X:Landroid/net/Uri;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isOnline="
-
-    const-string v2, ", isVerified="
-
-    iget-boolean v3, p0, Linb;->Y:Z
-
-    iget-boolean v4, p0, Linb;->Z:Z
-
-    invoke-static {v1, v2, v0, v3, v4}, Lzb3;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
-
-    const-string v1, ", entity="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Linb;->q0:Lapb;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", abbreviation="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Linb;->r0:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isEnabled="
-
-    const-string v2, ")"
-
-    iget-boolean v3, p0, Linb;->s0:Z
-
-    invoke-static {v0, v1, v3, v2}, Li57;->k(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+    :cond_0
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    return-object v0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lnt1;
+
+    iget-object v2, p0, Linb;->j:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v2, v1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p2, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public final f()V
+    .locals 3
+
+    iget-object v0, p0, Lvt3;->c:Ljava/lang/Object;
+
+    check-cast v0, Landroid/os/Handler;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lvt3;->a:Ljava/lang/Object;
+
+    check-cast v0, Lawd;
+
+    new-instance v1, Lawa;
+
+    const/4 v2, 0x7
+
+    invoke-direct {v1, v2, p0}, Lawa;-><init>(ILjava/lang/Object;)V
+
+    iget-object v0, v0, Lawd;->b:Ljava/lang/Object;
+
+    check-cast v0, Lwpb;
+
+    const-string v2, "ParticipantsAgnosticRemoteVideoTracks.closeInternal"
+
+    invoke-virtual {v0, v1, v2}, Lwpb;->i(Ljava/lang/Runnable;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final k(Lorg/webrtc/RtpReceiver;[Lorg/webrtc/MediaStream;)V
+    .locals 3
+
+    iget-object v0, p0, Lvt3;->a:Ljava/lang/Object;
+
+    check-cast v0, Lawd;
+
+    new-instance v1, Lzo4;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, p0, p1, p2, v2}, Lzo4;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/io/Serializable;I)V
+
+    iget-object p1, v0, Lawd;->b:Ljava/lang/Object;
+
+    check-cast p1, Lwpb;
+
+    new-instance p2, Lc;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p2, p1, v1, v0}, Lc;-><init>(Lwpb;Lhu3;I)V
+
+    const-string v0, "DefaultRemoteVideoTracks.handleVideoTracksOnExecutor"
+
+    invoke-virtual {p1, p2, v0}, Lwpb;->i(Ljava/lang/Runnable;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final p(Ljava/lang/String;Lnt1;Ljava/util/List;)V
+    .locals 1
+
+    invoke-static {}, Lw0a;->f()V
+
+    iget-object p1, p0, Linb;->j:Ljava/util/concurrent/ConcurrentHashMap;
+
+    iget-object v0, p0, Linb;->i:Ljava/util/HashMap;
+
+    if-nez p3, :cond_1
+
+    invoke-virtual {p1, p2}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object p1, p2, Lnt1;->b:Lti1;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/util/Set;
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {p1, p2}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+
+    :cond_0
+    return-void
+
+    :cond_1
+    invoke-virtual {p1, p2, p3}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object p1, p2, Lnt1;->b:Lti1;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/util/Set;
+
+    if-nez p1, :cond_2
+
+    new-instance p1, Ljava/util/HashSet;
+
+    invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
+
+    iget-object p3, p2, Lnt1;->b:Lti1;
+
+    invoke-virtual {v0, p3, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_2
+    invoke-interface {p1, p2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    return-void
 .end method

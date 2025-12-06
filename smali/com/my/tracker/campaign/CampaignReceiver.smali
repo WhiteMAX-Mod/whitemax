@@ -44,7 +44,7 @@
 
     const-string p0, "CampaignReceiver: referrer is null or empty"
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/my/tracker/core/Tracer;->d(Ljava/lang/String;)V
 
     return-void
 
@@ -61,7 +61,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/my/tracker/core/Tracer;->d(Ljava/lang/String;)V
 
     :try_start_0
     new-instance v1, Landroid/content/Intent;
@@ -95,7 +95,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/my/tracker/core/Tracer;->e(Ljava/lang/String;)V
 
     return-void
 .end method

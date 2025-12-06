@@ -1,80 +1,46 @@
 .class public final Lsm4;
-.super Lbpd;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lqa5;
 
 
 # static fields
-.field public static final b:Lsm4;
+.field public static final b:Ljava/lang/ThreadLocal;
+
+
+# instance fields
+.field public final a:Landroid/text/TextPaint;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 7
+    .locals 1
 
-    new-instance v0, Lsm4;
+    new-instance v0, Ljava/lang/ThreadLocal;
 
-    sget v5, Lppf;->c:I
+    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
 
-    sget v6, Lppf;->d:I
-
-    sget-wide v2, Lppf;->e:J
-
-    sget-object v4, Lppf;->a:Ljava/lang/String;
-
-    invoke-direct {v0}, Lk54;-><init>()V
-
-    new-instance v1, Lp54;
-
-    invoke-direct/range {v1 .. v6}, Lp54;-><init>(JLjava/lang/String;II)V
-
-    iput-object v1, v0, Lbpd;->a:Lp54;
-
-    sput-object v0, Lsm4;->b:Lsm4;
+    sput-object v0, Lsm4;->b:Ljava/lang/ThreadLocal;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final close()V
+.method public constructor <init>()V
     .locals 2
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "Dispatchers.Default cannot be closed"
+    new-instance v0, Landroid/text/TextPaint;
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0}, Landroid/text/TextPaint;-><init>()V
 
-    throw v0
-.end method
+    iput-object v0, p0, Lsm4;->a:Landroid/text/TextPaint;
 
-.method public final limitedParallelism(ILjava/lang/String;)Lk54;
-    .locals 1
+    const/high16 v1, 0x41200000    # 10.0f
 
-    invoke-static {p1}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->checkParallelism(I)V
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    sget v0, Lppf;->c:I
-
-    if-lt p1, v0, :cond_0
-
-    invoke-static {p0, p2}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->namedOrThis(Lk54;Ljava/lang/String;)Lk54;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_0
-    invoke-super {p0, p1, p2}, Lk54;->limitedParallelism(ILjava/lang/String;)Lk54;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Dispatchers.Default"
-
-    return-object v0
+    return-void
 .end method

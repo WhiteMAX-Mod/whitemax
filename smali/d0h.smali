@@ -1,41 +1,27 @@
-.class public interface abstract Ld0h;
+.class public abstract Ld0h;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public a(Ljava/lang/Class;)Lyzg;
+# direct methods
+.method static constructor <clinit>()V
     .locals 1
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    const-string v0, "[-_./;:]"
 
-    const-string v0, "`Factory.create(String, CreationExtras)` is not implemented. You may need to override the method and provide a custom implementation. Note that using `Factory.create(String)` is not supported and considered an error."
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-void
 .end method
 
-.method public b(Ljava/lang/Class;Li0a;)Lyzg;
-    .locals 0
+.method public static final a()V
+    .locals 2
 
-    invoke-interface {p0, p1}, Ld0h;->a(Ljava/lang/Class;)Lyzg;
+    new-instance v0, Ljava/lang/RuntimeException;
 
-    move-result-object p1
+    const-string v1, "Internal error: this code path should never get executed"
 
-    return-object p1
-.end method
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-.method public c(Lh73;Li0a;)Lyzg;
-    .locals 0
-
-    invoke-interface {p1}, Lf73;->a()Ljava/lang/Class;
-
-    move-result-object p1
-
-    invoke-interface {p0, p1, p2}, Ld0h;->b(Ljava/lang/Class;Li0a;)Lyzg;
-
-    move-result-object p1
-
-    return-object p1
+    throw v0
 .end method

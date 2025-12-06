@@ -1,5 +1,5 @@
 .class public final Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;
-.super Lee9;
+.super Lfl9;
 .source "SourceFile"
 
 
@@ -28,7 +28,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lee9;-><init>()V
+    invoke-direct {p0}, Lfl9;-><init>()V
 
     invoke-virtual {p0}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;->clear()Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;
 
@@ -42,7 +42,7 @@
 
     if-nez v0, :cond_1
 
-    sget-object v0, Lij7;->b:Ljava/lang/Object;
+    sget-object v0, Lkp7;->b:Ljava/lang/Object;
 
     monitor-enter v0
 
@@ -84,7 +84,7 @@
     return-object v0
 .end method
 
-.method public static parseFrom(Loa3;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;
+.method public static parseFrom(Lgd3;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -97,7 +97,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;-><init>()V
 
-    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;->mergeFrom(Loa3;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;
+    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;->mergeFrom(Lgd3;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;
 
     move-result-object p0
 
@@ -117,7 +117,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;-><init>()V
 
-    invoke-static {v0, p0}, Lee9;->mergeFrom(Lee9;[B)Lee9;
+    invoke-static {v0, p0}, Lfl9;->mergeFrom(Lfl9;[B)Lfl9;
 
     move-result-object p0
 
@@ -143,7 +143,7 @@
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lee9;->cachedSize:I
+    iput v0, p0, Lfl9;->cachedSize:I
 
     return-object p0
 .end method
@@ -176,7 +176,7 @@
 
     const/4 v3, 0x1
 
-    invoke-static {v3, v2}, Lpa3;->i(ILee9;)I
+    invoke-static {v3, v2}, Lhd3;->i(ILfl9;)I
 
     move-result v2
 
@@ -207,7 +207,7 @@
 
     iget-object v2, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;->callbackId:Ljava/lang/String;
 
-    invoke-static {v0, v2}, Lpa3;->l(ILjava/lang/String;)I
+    invoke-static {v0, v2}, Lhd3;->l(ILjava/lang/String;)I
 
     move-result v0
 
@@ -219,7 +219,7 @@
     return v1
 .end method
 
-.method public bridge synthetic mergeFrom(Loa3;)Lee9;
+.method public bridge synthetic mergeFrom(Lgd3;)Lfl9;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -228,14 +228,14 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;->mergeFrom(Loa3;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;
+    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;->mergeFrom(Lgd3;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public mergeFrom(Loa3;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;
+.method public mergeFrom(Lgd3;)Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;
     .locals 5
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -246,7 +246,7 @@
     .line 2
     :cond_0
     :goto_0
-    invoke-virtual {p1}, Loa3;->s()I
+    invoke-virtual {p1}, Lgd3;->s()I
 
     move-result v0
 
@@ -261,7 +261,7 @@
     if-eq v0, v1, :cond_1
 
     .line 3
-    invoke-virtual {p1, v0}, Loa3;->u(I)Z
+    invoke-virtual {p1, v0}, Lgd3;->u(I)Z
 
     move-result v0
 
@@ -271,7 +271,7 @@
 
     .line 4
     :cond_1
-    invoke-virtual {p1}, Loa3;->r()Ljava/lang/String;
+    invoke-virtual {p1}, Lgd3;->r()Ljava/lang/String;
 
     move-result-object v0
 
@@ -281,7 +281,7 @@
 
     .line 5
     :cond_2
-    invoke-static {p1, v1}, Lzbi;->c(Loa3;I)I
+    invoke-static {p1, v1}, Lcoi;->b(Lgd3;I)I
 
     move-result v0
 
@@ -324,10 +324,10 @@
     aput-object v1, v4, v3
 
     .line 10
-    invoke-virtual {p1, v1}, Loa3;->j(Lee9;)V
+    invoke-virtual {p1, v1}, Lgd3;->j(Lfl9;)V
 
     .line 11
-    invoke-virtual {p1}, Loa3;->s()I
+    invoke-virtual {p1}, Lgd3;->s()I
 
     add-int/lit8 v3, v3, 0x1
 
@@ -342,7 +342,7 @@
     aput-object v0, v4, v3
 
     .line 13
-    invoke-virtual {p1, v0}, Loa3;->j(Lee9;)V
+    invoke-virtual {p1, v0}, Lgd3;->j(Lfl9;)V
 
     .line 14
     iput-object v4, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;->buttons:[Lru/ok/tamtam/nano/Protos$Attaches$Attach$Buttons;
@@ -354,7 +354,7 @@
     return-object p0
 .end method
 
-.method public writeTo(Lpa3;)V
+.method public writeTo(Lhd3;)V
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -385,7 +385,7 @@
 
     const/4 v2, 0x1
 
-    invoke-virtual {p1, v2, v1}, Lpa3;->y(ILee9;)V
+    invoke-virtual {p1, v2, v1}, Lhd3;->y(ILfl9;)V
 
     :cond_0
     add-int/lit8 v0, v0, 0x1
@@ -407,7 +407,7 @@
 
     iget-object v1, p0, Lru/ok/tamtam/nano/Protos$Attaches$Attach$InlineKeyboard;->callbackId:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, v1}, Lpa3;->E(ILjava/lang/String;)V
+    invoke-virtual {p1, v0, v1}, Lhd3;->E(ILjava/lang/String;)V
 
     :cond_2
     return-void

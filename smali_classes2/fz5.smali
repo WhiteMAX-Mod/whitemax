@@ -1,48 +1,18 @@
 .class public final Lfz5;
-.super Ly14;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
-
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Lv23;
-
-.field public synthetic o:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Lv23;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lfz5;->Y:Lv23;
-
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+# interfaces
+.implements Lcx5;
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final error(Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
-    iput-object p1, p0, Lfz5;->o:Ljava/lang/Object;
+    const-string v0, "Files"
 
-    iget p1, p0, Lfz5;->X:I
+    invoke-static {v0, p1, p2}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lfz5;->X:I
-
-    iget-object p1, p0, Lfz5;->Y:Lv23;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lv23;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

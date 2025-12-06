@@ -1,283 +1,180 @@
 .class public final Lsnd;
-.super Ljava/lang/Object;
+.super Latc;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/Map;
-.implements Lir7;
 
 
 # instance fields
-.field public final synthetic a:Lg1a;
+.field public a:I
+
+.field public b:J
+
+.field public c:J
 
 
-# direct methods
-.method public constructor <init>(Lg1a;)V
-    .locals 0
+# virtual methods
+.method public final a(Lysc;Lbtc;Lbj;)V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    :try_start_0
+    iget-object p2, p1, Lysc;->O0:Lllf;
 
-    iput-object p1, p0, Lsnd;->a:Lg1a;
+    iget-object p3, p2, Lllf;->a:Ljava/util/concurrent/ConcurrentHashMap;
+
+    iget v0, p0, Lsnd;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-virtual {p3, v0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Lctc;
+
+    if-eqz p3, :cond_0
+
+    iget-wide v0, p2, Lllf;->y:J
+
+    iget-wide v2, p0, Lsnd;->c:J
+
+    iget-object p3, p3, Lctc;->e:Lelf;
+
+    invoke-virtual {p3, v2, v3}, Lelf;->Q(J)J
+
+    move-result-wide v2
+
+    add-long/2addr v2, v0
+
+    iput-wide v2, p2, Lllf;->y:J
+    :try_end_0
+    .catch Ltech/kwik/core/impl/TransportError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_0
+    return-void
+
+    :catch_0
+    move-exception p2
+
+    iget p2, p2, Ltech/kwik/core/impl/TransportError;->a:I
+
+    invoke-static {p2}, Lutb;->e(I)I
+
+    move-result p2
+
+    int-to-long p2, p2
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p1, p2, p3, v0, v1}, Lysc;->f(JLjava/lang/String;I)V
 
     return-void
 .end method
 
+.method public final c()I
+    .locals 4
 
-# virtual methods
-.method public final clear()V
-    .locals 2
+    iget v0, p0, Lsnd;->a:I
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    int-to-long v0, v0
 
-    const-string v1, "Operation is not supported for read-only collection"
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final compute(Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string p2, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final computeIfAbsent(Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string p2, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final computeIfPresent(Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string p2, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final containsKey(Ljava/lang/Object;)Z
-    .locals 1
-
-    iget-object v0, p0, Lsnd;->a:Lg1a;
-
-    invoke-virtual {v0, p1}, Lg1a;->b(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final containsValue(Ljava/lang/Object;)Z
-    .locals 1
-
-    iget-object v0, p0, Lsnd;->a:Lg1a;
-
-    invoke-virtual {v0, p1}, Lg1a;->c(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final entrySet()Ljava/util/Set;
-    .locals 3
-
-    new-instance v0, Lpnd;
-
-    iget-object v1, p0, Lsnd;->a:Lg1a;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lpnd;-><init>(Lg1a;I)V
-
-    return-object v0
-.end method
-
-.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lsnd;->a:Lg1a;
-
-    invoke-virtual {v0, p1}, Lg1a;->f(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final isEmpty()Z
-    .locals 1
-
-    iget-object v0, p0, Lsnd;->a:Lg1a;
-
-    invoke-virtual {v0}, Lg1a;->h()Z
+    invoke-static {v0, v1}, Lepi;->a(J)I
 
     move-result v0
 
-    return v0
-.end method
+    add-int/lit8 v0, v0, 0x1
 
-.method public final keySet()Ljava/util/Set;
-    .locals 3
+    iget-wide v1, p0, Lsnd;->b:J
 
-    new-instance v0, Lpnd;
+    invoke-static {v1, v2}, Lepi;->a(J)I
 
-    iget-object v1, p0, Lsnd;->a:Lg1a;
+    move-result v1
 
-    const/4 v2, 0x1
+    add-int/2addr v1, v0
 
-    invoke-direct {v0, v1, v2}, Lpnd;-><init>(Lg1a;I)V
+    iget-wide v2, p0, Lsnd;->c:J
 
-    return-object v0
-.end method
+    invoke-static {v2, v3}, Lepi;->a(J)I
 
-.method public final merge(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;
-    .locals 0
+    move-result v0
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string p2, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string p2, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final putAll(Ljava/util/Map;)V
-    .locals 1
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string p2, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final remove(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    .line 1
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final remove(Ljava/lang/Object;Ljava/lang/Object;)Z
-    .locals 0
-
-    .line 2
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string p2, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final replace(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    .line 1
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string p2, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final replace(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
-    .locals 0
-
-    .line 2
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string p2, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final replaceAll(Ljava/util/function/BiFunction;)V
-    .locals 1
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final size()I
-    .locals 1
-
-    iget-object v0, p0, Lsnd;->a:Lg1a;
-
-    iget v0, v0, Lg1a;->e:I
+    add-int/2addr v0, v1
 
     return v0
 .end method
 
-.method public final values()Ljava/util/Collection;
+.method public final g(Ljava/nio/ByteBuffer;)V
     .locals 2
 
-    new-instance v0, Lgb6;
+    const/4 v0, 0x4
 
-    iget-object v1, p0, Lsnd;->a:Lg1a;
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    invoke-direct {v0, v1}, Lgb6;-><init>(Lg1a;)V
+    iget v0, p0, Lsnd;->a:I
+
+    invoke-static {v0, p1}, Lepi;->b(ILjava/nio/ByteBuffer;)I
+
+    iget-wide v0, p0, Lsnd;->b:J
+
+    invoke-static {v0, v1, p1}, Lepi;->c(JLjava/nio/ByteBuffer;)I
+
+    iget-wide v0, p0, Lsnd;->c:J
+
+    invoke-static {v0, v1, p1}, Lepi;->c(JLjava/nio/ByteBuffer;)I
+
+    return-void
+.end method
+
+.method public final h(Ljava/nio/ByteBuffer;)V
+    .locals 2
+
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
+
+    invoke-static {p1}, Latc;->e(Ljava/nio/ByteBuffer;)I
+
+    move-result v0
+
+    iput v0, p0, Lsnd;->a:I
+
+    invoke-static {p1}, Lepi;->i(Ljava/nio/ByteBuffer;)J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lsnd;->b:J
+
+    invoke-static {p1}, Lepi;->i(Ljava/nio/ByteBuffer;)J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lsnd;->c:J
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 7
+
+    iget v0, p0, Lsnd;->a:I
+
+    iget-wide v1, p0, Lsnd;->b:J
+
+    iget-wide v3, p0, Lsnd;->c:J
+
+    const-string v5, "ResetStreamFrame["
+
+    const-string v6, "|"
+
+    invoke-static {v0, v1, v2, v5, v6}, Lu45;->m(IJLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "]"
+
+    invoke-static {v3, v4, v6, v1, v0}, Lu45;->i(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

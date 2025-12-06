@@ -1,61 +1,124 @@
-.class public final Lf1j;
-.super Lmui;
+.class public final synthetic Lf1j;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lrpc;
 
 
 # instance fields
-.field public final synthetic c:Lk2j;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljig;
 
 
 # direct methods
-.method public constructor <init>(Lk2j;)V
+.method public synthetic constructor <init>(Ljig;I)V
     .locals 0
 
-    iput-object p1, p0, Lf1j;->c:Lk2j;
+    iput p2, p0, Lf1j;->a:I
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+    iput-object p1, p0, Lf1j;->b:Ljig;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic get(I)Ljava/lang/Object;
-    .locals 2
+.method public final get()Ljava/lang/Object;
+    .locals 4
 
-    iget-object v0, p0, Lf1j;->c:Lk2j;
+    iget v0, p0, Lf1j;->a:I
 
-    iget v1, v0, Lk2j;->X:I
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {p1, v1}, Lpji;->d(II)V
+    new-instance v0, Lgf5;
 
-    iget-object v0, v0, Lk2j;->o:[Ljava/lang/Object;
+    const-string v1, "proto"
 
-    add-int/2addr p1, p1
+    invoke-direct {v0, v1}, Lgf5;-><init>(Ljava/lang/String;)V
 
-    aget-object v1, v0, p1
+    new-instance v1, Losf;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    add-int/lit8 p1, p1, 0x1
+    iget-object v2, p0, Lf1j;->b:Ljig;
 
-    aget-object p1, v0, p1
+    const-string v3, "FIREBASE_ML_SDK"
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v2, v3, v0, v1}, Ljig;->a(Ljava/lang/String;Lgf5;Lghg;)Lkig;
 
-    new-instance v0, Ljava/util/AbstractMap$SimpleImmutableEntry;
-
-    invoke-direct {v0, v1, p1}, Ljava/util/AbstractMap$SimpleImmutableEntry;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    move-result-object v0
 
     return-object v0
-.end method
 
-.method public final size()I
-    .locals 1
+    :pswitch_0
+    new-instance v0, Lgf5;
 
-    iget-object v0, p0, Lf1j;->c:Lk2j;
+    const-string v1, "json"
 
-    iget v0, v0, Lk2j;->X:I
+    invoke-direct {v0, v1}, Lgf5;-><init>(Ljava/lang/String;)V
 
-    return v0
+    new-instance v1, Lcwf;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    iget-object v2, p0, Lf1j;->b:Ljig;
+
+    const-string v3, "FIREBASE_ML_SDK"
+
+    invoke-virtual {v2, v3, v0, v1}, Ljig;->a(Ljava/lang/String;Lgf5;Lghg;)Lkig;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    new-instance v0, Lgf5;
+
+    const-string v1, "proto"
+
+    invoke-direct {v0, v1}, Lgf5;-><init>(Ljava/lang/String;)V
+
+    sget-object v1, Ltha;->z0:Ltha;
+
+    iget-object v2, p0, Lf1j;->b:Ljig;
+
+    const-string v3, "FIREBASE_ML_SDK"
+
+    invoke-virtual {v2, v3, v0, v1}, Ljig;->a(Ljava/lang/String;Lgf5;Lghg;)Lkig;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_2
+    new-instance v0, Lgf5;
+
+    const-string v1, "json"
+
+    invoke-direct {v0, v1}, Lgf5;-><init>(Ljava/lang/String;)V
+
+    sget-object v1, Luha;->C0:Luha;
+
+    iget-object v2, p0, Lf1j;->b:Ljig;
+
+    const-string v3, "FIREBASE_ML_SDK"
+
+    invoke-virtual {v2, v3, v0, v1}, Ljig;->a(Ljava/lang/String;Lgf5;Lghg;)Lkig;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,129 +1,193 @@
-.class public final enum Lbmh;
-.super Ljava/lang/Enum;
+.class public final Lbmh;
+.super Ldtf;
 .source "SourceFile"
 
+# interfaces
+.implements Lsm6;
 
-# static fields
-.field public static final enum X:Lbmh;
 
-.field public static final enum Y:Lbmh;
+# instance fields
+.field public X:I
 
-.field public static final synthetic Z:[Lbmh;
+.field public final synthetic Y:Ltmh;
 
-.field public static final enum a:Lbmh;
-
-.field public static final enum b:Lbmh;
-
-.field public static final enum c:Lbmh;
-
-.field public static final enum o:Lbmh;
+.field public o:Lumh;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
+.method public constructor <init>(Ltmh;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lbmh;
+    iput-object p1, p0, Lbmh;->Y:Ltmh;
 
-    const-string v1, "ADAPTIVE_ICON"
+    const/4 p1, 0x2
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lbmh;->a:Lbmh;
-
-    new-instance v1, Lbmh;
-
-    const-string v2, "PICTURE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lbmh;->b:Lbmh;
-
-    new-instance v2, Lbmh;
-
-    const-string v3, "TITLE_BIG"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lbmh;->c:Lbmh;
-
-    new-instance v3, Lbmh;
-
-    const-string v4, "TITLE_STANDARD"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lbmh;->o:Lbmh;
-
-    new-instance v4, Lbmh;
-
-    const-string v5, "DESCRIPTION"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lbmh;->X:Lbmh;
-
-    new-instance v5, Lbmh;
-
-    const-string v6, "FILE"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v6, Lbmh;
-
-    const-string v7, "KEYBOARD"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v6, Lbmh;->Y:Lbmh;
-
-    filled-new-array/range {v0 .. v6}, [Lbmh;
-
-    move-result-object v0
-
-    sput-object v0, Lbmh;->Z:[Lbmh;
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lbmh;
-    .locals 1
 
-    const-class v0, Lbmh;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p1, Lf84;
 
-    move-result-object p0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast p0, Lbmh;
+    invoke-virtual {p0, p1, p2}, Lbmh;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-object p0
+    move-result-object p1
+
+    check-cast p1, Lbmh;
+
+    sget-object p2, Lqqg;->a:Lqqg;
+
+    invoke-virtual {p1, p2}, Lbmh;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public static values()[Lbmh;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    sget-object v0, Lbmh;->Z:[Lbmh;
+    new-instance p1, Lbmh;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object v0, p0, Lbmh;->Y:Ltmh;
+
+    invoke-direct {p1, v0, p2}, Lbmh;-><init>(Ltmh;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 17
+
+    move-object/from16 v5, p0
+
+    iget-object v6, v5, Lbmh;->Y:Ltmh;
+
+    iget-object v7, v6, Ltmh;->h:Lk18;
+
+    iget v0, v5, Lbmh;->X:I
+
+    const/4 v8, 0x2
+
+    const/4 v9, 0x1
+
+    sget-object v10, Lg84;->a:Lg84;
+
+    if-eqz v0, :cond_2
+
+    if-eq v0, v9, :cond_1
+
+    if-ne v0, v8, :cond_0
+
+    iget-object v0, v5, Lbmh;->o:Lumh;
+
+    invoke-static/range {p1 .. p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    invoke-static/range {p1 .. p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    move-object/from16 v0, p1
+
+    goto :goto_0
+
+    :cond_2
+    invoke-static/range {p1 .. p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    invoke-interface {v7}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lbmh;
+    check-cast v0, Lqlh;
 
+    iget-wide v1, v6, Ltmh;->a:J
+
+    iget-wide v3, v6, Ltmh;->b:J
+
+    iput v9, v5, Lbmh;->X:I
+
+    invoke-virtual/range {v0 .. v5}, Lqlh;->a(JJLdtf;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-ne v0, v10, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    :goto_0
+    check-cast v0, Lumh;
+
+    if-eqz v0, :cond_4
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0xf
+
+    invoke-static {v0, v9, v1, v2}, Lumh;->a(Lumh;ZZI)Lumh;
+
+    move-result-object v0
+
+    goto :goto_1
+
+    :cond_4
+    new-instance v11, Lumh;
+
+    iget-wide v12, v6, Ltmh;->a:J
+
+    iget-wide v14, v6, Ltmh;->b:J
+
+    const/16 v16, 0x0
+
+    invoke-direct/range {v11 .. v16}, Lumh;-><init>(JJZ)V
+
+    move-object v0, v11
+
+    :goto_1
+    invoke-interface {v7}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqlh;
+
+    iput-object v0, v5, Lbmh;->o:Lumh;
+
+    iput v8, v5, Lbmh;->X:I
+
+    iget-object v2, v1, Lqlh;->a:Llrd;
+
+    new-instance v3, Lplh;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v3, v1, v0, v4}, Lplh;-><init>(Lqlh;Lumh;I)V
+
+    invoke-static {v2, v3, v5}, Lk7j;->b(Llrd;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-ne v1, v10, :cond_5
+
+    :goto_2
+    return-object v10
+
+    :cond_5
     return-object v0
 .end method

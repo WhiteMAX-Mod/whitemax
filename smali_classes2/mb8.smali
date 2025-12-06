@@ -2,95 +2,167 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lvy5;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lac8;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lac8;I)V
-    .locals 0
+.method public static a(Lg5i;Z)V
+    .locals 15
 
-    iput p2, p0, Lmb8;->a:I
+    const-string v0, "start"
 
-    iput-object p1, p0, Lmb8;->b:Lac8;
+    const-string v1, "LoadEmojiFontWorker"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {v1, v0}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    return-void
-.end method
+    new-instance v0, Lngb;
 
+    const-class v2, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;
 
-# virtual methods
-.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 3
+    invoke-direct {v0, v2}, Lngb;-><init>(Ljava/lang/Class;)V
 
-    iget v0, p0, Lmb8;->a:I
+    const-wide/16 v2, 0x2710
 
-    packed-switch v0, :pswitch_data_0
+    sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    check-cast p1, Ljava/util/List;
+    sget-object v5, Leg0;->a:Leg0;
 
-    new-instance v0, Llb8;
+    invoke-virtual {v0, v5, v2, v3, v4}, Landroidx/work/WorkRequest$Builder;->setBackoffCriteria(Leg0;JLjava/util/concurrent/TimeUnit;)Landroidx/work/WorkRequest$Builder;
 
-    const/4 v1, 0x1
+    move-result-object v0
 
-    iget-object v2, p0, Lmb8;->b:Lac8;
+    check-cast v0, Lngb;
 
-    invoke-direct {v0, v2, p1, v1}, Llb8;-><init>(Lac8;Ljava/util/List;I)V
+    new-instance v2, Ljava/util/LinkedHashSet;
 
-    invoke-static {v0, p2}, Lg1i;->b(Lji6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-direct {v2}, Ljava/util/LinkedHashSet;-><init>()V
 
-    move-result-object p1
+    if-eqz p1, :cond_0
 
-    sget-object p2, Lr54;->a:Lr54;
-
-    if-ne p1, p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object p1, Lccg;->a:Lccg;
+    const/4 v3, 0x2
 
     :goto_0
-    return-object p1
-
-    :pswitch_0
-    check-cast p1, Ljava/util/List;
-
-    new-instance v0, Llb8;
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lmb8;->b:Lac8;
-
-    invoke-direct {v0, v2, p1, v1}, Llb8;-><init>(Lac8;Ljava/util/List;I)V
-
-    invoke-static {v0, p2}, Lg1i;->b(Lji6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lr54;->a:Lr54;
-
-    if-ne p1, p2, :cond_1
+    move v5, v3
 
     goto :goto_1
 
-    :cond_1
-    sget-object p1, Lccg;->a:Lccg;
+    :cond_0
+    const/4 v3, 0x3
+
+    goto :goto_0
 
     :goto_1
-    return-object p1
+    invoke-static {v2}, Lue3;->h0(Ljava/lang/Iterable;)Ljava/util/Set;
 
-    nop
+    move-result-object v14
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    new-instance v4, Lbu3;
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    const-wide/16 v10, -0x1
+
+    const-wide/16 v12, -0x1
+
+    invoke-direct/range {v4 .. v14}, Lbu3;-><init>(IZZZZJJLjava/util/Set;)V
+
+    invoke-virtual {v0, v4}, Landroidx/work/WorkRequest$Builder;->setConstraints(Lbu3;)Landroidx/work/WorkRequest$Builder;
+
+    move-result-object v0
+
+    check-cast v0, Lngb;
+
+    sget-object v2, Lujb;->a:Lujb;
+
+    invoke-virtual {v0, v2}, Landroidx/work/WorkRequest$Builder;->setExpedited(Lujb;)Landroidx/work/WorkRequest$Builder;
+
+    move-result-object v0
+
+    check-cast v0, Lngb;
+
+    invoke-virtual {v0, v1}, Landroidx/work/WorkRequest$Builder;->addTag(Ljava/lang/String;)Landroidx/work/WorkRequest$Builder;
+
+    move-result-object v0
+
+    check-cast v0, Lngb;
+
+    invoke-static/range {p1 .. p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    new-instance v3, Limb;
+
+    const-string v4, "waiting_for_wifi"
+
+    invoke-direct {v3, v4, v2}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array {v3}, [Limb;
+
+    move-result-object v2
+
+    new-instance v3, Lr5j;
+
+    const/16 v4, 0xe
+
+    invoke-direct {v3, v4}, Lr5j;-><init>(I)V
+
+    const/4 v4, 0x0
+
+    aget-object v2, v2, v4
+
+    iget-object v4, v2, Limb;->a:Ljava/lang/Object;
+
+    check-cast v4, Ljava/lang/String;
+
+    iget-object v2, v2, Limb;->b:Ljava/lang/Object;
+
+    invoke-virtual {v3, v2, v4}, Lr5j;->C(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v3}, Lr5j;->g()Lyd4;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Landroidx/work/WorkRequest$Builder;->setInputData(Lyd4;)Landroidx/work/WorkRequest$Builder;
+
+    move-result-object v0
+
+    check-cast v0, Lngb;
+
+    invoke-virtual {v0}, Landroidx/work/WorkRequest$Builder;->build()Landroidx/work/WorkRequest;
+
+    move-result-object v0
+
+    check-cast v0, Logb;
+
+    invoke-virtual {v0}, Landroidx/work/WorkRequest;->getId()Ljava/util/UUID;
+
+    move-result-object v2
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "work "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v2, Luk5;->b:Luk5;
+
+    invoke-virtual {p0, v1, v2, v0}, Lg5i;->b(Ljava/lang/String;Luk5;Logb;)Lq48;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lq48;->c()Lxn3;
+
+    return-void
 .end method

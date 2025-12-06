@@ -1,119 +1,183 @@
-.class public final synthetic Luf2;
-.super Ljava/lang/Object;
+.class public final enum Luf2;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 # interfaces
-.implements Lli6;
+.implements Landroid/os/Parcelable;
+.implements Ljw0;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Luf2;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final enum b:Luf2;
+
+.field public static final synthetic c:[Luf2;
+
+.field public static final synthetic d:Lzg5;
 
 
 # instance fields
-.field public final synthetic X:Ljava/util/Set;
-
-.field public final synthetic Y:Ljava/util/Set;
-
-.field public final synthetic a:Lyf2;
-
-.field public final synthetic b:Ljava/util/Set;
-
-.field public final synthetic c:Ljava/util/Set;
-
-.field public final synthetic o:Ljava/util/Map;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lyf2;Ljava/util/Set;Ljava/util/Set;Ljava/util/Map;Ljava/util/Set;Ljava/util/Set;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Luf2;
 
-    iput-object p1, p0, Luf2;->a:Lyf2;
+    const/4 v1, 0x0
 
-    iput-object p2, p0, Luf2;->b:Ljava/util/Set;
+    const-string v2, "local"
 
-    iput-object p3, p0, Luf2;->c:Ljava/util/Set;
+    const-string v3, "LOCAL_ID"
 
-    iput-object p4, p0, Luf2;->o:Ljava/util/Map;
+    invoke-direct {v0, v3, v1, v2}, Luf2;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    iput-object p5, p0, Luf2;->X:Ljava/util/Set;
+    sput-object v0, Luf2;->b:Luf2;
 
-    iput-object p6, p0, Luf2;->Y:Ljava/util/Set;
+    new-instance v1, Luf2;
+
+    const/4 v2, 0x1
+
+    const-string v3, "server"
+
+    const-string v4, "SERVER_ID"
+
+    invoke-direct {v1, v4, v2, v3}, Luf2;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    filled-new-array {v0, v1}, [Luf2;
+
+    move-result-object v0
+
+    sput-object v0, Luf2;->c:[Luf2;
+
+    new-instance v1, Lzg5;
+
+    invoke-direct {v1, v0}, Lzg5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Luf2;->d:Lzg5;
+
+    new-instance v0, Le8;
+
+    const/16 v1, 0x11
+
+    invoke-direct {v0, v1}, Le8;-><init>(I)V
+
+    sput-object v0, Luf2;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    check-cast p1, Lla2;
+    iput-object p3, p0, Luf2;->a:Ljava/lang/String;
 
-    iget-object v0, p1, Lla2;->b:Lne2;
+    return-void
+.end method
 
-    iget-wide v1, v0, Lne2;->a:J
+.method public static valueOf(Ljava/lang/String;)Luf2;
+    .locals 1
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    const-class v0, Luf2;
 
-    move-result-object v1
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iget-object v2, p0, Luf2;->b:Ljava/util/Set;
+    move-result-object p0
 
-    invoke-interface {v2, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+    check-cast p0, Luf2;
 
-    move-result v1
+    return-object p0
+.end method
 
-    iget-object v2, p0, Luf2;->a:Lyf2;
+.method public static values()[Luf2;
+    .locals 1
 
-    iget-object v3, p0, Luf2;->o:Ljava/util/Map;
+    sget-object v0, Luf2;->c:[Luf2;
 
-    if-nez v1, :cond_0
-
-    iget-object v1, p0, Luf2;->c:Ljava/util/Set;
-
-    invoke-virtual {v2, v1, v3, p1}, Lyf2;->f(Ljava/util/Set;Ljava/util/Map;Lla2;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    :cond_0
-    iget-wide v0, v0, Lne2;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v1, p0, Luf2;->X:Ljava/util/Set;
+    check-cast v0, [Luf2;
 
-    invoke-interface {v1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+    return-object v0
+.end method
 
-    move-result v0
 
-    if-nez v0, :cond_2
+# virtual methods
+.method public final a(Ljava/lang/String;)Ljava/lang/Object;
+    .locals 3
 
-    iget-object v0, p0, Luf2;->Y:Ljava/util/Set;
+    new-instance v0, Lf2;
 
-    invoke-virtual {v2, v0, v3, p1}, Lyf2;->f(Ljava/util/Set;Ljava/util/Map;Lla2;)Z
+    const/4 v1, 0x0
 
-    move-result p1
+    sget-object v2, Luf2;->d:Lzg5;
 
-    if-eqz p1, :cond_1
+    invoke-direct {v0, v1, v2}, Lf2;-><init>(ILjava/lang/Object;)V
 
-    goto :goto_0
+    :cond_0
+    invoke-virtual {v0}, Lf2;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v0}, Lf2;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Luf2;
+
+    iget-object v2, v1, Luf2;->a:Ljava/lang/String;
+
+    invoke-virtual {v2, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    return-object v1
 
     :cond_1
-    const/4 p1, 0x1
+    new-instance p1, Ljava/util/NoSuchElementException;
 
-    goto :goto_1
+    const-string v0, "Collection contains no element matching the predicate."
 
-    :cond_2
-    :goto_0
-    const/4 p1, 0x0
+    invoke-direct {p1, v0}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
 
-    :goto_1
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    throw p1
+.end method
 
-    move-result-object p1
+.method public final describeContents()I
+    .locals 1
 
-    return-object p1
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    return-void
 .end method

@@ -1,267 +1,295 @@
 .class public final Lqnd;
-.super Lwdd;
+.super Lwi0;
 .source "SourceFile"
-
-# interfaces
-.implements Lzi6;
-
-
-# instance fields
-.field public X:I
-
-.field public Y:I
-
-.field public Z:I
-
-.field public c:[Ljava/lang/Object;
-
-.field public o:[J
-
-.field public q0:I
-
-.field public r0:J
-
-.field public s0:I
-
-.field public synthetic t0:Ljava/lang/Object;
-
-.field public final synthetic u0:Lg1a;
-
-
-# direct methods
-.method public constructor <init>(Lg1a;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lqnd;->u0:Lg1a;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lwdd;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final c(Ljava/nio/ByteBuffer;)V
+    .locals 9
 
-    check-cast p1, Lp2e;
+    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result v0
 
-    invoke-virtual {p0, p1, p2}, Lqnd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
 
-    move-result-object p1
+    move-result v1
 
-    check-cast p1, Lqnd;
+    sub-int v2, v1, v0
 
-    sget-object p2, Lccg;->a:Lccg;
+    iget-object v3, p0, Lwi0;->b:Lh50;
 
-    invoke-virtual {p1, p2}, Lqnd;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget v3, v3, Lh50;->c:I
 
-    move-result-object p1
+    const/high16 v4, 0x30000000
 
-    return-object p1
-.end method
+    const/high16 v5, 0x20000000
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    const/high16 v6, 0x10000000
 
-    new-instance v0, Lqnd;
+    const/4 v7, 0x4
 
-    iget-object v1, p0, Lqnd;->u0:Lg1a;
+    const/4 v8, 0x3
 
-    invoke-direct {v0, v1, p2}, Lqnd;-><init>(Lg1a;Lkotlin/coroutines/Continuation;)V
+    if-eq v3, v8, :cond_2
 
-    iput-object p1, v0, Lqnd;->t0:Ljava/lang/Object;
+    if-eq v3, v7, :cond_3
 
-    return-object v0
-.end method
+    if-eq v3, v6, :cond_4
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 19
+    if-eq v3, v5, :cond_1
 
-    move-object/from16 v0, p0
+    if-ne v3, v4, :cond_0
 
-    iget v1, v0, Lqnd;->s0:I
-
-    const/4 v2, 0x0
-
-    const/16 v3, 0x8
-
-    const/4 v4, 0x1
-
-    if-eqz v1, :cond_1
-
-    if-ne v1, v4, :cond_0
-
-    iget v1, v0, Lqnd;->q0:I
-
-    iget v5, v0, Lqnd;->Z:I
-
-    iget-wide v6, v0, Lqnd;->r0:J
-
-    iget v8, v0, Lqnd;->Y:I
-
-    iget v9, v0, Lqnd;->X:I
-
-    iget-object v10, v0, Lqnd;->o:[J
-
-    iget-object v11, v0, Lqnd;->c:[Ljava/lang/Object;
-
-    iget-object v12, v0, Lqnd;->t0:Ljava/lang/Object;
-
-    check-cast v12, Lp2e;
-
-    invoke-static/range {p1 .. p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    goto :goto_2
+    goto :goto_0
 
     :cond_0
-    new-instance v1, Ljava/lang/IllegalStateException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
 
-    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v1
+    throw p1
 
     :cond_1
-    invoke-static/range {p1 .. p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    iget-object v1, v0, Lqnd;->t0:Ljava/lang/Object;
-
-    check-cast v1, Lp2e;
-
-    iget-object v5, v0, Lqnd;->u0:Lg1a;
-
-    iget-object v6, v5, Lg1a;->b:[Ljava/lang/Object;
-
-    iget-object v5, v5, Lg1a;->a:[J
-
-    array-length v7, v5
-
-    add-int/lit8 v7, v7, -0x2
-
-    if-ltz v7, :cond_5
-
-    move v8, v2
-
-    :goto_0
-    aget-wide v9, v5, v8
-
-    not-long v11, v9
-
-    const/4 v13, 0x7
-
-    shl-long/2addr v11, v13
-
-    and-long/2addr v11, v9
-
-    const-wide v13, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
-
-    and-long/2addr v11, v13
-
-    cmp-long v11, v11, v13
-
-    if-eqz v11, :cond_4
-
-    sub-int v11, v8, v7
-
-    not-int v11, v11
-
-    ushr-int/lit8 v11, v11, 0x1f
-
-    rsub-int/lit8 v11, v11, 0x8
-
-    move-object v12, v1
-
-    move v1, v2
-
-    move-wide/from16 v17, v9
-
-    move-object v10, v5
-
-    move v9, v7
-
-    move v5, v11
-
-    move-object v11, v6
-
-    move-wide/from16 v6, v17
-
-    :goto_1
-    if-ge v1, v5, :cond_3
-
-    const-wide/16 v13, 0xff
-
-    and-long/2addr v13, v6
-
-    const-wide/16 v15, 0x80
-
-    cmp-long v13, v13, v15
-
-    if-gez v13, :cond_2
-
-    shl-int/lit8 v2, v8, 0x3
-
-    add-int/2addr v2, v1
-
-    aget-object v2, v11, v2
-
-    iput-object v12, v0, Lqnd;->t0:Ljava/lang/Object;
-
-    iput-object v11, v0, Lqnd;->c:[Ljava/lang/Object;
-
-    iput-object v10, v0, Lqnd;->o:[J
-
-    iput v9, v0, Lqnd;->X:I
-
-    iput v8, v0, Lqnd;->Y:I
-
-    iput-wide v6, v0, Lqnd;->r0:J
-
-    iput v5, v0, Lqnd;->Z:I
-
-    iput v1, v0, Lqnd;->q0:I
-
-    iput v4, v0, Lqnd;->s0:I
-
-    invoke-virtual {v12, v2, v0}, Lp2e;->b(Ljava/lang/Object;Lwdd;)V
-
-    sget-object v1, Lr54;->a:Lr54;
-
-    return-object v1
+    div-int/lit8 v2, v2, 0x3
 
     :cond_2
-    :goto_2
-    shr-long/2addr v6, v3
-
-    add-int/2addr v1, v4
+    mul-int/lit8 v2, v2, 0x2
 
     goto :goto_1
 
     :cond_3
-    if-ne v5, v3, :cond_5
-
-    move v7, v9
-
-    move-object v5, v10
-
-    move-object v6, v11
-
-    move-object v1, v12
+    :goto_0
+    div-int/lit8 v2, v2, 0x2
 
     :cond_4
-    if-eq v8, v7, :cond_5
+    :goto_1
+    invoke-virtual {p0, v2}, Lwi0;->j(I)Ljava/nio/ByteBuffer;
 
-    add-int/lit8 v8, v8, 0x1
+    move-result-object v2
+
+    iget-object v3, p0, Lwi0;->b:Lh50;
+
+    iget v3, v3, Lh50;->c:I
+
+    if-eq v3, v8, :cond_9
+
+    if-eq v3, v7, :cond_8
+
+    if-eq v3, v6, :cond_7
+
+    if-eq v3, v5, :cond_6
+
+    if-ne v3, v4, :cond_5
+
+    :goto_2
+    if-ge v0, v1, :cond_a
+
+    add-int/lit8 v3, v0, 0x2
+
+    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    add-int/lit8 v3, v0, 0x3
+
+    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    add-int/lit8 v0, v0, 0x4
+
+    goto :goto_2
+
+    :cond_5
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw p1
+
+    :cond_6
+    :goto_3
+    if-ge v0, v1, :cond_a
+
+    add-int/lit8 v3, v0, 0x1
+
+    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    add-int/lit8 v3, v0, 0x2
+
+    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    add-int/lit8 v0, v0, 0x3
+
+    goto :goto_3
+
+    :cond_7
+    :goto_4
+    if-ge v0, v1, :cond_a
+
+    add-int/lit8 v3, v0, 0x1
+
+    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    add-int/lit8 v0, v0, 0x2
+
+    goto :goto_4
+
+    :cond_8
+    :goto_5
+    if-ge v0, v1, :cond_a
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->getFloat(I)F
+
+    move-result v3
+
+    const/high16 v4, -0x40800000    # -1.0f
+
+    const/high16 v5, 0x3f800000    # 1.0f
+
+    invoke-static {v3, v4, v5}, Lxxg;->h(FFF)F
+
+    move-result v3
+
+    const v4, 0x46fffe00    # 32767.0f
+
+    mul-float/2addr v3, v4
+
+    float-to-int v3, v3
+
+    int-to-short v3, v3
+
+    and-int/lit16 v4, v3, 0xff
+
+    int-to-byte v4, v4
+
+    invoke-virtual {v2, v4}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    shr-int/lit8 v3, v3, 0x8
+
+    and-int/lit16 v3, v3, 0xff
+
+    int-to-byte v3, v3
+
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    add-int/lit8 v0, v0, 0x4
+
+    goto :goto_5
+
+    :cond_9
+    :goto_6
+    if-ge v0, v1, :cond_a
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v3
+
+    and-int/lit16 v3, v3, 0xff
+
+    add-int/lit8 v3, v3, -0x80
+
+    int-to-byte v3, v3
+
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_6
+
+    :cond_a
+    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
+
+    return-void
+.end method
+
+.method public final f(Lh50;)Lh50;
+    .locals 3
+
+    iget v0, p1, Lh50;->c:I
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x2
+
+    if-eq v0, v1, :cond_1
+
+    if-eq v0, v2, :cond_1
+
+    const/high16 v1, 0x10000000
+
+    if-eq v0, v1, :cond_1
+
+    const/high16 v1, 0x20000000
+
+    if-eq v0, v1, :cond_1
+
+    const/high16 v1, 0x30000000
+
+    if-eq v0, v1, :cond_1
+
+    const/4 v1, 0x4
+
+    if-ne v0, v1, :cond_0
 
     goto :goto_0
 
-    :cond_5
-    sget-object v1, Lccg;->a:Lccg;
+    :cond_0
+    new-instance v0, Lcom/google/android/exoplayer2/audio/AudioProcessor$UnhandledAudioFormatException;
 
-    return-object v1
+    invoke-direct {v0, p1}, Lcom/google/android/exoplayer2/audio/AudioProcessor$UnhandledAudioFormatException;-><init>(Lh50;)V
+
+    throw v0
+
+    :cond_1
+    :goto_0
+    if-eq v0, v2, :cond_2
+
+    new-instance v0, Lh50;
+
+    iget v1, p1, Lh50;->a:I
+
+    iget p1, p1, Lh50;->b:I
+
+    invoke-direct {v0, v1, p1, v2}, Lh50;-><init>(III)V
+
+    return-object v0
+
+    :cond_2
+    sget-object p1, Lh50;->e:Lh50;
+
+    return-object p1
 .end method

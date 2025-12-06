@@ -1,99 +1,37 @@
-.class public final Lpv4;
+.class public abstract Lpv4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/view/DisplayCutout;
+# static fields
+.field public static volatile a:Li17;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/DisplayCutout;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lfuc;->c:Lfuc;
 
-    iput-object p1, p0, Lpv4;->a:Landroid/view/DisplayCutout;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    if-eqz p1, :cond_2
-
-    const-class v0, Lpv4;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {}, Layi;->a()Lex4;
 
     move-result-object v1
 
-    if-eq v0, v1, :cond_1
+    new-instance v2, Ldk0;
 
-    goto :goto_0
+    const/16 v3, 0xb
 
-    :cond_1
-    check-cast p1, Lpv4;
+    invoke-direct {v2, v3}, Ldk0;-><init>(I)V
 
-    iget-object v0, p0, Lpv4;->a:Landroid/view/DisplayCutout;
+    iget-object v0, v0, Lfuc;->a:Ldy;
 
-    iget-object p1, p1, Lpv4;->a:Landroid/view/DisplayCutout;
+    new-instance v3, Leuc;
 
-    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const/4 v4, 0x0
 
-    move-result p1
+    invoke-direct {v3, v4, v2}, Leuc;-><init>(ILjava/lang/Object;)V
 
-    return p1
+    invoke-virtual {v0, v1, v3}, Ldy;->f(Ljava/util/concurrent/Executor;Luqa;)V
 
-    :cond_2
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lpv4;->a:Landroid/view/DisplayCutout;
-
-    invoke-static {v0}, Lv4;->d(Landroid/view/DisplayCutout;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "DisplayCutoutCompat{"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lpv4;->a:Landroid/view/DisplayCutout;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

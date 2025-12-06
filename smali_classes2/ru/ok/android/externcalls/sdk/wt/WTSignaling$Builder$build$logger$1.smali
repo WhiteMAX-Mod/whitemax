@@ -1,5 +1,5 @@
 .class public final Lru/ok/android/externcalls/sdk/wt/WTSignaling$Builder$build$logger$1;
-.super Lyj0;
+.super Lwj0;
 .source "SourceFile"
 
 
@@ -19,10 +19,10 @@
     }
     d2 = {
         "ru/ok/android/externcalls/sdk/wt/WTSignaling$Builder$build$logger$1",
-        "Lyj0;",
+        "Lwj0;",
         "",
         "message",
-        "Lccg;",
+        "Lqqg;",
         "log",
         "(Ljava/lang/String;)V",
         "",
@@ -50,16 +50,16 @@
 
 
 # instance fields
-.field final synthetic $log:Lfwc;
+.field final synthetic $log:Ly6d;
 
 
 # direct methods
-.method public constructor <init>(Lfwc;)V
+.method public constructor <init>(Ly6d;)V
     .locals 0
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/wt/WTSignaling$Builder$build$logger$1;->$log:Lfwc;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/wt/WTSignaling$Builder$build$logger$1;->$log:Ly6d;
 
-    invoke-direct {p0}, Lyj0;-><init>()V
+    invoke-direct {p0}, Lwj0;-><init>()V
 
     return-void
 .end method
@@ -70,7 +70,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/wt/WTSignaling$Builder$build$logger$1;->$log:Lfwc;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/wt/WTSignaling$Builder$build$logger$1;->$log:Ly6d;
 
     if-nez p1, :cond_0
 
@@ -79,7 +79,7 @@
     :cond_0
     const-string v1, "WebTransportNetworking"
 
-    invoke-interface {v0, v1, p1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v1, p1}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -95,27 +95,27 @@
     if-eqz p2, :cond_1
 
     .line 3
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/wt/WTSignaling$Builder$build$logger$1;->$log:Lfwc;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/wt/WTSignaling$Builder$build$logger$1;->$log:Ly6d;
 
     if-nez p1, :cond_0
 
     move-object p1, v0
 
     :cond_0
-    invoke-interface {v2, v1, p1, p2}, Lfwc;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v2, v1, p1, p2}, Ly6d;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 
     .line 4
     :cond_1
-    iget-object p2, p0, Lru/ok/android/externcalls/sdk/wt/WTSignaling$Builder$build$logger$1;->$log:Lfwc;
+    iget-object p2, p0, Lru/ok/android/externcalls/sdk/wt/WTSignaling$Builder$build$logger$1;->$log:Ly6d;
 
     if-nez p1, :cond_2
 
     move-object p1, v0
 
     :cond_2
-    invoke-interface {p2, v1, p1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p2, v1, p1}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -124,7 +124,7 @@
     .locals 0
 
     .line 2
-    iget-object p2, p0, Lru/ok/android/externcalls/sdk/wt/WTSignaling$Builder$build$logger$1;->$log:Lfwc;
+    iget-object p2, p0, Lru/ok/android/externcalls/sdk/wt/WTSignaling$Builder$build$logger$1;->$log:Ly6d;
 
     if-nez p1, :cond_0
 
@@ -139,7 +139,7 @@
 
     const-string p3, "WebTransportNetworking"
 
-    invoke-interface {p2, p3, p1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p2, p3, p1}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -148,7 +148,7 @@
     .locals 0
 
     .line 1
-    iget-object p2, p0, Lru/ok/android/externcalls/sdk/wt/WTSignaling$Builder$build$logger$1;->$log:Lfwc;
+    iget-object p2, p0, Lru/ok/android/externcalls/sdk/wt/WTSignaling$Builder$build$logger$1;->$log:Ly6d;
 
     if-nez p1, :cond_0
 
@@ -163,7 +163,7 @@
 
     const-string p3, "WebTransportNetworking"
 
-    invoke-interface {p2, p3, p1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p2, p3, p1}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

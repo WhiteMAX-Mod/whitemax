@@ -1,132 +1,105 @@
 .class public final Ljf2;
-.super Lsgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Ljava/io/Serializable;
+.implements Ld93;
 
 
 # instance fields
-.field public X:I
+.field public final a:J
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lx23;
-
-.field public final synthetic q0:Lmf2;
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Lx23;Lkotlin/coroutines/Continuation;Lmf2;)V
-    .locals 0
+.method public constructor <init>(JJ)V
+    .locals 4
 
-    iput-object p1, p0, Ljf2;->Z:Lx23;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Ljf2;->q0:Lmf2;
+    iput-wide p1, p0, Ljf2;->a:J
 
-    const/4 p1, 0x2
+    iput-wide p3, p0, Ljf2;->b:J
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    const-wide/16 v0, -0x1
 
+    cmp-long p1, p1, v0
+
+    const-string p2, ""
+
+    const-string v2, "Chunk"
+
+    if-nez p1, :cond_0
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v3, "start time is -1"
+
+    invoke-direct {p1, v3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v2, p2, p1}, Lwqi;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_0
+    cmp-long p1, p3, v0
+
+    if-nez p1, :cond_1
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p3, "end time is -1"
+
+    invoke-direct {p1, p3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v2, p2, p1}, Lwqi;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()J
+    .locals 2
 
-    check-cast p1, Lvy5;
+    iget-wide v0, p0, Ljf2;->a:J
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ljf2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ljf2;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Ljf2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-wide v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+.method public final c()J
+    .locals 2
 
-    new-instance v0, Ljf2;
+    iget-wide v0, p0, Ljf2;->b:J
 
-    iget-object v1, p0, Ljf2;->Z:Lx23;
-
-    iget-object v2, p0, Ljf2;->q0:Lmf2;
-
-    invoke-direct {v0, v1, p2, v2}, Ljf2;-><init>(Lx23;Lkotlin/coroutines/Continuation;Lmf2;)V
-
-    iput-object p1, v0, Ljf2;->Y:Ljava/lang/Object;
-
-    return-object v0
+    return-wide v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final toString()Ljava/lang/String;
     .locals 4
 
-    iget v0, p0, Ljf2;->X:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x1
+    const-string v1, "Chunk(startTime="
 
-    if-eqz v0, :cond_1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-ne v0, v1, :cond_0
+    iget-wide v1, p0, Ljf2;->a:J
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    const-string v1, ", endTime="
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    iget-wide v1, p0, Ljf2;->b:J
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const/16 v3, 0x29
 
-    throw p1
+    invoke-static {v0, v1, v2, v3}, Lutb;->l(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
 
-    :cond_1
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ljf2;->Y:Ljava/lang/Object;
-
-    check-cast p1, Lvy5;
-
-    new-instance v0, Lec2;
-
-    iget-object v2, p0, Ljf2;->q0:Lmf2;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v0, p1, v2, v3}, Lec2;-><init>(Lvy5;Ljava/lang/Object;I)V
-
-    iput v1, p0, Ljf2;->X:I
-
-    iget-object p1, p0, Ljf2;->Z:Lx23;
-
-    invoke-virtual {p1, v0, p0}, Lx23;->d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lr54;->a:Lr54;
-
-    if-ne p1, v0, :cond_2
+    move-result-object v0
 
     return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
 .end method

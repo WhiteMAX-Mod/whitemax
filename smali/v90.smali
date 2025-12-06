@@ -4,44 +4,22 @@
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/Executor;
+.field public final a:Lua0;
 
-.field public final b:Landroid/os/Handler;
+.field public final b:Lua0;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;Landroid/os/Handler;)V
+.method public constructor <init>(Lua0;Lua0;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p1, :cond_1
+    iput-object p1, p0, Lv90;->a:Lua0;
 
-    iput-object p1, p0, Lv90;->a:Ljava/util/concurrent/Executor;
-
-    if-eqz p2, :cond_0
-
-    iput-object p2, p0, Lv90;->b:Landroid/os/Handler;
+    iput-object p2, p0, Lv90;->b:Lua0;
 
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "Null schedulerHandler"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "Null cameraExecutor"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 
@@ -64,21 +42,21 @@
 
     check-cast p1, Lv90;
 
-    iget-object v1, p0, Lv90;->a:Ljava/util/concurrent/Executor;
+    iget-object v1, p0, Lv90;->a:Lua0;
 
-    iget-object v3, p1, Lv90;->a:Ljava/util/concurrent/Executor;
+    iget-object v3, p1, Lv90;->a:Lua0;
 
-    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Lua0;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lv90;->b:Landroid/os/Handler;
+    iget-object v1, p0, Lv90;->b:Lua0;
 
-    iget-object p1, p1, Lv90;->b:Landroid/os/Handler;
+    iget-object p1, p1, Lv90;->b:Lua0;
 
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, p1}, Lua0;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -93,9 +71,9 @@
 .method public final hashCode()I
     .locals 2
 
-    iget-object v0, p0, Lv90;->a:Ljava/util/concurrent/Executor;
+    iget-object v0, p0, Lv90;->a:Lua0;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v0}, Lua0;->hashCode()I
 
     move-result v0
 
@@ -105,9 +83,9 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v1, p0, Lv90;->b:Landroid/os/Handler;
+    iget-object v1, p0, Lv90;->b:Lua0;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v1}, Lua0;->hashCode()I
 
     move-result v1
 
@@ -121,19 +99,19 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "CameraThreadConfig{cameraExecutor="
+    const-string v1, "DualOutConfig{primaryOutConfig="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lv90;->a:Ljava/util/concurrent/Executor;
+    iget-object v1, p0, Lv90;->a:Lua0;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", schedulerHandler="
+    const-string v1, ", secondaryOutConfig="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lv90;->b:Landroid/os/Handler;
+    iget-object v1, p0, Lv90;->b:Lua0;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

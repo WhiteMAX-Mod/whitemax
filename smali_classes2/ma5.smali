@@ -1,152 +1,88 @@
-.class public interface abstract Lma5;
+.class public final synthetic Lma5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ly7b;
+.implements Ljava/util/function/IntPredicate;
+
+
+# instance fields
+.field public final synthetic a:I
+
+
+# direct methods
+.method public synthetic constructor <init>(I)V
+    .locals 0
+
+    iput p1, p0, Lma5;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public a(La8b;)V
-    .locals 0
+.method public final test(I)Z
+    .locals 1
 
-    return-void
-.end method
+    iget v0, p0, Lma5;->a:I
 
-.method public b(La8b;)V
-    .locals 0
+    packed-switch v0, :pswitch_data_0
 
-    return-void
-.end method
+    invoke-static {p1}, Lna5;->a(I)Z
 
-.method public c(La8b;)V
-    .locals 0
+    move-result v0
 
-    return-void
-.end method
+    if-nez v0, :cond_2
 
-.method public d(Lq7b;Lvrf;Z)V
-    .locals 0
+    const/16 v0, 0x200d
 
-    return-void
-.end method
+    if-ne p1, v0, :cond_0
 
-.method public e(Lone/video/exo/error/OneVideoExoPlaybackException;Llxg;La8b;)V
-    .locals 0
+    goto :goto_0
 
-    return-void
-.end method
+    :cond_0
+    const/16 v0, 0x20e3
 
-.method public f(La8b;)V
-    .locals 0
+    if-ne p1, v0, :cond_1
 
-    return-void
-.end method
+    goto :goto_0
 
-.method public g(La8b;F)V
-    .locals 0
+    :cond_1
+    const/4 p1, 0x0
 
-    return-void
-.end method
+    goto :goto_1
 
-.method public h(Lq7b;Lrxg;)V
-    .locals 0
+    :cond_2
+    :goto_0
+    const/4 p1, 0x1
 
-    return-void
-.end method
+    :goto_1
+    return p1
 
-.method public i(La8b;)V
-    .locals 0
+    :pswitch_0
+    invoke-static {p1}, Lna5;->c(I)Z
 
-    return-void
-.end method
+    move-result p1
 
-.method public j(La8b;)V
-    .locals 0
+    :goto_2
+    xor-int/lit8 p1, p1, 0x1
 
-    return-void
-.end method
+    return p1
 
-.method public k(Lq7b;Lrxg;)V
-    .locals 0
+    :pswitch_1
+    invoke-static {p1}, Lna5;->c(I)Z
 
-    return-void
-.end method
+    move-result p1
 
-.method public l(La8b;)V
-    .locals 0
+    goto :goto_2
 
-    return-void
-.end method
+    nop
 
-.method public m(La8b;I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public n(La8b;Z)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public o(Lq7b;Lp60;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public p(La8b;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public q(La8b;Lx7b;Lh22;Lh22;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public r(La8b;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public s(Lul0;II)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public t(La8b;J)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public u(La8b;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public v(La8b;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public w(La8b;Z)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public x(La8b;I)V
-    .locals 0
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,181 +1,143 @@
-.class public final Lxi9;
-.super Ljava/lang/Object;
+.class public final enum Lxi9;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Laj9;
+
+# static fields
+.field public static final enum X:Lxi9;
+
+.field public static final enum Y:Lxi9;
+
+.field public static final synthetic Z:[Lxi9;
+
+.field public static final b:Ljava/util/List;
+
+.field public static final enum c:Lxi9;
+
+.field public static final enum d:Lxi9;
+
+.field public static final enum o:Lxi9;
 
 
 # instance fields
-.field public final a:J
-
-.field public final b:Lppg;
-
-.field public final c:F
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(JLppg;F)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 8
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lxi9;
 
-    iput-wide p1, p0, Lxi9;->a:J
+    const-string v1, "UNKNOWN"
 
-    iput-object p3, p0, Lxi9;->b:Lppg;
+    const/4 v2, 0x0
 
-    iput p4, p0, Lxi9;->c:F
+    invoke-direct {v0, v1, v2, v2}, Lxi9;-><init>(Ljava/lang/String;II)V
+
+    sput-object v0, Lxi9;->c:Lxi9;
+
+    new-instance v1, Lxi9;
+
+    const/4 v2, 0x1
+
+    const/16 v3, 0xa
+
+    const-string v4, "SENDING"
+
+    invoke-direct {v1, v4, v2, v3}, Lxi9;-><init>(Ljava/lang/String;II)V
+
+    sput-object v1, Lxi9;->d:Lxi9;
+
+    new-instance v2, Lxi9;
+
+    const/4 v3, 0x2
+
+    const/16 v4, 0x14
+
+    const-string v5, "SENT"
+
+    invoke-direct {v2, v5, v3, v4}, Lxi9;-><init>(Ljava/lang/String;II)V
+
+    sput-object v2, Lxi9;->o:Lxi9;
+
+    new-instance v3, Lxi9;
+
+    const/4 v4, 0x3
+
+    const/16 v5, 0x1e
+
+    const-string v6, "READ"
+
+    invoke-direct {v3, v6, v4, v5}, Lxi9;-><init>(Ljava/lang/String;II)V
+
+    sput-object v3, Lxi9;->X:Lxi9;
+
+    new-instance v4, Lxi9;
+
+    const/4 v5, 0x4
+
+    const/16 v6, 0x28
+
+    const-string v7, "ERROR"
+
+    invoke-direct {v4, v7, v5, v6}, Lxi9;-><init>(Ljava/lang/String;II)V
+
+    sput-object v4, Lxi9;->Y:Lxi9;
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Lxi9;
+
+    move-result-object v0
+
+    sput-object v0, Lxi9;->Z:[Lxi9;
+
+    new-instance v1, Lzg5;
+
+    invoke-direct {v1, v0}, Lzg5;-><init>([Ljava/lang/Enum;)V
+
+    invoke-static {v1}, Lue3;->d0(Ljava/lang/Iterable;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Lxi9;->b:Ljava/util/List;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
-# virtual methods
-.method public final b()Lppg;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput p3, p0, Lxi9;->a:I
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lxi9;
     .locals 1
 
-    iget-object v0, p0, Lxi9;->b:Lppg;
+    const-class v0, Lxi9;
 
-    return-object v0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lxi9;
+
+    return-object p0
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public static values()[Lxi9;
+    .locals 1
 
-    const/4 v0, 0x1
+    sget-object v0, Lxi9;->Z:[Lxi9;
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lxi9;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lxi9;
-
-    iget-wide v3, p0, Lxi9;->a:J
-
-    iget-wide v5, p1, Lxi9;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lxi9;->b:Lppg;
-
-    iget-object v3, p1, Lxi9;->b:Lppg;
-
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget v1, p0, Lxi9;->c:F
-
-    iget p1, p1, Lxi9;->c:F
-
-    invoke-static {v1, p1}, Ljava/lang/Float;->compare(FF)I
-
-    move-result p1
-
-    if-eqz p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lxi9;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lxi9;->b:Lppg;
-
-    invoke-virtual {v1}, Lppg;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget v0, p0, Lxi9;->c:F
-
-    invoke-static {v0}, Ljava/lang/Float;->hashCode(F)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final j()J
-    .locals 2
-
-    iget-wide v0, p0, Lxi9;->a:J
-
-    return-wide v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "OnSeek(messageId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lxi9;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", model="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lxi9;->b:Lppg;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", progress="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lxi9;->c:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, [Lxi9;
 
     return-object v0
 .end method

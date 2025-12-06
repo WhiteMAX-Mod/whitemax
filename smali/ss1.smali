@@ -4,26 +4,24 @@
 
 
 # static fields
-.field public static final enum X:Lss1;
-
-.field public static final synthetic Y:[Lss1;
-
 .field public static final enum a:Lss1;
 
 .field public static final enum b:Lss1;
 
 .field public static final enum c:Lss1;
 
-.field public static final enum o:Lss1;
+.field public static final enum d:Lss1;
+
+.field public static final synthetic o:[Lss1;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 7
+    .locals 6
 
     new-instance v0, Lss1;
 
-    const-string v1, "MIDDLE"
+    const-string v1, "ACTIVE"
 
     const/4 v2, 0x0
 
@@ -33,7 +31,7 @@
 
     new-instance v1, Lss1;
 
-    const-string v2, "SMALL"
+    const-string v2, "CALLING"
 
     const/4 v3, 0x1
 
@@ -43,7 +41,7 @@
 
     new-instance v2, Lss1;
 
-    const-string v3, "PIP"
+    const-string v3, "NO_CONNECTION"
 
     const/4 v4, 0x2
 
@@ -53,29 +51,19 @@
 
     new-instance v3, Lss1;
 
-    const-string v4, "PREVIEW"
+    const-string v4, "NONE"
 
     const/4 v5, 0x3
 
     invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sput-object v3, Lss1;->o:Lss1;
+    sput-object v3, Lss1;->d:Lss1;
 
-    new-instance v4, Lss1;
-
-    const-string v5, "BIG_AVATAR"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lss1;->X:Lss1;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Lss1;
+    filled-new-array {v0, v1, v2, v3}, [Lss1;
 
     move-result-object v0
 
-    sput-object v0, Lss1;->Y:[Lss1;
+    sput-object v0, Lss1;->o:[Lss1;
 
     return-void
 .end method
@@ -97,7 +85,7 @@
 .method public static values()[Lss1;
     .locals 1
 
-    sget-object v0, Lss1;->Y:[Lss1;
+    sget-object v0, Lss1;->o:[Lss1;
 
     invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 

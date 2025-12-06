@@ -1,6 +1,23 @@
 .class public final Lad3;
-.super Ljava/lang/Object;
+.super Landroid/text/style/CharacterStyle;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/text/style/UpdateAppearance;
+.implements Landroid/os/Parcelable;
+.implements Lep8;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lad3;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
@@ -8,141 +25,107 @@
 
 .field public final b:I
 
-.field public final c:I
-
 
 # direct methods
-.method public constructor <init>(III)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Le8;
+
+    const/16 v1, 0x15
+
+    invoke-direct {v0, v1}, Le8;-><init>(I)V
+
+    sput-object v0, Lad3;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
+    .locals 1
+
+    const/high16 v0, -0x10000
+
+    .line 1
+    invoke-direct {p0, v0}, Lad3;-><init>(I)V
+
+    return-void
+.end method
+
+.method public constructor <init>(I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 2
+    invoke-direct {p0}, Landroid/text/style/CharacterStyle;-><init>()V
 
+    .line 3
     iput p1, p0, Lad3;->a:I
 
-    iput p2, p0, Lad3;->b:I
+    const/16 p1, 0x9
 
-    iput p3, p0, Lad3;->c:I
+    .line 4
+    iput p1, p0, Lad3;->b:I
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 0
+
+    .line 5
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result p1
+
+    invoke-direct {p0, p1}, Lad3;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final copy()Lg74;
+    .locals 1
 
-    if-ne p0, p1, :cond_0
+    new-instance v0, Lad3;
 
-    goto :goto_1
+    invoke-direct {v0}, Lad3;-><init>()V
 
-    :cond_0
-    instance-of v0, p1, Lad3;
+    return-object v0
+.end method
 
-    if-nez v0, :cond_1
+.method public final describeContents()I
+    .locals 1
 
-    goto :goto_0
+    const/4 v0, 0x0
 
-    :cond_1
-    check-cast p1, Lad3;
+    return v0
+.end method
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.method public final getType()I
+    .locals 1
+
+    iget v0, p0, Lad3;->b:I
+
+    return v0
+.end method
+
+.method public final updateDrawState(Landroid/text/TextPaint;)V
+    .locals 1
 
     iget v0, p0, Lad3;->a:I
 
-    iget v1, p1, Lad3;->a:I
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p0, Lad3;->b:I
-
-    iget v1, p1, Lad3;->b:I
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget v0, p0, Lad3;->c:I
-
-    iget p1, p1, Lad3;->c:I
-
-    if-eq v0, p1, :cond_4
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_4
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    const/4 v0, -0x1
+    iget p2, p0, Lad3;->a:I
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lad3;->a:I
-
-    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
-
-    move-result v0
-
-    iget v2, p0, Lad3;->b:I
-
-    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
-
-    move-result v0
-
-    iget v1, p0, Lad3;->c:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", neutralSecondary="
-
-    const-string v1, ", themedFade="
-
-    const-string v2, "CommonActionIconColors(contrastStatic=-1, neutral="
-
-    iget v3, p0, Lad3;->a:I
-
-    iget v4, p0, Lad3;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    iget v2, p0, Lad3;->c:I
-
-    invoke-static {v0, v2, v1}, Li57;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

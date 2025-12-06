@@ -1,434 +1,182 @@
-.class public final Loxc;
+.class public abstract Loxc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Landroid/os/Parcelable;
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Loxc;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static abc_ab_share_pack_mtrl_alpha:I = 0x7f08027e
 
+.field public static abc_action_bar_item_background_material:I = 0x7f08027f
 
-# instance fields
-.field public final a:I
+.field public static abc_btn_borderless_material:I = 0x7f080280
 
-.field public final b:F
+.field public static abc_btn_check_material:I = 0x7f080281
 
-.field public c:Ljava/lang/Object;
+.field public static abc_btn_check_material_anim:I = 0x7f080282
 
+.field public static abc_btn_check_to_on_mtrl_000:I = 0x7f080283
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.field public static abc_btn_check_to_on_mtrl_015:I = 0x7f080284
 
-    new-instance v0, Lx3b;
+.field public static abc_btn_colored_material:I = 0x7f080285
 
-    const/16 v1, 0x15
+.field public static abc_btn_default_mtrl_shape:I = 0x7f080286
 
-    invoke-direct {v0, v1}, Lx3b;-><init>(I)V
+.field public static abc_btn_radio_material:I = 0x7f080287
 
-    sput-object v0, Loxc;->CREATOR:Landroid/os/Parcelable$Creator;
+.field public static abc_btn_radio_material_anim:I = 0x7f080288
 
-    return-void
-.end method
+.field public static abc_btn_radio_to_on_mtrl_000:I = 0x7f080289
 
-.method public constructor <init>(IF)V
-    .locals 0
+.field public static abc_btn_radio_to_on_mtrl_015:I = 0x7f08028a
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static abc_btn_switch_to_on_mtrl_00001:I = 0x7f08028b
 
-    iput p1, p0, Loxc;->a:I
+.field public static abc_btn_switch_to_on_mtrl_00012:I = 0x7f08028c
 
-    iput p2, p0, Loxc;->b:F
+.field public static abc_cab_background_internal_bg:I = 0x7f08028d
 
-    return-void
-.end method
+.field public static abc_cab_background_top_material:I = 0x7f08028e
 
-.method public static a(Landroid/os/Parcelable;)Loxc;
-    .locals 5
+.field public static abc_cab_background_top_mtrl_alpha:I = 0x7f08028f
 
-    const/4 v0, 0x0
+.field public static abc_control_background_material:I = 0x7f080290
 
-    if-eqz p0, :cond_3
+.field public static abc_dialog_material_background:I = 0x7f080291
 
-    move-object v1, p0
+.field public static abc_edit_text_material:I = 0x7f080292
 
-    check-cast v1, Landroid/media/Rating;
+.field public static abc_ic_ab_back_material:I = 0x7f080293
 
-    invoke-virtual {v1}, Landroid/media/Rating;->getRatingStyle()I
+.field public static abc_ic_arrow_drop_right_black_24dp:I = 0x7f080294
 
-    move-result v2
+.field public static abc_ic_clear_material:I = 0x7f080295
 
-    invoke-virtual {v1}, Landroid/media/Rating;->isRated()Z
+.field public static abc_ic_commit_search_api_mtrl_alpha:I = 0x7f080296
 
-    move-result v3
+.field public static abc_ic_go_search_api_material:I = 0x7f080297
 
-    if-eqz v3, :cond_2
+.field public static abc_ic_menu_copy_mtrl_am_alpha:I = 0x7f080298
 
-    const/4 v3, 0x0
+.field public static abc_ic_menu_cut_mtrl_alpha:I = 0x7f080299
 
-    const/high16 v4, 0x3f800000    # 1.0f
+.field public static abc_ic_menu_overflow_material:I = 0x7f08029a
 
-    packed-switch v2, :pswitch_data_0
+.field public static abc_ic_menu_paste_mtrl_am_alpha:I = 0x7f08029b
 
-    goto :goto_2
+.field public static abc_ic_menu_selectall_mtrl_alpha:I = 0x7f08029c
 
-    :pswitch_0
-    invoke-virtual {v1}, Landroid/media/Rating;->getPercentRating()F
+.field public static abc_ic_menu_share_mtrl_alpha:I = 0x7f08029d
 
-    move-result v0
+.field public static abc_ic_search_api_material:I = 0x7f08029e
 
-    invoke-static {v0}, Loxc;->d(F)Loxc;
+.field public static abc_ic_voice_search_api_material:I = 0x7f08029f
 
-    move-result-object v0
+.field public static abc_item_background_holo_dark:I = 0x7f0802a0
 
-    goto :goto_1
+.field public static abc_item_background_holo_light:I = 0x7f0802a1
 
-    :pswitch_1
-    invoke-virtual {v1}, Landroid/media/Rating;->getStarRating()F
+.field public static abc_list_divider_material:I = 0x7f0802a2
 
-    move-result v0
+.field public static abc_list_divider_mtrl_alpha:I = 0x7f0802a3
 
-    invoke-static {v2, v0}, Loxc;->e(IF)Loxc;
+.field public static abc_list_focused_holo:I = 0x7f0802a4
 
-    move-result-object v0
+.field public static abc_list_longpressed_holo:I = 0x7f0802a5
 
-    goto :goto_1
+.field public static abc_list_pressed_holo_dark:I = 0x7f0802a6
 
-    :pswitch_2
-    invoke-virtual {v1}, Landroid/media/Rating;->isThumbUp()Z
+.field public static abc_list_pressed_holo_light:I = 0x7f0802a7
 
-    move-result v0
+.field public static abc_list_selector_background_transition_holo_dark:I = 0x7f0802a8
 
-    new-instance v1, Loxc;
+.field public static abc_list_selector_background_transition_holo_light:I = 0x7f0802a9
 
-    if-eqz v0, :cond_0
+.field public static abc_list_selector_disabled_holo_dark:I = 0x7f0802aa
 
-    move v3, v4
+.field public static abc_list_selector_disabled_holo_light:I = 0x7f0802ab
 
-    :cond_0
-    const/4 v0, 0x2
+.field public static abc_list_selector_holo_dark:I = 0x7f0802ac
 
-    invoke-direct {v1, v0, v3}, Loxc;-><init>(IF)V
+.field public static abc_list_selector_holo_light:I = 0x7f0802ad
 
-    :goto_0
-    move-object v0, v1
+.field public static abc_menu_hardkey_panel_mtrl_mult:I = 0x7f0802ae
 
-    goto :goto_1
+.field public static abc_popup_background_mtrl_mult:I = 0x7f0802af
 
-    :pswitch_3
-    invoke-virtual {v1}, Landroid/media/Rating;->hasHeart()Z
+.field public static abc_ratingbar_indicator_material:I = 0x7f0802b0
 
-    move-result v0
+.field public static abc_ratingbar_material:I = 0x7f0802b1
 
-    new-instance v1, Loxc;
+.field public static abc_ratingbar_small_material:I = 0x7f0802b2
 
-    if-eqz v0, :cond_1
+.field public static abc_scrubber_control_off_mtrl_alpha:I = 0x7f0802b3
 
-    move v3, v4
+.field public static abc_scrubber_control_to_pressed_mtrl_000:I = 0x7f0802b4
 
-    :cond_1
-    const/4 v0, 0x1
+.field public static abc_scrubber_control_to_pressed_mtrl_005:I = 0x7f0802b5
 
-    invoke-direct {v1, v0, v3}, Loxc;-><init>(IF)V
+.field public static abc_scrubber_primary_mtrl_alpha:I = 0x7f0802b6
 
-    goto :goto_0
+.field public static abc_scrubber_track_mtrl_alpha:I = 0x7f0802b7
 
-    :cond_2
-    packed-switch v2, :pswitch_data_1
+.field public static abc_seekbar_thumb_material:I = 0x7f0802b8
 
-    goto :goto_1
+.field public static abc_seekbar_tick_mark_material:I = 0x7f0802b9
 
-    :pswitch_4
-    new-instance v0, Loxc;
+.field public static abc_seekbar_track_material:I = 0x7f0802ba
 
-    const/high16 v1, -0x40800000    # -1.0f
+.field public static abc_spinner_mtrl_am_alpha:I = 0x7f0802bb
 
-    invoke-direct {v0, v2, v1}, Loxc;-><init>(IF)V
+.field public static abc_spinner_textfield_background_material:I = 0x7f0802bc
 
-    :goto_1
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.field public static abc_star_black_48dp:I = 0x7f0802bd
 
-    iput-object p0, v0, Loxc;->c:Ljava/lang/Object;
+.field public static abc_star_half_black_48dp:I = 0x7f0802be
 
-    :cond_3
-    :goto_2
-    return-object v0
+.field public static abc_switch_thumb_material:I = 0x7f0802bf
 
-    nop
+.field public static abc_switch_track_mtrl_alpha:I = 0x7f0802c0
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+.field public static abc_tab_indicator_material:I = 0x7f0802c1
 
-    :pswitch_data_1
-    .packed-switch 0x1
-        :pswitch_4
-        :pswitch_4
-        :pswitch_4
-        :pswitch_4
-        :pswitch_4
-        :pswitch_4
-    .end packed-switch
-.end method
+.field public static abc_tab_indicator_mtrl_alpha:I = 0x7f0802c2
 
-.method public static d(F)Loxc;
-    .locals 2
+.field public static abc_text_cursor_material:I = 0x7f0802c3
 
-    const/4 v0, 0x0
+.field public static abc_text_select_handle_left_mtrl:I = 0x7f0802c4
 
-    cmpg-float v0, p0, v0
+.field public static abc_text_select_handle_middle_mtrl:I = 0x7f0802c5
 
-    if-ltz v0, :cond_1
+.field public static abc_text_select_handle_right_mtrl:I = 0x7f0802c6
 
-    const/high16 v0, 0x42c80000    # 100.0f
+.field public static abc_textfield_activated_mtrl_alpha:I = 0x7f0802c7
 
-    cmpl-float v0, p0, v0
+.field public static abc_textfield_default_mtrl_alpha:I = 0x7f0802c8
 
-    if-lez v0, :cond_0
+.field public static abc_textfield_search_activated_mtrl_alpha:I = 0x7f0802c9
 
-    goto :goto_0
+.field public static abc_textfield_search_default_mtrl_alpha:I = 0x7f0802ca
 
-    :cond_0
-    new-instance v0, Loxc;
+.field public static abc_textfield_search_material:I = 0x7f0802cb
 
-    const/4 v1, 0x6
+.field public static btn_checkbox_checked_mtrl:I = 0x7f0802ef
 
-    invoke-direct {v0, v1, p0}, Loxc;-><init>(IF)V
+.field public static btn_checkbox_checked_to_unchecked_mtrl_animation:I = 0x7f0802f0
 
-    return-object v0
+.field public static btn_checkbox_unchecked_mtrl:I = 0x7f0802f1
 
-    :cond_1
-    :goto_0
-    const-string p0, "Rating"
+.field public static btn_checkbox_unchecked_to_checked_mtrl_animation:I = 0x7f0802f2
 
-    const-string v0, "Invalid percentage-based rating value"
+.field public static btn_radio_off_mtrl:I = 0x7f0802f3
 
-    invoke-static {p0, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+.field public static btn_radio_off_to_on_mtrl_animation:I = 0x7f0802f4
 
-    const/4 p0, 0x0
+.field public static btn_radio_on_mtrl:I = 0x7f0802f5
 
-    return-object p0
-.end method
+.field public static btn_radio_on_to_off_mtrl_animation:I = 0x7f0802f6
 
-.method public static e(IF)Loxc;
-    .locals 4
+.field public static test_level_drawable:I = 0x7f080970
 
-    const/4 v0, 0x3
+.field public static tooltip_frame_dark:I = 0x7f080974
 
-    const/4 v1, 0x0
-
-    const-string v2, "Rating"
-
-    if-eq p0, v0, :cond_2
-
-    const/4 v0, 0x4
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x5
-
-    if-eq p0, v0, :cond_0
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string v0, "Invalid rating style ("
-
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p0, ") for a star rating"
-
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-object v1
-
-    :cond_0
-    const/high16 v0, 0x40a00000    # 5.0f
-
-    goto :goto_0
-
-    :cond_1
-    const/high16 v0, 0x40800000    # 4.0f
-
-    goto :goto_0
-
-    :cond_2
-    const/high16 v0, 0x40400000    # 3.0f
-
-    :goto_0
-    const/4 v3, 0x0
-
-    cmpg-float v3, p1, v3
-
-    if-ltz v3, :cond_4
-
-    cmpl-float v0, p1, v0
-
-    if-lez v0, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    new-instance v0, Loxc;
-
-    invoke-direct {v0, p0, p1}, Loxc;-><init>(IF)V
-
-    return-object v0
-
-    :cond_4
-    :goto_1
-    const-string p0, "Trying to set out of range star-based rating"
-
-    invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-object v1
-.end method
-
-
-# virtual methods
-.method public final b()F
-    .locals 2
-
-    const/4 v0, 0x3
-
-    iget v1, p0, Loxc;->a:I
-
-    if-eq v1, v0, :cond_0
-
-    const/4 v0, 0x4
-
-    if-eq v1, v0, :cond_0
-
-    const/4 v0, 0x5
-
-    if-eq v1, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Loxc;->c()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget v0, p0, Loxc;->b:F
-
-    return v0
-
-    :cond_1
-    :goto_0
-    const/high16 v0, -0x40800000    # -1.0f
-
-    return v0
-.end method
-
-.method public final c()Z
-    .locals 2
-
-    iget v0, p0, Loxc;->b:F
-
-    const/4 v1, 0x0
-
-    cmpl-float v0, v0, v1
-
-    if-ltz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final describeContents()I
-    .locals 1
-
-    iget v0, p0, Loxc;->a:I
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Rating:style="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Loxc;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, " rating="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v1, 0x0
-
-    iget v2, p0, Loxc;->b:F
-
-    cmpg-float v1, v2, v1
-
-    if-gez v1, :cond_0
-
-    const-string v1, "unrated"
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {v2}, Ljava/lang/String;->valueOf(F)Ljava/lang/String;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    iget p2, p0, Loxc;->a:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget p2, p0, Loxc;->b:F
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
-
-    return-void
-.end method
+.field public static tooltip_frame_light:I = 0x7f080975

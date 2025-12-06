@@ -1,156 +1,142 @@
 .class public final Lrrd;
-.super Ljava/lang/Object;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Lli6;
+.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic X:Ljrd;
+.field public final synthetic X:Lbsd;
 
-.field public final synthetic a:Landroid/view/View;
+.field public final synthetic Y:J
 
-.field public final synthetic b:Ltrd;
+.field public final synthetic Z:Ljava/util/Collection;
 
-.field public final synthetic c:Lnrd;
-
-.field public final synthetic o:Ltrd;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Ljrd;Ltrd;Lnrd;Ltrd;Ljrd;)V
+.method public constructor <init>(Lbsd;JLjava/util/Collection;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lrrd;->X:Lbsd;
 
-    iput-object p1, p0, Lrrd;->a:Landroid/view/View;
+    iput-wide p2, p0, Lrrd;->Y:J
 
-    iput-object p2, p0, Lrrd;->b:Ltrd;
+    iput-object p4, p0, Lrrd;->Z:Ljava/util/Collection;
 
-    iput-object p3, p0, Lrrd;->c:Lnrd;
+    const/4 p1, 0x2
 
-    iput-object p4, p0, Lrrd;->o:Ltrd;
-
-    iput-object p5, p0, Lrrd;->X:Ljrd;
+    invoke-direct {p0, p1, p5}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    check-cast p1, Landroid/animation/ValueAnimator;
+    check-cast p1, Lf84;
 
-    const/4 v0, 0x1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    int-to-float v1, v0
+    invoke-virtual {p0, p1, p2}, Lrrd;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v2, p0, Lrrd;->a:Landroid/view/View;
+    move-result-object p1
 
-    invoke-virtual {v2}, Landroid/view/View;->getTranslationY()F
+    check-cast p1, Lrrd;
 
-    move-result v3
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+    invoke-virtual {p1, p2}, Lrrd;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object p1
 
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    return-object p1
+.end method
 
-    move-result-object v4
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 6
 
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+    new-instance v0, Lrrd;
 
-    const/high16 v5, 0x40800000    # 4.0f
+    iget-wide v2, p0, Lrrd;->Y:J
 
-    mul-float/2addr v4, v5
+    iget-object v4, p0, Lrrd;->Z:Ljava/util/Collection;
 
-    div-float/2addr v3, v4
+    iget-object v1, p0, Lrrd;->X:Lbsd;
 
-    sub-float/2addr v1, v3
+    move-object v5, p2
 
-    if-eqz p1, :cond_0
+    invoke-direct/range {v0 .. v5}, Lrrd;-><init>(Lbsd;JLjava/util/Collection;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
+    return-object v0
+.end method
 
-    move-result p1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    iget v0, p0, Lrrd;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    :goto_0
-    invoke-virtual {v2}, Landroid/view/View;->getTranslationY()F
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    move-result v2
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+    throw p1
 
-    move-result-object v3
+    :cond_1
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    iget-object p1, p0, Lrrd;->X:Lbsd;
 
-    move-result-object v3
+    invoke-virtual {p1}, Lbsd;->d()Llq9;
 
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+    move-result-object p1
 
-    mul-float/2addr v3, v5
+    iget-object v0, p0, Lrrd;->Z:Ljava/util/Collection;
 
-    const/4 v4, 0x2
-
-    new-array v4, v4, [F
-
-    const/4 v5, 0x0
-
-    aput v2, v4, v5
-
-    aput v3, v4, v0
-
-    invoke-static {v4}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+    invoke-static {v0}, Lue3;->d0(Ljava/lang/Iterable;)Ljava/util/List;
 
     move-result-object v0
 
-    const-wide/16 v2, 0xc8
+    iput v1, p0, Lrrd;->o:I
 
-    long-to-float v2, v2
+    iget-object v1, p1, Llq9;->a:Llrd;
 
-    mul-float/2addr v2, v1
+    new-instance v2, Lk35;
 
-    float-to-long v1, v2
+    iget-wide v3, p0, Lrrd;->Y:J
 
-    invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+    invoke-direct {v2, p1, v0, v3, v4}, Lk35;-><init>(Llq9;Ljava/util/List;J)V
 
-    sget-object v1, Ltrd;->v0:Landroid/view/animation/AccelerateDecelerateInterpolator;
+    invoke-static {v1, v2, p0}, Lk7j;->b(Llrd;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+    move-result-object p1
 
-    new-instance v2, Lprd;
+    sget-object v0, Lg84;->a:Lg84;
 
-    iget-object v6, p0, Lrrd;->o:Ltrd;
-
-    iget-object v7, p0, Lrrd;->X:Ljrd;
-
-    iget-object v3, p0, Lrrd;->a:Landroid/view/View;
-
-    iget-object v4, p0, Lrrd;->b:Ltrd;
-
-    iget-object v5, p0, Lrrd;->c:Lnrd;
-
-    invoke-direct/range {v2 .. v7}, Lprd;-><init>(Landroid/view/View;Ltrd;Lnrd;Ltrd;Ljrd;)V
-
-    invoke-virtual {v0, v2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    new-instance v1, Lqrd;
-
-    invoke-direct {v1, v3, p1}, Lqrd;-><init>(Landroid/view/View;F)V
-
-    invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
+    if-ne p1, v0, :cond_2
 
     return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

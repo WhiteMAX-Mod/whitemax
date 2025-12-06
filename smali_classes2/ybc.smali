@@ -1,26 +1,26 @@
 .class public final Lybc;
-.super Lsgf;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Lsm6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic X:Lone/me/profile/screens/avatars/ProfileAvatarsScreen;
 
-.field public final synthetic Y:Ld8h;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ld8h;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/avatars/ProfileAvatarsScreen;)V
     .locals 0
 
-    iput-object p1, p0, Lybc;->Y:Ld8h;
+    iput-object p2, p0, Lybc;->X:Lone/me/profile/screens/avatars/ProfileAvatarsScreen;
 
-    const/4 p1, 0x2
+    const/4 p2, 0x2
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,162 +30,119 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lwr3;
-
     check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p0, p1, p2}, Lybc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1, p2}, Lybc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
     check-cast p1, Lybc;
 
-    sget-object p2, Lccg;->a:Lccg;
+    sget-object p2, Lqqg;->a:Lqqg;
 
     invoke-virtual {p1, p2}, Lybc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object p2
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
     new-instance v0, Lybc;
 
-    iget-object v1, p0, Lybc;->Y:Ld8h;
+    iget-object v1, p0, Lybc;->X:Lone/me/profile/screens/avatars/ProfileAvatarsScreen;
 
-    invoke-direct {v0, v1, p2}, Lybc;-><init>(Ld8h;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p2, v1}, Lybc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/avatars/ProfileAvatarsScreen;)V
 
-    iput-object p1, v0, Lybc;->X:Ljava/lang/Object;
+    iput-object p1, v0, Lybc;->o:Ljava/lang/Object;
 
     return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    .locals 5
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lybc;->X:Ljava/lang/Object;
+    iget-object p1, p0, Lybc;->o:Ljava/lang/Object;
 
-    check-cast p1, Lwr3;
+    check-cast p1, Ljava/util/List;
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lybc;->X:Lone/me/profile/screens/avatars/ProfileAvatarsScreen;
 
-    if-eqz p1, :cond_0
+    iget-object v1, v0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->v0:Lobc;
 
-    sget-object v1, Lll0;->c:Lll0;
+    iget-object v2, v1, Lobc;->v0:Ljava/util/List;
 
-    invoke-virtual {p1, v1}, Lwr3;->r(Lll0;)Ljava/lang/String;
+    invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
 
-    move-result-object v1
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    iput-object p1, v1, Lobc;->v0:Ljava/util/List;
+
+    const/4 v2, 0x0
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result p1
+
+    invoke-virtual {v1, v2, p1}, Lphd;->p(II)V
 
     goto :goto_0
 
     :cond_0
-    move-object v1, v0
+    new-instance v2, Lea1;
 
-    :goto_0
-    if-eqz p1, :cond_1
+    iget-object v3, v1, Lobc;->v0:Ljava/util/List;
 
-    invoke-virtual {p1}, Lwr3;->o()Ljava/lang/CharSequence;
+    const/4 v4, 0x3
+
+    invoke-direct {v2, v4, v3, p1}, Lea1;-><init>(ILjava/util/List;Ljava/util/List;)V
+
+    invoke-static {v2}, Lq08;->b(Le9j;)Lmw4;
 
     move-result-object v2
 
-    goto :goto_1
+    iput-object p1, v1, Lobc;->v0:Ljava/util/List;
 
-    :cond_1
-    move-object v2, v0
+    new-instance p1, Liv6;
 
-    :goto_1
-    if-eqz p1, :cond_2
+    const/4 v3, 0x2
 
-    invoke-virtual {p1}, Lwr3;->p()J
+    invoke-direct {p1, v3, v1}, Liv6;-><init>(ILjava/lang/Object;)V
 
-    move-result-wide v3
+    invoke-virtual {v2, p1}, Lmw4;->a(Lda8;)V
 
-    goto :goto_2
+    :goto_0
+    invoke-virtual {v0}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->N0()Ljcc;
 
-    :cond_2
-    const-wide/16 v3, 0x0
+    move-result-object p1
 
-    :goto_2
-    const-string p1, "Required value was null."
+    iget-object p1, p1, Ljcc;->b:Lnbc;
 
-    if-eqz v1, :cond_5
+    invoke-interface {p1}, Lnbc;->getTitle()Lmbc;
 
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
+    move-result-object p1
 
-    move-result v5
+    invoke-virtual {v0}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->O0()Landroidx/viewpager2/widget/ViewPager2;
 
-    if-nez v5, :cond_3
+    move-result-object v1
 
-    goto :goto_3
-
-    :cond_3
-    new-instance v2, Lcsb;
-
-    if-eqz v1, :cond_4
-
-    invoke-direct {v2, v1}, Lcsb;-><init>(Ljava/lang/String;)V
-
-    goto :goto_5
-
-    :cond_4
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_5
-    :goto_3
-    if-eqz v2, :cond_8
-
-    move-object v1, v2
-
-    check-cast v1, Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
+    invoke-virtual {v1}, Landroidx/viewpager2/widget/ViewPager2;->getCurrentItem()I
 
     move-result v1
 
-    if-nez v1, :cond_6
+    invoke-static {v0, p1, v1}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->I0(Lone/me/profile/screens/avatars/ProfileAvatarsScreen;Lmbc;I)V
 
-    goto :goto_4
-
-    :cond_6
-    new-instance v1, Lzrb;
-
-    if-eqz v2, :cond_7
-
-    invoke-direct {v1, v2, v3, v4}, Lzrb;-><init>(Ljava/lang/CharSequence;J)V
-
-    move-object v2, v1
-
-    goto :goto_5
-
-    :cond_7
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_8
-    :goto_4
-    sget-object v2, Lasb;->a:Lasb;
-
-    :goto_5
-    iget-object p1, p0, Lybc;->Y:Ld8h;
-
-    iget-object p1, p1, Ld8h;->X:Ljava/lang/Object;
-
-    check-cast p1, Lx0f;
-
-    invoke-virtual {p1, v0, v2}, Lx0f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    sget-object p1, Lccg;->a:Lccg;
+    sget-object p1, Lqqg;->a:Lqqg;
 
     return-object p1
 .end method

@@ -1,58 +1,79 @@
-.class public final Lu5b;
+.class public abstract Lu5b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lyrf;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final a:Landroid/content/Context;
+.field public static final b:I
 
-.field public final b:Lrxb;
+.field public static final c:I
 
-.field public final c:Ljava/lang/String;
+.field public static final d:I
 
-.field public final d:Liu7;
+.field public static final e:I
 
-.field public final e:Liu7;
+.field public static final f:I
 
-.field public final f:Lwif;
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
 
 
 # direct methods
-.method public constructor <init>(Liu7;Landroid/content/Context;Lrxb;Liu7;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lq3d;->oneme_contact_not_found_bottom_sheet_negative_button:I
 
-    iput-object p2, p0, Lu5b;->a:Landroid/content/Context;
+    sput v0, Lu5b;->a:I
 
-    iput-object p3, p0, Lu5b;->b:Lrxb;
+    sget v0, Lq3d;->oneme_contact_not_found_bottom_sheet_subtitle:I
 
-    const-class p2, Lu5b;
+    sput v0, Lu5b;->b:I
 
-    invoke-virtual {p2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    sget v0, Lq3d;->oneme_contact_not_found_bottom_sheet_title:I
 
-    move-result-object p2
+    sput v0, Lu5b;->c:I
 
-    iput-object p2, p0, Lu5b;->c:Ljava/lang/String;
+    sget v0, Lq3d;->oneme_found_contact_is_self_error:I
 
-    iput-object p4, p0, Lu5b;->d:Liu7;
+    sput v0, Lu5b;->d:I
 
-    iput-object p1, p0, Lu5b;->e:Liu7;
+    sget v0, Lq3d;->oneme_invite_by_link_action:I
 
-    new-instance p1, Luna;
+    sput v0, Lu5b;->e:I
 
-    const/16 p2, 0x11
+    sget v0, Lq3d;->oneme_invite_by_phone_action:I
 
-    invoke-direct {p1, p2}, Luna;-><init>(I)V
+    sput v0, Lu5b;->f:I
 
-    new-instance p2, Lwif;
+    sget v0, Lq3d;->oneme_invite_by_phone_continue_button:I
 
-    invoke-direct {p2, p1}, Lwif;-><init>(Lji6;)V
+    sput v0, Lu5b;->g:I
 
-    iput-object p2, p0, Lu5b;->f:Lwif;
+    sget v0, Lq3d;->oneme_invite_by_phone_description:I
+
+    sput v0, Lu5b;->h:I
+
+    sget v0, Lq3d;->oneme_invite_by_phone_hint_default:I
+
+    sput v0, Lu5b;->i:I
+
+    sget v0, Lq3d;->oneme_invite_by_phone_title:I
+
+    sput v0, Lu5b;->j:I
+
+    sget v0, Lq3d;->oneme_invite_friends_to_max_bottom_sheet_title:I
+
+    sput v0, Lu5b;->k:I
 
     return-void
 .end method

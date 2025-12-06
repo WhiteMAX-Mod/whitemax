@@ -1,41 +1,80 @@
-.class public abstract Lb8i;
+.class public final synthetic Lb8i;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcom/my/tracker/core/utils/Consumer;
 
-# static fields
-.field public static final a:Ljava/nio/charset/Charset;
 
-.field public static final b:[B
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lcom/my/tracker/core/a;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lcom/my/tracker/core/a;I)V
+    .locals 0
 
-    const-string v0, "US-ASCII"
+    iput p2, p0, Lb8i;->a:I
 
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+    iput-object p1, p0, Lb8i;->b:Lcom/my/tracker/core/a;
 
-    const-string v0, "UTF-8"
-
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    move-result-object v0
-
-    sput-object v0, Lb8i;->a:Ljava/nio/charset/Charset;
-
-    const-string v0, "ISO-8859-1"
-
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    const/4 v0, 0x0
-
-    new-array v0, v0, [B
-
-    sput-object v0, Lb8i;->b:[B
-
-    invoke-static {v0}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final accept(Ljava/lang/Object;)V
+    .locals 1
+
+    iget v0, p0, Lb8i;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lb8i;->b:Lcom/my/tracker/core/a;
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {v0, p1}, Lcom/my/tracker/core/a;->b(Ljava/lang/Boolean;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lb8i;->b:Lcom/my/tracker/core/a;
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-static {v0, p1}, Lcom/my/tracker/core/a;->h(Lcom/my/tracker/core/a;Ljava/lang/Boolean;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lb8i;->b:Lcom/my/tracker/core/a;
+
+    check-cast p1, Lcom/my/tracker/core/UserInfoState;
+
+    invoke-static {v0, p1}, Lcom/my/tracker/core/a;->e(Lcom/my/tracker/core/a;Lcom/my/tracker/core/UserInfoState;)V
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lb8i;->b:Lcom/my/tracker/core/a;
+
+    check-cast p1, Lcom/my/tracker/core/UserInfoState;
+
+    invoke-static {v0, p1}, Lcom/my/tracker/core/a;->d(Lcom/my/tracker/core/a;Lcom/my/tracker/core/UserInfoState;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,178 +1,55 @@
 .class public final Lr3h;
-.super Ljava/lang/Object;
+.super Lq44;
 .source "SourceFile"
-
-# interfaces
-.implements Lwt1;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Ls3h;
+
+.field public Z:I
+
+.field public d:Ls3h;
+
+.field public o:Lsi9;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Ls3h;Lq44;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lr3h;->Y:Ls3h;
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
-
-    iput-object v0, p0, Lr3h;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAttendee(Lgt1;)V
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    iget-object v0, p0, Lr3h;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iput-object p1, p0, Lr3h;->X:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    iget p1, p0, Lr3h;->Z:I
 
-    move-result-object v0
+    const/high16 v0, -0x80000000
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    or-int/2addr p1, v0
 
-    move-result v1
+    iput p1, p0, Lr3h;->Z:I
 
-    if-eqz v1, :cond_0
+    const/4 p1, 0x0
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const-wide/16 v0, 0x0
 
-    move-result-object v1
+    iget-object v2, p0, Lr3h;->Y:Ls3h;
 
-    check-cast v1, Lwt1;
+    invoke-static {v2, p1, v0, v1, p0}, Ls3h;->a(Ls3h;Lsi9;JLq44;)Ljava/lang/Object;
 
-    invoke-interface {v1, p1}, Lwt1;->onAttendee(Lgt1;)V
+    move-result-object p1
 
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onFeedback(Lht1;)V
-    .locals 2
-
-    iget-object v0, p0, Lr3h;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lwt1;
-
-    invoke-interface {v1, p1}, Lwt1;->onFeedback(Lht1;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onHandUp(Lit1;)V
-    .locals 2
-
-    iget-object v0, p0, Lr3h;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lwt1;
-
-    invoke-interface {v1, p1}, Lwt1;->onHandUp(Lit1;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onMeInWaitingRoomChanged(Z)V
-    .locals 2
-
-    iget-object v0, p0, Lr3h;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lwt1;
-
-    invoke-interface {v1, p1}, Lwt1;->onMeInWaitingRoomChanged(Z)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onPromotionUpdated(Ljt1;)V
-    .locals 2
-
-    iget-object v0, p0, Lr3h;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lwt1;
-
-    invoke-interface {v1, p1}, Lwt1;->onPromotionUpdated(Ljt1;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+    return-object p1
 .end method

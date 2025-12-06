@@ -1,155 +1,212 @@
-.class public final Le2f;
+.class public abstract Le2f;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lfc4;
-
-
-# instance fields
-.field public final a:Lfc4;
-
-.field public b:J
-
-.field public c:Landroid/net/Uri;
+.implements Lm3f;
 
 
 # direct methods
-.method public constructor <init>(Lfc4;)V
-    .locals 0
+.method public static f(Ljava/lang/RuntimeException;)Lwk3;
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lkn6;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {v0, p0}, Lkn6;-><init>(Ljava/lang/Object;)V
 
-    iput-object p1, p0, Le2f;->a:Lfc4;
+    new-instance p0, Lwk3;
 
-    sget-object p1, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
+    const/4 v1, 0x4
 
-    iput-object p1, p0, Le2f;->c:Landroid/net/Uri;
+    invoke-direct {p0, v1, v0}, Lwk3;-><init>(ILjava/lang/Object;)V
 
-    sget-object p1, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
+    return-object p0
+.end method
 
-    return-void
+.method public static g(Ljava/lang/Object;)Lwk3;
+    .locals 2
+
+    const-string v0, "item is null"
+
+    invoke-static {p0, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    new-instance v0, Lwk3;
+
+    const/4 v1, 0x6
+
+    invoke-direct {v0, v1, p0}, Lwk3;-><init>(ILjava/lang/Object;)V
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final H(Lmc4;)J
-    .locals 3
+.method public final e()Ljava/lang/Object;
+    .locals 2
 
-    iget-object v0, p0, Le2f;->a:Lfc4;
+    new-instance v0, Lrq0;
 
-    iget-object v1, p1, Lmc4;->a:Landroid/net/Uri;
+    const/4 v1, 0x1
 
-    iput-object v1, p0, Le2f;->c:Landroid/net/Uri;
+    invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
-    sget-object v1, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
+    invoke-virtual {p0, v0}, Le2f;->k(Lv2f;)V
 
-    :try_start_0
-    invoke-interface {v0, p1}, Lfc4;->H(Lmc4;)J
-
-    move-result-wide v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-interface {v0}, Lfc4;->getUri()Landroid/net/Uri;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    iput-object p1, p0, Le2f;->c:Landroid/net/Uri;
-
-    :cond_0
-    invoke-interface {v0}, Lfc4;->x()Ljava/util/Map;
-
-    return-wide v1
-
-    :catchall_0
-    move-exception p1
-
-    invoke-interface {v0}, Lfc4;->getUri()Landroid/net/Uri;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    iput-object v1, p0, Le2f;->c:Landroid/net/Uri;
-
-    :cond_1
-    invoke-interface {v0}, Lfc4;->x()Ljava/util/Map;
-
-    throw p1
-.end method
-
-.method public final I(Lc3g;)V
-    .locals 1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, p0, Le2f;->a:Lfc4;
-
-    invoke-interface {v0, p1}, Lfc4;->I(Lc3g;)V
-
-    return-void
-.end method
-
-.method public final close()V
-    .locals 1
-
-    iget-object v0, p0, Le2f;->a:Lfc4;
-
-    invoke-interface {v0}, Lfc4;->close()V
-
-    return-void
-.end method
-
-.method public final getUri()Landroid/net/Uri;
-    .locals 1
-
-    iget-object v0, p0, Le2f;->a:Lfc4;
-
-    invoke-interface {v0}, Lfc4;->getUri()Landroid/net/Uri;
+    invoke-virtual {v0}, Lrq0;->d()Ljava/lang/Object;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final read([BII)I
+.method public final h(Ltm6;)Lm2f;
     .locals 2
 
-    iget-object v0, p0, Le2f;->a:Lfc4;
+    const-string v0, "mapper is null"
 
-    invoke-interface {v0, p1, p2, p3}, Lyb4;->read([BII)I
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    move-result p1
+    new-instance v0, Lm2f;
 
-    const/4 p2, -0x1
+    const/4 v1, 0x1
 
-    if-eq p1, p2, :cond_0
+    invoke-direct {v0, p0, p1, v1}, Lm2f;-><init>(Le2f;Ltm6;I)V
 
-    iget-wide p2, p0, Le2f;->b:J
-
-    int-to-long v0, p1
-
-    add-long/2addr p2, v0
-
-    iput-wide p2, p0, Le2f;->b:J
-
-    :cond_0
-    return p1
+    return-object v0
 .end method
 
-.method public final x()Ljava/util/Map;
-    .locals 1
+.method public final i(Lj0e;)Lu2f;
+    .locals 2
 
-    iget-object v0, p0, Le2f;->a:Lfc4;
+    const-string v0, "scheduler is null"
 
-    invoke-interface {v0}, Lfc4;->x()Ljava/util/Map;
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    new-instance v0, Lu2f;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, p1, v1}, Lu2f;-><init>(Le2f;Lj0e;I)V
+
+    return-object v0
+.end method
+
+.method public final j(Lb1g;)Lm76;
+    .locals 3
+
+    instance-of v0, p0, Lnn6;
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p0
+
+    check-cast v0, Lnn6;
+
+    invoke-interface {v0}, Lnn6;->d()Li66;
 
     move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lr66;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, v1, p0}, Lr66;-><init>(ILjava/lang/Object;)V
+
+    :goto_0
+    new-instance v1, Lg76;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v0, p1, v2}, Lg76;-><init>(Li66;Ljava/lang/Object;I)V
+
+    new-instance p1, Lm76;
+
+    invoke-direct {p1, v1}, Lm76;-><init>(La1;)V
+
+    return-object p1
+.end method
+
+.method public final k(Lv2f;)V
+    .locals 2
+
+    const-string v0, "observer is null"
+
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    :try_start_0
+    invoke-virtual {p0, p1}, Le2f;->l(Lv2f;)V
+    :try_end_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-static {p1}, Lraj;->c(Ljava/lang/Throwable;)V
+
+    new-instance v0, Ljava/lang/NullPointerException;
+
+    const-string v1, "subscribeActual failed"
+
+    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+
+    throw v0
+
+    :catch_0
+    move-exception p1
+
+    throw p1
+.end method
+
+.method public abstract l(Lv2f;)V
+.end method
+
+.method public final m(Lj0e;)Lu2f;
+    .locals 2
+
+    const-string v0, "scheduler is null"
+
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    new-instance v0, Lu2f;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p0, p1, v1}, Lu2f;-><init>(Le2f;Lj0e;I)V
+
+    return-object v0
+.end method
+
+.method public final n()Lvqa;
+    .locals 2
+
+    instance-of v0, p0, Lon6;
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p0
+
+    check-cast v0, Lon6;
+
+    invoke-interface {v0}, Lon6;->b()Lvqa;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Lvk3;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1, p0}, Lvk3;-><init>(ILjava/lang/Object;)V
 
     return-object v0
 .end method

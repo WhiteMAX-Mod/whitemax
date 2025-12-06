@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field public transient X:I
+.field public final transient d:Ljava/util/Map;
 
-.field public final transient o:Ljava/util/Map;
+.field public transient o:I
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     if-eqz v0, :cond_0
 
-    iput-object p1, p0, Lk2;->o:Ljava/util/Map;
+    iput-object p1, p0, Lk2;->d:Ljava/util/Map;
 
     return-void
 
@@ -58,7 +58,7 @@
 .method public final b()V
     .locals 3
 
-    iget-object v0, p0, Lk2;->o:Ljava/util/Map;
+    iget-object v0, p0, Lk2;->d:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
 
@@ -90,7 +90,7 @@
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lk2;->X:I
+    iput v0, p0, Lk2;->o:I
 
     return-void
 .end method
@@ -98,13 +98,13 @@
 .method public c()Ljava/util/Map;
     .locals 3
 
-    new-instance v0, Lp2;
+    new-instance v0, Ls2;
 
-    iget-object v1, p0, Lk2;->o:Ljava/util/Map;
+    iget-object v1, p0, Lk2;->d:Ljava/util/Map;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, p0, v1, v2}, Lp2;-><init>(Ljava/io/Serializable;Ljava/util/Map;I)V
+    invoke-direct {v0, p0, v1, v2}, Ls2;-><init>(Ljava/io/Serializable;Ljava/util/Map;I)V
 
     return-object v0
 .end method
@@ -115,11 +115,11 @@
 .method public e()Ljava/util/Set;
     .locals 2
 
-    new-instance v0, Lq2;
+    new-instance v0, Lt2;
 
-    iget-object v1, p0, Lk2;->o:Ljava/util/Map;
+    iget-object v1, p0, Lk2;->d:Ljava/util/Map;
 
-    invoke-direct {v0, p0, v1}, Lq2;-><init>(Lk2;Ljava/util/Map;)V
+    invoke-direct {v0, p0, v1}, Lt2;-><init>(Lk2;Ljava/util/Map;)V
 
     return-object v0
 .end method
@@ -127,7 +127,7 @@
 .method public final f(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 3
 
-    iget-object v0, p0, Lk2;->o:Ljava/util/Map;
+    iget-object v0, p0, Lk2;->d:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -149,11 +149,11 @@
 
     if-eqz p2, :cond_0
 
-    iget p2, p0, Lk2;->X:I
+    iget p2, p0, Lk2;->o:I
 
     add-int/2addr p2, v2
 
-    iput p2, p0, Lk2;->X:I
+    iput p2, p0, Lk2;->o:I
 
     invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -175,11 +175,11 @@
 
     if-eqz p1, :cond_2
 
-    iget p1, p0, Lk2;->X:I
+    iget p1, p0, Lk2;->o:I
 
     add-int/2addr p1, v2
 
-    iput p1, p0, Lk2;->X:I
+    iput p1, p0, Lk2;->o:I
 
     return v2
 
@@ -196,11 +196,11 @@
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lb3;
+    new-instance v0, Le3;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1, p0}, Lb3;-><init>(ILjava/io/Serializable;)V
+    invoke-direct {v0, v1, p0}, Le3;-><init>(ILjava/io/Serializable;)V
 
     iput-object v0, p0, Lcom/google/common/collect/a;->b:Ljava/util/Collection;
 

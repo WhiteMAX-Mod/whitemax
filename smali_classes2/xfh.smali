@@ -1,115 +1,88 @@
-.class public final Lxfh;
+.class public abstract Lxfh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lnjh;
-
 
 # instance fields
-.field public final synthetic a:Lone/me/webapp/settings/WebAppSettingsScreen;
+.field public final a:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/webapp/settings/WebAppSettingsScreen;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxfh;->a:Lone/me/webapp/settings/WebAppSettingsScreen;
+    invoke-static {}, Lzk6;->a()Larf;
+
+    move-result-object v0
+
+    sget-object v1, Lgy4;->a:Lep4;
+
+    sget-object v1, Lkotlinx/coroutines/internal/MainDispatcherLoader;->dispatcher:Lwl8;
+
+    invoke-virtual {v1}, Lwl8;->getImmediate()Lwl8;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Lx74;->plus(Lx74;)Lx74;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ld7j;->a(Lx74;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lxfh;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    return-void
+.end method
+
+.method public static o(Lxfh;Lx74;Lsm6;I)Lx9f;
+    .locals 1
+
+    and-int/lit8 v0, p3, 0x1
+
+    if-eqz v0, :cond_0
+
+    sget-object p1, Lbd5;->a:Lbd5;
+
+    :cond_0
+    and-int/lit8 p3, p3, 0x2
+
+    if-eqz p3, :cond_1
+
+    sget-object p3, Li84;->a:Li84;
+
+    goto :goto_0
+
+    :cond_1
+    sget-object p3, Li84;->b:Li84;
+
+    :goto_0
+    iget-object p0, p0, Lxfh;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {p0, p1, p3, p2}, Lsvi;->d(Lf84;Lx74;Li84;Lsm6;)Lx9f;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static r(Lci5;Ljava/lang/Object;)V
+    .locals 0
+
+    iget-object p0, p0, Lci5;->b:Ljve;
+
+    invoke-virtual {p0, p1}, Ljve;->h(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lmjh;)V
-    .locals 2
-
-    sget-object v0, Lone/me/webapp/settings/WebAppSettingsScreen;->q0:[Ltr7;
-
-    iget-object v0, p0, Lxfh;->a:Lone/me/webapp/settings/WebAppSettingsScreen;
-
-    invoke-virtual {v0}, Lone/me/webapp/settings/WebAppSettingsScreen;->C0()Lfgh;
-
-    move-result-object v0
-
-    instance-of v1, p1, Lljh;
-
-    if-eqz v1, :cond_0
-
-    iget-object v0, v0, Lfgh;->u0:Lxe5;
-
-    new-instance v1, Lagh;
-
-    check-cast p1, Lljh;
-
-    iget-object p1, p1, Lljh;->b:Lwf4;
-
-    invoke-direct {v1, p1}, Lagh;-><init>(Lwf4;)V
-
-    invoke-static {v0, v1}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-void
-.end method
-
-.method public final b(Lkjh;Z)V
-    .locals 4
-
-    sget-object p1, Lone/me/webapp/settings/WebAppSettingsScreen;->q0:[Ltr7;
-
-    iget-object p1, p0, Lxfh;->a:Lone/me/webapp/settings/WebAppSettingsScreen;
-
-    invoke-virtual {p1}, Lone/me/webapp/settings/WebAppSettingsScreen;->C0()Lfgh;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, p1, Lxzg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    iget-object v1, p1, Lfgh;->q0:Liu7;
-
-    invoke-interface {v1}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lulf;
-
-    check-cast v1, Lqta;
-
-    invoke-virtual {v1}, Lqta;->b()Lk54;
-
-    move-result-object v1
-
-    new-instance v2, Legh;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, p2, p1, v3}, Legh;-><init>(ZLfgh;Lkotlin/coroutines/Continuation;)V
-
-    sget-object p2, Lt54;->b:Lt54;
-
-    invoke-static {v0, v1, p2, v2}, Ltki;->c(Lq54;Li54;Lt54;Lzi6;)Lcye;
-
-    move-result-object p2
-
-    iget-object v0, p1, Lfgh;->v0:Lw0e;
-
-    sget-object v1, Lfgh;->x0:[Ltr7;
-
-    const/4 v2, 0x0
-
-    aget-object v1, v1, v2
-
-    invoke-virtual {v0, p1, v1, p2}, Lw0e;->P(Ljava/lang/Object;Ltr7;Ljava/lang/Object;)V
-
-    invoke-virtual {p1}, Lfgh;->r()V
+.method public s()V
+    .locals 0
 
     return-void
 .end method

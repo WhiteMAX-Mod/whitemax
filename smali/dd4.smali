@@ -4,46 +4,52 @@
 
 
 # instance fields
-.field public a:I
+.field public final a:Lhf6;
 
-.field public b:I
+.field public final b:Lwg7;
 
-.field public c:Ljava/lang/String;
+.field public final c:Lhae;
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/util/ArrayList;
+
+.field public final f:Ljava/util/ArrayList;
+
+.field public final g:J
+
+.field public final h:Ljava/util/List;
+
+.field public final i:Ljava/util/List;
 
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+# direct methods
+.method public constructor <init>(Lhf6;Ljava/util/List;Lhae;Ljava/lang/String;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/List;Ljava/util/List;J)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "Start:"
+    iput-object p1, p0, Ldd4;->a:Lhf6;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-static {p2}, Lwg7;->j(Ljava/util/Collection;)Lwg7;
 
-    iget v1, p0, Ldd4;->a:I
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iput-object p1, p0, Ldd4;->b:Lwg7;
 
-    const-string v1, " End:"
+    iput-object p3, p0, Ldd4;->c:Lhae;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput-object p4, p0, Ldd4;->d:Ljava/lang/String;
 
-    iget v1, p0, Ldd4;->b:I
+    iput-object p5, p0, Ldd4;->e:Ljava/util/ArrayList;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iput-object p6, p0, Ldd4;->f:Ljava/util/ArrayList;
 
-    const-string v1, " \'"
+    iput-object p7, p0, Ldd4;->h:Ljava/util/List;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput-object p8, p0, Ldd4;->i:Ljava/util/List;
 
-    iget-object v1, p0, Ldd4;->c:Ljava/lang/String;
+    iput-wide p9, p0, Ldd4;->g:J
 
-    const-string v2, "\'"
-
-    invoke-static {v0, v1, v2}, Li57;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

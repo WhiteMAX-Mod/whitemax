@@ -1,39 +1,68 @@
-.class public final Lqaa;
+.class public final synthetic Lqaa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lp6;
+
 
 # instance fields
-.field public final a:Lpw4;
+.field public final synthetic a:I
 
-.field public final b:Lpw4;
-
-.field public final c:Lpw0;
-
-.field public final d:Lpw4;
-
-.field public final e:Lpw4;
-
-.field public final f:Lpw4;
+.field public final synthetic b:Lraa;
 
 
 # direct methods
-.method public constructor <init>(Lpw4;Lpw4;Lpw0;Lpw4;Lpw4;Lpw4;)V
+.method public synthetic constructor <init>(Lraa;I)V
     .locals 0
+
+    iput p2, p0, Lqaa;->a:I
+
+    iput-object p1, p0, Lqaa;->b:Lraa;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lqaa;->a:Lpw4;
+    return-void
+.end method
 
-    iput-object p2, p0, Lqaa;->b:Lpw4;
 
-    iput-object p3, p0, Lqaa;->c:Lpw0;
+# virtual methods
+.method public final run()V
+    .locals 2
 
-    iput-object p4, p0, Lqaa;->d:Lpw4;
+    iget v0, p0, Lqaa;->a:I
 
-    iput-object p5, p0, Lqaa;->e:Lpw4;
+    packed-switch v0, :pswitch_data_0
 
-    iput-object p6, p0, Lqaa;->f:Lpw4;
+    new-instance v0, Ldk0;
+
+    const/16 v1, 0x16
+
+    invoke-direct {v0, v1}, Ldk0;-><init>(I)V
+
+    iget-object v1, p0, Lqaa;->b:Lraa;
+
+    invoke-virtual {v1, v0}, Lj3;->j(Lju3;)V
 
     return-void
+
+    :pswitch_0
+    new-instance v0, Ldk0;
+
+    const/16 v1, 0x15
+
+    invoke-direct {v0, v1}, Ldk0;-><init>(I)V
+
+    iget-object v1, p0, Lqaa;->b:Lraa;
+
+    invoke-virtual {v1, v0}, Lj3;->j(Lju3;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

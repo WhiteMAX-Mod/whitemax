@@ -1,198 +1,117 @@
-.class public final synthetic Lxv0;
+.class public final Lxv0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lji6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:J
 
-.field public final synthetic b:Lyv0;
+.field public final b:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lyv0;I)V
+.method public constructor <init>(JZ)V
     .locals 0
 
-    iput p2, p0, Lxv0;->a:I
-
-    iput-object p1, p0, Lxv0;->b:Lyv0;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lxv0;->a:J
+
+    iput-boolean p3, p0, Lxv0;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 6
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget v0, p0, Lxv0;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lxv0;->b:Lyv0;
+    return v0
 
-    iget-object v0, v0, Lyv0;->a:Landroid/content/Context;
-
-    invoke-static {v0}, Ltyi;->a(Landroid/content/Context;)Lhqd;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lxv0;->b:Lyv0;
-
-    iget-object v0, v0, Lyv0;->c:Ljava/lang/Object;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Landroid/graphics/drawable/ShapeDrawable;
-
-    array-length v0, v0
-
-    new-array v1, v0, [Ltcb;
+    :cond_0
+    instance-of v1, p1, Lxv0;
 
     const/4 v2, 0x0
 
-    :goto_0
-    if-ge v2, v0, :cond_0
+    if-nez v1, :cond_1
 
-    new-instance v3, Lbec;
+    return v2
 
-    const-string v4, "x"
+    :cond_1
+    check-cast p1, Lxv0;
 
-    invoke-direct {v3, v4}, Lbec;-><init>(Ljava/lang/String;)V
+    iget-wide v3, p0, Lxv0;->a:J
 
-    new-instance v4, Lbec;
+    iget-wide v5, p1, Lxv0;->a:J
 
-    const-string v5, "y"
+    cmp-long v1, v3, v5
 
-    invoke-direct {v4, v5}, Lbec;-><init>(Ljava/lang/String;)V
+    if-eqz v1, :cond_2
 
-    new-instance v5, Ltcb;
+    return v2
 
-    invoke-direct {v5, v3, v4}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    :cond_2
+    iget-boolean v1, p0, Lxv0;->b:Z
 
-    aput-object v5, v1, v2
+    iget-boolean p1, p1, Lxv0;->b:Z
 
-    add-int/lit8 v2, v2, 0x1
+    if-eq v1, p1, :cond_3
 
-    goto :goto_0
+    return v2
 
-    :cond_0
-    return-object v1
+    :cond_3
+    return v0
+.end method
 
-    :pswitch_1
-    iget-object v0, p0, Lxv0;->b:Lyv0;
+.method public final hashCode()I
+    .locals 2
 
-    iget-object v0, v0, Lyv0;->a:Landroid/content/Context;
+    iget-wide v0, p0, Lxv0;->a:J
 
-    sget-object v1, Ll05;->s0:Lk82;
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    invoke-virtual {v1, v0}, Lk82;->e(Landroid/content/Context;)Ll05;
+    move-result v0
 
-    move-result-object v2
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-virtual {v2}, Ll05;->l()Lv5b;
+    iget-boolean v1, p0, Lxv0;->b:Z
 
-    move-result-object v2
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    invoke-interface {v2}, Lv5b;->g()Lykg;
+    move-result v1
 
-    move-result-object v2
+    add-int/2addr v1, v0
 
-    iget-object v2, v2, Lykg;->b:Lzkg;
+    return v1
+.end method
 
-    iget-object v2, v2, Lzkg;->a:Lalg;
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    iget v2, v2, Lalg;->a:I
+    const-string v0, "BufferingState(messageId="
 
-    invoke-static {v2}, Lyv0;->b(I)Landroid/graphics/drawable/ShapeDrawable;
+    const-string v1, ", isBuffering="
 
-    move-result-object v2
+    iget-wide v2, p0, Lxv0;->a:J
 
-    invoke-virtual {v1, v0}, Lk82;->e(Landroid/content/Context;)Ll05;
+    iget-boolean v4, p0, Lxv0;->b:Z
 
-    move-result-object v3
-
-    invoke-virtual {v3}, Ll05;->l()Lv5b;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Lv5b;->g()Lykg;
-
-    move-result-object v3
-
-    iget-object v3, v3, Lykg;->b:Lzkg;
-
-    iget-object v3, v3, Lzkg;->a:Lalg;
-
-    iget v3, v3, Lalg;->b:I
-
-    invoke-static {v3}, Lyv0;->b(I)Landroid/graphics/drawable/ShapeDrawable;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v0}, Lk82;->e(Landroid/content/Context;)Ll05;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ll05;->l()Lv5b;
-
-    move-result-object v4
-
-    invoke-interface {v4}, Lv5b;->g()Lykg;
-
-    move-result-object v4
-
-    iget-object v4, v4, Lykg;->b:Lzkg;
-
-    iget-object v4, v4, Lzkg;->a:Lalg;
-
-    iget v4, v4, Lalg;->c:I
-
-    invoke-static {v4}, Lyv0;->b(I)Landroid/graphics/drawable/ShapeDrawable;
-
-    move-result-object v4
-
-    invoke-virtual {v1, v0}, Lk82;->e(Landroid/content/Context;)Ll05;
+    invoke-static {v2, v3, v0, v1, v4}, Lxc0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ll05;->l()Lv5b;
+    const-string v1, ")"
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {v0}, Lv5b;->g()Lykg;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lykg;->b:Lzkg;
-
-    iget-object v0, v0, Lzkg;->a:Lalg;
-
-    iget v0, v0, Lalg;->d:I
-
-    invoke-static {v0}, Lyv0;->b(I)Landroid/graphics/drawable/ShapeDrawable;
-
-    move-result-object v0
-
-    filled-new-array {v2, v3, v4, v0}, [Landroid/graphics/drawable/ShapeDrawable;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

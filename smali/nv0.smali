@@ -1,62 +1,58 @@
-.class public final synthetic Lnv0;
-.super Loj6;
+.class public final Lnv0;
+.super Lq44;
 .source "SourceFile"
 
-# interfaces
-.implements Lzi6;
 
+# instance fields
+.field public X:I
 
-# static fields
-.field public static final a:Lnv0;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Lpv0;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Lpv0;Lq44;)V
+    .locals 0
 
-    new-instance v0, Lnv0;
+    iput-object p1, p0, Lnv0;->o:Lpv0;
 
-    const-string v4, "createSegment(JLkotlinx/coroutines/channels/ChannelSegment;)Lkotlinx/coroutines/channels/ChannelSegment;"
-
-    const/4 v5, 0x1
-
-    const/4 v1, 0x2
-
-    const-class v2, Lov0;
-
-    const-string v3, "createSegment"
-
-    invoke-direct/range {v0 .. v5}, Loj6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sput-object v0, Lnv0;->a:Lnv0;
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    check-cast p1, Ljava/lang/Number;
+    iput-object p1, p0, Lnv0;->d:Ljava/lang/Object;
 
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+    iget p1, p0, Lnv0;->X:I
 
-    move-result-wide v1
+    const/high16 v0, -0x80000000
 
-    move-object v3, p2
+    or-int/2addr p1, v0
 
-    check-cast v3, Ln92;
+    iput p1, p0, Lnv0;->X:I
 
-    sget-object p1, Lov0;->a:Ln92;
+    iget-object p1, p0, Lnv0;->o:Lpv0;
 
-    new-instance v0, Ln92;
+    invoke-static {p1, p0}, Lpv0;->B(Lpv0;Lq44;)Ljava/lang/Object;
 
-    iget-object v4, v3, Ln92;->a:Lmv0;
+    move-result-object p1
 
-    const/4 v5, 0x0
+    sget-object v0, Lg84;->a:Lg84;
 
-    invoke-direct/range {v0 .. v5}, Ln92;-><init>(JLn92;Lmv0;I)V
+    if-ne p1, v0, :cond_0
+
+    return-object p1
+
+    :cond_0
+    new-instance v0, Lna2;
+
+    invoke-direct {v0, p1}, Lna2;-><init>(Ljava/lang/Object;)V
 
     return-object v0
 .end method

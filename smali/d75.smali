@@ -1,20 +1,31 @@
-.class public interface abstract Ld75;
+.class public final Ld75;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()V
-.end method
+# instance fields
+.field public final a:I
 
-.method public abstract d(Ledb;)V
-.end method
+.field public final b:Z
 
-.method public abstract e(Z)V
-.end method
+.field public final c:[B
 
-.method public abstract f(Lam5;Lq5g;)V
-.end method
+.field public final d:[B
 
-.method public abstract h(IJ)V
+
+# direct methods
+.method public constructor <init>(IZ[B[B)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Ld75;->a:I
+
+    iput-boolean p2, p0, Ld75;->b:Z
+
+    iput-object p3, p0, Ld75;->c:[B
+
+    iput-object p4, p0, Ld75;->d:[B
+
+    return-void
 .end method

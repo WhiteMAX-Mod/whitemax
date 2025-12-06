@@ -1,51 +1,48 @@
 .class public final Lds0;
-.super Ly14;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public X:Lfz2;
+.field public final a:Z
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Les0;
-
-.field public o:Les0;
-
-.field public q0:I
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Les0;Ly14;)V
+.method public constructor <init>(ZZ)V
     .locals 0
 
-    iput-object p1, p0, Lds0;->Z:Les0;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-boolean p1, p0, Lds0;->a:Z
+
+    iput-boolean p2, p0, Lds0;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    iput-object p1, p0, Lds0;->Y:Ljava/lang/Object;
+    const-string v0, ", suspendedBot="
 
-    iget p1, p0, Lds0;->q0:I
+    const-string v1, "}"
 
-    const/high16 v0, -0x80000000
+    const-string v2, "{hasBots="
 
-    or-int/2addr p1, v0
+    iget-boolean v3, p0, Lds0;->a:Z
 
-    iput p1, p0, Lds0;->q0:I
+    iget-boolean v4, p0, Lds0;->b:Z
 
-    iget-object p1, p0, Lds0;->Z:Les0;
+    invoke-static {v2, v3, v0, v4, v1}, Lxc0;->g(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
 
-    invoke-static {p1, p0}, Les0;->a(Les0;Ly14;)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

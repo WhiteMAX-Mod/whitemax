@@ -1,51 +1,133 @@
 .class public final Lb80;
-.super Ly14;
+.super Lh0;
 .source "SourceFile"
+
+# interfaces
+.implements Lkm;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic Y:Lc80;
-
-.field public Z:I
-
-.field public o:Lc80;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lc80;Ly14;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lb80;->Y:Lc80;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lb80;->a:Ljava/lang/String;
+
+    iput-object p1, p0, Lb80;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final getScope()Lnm;
     .locals 1
 
-    iput-object p1, p0, Lb80;->X:Ljava/lang/Object;
+    sget-object v0, Lnm;->b:Lnm;
 
-    iget p1, p0, Lb80;->Z:I
+    return-object v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public final getUri()Landroid/net/Uri;
+    .locals 1
 
-    or-int/2addr p1, v0
+    const-string v0, "auth.anonymLogin"
 
-    iput p1, p0, Lb80;->Z:I
+    invoke-static {v0}, Lwm;->a(Ljava/lang/String;)Landroid/net/Uri;
 
-    iget-object p1, p0, Lb80;->Y:Lc80;
+    move-result-object v0
 
-    const/4 v0, 0x0
+    return-object v0
+.end method
 
-    invoke-virtual {p1, v0, v0, p0}, Lc80;->a(Ljava/lang/String;Ljava/lang/String;Ly14;)Ljava/lang/Object;
+.method public final populateParams(Lgm;)V
+    .locals 5
 
-    move-result-object p1
+    const-string v0, "referrer"
 
-    return-object p1
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, v1}, Lgm;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v0, "deviceId"
+
+    iget-object v2, p0, Lb80;->a:Ljava/lang/String;
+
+    invoke-virtual {p1, v0, v2}, Lgm;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v0, Lbr0;
+
+    const-string v3, "verification_supported"
+
+    const/4 v4, 0x1
+
+    invoke-direct {v0, v3, v4}, Lbr0;-><init>(Ljava/lang/String;Z)V
+
+    invoke-virtual {p1, v0}, Lgm;->a(Lfm;)V
+
+    const-string v0, "verification_token"
+
+    invoke-virtual {p1, v0, v1}, Lgm;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v0, "verification_supported_v"
+
+    const-string v1, "1"
+
+    invoke-virtual {p1, v0, v1}, Lgm;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v0, "client"
+
+    const-string v1, "test"
+
+    invoke-virtual {p1, v0, v1}, Lgm;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v0, Lbr0;
+
+    const-string v3, "gen_token"
+
+    invoke-direct {v0, v3, v4}, Lbr0;-><init>(Ljava/lang/String;Z)V
+
+    invoke-virtual {p1, v0}, Lgm;->a(Lfm;)V
+
+    if-nez v2, :cond_0
+
+    move-object v2, v1
+
+    :cond_0
+    const-string v0, "\", \"client_version\": 1}"
+
+    iget-object v1, p0, Lb80;->b:Ljava/lang/String;
+
+    if-eqz v1, :cond_1
+
+    const-string v3, "{\"auth_token\": \""
+
+    const-string v4, "\", \"version\": 3, \"device_id\": \""
+
+    invoke-static {v3, v1, v4, v2, v0}, Lwy1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_1
+    const-string v1, "{\"version\": 2, \"device_id\": \""
+
+    invoke-static {v1, v2, v0}, Lho7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_0
+    const-string v1, "session_data"
+
+    invoke-virtual {p1, v1, v0}, Lgm;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
 .end method

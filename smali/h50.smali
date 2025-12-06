@@ -3,96 +3,109 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final e:Lh50;
+
+
 # instance fields
-.field public a:Z
+.field public final a:I
 
-.field public b:Z
+.field public final b:I
 
-.field public c:Z
+.field public final c:I
+
+.field public final d:I
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lh50;
+
+    const/4 v1, -0x1
+
+    invoke-direct {v0, v1, v1, v1}, Lh50;-><init>(III)V
+
+    sput-object v0, Lh50;->e:Lh50;
+
+    return-void
+.end method
+
+.method public constructor <init>(III)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lh50;->a:I
+
+    iput p2, p0, Lh50;->b:I
+
+    iput p3, p0, Lh50;->c:I
+
+    invoke-static {p3}, Lxxg;->z(I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    invoke-static {p3, p2}, Lxxg;->u(II)I
+
+    move-result p1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, -0x1
+
+    :goto_0
+    iput p1, p0, Lh50;->d:I
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public a()Li50;
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    iget-boolean v0, p0, Lh50;->a:Z
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-nez v0, :cond_1
+    const/16 v1, 0x53
 
-    iget-boolean v0, p0, Lh50;->b:Z
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    if-nez v0, :cond_0
+    const-string v1, "AudioFormat[sampleRate="
 
-    iget-boolean v0, p0, Lh50;->c:Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-nez v0, :cond_0
+    iget v1, p0, Lh50;->a:I
 
-    goto :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
+    const-string v1, ", channelCount="
 
-    const-string v1, "Secondary offload attribute fields are true but primary isFormatSupported is false"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget v1, p0, Lh50;->b:I
 
-    throw v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    :cond_1
-    :goto_0
-    new-instance v0, Li50;
+    const-string v1, ", encoding="
 
-    invoke-direct {v0, p0}, Li50;-><init>(Lh50;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object v0
-.end method
+    iget v1, p0, Lh50;->c:I
 
-.method public b(Ljava/util/ArrayList;)V
-    .locals 1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget-boolean v0, p0, Lh50;->a:Z
+    const/16 v1, 0x5d
 
-    if-nez v0, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    iget-boolean v0, p0, Lh50;->b:Z
-
-    if-nez v0, :cond_0
-
-    iget-boolean v0, p0, Lh50;->c:Z
-
-    if-eqz v0, :cond_2
-
-    :cond_0
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lnp4;
-
-    invoke-virtual {v0}, Lnp4;->a()V
-
-    goto :goto_0
-
-    :cond_1
-    const-string p1, "ForceCloseDeferrableSurface"
-
-    const-string v0, "deferrableSurface closed"
-
-    invoke-static {p1, v0}, Lgfi;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_2
-    return-void
+    return-object v0
 .end method

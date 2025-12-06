@@ -1,187 +1,106 @@
 .class public final Lctg;
-.super Lsgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Lrud;
 
 
 # instance fields
-.field public final synthetic X:Landroid/util/Size;
+.field public final a:Ljava/util/Map;
 
 
 # direct methods
-.method public constructor <init>(Landroid/util/Size;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/util/Map;)V
     .locals 0
 
-    iput-object p1, p0, Lctg;->X:Landroid/util/Size;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lctg;->a:Ljava/util/Map;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    check-cast p1, Lq54;
+    if-ne p0, p1, :cond_0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 p1, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lctg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return p1
 
-    move-result-object p1
+    :cond_0
+    if-eqz p1, :cond_2
 
+    const-class v0, Lctg;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    if-eq v0, v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
     check-cast p1, Lctg;
 
-    sget-object p2, Lccg;->a:Lccg;
+    iget-object v0, p0, Lctg;->a:Ljava/util/Map;
 
-    invoke-virtual {p1, p2}, Lctg;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p1, p1, Lctg;->a:Ljava/util/Map;
 
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lctg;
-
-    iget-object v0, p0, Lctg;->X:Landroid/util/Size;
-
-    invoke-direct {p1, v0, p2}, Lctg;-><init>(Landroid/util/Size;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lctg;->X:Landroid/util/Size;
-
-    invoke-virtual {p1}, Landroid/util/Size;->getWidth()I
+    invoke-interface {v0, p1}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    const-string v0, "M328 164c0 90.446-73.554 164-164 164S0 254.446 0 164S73.554 0 164 0s164 73.554 164 164Z"
+    return p1
 
-    invoke-static {v0}, Lrpi;->e(Ljava/lang/String;)Landroid/graphics/Path;
+    :cond_2
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lctg;->a:Ljava/util/Map;
+
+    filled-new-array {v0}, [Ljava/lang/Object;
 
     move-result-object v0
 
-    new-instance v1, Landroid/graphics/RectF;
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
-    invoke-direct {v1}, Landroid/graphics/RectF;-><init>()V
+    move-result v0
 
-    const/4 v2, 0x1
+    return v0
+.end method
 
-    invoke-virtual {v0, v1, v2}, Landroid/graphics/Path;->computeBounds(Landroid/graphics/RectF;Z)V
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    const/4 v2, 0x2
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    add-int v3, v2, p1
+    const-string v1, "UpdateDisplayLayoutCommandV2Response{participantsToErrorMap="
 
-    int-to-float v3, v3
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Landroid/graphics/RectF;->width()F
+    iget-object v1, p0, Lctg;->a:Ljava/util/Map;
 
-    move-result v4
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Landroid/graphics/RectF;->height()F
+    const/16 v1, 0x7d
 
-    move-result v5
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-static {v4, v5}, Ljava/lang/Math;->max(FF)F
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result v4
+    move-result-object v0
 
-    div-float/2addr v3, v4
-
-    new-instance v4, Landroid/graphics/Matrix;
-
-    invoke-direct {v4}, Landroid/graphics/Matrix;-><init>()V
-
-    iget v5, v1, Landroid/graphics/RectF;->left:F
-
-    neg-float v5, v5
-
-    iget v6, v1, Landroid/graphics/RectF;->top:F
-
-    neg-float v6, v6
-
-    invoke-virtual {v4, v5, v6}, Landroid/graphics/Matrix;->setTranslate(FF)V
-
-    invoke-virtual {v4, v3, v3}, Landroid/graphics/Matrix;->postScale(FF)Z
-
-    int-to-float v5, p1
-
-    invoke-virtual {v1}, Landroid/graphics/RectF;->width()F
-
-    move-result v6
-
-    mul-float/2addr v6, v3
-
-    sub-float v6, v5, v6
-
-    int-to-float v2, v2
-
-    div-float/2addr v6, v2
-
-    invoke-virtual {v1}, Landroid/graphics/RectF;->height()F
-
-    move-result v1
-
-    mul-float/2addr v1, v3
-
-    sub-float/2addr v5, v1
-
-    div-float/2addr v5, v2
-
-    invoke-virtual {v4, v6, v5}, Landroid/graphics/Matrix;->postTranslate(FF)Z
-
-    invoke-virtual {v0, v4}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
-
-    new-instance v1, Landroid/graphics/Paint;
-
-    invoke-direct {v1}, Landroid/graphics/Paint;-><init>()V
-
-    const/4 v2, -0x1
-
-    invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
-
-    const/4 v2, 0x6
-
-    invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setFlags(I)V
-
-    sget-object v2, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
-
-    invoke-static {p1, p1, v2}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
-
-    move-result-object p1
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :cond_0
-    new-instance v2, Landroid/graphics/Canvas;
-
-    invoke-direct {v2, p1}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
-
-    sget-object v3, Landroid/graphics/Path$FillType;->INVERSE_EVEN_ODD:Landroid/graphics/Path$FillType;
-
-    invoke-virtual {v0, v3}, Landroid/graphics/Path;->setFillType(Landroid/graphics/Path$FillType;)V
-
-    invoke-virtual {v2, v0, v1}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
-
-    return-object p1
+    return-object v0
 .end method

@@ -2,316 +2,404 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lgp5;
+
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field public final synthetic a:I
 
-.field public final b:I
+.field public final b:Lumb;
 
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:I
-
-.field public final g:I
-
-.field public final h:I
-
-.field public final i:I
-
-.field public final j:I
-
-.field public final k:F
-
-.field public final l:Ljava/lang/String;
+.field public final c:La3f;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/ArrayList;IIIIIIIIIFLjava/lang/String;)V
-    .locals 0
+.method public constructor <init>(I)V
+    .locals 2
+
+    iput p1, p0, Lke0;->a:I
+
+    packed-switch p1, :pswitch_data_0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lke0;->a:Ljava/util/ArrayList;
+    new-instance p1, Lumb;
 
-    iput p2, p0, Lke0;->b:I
+    const/4 v0, 0x4
 
-    iput p3, p0, Lke0;->c:I
+    invoke-direct {p1, v0}, Lumb;-><init>(I)V
 
-    iput p4, p0, Lke0;->d:I
+    iput-object p1, p0, Lke0;->b:Lumb;
 
-    iput p5, p0, Lke0;->e:I
+    new-instance p1, La3f;
 
-    iput p6, p0, Lke0;->f:I
+    const/4 v0, -0x1
 
-    iput p7, p0, Lke0;->g:I
+    const-string v1, "image/avif"
 
-    iput p8, p0, Lke0;->h:I
+    invoke-direct {p1, v0, v0, v1}, La3f;-><init>(IILjava/lang/String;)V
 
-    iput p9, p0, Lke0;->i:I
+    iput-object p1, p0, Lke0;->c:La3f;
 
-    iput p10, p0, Lke0;->j:I
+    return-void
 
-    iput p11, p0, Lke0;->k:F
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p12, p0, Lke0;->l:Ljava/lang/String;
+    new-instance p1, Lumb;
+
+    const/4 v0, 0x4
+
+    invoke-direct {p1, v0}, Lumb;-><init>(I)V
+
+    iput-object p1, p0, Lke0;->b:Lumb;
+
+    new-instance p1, La3f;
+
+    const/4 v0, -0x1
+
+    const-string v1, "image/webp"
+
+    invoke-direct {p1, v0, v0, v1}, La3f;-><init>(IILjava/lang/String;)V
+
+    iput-object p1, p0, Lke0;->c:La3f;
+
+    return-void
+
+    :pswitch_1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance p1, Lumb;
+
+    const/4 v0, 0x4
+
+    invoke-direct {p1, v0}, Lumb;-><init>(I)V
+
+    iput-object p1, p0, Lke0;->b:Lumb;
+
+    new-instance p1, La3f;
+
+    const/4 v0, -0x1
+
+    const-string v1, "image/heif"
+
+    invoke-direct {p1, v0, v0, v1}, La3f;-><init>(IILjava/lang/String;)V
+
+    iput-object p1, p0, Lke0;->c:La3f;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method private final a()V
+    .locals 0
 
     return-void
 .end method
 
-.method public static a(Ledb;)Lke0;
-    .locals 17
+.method private final b()V
+    .locals 0
 
-    move-object/from16 v0, p0
+    return-void
+.end method
+
+.method private final c()V
+    .locals 0
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final d(JJ)V
+    .locals 1
+
+    iget v0, p0, Lke0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lke0;->c:La3f;
+
+    invoke-virtual {v0, p1, p2, p3, p4}, La3f;->d(JJ)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lke0;->c:La3f;
+
+    invoke-virtual {v0, p1, p2, p3, p4}, La3f;->d(JJ)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lke0;->c:La3f;
+
+    invoke-virtual {v0, p1, p2, p3, p4}, La3f;->d(JJ)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final i(Lip5;)Z
+    .locals 8
+
+    iget v0, p0, Lke0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lke0;->b:Lumb;
 
     const/4 v1, 0x4
 
-    :try_start_0
-    invoke-virtual {v0, v1}, Ledb;->K(I)V
+    invoke-virtual {v0, v1}, Lumb;->G(I)V
 
-    invoke-virtual {v0}, Ledb;->x()I
-
-    move-result v2
-
-    const/4 v3, 0x3
-
-    and-int/2addr v2, v3
-
-    add-int/lit8 v6, v2, 0x1
-
-    if-eq v6, v3, :cond_3
-
-    new-instance v5, Ljava/util/ArrayList;
-
-    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-virtual {v0}, Ledb;->x()I
-
-    move-result v2
-
-    and-int/lit8 v2, v2, 0x1f
+    iget-object v2, v0, Lumb;->a:[B
 
     const/4 v3, 0x0
 
-    move v4, v3
+    invoke-interface {p1, v3, v2, v1}, Lip5;->i(I[BI)V
 
-    :goto_0
-    if-ge v4, v2, :cond_0
+    invoke-virtual {v0}, Lumb;->z()J
 
-    invoke-virtual {v0}, Ledb;->D()I
+    move-result-wide v4
 
-    move-result v7
+    const-wide/32 v6, 0x52494646
 
-    iget v8, v0, Ledb;->b:I
+    cmp-long v2, v4, v6
 
-    invoke-virtual {v0, v7}, Ledb;->K(I)V
-
-    iget-object v9, v0, Ledb;->a:[B
-
-    sget-object v10, Lma3;->a:[B
-
-    add-int/lit8 v11, v7, 0x4
-
-    new-array v11, v11, [B
-
-    invoke-static {v10, v3, v11, v3, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    invoke-static {v9, v8, v11, v1, v7}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    invoke-virtual {v5, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v4, v4, 0x1
+    if-eqz v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Ledb;->x()I
+    invoke-interface {p1, v1}, Lip5;->q(I)V
 
-    move-result v4
+    invoke-virtual {v0, v1}, Lumb;->G(I)V
 
-    move v7, v3
+    iget-object v2, v0, Lumb;->a:[B
 
-    :goto_1
-    if-ge v7, v4, :cond_1
+    invoke-interface {p1, v3, v2, v1}, Lip5;->i(I[BI)V
 
-    invoke-virtual {v0}, Ledb;->D()I
+    invoke-virtual {v0}, Lumb;->z()J
 
-    move-result v8
+    move-result-wide v0
 
-    iget v9, v0, Ledb;->b:I
+    const-wide/32 v4, 0x57454250
 
-    invoke-virtual {v0, v8}, Ledb;->K(I)V
+    cmp-long p1, v0, v4
 
-    iget-object v10, v0, Ledb;->a:[B
+    if-nez p1, :cond_1
 
-    sget-object v11, Lma3;->a:[B
-
-    add-int/lit8 v12, v8, 0x4
-
-    new-array v12, v12, [B
-
-    invoke-static {v11, v3, v12, v3, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    invoke-static {v10, v9, v12, v1, v8}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    invoke-virtual {v5, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v7, v7, 0x1
-
-    goto :goto_1
+    const/4 v3, 0x1
 
     :cond_1
-    if-lez v2, :cond_2
+    :goto_0
+    return v3
 
-    invoke-virtual {v5, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    :pswitch_0
+    const/4 v0, 0x4
 
-    move-result-object v0
+    invoke-interface {p1, v0}, Lip5;->q(I)V
 
-    check-cast v0, [B
+    iget-object v1, p0, Lke0;->b:Lumb;
 
-    invoke-virtual {v5, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Lumb;->G(I)V
 
-    move-result-object v2
+    iget-object v2, v1, Lumb;->a:[B
 
-    check-cast v2, [B
+    const/4 v3, 0x0
 
-    array-length v0, v0
+    invoke-interface {p1, v3, v2, v0}, Lip5;->i(I[BI)V
 
-    invoke-static {v1, v2, v0}, Lj0i;->n(I[BI)Li4a;
+    invoke-virtual {v1}, Lumb;->z()J
 
-    move-result-object v0
+    move-result-wide v4
 
-    iget v1, v0, Li4a;->e:I
+    const v2, 0x66747970
 
-    iget v2, v0, Li4a;->f:I
+    int-to-long v6, v2
 
-    iget v3, v0, Li4a;->h:I
+    cmp-long v2, v4, v6
 
-    add-int/lit8 v3, v3, 0x8
+    if-nez v2, :cond_2
 
-    iget v4, v0, Li4a;->i:I
+    invoke-virtual {v1, v0}, Lumb;->G(I)V
 
-    add-int/lit8 v4, v4, 0x8
+    iget-object v2, v1, Lumb;->a:[B
 
-    iget v7, v0, Li4a;->p:I
+    invoke-interface {p1, v3, v2, v0}, Lip5;->i(I[BI)V
 
-    iget v8, v0, Li4a;->q:I
+    invoke-virtual {v1}, Lumb;->z()J
 
-    iget v9, v0, Li4a;->r:I
+    move-result-wide v0
 
-    iget v10, v0, Li4a;->s:I
+    const p1, 0x68656963
 
-    iget v11, v0, Li4a;->g:F
+    int-to-long v4, p1
 
-    iget v12, v0, Li4a;->a:I
+    cmp-long p1, v0, v4
 
-    iget v13, v0, Li4a;->b:I
+    if-nez p1, :cond_2
 
-    iget v0, v0, Li4a;->c:I
-
-    sget-object v14, Lma3;->a:[B
-
-    const-string v14, "avc1.%02X%02X%02X"
-
-    invoke-static {v12}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v12
-
-    invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v13
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    filled-new-array {v12, v13, v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v14, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    move v12, v8
-
-    move v13, v9
-
-    move v14, v10
-
-    move v15, v11
-
-    move v8, v2
-
-    move v9, v3
-
-    move v10, v4
-
-    move v11, v7
-
-    move v7, v1
-
-    :goto_2
-    move-object/from16 v16, v0
-
-    goto :goto_3
+    const/4 v3, 0x1
 
     :cond_2
-    const/4 v1, -0x1
+    return v3
 
-    const/high16 v11, 0x3f800000    # 1.0f
+    :pswitch_1
+    const/4 v0, 0x4
 
-    const/4 v0, 0x0
+    invoke-interface {p1, v0}, Lip5;->q(I)V
 
-    const/16 v10, 0x10
+    iget-object v1, p0, Lke0;->b:Lumb;
 
-    move v7, v1
+    invoke-virtual {v1, v0}, Lumb;->G(I)V
 
-    move v8, v7
+    iget-object v2, v1, Lumb;->a:[B
 
-    move v9, v8
+    const/4 v3, 0x0
 
-    move v12, v9
+    invoke-interface {p1, v3, v2, v0}, Lip5;->i(I[BI)V
 
-    move v13, v12
+    invoke-virtual {v1}, Lumb;->z()J
 
-    move v14, v10
+    move-result-wide v4
 
-    move v15, v11
+    const v2, 0x66747970
 
-    move v10, v13
+    int-to-long v6, v2
 
-    move v11, v10
+    cmp-long v2, v4, v6
 
-    goto :goto_2
+    if-nez v2, :cond_3
 
-    :goto_3
-    new-instance v4, Lke0;
+    invoke-virtual {v1, v0}, Lumb;->G(I)V
 
-    invoke-direct/range {v4 .. v16}, Lke0;-><init>(Ljava/util/ArrayList;IIIIIIIIIFLjava/lang/String;)V
+    iget-object v2, v1, Lumb;->a:[B
 
-    return-object v4
+    invoke-interface {p1, v3, v2, v0}, Lip5;->i(I[BI)V
+
+    invoke-virtual {v1}, Lumb;->z()J
+
+    move-result-wide v0
+
+    const p1, 0x61766966
+
+    int-to-long v4, p1
+
+    cmp-long p1, v0, v4
+
+    if-nez p1, :cond_3
+
+    const/4 v3, 0x1
 
     :cond_3
-    new-instance v0, Ljava/lang/IllegalStateException;
+    return v3
 
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
+    nop
 
-    throw v0
-    :try_end_0
-    .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    :catch_0
-    move-exception v0
+.method public final release()V
+    .locals 1
 
-    const-string v1, "Error parsing AVC config"
+    iget v0, p0, Lke0;->a:I
 
-    invoke-static {v0, v1}, Landroidx/media3/common/ParserException;->a(Ljava/lang/RuntimeException;Ljava/lang/String;)Landroidx/media3/common/ParserException;
+    return-void
+.end method
 
-    move-result-object v0
+.method public final w(Lkp5;)V
+    .locals 1
 
-    throw v0
+    iget v0, p0, Lke0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lke0;->c:La3f;
+
+    invoke-virtual {v0, p1}, La3f;->w(Lkp5;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lke0;->c:La3f;
+
+    invoke-virtual {v0, p1}, La3f;->w(Lkp5;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lke0;->c:La3f;
+
+    invoke-virtual {v0, p1}, La3f;->w(Lkp5;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final y(Lip5;Ln7;)I
+    .locals 1
+
+    iget v0, p0, Lke0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lke0;->c:La3f;
+
+    invoke-virtual {v0, p1, p2}, La3f;->y(Lip5;Ln7;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    iget-object v0, p0, Lke0;->c:La3f;
+
+    invoke-virtual {v0, p1, p2}, La3f;->y(Lip5;Ln7;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_1
+    iget-object v0, p0, Lke0;->c:La3f;
+
+    invoke-virtual {v0, p1, p2}, La3f;->y(Lip5;Ln7;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

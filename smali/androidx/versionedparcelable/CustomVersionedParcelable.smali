@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lrkg;
+.implements Lg0h;
 
 
 # direct methods

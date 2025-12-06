@@ -1,56 +1,73 @@
 .class public final Ldq7;
-.super Ljava/lang/Object;
+.super Lapd;
 .source "SourceFile"
 
-# interfaces
-.implements Lbjg;
 
+# instance fields
+.field public b:I
 
-# static fields
-.field public static final a:Ljava/text/SimpleDateFormat;
+.field public final synthetic c:Lsm6;
+
+.field public final synthetic d:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lsm6;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Ljava/text/SimpleDateFormat;
+    iput-object p1, p0, Ldq7;->c:Lsm6;
 
-    const-string v1, "yyyy-MM-dd\'T\'HH:mm:ss.SSS\'Z\'"
+    iput-object p2, p0, Ldq7;->d:Ljava/lang/Object;
 
-    sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    invoke-direct {v0, v1, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
-
-    sput-object v0, Ldq7;->a:Ljava/text/SimpleDateFormat;
-
-    const-string v1, "UTC"
-
-    invoke-static {v1}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/text/DateFormat;->setTimeZone(Ljava/util/TimeZone;)V
+    invoke-direct {p0, p3}, Lapd;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    check-cast p1, Ljava/util/Date;
+    iget v0, p0, Ldq7;->b:I
 
-    check-cast p2, Lcjg;
+    const/4 v1, 0x2
 
-    sget-object v0, Ldq7;->a:Ljava/text/SimpleDateFormat;
+    const/4 v2, 0x1
 
-    invoke-virtual {v0, p1}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+    if-eqz v0, :cond_1
+
+    if-ne v0, v2, :cond_0
+
+    iput v1, p0, Ldq7;->b:I
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    return-object p1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "This coroutine had already completed"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    iput v2, p0, Ldq7;->b:I
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ldq7;->c:Lsm6;
+
+    invoke-static {v1, p1}, Luog;->d(ILjava/lang/Object;)V
+
+    iget-object v0, p0, Ldq7;->d:Ljava/lang/Object;
+
+    invoke-interface {p1, v0, p0}, Lsm6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-interface {p2, p1}, Lcjg;->b(Ljava/lang/String;)Lcjg;
-
-    return-void
+    return-object p1
 .end method

@@ -1,185 +1,88 @@
-.class public final Ld61;
-.super Ldg4;
+.class public final synthetic Ld61;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcm6;
 
-# static fields
-.field public static final b:Ld61;
 
-.field public static final c:Lyf4;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final d:Lyf4;
-
-.field public static final e:Lyf4;
-
-.field public static final f:Lyf4;
-
-.field public static final g:Lyf4;
-
-.field public static final h:Lyf4;
-
-.field public static final i:Lyf4;
-
-.field public static final j:Lyf4;
-
-.field public static final k:Lyf4;
-
-.field public static final l:Lyf4;
-
-.field public static final m:Lyf4;
+.field public final synthetic b:Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public synthetic constructor <init>(Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;I)V
+    .locals 0
 
-    new-instance v0, Ld61;
+    iput p2, p0, Ld61;->a:I
 
-    invoke-direct {v0}, Ldg4;-><init>()V
+    iput-object p1, p0, Ld61;->b:Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;
 
-    sput-object v0, Ld61;->b:Ld61;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "opponent_id"
+    return-void
+.end method
 
-    filled-new-array {v1}, [Ljava/lang/String;
 
-    move-result-object v1
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 8
 
-    const-string v2, ":call-user"
+    iget v0, p0, Ld61;->a:I
 
-    const/4 v3, 0x0
+    iget-object v1, p0, Ld61;->b:Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;
 
-    const/16 v4, 0xe
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {v0, v2, v1, v3, v4}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+    sget-object v0, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->Z:[Lyy7;
 
-    move-result-object v1
+    new-instance v0, Lf61;
 
-    sput-object v1, Ld61;->c:Lyf4;
+    invoke-direct {v0, v1}, Lf61;-><init>(Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;)V
 
-    const-string v1, "link"
+    return-object v0
 
-    filled-new-array {v1}, [Ljava/lang/String;
+    :pswitch_0
+    sget-object v0, Lone/me/calls/ui/ui/debugmenu/CallDebugMenuScreen;->Z:[Lyy7;
 
-    move-result-object v2
+    new-instance v4, Lxtd;
 
-    const-string v5, ":call-join-link"
+    const/16 v0, 0xb
 
-    invoke-static {v0, v5, v2, v3, v4}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+    invoke-direct {v4, v0, v1}, Lxtd;-><init>(ILjava/lang/Object;)V
 
-    move-result-object v2
+    new-instance v2, Ld9e;
 
-    sput-object v2, Ld61;->d:Lyf4;
+    sget-object v0, La93;->s0:Lv1a;
 
-    const-string v2, "chat_id"
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    filled-new-array {v2}, [Ljava/lang/String;
+    move-result-object v3
 
-    move-result-object v5
-
-    const-string v6, ":call-chat"
-
-    invoke-static {v0, v6, v5, v3, v4}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
-
-    move-result-object v5
-
-    sput-object v5, Ld61;->e:Lyf4;
-
-    const-string v5, "call_name"
-
-    filled-new-array {v2, v5}, [Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v5, ":call-incoming"
-
-    invoke-static {v0, v5, v2, v3, v4}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
-
-    move-result-object v2
-
-    sput-object v2, Ld61;->f:Lyf4;
-
-    const/4 v2, 0x0
-
-    new-array v5, v2, [Ljava/lang/String;
-
-    const-string v6, ":call-active"
-
-    invoke-static {v0, v6, v5, v3, v4}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
-
-    move-result-object v5
-
-    sput-object v5, Ld61;->g:Lyf4;
-
-    const-string v5, ":call-join-preview"
-
-    filled-new-array {v1}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v5, v1, v3, v4}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
-
-    move-result-object v1
-
-    sput-object v1, Ld61;->h:Lyf4;
-
-    const-string v1, ":call-opponents-list"
-
-    new-array v5, v2, [Ljava/lang/String;
-
-    invoke-static {v0, v1, v5, v3, v4}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
-
-    move-result-object v1
-
-    sput-object v1, Ld61;->i:Lyf4;
-
-    const-string v1, ":call-admin-settings"
-
-    new-array v5, v2, [Ljava/lang/String;
-
-    invoke-static {v0, v1, v5, v3, v4}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
-
-    move-result-object v1
-
-    sput-object v1, Ld61;->j:Lyf4;
-
-    const-string v1, ":call-pip"
-
-    new-array v5, v2, [Ljava/lang/String;
-
-    invoke-static {v0, v1, v5, v3, v4}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
-
-    move-result-object v1
-
-    sput-object v1, Ld61;->k:Lyf4;
-
-    const-string v1, ":call-admin-waiting-room"
-
-    new-array v2, v2, [Ljava/lang/String;
-
-    invoke-static {v0, v1, v2, v3, v4}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
-
-    move-result-object v1
-
-    sput-object v1, Ld61;->l:Lyf4;
-
-    const-string v1, "is_group"
-
-    const-string v2, "is_video"
-
-    const-string v5, "call_id"
-
-    filled-new-array {v5, v1, v2}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, ":call-rate"
-
-    invoke-static {v0, v2, v1, v3, v4}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+    invoke-virtual {v0, v3}, Lv1a;->z(Landroid/content/Context;)Lh5b;
 
     move-result-object v0
 
-    sput-object v0, Ld61;->m:Lyf4;
+    iget-object v3, v0, Lh5b;->c:Lyeb;
 
-    return-void
+    new-instance v5, Lk;
+
+    const/16 v0, 0x11
+
+    invoke-direct {v5, v0, v1}, Lk;-><init>(ILjava/lang/Object;)V
+
+    const/4 v6, 0x0
+
+    const/16 v7, 0x14
+
+    invoke-direct/range {v2 .. v7}, Ld9e;-><init>(Lyeb;Lb9e;Lem6;La7c;I)V
+
+    return-object v2
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

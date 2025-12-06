@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lone;
+.implements Lmze;
 
 
 # instance fields

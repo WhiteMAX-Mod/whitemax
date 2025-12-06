@@ -1,39 +1,37 @@
 .class public final Le60;
-.super Ljava/lang/Object;
+.super Li3;
 .source "SourceFile"
 
 
+# static fields
+.field public static final X:[I
+
+
 # instance fields
-.field public final a:I
+.field public c:Z
 
-.field public final b:I
+.field public d:Z
 
-.field public final c:I
-
-.field public final d:Z
-
-.field public final e:Z
-
-.field public final f:I
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(IIIZZI)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0x5622
 
-    iput p1, p0, Le60;->a:I
+    const v1, 0xac44
 
-    iput p2, p0, Le60;->b:I
+    const/16 v2, 0x1588
 
-    iput p3, p0, Le60;->c:I
+    const/16 v3, 0x2b11
 
-    iput-boolean p4, p0, Le60;->d:Z
+    filled-new-array {v2, v3, v0, v1}, [I
 
-    iput-boolean p5, p0, Le60;->e:Z
+    move-result-object v0
 
-    iput p6, p0, Le60;->f:I
+    sput-object v0, Le60;->X:[I
 
     return-void
 .end method

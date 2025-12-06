@@ -1,106 +1,48 @@
-.class public final Lbqi;
-.super Lwii;
+.class public abstract Lbqi;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic b:Lvof;
+# static fields
+.field public static a:Z
 
-.field public final synthetic c:Lv8i;
-
-.field public final synthetic o:Lezi;
+.field public static b:Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;
 
 
 # direct methods
-.method public constructor <init>(Lezi;Lvof;Lvof;Lv8i;)V
-    .locals 0
+.method public static final a(Lsn0;)V
+    .locals 1
 
-    iput-object p3, p0, Lbqi;->b:Lvof;
+    invoke-virtual {p0}, Lsn0;->e()Z
 
-    iput-object p4, p0, Lbqi;->c:Lv8i;
+    move-result v0
 
-    iput-object p1, p0, Lbqi;->o:Lezi;
+    if-eqz v0, :cond_0
 
-    invoke-direct {p0, p2}, Lwii;-><init>(Lvof;)V
+    invoke-virtual {p0}, Lsn0;->getValue()Ljava/lang/Object;
 
+    move-result-object p0
+
+    check-cast p0, Landroid/view/View;
+
+    const/16 v0, 0x8
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_0
     return-void
 .end method
 
+.method public static final b(Lhn;Lin;Lj48;)Li48;
+    .locals 1
 
-# virtual methods
-.method public final a()V
-    .locals 6
+    invoke-interface {p2}, Lj48;->p()Ll48;
 
-    iget-object v0, p0, Lbqi;->o:Lezi;
+    move-result-object p2
 
-    iget-object v0, v0, Lezi;->f:Ljava/lang/Object;
+    new-instance v0, Li48;
 
-    monitor-enter v0
+    invoke-direct {v0, p1, p2, p0}, Li48;-><init>(Lin;Ll48;Lhn;)V
 
-    :try_start_0
-    iget-object v1, p0, Lbqi;->o:Lezi;
-
-    iget-object v2, p0, Lbqi;->b:Lvof;
-
-    iget-object v3, v1, Lezi;->e:Ljava/util/HashSet;
-
-    invoke-virtual {v3, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    iget-object v3, v2, Lvof;->a:Le2j;
-
-    new-instance v4, Lvxe;
-
-    const/4 v5, 0x0
-
-    invoke-direct {v4, v1, v2, v5}, Lvxe;-><init>(Ljava/lang/Object;Ljava/lang/Object;Z)V
-
-    invoke-virtual {v3, v4}, Le2j;->i(Lrma;)Le2j;
-
-    iget-object v1, p0, Lbqi;->o:Lezi;
-
-    iget-object v1, v1, Lezi;->k:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
-
-    move-result v1
-
-    if-lez v1, :cond_0
-
-    iget-object v1, p0, Lbqi;->o:Lezi;
-
-    iget-object v1, v1, Lezi;->b:Lo7f;
-
-    const-string v2, "Already connected to the service."
-
-    const/4 v3, 0x0
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    invoke-virtual {v1, v2, v3}, Lo7f;->b(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    iget-object v1, p0, Lbqi;->o:Lezi;
-
-    iget-object v2, p0, Lbqi;->c:Lv8i;
-
-    invoke-static {v1, v2}, Lezi;->b(Lezi;Lv8i;)V
-
-    monitor-exit v0
-
-    return-void
-
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
+    return-object v0
 .end method

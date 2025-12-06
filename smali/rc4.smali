@@ -1,11 +1,42 @@
-.class public interface abstract Lrc4;
+.class public final Lrc4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/Closeable;
+
+
+# instance fields
+.field public X:Ljavax/inject/Provider;
+
+.field public Y:Ljavax/inject/Provider;
+
+.field public a:Ljavax/inject/Provider;
+
+.field public b:Ltl4;
+
+.field public c:Ljavax/inject/Provider;
+
+.field public d:Lznd;
+
+.field public o:Ljavax/inject/Provider;
+
 
 # virtual methods
-.method public abstract getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
-.end method
+.method public final close()V
+    .locals 1
 
-.method public abstract getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    iget-object v0, p0, Lrc4;->X:Ljavax/inject/Provider;
+
+    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lri5;
+
+    check-cast v0, Lgwd;
+
+    invoke-virtual {v0}, Lgwd;->close()V
+
+    return-void
 .end method

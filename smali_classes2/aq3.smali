@@ -2,33 +2,24 @@
 .super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Comparable;
-
 
 # static fields
-.field public static final enum X:Laq3;
-
-.field public static final synthetic Y:[Laq3;
-
-.field public static final synthetic Z:Lzd5;
-
 .field public static final enum a:Laq3;
 
 .field public static final enum b:Laq3;
 
 .field public static final enum c:Laq3;
 
-.field public static final enum o:Laq3;
+.field public static final synthetic d:[Laq3;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 7
+    .locals 5
 
     new-instance v0, Laq3;
 
-    const-string v1, "TYPE_UNKNOWN"
+    const-string v1, "DEFAULT"
 
     const/4 v2, 0x0
 
@@ -38,7 +29,7 @@
 
     new-instance v1, Laq3;
 
-    const-string v2, "TYPE_WIFI"
+    const-string v2, "SUCCESS"
 
     const/4 v3, 0x1
 
@@ -48,7 +39,7 @@
 
     new-instance v2, Laq3;
 
-    const-string v3, "TYPE_MOBILE_SLOW"
+    const-string v3, "ERROR"
 
     const/4 v4, 0x2
 
@@ -56,37 +47,11 @@
 
     sput-object v2, Laq3;->c:Laq3;
 
-    new-instance v3, Laq3;
-
-    const-string v4, "TYPE_MOBILE_NORMAL"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Laq3;->o:Laq3;
-
-    new-instance v4, Laq3;
-
-    const-string v5, "TYPE_MOBILE_FAST"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Laq3;->X:Laq3;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Laq3;
+    filled-new-array {v0, v1, v2}, [Laq3;
 
     move-result-object v0
 
-    sput-object v0, Laq3;->Y:[Laq3;
-
-    new-instance v1, Lzd5;
-
-    invoke-direct {v1, v0}, Lzd5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Laq3;->Z:Lzd5;
+    sput-object v0, Laq3;->d:[Laq3;
 
     return-void
 .end method
@@ -108,67 +73,13 @@
 .method public static values()[Laq3;
     .locals 1
 
-    sget-object v0, Laq3;->Y:[Laq3;
+    sget-object v0, Laq3;->d:[Laq3;
 
     invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [Laq3;
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 2
-
-    sget-object v0, Lzp3;->$EnumSwitchMapping$0:[I
-
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    aget v0, v0, v1
-
-    const/4 v1, 0x1
-
-    if-eq v0, v1, :cond_3
-
-    const/4 v1, 0x2
-
-    if-eq v0, v1, :cond_2
-
-    const/4 v1, 0x3
-
-    if-eq v0, v1, :cond_1
-
-    const/4 v1, 0x4
-
-    if-eq v0, v1, :cond_0
-
-    const-string v0, "UNKNOWN"
-
-    return-object v0
-
-    :cond_0
-    const-string v0, "4G"
-
-    return-object v0
-
-    :cond_1
-    const-string v0, "3G"
-
-    return-object v0
-
-    :cond_2
-    const-string v0, "2G"
-
-    return-object v0
-
-    :cond_3
-    const-string v0, "WIFI"
 
     return-object v0
 .end method

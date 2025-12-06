@@ -4,14 +4,5 @@
 
 
 # virtual methods
-.method public abstract onIceRestart()V
-.end method
-
-.method public abstract onNegotiationError(Lm5a;)V
-.end method
-
-.method public abstract onPeerConnectionStateChanged(Lorg/webrtc/PeerConnection$PeerConnectionState;)V
-.end method
-
-.method public abstract onSelectedCandidatePairChanged(Lorg/webrtc/CandidatePairChangeEvent;)V
+.method public abstract onEvent(Lk01;Lx71;Ljava/lang/Object;)V
 .end method

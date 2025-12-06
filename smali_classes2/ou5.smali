@@ -1,42 +1,26 @@
 .class public final Lou5;
-.super Lsgf;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Lsm6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic X:Lpe4;
 
-.field public final synthetic Y:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field public final synthetic Z:Luu5;
-
-.field public final synthetic q0:Ljava/nio/channels/AsynchronousFileChannel;
-
-.field public final synthetic r0:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final synthetic s0:Le0c;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/atomic/AtomicBoolean;Luu5;Ljava/nio/channels/AsynchronousFileChannel;Ljava/util/concurrent/atomic/AtomicReference;Le0c;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lpe4;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lou5;->Y:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    iput-object p2, p0, Lou5;->Z:Luu5;
-
-    iput-object p3, p0, Lou5;->q0:Ljava/nio/channels/AsynchronousFileChannel;
-
-    iput-object p4, p0, Lou5;->r0:Ljava/util/concurrent/atomic/AtomicReference;
-
-    iput-object p5, p0, Lou5;->s0:Le0c;
+    iput-object p1, p0, Lou5;->X:Lpe4;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p6}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -46,94 +30,112 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lfxf;
+    check-cast p1, Lf84;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p0, p1, p2}, Lou5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1, p2}, Lou5;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
     check-cast p1, Lou5;
 
-    sget-object p2, Lccg;->a:Lccg;
+    sget-object p2, Lqqg;->a:Lqqg;
 
     invoke-virtual {p1, p2}, Lou5;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p2
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 7
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    new-instance v0, Lou5;
+    new-instance p1, Lou5;
 
-    iget-object v4, p0, Lou5;->r0:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object v0, p0, Lou5;->X:Lpe4;
 
-    iget-object v5, p0, Lou5;->s0:Le0c;
+    invoke-direct {p1, v0, p2}, Lou5;-><init>(Lpe4;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v1, p0, Lou5;->Y:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    iget-object v2, p0, Lou5;->Z:Luu5;
-
-    iget-object v3, p0, Lou5;->q0:Ljava/nio/channels/AsynchronousFileChannel;
-
-    move-object v6, p2
-
-    invoke-direct/range {v0 .. v6}, Lou5;-><init>(Ljava/util/concurrent/atomic/AtomicBoolean;Luu5;Ljava/nio/channels/AsynchronousFileChannel;Ljava/util/concurrent/atomic/AtomicReference;Le0c;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lou5;->X:Ljava/lang/Object;
-
-    return-object v0
+    return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
+    .locals 4
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    iget v0, p0, Lou5;->o:I
 
-    iget-object p1, p0, Lou5;->X:Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    move-object v2, p1
+    if-eqz v0, :cond_1
 
-    check-cast v2, Lfxf;
+    if-ne v0, v1, :cond_0
 
-    iget-object v4, p0, Lou5;->Y:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v4}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result p1
-
-    sget-object v8, Lccg;->a:Lccg;
-
-    if-nez p1, :cond_0
-
-    return-object v8
+    return-object p1
 
     :cond_0
-    iget-object v1, p0, Lou5;->Z:Luu5;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    iget-object p1, v1, Luu5;->q:Lkotlinx/coroutines/internal/ContextScope;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    iget-object v9, v1, Luu5;->p:Lkn7;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iput v1, p0, Lou5;->o:I
+
+    new-instance p1, Ll42;
+
+    invoke-static {p0}, Lhni;->f(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object v0
+
+    invoke-direct {p1, v1, v0}, Ll42;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    invoke-virtual {p1}, Ll42;->o()V
+
+    new-instance v0, Lz11;
+
+    const/4 v1, 0x7
+
+    iget-object v2, p0, Lou5;->X:Lpe4;
+
+    invoke-direct {v0, v1, v2}, Lz11;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p1, v0}, Ll42;->e(Lem6;)V
 
     new-instance v0, Lnu5;
 
-    iget-object v6, p0, Lou5;->s0:Le0c;
+    const/4 v1, 0x0
 
-    const/4 v7, 0x0
+    invoke-direct {v0, v1, p1}, Lnu5;-><init>(ILjava/lang/Object;)V
 
-    iget-object v3, p0, Lou5;->q0:Ljava/nio/channels/AsynchronousFileChannel;
+    new-instance v1, Les;
 
-    iget-object v5, p0, Lou5;->r0:Ljava/util/concurrent/atomic/AtomicReference;
+    const/4 v3, 0x2
 
-    invoke-direct/range {v0 .. v7}, Lnu5;-><init>(Luu5;Lfxf;Ljava/nio/channels/AsynchronousFileChannel;Ljava/util/concurrent/atomic/AtomicBoolean;Ljava/util/concurrent/atomic/AtomicReference;Le0c;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v1, v3}, Les;-><init>(I)V
 
-    const/4 v1, 0x2
+    check-cast v2, Lr0;
 
-    const/4 v2, 0x0
+    invoke-virtual {v2, v0, v1}, Lr0;->l(Laf4;Ljava/util/concurrent/Executor;)V
 
-    invoke-static {p1, v9, v2, v0, v1}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
+    invoke-virtual {p1}, Ll42;->n()Ljava/lang/Object;
 
-    return-object v8
+    move-result-object p1
+
+    sget-object v0, Lg84;->a:Lg84;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    return-object p1
 .end method

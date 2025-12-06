@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ldg7;
+.implements Ltl7;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Ldg7;"
+        "Ltl7;"
     }
 .end annotation
 
@@ -20,8 +20,8 @@
     }
     d2 = {
         "Lru/ok/tracer/nativebridge/NativeBridgeInitializer;",
-        "Ldg7;",
-        "Lccg;",
+        "Ltl7;",
+        "Lqqg;",
         "<init>",
         "()V",
         "tracer-crash-report-native_release"
@@ -62,9 +62,13 @@
 .method public final b(Landroid/content/Context;)Ljava/lang/Object;
     .locals 0
 
+    :try_start_0
     invoke-static {}, Lru/ok/tracer/nativebridge/NativeBridgeInstaller;->a()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    sget-object p1, Lccg;->a:Lccg;
+    :catchall_0
+    sget-object p1, Lqqg;->a:Lqqg;
 
     return-object p1
 .end method

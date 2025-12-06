@@ -4,10 +4,20 @@
 
 
 # direct methods
-.method public static a(Ljava/lang/String;)Landroid/os/LocaleList;
+.method public static a(Landroid/os/PowerManager;)Z
     .locals 0
 
-    invoke-static {p0}, Landroid/os/LocaleList;->forLanguageTags(Ljava/lang/String;)Landroid/os/LocaleList;
+    invoke-virtual {p0}, Landroid/os/PowerManager;->isPowerSaveMode()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static b(Ljava/util/Locale;)Ljava/lang/String;
+    .locals 0
+
+    invoke-virtual {p0}, Ljava/util/Locale;->toLanguageTag()Ljava/lang/String;
 
     move-result-object p0
 

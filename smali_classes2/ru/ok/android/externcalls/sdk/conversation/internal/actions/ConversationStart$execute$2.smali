@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Laj6;
+.implements Ltm6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;->execute(Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$Params;)Lwpe;
+    value = Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart;->execute(Lru/ok/android/externcalls/sdk/conversation/internal/actions/ConversationStart$Params;)Le2f;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Laj6;"
+        "Ltm6;"
     }
 .end annotation
 
@@ -98,14 +98,69 @@
 .end method
 
 .method public final apply(Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result;)Lru/ok/android/externcalls/sdk/api/CallInfo;
-    .locals 1
+    .locals 2
 
     .line 2
+    instance-of v0, p1, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result$Success;
+
+    if-eqz v0, :cond_0
+
     sget-object v0, Lru/ok/android/externcalls/sdk/api/CallInfo;->Companion:Lru/ok/android/externcalls/sdk/api/CallInfo$Companion;
 
-    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/api/CallInfo$Companion;->createFromStartConversationDelegateResult$calls_sdk_release(Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result;)Lru/ok/android/externcalls/sdk/api/CallInfo;
+    check-cast p1, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result$Success;
+
+    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/api/CallInfo$Companion;->createFromStartConversationDelegateResult$calls_sdk_release(Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result$Success;)Lru/ok/android/externcalls/sdk/api/CallInfo;
 
     move-result-object p1
 
     return-object p1
+
+    .line 3
+    :cond_0
+    instance-of v0, p1, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result$Error;
+
+    if-eqz v0, :cond_2
+
+    check-cast p1, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result$Error;
+
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result$Error;->getErrorCode()Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    .line 4
+    new-instance v0, Lru/ok/android/api/core/ApiInvocationException;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result$Error;->getErrorCode()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, v1, p1}, Lru/ok/android/api/core/ApiInvocationException;-><init>(ILjava/lang/String;)V
+
+    goto :goto_0
+
+    .line 5
+    :cond_1
+    new-instance v0, Lru/ok/android/api/core/ApiException;
+
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result$Error;->getThrowable()Ljava/lang/Throwable;
+
+    move-result-object p1
+
+    .line 6
+    invoke-direct {v0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
+
+    .line 7
+    :goto_0
+    throw v0
+
+    :cond_2
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 .end method

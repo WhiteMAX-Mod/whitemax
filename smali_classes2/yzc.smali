@@ -1,155 +1,40 @@
-.class public final Lyzc;
-.super Lsgf;
-.source "SourceFile"
+.class public abstract Lyzc;
+.super Ljava/lang/Object;
 
-# interfaces
-.implements Lzi6;
 
+# static fields
+.field public static oneme_settings_avatar_select_screen:I = 0x7f0a0785
 
-# instance fields
-.field public X:I
+.field public static oneme_settings_change_avatar_cancel:I = 0x7f0a0786
 
-.field public final synthetic Y:Lru/ok/onechat/reactions/ReactionsViewModel;
+.field public static oneme_settings_change_avatar_remove_current:I = 0x7f0a0787
 
+.field public static oneme_settings_change_avatar_upload_from_camera:I = 0x7f0a0788
 
-# direct methods
-.method public constructor <init>(Lru/ok/onechat/reactions/ReactionsViewModel;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.field public static oneme_settings_change_avatar_upload_from_gallery:I = 0x7f0a0789
 
-    iput-object p1, p0, Lyzc;->Y:Lru/ok/onechat/reactions/ReactionsViewModel;
+.field public static oneme_settings_change_avatar_upload_from_neuroavatars:I = 0x7f0a078a
 
-    const/4 p1, 0x2
+.field public static oneme_settings_collapsingstoolbar:I = 0x7f0a078b
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+.field public static oneme_settings_container:I = 0x7f0a078c
 
-    return-void
-.end method
+.field public static oneme_settings_list_screen_appbar:I = 0x7f0a0794
 
+.field public static oneme_settings_list_screen_pinned_toolbar:I = 0x7f0a0795
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.field public static oneme_settings_toolbar:I = 0x7f0a0831
 
-    check-cast p1, Lq54;
+.field public static oneme_settings_topbar:I = 0x7f0a0832
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+.field public static oneme_settings_topbar_avatar:I = 0x7f0a0833
 
-    invoke-virtual {p0, p1, p2}, Lyzc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.field public static oneme_settings_topbar_container:I = 0x7f0a0834
 
-    move-result-object p1
+.field public static oneme_settings_topbar_dotdivider:I = 0x7f0a0835
 
-    check-cast p1, Lyzc;
+.field public static oneme_settings_topbar_name:I = 0x7f0a0836
 
-    sget-object p2, Lccg;->a:Lccg;
+.field public static oneme_settings_topbar_nick:I = 0x7f0a0837
 
-    invoke-virtual {p1, p2}, Lyzc;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lyzc;
-
-    iget-object v0, p0, Lyzc;->Y:Lru/ok/onechat/reactions/ReactionsViewModel;
-
-    invoke-direct {p1, v0, p2}, Lyzc;-><init>(Lru/ok/onechat/reactions/ReactionsViewModel;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Lyzc;->X:I
-
-    sget-object v1, Lccg;->a:Lccg;
-
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    :try_start_0
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-object v1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    :try_start_1
-    iget-object p1, p0, Lyzc;->Y:Lru/ok/onechat/reactions/ReactionsViewModel;
-
-    iget-object p1, p1, Lru/ok/onechat/reactions/ReactionsViewModel;->s:Lwif;
-
-    invoke-virtual {p1}, Lwif;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lvv2;
-
-    iput v2, p0, Lyzc;->X:I
-
-    iget-object v0, p1, Lvv2;->l:Li54;
-
-    new-instance v2, Lsv2;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, p1, v3}, Lsv2;-><init>(Lvv2;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v0, v2, p0}, Ltki;->h(Li54;Lzi6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    sget-object v0, Lr54;->a:Lr54;
-
-    if-ne p1, v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    move-object p1, v1
-
-    :goto_0
-    if-ne p1, v0, :cond_3
-
-    return-object v0
-
-    :goto_1
-    instance-of v0, p1, Ljava/util/concurrent/CancellationException;
-
-    if-nez v0, :cond_3
-
-    const-string v0, "ru.ok.onechat.reactions.ReactionsViewModel"
-
-    const-string v2, "runChatSubscribeNotifObserving: fail to run()"
-
-    invoke-static {v0, v2, p1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_3
-    return-object v1
-.end method
+.field public static oneme_settings_topbar_phone:I = 0x7f0a0838

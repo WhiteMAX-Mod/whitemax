@@ -1,90 +1,116 @@
-.class public final La4i;
-.super Ljava/lang/Object;
+.class public La4i;
+.super Lz3i;
 .source "SourceFile"
 
-# interfaces
-.implements Ltha;
 
-
-# static fields
-.field public static final a:La4i;
+# instance fields
+.field public m:Lco7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lg4i;Landroid/view/WindowInsets;)V
+    .locals 0
 
-    new-instance v0, La4i;
+    invoke-direct {p0, p1, p2}, Lz3i;-><init>(Lg4i;Landroid/view/WindowInsets;)V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x0
 
-    sput-object v0, La4i;->a:La4i;
-
-    new-instance v0, Ltwh;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ltwh;-><init>(I)V
-
-    const-class v1, Lmxh;
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x5
-
-    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
+    iput-object p1, p0, La4i;->m:Lco7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public b()Lg4i;
+    .locals 2
+
+    iget-object v0, p0, Lz3i;->c:Landroid/view/WindowInsets;
+
+    invoke-virtual {v0}, Landroid/view/WindowInsets;->consumeStableInsets()Landroid/view/WindowInsets;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-static {v1, v0}, Lg4i;->h(Landroid/view/View;Landroid/view/WindowInsets;)Lg4i;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public c()Lg4i;
+    .locals 2
+
+    iget-object v0, p0, Lz3i;->c:Landroid/view/WindowInsets;
+
+    invoke-virtual {v0}, Landroid/view/WindowInsets;->consumeSystemWindowInsets()Landroid/view/WindowInsets;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-static {v1, v0}, Lg4i;->h(Landroid/view/View;Landroid/view/WindowInsets;)Lg4i;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final h()Lco7;
+    .locals 4
+
+    iget-object v0, p0, La4i;->m:Lco7;
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lz3i;->c:Landroid/view/WindowInsets;
+
+    invoke-virtual {v0}, Landroid/view/WindowInsets;->getStableInsetLeft()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Landroid/view/WindowInsets;->getStableInsetTop()I
+
+    move-result v2
+
+    invoke-virtual {v0}, Landroid/view/WindowInsets;->getStableInsetRight()I
+
+    move-result v3
+
+    invoke-virtual {v0}, Landroid/view/WindowInsets;->getStableInsetBottom()I
+
+    move-result v0
+
+    invoke-static {v1, v2, v3, v0}, Lco7;->b(IIII)Lco7;
+
+    move-result-object v0
+
+    iput-object v0, p0, La4i;->m:Lco7;
+
+    :cond_0
+    iget-object v0, p0, La4i;->m:Lco7;
+
+    return-object v0
+.end method
+
+.method public m()Z
+    .locals 1
+
+    iget-object v0, p0, Lz3i;->c:Landroid/view/WindowInsets;
+
+    invoke-virtual {v0}, Landroid/view/WindowInsets;->isConsumed()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public r(Lco7;)V
     .locals 0
 
-    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iput-object p1, p0, La4i;->m:Lco7;
 
-    move-result-object p1
-
-    throw p1
+    return-void
 .end method

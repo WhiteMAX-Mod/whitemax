@@ -1,6 +1,3 @@
-.class public interface abstract Lbib;
-.super Ljava/lang/Object;
+.class public final Lbib;
+.super Lid0;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/os/Parcelable;

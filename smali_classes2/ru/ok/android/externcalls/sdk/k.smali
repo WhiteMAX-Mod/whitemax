@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lsr3;
+.implements Lgu3;
 
 
 # instance fields
@@ -15,7 +15,7 @@
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Runnable;Ltr3;)V
+.method public synthetic constructor <init>(Ljava/lang/Runnable;Lhu3;)V
     .locals 1
 
     .line 1
@@ -58,13 +58,13 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/k;->b:Ljava/lang/Object;
 
-    check-cast v0, Ltr3;
+    check-cast v0, Lhu3;
 
     check-cast p1, Ljava/lang/Boolean;
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/k;->c:Ljava/lang/Runnable;
 
-    invoke-static {v1, v0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->e(Ljava/lang/Runnable;Ltr3;Ljava/lang/Boolean;)V
+    invoke-static {v1, v0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->e(Ljava/lang/Runnable;Lhu3;Ljava/lang/Boolean;)V
 
     return-void
 

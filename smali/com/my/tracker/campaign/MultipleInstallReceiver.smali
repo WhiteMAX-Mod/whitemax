@@ -84,14 +84,14 @@
 
     const-string p1, "MultipleInstallReceiver: attempt to call, but it was called before"
 
-    invoke-static {p1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/my/tracker/core/Tracer;->d(Ljava/lang/String;)V
 
     return-void
 
     :cond_1
     const-string v0, "MultipleInstallReceiver called"
 
-    invoke-static {v0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/my/tracker/core/Tracer;->d(Ljava/lang/String;)V
 
     invoke-static {p1, p2}, Lcom/my/tracker/campaign/CampaignReceiver;->a(Landroid/content/Context;Landroid/content/Intent;)V
 
@@ -173,7 +173,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
+    invoke-static {v2}, Lcom/my/tracker/core/Tracer;->d(Ljava/lang/String;)V
 
     :try_start_0
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
@@ -199,7 +199,7 @@
 
     const-string v4, " : "
 
-    invoke-static {v3, v1, v4}, Ldy1;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v3, v1, v4}, Laz1;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -213,7 +213,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/my/tracker/core/Tracer;->d(Ljava/lang/String;)V
 
     goto :goto_0
 

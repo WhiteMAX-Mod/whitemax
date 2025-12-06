@@ -1,3 +1,3 @@
-.class public interface abstract Lbx7;
-.super Ljava/lang/Object;
+.class public final Lbx7;
+.super Lew7;
 .source "SourceFile"

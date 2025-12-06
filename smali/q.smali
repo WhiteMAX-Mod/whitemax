@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lwzg;
+.implements Lcm6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lji6;
+.field public final synthetic b:Lcm6;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILji6;)V
+.method public synthetic constructor <init>(ILcm6;)V
     .locals 0
 
     iput p1, p0, Lq;->a:I
 
-    iput-object p2, p0, Lq;->b:Lji6;
+    iput-object p2, p0, Lq;->b:Lcm6;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,521 +27,401 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/Class;)Lxzg;
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
     iget v0, p0, Lq;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lq;->b:Lji6;
+    new-instance v0, Lp;
 
-    check-cast v0, Li3;
+    iget-object v1, p0, Lq;->b:Lcm6;
 
-    invoke-virtual {v0}, Li3;->invoke()Ljava/lang/Object;
+    check-cast v1, Lzb2;
 
-    move-result-object v0
+    const/16 v2, 0x1d
 
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v2, v1}, Lp;-><init>(ILcm6;)V
 
-    move-result-object p1
-
-    check-cast p1, Lxzg;
-
-    return-object p1
+    return-object v0
 
     :pswitch_0
-    iget-object v0, p0, Lq;->b:Lji6;
+    new-instance v0, Lp;
 
-    check-cast v0, Lnb2;
+    iget-object v1, p0, Lq;->b:Lcm6;
 
-    invoke-virtual {v0}, Lnb2;->invoke()Ljava/lang/Object;
+    check-cast v1, Lxb2;
 
-    move-result-object v0
+    const/16 v2, 0x1c
 
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v2, v1}, Lp;-><init>(ILcm6;)V
 
-    move-result-object p1
-
-    check-cast p1, Lxzg;
-
-    return-object p1
+    return-object v0
 
     :pswitch_1
-    iget-object v0, p0, Lq;->b:Lji6;
+    new-instance v0, Lp;
 
-    check-cast v0, Lta2;
+    iget-object v1, p0, Lq;->b:Lcm6;
 
-    invoke-virtual {v0}, Lta2;->invoke()Ljava/lang/Object;
+    check-cast v1, Lxb2;
 
-    move-result-object v0
+    const/16 v2, 0x1b
 
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v2, v1}, Lp;-><init>(ILcm6;)V
 
-    move-result-object p1
-
-    check-cast p1, Lxzg;
-
-    return-object p1
+    return-object v0
 
     :pswitch_2
-    iget-object v0, p0, Lq;->b:Lji6;
+    new-instance v0, Lp;
 
-    check-cast v0, Lta2;
+    iget-object v1, p0, Lq;->b:Lcm6;
 
-    invoke-virtual {v0}, Lta2;->invoke()Ljava/lang/Object;
+    check-cast v1, Ljl1;
 
-    move-result-object v0
+    const/16 v2, 0x1a
 
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v2, v1}, Lp;-><init>(ILcm6;)V
 
-    move-result-object p1
-
-    check-cast p1, Lxzg;
-
-    return-object p1
+    return-object v0
 
     :pswitch_3
-    iget-object v0, p0, Lq;->b:Lji6;
+    new-instance v0, Lp;
 
-    check-cast v0, Lvk1;
+    iget-object v1, p0, Lq;->b:Lcm6;
 
-    invoke-virtual {v0}, Lvk1;->invoke()Ljava/lang/Object;
+    check-cast v1, Lhk1;
 
-    move-result-object v0
+    const/16 v2, 0x19
 
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v2, v1}, Lp;-><init>(ILcm6;)V
 
-    move-result-object p1
-
-    check-cast p1, Lxzg;
-
-    return-object p1
+    return-object v0
 
     :pswitch_4
-    iget-object v0, p0, Lq;->b:Lji6;
+    new-instance v0, Lp;
 
-    check-cast v0, Ljj1;
+    iget-object v1, p0, Lq;->b:Lcm6;
 
-    invoke-virtual {v0}, Ljj1;->invoke()Ljava/lang/Object;
+    check-cast v1, Ljl1;
 
-    move-result-object v0
+    const/16 v2, 0x18
 
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v2, v1}, Lp;-><init>(ILcm6;)V
 
-    move-result-object p1
-
-    check-cast p1, Lxzg;
-
-    return-object p1
+    return-object v0
 
     :pswitch_5
-    iget-object v0, p0, Lq;->b:Lji6;
+    new-instance v0, Lp;
 
-    check-cast v0, Lvk1;
+    iget-object v1, p0, Lq;->b:Lcm6;
 
-    invoke-virtual {v0}, Lvk1;->invoke()Ljava/lang/Object;
+    check-cast v1, Lhk1;
 
-    move-result-object v0
+    const/16 v2, 0x17
 
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v2, v1}, Lp;-><init>(ILcm6;)V
 
-    move-result-object p1
-
-    check-cast p1, Lxzg;
-
-    return-object p1
+    return-object v0
 
     :pswitch_6
-    iget-object v0, p0, Lq;->b:Lji6;
+    new-instance v0, Lp;
 
-    check-cast v0, Ljj1;
+    iget-object v1, p0, Lq;->b:Lcm6;
 
-    invoke-virtual {v0}, Ljj1;->invoke()Ljava/lang/Object;
+    check-cast v1, Lkl1;
 
-    move-result-object v0
+    const/16 v2, 0x16
 
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v2, v1}, Lp;-><init>(ILcm6;)V
 
-    move-result-object p1
-
-    check-cast p1, Lxzg;
-
-    return-object p1
+    return-object v0
 
     :pswitch_7
-    iget-object v0, p0, Lq;->b:Lji6;
+    new-instance v0, Lp;
 
-    check-cast v0, Lwk1;
+    iget-object v1, p0, Lq;->b:Lcm6;
 
-    invoke-virtual {v0}, Lwk1;->invoke()Ljava/lang/Object;
+    check-cast v1, Lhk1;
 
-    move-result-object v0
+    const/16 v2, 0x15
 
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v2, v1}, Lp;-><init>(ILcm6;)V
 
-    move-result-object p1
-
-    check-cast p1, Lxzg;
-
-    return-object p1
+    return-object v0
 
     :pswitch_8
-    iget-object v0, p0, Lq;->b:Lji6;
+    new-instance v0, Lp;
 
-    check-cast v0, Ljj1;
+    iget-object v1, p0, Lq;->b:Lcm6;
 
-    invoke-virtual {v0}, Ljj1;->invoke()Ljava/lang/Object;
+    check-cast v1, Lwj1;
 
-    move-result-object v0
+    const/16 v2, 0x14
 
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v2, v1}, Lp;-><init>(ILcm6;)V
 
-    move-result-object p1
-
-    check-cast p1, Lxzg;
-
-    return-object p1
+    return-object v0
 
     :pswitch_9
-    iget-object v0, p0, Lq;->b:Lji6;
+    new-instance v0, Lp;
 
-    check-cast v0, Lij1;
+    iget-object v1, p0, Lq;->b:Lcm6;
 
-    invoke-virtual {v0}, Lij1;->invoke()Ljava/lang/Object;
+    check-cast v1, Lg31;
 
-    move-result-object v0
+    const/16 v2, 0x13
 
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v2, v1}, Lp;-><init>(ILcm6;)V
 
-    move-result-object p1
-
-    check-cast p1, Lxzg;
-
-    return-object p1
+    return-object v0
 
     :pswitch_a
-    iget-object v0, p0, Lq;->b:Lji6;
+    new-instance v0, Lp;
 
-    check-cast v0, La41;
+    iget-object v1, p0, Lq;->b:Lcm6;
 
-    invoke-virtual {v0}, La41;->invoke()Ljava/lang/Object;
+    check-cast v1, Lm3;
 
-    move-result-object v0
+    const/16 v2, 0x12
 
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v2, v1}, Lp;-><init>(ILcm6;)V
 
-    move-result-object p1
-
-    check-cast p1, Lxzg;
-
-    return-object p1
+    return-object v0
 
     :pswitch_b
-    iget-object v0, p0, Lq;->b:Lji6;
+    new-instance v0, Lp;
 
-    check-cast v0, Li3;
+    iget-object v1, p0, Lq;->b:Lcm6;
 
-    invoke-virtual {v0}, Li3;->invoke()Ljava/lang/Object;
+    check-cast v1, Lm3;
 
-    move-result-object v0
+    const/16 v2, 0x11
 
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v2, v1}, Lp;-><init>(ILcm6;)V
 
-    move-result-object p1
-
-    check-cast p1, Lxzg;
-
-    return-object p1
+    return-object v0
 
     :pswitch_c
-    iget-object v0, p0, Lq;->b:Lji6;
+    new-instance v0, Lp;
 
-    check-cast v0, Li3;
+    iget-object v1, p0, Lq;->b:Lcm6;
 
-    invoke-virtual {v0}, Li3;->invoke()Ljava/lang/Object;
+    check-cast v1, Lm3;
 
-    move-result-object v0
+    const/16 v2, 0x10
 
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v2, v1}, Lp;-><init>(ILcm6;)V
 
-    move-result-object p1
-
-    check-cast p1, Lxzg;
-
-    return-object p1
+    return-object v0
 
     :pswitch_d
-    iget-object v0, p0, Lq;->b:Lji6;
+    new-instance v0, Lp;
 
-    check-cast v0, Li3;
+    iget-object v1, p0, Lq;->b:Lcm6;
 
-    invoke-virtual {v0}, Li3;->invoke()Ljava/lang/Object;
+    check-cast v1, Lfc1;
 
-    move-result-object v0
+    const/16 v2, 0xf
 
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v2, v1}, Lp;-><init>(ILcm6;)V
 
-    move-result-object p1
-
-    check-cast p1, Lxzg;
-
-    return-object p1
+    return-object v0
 
     :pswitch_e
-    iget-object v0, p0, Lq;->b:Lji6;
+    new-instance v0, Lp;
 
-    check-cast v0, Lpb1;
+    iget-object v1, p0, Lq;->b:Lcm6;
 
-    invoke-virtual {v0}, Lpb1;->invoke()Ljava/lang/Object;
+    check-cast v1, Lm3;
 
-    move-result-object v0
+    const/16 v2, 0xe
 
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v2, v1}, Lp;-><init>(ILcm6;)V
 
-    move-result-object p1
-
-    check-cast p1, Lxzg;
-
-    return-object p1
+    return-object v0
 
     :pswitch_f
-    iget-object v0, p0, Lq;->b:Lji6;
+    new-instance v0, Lp;
 
-    check-cast v0, Li3;
+    iget-object v1, p0, Lq;->b:Lcm6;
 
-    invoke-virtual {v0}, Li3;->invoke()Ljava/lang/Object;
+    check-cast v1, Lra1;
 
-    move-result-object v0
+    const/16 v2, 0xd
 
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v2, v1}, Lp;-><init>(ILcm6;)V
 
-    move-result-object p1
-
-    check-cast p1, Lxzg;
-
-    return-object p1
+    return-object v0
 
     :pswitch_10
-    iget-object v0, p0, Lq;->b:Lji6;
+    new-instance v0, Lp;
 
-    check-cast v0, Lca1;
+    iget-object v1, p0, Lq;->b:Lcm6;
 
-    invoke-virtual {v0}, Lca1;->invoke()Ljava/lang/Object;
+    check-cast v1, Lja1;
 
-    move-result-object v0
+    const/16 v2, 0xc
 
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v2, v1}, Lp;-><init>(ILcm6;)V
 
-    move-result-object p1
-
-    check-cast p1, Lxzg;
-
-    return-object p1
+    return-object v0
 
     :pswitch_11
-    iget-object v0, p0, Lq;->b:Lji6;
+    new-instance v0, Lp;
 
-    check-cast v0, Lu91;
+    iget-object v1, p0, Lq;->b:Lcm6;
 
-    invoke-virtual {v0}, Lu91;->invoke()Ljava/lang/Object;
+    check-cast v1, Lg31;
 
-    move-result-object v0
+    const/16 v2, 0xb
 
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v2, v1}, Lp;-><init>(ILcm6;)V
 
-    move-result-object p1
-
-    check-cast p1, Lxzg;
-
-    return-object p1
+    return-object v0
 
     :pswitch_12
-    iget-object v0, p0, Lq;->b:Lji6;
+    new-instance v0, Lp;
 
-    check-cast v0, La41;
+    iget-object v1, p0, Lq;->b:Lcm6;
 
-    invoke-virtual {v0}, La41;->invoke()Ljava/lang/Object;
+    check-cast v1, Lg31;
 
-    move-result-object v0
+    const/16 v2, 0xa
 
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v2, v1}, Lp;-><init>(ILcm6;)V
 
-    move-result-object p1
-
-    check-cast p1, Lxzg;
-
-    return-object p1
+    return-object v0
 
     :pswitch_13
-    iget-object v0, p0, Lq;->b:Lji6;
+    new-instance v0, Lp;
 
-    check-cast v0, Ll6;
+    iget-object v1, p0, Lq;->b:Lcm6;
 
-    invoke-virtual {v0}, Ll6;->invoke()Ljava/lang/Object;
+    check-cast v1, Li6;
 
-    move-result-object v0
+    const/16 v2, 0x9
 
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v2, v1}, Lp;-><init>(ILcm6;)V
 
-    move-result-object p1
-
-    check-cast p1, Lxzg;
-
-    return-object p1
+    return-object v0
 
     :pswitch_14
-    iget-object v0, p0, Lq;->b:Lji6;
+    new-instance v0, Lp;
 
-    check-cast v0, Lm;
+    iget-object v1, p0, Lq;->b:Lcm6;
 
-    invoke-virtual {v0}, Lm;->invoke()Ljava/lang/Object;
+    check-cast v1, Ll;
 
-    move-result-object v0
+    const/16 v2, 0x8
 
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v2, v1}, Lp;-><init>(ILcm6;)V
 
-    move-result-object p1
-
-    check-cast p1, Lxzg;
-
-    return-object p1
+    return-object v0
 
     :pswitch_15
-    iget-object v0, p0, Lq;->b:Lji6;
+    new-instance v0, Lp;
 
-    check-cast v0, Lm;
+    iget-object v1, p0, Lq;->b:Lcm6;
 
-    invoke-virtual {v0}, Lm;->invoke()Ljava/lang/Object;
+    check-cast v1, Ll;
 
-    move-result-object v0
+    const/4 v2, 0x7
 
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v2, v1}, Lp;-><init>(ILcm6;)V
 
-    move-result-object p1
-
-    check-cast p1, Lxzg;
-
-    return-object p1
+    return-object v0
 
     :pswitch_16
-    iget-object v0, p0, Lq;->b:Lji6;
+    new-instance v0, Lp;
 
-    check-cast v0, Lm;
+    iget-object v1, p0, Lq;->b:Lcm6;
 
-    invoke-virtual {v0}, Lm;->invoke()Ljava/lang/Object;
+    check-cast v1, Ll;
 
-    move-result-object v0
+    const/4 v2, 0x6
 
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v2, v1}, Lp;-><init>(ILcm6;)V
 
-    move-result-object p1
-
-    check-cast p1, Lxzg;
-
-    return-object p1
+    return-object v0
 
     :pswitch_17
-    iget-object v0, p0, Lq;->b:Lji6;
+    new-instance v0, Lp;
 
-    check-cast v0, Ll6;
+    iget-object v1, p0, Lq;->b:Lcm6;
 
-    invoke-virtual {v0}, Ll6;->invoke()Ljava/lang/Object;
+    check-cast v1, Li6;
 
-    move-result-object v0
+    const/4 v2, 0x5
 
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v2, v1}, Lp;-><init>(ILcm6;)V
 
-    move-result-object p1
-
-    check-cast p1, Lxzg;
-
-    return-object p1
+    return-object v0
 
     :pswitch_18
-    iget-object v0, p0, Lq;->b:Lji6;
+    new-instance v0, Lp;
 
-    check-cast v0, Lm;
+    iget-object v1, p0, Lq;->b:Lcm6;
 
-    invoke-virtual {v0}, Lm;->invoke()Ljava/lang/Object;
+    check-cast v1, Ll;
 
-    move-result-object v0
+    const/4 v2, 0x4
 
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v2, v1}, Lp;-><init>(ILcm6;)V
 
-    move-result-object p1
-
-    check-cast p1, Lxzg;
-
-    return-object p1
+    return-object v0
 
     :pswitch_19
-    iget-object v0, p0, Lq;->b:Lji6;
+    new-instance v0, Lp;
 
-    check-cast v0, Ll6;
+    iget-object v1, p0, Lq;->b:Lcm6;
 
-    invoke-virtual {v0}, Ll6;->invoke()Ljava/lang/Object;
+    check-cast v1, Li6;
 
-    move-result-object v0
+    const/4 v2, 0x3
 
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v2, v1}, Lp;-><init>(ILcm6;)V
 
-    move-result-object p1
-
-    check-cast p1, Lxzg;
-
-    return-object p1
+    return-object v0
 
     :pswitch_1a
-    iget-object v0, p0, Lq;->b:Lji6;
+    new-instance v0, Lp;
 
-    check-cast v0, Ll6;
+    iget-object v1, p0, Lq;->b:Lcm6;
 
-    invoke-virtual {v0}, Ll6;->invoke()Ljava/lang/Object;
+    check-cast v1, Li6;
 
-    move-result-object v0
+    const/4 v2, 0x2
 
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v2, v1}, Lp;-><init>(ILcm6;)V
 
-    move-result-object p1
-
-    check-cast p1, Lxzg;
-
-    return-object p1
+    return-object v0
 
     :pswitch_1b
-    iget-object v0, p0, Lq;->b:Lji6;
+    new-instance v0, Lp;
 
-    check-cast v0, Li3;
+    iget-object v1, p0, Lq;->b:Lcm6;
 
-    invoke-virtual {v0}, Li3;->invoke()Ljava/lang/Object;
+    check-cast v1, Lm3;
 
-    move-result-object v0
+    const/4 v2, 0x1
 
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v2, v1}, Lp;-><init>(ILcm6;)V
 
-    move-result-object p1
-
-    check-cast p1, Lxzg;
-
-    return-object p1
+    return-object v0
 
     :pswitch_1c
-    iget-object v0, p0, Lq;->b:Lji6;
+    new-instance v0, Lp;
 
-    check-cast v0, Lm;
+    iget-object v1, p0, Lq;->b:Lcm6;
 
-    invoke-virtual {v0}, Lm;->invoke()Ljava/lang/Object;
+    check-cast v1, Ll;
 
-    move-result-object v0
+    const/4 v2, 0x0
 
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, v2, v1}, Lp;-><init>(ILcm6;)V
 
-    move-result-object p1
-
-    check-cast p1, Lxzg;
-
-    return-object p1
+    return-object v0
 
     nop
 

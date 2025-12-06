@@ -1,35 +1,86 @@
-.class public final Liq;
+.class public final synthetic Liq;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lfrf;
+.implements Lorf;
 
-# static fields
-.field public static final a:Liq;
 
-.field public static final b:Lg1a;
-
-.field public static c:Z
+# instance fields
+.field public final synthetic a:Landroid/content/Context;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Landroid/content/Context;)V
+    .locals 0
 
-    new-instance v0, Liq;
+    iput-object p1, p0, Liq;->a:Landroid/content/Context;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Liq;->a:Liq;
-
-    new-instance v0, Lg1a;
-
-    invoke-direct {v0}, Lg1a;-><init>()V
-
-    sput-object v0, Liq;->b:Lg1a;
-
-    const/4 v0, 0x1
-
-    sput-boolean v0, Liq;->c:Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public a(Lu73;)Lprf;
+    .locals 7
+
+    iget-object v0, p1, Lu73;->d:Ljava/lang/Object;
+
+    move-object v3, v0
+
+    check-cast v3, Ljava/lang/String;
+
+    iget-object p1, p1, Lu73;->o:Ljava/lang/Object;
+
+    move-object v4, p1
+
+    check-cast v4, Lggg;
+
+    if-eqz v3, :cond_0
+
+    invoke-virtual {v3}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    new-instance v1, Ltk6;
+
+    iget-object v2, p0, Liq;->a:Landroid/content/Context;
+
+    const/4 v5, 0x1
+
+    const/4 v6, 0x1
+
+    invoke-direct/range {v1 .. v6}, Ltk6;-><init>(Landroid/content/Context;Ljava/lang/String;Lggg;ZZ)V
+
+    return-object v1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Must set a non-null database name to a configuration that uses the no backup directory."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public get()Ljava/lang/Object;
+    .locals 2
+
+    iget-object v0, p0, Liq;->a:Landroid/content/Context;
+
+    const-string v1, "audio"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/media/AudioManager;
+
+    return-object v0
 .end method

@@ -1,49 +1,39 @@
-.class public final Leu4;
+.class public final synthetic Leu4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Lvje;
+.field public final synthetic a:Lgu4;
 
-.field public b:Lsje;
+.field public final synthetic b:Lli1;
 
-.field public c:Lnvg;
 
-.field public d:Ljava/util/concurrent/ExecutorService;
+# direct methods
+.method public synthetic constructor <init>(Lgu4;Lli1;)V
+    .locals 0
 
-.field public e:Landroid/content/Context;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public f:Lorg/webrtc/EglBase;
+    iput-object p1, p0, Leu4;->a:Lgu4;
 
-.field public g:Lw0a;
+    iput-object p2, p0, Leu4;->b:Lli1;
 
-.field public h:Lqi1;
+    return-void
+.end method
 
-.field public i:Lrne;
 
-.field public j:Lgi1;
+# virtual methods
+.method public final a()V
+    .locals 2
 
-.field public k:Lfwc;
+    iget-object v0, p0, Leu4;->b:Lli1;
 
-.field public l:Liwc;
+    iget-object v1, p0, Leu4;->a:Lgu4;
 
-.field public m:Lrw5;
+    iget-object v1, v1, Lgu4;->s0:Lw3b;
 
-.field public n:Z
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->removeTextChangedListener(Landroid/text/TextWatcher;)V
 
-.field public o:Lbua;
-
-.field public p:Ldi;
-
-.field public q:Lef1;
-
-.field public r:Lhl8;
-
-.field public s:Lgjd;
-
-.field public t:Lavf;
-
-.field public u:Lh01;
-
-.field public v:Lh01;
+    return-void
+.end method

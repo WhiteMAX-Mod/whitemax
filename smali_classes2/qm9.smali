@@ -1,72 +1,58 @@
-.class public final Lqm9;
-.super Lsgf;
+.class public final synthetic Lqm9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic X:Ljn9;
+.field public final synthetic a:I
+
+.field public final synthetic b:Landroid/graphics/drawable/Drawable;
 
 
 # direct methods
-.method public constructor <init>(Ljn9;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Landroid/graphics/drawable/Drawable;I)V
     .locals 0
 
-    iput-object p1, p0, Lqm9;->X:Ljn9;
+    iput p2, p0, Lqm9;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lqm9;->b:Landroid/graphics/drawable/Drawable;
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lq54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lqm9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lqm9;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lqm9;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final run()V
     .locals 1
 
-    new-instance p1, Lqm9;
+    iget v0, p0, Lqm9;->a:I
 
-    iget-object v0, p0, Lqm9;->X:Ljn9;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {p1, v0, p2}, Lqm9;-><init>(Ljn9;Lkotlin/coroutines/Continuation;)V
+    iget-object v0, p0, Lqm9;->b:Landroid/graphics/drawable/Drawable;
 
-    return-object p1
-.end method
+    check-cast v0, Landroid/graphics/drawable/AnimationDrawable;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    invoke-virtual {v0}, Landroid/graphics/drawable/AnimationDrawable;->start()V
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    return-void
 
-    iget-object p1, p0, Lqm9;->X:Ljn9;
+    :pswitch_0
+    iget-object v0, p0, Lqm9;->b:Landroid/graphics/drawable/Drawable;
 
-    invoke-static {p1}, Ljn9;->v(Ljn9;)V
+    invoke-static {v0}, Lrm9;->d(Landroid/graphics/drawable/Drawable;)V
 
-    sget-object p1, Lccg;->a:Lccg;
+    return-void
 
-    return-object p1
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

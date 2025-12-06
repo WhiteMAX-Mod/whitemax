@@ -3,30 +3,20 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ltha;
+.implements Lpqa;
 
 
 # static fields
 .field public static final a:Ls80;
 
-.field public static final b:Lbr5;
+.field public static final b:Lwu5;
 
-.field public static final c:Lbr5;
-
-.field public static final d:Lbr5;
-
-.field public static final e:Lbr5;
-
-.field public static final f:Lbr5;
-
-.field public static final g:Lbr5;
-
-.field public static final h:Lbr5;
+.field public static final c:Lwu5;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 4
 
     new-instance v0, Ls80;
 
@@ -34,61 +24,51 @@
 
     sput-object v0, Ls80;->a:Ls80;
 
-    const-string v0, "requestTimeMs"
+    new-instance v0, Lly;
 
-    invoke-static {v0}, Lbr5;->c(Ljava/lang/String;)Lbr5;
+    const/4 v1, 0x1
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Lly;-><init>(I)V
 
-    sput-object v0, Ls80;->b:Lbr5;
+    const-class v1, Lbpc;
 
-    const-string v0, "requestUptimeMs"
-
-    invoke-static {v0}, Lbr5;->c(Ljava/lang/String;)Lbr5;
+    invoke-static {v1, v0}, Laz1;->o(Ljava/lang/Class;Lly;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    sput-object v0, Ls80;->c:Lbr5;
+    new-instance v2, Lwu5;
 
-    const-string v0, "clientInfo"
-
-    invoke-static {v0}, Lbr5;->c(Ljava/lang/String;)Lbr5;
+    invoke-static {v0}, Laz1;->p(Ljava/util/HashMap;)Ljava/util/Map;
 
     move-result-object v0
 
-    sput-object v0, Ls80;->d:Lbr5;
+    const-string v3, "logSource"
 
-    const-string v0, "logSource"
+    invoke-direct {v2, v3, v0}, Lwu5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    invoke-static {v0}, Lbr5;->c(Ljava/lang/String;)Lbr5;
+    sput-object v2, Ls80;->b:Lwu5;
 
-    move-result-object v0
+    new-instance v0, Lly;
 
-    sput-object v0, Ls80;->e:Lbr5;
+    const/4 v2, 0x2
 
-    const-string v0, "logSourceName"
+    invoke-direct {v0, v2}, Lly;-><init>(I)V
 
-    invoke-static {v0}, Lbr5;->c(Ljava/lang/String;)Lbr5;
-
-    move-result-object v0
-
-    sput-object v0, Ls80;->f:Lbr5;
-
-    const-string v0, "logEvent"
-
-    invoke-static {v0}, Lbr5;->c(Ljava/lang/String;)Lbr5;
+    invoke-static {v1, v0}, Laz1;->o(Ljava/lang/Class;Lly;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    sput-object v0, Ls80;->g:Lbr5;
+    new-instance v1, Lwu5;
 
-    const-string v0, "qosTier"
-
-    invoke-static {v0}, Lbr5;->c(Ljava/lang/String;)Lbr5;
+    invoke-static {v0}, Laz1;->p(Ljava/util/HashMap;)Ljava/util/Map;
 
     move-result-object v0
 
-    sput-object v0, Ls80;->h:Lbr5;
+    const-string v2, "logEventDropped"
+
+    invoke-direct {v1, v2, v0}, Lwu5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v1, Ls80;->c:Lwu5;
 
     return-void
 .end method
@@ -96,55 +76,23 @@
 
 # virtual methods
 .method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 3
+    .locals 2
 
-    check-cast p1, Le98;
+    check-cast p1, Log8;
 
-    check-cast p2, Luha;
+    check-cast p2, Lqqa;
 
-    check-cast p1, Lxa0;
+    sget-object v0, Ls80;->b:Lwu5;
 
-    iget-wide v0, p1, Lxa0;->a:J
+    iget-object v1, p1, Log8;->a:Ljava/lang/String;
 
-    sget-object v2, Ls80;->b:Lbr5;
+    invoke-interface {p2, v0, v1}, Lqqa;->a(Lwu5;Ljava/lang/Object;)Lqqa;
 
-    invoke-interface {p2, v2, v0, v1}, Luha;->e(Lbr5;J)Luha;
+    sget-object v0, Ls80;->c:Lwu5;
 
-    sget-object v0, Ls80;->c:Lbr5;
+    iget-object p1, p1, Log8;->b:Ljava/util/List;
 
-    iget-wide v1, p1, Lxa0;->b:J
-
-    invoke-interface {p2, v0, v1, v2}, Luha;->e(Lbr5;J)Luha;
-
-    sget-object v0, Ls80;->d:Lbr5;
-
-    iget-object v1, p1, Lxa0;->c:Ly90;
-
-    invoke-interface {p2, v0, v1}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
-
-    sget-object v0, Ls80;->e:Lbr5;
-
-    iget-object v1, p1, Lxa0;->d:Ljava/lang/Integer;
-
-    invoke-interface {p2, v0, v1}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
-
-    sget-object v0, Ls80;->f:Lbr5;
-
-    iget-object v1, p1, Lxa0;->e:Ljava/lang/String;
-
-    invoke-interface {p2, v0, v1}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
-
-    sget-object v0, Ls80;->g:Lbr5;
-
-    iget-object p1, p1, Lxa0;->f:Ljava/util/ArrayList;
-
-    invoke-interface {p2, v0, p1}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
-
-    sget-object p1, Ls80;->h:Lbr5;
-
-    sget-object v0, Lfgc;->a:Lfgc;
-
-    invoke-interface {p2, p1, v0}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
+    invoke-interface {p2, v0, p1}, Lqqa;->a(Lwu5;Ljava/lang/Object;)Lqqa;
 
     return-void
 .end method

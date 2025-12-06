@@ -12,14 +12,14 @@
         "Lru/ok/android/externcalls/sdk/stat/icerestart/IceRestartStat;",
         "",
         "Lkotlin/Function0;",
-        "Lx71;",
+        "Lm81;",
         "getEventualStatSender",
         "<init>",
-        "(Lji6;)V",
-        "Lccg;",
+        "(Lcm6;)V",
+        "Lqqg;",
         "onIceRestart",
         "()V",
-        "Lji6;",
+        "Lcm6;",
         "calls-sdk_release"
     }
     k = 0x1
@@ -33,29 +33,29 @@
 
 
 # instance fields
-.field private final getEventualStatSender:Lji6;
+.field private final getEventualStatSender:Lcm6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lji6;"
+            "Lcm6;"
         }
     .end annotation
 .end field
 
 
 # direct methods
-.method public constructor <init>(Lji6;)V
+.method public constructor <init>(Lcm6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lji6;",
+            "Lcm6;",
             ")V"
         }
     .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/icerestart/IceRestartStat;->getEventualStatSender:Lji6;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/icerestart/IceRestartStat;->getEventualStatSender:Lcm6;
 
     return-void
 .end method
@@ -65,13 +65,13 @@
 .method public final onIceRestart()V
     .locals 4
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/icerestart/IceRestartStat;->getEventualStatSender:Lji6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/icerestart/IceRestartStat;->getEventualStatSender:Lcm6;
 
-    invoke-interface {v0}, Lji6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lcm6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lx71;
+    check-cast v0, Lm81;
 
     if-eqz v0, :cond_0
 
@@ -81,7 +81,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v0, v1, v3, v3, v2}, Lx71;->a(Lx71;Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;I)V
+    invoke-static {v0, v1, v3, v3, v2}, Lm81;->a(Lm81;Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;I)V
 
     :cond_0
     return-void

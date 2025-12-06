@@ -3,26 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcm6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Luj2;
-
-.field public final synthetic c:Lca9;
+.field public final synthetic b:Lxw;
 
 
 # direct methods
-.method public synthetic constructor <init>(Luj2;Lca9;I)V
+.method public synthetic constructor <init>(Lxw;I)V
     .locals 0
 
-    iput p3, p0, Ljv;->a:I
+    iput p2, p0, Ljv;->a:I
 
-    iput-object p1, p0, Ljv;->b:Luj2;
-
-    iput-object p2, p0, Ljv;->c:Lca9;
+    iput-object p1, p0, Ljv;->b:Lxw;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,84 +27,138 @@
 
 
 # virtual methods
-.method public final run()V
+.method public final invoke()Ljava/lang/Object;
     .locals 4
 
     iget v0, p0, Ljv;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Ljv;->b:Luj2;
+    iget-object v0, p0, Ljv;->b:Lxw;
 
-    iget-object v1, p0, Ljv;->c:Lca9;
+    iget-object v1, v0, Lxw;->B:Ltcf;
 
-    :try_start_0
-    iget-object v2, v0, Luj2;->b:Lyz6;
+    invoke-virtual {v1}, Ltcf;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v2, v1}, Lyz6;->r(Lgz6;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result-object v1
+
+    iget-object v0, v0, Lxw;->t:Lx9f;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lo0;->isActive()Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v1
-
-    iget-object v2, v0, Luj2;->a:Ljava/lang/String;
-
-    const-string v3, "updateHistoryItemSync: exception"
-
-    invoke-static {v2, v3, v1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    iget-object v0, v0, Luj2;->Y:Lsf5;
-
-    new-instance v2, Lru/ok/tamtam/util/HandledException;
-
-    invoke-direct {v2, v1}, Lru/ok/tamtam/util/HandledException;-><init>(Ljava/lang/Throwable;)V
-
-    invoke-interface {v0, v2}, Lsf5;->a(Ljava/lang/Throwable;)V
+    :cond_0
+    const/4 v0, 0x0
 
     :goto_0
-    return-void
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "loadPrev: try offer LoadingPrev after remote call. \n                                |Current state "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ",\n                                |Pipeline observing job is active "
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, "\n                                |"
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lwmf;->e(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 
     :pswitch_0
-    iget-object v0, p0, Ljv;->b:Luj2;
+    iget-object v0, p0, Ljv;->b:Lxw;
 
-    iget-object v1, p0, Ljv;->c:Lca9;
+    iget-object v1, v0, Lxw;->B:Ltcf;
 
-    :try_start_1
-    iget-object v2, v0, Luj2;->b:Lyz6;
+    invoke-virtual {v1}, Ltcf;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v2, v1}, Lyz6;->b(Lgz6;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    move-result-object v1
+
+    iget-object v0, v0, Lxw;->t:Lx9f;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Lo0;->isActive()Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
 
     goto :goto_1
 
-    :catchall_1
-    move-exception v1
-
-    iget-object v2, v0, Luj2;->a:Ljava/lang/String;
-
-    const-string v3, "addHistoryItem: exception"
-
-    invoke-static {v2, v3, v1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    iget-object v0, v0, Luj2;->Y:Lsf5;
-
-    new-instance v2, Lru/ok/tamtam/util/HandledException;
-
-    invoke-direct {v2, v1}, Lru/ok/tamtam/util/HandledException;-><init>(Ljava/lang/Throwable;)V
-
-    invoke-interface {v0, v2}, Lsf5;->a(Ljava/lang/Throwable;)V
+    :cond_1
+    const/4 v0, 0x0
 
     :goto_1
-    return-void
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    nop
+    const-string v3, "loadNext: try offer LoadingNext after remote call. \n                                |Current state "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ",\n                                |Pipeline observing job is active "
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, "\n                                |"
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lwmf;->e(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Ljv;->b:Lxw;
+
+    invoke-virtual {v0}, Lxw;->h()Lg37;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lg37;->c()Ljava/util/Comparator;
+
+    move-result-object v0
+
+    return-object v0
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

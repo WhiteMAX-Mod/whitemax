@@ -1,83 +1,127 @@
 .class public abstract Lax7;
-.super Ljava/lang/Object;
+.super Lbr6;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Ljava/util/LinkedHashMap;
+.field public static final s0:[I
+
+
+# instance fields
+.field public final X:I
+
+.field public Y:Lxee;
+
+.field public final Z:Z
+
+.field public final d:Lb6;
+
+.field public o:[I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Ljava/util/LinkedHashMap;
+    sget-object v0, Lhb2;->h:[I
 
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
-
-    sput-object v0, Lax7;->a:Ljava/util/LinkedHashMap;
+    sput-object v0, Lax7;->s0:[I
 
     return-void
 .end method
 
-.method public static final a(Landroid/app/Activity;Z)Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
-    .locals 2
+.method public constructor <init>(Lb6;I)V
+    .locals 4
 
-    sget-object v0, Lax7;->a:Ljava/util/LinkedHashMap;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0, p0}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iput p2, p0, Lbr6;->a:I
 
-    move-result-object v0
+    sget-object v0, Lyw7;->u0:Lyw7;
 
-    check-cast v0, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
+    iget v0, v0, Lyw7;->b:I
 
-    if-nez v0, :cond_1
+    and-int/2addr v0, p2
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    const-string v1, "LifecycleHandler"
+    if-eqz v0, :cond_0
 
-    if-eqz p1, :cond_0
+    new-instance v0, Lzva;
 
-    instance-of p1, p0, Landroidx/fragment/app/b;
-
-    if-eqz p1, :cond_0
-
-    move-object p1, p0
-
-    check-cast p1, Landroidx/fragment/app/b;
-
-    invoke-virtual {p1}, Landroidx/fragment/app/b;->F()Lxe6;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Landroidx/fragment/app/c;->E(Ljava/lang/String;)Landroidx/fragment/app/a;
-
-    move-result-object p1
-
-    instance-of v1, p1, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
-
-    if-eqz v1, :cond_1
-
-    check-cast p1, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
-
-    move-object v0, p1
+    invoke-direct {v0, p0}, Lzva;-><init>(Ljava/io/Closeable;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
+    move-object v0, v1
 
-    move-result-object p1
+    :goto_0
+    new-instance v2, Lfy7;
 
-    invoke-virtual {p1, v1}, Landroid/app/FragmentManager;->findFragmentByTag(Ljava/lang/String;)Landroid/app/Fragment;
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v3, v1, v0}, Lfy7;-><init>(ILfy7;Lzva;)V
+
+    iput-object v2, p0, Lbr6;->c:Lfy7;
+
+    sget-object v0, Lyw7;->s0:Lyw7;
+
+    iget v0, v0, Lyw7;->b:I
+
+    and-int/2addr v0, p2
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    move v0, v1
+
+    goto :goto_1
 
     :cond_1
-    :goto_0
-    if-eqz v0, :cond_2
+    move v0, v3
 
-    invoke-virtual {v0, p0}, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;->D0(Landroid/app/Activity;)V
+    :goto_1
+    iput-boolean v0, p0, Lbr6;->b:Z
+
+    sget-object v0, Lax7;->s0:[I
+
+    iput-object v0, p0, Lax7;->o:[I
+
+    sget-object v0, Lvo4;->a:Lafe;
+
+    iput-object v0, p0, Lax7;->Y:Lxee;
+
+    iput-object p1, p0, Lax7;->d:Lb6;
+
+    sget-object p1, Lyw7;->Z:Lyw7;
+
+    iget p1, p1, Lyw7;->b:I
+
+    and-int/2addr p1, p2
+
+    if-eqz p1, :cond_2
+
+    const/16 p1, 0x7f
+
+    iput p1, p0, Lax7;->X:I
 
     :cond_2
-    return-object v0
+    sget-object p1, Lyw7;->X:Lyw7;
+
+    iget p1, p1, Lyw7;->b:I
+
+    and-int/2addr p1, p2
+
+    if-eqz p1, :cond_3
+
+    move v3, v1
+
+    :cond_3
+    xor-int/lit8 p1, v3, 0x1
+
+    iput-boolean p1, p0, Lax7;->Z:Z
+
+    return-void
 .end method

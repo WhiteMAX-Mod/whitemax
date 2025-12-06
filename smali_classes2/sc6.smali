@@ -1,24 +1,24 @@
-.class public final Lsc6;
+.class public final synthetic Lsc6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lts7;
+.implements Lcm6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lone/me/sdk/arch/Widget;
+.field public final synthetic b:Lone/me/folders/pickerfolders/FoldersPickerScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/arch/Widget;I)V
+.method public synthetic constructor <init>(Lone/me/folders/pickerfolders/FoldersPickerScreen;I)V
     .locals 0
 
     iput p2, p0, Lsc6;->a:I
 
-    iput-object p1, p0, Lsc6;->b:Lone/me/sdk/arch/Widget;
+    iput-object p1, p0, Lsc6;->b:Lone/me/folders/pickerfolders/FoldersPickerScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,76 +27,90 @@
 
 
 # virtual methods
-.method public final k()V
-    .locals 3
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
 
     iget v0, p0, Lsc6;->a:I
 
     const/4 v1, 0x0
 
-    iget-object v2, p0, Lsc6;->b:Lone/me/sdk/arch/Widget;
+    iget-object v2, p0, Lsc6;->b:Lone/me/folders/pickerfolders/FoldersPickerScreen;
 
     packed-switch v0, :pswitch_data_0
 
-    check-cast v2, Lone/me/sharedata/ShareDataPickerScreen;
+    sget-object v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->Z:[Lyy7;
 
-    iget-object v0, v2, Lone/me/sharedata/ShareDataPickerScreen;->x0:Lwn0;
+    new-instance v0, Lx3b;
 
-    invoke-virtual {v0}, Lwn0;->e()Z
+    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    move-result v2
+    move-result-object v3
 
-    if-eqz v2, :cond_0
+    invoke-direct {v0, v3}, Lx3b;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v0}, Lwn0;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setClipChildren(Z)V
 
-    move-result-object v0
+    sget v1, Lyud;->P:I
 
-    check-cast v0, Lgd9;
+    invoke-virtual {v0, v1}, Lx3b;->setIcon(I)V
 
-    invoke-virtual {v0, v1}, Lgd9;->e(Z)V
+    sget v1, Lf5b;->o:I
 
-    :cond_0
-    return-void
+    new-instance v3, Ln5g;
+
+    invoke-direct {v3, v1}, Ln5g;-><init>(I)V
+
+    invoke-virtual {v0, v3}, Lx3b;->setTitle(Ls5g;)V
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    sget v3, Lf5b;->l:I
+
+    invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v3, Luc6;
+
+    const/4 v4, 0x1
+
+    invoke-direct {v3, v2, v4}, Luc6;-><init>(Lone/me/folders/pickerfolders/FoldersPickerScreen;I)V
+
+    invoke-virtual {v0, v1, v3}, Lx3b;->f(Ljava/lang/String;Landroid/view/View$OnClickListener;)V
+
+    return-object v0
 
     :pswitch_0
-    check-cast v2, Lone/me/chatscreen/mediabar/MediaBarWidget;
+    sget-object v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->Z:[Lyy7;
 
-    sget-object v0, Lone/me/chatscreen/mediabar/MediaBarWidget;->b1:[Ltr7;
+    new-instance v0, Lgd6;
 
-    invoke-virtual {v2}, Lone/me/chatscreen/mediabar/MediaBarWidget;->M0()Lgd9;
+    iget-object v3, v2, Lone/me/folders/pickerfolders/FoldersPickerScreen;->b:Lhs;
 
-    move-result-object v0
+    sget-object v4, Lone/me/folders/pickerfolders/FoldersPickerScreen;->Z:[Lyy7;
 
-    invoke-virtual {v0, v1}, Lgd9;->e(Z)V
+    aget-object v1, v4, v1
 
-    return-void
+    invoke-virtual {v3, v2}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
-    :pswitch_1
-    check-cast v2, Lone/me/chats/forward/ForwardPickerScreen;
+    move-result-object v1
 
-    iget-object v0, v2, Lone/me/chats/forward/ForwardPickerScreen;->z0:Lwn0;
+    check-cast v1, Ljava/lang/Number;
 
-    invoke-virtual {v0}, Lwn0;->e()Z
+    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
 
-    move-result v2
+    move-result-wide v1
 
-    if-eqz v2, :cond_1
+    invoke-direct {v0, v1, v2}, Lgd6;-><init>(J)V
 
-    invoke-virtual {v0}, Lwn0;->getValue()Ljava/lang/Object;
+    return-object v0
 
-    move-result-object v0
-
-    check-cast v0, Lgd9;
-
-    invoke-virtual {v0, v1}, Lgd9;->e(Z)V
-
-    :cond_1
-    return-void
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

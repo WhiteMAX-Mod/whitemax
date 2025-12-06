@@ -192,7 +192,7 @@
 
     const-string p2, "Unsupported color format: "
 
-    invoke-static {p4, p2}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p4, p2}, Lho7;->f(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -262,7 +262,7 @@
 
     const-string p1, "can not convert codec format to string: "
 
-    invoke-static {p1, p0}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, p0}, Lwy1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -500,7 +500,7 @@
 
     const-string v1, "Stride is not divisible by two: "
 
-    invoke-static {v3, v1}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v1}, Lho7;->f(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1565,7 +1565,7 @@
 
     const-string v1, "Unsupported color format: "
 
-    invoke-static {v0, v1}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lho7;->f(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

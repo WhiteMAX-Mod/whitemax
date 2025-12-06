@@ -1,373 +1,192 @@
 .class public final Ls5e;
-.super Lr5e;
+.super Ldtf;
 .source "SourceFile"
+
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public final s0:Ljava/util/Queue;
+.field public final synthetic X:Landroid/view/View;
 
-.field public t0:Lr5e;
+.field public final synthetic Y:Lone/me/chatscreen/search/SearchMessageBottomWidget;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lv4e;)V
-    .locals 10
+.method public constructor <init>(Landroid/view/View;Lone/me/chatscreen/search/SearchMessageBottomWidget;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    iget-wide v1, p1, Lq5e;->a:J
+    iput-object p1, p0, Ls5e;->X:Landroid/view/View;
 
-    iget-object v0, p1, Lv4e;->h:Ljava/lang/Object;
+    iput-object p2, p0, Ls5e;->Y:Lone/me/chatscreen/search/SearchMessageBottomWidget;
 
-    move-object v9, v0
+    const/4 p1, 0x2
 
-    check-cast v9, Ljava/util/Queue;
-
-    invoke-interface {v9}, Ljava/util/Queue;->peek()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lr5e;
-
-    iget-object v3, v0, Lr5e;->o:Lqd9;
-
-    invoke-interface {v9}, Ljava/util/Queue;->peek()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lr5e;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-wide v4, p1, Lq5e;->c:J
-
-    iget-boolean v6, p1, Lq5e;->d:Z
-
-    invoke-interface {v9}, Ljava/util/Queue;->peek()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lr5e;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v7, p1, Lq5e;->e:Ljava/lang/String;
-
-    invoke-interface {v9}, Ljava/util/Queue;->peek()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lr5e;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-interface {v9}, Ljava/util/Queue;->peek()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lr5e;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-interface {v9}, Ljava/util/Queue;->peek()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lr5e;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v8, p1, Lq5e;->f:Leq4;
-
-    move-object v0, p0
-
-    invoke-direct/range {v0 .. v8}, Lr5e;-><init>(JLqd9;JZLjava/lang/String;Leq4;)V
-
-    iput-object v9, v0, Ls5e;->s0:Ljava/util/Queue;
-
-    invoke-interface {v9}, Ljava/util/Queue;->poll()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lr5e;
-
-    iput-object p1, v0, Ls5e;->t0:Lr5e;
+    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final w()V
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-super {p0}, Lr5e;->w()V
+    check-cast p1, Lg7e;
 
-    iget-object v0, p0, Ls5e;->s0:Ljava/util/Queue;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+    invoke-virtual {p0, p1, p2}, Ls5e;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result v1
+    move-result-object p1
 
-    if-nez v1, :cond_0
+    check-cast p1, Ls5e;
 
-    new-instance v1, Lv4e;
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    const/4 v2, 0x2
+    invoke-virtual {p1, p2}, Ls5e;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-wide v3, p0, Lr5e;->c:J
+    return-object p2
+.end method
 
-    invoke-direct {v1, v3, v4, v0, v2}, Lv4e;-><init>(JLjava/lang/Object;I)V
-
-    iget-wide v2, p0, Lr5e;->q0:J
-
-    iput-wide v2, v1, Lq5e;->c:J
-
-    iget-boolean v0, p0, Lr5e;->Y:Z
-
-    iput-boolean v0, v1, Lq5e;->d:Z
-
-    iget-object v0, p0, Lr5e;->Z:Ljava/lang/String;
-
-    iput-object v0, v1, Lq5e;->e:Ljava/lang/String;
-
-    iget-object v0, p0, Lr5e;->r0:Leq4;
-
-    iput-object v0, v1, Lq5e;->f:Leq4;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
     new-instance v0, Ls5e;
 
-    invoke-direct {v0, v1}, Ls5e;-><init>(Lv4e;)V
+    iget-object v1, p0, Ls5e;->X:Landroid/view/View;
 
-    invoke-virtual {p0}, Lr4e;->t()Ltph;
+    iget-object v2, p0, Ls5e;->Y:Lone/me/chatscreen/search/SearchMessageBottomWidget;
 
-    move-result-object v1
+    invoke-direct {v0, v1, v2, p2}, Ls5e;-><init>(Landroid/view/View;Lone/me/chatscreen/search/SearchMessageBottomWidget;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v1, v0}, Ltph;->b(Lr4e;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final x()Lob9;
-    .locals 2
-
-    iget-object v0, p0, Ls5e;->t0:Lr5e;
-
-    iget-object v1, p0, Lr4e;->a:Ls4e;
-
-    iput-object v1, v0, Lr4e;->a:Ls4e;
-
-    invoke-virtual {v0}, Lr5e;->x()Lob9;
-
-    move-result-object v0
-
-    iget-object v1, p0, Ls5e;->t0:Lr5e;
-
-    iget-object v1, v1, Lr5e;->r0:Leq4;
-
-    iput-object v1, v0, Lob9;->F:Leq4;
+    iput-object p1, v0, Ls5e;->o:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final y(Lla2;J)J
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 7
 
-    iget-wide v0, p1, Lla2;->a:J
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    iget-object v2, p0, Ls5e;->t0:Lr5e;
+    iget-object p1, p0, Ls5e;->o:Ljava/lang/Object;
 
-    iget-object v3, p0, Lr4e;->a:Ls4e;
+    check-cast p1, Lg7e;
 
-    iput-object v3, v2, Lr4e;->a:Ls4e;
+    instance-of v0, p1, Lc7e;
 
-    instance-of v3, v2, Lx5e;
+    if-eqz v0, :cond_0
 
-    iget-object v4, p0, Lr5e;->r0:Leq4;
+    const/4 v1, 0x0
 
-    if-eqz v3, :cond_0
-
-    check-cast v2, Lx5e;
-
-    new-instance v3, Lw5e;
-
-    iget-object v5, v2, Lp5e;->u0:Ljava/util/List;
-
-    const/4 v6, 0x0
-
-    invoke-interface {v5, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, La3;
-
-    invoke-direct {v3, v0, v1, v5}, Lw5e;-><init>(JLa3;)V
-
-    iget-object v0, v2, Lx5e;->w0:Lir4;
-
-    iput-object v0, v3, Lw5e;->k:Lir4;
-
-    iget-object v0, v2, Lp5e;->s0:Ljava/lang/String;
-
-    iget-object v1, v2, Lp5e;->t0:Ljava/util/List;
-
-    iput-object v0, v3, Lo5e;->h:Ljava/lang/String;
-
-    iput-object v1, v3, Lo5e;->i:Ljava/util/List;
-
-    iget-object v0, v2, Lr5e;->o:Lqd9;
-
-    iput-object v0, v3, Lq5e;->b:Lqd9;
-
-    iget-boolean v0, v2, Lr5e;->Y:Z
-
-    iput-boolean v0, v3, Lq5e;->d:Z
-
-    iget-boolean v0, v2, Lp5e;->v0:Z
-
-    iput-boolean v0, v3, Lo5e;->j:Z
-
-    iget-object v0, v2, Lr5e;->Z:Ljava/lang/String;
-
-    iput-object v0, v3, Lq5e;->e:Ljava/lang/String;
-
-    iget-wide v0, v2, Lr5e;->X:J
-
-    iput-wide v0, v3, Lq5e;->c:J
-
-    iput-object v4, v3, Lq5e;->f:Leq4;
-
-    invoke-virtual {v3}, Lw5e;->b()Lp5e;
-
-    move-result-object v0
-
-    iput-object v0, p0, Ls5e;->t0:Lr5e;
-
-    iget-object v1, p0, Lr4e;->a:Ls4e;
-
-    iput-object v1, v0, Lr4e;->a:Ls4e;
-
-    invoke-virtual {v0, p1, p2, p3}, Lp5e;->y(Lla2;J)J
-
-    move-result-wide p1
-
-    return-wide p1
+    goto :goto_0
 
     :cond_0
-    instance-of v3, v2, Lp5e;
+    const/16 v1, 0x8
 
-    if-eqz v3, :cond_1
+    :goto_0
+    iget-object v2, p0, Ls5e;->X:Landroid/view/View;
 
-    check-cast v2, Lp5e;
+    invoke-virtual {v2, v1}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object v3, v2, Lp5e;->u0:Ljava/util/List;
+    instance-of v1, p1, Ld7e;
 
-    new-instance v5, Lo5e;
+    if-nez v1, :cond_4
 
-    invoke-direct {v5, v0, v1, v3}, Lo5e;-><init>(JLjava/util/List;)V
+    instance-of v1, p1, Le7e;
 
-    iget-object v0, v2, Lp5e;->s0:Ljava/lang/String;
+    if-eqz v1, :cond_1
 
-    iget-object v1, v2, Lp5e;->t0:Ljava/util/List;
-
-    iput-object v0, v5, Lo5e;->h:Ljava/lang/String;
-
-    iput-object v1, v5, Lo5e;->i:Ljava/util/List;
-
-    iget-object v0, v2, Lr5e;->o:Lqd9;
-
-    iput-object v0, v5, Lq5e;->b:Lqd9;
-
-    iget-boolean v0, v2, Lr5e;->Y:Z
-
-    iput-boolean v0, v5, Lq5e;->d:Z
-
-    iget-boolean v0, v2, Lp5e;->v0:Z
-
-    iput-boolean v0, v5, Lo5e;->j:Z
-
-    iget-object v0, v2, Lr5e;->Z:Ljava/lang/String;
-
-    iput-object v0, v5, Lq5e;->e:Ljava/lang/String;
-
-    iget-wide v0, v2, Lr5e;->X:J
-
-    iput-wide v0, v5, Lq5e;->c:J
-
-    iput-object v4, v5, Lq5e;->f:Leq4;
-
-    new-instance v0, Lp5e;
-
-    invoke-direct {v0, v5}, Lp5e;-><init>(Lo5e;)V
-
-    iput-object v0, p0, Ls5e;->t0:Lr5e;
-
-    iget-object v1, p0, Lr4e;->a:Ls4e;
-
-    iput-object v1, v0, Lr4e;->a:Ls4e;
-
-    invoke-virtual {v0, p1, p2, p3}, Lp5e;->y(Lla2;J)J
-
-    move-result-wide p1
-
-    return-wide p1
+    goto :goto_2
 
     :cond_1
-    instance-of v3, v2, Lu5e;
+    if-eqz v0, :cond_3
 
-    if-eqz v3, :cond_2
+    check-cast p1, Lc7e;
 
-    check-cast v2, Lu5e;
+    sget-object v0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->Z:[Lyy7;
 
-    iget-object v3, v2, Lu5e;->s0:Ljava/lang/String;
+    iget-object v0, p0, Ls5e;->Y:Lone/me/chatscreen/search/SearchMessageBottomWidget;
 
-    iget-object v5, v2, Lu5e;->t0:Le20;
+    invoke-virtual {v0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->z0()Landroidx/appcompat/widget/AppCompatTextView;
 
-    new-instance v6, Lt5e;
+    move-result-object v1
 
-    invoke-direct {v6, v0, v1, v3, v5}, Lt5e;-><init>(JLjava/lang/String;Le20;)V
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    iget-object v0, v2, Lr5e;->o:Lqd9;
+    move-result-object v2
 
-    iput-object v0, v6, Lq5e;->b:Lqd9;
+    iget v3, p1, Lc7e;->a:I
 
-    iget-boolean v0, v2, Lr5e;->Y:Z
+    iget-boolean v4, p1, Lc7e;->d:Z
 
-    iput-boolean v0, v6, Lq5e;->d:Z
+    iget-boolean v5, p1, Lc7e;->c:Z
 
-    iget-object v0, v2, Lr5e;->Z:Ljava/lang/String;
+    if-nez v3, :cond_2
 
-    iput-object v0, v6, Lq5e;->e:Ljava/lang/String;
+    sget p1, Ln1b;->f:I
 
-    iget-wide v0, v2, Lr5e;->X:J
+    invoke-virtual {v2, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    iput-wide v0, v6, Lq5e;->c:J
+    move-result-object p1
 
-    iget-boolean v0, v2, Lu5e;->u0:Z
-
-    iput-boolean v0, v6, Lt5e;->i:Z
-
-    iput-object v4, v6, Lq5e;->f:Leq4;
-
-    new-instance v0, Lu5e;
-
-    invoke-direct {v0, v6}, Lu5e;-><init>(Lt5e;)V
-
-    iput-object v0, p0, Ls5e;->t0:Lr5e;
-
-    iget-object v1, p0, Lr4e;->a:Ls4e;
-
-    iput-object v1, v0, Lr4e;->a:Ls4e;
-
-    invoke-virtual {v0, p1, p2, p3}, Lu5e;->y(Lla2;J)J
-
-    move-result-wide p1
-
-    return-wide p1
+    goto :goto_1
 
     :cond_2
-    invoke-super {p0, p1, p2, p3}, Lr5e;->y(Lla2;J)J
+    sget v6, Ln1b;->g:I
 
-    move-result-wide p1
+    iget p1, p1, Lc7e;->b:I
 
-    return-wide p1
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    filled-new-array {p1, v3}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v2, v6, p1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    :goto_1
+    invoke-virtual {v1, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iput-boolean v5, v0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->X:Z
+
+    invoke-virtual {v0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->B0()Landroidx/appcompat/widget/AppCompatImageView;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1, v5}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->D0(Landroidx/appcompat/widget/AppCompatImageView;Z)V
+
+    iput-boolean v4, v0, Lone/me/chatscreen/search/SearchMessageBottomWidget;->Y:Z
+
+    invoke-virtual {v0}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->y0()Landroidx/appcompat/widget/AppCompatImageView;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1, v4}, Lone/me/chatscreen/search/SearchMessageBottomWidget;->D0(Landroidx/appcompat/widget/AppCompatImageView;Z)V
+
+    goto :goto_2
+
+    :cond_3
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_4
+    :goto_2
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

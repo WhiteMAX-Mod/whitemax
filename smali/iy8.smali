@@ -1,65 +1,44 @@
-.class public final Liy8;
-.super Lq7d;
+.class public final synthetic Liy8;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/os/IBinder$DeathRecipient;
 
 
 # instance fields
-.field public final D0:Landroid/view/View;
-
-.field public final E0:Landroid/widget/ImageView;
-
-.field public final F0:Landroid/widget/ProgressBar;
-
-.field public final G0:Landroid/widget/TextView;
-
-.field public final synthetic H0:Ljy8;
+.field public final synthetic a:Lly8;
 
 
 # direct methods
-.method public constructor <init>(Ljy8;Landroid/view/View;)V
-    .locals 2
+.method public synthetic constructor <init>(Lly8;)V
+    .locals 0
 
-    iput-object p1, p0, Liy8;->H0:Ljy8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lq7d;-><init>(Landroid/view/View;)V
+    iput-object p1, p0, Liy8;->a:Lly8;
 
-    iput-object p2, p0, Liy8;->D0:Landroid/view/View;
+    return-void
+.end method
 
-    sget v0, Lumc;->mr_picker_route_icon:I
 
-    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+# virtual methods
+.method public final binderDied()V
+    .locals 3
 
-    move-result-object v0
+    iget-object v0, p0, Liy8;->a:Lly8;
 
-    check-cast v0, Landroid/widget/ImageView;
+    iget-object v0, v0, Lly8;->a:Lpx8;
 
-    iput-object v0, p0, Liy8;->E0:Landroid/widget/ImageView;
+    invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget v0, Lumc;->mr_picker_route_progress_bar:I
+    new-instance v1, Lgq5;
 
-    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    const/16 v2, 0xf
 
-    move-result-object v0
+    invoke-direct {v1, v2, v0}, Lgq5;-><init>(ILjava/lang/Object;)V
 
-    check-cast v0, Landroid/widget/ProgressBar;
-
-    iput-object v0, p0, Liy8;->F0:Landroid/widget/ProgressBar;
-
-    sget v1, Lumc;->mr_picker_route_name:I
-
-    invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/widget/TextView;
-
-    iput-object p2, p0, Liy8;->G0:Landroid/widget/TextView;
-
-    iget-object p1, p1, Ljy8;->s0:Lky8;
-
-    iget-object p1, p1, Lky8;->q0:Landroid/content/Context;
-
-    invoke-static {p1, v0}, Lnz8;->i(Landroid/content/Context;Landroid/widget/ProgressBar;)V
+    invoke-virtual {v0, v1}, Lpx8;->z(Ljava/lang/Runnable;)V
 
     return-void
 .end method

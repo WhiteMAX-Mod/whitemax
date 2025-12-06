@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lji6;
+.implements Lcm6;
 
 
 # instance fields

@@ -1,72 +1,49 @@
-.class public final synthetic Lnag;
-.super Ljava/lang/Object;
+.class public final Lnag;
+.super Lq44;
 .source "SourceFile"
-
-# interfaces
-.implements Lli6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lyag;
 
-.field public final synthetic b:Lrag;
+.field public Y:I
+
+.field public d:Lyag;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrag;I)V
+.method public constructor <init>(Lyag;Lq44;)V
     .locals 0
 
-    iput p2, p0, Lnag;->a:I
+    iput-object p1, p0, Lnag;->X:Lyag;
 
-    iput-object p1, p0, Lnag;->b:Lrag;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lnag;->a:I
+    iput-object p1, p0, Lnag;->o:Ljava/lang/Object;
 
-    check-cast p1, Ljava/lang/CharSequence;
+    iget p1, p0, Lnag;->Y:I
 
-    packed-switch v0, :pswitch_data_0
+    const/high16 v0, -0x80000000
 
-    iget-object p1, p0, Lnag;->b:Lrag;
+    or-int/2addr p1, v0
 
-    iget-object p1, p1, Lrag;->v0:Lpag;
+    iput p1, p0, Lnag;->Y:I
 
-    if-eqz p1, :cond_0
+    iget-object p1, p0, Lnag;->X:Lyag;
 
-    invoke-interface {p1}, Lpag;->r()V
+    invoke-virtual {p1, p0}, Lyag;->e(Lq44;)Ljava/lang/Object;
 
-    :cond_0
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
-
-    :pswitch_0
-    iget-object p1, p0, Lnag;->b:Lrag;
-
-    iget-object p1, p1, Lrag;->v0:Lpag;
-
-    if-eqz p1, :cond_1
-
-    invoke-interface {p1}, Lpag;->x()V
-
-    :cond_1
-    sget-object p1, Lccg;->a:Lccg;
+    move-result-object p1
 
     return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

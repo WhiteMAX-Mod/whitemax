@@ -19,9 +19,9 @@
         "",
         "",
         "key",
-        "Lwpe;",
+        "Le2f;",
         "get",
-        "(Ljava/lang/String;)Lwpe;",
+        "(Ljava/lang/String;)Le2f;",
         "Companion",
         "calls-sdk_release"
     }
@@ -60,13 +60,13 @@
 
 
 # virtual methods
-.method public abstract get(Ljava/lang/String;)Lwpe;
+.method public abstract get(Ljava/lang/String;)Le2f;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             ")",
-            "Lwpe;"
+            "Le2f;"
         }
     .end annotation
 .end method

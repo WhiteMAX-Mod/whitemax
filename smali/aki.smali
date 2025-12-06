@@ -1,177 +1,211 @@
 .class public final Laki;
-.super Lj7i;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbai;
-
-
-# static fields
-.field private static final zzb:Laki;
+.implements Landroid/content/ServiceConnection;
 
 
 # instance fields
-.field private zzd:I
+.field public final a:I
 
-.field private zze:Ljava/lang/String;
-
-.field private zzf:Ljava/lang/String;
-
-.field private zzg:Ljava/lang/String;
-
-.field private zzh:I
-
-.field private zzi:I
-
-.field private zzj:Lqhi;
-
-.field private zzk:Z
-
-.field private zzl:I
-
-.field private zzm:Z
-
-.field private zzn:Z
-
-.field private zzo:Z
-
-.field private zzp:J
+.field public final synthetic b:Lcom/google/android/gms/common/internal/a;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lcom/google/android/gms/common/internal/a;I)V
+    .locals 0
 
-    new-instance v0, Laki;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Laki;-><init>()V
+    iput-object p1, p0, Laki;->b:Lcom/google/android/gms/common/internal/a;
 
-    sput-object v0, Laki;->zzb:Laki;
-
-    const-class v1, Laki;
-
-    invoke-static {v1, v0}, Lj7i;->h(Ljava/lang/Class;Lj7i;)V
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Lj7i;-><init>()V
-
-    const-string v0, ""
-
-    iput-object v0, p0, Laki;->zze:Ljava/lang/String;
-
-    iput-object v0, p0, Laki;->zzf:Ljava/lang/String;
-
-    iput-object v0, p0, Laki;->zzg:Ljava/lang/String;
+    iput p2, p0, Laki;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final m(ILj7i;)Ljava/lang/Object;
-    .locals 16
+.method public final onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
+    .locals 3
 
-    add-int/lit8 v0, p1, -0x1
+    iget-object p1, p0, Laki;->b:Lcom/google/android/gms/common/internal/a;
 
-    if-eqz v0, :cond_4
+    if-nez p2, :cond_1
 
-    const/4 v1, 0x2
+    iget-object v0, p1, Lcom/google/android/gms/common/internal/a;->X:Ljava/lang/Object;
 
-    if-eq v0, v1, :cond_3
+    monitor-enter v0
 
-    const/4 v1, 0x3
+    :try_start_0
+    iget p2, p1, Lcom/google/android/gms/common/internal/a;->w0:I
 
-    if-eq v0, v1, :cond_2
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const/4 v1, 0x4
+    const/4 v0, 0x3
 
-    if-eq v0, v1, :cond_1
+    if-ne p2, v0, :cond_0
 
-    const/4 v1, 0x5
+    const/4 p2, 0x1
 
-    if-eq v0, v1, :cond_0
+    iput-boolean p2, p1, Lcom/google/android/gms/common/internal/a;->D0:Z
 
-    const/4 v0, 0x0
+    const/4 p2, 0x5
 
-    return-object v0
+    goto :goto_0
 
     :cond_0
-    sget-object v0, Laki;->zzb:Laki;
+    const/4 p2, 0x4
 
-    return-object v0
+    :goto_0
+    iget-object v0, p1, Lcom/google/android/gms/common/internal/a;->o:Lbfi;
+
+    iget-object p1, p1, Lcom/google/android/gms/common/internal/a;->F0:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result p1
+
+    const/16 v1, 0x10
+
+    invoke-virtual {v0, p2, p1, v1}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
 
     :cond_1
-    new-instance v0, Leji;
+    iget-object p1, p1, Lcom/google/android/gms/common/internal/a;->Y:Ljava/lang/Object;
 
-    sget-object v1, Laki;->zzb:Laki;
+    monitor-enter p1
 
-    invoke-direct {v0, v1}, Ly6i;-><init>(Lj7i;)V
+    :try_start_2
+    iget-object v0, p0, Laki;->b:Lcom/google/android/gms/common/internal/a;
 
-    return-object v0
+    const-string v1, "com.google.android.gms.common.internal.IGmsServiceBroker"
+
+    invoke-interface {p2, v1}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_2
+
+    instance-of v2, v1, Lrci;
+
+    if-eqz v2, :cond_2
+
+    check-cast v1, Lrci;
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception p2
+
+    goto :goto_2
 
     :cond_2
-    new-instance v0, Laki;
+    new-instance v1, Lrci;
 
-    invoke-direct {v0}, Laki;-><init>()V
+    invoke-direct {v1, p2}, Lrci;-><init>(Landroid/os/IBinder;)V
 
-    return-object v0
+    :goto_1
+    iput-object v1, v0, Lcom/google/android/gms/common/internal/a;->Z:Lrci;
 
-    :cond_3
-    sget-object v6, Lcxh;->y:Lcxh;
+    monitor-exit p1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    sget-object v11, Lcxh;->z:Lcxh;
+    iget-object p1, p0, Laki;->b:Lcom/google/android/gms/common/internal/a;
 
-    const-string v14, "zzo"
+    iget p2, p0, Laki;->a:I
 
-    const-string v15, "zzp"
+    new-instance v0, Loni;
 
-    const-string v1, "zzd"
+    const/4 v1, 0x0
 
-    const-string v2, "zze"
+    invoke-direct {v0, p1, v1}, Loni;-><init>(Lcom/google/android/gms/common/internal/a;I)V
 
-    const-string v3, "zzf"
+    iget-object p1, p1, Lcom/google/android/gms/common/internal/a;->o:Lbfi;
 
-    const-string v4, "zzg"
+    const/4 v1, 0x7
 
-    const-string v5, "zzh"
+    const/4 v2, -0x1
 
-    const-string v7, "zzi"
+    invoke-virtual {p1, v1, p2, v2, v0}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
-    const-string v8, "zzj"
+    move-result-object p2
 
-    const-string v9, "zzk"
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    const-string v10, "zzl"
+    return-void
 
-    const-string v12, "zzm"
+    :goto_2
+    :try_start_3
+    monitor-exit p1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    const-string v13, "zzn"
+    throw p2
+.end method
 
-    filled-new-array/range {v1 .. v15}, [Ljava/lang/Object;
+.method public final onServiceDisconnected(Landroid/content/ComponentName;)V
+    .locals 3
 
-    move-result-object v0
+    iget-object p1, p0, Laki;->b:Lcom/google/android/gms/common/internal/a;
 
-    sget-object v1, Laki;->zzb:Laki;
+    iget-object p1, p1, Lcom/google/android/gms/common/internal/a;->Y:Ljava/lang/Object;
 
-    new-instance v2, Lwai;
+    monitor-enter p1
 
-    const-string v3, "\u0001\u000c\u0000\u0001\u0001\u000c\u000c\u0000\u0000\u0000\u0001\u1008\u0000\u0002\u1008\u0001\u0003\u1008\u0002\u0004\u180c\u0003\u0005\u1004\u0004\u0006\u1009\u0005\u0007\u1007\u0006\u0008\u180c\u0007\t\u1007\u0008\n\u1007\t\u000b\u1007\n\u000c\u1002\u000b"
+    :try_start_0
+    iget-object v0, p0, Laki;->b:Lcom/google/android/gms/common/internal/a;
 
-    invoke-direct {v2, v1, v3, v0}, Lwai;-><init>(Lo3i;Ljava/lang/String;[Ljava/lang/Object;)V
+    const/4 v1, 0x0
 
-    return-object v2
+    iput-object v1, v0, Lcom/google/android/gms/common/internal/a;->Z:Lrci;
 
-    :cond_4
-    const/4 v0, 0x1
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-static {v0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+    iget p1, p0, Laki;->a:I
 
-    move-result-object v0
+    iget-object v0, v0, Lcom/google/android/gms/common/internal/a;->o:Lbfi;
 
-    return-object v0
+    const/4 v1, 0x6
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, p1, v2}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
 .end method

@@ -1,199 +1,290 @@
-.class public final Loy;
+.class public abstract Loy;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final g:Ljava/util/ArrayDeque;
-
-.field public static final h:Ljava/lang/Object;
-
-
 # instance fields
-.field public final a:Landroid/media/MediaCodec;
+.field public final synthetic a:I
 
-.field public final b:Landroid/os/HandlerThread;
-
-.field public c:Lly;
-
-.field public final d:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final e:Lmk3;
-
-.field public f:Z
+.field public b:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    new-instance v0, Ljava/util/ArrayDeque;
-
-    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
-
-    sput-object v0, Loy;->g:Ljava/util/ArrayDeque;
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Loy;->h:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/media/MediaCodec;Landroid/os/HandlerThread;)V
-    .locals 2
-
-    new-instance v0, Lmk3;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lmk3;-><init>(I)V
+    .line 1
+    iput p1, p0, Loy;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Loy;->a:Landroid/media/MediaCodec;
+    return-void
+.end method
 
-    iput-object p2, p0, Loy;->b:Landroid/os/HandlerThread;
+.method public synthetic constructor <init>(II)V
+    .locals 0
 
-    iput-object v0, p0, Loy;->e:Lmk3;
+    .line 2
+    iput p2, p0, Loy;->a:I
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+    iput p1, p0, Loy;->b:I
 
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    iput-object p1, p0, Loy;->d:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static b()Lmy;
+.method public static h(I)Ljava/lang/String;
+    .locals 5
+
+    shr-int/lit8 v0, p0, 0x18
+
+    and-int/lit16 v0, v0, 0xff
+
+    int-to-char v0, v0
+
+    shr-int/lit8 v1, p0, 0x10
+
+    and-int/lit16 v1, v1, 0xff
+
+    int-to-char v1, v1
+
+    shr-int/lit8 v2, p0, 0x8
+
+    and-int/lit16 v2, v2, 0xff
+
+    int-to-char v2, v2
+
+    and-int/lit16 p0, p0, 0xff
+
+    int-to-char p0, p0
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const/4 v4, 0x4
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static i(I)Ljava/lang/String;
     .locals 2
 
-    sget-object v0, Loy;->g:Ljava/util/ArrayDeque;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    monitor-enter v0
+    const-string v1, ""
 
-    :try_start_0
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->isEmpty()Z
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result v1
+    shr-int/lit8 v1, p0, 0x18
 
-    if-eqz v1, :cond_0
+    and-int/lit16 v1, v1, 0xff
 
-    new-instance v1, Lmy;
+    int-to-char v1, v1
 
-    invoke-direct {v1}, Lmy;-><init>()V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    monitor-exit v0
+    shr-int/lit8 v1, p0, 0x10
 
-    return-object v1
+    and-int/lit16 v1, v1, 0xff
 
-    :catchall_0
-    move-exception v1
+    int-to-char v1, v1
 
-    goto :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    :cond_0
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->removeFirst()Ljava/lang/Object;
+    shr-int/lit8 v1, p0, 0x8
 
-    move-result-object v1
+    and-int/lit16 v1, v1, 0xff
 
-    check-cast v1, Lmy;
+    int-to-char v1, v1
 
-    monitor-exit v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    return-object v1
+    and-int/lit16 p0, p0, 0xff
 
-    :goto_0
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    int-to-char p0, p0
 
-    throw v1
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static v(I)I
+    .locals 0
+
+    shr-int/lit8 p0, p0, 0x18
+
+    and-int/lit16 p0, p0, 0xff
+
+    return p0
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 3
+.method public a(I)V
+    .locals 1
 
-    iget-boolean v0, p0, Loy;->f:Z
+    iget v0, p0, Loy;->a:I
 
-    if-eqz v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    :try_start_0
-    iget-object v0, p0, Loy;->c:Lly;
+    iget v0, p0, Loy;->b:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    or-int/2addr p1, v0
 
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
-
-    iget-object v0, p0, Loy;->e:Lmk3;
-
-    monitor-enter v0
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
-
-    const/4 v1, 0x0
-
-    :try_start_1
-    iput-boolean v1, v0, Lmk3;->b:Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :try_start_2
-    monitor-exit v0
-
-    iget-object v1, p0, Loy;->c:Lly;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v2, 0x2
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
-
-    invoke-virtual {v0}, Lmk3;->a()V
-    :try_end_2
-    .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
+    iput p1, p0, Loy;->b:I
 
     return-void
 
-    :catchall_0
-    move-exception v1
+    :pswitch_0
+    iget v0, p0, Loy;->b:I
 
-    :try_start_3
-    monitor-exit v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    or-int/2addr p1, v0
 
-    :try_start_4
-    throw v1
-    :try_end_4
-    .catch Ljava/lang/InterruptedException; {:try_start_4 .. :try_end_4} :catch_0
+    iput p1, p0, Loy;->b:I
 
-    :catch_0
-    move-exception v0
+    return-void
 
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    nop
 
-    move-result-object v1
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    invoke-virtual {v1}, Ljava/lang/Thread;->interrupt()V
+.method public abstract c(Lpk6;)V
+.end method
 
-    new-instance v1, Ljava/lang/IllegalStateException;
+.method public abstract d(Lpk6;)V
+.end method
 
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
+.method public j(I)Z
+    .locals 1
 
-    throw v1
+    iget v0, p0, Loy;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget v0, p0, Loy;->b:I
+
+    and-int/2addr v0, p1
+
+    if-ne v0, p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
 
     :cond_0
-    return-void
+    const/4 p1, 0x0
+
+    :goto_0
+    return p1
+
+    :pswitch_0
+    iget v0, p0, Loy;->b:I
+
+    and-int/2addr v0, p1
+
+    if-ne v0, p1, :cond_1
+
+    const/4 p1, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    :goto_1
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public abstract k()I
+.end method
+
+.method public abstract l()I
+.end method
+
+.method public abstract n()I
+.end method
+
+.method public abstract o()I
+.end method
+
+.method public abstract p()I
+.end method
+
+.method public abstract q()V
+.end method
+
+.method public abstract r(Lpk6;)V
+.end method
+
+.method public abstract t(Lpk6;)V
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 1
+
+    iget v0, p0, Loy;->a:I
+
+    sparse-switch v0, :sswitch_data_0
+
+    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :sswitch_0
+    iget v0, p0, Loy;->b:I
+
+    invoke-static {v0}, Loy;->i(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :sswitch_1
+    iget v0, p0, Loy;->b:I
+
+    invoke-static {v0}, Loy;->h(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :sswitch_data_0
+    .sparse-switch
+        0x0 -> :sswitch_1
+        0x4 -> :sswitch_0
+    .end sparse-switch
+.end method
+
+.method public abstract u(Lpk6;)Llm9;
 .end method

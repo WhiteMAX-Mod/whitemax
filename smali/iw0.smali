@@ -1,171 +1,231 @@
-.class public abstract Liw0;
-.super Ljava/lang/Object;
+.class public final Liw0;
+.super Landroid/os/Binder;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Ljava/lang/Object;
+.field public static final d:I
 
-.field public static b:Ljava/util/concurrent/ExecutorService;
+
+# instance fields
+.field public final c:Lwg7;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    new-instance v0, Ljava/lang/Object;
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v1, 0x1e
 
-    sput-object v0, Liw0;->a:Ljava/lang/Object;
+    if-lt v0, v1, :cond_0
 
-    return-void
-.end method
+    invoke-static {}, Lf5;->a()I
 
-.method public static final a(Ljava/io/File;Ljava/util/List;)V
-    .locals 3
-
-    sget-object v0, Lha2;->a:Ljava/nio/charset/Charset;
-
-    new-instance v1, Ljava/io/OutputStreamWriter;
-
-    new-instance v2, Ljava/io/FileOutputStream;
-
-    invoke-direct {v2, p0}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
-
-    invoke-direct {v1, v2, v0}, Ljava/io/OutputStreamWriter;-><init>(Ljava/io/OutputStream;Ljava/nio/charset/Charset;)V
-
-    :try_start_0
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/String;
-
-    invoke-virtual {v1, p1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
-
-    const/16 p1, 0xa
-
-    invoke-virtual {v1, p1}, Ljava/io/OutputStreamWriter;->write(I)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result v0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
-
     :cond_0
-    invoke-virtual {v1}, Ljava/io/OutputStreamWriter;->close()V
+    const/high16 v0, 0x10000
+
+    :goto_0
+    sput v0, Liw0;->d:I
 
     return-void
-
-    :goto_1
-    :try_start_1
-    throw p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :catchall_1
-    move-exception p1
-
-    invoke-static {v1, p0}, Lhfb;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
-
-    throw p1
 .end method
 
-.method public static b(Lgw0;Ljava/util/List;)Lz8d;
-    .locals 3
+.method public constructor <init>(Ljava/util/List;)V
+    .locals 0
 
-    invoke-static {}, Lec7;->j()Lbc7;
+    invoke-direct {p0}, Landroid/os/Binder;-><init>()V
+
+    invoke-static {p1}, Lwg7;->j(Ljava/util/Collection;)Lwg7;
+
+    move-result-object p1
+
+    iput-object p1, p0, Liw0;->c:Lwg7;
+
+    return-void
+.end method
+
+.method public static a(Landroid/os/IBinder;)Lwg7;
+    .locals 7
+
+    instance-of v0, p0, Liw0;
+
+    if-eqz v0, :cond_0
+
+    check-cast p0, Liw0;
+
+    iget-object p0, p0, Liw0;->c:Lwg7;
+
+    return-object p0
+
+    :cond_0
+    invoke-static {}, Lwg7;->i()Ltg7;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
+    const/4 v2, 0x1
+
+    move v4, v1
+
+    move v3, v2
+
     :goto_0
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    if-eqz v3, :cond_2
 
-    move-result v2
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
-    if-ge v1, v2, :cond_0
+    move-result-object v3
 
-    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
-    move-result-object v2
+    move-result-object v5
 
-    check-cast v2, Landroid/os/Bundle;
+    :try_start_0
+    invoke-virtual {v3, v4}, Landroid/os/Parcel;->writeInt(I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :try_start_1
+    invoke-interface {p0, v2, v3, v5, v1}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_1
+    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-interface {p0, v2}, Lgw0;->f(Landroid/os/Bundle;)Lhw0;
+    :goto_1
+    :try_start_2
+    invoke-virtual {v5}, Landroid/os/Parcel;->readInt()I
 
-    move-result-object v2
+    move-result v6
 
-    invoke-virtual {v0, v2}, Lub7;->a(Ljava/lang/Object;)V
+    if-ne v6, v2, :cond_1
 
-    add-int/lit8 v1, v1, 0x1
+    invoke-virtual {v5}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0, v6}, Lmg7;->a(Ljava/lang/Object;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_2
+
+    :cond_1
+    invoke-virtual {v5}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v3}, Landroid/os/Parcel;->recycle()V
+
+    move v3, v6
 
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {v0}, Lbc7;->i()Lz8d;
+    :catch_0
+    move-exception p0
+
+    :try_start_3
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :goto_2
+    invoke-virtual {v5}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v3}, Landroid/os/Parcel;->recycle()V
+
+    throw p0
+
+    :cond_2
+    invoke-virtual {v0}, Ltg7;->i()Lzjd;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static c(I)Lu66;
-    .locals 3
 
-    sget-object v0, Lu66;->Y:Lzd5;
+# virtual methods
+.method public final onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    .locals 4
 
-    new-instance v1, Lf2;
+    const/4 v0, 0x1
 
-    const/4 v2, 0x0
+    if-eq p1, v0, :cond_0
 
-    invoke-direct {v1, v2, v0}, Lf2;-><init>(ILjava/lang/Object;)V
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    move-result p1
+
+    return p1
 
     :cond_0
-    invoke-virtual {v1}, Lf2;->hasNext()Z
+    const/4 p1, 0x0
 
-    move-result v0
+    if-nez p3, :cond_1
 
-    if-eqz v0, :cond_1
+    return p1
 
-    invoke-virtual {v1}, Lf2;->next()Ljava/lang/Object;
+    :cond_1
+    iget-object p4, p0, Liw0;->c:Lwg7;
 
-    move-result-object v0
+    invoke-virtual {p4}, Ljava/util/AbstractCollection;->size()I
 
-    move-object v2, v0
+    move-result v1
 
-    check-cast v2, Lu66;
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
-    iget v2, v2, Lu66;->a:I
+    move-result p2
 
-    if-ne v2, p0, :cond_0
+    :goto_0
+    if-ge p2, v1, :cond_2
+
+    invoke-virtual {p3}, Landroid/os/Parcel;->dataSize()I
+
+    move-result v2
+
+    sget v3, Liw0;->d:I
+
+    if-ge v2, v3, :cond_2
+
+    invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-interface {p4, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/os/Bundle;
+
+    invoke-virtual {p3, v2}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
+
+    add-int/lit8 p2, p2, 0x1
 
     goto :goto_0
 
-    :cond_1
-    const/4 v0, 0x0
+    :cond_2
+    if-ge p2, v1, :cond_3
 
-    :goto_0
-    check-cast v0, Lu66;
+    const/4 p1, 0x2
 
-    return-object v0
+    :cond_3
+    invoke-virtual {p3, p1}, Landroid/os/Parcel;->writeInt(I)V
+
+    return v0
 .end method

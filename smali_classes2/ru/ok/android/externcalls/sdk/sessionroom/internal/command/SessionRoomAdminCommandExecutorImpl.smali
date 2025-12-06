@@ -22,42 +22,42 @@
         "<init>",
         "(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;)V",
         "",
-        "Lr7e;",
+        "Leje;",
         "",
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "Lru/ok/android/externcalls/sdk/id/ExternalId;",
         "addToRooms",
         "removeFromRooms",
-        "Lhi1;",
+        "Lti1;",
         "Lru/ok/android/externcalls/sdk/id/InternalId;",
         "externalToInternalIdsMap",
-        "Lheg;",
+        "Lmtg;",
         "buildUpdateRoomsParams",
-        "(Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;)Lheg;",
-        "Lr7;",
+        "(Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;)Lmtg;",
+        "Lo7;",
         "params",
         "Lkotlin/Function0;",
-        "Lccg;",
+        "Lqqg;",
         "onSuccess",
         "Lkotlin/Function1;",
         "",
         "onError",
         "activateRooms",
-        "(Lr7;Lji6;Lli6;)V",
-        "Lbad;",
+        "(Lo7;Lcm6;Lem6;)V",
+        "Lgld;",
         "removeRooms",
-        "(Lbad;Lji6;Lli6;)V",
-        "Llif;",
+        "(Lgld;Lcm6;Lem6;)V",
+        "Llvf;",
         "switchRoom",
-        "(Llif;Lji6;Lli6;)V",
+        "(Llvf;Lcm6;Lem6;)V",
         "updateRooms",
-        "(Lheg;Lji6;Lli6;)V",
+        "(Lmtg;Lcm6;Lem6;)V",
         "Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams;",
         "assignParticipantsToRooms",
-        "(Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams;Lji6;Lli6;)V",
+        "(Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams;Lcm6;Lem6;)V",
         "Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;",
         "moveParticipant",
-        "(Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;Lji6;Lli6;)V",
+        "(Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;Lcm6;Lem6;)V",
         "Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;",
         "Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;",
         "calls-sdk_release"
@@ -91,65 +91,65 @@
     return-void
 .end method
 
-.method public static synthetic a(Lji6;Lorg/json/JSONObject;)V
+.method public static synthetic a(Lcm6;Lorg/json/JSONObject;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;->switchRoom$lambda$4(Lji6;Lorg/json/JSONObject;)V
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;->switchRoom$lambda$4(Lcm6;Lorg/json/JSONObject;)V
 
     return-void
 .end method
 
-.method private static final activateRooms$lambda$0(Lji6;Lorg/json/JSONObject;)V
+.method private static final activateRooms$lambda$0(Lcm6;Lorg/json/JSONObject;)V
     .locals 0
 
     if-eqz p0, :cond_0
 
-    invoke-interface {p0}, Lji6;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Lcm6;->invoke()Ljava/lang/Object;
 
     :cond_0
     return-void
 .end method
 
-.method private static final activateRooms$lambda$1(Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;Lli6;Lorg/json/JSONObject;)V
+.method private static final activateRooms$lambda$1(Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;Lem6;Lorg/json/JSONObject;)V
     .locals 1
 
     const-string v0, "activateRooms"
 
-    invoke-virtual {p0, v0, p2, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomCommandExecutorBase;->parseErrorResponse(Ljava/lang/String;Lorg/json/JSONObject;Lli6;)V
+    invoke-virtual {p0, v0, p2, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomCommandExecutorBase;->parseErrorResponse(Ljava/lang/String;Lorg/json/JSONObject;Lem6;)V
 
     return-void
 .end method
 
-.method public static synthetic b(Lji6;Lorg/json/JSONObject;)V
+.method public static synthetic b(Lcm6;Lorg/json/JSONObject;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;->updateRooms$lambda$6(Lji6;Lorg/json/JSONObject;)V
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;->updateRooms$lambda$6(Lcm6;Lorg/json/JSONObject;)V
 
     return-void
 .end method
 
-.method private final buildUpdateRoomsParams(Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;)Lheg;
+.method private final buildUpdateRoomsParams(Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;)Lmtg;
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Map<",
-            "Lr7e;",
+            "Leje;",
             "+",
             "Ljava/util/List<",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
             ">;>;",
             "Ljava/util/Map<",
-            "Lr7e;",
+            "Leje;",
             "+",
             "Ljava/util/List<",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
             ">;>;",
             "Ljava/util/Map<",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-            "Lhi1;",
+            "Lti1;",
             ">;)",
-            "Lheg;"
+            "Lmtg;"
         }
     .end annotation
 
@@ -220,7 +220,7 @@
 
     move-result-object v5
 
-    check-cast v5, Lhi1;
+    check-cast v5, Lti1;
 
     if-eqz v5, :cond_1
 
@@ -303,7 +303,7 @@
 
     move-result-object v4
 
-    check-cast v4, Lhi1;
+    check-cast v4, Lti1;
 
     if-eqz v4, :cond_5
 
@@ -339,7 +339,7 @@
 
     const/16 p3, 0xa
 
-    invoke-static {v2, p3}, Lpb3;->l(Ljava/lang/Iterable;I)I
+    invoke-static {v2, p3}, Lwe3;->q(Ljava/lang/Iterable;I)I
 
     move-result v3
 
@@ -360,13 +360,13 @@
 
     move-result-object v3
 
-    check-cast v3, Lr7e;
+    check-cast v3, Leje;
 
-    new-instance v4, Lfeg;
+    new-instance v4, Lktg;
 
     invoke-direct {v4}, Ljava/lang/Object;-><init>()V
 
-    iput-object v3, v4, Lfeg;->a:Lr7e;
+    iput-object v3, v4, Lktg;->a:Leje;
 
     invoke-virtual {v0, v3}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -376,7 +376,7 @@
 
     if-eqz v5, :cond_8
 
-    iput-object v5, v4, Lfeg;->b:Ljava/util/List;
+    iput-object v5, v4, Lktg;->b:Ljava/util/List;
 
     :cond_8
     invoke-virtual {v1, v3}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -387,7 +387,7 @@
 
     if-eqz v3, :cond_9
 
-    iput-object v3, v4, Lfeg;->c:Ljava/util/List;
+    iput-object v3, v4, Lktg;->c:Ljava/util/List;
 
     :cond_9
     invoke-virtual {p2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -401,7 +401,7 @@
 
     new-instance p2, Ljava/util/ArrayList;
 
-    invoke-static {p1, p3}, Lpb3;->l(Ljava/lang/Iterable;I)I
+    invoke-static {p1, p3}, Lwe3;->q(Ljava/lang/Iterable;I)I
 
     move-result p3
 
@@ -422,119 +422,119 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    check-cast v1, Lfeg;
+    check-cast v1, Lktg;
 
-    new-instance v2, Lgeg;
+    new-instance v2, Lltg;
 
-    iget-object v3, v1, Lfeg;->a:Lr7e;
+    iget-object v3, v1, Lktg;->a:Leje;
 
-    iget-object v4, v1, Lfeg;->b:Ljava/util/List;
+    iget-object v4, v1, Lktg;->b:Ljava/util/List;
 
-    iget-object v1, v1, Lfeg;->c:Ljava/util/List;
+    iget-object v1, v1, Lktg;->c:Ljava/util/List;
 
-    invoke-direct {v2, v3, v4, v1}, Lgeg;-><init>(Lr7e;Ljava/util/Collection;Ljava/util/Collection;)V
+    invoke-direct {v2, v3, v4, v1}, Lltg;-><init>(Leje;Ljava/util/Collection;Ljava/util/Collection;)V
 
     invoke-virtual {p2, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_3
 
     :cond_b
-    new-instance p1, Lheg;
+    new-instance p1, Lmtg;
 
-    invoke-direct {p1, p2}, Lheg;-><init>(Ljava/util/ArrayList;)V
+    invoke-direct {p1, p2}, Lmtg;-><init>(Ljava/util/ArrayList;)V
 
     return-object p1
 .end method
 
-.method public static synthetic c(Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;Lli6;Lorg/json/JSONObject;)V
+.method public static synthetic c(Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;Lem6;Lorg/json/JSONObject;)V
     .locals 0
 
-    invoke-static {p0, p1, p2}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;->updateRooms$lambda$7(Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;Lli6;Lorg/json/JSONObject;)V
+    invoke-static {p0, p1, p2}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;->updateRooms$lambda$7(Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;Lem6;Lorg/json/JSONObject;)V
 
     return-void
 .end method
 
-.method public static synthetic d(Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;Lli6;Lorg/json/JSONObject;)V
+.method public static synthetic d(Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;Lem6;Lorg/json/JSONObject;)V
     .locals 0
 
-    invoke-static {p0, p1, p2}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;->switchRoom$lambda$5(Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;Lli6;Lorg/json/JSONObject;)V
+    invoke-static {p0, p1, p2}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;->switchRoom$lambda$5(Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;Lem6;Lorg/json/JSONObject;)V
 
     return-void
 .end method
 
-.method private static final removeRooms$lambda$2(Lji6;Lorg/json/JSONObject;)V
+.method private static final removeRooms$lambda$2(Lcm6;Lorg/json/JSONObject;)V
     .locals 0
 
     if-eqz p0, :cond_0
 
-    invoke-interface {p0}, Lji6;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Lcm6;->invoke()Ljava/lang/Object;
 
     :cond_0
     return-void
 .end method
 
-.method private static final removeRooms$lambda$3(Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;Lli6;Lorg/json/JSONObject;)V
+.method private static final removeRooms$lambda$3(Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;Lem6;Lorg/json/JSONObject;)V
     .locals 1
 
     const-string v0, "removeRooms"
 
-    invoke-virtual {p0, v0, p2, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomCommandExecutorBase;->parseErrorResponse(Ljava/lang/String;Lorg/json/JSONObject;Lli6;)V
+    invoke-virtual {p0, v0, p2, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomCommandExecutorBase;->parseErrorResponse(Ljava/lang/String;Lorg/json/JSONObject;Lem6;)V
 
     return-void
 .end method
 
-.method private static final switchRoom$lambda$4(Lji6;Lorg/json/JSONObject;)V
+.method private static final switchRoom$lambda$4(Lcm6;Lorg/json/JSONObject;)V
     .locals 0
 
     if-eqz p0, :cond_0
 
-    invoke-interface {p0}, Lji6;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Lcm6;->invoke()Ljava/lang/Object;
 
     :cond_0
     return-void
 .end method
 
-.method private static final switchRoom$lambda$5(Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;Lli6;Lorg/json/JSONObject;)V
+.method private static final switchRoom$lambda$5(Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;Lem6;Lorg/json/JSONObject;)V
     .locals 1
 
     const-string v0, "switchRoom"
 
-    invoke-virtual {p0, v0, p2, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomCommandExecutorBase;->parseErrorResponse(Ljava/lang/String;Lorg/json/JSONObject;Lli6;)V
+    invoke-virtual {p0, v0, p2, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomCommandExecutorBase;->parseErrorResponse(Ljava/lang/String;Lorg/json/JSONObject;Lem6;)V
 
     return-void
 .end method
 
-.method private static final updateRooms$lambda$6(Lji6;Lorg/json/JSONObject;)V
+.method private static final updateRooms$lambda$6(Lcm6;Lorg/json/JSONObject;)V
     .locals 0
 
     if-eqz p0, :cond_0
 
-    invoke-interface {p0}, Lji6;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Lcm6;->invoke()Ljava/lang/Object;
 
     :cond_0
     return-void
 .end method
 
-.method private static final updateRooms$lambda$7(Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;Lli6;Lorg/json/JSONObject;)V
+.method private static final updateRooms$lambda$7(Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;Lem6;Lorg/json/JSONObject;)V
     .locals 1
 
     const-string v0, "updateRooms"
 
-    invoke-virtual {p0, v0, p2, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomCommandExecutorBase;->parseErrorResponse(Ljava/lang/String;Lorg/json/JSONObject;Lli6;)V
+    invoke-virtual {p0, v0, p2, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomCommandExecutorBase;->parseErrorResponse(Ljava/lang/String;Lorg/json/JSONObject;Lem6;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public activateRooms(Lr7;Lji6;Lli6;)V
+.method public activateRooms(Lo7;Lcm6;Lem6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lr7;",
-            "Lji6;",
-            "Lli6;",
+            "Lo7;",
+            "Lcm6;",
+            "Lem6;",
             ")V"
         }
     .end annotation
@@ -544,14 +544,14 @@
     throw p1
 .end method
 
-.method public assignParticipantsToRooms(Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams;Lji6;Lli6;)V
+.method public assignParticipantsToRooms(Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams;Lcm6;Lem6;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/sessionroom/admin/AssignParticipantsToRoomsParams;",
-            "Lji6;",
-            "Lli6;",
+            "Lcm6;",
+            "Lem6;",
             ")V"
         }
     .end annotation
@@ -569,7 +569,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lpb3;->m(Ljava/util/Collection;)Ljava/util/ArrayList;
+    invoke-static {v1}, Lwe3;->r(Ljava/util/Collection;)Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -583,7 +583,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lpb3;->m(Ljava/util/Collection;)Ljava/util/ArrayList;
+    invoke-static {v1}, Lwe3;->r(Ljava/util/Collection;)Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -603,11 +603,11 @@
 
     move-result-object p1
 
-    invoke-direct {p0, v1, p1, v0}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;->buildUpdateRoomsParams(Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;)Lheg;
+    invoke-direct {p0, v1, p1, v0}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;->buildUpdateRoomsParams(Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;)Lmtg;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;->updateRooms(Lheg;Lji6;Lli6;)V
+    invoke-virtual {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;->updateRooms(Lmtg;Lcm6;Lem6;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -618,20 +618,20 @@
 
     if-eqz p3, :cond_0
 
-    invoke-interface {p3, p1}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, p1}, Lem6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-void
 .end method
 
-.method public moveParticipant(Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;Lji6;Lli6;)V
+.method public moveParticipant(Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;Lcm6;Lem6;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;",
-            "Lji6;",
-            "Lli6;",
+            "Lcm6;",
+            "Lem6;",
             ")V"
         }
     .end annotation
@@ -646,26 +646,26 @@
 
     new-instance v2, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl$moveParticipant$1;
 
-    invoke-direct {v2, p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl$moveParticipant$1;-><init>(Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;Lji6;Lli6;)V
+    invoke-direct {v2, p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl$moveParticipant$1;-><init>(Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;Lcm6;Lem6;)V
 
-    invoke-virtual {v1, v0, v2, p3}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->resolveInternalIdByExternal(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lli6;Lli6;)V
+    invoke-virtual {v1, v0, v2, p3}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->resolveInternalIdByExternal(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lem6;Lem6;)V
 
     return-void
 
     :cond_0
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;->getToRoomId()Ls7e;
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/sessionroom/admin/MoveParticipantParams;->getToRoomId()Lfje;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    new-instance v0, Llif;
+    new-instance v0, Llvf;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1, p1}, Llif;-><init>(Lhi1;Ls7e;)V
+    invoke-direct {v0, v1, p1}, Llvf;-><init>(Lti1;Lfje;)V
 
-    invoke-virtual {p0, v0, p2, p3}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;->switchRoom(Llif;Lji6;Lli6;)V
+    invoke-virtual {p0, v0, p2, p3}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;->switchRoom(Llvf;Lcm6;Lem6;)V
 
     return-void
 
@@ -679,14 +679,14 @@
     throw p1
 .end method
 
-.method public removeRooms(Lbad;Lji6;Lli6;)V
+.method public removeRooms(Lgld;Lcm6;Lem6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lbad;",
-            "Lji6;",
-            "Lli6;",
+            "Lgld;",
+            "Lcm6;",
+            "Lem6;",
             ")V"
         }
     .end annotation
@@ -696,21 +696,21 @@
     throw p1
 .end method
 
-.method public switchRoom(Llif;Lji6;Lli6;)V
+.method public switchRoom(Llvf;Lcm6;Lem6;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Llif;",
-            "Lji6;",
-            "Lli6;",
+            "Llvf;",
+            "Lcm6;",
+            "Lem6;",
             ")V"
         }
     .end annotation
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;->signalingProvider:Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;
 
-    invoke-static {v0, p3}, Lru/ok/android/externcalls/sdk/signaling/SignalingProviderKt;->get(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lli6;)Lrne;
+    invoke-static {v0, p3}, Lru/ok/android/externcalls/sdk/signaling/SignalingProviderKt;->get(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lem6;)Lpze;
 
     move-result-object v0
 
@@ -729,28 +729,28 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    iget-object v2, p1, Llif;->a:Ls7e;
+    iget-object v2, p1, Llvf;->a:Lfje;
 
     if-eqz v2, :cond_1
 
-    instance-of v3, v2, Lr7e;
+    instance-of v3, v2, Leje;
 
     if-eqz v3, :cond_1
 
-    check-cast v2, Lr7e;
+    check-cast v2, Leje;
 
-    iget v2, v2, Lr7e;->a:I
+    iget v2, v2, Leje;->a:I
 
     const-string v3, "toRoomId"
 
     invoke-virtual {v1, v3, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
     :cond_1
-    iget-object p1, p1, Llif;->b:Lhi1;
+    iget-object p1, p1, Llvf;->b:Lti1;
 
     if-eqz p1, :cond_2
 
-    invoke-virtual {p1}, Lhi1;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lti1;->b()Ljava/lang/String;
 
     move-result-object p1
 
@@ -759,44 +759,44 @@
     invoke-virtual {v1, v2, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     :cond_2
-    new-instance p1, Lmn6;
+    new-instance p1, Lfr6;
 
-    invoke-direct {p1, v1}, Lmn6;-><init>(Lorg/json/JSONObject;)V
+    invoke-direct {p1, v1}, Lfr6;-><init>(Lorg/json/JSONObject;)V
 
-    new-instance v1, Lxt;
+    new-instance v1, Lnt;
 
     const/16 v2, 0x8
 
-    invoke-direct {v1, v2, p2}, Lxt;-><init>(ILji6;)V
+    invoke-direct {v1, v2, p2}, Lnt;-><init>(ILcm6;)V
 
-    new-instance p2, Ln7e;
+    new-instance p2, Laje;
 
     const/4 v2, 0x0
 
-    invoke-direct {p2, p0, p3, v2}, Ln7e;-><init>(Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;Lli6;I)V
+    invoke-direct {p2, p0, p3, v2}, Laje;-><init>(Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;Lem6;I)V
 
     const/4 p3, 0x0
 
-    invoke-virtual {v0, p1, p3, v1, p2}, Lrne;->d(Lvne;ZLone;Lone;)V
+    invoke-virtual {v0, p1, p3, v1, p2}, Lpze;->d(Ltze;ZLmze;Lmze;)V
 
     return-void
 .end method
 
-.method public updateRooms(Lheg;Lji6;Lli6;)V
+.method public updateRooms(Lmtg;Lcm6;Lem6;)V
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lheg;",
-            "Lji6;",
-            "Lli6;",
+            "Lmtg;",
+            "Lcm6;",
+            "Lem6;",
             ")V"
         }
     .end annotation
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;->signalingProvider:Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;
 
-    invoke-static {v0, p3}, Lru/ok/android/externcalls/sdk/signaling/SignalingProviderKt;->get(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lli6;)Lrne;
+    invoke-static {v0, p3}, Lru/ok/android/externcalls/sdk/signaling/SignalingProviderKt;->get(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lem6;)Lpze;
 
     move-result-object v0
 
@@ -815,7 +815,7 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    iget-object p1, p1, Lheg;->a:Ljava/util/ArrayList;
+    iget-object p1, p1, Lmtg;->a:Ljava/util/ArrayList;
 
     new-instance v2, Lorg/json/JSONArray;
 
@@ -836,24 +836,24 @@
 
     move-result-object v3
 
-    check-cast v3, Lgeg;
+    check-cast v3, Lltg;
 
     new-instance v4, Lorg/json/JSONObject;
 
     invoke-direct {v4}, Lorg/json/JSONObject;-><init>()V
 
-    iget-object v5, v3, Lgeg;->a:Lr7e;
+    iget-object v5, v3, Lltg;->a:Leje;
 
     if-eqz v5, :cond_1
 
-    iget v5, v5, Lr7e;->a:I
+    iget v5, v5, Leje;->a:I
 
     const-string v6, "id"
 
     invoke-virtual {v4, v6, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
     :cond_1
-    iget-object v5, v3, Lgeg;->b:Ljava/util/Collection;
+    iget-object v5, v3, Lltg;->b:Ljava/util/Collection;
 
     if-eqz v5, :cond_3
 
@@ -876,9 +876,9 @@
 
     move-result-object v7
 
-    check-cast v7, Lhi1;
+    check-cast v7, Lti1;
 
-    invoke-virtual {v7}, Lhi1;->b()Ljava/lang/String;
+    invoke-virtual {v7}, Lti1;->b()Ljava/lang/String;
 
     move-result-object v7
 
@@ -892,7 +892,7 @@
     invoke-virtual {v4, v5, v6}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     :cond_3
-    iget-object v3, v3, Lgeg;->c:Ljava/util/Collection;
+    iget-object v3, v3, Lltg;->c:Ljava/util/Collection;
 
     if-eqz v3, :cond_5
 
@@ -915,9 +915,9 @@
 
     move-result-object v6
 
-    check-cast v6, Lhi1;
+    check-cast v6, Lti1;
 
-    invoke-virtual {v6}, Lhi1;->b()Ljava/lang/String;
+    invoke-virtual {v6}, Lti1;->b()Ljava/lang/String;
 
     move-result-object v6
 
@@ -940,25 +940,25 @@
 
     invoke-virtual {v1, p1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    new-instance p1, Lmn6;
+    new-instance p1, Lfr6;
 
-    invoke-direct {p1, v1}, Lmn6;-><init>(Lorg/json/JSONObject;)V
+    invoke-direct {p1, v1}, Lfr6;-><init>(Lorg/json/JSONObject;)V
 
-    new-instance v1, Lxt;
+    new-instance v1, Lnt;
 
     const/16 v2, 0x9
 
-    invoke-direct {v1, v2, p2}, Lxt;-><init>(ILji6;)V
+    invoke-direct {v1, v2, p2}, Lnt;-><init>(ILcm6;)V
 
-    new-instance p2, Ln7e;
+    new-instance p2, Laje;
 
     const/4 v2, 0x1
 
-    invoke-direct {p2, p0, p3, v2}, Ln7e;-><init>(Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;Lli6;I)V
+    invoke-direct {p2, p0, p3, v2}, Laje;-><init>(Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;Lem6;I)V
 
     const/4 p3, 0x0
 
-    invoke-virtual {v0, p1, p3, v1, p2}, Lrne;->d(Lvne;ZLone;Lone;)V
+    invoke-virtual {v0, p1, p3, v1, p2}, Lpze;->d(Ltze;ZLmze;Lmze;)V
 
     return-void
 .end method

@@ -1,260 +1,168 @@
-.class public final synthetic Lcn1;
-.super Ljava/lang/Object;
+.class public final Lcn1;
+.super Len1;
 .source "SourceFile"
-
-# interfaces
-.implements Lji6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final D:Lkm1;
 
-.field public final synthetic b:Lio1;
+.field public final E:Ls5g;
 
-.field public final synthetic c:Lzk8;
-
-.field public final synthetic o:Lzk8;
+.field public final F:Ljava/lang/Integer;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lio1;Lzk8;Lzk8;I)V
-    .locals 0
+.method public constructor <init>(Ls5g;Ljava/lang/Integer;)V
+    .locals 1
 
-    iput p4, p0, Lcn1;->a:I
+    invoke-direct {p0}, Len1;-><init>()V
 
-    iput-object p1, p0, Lcn1;->b:Lio1;
+    sget-object v0, Lkm1;->a:Lkm1;
 
-    iput-object p2, p0, Lcn1;->c:Lzk8;
+    iput-object v0, p0, Lcn1;->D:Lkm1;
 
-    iput-object p3, p0, Lcn1;->o:Lzk8;
+    iput-object p1, p0, Lcn1;->E:Ls5g;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lcn1;->F:Ljava/lang/Integer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 12
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Lcn1;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lcn1;->c:Lzk8;
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lcn1;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lcn1;
+
+    iget-object v1, p0, Lcn1;->D:Lkm1;
+
+    iget-object v3, p1, Lcn1;->D:Lkm1;
+
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lcn1;->E:Ls5g;
+
+    iget-object v3, p1, Lcn1;->E:Ls5g;
+
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lcn1;->F:Ljava/lang/Integer;
+
+    iget-object p1, p1, Lcn1;->F:Ljava/lang/Integer;
+
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lcn1;->D:Lkm1;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lcn1;->E:Ls5g;
+
+    invoke-static {v0, v1, v2}, Lxc0;->d(IILs5g;)I
+
+    move-result v0
+
+    iget-object v1, p0, Lcn1;->F:Ljava/lang/Integer;
+
+    if-nez v1, :cond_0
 
     const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    sget-object v3, Lzk8;->b:Lzk8;
-
-    if-ne v0, v3, :cond_0
-
-    move v0, v2
 
     goto :goto_0
 
     :cond_0
-    move v0, v1
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
 
     :goto_0
-    iget-object v4, p0, Lcn1;->o:Lzk8;
+    add-int/2addr v0, v1
 
-    if-ne v4, v3, :cond_1
+    return v0
+.end method
 
-    move v6, v2
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    goto :goto_1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    :cond_1
-    move v6, v1
+    const-string v1, "ShowSnackbar(priority="
 
-    :goto_1
-    iget-object v1, p0, Lcn1;->b:Lio1;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, v1, Lio1;->c:Lcv1;
+    iget-object v1, p0, Lcn1;->D:Lkm1;
 
-    iget-object v2, v1, Lcv1;->b:Lr21;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    check-cast v2, Ls21;
+    const-string v1, ", textSource="
 
-    invoke-virtual {v2, v0}, Ls21;->e(Z)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_2
+    iget-object v1, p0, Lcn1;->E:Ls5g;
 
-    iget-object v0, v1, Lcv1;->s:Lwif;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
+    const-string v1, ", icon="
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast v0, Li1a;
+    iget-object v1, p0, Lcn1;->F:Ljava/lang/Integer;
 
-    sget-object v2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-interface {v0, v2}, Li1a;->h(Ljava/lang/Object;)Z
+    const-string v1, ")"
 
-    :cond_2
-    iget-object v0, v1, Lcv1;->h:Lvpd;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lvpd;->c()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    iget-object v0, v1, Lcv1;->e:Lz31;
-
-    invoke-virtual {v0, v6}, Lz31;->c(Z)V
-
-    iget-object v0, v1, Lcv1;->b:Lr21;
-
-    check-cast v0, Ls21;
-
-    iget-object v0, v0, Ls21;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
-
-    move-object v5, v0
-
-    check-cast v5, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;
-
-    if-eqz v5, :cond_4
-
-    const/16 v10, 0xc
-
-    const/4 v11, 0x0
-
-    const/4 v7, 0x1
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    invoke-static/range {v5 .. v11}, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;->setSpeakerEnabledAsync$default(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;ZZLji6;Lli6;ILjava/lang/Object;)V
-
-    :cond_4
-    :goto_2
-    sget-object v0, Lccg;->a:Lccg;
 
     return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lcn1;->c:Lzk8;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    sget-object v3, Lzk8;->b:Lzk8;
-
-    if-ne v0, v3, :cond_5
-
-    move v0, v2
-
-    goto :goto_3
-
-    :cond_5
-    move v0, v1
-
-    :goto_3
-    iget-object v4, p0, Lcn1;->o:Lzk8;
-
-    if-ne v4, v3, :cond_6
-
-    move v6, v2
-
-    goto :goto_4
-
-    :cond_6
-    move v6, v1
-
-    :goto_4
-    iget-object v1, p0, Lcn1;->b:Lio1;
-
-    iget-object v1, v1, Lio1;->c:Lcv1;
-
-    iget-object v2, v1, Lcv1;->b:Lr21;
-
-    check-cast v2, Ls21;
-
-    invoke-virtual {v2, v0}, Ls21;->e(Z)V
-
-    if-eqz v0, :cond_7
-
-    iget-object v0, v1, Lcv1;->s:Lwif;
-
-    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Li1a;
-
-    sget-object v2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-interface {v0, v2}, Li1a;->h(Ljava/lang/Object;)Z
-
-    :cond_7
-    iget-object v0, v1, Lcv1;->h:Lvpd;
-
-    invoke-virtual {v0}, Lvpd;->c()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_8
-
-    goto :goto_5
-
-    :cond_8
-    iget-object v0, v1, Lcv1;->e:Lz31;
-
-    invoke-virtual {v0, v6}, Lz31;->c(Z)V
-
-    iget-object v0, v1, Lcv1;->b:Lr21;
-
-    check-cast v0, Ls21;
-
-    iget-object v0, v0, Ls21;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v5, v0
-
-    check-cast v5, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;
-
-    if-eqz v5, :cond_9
-
-    const/16 v10, 0xc
-
-    const/4 v11, 0x0
-
-    const/4 v7, 0x1
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    invoke-static/range {v5 .. v11}, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;->setSpeakerEnabledAsync$default(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;ZZLji6;Lli6;ILjava/lang/Object;)V
-
-    :cond_9
-    :goto_5
-    sget-object v0, Lccg;->a:Lccg;
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

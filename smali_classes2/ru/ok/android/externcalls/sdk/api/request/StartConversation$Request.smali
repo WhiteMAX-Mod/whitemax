@@ -3,8 +3,9 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lem;
-.implements Lula;
+.implements Lkm;
+.implements Lnua;
+.implements Lyl;
 
 
 # annotations
@@ -20,20 +21,22 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lem;",
-        "Lula;"
+        "Lkm;",
+        "Lnua;",
+        "Lyl;"
     }
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000\u0094\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0010\t\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\n\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00020\u00012\u00020\u0003B\u00b5\u0001\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0006\u001a\u00020\u0004\u0012\u0006\u0010\u0008\u001a\u00020\u0007\u0012\u0008\u0010\n\u001a\u0004\u0018\u00010\t\u0012\u000e\u0010\r\u001a\n\u0012\u0004\u0012\u00020\u000c\u0018\u00010\u000b\u0012\u000e\u0010\u000e\u001a\n\u0012\u0004\u0012\u00020\u0004\u0018\u00010\u000b\u0012\u0006\u0010\u0010\u001a\u00020\u000f\u00120\u0010\u0015\u001a,\u0012\u0006\u0012\u0004\u0018\u00010\t\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u000c0\u000b\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u0012\u0012\u0004\u0012\u00020\u00130\u0011j\u0002`\u0014\u00120\u0010\u0017\u001a,\u0012\u0006\u0012\u0004\u0018\u00010\t\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u00040\u000b\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u0012\u0012\u0004\u0012\u00020\u00130\u0011j\u0002`\u0016\u00a2\u0006\u0004\u0008\u0018\u0010\u0019J\u0010\u0010\u001a\u001a\u00020\u0007H\u0096\u0001\u00a2\u0006\u0004\u0008\u001a\u0010\u001bJ\u0010\u0010\u001c\u001a\u00020\u0007H\u0096\u0001\u00a2\u0006\u0004\u0008\u001c\u0010\u001bJ\u0010\u0010\u001d\u001a\u00020\u0007H\u0096\u0001\u00a2\u0006\u0004\u0008\u001d\u0010\u001bJ\u0010\u0010\u001e\u001a\u00020\u0007H\u0096\u0001\u00a2\u0006\u0004\u0008\u001e\u0010\u001bJ\u0010\u0010\u001f\u001a\u00020\u0007H\u0096\u0001\u00a2\u0006\u0004\u0008\u001f\u0010\u001bJ\u0010\u0010 \u001a\u00020\u0007H\u0096\u0001\u00a2\u0006\u0004\u0008 \u0010\u001bJ\u0018\u0010#\u001a\u00020\u00132\u0006\u0010\"\u001a\u00020!H\u0096\u0001\u00a2\u0006\u0004\u0008#\u0010$J\u0018\u0010%\u001a\u00020\u00132\u0006\u0010\"\u001a\u00020!H\u0096\u0001\u00a2\u0006\u0004\u0008%\u0010$J\u000f\u0010\'\u001a\u00020&H\u0016\u00a2\u0006\u0004\u0008\'\u0010(R\u001a\u0010,\u001a\u0008\u0012\u0004\u0012\u00020\u00020)8VX\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u0008*\u0010+R\u001c\u00101\u001a\n\u0012\u0006\u0008\u0001\u0012\u00020.0-8VX\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u0008/\u00100R\u001c\u00103\u001a\n\u0012\u0006\u0008\u0001\u0012\u00020\u00020-8\u0016X\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u00082\u00100R\u0014\u00107\u001a\u0002048VX\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u00085\u00106R\u0014\u0010;\u001a\u0002088VX\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u00089\u0010:R\u0014\u0010?\u001a\u00020<8VX\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u0008=\u0010>R\u0014\u0010C\u001a\u00020@8\u0016X\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u0008A\u0010B\u00a8\u0006D"
+        "\u0000\u0098\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0010\t\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\n\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u0018\u00002\u00020\u00012\u00020\u00022\u0008\u0012\u0004\u0012\u00020\u00040\u0003B\u00b5\u0001\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u0012\u0006\u0010\u0007\u001a\u00020\u0005\u0012\u0006\u0010\t\u001a\u00020\u0008\u0012\u0008\u0010\u000b\u001a\u0004\u0018\u00010\n\u0012\u000e\u0010\u000e\u001a\n\u0012\u0004\u0012\u00020\r\u0018\u00010\u000c\u0012\u000e\u0010\u000f\u001a\n\u0012\u0004\u0012\u00020\u0005\u0018\u00010\u000c\u0012\u0006\u0010\u0011\u001a\u00020\u0010\u00120\u0010\u0016\u001a,\u0012\u0006\u0012\u0004\u0018\u00010\n\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\r0\u000c\u0012\u0004\u0012\u00020\u0010\u0012\u0004\u0012\u00020\u0013\u0012\u0004\u0012\u00020\u00140\u0012j\u0002`\u0015\u00120\u0010\u0018\u001a,\u0012\u0006\u0012\u0004\u0018\u00010\n\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u00050\u000c\u0012\u0004\u0012\u00020\u0010\u0012\u0004\u0012\u00020\u0013\u0012\u0004\u0012\u00020\u00140\u0012j\u0002`\u0017\u00a2\u0006\u0004\u0008\u0019\u0010\u001aJ\u0010\u0010\u001b\u001a\u00020\u0008H\u0096\u0001\u00a2\u0006\u0004\u0008\u001b\u0010\u001cJ\u0010\u0010\u001d\u001a\u00020\u0008H\u0096\u0001\u00a2\u0006\u0004\u0008\u001d\u0010\u001cJ\u0010\u0010\u001e\u001a\u00020\u0008H\u0096\u0001\u00a2\u0006\u0004\u0008\u001e\u0010\u001cJ\u0010\u0010\u001f\u001a\u00020\u0008H\u0096\u0001\u00a2\u0006\u0004\u0008\u001f\u0010\u001cJ\u0010\u0010 \u001a\u00020\u0008H\u0096\u0001\u00a2\u0006\u0004\u0008 \u0010\u001cJ\u0010\u0010!\u001a\u00020\u0008H\u0096\u0001\u00a2\u0006\u0004\u0008!\u0010\u001cJ\u0018\u0010$\u001a\u00020\u00142\u0006\u0010#\u001a\u00020\"H\u0096\u0001\u00a2\u0006\u0004\u0008$\u0010%J\u0018\u0010&\u001a\u00020\u00142\u0006\u0010#\u001a\u00020\"H\u0096\u0001\u00a2\u0006\u0004\u0008&\u0010%J\u000f\u0010(\u001a\u00020\'H\u0016\u00a2\u0006\u0004\u0008(\u0010)R\u001a\u0010-\u001a\u0008\u0012\u0004\u0012\u00020\u00040*8VX\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u0008+\u0010,R\u001c\u00102\u001a\n\u0012\u0006\u0008\u0001\u0012\u00020/0.8VX\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u00080\u00101R\u001c\u00104\u001a\n\u0012\u0006\u0008\u0001\u0012\u00020\u00040.8\u0016X\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u00083\u00101R\u0014\u00108\u001a\u0002058VX\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u00086\u00107R\u0014\u0010<\u001a\u0002098VX\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u0008:\u0010;R\u0014\u0010@\u001a\u00020=8VX\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u0008>\u0010?R\u0014\u0010D\u001a\u00020A8\u0016X\u0096\u0005\u00a2\u0006\u0006\u001a\u0004\u0008B\u0010C\u00a8\u0006E"
     }
     d2 = {
         "Lru/ok/android/externcalls/sdk/api/request/StartConversation$Request;",
-        "Lem;",
+        "Lkm;",
+        "Lnua;",
+        "Lyl;",
         "Lru/ok/android/externcalls/sdk/api/CallInfo;",
-        "Lula;",
         "",
         "servers",
         "cid",
@@ -48,14 +51,14 @@
         "Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;",
         "params",
         "Lkotlin/Function4;",
-        "Lwl0;",
-        "Lccg;",
+        "Ltl0;",
+        "Lqqg;",
         "Lru/ok/android/externcalls/sdk/api/request/AddParamsCallback;",
         "addParamsCallback",
         "Lru/ok/android/externcalls/sdk/api/request/AddParamsByExternalOpponentIdsCallback;",
         "addParamsByExternalOpponentIdsCallback",
         "<init>",
-        "(Ljava/lang/String;Ljava/lang/String;ZLru/ok/android/externcalls/sdk/ConversationParticipant;Ljava/util/List;Ljava/util/List;Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;Ldj6;Ldj6;)V",
+        "(Ljava/lang/String;Ljava/lang/String;ZLru/ok/android/externcalls/sdk/ConversationParticipant;Ljava/util/List;Ljava/util/List;Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;Lwm6;Lwm6;)V",
         "canRepeat",
         "()Z",
         "shouldGzip",
@@ -63,22 +66,22 @@
         "shouldReport",
         "willWriteParams",
         "willWriteSupplyParams",
-        "Lcr7;",
+        "Lgy7;",
         "writer",
         "writeParams",
-        "(Lcr7;)V",
+        "(Lgy7;)V",
         "writeSupplyParams",
         "",
         "handleInterruptedIO",
         "()Ljava/lang/Object;",
-        "Lam;",
+        "Lul;",
         "getConfigExtractor",
-        "()Lam;",
+        "()Lul;",
         "configExtractor",
-        "Lpq7;",
+        "Lox7;",
         "Lru/ok/android/api/core/ApiInvocationException;",
         "getFailParser",
-        "()Lpq7;",
+        "()Lox7;",
         "failParser",
         "getOkParser",
         "okParser",
@@ -86,13 +89,13 @@
         "getPriority",
         "()I",
         "priority",
-        "Ltm;",
+        "Lnm;",
         "getScope",
-        "()Ltm;",
+        "()Lnm;",
         "scope",
-        "Lum;",
+        "Lom;",
         "getScopeAfter",
-        "()Lum;",
+        "()Lom;",
         "scopeAfter",
         "Landroid/net/Uri;",
         "getUri",
@@ -111,17 +114,17 @@
 
 
 # instance fields
-.field private final synthetic $$delegate_0:Lxl0;
+.field private final synthetic $$delegate_0:Lul0;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lxl0;"
+            "Lul0;"
         }
     .end annotation
 .end field
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;ZLru/ok/android/externcalls/sdk/ConversationParticipant;Ljava/util/List;Ljava/util/List;Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;Ldj6;Ldj6;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;ZLru/ok/android/externcalls/sdk/ConversationParticipant;Ljava/util/List;Ljava/util/List;Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;Lwm6;Lwm6;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -137,8 +140,8 @@
             "Ljava/lang/String;",
             ">;",
             "Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;",
-            "Ldj6;",
-            "Ldj6;",
+            "Lwm6;",
+            "Lwm6;",
             ")V"
         }
     .end annotation
@@ -147,17 +150,17 @@
 
     const-string v0, "vchat.startConversation"
 
-    invoke-static {v0}, Lcn;->a(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v0}, Lwm;->a(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    new-instance v1, Lwl0;
+    new-instance v1, Ltl0;
 
-    invoke-direct {v1, v0}, Lwl0;-><init>(Landroid/net/Uri;)V
+    invoke-direct {v1, v0}, Ltl0;-><init>(Landroid/net/Uri;)V
 
-    sget-object v0, Ltm;->c:Ltm;
+    sget-object v0, Lnm;->c:Lnm;
 
-    iput-object v0, v1, Lwl0;->b:Ltm;
+    iput-object v0, v1, Ltl0;->b:Lnm;
 
     const-string v0, "isVideo"
 
@@ -165,19 +168,19 @@
 
     move-result v2
 
-    invoke-virtual {v1, v0, v2}, Lwl0;->c(Ljava/lang/String;Z)V
+    invoke-virtual {v1, v0, v2}, Ltl0;->c(Ljava/lang/String;Z)V
 
     const-string v0, "turnServers"
 
-    invoke-virtual {v1, v0, p1}, Lwl0;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1, v0, p1}, Ltl0;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "conversationId"
 
-    invoke-virtual {v1, p1, p2}, Lwl0;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1, p1, p2}, Ltl0;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "createJoinLink"
 
-    invoke-virtual {v1, p1, p3}, Lwl0;->c(Ljava/lang/String;Z)V
+    invoke-virtual {v1, p1, p3}, Ltl0;->c(Ljava/lang/String;Z)V
 
     invoke-virtual {p7}, Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;->isMultipleDevicesEnabled()Z
 
@@ -191,7 +194,7 @@
 
     invoke-static {p1, p2}, Lru/ok/android/externcalls/sdk/log/GlobalRTCLogger;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance p1, Lvi7;
+    new-instance p1, Lwo7;
 
     const/4 p2, 0x6
 
@@ -199,11 +202,11 @@
 
     const-string v0, "protocolVersion"
 
-    invoke-direct {p1, v0, p2, p3}, Lvi7;-><init>(Ljava/lang/String;J)V
+    invoke-direct {p1, v0, p2, p3}, Lwo7;-><init>(Ljava/lang/String;J)V
 
-    iget-object p2, v1, Lwl0;->c:Lnm;
+    iget-object p2, v1, Ltl0;->c:Lgm;
 
-    invoke-virtual {p2, p1}, Lnm;->a(Lmm;)V
+    invoke-virtual {p2, p1}, Lgm;->a(Lfm;)V
 
     :cond_0
     invoke-virtual {p7}, Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;->getDomainId()Ljava/lang/String;
@@ -214,7 +217,7 @@
 
     const-string p2, "domainId"
 
-    invoke-virtual {v1, p2, p1}, Lwl0;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1, p2, p1}, Ltl0;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     invoke-virtual {p7}, Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;->getPayload()Ljava/lang/String;
@@ -225,17 +228,17 @@
 
     const-string p2, "payload"
 
-    invoke-virtual {v1, p2, p1}, Lwl0;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1, p2, p1}, Ltl0;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
     if-eqz p5, :cond_3
 
-    invoke-interface {p8, p4, p5, p7, v1}, Ldj6;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p8, p4, p5, p7, v1}, Lwm6;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_3
     if-eqz p6, :cond_4
 
-    invoke-interface {p9, p4, p6, p7, v1}, Ldj6;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p9, p4, p6, p7, v1}, Lwm6;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_4
     invoke-virtual {p7}, Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;->isWatchTogetherEnabledForAll()Z
@@ -246,19 +249,19 @@
 
     const-string p2, "onlyAdminCanShareMovie"
 
-    invoke-virtual {v1, p2, p1}, Lwl0;->c(Ljava/lang/String;Z)V
+    invoke-virtual {v1, p2, p1}, Ltl0;->c(Ljava/lang/String;Z)V
 
     sget-object p1, Lru/ok/android/externcalls/sdk/api/CallInfo;->Companion:Lru/ok/android/externcalls/sdk/api/CallInfo$Companion;
 
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/api/CallInfo$Companion;->getPARSER()Lpq7;
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/api/CallInfo$Companion;->getPARSER()Lox7;
 
     move-result-object p1
 
-    invoke-virtual {v1, p1}, Lwl0;->a(Lpq7;)Lxl0;
+    invoke-virtual {v1, p1}, Ltl0;->a(Lox7;)Lul0;
 
     move-result-object p1
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/api/request/StartConversation$Request;->$$delegate_0:Lxl0;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/api/request/StartConversation$Request;->$$delegate_0:Lul0;
 
     return-void
 .end method
@@ -268,63 +271,63 @@
 .method public canRepeat()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/StartConversation$Request;->$$delegate_0:Lxl0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/StartConversation$Request;->$$delegate_0:Lul0;
 
-    iget-object v0, v0, Lxl0;->c:Lnm;
+    iget-object v0, v0, Lul0;->c:Lgm;
 
-    iget-boolean v0, v0, Lnm;->b:Z
+    iget-boolean v0, v0, Lgm;->b:Z
 
     return v0
 .end method
 
-.method public getConfigExtractor()Lam;
+.method public getConfigExtractor()Lul;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lam;"
+            "Lul;"
         }
     .end annotation
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/StartConversation$Request;->$$delegate_0:Lxl0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/StartConversation$Request;->$$delegate_0:Lul0;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v0, Lam;->e:Lfpd;
+    sget-object v0, Lul;->f:Lrha;
 
     return-object v0
 .end method
 
-.method public getFailParser()Lpq7;
+.method public getFailParser()Lox7;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lpq7;"
+            "Lox7;"
         }
     .end annotation
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/StartConversation$Request;->$$delegate_0:Lxl0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/StartConversation$Request;->$$delegate_0:Lul0;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v0, Lzw3;->a:Lzw3;
+    sget-object v0, Ltha;->c:Ltha;
 
     return-object v0
 .end method
 
-.method public getOkParser()Lpq7;
+.method public getOkParser()Lox7;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lpq7;"
+            "Lox7;"
         }
     .end annotation
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/StartConversation$Request;->$$delegate_0:Lxl0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/StartConversation$Request;->$$delegate_0:Lul0;
 
-    iget-object v0, v0, Lxl0;->d:Lpq7;
+    iget-object v0, v0, Lul0;->d:Lox7;
 
     return-object v0
 .end method
@@ -332,7 +335,7 @@
 .method public getPriority()I
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/StartConversation$Request;->$$delegate_0:Lxl0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/StartConversation$Request;->$$delegate_0:Lul0;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -341,24 +344,24 @@
     return v0
 .end method
 
-.method public getScope()Ltm;
+.method public getScope()Lnm;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/StartConversation$Request;->$$delegate_0:Lxl0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/StartConversation$Request;->$$delegate_0:Lul0;
 
-    iget-object v0, v0, Lxl0;->b:Ltm;
+    iget-object v0, v0, Lul0;->b:Lnm;
 
     return-object v0
 .end method
 
-.method public getScopeAfter()Lum;
+.method public getScopeAfter()Lom;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/StartConversation$Request;->$$delegate_0:Lxl0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/StartConversation$Request;->$$delegate_0:Lul0;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v0, Lum;->a:Lum;
+    sget-object v0, Lom;->a:Lom;
 
     return-object v0
 .end method
@@ -366,9 +369,9 @@
 .method public getUri()Landroid/net/Uri;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/StartConversation$Request;->$$delegate_0:Lxl0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/StartConversation$Request;->$$delegate_0:Lul0;
 
-    iget-object v0, v0, Lxl0;->a:Landroid/net/Uri;
+    iget-object v0, v0, Lul0;->a:Landroid/net/Uri;
 
     return-object v0
 .end method
@@ -404,7 +407,7 @@
 
     const/4 v11, 0x0
 
-    invoke-direct/range {v0 .. v13}, Lru/ok/android/externcalls/sdk/api/CallInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;ZIILki4;)V
+    invoke-direct/range {v0 .. v13}, Lru/ok/android/externcalls/sdk/api/CallInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;ZIILtk4;)V
 
     return-object v0
 .end method
@@ -412,7 +415,7 @@
 .method public shouldGzip()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/StartConversation$Request;->$$delegate_0:Lxl0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/StartConversation$Request;->$$delegate_0:Lul0;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -424,11 +427,11 @@
 .method public shouldPost()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/StartConversation$Request;->$$delegate_0:Lxl0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/StartConversation$Request;->$$delegate_0:Lul0;
 
-    iget-object v0, v0, Lxl0;->c:Lnm;
+    iget-object v0, v0, Lul0;->c:Lgm;
 
-    iget-boolean v0, v0, Lnm;->c:Z
+    iget-boolean v0, v0, Lgm;->c:Z
 
     return v0
 .end method
@@ -436,7 +439,7 @@
 .method public shouldReport()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/StartConversation$Request;->$$delegate_0:Lxl0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/StartConversation$Request;->$$delegate_0:Lul0;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -448,11 +451,11 @@
 .method public willWriteParams()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/StartConversation$Request;->$$delegate_0:Lxl0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/StartConversation$Request;->$$delegate_0:Lul0;
 
-    iget-object v0, v0, Lxl0;->c:Lnm;
+    iget-object v0, v0, Lul0;->c:Lgm;
 
-    iget-boolean v0, v0, Lnm;->d:Z
+    iget-boolean v0, v0, Lgm;->d:Z
 
     return v0
 .end method
@@ -460,31 +463,31 @@
 .method public willWriteSupplyParams()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/StartConversation$Request;->$$delegate_0:Lxl0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/StartConversation$Request;->$$delegate_0:Lul0;
 
-    iget-object v0, v0, Lxl0;->c:Lnm;
+    iget-object v0, v0, Lul0;->c:Lgm;
 
-    iget-boolean v0, v0, Lnm;->e:Z
+    iget-boolean v0, v0, Lgm;->e:Z
 
     return v0
 .end method
 
-.method public writeParams(Lcr7;)V
+.method public writeParams(Lgy7;)V
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/StartConversation$Request;->$$delegate_0:Lxl0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/StartConversation$Request;->$$delegate_0:Lul0;
 
-    invoke-virtual {v0, p1}, Lxl0;->writeParams(Lcr7;)V
+    invoke-virtual {v0, p1}, Lul0;->writeParams(Lgy7;)V
 
     return-void
 .end method
 
-.method public writeSupplyParams(Lcr7;)V
+.method public writeSupplyParams(Lgy7;)V
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/StartConversation$Request;->$$delegate_0:Lxl0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/StartConversation$Request;->$$delegate_0:Lul0;
 
-    invoke-virtual {v0, p1}, Lxl0;->writeSupplyParams(Lcr7;)V
+    invoke-virtual {v0, p1}, Lul0;->writeSupplyParams(Lgy7;)V
 
     return-void
 .end method

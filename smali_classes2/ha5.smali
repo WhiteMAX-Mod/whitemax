@@ -2,44 +2,65 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lxig;
+
+# instance fields
+.field public final a:D
+
+.field public volatile b:D
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 2
+
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-wide v0, 0x3fd3333333333333L    # 0.3
+
+    .line 5
+    iput-wide v0, p0, Lha5;->a:D
+
+    return-void
+.end method
+
+.method public constructor <init>(D)V
+    .locals 2
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-wide/high16 v0, 0x3fe0000000000000L    # 0.5
+
+    .line 2
+    iput-wide v0, p0, Lha5;->a:D
+
+    .line 3
+    iput-wide p1, p0, Lha5;->b:D
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(ILjava/lang/String;)Lorf;
-    .locals 0
+.method public final a(D)V
+    .locals 6
 
-    invoke-virtual {p2}, Ljava/lang/String;->length()I
+    iget-wide v0, p0, Lha5;->b:D
 
-    move-result p2
+    iget-wide v2, p0, Lha5;->a:D
 
-    if-nez p2, :cond_0
+    mul-double/2addr p1, v2
 
-    const-class p2, Lha5;
+    const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
 
-    invoke-static {p2}, Lz7d;->a(Ljava/lang/Class;)Lh73;
+    sub-double/2addr v4, v2
 
-    move-result-object p2
+    mul-double/2addr v4, v0
 
-    invoke-static {p1, p2}, Lpbi;->b(ILh73;)Ljava/lang/Integer;
+    add-double/2addr v4, p1
 
-    move-result-object p1
+    iput-wide v4, p0, Lha5;->b:D
 
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    new-instance p2, Lorf;
-
-    invoke-direct {p2, p1}, Lorf;-><init>(I)V
-
-    return-object p2
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return-object p1
+    return-void
 .end method

@@ -1,5 +1,5 @@
 .class public abstract Lb2;
-.super Lmcg;
+.super Lrrg;
 .source "SourceFile"
 
 # interfaces
@@ -18,9 +18,9 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lmcg;-><init>(I)V
+    invoke-direct {p0, v0}, Lrrg;-><init>(I)V
 
-    invoke-static {p2, p1}, Lavi;->f(II)V
+    invoke-static {p2, p1}, Lu5j;->f(II)V
 
     iput p1, p0, Lb2;->b:I
 
@@ -31,6 +31,9 @@
 
 
 # virtual methods
+.method public abstract a(I)Ljava/lang/Object;
+.end method
+
 .method public final add(Ljava/lang/Object;)V
     .locals 0
 
@@ -39,9 +42,6 @@
     invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
     throw p1
-.end method
-
-.method public abstract b(I)Ljava/lang/Object;
 .end method
 
 .method public final hasNext()Z
@@ -95,7 +95,7 @@
 
     iput v1, p0, Lb2;->c:I
 
-    invoke-virtual {p0, v0}, Lb2;->b(I)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lb2;->a(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -132,7 +132,7 @@
 
     iput v0, p0, Lb2;->c:I
 
-    invoke-virtual {p0, v0}, Lb2;->b(I)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lb2;->a(I)Ljava/lang/Object;
 
     move-result-object v0
 

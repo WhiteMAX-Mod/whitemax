@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public x1:Z
+.field public y1:Z
 
 
 # direct methods
@@ -18,71 +18,32 @@
 
 
 # virtual methods
-.method public D0()Landroid/app/Dialog;
-    .locals 3
-
-    new-instance v0, Lrs0;
-
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->E()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {p0}, Landroidx/fragment/app/DialogFragment;->C0()I
-
-    move-result v2
-
-    invoke-direct {v0, v1, v2}, Lrs0;-><init>(Landroid/content/Context;I)V
-
-    return-object v0
-.end method
-
-.method public final G0()V
-    .locals 2
-
-    iget-boolean v0, p0, Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment;->x1:Z
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0, v1}, Landroidx/fragment/app/DialogFragment;->B0(ZZ)V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0, v1, v1}, Landroidx/fragment/app/DialogFragment;->B0(ZZ)V
-
-    return-void
-.end method
-
-.method public final H0()V
+.method public final s0()V
     .locals 5
 
-    iget-object v0, p0, Landroidx/fragment/app/DialogFragment;->s1:Landroid/app/Dialog;
+    iget-object v0, p0, Landroidx/fragment/app/DialogFragment;->t1:Landroid/app/Dialog;
 
-    instance-of v1, v0, Lrs0;
-
-    const/4 v2, 0x1
+    instance-of v1, v0, Lvs0;
 
     if-eqz v1, :cond_3
 
-    check-cast v0, Lrs0;
+    check-cast v0, Lvs0;
 
-    invoke-virtual {v0}, Lrs0;->g()Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
+    invoke-virtual {v0}, Lvs0;->g()Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 
     move-result-object v1
 
-    iget-boolean v3, v1, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->I:Z
+    iget-boolean v2, v1, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->I:Z
 
-    if-eqz v3, :cond_3
+    if-eqz v2, :cond_3
 
-    iget-boolean v0, v0, Lrs0;->s0:Z
+    iget-boolean v0, v0, Lvs0;->t0:Z
 
     if-eqz v0, :cond_3
 
-    iput-boolean v2, p0, Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment;->x1:Z
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment;->y1:Z
 
     iget v0, v1, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->L:I
 
@@ -90,29 +51,29 @@
 
     if-ne v0, v2, :cond_0
 
-    invoke-virtual {p0}, Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment;->G0()V
+    invoke-virtual {p0}, Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment;->y0()V
 
     return-void
 
     :cond_0
-    iget-object v0, p0, Landroidx/fragment/app/DialogFragment;->s1:Landroid/app/Dialog;
+    iget-object v0, p0, Landroidx/fragment/app/DialogFragment;->t1:Landroid/app/Dialog;
 
-    instance-of v3, v0, Lrs0;
+    instance-of v3, v0, Lvs0;
 
     if-eqz v3, :cond_1
 
-    check-cast v0, Lrs0;
+    check-cast v0, Lvs0;
 
-    iget-object v3, v0, Lrs0;->Y:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
+    iget-object v3, v0, Lvs0;->X:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 
-    iget-object v0, v0, Lrs0;->z0:Lps0;
+    iget-object v0, v0, Lvs0;->A0:Lts0;
 
     iget-object v3, v3, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->W:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
     :cond_1
-    new-instance v0, Lps0;
+    new-instance v0, Lts0;
 
     move-object v3, p0
 
@@ -120,7 +81,7 @@
 
     const/4 v4, 0x1
 
-    invoke-direct {v0, v4, v3}, Lps0;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v4, v3}, Lts0;-><init>(ILjava/lang/Object;)V
 
     iget-object v3, v1, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->W:Ljava/util/ArrayList;
 
@@ -138,9 +99,44 @@
     return-void
 
     :cond_3
+    invoke-super {p0}, Landroidx/fragment/app/DialogFragment;->s0()V
+
+    return-void
+.end method
+
+.method public v0()Landroid/app/Dialog;
+    .locals 3
+
+    new-instance v0, Lvs0;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/a;->v()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Landroidx/fragment/app/DialogFragment;->u0()I
+
+    move-result v2
+
+    invoke-direct {v0, v1, v2}, Lvs0;-><init>(Landroid/content/Context;I)V
+
+    return-object v0
+.end method
+
+.method public final y0()V
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment;->y1:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-super {p0}, Landroidx/fragment/app/DialogFragment;->s0()V
+
+    return-void
+
+    :cond_0
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v2, v0}, Landroidx/fragment/app/DialogFragment;->B0(ZZ)V
+    invoke-virtual {p0, v0, v0}, Landroidx/fragment/app/DialogFragment;->t0(ZZ)V
 
     return-void
 .end method

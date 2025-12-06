@@ -1,160 +1,67 @@
 .class public final Lmea;
-.super Ljava/lang/Object;
+.super Landroid/telephony/TelephonyCallback;
 .source "SourceFile"
 
-
-# static fields
-.field public static final c:Ljava/lang/Object;
-
-.field public static d:Ljava/lang/String;
-
-.field public static e:Ljava/util/HashSet;
-
-.field public static final f:Ljava/lang/Object;
-
-.field public static g:Llea;
+# interfaces
+.implements Landroid/telephony/TelephonyCallback$DisplayInfoListener;
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
-
-.field public final b:Landroid/app/NotificationManager;
+.field public final a:Lqea;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lqea;)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/Object;
+    invoke-direct {p0}, Landroid/telephony/TelephonyCallback;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lmea;->c:Ljava/lang/Object;
-
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    sput-object v0, Lmea;->e:Ljava/util/HashSet;
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lmea;->f:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lmea;->a:Landroid/content/Context;
-
-    const-string v0, "notification"
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/app/NotificationManager;
-
-    iput-object p1, p0, Lmea;->b:Landroid/app/NotificationManager;
+    iput-object p1, p0, Lmea;->a:Lqea;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;ILandroid/app/Notification;)V
-    .locals 4
+.method public final onDisplayInfoChanged(Landroid/telephony/TelephonyDisplayInfo;)V
+    .locals 2
 
-    iget-object v0, p0, Lmea;->b:Landroid/app/NotificationManager;
+    invoke-static {p1}, Ll49;->c(Landroid/telephony/TelephonyDisplayInfo;)I
 
-    iget-object v1, p3, Landroid/app/Notification;->extras:Landroid/os/Bundle;
+    move-result p1
 
-    if-eqz v1, :cond_1
+    const/4 v0, 0x3
 
-    const-string v2, "android.support.useSideChannel"
+    const/4 v1, 0x5
 
-    invoke-virtual {v1, v2}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
+    if-eq p1, v0, :cond_1
 
-    move-result v1
+    const/4 v0, 0x4
 
-    if-eqz v1, :cond_1
+    if-eq p1, v0, :cond_1
 
-    new-instance v1, Liea;
-
-    iget-object v2, p0, Lmea;->a:Landroid/content/Context;
-
-    invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v1, v2, p2, p1, p3}, Liea;-><init>(Ljava/lang/String;ILjava/lang/String;Landroid/app/Notification;)V
-
-    sget-object v2, Lmea;->f:Ljava/lang/Object;
-
-    monitor-enter v2
-
-    :try_start_0
-    sget-object p3, Lmea;->g:Llea;
-
-    if-nez p3, :cond_0
-
-    new-instance p3, Llea;
-
-    iget-object v3, p0, Lmea;->a:Landroid/content/Context;
-
-    invoke-virtual {v3}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    invoke-direct {p3, v3}, Llea;-><init>(Landroid/content/Context;)V
-
-    sput-object p3, Lmea;->g:Llea;
+    if-ne p1, v1, :cond_0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p1
+    :cond_0
+    const/4 p1, 0x0
 
     goto :goto_1
 
-    :cond_0
+    :cond_1
     :goto_0
-    sget-object p3, Lmea;->g:Llea;
-
-    iget-object p3, p3, Llea;->b:Landroid/os/Handler;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {p3, v3, v1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object p3
-
-    invoke-virtual {p3}, Landroid/os/Message;->sendToTarget()V
-
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v0, p1, p2}, Landroid/app/NotificationManager;->cancel(Ljava/lang/String;I)V
-
-    return-void
+    const/4 p1, 0x1
 
     :goto_1
-    :try_start_1
-    monitor-exit v2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    if-eqz p1, :cond_2
 
-    throw p1
+    const/16 v1, 0xa
 
-    :cond_1
-    invoke-virtual {v0, p1, p2, p3}, Landroid/app/NotificationManager;->notify(Ljava/lang/String;ILandroid/app/Notification;)V
+    :cond_2
+    iget-object p1, p0, Lmea;->a:Lqea;
+
+    invoke-virtual {p1, v1}, Lqea;->d(I)V
 
     return-void
 .end method

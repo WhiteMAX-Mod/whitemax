@@ -3,28 +3,32 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lone;
+.implements Lmze;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Lk01;
 
-.field public final synthetic b:Lh01;
+.field public final synthetic b:Z
 
-.field public final synthetic c:Lhi1;
+.field public final synthetic c:Lti1;
+
+.field public final synthetic d:Lfje;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lh01;Lhi1;I)V
+.method public synthetic constructor <init>(Lk01;ZLti1;Lfje;)V
     .locals 0
 
-    iput p3, p0, Lvz0;->a:I
-
-    iput-object p1, p0, Lvz0;->b:Lh01;
-
-    iput-object p2, p0, Lvz0;->c:Lhi1;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lvz0;->a:Lk01;
+
+    iput-boolean p2, p0, Lvz0;->b:Z
+
+    iput-object p3, p0, Lvz0;->c:Lti1;
+
+    iput-object p4, p0, Lvz0;->d:Lfje;
 
     return-void
 .end method
@@ -32,80 +36,62 @@
 
 # virtual methods
 .method public final onResponse(Lorg/json/JSONObject;)V
-    .locals 3
+    .locals 5
 
-    iget p1, p0, Lvz0;->a:I
+    iget-object v0, p0, Lvz0;->a:Lk01;
 
-    packed-switch p1, :pswitch_data_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object p1, p0, Lvz0;->b:Lh01;
+    const-string v1, "error"
 
-    iget-object v0, p1, Lh01;->E0:Lhi1;
-
-    iget-object v1, p0, Lvz0;->c:Lhi1;
-
-    invoke-virtual {v1, v0}, Lhi1;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    iput-object v0, p1, Lh01;->E0:Lhi1;
-
-    sget-object v1, Li71;->G0:Li71;
-
-    invoke-virtual {p1, v1, v0}, Lh01;->l(Li71;Ljava/lang/Object;)V
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lvz0;->b:Lh01;
-
-    iget-object v0, p1, Lh01;->d0:Lps6;
-
-    iget-object p1, p1, Lh01;->j0:Lqi1;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v1, p0, Lvz0;->c:Lhi1;
-
-    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p1, v2, v1}, Lqi1;->l(Ls7e;Ljava/util/List;)Ljava/util/ArrayList;
+    invoke-virtual {p1, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {p1}, Lnb3;->D(Ljava/util/List;)Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
-    move-result-object p1
+    move-result p1
 
-    check-cast p1, Lli1;
+    if-eqz p1, :cond_2
 
-    if-eqz p1, :cond_1
+    iget-boolean p1, p0, Lvz0;->b:Z
 
-    iget-object v0, v0, Lps6;->d:Ljava/lang/Object;
+    iget-object v1, p0, Lvz0;->c:Lti1;
 
-    check-cast v0, Ljava/util/Hashtable;
+    if-eqz p1, :cond_0
 
-    invoke-virtual {v0, p1}, Ljava/util/Hashtable;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    move-object v2, v1
 
     goto :goto_0
 
-    :cond_1
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :cond_0
+    const/4 v2, 0x0
 
     :goto_0
-    return-void
+    iget-object v3, p0, Lvz0;->d:Lfje;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    instance-of v4, v3, Leje;
+
+    if-eqz v4, :cond_1
+
+    iget-object v4, v0, Lk01;->T0:Lkp1;
+
+    xor-int/lit8 p1, p1, 0x1
+
+    check-cast v3, Leje;
+
+    invoke-virtual {v4, p1, v1, v3}, Lkp1;->b(ZLti1;Leje;)V
+
+    goto :goto_1
+
+    :cond_1
+    iput-object v2, v0, Lk01;->D0:Lti1;
+
+    :goto_1
+    sget-object p1, Lx71;->I0:Lx71;
+
+    invoke-virtual {v0, p1, v2}, Lk01;->l(Lx71;Ljava/lang/Object;)V
+
+    :cond_2
+    return-void
 .end method

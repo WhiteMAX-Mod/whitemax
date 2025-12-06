@@ -1,133 +1,48 @@
 .class public final Ls31;
-.super Lsgf;
-.source "SourceFile"
-
-# interfaces
-.implements Lzi6;
+.super Lq44;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic X:Lpg0;
 
-.field public final synthetic Y:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;)V
+.method public constructor <init>(Lpg0;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Ls31;->Y:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
+    iput-object p1, p0, Ls31;->X:Lpg0;
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ls31;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ls31;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Ls31;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Ls31;
-
-    iget-object v1, p0, Ls31;->Y:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
-
-    invoke-direct {v0, p2, v1}, Ls31;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;)V
-
-    iput-object p1, v0, Ls31;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+    .locals 1
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    iput-object p1, p0, Ls31;->d:Ljava/lang/Object;
 
-    iget-object p1, p0, Ls31;->X:Ljava/lang/Object;
+    iget p1, p0, Ls31;->o:I
 
-    check-cast p1, Ljava/lang/Boolean;
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    or-int/2addr p1, v0
 
-    move-result p1
+    iput p1, p0, Ls31;->o:I
 
-    iget-object v0, p0, Ls31;->Y:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
+    iget-object p1, p0, Ls31;->X:Lpg0;
 
-    if-eqz p1, :cond_0
+    const/4 v0, 0x0
 
-    sget-object p1, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->q0:[Ltr7;
-
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->C0()Le31;
-
-    move-result-object v1
-
-    iget-object v2, v1, Le31;->Q0:Lsyf;
-
-    iget-object v3, v1, Le31;->I0:Lbid;
-
-    sget p1, Lnra;->d2:I
-
-    new-instance v4, Lorf;
-
-    invoke-direct {v4, p1}, Lorf;-><init>(I)V
-
-    sget p1, Ljra;->Q:I
-
-    new-instance v5, La31;
-
-    const/4 v0, 0x2
-
-    invoke-direct {v5, v1, v0}, La31;-><init>(Le31;I)V
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    invoke-virtual/range {v1 .. v6}, Le31;->w(Lsyf;Lbid;Lorf;Lji6;Ljava/lang/Integer;)Lsyf;
+    invoke-virtual {p1, v0, p0}, Lpg0;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
-
-    iput-object p1, v1, Le31;->Q0:Lsyf;
-
-    goto :goto_0
-
-    :cond_0
-    sget-object p1, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->q0:[Ltr7;
-
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->C0()Le31;
-
-    move-result-object p1
-
-    iget-object p1, p1, Le31;->Q0:Lsyf;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1}, Lsyf;->a()V
-
-    :cond_1
-    :goto_0
-    sget-object p1, Lccg;->a:Lccg;
 
     return-object p1
 .end method

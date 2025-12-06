@@ -1,45 +1,65 @@
-.class public abstract Lct2;
-.super Ljava/lang/Object;
+.class public final Lct2;
+.super Lq44;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Liu7;
+# instance fields
+.field public X:Ljava/util/Collection;
+
+.field public Y:Ljava/util/Iterator;
+
+.field public Z:Ljava/lang/Object;
+
+.field public d:Ldt2;
+
+.field public o:Lbs4;
+
+.field public s0:Lps2;
+
+.field public t0:Ldt2;
+
+.field public u0:J
+
+.field public synthetic v0:Ljava/lang/Object;
+
+.field public final synthetic w0:Ldt2;
+
+.field public x0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Ldt2;Lq44;)V
+    .locals 0
 
-    sget-object v0, Ldt2;->a:Ldt2;
+    iput-object p1, p0, Lct2;->w0:Ldt2;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v1
-
-    const-class v2, Ln0e;
-
-    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
-
-    move-result-object v1
-
-    sput-object v1, Lct2;->a:Liu7;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v1
-
-    const-class v2, Lc3b;
-
-    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v0
-
-    const-class v1, Lrib;
-
-    invoke-virtual {v0, v1}, Lr5;->d(Ljava/lang/Class;)Lwif;
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lct2;->v0:Ljava/lang/Object;
+
+    iget p1, p0, Lct2;->x0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lct2;->x0:I
+
+    iget-object p1, p0, Lct2;->w0:Ldt2;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0, v0, p0}, Ldt2;->b(Ldt2;Lrs2;Lbs4;Lq44;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

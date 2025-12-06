@@ -1,48 +1,66 @@
-.class public final Lmt8;
-.super Ly14;
+.class public final synthetic Lmt8;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Ldb8;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;
 
 
 # direct methods
-.method public constructor <init>(Ldb8;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;I)V
     .locals 0
 
-    iput-object p1, p0, Lmt8;->Y:Ldb8;
+    iput p2, p0, Lmt8;->a:I
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lmt8;->b:Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onClick(Landroid/view/View;)V
     .locals 1
 
-    iput-object p1, p0, Lmt8;->o:Ljava/lang/Object;
+    iget p1, p0, Lmt8;->a:I
 
-    iget p1, p0, Lmt8;->X:I
+    iget-object v0, p0, Lmt8;->b:Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;
 
-    const/high16 v0, -0x80000000
+    packed-switch p1, :pswitch_data_0
 
-    or-int/2addr p1, v0
+    sget-object p1, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->Y:[Lyy7;
 
-    iput p1, p0, Lmt8;->X:I
+    invoke-virtual {v0}, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->y0()V
 
-    iget-object p1, p0, Lmt8;->Y:Ldb8;
+    return-void
 
-    const/4 v0, 0x0
+    :pswitch_0
+    sget-object p1, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->Y:[Lyy7;
 
-    invoke-virtual {p1, v0, p0}, Ldb8;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v0}, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->y0()V
 
-    move-result-object p1
+    return-void
 
-    return-object p1
+    :pswitch_1
+    sget-object p1, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->Y:[Lyy7;
+
+    invoke-virtual {v0}, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->y0()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

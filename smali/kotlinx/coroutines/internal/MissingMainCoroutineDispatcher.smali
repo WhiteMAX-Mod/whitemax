@@ -1,9 +1,9 @@
 .class final Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcher;
-.super Lce8;
+.super Lwl8;
 .source "SourceFile"
 
 # interfaces
-.implements Lyp4;
+.implements Lms4;
 
 
 # annotations
@@ -13,8 +13,8 @@
     }
     d2 = {
         "Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcher;",
-        "Lce8;",
-        "Lyp4;",
+        "Lwl8;",
+        "Lms4;",
         "",
         "cause",
         "",
@@ -24,38 +24,38 @@
         "",
         "missing",
         "()Ljava/lang/Void;",
-        "Li54;",
+        "Lx74;",
         "context",
         "",
         "isDispatchNeeded",
-        "(Li54;)Z",
+        "(Lx74;)Z",
         "",
         "parallelism",
         "name",
-        "Lk54;",
+        "Lz74;",
         "limitedParallelism",
-        "(ILjava/lang/String;)Lk54;",
+        "(ILjava/lang/String;)Lz74;",
         "",
         "timeMillis",
         "Ljava/lang/Runnable;",
         "Lkotlinx/coroutines/Runnable;",
         "block",
-        "Lyv4;",
+        "Lsy4;",
         "invokeOnTimeout",
-        "(JLjava/lang/Runnable;Li54;)Lyv4;",
+        "(JLjava/lang/Runnable;Lx74;)Lsy4;",
         "dispatch",
-        "(Li54;Ljava/lang/Runnable;)Ljava/lang/Void;",
-        "Ln32;",
-        "Lccg;",
+        "(Lx74;Ljava/lang/Runnable;)Ljava/lang/Void;",
+        "Lk42;",
+        "Lqqg;",
         "continuation",
         "scheduleResumeAfterDelay",
-        "(JLn32;)Ljava/lang/Void;",
+        "(JLk42;)Ljava/lang/Void;",
         "toString",
         "()Ljava/lang/String;",
         "Ljava/lang/Throwable;",
         "Ljava/lang/String;",
         "getImmediate",
-        "()Lce8;",
+        "()Lwl8;",
         "immediate",
         "kotlinx-coroutines-core"
     }
@@ -80,7 +80,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lk54;-><init>()V
+    invoke-direct {p0}, Lz74;-><init>()V
 
     .line 2
     iput-object p1, p0, Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcher;->cause:Ljava/lang/Throwable;
@@ -91,7 +91,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/Throwable;Ljava/lang/String;ILki4;)V
+.method public synthetic constructor <init>(Ljava/lang/Throwable;Ljava/lang/String;ILtk4;)V
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -163,20 +163,20 @@
             "(J",
             "Lkotlin/coroutines/Continuation<",
             "-",
-            "Lccg;",
+            "Lqqg;",
             ">;)",
             "Ljava/lang/Object;"
         }
     .end annotation
 
-    invoke-static {p0, p1, p2, p3}, Lpyi;->b(Lyp4;JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {p0, p1, p2, p3}, Lq8j;->a(Lms4;JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public dispatch(Li54;Ljava/lang/Runnable;)Ljava/lang/Void;
+.method public dispatch(Lx74;Ljava/lang/Runnable;)Ljava/lang/Void;
     .locals 0
 
     .line 2
@@ -189,22 +189,22 @@
     throw p1
 .end method
 
-.method public bridge synthetic dispatch(Li54;Ljava/lang/Runnable;)V
+.method public bridge synthetic dispatch(Lx74;Ljava/lang/Runnable;)V
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcher;->dispatch(Li54;Ljava/lang/Runnable;)Ljava/lang/Void;
+    invoke-virtual {p0, p1, p2}, Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcher;->dispatch(Lx74;Ljava/lang/Runnable;)Ljava/lang/Void;
 
     return-void
 .end method
 
-.method public getImmediate()Lce8;
+.method public getImmediate()Lwl8;
     .locals 0
 
     return-object p0
 .end method
 
-.method public invokeOnTimeout(JLjava/lang/Runnable;Li54;)Lyv4;
+.method public invokeOnTimeout(JLjava/lang/Runnable;Lx74;)Lsy4;
     .locals 0
 
     invoke-direct {p0}, Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcher;->missing()Ljava/lang/Void;
@@ -216,7 +216,7 @@
     throw p1
 .end method
 
-.method public isDispatchNeeded(Li54;)Z
+.method public isDispatchNeeded(Lx74;)Z
     .locals 0
 
     invoke-direct {p0}, Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcher;->missing()Ljava/lang/Void;
@@ -228,7 +228,7 @@
     throw p1
 .end method
 
-.method public limitedParallelism(ILjava/lang/String;)Lk54;
+.method public limitedParallelism(ILjava/lang/String;)Lz74;
     .locals 0
 
     invoke-direct {p0}, Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcher;->missing()Ljava/lang/Void;
@@ -240,12 +240,12 @@
     throw p1
 .end method
 
-.method public scheduleResumeAfterDelay(JLn32;)Ljava/lang/Void;
+.method public scheduleResumeAfterDelay(JLk42;)Ljava/lang/Void;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(J",
-            "Ln32;",
+            "Lk42;",
             ")",
             "Ljava/lang/Void;"
         }
@@ -261,11 +261,11 @@
     throw p1
 .end method
 
-.method public bridge synthetic scheduleResumeAfterDelay(JLn32;)V
+.method public bridge synthetic scheduleResumeAfterDelay(JLk42;)V
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1, p2, p3}, Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcher;->scheduleResumeAfterDelay(JLn32;)Ljava/lang/Void;
+    invoke-virtual {p0, p1, p2, p3}, Lkotlinx/coroutines/internal/MissingMainCoroutineDispatcher;->scheduleResumeAfterDelay(JLk42;)Ljava/lang/Void;
 
     return-void
 .end method
@@ -303,13 +303,9 @@
     const-string v1, ""
 
     :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/16 v2, 0x5d
 
-    const/16 v1, 0x5d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lu45;->l(Ljava/lang/StringBuilder;Ljava/lang/String;C)Ljava/lang/String;
 
     move-result-object v0
 

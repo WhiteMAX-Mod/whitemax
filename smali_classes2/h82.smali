@@ -1,94 +1,129 @@
 .class public final Lh82;
-.super Lsgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic X:Li82;
+.field public final a:Lv82;
+
+.field public final b:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Li82;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lv82;Ljava/util/List;)V
     .locals 0
 
-    iput-object p1, p0, Lh82;->X:Li82;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lh82;->a:Lv82;
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lh82;->b:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p1, Lq54;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lh82;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    instance-of v1, p1, Lh82;
 
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
     check-cast p1, Lh82;
 
-    sget-object p2, Lccg;->a:Lccg;
+    iget-object v1, p0, Lh82;->a:Lv82;
 
-    invoke-virtual {p1, p2}, Lh82;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v3, p1, Lh82;->a:Lv82;
 
-    return-object p2
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lh82;->b:Ljava/util/List;
+
+    iget-object p1, p1, Lh82;->b:Ljava/util/List;
+
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
-    new-instance p1, Lh82;
+    iget-object v0, p0, Lh82;->a:Lv82;
 
-    iget-object v0, p0, Lh82;->X:Li82;
+    invoke-virtual {v0}, Lv82;->hashCode()I
 
-    invoke-direct {p1, v0, p2}, Lh82;-><init>(Li82;Lkotlin/coroutines/Continuation;)V
+    move-result v0
 
-    return-object p1
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lh82;->b:Ljava/util/List;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lh82;->X:Li82;
+    const-string v1, "State(screenState="
 
-    iget-object v0, p1, Li82;->o:Liu7;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    iget-object v1, p0, Lh82;->a:Lv82;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", items="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lh82;->b:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Ld33;
-
-    iget-wide v1, p1, Li82;->b:J
-
-    check-cast v0, Ld43;
-
-    invoke-virtual {v0}, Ld43;->M()Lsd2;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1, v2}, Lsd2;->O(J)V
-
-    iget-object p1, p1, Li82;->Z:Lxe5;
-
-    sget-object v0, Llac;->b:Llac;
-
-    invoke-static {p1, v0}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
-
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
+    return-object v0
 .end method

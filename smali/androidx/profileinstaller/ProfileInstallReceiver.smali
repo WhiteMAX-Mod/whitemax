@@ -34,21 +34,21 @@
 
     if-eqz v1, :cond_1
 
-    new-instance p2, Lns;
+    new-instance p2, Les;
 
     const/4 v0, 0x2
 
-    invoke-direct {p2, v0}, Lns;-><init>(I)V
+    invoke-direct {p2, v0}, Les;-><init>(I)V
 
-    new-instance v0, Ls9d;
+    new-instance v0, Lao6;
 
-    const/16 v1, 0x18
+    const/16 v1, 0x1b
 
-    invoke-direct {v0, v1, p0}, Ls9d;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Lao6;-><init>(ILjava/lang/Object;)V
 
     const/4 v1, 0x1
 
-    invoke-static {p1, p2, v0, v1}, Lv0i;->i(Landroid/content/Context;Ljava/util/concurrent/Executor;Lh7c;Z)V
+    invoke-static {p1, p2, v0, v1}, Lqfi;->d(Landroid/content/Context;Ljava/util/concurrent/Executor;Lshc;Z)V
 
     return-void
 
@@ -87,11 +87,11 @@
 
     if-eqz v0, :cond_2
 
-    new-instance p2, Ls9d;
+    new-instance p2, Lao6;
 
-    const/16 v0, 0x18
+    const/16 v0, 0x1b
 
-    invoke-direct {p2, v0, p0}, Ls9d;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p2, v0, p0}, Lao6;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
@@ -118,9 +118,9 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lv0i;->h(Landroid/content/pm/PackageInfo;Ljava/io/File;)V
+    invoke-static {v0, p1}, Lqfi;->c(Landroid/content/pm/PackageInfo;Ljava/io/File;)V
 
-    invoke-virtual {p2, v3, v4}, Ls9d;->l(ILjava/lang/Object;)V
+    invoke-virtual {p2, v3, v4}, Lao6;->e(ILjava/lang/Object;)V
 
     goto/16 :goto_1
 
@@ -129,7 +129,7 @@
 
     const/4 v0, 0x7
 
-    invoke-virtual {p2, v0, p1}, Ls9d;->l(ILjava/lang/Object;)V
+    invoke-virtual {p2, v0, p1}, Lao6;->e(ILjava/lang/Object;)V
 
     goto/16 :goto_1
 
@@ -210,11 +210,11 @@
 
     move-result-object v0
 
-    new-instance v1, Ls9d;
+    new-instance v1, Lao6;
 
-    const/16 v2, 0x18
+    const/16 v2, 0x1b
 
-    invoke-direct {v1, v2, p0}, Ls9d;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Lao6;-><init>(ILjava/lang/Object;)V
 
     const-string v2, "DROP_SHADER_CACHE"
 
@@ -250,7 +250,7 @@
     move-result-object p1
 
     :goto_0
-    invoke-static {p1}, Lyji;->a(Ljava/io/File;)Z
+    invoke-static {p1}, Lbvi;->a(Ljava/io/File;)Z
 
     move-result p1
 
@@ -258,14 +258,14 @@
 
     const/16 p1, 0xe
 
-    invoke-virtual {v1, p1, v4}, Ls9d;->l(ILjava/lang/Object;)V
+    invoke-virtual {v1, p1, v4}, Lao6;->e(ILjava/lang/Object;)V
 
     return-void
 
     :cond_6
     const/16 p1, 0xf
 
-    invoke-virtual {v1, p1, v4}, Ls9d;->l(ILjava/lang/Object;)V
+    invoke-virtual {v1, p1, v4}, Lao6;->e(ILjava/lang/Object;)V
 
     return-void
 
@@ -290,14 +290,14 @@
 
     invoke-static {p1, v3}, Landroid/os/Process;->sendSignal(II)V
 
-    invoke-virtual {v1, v5, v4}, Ls9d;->l(ILjava/lang/Object;)V
+    invoke-virtual {v1, v5, v4}, Lao6;->e(ILjava/lang/Object;)V
 
     return-void
 
     :cond_8
     const/16 p1, 0x10
 
-    invoke-virtual {v1, p1, v4}, Ls9d;->l(ILjava/lang/Object;)V
+    invoke-virtual {v1, p1, v4}, Lao6;->e(ILjava/lang/Object;)V
 
     :cond_9
     :goto_1

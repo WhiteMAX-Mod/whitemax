@@ -3,4 +3,4 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgjc;
+.implements Lcuc;

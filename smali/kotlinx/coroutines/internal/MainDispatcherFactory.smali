@@ -19,9 +19,9 @@
         "",
         "",
         "allFactories",
-        "Lce8;",
+        "Lwl8;",
         "createDispatcher",
-        "(Ljava/util/List;)Lce8;",
+        "(Ljava/util/List;)Lwl8;",
         "",
         "hintOnError",
         "()Ljava/lang/String;",
@@ -42,7 +42,7 @@
 
 
 # virtual methods
-.method public abstract createDispatcher(Ljava/util/List;)Lce8;
+.method public abstract createDispatcher(Ljava/util/List;)Lwl8;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -50,7 +50,7 @@
             "+",
             "Lkotlinx/coroutines/internal/MainDispatcherFactory;",
             ">;)",
-            "Lce8;"
+            "Lwl8;"
         }
     .end annotation
 .end method

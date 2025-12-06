@@ -1,162 +1,155 @@
 .class public final Lsc4;
-.super Leic;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:[B
+.field public final a:Lk18;
+
+.field public final b:Lk18;
+
+
+# direct methods
+.method public constructor <init>(Lk18;Lk18;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lsc4;->a:Lk18;
+
+    iput-object p2, p0, Lsc4;->b:Lk18;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(Lcic;Lfic;Lfj;)V
-    .locals 2
+.method public final a(Lf7f;I)V
+    .locals 4
 
-    iget p2, p1, Lcic;->E0:I
+    iget-object v0, p0, Lsc4;->a:Lk18;
 
-    const/4 p3, 0x3
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
-    if-eq p2, p3, :cond_1
+    move-result-object v0
 
-    iget p2, p1, Lcic;->E0:I
+    check-cast v0, Ldd;
 
-    const/4 p3, 0x4
+    iget-wide v1, p1, Lf7f;->a:J
 
-    if-ne p2, p3, :cond_0
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    new-instance v2, Limb;
+
+    const-string v3, "source_id"
+
+    invoke-direct {v2, v3, v1}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    iget p1, p1, Lf7f;->b:I
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    new-instance v1, Limb;
+
+    const-string v3, "source_type"
+
+    invoke-direct {v1, v3, p1}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array {v2, v1}, [Limb;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lori;->a([Limb;)Lus;
+
+    move-result-object p1
+
+    new-instance v1, Lxp7;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    iput-wide v2, v1, Lxp7;->a:J
+
+    const-string v2, "DANGEROUS_FILE_ACTIONS"
+
+    iput-object v2, v1, Lxp7;->c:Ljava/lang/String;
+
+    const/4 v2, 0x1
+
+    if-eq p2, v2, :cond_2
+
+    const/4 v2, 0x2
+
+    if-eq p2, v2, :cond_1
+
+    const/4 v2, 0x3
+
+    if-ne p2, v2, :cond_0
+
+    const-string p2, "not_download_file"
 
     goto :goto_0
 
     :cond_0
-    const/16 p2, 0xa
-
-    int-to-long p2, p2
-
-    const-string v0, "Datagram frame received, but datagram extension is not enabled"
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p1, p2, p3, v0, v1}, Lcic;->g(JLjava/lang/String;I)V
-
-    return-void
-
-    :cond_1
-    :goto_0
-    iget-object p1, p1, Lcic;->c:Lq98;
-
-    const-string p2, "Received datagram frame, but no handler is set"
-
-    invoke-interface {p1, p2}, Lq98;->warn(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final c()I
-    .locals 2
-
-    iget-object v0, p0, Lsc4;->a:[B
-
-    array-length v0, v0
-
-    int-to-long v0, v0
-
-    invoke-static {v0, v1}, Lubi;->a(J)I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    iget-object v1, p0, Lsc4;->a:[B
-
-    array-length v1, v1
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final f(Ljava/nio/ByteBuffer;)V
-    .locals 1
-
-    const/16 v0, 0x31
-
-    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    iget-object v0, p0, Lsc4;->a:[B
-
-    array-length v0, v0
-
-    invoke-static {v0, p1}, Lubi;->f(ILjava/nio/ByteBuffer;)I
-
-    iget-object v0, p0, Lsc4;->a:[B
-
-    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
-
-    return-void
-.end method
-
-.method public final g(Ljava/nio/ByteBuffer;)V
-    .locals 2
-
-    invoke-static {p1}, Lubi;->n(Ljava/nio/ByteBuffer;)I
-
-    move-result v0
-
-    const/16 v1, 0x31
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lubi;->n(Ljava/nio/ByteBuffer;)I
-
-    move-result v0
-
-    new-array v0, v0, [B
-
-    iput-object v0, p0, Lsc4;->a:[B
-
-    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
-
-    return-void
-
-    :cond_0
-    const/16 v1, 0x30
-
-    if-ne v0, v1, :cond_1
-
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
-
-    move-result v0
-
-    new-array v0, v0, [B
-
-    iput-object v0, p0, Lsc4;->a:[B
-
-    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
-
-    return-void
-
-    :cond_1
-    new-instance p1, Ltech/kwik/core/impl/ImplementationError;
-
-    invoke-direct {p1}, Ltech/kwik/core/impl/ImplementationError;-><init>()V
+    const/4 p1, 0x0
 
     throw p1
-.end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    :cond_1
+    const-string p2, "download_file"
 
-    iget-object v0, p0, Lsc4;->a:[B
+    goto :goto_0
 
-    invoke-static {v0}, Lami;->a([B)Ljava/lang/String;
+    :cond_2
+    const-string p2, "modal_is_shown"
 
-    move-result-object v0
+    :goto_0
+    iput-object p2, v1, Lxp7;->d:Ljava/lang/String;
 
-    const-string v1, "DatagramFrame ["
+    iget-object p2, p0, Lsc4;->b:Lk18;
 
-    const-string v2, "]"
+    invoke-interface {p2}, Lk18;->getValue()Ljava/lang/Object;
 
-    invoke-static {v1, v0, v2}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v2
 
-    move-result-object v0
+    check-cast v2, Lpb3;
 
-    return-object v0
+    check-cast v2, Lw4e;
+
+    invoke-virtual {v2}, Lw4e;->s()J
+
+    move-result-wide v2
+
+    iput-wide v2, v1, Lxp7;->b:J
+
+    invoke-virtual {v1, p1}, Lxp7;->c(Ljava/util/Map;)V
+
+    invoke-interface {p2}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lpb3;
+
+    check-cast p1, Lpe8;
+
+    invoke-virtual {p1}, Lpe8;->K()J
+
+    move-result-wide p1
+
+    iput-wide p1, v1, Lxp7;->o:J
+
+    invoke-virtual {v1}, Lxp7;->d()Lhg8;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ldd;->h(Lhg8;)V
+
+    return-void
 .end method

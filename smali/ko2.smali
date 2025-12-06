@@ -1,88 +1,68 @@
 .class public final Lko2;
-.super Lsgf;
+.super Li3;
 .source "SourceFile"
 
-# interfaces
-.implements Lzi6;
 
-
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lpo2;
+# static fields
+.field public static final c:Lko2;
 
 
 # direct methods
-.method public constructor <init>(Lpo2;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lko2;->Y:Lpo2;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lgu8;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lko2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lko2;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lko2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method static constructor <clinit>()V
     .locals 2
 
     new-instance v0, Lko2;
 
-    iget-object v1, p0, Lko2;->Y:Lpo2;
+    const/16 v1, 0xb
 
-    invoke-direct {v0, v1, p2}, Lko2;-><init>(Lpo2;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1}, Li3;-><init>(I)V
 
-    iput-object p1, v0, Lko2;->X:Ljava/lang/Object;
+    sput-object v0, Lko2;->c:Lko2;
 
-    return-object v0
+    return-void
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public static L0(JLjava/lang/Long;)Lei4;
+    .locals 2
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    const-string v0, ":chats/forward?messages_ids="
 
-    iget-object p1, p0, Lko2;->X:Ljava/lang/Object;
+    if-eqz p2, :cond_0
 
-    check-cast p1, Lgu8;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lko2;->Y:Lpo2;
+    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, v0, Lpo2;->H0:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-virtual {v1, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    new-instance v1, La11;
+    const-string p0, "&attach_id="
 
-    const/4 v2, 0x5
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, v2, p1}, La11;-><init>(ILjava/lang/Object;)V
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->updateAndGet(Ljava/util/function/UnaryOperator;)Ljava/lang/Object;
+    const-string p0, "&is_forward_attach=true"
 
-    sget-object p1, Lccg;->a:Lccg;
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance p1, Lei4;
+
+    invoke-direct {p1, p0}, Lei4;-><init>(Ljava/lang/String;)V
+
+    return-object p1
+
+    :cond_0
+    invoke-static {p0, p1, v0}, Lvb9;->e(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance p1, Lei4;
+
+    invoke-direct {p1, p0}, Lei4;-><init>(Ljava/lang/String;)V
 
     return-object p1
 .end method

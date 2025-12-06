@@ -1,123 +1,72 @@
-.class public abstract synthetic Ltne;
+.class public final Ltne;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lioe;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
 
+# virtual methods
+.method public final a()Ls5g;
+    .locals 1
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
+    const/4 v0, 0x0
 
-    invoke-static {}, Lcoe;->values()[Lcoe;
+    return-object v0
+.end method
 
-    move-result-object v0
+.method public final b()Lxne;
+    .locals 1
 
-    array-length v0, v0
+    const/4 v0, 0x0
 
-    new-array v0, v0, [I
+    return-object v0
+.end method
 
-    const/4 v1, 0x1
+.method public final c()Ls5g;
+    .locals 1
 
-    const/4 v2, 0x0
+    const/4 v0, 0x0
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    return-object v0
+.end method
 
-    :catch_0
-    const/4 v2, 0x2
+.method public final d()Lfoe;
+    .locals 1
 
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    const/4 v0, 0x0
 
-    :catch_1
-    const/4 v1, 0x3
+    return-object v0
+.end method
 
-    :try_start_2
-    aput v1, v0, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+.method public final e()Lu18;
+    .locals 1
 
-    :catch_2
-    const/4 v2, 0x4
+    const/4 v0, 0x0
 
-    :try_start_3
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    return-object v0
+.end method
 
-    :catch_3
-    const/4 v1, 0x5
+.method public final getItemId()J
+    .locals 2
 
-    :try_start_4
-    aput v1, v0, v2
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    const-wide/16 v0, 0x0
 
-    :catch_4
-    const/4 v2, 0x6
+    return-wide v0
+.end method
 
-    :try_start_5
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+.method public final getTitle()Ls5g;
+    .locals 1
 
-    :catch_5
-    const/4 v1, 0x7
+    sget-object v0, Ls5g;->b:Lr5g;
 
-    :try_start_6
-    aput v1, v0, v2
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+    return-object v0
+.end method
 
-    :catch_6
-    const/16 v2, 0x8
+.method public final t()I
+    .locals 1
 
-    :try_start_7
-    aput v2, v0, v1
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+    const/4 v0, 0x0
 
-    :catch_7
-    const/16 v1, 0x9
-
-    :try_start_8
-    aput v1, v0, v1
-    :try_end_8
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
-
-    :catch_8
-    const/16 v1, 0xa
-
-    :try_start_9
-    aput v1, v0, v1
-    :try_end_9
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_9
-
-    :catch_9
-    const/16 v1, 0xb
-
-    :try_start_a
-    aput v1, v0, v1
-    :try_end_a
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_a
-
-    :catch_a
-    const/16 v1, 0xc
-
-    :try_start_b
-    aput v1, v0, v2
-    :try_end_b
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_b .. :try_end_b} :catch_b
-
-    :catch_b
-    sput-object v0, Ltne;->$EnumSwitchMapping$0:[I
-
-    return-void
+    return v0
 .end method

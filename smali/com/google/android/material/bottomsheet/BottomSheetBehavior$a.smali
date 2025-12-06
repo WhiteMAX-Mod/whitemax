@@ -1,5 +1,5 @@
 .class public Lcom/google/android/material/bottomsheet/BottomSheetBehavior$a;
-.super Lg0;
+.super Lf0;
 .source "SourceFile"
 
 
@@ -31,11 +31,11 @@
 
 .field public final Y:Z
 
-.field public final Z:Z
-
 .field public final c:I
 
-.field public final o:I
+.field public final d:I
+
+.field public final o:Z
 
 
 # direct methods
@@ -66,7 +66,7 @@
     .locals 2
 
     .line 2
-    invoke-direct {p0, p1, p2}, Lg0;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+    invoke-direct {p0, p1, p2}, Lf0;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
     .line 3
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -80,7 +80,7 @@
 
     move-result p2
 
-    iput p2, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$a;->o:I
+    iput p2, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$a;->d:I
 
     .line 5
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -101,7 +101,7 @@
     move p2, v0
 
     :goto_0
-    iput-boolean p2, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$a;->X:Z
+    iput-boolean p2, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$a;->o:Z
 
     .line 6
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -118,7 +118,7 @@
     move p2, v0
 
     :goto_1
-    iput-boolean p2, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$a;->Y:Z
+    iput-boolean p2, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$a;->X:Z
 
     .line 7
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -130,7 +130,7 @@
     move v0, v1
 
     :cond_2
-    iput-boolean v0, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$a;->Z:Z
+    iput-boolean v0, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$a;->Y:Z
 
     return-void
 .end method
@@ -141,7 +141,7 @@
     sget-object v0, Landroid/view/AbsSavedState;->EMPTY_STATE:Landroid/view/AbsSavedState;
 
     .line 8
-    invoke-direct {p0, v0}, Lg0;-><init>(Landroid/os/Parcelable;)V
+    invoke-direct {p0, v0}, Lf0;-><init>(Landroid/os/Parcelable;)V
 
     .line 9
     iget v0, p1, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->L:I
@@ -152,24 +152,24 @@
     iget v0, p1, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->e:I
 
     .line 11
-    iput v0, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$a;->o:I
+    iput v0, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$a;->d:I
 
     .line 12
     iget-boolean v0, p1, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->b:Z
 
     .line 13
-    iput-boolean v0, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$a;->X:Z
+    iput-boolean v0, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$a;->o:Z
 
     .line 14
     iget-boolean v0, p1, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->I:Z
 
-    iput-boolean v0, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$a;->Y:Z
+    iput-boolean v0, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$a;->X:Z
 
     .line 15
     iget-boolean p1, p1, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->J:Z
 
     .line 16
-    iput-boolean p1, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$a;->Z:Z
+    iput-boolean p1, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$a;->Y:Z
 
     return-void
 .end method
@@ -179,13 +179,17 @@
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    invoke-super {p0, p1, p2}, Lg0;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-super {p0, p1, p2}, Lf0;->writeToParcel(Landroid/os/Parcel;I)V
 
     iget p2, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$a;->c:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget p2, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$a;->o:I
+    iget p2, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$a;->d:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-boolean p2, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$a;->o:Z
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
@@ -194,10 +198,6 @@
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     iget-boolean p2, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$a;->Y:Z
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-boolean p2, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$a;->Z:Z
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 

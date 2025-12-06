@@ -1,48 +1,91 @@
 .class public final Lsaf;
-.super Ljava/lang/Object;
+.super Lki4;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
+# static fields
+.field public static final b:Lsaf;
 
-.field public final b:Ljava/lang/String;
+.field public static final c:Lgi4;
+
+.field public static final d:Lgi4;
+
+.field public static final e:Lgi4;
+
+.field public static final f:Lgi4;
+
+.field public static final g:Lgi4;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lsaf;
 
-    iput-object p1, p0, Lsaf;->a:Ljava/lang/String;
+    invoke-direct {v0}, Lki4;-><init>()V
 
-    iput-object p2, p0, Lsaf;->b:Ljava/lang/String;
+    sput-object v0, Lsaf;->b:Lsaf;
 
-    return-void
-.end method
+    const/4 v1, 0x0
 
+    new-array v2, v1, [Ljava/lang/String;
 
-# virtual methods
-.method public final a(Ln57;)V
-    .locals 2
+    const-string v3, ":start-conversation"
 
-    iget-object v0, p0, Lsaf;->b:Ljava/lang/String;
+    const/4 v4, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    const/16 v5, 0xe
 
-    move-result v1
+    invoke-static {v0, v3, v2, v4, v5}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
 
-    if-nez v1, :cond_0
+    move-result-object v2
 
-    return-void
+    sput-object v2, Lsaf;->c:Lgi4;
 
-    :cond_0
-    iget-object v1, p0, Lsaf;->a:Ljava/lang/String;
+    const-string v2, ":start-conversation/chat"
 
-    invoke-virtual {p1, v1}, Ln57;->b0(Ljava/lang/String;)Lcr7;
+    new-array v3, v1, [Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Ln57;->h(Ljava/lang/String;)V
+    invoke-static {v0, v2, v3, v4, v5}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
+
+    move-result-object v2
+
+    sput-object v2, Lsaf;->d:Lgi4;
+
+    const-string v2, ":start-conversation/channel"
+
+    new-array v3, v1, [Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v4, v5}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
+
+    move-result-object v2
+
+    sput-object v2, Lsaf;->e:Lgi4;
+
+    const-string v2, ":chat/add-icon"
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    invoke-static {v0, v2, v1, v4, v5}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
+
+    move-result-object v1
+
+    sput-object v1, Lsaf;->f:Lgi4;
+
+    const-string v1, "id"
+
+    filled-new-array {v1}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, ":start-conversation/add-subscribers"
+
+    invoke-static {v0, v2, v1, v4, v5}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
+
+    move-result-object v0
+
+    sput-object v0, Lsaf;->g:Lgi4;
 
     return-void
 .end method

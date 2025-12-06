@@ -1,133 +1,41 @@
 .class public final Lpaf;
-.super Landroid/text/style/CharacterStyle;
+.super Lxp;
 .source "SourceFile"
 
-# interfaces
-.implements Llh8;
-.implements Landroid/text/style/UpdateAppearance;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final b:I
+# static fields
+.field public static final a:Lpaf;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p1, p0, Lpaf;->a:I
+    new-instance v0, Lpaf;
 
-    packed-switch p1, :pswitch_data_0
+    invoke-direct {v0}, Lxp;-><init>()V
 
-    invoke-direct {p0}, Landroid/text/style/CharacterStyle;-><init>()V
-
-    const/4 p1, 0x7
-
-    iput p1, p0, Lpaf;->b:I
+    sput-object v0, Lpaf;->a:Lpaf;
 
     return-void
-
-    :pswitch_0
-    invoke-direct {p0}, Landroid/text/style/CharacterStyle;-><init>()V
-
-    const/4 p1, 0x4
-
-    iput p1, p0, Lpaf;->b:I
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final copy()Lr44;
+.method public final a()Lage;
     .locals 2
 
-    iget v0, p0, Lpaf;->a:I
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lw5;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v0
 
-    new-instance v0, Lpaf;
+    const/16 v1, 0x2f
 
-    const/4 v1, 0x1
+    invoke-virtual {v0, v1}, Lw5;->c(I)Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Lpaf;-><init>(I)V
+    move-result-object v0
 
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Lpaf;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lpaf;-><init>(I)V
+    check-cast v0, Lage;
 
     return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final getType()I
-    .locals 1
-
-    iget v0, p0, Lpaf;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget v0, p0, Lpaf;->b:I
-
-    return v0
-
-    :pswitch_0
-    iget v0, p0, Lpaf;->b:I
-
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final updateDrawState(Landroid/text/TextPaint;)V
-    .locals 1
-
-    iget v0, p0, Lpaf;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
-
-    return-void
-
-    :pswitch_0
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setStrikeThruText(Z)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

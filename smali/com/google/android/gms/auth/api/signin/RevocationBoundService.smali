@@ -121,9 +121,9 @@
     invoke-static {v1, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_4
-    new-instance p1, Lh1j;
+    new-instance p1, Lyaj;
 
-    invoke-direct {p1, p0}, Lh1j;-><init>(Lcom/google/android/gms/auth/api/signin/RevocationBoundService;)V
+    invoke-direct {p1, p0}, Lyaj;-><init>(Lcom/google/android/gms/auth/api/signin/RevocationBoundService;)V
 
     return-object p1
 .end method

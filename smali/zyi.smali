@@ -1,60 +1,60 @@
-.class public abstract Lzyi;
+.class public final Lzyi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lorg/webrtc/SdpObserver;
+.implements Lpqa;
+
+
+# static fields
+.field public static final a:Lzyi;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
+
+    new-instance v0, Lzyi;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lzyi;->a:Lzyi;
+
+    new-instance v0, Lmli;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lmli;-><init>(I)V
+
+    const-class v1, Lemi;
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a(II)Z
-.end method
-
-.method public abstract b(II)Z
-.end method
-
-.method public c(II)Ljava/lang/Object;
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    const/4 p1, 0x0
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    return-object p1
-.end method
+    move-result-object p1
 
-.method public abstract d()I
-.end method
-
-.method public abstract e()I
-.end method
-
-.method public onCreateFailure(Ljava/lang/String;)V
-    .locals 1
-
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public onCreateSuccess(Lorg/webrtc/SessionDescription;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onSetFailure(Ljava/lang/String;)V
-    .locals 1
-
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public onSetSuccess()V
-    .locals 0
-
-    return-void
+    throw p1
 .end method

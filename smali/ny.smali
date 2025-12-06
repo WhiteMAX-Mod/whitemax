@@ -1,31 +1,21 @@
 .class public final Lny;
-.super Ljava/lang/Object;
+.super Loy;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:I
-
-.field public b:I
-
-.field public final c:Landroid/media/MediaCodec$CryptoInfo;
-
-.field public d:J
-
-.field public e:I
+.field public final c:Lqyg;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(ILqyg;)V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    new-instance v0, Landroid/media/MediaCodec$CryptoInfo;
+    invoke-direct {p0, p1, v0}, Loy;-><init>(II)V
 
-    invoke-direct {v0}, Landroid/media/MediaCodec$CryptoInfo;-><init>()V
-
-    iput-object v0, p0, Lny;->c:Landroid/media/MediaCodec$CryptoInfo;
+    iput-object p2, p0, Lny;->c:Lqyg;
 
     return-void
 .end method

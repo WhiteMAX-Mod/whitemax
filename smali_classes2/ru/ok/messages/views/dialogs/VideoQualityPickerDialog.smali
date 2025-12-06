@@ -36,10 +36,10 @@
 
 
 # virtual methods
-.method public final D0()Landroid/app/Dialog;
+.method public final v0()Landroid/app/Dialog;
     .locals 15
 
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->s0()Landroid/os/Bundle;
+    invoke-virtual {p0}, Landroidx/fragment/app/a;->j0()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -49,7 +49,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->s0()Landroid/os/Bundle;
+    invoke-virtual {p0}, Landroidx/fragment/app/a;->j0()Landroid/os/Bundle;
 
     move-result-object v1
 
@@ -59,7 +59,7 @@
 
     move-result v1
 
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->s0()Landroid/os/Bundle;
+    invoke-virtual {p0}, Landroidx/fragment/app/a;->j0()Landroid/os/Bundle;
 
     move-result-object v2
 
@@ -69,7 +69,7 @@
 
     move-result-object v2
 
-    check-cast v2, Llhc;
+    check-cast v2, Lgsc;
 
     const/4 v3, 0x0
 
@@ -92,11 +92,11 @@
 
     move-result-object v6
 
-    check-cast v6, Lphc;
+    check-cast v6, Llsc;
 
-    iget-object v6, v6, Lphc;->a:Lnhc;
+    iget-object v6, v6, Llsc;->a:Lisc;
 
-    iget-object v6, v6, Lnhc;->a:Llhc;
+    iget-object v6, v6, Lisc;->a:Lgsc;
 
     if-ne v6, v2, :cond_0
 
@@ -116,13 +116,13 @@
     move v5, v3
 
     :goto_1
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->t0()Landroid/content/Context;
+    invoke-virtual {p0}, Landroidx/fragment/app/a;->k0()Landroid/content/Context;
 
     move-result-object v2
 
-    sget-object v4, Lynf;->a0:Lwif;
+    sget-object v4, Lq1g;->a0:Lbwf;
 
-    invoke-static {v2}, Laa4;->c(Landroid/content/Context;)Lynf;
+    invoke-static {v2}, Lnca;->d(Landroid/content/Context;)Lq1g;
 
     move-result-object v2
 
@@ -130,7 +130,7 @@
 
     const/16 v6, 0xa
 
-    invoke-static {v0, v6}, Lpb3;->l(Ljava/lang/Iterable;I)I
+    invoke-static {v0, v6}, Lwe3;->q(Ljava/lang/Iterable;I)I
 
     move-result v6
 
@@ -153,15 +153,15 @@
 
     move-result-object v7
 
-    check-cast v7, Lphc;
+    check-cast v7, Llsc;
 
-    iget-object v7, v7, Lphc;->a:Lnhc;
+    iget-object v7, v7, Llsc;->a:Lisc;
 
-    iget-boolean v9, v7, Lnhc;->f:Z
+    iget-boolean v9, v7, Lisc;->f:Z
 
-    iget-object v10, v7, Lnhc;->a:Llhc;
+    iget-object v10, v7, Lisc;->a:Lgsc;
 
-    iget-object v10, v10, Llhc;->a:Ljava/lang/String;
+    iget-object v10, v10, Lgsc;->a:Ljava/lang/String;
 
     new-instance v11, Landroid/text/SpannableStringBuilder;
 
@@ -177,17 +177,17 @@
 
     if-eqz v1, :cond_4
 
-    iget-wide v13, v7, Lnhc;->e:J
+    iget-wide v13, v7, Lisc;->e:J
 
     const/4 v7, 0x0
 
-    invoke-static {v13, v14, v8, v7}, Lnsf;->u(JZLandroid/content/Context;)Ljava/lang/String;
+    invoke-static {v13, v14, v8, v7}, Ll6g;->u(JZLandroid/content/Context;)Ljava/lang/String;
 
     move-result-object v7
 
     if-eqz v9, :cond_3
 
-    invoke-static {v12, v7}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v12, v7}, Lwy1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
@@ -196,7 +196,7 @@
     :cond_3
     const-string v8, "~ "
 
-    invoke-static {v8, v7}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v8, v7}, Lwy1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
@@ -207,7 +207,7 @@
 
     new-instance v13, Landroid/text/style/ForegroundColorSpan;
 
-    iget v14, v2, Lynf;->M:I
+    iget v14, v2, Lq1g;->M:I
 
     invoke-direct {v13, v14}, Landroid/text/style/ForegroundColorSpan;-><init>(I)V
 
@@ -218,13 +218,13 @@
     :cond_4
     if-eqz v9, :cond_5
 
-    sget v7, Ldkd;->M1:I
+    sget v7, Lmvd;->T0:I
 
-    invoke-virtual {p0, v7}, Landroidx/fragment/app/a;->H(I)Ljava/lang/String;
+    invoke-virtual {p0, v7}, Landroidx/fragment/app/a;->y(I)Ljava/lang/String;
 
     move-result-object v7
 
-    invoke-static {v12, v7}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v12, v7}, Lwy1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
@@ -234,7 +234,7 @@
 
     new-instance v9, Landroid/text/style/ForegroundColorSpan;
 
-    iget v11, v2, Lynf;->M:I
+    iget v11, v2, Lq1g;->M:I
 
     invoke-direct {v9, v11}, Landroid/text/style/ForegroundColorSpan;-><init>(I)V
 
@@ -248,21 +248,21 @@
     goto :goto_2
 
     :cond_6
-    new-instance v1, Lei8;
+    new-instance v1, Lxp8;
 
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->t0()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-direct {v1, v2, v3}, Lei8;-><init>(Landroid/content/Context;I)V
-
-    sget v2, Ldkd;->g3:I
-
-    invoke-virtual {p0, v2}, Landroidx/fragment/app/a;->H(I)Ljava/lang/String;
+    invoke-virtual {p0}, Landroidx/fragment/app/a;->k0()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lei8;->d(Ljava/lang/CharSequence;)Lei8;
+    invoke-direct {v1, v2, v3}, Lxp8;-><init>(Landroid/content/Context;I)V
+
+    sget v2, Lmvd;->o2:I
+
+    invoke-virtual {p0, v2}, Landroidx/fragment/app/a;->y(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lxp8;->b(Ljava/lang/String;)Lxp8;
 
     move-result-object v1
 
@@ -274,48 +274,48 @@
 
     check-cast v2, [Ljava/lang/CharSequence;
 
-    new-instance v3, Lqh6;
+    new-instance v3, Lnbh;
 
-    const/4 v4, 0x5
+    invoke-direct {v3, p0, v0}, Lnbh;-><init>(Lru/ok/messages/views/dialogs/VideoQualityPickerDialog;Ljava/util/ArrayList;)V
 
-    invoke-direct {v3, p0, v0, v4}, Lqh6;-><init>(Landroidx/fragment/app/a;Ljava/lang/Object;I)V
+    iget-object v0, v1, Luc;->a:Lqc;
 
-    iget-object v0, v1, Lyc;->a:Luc;
+    iput-object v2, v0, Lqc;->o:[Ljava/lang/CharSequence;
 
-    iput-object v2, v0, Luc;->p:[Ljava/lang/CharSequence;
+    iput-object v3, v0, Lqc;->q:Landroid/content/DialogInterface$OnClickListener;
 
-    iput-object v3, v0, Luc;->r:Landroid/content/DialogInterface$OnClickListener;
+    iput v5, v0, Lqc;->t:I
 
-    iput v5, v0, Luc;->u:I
+    iput-boolean v8, v0, Lqc;->s:Z
 
-    iput-boolean v8, v0, Luc;->t:Z
+    sget v0, Lmvd;->p:I
 
-    sget v0, Ldkd;->p:I
-
-    invoke-virtual {p0, v0}, Landroidx/fragment/app/a;->H(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Landroidx/fragment/app/a;->y(I)Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v2, Lth6;
+    new-instance v2, Luq3;
 
     const/4 v3, 0x2
 
-    invoke-direct {v2, p0, v3}, Lth6;-><init>(Landroidx/fragment/app/DialogFragment;I)V
+    invoke-direct {v2, p0, v3}, Luq3;-><init>(Landroidx/fragment/app/DialogFragment;I)V
 
-    iget-object v3, v1, Lyc;->a:Luc;
+    iget-object v3, v1, Luc;->a:Lqc;
 
-    iput-object v0, v3, Luc;->k:Ljava/lang/CharSequence;
+    iput-object v0, v3, Lqc;->k:Ljava/lang/CharSequence;
 
-    iput-object v2, v3, Luc;->l:Landroid/content/DialogInterface$OnClickListener;
+    iput-object v2, v3, Lqc;->l:Landroid/content/DialogInterface$OnClickListener;
 
-    invoke-virtual {v1}, Lyc;->a()Lzc;
+    invoke-virtual {v1}, Lxp8;->create()Lvc;
 
     move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/Dialog;->show()V
 
     return-object v0
 .end method
 
-.method public final H0(Liwg;)V
+.method public final y0(Lrbh;)V
     .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -332,33 +332,33 @@
 
     const-string v1, "ru.ok.messages.views.dialogs.VideoQualityPickerDialog"
 
-    invoke-static {v1, v0}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v0, Ltcb;
+    new-instance v0, Limb;
 
     const-string v1, "VideoQualityPickerDialog:result:key"
 
-    invoke-direct {v0, v1, p1}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v0, v1, p1}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    filled-new-array {v0}, [Ltcb;
-
-    move-result-object p1
-
-    invoke-static {p1}, Leli;->b([Ltcb;)Landroid/os/Bundle;
+    filled-new-array {v0}, [Limb;
 
     move-result-object p1
 
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->G()Landroidx/fragment/app/c;
+    invoke-static {p1}, Lgwi;->b([Limb;)Landroid/os/Bundle;
+
+    move-result-object p1
+
+    invoke-virtual {p0}, Landroidx/fragment/app/a;->x()Landroidx/fragment/app/c;
 
     move-result-object v0
 
     const-string v1, "VideoQualityPickerDialog:result:request"
 
-    invoke-virtual {v0, v1, p1}, Landroidx/fragment/app/c;->c0(Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-virtual {v0, v1, p1}, Landroidx/fragment/app/c;->b0(Ljava/lang/String;Landroid/os/Bundle;)V
 
     const/4 p1, 0x0
 
-    invoke-virtual {p0, p1, p1}, Landroidx/fragment/app/DialogFragment;->B0(ZZ)V
+    invoke-virtual {p0, p1, p1}, Landroidx/fragment/app/DialogFragment;->t0(ZZ)V
 
     return-void
 .end method

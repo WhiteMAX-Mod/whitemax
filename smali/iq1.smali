@@ -1,43 +1,29 @@
-.class public abstract synthetic Liq1;
+.class public interface abstract Liq1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# virtual methods
+.method public e()V
+    .locals 0
 
+    return-void
+.end method
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public k()V
+    .locals 0
 
-    const/4 v0, 0x2
+    return-void
+.end method
 
-    invoke-static {v0}, Ldy1;->y(I)[I
+.method public l()V
+    .locals 0
 
-    move-result-object v1
+    return-void
+.end method
 
-    array-length v1, v1
-
-    new-array v1, v1, [I
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :try_start_1
-    aput v0, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    sput-object v1, Liq1;->$EnumSwitchMapping$0:[I
+.method public onCallAccepted()V
+    .locals 0
 
     return-void
 .end method

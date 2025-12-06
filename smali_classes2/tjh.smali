@@ -1,77 +1,56 @@
-.class public final Ltjh;
+.class public final synthetic Ltjh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lnjh;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/webapp/settings/WebAppsSettingScreen;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ll2f;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/webapp/settings/WebAppsSettingScreen;)V
+.method public synthetic constructor <init>(Ll2f;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Ltjh;->a:I
 
-    iput-object p1, p0, Ltjh;->a:Lone/me/webapp/settings/WebAppsSettingScreen;
+    iput-object p1, p0, Ltjh;->b:Ll2f;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lmjh;)V
-    .locals 2
+.method public final run()V
+    .locals 1
 
-    sget-object v0, Lone/me/webapp/settings/WebAppsSettingScreen;->X:[Ltr7;
+    iget v0, p0, Ltjh;->a:I
 
-    iget-object v0, p0, Ltjh;->a:Lone/me/webapp/settings/WebAppsSettingScreen;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v0, v0, Lone/me/webapp/settings/WebAppsSettingScreen;->b:Liu7;
+    iget-object v0, p0, Ltjh;->b:Ll2f;
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lwjh;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    instance-of v1, p1, Lkjh;
-
-    if-nez v1, :cond_2
-
-    instance-of v1, p1, Ljjh;
-
-    if-eqz v1, :cond_0
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants;->a(Ll2f;)V
 
     return-void
 
-    :cond_0
-    instance-of v1, p1, Lljh;
+    :pswitch_0
+    iget-object v0, p0, Ltjh;->b:Ll2f;
 
-    if-eqz v1, :cond_1
-
-    iget-object v0, v0, Lwjh;->Z:Lxe5;
-
-    check-cast p1, Lljh;
-
-    iget-object p1, p1, Lljh;->b:Lwf4;
-
-    invoke-static {v0, p1}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants;->e(Ll2f;)V
 
     return-void
 
-    :cond_1
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    nop
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_2
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

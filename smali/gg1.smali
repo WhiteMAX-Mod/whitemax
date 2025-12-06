@@ -1,48 +1,80 @@
-.class public final Lgg1;
-.super Ly14;
+.class public final synthetic Lgg1;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Ls3;
+.field public final synthetic b:Lao6;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic c:Ln01;
 
 
 # direct methods
-.method public constructor <init>(Ls3;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lao6;Ln01;I)V
     .locals 0
 
-    iput-object p1, p0, Lgg1;->Y:Ls3;
+    iput p3, p0, Lgg1;->a:I
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lgg1;->b:Lao6;
+
+    iput-object p2, p0, Lgg1;->c:Ln01;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
-    iput-object p1, p0, Lgg1;->o:Ljava/lang/Object;
+    iget p1, p0, Lgg1;->a:I
 
-    iget p1, p0, Lgg1;->X:I
+    packed-switch p1, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object p1, p0, Lgg1;->c:Ln01;
 
-    or-int/2addr p1, v0
+    iget-wide v0, p1, Ln01;->c:J
 
-    iput p1, p0, Lgg1;->X:I
+    iget-object p1, p0, Lgg1;->b:Lao6;
 
-    iget-object p1, p0, Lgg1;->Y:Ls3;
+    invoke-virtual {p1, v0, v1}, Lao6;->m(J)V
 
-    const/4 v0, 0x0
+    return-void
 
-    invoke-virtual {p1, v0, p0}, Ls3;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :pswitch_0
+    iget-object p1, p0, Lgg1;->c:Ln01;
 
-    move-result-object p1
+    iget-wide v0, p1, Ln01;->c:J
 
-    return-object p1
+    iget-object p1, p0, Lgg1;->b:Lao6;
+
+    invoke-virtual {p1, v0, v1}, Lao6;->m(J)V
+
+    return-void
+
+    :pswitch_1
+    iget-object p1, p0, Lgg1;->c:Ln01;
+
+    iget-wide v0, p1, Ln01;->c:J
+
+    iget-object p1, p0, Lgg1;->b:Lao6;
+
+    invoke-virtual {p1, v0, v1}, Lao6;->m(J)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

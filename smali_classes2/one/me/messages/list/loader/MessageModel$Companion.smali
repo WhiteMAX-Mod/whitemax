@@ -45,17 +45,17 @@
     .annotation build Landroidx/annotation/Keep;
     .end annotation
 
-    sget-object v13, Lsz;->d:Lsz;
+    sget-object v13, Llz;->d:Llz;
 
-    sget-object v27, Lub9;->X:Lub9;
+    sget-object v27, Lxi9;->o:Lxi9;
 
-    new-instance v0, Lde9;
+    new-instance v0, Lel9;
 
     move-wide/from16 v1, p2
 
-    invoke-direct {v0, v1, v2}, Lde9;-><init>(J)V
+    invoke-direct {v0, v1, v2}, Lel9;-><init>(J)V
 
-    sget-object v10, Lf1h;->b:Lf1h;
+    sget-object v10, Lghh;->b:Lghh;
 
     move-object/from16 v18, v0
 
@@ -105,7 +105,7 @@
 
     move-object/from16 v7, p1
 
-    invoke-direct/range {v0 .. v30}, Lone/me/messages/list/loader/MessageModel;-><init>(JJJLjava/lang/CharSequence;Ljava/lang/String;Ljava/lang/CharSequence;Lf1h;ZZLsz;ZZLlf9;Lrd9;Lde9;Lg53;ILjava/lang/String;ZLwe9;JZLub9;Lce9;II)V
+    invoke-direct/range {v0 .. v30}, Lone/me/messages/list/loader/MessageModel;-><init>(JJJLjava/lang/CharSequence;Ljava/lang/String;Ljava/lang/CharSequence;Lghh;ZZLlz;ZZLpm9;Ltk9;Lel9;Lv32;ILjava/lang/String;ZLxl9;JZLxi9;Ldl9;II)V
 
     return-object v0
 .end method

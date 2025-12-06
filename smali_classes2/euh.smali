@@ -1,53 +1,97 @@
 .class public final Leuh;
-.super Lxe0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lavh;
 
 
 # instance fields
-.field public final synthetic c:I
-
-.field public final synthetic o:Legb;
+.field public final a:Landroid/content/Intent;
 
 
 # direct methods
-.method public synthetic constructor <init>(Legb;I)V
+.method public constructor <init>(Landroid/content/Intent;)V
     .locals 0
 
-    iput p2, p0, Leuh;->c:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Leuh;->o:Legb;
-
-    invoke-direct {p0, p1}, Lxe0;-><init>(Legb;)V
+    iput-object p1, p0, Leuh;->a:Landroid/content/Intent;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lorg/webrtc/PeerConnection;)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget p1, p0, Leuh;->c:I
+    const/4 v0, 0x1
 
-    packed-switch p1, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object p1, p0, Leuh;->o:Legb;
+    return v0
 
-    invoke-virtual {p1}, Legb;->G()V
+    :cond_0
+    instance-of v1, p1, Leuh;
 
-    return-void
+    const/4 v2, 0x0
 
-    :pswitch_0
-    iget-object p1, p0, Leuh;->o:Legb;
+    if-nez v1, :cond_1
 
-    invoke-virtual {p1}, Legb;->G()V
+    return v2
 
-    return-void
+    :cond_1
+    check-cast p1, Leuh;
 
-    nop
+    iget-object v1, p0, Leuh;->a:Landroid/content/Intent;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object p1, p1, Leuh;->a:Landroid/content/Intent;
+
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Leuh;->a:Landroid/content/Intent;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "CameraScreenIntentReady(intent="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Leuh;->a:Landroid/content/Intent;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,825 +1,312 @@
-.class public final Ltxc;
-.super Lnj0;
-.source "SourceFile"
+.class public abstract Ltxc;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final X:Landroid/content/res/Resources;
+# static fields
+.field public static accessibility_action_clickable_span:I = 0x7f0a0054
 
-.field public final Y:Ljava/lang/String;
+.field public static accessibility_custom_action_0:I = 0x7f0a0055
 
-.field public Z:Landroid/net/Uri;
+.field public static accessibility_custom_action_1:I = 0x7f0a0056
 
-.field public q0:Landroid/content/res/AssetFileDescriptor;
+.field public static accessibility_custom_action_10:I = 0x7f0a0057
 
-.field public r0:Ljava/io/FileInputStream;
+.field public static accessibility_custom_action_11:I = 0x7f0a0058
 
-.field public s0:J
+.field public static accessibility_custom_action_12:I = 0x7f0a0059
 
-.field public t0:Z
+.field public static accessibility_custom_action_13:I = 0x7f0a005a
 
+.field public static accessibility_custom_action_14:I = 0x7f0a005b
 
-# direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
+.field public static accessibility_custom_action_15:I = 0x7f0a005c
 
-    const/4 v0, 0x0
+.field public static accessibility_custom_action_16:I = 0x7f0a005d
 
-    invoke-direct {p0, v0}, Lnj0;-><init>(Z)V
+.field public static accessibility_custom_action_17:I = 0x7f0a005e
 
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+.field public static accessibility_custom_action_18:I = 0x7f0a005f
 
-    move-result-object v0
+.field public static accessibility_custom_action_19:I = 0x7f0a0060
 
-    iput-object v0, p0, Ltxc;->X:Landroid/content/res/Resources;
+.field public static accessibility_custom_action_2:I = 0x7f0a0061
 
-    invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+.field public static accessibility_custom_action_20:I = 0x7f0a0062
 
-    move-result-object p1
+.field public static accessibility_custom_action_21:I = 0x7f0a0063
 
-    iput-object p1, p0, Ltxc;->Y:Ljava/lang/String;
+.field public static accessibility_custom_action_22:I = 0x7f0a0064
 
-    return-void
-.end method
+.field public static accessibility_custom_action_23:I = 0x7f0a0065
 
-.method public static buildRawResourceUri(I)Landroid/net/Uri;
-    .locals 2
+.field public static accessibility_custom_action_24:I = 0x7f0a0066
 
-    new-instance v0, Ljava/lang/StringBuilder;
+.field public static accessibility_custom_action_25:I = 0x7f0a0067
 
-    const/16 v1, 0x1a
+.field public static accessibility_custom_action_26:I = 0x7f0a0068
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+.field public static accessibility_custom_action_27:I = 0x7f0a0069
 
-    const-string v1, "rawresource:///"
+.field public static accessibility_custom_action_28:I = 0x7f0a006a
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.field public static accessibility_custom_action_29:I = 0x7f0a006b
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+.field public static accessibility_custom_action_3:I = 0x7f0a006c
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+.field public static accessibility_custom_action_30:I = 0x7f0a006d
 
-    move-result-object p0
+.field public static accessibility_custom_action_31:I = 0x7f0a006e
 
-    invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+.field public static accessibility_custom_action_4:I = 0x7f0a006f
 
-    move-result-object p0
+.field public static accessibility_custom_action_5:I = 0x7f0a0070
 
-    return-object p0
-.end method
+.field public static accessibility_custom_action_6:I = 0x7f0a0071
 
+.field public static accessibility_custom_action_7:I = 0x7f0a0072
 
-# virtual methods
-.method public final R(Llc4;)J
-    .locals 20
+.field public static accessibility_custom_action_8:I = 0x7f0a0073
 
-    move-object/from16 v1, p0
+.field public static accessibility_custom_action_9:I = 0x7f0a0074
 
-    move-object/from16 v0, p1
+.field public static action_bar:I = 0x7f0a0095
 
-    iget-object v2, v0, Llc4;->a:Landroid/net/Uri;
+.field public static action_bar_activity_content:I = 0x7f0a0096
 
-    iget-wide v3, v0, Llc4;->g:J
+.field public static action_bar_container:I = 0x7f0a0097
 
-    iget-wide v5, v0, Llc4;->f:J
+.field public static action_bar_root:I = 0x7f0a0098
 
-    iput-object v2, v1, Ltxc;->Z:Landroid/net/Uri;
+.field public static action_bar_spinner:I = 0x7f0a0099
 
-    const-string v7, "rawresource"
+.field public static action_bar_subtitle:I = 0x7f0a009a
 
-    invoke-virtual {v2}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+.field public static action_bar_title:I = 0x7f0a009b
 
-    move-result-object v8
+.field public static action_container:I = 0x7f0a009c
 
-    invoke-static {v7, v8}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+.field public static action_context_bar:I = 0x7f0a009d
 
-    move-result v7
+.field public static action_divider:I = 0x7f0a009e
 
-    const/16 v8, 0x3ec
+.field public static action_image:I = 0x7f0a009f
 
-    const/16 v9, 0x7d5
+.field public static action_menu_divider:I = 0x7f0a00a0
 
-    iget-object v10, v1, Ltxc;->X:Landroid/content/res/Resources;
+.field public static action_menu_presenter:I = 0x7f0a00a1
 
-    const/4 v11, 0x1
+.field public static action_mode_bar:I = 0x7f0a00a2
 
-    const/4 v12, 0x0
+.field public static action_mode_bar_stub:I = 0x7f0a00a3
 
-    if-nez v7, :cond_6
+.field public static action_mode_close_button:I = 0x7f0a00a4
 
-    invoke-virtual {v2}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+.field public static action_text:I = 0x7f0a00a5
 
-    move-result-object v7
+.field public static actions:I = 0x7f0a00a6
 
-    const-string v13, "android.resource"
+.field public static activity_chooser_view_content:I = 0x7f0a00a7
 
-    invoke-static {v13, v7}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+.field public static add:I = 0x7f0a00a8
 
-    move-result v7
+.field public static alertTitle:I = 0x7f0a00af
 
-    if-eqz v7, :cond_0
+.field public static async:I = 0x7f0a00d0
 
-    invoke-virtual {v2}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
+.field public static blocking:I = 0x7f0a00f2
 
-    move-result-object v7
+.field public static buttonPanel:I = 0x7f0a0100
 
-    invoke-interface {v7}, Ljava/util/List;->size()I
+.field public static checkbox:I = 0x7f0a02a2
 
-    move-result v7
+.field public static checked:I = 0x7f0a02a3
 
-    if-ne v7, v11, :cond_0
+.field public static chronometer:I = 0x7f0a02a4
 
-    invoke-virtual {v2}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
+.field public static content:I = 0x7f0a02d5
 
-    move-result-object v7
+.field public static contentPanel:I = 0x7f0a02d6
 
-    invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.field public static custom:I = 0x7f0a02e5
 
-    const-string v14, "\\d+"
+.field public static customPanel:I = 0x7f0a02e6
 
-    invoke-virtual {v7, v14}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
+.field public static decor_content_parent:I = 0x7f0a02f1
 
-    move-result v7
+.field public static default_activity_button:I = 0x7f0a02f3
 
-    if-eqz v7, :cond_0
+.field public static dialog_button:I = 0x7f0a02ff
 
-    goto :goto_2
+.field public static edit_query:I = 0x7f0a0324
 
-    :cond_0
-    invoke-virtual {v2}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+.field public static expand_activities_button:I = 0x7f0a0368
 
-    move-result-object v7
+.field public static expanded_menu:I = 0x7f0a0369
 
-    invoke-static {v13, v7}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+.field public static forever:I = 0x7f0a039a
 
-    move-result v7
+.field public static fragment_container_view_tag:I = 0x7f0a039b
 
-    if-eqz v7, :cond_5
+.field public static group_divider:I = 0x7f0a03e5
 
-    invoke-virtual {v2}, Landroid/net/Uri;->getPath()Ljava/lang/String;
+.field public static home:I = 0x7f0a03ed
 
-    move-result-object v7
+.field public static icon:I = 0x7f0a03f4
 
-    invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.field public static icon_group:I = 0x7f0a03f6
 
-    const-string v8, "/"
+.field public static image:I = 0x7f0a03fb
 
-    invoke-virtual {v7, v8}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+.field public static info:I = 0x7f0a0403
 
-    move-result v8
+.field public static italic:I = 0x7f0a040a
 
-    if-eqz v8, :cond_1
+.field public static line1:I = 0x7f0a0432
 
-    invoke-virtual {v7, v11}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+.field public static line3:I = 0x7f0a0433
 
-    move-result-object v7
+.field public static listMode:I = 0x7f0a0442
 
-    :cond_1
-    invoke-virtual {v2}, Landroid/net/Uri;->getHost()Ljava/lang/String;
+.field public static list_item:I = 0x7f0a0443
 
-    move-result-object v8
+.field public static message:I = 0x7f0a050f
 
-    invoke-static {v8}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+.field public static multiply:I = 0x7f0a05c5
 
-    move-result v13
+.field public static none:I = 0x7f0a05d7
 
-    if-eqz v13, :cond_2
+.field public static normal:I = 0x7f0a05d8
 
-    const-string v8, ""
+.field public static notification_background:I = 0x7f0a05da
 
-    goto :goto_0
+.field public static notification_main_column:I = 0x7f0a05dd
 
-    :cond_2
-    invoke-static {v8}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+.field public static notification_main_column_container:I = 0x7f0a05de
 
-    move-result-object v8
+.field public static off:I = 0x7f0a05e0
 
-    const-string v13, ":"
+.field public static on:I = 0x7f0a05e2
 
-    invoke-virtual {v8, v13}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+.field public static parentPanel:I = 0x7f0a08d9
 
-    move-result-object v8
+.field public static progress_circular:I = 0x7f0a09e8
 
-    :goto_0
-    invoke-static {v8}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+.field public static progress_horizontal:I = 0x7f0a09e9
 
-    move-result-object v8
+.field public static radio:I = 0x7f0a09f5
 
-    invoke-static {v7}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+.field public static right_icon:I = 0x7f0a0a08
 
-    move-result-object v7
+.field public static right_side:I = 0x7f0a0a09
 
-    invoke-virtual {v7}, Ljava/lang/String;->length()I
+.field public static screen:I = 0x7f0a0b13
 
-    move-result v13
+.field public static scrollIndicatorDown:I = 0x7f0a0b15
 
-    if-eqz v13, :cond_3
+.field public static scrollIndicatorUp:I = 0x7f0a0b16
 
-    invoke-virtual {v8, v7}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+.field public static scrollView:I = 0x7f0a0b17
 
-    move-result-object v7
+.field public static search_badge:I = 0x7f0a0b19
 
-    goto :goto_1
+.field public static search_bar:I = 0x7f0a0b1a
 
-    :cond_3
-    new-instance v7, Ljava/lang/String;
+.field public static search_button:I = 0x7f0a0b1b
 
-    invoke-direct {v7, v8}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+.field public static search_close_btn:I = 0x7f0a0b1e
 
-    :goto_1
-    const-string v8, "raw"
+.field public static search_edit_frame:I = 0x7f0a0b20
 
-    iget-object v13, v1, Ltxc;->Y:Ljava/lang/String;
+.field public static search_go_btn:I = 0x7f0a0b21
 
-    invoke-virtual {v10, v7, v8, v13}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+.field public static search_mag_icon:I = 0x7f0a0b22
 
-    move-result v7
+.field public static search_plate:I = 0x7f0a0b24
 
-    if-eqz v7, :cond_4
+.field public static search_src_text:I = 0x7f0a0b25
 
-    goto :goto_3
+.field public static search_voice_btn:I = 0x7f0a0b26
 
-    :cond_4
-    new-instance v0, Lcom/google/android/exoplayer2/upstream/RawResourceDataSource$RawResourceDataSourceException;
+.field public static select_dialog_listview:I = 0x7f0a0b2f
 
-    const-string v2, "Resource not found."
+.field public static shortcut:I = 0x7f0a0ba6
 
-    invoke-direct {v0, v2, v12, v9}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
+.field public static spacer:I = 0x7f0a0bbd
 
-    throw v0
+.field public static special_effects_controller_view_tag:I = 0x7f0a0bbe
 
-    :cond_5
-    new-instance v0, Lcom/google/android/exoplayer2/upstream/RawResourceDataSource$RawResourceDataSourceException;
+.field public static split_action_bar:I = 0x7f0a0bc3
 
-    const-string v2, "URI must either use scheme rawresource or android.resource"
+.field public static src_atop:I = 0x7f0a0bc8
 
-    invoke-direct {v0, v2, v12, v8}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
+.field public static src_in:I = 0x7f0a0bc9
 
-    throw v0
+.field public static src_over:I = 0x7f0a0bca
 
-    :cond_6
-    :goto_2
-    :try_start_0
-    invoke-virtual {v2}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
+.field public static submenuarrow:I = 0x7f0a0bd6
 
-    move-result-object v7
+.field public static submit_area:I = 0x7f0a0bd7
 
-    invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.field public static tabMode:I = 0x7f0a0bdd
 
-    invoke-static {v7}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+.field public static tag_accessibility_actions:I = 0x7f0a0bde
 
-    move-result v7
-    :try_end_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_3
+.field public static tag_accessibility_clickable_spans:I = 0x7f0a0bdf
 
-    :goto_3
-    invoke-virtual {v1}, Lnj0;->e()V
+.field public static tag_accessibility_heading:I = 0x7f0a0be0
 
-    :try_start_1
-    invoke-virtual {v10, v7}, Landroid/content/res/Resources;->openRawResourceFd(I)Landroid/content/res/AssetFileDescriptor;
+.field public static tag_accessibility_pane_title:I = 0x7f0a0be1
 
-    move-result-object v7
-    :try_end_1
-    .catch Landroid/content/res/Resources$NotFoundException; {:try_start_1 .. :try_end_1} :catch_2
+.field public static tag_on_apply_window_listener:I = 0x7f0a0be2
 
-    iput-object v7, v1, Ltxc;->q0:Landroid/content/res/AssetFileDescriptor;
+.field public static tag_on_receive_content_listener:I = 0x7f0a0be3
 
-    if-eqz v7, :cond_11
+.field public static tag_on_receive_content_mime_types:I = 0x7f0a0be4
 
-    invoke-virtual {v7}, Landroid/content/res/AssetFileDescriptor;->getLength()J
+.field public static tag_screen_reader_focusable:I = 0x7f0a0be6
 
-    move-result-wide v9
+.field public static tag_state_description:I = 0x7f0a0be7
 
-    new-instance v2, Ljava/io/FileInputStream;
+.field public static tag_transition_group:I = 0x7f0a0be9
 
-    invoke-virtual {v7}, Landroid/content/res/AssetFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
+.field public static tag_unhandled_key_event_manager:I = 0x7f0a0bea
 
-    move-result-object v13
+.field public static tag_unhandled_key_listeners:I = 0x7f0a0beb
 
-    invoke-direct {v2, v13}, Ljava/io/FileInputStream;-><init>(Ljava/io/FileDescriptor;)V
+.field public static tag_window_insets_animation_callback:I = 0x7f0a0bec
 
-    iput-object v2, v1, Ltxc;->r0:Ljava/io/FileInputStream;
+.field public static text:I = 0x7f0a0bee
 
-    const-wide/16 v13, -0x1
+.field public static text2:I = 0x7f0a0bef
 
-    cmp-long v15, v9, v13
+.field public static textSpacerNoButtons:I = 0x7f0a0bf1
 
-    const/16 v8, 0x7d8
+.field public static textSpacerNoTitle:I = 0x7f0a0bf2
 
-    if-eqz v15, :cond_8
+.field public static time:I = 0x7f0a0c0d
 
-    cmp-long v16, v5, v9
+.field public static title:I = 0x7f0a0c0f
 
-    if-gtz v16, :cond_7
+.field public static titleDividerNoCustom:I = 0x7f0a0c10
 
-    goto :goto_4
+.field public static title_template:I = 0x7f0a0c11
 
-    :cond_7
-    :try_start_2
-    new-instance v0, Lcom/google/android/exoplayer2/upstream/RawResourceDataSource$RawResourceDataSourceException;
+.field public static topPanel:I = 0x7f0a0c25
 
-    invoke-direct {v0, v12, v12, v8}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
+.field public static unchecked:I = 0x7f0a0c41
 
-    throw v0
+.field public static uniform:I = 0x7f0a0c42
 
-    :catch_0
-    move-exception v0
+.field public static up:I = 0x7f0a0c4c
 
-    goto/16 :goto_7
+.field public static view_tree_lifecycle_owner:I = 0x7f0a0d1c
 
-    :catch_1
-    move-exception v0
+.field public static view_tree_on_back_pressed_dispatcher_owner:I = 0x7f0a0d1d
 
-    goto/16 :goto_8
+.field public static view_tree_saved_state_registry_owner:I = 0x7f0a0d1e
 
-    :cond_8
-    :goto_4
-    invoke-virtual {v7}, Landroid/content/res/AssetFileDescriptor;->getStartOffset()J
+.field public static view_tree_view_model_store_owner:I = 0x7f0a0d1f
 
-    move-result-wide v16
+.field public static visible_removing_fragment_view_tag:I = 0x7f0a0d42
 
-    move-wide/from16 v18, v9
-
-    add-long v8, v16, v5
-
-    invoke-virtual {v2, v8, v9}, Ljava/io/FileInputStream;->skip(J)J
-
-    move-result-wide v8
-
-    sub-long v8, v8, v16
-
-    cmp-long v5, v8, v5
-
-    if-nez v5, :cond_10
-
-    const-wide/16 v5, 0x0
-
-    if-nez v15, :cond_b
-
-    invoke-virtual {v2}, Ljava/io/FileInputStream;->getChannel()Ljava/nio/channels/FileChannel;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/nio/channels/FileChannel;->size()J
-
-    move-result-wide v8
-
-    cmp-long v8, v8, v5
-
-    if-nez v8, :cond_9
-
-    iput-wide v13, v1, Ltxc;->s0:J
-
-    goto :goto_5
-
-    :cond_9
-    invoke-virtual {v2}, Ljava/nio/channels/FileChannel;->size()J
-
-    move-result-wide v8
-
-    invoke-virtual {v2}, Ljava/nio/channels/FileChannel;->position()J
-
-    move-result-wide v16
-
-    sub-long v8, v8, v16
-
-    iput-wide v8, v1, Ltxc;->s0:J
-
-    cmp-long v2, v8, v5
-
-    if-ltz v2, :cond_a
-
-    goto :goto_5
-
-    :cond_a
-    new-instance v0, Lcom/google/android/exoplayer2/upstream/RawResourceDataSource$RawResourceDataSourceException;
-
-    const/16 v7, 0x7d8
-
-    invoke-direct {v0, v12, v12, v7}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
-
-    throw v0
-
-    :cond_b
-    sub-long v9, v18, v8
-
-    iput-wide v9, v1, Ltxc;->s0:J
-    :try_end_2
-    .catch Lcom/google/android/exoplayer2/upstream/RawResourceDataSource$RawResourceDataSourceException; {:try_start_2 .. :try_end_2} :catch_1
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
-
-    cmp-long v2, v9, v5
-
-    if-ltz v2, :cond_f
-
-    :goto_5
-    cmp-long v2, v3, v13
-
-    if-eqz v2, :cond_d
-
-    iget-wide v5, v1, Ltxc;->s0:J
-
-    cmp-long v7, v5, v13
-
-    if-nez v7, :cond_c
-
-    move-wide v5, v3
-
-    goto :goto_6
-
-    :cond_c
-    invoke-static {v5, v6, v3, v4}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v5
-
-    :goto_6
-    iput-wide v5, v1, Ltxc;->s0:J
-
-    :cond_d
-    iput-boolean v11, v1, Ltxc;->t0:Z
-
-    invoke-virtual/range {p0 .. p1}, Lnj0;->f(Llc4;)V
-
-    if-eqz v2, :cond_e
-
-    return-wide v3
-
-    :cond_e
-    iget-wide v2, v1, Ltxc;->s0:J
-
-    return-wide v2
-
-    :cond_f
-    :try_start_3
-    new-instance v0, Lcom/google/android/exoplayer2/upstream/DataSourceException;
-
-    const/16 v7, 0x7d8
-
-    invoke-direct {v0, v7}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(I)V
-
-    throw v0
-
-    :cond_10
-    new-instance v0, Lcom/google/android/exoplayer2/upstream/RawResourceDataSource$RawResourceDataSourceException;
-
-    const/16 v7, 0x7d8
-
-    invoke-direct {v0, v12, v12, v7}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
-
-    throw v0
-    :try_end_3
-    .catch Lcom/google/android/exoplayer2/upstream/RawResourceDataSource$RawResourceDataSourceException; {:try_start_3 .. :try_end_3} :catch_1
-    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
-
-    :goto_7
-    new-instance v2, Lcom/google/android/exoplayer2/upstream/RawResourceDataSource$RawResourceDataSourceException;
-
-    const/16 v3, 0x7d0
-
-    invoke-direct {v2, v12, v0, v3}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
-
-    throw v2
-
-    :goto_8
-    throw v0
-
-    :cond_11
-    new-instance v0, Lcom/google/android/exoplayer2/upstream/RawResourceDataSource$RawResourceDataSourceException;
-
-    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    add-int/lit8 v3, v3, 0x18
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4, v3}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v3, "Resource is compressed: "
-
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    const/16 v3, 0x7d0
-
-    invoke-direct {v0, v2, v12, v3}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
-
-    throw v0
-
-    :catch_2
-    move-exception v0
-
-    new-instance v2, Lcom/google/android/exoplayer2/upstream/RawResourceDataSource$RawResourceDataSourceException;
-
-    invoke-direct {v2, v12, v0, v9}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
-
-    throw v2
-
-    :catch_3
-    new-instance v0, Lcom/google/android/exoplayer2/upstream/RawResourceDataSource$RawResourceDataSourceException;
-
-    const-string v2, "Resource identifier must be an integer."
-
-    invoke-direct {v0, v2, v12, v8}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
-
-    throw v0
-.end method
-
-.method public final close()V
-    .locals 5
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Ltxc;->Z:Landroid/net/Uri;
-
-    const/16 v1, 0x7d0
-
-    const/4 v2, 0x0
-
-    :try_start_0
-    iget-object v3, p0, Ltxc;->r0:Ljava/io/FileInputStream;
-
-    if-eqz v3, :cond_0
-
-    invoke-virtual {v3}, Ljava/io/InputStream;->close()V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v3
-
-    goto :goto_5
-
-    :catch_0
-    move-exception v3
-
-    goto :goto_4
-
-    :cond_0
-    :goto_0
-    iput-object v0, p0, Ltxc;->r0:Ljava/io/FileInputStream;
-
-    :try_start_1
-    iget-object v3, p0, Ltxc;->q0:Landroid/content/res/AssetFileDescriptor;
-
-    if-eqz v3, :cond_1
-
-    invoke-virtual {v3}, Landroid/content/res/AssetFileDescriptor;->close()V
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    goto :goto_1
-
-    :catchall_1
-    move-exception v1
-
-    goto :goto_3
-
-    :catch_1
-    move-exception v3
-
-    goto :goto_2
-
-    :cond_1
-    :goto_1
-    iput-object v0, p0, Ltxc;->q0:Landroid/content/res/AssetFileDescriptor;
-
-    iget-boolean v0, p0, Ltxc;->t0:Z
-
-    if-eqz v0, :cond_2
-
-    iput-boolean v2, p0, Ltxc;->t0:Z
-
-    invoke-virtual {p0}, Lnj0;->c()V
-
-    :cond_2
-    return-void
-
-    :goto_2
-    :try_start_2
-    new-instance v4, Lcom/google/android/exoplayer2/upstream/RawResourceDataSource$RawResourceDataSourceException;
-
-    invoke-direct {v4, v0, v3, v1}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
-
-    throw v4
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    :goto_3
-    iput-object v0, p0, Ltxc;->q0:Landroid/content/res/AssetFileDescriptor;
-
-    iget-boolean v0, p0, Ltxc;->t0:Z
-
-    if-eqz v0, :cond_3
-
-    iput-boolean v2, p0, Ltxc;->t0:Z
-
-    invoke-virtual {p0}, Lnj0;->c()V
-
-    :cond_3
-    throw v1
-
-    :goto_4
-    :try_start_3
-    new-instance v4, Lcom/google/android/exoplayer2/upstream/RawResourceDataSource$RawResourceDataSourceException;
-
-    invoke-direct {v4, v0, v3, v1}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
-
-    throw v4
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :goto_5
-    iput-object v0, p0, Ltxc;->r0:Ljava/io/FileInputStream;
-
-    :try_start_4
-    iget-object v4, p0, Ltxc;->q0:Landroid/content/res/AssetFileDescriptor;
-
-    if-eqz v4, :cond_4
-
-    invoke-virtual {v4}, Landroid/content/res/AssetFileDescriptor;->close()V
-    :try_end_4
-    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
-    .catchall {:try_start_4 .. :try_end_4} :catchall_2
-
-    goto :goto_6
-
-    :catchall_2
-    move-exception v1
-
-    goto :goto_8
-
-    :catch_2
-    move-exception v3
-
-    goto :goto_7
-
-    :cond_4
-    :goto_6
-    iput-object v0, p0, Ltxc;->q0:Landroid/content/res/AssetFileDescriptor;
-
-    iget-boolean v0, p0, Ltxc;->t0:Z
-
-    if-eqz v0, :cond_5
-
-    iput-boolean v2, p0, Ltxc;->t0:Z
-
-    invoke-virtual {p0}, Lnj0;->c()V
-
-    :cond_5
-    throw v3
-
-    :goto_7
-    :try_start_5
-    new-instance v4, Lcom/google/android/exoplayer2/upstream/RawResourceDataSource$RawResourceDataSourceException;
-
-    invoke-direct {v4, v0, v3, v1}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
-
-    throw v4
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_2
-
-    :goto_8
-    iput-object v0, p0, Ltxc;->q0:Landroid/content/res/AssetFileDescriptor;
-
-    iget-boolean v0, p0, Ltxc;->t0:Z
-
-    if-eqz v0, :cond_6
-
-    iput-boolean v2, p0, Ltxc;->t0:Z
-
-    invoke-virtual {p0}, Lnj0;->c()V
-
-    :cond_6
-    throw v1
-.end method
-
-.method public final getUri()Landroid/net/Uri;
-    .locals 1
-
-    iget-object v0, p0, Ltxc;->Z:Landroid/net/Uri;
-
-    return-object v0
-.end method
-
-.method public final read([BII)I
-    .locals 9
-
-    if-nez p3, :cond_0
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_0
-    iget-wide v0, p0, Ltxc;->s0:J
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v2, v0, v2
-
-    const/4 v3, -0x1
-
-    if-nez v2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    const-wide/16 v4, -0x1
-
-    cmp-long v2, v0, v4
-
-    const/16 v6, 0x7d0
-
-    if-nez v2, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    int-to-long v7, p3
-
-    :try_start_0
-    invoke-static {v0, v1, v7, v8}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v0
-
-    long-to-int p3, v0
-
-    :goto_0
-    iget-object v0, p0, Ltxc;->r0:Ljava/io/FileInputStream;
-
-    sget v1, Llig;->a:I
-
-    invoke-virtual {v0, p1, p2, p3}, Ljava/io/InputStream;->read([BII)I
-
-    move-result p1
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    if-ne p1, v3, :cond_4
-
-    iget-wide p1, p0, Ltxc;->s0:J
-
-    cmp-long p1, p1, v4
-
-    if-nez p1, :cond_3
-
-    :goto_1
-    return v3
-
-    :cond_3
-    new-instance p1, Lcom/google/android/exoplayer2/upstream/RawResourceDataSource$RawResourceDataSourceException;
-
-    new-instance p2, Ljava/io/EOFException;
-
-    invoke-direct {p2}, Ljava/io/EOFException;-><init>()V
-
-    const-string p3, "End of stream reached having not read sufficient data."
-
-    invoke-direct {p1, p3, p2, v6}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
-
-    throw p1
-
-    :cond_4
-    iget-wide p2, p0, Ltxc;->s0:J
-
-    cmp-long v0, p2, v4
-
-    if-eqz v0, :cond_5
-
-    int-to-long v0, p1
-
-    sub-long/2addr p2, v0
-
-    iput-wide p2, p0, Ltxc;->s0:J
-
-    :cond_5
-    invoke-virtual {p0, p1}, Lnj0;->b(I)V
-
-    return p1
-
-    :catch_0
-    move-exception p1
-
-    new-instance p2, Lcom/google/android/exoplayer2/upstream/RawResourceDataSource$RawResourceDataSourceException;
-
-    const/4 p3, 0x0
-
-    invoke-direct {p2, p3, p1, v6}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
-
-    throw p2
-.end method
+.field public static wrap_content:I = 0x7f0a0d5b

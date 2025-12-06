@@ -1,194 +1,87 @@
-.class public abstract Lc99;
-.super Ljava/lang/Object;
+.class public final Lc99;
+.super Ls29;
 .source "SourceFile"
-
-# interfaces
-.implements Lume;
-.implements Lk99;
-.implements Landroid/widget/AdapterView$OnItemClickListener;
-
-
-# instance fields
-.field public a:Landroid/graphics/Rect;
 
 
 # direct methods
-.method public static m(Landroid/widget/ListAdapter;Landroid/content/Context;I)I
-    .locals 10
+.method public constructor <init>(Ljava/lang/Object;)V
+    .locals 7
 
-    const/4 v0, 0x0
+    const/4 v3, -0x1
 
-    invoke-static {v0, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+    const/4 v6, -0x1
 
-    move-result v1
+    const/4 v2, -0x1
 
-    invoke-static {v0, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+    const-wide/16 v4, -0x1
 
-    move-result v2
+    move-object v0, p0
 
-    invoke-interface {p0}, Landroid/widget/Adapter;->getCount()I
+    move-object v1, p1
 
-    move-result v3
+    .line 1
+    invoke-direct/range {v0 .. v6}, Ls29;-><init>(Ljava/lang/Object;IIJI)V
 
-    const/4 v4, 0x0
+    return-void
+.end method
 
-    move v5, v0
+.method public constructor <init>(Ljava/lang/Object;JI)V
+    .locals 7
 
-    move v6, v5
+    const/4 v2, -0x1
 
-    move-object v7, v4
+    const/4 v3, -0x1
 
-    move-object v8, v7
+    move-object v0, p0
 
-    :goto_0
-    if-ge v0, v3, :cond_4
+    move-object v1, p1
 
-    invoke-interface {p0, v0}, Landroid/widget/Adapter;->getItemViewType(I)I
+    move-wide v4, p2
 
-    move-result v9
+    move v6, p4
 
-    if-eq v9, v6, :cond_0
+    .line 2
+    invoke-direct/range {v0 .. v6}, Ls29;-><init>(Ljava/lang/Object;IIJI)V
 
-    move-object v8, v4
-
-    move v6, v9
-
-    :cond_0
-    if-nez v7, :cond_1
-
-    new-instance v7, Landroid/widget/FrameLayout;
-
-    invoke-direct {v7, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
-
-    :cond_1
-    invoke-interface {p0, v0, v8, v7}, Landroid/widget/Adapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object v8
-
-    invoke-virtual {v8, v1, v2}, Landroid/view/View;->measure(II)V
-
-    invoke-virtual {v8}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result v9
-
-    if-lt v9, p2, :cond_2
-
-    return p2
-
-    :cond_2
-    if-le v9, v5, :cond_3
-
-    move v5, v9
-
-    :cond_3
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_4
-    return v5
+    return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lx89;)Z
-    .locals 0
+.method public final b(Ljava/lang/Object;)Lc99;
+    .locals 9
 
-    const/4 p1, 0x0
+    new-instance v0, Lc99;
 
-    return p1
-.end method
+    iget-object v1, p0, Ls29;->a:Ljava/lang/Object;
 
-.method public final g(Lx89;)Z
-    .locals 0
+    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    const/4 p1, 0x0
+    move-result v1
 
-    return p1
-.end method
+    if-eqz v1, :cond_0
 
-.method public final j(Landroid/content/Context;Lt89;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public abstract k(Lt89;)V
-.end method
-
-.method public abstract n(Landroid/view/View;)V
-.end method
-
-.method public abstract o(Z)V
-.end method
-
-.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 0
-
-    invoke-virtual {p1}, Landroid/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/widget/ListAdapter;
-
-    instance-of p2, p1, Landroid/widget/HeaderViewListAdapter;
-
-    if-eqz p2, :cond_0
-
-    move-object p2, p1
-
-    check-cast p2, Landroid/widget/HeaderViewListAdapter;
-
-    invoke-virtual {p2}, Landroid/widget/HeaderViewListAdapter;->getWrappedAdapter()Landroid/widget/ListAdapter;
-
-    move-result-object p2
-
-    check-cast p2, Lq89;
+    move-object v2, p0
 
     goto :goto_0
 
     :cond_0
-    move-object p2, p1
+    new-instance v2, Ls29;
 
-    check-cast p2, Lq89;
+    iget-wide v6, p0, Ls29;->d:J
+
+    iget v8, p0, Ls29;->e:I
+
+    iget v4, p0, Ls29;->b:I
+
+    iget v5, p0, Ls29;->c:I
+
+    move-object v3, p1
+
+    invoke-direct/range {v2 .. v8}, Ls29;-><init>(Ljava/lang/Object;IIJI)V
 
     :goto_0
-    iget-object p2, p2, Lq89;->a:Lt89;
+    invoke-direct {v0, v2}, Ls29;-><init>(Ls29;)V
 
-    invoke-interface {p1, p3}, Landroid/widget/Adapter;->getItem(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/view/MenuItem;
-
-    instance-of p3, p0, Lz42;
-
-    if-nez p3, :cond_1
-
-    const/4 p3, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    const/4 p3, 0x4
-
-    :goto_1
-    invoke-virtual {p2, p1, p0, p3}, Lt89;->q(Landroid/view/MenuItem;Lk99;I)Z
-
-    return-void
-.end method
-
-.method public abstract p(I)V
-.end method
-
-.method public abstract q(I)V
-.end method
-
-.method public abstract r(Landroid/widget/PopupWindow$OnDismissListener;)V
-.end method
-
-.method public abstract s(Z)V
-.end method
-
-.method public abstract t(I)V
+    return-object v0
 .end method

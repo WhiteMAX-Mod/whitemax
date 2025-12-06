@@ -1,156 +1,167 @@
-.class public abstract Llsc;
+.class public final Llsc;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/os/Parcelable;
 
 
 # static fields
-.field public static cancel:I = 0x7f1302a3
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Llsc;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public static channel_close_title:I = 0x7f1302bd
 
-.field public static channel_delete_for_all:I = 0x7f1302c0
+# instance fields
+.field public final a:Lisc;
 
-.field public static channel_delete_title:I = 0x7f1302c1
 
-.field public static channel_leave_title:I = 0x7f1302c9
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-.field public static channel_move_rights_and_leave:I = 0x7f1302cd
+    new-instance v0, Lwcb;
 
-.field public static chat_clear_history_snackbar_title:I = 0x7f1302fe
+    const/16 v1, 0x15
 
-.field public static chat_delete_confirm:I = 0x7f13030b
+    invoke-direct {v0, v1}, Lwcb;-><init>(I)V
 
-.field public static chat_delete_for_all:I = 0x7f13030c
+    sput-object v0, Llsc;->CREATOR:Landroid/os/Parcelable$Creator;
 
-.field public static chat_delete_for_all_title:I = 0x7f13030d
+    return-void
+.end method
 
-.field public static chat_delete_for_both:I = 0x7f13030e
+.method public constructor <init>(Lisc;)V
+    .locals 0
 
-.field public static chat_delete_for_self:I = 0x7f13030f
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static chat_delete_title:I = 0x7f130310
+    iput-object p1, p0, Llsc;->a:Lisc;
 
-.field public static chat_leave_cancel:I = 0x7f130323
+    return-void
+.end method
 
-.field public static chat_leave_title:I = 0x7f130326
 
-.field public static chat_list_confirm_clear_saved_messages_history_negative_button:I = 0x7f130327
+# virtual methods
+.method public final describeContents()I
+    .locals 1
 
-.field public static chat_list_confirm_clear_saved_messages_history_subtitle:I = 0x7f130328
+    const/4 v0, 0x0
 
-.field public static chat_list_confirm_clear_saved_messages_history_title:I = 0x7f130329
+    return v0
+.end method
 
-.field public static chat_list_toolbar_title:I = 0x7f13032a
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-.field public static chat_list_toolbar_transition_name:I = 0x7f13032b
+    const/4 v0, 0x1
 
-.field public static chat_move_rights_and_leave:I = 0x7f130346
+    if-ne p0, p1, :cond_0
 
-.field public static chats_list_empty_state_action:I = 0x7f1303c7
+    return v0
 
-.field public static chats_list_empty_state_title:I = 0x7f1303c8
+    :cond_0
+    instance-of v1, p1, Llsc;
 
-.field public static chats_list_search_clear_recent_dialog_confirm_text:I = 0x7f1303c9
+    const/4 v2, 0x0
 
-.field public static chats_list_search_clear_recent_dialog_title:I = 0x7f1303ca
+    if-nez v1, :cond_1
 
-.field public static chats_list_search_contacts_header:I = 0x7f1303cb
+    return v2
 
-.field public static chats_list_search_hint:I = 0x7f1303cc
+    :cond_1
+    check-cast p1, Llsc;
 
-.field public static chats_list_search_messages_header:I = 0x7f1303cd
+    iget-object v1, p0, Llsc;->a:Lisc;
 
-.field public static chats_list_search_recent_header:I = 0x7f1303ce
+    iget-object p1, p1, Llsc;->a:Lisc;
 
-.field public static chats_list_search_recent_header_clear:I = 0x7f1303cf
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.field public static confirmation_block:I = 0x7f1303f7
+    move-result p1
 
-.field public static confirmation_close:I = 0x7f1303f8
+    if-nez p1, :cond_2
 
-.field public static confirmation_close_channel:I = 0x7f1303f9
+    return v2
 
-.field public static confirmation_leave_channel:I = 0x7f1303fa
+    :cond_2
+    return v0
+.end method
 
-.field public static confirmation_leave_chat:I = 0x7f1303fb
+.method public final hashCode()I
+    .locals 1
 
-.field public static contact_block_title:I = 0x7f13040c
+    iget-object v0, p0, Llsc;->a:Lisc;
 
-.field public static contact_blocked_snackbar_title:I = 0x7f13040e
+    invoke-virtual {v0}, Lisc;->hashCode()I
 
-.field public static contact_empty_last_seen:I = 0x7f13040f
+    move-result v0
 
-.field public static contacts_picker_search_hint:I = 0x7f130428
+    return v0
+.end method
 
-.field public static contacts_picker_send_btn_title:I = 0x7f130429
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-.field public static contacts_picker_toolbar_title:I = 0x7f13042a
+    new-instance v0, Ljava/lang/StringBuilder;
 
-.field public static dialog_delete_title:I = 0x7f130458
+    const-string v1, "QualityParc(value="
 
-.field public static notifications_1_day:I = 0x7f130789
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.field public static notifications_1_hour:I = 0x7f13078a
+    iget-object v1, p0, Llsc;->a:Lisc;
 
-.field public static notifications_4_hour:I = 0x7f13078b
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-.field public static notifications_disable:I = 0x7f13078d
+    const-string v1, ")"
 
-.field public static notifications_infinite:I = 0x7f130794
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.field public static picker_chats_add_button:I = 0x7f130af6
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-.field public static picker_chats_adding_disabled_bot:I = 0x7f130af7
+    move-result-object v0
 
-.field public static picker_chats_adding_disabled_bot_official:I = 0x7f130af8
+    return-object v0
+.end method
 
-.field public static picker_chats_adding_disabled_default:I = 0x7f130af9
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
 
-.field public static picker_chats_adding_disabled_to_channel_bot:I = 0x7f130afa
+    iget-object p2, p0, Llsc;->a:Lisc;
 
-.field public static picker_chats_adding_disabled_to_channel_bot_official:I = 0x7f130afb
+    iget-object v0, p2, Lisc;->a:Lgsc;
 
-.field public static picker_chats_adding_disabled_to_channel_default:I = 0x7f130afc
+    iget-object v0, v0, Lgsc;->a:Ljava/lang/String;
 
-.field public static picker_chats_confirm_close:I = 0x7f130afd
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-.field public static picker_chats_confirmation_close_title:I = 0x7f130afe
+    iget v0, p2, Lisc;->b:I
 
-.field public static picker_chats_creating_disabled_bot:I = 0x7f130aff
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-.field public static picker_chats_creating_disabled_bot_official:I = 0x7f130b00
+    iget v0, p2, Lisc;->c:I
 
-.field public static picker_chats_creating_disabled_channel_bot:I = 0x7f130b01
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-.field public static picker_chats_creating_disabled_channel_bot_official:I = 0x7f130b02
+    iget v0, p2, Lisc;->d:I
 
-.field public static picker_chats_creating_disabled_channel_default:I = 0x7f130b03
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-.field public static picker_chats_creating_disabled_default:I = 0x7f130b04
+    iget-wide v0, p2, Lisc;->e:J
 
-.field public static picker_chats_forward_disabled_bot:I = 0x7f130b05
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-.field public static picker_chats_forward_disabled_bot_official:I = 0x7f130b06
+    iget-boolean p2, p2, Lisc;->f:Z
 
-.field public static picker_chats_forward_disabled_channel:I = 0x7f130b07
+    int-to-byte p2, p2
 
-.field public static picker_chats_forward_disabled_default:I = 0x7f130b08
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
 
-.field public static picker_chats_forward_from_channel:I = 0x7f130b09
-
-.field public static picker_chats_forward_from_self:I = 0x7f130b0a
-
-.field public static picker_chats_forward_from_somebody:I = 0x7f130b0b
-
-.field public static picker_chats_forward_quote_title:I = 0x7f130b0c
-
-.field public static picker_chats_forward_title:I = 0x7f130b0d
-
-.field public static picker_chats_list_share_contact:I = 0x7f130b0e
-
-.field public static picker_chats_list_share_link:I = 0x7f130b0f
-
-.field public static picker_chats_message_hint:I = 0x7f130b10
-
-.field public static picker_chats_search_hint:I = 0x7f130b11
-
-.field public static picker_chats_toolbar_title:I = 0x7f130b12
+    return-void
+.end method

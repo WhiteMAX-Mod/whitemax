@@ -1,108 +1,26 @@
-.class public final Lwyc;
+.class public abstract Lwyc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
 
 
-# instance fields
-.field public final synthetic a:Z
+# static fields
+.field public static oneme_location_map_bottom_gradient_view:I = 0x7f0a06c0
 
-.field public final synthetic b:Lyyc;
+.field public static oneme_location_map_bottom_insets_guideline:I = 0x7f0a06c1
 
-.field public final synthetic c:Landroid/view/View;
+.field public static oneme_location_map_button_current_location:I = 0x7f0a06c2
 
+.field public static oneme_location_map_button_geo_layers:I = 0x7f0a06c3
 
-# direct methods
-.method public constructor <init>(ZLyyc;Landroid/view/View;)V
-    .locals 0
+.field public static oneme_location_map_button_send:I = 0x7f0a06c4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_location_map_center_marker:I = 0x7f0a06c5
 
-    iput-boolean p1, p0, Lwyc;->a:Z
+.field public static oneme_location_map_location_info:I = 0x7f0a06c6
 
-    iput-object p2, p0, Lwyc;->b:Lyyc;
+.field public static oneme_location_map_logo_view:I = 0x7f0a06c7
 
-    iput-object p3, p0, Lwyc;->c:Landroid/view/View;
+.field public static oneme_location_map_toolbar:I = 0x7f0a06c8
 
-    return-void
-.end method
+.field public static oneme_location_map_toolbar_close:I = 0x7f0a06c9
 
-
-# virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 2
-
-    iget-boolean p1, p0, Lwyc;->a:Z
-
-    if-eqz p1, :cond_2
-
-    iget-object p1, p0, Lwyc;->b:Lyyc;
-
-    iget-object p1, p1, Lyyc;->a:Ljyc;
-
-    invoke-virtual {p1}, Ljyc;->invoke()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    iget-object v0, p0, Lwyc;->c:Landroid/view/View;
-
-    if-eqz p1, :cond_1
-
-    instance-of p1, v0, Liyc;
-
-    if-eqz p1, :cond_0
-
-    move-object p1, v0
-
-    check-cast p1, Liyc;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Liyc;->b()Z
-
-    move-result p1
-
-    const/4 v1, 0x1
-
-    if-ne p1, v1, :cond_2
-
-    :cond_1
-    sget-object p1, Lpw6;->Y:Lpw6;
-
-    invoke-static {v0, p1}, Lzpe;->h(Landroid/view/View;Lrw6;)Z
-
-    :cond_2
-    return-void
-.end method
-
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
+.field public static oneme_location_map_view:I = 0x7f0a06ca

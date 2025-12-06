@@ -1,100 +1,124 @@
 .class public final Lqhf;
-.super Ljava/lang/Object;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Lty5;
+.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lwhf;
 
-.field public final synthetic b:Lx23;
-
-.field public final synthetic c:Lthf;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lx23;Lthf;I)V
+.method public constructor <init>(Lwhf;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p3, p0, Lqhf;->a:I
+    iput-object p1, p0, Lqhf;->X:Lwhf;
 
-    iput-object p1, p0, Lqhf;->b:Lx23;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lqhf;->c:Lthf;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lqhf;->a:I
+    check-cast p1, Ljava/util/List;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    new-instance v0, Lkw8;
-
-    iget-object v1, p0, Lqhf;->c:Lthf;
-
-    const/16 v2, 0x16
-
-    invoke-direct {v0, p1, v2, v1}, Lkw8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    iget-object p1, p0, Lqhf;->b:Lx23;
-
-    invoke-virtual {p1, v0, p2}, Lx23;->d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lqhf;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    sget-object p2, Lr54;->a:Lr54;
+    check-cast p1, Lqhf;
 
-    if-ne p1, p2, :cond_0
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    goto :goto_0
+    invoke-virtual {p1, p2}, Lqhf;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lqhf;
+
+    iget-object v1, p0, Lqhf;->X:Lwhf;
+
+    invoke-direct {v0, v1, p2}, Lqhf;-><init>(Lwhf;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lqhf;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lqhf;->o:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/List;
+
+    iget-object v0, p0, Lqhf;->X:Lwhf;
+
+    iget-object v1, v0, Lwhf;->t0:Ljava/util/concurrent/atomic/AtomicReference;
+
+    new-instance v2, Lj11;
+
+    const/4 v3, 0x4
+
+    invoke-direct {v2, p1, v3, v0}, Lj11;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->updateAndGet(Ljava/util/function/UnaryOperator;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/util/List;
+
+    iget-object v1, v0, Lwhf;->u0:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lrhf;
+
+    iget-object v1, v1, Lrhf;->a:Ljava/lang/String;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    if-nez v1, :cond_1
 
     :cond_0
-    sget-object p1, Lccg;->a:Lccg;
+    iget-object v0, v0, Lwhf;->X:Ltcf;
 
-    :goto_0
-    return-object p1
+    new-instance v1, Lf7e;
 
-    :pswitch_0
-    new-instance v0, Ls3a;
+    const/4 v2, 0x2
 
-    iget-object v1, p0, Lqhf;->c:Lthf;
+    invoke-direct {v1, v2, p1}, Lf7e;-><init>(ILjava/util/List;)V
 
-    const/16 v2, 0x1a
+    const/4 p1, 0x0
 
-    invoke-direct {v0, p1, v1, v2}, Ls3a;-><init>(Lvy5;Ljava/lang/Object;I)V
-
-    iget-object p1, p0, Lqhf;->b:Lx23;
-
-    invoke-virtual {p1, v0, p2}, Lx23;->d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lr54;->a:Lr54;
-
-    if-ne p1, p2, :cond_1
-
-    goto :goto_1
+    invoke-virtual {v0, p1, v1}, Ltcf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     :cond_1
-    sget-object p1, Lccg;->a:Lccg;
+    sget-object p1, Lqqg;->a:Lqqg;
 
-    :goto_1
     return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

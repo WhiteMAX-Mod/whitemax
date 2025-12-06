@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lv0a;
+.implements Lcm6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lh01;
+.field public final synthetic b:Ldj1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lh01;I)V
+.method public synthetic constructor <init>(Ldj1;I)V
     .locals 0
 
     iput p2, p0, Lqz0;->a:I
 
-    iput-object p1, p0, Lqz0;->b:Lh01;
+    iput-object p1, p0, Lqz0;->b:Ldj1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,95 +27,31 @@
 
 
 # virtual methods
-.method public final h(Lw0a;)V
-    .locals 3
+.method public final invoke()Ljava/lang/Object;
+    .locals 1
 
     iget v0, p0, Lqz0;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lqz0;->b:Lh01;
+    iget-object v0, p0, Lqz0;->b:Ldj1;
 
-    iget-object v0, v0, Lh01;->O0:Lrq1;
+    invoke-virtual {v0}, Ldj1;->q()I
 
-    iget-object v0, v0, Lrq1;->m:Lu7;
+    move-result v0
 
-    iget-boolean p1, p1, Lw0a;->f:Z
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget-object v0, v0, Lu7;->b:Lw7;
+    move-result-object v0
 
-    if-eqz p1, :cond_1
-
-    iget-boolean p1, v0, Lw7;->b:Z
-
-    if-eqz p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x1
-
-    iput-boolean p1, v0, Lw7;->b:Z
-
-    iget-object p1, v0, Lw7;->c:Ljava/lang/Object;
-
-    check-cast p1, Lavf;
-
-    invoke-interface {p1}, Lavf;->getMsSinceBoot()J
-
-    move-result-wide v1
-
-    iput-wide v1, v0, Lw7;->a:J
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v0}, Lw7;->a()V
-
-    :goto_0
-    return-void
+    return-object v0
 
     :pswitch_0
-    iget-object v0, p0, Lqz0;->b:Lh01;
+    iget-object v0, p0, Lqz0;->b:Ldj1;
 
-    iget-object v0, v0, Lh01;->O0:Lrq1;
+    iget-object v0, v0, Ldj1;->k:Lfje;
 
-    iget-object v0, v0, Lrq1;->m:Lu7;
-
-    iget-boolean p1, p1, Lw0a;->f:Z
-
-    iget-object v0, v0, Lu7;->b:Lw7;
-
-    if-eqz p1, :cond_3
-
-    iget-boolean p1, v0, Lw7;->b:Z
-
-    if-eqz p1, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    const/4 p1, 0x1
-
-    iput-boolean p1, v0, Lw7;->b:Z
-
-    iget-object p1, v0, Lw7;->c:Ljava/lang/Object;
-
-    check-cast p1, Lavf;
-
-    invoke-interface {p1}, Lavf;->getMsSinceBoot()J
-
-    move-result-wide v1
-
-    iput-wide v1, v0, Lw7;->a:J
-
-    goto :goto_1
-
-    :cond_3
-    invoke-virtual {v0}, Lw7;->a()V
-
-    :goto_1
-    return-void
+    return-object v0
 
     nop
 

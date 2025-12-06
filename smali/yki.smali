@@ -1,28 +1,130 @@
-.class public abstract Lyki;
+.class public final Lyki;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpqa;
+
+
+# static fields
+.field public static final a:Lyki;
+
 
 # direct methods
-.method public static final a(Lur7;)Lur7;
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-interface {p0}, Lur7;->d()Lb3e;
+    new-instance v0, Lyki;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lyki;->a:Lyki;
+
+    new-instance v0, Ltci;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Ltci;-><init>(I)V
+
+    const-class v1, Lhdi;
+
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lb3e;->c()Z
+    const/4 v2, 0x2
 
-    move-result v0
+    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
 
-    if-eqz v0, :cond_0
+    move-result-object v0
 
-    return-object p0
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
 
-    :cond_0
-    new-instance v0, Lhha;
+    move-result-object v0
 
-    invoke-direct {v0, p0}, Lhha;-><init>(Lur7;)V
+    const/4 v2, 0x3
 
-    return-object v0
+    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x4
+
+    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x5
+
+    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x6
+
+    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x7
+
+    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/16 v2, 0x8
+
+    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/16 v2, 0x9
+
+    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

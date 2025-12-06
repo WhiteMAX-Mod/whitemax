@@ -1,47 +1,68 @@
-.class public final synthetic Ls68;
+.class public final Ls68;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ly68;
+.implements Lw68;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Ls68;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic a:Lw68;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lw68;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lf18;
+
+    const/16 v1, 0x15
+
+    invoke-direct {v0, v1}, Lf18;-><init>(I)V
+
+    sput-object v0, Ls68;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Ls68;->a:Lw68;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ls68;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(II)V
+.method public final describeContents()I
     .locals 1
 
-    iget-object v0, p0, Ls68;->a:Lw68;
+    const/4 v0, 0x0
 
-    iget-object v0, v0, Lw68;->t:Lxpd;
+    return v0
+.end method
 
-    if-eqz v0, :cond_0
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    invoke-static {p1, p2}, Let9;->a(II)Landroid/graphics/Point;
+    iget-object p2, p0, Ls68;->a:Ljava/lang/String;
 
-    move-result-object p1
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    iget p2, p1, Landroid/graphics/Point;->x:I
-
-    iget p1, p1, Landroid/graphics/Point;->y:I
-
-    invoke-virtual {v0, p2, p1}, Lxpd;->a(II)V
-
-    :cond_0
     return-void
 .end method

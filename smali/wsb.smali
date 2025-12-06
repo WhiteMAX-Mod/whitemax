@@ -1,231 +1,293 @@
-.class public final Lwsb;
+.class public abstract Lwsb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final d:Lwsb;
-
-.field public static final e:Ljava/lang/String;
-
-.field public static final f:Ljava/lang/String;
+# interfaces
+.implements Ljava/util/Iterator;
+.implements Lmy7;
 
 
 # instance fields
-.field public final a:F
+.field public final a:[Lvig;
 
-.field public final b:F
+.field public b:I
 
-.field public final c:I
+.field public c:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Luig;[Lvig;)V
     .locals 2
 
-    new-instance v0, Lwsb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    invoke-direct {v0, v1}, Lwsb;-><init>(F)V
-
-    sput-object v0, Lwsb;->d:Lwsb;
-
-    sget-object v0, Lnig;->a:Ljava/lang/String;
-
-    const/4 v0, 0x0
-
-    const/16 v1, 0x24
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lwsb;->e:Ljava/lang/String;
+    iput-object p2, p0, Lwsb;->a:[Lvig;
 
     const/4 v0, 0x1
 
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lwsb;->f:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(F)V
-    .locals 1
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    .line 1
-    invoke-direct {p0, p1, v0}, Lwsb;-><init>(FF)V
-
-    return-void
-.end method
-
-.method public constructor <init>(FF)V
-    .locals 4
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-boolean v0, p0, Lwsb;->c:Z
 
     const/4 v0, 0x0
 
-    cmpl-float v1, p1, v0
+    aget-object p2, p2, v0
 
-    const/4 v2, 0x0
+    iget-object v1, p1, Luig;->d:[Ljava/lang/Object;
 
-    const/4 v3, 0x1
+    iget p1, p1, Luig;->a:I
 
-    if-lez v1, :cond_0
-
-    move v1, v3
-
-    goto :goto_0
-
-    :cond_0
-    move v1, v2
-
-    .line 3
-    :goto_0
-    invoke-static {v1}, Lsgi;->d(Z)V
-
-    cmpl-float v0, p2, v0
-
-    if-lez v0, :cond_1
-
-    move v2, v3
-
-    .line 4
-    :cond_1
-    invoke-static {v2}, Lsgi;->d(Z)V
-
-    .line 5
-    iput p1, p0, Lwsb;->a:F
-
-    .line 6
-    iput p2, p0, Lwsb;->b:F
-
-    const/high16 p2, 0x447a0000    # 1000.0f
-
-    mul-float/2addr p1, p2
-
-    .line 7
-    invoke-static {p1}, Ljava/lang/Math;->round(F)I
+    invoke-static {p1}, Ljava/lang/Integer;->bitCount(I)I
 
     move-result p1
 
-    iput p1, p0, Lwsb;->c:I
+    mul-int/lit8 p1, p1, 0x2
+
+    invoke-virtual {p2, p1, v0, v1}, Lvig;->a(II[Ljava/lang/Object;)V
+
+    iput v0, p0, Lwsb;->b:I
+
+    invoke-virtual {p0}, Lwsb;->a()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a()V
+    .locals 10
 
-    const/4 v0, 0x1
+    iget v0, p0, Lwsb;->b:I
 
-    if-ne p0, p1, :cond_0
+    iget-object v1, p0, Lwsb;->a:[Lvig;
 
-    return v0
+    aget-object v2, v1, v0
+
+    iget v3, v2, Lvig;->c:I
+
+    iget v2, v2, Lvig;->b:I
+
+    if-ge v3, v2, :cond_0
+
+    return-void
 
     :cond_0
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    if-eqz p1, :cond_2
+    if-ltz v0, :cond_5
 
-    const-class v2, Lwsb;
+    :goto_0
+    add-int/lit8 v3, v0, -0x1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p0, v0}, Lwsb;->b(I)I
 
-    move-result-object v3
+    move-result v4
 
-    if-eq v2, v3, :cond_1
+    const/4 v5, -0x1
+
+    if-ne v4, v5, :cond_1
+
+    aget-object v6, v1, v0
+
+    iget v7, v6, Lvig;->c:I
+
+    iget-object v8, v6, Lvig;->a:[Ljava/lang/Object;
+
+    array-length v9, v8
+
+    if-ge v7, v9, :cond_1
+
+    array-length v4, v8
+
+    add-int/lit8 v7, v7, 0x1
+
+    iput v7, v6, Lvig;->c:I
+
+    invoke-virtual {p0, v0}, Lwsb;->b(I)I
+
+    move-result v4
+
+    :cond_1
+    if-eq v4, v5, :cond_2
+
+    iput v4, p0, Lwsb;->b:I
+
+    return-void
+
+    :cond_2
+    if-lez v0, :cond_3
+
+    add-int/lit8 v4, v0, -0x1
+
+    aget-object v4, v1, v4
+
+    iget v5, v4, Lvig;->c:I
+
+    iget-object v6, v4, Lvig;->a:[Ljava/lang/Object;
+
+    array-length v6, v6
+
+    add-int/lit8 v5, v5, 0x1
+
+    iput v5, v4, Lvig;->c:I
+
+    :cond_3
+    aget-object v0, v1, v0
+
+    sget-object v4, Luig;->e:Luig;
+
+    iget-object v4, v4, Luig;->d:[Ljava/lang/Object;
+
+    invoke-virtual {v0, v2, v2, v4}, Lvig;->a(II[Ljava/lang/Object;)V
+
+    if-gez v3, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    move v0, v3
+
+    goto :goto_0
+
+    :cond_5
+    :goto_1
+    iput-boolean v2, p0, Lwsb;->c:Z
+
+    return-void
+.end method
+
+.method public final b(I)I
+    .locals 4
+
+    iget-object v0, p0, Lwsb;->a:[Lvig;
+
+    aget-object v1, v0, p1
+
+    iget v2, v1, Lvig;->c:I
+
+    iget v3, v1, Lvig;->b:I
+
+    if-ge v2, v3, :cond_0
+
+    return p1
+
+    :cond_0
+    iget-object v1, v1, Lvig;->a:[Ljava/lang/Object;
+
+    array-length v3, v1
+
+    if-ge v2, v3, :cond_3
+
+    array-length v3, v1
+
+    aget-object v1, v1, v2
+
+    if-eqz v1, :cond_2
+
+    check-cast v1, Luig;
+
+    const/4 v2, 0x6
+
+    const/4 v3, 0x0
+
+    if-ne p1, v2, :cond_1
+
+    add-int/lit8 v2, p1, 0x1
+
+    aget-object v0, v0, v2
+
+    iget-object v1, v1, Luig;->d:[Ljava/lang/Object;
+
+    array-length v2, v1
+
+    invoke-virtual {v0, v2, v3, v1}, Lvig;->a(II[Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_1
-    check-cast p1, Lwsb;
+    add-int/lit8 v2, p1, 0x1
 
-    iget v2, p0, Lwsb;->a:F
+    aget-object v0, v0, v2
 
-    iget v3, p1, Lwsb;->a:F
+    iget-object v2, v1, Luig;->d:[Ljava/lang/Object;
 
-    cmpl-float v2, v2, v3
+    iget v1, v1, Luig;->a:I
 
-    if-nez v2, :cond_2
-
-    iget v2, p0, Lwsb;->b:F
-
-    iget p1, p1, Lwsb;->b:F
-
-    cmpl-float p1, v2, p1
-
-    if-nez p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget v0, p0, Lwsb;->a:F
-
-    invoke-static {v0}, Ljava/lang/Float;->floatToRawIntBits(F)I
-
-    move-result v0
-
-    add-int/lit16 v0, v0, 0x20f
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lwsb;->b:F
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToRawIntBits(F)I
+    invoke-static {v1}, Ljava/lang/Integer;->bitCount(I)I
 
     move-result v1
 
-    add-int/2addr v1, v0
+    mul-int/lit8 v1, v1, 0x2
 
-    return v1
+    invoke-virtual {v0, v1, v3, v2}, Lvig;->a(II[Ljava/lang/Object;)V
+
+    :goto_0
+    add-int/lit8 p1, p1, 0x1
+
+    invoke-virtual {p0, p1}, Lwsb;->b(I)I
+
+    move-result p1
+
+    return p1
+
+    :cond_2
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string v0, "null cannot be cast to non-null type kotlinx.collections.immutable.implementations.immutableMap.TrieNode<K of kotlinx.collections.immutable.implementations.immutableMap.TrieNodeBaseIterator, V of kotlinx.collections.immutable.implementations.immutableMap.TrieNodeBaseIterator>"
+
+    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_3
+    const/4 p1, -0x1
+
+    return p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final hasNext()Z
+    .locals 1
 
-    iget v0, p0, Lwsb;->a:F
+    iget-boolean v0, p0, Lwsb;->c:Z
 
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    return v0
+.end method
 
-    move-result-object v0
+.method public next()Ljava/lang/Object;
+    .locals 2
 
-    iget v1, p0, Lwsb;->b:F
+    iget-boolean v0, p0, Lwsb;->c:Z
 
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    if-eqz v0, :cond_0
 
-    move-result-object v1
+    iget-object v0, p0, Lwsb;->a:[Lvig;
 
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
+    iget v1, p0, Lwsb;->b:I
 
-    move-result-object v0
+    aget-object v0, v0, v1
 
-    sget-object v1, Lnig;->a:Ljava/lang/String;
-
-    sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    const-string v2, "PlaybackParameters(speed=%.2f, pitch=%.2f)"
-
-    invoke-static {v1, v2, v0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
+
+    invoke-virtual {p0}, Lwsb;->a()V
 
     return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+.end method
+
+.method public remove()V
+    .locals 2
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Operation is not supported for read-only collection"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

@@ -1,80 +1,182 @@
-.class public final Llze;
-.super Lsgf;
+.class public final synthetic Llze;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lone/me/startconversation/StartConversationScreen;
+.field public final synthetic b:Lpze;
+
+.field public final synthetic c:Lmze;
+
+.field public final synthetic d:Lorg/json/JSONObject;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/startconversation/StartConversationScreen;)V
+.method public synthetic constructor <init>(Lpze;Lmze;Lorg/json/JSONObject;I)V
     .locals 0
 
-    iput-object p2, p0, Llze;->Y:Lone/me/startconversation/StartConversationScreen;
+    iput p4, p0, Llze;->a:I
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Llze;->b:Lpze;
 
-    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Llze;->c:Lmze;
+
+    iput-object p3, p0, Llze;->d:Lorg/json/JSONObject;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 7
 
-    check-cast p1, Lwf4;
+    iget v0, p0, Llze;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Llze;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Llze;->c:Lmze;
 
-    move-result-object p1
+    const-string v1, "OKSignaling"
 
-    check-cast p1, Llze;
+    iget-object v2, p0, Llze;->b:Lpze;
 
-    sget-object p2, Lccg;->a:Lccg;
+    iget-object v3, v2, Lpze;->b:Ly6d;
 
-    invoke-virtual {p1, p2}, Llze;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v4, "<!> ignoring "
 
-    return-object p2
-.end method
+    :try_start_0
+    instance-of v5, v0, Lv8i;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    iget-object v6, p0, Llze;->d:Lorg/json/JSONObject;
 
-    new-instance v0, Llze;
+    if-eqz v5, :cond_0
 
-    iget-object v1, p0, Llze;->Y:Lone/me/startconversation/StartConversationScreen;
+    :try_start_1
+    check-cast v0, Lv8i;
 
-    invoke-direct {v0, p2, v1}, Llze;-><init>(Lkotlin/coroutines/Continuation;Lone/me/startconversation/StartConversationScreen;)V
+    invoke-virtual {v0, v6}, Lv8i;->onResponse(Lorg/json/JSONObject;)V
 
-    iput-object p1, v0, Llze;->X:Ljava/lang/Object;
+    goto :goto_1
 
-    return-object v0
-.end method
+    :cond_0
+    iget-boolean v2, v2, Lpze;->q:Z
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    if-eqz v2, :cond_1
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    invoke-interface {v0, v6}, Lmze;->onResponse(Lorg/json/JSONObject;)V
 
-    iget-object p1, p0, Llze;->X:Ljava/lang/Object;
+    goto :goto_1
 
-    check-cast p1, Lwf4;
+    :catch_0
+    move-exception v0
 
-    sget-object v0, Laze;->c:Laze;
+    goto :goto_0
 
-    invoke-virtual {v0, p1}, Lrdi;->t0(Lwf4;)V
+    :cond_1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    sget-object p1, Lccg;->a:Lccg;
+    invoke-direct {v0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return-object p1
+    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {v3, v1, v0}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+
+    goto :goto_1
+
+    :goto_0
+    const-string v2, "signaling.response"
+
+    invoke-interface {v3, v1, v2, v0}, Ly6d;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_1
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Llze;->c:Lmze;
+
+    const-string v1, "OKSignaling"
+
+    iget-object v2, p0, Llze;->b:Lpze;
+
+    iget-object v3, v2, Lpze;->b:Ly6d;
+
+    const-string v4, "<!> ignoring "
+
+    :try_start_2
+    instance-of v5, v0, Lv8i;
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
+
+    iget-object v6, p0, Llze;->d:Lorg/json/JSONObject;
+
+    if-eqz v5, :cond_2
+
+    :try_start_3
+    check-cast v0, Lv8i;
+
+    invoke-virtual {v0, v6}, Lv8i;->onResponse(Lorg/json/JSONObject;)V
+
+    goto :goto_3
+
+    :cond_2
+    iget-boolean v2, v2, Lpze;->q:Z
+
+    if-eqz v2, :cond_3
+
+    invoke-interface {v0, v6}, Lmze;->onResponse(Lorg/json/JSONObject;)V
+
+    goto :goto_3
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_2
+
+    :cond_3
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {v3, v1, v0}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
+
+    goto :goto_3
+
+    :goto_2
+    const-string v2, "signaling.response"
+
+    invoke-interface {v3, v1, v2, v0}, Ly6d;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_3
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

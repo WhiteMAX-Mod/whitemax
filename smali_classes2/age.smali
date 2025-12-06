@@ -1,131 +1,67 @@
-.class public final Lage;
-.super Lpd0;
+.class public interface abstract Lage;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:Lorf;
+# static fields
+.field public static final a:Lxs;
 
-.field public final c:I
+.field public static final b:[Ljava/lang/String;
+
+.field public static final c:[I
 
 
 # direct methods
-.method public constructor <init>(ILorf;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 7
 
-    const/16 v0, 0x13
+    new-instance v0, Lxs;
 
-    invoke-direct {p0, v0}, Lpd0;-><init>(I)V
+    const-string v5, "error.message.like.unknown.like"
 
-    iput-object p2, p0, Lage;->b:Lorf;
+    const-string v6, "error.message.like.unknown.reaction"
 
-    iput p1, p0, Lage;->c:I
+    const-string v1, "error.comment.chat.access"
 
-    return-void
-.end method
+    const-string v2, "error.comment.invalid"
 
+    const-string v3, "error.message.invalid"
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    const-string v4, "error.message.chat.access"
 
-    if-ne p0, p1, :cond_0
+    filled-new-array/range {v1 .. v6}, [Ljava/lang/String;
 
-    goto :goto_1
+    move-result-object v1
 
-    :cond_0
-    instance-of v0, p1, Lage;
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    if-nez v0, :cond_1
+    move-result-object v1
 
-    goto :goto_0
+    invoke-direct {v0, v1}, Lxs;-><init>(Ljava/util/Collection;)V
 
-    :cond_1
-    check-cast p1, Lage;
+    sput-object v0, Lage;->a:Lxs;
 
-    iget-object v0, p0, Lage;->b:Lorf;
+    const-string v0, "modifiers"
 
-    iget-object v1, p1, Lage;->b:Lorf;
+    const-string v1, "accessFlags"
 
-    invoke-virtual {v0, v1}, Lorf;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p0, Lage;->c:I
-
-    iget p1, p1, Lage;->c:I
-
-    if-eq v0, p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lage;->b:Lorf;
-
-    iget v0, v0, Lorf;->c:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lage;->c:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShowSnackbar(message="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lage;->b:Lorf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", icon="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lage;->c:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    filled-new-array {v0, v1}, [Ljava/lang/String;
 
     move-result-object v0
 
-    return-object v0
+    sput-object v0, Lage;->b:[Ljava/lang/String;
+
+    const/4 v0, 0x3
+
+    const/4 v1, 0x4
+
+    const/4 v2, 0x1
+
+    filled-new-array {v2, v0, v1}, [I
+
+    move-result-object v0
+
+    sput-object v0, Lage;->c:[I
+
+    return-void
 .end method

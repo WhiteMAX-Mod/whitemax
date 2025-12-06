@@ -1,109 +1,35 @@
 .class public final Lpe0;
-.super Ljava/lang/Object;
+.super Lq44;
 .source "SourceFile"
-
-# interfaces
-.implements Lle0;
 
 
 # instance fields
-.field public final a:I
+.field public X:I
 
-.field public final b:I
+.field public d:Ljava/util/Iterator;
 
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:I
-
-
-# direct methods
-.method public constructor <init>(IIIIII)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lpe0;->a:I
-
-    iput p2, p0, Lpe0;->b:I
-
-    iput p3, p0, Lpe0;->c:I
-
-    iput p4, p0, Lpe0;->d:I
-
-    iput p5, p0, Lpe0;->e:I
-
-    iput p6, p0, Lpe0;->f:I
-
-    return-void
-.end method
+.field public synthetic o:Ljava/lang/Object;
 
 
 # virtual methods
-.method public final a()I
-    .locals 3
-
-    const v0, 0x73646976
-
-    iget v1, p0, Lpe0;->a:I
-
-    if-eq v1, v0, :cond_2
-
-    const v0, 0x73647561
-
-    if-eq v1, v0, :cond_1
-
-    const v0, 0x73747874
-
-    if-eq v1, v0, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v2, "Found unsupported streamType fourCC: "
-
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "AviStreamHeaderChunk"
-
-    invoke-static {v1, v0}, Luyh;->m(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v0, -0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x3
-
-    return v0
-
-    :cond_1
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_2
-    const/4 v0, 0x2
-
-    return v0
-.end method
-
-.method public final getType()I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const v0, 0x68727473
+    iput-object p1, p0, Lpe0;->o:Ljava/lang/Object;
 
-    return v0
+    iget p1, p0, Lpe0;->X:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lpe0;->X:I
+
+    const/4 p1, 0x0
+
+    invoke-static {p1, p0}, Lhui;->c(Ljava/util/ArrayList;Lq44;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

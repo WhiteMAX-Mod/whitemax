@@ -1,20 +1,64 @@
-.class public abstract Lftc;
+.class public final Lftc;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lhtc;
 
 
 # static fields
-.field public static audio_onboarding_intro:I = 0x7f130087
+.field public static final a:Lftc;
 
-.field public static pinbars_group_call_bar_button_text:I = 0x7f130b1f
 
-.field public static pinbars_group_call_bar_title:I = 0x7f130b20
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.field public static pinbars_snackbar_unpinned:I = 0x7f130b21
+    new-instance v0, Lftc;
 
-.field public static unknown_contact_add_to_contact:I = 0x7f130e33
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-.field public static unknown_contact_block_contact:I = 0x7f130e34
+    sput-object v0, Lftc;->a:Lftc;
 
-.field public static unknown_contact_snackbar_add_contact:I = 0x7f130e35
+    return-void
+.end method
 
-.field public static videomsg_player_type:I = 0x7f130e63
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lftc;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x42c479c9
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "StopRecordVideo"
+
+    return-object v0
+.end method

@@ -1,102 +1,75 @@
-.class public final Lvj5;
+.class public final synthetic Lvj5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lc3g;
+.implements Lcm6;
 
 
 # instance fields
-.field public final a:Lq7b;
+.field public final synthetic a:I
 
-.field public final b:Lce6;
+.field public final synthetic b:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public constructor <init>(Lq7b;Lce6;)V
+.method public synthetic constructor <init>(Ljava/lang/Runnable;I)V
     .locals 0
 
+    iput p2, p0, Lvj5;->a:I
+
+    iput-object p1, p0, Lvj5;->b:Ljava/lang/Runnable;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lvj5;->a:Lq7b;
-
-    iput-object p2, p0, Lvj5;->b:Lce6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Lfc4;Lmc4;Z)V
-    .locals 6
+.method public final invoke()Ljava/lang/Object;
+    .locals 1
 
-    iget-object v2, p2, Lmc4;->a:Landroid/net/Uri;
+    iget v0, p0, Lvj5;->a:I
 
-    iget-wide v3, p2, Lmc4;->g:J
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lvj5;->b:Lce6;
+    iget-object v0, p0, Lvj5;->b:Ljava/lang/Runnable;
 
-    iget-object v1, p0, Lvj5;->a:Lq7b;
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    move v5, p3
+    :goto_0
+    sget-object v0, Lqqg;->a:Lqqg;
 
-    invoke-virtual/range {v0 .. v5}, Lce6;->f(Lq7b;Landroid/net/Uri;JZ)V
+    return-object v0
 
-    return-void
-.end method
+    :pswitch_0
+    iget-object v0, p0, Lvj5;->b:Ljava/lang/Runnable;
 
-.method public final d(Lfc4;Lmc4;ZI)V
-    .locals 7
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    iget-object v2, p2, Lmc4;->a:Landroid/net/Uri;
+    goto :goto_0
 
-    iget-wide v3, p2, Lmc4;->g:J
+    :pswitch_1
+    iget-object v0, p0, Lvj5;->b:Ljava/lang/Runnable;
 
-    iget-object v0, p0, Lvj5;->b:Lce6;
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    iget-object v1, p0, Lvj5;->a:Lq7b;
+    goto :goto_0
 
-    move v5, p3
+    :pswitch_2
+    iget-object v0, p0, Lvj5;->b:Ljava/lang/Runnable;
 
-    move v6, p4
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    invoke-virtual/range {v0 .. v6}, Lce6;->a(Lq7b;Landroid/net/Uri;JZI)V
+    goto :goto_0
 
-    return-void
-.end method
+    nop
 
-.method public final h(Lfc4;Lmc4;Z)V
-    .locals 6
-
-    iget-object v2, p2, Lmc4;->a:Landroid/net/Uri;
-
-    iget-wide v3, p2, Lmc4;->g:J
-
-    iget-object v0, p0, Lvj5;->b:Lce6;
-
-    iget-object v1, p0, Lvj5;->a:Lq7b;
-
-    move v5, p3
-
-    invoke-virtual/range {v0 .. v5}, Lce6;->d(Lq7b;Landroid/net/Uri;JZ)V
-
-    return-void
-.end method
-
-.method public final i(Lfc4;Lmc4;Z)V
-    .locals 6
-
-    iget-object v2, p2, Lmc4;->a:Landroid/net/Uri;
-
-    iget-wide v3, p2, Lmc4;->g:J
-
-    iget-object v0, p0, Lvj5;->b:Lce6;
-
-    iget-object v1, p0, Lvj5;->a:Lq7b;
-
-    move v5, p3
-
-    invoke-virtual/range {v0 .. v5}, Lce6;->h(Lq7b;Landroid/net/Uri;JZ)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

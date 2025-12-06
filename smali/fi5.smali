@@ -1,142 +1,61 @@
-.class public final synthetic Lfi5;
-.super Ljava/lang/Object;
+.class public final Lfi5;
+.super Lhi5;
 .source "SourceFile"
-
-# interfaces
-.implements Lt28;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final c:Lk42;
 
-.field public final synthetic b:Ltsb;
+.field public final synthetic d:Lji5;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ltsb;I)V
+.method public constructor <init>(Lji5;JLk42;)V
     .locals 0
 
-    iput p2, p0, Lfi5;->a:I
+    iput-object p1, p0, Lfi5;->d:Lji5;
 
-    iput-object p1, p0, Lfi5;->b:Ltsb;
+    invoke-direct {p0, p2, p3}, Lhi5;-><init>(J)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p4, p0, Lfi5;->c:Lk42;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)V
+.method public final run()V
     .locals 2
 
-    iget v0, p0, Lfi5;->a:I
+    iget-object v0, p0, Lfi5;->c:Lk42;
 
-    check-cast p1, Lmtb;
+    iget-object v1, p0, Lfi5;->d:Lji5;
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lfi5;->b:Ltsb;
-
-    iget-object v0, v0, Ltsb;->n:Lvsb;
-
-    invoke-interface {p1, v0}, Lmtb;->x(Lvsb;)V
+    invoke-interface {v0, v1}, Lk42;->d(Lz74;)V
 
     return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lfi5;->b:Ltsb;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    invoke-static {v0}, Lwi5;->Y0(Ltsb;)Z
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result v0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-interface {p1, v0}, Lmtb;->q(Z)V
+    invoke-super {p0}, Lhi5;->toString()Ljava/lang/String;
 
-    return-void
+    move-result-object v1
 
-    :pswitch_1
-    iget-object v0, p0, Lfi5;->b:Ltsb;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v0, v0, Ltsb;->m:I
+    iget-object v1, p0, Lfi5;->c:Lk42;
 
-    invoke-interface {p1, v0}, Lmtb;->e(I)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-void
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :pswitch_2
-    iget-object v0, p0, Lfi5;->b:Ltsb;
+    move-result-object v0
 
-    iget v0, v0, Ltsb;->e:I
-
-    invoke-interface {p1, v0}, Lmtb;->k(I)V
-
-    return-void
-
-    :pswitch_3
-    iget-object v0, p0, Lfi5;->b:Ltsb;
-
-    iget-boolean v1, v0, Ltsb;->l:Z
-
-    iget v0, v0, Ltsb;->e:I
-
-    invoke-interface {p1, v0, v1}, Lmtb;->o(IZ)V
-
-    return-void
-
-    :pswitch_4
-    iget-object v0, p0, Lfi5;->b:Ltsb;
-
-    iget-boolean v1, v0, Ltsb;->g:Z
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-boolean v0, v0, Ltsb;->g:Z
-
-    invoke-interface {p1, v0}, Lmtb;->h(Z)V
-
-    return-void
-
-    :pswitch_5
-    iget-object v0, p0, Lfi5;->b:Ltsb;
-
-    iget-object v0, v0, Ltsb;->i:Lk2g;
-
-    iget-object v0, v0, Lk2g;->Y:Ljava/lang/Object;
-
-    check-cast v0, Lr2g;
-
-    invoke-interface {p1, v0}, Lmtb;->w(Lr2g;)V
-
-    return-void
-
-    :pswitch_6
-    iget-object v0, p0, Lfi5;->b:Ltsb;
-
-    iget-object v0, v0, Ltsb;->f:Lcom/google/android/exoplayer2/ExoPlaybackException;
-
-    invoke-interface {p1, v0}, Lmtb;->u(Lcom/google/android/exoplayer2/PlaybackException;)V
-
-    return-void
-
-    :pswitch_7
-    iget-object v0, p0, Lfi5;->b:Ltsb;
-
-    iget-object v0, v0, Ltsb;->f:Lcom/google/android/exoplayer2/ExoPlaybackException;
-
-    invoke-interface {p1, v0}, Lmtb;->D(Lcom/google/android/exoplayer2/PlaybackException;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

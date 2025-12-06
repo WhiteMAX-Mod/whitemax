@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgjc;
+.implements Lcuc;
 
 
 # instance fields
@@ -11,14 +11,14 @@
 
 
 # direct methods
-.method public constructor <init>(Ln02;)V
+.method public constructor <init>(Li12;)V
     .locals 8
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->CONTROL_AE_AVAILABLE_TARGET_FPS_RANGES:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
-    invoke-virtual {p1, v0}, Ln02;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Li12;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
 
     move-result-object p1
 

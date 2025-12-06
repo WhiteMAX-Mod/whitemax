@@ -1,195 +1,68 @@
-.class public final Lzaa;
-.super Lpmf;
+.class public final synthetic Lzaa;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final X:Ljava/util/List;
+.field public final synthetic a:I
 
-.field public final Y:Lh1a;
-
-.field public final c:J
-
-.field public final o:Lb1a;
+.field public final synthetic b:Leba;
 
 
 # direct methods
-.method public constructor <init>(JLb1a;Ljava/util/List;Lh1a;)V
+.method public synthetic constructor <init>(Leba;I)V
     .locals 0
 
+    iput p2, p0, Lzaa;->a:I
+
+    iput-object p1, p0, Lzaa;->b:Leba;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lzaa;->c:J
-
-    iput-object p3, p0, Lzaa;->o:Lb1a;
-
-    iput-object p4, p0, Lzaa;->X:Ljava/util/List;
-
-    iput-object p5, p0, Lzaa;->Y:Lh1a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final onClick(Landroid/view/View;)V
+    .locals 1
 
-    const/4 v0, 0x1
+    iget p1, p0, Lzaa;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch p1, :pswitch_data_0
 
-    return v0
+    new-instance p1, Ldk0;
 
-    :cond_0
-    instance-of v1, p1, Lzaa;
+    const/16 v0, 0x1d
 
-    const/4 v2, 0x0
+    invoke-direct {p1, v0}, Ldk0;-><init>(I)V
 
-    if-nez v1, :cond_1
+    iget-object v0, p0, Lzaa;->b:Leba;
 
-    return v2
+    invoke-virtual {v0, p1}, Lj3;->j(Lju3;)V
 
-    :cond_1
-    check-cast p1, Lzaa;
+    return-void
 
-    iget-wide v3, p0, Lzaa;->c:J
+    :pswitch_0
+    new-instance p1, Ldk0;
 
-    iget-wide v5, p1, Lzaa;->c:J
+    const/16 v0, 0x1a
 
-    cmp-long v1, v3, v5
+    invoke-direct {p1, v0}, Ldk0;-><init>(I)V
 
-    if-eqz v1, :cond_2
+    iget-object v0, p0, Lzaa;->b:Leba;
 
-    return v2
+    invoke-virtual {v0, p1}, Lj3;->j(Lju3;)V
 
-    :cond_2
-    iget-object v1, p0, Lzaa;->o:Lb1a;
+    return-void
 
-    iget-object v3, p1, Lzaa;->o:Lb1a;
+    nop
 
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lzaa;->X:Ljava/util/List;
-
-    iget-object v3, p1, Lzaa;->X:Ljava/util/List;
-
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lzaa;->Y:Lh1a;
-
-    iget-object p1, p1, Lzaa;->Y:Lh1a;
-
-    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_5
-
-    return v2
-
-    :cond_5
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Lzaa;->c:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lzaa;->o:Lb1a;
-
-    invoke-virtual {v2}, Lb1a;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-object v0, p0, Lzaa;->X:Ljava/util/List;
-
-    invoke-static {v0, v2, v1}, Lzdf;->n(Ljava/util/List;II)I
-
-    move-result v0
-
-    iget-object v1, p0, Lzaa;->Y:Lh1a;
-
-    invoke-virtual {v1}, Lh1a;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Response(folderSync="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lzaa;->c:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", folders="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lzaa;->o:Lb1a;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", foldersOrder="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lzaa;->X:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", allFilterExcludeFolders="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lzaa;->Y:Lh1a;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

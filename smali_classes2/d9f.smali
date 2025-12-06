@@ -1,30 +1,52 @@
 .class public final Ld9f;
-.super Ljp7;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lf9f;
 
 
 # instance fields
-.field public final c:Ljava/lang/String;
+.field public volatile a:J
 
-.field public final d:Ljava/lang/String;
+.field public volatile b:J
 
-.field public final e:Z
+.field public volatile c:I
+
+.field public volatile d:J
+
+.field public volatile e:J
+
+.field public volatile f:I
+
+.field public volatile g:J
+
+.field public volatile h:J
+
+.field public volatile i:I
 
 
-# direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Z)V
-    .locals 0
+# virtual methods
+.method public final a(J)V
+    .locals 2
 
-    invoke-direct {p0}, Ljp7;-><init>()V
+    const-wide/16 v0, 0x0
 
-    iput-object p1, p0, Ld9f;->c:Ljava/lang/String;
+    cmp-long v0, p1, v0
 
-    iput-object p2, p0, Ld9f;->d:Ljava/lang/String;
+    if-ltz v0, :cond_0
 
-    iput-boolean p3, p0, Ld9f;->e:Z
+    iput-wide p1, p0, Ld9f;->d:J
 
+    iget-wide v0, p0, Ld9f;->e:J
+
+    add-long/2addr v0, p1
+
+    iput-wide v0, p0, Ld9f;->e:J
+
+    iget p1, p0, Ld9f;->f:I
+
+    add-int/lit8 p1, p1, 0x1
+
+    iput p1, p0, Ld9f;->f:I
+
+    :cond_0
     return-void
 .end method

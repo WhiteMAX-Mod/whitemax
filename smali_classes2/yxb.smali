@@ -1,138 +1,120 @@
-.class public final Lyxb;
-.super Lsgf;
+.class public final synthetic Lyxb;
+.super Lhn6;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Lem6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lzxb;
-
-.field public final synthetic Z:J
+.field public final synthetic b:Lone/me/chats/picker/chats/PickerChatsListWidget;
 
 
 # direct methods
-.method public constructor <init>(Lzxb;JLkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Lone/me/chats/picker/chats/PickerChatsListWidget;I)V
+    .locals 12
 
-    iput-object p1, p0, Lyxb;->Y:Lzxb;
+    iput p2, p0, Lyxb;->a:I
 
-    iput-wide p2, p0, Lyxb;->Z:J
+    packed-switch p2, :pswitch_data_0
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lyxb;->b:Lone/me/chats/picker/chats/PickerChatsListWidget;
 
-    invoke-direct {p0, p1, p4}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    const-string v4, "checkBoxItemDecoration_delegate$lambda$6$isChatItem(Lone/me/chats/picker/chats/PickerChatsListWidget;I)Z"
+
+    const/4 v5, 0x0
+
+    const/4 v1, 0x1
+
+    const-class v2, Lcq7;
+
+    const-string v3, "isChatItem"
+
+    move-object v0, p0
+
+    invoke-direct/range {v0 .. v5}, Lhn6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     return-void
+
+    :pswitch_0
+    move-object v0, p0
+
+    iput-object p1, v0, Lyxb;->b:Lone/me/chats/picker/chats/PickerChatsListWidget;
+
+    const-string v10, "checkBoxItemDecoration_delegate$lambda$6$isChatItem(Lone/me/chats/picker/chats/PickerChatsListWidget;I)Z"
+
+    const/4 v11, 0x0
+
+    const/4 v7, 0x1
+
+    const-class v8, Lcq7;
+
+    const-string v9, "isChatItem"
+
+    move-object v6, v0
+
+    invoke-direct/range {v6 .. v11}, Lhn6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    check-cast p1, Lq54;
+    iget v0, p0, Lyxb;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lyxb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast p1, Ljava/lang/Number;
 
-    move-result-object p1
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
 
-    check-cast p1, Lyxb;
+    move-result p1
 
-    sget-object p2, Lccg;->a:Lccg;
+    iget-object v0, p0, Lyxb;->b:Lone/me/chats/picker/chats/PickerChatsListWidget;
 
-    invoke-virtual {p1, p2}, Lyxb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, p1}, Lone/me/chats/picker/chats/PickerChatsListWidget;->y0(Lone/me/chats/picker/chats/PickerChatsListWidget;I)Z
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
     return-object p1
-.end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    :pswitch_0
+    check-cast p1, Ljava/lang/Number;
 
-    new-instance p1, Lyxb;
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
 
-    iget-object v0, p0, Lyxb;->Y:Lzxb;
+    move-result p1
 
-    iget-wide v1, p0, Lyxb;->Z:J
+    iget-object v0, p0, Lyxb;->b:Lone/me/chats/picker/chats/PickerChatsListWidget;
 
-    invoke-direct {p1, v0, v1, v2, p2}, Lyxb;-><init>(Lzxb;JLkotlin/coroutines/Continuation;)V
+    invoke-static {v0, p1}, Lone/me/chats/picker/chats/PickerChatsListWidget;->y0(Lone/me/chats/picker/chats/PickerChatsListWidget;I)Z
 
-    return-object p1
-.end method
+    move-result p1
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    iget v0, p0, Lyxb;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lyxb;->Y:Lzxb;
-
-    iget-object v0, p1, Lzxb;->r0:Lnje;
-
-    sget v2, Lu35;->o:I
-
-    iget-wide v2, p0, Lyxb;->Z:J
-
-    sget-object v4, Lz35;->c:Lz35;
-
-    invoke-static {v2, v3, v4}, Ltzi;->e(JLz35;)J
-
-    move-result-wide v2
-
-    invoke-static {v0, v2, v3}, La3j;->f(Lty5;J)Lt82;
-
-    move-result-object v0
-
-    new-instance v2, Lbx;
-
-    const/16 v3, 0x9
-
-    invoke-direct {v2, v3, p1}, Lbx;-><init>(ILjava/lang/Object;)V
-
-    iput v1, p0, Lyxb;->X:I
-
-    invoke-virtual {v0, v2, p0}, Ls82;->d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
-    sget-object v0, Lr54;->a:Lr54;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Lccg;->a:Lccg;
-
     return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

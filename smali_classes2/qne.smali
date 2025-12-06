@@ -1,20 +1,26 @@
-.class public interface abstract Lqne;
+.class public final Lqne;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lrne;
 
-# virtual methods
-.method public abstract dispose()V
-.end method
 
-.method public abstract registerListener(Lpne;)V
-.end method
+# instance fields
+.field public final a:I
 
-.method public abstract restart(Ljava/lang/String;)V
-.end method
+.field public final b:Ls5g;
 
-.method public abstract send(Ljava/lang/String;)V
-.end method
 
-.method public abstract updateActivityTimeout(J)V
+# direct methods
+.method public constructor <init>(ILs5g;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lqne;->a:I
+
+    iput-object p2, p0, Lqne;->b:Ls5g;
+
+    return-void
 .end method

@@ -1,44 +1,79 @@
-.class public final Lk8b;
+.class public abstract Lk8b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Comparable;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final a:I
+.field public static final b:I
 
-.field public final b:Lalh;
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
 
 
 # direct methods
-.method public constructor <init>(ILalh;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lk8b;->a:I
-
-    iput-object p2, p0, Lk8b;->b:Lalh;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
+.method static constructor <clinit>()V
     .locals 1
 
-    check-cast p1, Lk8b;
+    sget v0, Lezc;->pinbars_group_call_bar:I
 
-    iget v0, p0, Lk8b;->a:I
+    sput v0, Lk8b;->a:I
 
-    iget p1, p1, Lk8b;->a:I
+    sget v0, Lezc;->pinbars_group_call_bar_button:I
 
-    invoke-static {v0, p1}, Ljava/lang/Integer;->compare(II)I
+    sput v0, Lk8b;->b:I
 
-    move-result p1
+    sget v0, Lezc;->pinbars_group_call_bar_divider:I
 
-    return p1
+    sput v0, Lk8b;->c:I
+
+    sget v0, Lezc;->pinbars_group_call_bar_stack:I
+
+    sput v0, Lk8b;->d:I
+
+    sget v0, Lezc;->pinbars_group_call_bar_subtitle:I
+
+    sput v0, Lk8b;->e:I
+
+    sget v0, Lezc;->pinbars_group_call_bar_title:I
+
+    sput v0, Lk8b;->f:I
+
+    sget v0, Lezc;->pinbars_informer:I
+
+    sput v0, Lk8b;->g:I
+
+    sget v0, Lezc;->pinbars_message:I
+
+    sput v0, Lk8b;->h:I
+
+    sget v0, Lezc;->pinbars_miniplayer:I
+
+    sput v0, Lk8b;->i:I
+
+    sget v0, Lezc;->pinbars_root:I
+
+    sput v0, Lk8b;->j:I
+
+    sget v0, Lezc;->unknown_contact:I
+
+    sput v0, Lk8b;->k:I
+
+    return-void
 .end method

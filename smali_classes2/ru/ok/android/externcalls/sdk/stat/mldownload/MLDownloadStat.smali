@@ -12,15 +12,15 @@
         "Lru/ok/android/externcalls/sdk/stat/mldownload/MLDownloadStat;",
         "Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;",
         "Lkotlin/Function0;",
-        "Lx71;",
+        "Lm81;",
         "getEventualStatSender",
         "<init>",
-        "(Lji6;)V",
+        "(Lcm6;)V",
         "",
         "modelId",
         "",
         "downloadDurationMs",
-        "Lccg;",
+        "Lqqg;",
         "readyToUse",
         "(Ljava/lang/String;J)V",
         "error",
@@ -38,17 +38,17 @@
 
 
 # direct methods
-.method public constructor <init>(Lji6;)V
+.method public constructor <init>(Lcm6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lji6;",
+            "Lcm6;",
             ")V"
         }
     .end annotation
 
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;-><init>(Lji6;)V
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;-><init>(Lcm6;)V
 
     return-void
 .end method
@@ -62,7 +62,7 @@
 
     invoke-direct {v0, p2, p1}, Lru/ok/android/externcalls/sdk/stat/mldownload/MLDownloadStat$error$1;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;->reportOnce(Lli6;)V
+    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;->reportOnce(Lem6;)V
 
     return-void
 .end method
@@ -74,7 +74,7 @@
 
     invoke-direct {v0, p2, p3, p1}, Lru/ok/android/externcalls/sdk/stat/mldownload/MLDownloadStat$readyToUse$1;-><init>(JLjava/lang/String;)V
 
-    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;->reportOnce(Lli6;)V
+    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;->reportOnce(Lem6;)V
 
     return-void
 .end method

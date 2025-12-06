@@ -1,135 +1,70 @@
-.class public abstract Lgmi;
+.class public final Lgmi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpqa;
+
+
+# static fields
+.field public static final a:Lgmi;
+
 
 # direct methods
-.method public static a(Ljava/lang/StringBuilder;Ljava/lang/String;)V
-    .locals 5
+.method static constructor <clinit>()V
+    .locals 3
 
-    const/16 v0, 0x22
+    new-instance v0, Lgmi;
 
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    sput-object v0, Lgmi;->a:Lgmi;
 
-    move-result v1
+    new-instance v0, Ltci;
 
-    const/4 v2, 0x0
+    const/4 v1, 0x1
 
-    :goto_0
-    if-ge v2, v1, :cond_3
+    invoke-direct {v0, v1}, Ltci;-><init>(I)V
 
-    invoke-virtual {p1, v2}, Ljava/lang/String;->charAt(I)C
+    const-class v1, Lhdi;
 
-    move-result v3
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
 
-    const/16 v4, 0xa
+    move-result-object v0
 
-    if-eq v3, v4, :cond_2
+    const/4 v2, 0x2
 
-    const/16 v4, 0xd
+    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
 
-    if-eq v3, v4, :cond_1
+    move-result-object v0
 
-    if-eq v3, v0, :cond_0
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
 
-    invoke-virtual {p0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    goto :goto_1
+    const/4 v2, 0x3
 
-    :cond_0
-    const-string v3, "%22"
+    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
 
-    invoke-virtual {p0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    goto :goto_1
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
 
-    :cond_1
-    const-string v3, "%0D"
+    move-result-object v0
 
-    invoke-virtual {p0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    goto :goto_1
-
-    :cond_2
-    const-string v3, "%0A"
-
-    invoke-virtual {p0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :goto_1
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
-.method public static final b(Lly0;)Lwy0;
-    .locals 1
 
-    sget-object v0, Lxy0;->$EnumSwitchMapping$0:[I
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    move-result p0
+    move-result-object p1
 
-    aget p0, v0, p0
-
-    packed-switch p0, :pswitch_data_0
-
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-
-    :pswitch_0
-    sget-object p0, Lwy0;->s0:Lwy0;
-
-    return-object p0
-
-    :pswitch_1
-    sget-object p0, Lwy0;->q0:Lwy0;
-
-    return-object p0
-
-    :pswitch_2
-    sget-object p0, Lwy0;->Z:Lwy0;
-
-    return-object p0
-
-    :pswitch_3
-    sget-object p0, Lwy0;->X:Lwy0;
-
-    return-object p0
-
-    :pswitch_4
-    sget-object p0, Lwy0;->o:Lwy0;
-
-    return-object p0
-
-    :pswitch_5
-    sget-object p0, Lwy0;->c:Lwy0;
-
-    return-object p0
-
-    :pswitch_6
-    sget-object p0, Lwy0;->b:Lwy0;
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

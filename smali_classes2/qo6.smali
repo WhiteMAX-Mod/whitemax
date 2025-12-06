@@ -1,51 +1,75 @@
 .class public final Lqo6;
-.super Ly14;
+.super Lto6;
 .source "SourceFile"
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+# static fields
+.field public static final a:Lqo6;
 
-.field public final synthetic Y:Lro6;
+.field public static final b:Ljo6;
 
-.field public Z:I
-
-.field public o:Ljava/lang/Object;
+.field public static final c:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lro6;Ly14;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lqo6;->Y:Lro6;
+    new-instance v0, Lqo6;
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lqo6;->a:Lqo6;
+
+    new-instance v0, Ljo6;
+
+    sget v1, Lkab;->a:I
+
+    invoke-direct {v0, v1}, Ljo6;-><init>(I)V
+
+    sput-object v0, Lqo6;->b:Ljo6;
+
+    sget-object v0, Lmo6;->e:Lmo6;
+
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Lqo6;->c:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final b()Ljava/lang/String;
     .locals 1
 
-    iput-object p1, p0, Lqo6;->X:Ljava/lang/Object;
+    const-string v0, "ru.ok.tamtam.ALL_PHOTO"
 
-    iget p1, p0, Lqo6;->Z:I
+    return-object v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public final c()Ll4;
+    .locals 1
 
-    or-int/2addr p1, v0
+    sget-object v0, Lqo6;->b:Ljo6;
 
-    iput p1, p0, Lqo6;->Z:I
+    return-object v0
+.end method
 
-    iget-object p1, p0, Lqo6;->Y:Lro6;
+.method public final d()Ljava/util/List;
+    .locals 1
 
-    const/4 v0, 0x0
+    sget-object v0, Lqo6;->c:Ljava/util/List;
 
-    invoke-virtual {p1, v0, p0}, Lro6;->a(Ljava/lang/String;Ly14;)Ljava/lang/Object;
+    return-object v0
+.end method
 
-    move-result-object p1
+.method public final f()Ljo6;
+    .locals 1
 
-    return-object p1
+    sget-object v0, Lqo6;->b:Ljo6;
+
+    return-object v0
 .end method

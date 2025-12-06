@@ -1,61 +1,80 @@
-.class public abstract Lo0b;
+.class public final synthetic Lo0b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final synthetic a:I
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
+.field public final synthetic b:Lem6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(ILem6;)V
+    .locals 0
 
-    sget v0, Litc;->oneme_qrscanner_camera_request_description:I
+    iput p1, p0, Lo0b;->a:I
 
-    sput v0, Lo0b;->a:I
+    iput-object p2, p0, Lo0b;->b:Lem6;
 
-    sget v0, Litc;->oneme_qrscanner_context_menu_title:I
-
-    sput v0, Lo0b;->b:I
-
-    sget v0, Litc;->oneme_qrscanner_error_snackbar_description:I
-
-    sput v0, Lo0b;->c:I
-
-    sget v0, Litc;->oneme_qrscanner_error_snackbar_title:I
-
-    sput v0, Lo0b;->d:I
-
-    sget v0, Litc;->oneme_qrscanner_hint_with_gallery:I
-
-    sput v0, Lo0b;->e:I
-
-    sget v0, Litc;->oneme_qrscanner_hint_without_gallery:I
-
-    sput v0, Lo0b;->f:I
-
-    sget v0, Litc;->oneme_qrscanner_storage_request_description:I
-
-    sput v0, Lo0b;->g:I
-
-    sget v0, Litc;->oneme_qrscanner_toolbar_title:I
-
-    sput v0, Lo0b;->h:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 1
+
+    iget p1, p0, Lo0b;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p1, p0, Lo0b;->b:Lem6;
+
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-interface {p1, v0}, Lem6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lo0b;->b:Lem6;
+
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    invoke-interface {p1, v0}, Lem6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_1
+    iget-object p1, p0, Lo0b;->b:Lem6;
+
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-interface {p1, v0}, Lem6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_2
+    iget-object p1, p0, Lo0b;->b:Lem6;
+
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    invoke-interface {p1, v0}, Lem6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,80 +1,63 @@
-.class public final Lqri;
+.class public abstract Lqri;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ltha;
-
-
-# static fields
-.field public static final a:Lqri;
-
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public static final a(Lxs;[J)V
+    .locals 4
 
-    new-instance v0, Lqri;
+    array-length v0, p1
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x0
 
-    sput-object v0, Lqri;->a:Lqri;
+    :goto_0
+    if-ge v1, v0, :cond_0
 
-    new-instance v0, Lr8i;
+    aget-wide v2, p1, v1
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-virtual {p0, v2}, Lxs;->remove(Ljava/lang/Object;)Z
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public static final b(Lesg;)V
+    .locals 2
+
+    new-instance v0, La28;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, v1}, La28;-><init>(I)V
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Lr8i;-><init>(I)V
-
-    const-class v1, Lm9i;
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lrtg;->m(Ljava/util/HashMap;I)Lr8i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
+    invoke-virtual {p0, v1, v0}, Lesg;->c(ILio7;)V
 
     return-void
 .end method
 
+.method public static final c(Lesg;)V
+    .locals 2
 
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+    new-instance v0, Lqzg;
 
-    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    const/16 v1, 0xf
 
-    move-result-object p1
+    invoke-direct {v0, v1}, Lqzg;-><init>(I)V
 
-    throw p1
+    const/4 v1, 0x1
+
+    invoke-virtual {p0, v1, v0}, Lesg;->c(ILio7;)V
+
+    return-void
 .end method

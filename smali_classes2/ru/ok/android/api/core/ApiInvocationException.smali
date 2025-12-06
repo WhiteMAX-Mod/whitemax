@@ -26,13 +26,13 @@
 # instance fields
 .field public final X:Ljava/lang/String;
 
-.field public final Y:Ljava/lang/String;
-
 .field public final a:I
 
 .field public final b:Ljava/lang/String;
 
 .field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
 
 .field public final o:Ljava/lang/String;
 
@@ -94,13 +94,13 @@
     iput-object p2, p0, Lru/ok/android/api/core/ApiInvocationException;->c:Ljava/lang/String;
 
     .line 7
-    iput-object p4, p0, Lru/ok/android/api/core/ApiInvocationException;->o:Ljava/lang/String;
+    iput-object p4, p0, Lru/ok/android/api/core/ApiInvocationException;->d:Ljava/lang/String;
 
     .line 8
-    iput-object p5, p0, Lru/ok/android/api/core/ApiInvocationException;->X:Ljava/lang/String;
+    iput-object p5, p0, Lru/ok/android/api/core/ApiInvocationException;->o:Ljava/lang/String;
 
     .line 9
-    iput-object p6, p0, Lru/ok/android/api/core/ApiInvocationException;->Y:Ljava/lang/String;
+    iput-object p6, p0, Lru/ok/android/api/core/ApiInvocationException;->X:Ljava/lang/String;
 
     return-void
 .end method
@@ -140,7 +140,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lru/ok/android/api/core/ApiInvocationException;->o:Ljava/lang/String;
+    iget-object v1, p0, Lru/ok/android/api/core/ApiInvocationException;->d:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -148,7 +148,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lru/ok/android/api/core/ApiInvocationException;->Y:Ljava/lang/String;
+    iget-object v1, p0, Lru/ok/android/api/core/ApiInvocationException;->X:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -156,11 +156,11 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lru/ok/android/api/core/ApiInvocationException;->X:Ljava/lang/String;
+    iget-object v1, p0, Lru/ok/android/api/core/ApiInvocationException;->o:Ljava/lang/String;
 
     const-string v2, "\'}"
 
-    invoke-static {v0, v1, v2}, Li57;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lho7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

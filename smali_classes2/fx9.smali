@@ -1,81 +1,63 @@
 .class public final Lfx9;
-.super Luj0;
+.super Lq44;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:Ljava/util/List;
+.field public final synthetic X:Lgx9;
 
-.field public final b:J
+.field public Y:I
 
-.field public final c:Ljava/util/ArrayList;
+.field public d:Z
 
-.field public final o:Ljava/util/List;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(JJLjava/util/ArrayList;Ljava/util/List;Ljava/util/List;)V
+.method public constructor <init>(Lgx9;Lq44;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Luj0;-><init>(J)V
+    iput-object p1, p0, Lfx9;->X:Lgx9;
 
-    iput-wide p3, p0, Lfx9;->b:J
-
-    iput-object p5, p0, Lfx9;->c:Ljava/util/ArrayList;
-
-    iput-object p6, p0, Lfx9;->o:Ljava/util/List;
-
-    iput-object p7, p0, Lfx9;->X:Ljava/util/List;
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 11
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iput-object p1, p0, Lfx9;->o:Ljava/lang/Object;
 
-    const-string v1, "MsgGetEvent{serverChatId="
+    iget p1, p0, Lfx9;->Y:I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/high16 v0, -0x80000000
 
-    iget-wide v1, p0, Lfx9;->b:J
+    or-int/2addr p1, v0
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iput p1, p0, Lfx9;->Y:I
 
-    const-string v1, ", serverMessageIds="
+    const/4 v8, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v9, 0x0
 
-    iget-object v1, p0, Lfx9;->c:Ljava/util/ArrayList;
+    iget-object v0, p0, Lfx9;->X:Lgx9;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-wide/16 v1, 0x0
 
-    const-string v1, ", messages="
+    const-wide/16 v3, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-wide/16 v5, 0x0
 
-    iget-object v1, p0, Lfx9;->o:Ljava/util/List;
+    const/4 v7, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-object v10, p0
 
-    const-string v1, ", requestedMessageIds="
+    invoke-virtual/range {v0 .. v10}, Lgx9;->c(JJJZILrs4;Lq44;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    iget-object v1, p0, Lfx9;->X:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

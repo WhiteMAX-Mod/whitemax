@@ -1,146 +1,151 @@
-.class public abstract Lfpc;
-.super Ljava/lang/Object;
+.class public final Lfpc;
+.super Lfl9;
+.source "SourceFile"
 
 
 # static fields
-.field public static oneme_settings_privacy_black_list_empty_state:I = 0x7f0a07b8
+.field public static volatile c:[Lfpc;
 
-.field public static oneme_settings_privacy_black_list_rv:I = 0x7f0a07b9
 
-.field public static oneme_settings_privacy_black_list_toolbar:I = 0x7f0a07ba
+# instance fields
+.field public a:I
 
-.field public static oneme_settings_privacy_black_list_unblock_action:I = 0x7f0a07bb
+.field public b:I
 
-.field public static oneme_settings_privacy_black_list_unblock_cancel_action:I = 0x7f0a07bc
 
-.field public static oneme_settings_privacy_content_level_access:I = 0x7f0a07bd
+# direct methods
+.method public constructor <init>()V
+    .locals 1
 
-.field public static oneme_settings_privacy_enter_pin_code_root:I = 0x7f0a07be
+    invoke-direct {p0}, Lfl9;-><init>()V
 
-.field public static oneme_settings_privacy_info_header:I = 0x7f0a07bf
+    const/4 v0, 0x0
 
-.field public static oneme_settings_privacy_onboarding_content:I = 0x7f0a07c0
+    iput v0, p0, Lfpc;->a:I
 
-.field public static oneme_settings_privacy_onboarding_content_subtitle:I = 0x7f0a07c1
+    iput v0, p0, Lfpc;->b:I
 
-.field public static oneme_settings_privacy_onboarding_content_title:I = 0x7f0a07c2
+    const/4 v0, -0x1
 
-.field public static oneme_settings_privacy_onboarding_item_1:I = 0x7f0a07c3
+    iput v0, p0, Lfl9;->cachedSize:I
 
-.field public static oneme_settings_privacy_onboarding_item_2:I = 0x7f0a07c4
+    return-void
+.end method
 
-.field public static oneme_settings_privacy_onboarding_item_3:I = 0x7f0a07c5
 
-.field public static oneme_settings_privacy_onboarding_item_4:I = 0x7f0a07c6
+# virtual methods
+.method public final computeSerializedSize()I
+    .locals 3
 
-.field public static oneme_settings_privacy_onboarding_lock:I = 0x7f0a07c7
+    iget v0, p0, Lfpc;->a:I
 
-.field public static oneme_settings_privacy_onboarding_lock_background:I = 0x7f0a07c8
+    if-eqz v0, :cond_0
 
-.field public static oneme_settings_privacy_onboarding_root:I = 0x7f0a07c9
+    const/4 v1, 0x1
 
-.field public static oneme_settings_privacy_onboarding_scroll_view:I = 0x7f0a07ca
+    invoke-static {v1, v0}, Lhd3;->f(II)I
 
-.field public static oneme_settings_privacy_onboarding_set_password_button:I = 0x7f0a07cb
+    move-result v0
 
-.field public static oneme_settings_privacy_onboarding_set_pin_code_button:I = 0x7f0a07cc
+    goto :goto_0
 
-.field public static oneme_settings_privacy_onboarding_toolbar:I = 0x7f0a07cd
+    :cond_0
+    const/4 v0, 0x0
 
-.field public static oneme_settings_privacy_onboarding_top_guideline:I = 0x7f0a07ce
+    :goto_0
+    iget v1, p0, Lfpc;->b:I
 
-.field public static oneme_settings_privacy_onboarding_without_code_button:I = 0x7f0a07cf
+    if-eqz v1, :cond_1
 
-.field public static oneme_settings_privacy_pin_code_toolbar:I = 0x7f0a07d0
+    const/4 v2, 0x2
 
-.field public static oneme_settings_privacy_safe_files:I = 0x7f0a07d1
+    invoke-static {v2, v1}, Lhd3;->f(II)I
 
-.field public static oneme_settings_privacy_screen_add_me_to_chat:I = 0x7f0a07d2
+    move-result v1
 
-.field public static oneme_settings_privacy_screen_black_list:I = 0x7f0a07d3
+    add-int/2addr v1, v0
 
-.field public static oneme_settings_privacy_screen_blacklist:I = 0x7f0a07d4
+    return v1
 
-.field public static oneme_settings_privacy_screen_call_me:I = 0x7f0a07d5
+    :cond_1
+    return v0
+.end method
 
-.field public static oneme_settings_privacy_screen_dialog_add_chat_button_all:I = 0x7f0a07d6
+.method public final mergeFrom(Lgd3;)Lfl9;
+    .locals 2
 
-.field public static oneme_settings_privacy_screen_dialog_add_chat_button_contacts:I = 0x7f0a07d7
+    :cond_0
+    :goto_0
+    invoke-virtual {p1}, Lgd3;->s()I
 
-.field public static oneme_settings_privacy_screen_dialog_call_button_all:I = 0x7f0a07d8
+    move-result v0
 
-.field public static oneme_settings_privacy_screen_dialog_call_button_contacts:I = 0x7f0a07d9
+    if-eqz v0, :cond_4
 
-.field public static oneme_settings_privacy_screen_dialog_content_level_access_all:I = 0x7f0a07da
+    const/16 v1, 0x8
 
-.field public static oneme_settings_privacy_screen_dialog_content_level_access_safe:I = 0x7f0a07db
+    if-eq v0, v1, :cond_2
 
-.field public static oneme_settings_privacy_screen_dialog_finished_session_cancel_btn:I = 0x7f0a07dc
+    const/16 v1, 0x10
 
-.field public static oneme_settings_privacy_screen_dialog_finished_session_finish_btn:I = 0x7f0a07dd
+    if-eq v0, v1, :cond_1
 
-.field public static oneme_settings_privacy_screen_dialog_online_button_contacts:I = 0x7f0a07de
+    invoke-virtual {p1, v0}, Lgd3;->u(I)Z
 
-.field public static oneme_settings_privacy_screen_dialog_online_button_nobody:I = 0x7f0a07df
+    move-result v0
 
-.field public static oneme_settings_privacy_screen_dialog_online_never_accept_btn:I = 0x7f0a07e0
+    if-nez v0, :cond_0
 
-.field public static oneme_settings_privacy_screen_dialog_online_never_cancel_btn:I = 0x7f0a07e1
+    goto :goto_1
 
-.field public static oneme_settings_privacy_screen_dialog_safe_file_no_btn:I = 0x7f0a07e2
+    :cond_1
+    invoke-virtual {p1}, Lgd3;->p()I
 
-.field public static oneme_settings_privacy_screen_dialog_safe_file_yes_btn:I = 0x7f0a07e3
+    move-result v0
 
-.field public static oneme_settings_privacy_screen_dialog_search_by_phone_all:I = 0x7f0a07e4
+    iput v0, p0, Lfpc;->b:I
 
-.field public static oneme_settings_privacy_screen_dialog_search_by_phone_contacts:I = 0x7f0a07e5
+    goto :goto_0
 
-.field public static oneme_settings_privacy_screen_finished_sessions:I = 0x7f0a07e6
+    :cond_2
+    invoke-virtual {p1}, Lgd3;->p()I
 
-.field public static oneme_settings_privacy_screen_how_can_section:I = 0x7f0a07e7
+    move-result v0
 
-.field public static oneme_settings_privacy_screen_how_session:I = 0x7f0a07e8
+    if-eqz v0, :cond_3
 
-.field public static oneme_settings_privacy_screen_list:I = 0x7f0a07e9
+    goto :goto_0
 
-.field public static oneme_settings_privacy_screen_online_state_all:I = 0x7f0a07ea
+    :cond_3
+    iput v0, p0, Lfpc;->a:I
 
-.field public static oneme_settings_privacy_screen_online_state_nobody:I = 0x7f0a07eb
+    goto :goto_0
 
-.field public static oneme_settings_privacy_screen_safe_mode:I = 0x7f0a07ec
+    :cond_4
+    :goto_1
+    return-object p0
+.end method
 
-.field public static oneme_settings_privacy_screen_search_by_phone:I = 0x7f0a07ed
+.method public final writeTo(Lhd3;)V
+    .locals 2
 
-.field public static oneme_settings_privacy_screen_see_online_state:I = 0x7f0a07ee
+    iget v0, p0, Lfpc;->a:I
 
-.field public static oneme_settings_privacy_screen_settings_header_vh:I = 0x7f0a07ef
+    if-eqz v0, :cond_0
 
-.field public static oneme_settings_privacy_screen_settings_item_vh:I = 0x7f0a07f0
+    const/4 v1, 0x1
 
-.field public static oneme_settings_privacy_screen_settings_warning_vh:I = 0x7f0a07f1
+    invoke-virtual {p1, v1, v0}, Lhd3;->w(II)V
 
-.field public static oneme_settings_privacy_screen_toolbar:I = 0x7f0a07f2
+    :cond_0
+    iget v0, p0, Lfpc;->b:I
 
-.field public static oneme_settings_privacy_screen_twofa:I = 0x7f0a07f3
+    if-eqz v0, :cond_1
 
-.field public static oneme_settings_privacy_screen_twofa_profile_delete:I = 0x7f0a07f4
+    const/4 v1, 0x2
 
-.field public static oneme_settings_privacy_screen_twofa_warning_item:I = 0x7f0a07f5
+    invoke-virtual {p1, v1, v0}, Lhd3;->w(II)V
 
-.field public static oneme_settings_privacy_screen_web_apps:I = 0x7f0a07f6
-
-.field public static oneme_settings_privacy_setup_pin_code_description:I = 0x7f0a07f7
-
-.field public static oneme_settings_privacy_setup_pin_code_error:I = 0x7f0a07f8
-
-.field public static oneme_settings_privacy_setup_pin_code_forgot:I = 0x7f0a07f9
-
-.field public static oneme_settings_privacy_setup_pin_code_input:I = 0x7f0a07fa
-
-.field public static oneme_settings_privacy_setup_pin_code_lock:I = 0x7f0a07fb
-
-.field public static oneme_settings_privacy_setup_pin_code_root_view:I = 0x7f0a07fc
-
-.field public static oneme_settings_privacy_setup_pin_code_title:I = 0x7f0a07fd
-
-.field public static top_barrier:I = 0x7f0a0c2c
+    :cond_1
+    return-void
+.end method

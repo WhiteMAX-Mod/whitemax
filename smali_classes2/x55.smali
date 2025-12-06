@@ -1,163 +1,183 @@
-.class public final Lx55;
-.super Ljava/lang/Object;
+.class public final enum Lx55;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
+# static fields
+.field public static final enum X:Lx55;
+
+.field public static final enum Y:Lx55;
+
+.field public static final enum Z:Lx55;
+
+.field public static final b:[Lx55;
+
+.field public static final enum c:Lx55;
+
+.field public static final enum d:Lx55;
+
+.field public static final enum o:Lx55;
+
+.field public static final enum s0:Lx55;
+
+.field public static final enum t0:Lx55;
+
+.field public static final synthetic u0:[Lx55;
+
+
 # instance fields
-.field public final a:Lnb9;
-
-.field public final b:Lsd2;
-
-.field public final c:Lvwb;
-
-.field public final d:Lpw0;
-
-.field public final e:Ly83;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lnb9;Lsd2;Lvwb;Lpw0;Ly83;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 11
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lx55;
 
-    iput-object p1, p0, Lx55;->a:Lnb9;
+    const/4 v1, 0x0
 
-    iput-object p2, p0, Lx55;->b:Lsd2;
+    const-string v2, "do_not_disturb_mode"
 
-    iput-object p3, p0, Lx55;->c:Lvwb;
+    const-string v3, "DO_NOT_DISTURB_MODE"
 
-    iput-object p4, p0, Lx55;->d:Lpw0;
+    invoke-direct {v0, v3, v1, v2}, Lx55;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    iput-object p5, p0, Lx55;->e:Ly83;
+    sput-object v0, Lx55;->c:Lx55;
+
+    new-instance v1, Lx55;
+
+    const/4 v2, 0x1
+
+    const-string v3, "chat_muted"
+
+    const-string v4, "CHAT_MUTED"
+
+    invoke-direct {v1, v4, v2, v3}, Lx55;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v1, Lx55;->d:Lx55;
+
+    new-instance v2, Lx55;
+
+    const/4 v3, 0x2
+
+    const-string v4, "skipped_notif_message"
+
+    const-string v5, "SKIPPED_NOTIF_MESSAGE"
+
+    invoke-direct {v2, v5, v3, v4}, Lx55;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v2, Lx55;->o:Lx55;
+
+    new-instance v3, Lx55;
+
+    const/4 v4, 0x3
+
+    const-string v5, "notifications_limit"
+
+    const-string v6, "NOTIFICATIONS_LIMIT"
+
+    invoke-direct {v3, v6, v4, v5}, Lx55;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v3, Lx55;->X:Lx55;
+
+    new-instance v4, Lx55;
+
+    const/4 v5, 0x4
+
+    const-string v6, "messages_limit"
+
+    const-string v7, "MESSAGES_LIMIT"
+
+    invoke-direct {v4, v7, v5, v6}, Lx55;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v4, Lx55;->Y:Lx55;
+
+    new-instance v5, Lx55;
+
+    const/4 v6, 0x5
+
+    const-string v7, "notif_channel_disabled"
+
+    const-string v8, "NOTIFICATION_CHANNEL_DISABLED"
+
+    invoke-direct {v5, v8, v6, v7}, Lx55;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v5, Lx55;->Z:Lx55;
+
+    new-instance v6, Lx55;
+
+    const/4 v7, 0x6
+
+    const-string v8, "notif_group_channel_disabled"
+
+    const-string v9, "NOTIFICATION_GROUP_CHANNEL_DISABLED"
+
+    invoke-direct {v6, v9, v7, v8}, Lx55;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v6, Lx55;->s0:Lx55;
+
+    new-instance v7, Lx55;
+
+    const/4 v8, 0x7
+
+    const-string v9, "system_app_notif_disabled"
+
+    const-string v10, "SYSTEM_APP_NOTIF_DISABLED"
+
+    invoke-direct {v7, v10, v8, v9}, Lx55;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v7, Lx55;->t0:Lx55;
+
+    filled-new-array/range {v0 .. v7}, [Lx55;
+
+    move-result-object v0
+
+    sput-object v0, Lx55;->u0:[Lx55;
+
+    invoke-static {}, Lx55;->values()[Lx55;
+
+    move-result-object v0
+
+    sput-object v0, Lx55;->b:[Lx55;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
 
-# virtual methods
-.method public final a(JJLjava/lang/String;Ljava/util/List;Lef9;Ljava/util/List;Z)V
-    .locals 13
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    move-wide/from16 v11, p3
-
-    iget-object v0, p0, Lx55;->c:Lvwb;
-
-    iget-object v0, v0, Lvwb;->c:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v0, p0, Lx55;->e:Ly83;
-
-    check-cast v0, Lntd;
-
-    invoke-virtual {v0}, Lntd;->j()J
-
-    move-result-wide v4
-
-    new-instance v0, Lw55;
-
-    move-object v1, p0
-
-    move-wide v2, p1
-
-    move-object/from16 v8, p5
-
-    move-object/from16 v9, p6
-
-    move-object/from16 v10, p7
-
-    move-object/from16 v7, p8
-
-    move/from16 v6, p9
-
-    invoke-direct/range {v0 .. v10}, Lw55;-><init>(Lx55;JJZLjava/util/List;Ljava/lang/String;Ljava/util/List;Lef9;)V
-
-    iget-object v1, p0, Lx55;->a:Lnb9;
-
-    iget-object v4, v1, Lnb9;->a:Lpc4;
-
-    check-cast v4, Lwb4;
-
-    iget-object v4, v4, Lwb4;->c:Ltgd;
-
-    iget-object v4, v4, Ltgd;->a:Lggd;
-
-    invoke-virtual {v4}, Lggd;->m()Lfgd;
-
-    move-result-object v4
-
-    check-cast v4, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
-
-    new-instance v5, Lbgd;
-
-    const/4 v7, 0x1
-
-    invoke-direct {v5, v7, v0}, Lbgd;-><init>(ILji6;)V
-
-    invoke-virtual {v4, v5}, Lfgd;->o(Ljava/util/concurrent/Callable;)Ljava/lang/Object;
-
-    iget-object v0, p0, Lx55;->b:Lsd2;
-
-    invoke-virtual {v0, v11, v12}, Lsd2;->C(J)Lla2;
-
-    move-result-object v4
-
-    if-eqz v4, :cond_0
-
-    iget-object v5, v4, Lla2;->b:Lne2;
-
-    iget-wide v7, v5, Lne2;->j:J
-
-    cmp-long v5, v7, p1
-
-    if-nez v5, :cond_0
-
-    invoke-virtual {v1, p1, p2}, Lnb9;->n(J)Lpb9;
-
-    move-result-object v5
-
-    const/4 v7, 0x1
-
-    invoke-virtual {v0, v11, v12, v5, v7}, Lsd2;->g0(JLpb9;Z)Lla2;
-
-    :cond_0
-    if-eqz v4, :cond_1
-
-    iget-object v4, v4, Lla2;->b:Lne2;
-
-    iget-wide v4, v4, Lne2;->L:J
-
-    cmp-long v4, v4, p1
-
-    if-nez v4, :cond_1
-
-    invoke-virtual {v1, p1, p2}, Lnb9;->n(J)Lpb9;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v0, v11, v12}, Lsd2;->k0(J)V
-
-    :cond_1
-    new-instance v0, Ldeg;
-
-    const/4 v1, 0x0
-
-    move-wide v4, p1
-
-    move-wide v2, v11
-
-    invoke-direct/range {v0 .. v5}, Ldeg;-><init>(IJJ)V
-
-    iget-object v1, p0, Lx55;->d:Lpw0;
-
-    invoke-virtual {v1, v0}, Lpw0;->c(Ljava/lang/Object;)V
+    iput-object p3, p0, Lx55;->a:Ljava/lang/String;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lx55;
+    .locals 1
+
+    const-class v0, Lx55;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lx55;
+
+    return-object p0
+.end method
+
+.method public static values()[Lx55;
+    .locals 1
+
+    sget-object v0, Lx55;->u0:[Lx55;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lx55;
+
+    return-object v0
 .end method

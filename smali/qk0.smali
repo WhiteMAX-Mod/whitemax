@@ -1,278 +1,851 @@
-.class public Lqk0;
-.super Ljava/lang/Object;
+.class public abstract Lqk0;
+.super Landroid/widget/ProgressBar;
 .source "SourceFile"
-
-# interfaces
-.implements La0c;
 
 
 # static fields
-.field public static final v0:Lqc7;
-
-.field public static final w0:Ljava/lang/Object;
+.field public static final y0:I
 
 
 # instance fields
-.field public final X:Lza7;
+.field public final a:Lrk0;
 
-.field public final Y:Ljava/util/HashMap;
+.field public b:I
 
-.field public Z:Z
+.field public final c:Z
 
-.field public final a:Lab7;
+.field public final d:I
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ld0c;
-
-.field public final o:Ljava/lang/Object;
-
-.field public q0:Lzyb;
-
-.field public r0:Z
+.field public o:Ljh;
 
 .field public s0:Z
 
-.field public final t0:Ljava/util/ArrayList;
+.field public t0:I
 
-.field public final u0:Loa7;
+.field public final u0:Lok0;
+
+.field public final v0:Lok0;
+
+.field public final w0:Lpk0;
+
+.field public final x0:Lpk0;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
-    const-string v0, "id"
+    sget v0, Lm5d;->Widget_MaterialComponents_ProgressIndicator:I
 
-    const-string v1, "uri_source"
+    sput v0, Lqk0;->y0:I
 
-    filled-new-array {v0, v1}, [Ljava/lang/String;
+    return-void
+.end method
+
+.method public constructor <init>(IILandroid/content/Context;)V
+    .locals 7
+
+    sget v0, Lqk0;->y0:I
+
+    const/4 v2, 0x0
+
+    invoke-static {p3, v2, p1, v0}, Ler8;->a(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
+
+    move-result-object p3
+
+    invoke-direct {p0, p3, v2, p1}, Landroid/widget/ProgressBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+
+    const/4 p3, 0x0
+
+    iput-boolean p3, p0, Lqk0;->s0:Z
+
+    const/4 v0, 0x4
+
+    iput v0, p0, Lqk0;->t0:I
+
+    new-instance v0, Lok0;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lok0;-><init>(Lqk0;I)V
+
+    iput-object v0, p0, Lqk0;->u0:Lok0;
+
+    new-instance v0, Lok0;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p0, v1}, Lok0;-><init>(Lqk0;I)V
+
+    iput-object v0, p0, Lqk0;->v0:Lok0;
+
+    new-instance v0, Lpk0;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lpk0;-><init>(Lqk0;I)V
+
+    iput-object v0, p0, Lqk0;->w0:Lpk0;
+
+    new-instance v0, Lpk0;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p0, v1}, Lpk0;-><init>(Lqk0;I)V
+
+    iput-object v0, p0, Lqk0;->x0:Lpk0;
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1}, Lqk0;->a(Landroid/content/Context;)Lrk0;
 
     move-result-object v0
 
-    sget v1, Lqc7;->a:I
+    iput-object v0, p0, Lqk0;->a:Lrk0;
 
-    new-instance v1, Ljava/util/HashSet;
+    sget-object v3, Lz5d;->BaseProgressIndicator:[I
 
-    const/4 v2, 0x2
+    new-array v6, p3, [I
 
-    invoke-direct {v1, v2}, Ljava/util/HashSet;-><init>(I)V
+    invoke-static {v1, v2, p1, p2}, Ld7g;->a(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    invoke-static {v1, v0}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
+    move v4, p1
 
-    new-instance v0, Lqc7;
+    move v5, p2
 
-    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+    invoke-static/range {v1 .. v6}, Ld7g;->b(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)V
 
-    sput-object v0, Lqk0;->v0:Lqc7;
+    invoke-virtual {v1, v2, v3, v4, v5}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
-    new-instance v0, Ljava/lang/Object;
+    move-result-object p1
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    sget p2, Lz5d;->BaseProgressIndicator_showDelay:I
 
-    sput-object v0, Lqk0;->w0:Ljava/lang/Object;
+    const/4 p3, -0x1
 
-    return-void
-.end method
+    invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getInt(II)I
 
-.method public constructor <init>(Lab7;Ljava/lang/String;Ljava/lang/String;Ld0c;Ljava/lang/Object;Lza7;ZZLzyb;Loa7;)V
-    .locals 1
+    sget p2, Lz5d;->BaseProgressIndicator_minHideDelay:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getInt(II)I
 
-    iput-object p1, p0, Lqk0;->a:Lab7;
+    move-result p2
 
-    iput-object p2, p0, Lqk0;->b:Ljava/lang/String;
+    const/16 p3, 0x3e8
 
-    new-instance p3, Ljava/util/HashMap;
+    invoke-static {p2, p3}, Ljava/lang/Math;->min(II)I
 
-    invoke-direct {p3}, Ljava/util/HashMap;-><init>()V
+    move-result p2
 
-    iput-object p3, p0, Lqk0;->Y:Ljava/util/HashMap;
+    iput p2, p0, Lqk0;->d:I
 
-    const-string v0, "id"
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
-    invoke-virtual {p3, v0, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance p1, Ljh;
 
-    if-nez p1, :cond_0
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    const-string p1, "null-request"
+    iput-object p1, p0, Lqk0;->o:Ljh;
 
-    goto :goto_0
+    const/4 p1, 0x1
 
-    :cond_0
-    iget-object p1, p1, Lab7;->b:Landroid/net/Uri;
-
-    :goto_0
-    const-string p2, "uri_source"
-
-    invoke-virtual {p3, p2, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iput-object p4, p0, Lqk0;->c:Ld0c;
-
-    if-eqz p5, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    sget-object p5, Lqk0;->w0:Ljava/lang/Object;
-
-    :goto_1
-    iput-object p5, p0, Lqk0;->o:Ljava/lang/Object;
-
-    iput-object p6, p0, Lqk0;->X:Lza7;
-
-    iput-boolean p7, p0, Lqk0;->Z:Z
-
-    iput-object p9, p0, Lqk0;->q0:Lzyb;
-
-    iput-boolean p8, p0, Lqk0;->r0:Z
-
-    const/4 p1, 0x0
-
-    iput-boolean p1, p0, Lqk0;->s0:Z
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Lqk0;->t0:Ljava/util/ArrayList;
-
-    iput-object p10, p0, Lqk0;->u0:Loa7;
+    iput-boolean p1, p0, Lqk0;->c:Z
 
     return-void
 .end method
 
-.method public static b(Ljava/util/ArrayList;)V
-    .locals 1
+.method private getCurrentDrawingDelegate()Lq45;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lq45;"
+        }
+    .end annotation
 
-    if-nez p0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {p0}, Landroid/widget/ProgressBar;->isIndeterminate()Z
 
     move-result v0
 
+    const/4 v1, 0x0
+
     if-eqz v0, :cond_1
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {p0}, Lqk0;->getIndeterminateDrawable()Lpj7;
 
     move-result-object v0
 
-    check-cast v0, Lrk0;
+    if-nez v0, :cond_0
 
-    invoke-virtual {v0}, Lrk0;->b()V
-
-    goto :goto_0
-
-    :cond_1
-    :goto_1
-    return-void
-.end method
-
-.method public static c(Ljava/util/ArrayList;)V
-    .locals 1
-
-    if-nez p0, :cond_0
-
-    goto :goto_1
+    return-object v1
 
     :cond_0
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {p0}, Lqk0;->getIndeterminateDrawable()Lpj7;
 
     move-result-object v0
 
-    check-cast v0, Lrk0;
+    iget-object v0, v0, Lpj7;->v0:Lq45;
 
-    invoke-virtual {v0}, Lrk0;->c()V
-
-    goto :goto_0
+    return-object v0
 
     :cond_1
-    :goto_1
-    return-void
-.end method
-
-.method public static d(Ljava/util/ArrayList;)V
-    .locals 1
-
-    if-nez p0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {p0}, Lqk0;->getProgressDrawable()Lou4;
 
     move-result-object v0
 
-    check-cast v0, Lrk0;
+    if-nez v0, :cond_2
 
-    invoke-virtual {v0}, Lrk0;->d()V
+    return-object v1
 
-    goto :goto_0
+    :cond_2
+    invoke-virtual {p0}, Lqk0;->getProgressDrawable()Lou4;
 
-    :cond_1
-    :goto_1
-    return-void
+    move-result-object v0
+
+    iget-object v0, v0, Lou4;->v0:Lq45;
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a(Lrk0;)V
+.method public abstract a(Landroid/content/Context;)Lrk0;
+.end method
+
+.method public b(I)V
+    .locals 2
+
+    invoke-virtual {p0}, Landroid/widget/ProgressBar;->isIndeterminate()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {p0}, Lqk0;->getProgressDrawable()Lou4;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_3
+
+    iput p1, p0, Lqk0;->b:I
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lqk0;->s0:Z
+
+    invoke-virtual {p0}, Lqk0;->getIndeterminateDrawable()Lpj7;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->isVisible()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    iget-object p1, p0, Lqk0;->o:Ljh;
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string p1, "animator_duration_scale"
+
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    invoke-static {v0, p1, v1}, Landroid/provider/Settings$Global;->getFloat(Landroid/content/ContentResolver;Ljava/lang/String;F)F
+
+    move-result p1
+
+    const/4 v0, 0x0
+
+    cmpl-float p1, p1, v0
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Lqk0;->getIndeterminateDrawable()Lpj7;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lpj7;->w0:Ln2;
+
+    invoke-virtual {p1}, Ln2;->f0()V
+
+    return-void
+
+    :cond_1
+    :goto_0
+    iget-object p1, p0, Lqk0;->w0:Lpk0;
+
+    invoke-virtual {p0}, Lqk0;->getIndeterminateDrawable()Lpj7;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lpk0;->a(Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+
+    :cond_2
+    invoke-super {p0, p1}, Landroid/widget/ProgressBar;->setProgress(I)V
+
+    invoke-virtual {p0}, Lqk0;->getProgressDrawable()Lou4;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p0}, Lqk0;->getProgressDrawable()Lou4;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lou4;->jumpToCurrentState()V
+
+    :cond_3
+    return-void
+.end method
+
+.method public final c()Z
+    .locals 2
+
+    sget-object v0, Lhfh;->a:Ljava/util/WeakHashMap;
+
+    invoke-virtual {p0}, Landroid/view/View;->isAttachedToWindow()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {p0}, Landroid/view/View;->getWindowVisibility()I
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    move-object v0, p0
+
+    :goto_0
+    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    goto :goto_2
+
+    :cond_0
+    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {p0}, Landroid/view/View;->getWindowVisibility()I
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_1
+
+    :cond_1
+    instance-of v1, v0, Landroid/view/View;
+
+    if-nez v1, :cond_2
+
+    :goto_1
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_2
+    check-cast v0, Landroid/view/View;
+
+    goto :goto_0
+
+    :cond_3
+    :goto_2
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getCurrentDrawable()Landroid/graphics/drawable/Drawable;
     .locals 1
+
+    invoke-virtual {p0}, Landroid/widget/ProgressBar;->isIndeterminate()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lqk0;->getIndeterminateDrawable()Lpj7;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    invoke-virtual {p0}, Lqk0;->getProgressDrawable()Lou4;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getHideAnimationBehavior()I
+    .locals 1
+
+    iget-object v0, p0, Lqk0;->a:Lrk0;
+
+    iget v0, v0, Lrk0;->f:I
+
+    return v0
+.end method
+
+.method public bridge synthetic getIndeterminateDrawable()Landroid/graphics/drawable/Drawable;
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lqk0;->getIndeterminateDrawable()Lpj7;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getIndeterminateDrawable()Lpj7;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lpj7;"
+        }
+    .end annotation
+
+    .line 2
+    invoke-super {p0}, Landroid/widget/ProgressBar;->getIndeterminateDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    check-cast v0, Lpj7;
+
+    return-object v0
+.end method
+
+.method public getIndicatorColor()[I
+    .locals 1
+
+    iget-object v0, p0, Lqk0;->a:Lrk0;
+
+    iget-object v0, v0, Lrk0;->c:[I
+
+    return-object v0
+.end method
+
+.method public getIndicatorTrackGapSize()I
+    .locals 1
+
+    iget-object v0, p0, Lqk0;->a:Lrk0;
+
+    iget v0, v0, Lrk0;->g:I
+
+    return v0
+.end method
+
+.method public bridge synthetic getProgressDrawable()Landroid/graphics/drawable/Drawable;
+    .locals 1
+
+    .line 1
+    invoke-virtual {p0}, Lqk0;->getProgressDrawable()Lou4;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getProgressDrawable()Lou4;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lou4;"
+        }
+    .end annotation
+
+    .line 2
+    invoke-super {p0}, Landroid/widget/ProgressBar;->getProgressDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    check-cast v0, Lou4;
+
+    return-object v0
+.end method
+
+.method public getShowAnimationBehavior()I
+    .locals 1
+
+    iget-object v0, p0, Lqk0;->a:Lrk0;
+
+    iget v0, v0, Lrk0;->e:I
+
+    return v0
+.end method
+
+.method public getTrackColor()I
+    .locals 1
+
+    iget-object v0, p0, Lqk0;->a:Lrk0;
+
+    iget v0, v0, Lrk0;->d:I
+
+    return v0
+.end method
+
+.method public getTrackCornerRadius()I
+    .locals 1
+
+    iget-object v0, p0, Lqk0;->a:Lrk0;
+
+    iget v0, v0, Lrk0;->b:I
+
+    return v0
+.end method
+
+.method public getTrackThickness()I
+    .locals 1
+
+    iget-object v0, p0, Lqk0;->a:Lrk0;
+
+    iget v0, v0, Lrk0;->a:I
+
+    return v0
+.end method
+
+.method public final invalidate()V
+    .locals 1
+
+    invoke-super {p0}, Landroid/view/View;->invalidate()V
+
+    invoke-virtual {p0}, Lqk0;->getCurrentDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lqk0;->getCurrentDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onAttachedToWindow()V
+    .locals 3
+
+    invoke-super {p0}, Landroid/widget/ProgressBar;->onAttachedToWindow()V
+
+    invoke-virtual {p0}, Lqk0;->getProgressDrawable()Lou4;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lqk0;->getIndeterminateDrawable()Lpj7;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lqk0;->getIndeterminateDrawable()Lpj7;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lpj7;->w0:Ln2;
+
+    iget-object v1, p0, Lqk0;->w0:Lpk0;
+
+    invoke-virtual {v0, v1}, Ln2;->e0(Lpk0;)V
+
+    :cond_0
+    invoke-virtual {p0}, Lqk0;->getProgressDrawable()Lou4;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lqk0;->x0:Lpk0;
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {p0}, Lqk0;->getProgressDrawable()Lou4;
+
+    move-result-object v0
+
+    iget-object v2, v0, Lf45;->X:Ljava/util/ArrayList;
+
+    if-nez v2, :cond_1
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v2, v0, Lf45;->X:Ljava/util/ArrayList;
+
+    :cond_1
+    iget-object v2, v0, Lf45;->X:Ljava/util/ArrayList;
+
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    iget-object v0, v0, Lf45;->X:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_2
+    invoke-virtual {p0}, Lqk0;->getIndeterminateDrawable()Lpj7;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_4
+
+    invoke-virtual {p0}, Lqk0;->getIndeterminateDrawable()Lpj7;
+
+    move-result-object v0
+
+    iget-object v2, v0, Lf45;->X:Ljava/util/ArrayList;
+
+    if-nez v2, :cond_3
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v2, v0, Lf45;->X:Ljava/util/ArrayList;
+
+    :cond_3
+    iget-object v2, v0, Lf45;->X:Ljava/util/ArrayList;
+
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_4
+
+    iget-object v0, v0, Lf45;->X:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_4
+    invoke-virtual {p0}, Lqk0;->c()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    iget v0, p0, Lqk0;->d:I
+
+    if-lez v0, :cond_5
+
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    :cond_5
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_6
+    return-void
+.end method
+
+.method public final onDetachedFromWindow()V
+    .locals 2
+
+    iget-object v0, p0, Lqk0;->v0:Lok0;
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+
+    iget-object v0, p0, Lqk0;->u0:Lok0;
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+
+    invoke-virtual {p0}, Lqk0;->getCurrentDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    check-cast v0, Lf45;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1, v1, v1}, Lf45;->c(ZZZ)Z
+
+    invoke-virtual {p0}, Lqk0;->getIndeterminateDrawable()Lpj7;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lqk0;->x0:Lpk0;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lqk0;->getIndeterminateDrawable()Lpj7;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Lf45;->e(Lpk0;)V
+
+    invoke-virtual {p0}, Lqk0;->getIndeterminateDrawable()Lpj7;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lpj7;->w0:Ln2;
+
+    invoke-virtual {v0}, Ln2;->i0()V
+
+    :cond_0
+    invoke-virtual {p0}, Lqk0;->getProgressDrawable()Lou4;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Lqk0;->getProgressDrawable()Lou4;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Lf45;->e(Lpk0;)V
+
+    :cond_1
+    invoke-super {p0}, Landroid/widget/ProgressBar;->onDetachedFromWindow()V
+
+    return-void
+.end method
+
+.method public final declared-synchronized onDraw(Landroid/graphics/Canvas;)V
+    .locals 5
 
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Lqk0;->t0:Ljava/util/ArrayList;
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move-result v0
 
-    iget-boolean v0, p0, Lqk0;->s0:Z
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
 
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result v1
 
-    if-eqz v0, :cond_0
+    if-nez v1, :cond_0
 
-    invoke-virtual {p1}, Lrk0;->a()V
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
 
-    :cond_0
-    return-void
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    goto :goto_0
 
     :catchall_0
     move-exception p1
 
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
+
+    :cond_1
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    :cond_2
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
+
+    move-result v2
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
+
+    move-result v3
+
+    add-int/2addr v2, v3
+
+    sub-int/2addr v1, v2
+
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+
+    move-result v2
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
+
+    move-result v3
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
+
+    move-result v4
+
+    add-int/2addr v3, v4
+
+    sub-int/2addr v2, v3
+
+    const/4 v3, 0x0
+
+    invoke-virtual {p1, v3, v3, v1, v2}, Landroid/graphics/Canvas;->clipRect(IIII)Z
+
+    :cond_3
+    invoke-virtual {p0}, Lqk0;->getCurrentDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :goto_1
     :try_start_1
     monitor-exit p0
     :try_end_1
@@ -281,13 +854,444 @@
     throw p1
 .end method
 
-.method public final e()V
+.method public final declared-synchronized onMeasure(II)V
     .locals 2
 
     monitor-enter p0
 
     :try_start_0
-    iget-boolean v0, p0, Lqk0;->s0:Z
+    invoke-direct {p0}, Lqk0;->getCurrentDrawingDelegate()Lq45;
+
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-nez v0, :cond_0
+
+    monitor-exit p0
+
+    return-void
+
+    :cond_0
+    :try_start_1
+    invoke-virtual {v0}, Lq45;->f()I
+
+    move-result v1
+
+    if-gez v1, :cond_1
+
+    invoke-virtual {p0}, Landroid/view/View;->getSuggestedMinimumWidth()I
+
+    move-result v1
+
+    invoke-static {v1, p1}, Landroid/view/View;->getDefaultSize(II)I
+
+    move-result p1
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_1
+    invoke-virtual {v0}, Lq45;->f()I
+
+    move-result p1
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
+
+    move-result v1
+
+    add-int/2addr p1, v1
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
+
+    move-result v1
+
+    add-int/2addr p1, v1
+
+    :goto_0
+    invoke-virtual {v0}, Lq45;->e()I
+
+    move-result v1
+
+    if-gez v1, :cond_2
+
+    invoke-virtual {p0}, Landroid/view/View;->getSuggestedMinimumHeight()I
+
+    move-result v0
+
+    invoke-static {v0, p2}, Landroid/view/View;->getDefaultSize(II)I
+
+    move-result p2
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {v0}, Lq45;->e()I
+
+    move-result p2
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
+
+    move-result v0
+
+    add-int/2addr p2, v0
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
+
+    move-result v0
+
+    add-int/2addr p2, v0
+
+    :goto_1
+    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setMeasuredDimension(II)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :goto_2
+    :try_start_2
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw p1
+.end method
+
+.method public final onVisibilityChanged(Landroid/view/View;I)V
+    .locals 2
+
+    invoke-super {p0, p1, p2}, Landroid/view/View;->onVisibilityChanged(Landroid/view/View;I)V
+
+    const/4 p1, 0x0
+
+    if-nez p2, :cond_0
+
+    const/4 p2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    move p2, p1
+
+    :goto_0
+    iget-boolean v0, p0, Lqk0;->c:Z
+
+    if-nez v0, :cond_1
+
+    return-void
+
+    :cond_1
+    invoke-virtual {p0}, Lqk0;->getCurrentDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    check-cast v0, Lf45;
+
+    invoke-virtual {p0}, Lqk0;->c()Z
+
+    move-result v1
+
+    invoke-virtual {v0, v1, p1, p2}, Lf45;->c(ZZZ)Z
+
+    return-void
+.end method
+
+.method public final onWindowVisibilityChanged(I)V
+    .locals 2
+
+    invoke-super {p0, p1}, Landroid/view/View;->onWindowVisibilityChanged(I)V
+
+    iget-boolean p1, p0, Lqk0;->c:Z
+
+    if-nez p1, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0}, Lqk0;->getCurrentDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    check-cast p1, Lf45;
+
+    invoke-virtual {p0}, Lqk0;->c()Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, v1, v1}, Lf45;->c(ZZZ)Z
+
+    return-void
+.end method
+
+.method public setAnimatorDurationScaleProvider(Ljh;)V
+    .locals 1
+
+    iput-object p1, p0, Lqk0;->o:Ljh;
+
+    invoke-virtual {p0}, Lqk0;->getProgressDrawable()Lou4;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lqk0;->getProgressDrawable()Lou4;
+
+    move-result-object v0
+
+    iput-object p1, v0, Lf45;->c:Ljh;
+
+    :cond_0
+    invoke-virtual {p0}, Lqk0;->getIndeterminateDrawable()Lpj7;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Lqk0;->getIndeterminateDrawable()Lpj7;
+
+    move-result-object v0
+
+    iput-object p1, v0, Lf45;->c:Ljh;
+
+    :cond_1
+    return-void
+.end method
+
+.method public setHideAnimationBehavior(I)V
+    .locals 1
+
+    iget-object v0, p0, Lqk0;->a:Lrk0;
+
+    iput p1, v0, Lrk0;->f:I
+
+    invoke-virtual {p0}, Lqk0;->invalidate()V
+
+    return-void
+.end method
+
+.method public declared-synchronized setIndeterminate(Z)V
+    .locals 2
+
+    monitor-enter p0
+
+    :try_start_0
+    invoke-virtual {p0}, Landroid/widget/ProgressBar;->isIndeterminate()Z
+
+    move-result v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-ne p1, v0, :cond_0
+
+    monitor-exit p0
+
+    return-void
+
+    :cond_0
+    :try_start_1
+    invoke-virtual {p0}, Lqk0;->getCurrentDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    check-cast v0, Lf45;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0, v1, v1, v1}, Lf45;->c(ZZZ)Z
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    invoke-super {p0, p1}, Landroid/widget/ProgressBar;->setIndeterminate(Z)V
+
+    invoke-virtual {p0}, Lqk0;->getCurrentDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    check-cast p1, Lf45;
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p0}, Lqk0;->c()Z
+
+    move-result v0
+
+    invoke-virtual {p1, v0, v1, v1}, Lf45;->c(ZZZ)Z
+
+    :cond_2
+    instance-of v0, p1, Lpj7;
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {p0}, Lqk0;->c()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    check-cast p1, Lpj7;
+
+    iget-object p1, p1, Lpj7;->w0:Ln2;
+
+    invoke-virtual {p1}, Ln2;->h0()V
+
+    :cond_3
+    iput-boolean v1, p0, Lqk0;->s0:Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :goto_1
+    :try_start_2
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw p1
+.end method
+
+.method public setIndeterminateDrawable(Landroid/graphics/drawable/Drawable;)V
+    .locals 2
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    invoke-super {p0, p1}, Landroid/widget/ProgressBar;->setIndeterminateDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+
+    :cond_0
+    instance-of v0, p1, Lpj7;
+
+    if-eqz v0, :cond_1
+
+    move-object v0, p1
+
+    check-cast v0, Lf45;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1, v1, v1}, Lf45;->c(ZZZ)Z
+
+    invoke-super {p0, p1}, Landroid/widget/ProgressBar;->setIndeterminateDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Cannot set framework drawable as indeterminate drawable."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public varargs setIndicatorColor([I)V
+    .locals 3
+
+    array-length v0, p1
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x1
+
+    new-array p1, p1, [I
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    sget v1, Ldvc;->colorPrimary:I
+
+    const/4 v2, -0x1
+
+    invoke-static {v1, v2, v0}, Leti;->d(IILandroid/content/Context;)I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    aput v0, p1, v1
+
+    :cond_0
+    invoke-virtual {p0}, Lqk0;->getIndicatorColor()[I
+
+    move-result-object v0
+
+    invoke-static {v0, p1}, Ljava/util/Arrays;->equals([I[I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lqk0;->a:Lrk0;
+
+    iput-object p1, v0, Lrk0;->c:[I
+
+    invoke-virtual {p0}, Lqk0;->getIndeterminateDrawable()Lpj7;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lpj7;->w0:Ln2;
+
+    invoke-virtual {p1}, Ln2;->V()V
+
+    invoke-virtual {p0}, Lqk0;->invalidate()V
+
+    :cond_1
+    return-void
+.end method
+
+.method public setIndicatorTrackGapSize(I)V
+    .locals 2
+
+    iget-object v0, p0, Lqk0;->a:Lrk0;
+
+    iget v1, v0, Lrk0;->g:I
+
+    if-eq v1, p1, :cond_0
+
+    iput p1, v0, Lrk0;->g:I
+
+    invoke-virtual {v0}, Lrk0;->a()V
+
+    invoke-virtual {p0}, Lqk0;->invalidate()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public declared-synchronized setProgress(I)V
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    invoke-virtual {p0}, Landroid/widget/ProgressBar;->isIndeterminate()Z
+
+    move-result v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -295,238 +1299,185 @@
 
     monitor-exit p0
 
-    const/4 v0, 0x0
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    const/4 v0, 0x1
-
     :try_start_1
-    iput-boolean v0, p0, Lqk0;->s0:Z
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    iget-object v1, p0, Lqk0;->t0:Ljava/util/ArrayList;
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    invoke-virtual {p0, p1}, Lqk0;->b(I)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     monitor-exit p0
 
-    :goto_0
-    if-nez v0, :cond_1
-
-    goto :goto_2
-
-    :cond_1
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lrk0;
-
-    invoke-virtual {v1}, Lrk0;->a()V
-
-    goto :goto_1
-
-    :cond_2
-    :goto_2
     return-void
 
     :catchall_0
-    move-exception v0
+    move-exception p1
 
     :try_start_2
     monitor-exit p0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    throw v0
+    throw p1
 .end method
 
-.method public final declared-synchronized f()Z
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-boolean v0, p0, Lqk0;->r0:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return v0
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public final declared-synchronized g()Z
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-boolean v0, p0, Lqk0;->Z:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return v0
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public final getExtra(Ljava/lang/String;)Ljava/lang/Object;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Lqk0;->Y:Ljava/util/HashMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final getExtra(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    .line 2
-    iget-object v0, p0, Lqk0;->Y:Ljava/util/HashMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-nez p1, :cond_0
-
-    return-object p2
-
-    :cond_0
-    return-object p1
-.end method
-
-.method public final getExtras()Ljava/util/Map;
-    .locals 1
-
-    iget-object v0, p0, Lqk0;->Y:Ljava/util/HashMap;
-
-    return-object v0
-.end method
-
-.method public final h(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 2
-
-    const-string v0, "origin"
-
-    iget-object v1, p0, Lqk0;->Y:Ljava/util/HashMap;
-
-    invoke-virtual {v1, v0, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string p1, "origin_sub"
-
-    invoke-virtual {v1, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public final putExtra(Ljava/lang/String;Ljava/lang/Object;)V
-    .locals 1
-
-    sget-object v0, Lqk0;->v0:Lqc7;
-
-    invoke-virtual {v0, p1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lqk0;->Y:Ljava/util/HashMap;
-
-    invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public final putExtras(Ljava/util/Map;)V
+.method public setProgressDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 2
 
     if-nez p1, :cond_0
 
-    goto :goto_1
+    const/4 p1, 0x0
+
+    invoke-super {p0, p1}, Landroid/widget/ProgressBar;->setProgressDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    return-void
 
     :cond_0
-    invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
+    instance-of v0, p1, Lou4;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    check-cast p1, Lou4;
 
-    move-result-object v0
+    const/4 v0, 0x0
 
-    check-cast v0, Ljava/util/Map$Entry;
+    invoke-virtual {p1, v0, v0, v0}, Lf45;->c(ZZZ)Z
 
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    invoke-super {p0, p1}, Landroid/widget/ProgressBar;->setProgressDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    move-result-object v1
+    invoke-virtual {p0}, Landroid/widget/ProgressBar;->getProgress()I
 
-    check-cast v1, Ljava/lang/String;
+    move-result v0
 
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    int-to-float v0, v0
 
-    move-result-object v0
+    invoke-virtual {p0}, Landroid/widget/ProgressBar;->getMax()I
 
-    invoke-virtual {p0, v1, v0}, Lqk0;->putExtra(Ljava/lang/String;Ljava/lang/Object;)V
+    move-result v1
+
+    int-to-float v1, v1
+
+    div-float/2addr v0, v1
+
+    const v1, 0x461c4000    # 10000.0f
+
+    mul-float/2addr v0, v1
+
+    float-to-int v0, v0
+
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setLevel(I)Z
+
+    return-void
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Cannot set framework drawable as progress drawable."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public setShowAnimationBehavior(I)V
+    .locals 1
+
+    iget-object v0, p0, Lqk0;->a:Lrk0;
+
+    iput p1, v0, Lrk0;->e:I
+
+    invoke-virtual {p0}, Lqk0;->invalidate()V
+
+    return-void
+.end method
+
+.method public setTrackColor(I)V
+    .locals 2
+
+    iget-object v0, p0, Lqk0;->a:Lrk0;
+
+    iget v1, v0, Lrk0;->d:I
+
+    if-eq v1, p1, :cond_0
+
+    iput p1, v0, Lrk0;->d:I
+
+    invoke-virtual {p0}, Lqk0;->invalidate()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setTrackCornerRadius(I)V
+    .locals 2
+
+    iget-object v0, p0, Lqk0;->a:Lrk0;
+
+    iget v1, v0, Lrk0;->b:I
+
+    if-eq v1, p1, :cond_0
+
+    iget v1, v0, Lrk0;->a:I
+
+    div-int/lit8 v1, v1, 0x2
+
+    invoke-static {p1, v1}, Ljava/lang/Math;->min(II)I
+
+    move-result p1
+
+    iput p1, v0, Lrk0;->b:I
+
+    invoke-virtual {p0}, Lqk0;->invalidate()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setTrackThickness(I)V
+    .locals 2
+
+    iget-object v0, p0, Lqk0;->a:Lrk0;
+
+    iget v1, v0, Lrk0;->a:I
+
+    if-eq v1, p1, :cond_0
+
+    iput p1, v0, Lrk0;->a:I
+
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setVisibilityAfterHide(I)V
+    .locals 1
+
+    if-eqz p1, :cond_1
+
+    const/4 v0, 0x4
+
+    if-eq p1, v0, :cond_1
+
+    const/16 v0, 0x8
+
+    if-ne p1, v0, :cond_0
 
     goto :goto_0
 
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "The component\'s visibility must be one of VISIBLE, INVISIBLE, and GONE defined in View."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
     :cond_1
-    :goto_1
+    :goto_0
+    iput p1, p0, Lqk0;->t0:I
+
     return-void
 .end method

@@ -1,362 +1,243 @@
-.class public final synthetic Lukh;
-.super Ljava/lang/Object;
+.class public final enum Lukh;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lskh;
-.implements Lrma;
-.implements Lqif;
-.implements Lvqe;
-.implements Lta7;
+
+# static fields
+.field public static final enum X:Lukh;
+
+.field public static final enum Y:Lukh;
+
+.field public static final enum Z:Lukh;
+
+.field public static final enum c:Lukh;
+
+.field public static final enum d:Lukh;
+
+.field public static final enum o:Lukh;
+
+.field public static final enum s0:Lukh;
+
+.field public static final synthetic t0:[Lukh;
+
+.field public static final synthetic u0:Lzg5;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method static constructor <clinit>()V
+    .locals 17
+
+    new-instance v0, Lukh;
+
+    const-string v1, "MONEY_BUTTON"
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    const-string v4, "money_button"
+
+    invoke-direct {v0, v1, v2, v3, v4}, Lukh;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    new-instance v1, Lukh;
+
+    const-string v2, "START_BUTTON"
+
+    const/4 v4, 0x2
+
+    const-string v5, "start_button"
+
+    invoke-direct {v1, v2, v3, v4, v5}, Lukh;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    new-instance v2, Lukh;
+
+    const-string v3, "URL"
+
+    const/4 v5, 0x3
+
+    const-string v6, "url"
+
+    invoke-direct {v2, v3, v4, v5, v6}, Lukh;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    sput-object v2, Lukh;->c:Lukh;
+
+    new-instance v3, Lukh;
+
+    const-string v4, "FOLDER"
+
+    const/4 v6, 0x4
+
+    const-string v7, "folder"
+
+    invoke-direct {v3, v4, v5, v6, v7}, Lukh;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    sput-object v3, Lukh;->d:Lukh;
+
+    new-instance v4, Lukh;
+
+    const-string v5, "INLINE_BUTTON"
+
+    const/4 v7, 0x5
+
+    const-string v8, "inline_button"
+
+    invoke-direct {v4, v5, v6, v7, v8}, Lukh;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    sput-object v4, Lukh;->o:Lukh;
+
+    new-instance v5, Lukh;
+
+    const-string v6, "WEB_APP"
+
+    const/4 v8, 0x6
+
+    const-string v9, "web_app"
+
+    invoke-direct {v5, v6, v7, v8, v9}, Lukh;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    sput-object v5, Lukh;->X:Lukh;
+
+    new-instance v6, Lukh;
+
+    const-string v7, "SETTINGS"
+
+    const/4 v9, 0x7
+
+    const-string v10, "settings"
+
+    invoke-direct {v6, v7, v8, v9, v10}, Lukh;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    new-instance v7, Lukh;
+
+    const-string v8, "EXTERNAL_CALLBACK"
+
+    const/16 v10, 0x8
+
+    const-string v11, "external_callback"
+
+    invoke-direct {v7, v8, v9, v10, v11}, Lukh;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    sput-object v7, Lukh;->Y:Lukh;
+
+    new-instance v8, Lukh;
+
+    const-string v9, "SETTINGS_PRIVACY"
+
+    const/16 v11, 0x9
+
+    const-string v12, "settings_privacy"
+
+    invoke-direct {v8, v9, v10, v11, v12}, Lukh;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    new-instance v9, Lukh;
+
+    const-string v10, "CHAT_PROFILE"
+
+    const/16 v12, 0xb
+
+    const-string v13, "chat_profile"
+
+    invoke-direct {v9, v10, v11, v12, v13}, Lukh;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    new-instance v10, Lukh;
+
+    const-string v11, "support_from_privacy"
+
+    const/16 v13, 0x3e8
+
+    const-string v14, "SUPPORT_FROM_PRIVACY"
+
+    const/16 v15, 0xa
+
+    invoke-direct {v10, v14, v15, v13, v11}, Lukh;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    new-instance v11, Lukh;
+
+    const-string v13, "from_notification"
+
+    const/16 v14, 0x3e9
+
+    const-string v15, "FROM_NOTIFICATION"
+
+    invoke-direct {v11, v15, v12, v14, v13}, Lukh;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    sput-object v11, Lukh;->Z:Lukh;
+
+    new-instance v12, Lukh;
+
+    const/16 v13, 0xc
+
+    const-string v14, "from_search"
+
+    const-string v15, "FROM_SEARCH"
+
+    move-object/from16 v16, v0
+
+    const/16 v0, 0xa
+
+    invoke-direct {v12, v15, v13, v0, v14}, Lukh;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    sput-object v12, Lukh;->s0:Lukh;
+
+    move-object/from16 v0, v16
+
+    filled-new-array/range {v0 .. v12}, [Lukh;
+
+    move-result-object v0
+
+    sput-object v0, Lukh;->t0:[Lukh;
+
+    new-instance v1, Lzg5;
+
+    invoke-direct {v1, v0}, Lzg5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lukh;->u0:Lzg5;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;IILjava/lang/String;)V
     .locals 0
 
-    iput p1, p0, Lukh;->a:I
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object p2, p0, Lukh;->b:Ljava/lang/Object;
+    iput-object p4, p0, Lukh;->a:Ljava/lang/String;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public a()Ljava/lang/Object;
-    .locals 6
-
-    iget-object v0, p0, Lukh;->b:Ljava/lang/Object;
-
-    check-cast v0, Looh;
-
-    iget-object v1, v0, Looh;->b:Lmf5;
-
-    check-cast v1, Lvkd;
-
-    new-instance v2, Lalb;
-
-    const/16 v3, 0x19
-
-    invoke-direct {v2, v3}, Lalb;-><init>(I)V
-
-    invoke-virtual {v1, v2}, Lvkd;->o(Ltkd;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Iterable;
-
-    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lhc0;
-
-    iget-object v3, v0, Looh;->c:Lln7;
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x1
-
-    invoke-virtual {v3, v2, v5, v4}, Lln7;->a(Lhc0;IZ)V
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public d(Lua7;)V
-    .locals 2
-
-    iget-object v0, p0, Lukh;->b:Ljava/lang/Object;
-
-    check-cast v0, Lsrh;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :try_start_0
-    invoke-interface {p1}, Lua7;->d()Lsa7;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    iget-object v0, v0, Lsrh;->b:Ltrh;
-
-    invoke-virtual {v0, p1}, Ltrh;->g(Lsa7;)V
-    :try_end_0
-    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception p1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-
-    :goto_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Failed to acquire latest image IllegalStateException = "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "ZslControlImpl"
-
-    invoke-static {v0, p1}, Lgfi;->b(Ljava/lang/String;Ljava/lang/String;)V
+    iput p3, p0, Lukh;->b:I
 
     return-void
 .end method
 
-.method public j(Laqe;)V
-    .locals 13
-
-    iget-object v0, p0, Lukh;->b:Ljava/lang/Object;
-
-    check-cast v0, Lbrh;
-
-    iget-object v1, v0, Lbrh;->b:Larh;
-
-    iget-object v0, v0, Lbrh;->a:Ljava/lang/String;
-
-    filled-new-array {v0}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
-
-    invoke-virtual {v1}, Landroid/os/AsyncTask;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/util/SparseArray;
-
-    const/4 v1, 0x4
-
-    if-eqz v0, :cond_7
-
-    invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    goto :goto_4
-
-    :cond_0
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
-
-    move-result v3
-
-    const/4 v4, 0x0
-
-    :goto_0
-    if-ge v4, v3, :cond_5
-
-    invoke-virtual {v0, v4}, Landroid/util/SparseArray;->keyAt(I)I
-
-    invoke-virtual {v0, v4}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lcrh;
-
-    iget-object v6, v5, Lcrh;->a:Llb6;
-
-    if-eqz v6, :cond_4
-
-    iget v11, v6, Llb6;->e:I
-
-    if-lez v11, :cond_4
-
-    iget-boolean v7, v6, Llb6;->f:Z
-
-    if-nez v7, :cond_4
-
-    iget-boolean v8, v6, Llb6;->g:Z
-
-    if-eqz v8, :cond_1
-
-    goto :goto_3
-
-    :cond_1
-    if-eqz v7, :cond_2
-
-    const/4 v7, 0x2
-
-    :goto_1
-    move v8, v7
-
-    goto :goto_2
-
-    :cond_2
-    if-eqz v8, :cond_3
-
-    const/4 v7, 0x1
-
-    goto :goto_1
-
-    :cond_3
-    const/4 v7, 0x3
-
-    goto :goto_1
-
-    :goto_2
-    new-instance v7, Luq5;
-
-    iget-object v12, v5, Lcrh;->b:Ljava/lang/String;
-
-    const/4 v9, -0x1
-
-    iget v10, v6, Llb6;->c:I
-
-    invoke-direct/range {v7 .. v12}, Luq5;-><init>(IIIILjava/lang/String;)V
-
-    invoke-virtual {v2, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_4
-    :goto_3
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    :cond_5
-    invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    new-instance v0, Lru/ok/messages/video/fetcher/FetcherException;
-
-    const-string v2, "Can\'t find any link"
-
-    invoke-direct {v0, v1, v2}, Lru/ok/messages/video/fetcher/FetcherException;-><init>(ILjava/lang/String;)V
-
-    invoke-virtual {p1, v0}, Laqe;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_6
-    invoke-virtual {p1}, Laqe;->h()Z
-
-    move-result v0
-
-    if-nez v0, :cond_8
-
-    new-instance v0, Lwq5;
-
-    const-string v1, "YouTube"
-
-    invoke-direct {v0, v1, v2}, Lwq5;-><init>(Ljava/lang/String;Ljava/util/List;)V
-
-    invoke-virtual {p1, v0}, Laqe;->a(Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_7
-    :goto_4
-    invoke-virtual {p1}, Laqe;->h()Z
-
-    move-result v0
-
-    if-nez v0, :cond_8
-
-    new-instance v0, Lru/ok/messages/video/fetcher/FetcherException;
-
-    const-string v2, "Can\'t get video link"
-
-    invoke-direct {v0, v1, v2}, Lru/ok/messages/video/fetcher/FetcherException;-><init>(ILjava/lang/String;)V
-
-    invoke-virtual {p1, v0}, Laqe;->onError(Ljava/lang/Throwable;)V
-
-    :cond_8
-    return-void
-.end method
-
-.method public l(Lcom/google/android/gms/tasks/Task;)V
+.method public static valueOf(Ljava/lang/String;)Lukh;
     .locals 1
 
-    iget v0, p0, Lukh;->a:I
+    const-class v0, Lukh;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iget-object v0, p0, Lukh;->b:Ljava/lang/Object;
+    move-result-object p0
 
-    check-cast v0, Lcom/my/tracker/obfuscated/x$c;
+    check-cast p0, Lukh;
 
-    invoke-static {v0, p1}, Lcom/my/tracker/obfuscated/x$b;->b(Lcom/my/tracker/obfuscated/x$c;Lcom/google/android/gms/tasks/Task;)V
+    return-object p0
+.end method
 
-    return-void
+.method public static values()[Lukh;
+    .locals 1
 
-    :pswitch_0
-    iget-object p1, p0, Lukh;->b:Ljava/lang/Object;
+    sget-object v0, Lukh;->t0:[Lukh;
 
-    check-cast p1, Ljava/util/concurrent/ScheduledFuture;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    const/4 v0, 0x0
+    move-result-object v0
 
-    invoke-interface {p1, v0}, Ljava/util/concurrent/Future;->cancel(Z)Z
+    check-cast v0, [Lukh;
 
-    return-void
-
-    :pswitch_1
-    iget-object p1, p0, Lukh;->b:Ljava/lang/Object;
-
-    check-cast p1, Lcoh;
-
-    iget-object p1, p1, Lcoh;->b:Lvof;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Lvof;->d(Ljava/lang/Object;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

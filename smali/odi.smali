@@ -1,134 +1,164 @@
-.class public final Lodi;
-.super Lrdi;
+.class public final synthetic Lodi;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lpqa;
+
+
+# static fields
+.field public static final synthetic b:Lodi;
+
+.field public static final synthetic c:Lodi;
+
+
+# instance fields
+.field public final synthetic a:I
+
+
+# direct methods
+.method static synthetic constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lodi;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lodi;-><init>(I)V
+
+    sput-object v0, Lodi;->b:Lodi;
+
+    new-instance v0, Lodi;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lodi;-><init>(I)V
+
+    sput-object v0, Lodi;->c:Lodi;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(I)V
+    .locals 0
+
+    iput p1, p0, Lodi;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final L0(JLjava/lang/Object;)D
-    .locals 1
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 2
 
-    iget-object v0, p0, Lrdi;->b:Ljava/lang/Object;
+    iget v0, p0, Lodi;->a:I
 
-    check-cast v0, Lsun/misc/Unsafe;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0, p3, p1, p2}, Lsun/misc/Unsafe;->getLong(Ljava/lang/Object;J)J
+    new-instance p2, Lcom/google/firebase/encoders/EncodingException;
 
-    move-result-wide p1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {p1, p2}, Ljava/lang/Double;->longBitsToDouble(J)D
+    move-result-object p1
 
-    move-result-wide p1
+    invoke-virtual {p1}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
-    return-wide p1
-.end method
+    move-result-object p1
 
-.method public final M0(JLjava/lang/Object;)F
-    .locals 1
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    iget-object v0, p0, Lrdi;->b:Ljava/lang/Object;
+    move-result-object p1
 
-    check-cast v0, Lsun/misc/Unsafe;
+    const-string v0, "Couldn\'t find encoder for type "
 
-    invoke-virtual {v0, p3, p1, p2}, Lsun/misc/Unsafe;->getInt(Ljava/lang/Object;J)I
+    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result p1
+    move-result-object p1
 
-    invoke-static {p1}, Ljava/lang/Float;->intBitsToFloat(I)F
+    invoke-direct {p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    move-result p1
+    throw p2
 
-    return p1
-.end method
+    :pswitch_0
+    check-cast p1, Ljava/util/Map$Entry;
 
-.method public final N0(Ljava/lang/Object;JZ)V
-    .locals 1
+    check-cast p2, Lqqa;
 
-    sget-boolean v0, Ludi;->g:Z
+    sget-object v0, Lhmi;->g:Lwu5;
 
-    if-eqz v0, :cond_0
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
-    invoke-static {p1, p2, p3, p4}, Ludi;->c(Ljava/lang/Object;JB)V
+    move-result-object v1
 
-    return-void
+    invoke-interface {p2, v0, v1}, Lqqa;->a(Lwu5;Ljava/lang/Object;)Lqqa;
 
-    :cond_0
-    invoke-static {p1, p2, p3, p4}, Ludi;->d(Ljava/lang/Object;JB)V
+    sget-object v0, Lhmi;->h:Lwu5;
 
-    return-void
-.end method
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
-.method public final O0(Ljava/lang/Object;JB)V
-    .locals 1
+    move-result-object p1
 
-    sget-boolean v0, Ludi;->g:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p1, p2, p3, p4}, Ludi;->c(Ljava/lang/Object;JB)V
+    invoke-interface {p2, v0, p1}, Lqqa;->a(Lwu5;Ljava/lang/Object;)Lqqa;
 
     return-void
 
-    :cond_0
-    invoke-static {p1, p2, p3, p4}, Ludi;->d(Ljava/lang/Object;JB)V
+    :pswitch_1
+    new-instance p2, Lcom/google/firebase/encoders/EncodingException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "Couldn\'t find encoder for type "
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+
+    :pswitch_2
+    check-cast p1, Ljava/util/Map$Entry;
+
+    check-cast p2, Lqqa;
+
+    sget-object v0, Lqdi;->g:Lwu5;
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-interface {p2, v0, v1}, Lqqa;->a(Lwu5;Ljava/lang/Object;)Lqqa;
+
+    sget-object v0, Lqdi;->h:Lwu5;
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-interface {p2, v0, p1}, Lqqa;->a(Lwu5;Ljava/lang/Object;)Lqqa;
 
     return-void
-.end method
 
-.method public final P0(Ljava/lang/Object;JD)V
-    .locals 6
+    nop
 
-    invoke-static {p4, p5}, Ljava/lang/Double;->doubleToLongBits(D)J
-
-    move-result-wide v4
-
-    iget-object p4, p0, Lrdi;->b:Ljava/lang/Object;
-
-    move-object v0, p4
-
-    check-cast v0, Lsun/misc/Unsafe;
-
-    move-object v1, p1
-
-    move-wide v2, p2
-
-    invoke-virtual/range {v0 .. v5}, Lsun/misc/Unsafe;->putLong(Ljava/lang/Object;JJ)V
-
-    return-void
-.end method
-
-.method public final Q0(Ljava/lang/Object;JF)V
-    .locals 1
-
-    invoke-static {p4}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result p4
-
-    iget-object v0, p0, Lrdi;->b:Ljava/lang/Object;
-
-    check-cast v0, Lsun/misc/Unsafe;
-
-    invoke-virtual {v0, p1, p2, p3, p4}, Lsun/misc/Unsafe;->putInt(Ljava/lang/Object;JI)V
-
-    return-void
-.end method
-
-.method public final R0(JLjava/lang/Object;)Z
-    .locals 1
-
-    sget-boolean v0, Ludi;->g:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p1, p2, p3}, Ludi;->m(JLjava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_0
-    invoke-static {p1, p2, p3}, Ludi;->n(JLjava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

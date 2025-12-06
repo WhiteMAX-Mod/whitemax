@@ -1,161 +1,346 @@
 .class public final Lfjg;
-.super Ljava/lang/Object;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
 
 # interfaces
-.implements Lcyd;
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static final c:Lo6;
+
+.field public static final d:Lo6;
 
 
 # instance fields
-.field public final X:J
+.field public final a:Ljava/util/concurrent/Callable;
 
-.field public final Y:I
-
-.field public final a:[J
-
-.field public final b:[J
-
-.field public final c:J
-
-.field public final o:J
+.field public final synthetic b:Lgjg;
 
 
 # direct methods
-.method public constructor <init>([J[JJJJI)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lo6;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, v1}, Lo6;-><init>(I)V
+
+    sput-object v0, Lfjg;->c:Lo6;
+
+    new-instance v0, Lo6;
+
+    invoke-direct {v0, v1}, Lo6;-><init>(I)V
+
+    sput-object v0, Lfjg;->d:Lo6;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lgjg;Ljava/util/concurrent/Callable;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lfjg;->b:Lgjg;
 
-    iput-object p1, p0, Lfjg;->a:[J
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    iput-object p2, p0, Lfjg;->b:[J
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput-wide p3, p0, Lfjg;->c:J
-
-    iput-wide p5, p0, Lfjg;->o:J
-
-    iput-wide p7, p0, Lfjg;->X:J
-
-    iput p9, p0, Lfjg;->Y:I
+    iput-object p2, p0, Lfjg;->a:Ljava/util/concurrent/Callable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
-    .locals 2
+.method public final a(Ljava/lang/Thread;)V
+    .locals 8
 
-    iget-wide v0, p0, Lfjg;->X:J
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    return-wide v0
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Runnable;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    move v3, v1
+
+    move v4, v3
+
+    :goto_0
+    instance-of v5, v0, Lbq7;
+
+    sget-object v6, Lfjg;->d:Lo6;
+
+    if-nez v5, :cond_2
+
+    if-ne v0, v6, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    if-eqz v3, :cond_1
+
+    invoke-virtual {p1}, Ljava/lang/Thread;->interrupt()V
+
+    :cond_1
+    return-void
+
+    :cond_2
+    :goto_1
+    if-eqz v5, :cond_3
+
+    move-object v2, v0
+
+    check-cast v2, Lbq7;
+
+    :cond_3
+    const/4 v5, 0x1
+
+    add-int/2addr v4, v5
+
+    const/16 v7, 0x3e8
+
+    if-le v4, v7, :cond_7
+
+    if-eq v0, v6, :cond_4
+
+    invoke-virtual {p0, v0, v6}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_8
+
+    :cond_4
+    invoke-static {}, Ljava/lang/Thread;->interrupted()Z
+
+    move-result v0
+
+    if-nez v0, :cond_6
+
+    if-eqz v3, :cond_5
+
+    goto :goto_2
+
+    :cond_5
+    move v3, v1
+
+    goto :goto_3
+
+    :cond_6
+    :goto_2
+    move v3, v5
+
+    :goto_3
+    invoke-static {v2}, Ljava/util/concurrent/locks/LockSupport;->park(Ljava/lang/Object;)V
+
+    goto :goto_4
+
+    :cond_7
+    invoke-static {}, Ljava/lang/Thread;->yield()V
+
+    :cond_8
+    :goto_4
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Runnable;
+
+    goto :goto_0
 .end method
 
-.method public final b(J)J
-    .locals 2
+.method public final run()V
+    .locals 7
 
-    iget-object v0, p0, Lfjg;->b:[J
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    const/4 v1, 0x1
+    move-result-object v0
 
-    invoke-static {v0, p1, p2, v1}, Lnig;->e([JJZ)I
+    const/4 v1, 0x0
 
-    move-result p1
-
-    iget-object p2, p0, Lfjg;->a:[J
-
-    aget-wide p1, p2, p1
-
-    return-wide p1
-.end method
-
-.method public final c()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final e(J)Lsxd;
-    .locals 9
-
-    iget-object v0, p0, Lfjg;->a:[J
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, p1, p2, v1}, Lnig;->e([JJZ)I
+    invoke-virtual {p0, v1, v0}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
-    new-instance v3, Lyxd;
+    if-nez v2, :cond_0
 
-    aget-wide v4, v0, v2
+    goto :goto_1
 
-    iget-object v6, p0, Lfjg;->b:[J
+    :cond_0
+    iget-object v2, p0, Lfjg;->b:Lgjg;
 
-    aget-wide v7, v6, v2
+    invoke-virtual {v2}, Lx1;->isDone()Z
 
-    invoke-direct {v3, v4, v5, v7, v8}, Lyxd;-><init>(JJ)V
+    move-result v3
 
-    cmp-long p1, v4, p1
+    sget-object v4, Lfjg;->c:Lo6;
 
-    if-gez p1, :cond_1
+    if-nez v3, :cond_5
 
-    array-length p1, v0
+    :try_start_0
+    iget-object v5, p0, Lfjg;->a:Ljava/util/concurrent/Callable;
 
-    sub-int/2addr p1, v1
+    invoke-interface {v5}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
 
-    if-ne v2, p1, :cond_0
+    move-result-object v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v5
+
+    :try_start_1
+    instance-of v6, v5, Ljava/lang/InterruptedException;
+
+    if-eqz v6, :cond_1
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/Thread;->interrupt()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :cond_1
+    invoke-virtual {p0, v0, v4}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    invoke-virtual {p0, v0}, Lfjg;->a(Ljava/lang/Thread;)V
+
+    :cond_2
+    if-nez v3, :cond_7
+
+    invoke-virtual {v2, v5}, Lx1;->l(Ljava/lang/Throwable;)Z
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception v5
+
+    invoke-virtual {p0, v0, v4}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_3
+
+    invoke-virtual {p0, v0}, Lfjg;->a(Ljava/lang/Thread;)V
+
+    :cond_3
+    if-nez v3, :cond_4
+
+    invoke-virtual {v2, v1}, Lx1;->k(Ljava/lang/Object;)Z
+
+    :cond_4
+    throw v5
+
+    :cond_5
+    :goto_0
+    invoke-virtual {p0, v0, v4}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_6
+
+    invoke-virtual {p0, v0}, Lfjg;->a(Ljava/lang/Thread;)V
+
+    :cond_6
+    if-nez v3, :cond_7
+
+    invoke-virtual {v2, v1}, Lx1;->k(Ljava/lang/Object;)Z
+
+    :cond_7
+    :goto_1
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Runnable;
+
+    sget-object v1, Lfjg;->c:Lo6;
+
+    if-ne v0, v1, :cond_0
+
+    const-string v0, "running=[DONE]"
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Lyxd;
+    instance-of v1, v0, Lbq7;
 
-    add-int/2addr v2, v1
+    if-eqz v1, :cond_1
 
-    aget-wide v4, v0, v2
+    const-string v0, "running=[INTERRUPTED]"
 
-    aget-wide v0, v6, v2
-
-    invoke-direct {p1, v4, v5, v0, v1}, Lyxd;-><init>(JJ)V
-
-    new-instance p2, Lsxd;
-
-    invoke-direct {p2, v3, p1}, Lsxd;-><init>(Lyxd;Lyxd;)V
-
-    return-object p2
+    goto :goto_0
 
     :cond_1
+    instance-of v1, v0, Ljava/lang/Thread;
+
+    if-eqz v1, :cond_2
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "running=[RUNNING ON "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    check-cast v0, Ljava/lang/Thread;
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "]"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_2
+    const-string v0, "running=[NOT STARTED YET]"
+
     :goto_0
-    new-instance p1, Lsxd;
+    const-string v1, ", "
 
-    invoke-direct {p1, v3, v3}, Lsxd;-><init>(Lyxd;Lyxd;)V
+    invoke-static {v0, v1}, Lho7;->o(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p1
-.end method
+    move-result-object v0
 
-.method public final f()J
-    .locals 2
+    iget-object v1, p0, Lfjg;->a:Ljava/util/concurrent/Callable;
 
-    iget-wide v0, p0, Lfjg;->c:J
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    return-wide v0
-.end method
+    move-result-object v1
 
-.method public final g()J
-    .locals 2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v0, p0, Lfjg;->o:J
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return-wide v0
-.end method
+    move-result-object v0
 
-.method public final h()I
-    .locals 1
-
-    iget v0, p0, Lfjg;->Y:I
-
-    return v0
+    return-object v0
 .end method

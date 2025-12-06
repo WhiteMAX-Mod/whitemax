@@ -1,81 +1,158 @@
 .class public final Lwg1;
-.super Lvpe;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final D0:Lrs1;
-
-.field public final E0:Lus1;
+# interfaces
+.implements Ljm;
 
 
-# direct methods
-.method public constructor <init>(Landroid/widget/FrameLayout;Lrs1;)V
-    .locals 0
+# virtual methods
+.method public final debugApiException(Lsl;Lhm;Lru/ok/android/api/core/ApiException;)V
+    .locals 2
 
-    invoke-direct {p0, p1}, Lq7d;-><init>(Landroid/view/View;)V
-
-    iput-object p2, p0, Lwg1;->D0:Lrs1;
-
-    sget p2, Ljnc;->call_opponent:I
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-interface {p2}, Lhm;->getUri()Landroid/net/Uri;
 
     move-result-object p1
 
-    check-cast p1, Lus1;
+    invoke-virtual {p3}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    iput-object p1, p0, Lwg1;->E0:Lus1;
+    move-result-object p2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "debugApiException: "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p1, " "
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, "ApiProviderTag"
+
+    invoke-static {p2, p1, p3}, Lwqi;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
+.method public final debugApiRequest(Lsl;Lhm;Ltl;)V
+    .locals 0
 
-# virtual methods
-.method public final A(Ly18;)V
-    .locals 3
+    invoke-interface {p2}, Lhm;->getUri()Landroid/net/Uri;
 
-    check-cast p1, Led1;
+    move-result-object p1
 
-    iget-object v0, p1, Led1;->c:Ljava/lang/CharSequence;
+    new-instance p2, Ljava/lang/StringBuilder;
 
-    iget-object v1, p1, Led1;->o:Ljava/lang/String;
+    const-string p3, "debugApiRequest: "
 
-    iget-object v2, p0, Lwg1;->E0:Lus1;
+    invoke-direct {p2, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v2, v1, v0}, Lus1;->G(Ljava/lang/String;Ljava/lang/CharSequence;)V
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-boolean v0, p1, Led1;->q0:Z
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v2, v0}, Lus1;->D(Z)V
+    move-result-object p1
 
-    iget-boolean v0, p1, Led1;->Y:Z
+    const-string p2, "ApiProviderTag"
 
-    invoke-virtual {v2, v0}, Lus1;->E(Z)V
+    invoke-static {p2, p1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p1, Led1;->X:Lce0;
+    return-void
+.end method
 
-    invoke-virtual {v2, v0}, Lus1;->setAvatar(Lce0;)V
+.method public final debugApiResponseFail(Lsl;Lhm;Lxx7;)Lxx7;
+    .locals 1
 
-    iget-boolean v0, p1, Led1;->t0:Z
+    invoke-interface {p2}, Lhm;->getUri()Landroid/net/Uri;
 
-    invoke-virtual {v2, v0}, Lus1;->setRaiseHand(Z)V
+    move-result-object p1
 
-    iget-object v0, p1, Led1;->x0:Lhig;
+    new-instance p2, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v0}, Lus1;->setOpponentVideo(Lhig;)V
+    const-string v0, "debugApiResponseFail: "
 
-    iget-object v0, p1, Led1;->y0:Liig;
+    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v2, v0}, Lus1;->setButtonAction(Liig;)V
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p1, Led1;->a:Lmi1;
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iput-object p1, v2, Lus1;->g1:Lmi1;
+    move-result-object p1
 
-    iget-object p1, p0, Lwg1;->D0:Lrs1;
+    const-string p2, "ApiProviderTag"
 
-    iput-object p1, v2, Lus1;->a1:Lrs1;
+    invoke-static {p2, p1}, Lwqi;->r(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object p3
+.end method
+
+.method public final debugApiResponseOk(Lsl;Lhm;Lxx7;)Lxx7;
+    .locals 1
+
+    invoke-interface {p2}, Lhm;->getUri()Landroid/net/Uri;
+
+    move-result-object p1
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    const-string v0, "debugApiResponseOk: "
+
+    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, "ApiProviderTag"
+
+    invoke-static {p2, p1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object p3
+.end method
+
+.method public final debugIoException(Lsl;Lhm;Ljava/io/IOException;)V
+    .locals 2
+
+    invoke-interface {p2}, Lhm;->getUri()Landroid/net/Uri;
+
+    move-result-object p1
+
+    invoke-virtual {p3}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object p2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "debugIoException: "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p1, " "
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, "ApiProviderTag"
+
+    invoke-static {p2, p1, p3}, Lwqi;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method

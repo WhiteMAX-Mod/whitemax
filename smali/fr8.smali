@@ -1,63 +1,45 @@
-.class public final synthetic Lfr8;
+.class public interface abstract Lfr8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lu28;
-.implements Lw28;
-
-
-# instance fields
-.field public final synthetic a:Ljr8;
-
-
-# direct methods
-.method public synthetic constructor <init>(Ljr8;)V
-    .locals 0
-
-    iput-object p1, p0, Lfr8;->a:Ljr8;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.implements Lmu6;
 
 
 # virtual methods
-.method public g(Ljava/lang/Object;Lzx5;)V
+.method public a(Landroid/content/Context;Z)Lsu6;
     .locals 2
 
-    check-cast p1, Lntb;
+    invoke-static {p0}, Lwg7;->m(Ljava/lang/Object;)Lzjd;
 
-    iget-object v0, p0, Lfr8;->a:Ljr8;
+    move-result-object v0
 
-    iget-object v0, v0, Ljr8;->b:Lhq8;
+    sget-object v1, Lzjd;->o:Lzjd;
 
-    new-instance v1, Lltb;
+    invoke-static {p1, v0, v1, p2}, Ljp4;->j(Landroid/content/Context;Lzjd;Lzjd;Z)Ljp4;
 
-    invoke-direct {v1, p2}, Lltb;-><init>(Lzx5;)V
+    move-result-object p1
 
-    invoke-interface {p1, v0, v1}, Lntb;->f0(Lqtb;Lltb;)V
-
-    return-void
+    return-object p1
 .end method
 
-.method public invoke(Ljava/lang/Object;)V
+.method public abstract b()Landroid/graphics/Matrix;
+.end method
+
+.method public c()I
     .locals 1
 
-    check-cast p1, Lntb;
+    const/16 v0, 0x2601
 
-    iget-object v0, p0, Lfr8;->a:Ljr8;
+    return v0
+.end method
 
-    iget-object v0, v0, Ljr8;->p:Lf76;
+.method public e(II)Lc4f;
+    .locals 1
 
-    iget-object v0, v0, Lf76;->b:Ljava/lang/Object;
+    new-instance v0, Lc4f;
 
-    check-cast v0, Lmub;
+    invoke-direct {v0, p1, p2}, Lc4f;-><init>(II)V
 
-    iget-object v0, v0, Lmub;->z:Lnu8;
-
-    invoke-interface {p1, v0}, Lntb;->i0(Lnu8;)V
-
-    return-void
+    return-object v0
 .end method

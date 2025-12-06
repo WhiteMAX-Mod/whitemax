@@ -3,42 +3,62 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lje3;
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final a:Lhe3;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final b:J
+.field public final synthetic b:Lle3;
+
+.field public final synthetic c:Landroid/graphics/drawable/Drawable;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lle3;Landroid/graphics/drawable/Drawable;I)V
+    .locals 0
 
-    new-instance v0, Lhe3;
+    iput p3, p0, Lhe3;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lhe3;->b:Lle3;
 
-    sput-object v0, Lhe3;->a:Lhe3;
+    iput-object p2, p0, Lhe3;->c:Landroid/graphics/drawable/Drawable;
 
-    const-class v0, Lhe3;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    const-wide/16 v0, 0x1
-
-    sput-wide v0, Lhe3;->b:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getId()J
+.method public final run()V
     .locals 2
 
-    sget-wide v0, Lhe3;->b:J
+    iget v0, p0, Lhe3;->a:I
 
-    return-wide v0
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lhe3;->b:Lle3;
+
+    iget-object v1, p0, Lhe3;->c:Landroid/graphics/drawable/Drawable;
+
+    invoke-static {v0, v1}, Lle3;->D(Lle3;Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lhe3;->b:Lle3;
+
+    iget-object v1, p0, Lhe3;->c:Landroid/graphics/drawable/Drawable;
+
+    invoke-static {v0, v1}, Lle3;->B(Lle3;Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

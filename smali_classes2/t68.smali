@@ -2,44 +2,67 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lw68;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lt68;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 
 # instance fields
-.field public a:Lorg/webrtc/PeerConnectionFactory;
+.field public final a:J
 
-.field public b:Lq40;
 
-.field public c:Ljava/util/concurrent/Executor;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-.field public d:Landroid/content/Context;
+    new-instance v0, Lf18;
 
-.field public e:Ljava/lang/String;
+    const/16 v1, 0x16
 
-.field public f:Ljava/lang/String;
+    invoke-direct {v0, v1}, Lf18;-><init>(I)V
 
-.field public g:Ljava/lang/String;
+    sput-object v0, Lt68;->CREATOR:Landroid/os/Parcelable$Creator;
 
-.field public h:Lfwc;
+    return-void
+.end method
 
-.field public i:Lorg/webrtc/EglBase$Context;
+.method public constructor <init>(J)V
+    .locals 0
 
-.field public j:Lv68;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public k:Z
+    iput-wide p1, p0, Lt68;->a:J
 
-.field public l:Z
+    return-void
+.end method
 
-.field public m:Luhd;
 
-.field public n:Lavf;
+# virtual methods
+.method public final describeContents()I
+    .locals 1
 
-.field public o:Z
+    const/4 v0, 0x0
 
-.field public p:Z
+    return v0
+.end method
 
-.field public q:Lk68;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
 
-.field public r:Lahf;
+    iget-wide v0, p0, Lt68;->a:J
 
-.field public s:Ljava/lang/Integer;
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-.field public t:Z
+    return-void
+.end method

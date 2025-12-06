@@ -1,44 +1,296 @@
-.class public abstract Llpc;
-.super Ljava/lang/Object;
+.class public final Llpc;
+.super Lfl9;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_startconversation_chat_titleicon_avatars_cancel_action:I = 0x7f0a085b
+# instance fields
+.field public a:F
 
-.field public static oneme_startconversation_chat_titleicon_avatars_load_from_gallery_action:I = 0x7f0a085c
+.field public b:F
 
-.field public static oneme_startconversation_chat_titleicon_avatars_take_photo_action:I = 0x7f0a085d
+.field public c:F
 
-.field public static oneme_startconversation_chat_titleicon_constraint_layout:I = 0x7f0a085e
+.field public d:F
 
-.field public static oneme_startconversation_chat_titleicon_create_button_view:I = 0x7f0a085f
 
-.field public static oneme_startconversation_chat_titleicon_create_hint_text_view:I = 0x7f0a0860
+# direct methods
+.method public constructor <init>()V
+    .locals 1
 
-.field public static oneme_startconversation_chat_titleicon_description_view:I = 0x7f0a0861
+    invoke-direct {p0}, Lfl9;-><init>()V
 
-.field public static oneme_startconversation_chat_titleicon_icon_view:I = 0x7f0a0862
+    const/4 v0, 0x0
 
-.field public static oneme_startconversation_chat_titleicon_scroll_view:I = 0x7f0a0863
+    iput v0, p0, Llpc;->a:F
 
-.field public static oneme_startconversation_chat_titleicon_title_view:I = 0x7f0a0864
+    iput v0, p0, Llpc;->b:F
 
-.field public static oneme_startconversation_chat_titleicon_toolbar:I = 0x7f0a0865
+    iput v0, p0, Llpc;->c:F
 
-.field public static oneme_startconversation_chat_toolbar:I = 0x7f0a0866
+    iput v0, p0, Llpc;->d:F
 
-.field public static oneme_startconversation_confirm_add_subscribers_button:I = 0x7f0a0867
+    const/4 v0, -0x1
 
-.field public static oneme_startconversation_container:I = 0x7f0a0868
+    iput v0, p0, Lfl9;->cachedSize:I
 
-.field public static oneme_startconversation_create_button_view_type:I = 0x7f0a0869
+    return-void
+.end method
 
-.field public static oneme_startconversation_recyclerview:I = 0x7f0a086a
 
-.field public static oneme_startconversation_select_channel_subscribers_toolbar:I = 0x7f0a086b
+# virtual methods
+.method public final computeSerializedSize()I
+    .locals 4
 
-.field public static oneme_startconversation_toolbar:I = 0x7f0a086c
+    iget v0, p0, Llpc;->a:F
 
-.field public static oneme_startconversations_create_channel:I = 0x7f0a086d
+    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
 
-.field public static oneme_startconversations_create_chat:I = 0x7f0a086e
+    move-result v0
+
+    const/4 v1, 0x0
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    if-eq v0, v2, :cond_0
+
+    const/4 v0, 0x1
+
+    invoke-static {v0}, Lhd3;->e(I)I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    iget v2, p0, Llpc;->b:F
+
+    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v3
+
+    if-eq v2, v3, :cond_1
+
+    const/4 v2, 0x2
+
+    invoke-static {v2}, Lhd3;->e(I)I
+
+    move-result v2
+
+    add-int/2addr v0, v2
+
+    :cond_1
+    iget v2, p0, Llpc;->c:F
+
+    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v3
+
+    if-eq v2, v3, :cond_2
+
+    const/4 v2, 0x3
+
+    invoke-static {v2}, Lhd3;->e(I)I
+
+    move-result v2
+
+    add-int/2addr v0, v2
+
+    :cond_2
+    iget v2, p0, Llpc;->d:F
+
+    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v1
+
+    if-eq v2, v1, :cond_3
+
+    const/4 v1, 0x4
+
+    invoke-static {v1}, Lhd3;->e(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+
+    :cond_3
+    return v0
+.end method
+
+.method public final mergeFrom(Lgd3;)Lfl9;
+    .locals 2
+
+    :cond_0
+    :goto_0
+    invoke-virtual {p1}, Lgd3;->s()I
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    const/16 v1, 0xd
+
+    if-eq v0, v1, :cond_4
+
+    const/16 v1, 0x15
+
+    if-eq v0, v1, :cond_3
+
+    const/16 v1, 0x1d
+
+    if-eq v0, v1, :cond_2
+
+    const/16 v1, 0x25
+
+    if-eq v0, v1, :cond_1
+
+    invoke-virtual {p1, v0}, Lgd3;->u(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p1}, Lgd3;->i()F
+
+    move-result v0
+
+    iput v0, p0, Llpc;->d:F
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p1}, Lgd3;->i()F
+
+    move-result v0
+
+    iput v0, p0, Llpc;->c:F
+
+    goto :goto_0
+
+    :cond_3
+    invoke-virtual {p1}, Lgd3;->i()F
+
+    move-result v0
+
+    iput v0, p0, Llpc;->b:F
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {p1}, Lgd3;->i()F
+
+    move-result v0
+
+    iput v0, p0, Llpc;->a:F
+
+    goto :goto_0
+
+    :cond_5
+    :goto_1
+    return-object p0
+.end method
+
+.method public final writeTo(Lhd3;)V
+    .locals 3
+
+    iget v0, p0, Llpc;->a:F
+
+    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    if-eq v0, v2, :cond_0
+
+    const/4 v0, 0x1
+
+    iget v2, p0, Llpc;->a:F
+
+    invoke-virtual {p1, v0, v2}, Lhd3;->v(IF)V
+
+    :cond_0
+    iget v0, p0, Llpc;->b:F
+
+    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v0
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    if-eq v0, v2, :cond_1
+
+    const/4 v0, 0x2
+
+    iget v2, p0, Llpc;->b:F
+
+    invoke-virtual {p1, v0, v2}, Lhd3;->v(IF)V
+
+    :cond_1
+    iget v0, p0, Llpc;->c:F
+
+    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v0
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    if-eq v0, v2, :cond_2
+
+    const/4 v0, 0x3
+
+    iget v2, p0, Llpc;->c:F
+
+    invoke-virtual {p1, v0, v2}, Lhd3;->v(IF)V
+
+    :cond_2
+    iget v0, p0, Llpc;->d:F
+
+    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v0
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v1
+
+    if-eq v0, v1, :cond_3
+
+    const/4 v0, 0x4
+
+    iget v1, p0, Llpc;->d:F
+
+    invoke-virtual {p1, v0, v1}, Lhd3;->v(IF)V
+
+    :cond_3
+    return-void
+.end method

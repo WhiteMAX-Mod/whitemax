@@ -1,356 +1,119 @@
 .class public final Ld39;
-.super Ljava/lang/Object;
+.super Lid0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final b:Ljava/lang/String;
 
-.field public final b:Ljava/util/ArrayList;
-
-.field public c:Ljava/lang/String;
-
-.field public d:I
-
-.field public e:I
-
-.field public f:I
-
-.field public g:F
-
-.field public h:F
-
-.field public i:Z
-
-.field public j:Z
-
-.field public k:Z
-
-.field public l:Z
-
-.field public m:Z
-
-.field public n:I
-
-.field public o:Ls9d;
-
-.field public p:J
-
-.field public q:J
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0x9
 
-    iput-object p1, p0, Ld39;->a:Landroid/content/Context;
+    invoke-direct {p0, v0}, Lid0;-><init>(I)V
 
-    new-instance p1, Ljava/util/ArrayList;
+    iput-object p1, p0, Ld39;->b:Ljava/lang/String;
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Ld39;->b:Ljava/util/ArrayList;
-
-    const/4 p1, -0x1
-
-    iput p1, p0, Ld39;->f:I
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    iput v0, p0, Ld39;->h:F
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Ld39;->l:Z
-
-    iput-boolean v0, p0, Ld39;->m:Z
-
-    iput p1, p0, Ld39;->n:I
-
-    const-wide/16 v0, 0x1f4
-
-    iput-wide v0, p0, Ld39;->p:J
-
-    const-wide/32 v0, 0x493e0
-
-    iput-wide v0, p0, Ld39;->q:J
+    iput-object p2, p0, Ld39;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lo39;
-    .locals 8
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-wide v0, p0, Ld39;->p:J
+    const/4 v0, 0x1
 
-    iget-object v2, p0, Ld39;->c:Ljava/lang/String;
+    if-ne p0, p1, :cond_0
 
-    const/4 v3, 0x0
-
-    if-eqz v2, :cond_0
-
-    invoke-static {v2}, Lzaf;->i0(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    move-object v2, v3
+    instance-of v1, p1, Ld39;
 
-    :goto_0
-    iput-object v2, p0, Ld39;->c:Ljava/lang/String;
+    const/4 v2, 0x0
 
-    iget-object v2, p0, Ld39;->b:Ljava/util/ArrayList;
+    if-nez v1, :cond_1
 
-    invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v4
-
-    if-nez v4, :cond_6
-
-    iget-object v4, p0, Ld39;->c:Ljava/lang/String;
-
-    if-eqz v4, :cond_6
-
-    invoke-virtual {v4}, Ljava/lang/String;->length()I
-
-    move-result v4
-
-    if-eqz v4, :cond_6
-
-    iget v4, p0, Ld39;->g:F
-
-    const/4 v5, 0x0
-
-    cmpg-float v5, v4, v5
-
-    if-ltz v5, :cond_5
-
-    const/high16 v5, 0x3f800000    # 1.0f
-
-    cmpg-float v5, v5, v4
-
-    if-lez v5, :cond_5
-
-    iget v5, p0, Ld39;->h:F
-
-    cmpg-float v4, v5, v4
-
-    if-lez v4, :cond_5
-
-    const-wide/high16 v6, 0x3ff0000000000000L    # 1.0
-
-    float-to-double v4, v5
-
-    cmpg-double v4, v6, v4
-
-    if-ltz v4, :cond_5
-
-    iget v4, p0, Ld39;->d:I
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x1
-
-    if-gtz v4, :cond_1
-
-    move v4, v6
-
-    goto :goto_1
+    return v2
 
     :cond_1
-    move v4, v5
+    check-cast p1, Ld39;
 
-    :goto_1
-    iget v7, p0, Ld39;->e:I
+    iget-object v1, p0, Ld39;->b:Ljava/lang/String;
 
-    if-gtz v7, :cond_2
+    iget-object v3, p1, Ld39;->b:Ljava/lang/String;
 
-    move v5, v6
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
 
     :cond_2
-    if-ne v4, v5, :cond_4
+    iget-object v1, p0, Ld39;->c:Ljava/lang/String;
 
-    const-wide/16 v4, 0x0
+    iget-object p1, p1, Ld39;->c:Ljava/lang/String;
 
-    cmp-long v4, v0, v4
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-lez v4, :cond_3
+    move-result p1
 
-    new-instance v3, Lo39;
+    if-nez p1, :cond_3
 
-    new-instance v4, Ld39;
-
-    iget-object v5, p0, Ld39;->a:Landroid/content/Context;
-
-    invoke-direct {v4, v5}, Ld39;-><init>(Landroid/content/Context;)V
-
-    iget-object v5, v4, Ld39;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v5, v2}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
-
-    iget-object v2, p0, Ld39;->c:Ljava/lang/String;
-
-    iput-object v2, v4, Ld39;->c:Ljava/lang/String;
-
-    iget v2, p0, Ld39;->d:I
-
-    iput v2, v4, Ld39;->d:I
-
-    iget v2, p0, Ld39;->e:I
-
-    iput v2, v4, Ld39;->e:I
-
-    iget v2, p0, Ld39;->f:I
-
-    iput v2, v4, Ld39;->f:I
-
-    iget-boolean v2, p0, Ld39;->i:Z
-
-    iput-boolean v2, v4, Ld39;->i:Z
-
-    iget-boolean v2, p0, Ld39;->j:Z
-
-    iput-boolean v2, v4, Ld39;->j:Z
-
-    iget-boolean v2, p0, Ld39;->k:Z
-
-    iput-boolean v2, v4, Ld39;->k:Z
-
-    iget v2, p0, Ld39;->h:F
-
-    iput v2, v4, Ld39;->h:F
-
-    iget v2, p0, Ld39;->g:F
-
-    iput v2, v4, Ld39;->g:F
-
-    iget-boolean v2, p0, Ld39;->l:Z
-
-    iput-boolean v2, v4, Ld39;->l:Z
-
-    iget-boolean v2, p0, Ld39;->m:Z
-
-    iput-boolean v2, v4, Ld39;->m:Z
-
-    iget v2, p0, Ld39;->n:I
-
-    iput v2, v4, Ld39;->n:I
-
-    iget-object v2, p0, Ld39;->o:Ls9d;
-
-    iput-object v2, v4, Ld39;->o:Ls9d;
-
-    iput-wide v0, v4, Ld39;->p:J
-
-    iget-wide v0, p0, Ld39;->q:J
-
-    iput-wide v0, v4, Ld39;->q:J
-
-    invoke-direct {v3, v4}, Lo39;-><init>(Ld39;)V
-
-    return-object v3
+    return v2
 
     :cond_3
-    new-instance v2, Lone/me/sdk/media/transformer/impl/IllegalMediaTransformException;
+    return v0
+.end method
 
-    const-string v4, "Illegal ping delay="
+.method public final hashCode()I
+    .locals 2
 
-    const-string v5, " ms"
+    iget-object v0, p0, Ld39;->b:Ljava/lang/String;
 
-    invoke-static {v0, v1, v4, v5}, Lrtg;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    move-result-object v0
+    move-result v0
 
-    invoke-direct {v2, v0, v3}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v2
-
-    :cond_4
-    new-instance v0, Lone/me/sdk/media/transformer/impl/IllegalMediaTransformException;
-
-    iget v1, p0, Ld39;->d:I
-
-    iget v2, p0, Ld39;->e:I
-
-    const-string v4, "Illegal requested size="
-
-    const-string v5, "x"
-
-    invoke-static {v4, v1, v2, v5}, Li57;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1, v3}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v0
-
-    :cond_5
-    new-instance v0, Lone/me/sdk/media/transformer/impl/IllegalMediaTransformException;
-
-    iget v1, p0, Ld39;->g:F
-
-    iget v2, p0, Ld39;->h:F
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "Illegal requested position range=["
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ", "
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, "]"
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1, v3}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v0
-
-    :cond_6
-    new-instance v0, Lone/me/sdk/media/transformer/impl/IllegalMediaTransformException;
+    mul-int/lit8 v0, v0, 0x1f
 
     iget-object v1, p0, Ld39;->c:Ljava/lang/String;
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    const-string v5, "Illegal input/output="
+    move-result v1
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    add-int/2addr v1, v0
 
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    return v1
+.end method
 
-    const-string v2, "/"
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v0, ", path="
 
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, ")"
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v2, "OpenCropScreen(uriAsString="
 
-    move-result-object v1
+    iget-object v3, p0, Ld39;->b:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v3}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    iget-object v4, p0, Ld39;->c:Ljava/lang/String;
 
-    throw v0
+    invoke-static {v2, v3, v0, v4, v1}, Lwy1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

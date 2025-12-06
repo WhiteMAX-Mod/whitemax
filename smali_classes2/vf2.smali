@@ -1,53 +1,57 @@
 .class public final Lvf2;
-.super Ly14;
+.super Lki4;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Lyf2;
+# static fields
+.field public static final b:Lvf2;
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public static final c:Lgi4;
 
-.field public final synthetic Z:Lyf2;
-
-.field public o:Ljava/lang/String;
-
-.field public q0:I
+.field public static final d:Lgi4;
 
 
 # direct methods
-.method public constructor <init>(Lyf2;Ly14;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p1, p0, Lvf2;->Z:Lyf2;
+    new-instance v0, Lvf2;
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Lki4;-><init>()V
+
+    sput-object v0, Lvf2;->b:Lvf2;
+
+    const-string v1, "id"
+
+    const-string v2, "type"
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, ":chats"
+
+    const/4 v3, 0x0
+
+    const/16 v4, 0xe
+
+    invoke-static {v0, v2, v1, v3, v4}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
+
+    move-result-object v1
+
+    sput-object v1, Lvf2;->c:Lgi4;
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    const-string v2, ":saved-messages"
+
+    invoke-static {v0, v2, v1, v3, v4}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
+
+    move-result-object v0
+
+    sput-object v0, Lvf2;->d:Lgi4;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lvf2;->Y:Ljava/lang/Object;
-
-    iget p1, p0, Lvf2;->q0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lvf2;->q0:I
-
-    iget-object p1, p0, Lvf2;->Z:Lyf2;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lyf2;->e(Ljava/lang/String;Ly14;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

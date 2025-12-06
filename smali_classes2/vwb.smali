@@ -1,200 +1,95 @@
-.class public final Lvwb;
+.class public final synthetic Lvwb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lem6;
+
 
 # instance fields
-.field public final a:Lpw0;
+.field public final synthetic a:I
 
-.field public final b:Liu7;
-
-.field public final c:Ljava/util/concurrent/ConcurrentHashMap;
+.field public final synthetic b:Lone/me/startconversation/channel/PickSubscribersScreen;
 
 
 # direct methods
-.method public constructor <init>(Lpw0;Liu7;)V
+.method public synthetic constructor <init>(Lone/me/startconversation/channel/PickSubscribersScreen;I)V
     .locals 0
 
+    iput p2, p0, Lvwb;->a:I
+
+    iput-object p1, p0, Lvwb;->b:Lone/me/startconversation/channel/PickSubscribersScreen;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lvwb;->a:Lpw0;
-
-    iput-object p2, p0, Lvwb;->b:Liu7;
-
-    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
-
-    iput-object p1, p0, Lvwb;->c:Ljava/util/concurrent/ConcurrentHashMap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    iget-object v0, p0, Lvwb;->c:Ljava/util/concurrent/ConcurrentHashMap;
+    iget v0, p0, Lvwb;->a:I
 
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->entrySet()Ljava/util/Set;
+    sget-object v1, Lqqg;->a:Lqqg;
 
-    move-result-object v1
+    iget-object v2, p0, Lvwb;->b:Lone/me/startconversation/channel/PickSubscribersScreen;
 
-    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v1
+    check-cast p1, Luaf;
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {p1}, Luaf;->M0()V
 
-    move-result v2
+    sget-object v0, Lone/me/startconversation/channel/PickSubscribersScreen;->z0:[Lyy7;
 
-    if-eqz v2, :cond_0
+    iget-object v0, v2, Lone/me/startconversation/channel/PickSubscribersScreen;->u0:Lhs;
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    sget-object v3, Lone/me/startconversation/channel/PickSubscribersScreen;->z0:[Lyy7;
 
-    move-result-object v2
+    const/4 v4, 0x1
 
-    check-cast v2, Ljava/util/Map$Entry;
+    aget-object v3, v3, v4
 
-    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0, v2}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v0
 
-    check-cast v2, Lwwb;
+    check-cast v0, Ljava/lang/Number;
 
-    const/4 v3, 0x0
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
 
-    iput-object v3, v2, Lwwb;->g:Ljava/lang/CharSequence;
+    move-result-wide v2
 
-    iput-object v3, v2, Lwwb;->h:Ljava/lang/CharSequence;
+    invoke-virtual {p1, v2, v3}, Luaf;->L0(J)Lei4;
 
-    iput-object v3, v2, Lwwb;->i:Ljava/lang/CharSequence;
+    move-result-object v0
 
-    iput-object v3, v2, Lwwb;->j:Ljava/lang/CharSequence;
+    invoke-virtual {p1, v0}, Li3;->s0(Lei4;)V
 
-    iput-object v3, v2, Lwwb;->k:Ljava/lang/String;
+    return-object v1
 
-    iput-object v3, v2, Lwwb;->l:Ljava/lang/String;
+    :pswitch_0
+    check-cast p1, Landroid/view/View;
 
-    iput-object v3, v2, Lwwb;->m:Lbd4;
+    sget-object p1, Lone/me/startconversation/channel/PickSubscribersScreen;->z0:[Lyy7;
 
-    const/4 v3, 0x0
+    invoke-virtual {v2}, Lc54;->getOnBackPressedDispatcher()Ljva;
 
-    iput-boolean v3, v2, Lwwb;->n:Z
+    move-result-object p1
 
-    iput-boolean v3, v2, Lwwb;->o:Z
+    if-eqz p1, :cond_0
 
-    iput-boolean v3, v2, Lwwb;->p:Z
-
-    goto :goto_0
+    invoke-virtual {p1}, Ljva;->d()V
 
     :cond_0
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
+    return-object v1
 
-    return-void
-.end method
+    nop
 
-.method public final b(Lla2;Lpb9;)V
-    .locals 3
-
-    iget-object v0, p0, Lvwb;->b:Liu7;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lxwb;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1, p2}, Lxwb;->a(Lla2;Lpb9;)Lwwb;
-
-    move-result-object v0
-
-    iget-wide v1, p2, Lrj0;->a:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p2
-
-    iget-object v1, p0, Lvwb;->c:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v1, p2, v0}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v0, p1}, Lwwb;->h(Lla2;)V
-
-    return-void
-.end method
-
-.method public final c()V
-    .locals 3
-
-    iget-object v0, p0, Lvwb;->c:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->entrySet()Ljava/util/Set;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/Map$Entry;
-
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lwwb;
-
-    const/4 v2, 0x0
-
-    iput-object v2, v1, Lwwb;->g:Ljava/lang/CharSequence;
-
-    iput-object v2, v1, Lwwb;->h:Ljava/lang/CharSequence;
-
-    iput-object v2, v1, Lwwb;->i:Ljava/lang/CharSequence;
-
-    iput-object v2, v1, Lwwb;->j:Ljava/lang/CharSequence;
-
-    iput-object v2, v1, Lwwb;->k:Ljava/lang/String;
-
-    iput-object v2, v1, Lwwb;->l:Ljava/lang/String;
-
-    iput-object v2, v1, Lwwb;->m:Lbd4;
-
-    const/4 v2, 0x0
-
-    iput-boolean v2, v1, Lwwb;->n:Z
-
-    iput-boolean v2, v1, Lwwb;->o:Z
-
-    iput-boolean v2, v1, Lwwb;->p:Z
-
-    iget-object v2, v1, Lwwb;->f:Lla2;
-
-    if-nez v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1, v2}, Lwwb;->h(Lla2;)V
-
-    goto :goto_0
-
-    :cond_1
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

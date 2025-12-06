@@ -1,67 +1,81 @@
-.class public abstract Lj3g;
-.super Ljava/lang/Object;
+.class public final Lj3g;
+.super Ll4;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/Iterator;
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lj3g;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final a:Ljava/util/Iterator;
+.field public final a:I
+
+.field public b:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Iterator;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lobh;
+
+    const/4 v1, 0x7
+
+    invoke-direct {v0, v1}, Lobh;-><init>(I)V
+
+    sput-object v0, Lj3g;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(ILjava/util/List;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput p1, p0, Lj3g;->a:I
 
-    iput-object p1, p0, Lj3g;->a:Ljava/util/Iterator;
+    iput-object p2, p0, Lj3g;->b:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a(Ljava/lang/Object;)Ljava/lang/Object;
-.end method
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
 
-.method public final hasNext()Z
-    .locals 1
+    const/16 p2, 0x4f45
 
-    iget-object v0, p0, Lj3g;->a:Ljava/util/Iterator;
+    invoke-static {p1, p2}, La9j;->k(Landroid/os/Parcel;I)I
 
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    move-result p2
 
-    move-result v0
+    const/4 v0, 0x4
 
-    return v0
-.end method
+    const/4 v1, 0x1
 
-.method public final next()Ljava/lang/Object;
-    .locals 1
+    invoke-static {p1, v1, v0}, La9j;->m(Landroid/os/Parcel;II)V
 
-    iget-object v0, p0, Lj3g;->a:Ljava/util/Iterator;
+    iget v0, p0, Lj3g;->a:I
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    move-result-object v0
+    const/4 v0, 0x2
 
-    invoke-virtual {p0, v0}, Lj3g;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v1, p0, Lj3g;->b:Ljava/util/List;
 
-    move-result-object v0
+    invoke-static {p1, v1, v0}, La9j;->j(Landroid/os/Parcel;Ljava/util/List;I)V
 
-    return-object v0
-.end method
-
-.method public final remove()V
-    .locals 1
-
-    iget-object v0, p0, Lj3g;->a:Ljava/util/Iterator;
-
-    invoke-interface {v0}, Ljava/util/Iterator;->remove()V
+    invoke-static {p1, p2}, La9j;->l(Landroid/os/Parcel;I)V
 
     return-void
 .end method

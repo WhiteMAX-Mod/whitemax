@@ -1,19 +1,19 @@
 .class public final Lr90;
-.super Lkm0;
+.super Lmb3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field public final a:Lc90;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/ArrayList;)V
+.method public constructor <init>(Lc90;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lr90;->a:Ljava/util/ArrayList;
+    iput-object p1, p0, Lr90;->a:Lc90;
 
     return-void
 .end method
@@ -25,26 +25,43 @@
 
     if-ne p1, p0, :cond_0
 
-    const/4 p1, 0x1
-
-    return p1
+    goto :goto_0
 
     :cond_0
-    instance-of v0, p1, Lkm0;
+    instance-of v0, p1, Lmb3;
 
     if-eqz v0, :cond_1
 
-    check-cast p1, Lkm0;
+    check-cast p1, Lmb3;
+
+    move-object v0, p1
+
+    check-cast v0, Lr90;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v0, Llb3;->a:Llb3;
+
+    invoke-virtual {v0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
 
     check-cast p1, Lr90;
 
-    iget-object p1, p1, Lr90;->a:Ljava/util/ArrayList;
+    iget-object p1, p1, Lr90;->a:Lc90;
 
-    iget-object v0, p0, Lr90;->a:Ljava/util/ArrayList;
+    iget-object v0, p0, Lr90;->a:Lc90;
 
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Lc90;->equals(Ljava/lang/Object;)Z
 
     move-result p1
+
+    if-eqz p1, :cond_1
+
+    :goto_0
+    const/4 p1, 0x1
 
     return p1
 
@@ -57,13 +74,23 @@
 .method public final hashCode()I
     .locals 2
 
-    iget-object v0, p0, Lr90;->a:Ljava/util/ArrayList;
+    sget-object v0, Llb3;->a:Llb3;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->hashCode()I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
     const v1, 0xf4243
+
+    xor-int/2addr v0, v1
+
+    mul-int/2addr v0, v1
+
+    iget-object v1, p0, Lr90;->a:Lc90;
+
+    invoke-virtual {v1}, Lc90;->hashCode()I
+
+    move-result v1
 
     xor-int/2addr v0, v1
 
@@ -75,11 +102,19 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "BatchedLogRequest{logRequests="
+    const-string v1, "ClientInfo{clientType="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lr90;->a:Ljava/util/ArrayList;
+    sget-object v1, Llb3;->a:Llb3;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", androidClientInfo="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lr90;->a:Lc90;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

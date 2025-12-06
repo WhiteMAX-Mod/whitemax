@@ -10,6 +10,7 @@
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Lorg/webrtc/Camera2Session$SessionState;,
+        Lorg/webrtc/Camera2Session$ProcessInfo;,
         Lorg/webrtc/Camera2Session$CameraStateCallback;,
         Lorg/webrtc/Camera2Session$CameraCaptureCallback;,
         Lorg/webrtc/Camera2Session$CaptureSessionCallback;
@@ -50,6 +51,8 @@
 
 .field private captureSession:Landroid/hardware/camera2/CameraCaptureSession;
 
+.field private final config:Lorg/webrtc/CameraSession$ConfigurationProvider;
+
 .field private final constructionTimeNs:J
 
 .field private final events:Lorg/webrtc/CameraSession$Events;
@@ -61,6 +64,8 @@
 .field private final framerate:I
 
 .field private final height:I
+
+.field private volatile infoOnStart:Lorg/webrtc/Camera2Session$ProcessInfo;
 
 .field private isCameraFrontFacing:Z
 
@@ -116,7 +121,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Lorg/webrtc/CameraSession$CreateSessionCallback;Lorg/webrtc/CameraSession$Events;Landroid/content/Context;Landroid/hardware/camera2/CameraManager;Lorg/webrtc/SurfaceTextureHelper;Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;III)V
+.method private constructor <init>(Lorg/webrtc/CameraSession$CreateSessionCallback;Lorg/webrtc/CameraSession$Events;Lorg/webrtc/CameraSession$ConfigurationProvider;Landroid/content/Context;Landroid/hardware/camera2/CameraManager;Lorg/webrtc/SurfaceTextureHelper;Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;III)V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -125,13 +130,17 @@
 
     iput-object v0, p0, Lorg/webrtc/Camera2Session;->state:Lorg/webrtc/Camera2Session$SessionState;
 
+    sget-object v0, Lorg/webrtc/Camera2Session$ProcessInfo;->DUMMY:Lorg/webrtc/Camera2Session$ProcessInfo;
+
+    iput-object v0, p0, Lorg/webrtc/Camera2Session;->infoOnStart:Lorg/webrtc/Camera2Session$ProcessInfo;
+
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "Create new camera2 session on camera "
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -147,42 +156,52 @@
 
     iput-wide v0, p0, Lorg/webrtc/Camera2Session;->constructionTimeNs:J
 
-    if-nez p7, :cond_0
+    if-nez p8, :cond_0
 
-    new-instance p7, Lorg/webrtc/Camera2Session$1;
+    new-instance p8, Lorg/webrtc/Camera2Session$1;
 
-    invoke-direct {p7, p0}, Lorg/webrtc/Camera2Session$1;-><init>(Lorg/webrtc/Camera2Session;)V
+    invoke-direct {p8, p0}, Lorg/webrtc/Camera2Session$1;-><init>(Lorg/webrtc/Camera2Session;)V
 
     :cond_0
-    iput-object p7, p0, Lorg/webrtc/Camera2Session;->captureFormatHelper:Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;
+    iput-object p8, p0, Lorg/webrtc/Camera2Session;->captureFormatHelper:Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;
 
-    new-instance p7, Landroid/os/Handler;
+    new-instance p8, Landroid/os/Handler;
 
-    invoke-direct {p7}, Landroid/os/Handler;-><init>()V
+    invoke-direct {p8}, Landroid/os/Handler;-><init>()V
 
-    iput-object p7, p0, Lorg/webrtc/Camera2Session;->cameraThreadHandler:Landroid/os/Handler;
+    iput-object p8, p0, Lorg/webrtc/Camera2Session;->cameraThreadHandler:Landroid/os/Handler;
 
     iput-object p1, p0, Lorg/webrtc/Camera2Session;->callback:Lorg/webrtc/CameraSession$CreateSessionCallback;
 
     iput-object p2, p0, Lorg/webrtc/Camera2Session;->events:Lorg/webrtc/CameraSession$Events;
 
-    iput-object p3, p0, Lorg/webrtc/Camera2Session;->applicationContext:Landroid/content/Context;
+    iput-object p3, p0, Lorg/webrtc/Camera2Session;->config:Lorg/webrtc/CameraSession$ConfigurationProvider;
 
-    iput-object p4, p0, Lorg/webrtc/Camera2Session;->cameraManager:Landroid/hardware/camera2/CameraManager;
+    iput-object p4, p0, Lorg/webrtc/Camera2Session;->applicationContext:Landroid/content/Context;
 
-    iput-object p5, p0, Lorg/webrtc/Camera2Session;->surfaceTextureHelper:Lorg/webrtc/SurfaceTextureHelper;
+    iput-object p5, p0, Lorg/webrtc/Camera2Session;->cameraManager:Landroid/hardware/camera2/CameraManager;
 
-    iput-object p6, p0, Lorg/webrtc/Camera2Session;->cameraId:Ljava/lang/String;
+    iput-object p6, p0, Lorg/webrtc/Camera2Session;->surfaceTextureHelper:Lorg/webrtc/SurfaceTextureHelper;
 
-    iput p8, p0, Lorg/webrtc/Camera2Session;->width:I
+    iput-object p7, p0, Lorg/webrtc/Camera2Session;->cameraId:Ljava/lang/String;
 
-    iput p9, p0, Lorg/webrtc/Camera2Session;->height:I
+    iput p9, p0, Lorg/webrtc/Camera2Session;->width:I
 
-    iput p10, p0, Lorg/webrtc/Camera2Session;->framerate:I
+    iput p10, p0, Lorg/webrtc/Camera2Session;->height:I
+
+    iput p11, p0, Lorg/webrtc/Camera2Session;->framerate:I
 
     invoke-direct {p0}, Lorg/webrtc/Camera2Session;->start()V
 
     return-void
+.end method
+
+.method public static bridge synthetic A()Lorg/webrtc/Histogram;
+    .locals 1
+
+    sget-object v0, Lorg/webrtc/Camera2Session;->camera2StartTimeMsHistogram:Lorg/webrtc/Histogram;
+
+    return-object v0
 .end method
 
 .method public static bridge synthetic a(Lorg/webrtc/Camera2Session;)Lorg/webrtc/CameraSession$CreateSessionCallback;
@@ -240,13 +259,13 @@
     throw v0
 .end method
 
-.method public static create(Lorg/webrtc/CameraSession$CreateSessionCallback;Lorg/webrtc/CameraSession$Events;Landroid/content/Context;Landroid/hardware/camera2/CameraManager;Lorg/webrtc/SurfaceTextureHelper;Ljava/lang/String;III)V
-    .locals 11
+.method public static create(Lorg/webrtc/CameraSession$CreateSessionCallback;Lorg/webrtc/CameraSession$Events;Lorg/webrtc/CameraSession$ConfigurationProvider;Landroid/content/Context;Landroid/hardware/camera2/CameraManager;Lorg/webrtc/SurfaceTextureHelper;Ljava/lang/String;III)V
+    .locals 12
 
     .line 2
     new-instance v0, Lorg/webrtc/Camera2Session;
 
-    const/4 v7, 0x0
+    const/4 v8, 0x0
 
     move-object v1, p0
 
@@ -256,23 +275,25 @@
 
     move-object v4, p3
 
-    move-object v5, p4
+    move-object/from16 v5, p4
 
     move-object/from16 v6, p5
 
-    move/from16 v8, p6
+    move-object/from16 v7, p6
 
     move/from16 v9, p7
 
     move/from16 v10, p8
 
-    invoke-direct/range {v0 .. v10}, Lorg/webrtc/Camera2Session;-><init>(Lorg/webrtc/CameraSession$CreateSessionCallback;Lorg/webrtc/CameraSession$Events;Landroid/content/Context;Landroid/hardware/camera2/CameraManager;Lorg/webrtc/SurfaceTextureHelper;Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;III)V
+    move/from16 v11, p9
+
+    invoke-direct/range {v0 .. v11}, Lorg/webrtc/Camera2Session;-><init>(Lorg/webrtc/CameraSession$CreateSessionCallback;Lorg/webrtc/CameraSession$Events;Lorg/webrtc/CameraSession$ConfigurationProvider;Landroid/content/Context;Landroid/hardware/camera2/CameraManager;Lorg/webrtc/SurfaceTextureHelper;Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;III)V
 
     return-void
 .end method
 
-.method public static create(Lorg/webrtc/CameraSession$CreateSessionCallback;Lorg/webrtc/CameraSession$Events;Landroid/content/Context;Landroid/hardware/camera2/CameraManager;Lorg/webrtc/SurfaceTextureHelper;Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;III)V
-    .locals 11
+.method public static create(Lorg/webrtc/CameraSession$CreateSessionCallback;Lorg/webrtc/CameraSession$Events;Lorg/webrtc/CameraSession$ConfigurationProvider;Landroid/content/Context;Landroid/hardware/camera2/CameraManager;Lorg/webrtc/SurfaceTextureHelper;Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;III)V
+    .locals 12
 
     .line 1
     new-instance v0, Lorg/webrtc/Camera2Session;
@@ -285,19 +306,21 @@
 
     move-object v4, p3
 
-    move-object v5, p4
+    move-object/from16 v5, p4
 
     move-object/from16 v6, p5
 
     move-object/from16 v7, p6
 
-    move/from16 v8, p7
+    move-object/from16 v8, p7
 
     move/from16 v9, p8
 
     move/from16 v10, p9
 
-    invoke-direct/range {v0 .. v10}, Lorg/webrtc/Camera2Session;-><init>(Lorg/webrtc/CameraSession$CreateSessionCallback;Lorg/webrtc/CameraSession$Events;Landroid/content/Context;Landroid/hardware/camera2/CameraManager;Lorg/webrtc/SurfaceTextureHelper;Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;III)V
+    move/from16 v11, p10
+
+    invoke-direct/range {v0 .. v11}, Lorg/webrtc/Camera2Session;-><init>(Lorg/webrtc/CameraSession$CreateSessionCallback;Lorg/webrtc/CameraSession$Events;Lorg/webrtc/CameraSession$ConfigurationProvider;Landroid/content/Context;Landroid/hardware/camera2/CameraManager;Lorg/webrtc/SurfaceTextureHelper;Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;III)V
 
     return-void
 .end method
@@ -524,7 +547,15 @@
     return p0
 .end method
 
-.method public static bridge synthetic l(Lorg/webrtc/Camera2Session;)Z
+.method public static bridge synthetic l(Lorg/webrtc/Camera2Session;)Lorg/webrtc/Camera2Session$ProcessInfo;
+    .locals 0
+
+    iget-object p0, p0, Lorg/webrtc/Camera2Session;->infoOnStart:Lorg/webrtc/Camera2Session$ProcessInfo;
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic m(Lorg/webrtc/Camera2Session;)Z
     .locals 0
 
     iget-boolean p0, p0, Lorg/webrtc/Camera2Session;->isCameraFrontFacing:Z
@@ -532,7 +563,7 @@
     return p0
 .end method
 
-.method public static bridge synthetic m(Lorg/webrtc/Camera2Session;)Lorg/webrtc/Camera2Session$SessionState;
+.method public static bridge synthetic n(Lorg/webrtc/Camera2Session;)Lorg/webrtc/Camera2Session$SessionState;
     .locals 0
 
     iget-object p0, p0, Lorg/webrtc/Camera2Session;->state:Lorg/webrtc/Camera2Session$SessionState;
@@ -540,18 +571,10 @@
     return-object p0
 .end method
 
-.method public static bridge synthetic n(Lorg/webrtc/Camera2Session;)Landroid/view/Surface;
+.method public static bridge synthetic o(Lorg/webrtc/Camera2Session;)Landroid/view/Surface;
     .locals 0
 
     iget-object p0, p0, Lorg/webrtc/Camera2Session;->surface:Landroid/view/Surface;
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic o(Lorg/webrtc/Camera2Session;)Lorg/webrtc/SurfaceTextureHelper;
-    .locals 0
-
-    iget-object p0, p0, Lorg/webrtc/Camera2Session;->surfaceTextureHelper:Lorg/webrtc/SurfaceTextureHelper;
 
     return-object p0
 .end method
@@ -635,7 +658,15 @@
     return-void
 .end method
 
-.method public static bridge synthetic p(Lorg/webrtc/Camera2Session;Landroid/hardware/camera2/CameraDevice;)V
+.method public static bridge synthetic p(Lorg/webrtc/Camera2Session;)Lorg/webrtc/SurfaceTextureHelper;
+    .locals 0
+
+    iget-object p0, p0, Lorg/webrtc/Camera2Session;->surfaceTextureHelper:Lorg/webrtc/SurfaceTextureHelper;
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic q(Lorg/webrtc/Camera2Session;Landroid/hardware/camera2/CameraDevice;)V
     .locals 0
 
     iput-object p1, p0, Lorg/webrtc/Camera2Session;->cameraDevice:Landroid/hardware/camera2/CameraDevice;
@@ -643,20 +674,10 @@
     return-void
 .end method
 
-.method public static bridge synthetic q(Lorg/webrtc/Camera2Session;Landroid/hardware/camera2/CameraCaptureSession;)V
+.method public static bridge synthetic r(Lorg/webrtc/Camera2Session;Landroid/hardware/camera2/CameraCaptureSession;)V
     .locals 0
 
     iput-object p1, p0, Lorg/webrtc/Camera2Session;->captureSession:Landroid/hardware/camera2/CameraCaptureSession;
-
-    return-void
-.end method
-
-.method public static bridge synthetic r(Lorg/webrtc/Camera2Session;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lorg/webrtc/Camera2Session;->firstFrameReported:Z
 
     return-void
 .end method
@@ -724,10 +745,12 @@
     return-void
 .end method
 
-.method public static bridge synthetic s(Lorg/webrtc/Camera2Session;Lorg/webrtc/Camera2Session$SessionState;)V
-    .locals 0
+.method public static bridge synthetic s(Lorg/webrtc/Camera2Session;)V
+    .locals 1
 
-    iput-object p1, p0, Lorg/webrtc/Camera2Session;->state:Lorg/webrtc/Camera2Session$SessionState;
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lorg/webrtc/Camera2Session;->firstFrameReported:Z
 
     return-void
 .end method
@@ -825,7 +848,7 @@
 
     const-string v1, "getCameraCharacteristics(): "
 
-    invoke-static {v1, v0}, Ley1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0}, Lwy1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -835,7 +858,7 @@
 .end method
 
 .method private stopInternal()V
-    .locals 3
+    .locals 6
 
     const-string v0, "Stop internal"
 
@@ -853,31 +876,93 @@
 
     const/4 v2, 0x0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_2
+
+    :try_start_0
+    iget-object v0, p0, Lorg/webrtc/Camera2Session;->config:Lorg/webrtc/CameraSession$ConfigurationProvider;
+
+    invoke-interface {v0}, Lorg/webrtc/CameraSession$ConfigurationProvider;->isCrashOnCameraCloseRequired()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lorg/webrtc/Camera2Session;->captureSession:Landroid/hardware/camera2/CameraCaptureSession;
 
     invoke-virtual {v0}, Landroid/hardware/camera2/CameraCaptureSession;->close()V
 
-    iput-object v2, p0, Lorg/webrtc/Camera2Session;->captureSession:Landroid/hardware/camera2/CameraCaptureSession;
+    goto :goto_1
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
 
     :cond_0
+    new-instance v0, Ljava/lang/SecurityException;
+
+    const-string v3, "checkPidStatus: externally required exception during camera closing"
+
+    invoke-direct {v0, v3}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+    :try_end_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v4, "checkPidStatus"
+
+    invoke-virtual {v3, v4}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    invoke-static {v2}, Lorg/webrtc/Camera2Session$ProcessInfo;->create(Lorg/webrtc/Camera2Session$ProcessInfo;)Lorg/webrtc/Camera2Session$ProcessInfo;
+
+    move-result-object v4
+
+    iget-object v5, p0, Lorg/webrtc/Camera2Session;->infoOnStart:Lorg/webrtc/Camera2Session$ProcessInfo;
+
+    invoke-static {v5, v4}, Lorg/webrtc/Camera2Session$ProcessInfo;->diffToString(Lorg/webrtc/Camera2Session$ProcessInfo;Lorg/webrtc/Camera2Session$ProcessInfo;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Laz1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    :cond_1
+    iget-object v4, p0, Lorg/webrtc/Camera2Session;->events:Lorg/webrtc/CameraSession$Events;
+
+    invoke-interface {v4, p0, v3, v0}, Lorg/webrtc/CameraSession$Events;->onNonFatal(Lorg/webrtc/CameraSession;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_1
+    iput-object v2, p0, Lorg/webrtc/Camera2Session;->captureSession:Landroid/hardware/camera2/CameraCaptureSession;
+
+    :cond_2
     iget-object v0, p0, Lorg/webrtc/Camera2Session;->surface:Landroid/view/Surface;
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_3
 
     invoke-virtual {v0}, Landroid/view/Surface;->release()V
 
     iput-object v2, p0, Lorg/webrtc/Camera2Session;->surface:Landroid/view/Surface;
 
-    :cond_1
+    :cond_3
     iget-object v0, p0, Lorg/webrtc/Camera2Session;->cameraDevice:Landroid/hardware/camera2/CameraDevice;
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_4
 
     invoke-virtual {v0}, Landroid/hardware/camera2/CameraDevice;->close()V
 
     iput-object v2, p0, Lorg/webrtc/Camera2Session;->cameraDevice:Landroid/hardware/camera2/CameraDevice;
 
-    :cond_2
+    :cond_4
     const-string v0, "Stop done"
 
     invoke-static {v1, v0}, Lorg/webrtc/Logging;->d(Ljava/lang/String;Ljava/lang/String;)V
@@ -885,7 +970,23 @@
     return-void
 .end method
 
-.method public static bridge synthetic t(Lorg/webrtc/Camera2Session;Landroid/view/Surface;)V
+.method public static bridge synthetic t(Lorg/webrtc/Camera2Session;Lorg/webrtc/Camera2Session$ProcessInfo;)V
+    .locals 0
+
+    iput-object p1, p0, Lorg/webrtc/Camera2Session;->infoOnStart:Lorg/webrtc/Camera2Session$ProcessInfo;
+
+    return-void
+.end method
+
+.method public static bridge synthetic u(Lorg/webrtc/Camera2Session;Lorg/webrtc/Camera2Session$SessionState;)V
+    .locals 0
+
+    iput-object p1, p0, Lorg/webrtc/Camera2Session;->state:Lorg/webrtc/Camera2Session$SessionState;
+
+    return-void
+.end method
+
+.method public static bridge synthetic v(Lorg/webrtc/Camera2Session;Landroid/view/Surface;)V
     .locals 0
 
     iput-object p1, p0, Lorg/webrtc/Camera2Session;->surface:Landroid/view/Surface;
@@ -893,7 +994,7 @@
     return-void
 .end method
 
-.method public static bridge synthetic u(Lorg/webrtc/Camera2Session;)V
+.method public static bridge synthetic w(Lorg/webrtc/Camera2Session;)V
     .locals 0
 
     invoke-direct {p0}, Lorg/webrtc/Camera2Session;->checkIsOnCameraThread()V
@@ -901,7 +1002,7 @@
     return-void
 .end method
 
-.method public static bridge synthetic v(Lorg/webrtc/Camera2Session;)I
+.method public static bridge synthetic x(Lorg/webrtc/Camera2Session;)I
     .locals 0
 
     invoke-direct {p0}, Lorg/webrtc/Camera2Session;->getFrameOrientation()I
@@ -911,7 +1012,7 @@
     return p0
 .end method
 
-.method public static bridge synthetic w(Lorg/webrtc/Camera2Session;Ljava/lang/String;)V
+.method public static bridge synthetic y(Lorg/webrtc/Camera2Session;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lorg/webrtc/Camera2Session;->reportError(Ljava/lang/String;)V
@@ -919,20 +1020,12 @@
     return-void
 .end method
 
-.method public static bridge synthetic x(Lorg/webrtc/Camera2Session;)V
+.method public static bridge synthetic z(Lorg/webrtc/Camera2Session;)V
     .locals 0
 
     invoke-direct {p0}, Lorg/webrtc/Camera2Session;->stopInternal()V
 
     return-void
-.end method
-
-.method public static bridge synthetic y()Lorg/webrtc/Histogram;
-    .locals 1
-
-    sget-object v0, Lorg/webrtc/Camera2Session;->camera2StartTimeMsHistogram:Lorg/webrtc/Histogram;
-
-    return-object v0
 .end method
 
 

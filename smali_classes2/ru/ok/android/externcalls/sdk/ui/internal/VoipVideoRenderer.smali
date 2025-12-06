@@ -18,13 +18,13 @@
         "name",
         "<init>",
         "(Ljava/lang/String;)V",
-        "Log1;",
+        "Lah1;",
         "renderer",
         "Lorg/webrtc/RendererCommon$GlDrawer;",
         "drawer",
-        "Lccg;",
+        "Lqqg;",
         "init",
-        "(Log1;Lorg/webrtc/RendererCommon$GlDrawer;)V",
+        "(Lah1;Lorg/webrtc/RendererCommon$GlDrawer;)V",
         "Lru/ok/android/externcalls/sdk/ui/internal/VideoRendererInterface$FrameSizeListener;",
         "listener",
         "addFrameSizeListener",
@@ -55,17 +55,17 @@
         "Lkotlin/Function0;",
         "onDone",
         "releaseEglSurface",
-        "(Lji6;)V",
+        "(Lcm6;)V",
         "release",
-        "Lws1;",
+        "Lkt1;",
         "callVideoDrawer",
-        "Lws1;",
+        "Lkt1;",
         "Ljava/util/concurrent/CopyOnWriteArrayList;",
         "listeners",
         "Ljava/util/concurrent/CopyOnWriteArrayList;",
-        "Lvs1;",
+        "Ljt1;",
         "drawerListener",
-        "Lvs1;",
+        "Ljt1;",
         "calls-sdk_release"
     }
     k = 0x1
@@ -79,9 +79,9 @@
 
 
 # instance fields
-.field private final callVideoDrawer:Lws1;
+.field private final callVideoDrawer:Lkt1;
 
-.field private final drawerListener:Lvs1;
+.field private final drawerListener:Ljt1;
 
 .field private final listeners:Ljava/util/concurrent/CopyOnWriteArrayList;
     .annotation system Ldalvik/annotation/Signature;
@@ -100,11 +100,11 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lws1;
+    new-instance v0, Lkt1;
 
-    invoke-direct {v0, p1}, Lws1;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Lkt1;-><init>(Ljava/lang/String;)V
 
-    iput-object v0, p0, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;->callVideoDrawer:Lws1;
+    iput-object v0, p0, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;->callVideoDrawer:Lkt1;
 
     new-instance p1, Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -112,11 +112,11 @@
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;->listeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    new-instance p1, La3h;
+    new-instance p1, Lbjh;
 
-    invoke-direct {p1, p0}, La3h;-><init>(Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;)V
+    invoke-direct {p1, p0}, Lbjh;-><init>(Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;)V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;->drawerListener:Lvs1;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;->drawerListener:Ljt1;
 
     return-void
 .end method
@@ -174,26 +174,26 @@
 .method public clearImage()V
     .locals 5
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;->callVideoDrawer:Lws1;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;->callVideoDrawer:Lkt1;
 
-    iget-object v1, v0, Lws1;->h:Ljava/lang/Object;
+    iget-object v1, v0, Lkt1;->h:Ljava/lang/Object;
 
     monitor-enter v1
 
     :try_start_0
-    iget-object v2, v0, Lws1;->g:Log1;
+    iget-object v2, v0, Lkt1;->g:Lah1;
 
     if-eqz v2, :cond_0
 
-    iget-object v2, v2, Log1;->e:Lmg1;
+    iget-object v2, v2, Lah1;->e:Lyg1;
 
-    new-instance v3, Lj0;
+    new-instance v3, Li0;
 
     const/4 v4, 0x4
 
-    invoke-direct {v3, v4, v0}, Lj0;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v3, v4, v0}, Li0;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {v2, v3}, Lmg1;->c(Lli6;)Z
+    invoke-virtual {v2, v3}, Lyg1;->c(Lem6;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -213,34 +213,34 @@
 .method public createEglSurface(Landroid/view/Surface;)V
     .locals 6
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;->callVideoDrawer:Lws1;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;->callVideoDrawer:Lkt1;
 
-    iget-object v1, v0, Lws1;->h:Ljava/lang/Object;
+    iget-object v1, v0, Lkt1;->h:Ljava/lang/Object;
 
     monitor-enter v1
 
     :try_start_0
-    iget-object v2, v0, Lws1;->g:Log1;
+    iget-object v2, v0, Lkt1;->g:Lah1;
 
     if-eqz v2, :cond_0
 
-    iget-object v3, v2, Log1;->a:Lfwc;
+    iget-object v3, v2, Lah1;->a:Ly6d;
 
-    iget-object v4, v0, Lws1;->j:Ljava/lang/String;
+    iget-object v4, v0, Lkt1;->j:Ljava/lang/String;
 
     const-string v5, "External request for surface creation"
 
-    invoke-interface {v3, v4, v5}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v3, v4, v5}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v2, v2, Log1;->e:Lmg1;
+    iget-object v2, v2, Lah1;->e:Lyg1;
 
-    new-instance v3, Lc64;
+    new-instance v3, Lr84;
 
     const/4 v4, 0x1
 
-    invoke-direct {v3, v0, v4, p1}, Lc64;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v3, v0, v4, p1}, Lr84;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {v2, v3}, Lmg1;->c(Lli6;)Z
+    invoke-virtual {v2, v3}, Lyg1;->c(Lem6;)Z
 
     goto :goto_0
 
@@ -250,7 +250,7 @@
     goto :goto_1
 
     :cond_0
-    iput-object p1, v0, Lws1;->i:Landroid/view/Surface;
+    iput-object p1, v0, Lkt1;->i:Landroid/view/Surface;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -275,17 +275,17 @@
     return-void
 .end method
 
-.method public init(Log1;Lorg/webrtc/RendererCommon$GlDrawer;)V
+.method public init(Lah1;Lorg/webrtc/RendererCommon$GlDrawer;)V
     .locals 5
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;->callVideoDrawer:Lws1;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;->callVideoDrawer:Lkt1;
 
-    iget-object v1, v0, Lws1;->h:Ljava/lang/Object;
+    iget-object v1, v0, Lkt1;->h:Ljava/lang/Object;
 
     monitor-enter v1
 
     :try_start_0
-    iget-object v2, v0, Lws1;->g:Log1;
+    iget-object v2, v0, Lkt1;->g:Lah1;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -297,37 +297,37 @@
 
     :cond_0
     :try_start_1
-    iput-object p1, v0, Lws1;->g:Log1;
+    iput-object p1, v0, Lkt1;->g:Lah1;
 
-    iget-object v2, p1, Log1;->e:Lmg1;
+    iget-object v2, p1, Lah1;->e:Lyg1;
 
-    new-instance v3, Ldgc;
+    new-instance v3, Lcwd;
 
-    invoke-direct {v3, v0, p2, p1}, Ldgc;-><init>(Lng1;Ljava/lang/Object;Log1;)V
+    invoke-direct {v3, v0, p2, p1}, Lcwd;-><init>(Lzg1;Ljava/lang/Object;Lah1;)V
 
-    invoke-virtual {v2, v3}, Lmg1;->c(Lli6;)Z
+    invoke-virtual {v2, v3}, Lyg1;->c(Lem6;)Z
 
-    iget-object p2, v0, Lws1;->i:Landroid/view/Surface;
+    iget-object p2, v0, Lkt1;->i:Landroid/view/Surface;
 
     if-eqz p2, :cond_1
 
-    iget-object v2, p1, Log1;->a:Lfwc;
+    iget-object v2, p1, Lah1;->a:Ly6d;
 
-    iget-object v3, v0, Lws1;->j:Ljava/lang/String;
+    iget-object v3, v0, Lkt1;->j:Ljava/lang/String;
 
     const-string v4, "Got postponed surface request, process and reset reference"
 
-    invoke-interface {v2, v3, v4}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v2, v3, v4}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object p1, p1, Log1;->e:Lmg1;
+    iget-object p1, p1, Lah1;->e:Lyg1;
 
-    new-instance v2, Lc64;
+    new-instance v2, Lr84;
 
     const/4 v3, 0x1
 
-    invoke-direct {v2, v0, v3, p2}, Lc64;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v2, v0, v3, p2}, Lr84;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {p1, v2}, Lmg1;->c(Lli6;)Z
+    invoke-virtual {p1, v2}, Lyg1;->c(Lem6;)Z
 
     goto :goto_0
 
@@ -340,18 +340,18 @@
     :goto_0
     const/4 p1, 0x0
 
-    iput-object p1, v0, Lws1;->i:Landroid/view/Surface;
+    iput-object p1, v0, Lkt1;->i:Landroid/view/Surface;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     monitor-exit v1
 
     :goto_1
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;->callVideoDrawer:Lws1;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;->callVideoDrawer:Lkt1;
 
-    iget-object p2, p0, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;->drawerListener:Lvs1;
+    iget-object p2, p0, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;->drawerListener:Ljt1;
 
-    iget-object p1, p1, Lws1;->c:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object p1, p1, Lkt1;->c:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {p1, p2}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
@@ -366,20 +366,20 @@
 .method public onFrame(Lorg/webrtc/VideoFrame;)V
     .locals 7
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;->callVideoDrawer:Lws1;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;->callVideoDrawer:Lkt1;
 
-    iget-object v1, v0, Lws1;->l:Lxs1;
+    iget-object v1, v0, Lkt1;->l:Llt1;
 
-    iget-object v1, v1, Lxs1;->c:Ljava/util/concurrent/atomic/AtomicInteger;
+    iget-object v1, v1, Llt1;->c:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
 
-    iget-object v1, v0, Lws1;->h:Ljava/lang/Object;
+    iget-object v1, v0, Lkt1;->h:Ljava/lang/Object;
 
     monitor-enter v1
 
     :try_start_0
-    iget-object v2, v0, Lws1;->g:Log1;
+    iget-object v2, v0, Lkt1;->g:Lah1;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -391,7 +391,7 @@
 
     :cond_0
     :try_start_1
-    iget-object v3, v0, Lws1;->d:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object v3, v0, Lkt1;->d:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {p1}, Lorg/webrtc/VideoFrame;->retain()V
 
@@ -401,24 +401,24 @@
 
     if-nez p1, :cond_1
 
-    iget-object v3, v2, Log1;->e:Lmg1;
+    iget-object v3, v2, Lah1;->e:Lyg1;
 
-    new-instance v4, Llkf;
+    new-instance v4, Lepg;
 
-    invoke-direct {v4, v0, v2}, Llkf;-><init>(Lng1;Log1;)V
+    invoke-direct {v4, v0, v2}, Lepg;-><init>(Lzg1;Lah1;)V
 
     invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     :try_start_2
-    iget-object v2, v3, Lmg1;->k:Lgd8;
+    iget-object v2, v3, Lyg1;->k:Lvba;
 
-    new-instance v5, Llg1;
+    new-instance v5, Lxg1;
 
     const/4 v6, 0x0
 
-    invoke-direct {v5, v4, v3, v6}, Llg1;-><init>(Lli6;Lmg1;I)V
+    invoke-direct {v5, v4, v3, v6}, Lxg1;-><init>(Lem6;Lyg1;I)V
 
     invoke-virtual {v2, v5}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
     :try_end_2
@@ -431,13 +431,13 @@
     move-exception v2
 
     :try_start_3
-    iget-object v4, v3, Lmg1;->a:Lfwc;
+    iget-object v4, v3, Lyg1;->a:Ly6d;
 
-    iget-object v3, v3, Lmg1;->j:Ljava/lang/String;
+    iget-object v3, v3, Lyg1;->j:Ljava/lang/String;
 
     const-string v5, "OpenGL tread died, is it fine?"
 
-    invoke-interface {v4, v3, v5, v2}, Lfwc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v4, v3, v5, v2}, Ly6d;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
@@ -451,9 +451,9 @@
 
     invoke-virtual {p1}, Lorg/webrtc/VideoFrame;->release()V
 
-    iget-object p1, v0, Lws1;->l:Lxs1;
+    iget-object p1, v0, Lkt1;->l:Llt1;
 
-    iget-object p1, p1, Lxs1;->d:Ljava/util/concurrent/atomic/AtomicInteger;
+    iget-object p1, p1, Llt1;->d:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
 
@@ -481,22 +481,22 @@
 .method public release()V
     .locals 5
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;->callVideoDrawer:Lws1;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;->callVideoDrawer:Lkt1;
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;->drawerListener:Lvs1;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;->drawerListener:Ljt1;
 
-    iget-object v0, v0, Lws1;->c:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v0, v0, Lkt1;->c:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;->callVideoDrawer:Lws1;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;->callVideoDrawer:Lkt1;
 
-    iget-object v1, v0, Lws1;->h:Ljava/lang/Object;
+    iget-object v1, v0, Lkt1;->h:Ljava/lang/Object;
 
     monitor-enter v1
 
     :try_start_0
-    iget-object v2, v0, Lws1;->g:Log1;
+    iget-object v2, v0, Lkt1;->g:Lah1;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -508,13 +508,13 @@
 
     :cond_0
     :try_start_1
-    iget-object v3, v2, Log1;->e:Lmg1;
+    iget-object v3, v2, Lah1;->e:Lyg1;
 
-    new-instance v4, Llkf;
+    new-instance v4, Lepg;
 
-    invoke-direct {v4, v2, v0}, Llkf;-><init>(Log1;Lng1;)V
+    invoke-direct {v4, v2, v0}, Lepg;-><init>(Lah1;Lzg1;)V
 
-    invoke-virtual {v3, v4}, Lmg1;->c(Lli6;)Z
+    invoke-virtual {v3, v4}, Lyg1;->c(Lem6;)Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -530,52 +530,52 @@
     throw v0
 .end method
 
-.method public releaseEglSurface(Lji6;)V
+.method public releaseEglSurface(Lcm6;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lji6;",
+            "Lcm6;",
             ")V"
         }
     .end annotation
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;->callVideoDrawer:Lws1;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;->callVideoDrawer:Lkt1;
 
-    iget-object v1, v0, Lws1;->h:Ljava/lang/Object;
+    iget-object v1, v0, Lkt1;->h:Ljava/lang/Object;
 
     monitor-enter v1
 
     const/4 v2, 0x0
 
     :try_start_0
-    iput-object v2, v0, Lws1;->i:Landroid/view/Surface;
+    iput-object v2, v0, Lkt1;->i:Landroid/view/Surface;
 
-    iget-object v2, v0, Lws1;->g:Log1;
+    iget-object v2, v0, Lkt1;->g:Lah1;
 
     if-eqz v2, :cond_1
 
-    iget-object v3, v2, Log1;->a:Lfwc;
+    iget-object v3, v2, Lah1;->a:Ly6d;
 
-    iget-object v4, v0, Lws1;->j:Ljava/lang/String;
+    iget-object v4, v0, Lkt1;->j:Ljava/lang/String;
 
     const-string v5, "External request for surface release"
 
-    invoke-interface {v3, v4, v5}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v3, v4, v5}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v3, v2, Log1;->e:Lmg1;
+    iget-object v3, v2, Lah1;->e:Lyg1;
 
-    new-instance v4, Ldgc;
+    new-instance v4, Lcwd;
 
-    invoke-direct {v4, v2, v0, p1}, Ldgc;-><init>(Log1;Lng1;Lji6;)V
+    invoke-direct {v4, v2, v0, p1}, Lcwd;-><init>(Lah1;Lzg1;Lcm6;)V
 
-    invoke-virtual {v3, v4}, Lmg1;->c(Lli6;)Z
+    invoke-virtual {v3, v4}, Lyg1;->c(Lem6;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    invoke-interface {p1}, Lji6;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lcm6;->invoke()Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -592,7 +592,7 @@
     :cond_1
     monitor-exit v1
 
-    invoke-interface {p1}, Lji6;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lcm6;->invoke()Ljava/lang/Object;
 
     return-void
 
@@ -615,14 +615,14 @@
 .method public setFpsReduction(F)V
     .locals 6
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;->callVideoDrawer:Lws1;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;->callVideoDrawer:Lkt1;
 
-    iget-object v0, v0, Lws1;->e:Lgq0;
+    iget-object v0, v0, Lkt1;->e:Ldq0;
 
     monitor-enter v0
 
     :try_start_0
-    iget-wide v1, v0, Lgq0;->c:J
+    iget-wide v1, v0, Ldq0;->c:J
 
     const/4 v3, 0x0
 
@@ -632,7 +632,7 @@
 
     const-wide v3, 0x7fffffffffffffffL
 
-    iput-wide v3, v0, Lgq0;->c:J
+    iput-wide v3, v0, Ldq0;->c:J
 
     goto :goto_0
 
@@ -656,10 +656,10 @@
 
     float-to-long v3, v3
 
-    iput-wide v3, v0, Lgq0;->c:J
+    iput-wide v3, v0, Ldq0;->c:J
 
     :goto_0
-    iget-wide v3, v0, Lgq0;->c:J
+    iget-wide v3, v0, Ldq0;->c:J
 
     cmp-long p1, v3, v1
 
@@ -669,7 +669,7 @@
 
     move-result-wide v1
 
-    iput-wide v1, v0, Lgq0;->b:J
+    iput-wide v1, v0, Ldq0;->b:J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -694,11 +694,11 @@
 .method public setLayoutAspectRatio(F)V
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;->callVideoDrawer:Lws1;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;->callVideoDrawer:Lkt1;
 
-    iget-object v0, v0, Lws1;->f:Lyoh;
+    iget-object v0, v0, Lkt1;->f:Ls7c;
 
-    iget-object v0, v0, Lyoh;->b:Ljava/lang/Object;
+    iget-object v0, v0, Ls7c;->a:Ljava/lang/Object;
 
     check-cast v0, Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -714,11 +714,11 @@
 .method public setMirror(Z)V
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;->callVideoDrawer:Lws1;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/ui/internal/VoipVideoRenderer;->callVideoDrawer:Lkt1;
 
-    iget-object v0, v0, Lws1;->f:Lyoh;
+    iget-object v0, v0, Lkt1;->f:Ls7c;
 
-    iget-object v0, v0, Lyoh;->c:Ljava/lang/Object;
+    iget-object v0, v0, Ls7c;->b:Ljava/lang/Object;
 
     check-cast v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 

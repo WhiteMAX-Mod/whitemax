@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
+.implements Lw68;
 
 
 # static fields
@@ -17,247 +17,26 @@
     .end annotation
 .end field
 
-
-# instance fields
-.field public final X:Ljava/lang/String;
-
-.field public final Y:Ljava/lang/String;
-
-.field public final Z:I
-
-.field public final a:Z
-
-.field public final b:Z
-
-.field public final c:Z
-
-.field public final o:I
-
-.field public final q0:Landroid/graphics/Rect;
-
-.field public final r0:[F
-
-.field public final s0:Z
-
-.field public final t0:I
-
-.field public final u0:I
+.field public static final a:La68;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Ldu7;
+    new-instance v0, La68;
 
-    const/16 v1, 0x18
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Ldu7;-><init>(I)V
+    sput-object v0, La68;->a:La68;
+
+    new-instance v0, Lf18;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, v1}, Lf18;-><init>(I)V
 
     sput-object v0, La68;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 3
-
-    .line 14
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 15
-    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_0
-
-    move v0, v2
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v1
-
-    :goto_0
-    iput-boolean v0, p0, La68;->a:Z
-
-    .line 16
-    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    move v0, v2
-
-    goto :goto_1
-
-    :cond_1
-    move v0, v1
-
-    :goto_1
-    iput-boolean v0, p0, La68;->b:Z
-
-    .line 17
-    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    move v0, v2
-
-    goto :goto_2
-
-    :cond_2
-    move v0, v1
-
-    :goto_2
-    iput-boolean v0, p0, La68;->c:Z
-
-    .line 18
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    iput v0, p0, La68;->o:I
-
-    .line 19
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, La68;->X:Ljava/lang/String;
-
-    .line 20
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, La68;->Y:Ljava/lang/String;
-
-    .line 21
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    iput v0, p0, La68;->Z:I
-
-    .line 22
-    const-class v0, Landroid/graphics/Rect;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/graphics/Rect;
-
-    iput-object v0, p0, La68;->q0:Landroid/graphics/Rect;
-
-    .line 23
-    invoke-virtual {p1}, Landroid/os/Parcel;->createFloatArray()[F
-
-    move-result-object v0
-
-    iput-object v0, p0, La68;->r0:[F
-
-    .line 24
-    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    move v1, v2
-
-    :cond_3
-    iput-boolean v1, p0, La68;->s0:Z
-
-    .line 25
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    iput v0, p0, La68;->t0:I
-
-    .line 26
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result p1
-
-    iput p1, p0, La68;->u0:I
-
-    return-void
-.end method
-
-.method public constructor <init>(Lns0;)V
-    .locals 3
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x1
-
-    .line 2
-    iput-boolean v0, p0, La68;->a:Z
-
-    .line 3
-    iget-boolean v1, p1, Lns0;->c:Z
-
-    iput-boolean v1, p0, La68;->b:Z
-
-    .line 4
-    iput-boolean v0, p0, La68;->c:Z
-
-    const/4 v1, 0x0
-
-    .line 5
-    iput v1, p0, La68;->o:I
-
-    .line 6
-    iget-object v2, p1, Lns0;->d:Ljava/lang/Object;
-
-    check-cast v2, Ljava/lang/String;
-
-    iput-object v2, p0, La68;->X:Ljava/lang/String;
-
-    .line 7
-    iget-object v2, p1, Lns0;->e:Ljava/lang/Object;
-
-    check-cast v2, Ljava/lang/String;
-
-    iput-object v2, p0, La68;->Y:Ljava/lang/String;
-
-    .line 8
-    iget p1, p1, Lns0;->b:I
-
-    iput p1, p0, La68;->Z:I
-
-    const/4 p1, 0x0
-
-    .line 9
-    iput-object p1, p0, La68;->q0:Landroid/graphics/Rect;
-
-    .line 10
-    iput-object p1, p0, La68;->r0:[F
-
-    .line 11
-    iput-boolean v0, p0, La68;->s0:Z
-
-    .line 12
-    iput v1, p0, La68;->t0:I
-
-    .line 13
-    iput v1, p0, La68;->u0:I
 
     return-void
 .end method
@@ -272,54 +51,48 @@
     return v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iget-boolean v0, p0, La68;->a:Z
+    const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
+    if-ne p0, p1, :cond_0
 
-    iget-boolean v0, p0, La68;->b:Z
+    return v0
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
+    :cond_0
+    instance-of p1, p1, La68;
 
-    iget-boolean v0, p0, La68;->c:Z
+    if-nez p1, :cond_1
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
+    const/4 p1, 0x0
 
-    iget v0, p0, La68;->o:I
+    return p1
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    :cond_1
+    return v0
+.end method
 
-    iget-object v0, p0, La68;->X:Ljava/lang/String;
+.method public final hashCode()I
+    .locals 1
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    const v0, -0x501f9358
 
-    iget-object v0, p0, La68;->Y:Ljava/lang/String;
+    return v0
+.end method
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    iget v0, p0, La68;->Z:I
+    const-string v0, "ContentLevelError"
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    return-object v0
+.end method
 
-    iget-object v0, p0, La68;->q0:Landroid/graphics/Rect;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
-
-    iget-object p2, p0, La68;->r0:[F
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloatArray([F)V
-
-    iget-boolean p2, p0, La68;->s0:Z
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
-
-    iget p2, p0, La68;->t0:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget p2, p0, La68;->u0:I
+    const/4 p2, 0x1
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 

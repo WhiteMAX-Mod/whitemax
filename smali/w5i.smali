@@ -2,78 +2,147 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final a:Lx5i;
 
-.field public final b:I
+.field public final b:Lv4i;
 
 
 # direct methods
-.method public constructor <init>(Lo3i;I)V
+.method public constructor <init>(Lx5i;Lv4i;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lw5i;->a:Ljava/lang/Object;
+    iput-object p1, p0, Lw5i;->a:Lx5i;
 
-    iput p2, p0, Lw5i;->b:I
+    iput-object p2, p0, Lw5i;->b:Lv4i;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final run()V
+    .locals 7
 
-    instance-of v0, p1, Lw5i;
+    const-string v0, "Timer with "
 
-    const/4 v1, 0x0
+    iget-object v1, p0, Lw5i;->a:Lx5i;
 
-    if-nez v0, :cond_0
+    iget-object v1, v1, Lx5i;->d:Ljava/lang/Object;
 
-    return v1
+    monitor-enter v1
+
+    :try_start_0
+    iget-object v2, p0, Lw5i;->a:Lx5i;
+
+    iget-object v2, v2, Lx5i;->b:Ljava/util/HashMap;
+
+    iget-object v3, p0, Lw5i;->b:Lv4i;
+
+    invoke-virtual {v2, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lw5i;
+
+    if-eqz v2, :cond_0
+
+    iget-object v0, p0, Lw5i;->a:Lx5i;
+
+    iget-object v0, v0, Lx5i;->c:Ljava/util/HashMap;
+
+    iget-object v2, p0, Lw5i;->b:Lv4i;
+
+    invoke-virtual {v0, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lv5i;
+
+    if-eqz v0, :cond_1
+
+    iget-object v2, p0, Lw5i;->b:Lv4i;
+
+    check-cast v0, Lps4;
+
+    invoke-static {}, Lcei;->g()Lcei;
+
+    move-result-object v3
+
+    sget-object v4, Lps4;->w0:Ljava/lang/String;
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    const-string v6, "Exceeded time limits on execution for "
+
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v3, v4, v2}, Lcei;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v2, v0, Lps4;->Z:Luee;
+
+    new-instance v3, Los4;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v3, v0, v4}, Los4;-><init>(Lps4;I)V
+
+    invoke-virtual {v2, v3}, Luee;->execute(Ljava/lang/Runnable;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
 
     :cond_0
-    check-cast p1, Lw5i;
+    invoke-static {}, Lcei;->g()Lcei;
 
-    iget-object v0, p0, Lw5i;->a:Ljava/lang/Object;
+    move-result-object v2
 
-    iget-object v2, p1, Lw5i;->a:Ljava/lang/Object;
+    const-string v3, "WrkTimerRunnable"
 
-    if-ne v0, v2, :cond_1
+    iget-object v4, p0, Lw5i;->b:Lv4i;
 
-    iget v0, p0, Lw5i;->b:I
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    iget p1, p1, Lw5i;->b:I
+    invoke-direct {v5, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-ne v0, p1, :cond_1
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/4 p1, 0x1
+    const-string v0, " is already marked as complete."
 
-    return p1
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v3, v0}, Lcei;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
-    return v1
-.end method
+    :goto_0
+    monitor-exit v1
 
-.method public final hashCode()I
-    .locals 2
+    return-void
 
-    iget-object v0, p0, Lw5i;->a:Ljava/lang/Object;
+    :goto_1
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-static {v0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
-
-    move-result v0
-
-    const v1, 0xffff
-
-    mul-int/2addr v0, v1
-
-    iget v1, p0, Lw5i;->b:I
-
-    add-int/2addr v0, v1
-
-    return v0
+    throw v0
 .end method

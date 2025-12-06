@@ -2,25 +2,26 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lugc;
-
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field public final a:Ln5g;
 
-.field public final b:Z
+.field public final b:I
+
+.field public final c:Li62;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/ArrayList;Z)V
+.method public constructor <init>(Ln5g;ILi62;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ltgc;->a:Ljava/util/ArrayList;
+    iput-object p1, p0, Ltgc;->a:Ln5g;
 
-    iput-boolean p2, p0, Ltgc;->b:Z
+    iput p2, p0, Ltgc;->b:I
+
+    iput-object p3, p0, Ltgc;->c:Li62;
 
     return-void
 .end method
@@ -44,11 +45,11 @@
     :cond_1
     check-cast p1, Ltgc;
 
-    iget-object v0, p0, Ltgc;->a:Ljava/util/ArrayList;
+    iget-object v0, p0, Ltgc;->a:Ln5g;
 
-    iget-object v1, p1, Ltgc;->a:Ljava/util/ArrayList;
+    iget-object v1, p1, Ltgc;->a:Ln5g;
 
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Ln5g;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -57,18 +58,31 @@
     goto :goto_0
 
     :cond_2
-    iget-boolean v0, p0, Ltgc;->b:Z
+    iget v0, p0, Ltgc;->b:I
 
-    iget-boolean p1, p1, Ltgc;->b:Z
+    iget v1, p1, Ltgc;->b:I
 
-    if-eq v0, p1, :cond_3
+    if-eq v0, v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Ltgc;->c:Li62;
+
+    iget-object p1, p1, Ltgc;->c:Li62;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
 
     :goto_0
     const/4 p1, 0x0
 
     return p1
 
-    :cond_3
+    :cond_4
     :goto_1
     const/4 p1, 0x1
 
@@ -76,19 +90,29 @@
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 3
 
-    iget-object v0, p0, Ltgc;->a:Ljava/util/ArrayList;
+    iget-object v0, p0, Ltgc;->a:Ln5g;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    iget v0, v0, Ln5g;->c:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    const/16 v1, 0x1f
 
-    iget-boolean v1, p0, Ltgc;->b:Z
+    mul-int/2addr v0, v1
 
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    iget v2, p0, Ltgc;->b:I
+
+    invoke-static {v2, v0, v1}, Lxrf;->k(III)I
+
+    move-result v0
+
+    iget-object v1, p0, Ltgc;->c:Li62;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
@@ -102,21 +126,29 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "Success(codes="
+    const-string v1, "ShowCancellableSnackbar(title="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Ltgc;->a:Ljava/util/ArrayList;
+    iget-object v1, p0, Ltgc;->a:Ln5g;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", fromLocalFile="
+    const-string v1, ", bottomMargin="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Ltgc;->b:Z
+    iget v1, p0, Ltgc;->b:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", cancelAction="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ltgc;->c:Li62;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 

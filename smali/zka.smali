@@ -1,268 +1,203 @@
 .class public final Lzka;
-.super Ljava/util/concurrent/atomic/AtomicLong;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lela;
-.implements Lvv4;
-.implements Lala;
 
 
 # instance fields
-.field public final X:Lq32;
+.field public final a:Landroid/os/Bundle;
 
-.field public final Y:Ljava/util/concurrent/atomic/AtomicReference;
+.field public b:Landroidx/core/graphics/drawable/IconCompat;
 
-.field public final a:Lela;
+.field public final c:[Lpkd;
 
-.field public final b:J
+.field public final d:Z
 
-.field public final c:Ljava/util/concurrent/TimeUnit;
+.field public final e:Z
 
-.field public final o:Lvod;
+.field public final f:I
+
+.field public final g:Z
+
+.field public final h:I
+
+.field public final i:Ljava/lang/CharSequence;
+
+.field public final j:Landroid/app/PendingIntent;
+
+.field public final k:Z
 
 
 # direct methods
-.method public constructor <init>(Lela;JLvod;)V
+.method public constructor <init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    .line 1
+    :cond_0
+    const-string v1, ""
+
+    invoke-static {v0, v1, p1}, Landroidx/core/graphics/drawable/IconCompat;->d(Landroid/content/res/Resources;Ljava/lang/String;I)Landroidx/core/graphics/drawable/IconCompat;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-direct {p0, v0, p2, p3}, Lzka;-><init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
+    .locals 12
+
+    .line 2
+    new-instance v4, Landroid/os/Bundle;
+
+    invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x1
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x1
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    invoke-direct/range {v0 .. v11}, Lzka;-><init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Lpkd;[Lpkd;ZIZZZ)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroidx/core/graphics/drawable/IconCompat;Ljava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Lpkd;[Lpkd;ZIZZZ)V
     .locals 1
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
+    const/4 p6, 0x1
 
-    iput-object p1, p0, Lzka;->a:Lela;
+    .line 4
+    iput-boolean p6, p0, Lzka;->e:Z
 
-    iput-wide p2, p0, Lzka;->b:J
+    .line 5
+    iput-object p1, p0, Lzka;->b:Landroidx/core/graphics/drawable/IconCompat;
 
-    iput-object v0, p0, Lzka;->c:Ljava/util/concurrent/TimeUnit;
+    if-eqz p1, :cond_1
 
-    iput-object p4, p0, Lzka;->o:Lvod;
+    .line 6
+    iget p6, p1, Landroidx/core/graphics/drawable/IconCompat;->a:I
 
-    new-instance p1, Lq32;
+    const/4 v0, -0x1
 
-    const/4 p2, 0x2
+    if-ne p6, v0, :cond_0
 
-    invoke-direct {p1, p2}, Lq32;-><init>(I)V
+    .line 7
+    iget-object p6, p1, Landroidx/core/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
 
-    iput-object p1, p0, Lzka;->X:Lq32;
+    invoke-static {p6}, Lob7;->d(Ljava/lang/Object;)I
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+    move-result p6
 
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    :cond_0
+    const/4 v0, 0x2
 
-    iput-object p1, p0, Lzka;->Y:Ljava/util/concurrent/atomic/AtomicReference;
+    if-ne p6, v0, :cond_1
+
+    .line 8
+    invoke-virtual {p1}, Landroidx/core/graphics/drawable/IconCompat;->e()I
+
+    move-result p1
+
+    iput p1, p0, Lzka;->h:I
+
+    .line 9
+    :cond_1
+    invoke-static {p2}, Lnla;->c(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lzka;->i:Ljava/lang/CharSequence;
+
+    .line 10
+    iput-object p3, p0, Lzka;->j:Landroid/app/PendingIntent;
+
+    if-eqz p4, :cond_2
+
+    goto :goto_0
+
+    .line 11
+    :cond_2
+    new-instance p4, Landroid/os/Bundle;
+
+    invoke-direct {p4}, Landroid/os/Bundle;-><init>()V
+
+    :goto_0
+    iput-object p4, p0, Lzka;->a:Landroid/os/Bundle;
+
+    .line 12
+    iput-object p5, p0, Lzka;->c:[Lpkd;
+
+    .line 13
+    iput-boolean p7, p0, Lzka;->d:Z
+
+    .line 14
+    iput p8, p0, Lzka;->f:I
+
+    .line 15
+    iput-boolean p9, p0, Lzka;->e:Z
+
+    .line 16
+    iput-boolean p10, p0, Lzka;->g:Z
+
+    .line 17
+    iput-boolean p11, p0, Lzka;->k:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(J)V
-    .locals 2
+.method public final a()Landroidx/core/graphics/drawable/IconCompat;
+    .locals 3
 
-    const-wide v0, 0x7fffffffffffffffL
-
-    invoke-virtual {p0, p1, p2, v0, v1}, Ljava/util/concurrent/atomic/AtomicLong;->compareAndSet(JJ)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Lzka;->Y:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-static {p1}, Lzv4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    new-instance p1, Ljava/util/concurrent/TimeoutException;
-
-    iget-wide v0, p0, Lzka;->b:J
-
-    iget-object p2, p0, Lzka;->c:Ljava/util/concurrent/TimeUnit;
-
-    invoke-static {v0, v1, p2}, Luf5;->e(JLjava/util/concurrent/TimeUnit;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/util/concurrent/TimeoutException;-><init>(Ljava/lang/String;)V
-
-    iget-object p2, p0, Lzka;->a:Lela;
-
-    invoke-interface {p2, p1}, Lela;->onError(Ljava/lang/Throwable;)V
-
-    iget-object p1, p0, Lzka;->o:Lvod;
-
-    invoke-interface {p1}, Lvv4;->g()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final b()V
-    .locals 4
-
-    const-wide v0, 0x7fffffffffffffffL
-
-    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicLong;->getAndSet(J)J
-
-    move-result-wide v2
-
-    cmp-long v0, v2, v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lzka;->X:Lq32;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v0}, Lzv4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    iget-object v0, p0, Lzka;->a:Lela;
-
-    invoke-interface {v0}, Lela;->b()V
-
-    iget-object v0, p0, Lzka;->o:Lvod;
-
-    invoke-interface {v0}, Lvv4;->g()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final c(Lvv4;)V
-    .locals 1
-
-    iget-object v0, p0, Lzka;->Y:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-static {v0, p1}, Lzv4;->f(Ljava/util/concurrent/atomic/AtomicReference;Lvv4;)Z
-
-    return-void
-.end method
-
-.method public final d(Ljava/lang/Object;)V
-    .locals 5
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
-
-    move-result-wide v0
-
-    const-wide v2, 0x7fffffffffffffffL
-
-    cmp-long v2, v0, v2
-
-    if-eqz v2, :cond_1
-
-    const-wide/16 v2, 0x1
-
-    add-long/2addr v2, v0
-
-    invoke-virtual {p0, v0, v1, v2, v3}, Ljava/util/concurrent/atomic/AtomicLong;->compareAndSet(JJ)Z
-
-    move-result v0
+    iget-object v0, p0, Lzka;->b:Landroidx/core/graphics/drawable/IconCompat;
 
     if-nez v0, :cond_0
 
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p0, Lzka;->X:Lq32;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lvv4;
-
-    invoke-interface {v1}, Lvv4;->g()V
-
-    iget-object v1, p0, Lzka;->a:Lela;
-
-    invoke-interface {v1, p1}, Lela;->d(Ljava/lang/Object;)V
-
-    new-instance p1, Ln36;
-
-    invoke-direct {p1, v2, v3, p0}, Ln36;-><init>(JLala;)V
-
-    iget-wide v1, p0, Lzka;->b:J
-
-    iget-object v3, p0, Lzka;->c:Ljava/util/concurrent/TimeUnit;
-
-    iget-object v4, p0, Lzka;->o:Lvod;
-
-    invoke-virtual {v4, p1, v1, v2, v3}, Lvod;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lvv4;
-
-    move-result-object p1
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v0, p1}, Lzv4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lvv4;)Z
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method public final g()V
-    .locals 1
-
-    iget-object v0, p0, Lzka;->Y:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-static {v0}, Lzv4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    iget-object v0, p0, Lzka;->o:Lvod;
-
-    invoke-interface {v0}, Lvv4;->g()V
-
-    return-void
-.end method
-
-.method public final h()Z
-    .locals 1
-
-    iget-object v0, p0, Lzka;->Y:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lvv4;
-
-    invoke-static {v0}, Lzv4;->c(Lvv4;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 4
-
-    const-wide v0, 0x7fffffffffffffffL
-
-    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicLong;->getAndSet(J)J
-
-    move-result-wide v2
-
-    cmp-long v0, v2, v0
+    iget v0, p0, Lzka;->h:I
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lzka;->X:Lq32;
+    const/4 v1, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-string v2, ""
 
-    invoke-static {v0}, Lzv4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+    invoke-static {v1, v2, v0}, Landroidx/core/graphics/drawable/IconCompat;->d(Landroid/content/res/Resources;Ljava/lang/String;I)Landroidx/core/graphics/drawable/IconCompat;
 
-    iget-object v0, p0, Lzka;->a:Lela;
+    move-result-object v0
 
-    invoke-interface {v0, p1}, Lela;->onError(Ljava/lang/Throwable;)V
-
-    iget-object p1, p0, Lzka;->o:Lvod;
-
-    invoke-interface {p1}, Lvv4;->g()V
-
-    return-void
+    iput-object v0, p0, Lzka;->b:Landroidx/core/graphics/drawable/IconCompat;
 
     :cond_0
-    invoke-static {p1}, Liyi;->a(Ljava/lang/Throwable;)V
+    iget-object v0, p0, Lzka;->b:Landroidx/core/graphics/drawable/IconCompat;
 
-    return-void
+    return-object v0
 .end method

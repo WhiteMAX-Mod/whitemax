@@ -1,196 +1,340 @@
 .class public final Lzpb;
-.super Lsgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lzi6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:I
 
-.field public final synthetic Y:Lone/me/pinbars/PinBarsWidget;
+.field public final b:I
 
-.field public final synthetic Z:Landroid/view/View;
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:Ljava/lang/String;
+
+.field public final f:Lbqb;
+
+.field public final g:I
+
+.field public final h:I
+
+.field public final i:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lkotlin/coroutines/Continuation;Lone/me/pinbars/PinBarsWidget;)V
+.method public constructor <init>(IIIILjava/lang/String;Lbqb;IILjava/lang/String;)V
     .locals 0
 
-    iput-object p3, p0, Lzpb;->Y:Lone/me/pinbars/PinBarsWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lzpb;->Z:Landroid/view/View;
+    iput p1, p0, Lzpb;->a:I
 
-    const/4 p1, 0x2
+    iput p2, p0, Lzpb;->b:I
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p3, p0, Lzpb;->c:I
+
+    iput p4, p0, Lzpb;->d:I
+
+    iput-object p5, p0, Lzpb;->e:Ljava/lang/String;
+
+    iput-object p6, p0, Lzpb;->f:Lbqb;
+
+    iput p7, p0, Lzpb;->g:I
+
+    iput p8, p0, Lzpb;->h:I
+
+    iput-object p9, p0, Lzpb;->i:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    check-cast p1, Lxqb;
+    if-ne p0, p1, :cond_0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 p1, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lzpb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return p1
 
-    move-result-object p1
+    :cond_0
+    if-eqz p1, :cond_a
 
-    check-cast p1, Lzpb;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object p2, Lccg;->a:Lccg;
+    move-result-object v0
 
-    invoke-virtual {p1, p2}, Lzpb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const-class v1, Lzpb;
 
-    return-object p2
-.end method
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    move-result v0
 
-    new-instance v0, Lzpb;
-
-    iget-object v1, p0, Lzpb;->Y:Lone/me/pinbars/PinBarsWidget;
-
-    iget-object v2, p0, Lzpb;->Z:Landroid/view/View;
-
-    invoke-direct {v0, v2, p2, v1}, Lzpb;-><init>(Landroid/view/View;Lkotlin/coroutines/Continuation;Lone/me/pinbars/PinBarsWidget;)V
-
-    iput-object p1, v0, Lzpb;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
-
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lzpb;->X:Ljava/lang/Object;
-
-    check-cast p1, Lxqb;
-
-    iget-object v0, p0, Lzpb;->Z:Landroid/view/View;
-
-    check-cast v0, Landroid/view/ViewGroup;
-
-    instance-of v1, p1, Lwqb;
-
-    iget-object v2, p0, Lzpb;->Y:Lone/me/pinbars/PinBarsWidget;
-
-    const/4 v3, 0x0
-
-    if-nez v1, :cond_0
-
-    sget p1, Lone/me/pinbars/PinBarsWidget;->r0:I
-
-    sget p1, Lkza;->g:I
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
-
-    iput-object v3, v2, Lone/me/pinbars/PinBarsWidget;->Y:Lnza;
+    if-nez v0, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    iget-object v1, v2, Lone/me/pinbars/PinBarsWidget;->Y:Lnza;
-
-    if-nez v1, :cond_2
-
-    new-instance v1, Lnza;
-
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v4
-
-    invoke-direct {v1, v4}, Lnza;-><init>(Landroid/content/Context;)V
-
-    sget v4, Lkza;->g:I
-
-    invoke-virtual {v1, v4}, Landroid/view/View;->setId(I)V
-
-    new-instance v4, Lspb;
-
-    const/4 v5, 0x0
-
-    invoke-direct {v4, v2, v5}, Lspb;-><init>(Lone/me/pinbars/PinBarsWidget;I)V
-
-    invoke-virtual {v1, v4}, Lnza;->setCloseBtnClickListener(Landroid/view/View$OnClickListener;)V
-
-    new-instance v4, Lspb;
-
-    const/4 v6, 0x1
-
-    invoke-direct {v4, v2, v6}, Lspb;-><init>(Lone/me/pinbars/PinBarsWidget;I)V
-
-    invoke-virtual {v1, v4}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    new-instance v4, Ldib;
-
-    const/4 v6, 0x3
-
-    const/4 v7, 0x2
-
-    invoke-direct {v4, v6, v3, v7}, Ldib;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    invoke-static {v4, v1}, Lqdi;->d(Lbj6;Landroid/view/View;)V
-
-    iput-object v1, v2, Lone/me/pinbars/PinBarsWidget;->Y:Lnza;
-
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
-
-    move-result v3
-
-    if-gez v3, :cond_1
-
-    move v5, v3
-
     :cond_1
-    invoke-virtual {v0, v1, v5}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
+    check-cast p1, Lzpb;
+
+    iget v0, p0, Lzpb;->a:I
+
+    iget v1, p1, Lzpb;->a:I
+
+    if-eq v0, v1, :cond_2
+
+    goto :goto_0
 
     :cond_2
-    iget-object v0, v2, Lone/me/pinbars/PinBarsWidget;->Y:Lnza;
+    iget v0, p0, Lzpb;->b:I
 
-    if-nez v0, :cond_3
+    iget v1, p1, Lzpb;->b:I
+
+    if-eq v0, v1, :cond_3
 
     goto :goto_0
 
     :cond_3
-    check-cast p1, Lwqb;
+    iget v0, p0, Lzpb;->c:I
 
-    iget-object v1, p1, Lwqb;->b:Lsrf;
+    iget v1, p1, Lzpb;->c:I
 
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    if-eq v0, v1, :cond_4
 
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ltrf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    if-nez v1, :cond_4
-
-    const-string v1, ""
+    goto :goto_0
 
     :cond_4
-    invoke-virtual {v0, v1}, Lnza;->setSubtitle(Ljava/lang/CharSequence;)V
+    iget v0, p0, Lzpb;->d:I
 
-    iget-boolean p1, p1, Lwqb;->c:Z
+    iget v1, p1, Lzpb;->d:I
 
-    invoke-virtual {v0, p1}, Lnza;->setCloseButtonVisibility(Z)V
+    if-eq v0, v1, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    iget v0, p0, Lzpb;->h:I
+
+    iget v1, p1, Lzpb;->h:I
+
+    if-eq v0, v1, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    iget-object v0, p0, Lzpb;->i:Ljava/lang/String;
+
+    iget-object v1, p1, Lzpb;->i:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    goto :goto_0
+
+    :cond_7
+    iget-object v0, p0, Lzpb;->f:Lbqb;
+
+    iget-object v1, p1, Lzpb;->f:Lbqb;
+
+    invoke-static {v0, v1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_8
+
+    goto :goto_0
+
+    :cond_8
+    iget v0, p0, Lzpb;->g:I
+
+    iget v1, p1, Lzpb;->g:I
+
+    if-eq v0, v1, :cond_9
+
+    goto :goto_0
+
+    :cond_9
+    iget-object v0, p0, Lzpb;->e:Ljava/lang/String;
+
+    iget-object p1, p1, Lzpb;->e:Ljava/lang/String;
+
+    invoke-static {v0, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_a
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget v0, p0, Lzpb;->a:I
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lzpb;->b:I
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lzpb;->c:I
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lzpb;->d:I
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lzpb;->h:I
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Lzpb;->e:Ljava/lang/String;
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v1
 
     :goto_0
-    sget-object p1, Lccg;->a:Lccg;
+    add-int/2addr v0, v2
 
-    return-object p1
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v2, p0, Lzpb;->f:Lbqb;
+
+    if-eqz v2, :cond_1
+
+    iget-object v2, v2, Lbqb;->a:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    goto :goto_1
+
+    :cond_1
+    move v2, v1
+
+    :goto_1
+    add-int/2addr v0, v2
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v2, p0, Lzpb;->g:I
+
+    add-int/2addr v0, v2
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v2, p0, Lzpb;->i:Ljava/lang/String;
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    :cond_2
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", initialMaxDimension="
+
+    const-string v1, ", maxBitrateK="
+
+    const-string v2, "PeerVideoSettings{maxDimension="
+
+    iget v3, p0, Lzpb;->a:I
+
+    iget v4, p0, Lzpb;->b:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Lwy1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", maxFrameRate="
+
+    const-string v2, ", temporalLayersCount="
+
+    iget v3, p0, Lzpb;->c:I
+
+    iget v4, p0, Lzpb;->d:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lhf3;->g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    iget v1, p0, Lzpb;->h:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", degradationPreference=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lzpb;->e:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', bitrateTable="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lzpb;->f:Lbqb;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mediaAdaptationScale="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lzpb;->g:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", source=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\'}"
+
+    iget-object v2, p0, Lzpb;->i:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Lho7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

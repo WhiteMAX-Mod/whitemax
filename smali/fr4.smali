@@ -1,23 +1,49 @@
-.class public final Lfr4;
+.class public final synthetic Lfr4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ll7c;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
+.field public final synthetic a:J
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+.method public synthetic constructor <init>(J)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lfr4;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Lfr4;->b:Ljava/lang/String;
+    iput-wide p1, p0, Lfr4;->a:J
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final apply(Ljava/lang/Object;)Z
+    .locals 4
+
+    check-cast p1, Lgr4;
+
+    iget-object p1, p1, Lgr4;->b:Lh9g;
+
+    iget-wide v0, p1, Lh9g;->b:J
+
+    iget-wide v2, p0, Lfr4;->a:J
+
+    cmp-long p1, v0, v2
+
+    if-gtz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
 .end method

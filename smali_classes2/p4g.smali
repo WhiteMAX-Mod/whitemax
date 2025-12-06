@@ -4,261 +4,133 @@
 
 
 # instance fields
-.field public a:[B
+.field public final a:I
 
-.field public b:J
+.field public final b:I
 
-.field public c:J
-
-.field public d:J
-
-.field public e:J
-
-.field public f:J
-
-.field public g:J
-
-.field public h:J
-
-.field public i:I
-
-.field public j:Z
-
-.field public k:Lm75;
-
-.field public l:I
-
-.field public m:I
-
-.field public n:[B
-
-.field public o:[B
-
-.field public p:I
-
-.field public q:[B
-
-.field public r:Lqqe;
-
-.field public s:J
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(III)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x3
+    iput p1, p0, Lp4g;->a:I
 
-    iput v0, p0, Lp4g;->i:I
+    iput p2, p0, Lp4g;->b:I
 
-    const/16 v0, 0x19
-
-    iput v0, p0, Lp4g;->l:I
-
-    const/4 v0, 0x2
-
-    iput v0, p0, Lp4g;->m:I
-
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lp4g;->s:J
-
-    const/16 v0, 0x5dc
-
-    iput v0, p0, Lp4g;->p:I
+    iput p3, p0, Lp4g;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 28
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    move-object/from16 v0, p0
+    const/4 v0, 0x1
 
-    iget-object v1, v0, Lp4g;->a:[B
+    if-ne p0, p1, :cond_0
 
-    const-string v2, "null"
-
-    if-eqz v1, :cond_0
-
-    invoke-static {v1}, Lami;->a([B)Ljava/lang/String;
-
-    move-result-object v1
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    move-object v1, v2
+    instance-of v1, p1, Lp4g;
 
-    :goto_0
-    iget-wide v3, v0, Lp4g;->b:J
+    const/4 v2, 0x0
 
-    const-wide/16 v5, 0x3e8
+    if-nez v1, :cond_1
 
-    div-long/2addr v3, v5
-
-    iget v5, v0, Lp4g;->p:I
-
-    iget-wide v6, v0, Lp4g;->c:J
-
-    iget-wide v8, v0, Lp4g;->d:J
-
-    iget-wide v10, v0, Lp4g;->e:J
-
-    iget-wide v12, v0, Lp4g;->f:J
-
-    iget-wide v14, v0, Lp4g;->g:J
-
-    move-wide/from16 v16, v14
-
-    iget-wide v14, v0, Lp4g;->h:J
-
-    move-object/from16 v18, v2
-
-    iget v2, v0, Lp4g;->i:I
-
-    move/from16 v19, v2
-
-    iget v2, v0, Lp4g;->l:I
-
-    move/from16 v20, v2
-
-    iget-boolean v2, v0, Lp4g;->j:Z
-
-    move/from16 v21, v2
-
-    iget v2, v0, Lp4g;->m:I
-
-    move/from16 v22, v2
-
-    iget-object v2, v0, Lp4g;->n:[B
-
-    if-eqz v2, :cond_1
-
-    invoke-static {v2}, Lami;->a([B)Ljava/lang/String;
-
-    move-result-object v2
-
-    move-object/from16 v23, v2
-
-    goto :goto_1
+    return v2
 
     :cond_1
-    move-object/from16 v23, v18
+    check-cast p1, Lp4g;
 
-    :goto_1
-    iget-object v2, v0, Lp4g;->o:[B
+    iget v1, p0, Lp4g;->a:I
 
-    if-eqz v2, :cond_2
+    iget v3, p1, Lp4g;->a:I
 
-    invoke-static {v2}, Lami;->a([B)Ljava/lang/String;
+    if-eq v1, v3, :cond_2
 
-    move-result-object v2
-
-    :goto_2
-    move-wide/from16 v24, v14
-
-    goto :goto_3
+    return v2
 
     :cond_2
-    move-object/from16 v2, v18
+    iget v1, p0, Lp4g;->b:I
 
-    goto :goto_2
+    iget v3, p1, Lp4g;->b:I
 
-    :goto_3
-    iget-wide v14, v0, Lp4g;->s:J
+    if-eq v1, v3, :cond_3
 
-    const-string v0, "\n- original destination connection id\t"
+    return v2
 
-    move-wide/from16 v26, v14
+    :cond_3
+    iget v1, p0, Lp4g;->c:I
 
-    const-string v14, "\n- max idle timeout\t"
+    iget p1, p1, Lp4g;->c:I
 
-    invoke-static {v0, v3, v4, v1, v14}, Lzdf;->u(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eq v1, p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget v0, p0, Lp4g;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lp4g;->b:I
+
+    invoke-static {v2, v0, v1}, Lxrf;->k(III)I
+
+    move-result v0
+
+    iget v1, p0, Lp4g;->c:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", payloadHash="
+
+    const-string v1, ", maxWidth="
+
+    const-string v2, "CacheKey(textHash="
+
+    iget v3, p0, Lp4g;->a:I
+
+    iget v4, p0, Lp4g;->b:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Lwy1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const-string v1, "\n- max udp payload size\t"
+    const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v2, p0, Lp4g;->c:I
 
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, "\n- initial max data\t\t\t"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, "\n- initial max stream data bidi local\t"
-
-    const-string v3, "\n- initial max stream data bidi remote\t"
-
-    invoke-static {v8, v9, v1, v3, v0}, Ldy1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
-
-    invoke-virtual {v0, v10, v11}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, "\n- initial max stream data uni\t\t"
-
-    const-string v3, "\n- initial max streams bidi\t\t"
-
-    invoke-static {v12, v13, v1, v3, v0}, Ldy1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
-
-    move-wide/from16 v3, v16
-
-    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, "\n- initial max streams uni\t\t"
-
-    const-string v3, "\n- ack delay exponent\t\t\t"
-
-    move-wide/from16 v4, v24
-
-    invoke-static {v4, v5, v1, v3, v0}, Ldy1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
-
-    const-string v1, "\n- max ack delay\t\t\t\t"
-
-    const-string v3, "\n- disable migration\t\t\t"
-
-    move/from16 v4, v19
-
-    move/from16 v5, v20
-
-    invoke-static {v0, v4, v1, v5, v3}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    move/from16 v1, v21
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, "\n- active connection id limit\t\t"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move/from16 v1, v22
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, "\n- initial source connection id\t\t"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\n- retry source connection id\t\t"
-
-    const-string v3, "\n- max datagram frame size\t\t"
-
-    move-object/from16 v4, v23
-
-    invoke-static {v0, v4, v1, v2, v3}, Li57;->q(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    move-wide/from16 v1, v26
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Lho7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

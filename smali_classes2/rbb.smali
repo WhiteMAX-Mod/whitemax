@@ -1,91 +1,55 @@
-.class public final Lrbb;
+.class public abstract Lrbb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Llbd;
+# static fields
+.field public static final a:J
 
-.field public final b:Lqbb;
+.field public static final b:J
 
-.field public final c:Lfwc;
+.field public static final c:J
 
-.field public final d:Lua2;
+.field public static final d:J
 
-.field public final e:Lla;
+.field public static final e:J
 
-.field public final f:Lc64;
-
-.field public volatile g:Ltt7;
-
-.field public volatile h:Lxod;
-
-.field public i:D
-
-.field public j:J
-
-.field public final k:Lyxe;
-
-.field public l:D
-
-.field public m:D
-
-.field public final n:Lmc8;
-
-.field public final o:Lgq0;
-
-.field public final p:Lgq0;
+.field public static final synthetic f:I
 
 
 # direct methods
-.method public constructor <init>(Llbd;Lqbb;Lfwc;Lua2;Lla;Lc64;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lb0d;->oneme_settings_ringtone_section_bottom_vh:I
 
-    iput-object p1, p0, Lrbb;->a:Llbd;
+    int-to-long v0, v0
 
-    iput-object p2, p0, Lrbb;->b:Lqbb;
+    sput-wide v0, Lrbb;->a:J
 
-    iput-object p3, p0, Lrbb;->c:Lfwc;
+    sget v0, Lb0d;->oneme_settings_ringtone_section_custom_add:I
 
-    iput-object p4, p0, Lrbb;->d:Lua2;
+    int-to-long v0, v0
 
-    iput-object p5, p0, Lrbb;->e:Lla;
+    sput-wide v0, Lrbb;->b:J
 
-    iput-object p6, p0, Lrbb;->f:Lc64;
+    sget v0, Lb0d;->oneme_settings_ringtone_section_default:I
 
-    const-wide/high16 p1, 0x3ff0000000000000L    # 1.0
+    int-to-long v0, v0
 
-    iput-wide p1, p0, Lrbb;->i:D
+    sput-wide v0, Lrbb;->c:J
 
-    new-instance p1, Lyxe;
+    sget v0, Lb0d;->oneme_settings_ringtone_section_header_vh:I
 
-    const/16 p2, 0x1d
+    int-to-long v0, v0
 
-    invoke-direct {p1, p2}, Lyxe;-><init>(I)V
+    sput-wide v0, Lrbb;->d:J
 
-    iput-object p1, p0, Lrbb;->k:Lyxe;
+    sget v0, Lb0d;->oneme_settings_ringtone_section_system:I
 
-    new-instance p1, Lmc8;
+    int-to-long v0, v0
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lrbb;->n:Lmc8;
-
-    new-instance p1, Lgq0;
-
-    const/4 p2, 0x0
-
-    invoke-direct {p1, p2}, Lgq0;-><init>(I)V
-
-    iput-object p1, p0, Lrbb;->o:Lgq0;
-
-    new-instance p1, Lgq0;
-
-    invoke-direct {p1, p2}, Lgq0;-><init>(I)V
-
-    iput-object p1, p0, Lrbb;->p:Lgq0;
+    sput-wide v0, Lrbb;->e:J
 
     return-void
 .end method

@@ -1,129 +1,517 @@
-.class public final Lzei;
-.super Lj7i;
+.class public abstract Lzei;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lbai;
 
 
 # static fields
-.field private static final zzb:Lzei;
+.field public static final a:Landroid/util/SparseArray;
 
+.field public static final b:Landroid/util/SparseArray;
 
-# instance fields
-.field private zzd:I
+.field public static final c:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field private zze:I
-
-.field private zzf:Loki;
-
-.field private zzg:Lhji;
-
-.field private zzh:Lmji;
+.field public static final d:Ljava/util/HashMap;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 16
 
-    new-instance v0, Lzei;
+    new-instance v0, Landroid/util/SparseArray;
 
-    invoke-direct {v0}, Lj7i;-><init>()V
+    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
-    sput-object v0, Lzei;->zzb:Lzei;
+    sput-object v0, Lzei;->a:Landroid/util/SparseArray;
 
-    const-class v1, Lzei;
+    new-instance v1, Landroid/util/SparseArray;
 
-    invoke-static {v1, v0}, Lj7i;->h(Ljava/lang/Class;Lj7i;)V
+    invoke-direct {v1}, Landroid/util/SparseArray;-><init>()V
+
+    sput-object v1, Lzei;->b:Landroid/util/SparseArray;
+
+    new-instance v2, Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-direct {v2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    sput-object v2, Lzei;->c:Ljava/util/concurrent/atomic/AtomicReference;
+
+    sget-object v2, Le7j;->b:Le7j;
+
+    const/4 v3, -0x1
+
+    invoke-virtual {v0, v3, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const/4 v2, 0x1
+
+    sget-object v3, Le7j;->c:Le7j;
+
+    invoke-virtual {v0, v2, v3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const/4 v3, 0x2
+
+    sget-object v4, Le7j;->d:Le7j;
+
+    invoke-virtual {v0, v3, v4}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const/4 v4, 0x4
+
+    sget-object v5, Le7j;->o:Le7j;
+
+    invoke-virtual {v0, v4, v5}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const/16 v5, 0x8
+
+    sget-object v6, Le7j;->X:Le7j;
+
+    invoke-virtual {v0, v5, v6}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const/16 v6, 0x10
+
+    sget-object v7, Le7j;->Y:Le7j;
+
+    invoke-virtual {v0, v6, v7}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const/16 v7, 0x20
+
+    sget-object v8, Le7j;->Z:Le7j;
+
+    invoke-virtual {v0, v7, v8}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const/16 v8, 0x40
+
+    sget-object v9, Le7j;->s0:Le7j;
+
+    invoke-virtual {v0, v8, v9}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const/16 v9, 0x80
+
+    sget-object v10, Le7j;->t0:Le7j;
+
+    invoke-virtual {v0, v9, v10}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const/16 v10, 0x100
+
+    sget-object v11, Le7j;->u0:Le7j;
+
+    invoke-virtual {v0, v10, v11}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const/16 v11, 0x200
+
+    sget-object v12, Le7j;->v0:Le7j;
+
+    invoke-virtual {v0, v11, v12}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const/16 v12, 0x400
+
+    sget-object v13, Le7j;->w0:Le7j;
+
+    invoke-virtual {v0, v12, v13}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const/16 v13, 0x800
+
+    sget-object v14, Le7j;->x0:Le7j;
+
+    invoke-virtual {v0, v13, v14}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const/16 v14, 0x1000
+
+    sget-object v15, Le7j;->y0:Le7j;
+
+    invoke-virtual {v0, v14, v15}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    sget-object v0, Lf7j;->b:Lf7j;
+
+    const/4 v15, 0x0
+
+    invoke-virtual {v1, v15, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    sget-object v0, Lf7j;->c:Lf7j;
+
+    invoke-virtual {v1, v2, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    sget-object v0, Lf7j;->d:Lf7j;
+
+    invoke-virtual {v1, v3, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    sget-object v0, Lf7j;->o:Lf7j;
+
+    const/4 v15, 0x3
+
+    invoke-virtual {v1, v15, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    sget-object v0, Lf7j;->X:Lf7j;
+
+    invoke-virtual {v1, v4, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    sget-object v0, Lf7j;->Y:Lf7j;
+
+    const/4 v15, 0x5
+
+    invoke-virtual {v1, v15, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    sget-object v0, Lf7j;->Z:Lf7j;
+
+    const/4 v15, 0x6
+
+    invoke-virtual {v1, v15, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    sget-object v0, Lf7j;->s0:Lf7j;
+
+    const/4 v15, 0x7
+
+    invoke-virtual {v1, v15, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    sget-object v0, Lf7j;->t0:Lf7j;
+
+    invoke-virtual {v1, v5, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    sget-object v0, Lf7j;->u0:Lf7j;
+
+    const/16 v15, 0x9
+
+    invoke-virtual {v1, v15, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    sget-object v0, Lf7j;->v0:Lf7j;
+
+    const/16 v15, 0xa
+
+    invoke-virtual {v1, v15, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    sget-object v0, Lf7j;->w0:Lf7j;
+
+    const/16 v15, 0xb
+
+    invoke-virtual {v1, v15, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    sget-object v0, Lf7j;->x0:Lf7j;
+
+    const/16 v15, 0xc
+
+    invoke-virtual {v1, v15, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    sput-object v0, Lzei;->d:Ljava/util/HashMap;
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    sget-object v2, Lrbj;->b:Lrbj;
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    sget-object v2, Lrbj;->c:Lrbj;
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    sget-object v2, Lrbj;->d:Lrbj;
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    sget-object v2, Lrbj;->o:Lrbj;
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    sget-object v2, Lrbj;->X:Lrbj;
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    sget-object v2, Lrbj;->Y:Lrbj;
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    sget-object v2, Lrbj;->Z:Lrbj;
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    sget-object v2, Lrbj;->s0:Lrbj;
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    sget-object v2, Lrbj;->t0:Lrbj;
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    sget-object v2, Lrbj;->u0:Lrbj;
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {v12}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    sget-object v2, Lrbj;->v0:Lrbj;
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    sget-object v2, Lrbj;->w0:Lrbj;
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {v14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    sget-object v2, Lrbj;->x0:Lrbj;
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
 
+.method public static a(Loi0;)Lsbj;
+    .locals 4
 
-# virtual methods
-.method public final m(ILj7i;)Ljava/lang/Object;
-    .locals 6
+    iget p0, p0, Loi0;->a:I
 
-    add-int/lit8 p1, p1, -0x1
+    new-instance v0, Lc0;
 
-    if-eqz p1, :cond_4
+    invoke-direct {v0}, Lc0;-><init>()V
 
-    const/4 p2, 0x2
+    sget-object v1, Lzei;->d:Ljava/util/HashMap;
 
-    if-eq p1, p2, :cond_3
+    if-nez p0, :cond_2
 
-    const/4 p2, 0x3
+    invoke-virtual {v1}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
-    if-eq p1, p2, :cond_2
+    move-result-object p0
 
-    const/4 p2, 0x4
+    if-eqz p0, :cond_1
 
-    if-eq p1, p2, :cond_1
+    iget v1, v0, Lc0;->a:I
 
-    const/4 p2, 0x5
+    invoke-interface {p0}, Ljava/util/Collection;->size()I
 
-    if-eq p1, p2, :cond_0
+    move-result v2
 
-    const/4 p1, 0x0
+    add-int/2addr v2, v1
 
-    return-object p1
+    invoke-virtual {v0, v2}, Lc0;->i(I)V
+
+    instance-of v1, p0, Lqhi;
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    sget-object p1, Lzei;->zzb:Lzei;
+    check-cast p0, Lqhi;
 
-    return-object p1
+    iget-object v1, v0, Lc0;->c:Ljava/lang/Object;
+
+    check-cast v1, [Ljava/lang/Object;
+
+    iget v2, v0, Lc0;->a:I
+
+    invoke-virtual {p0, v2, v1}, Lqhi;->a(I[Ljava/lang/Object;)I
+
+    move-result p0
+
+    iput p0, v0, Lc0;->a:I
+
+    goto :goto_3
 
     :cond_1
-    new-instance p1, Lali;
+    :goto_0
+    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    sget-object p2, Lzei;->zzb:Lzei;
+    move-result-object p0
 
-    const/16 v0, 0xf
+    :goto_1
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-direct {p1, v0, p2}, Lali;-><init>(ILj7i;)V
+    move-result v1
 
-    return-object p1
+    if-eqz v1, :cond_4
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lc0;->h(Ljava/lang/Object;)V
+
+    goto :goto_1
 
     :cond_2
-    new-instance p1, Lzei;
+    invoke-virtual {v1}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
-    invoke-direct {p1}, Lj7i;-><init>()V
+    move-result-object v1
 
-    return-object p1
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
 
     :cond_3
-    sget-object v2, Lcxh;->r:Lcxh;
+    :goto_2
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    const-string v4, "zzg"
+    move-result v2
 
-    const-string v5, "zzh"
+    if-eqz v2, :cond_4
 
-    const-string v0, "zzd"
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    const-string v1, "zze"
+    move-result-object v2
 
-    const-string v3, "zzf"
+    check-cast v2, Ljava/util/Map$Entry;
 
-    filled-new-array/range {v0 .. v5}, [Ljava/lang/Object;
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v3
 
-    sget-object p2, Lzei;->zzb:Lzei;
+    check-cast v3, Ljava/lang/Integer;
 
-    new-instance v0, Lwai;
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
-    const-string v1, "\u0001\u0004\u0000\u0001\u0001\u0005\u0004\u0000\u0000\u0000\u0001\u180c\u0000\u0002\u1009\u0001\u0003\u1009\u0002\u0005\u1009\u0003"
+    move-result v3
 
-    invoke-direct {v0, p2, v1, p1}, Lwai;-><init>(Lo3i;Ljava/lang/String;[Ljava/lang/Object;)V
+    and-int/2addr v3, p0
 
-    return-object v0
+    if-eqz v3, :cond_3
+
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lrbj;
+
+    invoke-virtual {v0, v2}, Lc0;->h(Ljava/lang/Object;)V
+
+    goto :goto_2
 
     :cond_4
-    const/4 p1, 0x1
+    :goto_3
+    new-instance p0, Ls6b;
 
-    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p1
+    invoke-virtual {v0}, Lc0;->j()Lcji;
 
-    return-object p1
+    move-result-object v0
+
+    iput-object v0, p0, Ls6b;->a:Ljava/lang/Object;
+
+    new-instance v0, Lsbj;
+
+    invoke-direct {v0, p0}, Lsbj;-><init>(Ls6b;)V
+
+    return-object v0
+.end method
+
+.method public static b(Lfcj;Lu6j;)V
+    .locals 2
+
+    new-instance v0, Lulc;
+
+    const/16 v1, 0xf
+
+    invoke-direct {v0, v1, p1}, Lulc;-><init>(ILjava/lang/Object;)V
+
+    sget-object p1, Lv6j;->x0:Lv6j;
+
+    invoke-virtual {p0, v0, p1}, Lfcj;->b(Lecj;Lv6j;)V
+
+    return-void
+.end method
+
+.method public static c()Z
+    .locals 3
+
+    sget-object v0, Lzei;->c:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    invoke-static {}, Lo1a;->c()Lo1a;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lo1a;->b()Landroid/content/Context;
+
+    move-result-object v1
+
+    sget-object v2, Lg3j;->Z:Lcji;
+
+    const-string v2, "com.google.mlkit.dynamite.barcode"
+
+    invoke-static {v1, v2}, Ld85;->a(Landroid/content/Context;Ljava/lang/String;)I
+
+    move-result v1
+
+    if-lez v1, :cond_1
+
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x0
+
+    :goto_0
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+
+    return v1
 .end method

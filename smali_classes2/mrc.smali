@@ -1,14 +1,21 @@
-.class public abstract Lmrc;
-.super Ljava/lang/Object;
+.class public final Lmrc;
+.super Lxp;
+.source "SourceFile"
 
 
 # static fields
-.field public static profile_chat_members_list_toolbar_subtitle:I = 0x7f110036
+.field public static final a:Lmrc;
 
-.field public static profile_members_list_delete_from_channel_snackbar:I = 0x7f110038
 
-.field public static profile_members_list_delete_from_chat_snackbar:I = 0x7f110039
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.field public static profile_members_list_restore_in_channel_snackbar:I = 0x7f11003a
+    new-instance v0, Lmrc;
 
-.field public static profile_members_list_restore_in_chat_snackbar:I = 0x7f11003b
+    invoke-direct {v0}, Lxp;-><init>()V
+
+    sput-object v0, Lmrc;->a:Lmrc;
+
+    return-void
+.end method

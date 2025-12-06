@@ -1,200 +1,101 @@
-.class public final Lfbh;
+.class public final synthetic Lfbh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final Companion:Lebh;
-
-.field public static final c:[Lur7;
+# interfaces
+.implements Lgu3;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final b:Lkbh;
+.field public final synthetic b:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Lebh;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lfbh;->Companion:Lebh;
-
-    sget-object v0, Lkbh;->Companion:Ljbh;
-
-    invoke-virtual {v0}, Ljbh;->serializer()Lur7;
-
-    move-result-object v0
-
-    const/4 v1, 0x2
-
-    new-array v1, v1, [Lur7;
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    aput-object v2, v1, v3
-
-    const/4 v2, 0x1
-
-    aput-object v0, v1, v2
-
-    sput-object v1, Lfbh;->c:[Lur7;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(ILjava/lang/String;Lkbh;)V
-    .locals 2
-
-    and-int/lit8 v0, p1, 0x3
-
-    const/4 v1, 0x3
-
-    if-ne v1, v0, :cond_0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Lfbh;->a:Ljava/lang/String;
-
-    iput-object p3, p0, Lfbh;->b:Lkbh;
-
-    return-void
-
-    :cond_0
-    sget-object p2, Ldbh;->a:Ldbh;
-
-    invoke-virtual {p2}, Ldbh;->d()Lb3e;
-
-    move-result-object p2
-
-    invoke-static {p1, v1, p2}, Lwui;->c(IILb3e;)V
-
-    const/4 p1, 0x0
-
-    throw p1
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Lkbh;)V
+.method public synthetic constructor <init>(Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;I)V
     .locals 0
 
-    .line 2
+    iput p2, p0, Lfbh;->a:I
+
+    iput-object p1, p0, Lfbh;->b:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    iput-object p1, p0, Lfbh;->a:Ljava/lang/String;
-
-    .line 4
-    iput-object p2, p0, Lfbh;->b:Lkbh;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final accept(Ljava/lang/Object;)V
+    .locals 6
+
+    iget v0, p0, Lfbh;->a:I
+
+    iget-object v1, p0, Lfbh;->b:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Landroid/graphics/Bitmap;
+
+    sget v0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->D0:I
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    iput-wide v2, v1, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->A0:J
+
+    iget-object v0, v1, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->t0:Lv08;
+
+    invoke-static {v0}, Lbwd;->b(Lpy4;)V
+
+    iget-object v0, v1, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->c:Lru/ok/messages/video/widgets/VideoFramePreview;
+
+    iget-object v1, v0, Lru/ok/messages/video/widgets/VideoFramePreview;->o:Landroidx/appcompat/widget/AppCompatImageView;
+
+    invoke-virtual {v1, p1}, Landroidx/appcompat/widget/AppCompatImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v0, p1}, Lru/ok/messages/video/widgets/VideoFramePreview;->a(Z)V
+
+    return-void
+
+    :pswitch_0
+    check-cast p1, Ljava/lang/Long;
+
+    sget p1, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->D0:I
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    iget-wide v4, v1, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->A0:J
+
+    sub-long/2addr v2, v4
+
+    const-wide/16 v4, 0x3e8
+
+    cmp-long p1, v2, v4
+
+    if-lez p1, :cond_0
+
+    iget-object p1, v1, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->c:Lru/ok/messages/video/widgets/VideoFramePreview;
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
-
-    return v0
+    invoke-virtual {p1, v0}, Lru/ok/messages/video/widgets/VideoFramePreview;->a(Z)V
 
     :cond_0
-    instance-of v1, p1, Lfbh;
+    return-void
 
-    const/4 v2, 0x0
+    nop
 
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lfbh;
-
-    iget-object v1, p0, Lfbh;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lfbh;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lfbh;->b:Lkbh;
-
-    iget-object p1, p1, Lfbh;->b:Lkbh;
-
-    if-eq v1, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lfbh;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lfbh;->b:Lkbh;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "WebAppHapticFeedbackResponse(requestId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lfbh;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", status="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lfbh;->b:Lkbh;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

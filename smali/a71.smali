@@ -1,68 +1,23 @@
-.class public final La71;
-.super Lv2h;
+.class public interface abstract La71;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lc71;
-
-
-# static fields
-.field public static final c:La71;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, La71;
-
-    sget v1, Lisc;->call_main_speaker_phone_disabled:I
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v2, v1}, Lv2h;-><init>(Ljava/lang/Long;I)V
-
-    sput-object v0, La71;->c:La71;
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, La71;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
+.method public abstract a()I
 .end method
 
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x6535960a
-
-    return v0
+.method public abstract b()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.method public abstract getContentDescription()Ls5g;
+.end method
 
-    const-string v0, "Muted"
+.method public abstract getIcon()I
+.end method
 
-    return-object v0
+.method public abstract getId()I
+.end method
+
+.method public abstract getTitle()Ls5g;
 .end method

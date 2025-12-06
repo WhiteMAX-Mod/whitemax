@@ -1,10 +1,27 @@
-.class public abstract Ln6i;
-.super Lmuh;
+.class public final Ln6i;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lu8i;
+
+# instance fields
+.field public final a:I
+
+.field public final b:[B
+
+.field public final c:Z
 
 
-# static fields
-.field public static final synthetic d:I
+# direct methods
+.method public constructor <init>(IZ[B)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Ln6i;->a:I
+
+    iput-object p3, p0, Ln6i;->b:[B
+
+    iput-boolean p2, p0, Ln6i;->c:Z
+
+    return-void
+.end method

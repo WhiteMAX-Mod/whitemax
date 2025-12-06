@@ -1,130 +1,73 @@
 .class public final Leq7;
-.super Ljava/lang/Object;
+.super Lq44;
 .source "SourceFile"
-
-# interfaces
-.implements Lnb5;
-
-
-# static fields
-.field public static final X:Lbq7;
-
-.field public static final Y:Lcq7;
-
-.field public static final Z:Lcq7;
-
-.field public static final q0:Ldq7;
 
 
 # instance fields
-.field public final a:Ljava/util/HashMap;
+.field public final synthetic X:Ljava/lang/Object;
 
-.field public final b:Ljava/util/HashMap;
+.field public d:I
 
-.field public final c:Lbq7;
-
-.field public o:Z
+.field public final synthetic o:Lsm6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lx74;Lsm6;Ljava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Lbq7;
+    iput-object p3, p0, Leq7;->o:Lsm6;
 
-    const/4 v1, 0x0
+    iput-object p4, p0, Leq7;->X:Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Lbq7;-><init>(I)V
-
-    sput-object v0, Leq7;->X:Lbq7;
-
-    new-instance v0, Lcq7;
-
-    invoke-direct {v0, v1}, Lcq7;-><init>(I)V
-
-    sput-object v0, Leq7;->Y:Lcq7;
-
-    new-instance v0, Lcq7;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lcq7;-><init>(I)V
-
-    sput-object v0, Leq7;->Z:Lcq7;
-
-    new-instance v0, Ldq7;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Leq7;->q0:Ldq7;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 4
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Leq7;->a:Ljava/util/HashMap;
-
-    new-instance v1, Ljava/util/HashMap;
-
-    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v1, p0, Leq7;->b:Ljava/util/HashMap;
-
-    sget-object v2, Leq7;->X:Lbq7;
-
-    iput-object v2, p0, Leq7;->c:Lbq7;
-
-    const/4 v2, 0x0
-
-    iput-boolean v2, p0, Leq7;->o:Z
-
-    sget-object v2, Leq7;->Y:Lcq7;
-
-    const-class v3, Ljava/lang/String;
-
-    invoke-virtual {v1, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v0, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v2, Leq7;->Z:Lcq7;
-
-    const-class v3, Ljava/lang/Boolean;
-
-    invoke-virtual {v1, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v0, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v2, Leq7;->q0:Ldq7;
-
-    const-class v3, Ljava/util/Date;
-
-    invoke-virtual {v1, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v0, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {p0, p2, p1}, Lq44;-><init>(Lx74;Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Ljava/lang/Class;Ltha;)Lnb5;
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    iget-object v0, p0, Leq7;->a:Ljava/util/HashMap;
+    iget v0, p0, Leq7;->d:I
 
-    invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v1, 0x2
 
-    iget-object p2, p0, Leq7;->b:Ljava/util/HashMap;
+    const/4 v2, 0x1
 
-    invoke-virtual {p2, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v0, :cond_1
 
-    return-object p0
+    if-ne v0, v2, :cond_0
+
+    iput v1, p0, Leq7;->d:I
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    return-object p1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "This coroutine had already completed"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    iput v2, p0, Leq7;->d:I
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Leq7;->o:Lsm6;
+
+    invoke-static {v1, p1}, Luog;->d(ILjava/lang/Object;)V
+
+    iget-object v0, p0, Leq7;->X:Ljava/lang/Object;
+
+    invoke-interface {p1, v0, p0}, Lsm6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

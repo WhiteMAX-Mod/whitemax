@@ -1,221 +1,261 @@
 .class public final Lrn8;
-.super Lsgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lrn8;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/chatscreen/mediabar/MediaBarWidget;
+.field public final a:Lqn8;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/MediaBarWidget;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lf18;
+
+    const/16 v1, 0x1d
+
+    invoke-direct {v0, v1}, Lf18;-><init>(I)V
+
+    sput-object v0, Lrn8;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 4
+
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    const/4 p1, 0x0
+
+    .line 5
+    iput-object p1, p0, Lrn8;->a:Lqn8;
+
+    return-void
+
+    .line 6
+    :cond_0
+    new-instance v0, Lqn8;
+
+    .line 7
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    .line 8
+    invoke-virtual {p1}, Landroid/os/Parcel;->readDouble()D
+
+    move-result-wide v2
+
+    .line 9
+    iput-wide v2, v0, Lqn8;->a:D
+
+    .line 10
+    invoke-virtual {p1}, Landroid/os/Parcel;->readDouble()D
+
+    move-result-wide v2
+
+    .line 11
+    iput-wide v2, v0, Lqn8;->b:D
+
+    .line 12
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    if-ne v2, v1, :cond_1
+
+    move v2, v1
+
+    goto :goto_0
+
+    :cond_1
+    move v2, v3
+
+    .line 13
+    :goto_0
+    iput-boolean v2, v0, Lqn8;->c:Z
+
+    .line 14
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
+    move-result v2
+
+    if-ne v2, v1, :cond_2
+
+    move v2, v1
+
+    goto :goto_1
+
+    :cond_2
+    move v2, v3
+
+    .line 15
+    :goto_1
+    iput-boolean v2, v0, Lqn8;->d:Z
+
+    .line 16
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
+    move-result v2
+
+    if-ne v2, v1, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    move v1, v3
+
+    .line 17
+    :goto_2
+    iput-boolean v1, v0, Lqn8;->e:Z
+
+    .line 18
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    .line 19
+    iput v1, v0, Lqn8;->f:I
+
+    .line 20
+    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
+
+    move-result v1
+
+    .line 21
+    iput v1, v0, Lqn8;->g:F
+
+    .line 22
+    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
+
+    move-result v1
+
+    .line 23
+    iput v1, v0, Lqn8;->h:F
+
+    .line 24
+    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
+
+    move-result p1
+
+    .line 25
+    iput p1, v0, Lqn8;->i:F
+
+    .line 26
+    new-instance p1, Lqn8;
+
+    invoke-direct {p1, v0}, Lqn8;-><init>(Lqn8;)V
+
+    .line 27
+    iput-object p1, p0, Lrn8;->a:Lqn8;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lqn8;)V
     .locals 0
 
-    iput-object p2, p0, Lrn8;->Y:Lone/me/chatscreen/mediabar/MediaBarWidget;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    .line 2
+    iput-object p1, p0, Lrn8;->a:Lqn8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final describeContents()I
+    .locals 1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x0
 
-    invoke-virtual {p0, p1, p2}, Lrn8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lrn8;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lrn8;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
-    new-instance v0, Lrn8;
+    iget-object p2, p0, Lrn8;->a:Lqn8;
 
-    iget-object v1, p0, Lrn8;->Y:Lone/me/chatscreen/mediabar/MediaBarWidget;
-
-    invoke-direct {v0, p2, v1}, Lrn8;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/MediaBarWidget;)V
-
-    iput-object p1, v0, Lrn8;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
-
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lrn8;->X:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
+    if-nez p2, :cond_0
 
     const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lrn8;->Y:Lone/me/chatscreen/mediabar/MediaBarWidget;
-
-    if-nez p1, :cond_1
-
-    sget-object p1, Lone/me/chatscreen/mediabar/MediaBarWidget;->b1:[Ltr7;
-
-    invoke-virtual {v2}, Lone/me/chatscreen/mediabar/MediaBarWidget;->R0()Lbn8;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lbn8;->t()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    move p1, v1
+    const/4 v0, 0x0
 
-    goto :goto_1
+    :goto_0
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
+
+    if-eqz p2, :cond_1
+
+    iget-wide v0, p2, Lqn8;->a:D
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
+
+    iget-wide v0, p2, Lqn8;->b:D
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
+
+    iget-boolean v0, p2, Lqn8;->c:Z
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
+
+    iget-boolean v0, p2, Lqn8;->d:Z
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
+
+    iget-boolean v0, p2, Lqn8;->e:Z
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
+
+    iget v0, p2, Lqn8;->f:I
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget v0, p2, Lqn8;->g:F
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
+
+    iget v0, p2, Lqn8;->h:F
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
+
+    iget p2, p2, Lqn8;->i:F
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
     :cond_1
-    :goto_0
-    move p1, v0
-
-    :goto_1
-    sget-object v3, Lone/me/chatscreen/mediabar/MediaBarWidget;->b1:[Ltr7;
-
-    invoke-virtual {v2}, Lone/me/chatscreen/mediabar/MediaBarWidget;->N0()Liwb;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Liwb;->getScrollState()Lgwb;
-
-    move-result-object v3
-
-    sget-object v4, Lgwb;->a:Lgwb;
-
-    if-ne v3, v4, :cond_2
-
-    move v3, v0
-
-    goto :goto_2
-
-    :cond_2
-    move v3, v1
-
-    :goto_2
-    invoke-virtual {v2}, Lone/me/chatscreen/mediabar/MediaBarWidget;->M0()Lgd9;
-
-    move-result-object v4
-
-    const/16 v5, 0x8
-
-    if-eqz p1, :cond_3
-
-    move v6, v1
-
-    goto :goto_3
-
-    :cond_3
-    move v6, v5
-
-    :goto_3
-    invoke-virtual {v4, v6}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v4, v2, Lone/me/chatscreen/mediabar/MediaBarWidget;->N0:Lwn0;
-
-    sget-object v6, Lone/me/chatscreen/mediabar/MediaBarWidget;->b1:[Ltr7;
-
-    const/16 v7, 0x10
-
-    aget-object v6, v6, v7
-
-    invoke-virtual {v4}, Lwn0;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Le72;
-
-    if-nez p1, :cond_4
-
-    goto :goto_4
-
-    :cond_4
-    move v1, v5
-
-    :goto_4
-    invoke-virtual {v4, v1}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {v2}, Lone/me/chatscreen/mediabar/MediaBarWidget;->L0()Lqid;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lqid;->n()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_6
-
-    if-eqz p1, :cond_5
-
-    if-eqz v3, :cond_6
-
-    :cond_5
-    invoke-virtual {v2}, Lone/me/chatscreen/mediabar/MediaBarWidget;->R0()Lbn8;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lbn8;->v0:Lzgd;
-
-    invoke-virtual {p1, v0}, Lzgd;->A(I)V
-
-    goto :goto_5
-
-    :cond_6
-    if-eqz p1, :cond_7
-
-    if-eqz v3, :cond_8
-
-    :cond_7
-    sget p1, Lus7;->a:I
-
-    sget p1, Lus7;->c:I
-
-    invoke-static {p1}, Lus7;->b(I)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_8
-
-    iget-object p1, v2, Lone/me/chatscreen/mediabar/MediaBarWidget;->Y0:Lsc6;
-
-    invoke-virtual {p1}, Lsc6;->k()V
-
-    :cond_8
-    :goto_5
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
+    return-void
 .end method

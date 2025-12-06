@@ -1,76 +1,102 @@
-.class public abstract Lfa3;
+.class public final Lfa3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/util/logging/Logger;
+# instance fields
+.field public final a:I
+
+.field public final b:Ljava/lang/reflect/Method;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(ILjava/lang/reflect/Method;)V
+    .locals 0
 
-    const-class v0, Lfa3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    iput p1, p0, Lfa3;->a:I
 
-    move-result-object v0
+    iput-object p2, p0, Lfa3;->b:Ljava/lang/reflect/Method;
 
-    invoke-static {v0}, Ljava/util/logging/Logger;->getLogger(Ljava/lang/String;)Ljava/util/logging/Logger;
+    const/4 p1, 0x1
 
-    move-result-object v0
-
-    sput-object v0, Lfa3;->a:Ljava/util/logging/Logger;
+    invoke-virtual {p2, p1}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
 
     return-void
 .end method
 
-.method public static a(Ljava/io/Closeable;)V
-    .locals 3
 
-    if-nez p0, :cond_0
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    return-void
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
 
     :cond_0
-    :try_start_0
-    invoke-interface {p0}, Ljava/io/Closeable;->close()V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    instance-of v1, p1, Lfa3;
 
-    return-void
+    const/4 v2, 0x0
 
-    :catch_0
-    move-exception p0
+    if-nez v1, :cond_1
 
-    sget-object v0, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
+    return v2
 
-    const-string v1, "IOException thrown while closing Closeable."
+    :cond_1
+    check-cast p1, Lfa3;
 
-    sget-object v2, Lfa3;->a:Ljava/util/logging/Logger;
+    iget v1, p0, Lfa3;->a:I
 
-    invoke-virtual {v2, v0, v1, p0}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
+    iget v3, p1, Lfa3;->a:I
 
-    return-void
+    if-ne v1, v3, :cond_2
+
+    iget-object v1, p0, Lfa3;->b:Ljava/lang/reflect/Method;
+
+    invoke-virtual {v1}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-object p1, p1, Lfa3;->b:Ljava/lang/reflect/Method;
+
+    invoke-virtual {p1}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v2
 .end method
 
-.method public static b(Ljava/io/InputStream;)V
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
-    :try_start_0
-    invoke-static {p0}, Lfa3;->a(Ljava/io/Closeable;)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    iget v0, p0, Lfa3;->a:I
 
-    return-void
+    mul-int/lit8 v0, v0, 0x1f
 
-    :catch_0
-    move-exception p0
+    iget-object v1, p0, Lfa3;->b:Ljava/lang/reflect/Method;
 
-    new-instance v0, Ljava/lang/AssertionError;
+    invoke-virtual {v1}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
-    invoke-direct {v0, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+    move-result-object v1
 
-    throw v0
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method

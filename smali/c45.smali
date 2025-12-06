@@ -1,31 +1,13 @@
-.class public final Lc45;
+.class public abstract Lc45;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
-
-.field public final b:[I
-
-.field public final c:[I
-
-.field public final d:[I
-
-
 # direct methods
-.method public constructor <init>(I[I[I[I)V
+.method public static a(Landroid/graphics/Outline;Landroid/graphics/Path;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lc45;->a:I
-
-    iput-object p2, p0, Lc45;->b:[I
-
-    iput-object p3, p0, Lc45;->c:[I
-
-    iput-object p4, p0, Lc45;->d:[I
+    invoke-static {p0, p1}, Lf5;->y(Landroid/graphics/Outline;Landroid/graphics/Path;)V
 
     return-void
 .end method

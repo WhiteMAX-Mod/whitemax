@@ -2,75 +2,72 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/content/ComponentCallbacks;
-.implements Lry5;
-
 
 # instance fields
-.field public final a:Lqrb;
+.field public final a:Lnv4;
+
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lfv7;Lqs4;Ldh;Lnb9;Lzgd;Lqrb;Lpw0;Lsd2;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
+
+    invoke-static {p1}, Lc9j;->b(Landroid/content/Context;)Lnv4;
+
+    move-result-object p1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance p2, Ljava/util/HashSet;
+    iput-object p1, p0, Lhrb;->a:Lnv4;
 
-    invoke-direct {p2}, Ljava/util/HashSet;-><init>()V
+    sget-object v0, Lnv4;->d:Lnv4;
 
-    iput-object p7, p0, Lhrb;->a:Lqrb;
+    invoke-virtual {p1, v0}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
 
-    new-instance p2, Lerb;
+    move-result p1
 
-    invoke-direct {p2, p1, p0}, Lerb;-><init>(Landroid/content/Context;Lhrb;)V
+    if-ltz p1, :cond_0
 
-    invoke-static {}, Lwt4;->a()Lwt4;
+    const/4 p1, 0x1
 
-    invoke-virtual {p1, p0}, Landroid/content/Context;->registerComponentCallbacks(Landroid/content/ComponentCallbacks;)V
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    iput-boolean p1, p0, Lhrb;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onConfigurationChanged(Landroid/content/res/Configuration;)V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    return-void
-.end method
+    new-instance v0, Ljava/lang/StringBuilder;
 
-.method public onEvent(Lr43;)V
-    .locals 0
-    .annotation runtime Lzbf;
-    .end annotation
+    const-string v1, "\n        PerformanceConfig(\n            perfClass="
 
-    .line 3
-    return-void
-.end method
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.method public onEvent(Lww9;)V
-    .locals 0
-    .annotation runtime Lzbf;
-    .end annotation
+    iget-object v1, p0, Lhrb;->a:Lnv4;
 
-    .line 1
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-.method public onEvent(Lyg2;)V
-    .locals 0
-    .annotation runtime Lzbf;
-    .end annotation
+    const-string v1, ",\n        )\n    "
 
-    .line 2
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final onLowMemory()V
-    .locals 0
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return-void
+    move-result-object v0
+
+    invoke-static {v0}, Lwmf;->d(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,76 +1,66 @@
-.class public final Lza5;
-.super Ljava/lang/Object;
+.class public abstract Lza5;
+.super Lri;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Led8;
+# instance fields
+.field public v0:Lxc5;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
+# virtual methods
+.method public final onTextContextMenuItem(I)Z
+    .locals 1
 
-    new-instance v0, Led8;
+    const v0, 0x1020022
 
-    const/16 v1, 0x8
+    if-ne p1, v0, :cond_0
 
-    invoke-direct {v0, v1}, Led8;-><init>(I)V
+    const p1, 0x1020031
 
-    sput-object v0, Lza5;->a:Led8;
+    invoke-super {p0, p1}, Landroidx/appcompat/widget/AppCompatEditText;->onTextContextMenuItem(I)Z
 
-    return-void
-.end method
+    move-result p1
 
-.method public static a(Lv5b;Loke;Ljava/lang/Integer;)Ljava/lang/String;
-    .locals 2
-
-    invoke-interface {p0}, Lv5b;->getName()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "_"
-
-    if-eqz p2, :cond_0
-
-    invoke-virtual {p2}, Ljava/lang/Number;->intValue()I
-
-    move-result p2
-
-    invoke-static {p2, v0}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    goto :goto_0
+    return p1
 
     :cond_0
-    const/4 p2, 0x0
+    invoke-super {p0, p1}, Landroidx/appcompat/widget/AppCompatEditText;->onTextContextMenuItem(I)Z
 
-    :goto_0
-    if-nez p2, :cond_1
+    move-result p1
 
-    const-string p2, ""
+    return p1
+.end method
+
+.method public setReplaceTextSmiles(Z)V
+    .locals 0
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lza5;->v0:Lxc5;
+
+    if-nez p1, :cond_1
+
+    new-instance p1, Lxc5;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lza5;->v0:Lxc5;
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
+
+    return-void
+
+    :cond_0
+    iget-object p1, p0, Lza5;->v0:Lxc5;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->removeTextChangedListener(Landroid/text/TextWatcher;)V
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lza5;->v0:Lxc5;
 
     :cond_1
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

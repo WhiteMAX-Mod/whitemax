@@ -1,41 +1,60 @@
-.class public final Lqo9;
-.super Lum7;
+.class public final synthetic Lqo9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lwsf;
+.implements Landroid/widget/PopupWindow$OnDismissListener;
 
 
 # instance fields
-.field public final synthetic L0:Lone/me/messages/list/ui/MessagesListWidget;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/messages/list/ui/MessagesListWidget;Liif;)V
+.method public synthetic constructor <init>(Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
     .locals 0
 
-    iput-object p1, p0, Lqo9;->L0:Lone/me/messages/list/ui/MessagesListWidget;
+    iput p2, p0, Lqo9;->a:I
 
-    invoke-direct {p0, p2}, Lum7;-><init>(Ltm7;)V
+    iput-object p1, p0, Lqo9;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onThemeChanged(Lv5b;)V
-    .locals 1
+.method public final onDismiss()V
+    .locals 2
 
-    iget-object v0, p0, Lqo9;->L0:Lone/me/messages/list/ui/MessagesListWidget;
+    iget v0, p0, Lqo9;->a:I
 
-    iget-object v0, v0, Lone/me/messages/list/ui/MessagesListWidget;->y0:Liif;
+    packed-switch v0, :pswitch_data_0
 
-    if-nez v0, :cond_0
+    iget-object v0, p0, Lqo9;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    :cond_0
-    invoke-virtual {v0, p1}, Liif;->onThemeChanged(Lv5b;)V
+    iput-object v1, v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->G0:Lncg;
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lqo9;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
+
+    const/4 v1, 0x0
+
+    iput-object v1, v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->G0:Lncg;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

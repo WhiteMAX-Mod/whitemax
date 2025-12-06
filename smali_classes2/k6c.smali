@@ -1,82 +1,26 @@
 .class public final Lk6c;
-.super Lsgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
-
-
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lu6c;
-
-
-# direct methods
-.method public constructor <init>(Lu6c;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lk6c;->Y:Lu6c;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.implements Landroid/os/Parcelable$Creator;
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .locals 1
 
-    check-cast p1, Le5a;
+    new-instance v0, Ll6c;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lk6c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lk6c;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lk6c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lk6c;
-
-    iget-object v1, p0, Lk6c;->Y:Lu6c;
-
-    invoke-direct {v0, v1, p2}, Lk6c;-><init>(Lu6c;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lk6c;->X:Ljava/lang/Object;
+    invoke-direct {v0, p1}, Ll6c;-><init>(Landroid/os/Parcel;)V
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final newArray(I)[Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lk6c;->X:Ljava/lang/Object;
-
-    check-cast p1, Le5a;
-
-    iget-object v0, p0, Lk6c;->Y:Lu6c;
-
-    iget-object v0, v0, Lu6c;->v0:Lxe5;
-
-    invoke-static {v0, p1}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
-
-    sget-object p1, Lccg;->a:Lccg;
+    new-array p1, p1, [Ll6c;
 
     return-object p1
 .end method

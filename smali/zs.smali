@@ -1,6 +1,10 @@
 .class public final Lzs;
-.super Ljava/util/AbstractSet;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Iterable;
+.implements Lmy7;
 
 
 # instance fields
@@ -10,182 +14,57 @@
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/util/Map;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    .line 1
     iput p1, p0, Lzs;->a:I
 
     iput-object p2, p0, Lzs;->b:Ljava/lang/Object;
 
-    invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
-
-    return-void
-.end method
-
-.method public constructor <init>([Lyig;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lzs;->a:I
-
-    .line 2
-    invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
-
-    .line 3
-    iput-object p1, p0, Lzs;->b:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public bridge synthetic add(Ljava/lang/Object;)Z
-    .locals 2
-
-    iget v0, p0, Lzs;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :pswitch_0
-    check-cast p1, Ljava/util/Map$Entry;
-
-    invoke-virtual {p0, p1}, Lzs;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
+.method public a(Ljava/lang/String;)Z
+    .locals 5
 
     iget-object v0, p0, Lzs;->b:Ljava/lang/Object;
 
-    check-cast v0, Ldci;
+    check-cast v0, [Lu97;
 
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Comparable;
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-virtual {v0, v1, p1}, Ldci;->b(Ljava/lang/Comparable;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public clear()V
-    .locals 1
-
-    iget v0, p0, Lzs;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Ljava/util/AbstractCollection;->clear()V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lzs;->b:Ljava/lang/Object;
-
-    check-cast v0, Ldci;
-
-    invoke-virtual {v0}, Ldci;->clear()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public contains(Ljava/lang/Object;)Z
-    .locals 3
-
-    iget v0, p0, Lzs;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->contains(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :pswitch_0
-    check-cast p1, Ljava/util/Map$Entry;
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lzs;->b:Ljava/lang/Object;
-
-    check-cast v1, Ldci;
-
-    invoke-virtual {v1, v0}, Ldci;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    const/4 v1, 0x1
-
-    if-eq v0, p1, :cond_1
+    array-length v1, v0
 
     const/4 v2, 0x0
 
-    if-eqz v0, :cond_0
+    move v3, v2
 
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    :goto_0
+    if-ge v3, v1, :cond_1
 
-    move-result p1
+    aget-object v4, v0, v3
 
-    if-eqz p1, :cond_0
+    iget-object v4, v4, Lu97;->a:Ljava/lang/String;
+
+    invoke-virtual {v4, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    :cond_0
-    move v1, v2
-
     :cond_1
-    :goto_0
-    return v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
+    return v2
 .end method
 
 .method public final iterator()Ljava/util/Iterator;
@@ -195,139 +74,125 @@
 
     packed-switch v0, :pswitch_data_0
 
-    new-instance v0, Llci;
+    new-instance v0, Lf2;
 
     iget-object v1, p0, Lzs;->b:Ljava/lang/Object;
 
-    check-cast v1, Ldci;
+    check-cast v1, Lxg5;
 
-    invoke-direct {v0, v1}, Llci;-><init>(Ldci;)V
+    invoke-direct {v0, v1}, Lf2;-><init>(Lxg5;)V
 
     return-object v0
 
     :pswitch_0
-    new-instance v0, Llb7;
+    iget-object v0, p0, Lzs;->b:Ljava/lang/Object;
 
-    iget-object v1, p0, Lzs;->b:Ljava/lang/Object;
+    check-cast v0, Lzde;
 
-    check-cast v1, [Lyig;
+    invoke-interface {v0}, Lzde;->iterator()Ljava/util/Iterator;
 
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, v2}, Llb7;-><init>([Lyig;I)V
+    move-result-object v0
 
     return-object v0
 
     :pswitch_1
-    new-instance v0, Lct;
+    new-instance v0, Lz55;
 
     iget-object v1, p0, Lzs;->b:Ljava/lang/Object;
 
-    check-cast v1, Let;
+    check-cast v1, Lm2;
 
-    invoke-direct {v0, v1}, Lct;-><init>(Let;)V
+    invoke-virtual {v1}, Lm2;->invoke()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/util/Iterator;
+
+    invoke-direct {v0, v1}, Lz55;-><init>(Ljava/util/Iterator;)V
 
     return-object v0
 
+    :pswitch_2
+    iget-object v0, p0, Lzs;->b:Ljava/lang/Object;
+
+    check-cast v0, [Lu97;
+
+    new-instance v1, Lf2;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v1, v2, v0}, Lf2;-><init>(ILjava/lang/Object;)V
+
+    return-object v1
+
+    :pswitch_3
+    iget-object v0, p0, Lzs;->b:Ljava/lang/Object;
+
+    check-cast v0, [Ljava/lang/Object;
+
+    new-instance v1, Lf2;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v1, v2, v0}, Lf2;-><init>(ILjava/lang/Object;)V
+
+    return-object v1
+
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method
 
-.method public remove(Ljava/lang/Object;)Z
-    .locals 1
+.method public toString()Ljava/lang/String;
+    .locals 4
 
     iget v0, p0, Lzs;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
+    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    move-result p1
+    move-result-object v0
 
-    return p1
-
-    :pswitch_0
-    check-cast p1, Ljava/util/Map$Entry;
-
-    invoke-virtual {p0, p1}, Lzs;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lzs;->b:Ljava/lang/Object;
-
-    check-cast v0, Ldci;
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ldci;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final size()I
-    .locals 1
-
-    iget v0, p0, Lzs;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lzs;->b:Ljava/lang/Object;
-
-    check-cast v0, Ldci;
-
-    invoke-virtual {v0}, Ldci;->size()I
-
-    move-result v0
-
-    return v0
+    return-object v0
 
     :pswitch_0
-    iget-object v0, p0, Lzs;->b:Ljava/lang/Object;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    check-cast v0, [Lyig;
+    const-string v1, "["
 
-    array-length v0, v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    div-int/lit8 v0, v0, 0x2
+    iget-object v1, p0, Lzs;->b:Ljava/lang/Object;
 
-    return v0
+    check-cast v1, [Lu97;
 
-    :pswitch_1
-    iget-object v0, p0, Lzs;->b:Ljava/lang/Object;
+    const-string v2, ", "
 
-    check-cast v0, Let;
+    const/16 v3, 0x3e
 
-    iget v0, v0, Lzoe;->c:I
+    invoke-static {v1, v2, v3}, Lys;->A([Ljava/lang/Object;Ljava/lang/String;I)Ljava/lang/String;
 
-    return v0
+    move-result-object v1
 
-    nop
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x5d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 
     :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
+    .packed-switch 0x1
         :pswitch_0
     .end packed-switch
 .end method

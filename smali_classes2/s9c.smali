@@ -1,132 +1,147 @@
 .class public final Ls9c;
-.super Lsgf;
+.super Lrj0;
 .source "SourceFile"
 
-# interfaces
-.implements Lzi6;
+
+# static fields
+.field public static final X:Lpzf;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic c:I
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final d:J
 
-.field public final synthetic Z:La4c;
-
-.field public final synthetic q0:Lu9c;
+.field public final o:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(La4c;Lkotlin/coroutines/Continuation;Lu9c;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Ls9c;->Z:La4c;
+    new-instance v0, Lpzf;
 
-    iput-object p3, p0, Ls9c;->q0:Lu9c;
+    const-string v1, "privacy.restricted"
 
-    const/4 p1, 0x2
+    const/4 v2, 0x0
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1, v2, v2}, Lpzf;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v0, Ls9c;->X:Lpzf;
+
+    return-void
+.end method
+
+.method public constructor <init>(JLjava/util/List;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Ls9c;->c:I
+
+    .line 4
+    sget-object v0, Ls9c;->X:Lpzf;
+
+    invoke-direct {p0, v0}, Lrj0;-><init>(Lpzf;)V
+
+    .line 5
+    iput-wide p1, p0, Ls9c;->d:J
+
+    .line 6
+    iput-object p3, p0, Ls9c;->o:Ljava/util/List;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lpzf;JLjava/util/List;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Ls9c;->c:I
+
+    .line 1
+    invoke-direct {p0, p1}, Lrj0;-><init>(Lpzf;)V
+
+    .line 2
+    iput-wide p2, p0, Ls9c;->d:J
+
+    .line 3
+    iput-object p4, p0, Ls9c;->o:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lvy5;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ls9c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ls9c;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Ls9c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final toString()Ljava/lang/String;
     .locals 3
 
-    new-instance v0, Ls9c;
+    iget v0, p0, Ls9c;->c:I
 
-    iget-object v1, p0, Ls9c;->Z:La4c;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v2, p0, Ls9c;->q0:Lu9c;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1, p2, v2}, Ls9c;-><init>(La4c;Lkotlin/coroutines/Continuation;Lu9c;)V
+    const-string v1, "ControlMessageAddError{chatId="
 
-    iput-object p1, v0, Ls9c;->Y:Ljava/lang/Object;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return-object v0
-.end method
+    iget-wide v1, p0, Ls9c;->d:J
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iget v0, p0, Ls9c;->X:I
+    const-string v1, ", contactIds="
 
-    const/4 v1, 0x1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_1
+    iget-object v1, p0, Ls9c;->o:Ljava/util/List;
 
-    if-ne v0, v1, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    const/16 v1, 0x7d
 
-    goto :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ls9c;->Y:Ljava/lang/Object;
-
-    check-cast p1, Lvy5;
-
-    new-instance v0, Lec2;
-
-    iget-object v2, p0, Ls9c;->q0:Lu9c;
-
-    const/16 v3, 0x9
-
-    invoke-direct {v0, p1, v2, v3}, Lec2;-><init>(Lvy5;Ljava/lang/Object;I)V
-
-    iput v1, p0, Ls9c;->X:I
-
-    iget-object p1, p0, Ls9c;->Z:La4c;
-
-    invoke-virtual {p1, v0, p0}, La4c;->d(Lvy5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lr54;->a:Lr54;
-
-    if-ne p1, v0, :cond_2
+    move-result-object v0
 
     return-object v0
 
-    :cond_2
-    :goto_0
-    sget-object p1, Lccg;->a:Lccg;
+    :pswitch_0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return-object p1
+    const-string v1, "PrivacyRestrictedError{chatId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Ls9c;->d:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", contactIds="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ls9c;->o:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,207 +1,253 @@
-.class public final synthetic Lug6;
-.super Ljava/lang/Object;
+.class public final Lug6;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/database/DatabaseErrorHandler;
+.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic a:Lz22;
+.field public final synthetic X:Lone/me/chats/forward/ForwardPickerScreen;
+
+.field public final synthetic Y:Landroid/view/View;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lk2g;Lz22;)V
+.method public constructor <init>(Lone/me/chats/forward/ForwardPickerScreen;Landroid/view/View;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lug6;->X:Lone/me/chats/forward/ForwardPickerScreen;
 
-    iput-object p2, p0, Lug6;->a:Lz22;
+    iput-object p2, p0, Lug6;->Y:Landroid/view/View;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onCorruption(Landroid/database/sqlite/SQLiteDatabase;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Ljava/util/Set;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lug6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lug6;
+
+    sget-object p2, Lqqg;->a:Lqqg;
+
+    invoke-virtual {p1, p2}, Lug6;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 3
 
-    sget v0, Lwg6;->q0:I
+    new-instance v0, Lug6;
 
-    iget-object v0, p0, Lug6;->a:Lz22;
+    iget-object v1, p0, Lug6;->X:Lone/me/chats/forward/ForwardPickerScreen;
 
-    iget-object v1, v0, Lz22;->b:Ljava/lang/Object;
+    iget-object v2, p0, Lug6;->Y:Landroid/view/View;
 
-    check-cast v1, Ltg6;
+    invoke-direct {v0, v1, v2, p2}, Lug6;-><init>(Lone/me/chats/forward/ForwardPickerScreen;Landroid/view/View;Lkotlin/coroutines/Continuation;)V
 
-    if-eqz v1, :cond_0
+    iput-object p1, v0, Lug6;->o:Ljava/lang/Object;
 
-    iget-object v2, v1, Ltg6;->b:Ljava/lang/Object;
+    return-object v0
+.end method
 
-    check-cast v2, Landroid/database/sqlite/SQLiteDatabase;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    invoke-static {v2, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lug6;->o:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/Set;
+
+    iget-object v0, p0, Lug6;->X:Lone/me/chats/forward/ForwardPickerScreen;
+
+    iget-object v1, v0, Lone/me/chats/forward/ForwardPickerScreen;->z0:Landroid/transition/AutoTransition;
+
+    sget-object v2, Lone/me/chats/forward/ForwardPickerScreen;->I0:[Lyy7;
+
+    invoke-virtual {v0}, Lone/me/chats/forward/ForwardPickerScreen;->O0()Z
 
     move-result v2
 
-    if-nez v2, :cond_1
+    sget-object v3, Lqqg;->a:Lqqg;
 
-    :cond_0
-    new-instance v1, Ltg6;
+    const/4 v4, 0x1
+
+    if-nez v2, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Set;->size()I
+
+    move-result v2
+
+    if-ne v2, v4, :cond_0
+
+    invoke-virtual {v0}, Lone/me/chats/picker/AbstractPickerScreen;->I0()Ljxb;
+
+    move-result-object v1
+
+    iget-object v1, v1, Ljxb;->c:Ljzb;
+
+    check-cast v1, Lcg6;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, v2, p1}, Ltg6;-><init>(ILjava/lang/Object;)V
-
-    iput-object v1, v0, Lz22;->b:Ljava/lang/Object;
-
-    :cond_1
-    iget-object p1, v1, Ltg6;->b:Ljava/lang/Object;
-
-    check-cast p1, Landroid/database/sqlite/SQLiteDatabase;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v2, "Corruption reported by sqlite on database: "
-
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, ".path"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v2, "SupportSQLite"
-
-    invoke-static {v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    invoke-virtual {p1}, Landroid/database/sqlite/SQLiteDatabase;->isOpen()Z
+    invoke-virtual {v0}, Lone/me/chats/forward/ForwardPickerScreen;->O0()Z
 
     move-result v0
 
-    if-nez v0, :cond_2
+    invoke-virtual {v1, v2, p1, v0}, Lcg6;->h(Ljava/lang/CharSequence;Ljava/util/Set;Z)V
 
-    invoke-virtual {p1}, Landroid/database/sqlite/SQLiteDatabase;->getPath()Ljava/lang/String;
+    return-object v3
 
-    move-result-object p1
+    :cond_0
+    invoke-interface {p1}, Ljava/util/Set;->size()I
 
-    if-eqz p1, :cond_6
+    move-result p1
 
-    invoke-static {p1}, Lk2g;->A(Ljava/lang/String;)V
+    invoke-virtual {v0}, Lone/me/chats/forward/ForwardPickerScreen;->L0()Lik9;
 
-    return-void
+    move-result-object v2
 
-    :cond_2
-    const/4 v0, 0x0
+    invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
 
-    :try_start_0
-    invoke-virtual {p1}, Landroid/database/sqlite/SQLiteDatabase;->getAttachedDbs()Ljava/util/List;
+    move-result v2
 
-    move-result-object v0
-    :try_end_0
-    .catch Landroid/database/sqlite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const/4 v5, 0x0
+
+    if-nez v2, :cond_1
+
+    move v2, v4
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v1
+    :cond_1
+    move v2, v5
 
-    goto :goto_1
-
-    :catch_0
     :goto_0
-    :try_start_1
-    invoke-virtual {v1}, Ltg6;->close()V
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    iget-object v6, p0, Lug6;->Y:Landroid/view/View;
 
-    goto :goto_3
+    if-nez v2, :cond_2
 
-    :goto_1
-    if-eqz v0, :cond_3
+    if-lez p1, :cond_2
 
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    check-cast v6, Landroid/view/ViewGroup;
+
+    invoke-static {v6, v1}, Landroid/transition/TransitionManager;->beginDelayedTransition(Landroid/view/ViewGroup;Landroid/transition/Transition;)V
+
+    invoke-virtual {v0}, Lone/me/chats/picker/AbstractPickerScreen;->I0()Ljxb;
 
     move-result-object p1
 
-    :goto_2
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    iget-object p1, p1, Ljxb;->c:Ljzb;
 
-    move-result v0
+    check-cast p1, Lcg6;
 
-    if-eqz v0, :cond_4
+    invoke-virtual {p1}, Lcg6;->f()V
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v0}, Lone/me/chats/forward/ForwardPickerScreen;->M0()Lmuc;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, Landroid/util/Pair;
+    invoke-virtual {p1, v5}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object v0, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
+    invoke-virtual {v0}, Lone/me/chats/forward/ForwardPickerScreen;->L0()Lik9;
 
-    check-cast v0, Ljava/lang/String;
+    move-result-object p1
 
-    invoke-static {v0}, Lk2g;->A(Ljava/lang/String;)V
+    invoke-virtual {p1, v5}, Landroid/view/View;->setVisibility(I)V
 
-    goto :goto_2
+    return-object v3
+
+    :cond_2
+    if-eqz v2, :cond_5
+
+    if-nez p1, :cond_5
+
+    check-cast v6, Landroid/view/ViewGroup;
+
+    invoke-static {v6, v1}, Landroid/transition/TransitionManager;->beginDelayedTransition(Landroid/view/ViewGroup;Landroid/transition/Transition;)V
+
+    invoke-virtual {v0}, Lone/me/chats/forward/ForwardPickerScreen;->M0()Lmuc;
+
+    move-result-object p1
+
+    const/16 v1, 0x8
+
+    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object p1, v0, Lone/me/chats/forward/ForwardPickerScreen;->A0:Lsn0;
+
+    invoke-virtual {p1}, Lsn0;->e()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    invoke-virtual {p1}, Lsn0;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lik9;
+
+    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
 
     :cond_3
-    invoke-virtual {p1}, Landroid/database/sqlite/SQLiteDatabase;->getPath()Ljava/lang/String;
-
-    move-result-object p1
+    iget-object p1, v0, Lone/me/chats/forward/ForwardPickerScreen;->E0:Lytd;
 
     if-eqz p1, :cond_4
 
-    invoke-static {p1}, Lk2g;->A(Ljava/lang/String;)V
+    invoke-virtual {p1}, Lytd;->n()Z
+
+    move-result p1
+
+    if-ne p1, v4, :cond_4
+
+    invoke-virtual {v0}, Lone/me/chats/picker/AbstractPickerScreen;->I0()Ljxb;
+
+    move-result-object p1
+
+    iget-object p1, p1, Ljxb;->c:Ljzb;
+
+    check-cast p1, Lcg6;
+
+    iget-object p1, p1, Lcg6;->r:Ls7c;
+
+    invoke-virtual {p1, v4}, Ls7c;->E(I)V
+
+    return-object v3
 
     :cond_4
-    throw v1
+    sget p1, Lxz7;->a:I
 
-    :catch_1
-    :goto_3
-    if-eqz v0, :cond_5
+    sget p1, Lxz7;->c:I
 
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-static {p1}, Lxz7;->b(I)Z
 
-    move-result-object p1
+    move-result p1
 
-    :goto_4
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    if-eqz p1, :cond_5
 
-    move-result v0
+    iget-object p1, v0, Lone/me/chats/forward/ForwardPickerScreen;->F0:Log6;
 
-    if-eqz v0, :cond_6
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/util/Pair;
-
-    iget-object v0, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/String;
-
-    invoke-static {v0}, Lk2g;->A(Ljava/lang/String;)V
-
-    goto :goto_4
+    invoke-virtual {p1}, Log6;->k()V
 
     :cond_5
-    invoke-virtual {p1}, Landroid/database/sqlite/SQLiteDatabase;->getPath()Ljava/lang/String;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_6
-
-    invoke-static {p1}, Lk2g;->A(Ljava/lang/String;)V
-
-    :cond_6
-    return-void
+    return-object v3
 .end method

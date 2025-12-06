@@ -1,34 +1,46 @@
-.class public final synthetic Lc44;
+.class public final Lc44;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lxzf;
+.implements Lt98;
 
 
 # instance fields
-.field public final synthetic a:Lru/ok/android/externcalls/sdk/stat/topology/ServerTopologyRequestedStat;
+.field public final a:Ljava/util/List;
+
+.field public final b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/stat/topology/ServerTopologyRequestedStat;)V
+.method public constructor <init>(Ljava/util/List;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lc44;->a:Lru/ok/android/externcalls/sdk/stat/topology/ServerTopologyRequestedStat;
+    iput-object p1, p0, Lc44;->a:Ljava/util/List;
+
+    sget p1, Lj7b;->D:I
+
+    iput p1, p0, Lc44;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ltzf;)V
+.method public final getItemId()J
+    .locals 2
+
+    const-wide/high16 v0, -0x8000000000000000L
+
+    return-wide v0
+.end method
+
+.method public final m()I
     .locals 1
 
-    iget-object v0, p0, Lc44;->a:Lru/ok/android/externcalls/sdk/stat/topology/ServerTopologyRequestedStat;
+    iget v0, p0, Lc44;->b:I
 
-    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/stat/topology/ServerTopologyRequestedStat;->onServerTopologyRequested(Luzf;)V
-
-    return-void
+    return v0
 .end method

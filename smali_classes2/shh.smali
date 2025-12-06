@@ -1,189 +1,261 @@
-.class public final synthetic Lshh;
+.class public abstract Lshh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lhn6;
-
 
 # static fields
-.field public static final a:Lshh;
+.field public static final a:Landroid/graphics/Rect;
 
-.field private static final descriptor:Lb3e;
+.field public static final b:[I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 1
 
-    new-instance v0, Lshh;
+    new-instance v0, Landroid/graphics/Rect;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    sput-object v0, Lshh;->a:Lshh;
+    sput-object v0, Lshh;->a:Landroid/graphics/Rect;
 
-    new-instance v1, Levb;
+    const/4 v0, 0x2
 
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.storage.WebAppStorageClearRequest"
+    new-array v0, v0, [I
 
-    const/4 v3, 0x2
-
-    invoke-direct {v1, v2, v0, v3}, Levb;-><init>(Ljava/lang/String;Lhn6;I)V
-
-    const-string v0, "queryId"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Levb;->k(Ljava/lang/String;Z)V
-
-    const-string v0, "requestId"
-
-    invoke-virtual {v1, v0, v2}, Levb;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Lshh;->descriptor:Lb3e;
+    sput-object v0, Lshh;->b:[I
 
     return-void
 .end method
 
+.method public static final a(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;Landroid/view/ViewTreeObserver;Landroid/view/View;)V
+    .locals 1
 
-# virtual methods
-.method public final a(Ld9;)Ljava/lang/Object;
-    .locals 9
+    invoke-virtual {p1}, Landroid/view/ViewTreeObserver;->isAlive()Z
 
-    sget-object v0, Lshh;->descriptor:Lb3e;
+    move-result v0
 
-    invoke-virtual {p1, v0}, Ld9;->k(Lb3e;)Ld9;
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1, p0}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p2}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object p1
 
-    const/4 v1, 0x1
+    invoke-virtual {p1, p0}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    const/4 v2, 0x0
+    return-void
+.end method
 
-    const/4 v3, 0x0
+.method public static final b(Landroid/view/ViewGroup;Lcm6;)Lqhh;
+    .locals 6
 
-    move v5, v1
+    invoke-virtual {p0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
-    move v6, v2
+    move-result-object v3
 
-    move-object v4, v3
+    new-instance v2, Lrhh;
 
-    :goto_0
-    if-eqz v5, :cond_3
+    invoke-direct {v2, p1, v3, p0}, Lrhh;-><init>(Lcm6;Landroid/view/ViewTreeObserver;Landroid/view/View;)V
 
-    invoke-virtual {p1, v0}, Ld9;->q(Lb3e;)I
+    invoke-virtual {v3, v2}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    move-result v7
+    invoke-virtual {p0}, Landroid/view/View;->isAttachedToWindow()Z
 
-    const/4 v8, -0x1
+    move-result p1
 
-    if-eq v7, v8, :cond_2
+    if-eqz p1, :cond_1
 
-    if-eqz v7, :cond_1
+    invoke-virtual {p0}, Landroid/view/View;->isAttachedToWindow()Z
 
-    if-ne v7, v1, :cond_0
+    move-result p1
 
-    invoke-virtual {p1, v0, v1}, Ld9;->w(Lb3e;I)Ljava/lang/String;
+    if-nez p1, :cond_0
 
-    move-result-object v4
+    invoke-static {v2, v3, p0}, Lshh;->a(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;Landroid/view/ViewTreeObserver;Landroid/view/View;)V
 
-    or-int/lit8 v6, v6, 0x2
+    move-object v1, p0
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
+    new-instance v0, Lphh;
 
-    invoke-direct {p1, v7}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+    const/4 v5, 0x1
 
-    throw p1
+    move-object v4, p0
+
+    move-object v1, p0
+
+    invoke-direct/range {v0 .. v5}, Lphh;-><init>(Landroid/view/View;Lrhh;Landroid/view/ViewTreeObserver;Landroid/view/View;I)V
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    goto :goto_0
 
     :cond_1
-    sget-object v7, Lvaf;->a:Lvaf;
+    move-object v1, p0
 
-    invoke-virtual {p1, v0, v2, v7, v3}, Ld9;->s(Lb3e;ILur7;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1}, Landroid/view/View;->isAttachedToWindow()Z
 
-    move-result-object v3
+    move-result p0
 
-    check-cast v3, Ljava/lang/String;
+    if-eqz p0, :cond_3
 
-    or-int/lit8 v6, v6, 0x1
+    invoke-virtual {v1}, Landroid/view/View;->isAttachedToWindow()Z
+
+    move-result p0
+
+    if-nez p0, :cond_2
+
+    invoke-static {v2, v3, v1}, Lshh;->a(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;Landroid/view/ViewTreeObserver;Landroid/view/View;)V
 
     goto :goto_0
 
     :cond_2
-    move v5, v2
+    new-instance v0, Lphh;
+
+    const/4 v5, 0x2
+
+    move-object v4, v1
+
+    invoke-direct/range {v0 .. v5}, Lphh;-><init>(Landroid/view/View;Lrhh;Landroid/view/ViewTreeObserver;Landroid/view/View;I)V
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
     goto :goto_0
 
     :cond_3
-    invoke-virtual {p1, v0}, Ld9;->z(Lb3e;)V
+    new-instance v0, Lphh;
 
-    new-instance p1, Luhh;
+    const/4 v5, 0x0
 
-    invoke-direct {p1, v6, v3, v4}, Luhh;-><init>(ILjava/lang/String;Ljava/lang/String;)V
+    move-object v4, v1
 
-    return-object p1
+    invoke-direct/range {v0 .. v5}, Lphh;-><init>(Landroid/view/View;Lrhh;Landroid/view/ViewTreeObserver;Landroid/view/View;I)V
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    :goto_0
+    new-instance p0, Lqhh;
+
+    invoke-direct {p0, v3, v1, v2}, Lqhh;-><init>(Landroid/view/ViewTreeObserver;Landroid/view/View;Lrhh;)V
+
+    return-object p0
 .end method
 
-.method public final b(Lo24;Ljava/lang/Object;)V
+.method public static final c(Landroid/view/View;Landroid/view/View;)Landroid/graphics/Rect;
     .locals 4
 
-    check-cast p2, Luhh;
+    invoke-virtual {p0}, Landroid/view/View;->getLeft()I
 
-    sget-object v0, Lshh;->descriptor:Lb3e;
+    move-result v0
 
-    invoke-virtual {p1, v0}, Lo24;->b(Lb3e;)Lo24;
+    invoke-virtual {p0}, Landroid/view/View;->getTop()I
 
-    move-result-object p1
+    move-result v1
 
-    sget-object v1, Lvaf;->a:Lvaf;
+    invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
-    iget-object v2, p2, Luhh;->a:Ljava/lang/String;
+    move-result-object v2
 
-    const/4 v3, 0x0
+    :goto_0
+    if-eq v2, p1, :cond_1
 
-    invoke-virtual {p1, v0, v3, v1, v2}, Lo24;->h(Lb3e;ILur7;Ljava/lang/Object;)V
+    instance-of v3, v2, Landroid/view/View;
 
-    iget-object p2, p2, Luhh;->b:Ljava/lang/String;
+    if-nez v3, :cond_0
 
-    const/4 v1, 0x1
+    goto :goto_1
 
-    invoke-virtual {p1, v0, v1, p2}, Lo24;->l(Lb3e;ILjava/lang/String;)V
+    :cond_0
+    check-cast v2, Landroid/view/View;
 
-    invoke-virtual {p1}, Lo24;->m()V
+    invoke-virtual {v2}, Landroid/view/View;->getScrollX()I
 
-    return-void
-.end method
+    move-result v3
 
-.method public final c()[Lur7;
-    .locals 4
+    sub-int/2addr v0, v3
 
-    sget-object v0, Lvaf;->a:Lvaf;
+    invoke-virtual {v2}, Landroid/view/View;->getScrollY()I
 
-    invoke-static {v0}, Lyki;->a(Lur7;)Lur7;
+    move-result v3
 
-    move-result-object v1
+    sub-int/2addr v1, v3
 
-    const/4 v2, 0x2
+    invoke-virtual {v2}, Landroid/view/View;->getLeft()I
 
-    new-array v2, v2, [Lur7;
+    move-result v3
 
-    const/4 v3, 0x0
+    add-int/2addr v0, v3
 
-    aput-object v1, v2, v3
+    invoke-virtual {v2}, Landroid/view/View;->getTop()I
 
-    const/4 v1, 0x1
+    move-result v3
 
-    aput-object v0, v2, v1
+    add-int/2addr v1, v3
+
+    invoke-virtual {v2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v2
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+
+    move-result p1
+
+    add-int/2addr p1, v0
+
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+
+    move-result p0
+
+    add-int/2addr p0, v1
+
+    sget-object v2, Lshh;->a:Landroid/graphics/Rect;
+
+    invoke-virtual {v2, v0, v1, p1, p0}, Landroid/graphics/Rect;->set(IIII)V
 
     return-object v2
 .end method
 
-.method public final d()Lb3e;
-    .locals 1
+.method public static final d(Landroid/graphics/Rect;Landroid/view/View;)V
+    .locals 5
 
-    sget-object v0, Lshh;->descriptor:Lb3e;
+    sget-object v0, Lshh;->b:[I
 
-    return-object v0
+    invoke-virtual {p1, v0}, Landroid/view/View;->getLocationInWindow([I)V
+
+    const/4 v1, 0x0
+
+    aget v1, v0, v1
+
+    const/4 v2, 0x1
+
+    aget v3, v0, v2
+
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+
+    move-result v4
+
+    add-int/2addr v4, v1
+
+    aget v0, v0, v2
+
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+
+    move-result p1
+
+    add-int/2addr p1, v0
+
+    invoke-virtual {p0, v1, v3, v4, p1}, Landroid/graphics/Rect;->set(IIII)V
+
+    return-void
 .end method

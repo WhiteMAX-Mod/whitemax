@@ -1,212 +1,125 @@
-.class public final synthetic Ler8;
+.class public abstract Ler8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lu28;
 
+# static fields
+.field public static final a:[I
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lf76;
+.field public static final b:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lf76;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p2, p0, Ler8;->a:I
+    const/high16 v0, 0x1010000
 
-    iput-object p1, p0, Ler8;->b:Lf76;
+    sget v1, Ldvc;->theme:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    filled-new-array {v0, v1}, [I
+
+    move-result-object v0
+
+    sput-object v0, Ler8;->a:[I
+
+    sget v0, Ldvc;->materialThemeOverlay:I
+
+    filled-new-array {v0}, [I
+
+    move-result-object v0
+
+    sput-object v0, Ler8;->b:[I
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)V
+.method public static a(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
     .locals 2
 
-    iget v0, p0, Ler8;->a:I
+    sget-object v0, Ler8;->b:[I
 
-    check-cast p1, Lntb;
+    invoke-virtual {p0, p1, v0, p2, p3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p2
 
-    iget-object v0, p0, Ler8;->b:Lf76;
+    const/4 p3, 0x0
 
-    iget-object v0, v0, Lf76;->b:Ljava/lang/Object;
+    invoke-virtual {p2, p3, p3}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
-    check-cast v0, Lmub;
+    move-result v0
 
-    iget-boolean v0, v0, Lmub;->i:Z
+    invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
-    invoke-interface {p1, v0}, Lntb;->T(Z)V
+    instance-of p2, p0, Lm44;
 
-    return-void
+    const/4 v1, 0x1
 
-    :pswitch_0
-    iget-object v0, p0, Ler8;->b:Lf76;
+    if-eqz p2, :cond_0
 
-    iget-object v0, v0, Lf76;->b:Ljava/lang/Object;
+    move-object p2, p0
 
-    check-cast v0, Lmub;
+    check-cast p2, Lm44;
 
-    iget v0, v0, Lmub;->h:I
+    iget p2, p2, Lm44;->a:I
 
-    invoke-interface {p1, v0}, Lntb;->onRepeatModeChanged(I)V
+    if-ne p2, v0, :cond_0
 
-    return-void
+    move p2, v1
 
-    :pswitch_1
-    iget-object v0, p0, Ler8;->b:Lf76;
+    goto :goto_0
 
-    iget-object v0, v0, Lf76;->b:Ljava/lang/Object;
+    :cond_0
+    move p2, p3
 
-    check-cast v0, Lmub;
+    :goto_0
+    if-eqz v0, :cond_4
 
-    iget-object v0, v0, Lmub;->g:Lwsb;
+    if-eqz p2, :cond_1
 
-    invoke-interface {p1, v0}, Lntb;->A0(Lwsb;)V
+    goto :goto_2
 
-    return-void
+    :cond_1
+    new-instance p2, Lm44;
 
-    :pswitch_2
-    iget-object v0, p0, Ler8;->b:Lf76;
+    invoke-direct {p2, p0, v0}, Lm44;-><init>(Landroid/content/Context;I)V
 
-    iget-object v0, v0, Lf76;->b:Ljava/lang/Object;
+    sget-object v0, Ler8;->a:[I
 
-    check-cast v0, Lmub;
+    invoke-virtual {p0, p1, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
-    iget-boolean v0, v0, Lmub;->v:Z
+    move-result-object p0
 
-    invoke-interface {p1, v0}, Lntb;->q(Z)V
+    invoke-virtual {p0, p3, p3}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
-    return-void
+    move-result p1
 
-    :pswitch_3
-    iget-object v0, p0, Ler8;->b:Lf76;
+    invoke-virtual {p0, v1, p3}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
-    iget-object v0, v0, Lf76;->b:Ljava/lang/Object;
+    move-result p3
 
-    check-cast v0, Lmub;
+    invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
 
-    iget-boolean v0, v0, Lmub;->t:Z
+    if-eqz p1, :cond_2
 
-    const/4 v1, 0x4
+    goto :goto_1
 
-    invoke-interface {p1, v1, v0}, Lntb;->i(IZ)V
+    :cond_2
+    move p1, p3
 
-    return-void
+    :goto_1
+    if-eqz p1, :cond_3
 
-    :pswitch_4
-    iget-object v0, p0, Ler8;->b:Lf76;
+    invoke-virtual {p2}, Lm44;->getTheme()Landroid/content/res/Resources$Theme;
 
-    iget-object v0, v0, Lf76;->b:Ljava/lang/Object;
+    move-result-object p0
 
-    check-cast v0, Lmub;
+    invoke-virtual {p0, p1, v1}, Landroid/content/res/Resources$Theme;->applyStyle(IZ)V
 
-    iget v0, v0, Lmub;->y:I
+    :cond_3
+    return-object p2
 
-    invoke-interface {p1, v0}, Lntb;->k(I)V
-
-    return-void
-
-    :pswitch_5
-    iget-object v0, p0, Ler8;->b:Lf76;
-
-    iget-object v0, v0, Lf76;->b:Ljava/lang/Object;
-
-    check-cast v0, Lmub;
-
-    iget-object v0, v0, Lmub;->m:Lnu8;
-
-    invoke-interface {p1, v0}, Lntb;->j0(Lnu8;)V
-
-    return-void
-
-    :pswitch_6
-    iget-object v0, p0, Ler8;->b:Lf76;
-
-    iget-object v0, v0, Lf76;->b:Ljava/lang/Object;
-
-    check-cast v0, Lmub;
-
-    iget-object v1, v0, Lmub;->j:Ltvf;
-
-    iget v0, v0, Lmub;->k:I
-
-    invoke-interface {p1, v1, v0}, Lntb;->m0(Ltvf;I)V
-
-    return-void
-
-    :pswitch_7
-    iget-object v0, p0, Ler8;->b:Lf76;
-
-    iget-object v0, v0, Lf76;->c:Ljava/lang/Object;
-
-    check-cast v0, Lktb;
-
-    invoke-interface {p1, v0}, Lntb;->B0(Lktb;)V
-
-    return-void
-
-    :pswitch_8
-    iget-object v0, p0, Ler8;->b:Lf76;
-
-    iget-object v0, v0, Lf76;->b:Ljava/lang/Object;
-
-    check-cast v0, Lmub;
-
-    iget v1, v0, Lmub;->r:I
-
-    iget-boolean v0, v0, Lmub;->s:Z
-
-    invoke-interface {p1, v1, v0}, Lntb;->l(IZ)V
-
-    return-void
-
-    :pswitch_9
-    iget-object v0, p0, Ler8;->b:Lf76;
-
-    iget-object v0, v0, Lf76;->b:Ljava/lang/Object;
-
-    check-cast v0, Lmub;
-
-    iget-object v0, v0, Lmub;->q:Lrs4;
-
-    invoke-interface {p1, v0}, Lntb;->E0(Lrs4;)V
-
-    return-void
-
-    :pswitch_a
-    iget-object v0, p0, Ler8;->b:Lf76;
-
-    iget-object v0, v0, Lf76;->b:Ljava/lang/Object;
-
-    check-cast v0, Lmub;
-
-    iget-object v0, v0, Lmub;->o:Ls20;
-
-    invoke-interface {p1, v0}, Lntb;->x(Ls20;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_4
+    :goto_2
+    return-object p0
 .end method

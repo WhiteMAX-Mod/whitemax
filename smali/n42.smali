@@ -1,123 +1,209 @@
-.class public final synthetic Ln42;
-.super Ljava/lang/Object;
+.class public final Ln42;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
 
 # interfaces
-.implements Lhu1;
+.implements Lpy4;
+.implements Lrk3;
 
 
 # instance fields
-.field public final synthetic a:Lp42;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lp42;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Ln42;->a:Lp42;
+    .line 1
+    iput p1, p0, Ln42;->a:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ljava/lang/Object;)V
+    .locals 1
+
+    .line 2
+    const/4 v0, 0x0
+
+    iput v0, p0, Ln42;->a:I
+
+    invoke-direct {p0, p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Ln42;)V
+    .locals 1
+
+    const/4 v0, 0x2
+
+    iput v0, p0, Ln42;->a:I
+
+    .line 3
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    .line 4
+    invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()V
-    .locals 4
+.method public b()V
+    .locals 1
 
-    iget-object v0, p0, Ln42;->a:Lp42;
+    sget-object v0, Lty4;->a:Lty4;
 
-    iget-object v1, v0, Lp42;->a:Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
 
-    monitor-enter v1
+    return-void
+.end method
+
+.method public c(Lpy4;)V
+    .locals 0
+
+    invoke-static {p0, p1}, Lty4;->h(Ljava/util/concurrent/atomic/AtomicReference;Lpy4;)Z
+
+    return-void
+.end method
+
+.method public final dispose()V
+    .locals 1
+
+    iget v0, p0, Ln42;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p0}, Lty4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p0}, Lty4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    return-void
+
+    :pswitch_1
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Li42;
+
+    if-eqz v0, :cond_0
 
     :try_start_0
-    iget v2, v0, Lp42;->i:I
-
-    const/4 v3, 0x5
-
-    if-ne v2, v3, :cond_0
-
-    iget-object v2, v0, Lp42;->f:Lr6e;
-
-    invoke-virtual {v0, v2}, Lp42;->k(Lr6e;)V
+    invoke-interface {v0}, Li42;->cancel()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
     :catchall_0
     move-exception v0
 
-    goto :goto_1
+    invoke-static {v0}, Lraj;->c(Ljava/lang/Throwable;)V
+
+    invoke-static {v0}, Lt8j;->a(Ljava/lang/Throwable;)V
 
     :cond_0
     :goto_0
-    monitor-exit v1
-
     return-void
 
-    :goto_1
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public o(Lgu1;)Ljava/lang/String;
-    .locals 5
+.method public final e()Z
+    .locals 2
 
-    iget-object v0, p0, Ln42;->a:Lp42;
+    iget v0, p0, Ln42;->a:I
 
-    const-string v1, "Release[session="
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v2, v0, Lp42;->a:Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    monitor-enter v2
+    move-result-object v0
 
-    :try_start_0
-    iget-object v3, v0, Lp42;->k:Lgu1;
+    check-cast v0, Lpy4;
 
-    if-nez v3, :cond_0
+    invoke-static {v0}, Lty4;->c(Lpy4;)Z
 
-    const/4 v3, 0x1
+    move-result v0
+
+    return v0
+
+    :pswitch_0
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    sget-object v1, Lty4;->a:Lty4;
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
 
     goto :goto_0
 
     :cond_0
-    const/4 v3, 0x0
+    const/4 v0, 0x0
 
     :goto_0
-    const-string v4, "Release completer expected to be null"
+    return v0
 
-    invoke-static {v4, v3}, Ldvi;->f(Ljava/lang/String;Z)V
+    :pswitch_1
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    iput-object p1, v0, Lp42;->k:Lgu1;
+    move-result-object v0
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    if-nez v0, :cond_1
 
-    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    goto :goto_1
 
-    const-string v0, "]"
+    :cond_1
+    const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :goto_1
+    return v0
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    move-result-object p1
+.method public onError(Ljava/lang/Throwable;)V
+    .locals 1
 
-    monitor-exit v2
+    sget-object v0, Lty4;->a:Lty4;
 
-    return-object p1
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
 
-    :catchall_0
-    move-exception p1
+    new-instance v0, Lio/reactivex/rxjava3/exceptions/OnErrorNotImplementedException;
 
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-direct {v0, p1}, Lio/reactivex/rxjava3/exceptions/OnErrorNotImplementedException;-><init>(Ljava/lang/Throwable;)V
 
-    throw p1
+    invoke-static {v0}, Lt8j;->a(Ljava/lang/Throwable;)V
+
+    return-void
 .end method

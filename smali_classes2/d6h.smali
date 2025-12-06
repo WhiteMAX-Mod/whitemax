@@ -1,26 +1,36 @@
 .class public final Ld6h;
-.super Lsgf;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Lsm6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic X:Ljava/lang/Object;
 
-.field public final synthetic Y:Lq6h;
+.field public final synthetic Y:Li6h;
+
+.field public final synthetic Z:J
+
+.field public o:I
+
+.field public s0:J
 
 
 # direct methods
-.method public constructor <init>(Lq6h;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Li6h;J)V
     .locals 0
 
-    iput-object p1, p0, Ld6h;->Y:Lq6h;
+    iput-object p1, p0, Ld6h;->X:Ljava/lang/Object;
+
+    iput-object p3, p0, Ld6h;->Y:Li6h;
+
+    iput-wide p4, p0, Ld6h;->Z:J
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,17 +40,17 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lq54;
+    check-cast p1, Lf84;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p0, p1, p2}, Ld6h;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1, p2}, Ld6h;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
     check-cast p1, Ld6h;
 
-    sget-object p2, Lccg;->a:Lccg;
+    sget-object p2, Lqqg;->a:Lqqg;
 
     invoke-virtual {p1, p2}, Ld6h;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -49,32 +59,44 @@
     return-object p1
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 6
 
-    new-instance p1, Ld6h;
+    new-instance v0, Ld6h;
 
-    iget-object v0, p0, Ld6h;->Y:Lq6h;
+    iget-object v3, p0, Ld6h;->Y:Li6h;
 
-    invoke-direct {p1, v0, p2}, Ld6h;-><init>(Lq6h;Lkotlin/coroutines/Continuation;)V
+    iget-wide v4, p0, Ld6h;->Z:J
 
-    return-object p1
+    iget-object v1, p0, Ld6h;->X:Ljava/lang/Object;
+
+    move-object v2, p2
+
+    invoke-direct/range {v0 .. v5}, Ld6h;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Li6h;J)V
+
+    return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+    .locals 7
 
-    iget v0, p0, Ld6h;->X:I
+    iget v0, p0, Ld6h;->o:I
 
-    const/4 v1, 0x1
+    iget-object v1, p0, Ld6h;->Y:Li6h;
+
+    const/4 v2, 0x1
 
     if-eqz v0, :cond_1
 
-    if-ne v0, v1, :cond_0
+    if-ne v0, v2, :cond_0
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    iget-wide v2, p0, Ld6h;->s0:J
 
-    return-object p1
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    move-object v6, p0
+
+    goto :goto_0
 
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
@@ -86,38 +108,53 @@
     throw p1
 
     :cond_1
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Ld6h;->Y:Lq6h;
+    iget-object p1, p0, Ld6h;->X:Ljava/lang/Object;
 
-    iget-object v0, p1, Lq6h;->h:Liu7;
+    check-cast p1, Ljava/lang/Number;
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
 
-    move-result-object v0
+    move-result-wide v4
 
-    move-object v2, v0
+    iput-wide v4, p0, Ld6h;->s0:J
 
-    check-cast v2, Ln5h;
+    iput v2, p0, Ld6h;->o:I
 
-    iget-wide v3, p1, Lq6h;->a:J
+    iget-wide v2, p0, Ld6h;->Z:J
 
-    iget-wide v5, p1, Lq6h;->b:J
+    move-object v6, p0
 
-    iput v1, p0, Ld6h;->X:I
-
-    move-object v7, p0
-
-    invoke-virtual/range {v2 .. v7}, Ln5h;->a(JJLsgf;)Ljava/lang/Object;
+    invoke-virtual/range {v1 .. v6}, Li6h;->b(JJLq44;)Ljava/lang/Object;
 
     move-result-object p1
 
-    sget-object v0, Lr54;->a:Lr54;
+    sget-object v0, Lg84;->a:Lg84;
 
     if-ne p1, v0, :cond_2
 
     return-object v0
 
     :cond_2
+    move-wide v2, v4
+
+    :goto_0
+    move-object v0, p1
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, v1, Li6h;->k:Ljava/util/concurrent/ConcurrentHashMap$KeySetView;
+
+    iget-wide v4, v6, Ld6h;->Z:J
+
+    invoke-static {v4, v5, v2, v3}, Li6h;->c(JJ)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/ConcurrentHashMap$KeySetView;->remove(Ljava/lang/Object;)Z
+
     return-object p1
 .end method

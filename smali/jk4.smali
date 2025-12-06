@@ -1,104 +1,69 @@
-.class public final synthetic Ljk4;
+.class public abstract Ljk4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lii3;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lkhc;
+# static fields
+.field public static final a:Landroid/util/SparseIntArray;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lkhc;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p2, p0, Ljk4;->a:I
+    new-instance v0, Landroid/util/SparseIntArray;
 
-    iput-object p1, p0, Ljk4;->b:Lkhc;
+    const/4 v1, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1}, Landroid/util/SparseIntArray;-><init>(I)V
+
+    sput-object v0, Ljk4;->a:Landroid/util/SparseIntArray;
 
     return-void
 .end method
 
+.method public static final a()Lw5c;
+    .locals 5
 
-# virtual methods
-.method public final h(Lcwc;)Ljava/lang/Object;
-    .locals 6
+    new-instance v0, Lw5c;
 
-    iget v0, p0, Ljk4;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ljk4;->b:Lkhc;
-
-    invoke-static {v0, p1}, Lcom/google/firebase/messaging/FirebaseMessagingRegistrar;->a(Lkhc;Lcwc;)Lcom/google/firebase/messaging/FirebaseMessaging;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_0
-    new-instance v0, Llk4;
-
-    const-class v1, Landroid/content/Context;
-
-    invoke-virtual {p1, v1}, Lcwc;->a(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v1
 
-    check-cast v1, Landroid/content/Context;
+    invoke-virtual {v1}, Ljava/lang/Runtime;->maxMemory()J
 
-    const-class v2, Lhw5;
+    move-result-wide v1
 
-    invoke-virtual {p1, v2}, Lcwc;->a(Ljava/lang/Class;)Ljava/lang/Object;
+    const-wide/32 v3, 0x7fffffff
 
-    move-result-object v2
+    invoke-static {v1, v2, v3, v4}, Ljava/lang/Math;->min(JJ)J
 
-    check-cast v2, Lhw5;
+    move-result-wide v1
 
-    invoke-virtual {v2}, Lhw5;->c()Ljava/lang/String;
+    long-to-int v1, v1
 
-    move-result-object v2
+    const/high16 v2, 0x1000000
 
-    const-class v3, Lux6;
+    if-le v1, v2, :cond_0
 
-    invoke-static {v3}, Lkhc;->a(Ljava/lang/Class;)Lkhc;
+    div-int/lit8 v1, v1, 0x4
 
-    move-result-object v3
+    mul-int/lit8 v1, v1, 0x3
 
-    invoke-virtual {p1, v3}, Lcwc;->b(Lkhc;)Ljava/util/Set;
+    goto :goto_0
 
-    move-result-object v3
+    :cond_0
+    div-int/lit8 v1, v1, 0x2
 
-    const-class v4, Lqo4;
+    :goto_0
+    sget-object v2, Ljk4;->a:Landroid/util/SparseIntArray;
 
-    invoke-virtual {p1, v4}, Lcwc;->c(Ljava/lang/Class;)Lcfc;
+    const/4 v3, -0x1
 
-    move-result-object v4
+    const/4 v4, 0x0
 
-    iget-object v5, p0, Ljk4;->b:Lkhc;
-
-    invoke-virtual {p1, v5}, Lcwc;->f(Lkhc;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    move-object v5, p1
-
-    check-cast v5, Ljava/util/concurrent/Executor;
-
-    invoke-direct/range {v0 .. v5}, Llk4;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/util/Set;Lcfc;Ljava/util/concurrent/Executor;)V
+    invoke-direct {v0, v4, v1, v2, v3}, Lw5c;-><init>(IILandroid/util/SparseIntArray;I)V
 
     return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,55 +1,96 @@
 .class public final Lvm9;
-.super Ly14;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lpb9;
+.field public final a:Lk18;
 
-.field public Y:Le20;
+.field public final b:Lk18;
 
-.field public synthetic Z:Ljava/lang/Object;
+.field public final c:Lk18;
 
-.field public o:Ljn9;
+.field public final d:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field public final synthetic q0:Ljn9;
-
-.field public r0:I
+.field public final e:Lbwf;
 
 
 # direct methods
-.method public constructor <init>(Ljn9;Ly14;)V
+.method public constructor <init>(Lk18;Lk18;Lk18;Lk18;)V
     .locals 0
 
-    iput-object p1, p0, Lvm9;->q0:Ljn9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lvm9;->a:Lk18;
+
+    iput-object p2, p0, Lvm9;->b:Lk18;
+
+    iput-object p4, p0, Lvm9;->c:Lk18;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
+
+    iput-object p1, p0, Lvm9;->d:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    new-instance p1, Lnz;
+
+    const/16 p2, 0x14
+
+    invoke-direct {p1, p3, p2}, Lnz;-><init>(Lk18;I)V
+
+    new-instance p2, Lbwf;
+
+    invoke-direct {p2, p1}, Lbwf;-><init>(Lcm6;)V
+
+    iput-object p2, p0, Lvm9;->e:Lbwf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a()V
+    .locals 3
 
-    iput-object p1, p0, Lvm9;->Z:Ljava/lang/Object;
+    const-class v0, Lvm9;
 
-    iget p1, p0, Lvm9;->r0:I
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    const/high16 v0, -0x80000000
+    move-result-object v0
 
-    or-int/2addr p1, v0
+    const-string v1, "try to restore uploads"
 
-    iput p1, p0, Lvm9;->r0:I
-
-    iget-object p1, p0, Lvm9;->q0:Ljn9;
+    invoke-static {v0, v1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0, p0}, Ljn9;->t(Ljn9;Lpb9;Ly14;)Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    move-result-object p1
+    iget-object v2, p0, Lvm9;->d:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    return-object p1
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lvm9;->e:Lbwf;
+
+    invoke-virtual {v0}, Lbwf;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/concurrent/ExecutorService;
+
+    new-instance v1, Lgq5;
+
+    const/16 v2, 0x14
+
+    invoke-direct {v1, v2, p0}, Lgq5;-><init>(ILjava/lang/Object;)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    :cond_0
+    return-void
 .end method

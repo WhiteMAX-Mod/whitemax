@@ -1,9 +1,9 @@
 .class public abstract Lam0;
-.super Ljava/util/concurrent/atomic/AtomicInteger;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lshc;
+.implements Losc;
 
 
 # virtual methods

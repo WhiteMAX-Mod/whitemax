@@ -1,77 +1,54 @@
-.class public final Ll3j;
-.super Lf4;
+.class public final synthetic Ll3j;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Ll3j;",
-            ">;"
-        }
-    .end annotation
-.end field
+# interfaces
+.implements Lbjb;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/String;
+.field public final synthetic b:[Lqt5;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lgti;
-
-    const/16 v1, 0x14
-
-    invoke-direct {v0, v1}, Lgti;-><init>(I)V
-
-    sput-object v0, Ll3j;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+.method public synthetic constructor <init>([Lqt5;I)V
     .locals 0
 
+    iput p2, p0, Ll3j;->a:I
+
+    iput-object p1, p0, Ll3j;->b:[Lqt5;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll3j;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Ll3j;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public final l()[Lqt5;
     .locals 2
 
-    const/16 p2, 0x4f45
+    iget v0, p0, Ll3j;->a:I
 
-    invoke-static {p1, p2}, Llyi;->t(Landroid/os/Parcel;I)I
+    iget-object v1, p0, Ll3j;->b:[Lqt5;
 
-    move-result p2
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v0, 0x1
+    sget-object v0, Lcjb;->a:[Lqt5;
 
-    iget-object v1, p0, Ll3j;->a:Ljava/lang/String;
+    return-object v1
 
-    invoke-static {p1, v0, v1}, Llyi;->p(Landroid/os/Parcel;ILjava/lang/String;)V
+    :pswitch_0
+    sget-object v0, Lcjb;->a:[Lqt5;
 
-    const/4 v0, 0x2
+    return-object v1
 
-    iget-object v1, p0, Ll3j;->b:Ljava/lang/String;
+    nop
 
-    invoke-static {p1, v0, v1}, Llyi;->p(Landroid/os/Parcel;ILjava/lang/String;)V
-
-    invoke-static {p1, p2}, Llyi;->u(Landroid/os/Parcel;I)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

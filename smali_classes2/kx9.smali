@@ -1,105 +1,90 @@
-.class public final Lkx9;
-.super Lpmf;
+.class public final synthetic Lkx9;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/function/UnaryOperator;
 
 
 # instance fields
-.field public c:Ljava/util/Map;
+.field public final synthetic a:I
+
+.field public final synthetic b:I
+
+.field public final synthetic c:Z
+
+.field public final synthetic d:J
 
 
 # direct methods
-.method public constructor <init>(Lpf9;)V
+.method public synthetic constructor <init>(JIIZ)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lpmf;-><init>(Lpf9;)V
+    iput p4, p0, Lkx9;->a:I
 
-    iget-object p1, p0, Lkx9;->c:Ljava/util/Map;
+    iput p3, p0, Lkx9;->b:I
 
-    if-nez p1, :cond_0
+    iput-boolean p5, p0, Lkx9;->c:Z
 
-    sget-object p1, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
+    iput-wide p1, p0, Lkx9;->d:J
 
-    iput-object p1, p0, Lkx9;->c:Ljava/util/Map;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lpf9;Ljava/lang/String;)V
-    .locals 4
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget v0, p0, Lkx9;->a:I
 
-    const-string v0, "stats"
+    check-cast p1, Lmx9;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    packed-switch v0, :pswitch_data_0
 
-    move-result p2
+    new-instance v0, Lmx9;
 
-    if-nez p2, :cond_0
+    const-wide/16 v4, 0x0
 
-    invoke-virtual {p1}, Lpf9;->y()V
+    const/16 v8, 0x16
 
-    return-void
+    iget v1, p0, Lkx9;->b:I
 
-    :cond_0
-    new-instance p2, Ljava/util/HashMap;
+    const/4 v2, 0x0
 
-    invoke-direct {p2}, Ljava/util/HashMap;-><init>()V
+    iget-boolean v3, p0, Lkx9;->c:Z
 
-    iput-object p2, p0, Lkx9;->c:Ljava/util/Map;
+    iget-wide v6, p0, Lkx9;->d:J
 
-    invoke-static {p1}, Lg0i;->n(Lpf9;)I
-
-    move-result p2
-
-    const/4 v0, 0x0
-
-    :goto_0
-    if-ge v0, p2, :cond_1
-
-    iget-object v1, p0, Lkx9;->c:Ljava/util/Map;
-
-    invoke-virtual {p1}, Lpf9;->r0()J
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    invoke-static {p1}, Ldf9;->a(Lpf9;)Ldf9;
-
-    move-result-object v3
-
-    invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    iget-object v0, p0, Lkx9;->c:Ljava/util/Map;
-
-    invoke-static {v0}, Lhuh;->d(Ljava/util/Map;)I
-
-    move-result v0
-
-    const-string v1, "{stats="
-
-    const-string v2, "}"
-
-    invoke-static {v0, v1, v2}, Ley1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    invoke-direct/range {v0 .. v8}, Lmx9;-><init>(IZZJJI)V
 
     return-object v0
+
+    :pswitch_0
+    new-instance v0, Lmx9;
+
+    const-wide/16 v4, 0x0
+
+    const/16 v8, 0x16
+
+    iget v1, p0, Lkx9;->b:I
+
+    const/4 v2, 0x0
+
+    iget-boolean v3, p0, Lkx9;->c:Z
+
+    iget-wide v6, p0, Lkx9;->d:J
+
+    invoke-direct/range {v0 .. v8}, Lmx9;-><init>(IZZJJI)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

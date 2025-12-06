@@ -1,80 +1,76 @@
-.class public final Lr3i;
+.class public abstract Lr3i;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ltha;
 
+# instance fields
+.field public final a:I
 
-# static fields
-.field public static final a:Lr3i;
+.field public b:F
+
+.field public final c:Landroid/view/animation/Interpolator;
+
+.field public final d:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(ILandroid/view/animation/Interpolator;J)V
+    .locals 0
 
-    new-instance v0, Lr3i;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lr3i;->a:I
 
-    sput-object v0, Lr3i;->a:Lr3i;
+    iput-object p2, p0, Lr3i;->c:Landroid/view/animation/Interpolator;
 
-    new-instance v0, Ltwh;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ltwh;-><init>(I)V
-
-    const-class v1, Lmxh;
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
+    iput-wide p3, p0, Lr3i;->d:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public a()J
+    .locals 2
+
+    iget-wide v0, p0, Lr3i;->d:J
+
+    return-wide v0
+.end method
+
+.method public b()F
+    .locals 2
+
+    iget-object v0, p0, Lr3i;->c:Landroid/view/animation/Interpolator;
+
+    if-eqz v0, :cond_0
+
+    iget v1, p0, Lr3i;->b:F
+
+    invoke-interface {v0, v1}, Landroid/animation/TimeInterpolator;->getInterpolation(F)F
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    iget v0, p0, Lr3i;->b:F
+
+    return v0
+.end method
+
+.method public c()I
+    .locals 1
+
+    iget v0, p0, Lr3i;->a:I
+
+    return v0
+.end method
+
+.method public d(F)V
     .locals 0
 
-    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iput p1, p0, Lr3i;->b:F
 
-    move-result-object p1
-
-    throw p1
+    return-void
 .end method

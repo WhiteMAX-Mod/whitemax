@@ -1,63 +1,97 @@
 .class public final Lv5e;
-.super Lr5e;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lw5e;
 
 
 # instance fields
-.field public final s0:Ljava/lang/String;
-
-.field public final t0:Z
-
-.field public final u0:Ljava/util/List;
+.field public final a:Lds2;
 
 
 # direct methods
-.method public constructor <init>(Lt5e;)V
-    .locals 1
+.method public constructor <init>(Lds2;)V
+    .locals 0
 
-    invoke-direct {p0, p1}, Lr5e;-><init>(Lq5e;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p1, Lt5e;->h:Ljava/lang/String;
-
-    iput-object v0, p0, Lv5e;->s0:Ljava/lang/String;
-
-    iget-boolean v0, p1, Lt5e;->i:Z
-
-    iput-boolean v0, p0, Lv5e;->t0:Z
-
-    iget-object p1, p1, Lt5e;->j:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/List;
-
-    iput-object p1, p0, Lv5e;->u0:Ljava/util/List;
+    iput-object p1, p0, Lv5e;->a:Lds2;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final x()Lob9;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lv5e;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lv5e;
+
+    iget-object v1, p0, Lv5e;->a:Lds2;
+
+    iget-object p1, p1, Lv5e;->a:Lds2;
+
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lv5e;->a:Lds2;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    new-instance v0, Lob9;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Lob9;-><init>()V
+    const-string v1, "SearchResult(result="
 
-    iget-object v1, p0, Lv5e;->s0:Ljava/lang/String;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iput-object v1, v0, Lob9;->g:Ljava/lang/String;
+    iget-object v1, p0, Lv5e;->a:Lds2;
 
-    iget-boolean v1, p0, Lv5e;->t0:Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iput-boolean v1, v0, Lob9;->u:Z
+    const-string v1, ")"
 
-    iget-object v1, p0, Lv5e;->u0:Ljava/util/List;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
-
-    iput-object v1, v0, Lob9;->D:Ljava/util/List;
+    move-result-object v0
 
     return-object v0
 .end method

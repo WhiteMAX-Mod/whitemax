@@ -2,377 +2,309 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lje7;
+
 
 # instance fields
-.field public a:I
+.field public final synthetic a:I
 
-.field public b:I
-
-.field public c:I
-
-.field public d:I
-
-.field public e:I
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(IIIII)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
     iput p1, p0, Lbf;->a:I
 
-    iput p2, p0, Lbf;->b:I
-
-    iput p3, p0, Lbf;->c:I
-
-    iput p4, p0, Lbf;->d:I
-
-    iput p5, p0, Lbf;->e:I
+    iput-object p2, p0, Lbf;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static b(Ljava/lang/String;)Lbf;
-    .locals 9
-
-    const-string v0, "Format:"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v0
-
-    invoke-static {v0}, Lzg8;->c(Z)V
-
-    const/4 v0, 0x7
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string v0, ","
-
-    invoke-static {p0, v0}, Landroid/text/TextUtils;->split(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object p0
-
-    const/4 v0, -0x1
-
-    const/4 v1, 0x0
-
-    move v4, v0
-
-    move v5, v4
-
-    move v6, v5
-
-    move v7, v6
-
-    move v2, v1
-
-    :goto_0
-    array-length v3, p0
-
-    if-ge v2, v3, :cond_4
-
-    aget-object v3, p0, v2
-
-    invoke-virtual {v3}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v3}, Lggi;->g(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
-
-    move-result v8
-
-    sparse-switch v8, :sswitch_data_0
-
-    :goto_1
-    move v3, v0
-
-    goto :goto_2
-
-    :sswitch_0
-    const-string v8, "style"
-
-    invoke-virtual {v3, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    const/4 v3, 0x3
-
-    goto :goto_2
-
-    :sswitch_1
-    const-string v8, "start"
-
-    invoke-virtual {v3, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v3, 0x2
-
-    goto :goto_2
-
-    :sswitch_2
-    const-string v8, "text"
-
-    invoke-virtual {v3, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    const/4 v3, 0x1
-
-    goto :goto_2
-
-    :sswitch_3
-    const-string v8, "end"
-
-    invoke-virtual {v3, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    move v3, v1
-
-    :goto_2
-    packed-switch v3, :pswitch_data_0
-
-    goto :goto_3
-
-    :pswitch_0
-    move v6, v2
-
-    goto :goto_3
-
-    :pswitch_1
-    move v4, v2
-
-    goto :goto_3
-
-    :pswitch_2
-    move v7, v2
-
-    goto :goto_3
-
-    :pswitch_3
-    move v5, v2
-
-    :goto_3
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_4
-    if-eq v4, v0, :cond_5
-
-    if-eq v5, v0, :cond_5
-
-    if-eq v7, v0, :cond_5
-
-    new-instance v3, Lbf;
-
-    array-length v8, p0
-
-    invoke-direct/range {v3 .. v8}, Lbf;-><init>(IIIII)V
-
-    return-object v3
-
-    :cond_5
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :sswitch_data_0
-    .sparse-switch
-        0x188db -> :sswitch_3
-        0x36452d -> :sswitch_2
-        0x68ac462 -> :sswitch_1
-        0x68b1db1 -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
 
 # virtual methods
-.method public a()Z
-    .locals 6
+.method public final a(Lce5;ILksc;Lie7;)Lsc3;
+    .locals 5
 
     iget v0, p0, Lbf;->a:I
 
-    and-int/lit8 v1, v0, 0x7
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v2, 0x2
+    invoke-virtual {p1}, Lce5;->i0()V
 
-    const/4 v3, 0x4
+    iget-object v0, p1, Lce5;->b:Lme7;
 
-    const/4 v4, 0x1
+    iget-object v1, p0, Lbf;->b:Ljava/lang/Object;
 
-    if-eqz v1, :cond_2
+    check-cast v1, Lkn4;
 
-    iget v1, p0, Lbf;->d:I
+    sget-object v2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    iget v5, p0, Lbf;->b:I
+    invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-le v1, v5, :cond_0
+    sget-object v3, Lmn4;->a:Lme7;
 
-    move v1, v4
+    const/4 v4, 0x0
+
+    if-ne v0, v3, :cond_0
+
+    iget-object v0, v1, Lkn4;->c:Ls2c;
+
+    iget-object p4, p4, Lie7;->a:Landroid/graphics/Bitmap$Config;
+
+    invoke-interface {v0, p1, p4, p2, v4}, Ls2c;->f(Lce5;Landroid/graphics/Bitmap$Config;ILandroid/graphics/ColorSpace;)Lvc3;
+
+    move-result-object p2
+
+    :try_start_0
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p1}, Lce5;->i0()V
+
+    iget p4, p1, Lce5;->c:I
+
+    invoke-virtual {p1}, Lce5;->i0()V
+
+    iget p1, p1, Lce5;->d:I
+
+    invoke-static {p2, p3, p4, p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->of(Lvc3;Lksc;II)Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
+
+    move-result-object v4
+
+    const-string p1, "is_rounded"
+
+    invoke-interface {v4, p1, v2}, Lcom/facebook/fresco/middleware/HasExtraData;->putExtra(Ljava/lang/String;Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p2}, Lvc3;->close()V
 
     goto :goto_0
 
-    :cond_0
-    if-ne v1, v5, :cond_1
+    :catchall_0
+    move-exception p1
 
-    move v1, v2
+    invoke-static {p2}, Lvc3;->P(Lvc3;)V
+
+    throw p1
+
+    :cond_0
+    sget-object v2, Lmn4;->c:Lme7;
+
+    if-ne v0, v2, :cond_3
+
+    invoke-virtual {p1}, Lce5;->i0()V
+
+    iget v0, p1, Lce5;->o:I
+
+    const/4 v2, -0x1
+
+    if-eq v0, v2, :cond_2
+
+    invoke-virtual {p1}, Lce5;->i0()V
+
+    iget v0, p1, Lce5;->X:I
+
+    if-eq v0, v2, :cond_2
+
+    invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, v1, Lkn4;->a:Lje7;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0, p1, p2, p3, p4}, Lje7;->a(Lce5;ILksc;Lie7;)Lsc3;
+
+    move-result-object v4
 
     goto :goto_0
 
     :cond_1
-    move v1, v3
+    invoke-virtual {v1, p1, p4}, Lkn4;->b(Lce5;Lie7;)Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
 
-    :goto_0
-    and-int/2addr v1, v0
+    move-result-object v4
 
-    if-nez v1, :cond_2
-
-    goto :goto_4
+    goto :goto_0
 
     :cond_2
-    and-int/lit8 v1, v0, 0x70
+    new-instance p2, Lcom/facebook/imagepipeline/decoder/DecodeException;
 
-    if-eqz v1, :cond_5
+    const-string p3, "image width or height is incorrect"
 
-    iget v1, p0, Lbf;->d:I
+    invoke-direct {p2, p3, p1}, Lcom/facebook/imagepipeline/decoder/DecodeException;-><init>(Ljava/lang/String;Lce5;)V
 
-    iget v5, p0, Lbf;->c:I
-
-    if-le v1, v5, :cond_3
-
-    move v1, v4
-
-    goto :goto_1
+    throw p2
 
     :cond_3
-    if-ne v1, v5, :cond_4
+    sget-object v2, Lmn4;->j:Lme7;
 
-    move v1, v2
+    if-ne v0, v2, :cond_5
+
+    invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, v1, Lkn4;->b:Lje7;
+
+    if-eqz v0, :cond_4
+
+    invoke-interface {v0, p1, p2, p3, p4}, Lje7;->a(Lce5;ILksc;Lie7;)Lsc3;
+
+    move-result-object v4
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {v1, p1, p4}, Lkn4;->b(Lce5;Lie7;)Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
+
+    move-result-object v4
+
+    goto :goto_0
+
+    :cond_5
+    sget-object p2, Lmn4;->m:Lme7;
+
+    if-ne v0, p2, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    sget-object p2, Lme7;->c:Lme7;
+
+    if-eq v0, p2, :cond_7
+
+    invoke-virtual {v1, p1, p4}, Lkn4;->b(Lce5;Lie7;)Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
+
+    move-result-object v4
+
+    :goto_0
+    return-object v4
+
+    :cond_7
+    new-instance p2, Lcom/facebook/imagepipeline/decoder/DecodeException;
+
+    const-string p3, "unknown image format"
+
+    invoke-direct {p2, p3, p1}, Lcom/facebook/imagepipeline/decoder/DecodeException;-><init>(Ljava/lang/String;Lce5;)V
+
+    throw p2
+
+    :pswitch_0
+    iget-object p2, p0, Lbf;->b:Ljava/lang/Object;
+
+    check-cast p2, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;
+
+    iget-object p3, p2, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->e:Lgf;
+
+    if-nez p3, :cond_8
+
+    new-instance p3, Lt9f;
+
+    const/4 v0, 0x2
+
+    invoke-direct {p3, v0, p2}, Lt9f;-><init>(ILjava/lang/Object;)V
+
+    new-instance v0, Lgf;
+
+    iget-object v1, p2, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->a:Lr2c;
+
+    iget-boolean v2, p2, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->k:Z
+
+    invoke-direct {v0, p3, v1, v2}, Lgf;-><init>(Lt9f;Lr2c;Z)V
+
+    iput-object v0, p2, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->e:Lgf;
+
+    :cond_8
+    iget-object p2, p2, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->e:Lgf;
+
+    iget-object p3, p4, Lie7;->b:Landroid/graphics/Bitmap$Config;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object p2, Lgf;->a:Lcom/facebook/animated/gif/GifImage;
+
+    if-eqz p2, :cond_a
+
+    iget-object p2, p1, Lce5;->a:Lvc3;
+
+    invoke-static {p2}, Lvc3;->y(Lvc3;)Lvc3;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :try_start_1
+    invoke-virtual {p2}, Lvc3;->Z()Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Lnf9;
+
+    invoke-virtual {p3}, Lnf9;->o()Ljava/nio/ByteBuffer;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_9
+
+    invoke-virtual {p3}, Lnf9;->o()Ljava/nio/ByteBuffer;
+
+    move-result-object p3
+
+    invoke-static {p3, p4}, Lcom/facebook/animated/gif/GifImage;->a(Ljava/nio/ByteBuffer;Lie7;)Lcom/facebook/animated/gif/GifImage;
+
+    move-result-object p3
 
     goto :goto_1
 
-    :cond_4
-    move v1, v3
-
-    :goto_1
-    shl-int/2addr v1, v3
-
-    and-int/2addr v1, v0
-
-    if-nez v1, :cond_5
-
-    goto :goto_4
-
-    :cond_5
-    and-int/lit16 v1, v0, 0x700
-
-    if-eqz v1, :cond_8
-
-    iget v1, p0, Lbf;->e:I
-
-    iget v5, p0, Lbf;->b:I
-
-    if-le v1, v5, :cond_6
-
-    move v1, v4
+    :catchall_1
+    move-exception p1
 
     goto :goto_2
-
-    :cond_6
-    if-ne v1, v5, :cond_7
-
-    move v1, v2
-
-    goto :goto_2
-
-    :cond_7
-    move v1, v3
-
-    :goto_2
-    shl-int/lit8 v1, v1, 0x8
-
-    and-int/2addr v1, v0
-
-    if-nez v1, :cond_8
-
-    goto :goto_4
-
-    :cond_8
-    and-int/lit16 v1, v0, 0x7000
-
-    if-eqz v1, :cond_b
-
-    iget v1, p0, Lbf;->e:I
-
-    iget v5, p0, Lbf;->c:I
-
-    if-le v1, v5, :cond_9
-
-    move v2, v4
-
-    goto :goto_3
 
     :cond_9
-    if-ne v1, v5, :cond_a
+    invoke-virtual {p3}, Lnf9;->w()J
 
-    goto :goto_3
+    move-result-wide v0
+
+    invoke-virtual {p3}, Lnf9;->Q()I
+
+    move-result p3
+
+    invoke-static {v0, v1, p3, p4}, Lcom/facebook/animated/gif/GifImage;->b(JILie7;)Lcom/facebook/animated/gif/GifImage;
+
+    move-result-object p3
+
+    :goto_1
+    iget-object p1, p1, Lce5;->t0:Ljava/lang/String;
+
+    invoke-static {p1, p4, p3}, Lgf;->a(Ljava/lang/String;Lie7;Lcom/facebook/animated/gif/GifImage;)Lqc3;
+
+    move-result-object p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    invoke-virtual {p2}, Lvc3;->close()V
+
+    return-object p1
+
+    :goto_2
+    invoke-virtual {p2}, Lvc3;->close()V
+
+    throw p1
 
     :cond_a
-    move v2, v3
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    :goto_3
-    shl-int/lit8 v1, v2, 0xc
+    const-string p2, "To encode animated gif please add the dependency to the animated-gif module"
 
-    and-int/2addr v0, v1
+    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    if-nez v0, :cond_b
+    throw p1
 
-    :goto_4
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_b
-    return v4
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

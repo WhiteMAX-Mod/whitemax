@@ -1,113 +1,152 @@
-.class public final Lw91;
-.super Lsgf;
+.class public final synthetic Lw91;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Lmi4;
 
 
 # instance fields
-.field public synthetic X:Z
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lone/me/calllist/ui/page/CallHistoryPageScreen;
+.field public final synthetic b:J
 
 
 # direct methods
-.method public constructor <init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(JI)V
     .locals 0
 
-    iput-object p1, p0, Lw91;->Y:Lone/me/calllist/ui/page/CallHistoryPageScreen;
+    iput p3, p0, Lw91;->a:I
 
-    const/4 p1, 0x2
+    iput-wide p1, p0, Lw91;->b:J
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Ljava/lang/Object;
+    .locals 4
 
-    check-cast p1, Ljava/lang/Boolean;
+    iget v0, p0, Lw91;->a:I
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    new-instance v0, Lone/me/webapp/settings/WebAppSettingsScreen;
 
-    invoke-virtual {p0, p1, p2}, Lw91;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-wide v1, p0, Lw91;->b:J
 
-    move-result-object p1
-
-    check-cast p1, Lw91;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lw91;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lw91;
-
-    iget-object v1, p0, Lw91;->Y:Lone/me/calllist/ui/page/CallHistoryPageScreen;
-
-    invoke-direct {v0, v1, p2}, Lw91;-><init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;Lkotlin/coroutines/Continuation;)V
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    iput-boolean p1, v0, Lw91;->X:Z
+    invoke-direct {v0, v1, v2}, Lone/me/webapp/settings/WebAppSettingsScreen;-><init>(J)V
 
     return-object v0
-.end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    :pswitch_0
+    new-instance v0, Lone/me/stickerssettings/stickersscreen/StickersScreen;
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    sget-object v1, Lghf;->d:Lghf;
 
-    iget-boolean p1, p0, Lw91;->X:Z
+    iget-wide v2, p0, Lw91;->b:J
 
-    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->t0:Lm9a;
+    invoke-direct {v0, v1, v2, v3}, Lone/me/stickerssettings/stickersscreen/StickersScreen;-><init>(Lghf;J)V
 
-    iget-object v0, p0, Lw91;->Y:Lone/me/calllist/ui/page/CallHistoryPageScreen;
+    return-object v0
 
-    invoke-virtual {v0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->E0()Lja1;
+    :pswitch_1
+    new-instance v0, Lone/me/startconversation/channel/PickSubscribersScreen;
 
-    move-result-object v0
+    iget-wide v1, p0, Lw91;->b:J
 
-    iget-object v0, v0, Lja1;->r0:Lx0f;
+    invoke-direct {v0, v1, v2}, Lone/me/startconversation/channel/PickSubscribersScreen;-><init>(J)V
 
-    :cond_0
-    invoke-virtual {v0}, Lx0f;->getValue()Ljava/lang/Object;
+    return-object v0
 
-    move-result-object v1
+    :pswitch_2
+    new-instance v0, Lone/me/profileedit/screens/memberpermissions/ProfileMemberPermissionsScreen;
 
-    move-object v2, v1
+    iget-wide v1, p0, Lw91;->b:J
 
-    check-cast v2, Ljava/lang/Boolean;
+    invoke-direct {v0, v1, v2}, Lone/me/profileedit/screens/memberpermissions/ProfileMemberPermissionsScreen;-><init>(J)V
 
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return-object v0
 
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    :pswitch_3
+    new-instance v0, Lone/me/profile/screens/addadmins/AddChatAdminsScreen;
 
-    move-result-object v2
+    iget-wide v1, p0, Lw91;->b:J
 
-    invoke-virtual {v0, v1, v2}, Lx0f;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-direct {v0, v1, v2}, Lone/me/profile/screens/addadmins/AddChatAdminsScreen;-><init>(J)V
 
-    move-result v1
+    return-object v0
 
-    if-eqz v1, :cond_0
+    :pswitch_4
+    new-instance v0, Lone/me/profile/screens/invite/ProfileInviteScreen;
 
-    sget-object p1, Lccg;->a:Lccg;
+    iget-wide v1, p0, Lw91;->b:J
 
-    return-object p1
+    invoke-direct {v0, v1, v2}, Lone/me/profile/screens/invite/ProfileInviteScreen;-><init>(J)V
+
+    return-object v0
+
+    :pswitch_5
+    new-instance v0, Lone/me/profile/screens/media/ChatMediaTabWidget;
+
+    iget-wide v1, p0, Lw91;->b:J
+
+    invoke-direct {v0, v1, v2}, Lone/me/profile/screens/media/ChatMediaTabWidget;-><init>(J)V
+
+    return-object v0
+
+    :pswitch_6
+    new-instance v0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+
+    iget-wide v1, p0, Lw91;->b:J
+
+    invoke-direct {v0, v1, v2}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;-><init>(J)V
+
+    return-object v0
+
+    :pswitch_7
+    new-instance v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;
+
+    iget-wide v1, p0, Lw91;->b:J
+
+    invoke-direct {v0, v1, v2}, Lone/me/folders/pickerfolders/FoldersPickerScreen;-><init>(J)V
+
+    return-object v0
+
+    :pswitch_8
+    new-instance v0, Lone/me/folders/edit/FolderEditScreen;
+
+    iget-wide v1, p0, Lw91;->b:J
+
+    invoke-direct {v0, v1, v2}, Lone/me/folders/edit/FolderEditScreen;-><init>(J)V
+
+    return-object v0
+
+    :pswitch_9
+    new-instance v0, Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;
+
+    iget-wide v1, p0, Lw91;->b:J
+
+    invoke-direct {v0, v1, v2}, Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;-><init>(J)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

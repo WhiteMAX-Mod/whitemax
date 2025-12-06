@@ -1,218 +1,221 @@
 .class public final Lchc;
-.super Lxzg;
+.super Ldtf;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic t0:[Ltr7;
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public final X:Lwt9;
+.field public final synthetic X:Lfhc;
 
-.field public final Y:Lxe5;
-
-.field public final Z:Lw0e;
-
-.field public final b:Lv3;
-
-.field public final c:Lulf;
-
-.field public final o:Ln0d;
-
-.field public final q0:Lcye;
-
-.field public final r0:Lx0f;
-
-.field public final s0:Ln0d;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lfhc;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Le1a;
+    iput-object p1, p0, Lchc;->X:Lfhc;
 
-    const-string v1, "scanLocalImageJob"
+    const/4 p1, 0x2
 
-    const-string v2, "getScanLocalImageJob()Lkotlinx/coroutines/Job;"
-
-    const-class v3, Lchc;
-
-    invoke-direct {v0, v3, v1, v2}, Le1a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v1, Lz7d;->a:La8d;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Ltr7;
-
-    const/4 v2, 0x0
-
-    aput-object v0, v1, v2
-
-    sput-object v1, Lchc;->t0:[Ltr7;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 7
-
-    sget-object v0, Lvgc;->a:Lvgc;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v1
-
-    const-class v2, Landroid/content/Context;
-
-    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v2
-
-    const-class v3, Leva;
-
-    invoke-virtual {v2, v3}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Leva;
-
-    new-instance v3, Lv3;
-
-    invoke-virtual {v2}, Leva;->c()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v2
-
-    invoke-direct {v3, v1, v2}, Lv3;-><init>(Liu7;Ljava/util/concurrent/ExecutorService;)V
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v0
-
-    const-class v1, Lulf;
-
-    invoke-virtual {v0, v1}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lulf;
-
-    invoke-direct {p0}, Lxzg;-><init>()V
-
-    iput-object v3, p0, Lchc;->b:Lv3;
-
-    iput-object v0, p0, Lchc;->c:Lulf;
-
-    iget-object v1, v3, Lv3;->Y:Ljava/lang/Object;
-
-    check-cast v1, Ln0d;
-
-    iput-object v1, p0, Lchc;->o:Ln0d;
-
-    new-instance v1, Lwt9;
-
-    iget-object v4, v3, Lv3;->o:Ljava/lang/Object;
-
-    check-cast v4, Lwif;
-
-    invoke-virtual {v4}, Lwif;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lni0;
-
-    invoke-static {v4}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v4
-
-    new-instance v5, Lx22;
-
-    const/4 v6, 0x1
-
-    invoke-direct {v5, v6, v3}, Lx22;-><init>(ILjava/lang/Object;)V
-
-    invoke-direct {v1, v4, v2, v5}, Lwt9;-><init>(Ljava/util/List;Ljava/util/concurrent/ExecutorService;Lx22;)V
-
-    iput-object v1, p0, Lchc;->X:Lwt9;
-
-    new-instance v1, Lxe5;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v2}, Lxe5;-><init>(I)V
-
-    iput-object v1, p0, Lchc;->Y:Lxe5;
-
-    invoke-static {}, Lcxi;->b()Lw0e;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lchc;->Z:Lw0e;
-
-    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-static {v1}, Ly0f;->a(Ljava/lang/Object;)Lx0f;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lchc;->r0:Lx0f;
-
-    new-instance v2, Ln0d;
-
-    invoke-direct {v2, v1}, Ln0d;-><init>(Lj1a;)V
-
-    iput-object v2, p0, Lchc;->s0:Ln0d;
-
-    iget-object v1, p0, Lchc;->q0:Lcye;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1, v2}, Llo7;->cancel(Ljava/util/concurrent/CancellationException;)V
-
-    :cond_0
-    check-cast v0, Lqta;
-
-    invoke-virtual {v0}, Lqta;->a()Lk54;
-
-    move-result-object v0
-
-    new-instance v1, Lbhc;
-
-    invoke-direct {v1, p0, v2}, Lbhc;-><init>(Lchc;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v2, 0x2
-
-    invoke-static {p0, v0, v1, v2}, Lxzg;->m(Lxzg;Li54;Lzi6;I)Lcye;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lchc;->q0:Lcye;
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final r(Lnnd;)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Lygc;
+    check-cast p1, Lf84;
 
-    invoke-direct {v0, p1}, Lygc;-><init>(Lnnd;)V
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object p1, p0, Lchc;->Y:Lxe5;
+    invoke-virtual {p0, p1, p2}, Lchc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-static {p1, v0}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
+    move-result-object p1
 
-    return-void
+    check-cast p1, Lchc;
+
+    sget-object p2, Lqqg;->a:Lqqg;
+
+    invoke-virtual {p1, p2}, Lchc;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lchc;
+
+    iget-object v1, p0, Lchc;->X:Lfhc;
+
+    invoke-direct {v0, v1, p2}, Lchc;-><init>(Lfhc;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lchc;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lchc;->o:Ljava/lang/Object;
+
+    check-cast p1, Lf84;
+
+    iget-object v0, p0, Lchc;->X:Lfhc;
+
+    iget-object v1, v0, Lfhc;->X:Lk18;
+
+    iget-object v2, v0, Lfhc;->y0:Ljava/util/concurrent/atomic/AtomicReference;
+
+    :try_start_0
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v3
+
+    invoke-static {v3, v4}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+
+    invoke-interface {v1}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Liz5;
+
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/String;
+
+    invoke-virtual {v3, v2}, Liz5;->p(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v2
+
+    invoke-static {v2}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v4, "content://"
+
+    invoke-virtual {v3, v4}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-interface {v1}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Liz5;
+
+    iget-object v3, v0, Lfhc;->Y:Lk18;
+
+    invoke-interface {v3}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/app/Application;
+
+    invoke-static {v2}, Lioi;->c(Landroid/net/Uri;)Ljava/io/File;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v3, v2}, Liz5;->f(Landroid/content/Context;Ljava/io/File;)Landroid/net/Uri;
+
+    move-result-object v2
+
+    :goto_0
+    new-instance v1, Landroid/content/Intent;
+
+    const-string v3, "android.media.action.IMAGE_CAPTURE"
+
+    invoke-direct {v1, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const-string v3, "output"
+
+    invoke-virtual {v1, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    const-string v2, "outputFormat"
+
+    sget-object v3, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception v1
+
+    new-instance v2, Lipd;
+
+    invoke-direct {v2, v1}, Lipd;-><init>(Ljava/lang/Throwable;)V
+
+    move-object v1, v2
+
+    :goto_1
+    invoke-static {v1}, Lkpd;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v3, "capturePhoto: failed to capture photo"
+
+    invoke-static {p1, v3, v2}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-virtual {v0}, Lfhc;->v()V
+
+    :cond_1
+    instance-of p1, v1, Lipd;
+
+    if-nez p1, :cond_2
+
+    check-cast v1, Landroid/content/Intent;
+
+    iget-object p1, v0, Lfhc;->v0:Lci5;
+
+    new-instance v0, Lagc;
+
+    invoke-direct {v0, v1}, Lagc;-><init>(Landroid/content/Intent;)V
+
+    invoke-static {p1, v0}, Lxfh;->r(Lci5;Ljava/lang/Object;)V
+
+    :cond_2
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

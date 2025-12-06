@@ -1,53 +1,80 @@
 .class public final Lckf;
-.super Ly14;
+.super Ldtf;
 .source "SourceFile"
+
+# interfaces
+.implements Lym6;
 
 
 # instance fields
-.field public X:Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
+.field public synthetic X:Ljava/util/List;
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public synthetic Y:Ljava/util/List;
 
-.field public final synthetic Z:Ljkf;
+.field public synthetic Z:Lcze;
 
-.field public o:Ljkf;
-
-.field public q0:I
-
-
-# direct methods
-.method public constructor <init>(Ljkf;Ly14;)V
-    .locals 0
-
-    iput-object p1, p0, Lckf;->Z:Ljkf;
-
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.field public synthetic o:Ljava/util/List;
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final b(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Lb66;)Ljava/lang/Object;
+    .locals 2
 
-    iput-object p1, p0, Lckf;->Y:Ljava/lang/Object;
+    check-cast p1, Ljava/util/List;
 
-    iget p1, p0, Lckf;->q0:I
+    check-cast p2, Ljava/util/List;
 
-    const/high16 v0, -0x80000000
+    check-cast p3, Ljava/util/List;
 
-    or-int/2addr p1, v0
+    check-cast p4, Lcze;
 
-    iput p1, p0, Lckf;->q0:I
+    new-instance v0, Lckf;
 
-    iget-object p1, p0, Lckf;->Z:Ljkf;
+    const/4 v1, 0x5
 
-    const/4 v0, 0x0
+    invoke-direct {v0, v1, p5}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {p1, v0, p0}, Ljkf;->I(Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;Ly14;)Ljava/lang/Object;
+    iput-object p1, v0, Lckf;->o:Ljava/util/List;
+
+    iput-object p2, v0, Lckf;->X:Ljava/util/List;
+
+    iput-object p3, v0, Lckf;->Y:Ljava/util/List;
+
+    iput-object p4, v0, Lckf;->Z:Lcze;
+
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    invoke-virtual {v0, p1}, Lckf;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
     return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lckf;->o:Ljava/util/List;
+
+    iget-object v0, p0, Lckf;->X:Ljava/util/List;
+
+    iget-object v1, p0, Lckf;->Y:Ljava/util/List;
+
+    iget-object v2, p0, Lckf;->Z:Lcze;
+
+    new-instance v3, Lpjf;
+
+    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, v3, Lpjf;->a:Ljava/util/List;
+
+    iput-object v0, v3, Lpjf;->b:Ljava/util/List;
+
+    iput-object v1, v3, Lpjf;->c:Ljava/util/List;
+
+    iput-object v2, v3, Lpjf;->d:Lcze;
+
+    return-object v3
 .end method

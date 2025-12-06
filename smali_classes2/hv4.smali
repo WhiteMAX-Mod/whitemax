@@ -2,335 +2,153 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final j:Ljava/security/SecureRandom;
+# interfaces
+.implements Liv4;
 
 
 # instance fields
-.field public final a:Ljava/util/LinkedList;
+.field public final a:J
 
-.field public final b:Landroid/util/SparseIntArray;
+.field public final b:J
 
-.field public final c:Ljava/util/LinkedList;
-
-.field public final d:I
-
-.field public e:I
-
-.field public final f:I
-
-.field public g:I
-
-.field public h:Z
-
-.field public final i:Lxe;
+.field public final c:Lhbd;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Ljava/security/SecureRandom;
-
-    invoke-direct {v0}, Ljava/security/SecureRandom;-><init>()V
-
-    sput-object v0, Lhv4;->j:Ljava/security/SecureRandom;
-
-    return-void
-.end method
-
 .method public constructor <init>()V
-    .locals 2
+    .locals 12
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/LinkedList;
+    sget-object v0, Lpu4;->b:Ljava/util/concurrent/atomic/AtomicLong;
 
-    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
 
-    iput-object v0, p0, Lhv4;->a:Ljava/util/LinkedList;
+    move-result-wide v2
 
-    new-instance v0, Landroid/util/SparseIntArray;
+    iput-wide v2, p0, Lhv4;->a:J
 
-    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
 
-    iput-object v0, p0, Lhv4;->b:Landroid/util/SparseIntArray;
+    move-result-wide v9
 
-    new-instance v0, Ljava/util/LinkedList;
+    iput-wide v9, p0, Lhv4;->b:J
 
-    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+    new-instance v1, Lyg4;
 
-    iput-object v0, p0, Lhv4;->c:Ljava/util/LinkedList;
+    sget v0, Lj3d;->oneme_settings_old_dev_menu:I
 
-    new-instance v0, Lxe;
+    new-instance v4, Ln5g;
 
-    const/16 v1, 0xd
+    invoke-direct {v4, v0}, Ln5g;-><init>(I)V
 
-    invoke-direct {v0, v1, p0}, Lxe;-><init>(ILjava/lang/Object;)V
+    sget v5, Lyud;->T:I
 
-    iput-object v0, p0, Lhv4;->i:Lxe;
+    const/16 v8, 0x8
 
-    const/4 v0, 0x4
+    const/4 v6, 0x0
 
-    iput v0, p0, Lhv4;->d:I
+    sget-object v7, Lwg4;->a:Lwg4;
 
-    sget-object v0, Lhv4;->j:Ljava/security/SecureRandom;
+    invoke-direct/range {v1 .. v8}, Lyg4;-><init>(JLs5g;ILs5g;Li8j;I)V
 
-    invoke-virtual {v0}, Ljava/util/Random;->nextInt()I
+    new-instance v4, Lyg4;
 
-    move-result v0
+    sget v0, Lj3d;->oneme_settings_old_logs_menu:I
 
-    iput v0, p0, Lhv4;->f:I
+    move-wide v5, v9
+
+    move-object v10, v7
+
+    new-instance v7, Ln5g;
+
+    invoke-direct {v7, v0}, Ln5g;-><init>(I)V
+
+    sget v8, Lyud;->f:I
+
+    const/4 v9, 0x0
+
+    const/16 v11, 0x8
+
+    invoke-direct/range {v4 .. v11}, Lyg4;-><init>(JLs5g;ILs5g;Li8j;I)V
+
+    filled-new-array {v1, v4}, [Lyg4;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lve3;->j([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lucf;->a(Ljava/lang/Object;)Ltcf;
+
+    move-result-object v0
+
+    new-instance v1, Lhbd;
+
+    invoke-direct {v1, v0}, Lhbd;-><init>(Lf9a;)V
+
+    iput-object v1, p0, Lhv4;->c:Lhbd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lfv4;
-    .locals 3
+.method public final b()Lmcf;
+    .locals 1
 
-    new-instance v0, Lfv4;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "rlottie-pool-"
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v2, p0, Lhv4;->f:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v2, "-"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget-object v2, Lhv4;->j:Ljava/security/SecureRandom;
-
-    invoke-virtual {v2}, Ljava/util/Random;->nextInt()I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lfv4;-><init>(Ljava/lang/String;)V
-
-    const/16 v1, 0xa
-
-    invoke-virtual {v0, v1}, Ljava/lang/Thread;->setPriority(I)V
+    iget-object v0, p0, Lhv4;->c:Lhbd;
 
     return-object v0
 .end method
 
-.method public final b(Ljava/lang/Runnable;)V
-    .locals 11
+.method public final d(Lyg4;)V
+    .locals 5
 
-    iget-object v0, p0, Lhv4;->c:Ljava/util/LinkedList;
+    iget-wide v0, p1, Lyg4;->a:J
 
-    invoke-virtual {v0}, Ljava/util/AbstractCollection;->isEmpty()Z
+    iget-wide v2, p0, Lhv4;->b:J
 
-    move-result v1
+    invoke-static {v0, v1, v2, v3}, Lpu4;->a(JJ)Z
 
-    iget v2, p0, Lhv4;->d:I
+    move-result p1
 
-    iget-object v3, p0, Lhv4;->a:Ljava/util/LinkedList;
+    const/4 v2, 0x0
 
-    const/4 v4, 0x1
+    if-eqz p1, :cond_0
 
-    if-nez v1, :cond_1
+    sget-object p1, Lav4;->c:Lav4;
 
-    iget v1, p0, Lhv4;->g:I
+    invoke-virtual {p1}, Li3;->p0()Lii4;
 
-    div-int/lit8 v1, v1, 0x2
+    move-result-object p1
 
-    invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
+    const-string v0, ":settings/dev/logsviewer"
 
-    move-result v5
+    invoke-virtual {p1, v0, v2}, Lii4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
-    if-le v1, v5, :cond_0
-
-    invoke-virtual {v3}, Ljava/util/AbstractCollection;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget v1, p0, Lhv4;->e:I
-
-    if-lt v1, v2, :cond_1
+    return-void
 
     :cond_0
-    :try_start_0
-    invoke-virtual {v0}, Ljava/util/LinkedList;->removeFirst()Ljava/lang/Object;
+    iget-wide v3, p0, Lhv4;->a:J
 
-    move-result-object v1
+    invoke-static {v0, v1, v3, v4}, Lpu4;->a(JJ)Z
 
-    check-cast v1, Lfv4;
-    :try_end_0
-    .catch Ljava/util/NoSuchElementException; {:try_start_0 .. :try_end_0} :catch_0
+    move-result p1
 
-    goto :goto_0
+    if-eqz p1, :cond_1
 
-    :catch_0
-    move-exception v1
+    sget-object p1, Lav4;->c:Lav4;
 
-    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lt4a;
+    invoke-virtual {p1}, Li3;->p0()Lii4;
 
-    move-result-object v5
+    move-result-object p1
 
-    invoke-interface {v5, v1}, Lt4a;->k(Ljava/lang/Throwable;)V
+    const-string v0, ":settings/dev/showroom"
 
-    const/4 v1, 0x0
-
-    goto :goto_0
+    invoke-virtual {p1, v0, v2}, Lii4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
     :cond_1
-    invoke-virtual {v3}, Ljava/util/AbstractCollection;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {p0}, Lhv4;->a()Lfv4;
-
-    move-result-object v1
-
-    iget v5, p0, Lhv4;->e:I
-
-    add-int/2addr v5, v4
-
-    iput v5, p0, Lhv4;->e:I
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {v3}, Ljava/util/LinkedList;->removeFirst()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lfv4;
-
-    :goto_0
-    iget-boolean v5, p0, Lhv4;->h:Z
-
-    if-nez v5, :cond_3
-
-    iget-object v5, p0, Lhv4;->i:Lxe;
-
-    const-wide/16 v6, 0x7530
-
-    invoke-static {v5, v6, v7}, Lne;->e(Ljava/lang/Runnable;J)V
-
-    iput-boolean v4, p0, Lhv4;->h:Z
-
-    :cond_3
-    if-nez v1, :cond_4
-
-    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lt4a;
-
-    move-result-object v1
-
-    sget-object v5, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
-
-    move-result v5
-
-    iget v6, p0, Lhv4;->g:I
-
-    invoke-virtual {v3}, Ljava/util/LinkedList;->size()I
-
-    move-result v3
-
-    iget v7, p0, Lhv4;->e:I
-
-    const-string v8, ", totalTasksCount="
-
-    const-string v9, ", queues.size="
-
-    const-string v10, "DispatchQueuePool: queue is null \u2013 busyQueues.size="
-
-    invoke-static {v10, v5, v8, v6, v9}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    const-string v6, ", createdCount="
-
-    const-string v8, ", maxCount="
-
-    invoke-static {v5, v3, v6, v7, v8}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    new-instance v3, Ljava/lang/IllegalStateException;
-
-    const-string v5, "queue is null"
-
-    invoke-direct {v3, v5}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    invoke-interface {v1, v2, v3}, Lt4a;->c(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-virtual {p0}, Lhv4;->a()Lfv4;
-
-    move-result-object v1
-
-    iget v2, p0, Lhv4;->e:I
-
-    add-int/2addr v2, v4
-
-    iput v2, p0, Lhv4;->e:I
-
-    :cond_4
-    iget v2, v1, Lfv4;->o:I
-
-    iget v3, p0, Lhv4;->g:I
-
-    add-int/2addr v3, v4
-
-    iput v3, p0, Lhv4;->g:I
-
-    invoke-virtual {v0, v1}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
-
-    const/4 v0, 0x0
-
-    iget-object v3, p0, Lhv4;->b:Landroid/util/SparseIntArray;
-
-    invoke-virtual {v3, v2, v0}, Landroid/util/SparseIntArray;->get(II)I
-
-    move-result v0
-
-    add-int/2addr v0, v4
-
-    invoke-virtual {v3, v2, v0}, Landroid/util/SparseIntArray;->put(II)V
-
-    invoke-virtual {v1}, Ljava/lang/Thread;->getPriority()I
-
-    move-result v0
-
-    const/16 v2, 0xa
-
-    if-eq v0, v2, :cond_5
-
-    invoke-virtual {v1, v2}, Ljava/lang/Thread;->setPriority(I)V
-
-    :cond_5
-    new-instance v0, Lgj;
-
-    const/16 v2, 0x19
-
-    invoke-direct {v0, p0, p1, v1, v2}, Lgj;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-virtual {v1, v0}, Lfv4;->b(Ljava/lang/Runnable;)V
-
     return-void
 .end method

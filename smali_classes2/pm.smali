@@ -1,6 +1,8 @@
-.class public final Lpm;
+.class public interface abstract Lpm;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lqm;
+
+# virtual methods
+.method public abstract c(Ltl;)Ltl;
+.end method

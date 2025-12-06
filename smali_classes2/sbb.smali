@@ -1,125 +1,85 @@
-.class public final Lsbb;
+.class public abstract Lsbb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Handler$Callback;
-
 
 # static fields
-.field public static final c:Ljava/util/concurrent/ExecutorService;
+.field public static final a:I
 
-.field public static final o:Ljava/lang/ThreadLocal;
+.field public static final b:I
 
+.field public static final c:I
 
-# instance fields
-.field public final a:Ljava/util/concurrent/ExecutorService;
+.field public static final d:I
 
-.field public final b:Liwc;
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
-    invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
+    sget v0, Lp4d;->oneme_settings_ringtone_custom_section_add:I
 
-    move-result-object v0
+    sput v0, Lsbb;->a:I
 
-    sput-object v0, Lsbb;->c:Ljava/util/concurrent/ExecutorService;
+    sget v0, Lp4d;->oneme_settings_ringtone_custom_section_bottom:I
 
-    new-instance v1, Ljava/lang/ThreadLocal;
+    sput v0, Lsbb;->b:I
 
-    invoke-direct {v1}, Ljava/lang/ThreadLocal;-><init>()V
+    sget v0, Lp4d;->oneme_settings_ringtone_custom_section_bottom_full:I
 
-    sput-object v1, Lsbb;->o:Ljava/lang/ThreadLocal;
+    sput v0, Lsbb;->c:I
 
-    new-instance v1, Lqc;
+    sget v0, Lp4d;->oneme_settings_ringtone_custom_section_header:I
 
-    const/16 v2, 0xb
+    sput v0, Lsbb;->d:I
 
-    invoke-direct {v1, v2}, Lqc;-><init>(I)V
+    sget v0, Lp4d;->oneme_settings_ringtone_custom_section_wrong_duration:I
 
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    sput v0, Lsbb;->e:I
+
+    sget v0, Lp4d;->oneme_settings_ringtone_custom_section_wrong_format:I
+
+    sput v0, Lsbb;->f:I
+
+    sget v0, Lp4d;->oneme_settings_ringtone_custom_section_wrong_size:I
+
+    sput v0, Lsbb;->g:I
+
+    sget v0, Lp4d;->oneme_settings_ringtone_default_section:I
+
+    sput v0, Lsbb;->h:I
+
+    sget v0, Lp4d;->oneme_settings_ringtone_low_volume_level:I
+
+    sput v0, Lsbb;->i:I
+
+    sget v0, Lp4d;->oneme_settings_ringtone_system_section:I
+
+    sput v0, Lsbb;->j:I
+
+    sget v0, Lp4d;->oneme_settings_ringtone_system_title:I
+
+    sput v0, Lsbb;->k:I
+
+    sget v0, Lp4d;->oneme_settings_ringtone_title:I
+
+    sput v0, Lsbb;->l:I
 
     return-void
-.end method
-
-.method public constructor <init>(Liwc;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lsbb;->b:Liwc;
-
-    sget-object p1, Lsbb;->c:Ljava/util/concurrent/ExecutorService;
-
-    iput-object p1, p0, Lsbb;->a:Ljava/util/concurrent/ExecutorService;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final handleMessage(Landroid/os/Message;)Z
-    .locals 5
-
-    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast p1, Lkth;
-
-    iget-boolean v0, p1, Lkth;->c:Z
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget v0, p1, Lkth;->o:I
-
-    add-int/2addr v0, v1
-
-    iput v0, p1, Lkth;->o:I
-
-    iget-object v0, p0, Lsbb;->b:Liwc;
-
-    sget-object v2, Ll0f;->t0:Ll0f;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "rtc.long.executor.task."
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v4, p1, Lkth;->o:I
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    iget-object v4, p1, Lkth;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v3, v4}, Liwc;->log(Ll0f;Ljava/lang/String;Ljava/lang/String;)V
-
-    iget p1, p1, Lkth;->o:I
-
-    const/4 v0, 0x4
-
-    if-lt p1, v0, :cond_1
-
-    :goto_0
-    return v1
-
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "No task duration check thread"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method

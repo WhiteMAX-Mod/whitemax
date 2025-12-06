@@ -1,66 +1,49 @@
 .class public final Lap;
-.super Ltd6;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/widget/PopupWindow$OnDismissListener;
 
 
 # instance fields
-.field public final synthetic s0:Lhp;
+.field public final synthetic a:Lvo;
 
-.field public final synthetic t0:Lkp;
+.field public final synthetic b:Lbp;
 
 
 # direct methods
-.method public constructor <init>(Lkp;Lkp;Lhp;)V
+.method public constructor <init>(Lbp;Lvo;)V
     .locals 0
 
-    iput-object p1, p0, Lap;->t0:Lkp;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lap;->s0:Lhp;
+    iput-object p1, p0, Lap;->b:Lbp;
 
-    invoke-direct {p0, p2}, Ltd6;-><init>(Landroid/view/View;)V
+    iput-object p2, p0, Lap;->a:Lvo;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Lume;
-    .locals 1
+.method public final onDismiss()V
+    .locals 2
 
-    iget-object v0, p0, Lap;->s0:Lhp;
+    iget-object v0, p0, Lap;->b:Lbp;
 
-    return-object v0
-.end method
+    iget-object v0, v0, Lbp;->Q0:Lep;
 
-.method public final c()Z
-    .locals 3
+    invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
-    iget-object v0, p0, Lap;->t0:Lkp;
+    move-result-object v0
 
-    invoke-virtual {v0}, Lkp;->getInternalPopup()Ljp;
+    if-eqz v0, :cond_0
 
-    move-result-object v1
+    iget-object v1, p0, Lap;->a:Lvo;
 
-    invoke-interface {v1}, Ljp;->a()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    iget-object v1, v0, Lkp;->r0:Ljp;
-
-    invoke-virtual {v0}, Landroid/view/View;->getTextDirection()I
-
-    move-result v2
-
-    invoke-virtual {v0}, Landroid/view/View;->getTextAlignment()I
-
-    move-result v0
-
-    invoke-interface {v1, v2, v0}, Ljp;->m(II)V
+    invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->removeGlobalOnLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
     :cond_0
-    const/4 v0, 0x1
-
-    return v0
+    return-void
 .end method

@@ -1,55 +1,23 @@
 .class public final Lwgf;
-.super Ly14;
+.super Li3;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Lweg;
-
-.field public Y:Lq1a;
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Lohf;
-
-.field public final synthetic q0:Lohf;
-
-.field public r0:I
+# static fields
+.field public static final c:Lwgf;
 
 
 # direct methods
-.method public constructor <init>(Lohf;Ly14;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lwgf;->q0:Lohf;
+    new-instance v0, Lwgf;
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/16 v1, 0xb
+
+    invoke-direct {v0, v1}, Li3;-><init>(I)V
+
+    sput-object v0, Lwgf;->c:Lwgf;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lwgf;->Z:Ljava/lang/Object;
-
-    iget p1, p0, Lwgf;->r0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lwgf;->r0:I
-
-    iget-object p1, p0, Lwgf;->q0:Lohf;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lohf;->g(Lweg;Ly14;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

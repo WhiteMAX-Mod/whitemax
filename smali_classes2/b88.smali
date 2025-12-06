@@ -1,118 +1,105 @@
 .class public final Lb88;
-.super Ljava/lang/Object;
+.super Landroid/text/style/ClickableSpan;
 .source "SourceFile"
+
+# interfaces
+.implements Lep8;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:I
 
-.field public b:I
+.field public b:Z
 
-.field public c:Ljava/lang/Long;
+.field public final c:Ljava/lang/String;
 
-.field public d:Ljava/lang/Long;
+.field public d:La88;
+
+.field public final o:I
 
 
 # direct methods
-.method public synthetic constructor <init>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;IZ)V
+    .locals 0
 
-    .line 1
-    const/4 v0, 0x0
+    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
 
-    iput v0, p0, Lb88;->a:I
+    iput p2, p0, Lb88;->a:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-boolean p3, p0, Lb88;->b:Z
 
-    return-void
-.end method
+    invoke-static {p1}, Lvmf;->c0(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
-.method public constructor <init>(Lb88;)V
-    .locals 1
+    move-result-object p1
 
-    const/4 v0, 0x1
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    iput v0, p0, Lb88;->a:I
+    move-result-object p1
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lb88;->c:Ljava/lang/String;
 
-    .line 3
-    iget v0, p1, Lb88;->b:I
+    const/4 p1, 0x6
 
-    iput v0, p0, Lb88;->b:I
-
-    .line 4
-    iget-object v0, p1, Lb88;->c:Ljava/lang/Long;
-
-    iput-object v0, p0, Lb88;->c:Ljava/lang/Long;
-
-    .line 5
-    iget-object p1, p1, Lb88;->d:Ljava/lang/Long;
-
-    iput-object p1, p0, Lb88;->d:Ljava/lang/Long;
+    iput p1, p0, Lb88;->o:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public toString()Ljava/lang/String;
+.method public final copy()Lg74;
+    .locals 4
+
+    new-instance v0, Lb88;
+
+    iget v1, p0, Lb88;->a:I
+
+    const/4 v2, 0x1
+
+    iget-object v3, p0, Lb88;->c:Ljava/lang/String;
+
+    invoke-direct {v0, v3, v1, v2}, Lb88;-><init>(Ljava/lang/String;IZ)V
+
+    return-object v0
+.end method
+
+.method public final getType()I
+    .locals 1
+
+    iget v0, p0, Lb88;->o:I
+
+    return v0
+.end method
+
+.method public final onClick(Landroid/view/View;)V
     .locals 2
+
+    iget-object v0, p0, Lb88;->d:La88;
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Lb88;->c:Ljava/lang/String;
+
+    invoke-interface {v0, p1, v1}, La88;->a(Landroid/view/View;Ljava/lang/String;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final updateDrawState(Landroid/text/TextPaint;)V
+    .locals 1
 
     iget v0, p0, Lb88;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    iget v0, p0, Lb88;->a:I
 
-    move-result-object v0
+    iput v0, p1, Landroid/text/TextPaint;->linkColor:I
 
-    return-object v0
+    iget-boolean v0, p0, Lb88;->b:Z
 
-    :pswitch_0
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
 
-    const-string v1, "LocationProviderRequest{priority="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lb88;->b:I
-
-    invoke-static {v1}, Li57;->s(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", interval="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lb88;->c:Ljava/lang/Long;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", fastestInterval="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lb88;->d:Ljava/lang/Long;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

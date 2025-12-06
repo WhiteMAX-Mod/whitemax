@@ -1,162 +1,83 @@
-.class public final Lh6c;
+.class public final synthetic Lh6c;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lsm6;
+
 
 # instance fields
-.field public final a:Lorf;
+.field public final synthetic a:I
 
-.field public final b:I
-
-.field public final c:Lj42;
+.field public final synthetic b:Lo6c;
 
 
 # direct methods
-.method public constructor <init>(Lorf;ILj42;)V
+.method public synthetic constructor <init>(Lo6c;I)V
     .locals 0
 
+    iput p2, p0, Lh6c;->a:I
+
+    iput-object p1, p0, Lh6c;->b:Lo6c;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lh6c;->a:Lorf;
-
-    iput p2, p0, Lh6c;->b:I
-
-    iput-object p3, p0, Lh6c;->c:Lj42;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Lh6c;->a:I
 
-    goto :goto_1
+    check-cast p1, Ljava/lang/Float;
 
-    :cond_0
-    instance-of v0, p1, Lh6c;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lh6c;
-
-    iget-object v0, p0, Lh6c;->a:Lorf;
-
-    iget-object v1, p1, Lh6c;->a:Lorf;
-
-    invoke-virtual {v0, v1}, Lorf;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p0, Lh6c;->b:I
-
-    iget v1, p1, Lh6c;->b:I
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Lh6c;->c:Lj42;
-
-    iget-object p1, p1, Lh6c;->c:Lj42;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
     move-result p1
 
-    if-nez p1, :cond_4
+    check-cast p2, Ljava/lang/Float;
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p2, p0, Lh6c;->b:Lo6c;
+
+    invoke-static {p2, p1}, Lo6c;->a(Lo6c;F)V
 
     :goto_0
-    const/4 p1, 0x0
+    sget-object p1, Lqqg;->a:Lqqg;
 
-    return p1
+    return-object p1
 
-    :cond_4
-    :goto_1
-    const/4 p1, 0x1
+    :pswitch_0
+    invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
-    return p1
-.end method
+    move-result p2
 
-.method public final hashCode()I
-    .locals 3
+    iget-object v0, p0, Lh6c;->b:Lo6c;
 
-    iget-object v0, p0, Lh6c;->a:Lorf;
+    invoke-static {v0, p1, p2}, Lo6c;->c(Lo6c;FF)V
 
-    iget v0, v0, Lorf;->c:I
+    goto :goto_0
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    :pswitch_1
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result v0
+    iget-object p2, p0, Lh6c;->b:Lo6c;
 
-    const/16 v1, 0x1f
+    invoke-static {p2, p1}, Lo6c;->b(Lo6c;F)V
 
-    mul-int/2addr v0, v1
+    goto :goto_0
 
-    iget v2, p0, Lh6c;->b:I
+    nop
 
-    invoke-static {v2, v0, v1}, Lzdf;->m(III)I
-
-    move-result v0
-
-    iget-object v1, p0, Lh6c;->c:Lj42;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShowCancellableSnackbar(title="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lh6c;->a:Lorf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", bottomMargin="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lh6c;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", cancelAction="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lh6c;->c:Lj42;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

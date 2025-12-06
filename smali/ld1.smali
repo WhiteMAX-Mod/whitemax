@@ -1,91 +1,399 @@
 .class public final Lld1;
-.super Lsgf;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Lsm6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic o:Lmd1;
+
+
+# direct methods
+.method public constructor <init>(Lmd1;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lld1;->o:Lmd1;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, [Lwr3;
+    check-cast p1, Lf84;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p0, p1, p2}, Lld1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1, p2}, Lld1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
     check-cast p1, Lld1;
 
-    sget-object p2, Lccg;->a:Lccg;
+    sget-object p2, Lqqg;->a:Lqqg;
 
     invoke-virtual {p1, p2}, Lld1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lld1;
+
+    iget-object v0, p0, Lld1;->o:Lmd1;
+
+    invoke-direct {p1, v0, p2}, Lld1;-><init>(Lmd1;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lld1;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lld1;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    .locals 9
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    sget-object v0, Llg8;->d:Llg8;
 
-    iget-object p1, p0, Lld1;->X:Ljava/lang/Object;
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    check-cast p1, [Lwr3;
+    iget-object p1, p0, Lld1;->o:Lmd1;
 
-    array-length v0, p1
+    sget-object v1, Lmd1;->t0:[Lyy7;
+
+    iget-object p1, p1, Lmd1;->a:Lk18;
+
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ln64;
+
+    invoke-virtual {p1}, Ln64;->a()Lru/ok/android/externcalls/sdk/Conversation;
+
+    move-result-object p1
 
     const/4 v1, 0x0
 
-    move v2, v1
+    if-eqz p1, :cond_0
 
-    :goto_0
-    if-ge v2, v0, :cond_0
+    invoke-interface {p1}, Lru/ok/android/externcalls/sdk/Conversation;->getParticipants()Lru/ok/android/externcalls/sdk/participant/collection/ParticipantCollection;
 
-    aget-object v3, p1, v2
-
-    if-eqz v3, :cond_1
-
-    invoke-virtual {v3}, Lwr3;->z()Z
-
-    move-result v3
-
-    if-nez v3, :cond_1
-
-    add-int/lit8 v2, v2, 0x1
+    move-result-object p1
 
     goto :goto_0
 
     :cond_0
-    const/4 v1, 0x1
+    move-object p1, v1
+
+    :goto_0
+    iget-object v2, p0, Lld1;->o:Lmd1;
+
+    iget-object v2, v2, Lmd1;->b:Lk18;
+
+    invoke-interface {v2}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lrt5;
+
+    check-cast v2, Lgu5;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v3, Lru/ok/tamtam/android/prefs/PmsKey;->gc-from-p2p:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v2, v3, v4}, Lf5e;->j(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
+
+    move-result v2
+
+    const-string v3, "CallInviteToP2PController"
+
+    if-nez v2, :cond_2
+
+    iget-object p1, p0, Lld1;->o:Lmd1;
+
+    iget-object p1, p1, Lmd1;->Z:Ltcf;
+
+    sget-object v2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    invoke-virtual {p1, v1, v2}, Ltcf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    sget-object p1, Lwqi;->a:Ll6b;
+
+    if-nez p1, :cond_1
+
+    goto/16 :goto_5
 
     :cond_1
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-virtual {p1, v0}, Ll6b;->b(Llg8;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_10
+
+    const-string v2, "Invite to p2p toggle disabled. Skip check."
+
+    invoke-virtual {p1, v0, v3, v2, v1}, Ll6b;->c(Llg8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto/16 :goto_5
+
+    :cond_2
+    iget-object v2, p0, Lld1;->o:Lmd1;
+
+    iget-object v2, v2, Lmd1;->Z:Ltcf;
+
+    invoke-virtual {v2}, Ltcf;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Boolean;
+
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    sget-object p1, Lwqi;->a:Ll6b;
+
+    if-nez p1, :cond_3
+
+    goto/16 :goto_5
+
+    :cond_3
+    invoke-virtual {p1, v0}, Ll6b;->b(Llg8;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_10
+
+    const-string v2, "Invite to p2p already enabled. Skip check."
+
+    invoke-virtual {p1, v0, v3, v2, v1}, Ll6b;->c(Llg8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto/16 :goto_5
+
+    :cond_4
+    if-eqz p1, :cond_e
+
+    invoke-interface {p1}, Ljava/util/Collection;->size()I
+
+    move-result v2
+
+    const/4 v5, 0x2
+
+    if-le v2, v5, :cond_5
+
+    goto/16 :goto_4
+
+    :cond_5
+    iget-object v2, p0, Lld1;->o:Lmd1;
+
+    iget-object v2, v2, Lmd1;->X:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_7
+
+    sget-object p1, Lwqi;->a:Ll6b;
+
+    if-nez p1, :cond_6
+
+    goto/16 :goto_5
+
+    :cond_6
+    invoke-virtual {p1, v0}, Ll6b;->b(Llg8;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_10
+
+    const-string v2, "Invite to p2p check in progress."
+
+    invoke-virtual {p1, v0, v3, v2, v1}, Ll6b;->c(Llg8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto/16 :goto_5
+
+    :cond_7
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v2
+
+    const/4 v5, 0x1
+
+    if-eqz v2, :cond_9
+
+    :cond_8
+    move v4, v5
+
+    goto :goto_2
+
+    :cond_9
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
+
+    :goto_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_8
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lru/ok/android/externcalls/sdk/ConversationParticipant;
+
+    invoke-virtual {v2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCapabilities()Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;
+
+    move-result-object v6
+
+    sget-object v7, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;->ADD_PARTICIPANT:Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;
+
+    invoke-virtual {v6, v7}, Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities;->has(Lru/ok/android/externcalls/sdk/capabilities/ClientCapabilities$Capability;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_a
+
+    invoke-virtual {v2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->isUseable()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_a
+
+    invoke-virtual {v2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->isCallAccepted()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_a
+
+    goto :goto_1
+
+    :cond_a
+    :goto_2
+    if-eqz v4, :cond_c
+
+    iget-object p1, p0, Lld1;->o:Lmd1;
+
+    iget-object p1, p1, Lmd1;->X:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {p1, v5}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    iget-object p1, p0, Lld1;->o:Lmd1;
+
+    iget-object p1, p1, Lmd1;->a:Lk18;
+
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ln64;
+
+    invoke-virtual {p1}, Ln64;->a()Lru/ok/android/externcalls/sdk/Conversation;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_b
+
+    invoke-interface {p1}, Lru/ok/android/externcalls/sdk/Conversation;->getFeatureManager()Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager;
+
+    move-result-object p1
+
+    goto :goto_3
+
+    :cond_b
+    move-object p1, v1
+
+    :goto_3
+    if-eqz p1, :cond_c
+
+    sget-object v2, Lu81;->a:Lu81;
+
+    iget-object v5, p0, Lld1;->o:Lmd1;
+
+    new-instance v6, Li6;
+
+    const/16 v7, 0x1b
+
+    invoke-direct {v6, v7, v5}, Li6;-><init>(ILjava/lang/Object;)V
+
+    new-instance v7, Lk;
+
+    const/16 v8, 0x14
+
+    invoke-direct {v7, v8, v5}, Lk;-><init>(ILjava/lang/Object;)V
+
+    invoke-interface {p1, v2, v6, v7}, Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager;->enableFeatureForAll(Lu81;Lcm6;Lem6;)V
+
+    :cond_c
+    sget-object p1, Lwqi;->a:Ll6b;
+
+    if-nez p1, :cond_d
+
+    goto :goto_5
+
+    :cond_d
+    invoke-virtual {p1, v0}, Ll6b;->b(Llg8;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_10
+
+    const-string v2, "Check need enable invite to p2p feature needEnabled="
+
+    invoke-static {v2, v4}, Lxc0;->f(Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p1, v0, v3, v2, v1}, Ll6b;->c(Llg8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_5
+
+    :cond_e
+    :goto_4
+    iget-object p1, p0, Lld1;->o:Lmd1;
+
+    iget-object p1, p1, Lmd1;->Z:Ltcf;
+
+    sget-object v2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-virtual {p1, v1, v2}, Ltcf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    sget-object p1, Lwqi;->a:Ll6b;
+
+    if-nez p1, :cond_f
+
+    goto :goto_5
+
+    :cond_f
+    invoke-virtual {p1, v0}, Ll6b;->b(Llg8;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_10
+
+    const-string v2, "Call is not p2p call. Skip check."
+
+    invoke-virtual {p1, v0, v3, v2, v1}, Ll6b;->c(Llg8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_10
+    :goto_5
+    sget-object p1, Lqqg;->a:Lqqg;
 
     return-object p1
 .end method

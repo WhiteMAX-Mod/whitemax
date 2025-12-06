@@ -1,72 +1,57 @@
 .class public final Lt4g;
-.super Lr4g;
+.super Landroid/util/LruCache;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Ljava/util/Iterator;
+.field public final synthetic a:Lcie;
 
 
 # direct methods
-.method public constructor <init>(Ldu5;Ljava/lang/Object;)V
+.method public constructor <init>(Lcie;)V
     .locals 0
 
-    iget-object p1, p1, Ldu5;->X:Lk2e;
+    iput-object p1, p0, Lt4g;->a:Lcie;
 
-    check-cast p1, Lay5;
+    const/4 p1, 0x3
 
-    invoke-direct {p0, p2}, Lw4g;-><init>(Ljava/lang/Object;)V
-
-    iget-object p1, p1, Lay5;->c:Lli6;
-
-    invoke-interface {p1, p2}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lk2e;
-
-    if-eqz p1, :cond_0
-
-    invoke-interface {p1}, Lk2e;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    iput-object p1, p0, Lt4g;->b:Ljava/util/Iterator;
+    invoke-direct {p0, p1}, Landroid/util/LruCache;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 3
+.method public final create(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    iget-object v0, p0, Lt4g;->b:Ljava/util/Iterator;
+    check-cast p1, Lq4g;
 
-    if-eqz v0, :cond_0
+    iget-object v0, p1, Lq4g;->a:Lt5g;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    iget p1, p1, Lq4g;->b:I
 
-    move-result v1
+    new-instance v2, Landroid/text/TextPaint;
 
-    const/4 v2, 0x1
+    const/4 v1, 0x1
 
-    if-ne v1, v2, :cond_0
+    invoke-direct {v2, v1}, Landroid/text/TextPaint;-><init>(I)V
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object v1, p0, Lt4g;->a:Lcie;
 
-    move-result-object v0
+    iget-object v1, v1, Lcie;->a:Ljava/lang/Object;
 
-    return-object v0
+    check-cast v1, Landroid/content/Context;
 
-    :cond_0
-    const/4 v0, 0x0
+    const/4 v3, 0x0
 
-    return-object v0
+    const/4 v5, 0x4
+
+    sget-object v4, Lt75;->b:Lt75;
+
+    invoke-static/range {v0 .. v5}, Lt5g;->c(Lt5g;Landroid/content/Context;Landroid/text/TextPaint;Landroid/util/DisplayMetrics;Lt75;I)V
+
+    invoke-virtual {v2, p1}, Landroid/graphics/Paint;->setColor(I)V
+
+    return-object v2
 .end method

@@ -3,28 +3,60 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lye1;
+.implements Lxe1;
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
+# static fields
+.field public static final a:Lwe1;
+
+.field public static final b:J
+
+.field public static final c:Ln5g;
+
+.field public static final d:Liza;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lwe1;
 
-    iput-object p1, p0, Lwe1;->a:Ljava/lang/String;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lwe1;->a:Lwe1;
+
+    sget-wide v0, Lzza;->c:J
+
+    sput-wide v0, Lwe1;->b:J
+
+    sget v0, Lb0b;->m:I
+
+    new-instance v1, Ln5g;
+
+    invoke-direct {v1, v0}, Ln5g;-><init>(I)V
+
+    sput-object v1, Lwe1;->c:Ln5g;
+
+    sget-object v0, Liza;->b:Liza;
+
+    sput-object v0, Lwe1;->d:Liza;
 
     return-void
 .end method
 
 
 # virtual methods
+.method public final a()Liza;
+    .locals 1
+
+    sget-object v0, Lwe1;->d:Liza;
+
+    return-object v0
+.end method
+
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    .locals 1
 
     const/4 v0, 0x1
 
@@ -33,57 +65,46 @@
     return v0
 
     :cond_0
-    instance-of v1, p1, Lwe1;
+    instance-of p1, p1, Lwe1;
 
-    const/4 v2, 0x0
+    if-nez p1, :cond_1
 
-    if-nez v1, :cond_1
+    const/4 p1, 0x0
 
-    return v2
+    return p1
 
     :cond_1
-    check-cast p1, Lwe1;
-
-    iget-object v1, p0, Lwe1;->a:Ljava/lang/String;
-
-    iget-object p1, p1, Lwe1;->a:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
     return v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    sget-wide v0, Lwe1;->b:J
+
+    return-wide v0
+.end method
+
+.method public final getTitle()Ln5g;
+    .locals 1
+
+    sget-object v0, Lwe1;->c:Ln5g;
+
+    return-object v0
 .end method
 
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lwe1;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
+    const v0, -0x1dcefff1
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 1
 
-    const-string v0, "Create(link="
-
-    const-string v1, ")"
-
-    iget-object v2, p0, Lwe1;->a:Ljava/lang/String;
-
-    invoke-static {v0, v2, v1}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "TryLoadLinkAgain"
 
     return-object v0
 .end method

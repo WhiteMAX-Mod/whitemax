@@ -2,153 +2,163 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lc09;",
-            ">;"
-        }
-    .end annotation
-.end field
-
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final a:Landroid/net/Uri;
 
-.field public final b:Landroid/media/session/MediaSession$Token;
-
-.field public c:Ls67;
-
-.field public o:Lrkg;
+.field public final b:Lwg7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lvk8;
-
-    const/4 v1, 0x6
-
-    invoke-direct {v0, v1}, Lvk8;-><init>(I)V
-
-    sput-object v0, Lc09;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/media/session/MediaSession$Token;Ls67;)V
+.method public constructor <init>(Landroid/net/Uri;Lzui;Lwg7;)V
     .locals 1
+
+    sget-object p2, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/lang/Object;
+    iput-object p1, p0, Lc09;->a:Landroid/net/Uri;
+
+    iput-object p3, p0, Lc09;->b:Lwg7;
+
+    invoke-static {}, Lwg7;->i()Ltg7;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    :goto_0
+    invoke-virtual {p3}, Ljava/util/AbstractCollection;->size()I
+
+    move-result v0
+
+    if-ge p2, v0, :cond_0
+
+    invoke-interface {p3, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Le09;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Le09;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lc09;->a:Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lmg7;->a(Ljava/lang/Object;)V
 
-    iput-object p1, p0, Lc09;->b:Landroid/media/session/MediaSession$Token;
+    add-int/lit8 p2, p2, 0x1
 
-    iput-object p2, p0, Lc09;->c:Ls67;
+    goto :goto_0
 
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Lc09;->o:Lrkg;
+    :cond_0
+    invoke-virtual {p1}, Ltg7;->i()Lzjd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ls67;
-    .locals 2
-
-    iget-object v0, p0, Lc09;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Lc09;->c:Ls67;
-
-    monitor-exit v0
-
-    return-object v1
-
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
-.method public final describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    .locals 2
 
     if-ne p0, p1, :cond_0
 
-    const/4 p1, 0x1
-
-    return p1
+    goto :goto_0
 
     :cond_0
     instance-of v0, p1, Lc09;
 
     if-nez v0, :cond_1
 
-    const/4 p1, 0x0
-
-    return p1
+    goto :goto_1
 
     :cond_1
     check-cast p1, Lc09;
 
-    iget-object v0, p0, Lc09;->b:Landroid/media/session/MediaSession$Token;
+    iget-object v0, p0, Lc09;->a:Landroid/net/Uri;
 
-    iget-object p1, p1, Lc09;->b:Landroid/media/session/MediaSession$Token;
+    iget-object v1, p1, Lc09;->a:Landroid/net/Uri;
 
-    invoke-virtual {v0, p1}, Landroid/media/session/MediaSession$Token;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    sget v0, Lxxg;->a:I
+
+    const/4 v0, 0x0
+
+    invoke-static {v0, v0}, Lxxg;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    invoke-interface {v0, v0}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lc09;->b:Lwg7;
+
+    iget-object p1, p1, Lc09;->b:Lwg7;
+
+    invoke-virtual {v0, p1}, Lwg7;->equals(Ljava/lang/Object;)Z
 
     move-result p1
+
+    if-eqz p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x0
 
     return p1
 .end method
 
 .method public final hashCode()I
-    .locals 1
+    .locals 2
 
-    iget-object v0, p0, Lc09;->b:Landroid/media/session/MediaSession$Token;
+    iget-object v0, p0, Lc09;->a:Landroid/net/Uri;
 
-    invoke-virtual {v0}, Landroid/media/session/MediaSession$Token;->hashCode()I
+    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
 
     move-result v0
 
+    const v1, 0xe1781
+
+    mul-int/2addr v0, v1
+
+    sget-object v1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit16 v1, v1, 0x3c1
+
+    iget-object v0, p0, Lc09;->b:Lwg7;
+
+    invoke-virtual {v0}, Lwg7;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
     return v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 1
-
-    iget-object v0, p0, Lc09;->b:Landroid/media/session/MediaSession$Token;
-
-    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
-
-    return-void
 .end method

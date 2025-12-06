@@ -1,130 +1,87 @@
 .class public final Lmx3;
-.super Luj0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic b:I
-
-.field public final c:Ljava/io/Serializable;
+.field public final a:Lk18;
 
 
 # direct methods
-.method public synthetic constructor <init>(JLjava/io/Serializable;I)V
+.method public constructor <init>(Lk18;)V
     .locals 0
 
-    .line 1
-    iput p4, p0, Lmx3;->b:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Luj0;-><init>(J)V
-
-    iput-object p3, p0, Lmx3;->c:Ljava/io/Serializable;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/util/List;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lmx3;->b:I
-
-    .line 2
-    invoke-direct {p0}, Luj0;-><init>()V
-
-    .line 3
-    new-instance v0, Ljava/util/LinkedHashSet;
-
-    invoke-direct {v0, p1}, Ljava/util/LinkedHashSet;-><init>(Ljava/util/Collection;)V
-
-    iput-object v0, p0, Lmx3;->c:Ljava/io/Serializable;
+    iput-object p1, p0, Lmx3;->a:Lk18;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final a(Landroid/content/Context;Landroid/net/Uri;)V
+    .locals 4
 
-    iget v0, p0, Lmx3;->b:I
+    iget-object v0, p0, Lmx3;->a:Lk18;
 
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SharePreviewEvent{attaches="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lmx3;->c:Ljava/io/Serializable;
-
-    check-cast v1, Lzz;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Lage;
 
-    :pswitch_0
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast v0, Ll5c;
 
-    const-string v1, "ProfileEvent{contactInfo="
+    const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v2, v0, Lc4;->g:Ln18;
 
-    iget-object v1, p0, Lmx3;->c:Ljava/io/Serializable;
+    const-string v3, "invite-long"
 
-    check-cast v1, Lru3;
+    invoke-virtual {v2, v3, v1}, Ln18;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    const/16 v1, 0x7d
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_0
+    sget v1, Lfvd;->J:I
 
-    move-result-object v0
+    invoke-virtual {p1, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    return-object v0
+    move-result-object v1
 
-    :pswitch_1
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ContactNotFoundEvent{contactServerIds="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lmx3;->c:Ljava/io/Serializable;
-
-    check-cast v1, Ljava/util/LinkedHashSet;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ll5c;->l()Ljava/lang/String;
 
     move-result-object v0
 
-    return-object v0
+    filled-new-array {v0}, [Ljava/lang/Object;
 
-    nop
+    move-result-object v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    const/4 v2, 0x1
+
+    invoke-static {v0, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Lxb3;->a(Landroid/content/Context;Ljava/lang/String;)V
+
+    sget-object v0, Lap7;->a:Ljava/lang/String;
+
+    invoke-static {p1, v1, p2}, Lap7;->i(Landroid/content/Context;Ljava/lang/CharSequence;Landroid/net/Uri;)V
+
+    return-void
 .end method

@@ -1,45 +1,86 @@
-.class public abstract synthetic Lash;
-.super Ljava/lang/Object;
+.class public final Lash;
+.super Lcsh;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:[I
+# instance fields
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lash;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    const/4 v0, 0x2
+    const/4 v0, 0x1
 
-    invoke-static {v0}, Ldy1;->y(I)[I
+    if-ne p0, p1, :cond_0
 
-    move-result-object v1
+    return v0
 
-    array-length v1, v1
-
-    new-array v1, v1, [I
-
-    sput-object v1, Lash;->a:[I
-
-    const/4 v2, 0x1
-
-    :try_start_0
-    aput v2, v1, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :try_start_1
-    sget-object v1, Lash;->a:[I
+    :cond_0
+    instance-of v1, p1, Lash;
 
     const/4 v2, 0x0
 
-    aput v0, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    if-nez v1, :cond_1
 
-    :catch_1
-    return-void
+    return v2
+
+    :cond_1
+    check-cast p1, Lash;
+
+    iget-object v1, p0, Lash;->a:Ljava/lang/String;
+
+    iget-object p1, p1, Lash;->a:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lash;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "InternalNavigation(deeplink="
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Lash;->a:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Lho7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,55 +1,19 @@
-.class public La22;
-.super Lz12;
+.class public final La22;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final A(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraDevice$StateCallback;)V
-    .locals 1
+# instance fields
+.field public final a:Landroid/os/Handler;
 
-    :try_start_0
-    iget-object v0, p0, Lu1f;->b:Ljava/lang/Object;
 
-    check-cast v0, Landroid/hardware/camera2/CameraManager;
+# direct methods
+.method public constructor <init>(Landroid/os/Handler;)V
+    .locals 0
 
-    invoke-virtual {v0, p1, p2, p3}, Landroid/hardware/camera2/CameraManager;->openCamera(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraDevice$StateCallback;)V
-    :try_end_0
-    .catch Landroid/hardware/camera2/CameraAccessException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, La22;->a:Landroid/os/Handler;
 
     return-void
-
-    :catch_0
-    move-exception p1
-
-    new-instance p2, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;
-
-    invoke-direct {p2, p1}, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;-><init>(Landroid/hardware/camera2/CameraAccessException;)V
-
-    throw p2
-.end method
-
-.method public final u(Ljava/lang/String;)Landroid/hardware/camera2/CameraCharacteristics;
-    .locals 1
-
-    :try_start_0
-    iget-object v0, p0, Lu1f;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroid/hardware/camera2/CameraManager;
-
-    invoke-virtual {v0, p1}, Landroid/hardware/camera2/CameraManager;->getCameraCharacteristics(Ljava/lang/String;)Landroid/hardware/camera2/CameraCharacteristics;
-
-    move-result-object p1
-    :try_end_0
-    .catch Landroid/hardware/camera2/CameraAccessException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object p1
-
-    :catch_0
-    move-exception p1
-
-    new-instance v0, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;
-
-    invoke-direct {v0, p1}, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;-><init>(Landroid/hardware/camera2/CameraAccessException;)V
-
-    throw v0
 .end method

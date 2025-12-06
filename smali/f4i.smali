@@ -1,85 +1,124 @@
-.class public final Lf4i;
-.super Lmcg;
+.class public abstract Lf4i;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public b:I
-
-.field public final c:I
-
-.field public final synthetic o:Lb5i;
-
-
 # direct methods
-.method public constructor <init>(Lb5i;)V
-    .locals 1
-
-    const/4 v0, 0x3
-
-    invoke-direct {p0, v0}, Lmcg;-><init>(I)V
-
-    iput-object p1, p0, Lf4i;->o:Lb5i;
+.method public static a(I)I
+    .locals 4
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lf4i;->b:I
+    const/4 v1, 0x1
 
-    invoke-virtual {p1}, Lb5i;->e()I
+    move v2, v1
 
-    move-result p1
+    :goto_0
+    const/16 v3, 0x100
 
-    iput p1, p0, Lf4i;->c:I
+    if-gt v2, v3, :cond_9
 
-    return-void
-.end method
+    and-int v3, p0, v2
 
+    if-eqz v3, :cond_8
 
-# virtual methods
-.method public final a()B
-    .locals 2
+    if-eq v2, v1, :cond_7
 
-    iget v0, p0, Lf4i;->b:I
+    const/4 v3, 0x2
 
-    iget v1, p0, Lf4i;->c:I
+    if-eq v2, v3, :cond_6
 
-    if-ge v0, v1, :cond_0
+    const/4 v3, 0x4
 
-    add-int/lit8 v1, v0, 0x1
+    if-eq v2, v3, :cond_5
 
-    iput v1, p0, Lf4i;->b:I
+    const/16 v3, 0x8
 
-    iget-object v1, p0, Lf4i;->o:Lb5i;
+    if-eq v2, v3, :cond_4
 
-    invoke-virtual {v1, v0}, Lb5i;->b(I)B
+    const/16 v3, 0x10
 
-    move-result v0
+    if-eq v2, v3, :cond_3
 
-    return v0
+    const/16 v3, 0x20
 
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
+    if-eq v2, v3, :cond_2
 
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+    const/16 v3, 0x40
 
-    throw v0
-.end method
+    if-eq v2, v3, :cond_1
 
-.method public final hasNext()Z
-    .locals 2
+    const/16 v3, 0x80
 
-    iget v0, p0, Lf4i;->b:I
+    if-eq v2, v3, :cond_0
 
-    iget v1, p0, Lf4i;->c:I
-
-    if-ge v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
+    goto :goto_2
 
     :cond_0
-    const/4 v0, 0x0
+    invoke-static {}, Lw3i;->s()I
 
+    move-result v3
+
+    :goto_1
+    or-int/2addr v0, v3
+
+    goto :goto_2
+
+    :cond_1
+    invoke-static {}, Lw3i;->q()I
+
+    move-result v3
+
+    goto :goto_1
+
+    :cond_2
+    invoke-static {}, Lw3i;->o()I
+
+    move-result v3
+
+    goto :goto_1
+
+    :cond_3
+    invoke-static {}, Lw3i;->m()I
+
+    move-result v3
+
+    goto :goto_1
+
+    :cond_4
+    invoke-static {}, Ljlb;->b()I
+
+    move-result v3
+
+    goto :goto_1
+
+    :cond_5
+    invoke-static {}, Lw3i;->k()I
+
+    move-result v3
+
+    goto :goto_1
+
+    :cond_6
+    invoke-static {}, Lw3i;->i()I
+
+    move-result v3
+
+    goto :goto_1
+
+    :cond_7
+    invoke-static {}, Lw3i;->a()I
+
+    move-result v3
+
+    goto :goto_1
+
+    :cond_8
+    :goto_2
+    shl-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_9
     return v0
 .end method

@@ -1,73 +1,111 @@
-.class public final enum Lmv9;
-.super Ljava/lang/Enum;
+.class public final Lmv9;
+.super Ldtf;
 .source "SourceFile"
 
+# interfaces
+.implements Lsm6;
 
-# static fields
-.field public static final enum a:Lmv9;
 
-.field public static final enum b:Lmv9;
+# instance fields
+.field public final synthetic X:Lone/me/messages/list/ui/MessagesListWidget;
 
-.field public static final synthetic c:[Lmv9;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+    .locals 0
 
-    new-instance v0, Lmv9;
+    iput-object p2, p0, Lmv9;->X:Lone/me/messages/list/ui/MessagesListWidget;
 
-    const-string v1, "MOVIE"
+    const/4 p2, 0x2
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lmv9;->a:Lmv9;
-
-    new-instance v1, Lmv9;
-
-    const-string v2, "STREAM"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lmv9;->b:Lmv9;
-
-    filled-new-array {v0, v1}, [Lmv9;
-
-    move-result-object v0
-
-    sput-object v0, Lmv9;->c:[Lmv9;
+    invoke-direct {p0, p2, p1}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lmv9;
-    .locals 1
 
-    const-class v0, Lmv9;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object p0
+    invoke-virtual {p0, p1, p2}, Lmv9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    check-cast p0, Lmv9;
+    move-result-object p1
 
-    return-object p0
+    check-cast p1, Lmv9;
+
+    sget-object p2, Lqqg;->a:Lqqg;
+
+    invoke-virtual {p1, p2}, Lmv9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public static values()[Lmv9;
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    sget-object v0, Lmv9;->c:[Lmv9;
+    new-instance v0, Lmv9;
 
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object v1, p0, Lmv9;->X:Lone/me/messages/list/ui/MessagesListWidget;
+
+    invoke-direct {v0, p2, v1}, Lmv9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+
+    iput-object p1, v0, Lmv9;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget-object v0, p0, Lmv9;->X:Lone/me/messages/list/ui/MessagesListWidget;
+
+    iget-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->S0:Lbwf;
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lmv9;->o:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    sget-object p1, Lone/me/messages/list/ui/MessagesListWidget;->b1:[Lyy7;
+
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->H0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    move-result-object p1
+
+    invoke-virtual {v1}, Lbwf;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ldv9;
+
+    invoke-virtual {p1, v2}, Landroidx/recyclerview/widget/RecyclerView;->s0(Lbid;)V
+
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->H0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    move-result-object p1
+
+    invoke-virtual {v1}, Lbwf;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lmv9;
+    check-cast v0, Ldv9;
 
-    return-object v0
+    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->m(Lbid;)V
+
+    :cond_0
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

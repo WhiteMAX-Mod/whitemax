@@ -117,25 +117,25 @@
 
     :cond_0
     :goto_0
-    new-instance v2, Ljsb;
+    new-instance v2, Lo2c;
 
-    new-instance v3, Lyab;
+    new-instance v3, Lkkb;
 
-    invoke-direct {v3, v1}, Lyab;-><init>(Ljava/io/OutputStream;)V
+    invoke-direct {v3, v1}, Lkkb;-><init>(Ljava/io/OutputStream;)V
 
-    invoke-direct {v2, v3}, Ljsb;-><init>(Ljava/io/Writer;)V
+    invoke-direct {v2, v3}, Lo2c;-><init>(Ljava/io/Writer;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     :try_start_2
     sget-object v3, Lru/ok/android/onelog/ItemSerializer;->INSTANCE:Lru/ok/android/onelog/ItemSerializer;
 
-    invoke-virtual {v3, v2, p1}, Lru/ok/android/onelog/ItemSerializer;->serialize(Lcr7;Lru/ok/android/onelog/OneLogItem;)V
+    invoke-virtual {v3, v2, p1}, Lru/ok/android/onelog/ItemSerializer;->serialize(Lgy7;Lru/ok/android/onelog/OneLogItem;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
     :try_start_3
-    invoke-virtual {v2}, Ljsb;->close()V
+    invoke-virtual {v2}, Lo2c;->close()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
@@ -172,7 +172,7 @@
     move-exception v3
 
     :try_start_5
-    invoke-virtual {v2}, Ljsb;->close()V
+    invoke-virtual {v2}, Lo2c;->close()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_3
 

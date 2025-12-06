@@ -1,267 +1,212 @@
-.class public final La0f;
-.super Ljava/lang/Object;
+.class public final enum La0f;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
+
+# static fields
+.field public static final synthetic b:[La0f;
+
+.field public static final synthetic c:Lzg5;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Z
-
-.field public final synthetic c:Landroid/widget/TextView;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(ZLandroid/widget/TextView;I)V
+.method static constructor <clinit>()V
+    .locals 14
+
+    new-instance v0, La0f;
+
+    const-string v1, "CANCELED"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2, v1}, La0f;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    new-instance v1, La0f;
+
+    const-string v2, "REJECTED"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3, v2}, La0f;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    new-instance v2, La0f;
+
+    const-string v3, "HUNGUP"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4, v3}, La0f;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    new-instance v3, La0f;
+
+    const-string v4, "MISSED"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5, v4}, La0f;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    new-instance v4, La0f;
+
+    const-string v5, "TIMEOUT"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6, v5}, La0f;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    new-instance v5, La0f;
+
+    const-string v6, "BUSY"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7, v6}, La0f;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    new-instance v6, La0f;
+
+    const-string v7, "FAILED"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v6, v7, v8, v7}, La0f;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    new-instance v7, La0f;
+
+    const-string v8, "REMOVED"
+
+    const/4 v9, 0x7
+
+    invoke-direct {v7, v8, v9, v8}, La0f;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    new-instance v8, La0f;
+
+    const-string v9, "BANNED"
+
+    const/16 v10, 0x8
+
+    invoke-direct {v8, v9, v10, v9}, La0f;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    new-instance v9, La0f;
+
+    const-string v10, "ANOTHER_DEVICE"
+
+    const/16 v11, 0x9
+
+    invoke-direct {v9, v10, v11, v10}, La0f;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    new-instance v10, La0f;
+
+    const-string v11, "KILLED"
+
+    const/16 v12, 0xa
+
+    invoke-direct {v10, v11, v12, v11}, La0f;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    new-instance v11, La0f;
+
+    const-string v12, "CALL_TIMEOUT"
+
+    const/16 v13, 0xb
+
+    invoke-direct {v11, v12, v13, v12}, La0f;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    filled-new-array/range {v0 .. v11}, [La0f;
+
+    move-result-object v0
+
+    sput-object v0, La0f;->b:[La0f;
+
+    new-instance v1, Lzg5;
+
+    invoke-direct {v1, v0}, Lzg5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, La0f;->c:Lzg5;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
 
-    iput p3, p0, La0f;->a:I
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-boolean p1, p0, La0f;->b:Z
-
-    iput-object p2, p0, La0f;->c:Landroid/widget/TextView;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p3, p0, La0f;->a:Ljava/lang/String;
 
     return-void
 .end method
 
-.method private final a(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final b(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final c(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final d(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final e(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 2
-
-    iget p1, p0, La0f;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    iget-boolean p1, p0, La0f;->b:Z
-
-    iget-object v0, p0, La0f;->c:Landroid/widget/TextView;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    const/4 p1, 0x4
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string v0, "null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams"
-
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    const/high16 p1, 0x3f800000    # 1.0f
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
-
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 2
-
-    iget p1, p0, La0f;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    iget-boolean p1, p0, La0f;->b:Z
-
-    iget-object v0, p0, La0f;->c:Landroid/widget/TextView;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    const/4 p1, 0x4
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string v0, "null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams"
-
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    const/high16 p1, 0x3f800000    # 1.0f
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
-
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
-
-    iget p1, p0, La0f;->a:I
-
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/animation/Animator;)V
+.method public static final a(Ljava/lang/String;)La0f;
     .locals 3
 
-    iget p1, p0, La0f;->a:I
+    new-instance v0, Lf2;
 
-    packed-switch p1, :pswitch_data_0
+    const/4 v1, 0x0
 
-    iget-boolean p1, p0, La0f;->b:Z
+    sget-object v2, La0f;->c:Lzg5;
 
-    iget-object v0, p0, La0f;->c:Landroid/widget/TextView;
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
-
-    goto :goto_0
+    invoke-direct {v0, v1, v2}, Lf2;-><init>(ILjava/lang/Object;)V
 
     :cond_0
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_1
-
-    check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    const/4 v1, 0x4
-
-    int-to-float v1, v1
-
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v2
-
-    invoke-static {v1}, Lfhi;->b(F)I
+    invoke-virtual {v0}, Lf2;->hasNext()Z
 
     move-result v1
 
-    invoke-virtual {p1, v1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
+    if-eqz v1, :cond_1
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v0}, Lf2;->next()Ljava/lang/Object;
 
-    const/4 p1, 0x0
+    move-result-object v1
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
+    move-object v2, v1
 
-    :goto_0
-    return-void
+    check-cast v2, La0f;
+
+    iget-object v2, v2, La0f;->a:Ljava/lang/String;
+
+    invoke-virtual {v2, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    goto :goto_0
 
     :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
+    const/4 v1, 0x0
 
-    const-string v0, "null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams"
+    :goto_0
+    check-cast v1, La0f;
 
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    return-object v1
+.end method
 
-    throw p1
+.method public static valueOf(Ljava/lang/String;)La0f;
+    .locals 1
 
-    :pswitch_0
-    return-void
+    const-class v0, La0f;
 
-    nop
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result-object p0
+
+    check-cast p0, La0f;
+
+    return-object p0
+.end method
+
+.method public static values()[La0f;
+    .locals 1
+
+    sget-object v0, La0f;->b:[La0f;
+
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [La0f;
+
+    return-object v0
 .end method

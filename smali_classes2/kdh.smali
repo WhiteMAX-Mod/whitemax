@@ -1,33 +1,93 @@
-.class public abstract synthetic Lkdh;
+.class public final Lkdh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lldh;
+
+
+# instance fields
+.field public final a:[F
+
 
 # direct methods
-.method public static bridge synthetic a(Landroid/os/StrictMode$VmPolicy$Builder;)Landroid/os/StrictMode$VmPolicy$Builder;
+.method public constructor <init>([F)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/os/StrictMode$VmPolicy$Builder;->permitUnsafeIntentLaunch()Landroid/os/StrictMode$VmPolicy$Builder;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    iput-object p1, p0, Lkdh;->a:[F
 
-    return-object p0
+    return-void
 .end method
 
-.method public static bridge synthetic b(Landroid/os/VibratorManager;)Landroid/os/Vibrator;
-    .locals 0
 
-    invoke-virtual {p0}, Landroid/os/VibratorManager;->getDefaultVibrator()Landroid/os/Vibrator;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    move-result-object p0
+    const/4 v0, 0x1
 
-    return-object p0
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lkdh;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lkdh;
+
+    iget-object v1, p0, Lkdh;->a:[F
+
+    iget-object p1, p1, Lkdh;->a:[F
+
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public static bridge synthetic c(Ljava/lang/Object;)Landroid/os/VibratorManager;
-    .locals 0
+.method public final hashCode()I
+    .locals 1
 
-    check-cast p0, Landroid/os/VibratorManager;
+    iget-object v0, p0, Lkdh;->a:[F
 
-    return-object p0
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([F)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Lkdh;->a:[F
+
+    invoke-static {v0}, Ljava/util/Arrays;->toString([F)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "WithCorners(corners="
+
+    const-string v2, ")"
+
+    invoke-static {v1, v0, v2}, Lho7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -3,70 +3,48 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lhp3;
+.implements Lh8e;
 
 
 # instance fields
-.field public final synthetic a:Lc8e;
+.field public final a:Ln5g;
 
 
 # direct methods
-.method public constructor <init>(Lc8e;)V
-    .locals 0
+.method public constructor <init>(Ln5g;)V
+    .locals 1
+
+    sget v0, Ludb;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lb8e;->a:Lc8e;
+    iput-object p1, p0, Lb8e;->a:Ln5g;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method public final f()I
+    .locals 1
 
-    const-string v0, "c8e"
+    const/4 v0, 0x0
 
-    const-string v1, "onBackgroundDataEnabledChange"
-
-    invoke-static {v0, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lb8e;->a:Lc8e;
-
-    iget-object v1, v0, Lc8e;->j:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Lc8e;->b(Ljava/lang/String;)V
-
-    return-void
+    return v0
 .end method
 
-.method public final b()V
+.method public final getItemId()J
     .locals 2
 
-    const-string v0, "c8e"
+    const-wide v0, 0x7ffffffffffffffcL
 
-    const-string v1, "onConnectionTypeChange"
+    return-wide v0
+.end method
 
-    invoke-static {v0, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+.method public final m()I
+    .locals 1
 
-    iget-object v0, p0, Lb8e;->a:Lc8e;
+    sget v0, Ludb;->s:I
 
-    iget-object v1, v0, Lc8e;->j:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Lc8e;->b(Ljava/lang/String;)V
-
-    return-void
+    return v0
 .end method

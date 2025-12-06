@@ -1,6 +1,9 @@
 .class public final Lyk7;
-.super Lzk7;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lzk7;
 
 
 # static fields
@@ -47,7 +50,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x6c883c95
+    const v0, -0x463c48f7
 
     return v0
 .end method
@@ -55,7 +58,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "TooManyRequests"
+    const-string v0, "Empty"
 
     return-object v0
 .end method

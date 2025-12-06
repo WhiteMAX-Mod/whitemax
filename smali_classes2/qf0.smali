@@ -3,82 +3,121 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic i:[Lyy7;
+
+
 # instance fields
-.field public final a:I
+.field public final a:Landroid/content/Context;
+
+.field public final b:Lk18;
+
+.field public final c:Lk18;
+
+.field public final d:Lk18;
+
+.field public final e:Ljava/util/concurrent/ConcurrentHashMap;
+
+.field public final f:Ljve;
+
+.field public final g:Lgbd;
+
+.field public final h:Lt9f;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lz8a;
 
-    iput p1, p0, Lqf0;->a:I
+    const-string v1, "warmUpJob"
+
+    const-string v2, "getWarmUpJob()Lkotlinx/coroutines/Job;"
+
+    const-class v3, Lqf0;
+
+    invoke-direct {v0, v3, v1, v2}, Lz8a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v1, Lvid;->a:Lwid;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Lyy7;
+
+    const/4 v2, 0x0
+
+    aput-object v0, v1, v2
+
+    sput-object v1, Lqf0;->i:[Lyy7;
 
     return-void
 .end method
 
+.method public constructor <init>(Landroid/content/Context;Lk18;Lk18;Lk18;)V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-ne p0, p1, :cond_0
+    iput-object p1, p0, Lqf0;->a:Landroid/content/Context;
 
-    goto :goto_1
+    iput-object p2, p0, Lqf0;->b:Lk18;
 
-    :cond_0
-    instance-of v0, p1, Lqf0;
+    iput-object p3, p0, Lqf0;->c:Lk18;
 
-    if-nez v0, :cond_1
+    iput-object p4, p0, Lqf0;->d:Lk18;
 
-    goto :goto_0
+    new-instance p2, Ljava/util/concurrent/ConcurrentHashMap;
 
-    :cond_1
-    check-cast p1, Lqf0;
+    sget-object p3, La93;->s0:Lv1a;
 
-    iget v0, p0, Lqf0;->a:I
+    invoke-virtual {p3, p1}, Lv1a;->x(Landroid/content/Context;)La93;
 
-    iget p1, p1, Lqf0;->a:I
+    move-result-object p1
 
-    if-eq v0, p1, :cond_2
+    iget-object p1, p1, La93;->c:Ljava/lang/Object;
 
-    :goto_0
+    check-cast p1, Lafb;
+
+    iget-object p1, p1, Lafb;->b:Ljava/util/Map;
+
+    invoke-interface {p1}, Ljava/util/Map;->values()Ljava/util/Collection;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ljava/util/Collection;->size()I
+
+    move-result p1
+
+    mul-int/lit8 p1, p1, 0x2
+
+    invoke-direct {p2, p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>(I)V
+
+    iput-object p2, p0, Lqf0;->e:Ljava/util/concurrent/ConcurrentHashMap;
+
     const/4 p1, 0x0
 
-    return p1
+    const/4 p2, 0x7
 
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
+    invoke-static {p1, p1, p2}, Lkve;->b(III)Ljve;
 
-    return p1
-.end method
+    move-result-object p1
 
-.method public final hashCode()I
-    .locals 1
+    iput-object p1, p0, Lqf0;->f:Ljve;
 
-    iget v0, p0, Lqf0;->a:I
+    new-instance p2, Lgbd;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-direct {p2, p1}, Lgbd;-><init>(Le9a;)V
 
-    move-result v0
+    iput-object p2, p0, Lqf0;->g:Lgbd;
 
-    return v0
-.end method
+    invoke-static {}, Lc7j;->c()Lt9f;
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    move-result-object p1
 
-    const-string v0, "BackgroundLocalTabBarColors(primary="
+    iput-object p1, p0, Lqf0;->h:Lt9f;
 
-    const-string v1, ")"
-
-    iget v2, p0, Lqf0;->a:I
-
-    invoke-static {v2, v0, v1}, Ley1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

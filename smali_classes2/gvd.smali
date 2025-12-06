@@ -4,24 +4,34 @@
 
 
 # static fields
-.field public static final a:J
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    sget v0, Lu35;->o:I
+    sget v0, Lqvc;->gray_66:I
 
-    const/4 v0, 0x5
+    sput v0, Lgvd;->a:I
 
-    sget-object v1, Lz35;->o:Lz35;
+    sget v0, Lqvc;->range_seek_bar_border_shadow_color:I
 
-    invoke-static {v0, v1}, Ltzi;->d(ILz35;)J
+    sput v0, Lgvd;->b:I
 
-    move-result-wide v0
+    sget v0, Lqvc;->white:I
 
-    sput-wide v0, Lgvd;->a:J
+    sput v0, Lgvd;->c:I
+
+    sget v0, Lqvc;->white_50:I
+
+    sput v0, Lgvd;->d:I
 
     return-void
 .end method

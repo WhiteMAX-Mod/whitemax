@@ -1,119 +1,141 @@
 .class public final Lkvb;
-.super Ljava/lang/Object;
+.super Ldtf;
 .source "SourceFile"
+
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public final a:Lvyh;
+.field public final synthetic X:Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lvyh;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lkvb;->X:Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;
 
-    invoke-static {p1}, Lzui;->i(Ljava/lang/Object;)V
+    const/4 p2, 0x2
 
-    iput-object p1, p0, Lkvb;->a:Lvyh;
+    invoke-direct {p0, p2, p1}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    instance-of v0, p1, Lkvb;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    return v1
-
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Lkvb;->a:Lvyh;
-
-    check-cast p1, Lkvb;
-
-    iget-object p1, p1, Lkvb;->a:Lvyh;
-
-    check-cast v0, Loyh;
-
-    invoke-virtual {v0}, Lguh;->W()Landroid/os/Parcel;
-
-    move-result-object v2
-
-    invoke-static {v2, p1}, Lz1i;->d(Landroid/os/Parcel;Landroid/os/IInterface;)V
-
-    const/16 p1, 0xf
-
-    invoke-virtual {v0, v2, p1}, Lguh;->V(Landroid/os/Parcel;I)Landroid/os/Parcel;
+    invoke-virtual {p0, p1, p2}, Lkvb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    check-cast p1, Lkvb;
 
-    move-result v0
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    if-eqz v0, :cond_1
+    invoke-virtual {p1, p2}, Lkvb;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v1, 0x1
-
-    :cond_1
-    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return v1
-
-    :catch_0
-    move-exception p1
-
-    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
-
-    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    :try_start_0
-    iget-object v0, p0, Lkvb;->a:Lvyh;
+    new-instance v0, Lkvb;
 
-    check-cast v0, Loyh;
+    iget-object v1, p0, Lkvb;->X:Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;
 
-    invoke-virtual {v0}, Lguh;->W()Landroid/os/Parcel;
+    invoke-direct {v0, p2, v1}, Lkvb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;)V
+
+    iput-object p1, v0, Lkvb;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lkvb;->o:Ljava/lang/Object;
+
+    check-cast p1, Ljp2;
+
+    sget-object v0, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->o:[Lyy7;
+
+    iget v0, p1, Ljp2;->a:I
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lkvb;->X:Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;
+
+    invoke-virtual {v0}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->B0()Lyq2;
 
     move-result-object v1
 
-    const/16 v2, 0x10
+    invoke-virtual {v0}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->z0()J
 
-    invoke-virtual {v0, v1, v2}, Lguh;->V(Landroid/os/Parcel;I)Landroid/os/Parcel;
+    move-result-wide v2
 
-    move-result-object v0
+    invoke-virtual {v0}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->y0()Ljava/lang/String;
 
-    invoke-virtual {v0}, Landroid/os/Parcel;->readInt()I
+    move-result-object v4
 
-    move-result v1
+    invoke-virtual {v1, v2, v3, v4}, Lyq2;->F(JLjava/lang/String;)Lj09;
 
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object v1
 
-    return v1
+    instance-of v2, v1, Lb09;
 
-    :catch_0
-    move-exception v0
+    if-eqz v2, :cond_0
 
-    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+    check-cast v1, Lb09;
 
-    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    goto :goto_0
 
-    throw v1
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    if-nez v1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v0}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->A0()Lhvb;
+
+    move-result-object v2
+
+    iget p1, p1, Ljp2;->b:F
+
+    invoke-virtual {v2, p1}, Lhvb;->setImageRotation(F)V
+
+    invoke-virtual {v0}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->A0()Lhvb;
+
+    move-result-object p1
+
+    iget-object v1, v1, Lb09;->d:Lod7;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {p1, v1, v2}, Lhvb;->k(Lod7;Z)V
+
+    invoke-virtual {v0}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->A0()Lhvb;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
+
+    :cond_2
+    :goto_1
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

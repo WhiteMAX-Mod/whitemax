@@ -1,23 +1,15 @@
-.class public abstract synthetic Lema;
+.class public abstract Lema;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/util/logging/Logger;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public static a(Landroid/app/Notification$Action$Builder;Z)Landroid/app/Notification$Action$Builder;
+    .locals 0
 
-    const-string v0, "okio.Okio"
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Action$Builder;->setAllowGeneratedReplies(Z)Landroid/app/Notification$Action$Builder;
 
-    invoke-static {v0}, Ljava/util/logging/Logger;->getLogger(Ljava/lang/String;)Ljava/util/logging/Logger;
+    move-result-object p0
 
-    move-result-object v0
-
-    sput-object v0, Lema;->a:Ljava/util/logging/Logger;
-
-    return-void
+    return-object p0
 .end method

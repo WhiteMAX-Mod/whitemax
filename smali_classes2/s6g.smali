@@ -1,49 +1,64 @@
-.class public final Ls6g;
-.super Ly14;
+.class public final synthetic Ls6g;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:La7g;
-
-.field public Z:I
-
-.field public o:La7g;
+.field public final synthetic b:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
 
 
 # direct methods
-.method public constructor <init>(La7g;Ly14;)V
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;I)V
     .locals 0
 
-    iput-object p1, p0, Ls6g;->Y:La7g;
+    iput p2, p0, Ls6g;->a:I
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ls6g;->b:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final run()V
     .locals 1
 
-    iput-object p1, p0, Ls6g;->X:Ljava/lang/Object;
+    iget v0, p0, Ls6g;->a:I
 
-    iget p1, p0, Ls6g;->Z:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Ls6g;->b:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
 
-    or-int/2addr p1, v0
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->b(Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;)V
 
-    iput p1, p0, Ls6g;->Z:I
+    return-void
 
-    iget-object p1, p0, Ls6g;->Y:La7g;
+    :pswitch_0
+    iget-object v0, p0, Ls6g;->b:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
 
-    invoke-static {p1, p0}, La7g;->s(La7g;Ly14;)Ljava/lang/Object;
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->d(Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;)V
 
-    move-result-object p1
+    return-void
 
-    return-object p1
+    :pswitch_1
+    iget-object v0, p0, Ls6g;->b:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
+
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->e(Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

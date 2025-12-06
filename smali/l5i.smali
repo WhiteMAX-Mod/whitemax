@@ -1,61 +1,41 @@
 .class public final Ll5i;
-.super Lv3i;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final c:Ljava/lang/String;
+
+
 # instance fields
-.field public final synthetic c:Ln5i;
+.field public final a:Landroidx/work/impl/WorkDatabase;
+
+.field public final b:Lt2g;
 
 
 # direct methods
-.method public constructor <init>(Ln5i;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Ll5i;->c:Ln5i;
+    const-string v0, "WorkProgressUpdater"
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+    invoke-static {v0}, Lcei;->m(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Ll5i;->c:Ljava/lang/String;
 
     return-void
 .end method
 
+.method public constructor <init>(Landroidx/work/impl/WorkDatabase;Lu5i;)V
+    .locals 0
 
-# virtual methods
-.method public final bridge synthetic get(I)Ljava/lang/Object;
-    .locals 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p0, Ll5i;->c:Ln5i;
+    iput-object p1, p0, Ll5i;->a:Landroidx/work/impl/WorkDatabase;
 
-    iget v1, v0, Ln5i;->X:I
+    iput-object p2, p0, Ll5i;->b:Lt2g;
 
-    invoke-static {p1, v1}, Lohi;->d(II)V
-
-    iget-object v0, v0, Ln5i;->o:[Ljava/lang/Object;
-
-    add-int/2addr p1, p1
-
-    aget-object v1, v0, p1
-
-    invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    add-int/lit8 p1, p1, 0x1
-
-    aget-object p1, v0, p1
-
-    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v0, Ljava/util/AbstractMap$SimpleImmutableEntry;
-
-    invoke-direct {v0, v1, p1}, Ljava/util/AbstractMap$SimpleImmutableEntry;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    return-object v0
-.end method
-
-.method public final size()I
-    .locals 1
-
-    iget-object v0, p0, Ll5i;->c:Ln5i;
-
-    iget v0, v0, Ln5i;->X:I
-
-    return v0
+    return-void
 .end method

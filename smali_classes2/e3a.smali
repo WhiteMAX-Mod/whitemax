@@ -1,68 +1,71 @@
-.class public final synthetic Le3a;
+.class public abstract synthetic Le3a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Li3a;
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Li3a;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput p2, p0, Le3a;->a:I
+    invoke-static {}, Ld3a;->values()[Ld3a;
 
-    iput-object p1, p0, Le3a;->b:Li3a;
+    move-result-object v0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    const/4 v2, 0x2
+
+    :try_start_1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    sput-object v0, Le3a;->$EnumSwitchMapping$0:[I
+
+    invoke-static {}, Lcdh;->values()[Lcdh;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    const/4 v3, 0x3
+
+    :try_start_2
+    aput v1, v0, v3
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    const/4 v1, 0x4
+
+    :try_start_3
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    sput-object v0, Le3a;->$EnumSwitchMapping$1:[I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 1
-
-    iget p1, p0, Le3a;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    new-instance p1, Lgk0;
-
-    const/16 v0, 0x1a
-
-    invoke-direct {p1, v0}, Lgk0;-><init>(I)V
-
-    iget-object v0, p0, Le3a;->b:Li3a;
-
-    invoke-virtual {v0, p1}, Lf3;->l(Lvr3;)V
-
-    return-void
-
-    :pswitch_0
-    new-instance p1, Lgk0;
-
-    const/16 v0, 0x17
-
-    invoke-direct {p1, v0}, Lgk0;-><init>(I)V
-
-    iget-object v0, p0, Le3a;->b:Li3a;
-
-    invoke-virtual {v0, p1}, Lf3;->l(Lvr3;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

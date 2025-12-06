@@ -1,212 +1,157 @@
-.class public final enum Lcoe;
-.super Ljava/lang/Enum;
+.class public final Lcoe;
+.super Lfoe;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic b:[Lcoe;
-
-.field public static final synthetic c:Lzd5;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lcoe;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Z
+
+.field public final b:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 14
+    .locals 2
 
-    new-instance v0, Lcoe;
+    new-instance v0, Lz6e;
 
-    const-string v1, "CANCELED"
+    const/4 v1, 0x7
+
+    invoke-direct {v0, v1}, Lz6e;-><init>(I)V
+
+    sput-object v0, Lcoe;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(ZZ)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p1, p0, Lcoe;->a:Z
+
+    iput-boolean p2, p0, Lcoe;->b:Z
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lcoe;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2, v1}, Lcoe;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    if-nez v1, :cond_1
 
-    new-instance v1, Lcoe;
+    return v2
 
-    const-string v2, "REJECTED"
+    :cond_1
+    check-cast p1, Lcoe;
 
-    const/4 v3, 0x1
+    iget-boolean v1, p0, Lcoe;->a:Z
 
-    invoke-direct {v1, v2, v3, v2}, Lcoe;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    iget-boolean v3, p1, Lcoe;->a:Z
 
-    new-instance v2, Lcoe;
+    if-eq v1, v3, :cond_2
 
-    const-string v3, "HUNGUP"
+    return v2
 
-    const/4 v4, 0x2
+    :cond_2
+    iget-boolean v1, p0, Lcoe;->b:Z
 
-    invoke-direct {v2, v3, v4, v3}, Lcoe;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    iget-boolean p1, p1, Lcoe;->b:Z
 
-    new-instance v3, Lcoe;
+    if-eq v1, p1, :cond_3
 
-    const-string v4, "MISSED"
+    return v2
 
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5, v4}, Lcoe;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v4, Lcoe;
-
-    const-string v5, "TIMEOUT"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6, v5}, Lcoe;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v5, Lcoe;
-
-    const-string v6, "BUSY"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7, v6}, Lcoe;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v6, Lcoe;
-
-    const-string v7, "FAILED"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8, v7}, Lcoe;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v7, Lcoe;
-
-    const-string v8, "REMOVED"
-
-    const/4 v9, 0x7
-
-    invoke-direct {v7, v8, v9, v8}, Lcoe;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v8, Lcoe;
-
-    const-string v9, "BANNED"
-
-    const/16 v10, 0x8
-
-    invoke-direct {v8, v9, v10, v9}, Lcoe;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v9, Lcoe;
-
-    const-string v10, "ANOTHER_DEVICE"
-
-    const/16 v11, 0x9
-
-    invoke-direct {v9, v10, v11, v10}, Lcoe;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v10, Lcoe;
-
-    const-string v11, "KILLED"
-
-    const/16 v12, 0xa
-
-    invoke-direct {v10, v11, v12, v11}, Lcoe;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v11, Lcoe;
-
-    const-string v12, "CALL_TIMEOUT"
-
-    const/16 v13, 0xb
-
-    invoke-direct {v11, v12, v13, v12}, Lcoe;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    filled-new-array/range {v0 .. v11}, [Lcoe;
-
-    move-result-object v0
-
-    sput-object v0, Lcoe;->b:[Lcoe;
-
-    new-instance v1, Lzd5;
-
-    invoke-direct {v1, v0}, Lzd5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lcoe;->c:Lzd5;
-
-    return-void
+    :cond_3
+    return v0
 .end method
 
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
-    .locals 0
+.method public final hashCode()I
+    .locals 2
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iget-boolean v0, p0, Lcoe;->a:Z
 
-    iput-object p3, p0, Lcoe;->a:Ljava/lang/String;
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    return-void
-.end method
+    move-result v0
 
-.method public static final a(Ljava/lang/String;)Lcoe;
-    .locals 3
+    mul-int/lit8 v0, v0, 0x1f
 
-    new-instance v0, Lf2;
+    iget-boolean v1, p0, Lcoe;->b:Z
 
-    const/4 v1, 0x0
-
-    sget-object v2, Lcoe;->c:Lzd5;
-
-    invoke-direct {v0, v1, v2}, Lf2;-><init>(ILjava/lang/Object;)V
-
-    :cond_0
-    invoke-virtual {v0}, Lf2;->hasNext()Z
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    add-int/2addr v1, v0
 
-    invoke-virtual {v0}, Lf2;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v2, v1
-
-    check-cast v2, Lcoe;
-
-    iget-object v2, v2, Lcoe;->a:Ljava/lang/String;
-
-    invoke-virtual {v2, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x0
-
-    :goto_0
-    check-cast v1, Lcoe;
-
-    return-object v1
+    return v1
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lcoe;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    const-class v0, Lcoe;
+    const-string v0, ", isEnabled="
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    const-string v1, ")"
 
-    move-result-object p0
+    const-string v2, "Radio(isChecked="
 
-    check-cast p0, Lcoe;
+    iget-boolean v3, p0, Lcoe;->a:Z
 
-    return-object p0
-.end method
+    iget-boolean v4, p0, Lcoe;->b:Z
 
-.method public static values()[Lcoe;
-    .locals 1
-
-    sget-object v0, Lcoe;->b:[Lcoe;
-
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-static {v2, v3, v0, v4, v1}, Lxc0;->g(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, [Lcoe;
-
     return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    iget-boolean p2, p0, Lcoe;->a:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-boolean p2, p0, Lcoe;->b:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    return-void
 .end method

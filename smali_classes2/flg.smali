@@ -1,23 +1,15 @@
-.class public interface abstract Lflg;
-.super Ljava/lang/Object;
+.class public abstract Lflg;
+.super Lcda;
 .source "SourceFile"
 
-# interfaces
-.implements Lt00;
 
+# direct methods
+.method public constructor <init>()V
+    .locals 1
 
-# virtual methods
-.method public abstract a()Z
-.end method
+    sget-object v0, Lqqg;->a:Lqqg;
 
-.method public abstract b()Z
-.end method
+    invoke-direct {p0, v0}, Lcda;-><init>(Ljava/lang/Object;)V
 
-.method public abstract c()Lclg;
-.end method
-
-.method public abstract i()Ljava/lang/String;
-.end method
-
-.method public abstract j()J
+    return-void
 .end method

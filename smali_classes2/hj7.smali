@@ -1,47 +1,203 @@
 .class public final Lhj7;
-.super Ljava/lang/Object;
+.super Lu06;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lqid;
+.field public final synthetic g:I
+
+.field public final h:Z
+
+.field public final i:Z
+
+.field public final j:Lhn6;
 
 
 # direct methods
-.method public constructor <init>(Lqid;)V
+.method public synthetic constructor <init>(Lhn6;ZZLy8g;Lm81;Ly6d;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p7, p0, Lhj7;->g:I
 
-    iput-object p1, p0, Lhj7;->a:Lqid;
+    invoke-direct {p0, p4, p5, p6}, Lu06;-><init>(Ly8g;Lm81;Ly6d;)V
+
+    iput-object p1, p0, Lhj7;->j:Lhn6;
+
+    iput-boolean p2, p0, Lhj7;->h:Z
+
+    iput-boolean p3, p0, Lhj7;->i:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ltid;Ljava/lang/String;)V
+.method public b()V
     .locals 1
 
-    invoke-virtual {p1, p2}, Ltid;->d(Ljava/lang/String;)V
+    iget v0, p0, Lhj7;->g:I
 
-    new-instance p2, Ll27;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p2, v0}, Ll27;-><init>(I)V
-
-    invoke-virtual {p1, p2}, Ltid;->c(Lq24;)V
-
-    new-instance p2, Ll27;
-
-    invoke-direct {p2, v0}, Ll27;-><init>(I)V
-
-    invoke-virtual {p1, p2}, Ltid;->a(Lq24;)V
-
-    iget-object p2, p0, Lhj7;->a:Lqid;
-
-    invoke-virtual {p2, p1}, Lqid;->G(Ltid;)V
+    packed-switch v0, :pswitch_data_0
 
     return-void
+
+    :pswitch_0
+    invoke-virtual {p0}, Lu06;->h()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final d(Lvdf;)V
+    .locals 1
+
+    iget v0, p0, Lhj7;->g:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lhj7;->j:Lhn6;
+
+    check-cast v0, Lsxa;
+
+    invoke-virtual {v0}, Lsxa;->invoke()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-boolean v0, p0, Lhj7;->h:Z
+
+    if-eqz v0, :cond_1
+
+    iget-boolean v0, p0, Lhj7;->i:Z
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-super {p0, p1}, Lu06;->d(Lvdf;)V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lhj7;->j:Lhn6;
+
+    check-cast v0, Lsxa;
+
+    invoke-virtual {v0}, Lsxa;->invoke()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    iget-boolean v0, p0, Lhj7;->h:Z
+
+    if-nez v0, :cond_3
+
+    iget-boolean v0, p0, Lhj7;->i:Z
+
+    if-eqz v0, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    invoke-super {p0, p1}, Lu06;->d(Lvdf;)V
+
+    :cond_3
+    :goto_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public e()V
+    .locals 1
+
+    iget v0, p0, Lhj7;->g:I
+
+    packed-switch v0, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    invoke-virtual {p0}, Lu06;->h()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final f()I
+    .locals 1
+
+    iget v0, p0, Lhj7;->g:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const/4 v0, 0x2
+
+    return v0
+
+    :pswitch_0
+    const/4 v0, 0x3
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final g()Ljava/lang/String;
+    .locals 1
+
+    iget v0, p0, Lhj7;->g:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const-string v0, "OutgoingP2PFirstDataStat"
+
+    return-object v0
+
+    :pswitch_0
+    const-string v0, "incomingP2PFirstDataStat"
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

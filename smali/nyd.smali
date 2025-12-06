@@ -1,262 +1,153 @@
 .class public final Lnyd;
-.super Ljyd;
+.super Ljava/util/concurrent/atomic/AtomicInteger;
 .source "SourceFile"
+
+# interfaces
+.implements Lqsc;
 
 
 # instance fields
-.field public final j:Lo6a;
+.field public final a:Ljava/lang/Object;
 
-.field public final k:Lo6a;
-
-.field public final l:J
+.field public final b:Laof;
 
 
 # direct methods
-.method public constructor <init>(Lvwc;JJJJJLjava/util/List;JLo6a;Lo6a;JJ)V
-    .locals 17
+.method public constructor <init>(Laof;Ljava/lang/Object;)V
+    .locals 0
 
-    move-object/from16 v0, p0
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
-    move-object/from16 v1, p1
+    iput-object p1, p0, Lnyd;->b:Laof;
 
-    move-wide/from16 v2, p2
-
-    move-wide/from16 v4, p4
-
-    move-wide/from16 v6, p6
-
-    move-wide/from16 v8, p10
-
-    move-object/from16 v10, p12
-
-    move-wide/from16 v11, p13
-
-    move-wide/from16 v13, p17
-
-    move-wide/from16 v15, p19
-
-    invoke-direct/range {v0 .. v16}, Ljyd;-><init>(Lvwc;JJJJLjava/util/List;JJJ)V
-
-    move-object/from16 v1, p15
-
-    iput-object v1, v0, Lnyd;->j:Lo6a;
-
-    move-object/from16 v1, p16
-
-    iput-object v1, v0, Lnyd;->k:Lo6a;
-
-    move-wide/from16 v1, p8
-
-    iput-wide v1, v0, Lnyd;->l:J
+    iput-object p2, p0, Lnyd;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ltbd;)Lvwc;
-    .locals 13
+.method public final cancel()V
+    .locals 1
 
-    iget-object v0, p0, Lnyd;->j:Lo6a;
+    const/4 v0, 0x2
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
 
-    iget-object p1, p1, Ltbd;->a:Lkb6;
-
-    iget-object v6, p1, Lkb6;->a:Ljava/lang/String;
-
-    iget v1, p1, Lkb6;->q0:I
-
-    const-wide/16 v4, 0x0
-
-    const-wide/16 v2, 0x0
-
-    invoke-virtual/range {v0 .. v6}, Lo6a;->b(IJJLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v10
-
-    new-instance v7, Lvwc;
-
-    const-wide/16 v8, 0x0
-
-    const-wide/16 v11, -0x1
-
-    invoke-direct/range {v7 .. v12}, Lvwc;-><init>(JLjava/lang/String;J)V
-
-    return-object v7
-
-    :cond_0
-    iget-object p1, p0, Ltyd;->c:Ljava/lang/Object;
-
-    check-cast p1, Lvwc;
-
-    return-object p1
+    return-void
 .end method
 
-.method public final e(J)J
-    .locals 5
+.method public final clear()V
+    .locals 1
 
-    iget-object v0, p0, Ljyd;->f:Ljava/util/List;
+    const/4 v0, 0x1
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    return-void
+.end method
+
+.method public final g(J)V
+    .locals 1
+
+    invoke-static {p1, p2}, Lfof;->e(J)Z
 
     move-result p1
 
-    int-to-long p1, p1
-
-    return-wide p1
-
-    :cond_0
-    iget-wide v0, p0, Lnyd;->l:J
-
-    const-wide/16 v2, -0x1
-
-    cmp-long v4, v0, v2
-
-    if-eqz v4, :cond_1
-
-    iget-wide p1, p0, Ljyd;->d:J
-
-    sub-long/2addr v0, p1
-
-    const-wide/16 p1, 0x1
-
-    add-long/2addr v0, p1
-
-    return-wide v0
-
-    :cond_1
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long v0, p1, v0
-
-    if-eqz v0, :cond_2
-
-    invoke-static {p1, p2}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
-
-    move-result-object p1
-
-    iget-wide v0, p0, Ltyd;->a:J
-
-    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Ljava/math/BigInteger;->multiply(Ljava/math/BigInteger;)Ljava/math/BigInteger;
-
-    move-result-object p1
-
-    iget-wide v0, p0, Ljyd;->e:J
-
-    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
-
-    move-result-object p2
-
-    const-wide/32 v0, 0xf4240
-
-    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
-
-    move-result-object v0
-
-    invoke-virtual {p2, v0}, Ljava/math/BigInteger;->multiply(Ljava/math/BigInteger;)Ljava/math/BigInteger;
-
-    move-result-object p2
-
-    sget-object v0, Ljava/math/RoundingMode;->CEILING:Ljava/math/RoundingMode;
-
-    sget v1, Ljn0;->a:I
-
-    new-instance v1, Ljava/math/BigDecimal;
-
-    invoke-direct {v1, p1}, Ljava/math/BigDecimal;-><init>(Ljava/math/BigInteger;)V
-
-    new-instance p1, Ljava/math/BigDecimal;
-
-    invoke-direct {p1, p2}, Ljava/math/BigDecimal;-><init>(Ljava/math/BigInteger;)V
-
-    const/4 p2, 0x0
-
-    invoke-virtual {v1, p1, p2, v0}, Ljava/math/BigDecimal;->divide(Ljava/math/BigDecimal;ILjava/math/RoundingMode;)Ljava/math/BigDecimal;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/math/BigDecimal;->toBigIntegerExact()Ljava/math/BigInteger;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/math/BigInteger;->longValue()J
-
-    move-result-wide p1
-
-    return-wide p1
-
-    :cond_2
-    return-wide v2
-.end method
-
-.method public final i(Lpbd;J)Lvwc;
-    .locals 16
-
-    move-object/from16 v0, p0
-
-    iget-wide v1, v0, Ljyd;->d:J
-
-    iget-object v3, v0, Ljyd;->f:Ljava/util/List;
-
-    if-eqz v3, :cond_0
-
-    sub-long v1, p2, v1
-
-    long-to-int v1, v1
-
-    invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lpyd;
-
-    iget-wide v1, v1, Lpyd;->a:J
-
-    :goto_0
-    move-wide v7, v1
-
-    move-object/from16 v1, p1
-
-    goto :goto_1
-
-    :cond_0
-    sub-long v1, p2, v1
-
-    iget-wide v3, v0, Ljyd;->e:J
-
-    mul-long/2addr v1, v3
+    if-nez p1, :cond_0
 
     goto :goto_0
 
-    :goto_1
-    iget-object v1, v1, Ltbd;->a:Lkb6;
+    :cond_0
+    const/4 p1, 0x0
 
-    iget-object v9, v1, Lkb6;->a:Ljava/lang/String;
+    const/4 p2, 0x1
 
-    iget v4, v1, Lkb6;->q0:I
+    invoke-virtual {p0, p1, p2}, Ljava/util/concurrent/atomic/AtomicInteger;->compareAndSet(II)Z
 
-    iget-object v3, v0, Lnyd;->k:Lo6a;
+    move-result p1
 
-    move-wide/from16 v5, p2
+    if-eqz p1, :cond_1
 
-    invoke-virtual/range {v3 .. v9}, Lo6a;->b(IJJLjava/lang/String;)Ljava/lang/String;
+    iget-object p1, p0, Lnyd;->a:Ljava/lang/Object;
 
-    move-result-object v13
+    iget-object p2, p0, Lnyd;->b:Laof;
 
-    new-instance v10, Lvwc;
+    invoke-interface {p2, p1}, Laof;->f(Ljava/lang/Object;)V
 
-    const-wide/16 v11, 0x0
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
-    const-wide/16 v14, -0x1
+    move-result p1
 
-    invoke-direct/range {v10 .. v15}, Lvwc;-><init>(JLjava/lang/String;J)V
+    const/4 v0, 0x2
 
-    return-object v10
+    if-eq p1, v0, :cond_1
+
+    invoke-interface {p2}, Laof;->b()V
+
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
+.method public final h(I)I
+    .locals 0
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final isEmpty()Z
+    .locals 1
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final offer(Ljava/lang/Object;)Z
+    .locals 1
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Should not be called!"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final poll()Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
+
+    iget-object v0, p0, Lnyd;->a:Ljava/lang/Object;
+
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return-object v0
 .end method

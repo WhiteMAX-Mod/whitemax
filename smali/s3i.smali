@@ -1,137 +1,42 @@
 .class public final Ls3i;
-.super Lv3i;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lv3i;
-
-.field public final transient c:I
-
-.field public final transient o:I
+.field public a:Lr3i;
 
 
 # direct methods
-.method public constructor <init>(Lv3i;II)V
-    .locals 0
+.method public constructor <init>(ILandroid/view/animation/Interpolator;J)V
+    .locals 2
 
-    iput-object p1, p0, Ls3i;->X:Lv3i;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    iput p2, p0, Ls3i;->c:I
+    const/16 v1, 0x1e
 
-    iput p3, p0, Ls3i;->o:I
+    if-lt v0, v1, :cond_0
+
+    new-instance v0, Lq3i;
+
+    invoke-static {p1, p2, p3, p4}, Ljlb;->l(ILandroid/view/animation/Interpolator;J)Landroid/view/WindowInsetsAnimation;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Lq3i;-><init>(Landroid/view/WindowInsetsAnimation;)V
+
+    iput-object v0, p0, Ls3i;->a:Lr3i;
 
     return-void
-.end method
 
+    :cond_0
+    new-instance v0, Lo3i;
 
-# virtual methods
-.method public final b()I
-    .locals 2
+    invoke-direct {v0, p1, p2, p3, p4}, Lr3i;-><init>(ILandroid/view/animation/Interpolator;J)V
 
-    iget-object v0, p0, Ls3i;->X:Lv3i;
+    iput-object v0, p0, Ls3i;->a:Lr3i;
 
-    invoke-virtual {v0}, Lj3i;->d()I
-
-    move-result v0
-
-    iget v1, p0, Ls3i;->c:I
-
-    add-int/2addr v0, v1
-
-    iget v1, p0, Ls3i;->o:I
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final d()I
-    .locals 2
-
-    iget-object v0, p0, Ls3i;->X:Lv3i;
-
-    invoke-virtual {v0}, Lj3i;->d()I
-
-    move-result v0
-
-    iget v1, p0, Ls3i;->c:I
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final e()[Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Ls3i;->X:Lv3i;
-
-    invoke-virtual {v0}, Lj3i;->e()[Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final f(II)Lv3i;
-    .locals 1
-
-    iget v0, p0, Ls3i;->o:I
-
-    invoke-static {p1, p2, v0}, Lohi;->e(III)V
-
-    iget v0, p0, Ls3i;->c:I
-
-    add-int/2addr p1, v0
-
-    add-int/2addr p2, v0
-
-    iget-object v0, p0, Ls3i;->X:Lv3i;
-
-    invoke-virtual {v0, p1, p2}, Lv3i;->f(II)Lv3i;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final get(I)Ljava/lang/Object;
-    .locals 1
-
-    iget v0, p0, Ls3i;->o:I
-
-    invoke-static {p1, v0}, Lohi;->d(II)V
-
-    iget v0, p0, Ls3i;->c:I
-
-    add-int/2addr p1, v0
-
-    iget-object v0, p0, Ls3i;->X:Lv3i;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final size()I
-    .locals 1
-
-    iget v0, p0, Ls3i;->o:I
-
-    return v0
-.end method
-
-.method public final bridge synthetic subList(II)Ljava/util/List;
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Ls3i;->f(II)Lv3i;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

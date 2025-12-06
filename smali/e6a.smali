@@ -1,65 +1,37 @@
 .class public final Le6a;
-.super Ltq3;
+.super Landroid/os/RemoteCallbackList;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic a:Landroidx/room/MultiInstanceInvalidationService;
+
+
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Landroidx/room/MultiInstanceInvalidationService;)V
+    .locals 0
 
-    const-string v0, "NetworkNotRoamingCtrlr"
+    iput-object p1, p0, Le6a;->a:Landroidx/room/MultiInstanceInvalidationService;
 
-    invoke-static {v0}, Lxyh;->l(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0}, Landroid/os/RemoteCallbackList;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lhph;)Z
-    .locals 1
+.method public final onCallbackDied(Landroid/os/IInterface;Ljava/lang/Object;)V
+    .locals 0
 
-    iget-object p1, p1, Lhph;->j:Lnr3;
+    check-cast p1, Lib7;
 
-    iget p1, p1, Lnr3;->a:I
+    iget-object p1, p0, Le6a;->a:Landroidx/room/MultiInstanceInvalidationService;
 
-    const/4 v0, 0x4
+    iget-object p1, p1, Landroidx/room/MultiInstanceInvalidationService;->b:Ljava/util/LinkedHashMap;
 
-    if-ne p1, v0, :cond_0
+    check-cast p2, Ljava/lang/Integer;
 
-    const/4 p1, 0x1
+    invoke-interface {p1, p2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final b(Ljava/lang/Object;)Z
-    .locals 1
-
-    check-cast p1, Lf6a;
-
-    iget-boolean v0, p1, Lf6a;->a:Z
-
-    if-eqz v0, :cond_1
-
-    iget-boolean p1, p1, Lf6a;->d:Z
-
-    if-nez p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
+    return-void
 .end method

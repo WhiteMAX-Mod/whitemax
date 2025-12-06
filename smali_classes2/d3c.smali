@@ -1,152 +1,113 @@
-.class public final Ld3c;
-.super Ljava/lang/Object;
+.class public final enum Ld3c;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# static fields
+.field public static final synthetic X:Lzg5;
+
+.field public static final enum b:Ld3c;
+
+.field public static final enum c:Ld3c;
+
+.field public static final enum d:Ld3c;
+
+.field public static final synthetic o:[Ld3c;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Landroid/widget/LinearLayout;
-
-.field public final synthetic c:Landroid/widget/ScrollView;
+.field public final a:F
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/widget/LinearLayout;Landroid/widget/ScrollView;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput p3, p0, Ld3c;->a:I
+    new-instance v0, Ld3c;
 
-    iput-object p1, p0, Ld3c;->b:Landroid/widget/LinearLayout;
+    const/4 v1, 0x0
 
-    iput-object p2, p0, Ld3c;->c:Landroid/widget/ScrollView;
+    const/high16 v2, 0x3f800000    # 1.0f
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v3, "X1"
+
+    invoke-direct {v0, v2, v1, v3}, Ld3c;-><init>(FILjava/lang/String;)V
+
+    sput-object v0, Ld3c;->b:Ld3c;
+
+    new-instance v1, Ld3c;
+
+    const/4 v2, 0x1
+
+    const/high16 v3, 0x3fc00000    # 1.5f
+
+    const-string v4, "X1_5"
+
+    invoke-direct {v1, v3, v2, v4}, Ld3c;-><init>(FILjava/lang/String;)V
+
+    sput-object v1, Ld3c;->c:Ld3c;
+
+    new-instance v2, Ld3c;
+
+    const/4 v3, 0x2
+
+    const/high16 v4, 0x40000000    # 2.0f
+
+    const-string v5, "X2"
+
+    invoke-direct {v2, v4, v3, v5}, Ld3c;-><init>(FILjava/lang/String;)V
+
+    sput-object v2, Ld3c;->d:Ld3c;
+
+    filled-new-array {v0, v1, v2}, [Ld3c;
+
+    move-result-object v0
+
+    sput-object v0, Ld3c;->o:[Ld3c;
+
+    new-instance v1, Lzg5;
+
+    invoke-direct {v1, v0}, Lzg5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Ld3c;->X:Lzg5;
 
     return-void
 .end method
 
+.method public constructor <init>(FILjava/lang/String;)V
+    .locals 0
 
-# virtual methods
-.method public final run()V
-    .locals 5
+    invoke-direct {p0, p3, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget v0, p0, Ld3c;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ld3c;->b:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v1
-
-    instance-of v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    if-eqz v2, :cond_0
-
-    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    if-eqz v1, :cond_1
-
-    iget v1, v1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v1, 0x0
-
-    :goto_1
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    iget-object v1, p0, Ld3c;->c:Landroid/widget/ScrollView;
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingLeft()I
-
-    move-result v2
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingTop()I
-
-    move-result v3
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingRight()I
-
-    move-result v4
-
-    invoke-virtual {v1, v2, v3, v4, v0}, Landroid/view/View;->setPadding(IIII)V
+    iput p1, p0, Ld3c;->a:F
 
     return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Ld3c;->b:Landroid/widget/LinearLayout;
+.method public static valueOf(Ljava/lang/String;)Ld3c;
+    .locals 1
 
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    const-class v0, Ld3c;
 
-    move-result-object v1
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    instance-of v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;
+    move-result-object p0
 
-    if-eqz v2, :cond_2
+    check-cast p0, Ld3c;
 
-    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
+    return-object p0
+.end method
 
-    goto :goto_2
+.method public static values()[Ld3c;
+    .locals 1
 
-    :cond_2
-    const/4 v1, 0x0
+    sget-object v0, Ld3c;->o:[Ld3c;
 
-    :goto_2
-    if-eqz v1, :cond_3
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    iget v1, v1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+    move-result-object v0
 
-    goto :goto_3
+    check-cast v0, [Ld3c;
 
-    :cond_3
-    const/4 v1, 0x0
-
-    :goto_3
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    iget-object v1, p0, Ld3c;->c:Landroid/widget/ScrollView;
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingLeft()I
-
-    move-result v2
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingTop()I
-
-    move-result v3
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingRight()I
-
-    move-result v4
-
-    invoke-virtual {v1, v2, v3, v4, v0}, Landroid/view/View;->setPadding(IIII)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

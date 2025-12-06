@@ -4,48 +4,22 @@
 
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static final synthetic a:Lzg5;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
-    invoke-static {}, Lss4;->values()[Lss4;
+    invoke-static {}, Lpxg;->values()[Lpxg;
 
     move-result-object v0
 
-    array-length v0, v0
+    new-instance v1, Lzg5;
 
-    new-array v0, v0, [I
+    invoke-direct {v1, v0}, Lzg5;-><init>([Ljava/lang/Enum;)V
 
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    const/4 v2, 0x2
-
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    const/4 v1, 0x3
-
-    :try_start_2
-    aput v1, v0, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    sput-object v0, Lc95;->$EnumSwitchMapping$0:[I
+    sput-object v1, Lc95;->a:Lzg5;
 
     return-void
 .end method

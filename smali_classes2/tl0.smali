@@ -2,161 +2,78 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lma5;
-
 
 # instance fields
-.field public final synthetic a:Lq7b;
+.field public final a:Landroid/net/Uri;
+
+.field public b:Lnm;
+
+.field public final c:Lgm;
 
 
 # direct methods
-.method public constructor <init>(Lq7b;)V
+.method public constructor <init>(Landroid/net/Uri;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ltl0;->a:Lq7b;
+    iput-object p1, p0, Ltl0;->a:Landroid/net/Uri;
+
+    sget-object p1, Lnm;->d:Lnm;
+
+    iput-object p1, p0, Ltl0;->b:Lnm;
+
+    new-instance p1, Lgm;
+
+    invoke-direct {p1}, Lgm;-><init>()V
+
+    iput-object p1, p0, Ltl0;->c:Lgm;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final k(Lq7b;Lrxg;)V
+.method public final a(Lox7;)Lul0;
+    .locals 4
+
+    new-instance v0, Lul0;
+
+    iget-object v1, p0, Ltl0;->b:Lnm;
+
+    iget-object v2, p0, Ltl0;->c:Lgm;
+
+    iget-object v3, p0, Ltl0;->a:Landroid/net/Uri;
+
+    invoke-direct {v0, v3, v1, v2, p1}, Lul0;-><init>(Landroid/net/Uri;Lnm;Lgm;Lox7;)V
+
+    return-object v0
+.end method
+
+.method public final b(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    iget-object p1, p0, Ltl0;->a:Lq7b;
+    new-instance v0, Lnmf;
 
-    iget-object v0, p1, Lul0;->b:Lpad;
+    invoke-direct {v0, p1, p2}, Ltmf;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-eqz v0, :cond_1
+    iget-object p1, p0, Ltl0;->c:Lgm;
 
-    if-eqz p2, :cond_0
+    invoke-virtual {p1, v0}, Lgm;->a(Lfm;)V
 
-    iget-object p2, p2, Lmmf;->c:Ljava/lang/Object;
-
-    check-cast p2, Lpr8;
-
-    check-cast p2, Liog;
-
-    if-eqz p2, :cond_0
-
-    iget-object p2, p2, Liog;->j:Lwif;
-
-    invoke-virtual {p2}, Lwif;->getValue()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/util/Size;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p2, 0x0
-
-    :goto_0
-    invoke-virtual {v0, p1, p2}, Lpad;->g(Lq7b;Landroid/util/Size;)V
-
-    :cond_1
     return-void
 .end method
 
-.method public final s(Lul0;II)V
-    .locals 2
+.method public final c(Ljava/lang/String;Z)V
+    .locals 1
 
-    const/4 p1, 0x3
+    new-instance v0, Lbr0;
 
-    if-ne p3, p1, :cond_2
+    invoke-direct {v0, p1, p2}, Lbr0;-><init>(Ljava/lang/String;Z)V
 
-    iget-object p1, p0, Ltl0;->a:Lq7b;
+    iget-object p1, p0, Ltl0;->c:Lgm;
 
-    iget-object p1, p1, Lul0;->c:Lcxe;
-
-    iget-object p1, p1, Lcxe;->c:Ljava/lang/Object;
-
-    check-cast p1, Lcvf;
-
-    monitor-enter p1
-
-    :try_start_0
-    iget-wide p2, p1, Lcvf;->d:J
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    const-wide/16 v0, -0x1
-
-    cmp-long p2, p2, v0
-
-    const/4 p3, 0x1
-
-    if-eqz p2, :cond_0
-
-    move p2, p3
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p2, 0x0
-
-    :goto_0
-    if-eqz p2, :cond_1
-
-    monitor-exit p1
-
-    return-void
-
-    :cond_1
-    :try_start_1
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v0
-
-    iput-wide v0, p1, Lcvf;->d:J
-
-    invoke-virtual {p1, p3, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    monitor-exit p1
-
-    return-void
-
-    :catchall_0
-    move-exception p2
-
-    monitor-exit p1
-
-    throw p2
-
-    :cond_2
-    iget-object p1, p0, Ltl0;->a:Lq7b;
-
-    iget-object p1, p1, Lul0;->c:Lcxe;
-
-    iget-object p1, p1, Lcxe;->c:Ljava/lang/Object;
-
-    check-cast p1, Lcvf;
-
-    invoke-virtual {p1}, Lcvf;->b()V
-
-    iget-object p1, p0, Ltl0;->a:Lq7b;
-
-    iget-object p2, p1, Lul0;->c:Lcxe;
-
-    iget-object p2, p2, Lcxe;->c:Ljava/lang/Object;
-
-    check-cast p2, Lcvf;
-
-    invoke-virtual {p2}, Lcvf;->a()J
-
-    move-result-wide p2
-
-    invoke-virtual {p1, p2, p3}, Lul0;->b(J)V
+    invoke-virtual {p1, v0}, Lgm;->a(Lfm;)V
 
     return-void
 .end method

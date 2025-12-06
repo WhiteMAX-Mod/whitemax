@@ -1,93 +1,154 @@
 .class public final Lghc;
-.super Lsgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lzi6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:J
 
-.field public final synthetic Y:Lone/me/qrscanner/QrScannerWidget;
+.field public final b:J
+
+.field public final c:Lpy0;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/qrscanner/QrScannerWidget;)V
+.method public constructor <init>(JJLpy0;)V
     .locals 0
 
-    iput-object p2, p0, Lghc;->Y:Lone/me/qrscanner/QrScannerWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-wide p1, p0, Lghc;->a:J
 
-    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p3, p0, Lghc;->b:J
+
+    iput-object p5, p0, Lghc;->c:Lpy0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lghc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p1
+    return v0
 
+    :cond_0
+    instance-of v1, p1, Lghc;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
     check-cast p1, Lghc;
 
-    sget-object p2, Lccg;->a:Lccg;
+    iget-wide v3, p0, Lghc;->a:J
 
-    invoke-virtual {p1, p2}, Lghc;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-wide v5, p1, Lghc;->a:J
 
-    return-object p2
-.end method
+    cmp-long v1, v3, v5
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    if-eqz v1, :cond_2
 
-    new-instance v0, Lghc;
+    return v2
 
-    iget-object v1, p0, Lghc;->Y:Lone/me/qrscanner/QrScannerWidget;
+    :cond_2
+    iget-wide v3, p0, Lghc;->b:J
 
-    invoke-direct {v0, p2, v1}, Lghc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/qrscanner/QrScannerWidget;)V
+    iget-wide v5, p1, Lghc;->b:J
 
-    iput-object p1, v0, Lghc;->X:Ljava/lang/Object;
+    cmp-long v1, v3, v5
 
-    return-object v0
-.end method
+    if-eqz v1, :cond_3
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    return v2
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    :cond_3
+    iget-object v1, p0, Lghc;->c:Lpy0;
 
-    iget-object p1, p0, Lghc;->X:Ljava/lang/Object;
+    iget-object p1, p1, Lghc;->c:Lpy0;
 
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_0
+    if-nez p1, :cond_4
 
-    sget-object p1, Lone/me/qrscanner/QrScannerWidget;->y0:[Ltr7;
+    return v2
 
-    iget-object p1, p0, Lghc;->Y:Lone/me/qrscanner/QrScannerWidget;
+    :cond_4
+    return v0
+.end method
 
-    invoke-virtual {p1}, Lone/me/qrscanner/QrScannerWidget;->E0()Lchc;
+.method public final hashCode()I
+    .locals 4
 
-    move-result-object p1
+    iget-wide v0, p0, Lghc;->a:J
 
-    sget-object v0, Lmnd;->a:Lmnd;
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    invoke-virtual {p1, v0}, Lchc;->r(Lnnd;)V
+    move-result v0
 
-    :cond_0
-    sget-object p1, Lccg;->a:Lccg;
+    const/16 v1, 0x1f
 
-    return-object p1
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lghc;->b:J
+
+    invoke-static {v0, v1, v2, v3}, La9h;->a(IIJ)I
+
+    move-result v0
+
+    iget-object v1, p0, Lghc;->c:Lpy0;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "ProfileEntity(id="
+
+    const-string v1, ", serverId="
+
+    iget-wide v2, p0, Lghc;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Laz1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-wide v1, p0, Lghc;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", profileData="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lghc;->c:Lpy0;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

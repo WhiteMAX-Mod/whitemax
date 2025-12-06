@@ -4,8 +4,18 @@
 
 
 # instance fields
-.field public a:I
+.field public final a:Lqk4;
 
-.field public b:J
+.field public b:Z
 
-.field public c:I
+
+# direct methods
+.method public constructor <init>(Lqk4;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lwu0;->a:Lqk4;
+
+    return-void
+.end method

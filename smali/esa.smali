@@ -1,121 +1,60 @@
-.class public abstract Lesa;
-.super Ljava/lang/Object;
+.class public final Lesa;
+.super Lhk3;
 .source "SourceFile"
 
+# interfaces
+.implements Lon6;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final a:Lvqa;
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
+.field public final b:Ltm6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lvqa;Ltm6;)V
+    .locals 0
 
-    sget v0, Lknc;->oneme_chatmedia_viewer_content_level_item_view_type:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lesa;->a:I
+    iput-object p1, p0, Lesa;->a:Lvqa;
 
-    sget v0, Lknc;->oneme_chatmedia_viewer_content_level_stub_view:I
+    iput-object p2, p0, Lesa;->b:Ltm6;
 
-    sput v0, Lesa;->b:I
+    return-void
+.end method
 
-    sget v0, Lknc;->oneme_chatmedia_viewer_info_panel_author_view:I
 
-    sput v0, Lesa;->c:I
+# virtual methods
+.method public final b()Lvqa;
+    .locals 4
 
-    sget v0, Lknc;->oneme_chatmedia_viewer_info_panel_date_view:I
+    new-instance v0, Lora;
 
-    sput v0, Lesa;->d:I
+    iget-object v1, p0, Lesa;->b:Ltm6;
 
-    sget v0, Lknc;->oneme_chatmedia_viewer_info_panel_forward_message_view:I
+    const/4 v2, 0x1
 
-    sput v0, Lesa;->e:I
+    iget-object v3, p0, Lesa;->a:Lvqa;
 
-    sget v0, Lknc;->oneme_chatmedia_viewer_info_panel_view:I
+    invoke-direct {v0, v3, v1, v2}, Lora;-><init>(Lvqa;Ltm6;I)V
 
-    sput v0, Lesa;->f:I
+    return-object v0
+.end method
 
-    sget v0, Lknc;->oneme_chatmedia_viewer_pager:I
+.method public final g(Lrk3;)V
+    .locals 2
 
-    sput v0, Lesa;->g:I
+    new-instance v0, Ldsa;
 
-    sget v0, Lknc;->oneme_chatmedia_viewer_photo_gif_view:I
+    iget-object v1, p0, Lesa;->b:Ltm6;
 
-    sput v0, Lesa;->h:I
+    invoke-direct {v0, p1, v1}, Ldsa;-><init>(Lrk3;Ltm6;)V
 
-    sget v0, Lknc;->oneme_chatmedia_viewer_photo_item_view_type:I
+    iget-object p1, p0, Lesa;->a:Lvqa;
 
-    sput v0, Lesa;->i:I
-
-    sget v0, Lknc;->oneme_chatmedia_viewer_photo_view:I
-
-    sput v0, Lesa;->j:I
-
-    sget v0, Lknc;->oneme_chatmedia_viewer_toolbar:I
-
-    sput v0, Lesa;->k:I
-
-    sget v0, Lknc;->oneme_chatmedia_viewer_toolbar_action_forward_attach:I
-
-    sput v0, Lesa;->l:I
-
-    sget v0, Lknc;->oneme_chatmedia_viewer_toolbar_action_goto_message:I
-
-    sput v0, Lesa;->m:I
-
-    sget v0, Lknc;->oneme_chatmedia_viewer_toolbar_action_share:I
-
-    sput v0, Lesa;->n:I
-
-    sget v0, Lknc;->oneme_chatmedia_viewer_video_item_view_type:I
-
-    sput v0, Lesa;->o:I
-
-    sget v0, Lknc;->oneme_chatmedia_viewer_video_preview_view:I
-
-    sput v0, Lesa;->p:I
-
-    sget v0, Lknc;->oneme_chatmedia_viewer_video_view:I
-
-    sput v0, Lesa;->q:I
-
-    sget v0, Lknc;->oneme_chatmedia_viewer_video_zoom_view:I
-
-    sput v0, Lesa;->r:I
+    invoke-virtual {p1, v0}, Lvqa;->a(Lvta;)V
 
     return-void
 .end method

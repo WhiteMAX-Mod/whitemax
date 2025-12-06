@@ -1,46 +1,60 @@
-.class public interface abstract Lqgf;
-.super Ljava/lang/Object;
+.class public final Lqgf;
+.super Ll0g;
 .source "SourceFile"
 
 
+# instance fields
+.field public c:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>(Ltm9;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Ll0g;-><init>(Ltm9;)V
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract a(FJJLy14;)Ljava/lang/Object;
+.method public final d(Ltm9;Ljava/lang/String;)V
+    .locals 1
+
+    const-string v0, "url"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    invoke-virtual {p1}, Ltm9;->w0()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lqgf;->c:Ljava/lang/String;
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p1}, Ltm9;->v()V
+
+    return-void
 .end method
 
-.method public b(Ly14;)Ljava/lang/Object;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    sget-object p1, Lccg;->a:Lccg;
+    iget-object v0, p0, Lqgf;->c:Ljava/lang/String;
 
-    return-object p1
-.end method
+    const-string v1, "{url=\'"
 
-.method public c(Ly14;)Ljava/lang/Object;
-    .locals 0
+    const-string v2, "\'}"
 
-    sget-object p1, Lccg;->a:Lccg;
+    invoke-static {v1, v0, v2}, Lho7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    return-object p1
-.end method
+    move-result-object v0
 
-.method public d(Ly14;)Ljava/lang/Object;
-    .locals 0
-
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
-.end method
-
-.method public abstract e(Ljava/io/File;Ly14;)Ljava/lang/Object;
-.end method
-
-.method public f(ZZLy14;)Ljava/lang/Object;
-    .locals 0
-
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
-.end method
-
-.method public abstract getDownloadContext()Ljava/lang/String;
+    return-object v0
 .end method

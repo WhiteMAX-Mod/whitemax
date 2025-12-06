@@ -1,75 +1,145 @@
 .class public final Ldo7;
-.super Lo32;
+.super Lwa2;
 .source "SourceFile"
 
 
 # instance fields
-.field public final Y:Llo7;
+.field public final c:Landroid/view/View;
+
+.field public d:I
+
+.field public e:I
+
+.field public final f:[I
 
 
 # direct methods
-.method public constructor <init>(Llo7;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Landroid/view/View;)V
     .locals 1
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
-    invoke-direct {p0, v0, p2}, Lo32;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, v0}, Lwa2;-><init>(I)V
 
-    iput-object p1, p0, Ldo7;->Y:Llo7;
+    const/4 v0, 0x2
+
+    new-array v0, v0, [I
+
+    iput-object v0, p0, Ldo7;->f:[I
+
+    iput-object p1, p0, Ldo7;->c:Landroid/view/View;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final m(Llo7;)Ljava/lang/Throwable;
+.method public final b(Ls3i;)V
+    .locals 1
+
+    iget-object p1, p0, Ldo7;->c:Landroid/view/View;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationY(F)V
+
+    return-void
+.end method
+
+.method public final c(Ls3i;)V
+    .locals 1
+
+    iget-object p1, p0, Ldo7;->c:Landroid/view/View;
+
+    iget-object v0, p0, Ldo7;->f:[I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->getLocationOnScreen([I)V
+
+    const/4 p1, 0x1
+
+    aget p1, v0, p1
+
+    iput p1, p0, Ldo7;->d:I
+
+    return-void
+.end method
+
+.method public final d(Lg4i;Ljava/util/List;)Lg4i;
     .locals 2
 
-    iget-object v0, p0, Ldo7;->Y:Llo7;
+    invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    invoke-virtual {v0}, Llo7;->getState$kotlinx_coroutines_core()Ljava/lang/Object;
+    move-result-object p2
+
+    :cond_0
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    instance-of v1, v0, Lfo7;
+    check-cast v0, Ls3i;
+
+    iget-object v1, v0, Ls3i;->a:Lr3i;
+
+    invoke-virtual {v1}, Lr3i;->c()I
+
+    move-result v1
+
+    and-int/lit8 v1, v1, 0x8
 
     if-eqz v1, :cond_0
 
-    move-object v1, v0
+    iget p2, p0, Ldo7;->e:I
 
-    check-cast v1, Lfo7;
+    iget-object v0, v0, Ls3i;->a:Lr3i;
 
-    invoke-virtual {v1}, Lfo7;->c()Ljava/lang/Throwable;
+    invoke-virtual {v0}, Lr3i;->b()F
 
-    move-result-object v1
+    move-result v0
 
-    if-eqz v1, :cond_0
+    const/4 v1, 0x0
 
-    return-object v1
+    invoke-static {p2, v0, v1}, Lrg;->c(IFI)I
 
-    :cond_0
-    instance-of v1, v0, Lqh3;
+    move-result p2
 
-    if-eqz v1, :cond_1
+    int-to-float p2, p2
 
-    check-cast v0, Lqh3;
+    iget-object v0, p0, Ldo7;->c:Landroid/view/View;
 
-    iget-object p1, v0, Lqh3;->a:Ljava/lang/Throwable;
-
-    return-object p1
+    invoke-virtual {v0, p2}, Landroid/view/View;->setTranslationY(F)V
 
     :cond_1
-    invoke-interface {p1}, Ljn7;->getCancellationException()Ljava/util/concurrent/CancellationException;
-
-    move-result-object p1
-
     return-object p1
 .end method
 
-.method public final u()Ljava/lang/String;
-    .locals 1
+.method public final e(Ls3i;Lssb;)Lssb;
+    .locals 2
 
-    const-string v0, "AwaitContinuation"
+    iget-object p1, p0, Ldo7;->c:Landroid/view/View;
 
-    return-object v0
+    iget-object v0, p0, Ldo7;->f:[I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->getLocationOnScreen([I)V
+
+    const/4 v1, 0x1
+
+    aget v0, v0, v1
+
+    iget v1, p0, Ldo7;->d:I
+
+    sub-int/2addr v1, v0
+
+    iput v1, p0, Ldo7;->e:I
+
+    int-to-float v0, v1
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationY(F)V
+
+    return-object p2
 .end method

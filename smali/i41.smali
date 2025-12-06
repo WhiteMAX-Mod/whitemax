@@ -1,459 +1,285 @@
 .class public final Li41;
-.super Ljava/lang/Object;
+.super Landroid/widget/FrameLayout;
 .source "SourceFile"
 
 
-# static fields
-.field public static final h:Li41;
-
-
 # instance fields
-.field public final a:Ljava/lang/Long;
+.field public final a:La9c;
 
-.field public final b:Ljava/lang/Long;
+.field public b:Z
 
-.field public final c:Ljava/lang/CharSequence;
+.field public c:Z
 
-.field public final d:Ljava/lang/String;
-
-.field public final e:Ljava/lang/Long;
-
-.field public final f:Ljava/lang/CharSequence;
-
-.field public final g:Z
+.field public final d:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 4
 
-    new-instance v0, Li41;
-
-    const/4 v4, 0x0
-
-    const/16 v5, 0x7c
+    const/4 v0, 0x0
 
     const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    invoke-direct {p0, p1, v0, v1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    const/4 v3, 0x0
+    new-instance v0, La9c;
 
-    invoke-direct/range {v0 .. v5}, Li41;-><init>(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;I)V
+    invoke-direct {v0, p1}, La9c;-><init>(Landroid/content/Context;)V
 
-    sput-object v0, Li41;->h:Li41;
+    iput-object v0, p0, Li41;->a:La9c;
+
+    new-instance v2, Lh41;
+
+    invoke-direct {v2, p0, v1}, Lh41;-><init>(Li41;I)V
+
+    const/4 v1, 0x3
+
+    invoke-static {v1, v2}, Lipi;->b(ILcm6;)Lk18;
+
+    move-result-object v1
+
+    iput-object v1, p0, Li41;->d:Ljava/lang/Object;
+
+    const/4 v1, -0x1
+
+    invoke-virtual {p0, v0, v1, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;II)V
+
+    invoke-direct {p0}, Li41;->getCameraPreviewController()Lg41;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v1, Lw9c;->f:Lw9c;
+
+    invoke-static {p1}, La6j;->c(Landroid/content/Context;)Lq72;
+
+    move-result-object v1
+
+    new-instance v2, Lud;
+
+    const/16 v3, 0x11
+
+    invoke-direct {v2, v0, v3, v1}, Lud;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {p1}, Lz7;->d(Landroid/content/Context;)Ljava/util/concurrent/Executor;
+
+    move-result-object p1
+
+    invoke-virtual {v1, v2, p1}, Lsn6;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+
+    invoke-direct {p0}, Li41;->getCameraPreviewController()Lg41;
+
+    move-result-object p1
+
+    new-instance v0, Lh41;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p0, v1}, Lh41;-><init>(Li41;I)V
+
+    iput-object v0, p1, Lg41;->c:Lcm6;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/CharSequence;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/CharSequence;Z)V
-    .locals 0
+.method private final getCameraPreviewController()Lg41;
+    .locals 1
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Li41;->d:Ljava/lang/Object;
 
-    .line 2
-    iput-object p1, p0, Li41;->a:Ljava/lang/Long;
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
-    .line 3
-    iput-object p2, p0, Li41;->b:Ljava/lang/Long;
+    move-result-object v0
 
-    .line 4
-    iput-object p3, p0, Li41;->c:Ljava/lang/CharSequence;
+    check-cast v0, Lg41;
 
-    .line 5
-    iput-object p4, p0, Li41;->d:Ljava/lang/String;
-
-    .line 6
-    iput-object p5, p0, Li41;->e:Ljava/lang/Long;
-
-    .line 7
-    iput-object p6, p0, Li41;->f:Ljava/lang/CharSequence;
-
-    .line 8
-    iput-boolean p7, p0, Li41;->g:Z
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;I)V
-    .locals 10
-
-    and-int/lit8 v0, p5, 0x4
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    move-object v5, v1
-
-    goto :goto_0
-
-    :cond_0
-    move-object v5, p2
-
-    :goto_0
-    and-int/lit8 p2, p5, 0x8
-
-    if-eqz p2, :cond_1
-
-    move-object v6, v1
-
-    goto :goto_1
-
-    :cond_1
-    move-object v6, p3
-
-    :goto_1
-    and-int/lit8 p2, p5, 0x10
-
-    if-eqz p2, :cond_2
-
-    move-object v7, v1
-
-    goto :goto_2
-
-    :cond_2
-    move-object v7, p4
-
-    :goto_2
-    const/4 v9, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v8, 0x0
-
-    move-object v2, p0
-
-    move-object v4, p1
-
-    .line 9
-    invoke-direct/range {v2 .. v9}, Li41;-><init>(Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/CharSequence;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/CharSequence;Z)V
-
-    return-void
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a(ZZ)V
+    .locals 6
 
-    const/4 v0, 0x1
+    if-nez p1, :cond_0
 
-    if-ne p0, p1, :cond_0
+    invoke-direct {p0}, Li41;->getCameraPreviewController()Lg41;
 
-    return v0
+    move-result-object p1
+
+    iget-object p1, p1, Lg41;->b:Lw9c;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Lw9c;->f()V
+
+    return-void
 
     :cond_0
-    instance-of v1, p1, Li41;
+    invoke-direct {p0}, Li41;->getCameraPreviewController()Lg41;
 
-    const/4 v2, 0x0
+    move-result-object p1
 
-    if-nez v1, :cond_1
+    iget-object v0, p1, Lg41;->b:Lw9c;
 
-    return v2
+    if-nez v0, :cond_2
 
     :cond_1
-    check-cast p1, Li41;
-
-    iget-object v1, p0, Li41;->a:Ljava/lang/Long;
-
-    iget-object v3, p1, Li41;->a:Ljava/lang/Long;
-
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
+    return-void
 
     :cond_2
-    iget-object v1, p0, Li41;->b:Ljava/lang/Long;
+    if-eqz v0, :cond_3
 
-    iget-object v3, p1, Li41;->b:Ljava/lang/Long;
-
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
+    invoke-virtual {v0}, Lw9c;->f()V
 
     :cond_3
-    iget-object v1, p0, Li41;->c:Ljava/lang/CharSequence;
+    const/4 v1, 0x1
 
-    iget-object v3, p1, Li41;->c:Ljava/lang/CharSequence;
+    xor-int/2addr p2, v1
 
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    new-instance v2, Ljava/util/LinkedHashSet;
 
-    move-result v1
+    invoke-direct {v2}, Ljava/util/LinkedHashSet;-><init>()V
 
-    if-nez v1, :cond_4
+    const/4 v3, -0x1
 
-    return v2
+    const/4 v4, 0x0
 
-    :cond_4
-    iget-object v1, p0, Li41;->d:Ljava/lang/String;
+    if-eq p2, v3, :cond_4
 
-    iget-object v3, p1, Li41;->d:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object v1, p0, Li41;->e:Ljava/lang/Long;
-
-    iget-object v3, p1, Li41;->e:Ljava/lang/Long;
-
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-object v1, p0, Li41;->f:Ljava/lang/CharSequence;
-
-    iget-object v3, p1, Li41;->f:Ljava/lang/CharSequence;
-
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_7
-
-    return v2
-
-    :cond_7
-    iget-boolean v1, p0, Li41;->g:Z
-
-    iget-boolean p1, p1, Li41;->g:Z
-
-    if-eq v1, p1, :cond_8
-
-    return v2
-
-    :cond_8
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Li41;->a:Ljava/lang/Long;
-
-    if-nez v1, :cond_0
-
-    move v1, v0
+    move v3, v1
 
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
+    :cond_4
+    move v3, v4
 
     :goto_0
-    mul-int/lit8 v1, v1, 0x1f
+    const-string v5, "The specified lens facing is invalid."
 
-    iget-object v2, p0, Li41;->b:Ljava/lang/Long;
+    invoke-static {v5, v3}, Lz5j;->f(Ljava/lang/String;Z)V
 
-    if-nez v2, :cond_1
+    new-instance v3, Ly28;
 
-    move v2, v0
+    invoke-direct {v3, p2}, Ly28;-><init>(I)V
+
+    invoke-virtual {v2, v3}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    move-object p2, v2
+
+    new-instance v2, Lf32;
+
+    invoke-direct {v2, p2}, Lf32;-><init>(Ljava/util/LinkedHashSet;)V
+
+    new-instance p2, Lad7;
+
+    const/4 v3, 0x2
+
+    invoke-direct {p2, v3}, Lad7;-><init>(I)V
+
+    invoke-virtual {p2}, Lad7;->b()Lr8c;
+
+    move-result-object p2
+
+    iget-object v5, p0, Li41;->a:La9c;
+
+    invoke-virtual {v5}, La9c;->getSurfaceProvider()Lq8c;
+
+    move-result-object v5
+
+    invoke-virtual {p2, v5}, Lr8c;->G(Lq8c;)V
+
+    iget-object p1, p1, Lg41;->a:Lj48;
+
+    new-array v5, v1, [Luwg;
+
+    aput-object p2, v5, v4
+
+    const-string p2, "CX:bindToLifecycle"
+
+    invoke-static {p2}, Lkfi;->h(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p2}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
+
+    :try_start_0
+    iget-object p2, v0, Lw9c;->d:Lq32;
+
+    if-nez p2, :cond_5
 
     goto :goto_1
 
-    :cond_1
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    :cond_5
+    iget-object p2, p2, Lq32;->f:Lwm2;
 
-    move-result v2
+    if-eqz p2, :cond_7
+
+    iget-object p2, p2, Lwm2;->c:Ljava/lang/Object;
+
+    check-cast p2, Lggg;
+
+    iget v4, p2, Lggg;->b:I
 
     :goto_1
-    add-int/2addr v1, v2
+    if-eq v4, v3, :cond_6
 
-    mul-int/lit8 v1, v1, 0x1f
+    invoke-static {v0, v1}, Lw9c;->b(Lw9c;I)V
 
-    iget-object v2, p0, Li41;->c:Ljava/lang/CharSequence;
+    sget-object v4, Lhd5;->a:Lhd5;
 
-    if-nez v2, :cond_2
+    invoke-static {v5, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
-    move v2, v0
+    move-result-object p2
+
+    move-object v5, p2
+
+    check-cast v5, [Luwg;
+
+    const/4 v3, 0x0
+
+    move-object v1, p1
+
+    invoke-virtual/range {v0 .. v5}, Lw9c;->d(Lj48;Lf32;Lchh;Ljava/util/List;[Luwg;)Ln38;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-static {}, Landroid/os/Trace;->endSection()V
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    move-object p1, v0
 
     goto :goto_2
 
-    :cond_2
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    :cond_6
+    :try_start_1
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    move-result v2
+    const-string p2, "bindToLifecycle for single camera is not supported in concurrent camera mode, call unbindAll() first"
+
+    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_7
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "CameraX not initialized yet."
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     :goto_2
-    add-int/2addr v1, v2
+    invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Li41;->d:Ljava/lang/String;
-
-    if-nez v2, :cond_3
-
-    move v2, v0
-
-    goto :goto_3
-
-    :cond_3
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
-
-    :goto_3
-    add-int/2addr v1, v2
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Li41;->e:Ljava/lang/Long;
-
-    if-nez v2, :cond_4
-
-    move v2, v0
-
-    goto :goto_4
-
-    :cond_4
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    :goto_4
-    add-int/2addr v1, v2
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Li41;->f:Ljava/lang/CharSequence;
-
-    if-nez v2, :cond_5
-
-    goto :goto_5
-
-    :cond_5
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    :goto_5
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-boolean v0, p0, Li41;->g:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    invoke-static {}, Ltei;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Li41;->c:Ljava/lang/CharSequence;
-
-    goto :goto_0
-
-    :cond_0
-    const-string v0, "*****"
-
-    :goto_0
-    invoke-static {}, Ltei;->a()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Li41;->f:Ljava/lang/CharSequence;
-
-    goto :goto_1
-
-    :cond_1
-    const-string v1, "**"
-
-    :goto_1
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "CallChatInfo(chatId="
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v3, p0, Li41;->a:Ljava/lang/Long;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v3, ", serverId="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v3, p0, Li41;->b:Ljava/lang/Long;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v3, ", name="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", avatar="
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v0, p0, Li41;->d:Ljava/lang/String;
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", avatarColorId="
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v0, p0, Li41;->e:Ljava/lang/Long;
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", avatarAbbreviation="
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", isLinkCall="
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ")"
-
-    iget-boolean v1, p0, Li41;->g:Z
-
-    invoke-static {v2, v1, v0}, Ldy1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    throw p1
 .end method

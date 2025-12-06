@@ -1,61 +1,55 @@
 .class public final Ltjg;
-.super Landroid/graphics/drawable/Drawable$ConstantState;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:I
+.field public final a:Ljava/lang/String;
 
-.field public b:Lsjg;
+.field public final b:F
 
-.field public c:Landroid/content/res/ColorStateList;
+.field public final c:F
 
-.field public d:Landroid/graphics/PorterDuff$Mode;
+.field public final d:I
 
-.field public e:Z
+.field public final e:I
 
-.field public f:Landroid/graphics/Bitmap;
+.field public final f:F
 
-.field public g:Landroid/content/res/ColorStateList;
+.field public final g:F
 
-.field public h:Landroid/graphics/PorterDuff$Mode;
+.field public final h:I
 
-.field public i:I
+.field public final i:F
 
-.field public j:Z
-
-.field public k:Z
-
-.field public l:Landroid/graphics/Paint;
+.field public final j:I
 
 
-# virtual methods
-.method public getChangingConfigurations()I
-    .locals 1
-
-    iget v0, p0, Ltjg;->a:I
-
-    return v0
-.end method
-
-.method public final newDrawable()Landroid/graphics/drawable/Drawable;
-    .locals 1
-
-    .line 1
-    new-instance v0, Lvjg;
-
-    invoke-direct {v0, p0}, Lvjg;-><init>(Ltjg;)V
-
-    return-object v0
-.end method
-
-.method public final newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
+# direct methods
+.method public constructor <init>(Ljava/lang/String;FFIIFFIFI)V
     .locals 0
 
-    .line 2
-    new-instance p1, Lvjg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p1, p0}, Lvjg;-><init>(Ltjg;)V
+    iput-object p1, p0, Ltjg;->a:Ljava/lang/String;
 
-    return-object p1
+    iput p2, p0, Ltjg;->b:F
+
+    iput p3, p0, Ltjg;->c:F
+
+    iput p4, p0, Ltjg;->d:I
+
+    iput p5, p0, Ltjg;->e:I
+
+    iput p6, p0, Ltjg;->f:F
+
+    iput p7, p0, Ltjg;->g:F
+
+    iput p8, p0, Ltjg;->h:I
+
+    iput p9, p0, Ltjg;->i:F
+
+    iput p10, p0, Ltjg;->j:I
+
+    return-void
 .end method

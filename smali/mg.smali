@@ -3,36 +3,56 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$DurationScaleChangeListener;
+.implements Ljava/util/concurrent/ThreadFactory;
 
 
 # instance fields
-.field public final synthetic a:Lcs8;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcs8;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lmg;->a:I
 
-    iput-object p1, p0, Lmg;->a:Lcs8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onChanged(F)V
-    .locals 1
+.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
+    .locals 2
 
-    iget-object v0, p0, Lmg;->a:Lcs8;
+    iget v0, p0, Lmg;->a:I
 
-    iget-object v0, v0, Lcs8;->b:Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    check-cast v0, Log;
+    new-instance v0, Ljava/lang/Thread;
 
-    iput p1, v0, Log;->g:F
+    const-string v1, "tracer-scheduler"
 
-    return-void
+    invoke-direct {v0, p1, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/Thread;
+
+    invoke-direct {v0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+
+    const/4 p1, 0x1
+
+    invoke-virtual {v0, p1}, Ljava/lang/Thread;->setPriority(I)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

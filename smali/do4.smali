@@ -1,126 +1,102 @@
-.class public final Ldo4;
+.class public final synthetic Ldo4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lhw0;
+.implements Lcrf;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
 
-.field public final b:[I
+.field public final synthetic b:Ljava/lang/Object;
 
-.field public final c:I
+.field public final synthetic c:Loe4;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public synthetic constructor <init>(Ljava/lang/Object;Loe4;I)V
     .locals 0
 
-    return-void
-.end method
+    iput p3, p0, Ldo4;->a:I
 
-.method public constructor <init>(II[I)V
-    .locals 0
+    iput-object p1, p0, Ldo4;->b:Ljava/lang/Object;
+
+    iput-object p2, p0, Ldo4;->c:Loe4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Ldo4;->a:I
-
-    array-length p1, p3
-
-    invoke-static {p3, p1}, Ljava/util/Arrays;->copyOf([II)[I
-
-    move-result-object p1
-
-    iput-object p1, p0, Ldo4;->b:[I
-
-    iput p2, p0, Ldo4;->c:I
-
-    invoke-static {p1}, Ljava/util/Arrays;->sort([I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_2
-
-    const-class v2, Ldo4;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Ldo4;
-
-    iget v2, p0, Ldo4;->a:I
-
-    iget v3, p1, Ldo4;->a:I
-
-    if-ne v2, v3, :cond_2
-
-    iget-object v2, p0, Ldo4;->b:[I
-
-    iget-object v3, p1, Ldo4;->b:[I
-
-    invoke-static {v2, v3}, Ljava/util/Arrays;->equals([I[I)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget v2, p0, Ldo4;->c:I
-
-    iget p1, p1, Ldo4;->c:I
-
-    if-ne v2, p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 2
+.method public final get()Ljava/lang/Object;
+    .locals 3
 
     iget v0, p0, Ldo4;->a:I
 
-    mul-int/lit8 v0, v0, 0x1f
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v1, p0, Ldo4;->b:[I
+    iget-object v0, p0, Ldo4;->b:Ljava/lang/Object;
 
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([I)I
+    check-cast v0, Lfo4;
 
-    move-result v1
+    new-instance v1, Ljoc;
 
-    add-int/2addr v1, v0
+    iget-object v0, v0, Lfo4;->b:Ljava/lang/Object;
 
-    mul-int/lit8 v1, v1, 0x1f
+    check-cast v0, Lpm4;
 
-    iget v0, p0, Ldo4;->c:I
+    iget-object v2, p0, Ldo4;->c:Loe4;
 
-    add-int/2addr v1, v0
+    invoke-direct {v1, v2, v0}, Ljoc;-><init>(Loe4;Lpm4;)V
 
-    return v1
+    return-object v1
+
+    :pswitch_0
+    iget-object v0, p0, Ldo4;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Class;
+
+    iget-object v1, p0, Ldo4;->c:Loe4;
+
+    invoke-static {v0, v1}, Lho4;->c(Ljava/lang/Class;Loe4;)Lb99;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Ldo4;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Class;
+
+    iget-object v1, p0, Ldo4;->c:Loe4;
+
+    invoke-static {v0, v1}, Lho4;->c(Ljava/lang/Class;Loe4;)Lb99;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_2
+    iget-object v0, p0, Ldo4;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Class;
+
+    iget-object v1, p0, Ldo4;->c:Loe4;
+
+    invoke-static {v0, v1}, Lho4;->c(Ljava/lang/Class;Loe4;)Lb99;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

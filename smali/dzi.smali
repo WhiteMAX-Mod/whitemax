@@ -1,162 +1,70 @@
 .class public final Ldzi;
-.super Lsri;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpqa;
 
-# instance fields
-.field public final synthetic b:Landroid/os/IBinder;
 
-.field public final synthetic c:Lqwi;
+# static fields
+.field public static final a:Ldzi;
 
 
 # direct methods
-.method public constructor <init>(Lqwi;Landroid/os/IBinder;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Ldzi;->c:Lqwi;
+    new-instance v0, Ldzi;
 
-    iput-object p2, p0, Ldzi;->b:Landroid/os/IBinder;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Lsri;-><init>()V
+    sput-object v0, Ldzi;->a:Ldzi;
+
+    new-instance v0, Lmli;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lmli;-><init>(I)V
+
+    const-class v1, Lemi;
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 7
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    iget-object v0, p0, Ldzi;->c:Lqwi;
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    iget-object v0, v0, Lqwi;->b:Ljava/lang/Object;
+    move-result-object p1
 
-    check-cast v0, Ly2j;
-
-    sget v1, Ln6i;->d:I
-
-    iget-object v1, p0, Ldzi;->b:Landroid/os/IBinder;
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    const-string v2, "com.google.android.play.core.appupdate.protocol.IAppUpdateService"
-
-    invoke-interface {v1, v2}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
-
-    move-result-object v2
-
-    instance-of v3, v2, Lu8i;
-
-    if-eqz v3, :cond_1
-
-    move-object v1, v2
-
-    check-cast v1, Lu8i;
-
-    goto :goto_0
-
-    :cond_1
-    new-instance v2, Li4i;
-
-    invoke-direct {v2, v1}, Li4i;-><init>(Landroid/os/IBinder;)V
-
-    move-object v1, v2
-
-    :goto_0
-    check-cast v1, Lu8i;
-
-    iput-object v1, v0, Ly2j;->m:Lu8i;
-
-    iget-object v1, v0, Ly2j;->b:Low4;
-
-    const-string v2, "linkToDeath"
-
-    const/4 v3, 0x0
-
-    new-array v4, v3, [Ljava/lang/Object;
-
-    invoke-virtual {v1, v2, v4}, Low4;->c(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    :try_start_0
-    iget-object v1, v0, Ly2j;->m:Lu8i;
-
-    invoke-interface {v1}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
-
-    move-result-object v1
-
-    iget-object v2, v0, Ly2j;->j:Loli;
-
-    invoke-interface {v1, v2, v3}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v1
-
-    iget-object v2, v0, Ly2j;->b:Low4;
-
-    new-array v4, v3, [Ljava/lang/Object;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v5, 0x6
-
-    const-string v6, "PlayCore"
-
-    invoke-static {v6, v5}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_2
-
-    iget-object v2, v2, Low4;->a:Ljava/lang/String;
-
-    const-string v5, "linkToDeath failed"
-
-    invoke-static {v2, v5, v4}, Low4;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v6, v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :cond_2
-    :goto_1
-    iput-boolean v3, v0, Ly2j;->g:Z
-
-    iget-object v1, v0, Ly2j;->d:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_2
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Runnable;
-
-    invoke-interface {v2}, Ljava/lang/Runnable;->run()V
-
-    goto :goto_2
-
-    :cond_3
-    iget-object v0, v0, Ly2j;->d:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
-
-    return-void
+    throw p1
 .end method

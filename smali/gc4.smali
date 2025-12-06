@@ -1,150 +1,94 @@
-.class public final synthetic Lgc4;
-.super Ljava/lang/Object;
+.class public final Lgc4;
+.super Lhc4;
 .source "SourceFile"
 
-# interfaces
-.implements Lwef;
 
+# virtual methods
+.method public final c(Ljava/lang/StringBuilder;)V
+    .locals 1
 
-# instance fields
-.field public final synthetic a:I
+    const/16 v0, 0x28
 
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-# direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
+    iget-object v0, p0, Lhc4;->a:Ljava/lang/Object;
 
-    iput p1, p0, Lgc4;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     return-void
 .end method
 
+.method public final d(Ljava/lang/StringBuilder;)V
+    .locals 1
 
-# virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 9
+    iget-object v0, p0, Lhc4;->a:Ljava/lang/Object;
 
-    iget v0, p0, Lgc4;->a:I
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    packed-switch v0, :pswitch_data_0
+    const/16 v0, 0x5d
 
-    new-instance v0, Ljava/lang/IllegalStateException;
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
+    return-void
+.end method
 
-    throw v0
+.method public final g(Ljava/lang/Comparable;)Z
+    .locals 1
 
-    :pswitch_0
-    sget-object v0, Lftb;->a:Lwef;
+    sget v0, Lo7d;->c:I
 
-    const-class v0, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;
+    iget-object v0, p0, Lhc4;->a:Ljava/lang/Object;
 
-    return-object v0
+    invoke-interface {v0, p1}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
 
-    :pswitch_1
-    new-instance v1, Lpl4;
+    move-result p1
 
-    new-instance v2, Lig4;
+    if-gez p1, :cond_0
 
-    invoke-direct {v2}, Lig4;-><init>()V
+    const/4 p1, 0x1
 
-    const/16 v5, 0x9c4
-
-    const/16 v6, 0x1388
-
-    const v3, 0xc350
-
-    const v4, 0xc350
-
-    invoke-direct/range {v1 .. v6}, Lpl4;-><init>(Lig4;IIII)V
-
-    return-object v1
-
-    :pswitch_2
-    new-instance v2, Lql4;
-
-    new-instance v3, Ljg4;
-
-    invoke-direct {v3}, Ljg4;-><init>()V
-
-    const/16 v7, 0x7d0
-
-    const/4 v8, 0x0
-
-    const v4, 0xc350
-
-    const v5, 0xc350
-
-    const/16 v6, 0x3e8
-
-    invoke-direct/range {v2 .. v8}, Lql4;-><init>(Ljg4;IIIIZ)V
-
-    return-object v2
-
-    :pswitch_3
-    const/16 v0, 0xc
-
-    new-array v0, v0, [B
-
-    sget-object v1, Ljm4;->i:Ljava/util/Random;
-
-    invoke-virtual {v1, v0}, Ljava/util/Random;->nextBytes([B)V
-
-    const/16 v1, 0xa
-
-    invoke-static {v0, v1}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_4
-    invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v0
-
-    instance-of v1, v0, La38;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, La38;
-
-    goto :goto_1
+    return p1
 
     :cond_0
-    instance-of v1, v0, Ljava/util/concurrent/ScheduledExecutorService;
+    const/4 p1, 0x0
 
-    if-eqz v1, :cond_1
+    return p1
+.end method
 
-    new-instance v1, Luu9;
+.method public final hashCode()I
+    .locals 1
 
-    check-cast v0, Ljava/util/concurrent/ScheduledExecutorService;
+    iget-object v0, p0, Lhc4;->a:Ljava/lang/Object;
 
-    invoke-direct {v1, v0}, Luu9;-><init>(Ljava/util/concurrent/ScheduledExecutorService;)V
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    :goto_0
-    move-object v0, v1
+    move-result v0
 
-    goto :goto_1
+    not-int v0, v0
 
-    :cond_1
-    new-instance v1, Lru9;
+    return v0
+.end method
 
-    invoke-direct {v1, v0}, Lru9;-><init>(Ljava/util/concurrent/ExecutorService;)V
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    goto :goto_0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    :goto_1
+    const-string v1, "/"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lhc4;->a:Ljava/lang/Object;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\\"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
     return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

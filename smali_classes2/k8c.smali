@@ -1,69 +1,41 @@
 .class public final Lk8c;
-.super Ly8c;
+.super Lxy;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+# instance fields
+.field public final X:Ljava/lang/Long;
 
-    const/4 v0, 0x1
+.field public final Y:Ljava/lang/Long;
 
-    if-ne p0, p1, :cond_0
+.field public final Z:I
 
-    return v0
+.field public final d:Ljava/lang/Long;
 
-    :cond_0
-    instance-of v1, p1, Lk8c;
+.field public final o:Ljava/lang/Long;
 
-    if-nez v1, :cond_1
+.field public final s0:Ljava/lang/String;
 
-    const/4 p1, 0x0
 
-    return p1
-
-    :cond_1
-    check-cast p1, Lk8c;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return v0
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    const/16 v0, 0x100
-
-    int-to-long v0, v0
-
-    return-wide v0
-.end method
-
-.method public final hashCode()I
+# direct methods
+.method public constructor <init>(Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;ILjava/lang/String;ZZ)V
     .locals 1
 
-    const/4 v0, -0x1
+    sget-object v0, Ls00;->w0:Ls00;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-direct {p0, v0, p7, p8}, Lxy;-><init>(Ls00;ZZ)V
 
-    move-result v0
+    iput-object p1, p0, Lk8c;->d:Ljava/lang/Long;
 
-    return v0
-.end method
+    iput-object p2, p0, Lk8c;->o:Ljava/lang/Long;
 
-.method public final m()I
-    .locals 1
+    iput-object p3, p0, Lk8c;->X:Ljava/lang/Long;
 
-    const/16 v0, 0x100
+    iput-object p4, p0, Lk8c;->Y:Ljava/lang/Long;
 
-    return v0
-.end method
+    iput p5, p0, Lk8c;->Z:I
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    iput-object p6, p0, Lk8c;->s0:Ljava/lang/String;
 
-    const-string v0, "Attaches(count=-1)"
-
-    return-object v0
+    return-void
 .end method

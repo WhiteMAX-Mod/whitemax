@@ -1,77 +1,82 @@
 .class public final Lwgc;
-.super Lkre;
+.super Ldtf;
 .source "SourceFile"
 
+# interfaces
+.implements Lsm6;
 
-# static fields
-.field public static final b:Lwgc;
+
+# instance fields
+.field public final synthetic X:Lfhc;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lfhc;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lwgc;
+    iput-object p1, p0, Lwgc;->X:Lfhc;
 
-    invoke-direct {v0}, Lkre;-><init>()V
+    const/4 p1, 0x2
 
-    sput-object v0, Lwgc;->b:Lwgc;
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Landroid/os/Bundle;)Lfg4;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const-string v0, "can_select_file"
+    check-cast p1, Lcda;
 
-    invoke-static {v0, p1}, Llyi;->a(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Boolean;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :goto_0
-    const-string v1, "source_id"
-
-    invoke-static {v1, p1}, Llyi;->c(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Long;
+    invoke-virtual {p0, p1, p2}, Lwgc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    new-instance v1, Lqv8;
+    check-cast p1, Lwgc;
 
-    const/4 v2, 0x1
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    invoke-direct {v1, v0, p1, v2}, Lqv8;-><init>(ZLjava/lang/Long;I)V
+    invoke-virtual {p1, p2}, Lwgc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object v1
+    return-object p2
 .end method
 
-.method public final e(Ljre;)V
-    .locals 4
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const/4 v0, 0x0
+    new-instance v0, Lwgc;
 
-    new-array v0, v0, [Ljava/lang/String;
+    iget-object v1, p0, Lwgc;->X:Lfhc;
 
-    const/4 v1, 0x0
+    invoke-direct {v0, v1, p2}, Lwgc;-><init>(Lfhc;Lkotlin/coroutines/Continuation;)V
 
-    const/16 v2, 0xe
+    iput-object p1, v0, Lwgc;->o:Ljava/lang/Object;
 
-    const-string v3, ":qr-scanner"
+    return-object v0
+.end method
 
-    invoke-static {p1, v3, v0, v1, v2}, Ldg4;->a(Ldg4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lyf4;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    return-void
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lwgc;->o:Ljava/lang/Object;
+
+    check-cast p1, Lcda;
+
+    iget-object v0, p0, Lwgc;->X:Lfhc;
+
+    iget-object v0, v0, Lfhc;->v0:Lci5;
+
+    invoke-static {v0, p1}, Lxfh;->r(Lci5;Ljava/lang/Object;)V
+
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

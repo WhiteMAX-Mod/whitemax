@@ -1,267 +1,97 @@
 .class public final Lfj9;
-.super Ljava/lang/Object;
+.super Landroid/text/style/ClickableSpan;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lcj9;
 
-.field public final synthetic b:J
+.field public b:I
 
-.field public final synthetic c:J
-
-.field public final synthetic o:Ljava/lang/Object;
+.field public c:Lg88;
 
 
 # direct methods
-.method public synthetic constructor <init>(IJJLjava/lang/Object;)V
+.method public constructor <init>(Lcj9;I)V
     .locals 0
 
-    iput p1, p0, Lfj9;->a:I
+    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
 
-    iput-object p6, p0, Lfj9;->o:Ljava/lang/Object;
+    iput-object p1, p0, Lfj9;->a:Lcj9;
 
-    iput-wide p2, p0, Lfj9;->b:J
-
-    iput-wide p4, p0, Lfj9;->c:J
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lfj9;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 6
+.method public final onClick(Landroid/view/View;)V
+    .locals 8
 
-    iget v0, p0, Lfj9;->a:I
+    iget-object v0, p0, Lfj9;->c:Lg88;
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lfj9;->o:Ljava/lang/Object;
+    iget-object v0, v0, Lg88;->a:Lh88;
 
-    check-cast v0, Ln5h;
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    iget-object v1, v0, Ln5h;->e:Lxfd;
+    move-result-wide v1
 
-    iget-object v0, v0, Ln5h;->a:Lfgd;
+    sget-object v3, Lh88;->d:Ln7;
 
-    invoke-virtual {v1}, Lf3;->a()Lzg6;
+    iget-wide v4, v3, Ln7;->a:J
 
-    move-result-object v2
+    sub-long v4, v1, v4
 
-    const/4 v3, 0x1
+    const-wide/16 v6, 0x12c
 
-    int-to-long v4, v3
+    cmp-long v4, v4, v6
 
-    invoke-interface {v2, v3, v4, v5}, Lkff;->k(IJ)V
+    if-lez v4, :cond_2
 
-    const/4 v3, 0x2
+    iput-wide v1, v3, Ln7;->a:J
 
-    invoke-interface {v2, v3, v4, v5}, Lkff;->k(IJ)V
+    iget-object v0, v0, Lh88;->a:Le88;
 
-    const/4 v3, 0x3
+    if-nez v0, :cond_1
 
-    iget-wide v4, p0, Lfj9;->b:J
+    instance-of v0, p1, Le88;
 
-    invoke-interface {v2, v3, v4, v5}, Lkff;->k(IJ)V
+    if-eqz v0, :cond_0
 
-    const/4 v3, 0x4
+    move-object v0, p1
 
-    iget-wide v4, p0, Lfj9;->c:J
-
-    invoke-interface {v2, v3, v4, v5}, Lkff;->k(IJ)V
-
-    :try_start_0
-    invoke-virtual {v0}, Lfgd;->c()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :try_start_1
-    invoke-virtual {v2}, Lzg6;->n()I
-
-    move-result v3
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-virtual {v0}, Lfgd;->q()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :try_start_2
-    invoke-virtual {v0}, Lfgd;->k()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    invoke-virtual {v1, v2}, Lf3;->u(Lzg6;)V
-
-    return-object v3
-
-    :catchall_0
-    move-exception v0
+    check-cast v0, Le88;
 
     goto :goto_0
 
-    :catchall_1
-    move-exception v3
+    :cond_0
+    const/4 v0, 0x0
 
-    :try_start_3
-    invoke-virtual {v0}, Lfgd;->k()V
-
-    throw v3
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
+    :cond_1
     :goto_0
-    invoke-virtual {v1, v2}, Lf3;->u(Lzg6;)V
+    if-eqz v0, :cond_2
 
-    throw v0
+    iget-object p1, p0, Lfj9;->a:Lcj9;
 
-    :pswitch_0
-    iget-object v0, p0, Lfj9;->o:Ljava/lang/Object;
+    invoke-interface {v0, p1}, Le88;->a(Lcj9;)V
 
-    check-cast v0, Lij9;
+    :cond_2
+    return-void
+.end method
 
-    iget-object v1, v0, Lij9;->u:Lej9;
+.method public final updateDrawState(Landroid/text/TextPaint;)V
+    .locals 1
 
-    iget-object v0, v0, Lij9;->a:Lfgd;
+    iget v0, p0, Lfj9;->b:I
 
-    invoke-virtual {v1}, Lf3;->a()Lzg6;
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    move-result-object v2
+    const/4 v0, 0x1
 
-    const/4 v3, 0x1
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
 
-    iget-wide v4, p0, Lfj9;->b:J
-
-    invoke-interface {v2, v3, v4, v5}, Lkff;->k(IJ)V
-
-    const/4 v3, 0x2
-
-    iget-wide v4, p0, Lfj9;->c:J
-
-    invoke-interface {v2, v3, v4, v5}, Lkff;->k(IJ)V
-
-    :try_start_4
-    invoke-virtual {v0}, Lfgd;->c()V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_2
-
-    :try_start_5
-    invoke-virtual {v2}, Lzg6;->n()I
-
-    invoke-virtual {v0}, Lfgd;->q()V
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_3
-
-    :try_start_6
-    invoke-virtual {v0}, Lfgd;->k()V
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_2
-
-    invoke-virtual {v1, v2}, Lf3;->u(Lzg6;)V
-
-    sget-object v0, Lccg;->a:Lccg;
-
-    return-object v0
-
-    :catchall_2
-    move-exception v0
-
-    goto :goto_1
-
-    :catchall_3
-    move-exception v3
-
-    :try_start_7
-    invoke-virtual {v0}, Lfgd;->k()V
-
-    throw v3
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_2
-
-    :goto_1
-    invoke-virtual {v1, v2}, Lf3;->u(Lzg6;)V
-
-    throw v0
-
-    :pswitch_1
-    iget-object v0, p0, Lfj9;->o:Ljava/lang/Object;
-
-    check-cast v0, Lij9;
-
-    iget-object v1, v0, Lij9;->t:Lej9;
-
-    iget-object v0, v0, Lij9;->a:Lfgd;
-
-    invoke-virtual {v1}, Lf3;->a()Lzg6;
-
-    move-result-object v2
-
-    const/4 v3, 0x1
-
-    iget-wide v4, p0, Lfj9;->b:J
-
-    invoke-interface {v2, v3, v4, v5}, Lkff;->k(IJ)V
-
-    const/4 v3, 0x2
-
-    iget-wide v4, p0, Lfj9;->c:J
-
-    invoke-interface {v2, v3, v4, v5}, Lkff;->k(IJ)V
-
-    :try_start_8
-    invoke-virtual {v0}, Lfgd;->c()V
-    :try_end_8
-    .catchall {:try_start_8 .. :try_end_8} :catchall_4
-
-    :try_start_9
-    invoke-virtual {v2}, Lzg6;->n()I
-
-    invoke-virtual {v0}, Lfgd;->q()V
-    :try_end_9
-    .catchall {:try_start_9 .. :try_end_9} :catchall_5
-
-    :try_start_a
-    invoke-virtual {v0}, Lfgd;->k()V
-    :try_end_a
-    .catchall {:try_start_a .. :try_end_a} :catchall_4
-
-    invoke-virtual {v1, v2}, Lf3;->u(Lzg6;)V
-
-    sget-object v0, Lccg;->a:Lccg;
-
-    return-object v0
-
-    :catchall_4
-    move-exception v0
-
-    goto :goto_2
-
-    :catchall_5
-    move-exception v3
-
-    :try_start_b
-    invoke-virtual {v0}, Lfgd;->k()V
-
-    throw v3
-    :try_end_b
-    .catchall {:try_start_b .. :try_end_b} :catchall_4
-
-    :goto_2
-    invoke-virtual {v1, v2}, Lf3;->u(Lzg6;)V
-
-    throw v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

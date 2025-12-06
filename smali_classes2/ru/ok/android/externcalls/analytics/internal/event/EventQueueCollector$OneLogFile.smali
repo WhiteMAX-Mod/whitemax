@@ -82,7 +82,11 @@
 
     iget-object v2, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector$OneLogFile;->this$0:Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;
 
-    invoke-static {v2}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->a(Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;)Ljava/lang/String;
+    invoke-static {v2}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->a(Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;)Lru/ok/android/externcalls/analytics/internal/event/EventChannel;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lru/ok/android/externcalls/analytics/internal/event/EventChannel;->getApiMethod()Ljava/lang/String;
 
     move-result-object v2
 

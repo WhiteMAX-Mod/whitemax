@@ -1,27 +1,25 @@
-.class public final Lh3b;
+.class public abstract Lh3b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lo3b;
+# static fields
+.field public static final a:I
 
-.field public final b:Ljava/lang/ref/WeakReference;
+.field public static final b:I
 
 
 # direct methods
-.method public constructor <init>(Lf3b;Lo3b;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lqyc;->oneme_file_download_warning_confirm:I
 
-    iput-object p2, p0, Lh3b;->a:Lo3b;
+    sput v0, Lh3b;->a:I
 
-    new-instance p2, Ljava/lang/ref/WeakReference;
+    sget v0, Lqyc;->oneme_file_download_warning_deny:I
 
-    invoke-direct {p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object p2, p0, Lh3b;->b:Ljava/lang/ref/WeakReference;
+    sput v0, Lh3b;->b:I
 
     return-void
 .end method

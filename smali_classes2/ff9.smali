@@ -1,125 +1,120 @@
-.class public final enum Lff9;
-.super Ljava/lang/Enum;
+.class public final Lff9;
+.super Ldtf;
 .source "SourceFile"
 
+# interfaces
+.implements Lsm6;
 
-# static fields
-.field public static final synthetic X:[Lff9;
 
-.field public static final a:Ljava/util/HashMap;
+# instance fields
+.field public final synthetic X:Lhf9;
 
-.field public static final enum b:Lff9;
+.field public final synthetic Y:Lpb2;
 
-.field public static final enum c:Lff9;
-
-.field public static final enum o:Lff9;
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lhf9;Lpb2;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lff9;
+    iput-object p1, p0, Lff9;->X:Lhf9;
 
-    const-string v1, "UNKNOWN"
+    iput-object p2, p0, Lff9;->Y:Lpb2;
 
-    const/4 v2, 0x0
+    const/4 p1, 0x2
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lff9;->b:Lff9;
-
-    new-instance v1, Lff9;
-
-    const-string v3, "EDITED"
-
-    const/4 v4, 0x1
-
-    invoke-direct {v1, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v3, Lff9;
-
-    const-string v4, "REMOVED"
-
-    const/4 v5, 0x2
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lff9;->c:Lff9;
-
-    new-instance v4, Lff9;
-
-    const-string v5, "DELAYED_FIRE_ERROR"
-
-    const/4 v6, 0x3
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lff9;->o:Lff9;
-
-    filled-new-array {v0, v1, v3, v4}, [Lff9;
-
-    move-result-object v0
-
-    sput-object v0, Lff9;->X:[Lff9;
-
-    new-instance v0, Ljava/util/HashMap;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(I)V
-
-    invoke-static {}, Lff9;->values()[Lff9;
-
-    move-result-object v1
-
-    array-length v3, v1
-
-    :goto_0
-    if-ge v2, v3, :cond_0
-
-    aget-object v4, v1, v2
-
-    invoke-virtual {v4}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v0, v5, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    sput-object v0, Lff9;->a:Ljava/util/HashMap;
+    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lff9;
-    .locals 1
 
-    const-class v0, Lff9;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p1, Lf84;
 
-    move-result-object p0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast p0, Lff9;
+    invoke-virtual {p0, p1, p2}, Lff9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-object p0
+    move-result-object p1
+
+    check-cast p1, Lff9;
+
+    sget-object p2, Lqqg;->a:Lqqg;
+
+    invoke-virtual {p1, p2}, Lff9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public static values()[Lff9;
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    sget-object v0, Lff9;->X:[Lff9;
+    new-instance p1, Lff9;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object v0, p0, Lff9;->X:Lhf9;
 
-    move-result-object v0
+    iget-object v1, p0, Lff9;->Y:Lpb2;
 
-    check-cast v0, [Lff9;
+    invoke-direct {p1, v0, v1, p2}, Lff9;-><init>(Lhf9;Lpb2;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Lff9;->o:I
+
+    iget-object v1, p0, Lff9;->X:Lhf9;
+
+    const/4 v2, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v2, :cond_0
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iput v2, p0, Lff9;->o:I
+
+    iget-object p1, p0, Lff9;->Y:Lpb2;
+
+    invoke-static {v1, p1, p0}, Lhf9;->v(Lhf9;Lpb2;Lq44;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lg84;->a:Lg84;
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
+
+    :cond_2
+    :goto_0
+    invoke-static {v1}, Lhf9;->t(Lhf9;)V
+
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

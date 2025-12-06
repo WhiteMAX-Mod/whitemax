@@ -1,127 +1,260 @@
-.class public abstract Lxo;
+.class public final Lxo;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ldp;
+.implements Landroid/content/DialogInterface$OnClickListener;
+
+
+# instance fields
+.field public a:Lvc;
+
+.field public b:Lyo;
+
+.field public c:Ljava/lang/CharSequence;
+
+.field public final synthetic d:Lep;
+
 
 # direct methods
-.method public static a(Landroid/view/DragEvent;Landroid/widget/TextView;Landroid/app/Activity;)Z
-    .locals 2
+.method public constructor <init>(Lep;)V
+    .locals 0
 
-    invoke-virtual {p2, p0}, Landroid/app/Activity;->requestDragAndDropPermissions(Landroid/view/DragEvent;)Landroid/view/DragAndDropPermissions;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0}, Landroid/view/DragEvent;->getX()F
+    iput-object p1, p0, Lxo;->d:Lep;
 
-    move-result p2
+    return-void
+.end method
 
-    invoke-virtual {p0}, Landroid/view/DragEvent;->getY()F
+
+# virtual methods
+.method public final a()Z
+    .locals 1
+
+    iget-object v0, p0, Lxo;->a:Lvc;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/app/Dialog;->isShowing()Z
 
     move-result v0
 
-    invoke-virtual {p1, p2, v0}, Landroid/widget/TextView;->getOffsetForPosition(FF)I
+    return v0
 
-    move-result p2
+    :cond_0
+    const/4 v0, 0x0
 
-    invoke-virtual {p1}, Landroid/widget/TextView;->beginBatchEdit()V
+    return v0
+.end method
 
-    :try_start_0
-    invoke-virtual {p1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+.method public final b()Landroid/graphics/drawable/Drawable;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final c()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final dismiss()V
+    .locals 1
+
+    iget-object v0, p0, Lxo;->a:Lvc;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljo;->dismiss()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lxo;->a:Lvc;
+
+    :cond_0
+    return-void
+.end method
+
+.method public final e(I)V
+    .locals 1
+
+    const-string p1, "AppCompatSpinner"
+
+    const-string v0, "Cannot set horizontal offset for MODE_DIALOG, ignoring"
+
+    invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method public final f()Ljava/lang/CharSequence;
+    .locals 1
+
+    iget-object v0, p0, Lxo;->c:Ljava/lang/CharSequence;
+
+    return-object v0
+.end method
+
+.method public final h(Ljava/lang/CharSequence;)V
+    .locals 0
+
+    iput-object p1, p0, Lxo;->c:Ljava/lang/CharSequence;
+
+    return-void
+.end method
+
+.method public final i(Landroid/graphics/drawable/Drawable;)V
+    .locals 1
+
+    const-string p1, "AppCompatSpinner"
+
+    const-string v0, "Cannot set popup background for MODE_DIALOG, ignoring"
+
+    invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method public final l(I)V
+    .locals 1
+
+    const-string p1, "AppCompatSpinner"
+
+    const-string v0, "Cannot set vertical offset for MODE_DIALOG, ignoring"
+
+    invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method public final m(I)V
+    .locals 1
+
+    const-string p1, "AppCompatSpinner"
+
+    const-string v0, "Cannot set horizontal (original) offset for MODE_DIALOG, ignoring"
+
+    invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method public final n(II)V
+    .locals 4
+
+    iget-object v0, p0, Lxo;->b:Lyo;
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v0, Luc;
+
+    iget-object v1, p0, Lxo;->d:Lep;
+
+    invoke-virtual {v1}, Lep;->getPopupContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-direct {v0, v2}, Luc;-><init>(Landroid/content/Context;)V
+
+    iget-object v2, p0, Lxo;->c:Ljava/lang/CharSequence;
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v0, v2}, Luc;->setTitle(Ljava/lang/CharSequence;)Luc;
+
+    :cond_1
+    iget-object v2, p0, Lxo;->b:Lyo;
+
+    invoke-virtual {v1}, Landroid/widget/AdapterView;->getSelectedItemPosition()I
+
+    move-result v1
+
+    iget-object v3, v0, Luc;->a:Lqc;
+
+    iput-object v2, v3, Lqc;->p:Landroid/widget/ListAdapter;
+
+    iput-object p0, v3, Lqc;->q:Landroid/content/DialogInterface$OnClickListener;
+
+    iput v1, v3, Lqc;->t:I
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, v3, Lqc;->s:Z
+
+    invoke-virtual {v0}, Luc;->create()Lvc;
 
     move-result-object v0
 
-    check-cast v0, Landroid/text/Spannable;
+    iput-object v0, p0, Lxo;->a:Lvc;
 
-    invoke-static {v0, p2}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
+    iget-object v0, v0, Lvc;->X:Ltc;
 
-    invoke-virtual {p0}, Landroid/view/DragEvent;->getClipData()Landroid/content/ClipData;
+    iget-object v0, v0, Ltc;->f:Landroidx/appcompat/app/AlertController$RecycleListView;
 
-    move-result-object p0
+    invoke-virtual {v0, p1}, Landroid/view/View;->setTextDirection(I)V
 
-    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
+    invoke-virtual {v0, p2}, Landroid/view/View;->setTextAlignment(I)V
 
-    const/16 v0, 0x1f
+    iget-object p1, p0, Lxo;->a:Lvc;
 
-    const/4 v1, 0x3
+    invoke-virtual {p1}, Landroid/app/Dialog;->show()V
 
-    if-lt p2, v0, :cond_0
-
-    new-instance p2, Lor6;
-
-    invoke-direct {p2, p0, v1}, Lor6;-><init>(Landroid/content/ClipData;I)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p2, Lo04;
-
-    invoke-direct {p2}, Lo04;-><init>()V
-
-    iput-object p0, p2, Lo04;->b:Landroid/content/ClipData;
-
-    iput v1, p2, Lo04;->c:I
-
-    :goto_0
-    invoke-interface {p2}, Ln04;->build()Lq04;
-
-    move-result-object p0
-
-    invoke-static {p1, p0}, Lhzg;->j(Landroid/view/View;Lq04;)Lq04;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {p1}, Landroid/widget/TextView;->endBatchEdit()V
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :catchall_0
-    move-exception p0
-
-    invoke-virtual {p1}, Landroid/widget/TextView;->endBatchEdit()V
-
-    throw p0
+    return-void
 .end method
 
-.method public static b(Landroid/view/DragEvent;Landroid/view/View;Landroid/app/Activity;)Z
-    .locals 2
+.method public final o()I
+    .locals 1
 
-    invoke-virtual {p2, p0}, Landroid/app/Activity;->requestDragAndDropPermissions(Landroid/view/DragEvent;)Landroid/view/DragAndDropPermissions;
+    const/4 v0, 0x0
 
-    invoke-virtual {p0}, Landroid/view/DragEvent;->getClipData()Landroid/content/ClipData;
+    return v0
+.end method
 
-    move-result-object p0
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 3
 
-    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
+    iget-object p1, p0, Lxo;->d:Lep;
 
-    const/16 v0, 0x1f
+    invoke-virtual {p1, p2}, Landroid/widget/AdapterView;->setSelection(I)V
 
-    const/4 v1, 0x3
+    invoke-virtual {p1}, Landroid/widget/AdapterView;->getOnItemClickListener()Landroid/widget/AdapterView$OnItemClickListener;
 
-    if-lt p2, v0, :cond_0
+    move-result-object v0
 
-    new-instance p2, Lor6;
+    if-eqz v0, :cond_0
 
-    invoke-direct {p2, p0, v1}, Lor6;-><init>(Landroid/content/ClipData;I)V
+    iget-object v0, p0, Lxo;->b:Lyo;
 
-    goto :goto_0
+    invoke-virtual {v0, p2}, Lyo;->getItemId(I)J
+
+    move-result-wide v0
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p1, v2, p2, v0, v1}, Landroid/widget/AdapterView;->performItemClick(Landroid/view/View;IJ)Z
 
     :cond_0
-    new-instance p2, Lo04;
+    invoke-virtual {p0}, Lxo;->dismiss()V
 
-    invoke-direct {p2}, Lo04;-><init>()V
+    return-void
+.end method
 
-    iput-object p0, p2, Lo04;->b:Landroid/content/ClipData;
+.method public final p(Landroid/widget/ListAdapter;)V
+    .locals 0
 
-    iput v1, p2, Lo04;->c:I
+    check-cast p1, Lyo;
 
-    :goto_0
-    invoke-interface {p2}, Ln04;->build()Lq04;
+    iput-object p1, p0, Lxo;->b:Lyo;
 
-    move-result-object p0
-
-    invoke-static {p1, p0}, Lhzg;->j(Landroid/view/View;Lq04;)Lq04;
-
-    const/4 p0, 0x1
-
-    return p0
+    return-void
 .end method

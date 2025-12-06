@@ -1,14 +1,9 @@
-.class public final synthetic Lgp4;
-.super Ljava/lang/Object;
+.class public final Lgp4;
+.super Lu3e;
 .source "SourceFile"
 
-# interfaces
-.implements Lkog;
 
+# instance fields
+.field public c:Landroid/view/View;
 
-# virtual methods
-.method public final b(JJLmb6;Landroid/media/MediaFormat;)V
-    .locals 0
-
-    return-void
-.end method
+.field public d:Landroid/view/View;

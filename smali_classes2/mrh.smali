@@ -1,0 +1,25 @@
+.class public final Lmrh;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# virtual methods
+.method public final serializer()Lzy7;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lzy7;"
+        }
+    .end annotation
+
+    sget-object v0, Lnrh;->a:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lzy7;
+
+    return-object v0
+.end method

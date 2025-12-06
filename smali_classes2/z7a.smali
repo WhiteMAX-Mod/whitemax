@@ -1,116 +1,97 @@
 .class public final Lz7a;
-.super Lf7d;
+.super Ldtf;
 .source "SourceFile"
+
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public final a:Li76;
-
-.field public final b:Lli6;
-
-.field public c:Z
+.field public final synthetic o:Lb8a;
 
 
 # direct methods
-.method public constructor <init>(Li76;Lli6;)V
+.method public constructor <init>(Lb8a;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lz7a;->o:Lb8a;
 
-    iput-object p1, p0, Lz7a;->a:Li76;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lz7a;->b:Lli6;
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroidx/recyclerview/widget/RecyclerView;I)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    if-nez p2, :cond_0
+    check-cast p1, Lf84;
 
-    const/4 p1, 0x0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iput-boolean p1, p0, Lz7a;->c:Z
-
-    :cond_0
-    return-void
-.end method
-
-.method public final b(Landroidx/recyclerview/widget/RecyclerView;II)V
-    .locals 2
-
-    iget-boolean p2, p0, Lz7a;->c:Z
-
-    if-eqz p2, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+    invoke-virtual {p0, p1, p2}, Lz7a;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    instance-of p2, p1, Landroidx/recyclerview/widget/GridLayoutManager;
+    check-cast p1, Lz7a;
 
-    if-eqz p2, :cond_1
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    check-cast p1, Landroidx/recyclerview/widget/GridLayoutManager;
+    invoke-virtual {p1, p2}, Lz7a;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    goto :goto_0
+    return-object p2
+.end method
 
-    :cond_1
-    const/4 p1, 0x0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    :goto_0
-    if-nez p1, :cond_2
+    new-instance p1, Lz7a;
 
-    goto :goto_1
+    iget-object v0, p0, Lz7a;->o:Lb8a;
 
-    :cond_2
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->S0()I
+    invoke-direct {p1, v0, p2}, Lz7a;-><init>(Lb8a;Lkotlin/coroutines/Continuation;)V
 
-    move-result p2
+    return-object p1
+.end method
 
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->W0()I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    move-result p1
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    iget-object p3, p0, Lz7a;->a:Li76;
+    iget-object p1, p0, Lz7a;->o:Lb8a;
 
-    invoke-virtual {p3}, Lr18;->j()I
+    iget-object p1, p1, Lb8a;->w0:Lpx8;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Lpx8;->D()V
+
+    iget-object p1, p1, Lpx8;->c:Lox8;
+
+    invoke-interface {p1}, Lox8;->isConnected()Z
 
     move-result v0
 
-    const/4 v1, -0x1
+    if-nez v0, :cond_0
 
-    if-ne p2, v1, :cond_3
+    const-string p1, "MediaController"
 
-    :goto_1
-    return-void
+    const-string v0, "The controller is not connected. Ignoring stop()."
 
-    :cond_3
-    add-int/lit8 v0, v0, -0x1
+    invoke-static {p1, v0}, La8i;->l(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-ne p1, v0, :cond_4
+    goto :goto_0
 
-    invoke-virtual {p3, p1}, Li76;->J(I)Lz6a;
+    :cond_0
+    invoke-interface {p1}, Lox8;->stop()V
 
-    move-result-object p1
+    :cond_1
+    :goto_0
+    sget-object p1, Lqqg;->a:Lqqg;
 
-    goto :goto_2
-
-    :cond_4
-    invoke-virtual {p3, p2}, Li76;->J(I)Lz6a;
-
-    move-result-object p1
-
-    :goto_2
-    iget-object p2, p0, Lz7a;->b:Lli6;
-
-    invoke-interface {p2, p1}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
+    return-object p1
 .end method

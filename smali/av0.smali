@@ -1,73 +1,176 @@
-.class public final enum Lav0;
-.super Ljava/lang/Enum;
+.class public final Lav0;
+.super Lj2;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Lav0;
+# instance fields
+.field public final synthetic c:I
 
-.field public static final enum b:Lav0;
-
-.field public static final synthetic c:[Lav0;
+.field public final d:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(II[Ljava/lang/Object;)V
+    .locals 1
 
-    new-instance v0, Lav0;
+    const/4 v0, 0x0
 
-    const-string v1, "ACTIVE"
+    iput v0, p0, Lav0;->c:I
 
-    const/4 v2, 0x0
+    .line 1
+    invoke-direct {p0, p1, p2}, Lj2;-><init>(II)V
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lav0;->a:Lav0;
-
-    new-instance v1, Lav0;
-
-    const-string v2, "INACTIVE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lav0;->b:Lav0;
-
-    filled-new-array {v0, v1}, [Lav0;
-
-    move-result-object v0
-
-    sput-object v0, Lav0;->c:[Lav0;
+    .line 2
+    iput-object p3, p0, Lav0;->d:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lav0;
+.method public constructor <init>(ILjava/lang/Object;)V
     .locals 1
 
-    const-class v0, Lav0;
+    const/4 v0, 0x1
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iput v0, p0, Lav0;->c:I
 
-    move-result-object p0
+    .line 3
+    invoke-direct {p0, p1, v0}, Lj2;-><init>(II)V
 
-    check-cast p0, Lav0;
+    iput-object p2, p0, Lav0;->d:Ljava/lang/Object;
 
-    return-object p0
+    return-void
 .end method
 
-.method public static values()[Lav0;
-    .locals 1
 
-    sget-object v0, Lav0;->c:[Lav0;
+# virtual methods
+.method public final next()Ljava/lang/Object;
+    .locals 3
 
-    invoke-virtual {v0}, [Lav0;->clone()Ljava/lang/Object;
+    iget v0, p0, Lav0;->c:I
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast v0, [Lav0;
+    invoke-virtual {p0}, Lj2;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lj2;->a:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Lj2;->a:I
+
+    iget-object v0, p0, Lav0;->d:Ljava/lang/Object;
 
     return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+
+    :pswitch_0
+    invoke-virtual {p0}, Lj2;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lav0;->d:Ljava/lang/Object;
+
+    check-cast v0, [Ljava/lang/Object;
+
+    iget v1, p0, Lj2;->a:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lj2;->a:I
+
+    aget-object v0, v0, v1
+
+    return-object v0
+
+    :cond_1
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final previous()Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lav0;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0}, Lj2;->hasPrevious()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lj2;->a:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Lj2;->a:I
+
+    iget-object v0, p0, Lav0;->d:Ljava/lang/Object;
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+
+    :pswitch_0
+    invoke-virtual {p0}, Lj2;->hasPrevious()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lav0;->d:Ljava/lang/Object;
+
+    check-cast v0, [Ljava/lang/Object;
+
+    iget v1, p0, Lj2;->a:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    iput v1, p0, Lj2;->a:I
+
+    aget-object v0, v0, v1
+
+    return-object v0
+
+    :cond_1
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

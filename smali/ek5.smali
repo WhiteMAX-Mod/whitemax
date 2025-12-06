@@ -2,475 +2,131 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/Enumeration;
+
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:J
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:Ljava/lang/String;
-
-.field public final h:I
-
-.field public final i:Lyb3;
-
-.field public final j:I
-
-.field public final k:I
-
-.field public final l:I
-
-.field public final m:Ljava/lang/String;
-
-.field public final n:Ljava/lang/String;
-
-.field public final o:I
-
-.field public final p:Landroidx/media3/transformer/ExportException;
-
-.field public final q:Lec7;
+.field public b:I
 
 
 # direct methods
-.method public constructor <init>(Lz8d;JJIIILjava/lang/String;Ljava/lang/String;ILyb3;IIILjava/lang/String;Ljava/lang/String;ILandroidx/media3/transformer/ExportException;)V
-    .locals 2
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    move-object/from16 v0, p17
-
-    move/from16 v1, p18
+    iput p1, p0, Lek5;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lek5;->q:Lec7;
-
-    iput-wide p2, p0, Lek5;->a:J
-
-    iput-wide p4, p0, Lek5;->b:J
-
-    iput p6, p0, Lek5;->c:I
-
-    iput p7, p0, Lek5;->d:I
-
-    iput p8, p0, Lek5;->e:I
-
-    iput-object p9, p0, Lek5;->f:Ljava/lang/String;
-
-    iput-object p10, p0, Lek5;->g:Ljava/lang/String;
-
-    iput p11, p0, Lek5;->h:I
-
-    iput-object p12, p0, Lek5;->i:Lyb3;
-
-    iput p13, p0, Lek5;->j:I
-
-    move/from16 p2, p14
-
-    iput p2, p0, Lek5;->k:I
-
-    move/from16 p2, p15
-
-    iput p2, p0, Lek5;->l:I
-
-    move-object/from16 p2, p16
-
-    iput-object p2, p0, Lek5;->m:Ljava/lang/String;
-
-    iput-object v0, p0, Lek5;->n:Ljava/lang/String;
-
-    iput v1, p0, Lek5;->o:I
-
-    move-object/from16 p2, p19
-
-    iput-object p2, p0, Lek5;->p:Landroidx/media3/transformer/ExportException;
-
-    const/4 p2, 0x1
-
-    invoke-static {p10, v1, p1, p2}, Lek5;->a(Ljava/lang/String;ILz8d;I)V
-
-    const/4 p2, 0x2
-
-    invoke-static {v0, v1, p1, p2}, Lek5;->a(Ljava/lang/String;ILz8d;I)V
-
-    return-void
-.end method
-
-.method public static a(Ljava/lang/String;ILz8d;I)V
-    .locals 2
-
-    if-nez p0, :cond_0
-
-    goto :goto_2
-
-    :cond_0
-    const/4 p0, 0x1
-
-    if-ne p1, p0, :cond_1
-
-    goto :goto_2
-
-    :cond_1
-    const/4 p1, 0x0
-
-    invoke-virtual {p2, p1}, Lec7;->m(I)Lv36;
-
-    move-result-object p2
-
-    :goto_0
-    invoke-virtual {p2}, Lb2;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    invoke-virtual {p2}, Lb2;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ldk5;
-
-    if-ne p3, p0, :cond_2
-
-    iget-object v0, v0, Ldk5;->d:Ljava/lang/String;
-
-    goto :goto_1
-
-    :cond_2
-    iget-object v0, v0, Ldk5;->e:Ljava/lang/String;
-
-    :goto_1
-    const/4 v1, 0x2
-
-    if-nez v0, :cond_4
-
-    if-ne p1, p0, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    move p1, v1
-
-    goto :goto_0
-
-    :cond_4
-    if-ne p1, v1, :cond_5
-
-    goto :goto_2
-
-    :cond_5
-    move p1, p0
-
-    goto :goto_0
-
-    :cond_6
-    :goto_2
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final hasMoreElements()Z
+    .locals 5
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Lek5;->a:I
 
-    goto/16 :goto_0
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x4
+
+    packed-switch v0, :pswitch_data_0
+
+    iget v0, p0, Lek5;->b:I
+
+    sget-object v4, Lhk5;->c:[Ltk5;
+
+    if-ge v0, v3, :cond_0
+
+    move v1, v2
 
     :cond_0
-    instance-of v0, p1, Lek5;
+    return v1
 
-    if-nez v0, :cond_1
+    :pswitch_0
+    iget v0, p0, Lek5;->b:I
 
-    goto/16 :goto_1
+    sget-object v4, Lhk5;->c:[Ltk5;
+
+    if-ge v0, v3, :cond_1
+
+    move v1, v2
 
     :cond_1
-    check-cast p1, Lek5;
-
-    iget-object v0, p0, Lek5;->q:Lec7;
-
-    iget-object v1, p1, Lek5;->q:Lec7;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-wide v0, p0, Lek5;->a:J
-
-    iget-wide v2, p1, Lek5;->a:J
-
-    cmp-long v0, v0, v2
-
-    if-nez v0, :cond_2
-
-    iget-wide v0, p0, Lek5;->b:J
-
-    iget-wide v2, p1, Lek5;->b:J
-
-    cmp-long v0, v0, v2
-
-    if-nez v0, :cond_2
-
-    iget v0, p0, Lek5;->c:I
-
-    iget v1, p1, Lek5;->c:I
-
-    if-ne v0, v1, :cond_2
-
-    iget v0, p0, Lek5;->d:I
-
-    iget v1, p1, Lek5;->d:I
-
-    if-ne v0, v1, :cond_2
-
-    iget v0, p0, Lek5;->e:I
-
-    iget v1, p1, Lek5;->e:I
-
-    if-ne v0, v1, :cond_2
-
-    iget-object v0, p0, Lek5;->f:Ljava/lang/String;
-
-    iget-object v1, p1, Lek5;->f:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lek5;->g:Ljava/lang/String;
-
-    iget-object v1, p1, Lek5;->g:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget v0, p0, Lek5;->h:I
-
-    iget v1, p1, Lek5;->h:I
-
-    if-ne v0, v1, :cond_2
-
-    iget-object v0, p0, Lek5;->i:Lyb3;
-
-    iget-object v1, p1, Lek5;->i:Lyb3;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget v0, p0, Lek5;->j:I
-
-    iget v1, p1, Lek5;->j:I
-
-    if-ne v0, v1, :cond_2
-
-    iget v0, p0, Lek5;->k:I
-
-    iget v1, p1, Lek5;->k:I
-
-    if-ne v0, v1, :cond_2
-
-    iget v0, p0, Lek5;->l:I
-
-    iget v1, p1, Lek5;->l:I
-
-    if-ne v0, v1, :cond_2
-
-    iget-object v0, p0, Lek5;->m:Ljava/lang/String;
-
-    iget-object v1, p1, Lek5;->m:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lek5;->n:Ljava/lang/String;
-
-    iget-object v1, p1, Lek5;->n:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget v0, p0, Lek5;->o:I
-
-    iget v1, p1, Lek5;->o:I
-
-    if-ne v0, v1, :cond_2
-
-    iget-object v0, p0, Lek5;->p:Landroidx/media3/transformer/ExportException;
-
-    iget-object p1, p1, Lek5;->p:Landroidx/media3/transformer/ExportException;
-
-    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x0
-
-    return p1
+    return v1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final nextElement()Ljava/lang/Object;
+    .locals 6
 
-    iget-object v0, p0, Lek5;->q:Lec7;
+    iget v0, p0, Lek5;->a:I
 
-    invoke-static {v0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    iget v0, p0, Lek5;->b:I
 
-    mul-int/lit8 v0, v0, 0x1f
+    add-int/lit8 v0, v0, 0x1
 
-    iget-wide v1, p0, Lek5;->a:J
+    iput v0, p0, Lek5;->b:I
 
-    long-to-int v1, v1
+    new-instance v0, Ljava/util/HashMap;
 
-    add-int/2addr v0, v1
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    mul-int/lit8 v0, v0, 0x1f
+    return-object v0
 
-    iget-wide v1, p0, Lek5;->b:J
+    :pswitch_0
+    new-instance v0, Ljava/util/HashMap;
 
-    long-to-int v1, v1
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    add-int/2addr v0, v1
+    sget-object v1, Lhk5;->d:[[Ltk5;
 
-    mul-int/lit8 v0, v0, 0x1f
+    iget v2, p0, Lek5;->b:I
 
-    iget v1, p0, Lek5;->c:I
+    aget-object v1, v1, v2
 
-    add-int/2addr v0, v1
+    array-length v2, v1
 
-    mul-int/lit8 v0, v0, 0x1f
+    const/4 v3, 0x0
 
-    iget v1, p0, Lek5;->d:I
+    :goto_0
+    if-ge v3, v2, :cond_0
 
-    add-int/2addr v0, v1
+    aget-object v4, v1, v3
 
-    mul-int/lit8 v0, v0, 0x1f
+    iget-object v5, v4, Ltk5;->b:Ljava/lang/String;
 
-    iget v1, p0, Lek5;->e:I
+    invoke-virtual {v0, v5, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    add-int/2addr v0, v1
+    add-int/lit8 v3, v3, 0x1
 
-    mul-int/lit8 v0, v0, 0x1f
+    goto :goto_0
 
-    iget-object v1, p0, Lek5;->f:Ljava/lang/String;
+    :cond_0
+    iget v1, p0, Lek5;->b:I
 
-    invoke-static {v1}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
+    add-int/lit8 v1, v1, 0x1
 
-    move-result v1
+    iput v1, p0, Lek5;->b:I
 
-    add-int/2addr v1, v0
+    return-object v0
 
-    mul-int/lit8 v1, v1, 0x1f
+    nop
 
-    iget-object v0, p0, Lek5;->g:Ljava/lang/String;
-
-    invoke-static {v0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lek5;->h:I
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lek5;->i:Lyb3;
-
-    invoke-static {v1}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget v0, p0, Lek5;->j:I
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget v0, p0, Lek5;->k:I
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget v0, p0, Lek5;->l:I
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Lek5;->m:Ljava/lang/String;
-
-    invoke-static {v0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lek5;->n:Ljava/lang/String;
-
-    invoke-static {v1}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget v0, p0, Lek5;->o:I
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Lek5;->p:Landroidx/media3/transformer/ExportException;
-
-    invoke-static {v0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

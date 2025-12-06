@@ -1,59 +1,87 @@
 .class public final Lowb;
-.super Lxzg;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lqwb;
 
 
 # instance fields
-.field public final b:Liu7;
-
-.field public final c:Liu7;
-
-.field public final o:Liu7;
+.field public final a:J
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 4
+.method public constructor <init>(J)V
+    .locals 0
 
-    sget-object v0, Lds4;->a:Lds4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v1
-
-    const-class v2, Lulf;
-
-    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v2
-
-    const-class v3, Ly83;
-
-    invoke-virtual {v2, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
-
-    move-result-object v2
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v0
-
-    const-class v3, Lcnf;
-
-    invoke-virtual {v0, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
-
-    move-result-object v0
-
-    invoke-direct {p0}, Lxzg;-><init>()V
-
-    iput-object v2, p0, Lowb;->b:Liu7;
-
-    iput-object v1, p0, Lowb;->c:Liu7;
-
-    iput-object v0, p0, Lowb;->o:Liu7;
+    iput-wide p1, p0, Lowb;->a:J
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lowb;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lowb;
+
+    iget-wide v3, p0, Lowb;->a:J
+
+    iget-wide v5, p1, Lowb;->a:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lowb;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "Fail(requestId="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lowb;->a:J
+
+    invoke-static {v2, v3, v0, v1}, La9h;->d(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

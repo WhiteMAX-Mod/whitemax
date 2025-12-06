@@ -1,36 +1,26 @@
 .class public final Llx;
-.super Lsgf;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Lsm6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic X:Lpx;
 
-.field public final synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lox;
-
-.field public final synthetic q0:Lla2;
-
-.field public r0:Lpb9;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lox;Lla2;)V
+.method public constructor <init>(Lpx;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Llx;->Y:Ljava/lang/Object;
-
-    iput-object p3, p0, Llx;->Z:Lox;
-
-    iput-object p4, p0, Llx;->q0:Lla2;
+    iput-object p1, p0, Llx;->X:Lpx;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -40,17 +30,17 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lq54;
+    check-cast p1, Ljava/lang/Throwable;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p0, p1, p2}, Llx;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1, p2}, Llx;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
     check-cast p1, Llx;
 
-    sget-object p2, Lccg;->a:Lccg;
+    sget-object p2, Lqqg;->a:Lqqg;
 
     invoke-virtual {p1, p2}, Llx;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -59,137 +49,98 @@
     return-object p1
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    new-instance p1, Llx;
+    new-instance v0, Llx;
 
-    iget-object v0, p0, Llx;->Z:Lox;
+    iget-object v1, p0, Llx;->X:Lpx;
 
-    iget-object v1, p0, Llx;->q0:Lla2;
+    invoke-direct {v0, v1, p2}, Llx;-><init>(Lpx;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v2, p0, Llx;->Y:Ljava/lang/Object;
+    iput-object p1, v0, Llx;->o:Ljava/lang/Object;
 
-    invoke-direct {p1, v2, p2, v0, v1}, Llx;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lox;Lla2;)V
-
-    return-object p1
+    return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    .locals 4
 
-    iget v0, p0, Llx;->X:I
+    iget-object v0, p0, Llx;->X:Lpx;
 
-    iget-object v1, p0, Llx;->Z:Lox;
+    iget-object v0, v0, Lpx;->i:Ljava/lang/String;
 
-    const/4 v2, 0x1
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    if-eqz v0, :cond_1
+    iget-object p1, p0, Llx;->o:Ljava/lang/Object;
 
-    if-ne v0, v2, :cond_0
+    check-cast p1, Ljava/lang/Throwable;
 
-    iget-object v0, p0, Llx;->r0:Lpb9;
+    instance-of v1, p1, Lru/ok/tamtam/errors/TamErrorException;
 
-    :try_start_0
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const/4 v2, 0x0
+
+    const-string v3, "request failed with "
+
+    if-eqz v1, :cond_0
+
+    move-object v1, p1
+
+    check-cast v1, Lru/ok/tamtam/errors/TamErrorException;
+
+    iget-object v1, v1, Lru/ok/tamtam/errors/TamErrorException;->a:Lpzf;
+
+    iget-object v1, v1, Lpzf;->b:Ljava/lang/String;
+
+    invoke-static {v1}, Lqaj;->c(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p1, ". Retrying"
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v0, p1, v2}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const/4 p1, 0x1
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    throw p1
+    const-string p1, ". Couldn\'t recover"
 
-    :cond_1
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Llx;->Y:Ljava/lang/Object;
-
-    move-object v0, p1
-
-    check-cast v0, Lpb9;
-
-    :try_start_1
-    iget-object p1, v1, Lox;->h:Ljava/lang/Object;
-
-    check-cast p1, Liu7;
-
-    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    check-cast p1, Lota;
-
-    iget-object v3, p0, Llx;->q0:Lla2;
-
-    iput-object v0, p0, Llx;->r0:Lpb9;
-
-    iput v2, p0, Llx;->X:I
-
-    invoke-virtual {p1, v3, p0, v0}, Lota;->j(Lla2;Ly14;Lpb9;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    sget-object v2, Lr54;->a:Lr54;
-
-    if-ne p1, v2, :cond_2
-
-    return-object v2
-
-    :cond_2
-    :goto_0
-    :try_start_2
-    check-cast p1, Lone/me/messages/list/loader/MessageModel;
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    return-object p1
-
-    :goto_1
-    iget-object v1, v1, Lox;->j:Ljava/lang/Object;
-
-    check-cast v1, Liu7;
-
-    invoke-interface {v1}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lsf5;
-
-    new-instance v2, Ljava/lang/RuntimeException;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "Error during mapping message="
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v2, v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    check-cast v1, Lxua;
-
-    invoke-virtual {v1, v2}, Lxua;->c(Ljava/lang/Throwable;)V
+    invoke-static {v0, p1, v2}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     const/4 p1, 0x0
+
+    :goto_0
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
 
     return-object p1
 .end method

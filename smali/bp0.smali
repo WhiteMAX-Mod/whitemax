@@ -1,21 +1,26 @@
-.class public final Lbp0;
+.class public interface abstract Lbp0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lz67;
+# virtual methods
+.method public abstract clear()V
+.end method
 
+.method public abstract d(I)Z
+.end method
 
-# direct methods
-.method public constructor <init>(Lz67;)V
-    .locals 0
+.method public abstract l()Lvc3;
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract m(ILvc3;)V
+.end method
 
-    invoke-static {p1}, Lzui;->i(Ljava/lang/Object;)V
+.method public abstract o(ILvc3;)V
+.end method
 
-    iput-object p1, p0, Lbp0;->a:Lz67;
+.method public abstract p()Lvc3;
+.end method
 
-    return-void
+.method public abstract s(I)Lvc3;
 .end method

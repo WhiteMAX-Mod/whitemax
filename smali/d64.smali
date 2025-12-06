@@ -1,99 +1,124 @@
 .class public final Ld64;
-.super Lsgf;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
-
-# interfaces
-.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic X:Ljava/util/concurrent/Callable;
+.field public final synthetic a:Landroid/view/View;
 
-.field public final synthetic Y:Lo32;
+.field public final synthetic b:Z
+
+.field public final synthetic c:Landroid/view/View;
+
+.field public final synthetic d:Le64;
+
+.field public final synthetic e:F
+
+.field public final synthetic f:F
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Callable;Lo32;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lf82;ZLf82;Le64;FF)V
     .locals 0
 
-    iput-object p1, p0, Ld64;->X:Ljava/util/concurrent/Callable;
+    iput-object p1, p0, Ld64;->a:Landroid/view/View;
 
-    iput-object p2, p0, Ld64;->Y:Lo32;
+    iput-boolean p2, p0, Ld64;->b:Z
 
-    const/4 p1, 0x2
+    iput-object p3, p0, Ld64;->c:Landroid/view/View;
 
-    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p4, p0, Ld64;->d:Le64;
+
+    iput p5, p0, Ld64;->e:F
+
+    iput p6, p0, Ld64;->f:F
+
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 1
 
-    check-cast p1, Lq54;
+    iget-object p1, p0, Ld64;->a:Landroid/view/View;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget v0, p0, Ld64;->e:F
 
-    invoke-virtual {p0, p1, p2}, Ld64;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationY(F)V
 
-    move-result-object p1
+    iget-object p1, p0, Ld64;->c:Landroid/view/View;
 
-    check-cast p1, Ld64;
+    iget v0, p0, Ld64;->f:F
 
-    sget-object p2, Lccg;->a:Lccg;
+    invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationY(F)V
 
-    invoke-virtual {p1, p2}, Ld64;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p1, p0, Ld64;->d:Le64;
 
-    return-object p2
+    iget-boolean v0, p0, Ld64;->b:Z
+
+    invoke-static {p1, v0}, Le64;->a(Le64;Z)V
+
+    return-void
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 1
 
-    new-instance p1, Ld64;
+    iget-object p1, p0, Ld64;->d:Le64;
 
-    iget-object v0, p0, Ld64;->X:Ljava/util/concurrent/Callable;
+    iget-boolean v0, p0, Ld64;->b:Z
 
-    iget-object v1, p0, Ld64;->Y:Lo32;
+    invoke-static {p1, v0}, Le64;->a(Le64;Z)V
 
-    invoke-direct {p1, v0, v1, p2}, Ld64;-><init>(Ljava/util/concurrent/Callable;Lo32;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
+    return-void
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 5
 
-    iget-object v0, p0, Ld64;->Y:Lo32;
+    sget p1, Lj0b;->m:I
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    const-string v0, "fade_out"
 
-    :try_start_0
-    iget-object p1, p0, Ld64;->X:Ljava/util/concurrent/Callable;
+    const-string v1, "fade_in"
 
-    invoke-interface {p1}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
+    iget-boolean v2, p0, Ld64;->b:Z
 
-    move-result-object p1
+    if-eqz v2, :cond_0
 
-    invoke-virtual {v0, p1}, Lo32;->resumeWith(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-object v3, v1
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p1
-
-    new-instance v1, Lbed;
-
-    invoke-direct {v1, p1}, Lbed;-><init>(Ljava/lang/Throwable;)V
-
-    invoke-virtual {v0, v1}, Lo32;->resumeWith(Ljava/lang/Object;)V
+    :cond_0
+    move-object v3, v0
 
     :goto_0
-    sget-object p1, Lccg;->a:Lccg;
+    iget-object v4, p0, Ld64;->a:Landroid/view/View;
 
-    return-object p1
+    invoke-virtual {v4, p1, v3}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    if-eqz v2, :cond_1
+
+    move-object v0, v1
+
+    :cond_1
+    iget-object v1, p0, Ld64;->c:Landroid/view/View;
+
+    invoke-virtual {v1, p1, v0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    iget-object p1, p0, Ld64;->d:Le64;
+
+    iget-object p1, p1, Le64;->i:Lem6;
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    invoke-interface {p1, v0}, Lem6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
 .end method

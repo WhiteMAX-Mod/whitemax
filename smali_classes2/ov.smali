@@ -1,115 +1,113 @@
 .class public final Lov;
-.super Ljava/lang/Object;
+.super Lrv;
 .source "SourceFile"
 
 
 # instance fields
-.field public volatile a:J
+.field public final a:J
 
-.field public volatile b:Ldu1;
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(JZ)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-wide/16 v0, -0x1
+    iput-wide p1, p0, Lov;->a:J
 
-    iput-wide v0, p0, Lov;->a:J
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lov;->b:Ldu1;
+    iput-boolean p3, p0, Lov;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final declared-synchronized a()V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    monitor-enter p0
+    if-ne p0, p1, :cond_0
 
-    :try_start_0
-    invoke-virtual {p0}, Lov;->b()V
+    goto :goto_1
 
-    iget-object v0, p0, Lov;->b:Ldu1;
+    :cond_0
+    instance-of v0, p1, Lov;
 
-    invoke-static {v0}, Lrkd;->b(Lvv4;)V
+    if-nez v0, :cond_1
 
-    const/4 v0, 0x0
+    goto :goto_0
 
-    iput-object v0, p0, Lov;->b:Ldu1;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :cond_1
+    check-cast p1, Lov;
 
-    monitor-exit p0
+    iget-wide v0, p0, Lov;->a:J
 
-    return-void
+    iget-wide v2, p1, Lov;->a:J
 
-    :catchall_0
-    move-exception v0
+    cmp-long v0, v0, v2
 
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    if-eqz v0, :cond_2
 
-    throw v0
+    goto :goto_0
+
+    :cond_2
+    iget-boolean v0, p0, Lov;->b:Z
+
+    iget-boolean p1, p1, Lov;->b:Z
+
+    if-eq v0, p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public final declared-synchronized b()V
+.method public final hashCode()I
     .locals 2
 
-    monitor-enter p0
+    iget-wide v0, p0, Lov;->a:J
 
-    const-wide/16 v0, -0x1
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    :try_start_0
-    iput-wide v0, p0, Lov;->a:J
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result v0
 
-    monitor-exit p0
+    mul-int/lit8 v0, v0, 0x1f
 
-    return-void
+    iget-boolean v1, p0, Lov;->b:Z
 
-    :catchall_0
-    move-exception v0
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    move-result v1
 
-    throw v0
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 5
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "LoadingAround(time="
 
-    const-string v1, "LoadOperation{operationTime="
+    const-string v1, ", isAddEventCaused="
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-wide v2, p0, Lov;->a:J
 
-    iget-wide v1, p0, Lov;->a:J
+    iget-boolean v4, p0, Lov;->b:Z
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-static {v2, v3, v0, v1, v4}, Lxc0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
 
-    const-string v1, ", disposable="
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lov;->b:Ldu1;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", onComplete=null}"
+    const-string v1, ")"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

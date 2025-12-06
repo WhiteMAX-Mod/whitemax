@@ -1,142 +1,51 @@
 .class public final Lfsh;
-.super Ljava/lang/Object;
+.super Lq44;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:[Z
+.field public final synthetic X:Lhsh;
 
-.field public b:I
+.field public Y:I
+
+.field public d:Lhsh;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lhsh;Lq44;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lfsh;->X:Lhsh;
 
-    const/4 v0, 0x0
-
-    iput v0, p0, Lfsh;->b:I
-
-    invoke-static {}, Ljg0;->values()[Ljg0;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [Z
-
-    iput-object v0, p0, Lfsh;->a:[Z
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljg0;Z)Z
-    .locals 2
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v0
-
-    iget-object v1, p0, Lfsh;->a:[Z
-
-    aget-boolean v0, v1, v0
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p1
-
-    aput-boolean p2, v1, p1
-
-    if-eq v0, p2, :cond_1
-
-    iget p1, p0, Lfsh;->b:I
-
-    const/4 v0, 0x1
-
-    if-eqz p2, :cond_0
-
-    move p2, v0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p2, -0x1
-
-    :goto_0
-    add-int/2addr p1, p2
-
-    iput p1, p0, Lfsh;->b:I
-
-    return v0
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v2
-
-    const-class v3, Lfsh;
-
-    if-eq v3, v2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lfsh;
-
-    iget v2, p0, Lfsh;->b:I
-
-    iget v3, p1, Lfsh;->b:I
-
-    if-ne v2, v3, :cond_2
-
-    iget-object v2, p0, Lfsh;->a:[Z
-
-    iget-object p1, p1, Lfsh;->a:[Z
-
-    invoke-static {v2, p1}, Ljava/util/Arrays;->equals([Z[Z)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lfsh;->a:[Z
+    iput-object p1, p0, Lfsh;->o:Ljava/lang/Object;
 
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Z)I
+    iget p1, p0, Lfsh;->Y:I
 
-    move-result v0
+    const/high16 v0, -0x80000000
 
-    return v0
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lfsh;->Y:I
+
+    iget-object p1, p0, Lfsh;->X:Lhsh;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lhsh;->e(Ljava/lang/String;Lq44;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

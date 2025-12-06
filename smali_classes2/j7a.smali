@@ -1,49 +1,44 @@
-.class public final Lj7a;
+.class public interface abstract Lj7a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lfyb;
+# virtual methods
+.method public A()V
+    .locals 0
 
-.field public final b:Liu7;
+    return-void
+.end method
 
-.field public final c:Liu7;
+.method public e()V
+    .locals 0
 
+    return-void
+.end method
 
-# direct methods
-.method public constructor <init>(Lfyb;)V
-    .locals 3
+.method public g()V
+    .locals 0
 
-    sget-object v0, Lw98;->a:Lw98;
+    return-void
+.end method
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+.method public n()V
+    .locals 0
 
-    move-result-object v1
+    return-void
+.end method
 
-    const-class v2, Lioa;
+.method public r()V
+    .locals 0
 
-    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+    return-void
+.end method
 
-    move-result-object v1
+.method public abstract u(J)V
+.end method
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v0
-
-    const-class v2, Lulf;
-
-    invoke-virtual {v0, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
-
-    move-result-object v0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lj7a;->a:Lfyb;
-
-    iput-object v1, p0, Lj7a;->b:Liu7;
-
-    iput-object v0, p0, Lj7a;->c:Liu7;
+.method public w()V
+    .locals 0
 
     return-void
 .end method

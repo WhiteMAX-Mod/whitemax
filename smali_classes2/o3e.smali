@@ -2,274 +2,246 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lms4;
+
+# static fields
+.field public static final e:Lo3e;
 
 
 # instance fields
-.field public final a:Lsrf;
+.field public final a:I
 
-.field public final b:Lru/ok/tamtam/android/prefs/PmsKey;
+.field public final b:Z
 
 .field public final c:Z
 
-.field public final d:Liu7;
-
-.field public final e:Liu7;
-
-.field public final f:J
-
-.field public final g:Lx0f;
-
-.field public final h:Ln0d;
+.field public final d:Ln3e;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    .line 19
-    new-instance v0, Lsrf;
+    new-instance v0, Lo3e;
 
-    invoke-direct {v0, p1}, Lsrf;-><init>(Ljava/lang/CharSequence;)V
+    const/4 v1, 0x0
 
-    .line 20
-    invoke-direct {p0, v0, p2, p3}, Lo3e;-><init>(Lsrf;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
+    const/4 v2, 0x0
 
-    return-void
-.end method
+    invoke-direct {v0, v1, v1, v1, v2}, Lo3e;-><init>(IZZLn3e;)V
 
-.method public constructor <init>(Lru/ok/tamtam/android/prefs/PmsKey;)V
-    .locals 2
-
-    .line 16
-    invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 17
-    new-instance v1, Lsrf;
-
-    invoke-direct {v1, v0}, Lsrf;-><init>(Ljava/lang/CharSequence;)V
-
-    const/4 v0, 0x0
-
-    .line 18
-    invoke-direct {p0, v1, p1, v0}, Lo3e;-><init>(Lsrf;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
+    sput-object v0, Lo3e;->e:Lo3e;
 
     return-void
 .end method
 
-.method public constructor <init>(Lsrf;Lru/ok/tamtam/android/prefs/PmsKey;Z)V
+.method public constructor <init>(IZZLn3e;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-object p1, p0, Lo3e;->a:Lsrf;
+    iput p1, p0, Lo3e;->a:I
 
-    .line 3
-    iput-object p2, p0, Lo3e;->b:Lru/ok/tamtam/android/prefs/PmsKey;
+    iput-boolean p2, p0, Lo3e;->b:Z
 
-    .line 4
     iput-boolean p3, p0, Lo3e;->c:Z
 
-    .line 5
-    sget-object p1, Lxs4;->a:Lxs4;
-
-    .line 6
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object p2
-
-    const-class p3, Lutd;
-
-    invoke-virtual {p2, p3}, Lr5;->d(Ljava/lang/Class;)Lwif;
-
-    move-result-object p2
-
-    .line 7
-    iput-object p2, p0, Lo3e;->d:Liu7;
-
-    .line 8
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object p1
-
-    const-class p2, Lwtd;
-
-    invoke-virtual {p1, p2}, Lr5;->d(Ljava/lang/Class;)Lwif;
-
-    move-result-object p1
-
-    .line 9
-    iput-object p1, p0, Lo3e;->e:Liu7;
-
-    .line 10
-    sget-object p1, Las4;->b:Ljava/util/concurrent/atomic/AtomicLong;
-
-    .line 11
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
-
-    move-result-wide p1
-
-    .line 12
-    iput-wide p1, p0, Lo3e;->f:J
-
-    .line 13
-    invoke-virtual {p0}, Lo3e;->e()Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ly0f;->a(Ljava/lang/Object;)Lx0f;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lo3e;->g:Lx0f;
-
-    .line 14
-    new-instance p2, Ln0d;
-
-    invoke-direct {p2, p1}, Ln0d;-><init>(Lj1a;)V
-
-    .line 15
-    iput-object p2, p0, Lo3e;->h:Ln0d;
+    iput-object p4, p0, Lo3e;->d:Ln3e;
 
     return-void
+.end method
+
+.method public static a(Lo3e;IZZLn3e;I)Lo3e;
+    .locals 1
+
+    and-int/lit8 v0, p5, 0x1
+
+    if-eqz v0, :cond_0
+
+    iget p1, p0, Lo3e;->a:I
+
+    :cond_0
+    and-int/lit8 v0, p5, 0x2
+
+    if-eqz v0, :cond_1
+
+    iget-boolean p2, p0, Lo3e;->b:Z
+
+    :cond_1
+    and-int/lit8 v0, p5, 0x4
+
+    if-eqz v0, :cond_2
+
+    iget-boolean p3, p0, Lo3e;->c:Z
+
+    :cond_2
+    and-int/lit8 p5, p5, 0x8
+
+    if-eqz p5, :cond_3
+
+    iget-object p4, p0, Lo3e;->d:Ln3e;
+
+    :cond_3
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance p0, Lo3e;
+
+    invoke-direct {p0, p1, p2, p3, p4}, Lo3e;-><init>(IZZLn3e;)V
+
+    return-object p0
 .end method
 
 
 # virtual methods
-.method public final c()Lq0f;
-    .locals 1
-
-    iget-object v0, p0, Lo3e;->h:Ln0d;
-
-    return-object v0
-.end method
-
-.method public final d(Lre4;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    iget-wide v0, p1, Lre4;->a:J
+    const/4 v0, 0x1
 
-    iget-wide v2, p0, Lo3e;->f:J
+    if-ne p0, p1, :cond_0
 
-    invoke-static {v0, v1, v2, v3}, Las4;->a(JJ)Z
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lo3e;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lo3e;
+
+    iget v1, p0, Lo3e;->a:I
+
+    iget v3, p1, Lo3e;->a:I
+
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Lo3e;->b:Z
+
+    iget-boolean v3, p1, Lo3e;->b:Z
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-boolean v1, p0, Lo3e;->c:Z
+
+    iget-boolean v3, p1, Lo3e;->c:Z
+
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lo3e;->d:Ln3e;
+
+    iget-object p1, p1, Lo3e;->d:Ln3e;
+
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_0
+    if-nez p1, :cond_5
 
-    iget-object p1, p0, Lo3e;->d:Liu7;
+    return v2
 
-    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+    :cond_5
+    return v0
+.end method
 
-    move-result-object v0
+.method public final hashCode()I
+    .locals 3
 
-    check-cast v0, Lutd;
+    iget v0, p0, Lo3e;->a:I
 
-    iget-boolean v1, p0, Lo3e;->c:Z
-
-    iget-object v2, p0, Lo3e;->b:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    invoke-virtual {v0, v2, v1}, Lutd;->j(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
-    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+    const/16 v1, 0x1f
 
-    move-result-object p1
+    mul-int/2addr v0, v1
 
-    check-cast p1, Lutd;
+    iget-boolean v2, p0, Lo3e;->b:Z
 
-    xor-int/lit8 v0, v0, 0x1
+    invoke-static {v0, v1, v2}, La9h;->b(IIZ)I
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1, v0}, Lw3;->f(Ljava/lang/String;Z)V
-
-    invoke-virtual {p0}, Lo3e;->e()Ljava/util/List;
-
-    move-result-object p1
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lo3e;->g:Lx0f;
-
-    invoke-virtual {v1, v0, p1}, Lx0f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    :cond_0
-    return-void
-.end method
-
-.method public final e()Ljava/util/List;
-    .locals 7
-
-    new-instance v6, Lqe4;
-
-    iget-object v0, p0, Lo3e;->d:Liu7;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lutd;
-
-    iget-object v1, p0, Lo3e;->b:Lru/ok/tamtam/android/prefs/PmsKey;
+    move-result v0
 
     iget-boolean v2, p0, Lo3e;->c:Z
 
-    invoke-virtual {v0, v1, v2}, Lutd;->j(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
+    invoke-static {v0, v1, v2}, La9h;->b(IIZ)I
 
     move-result v0
 
-    invoke-direct {v6, v0}, Lqe4;-><init>(Z)V
+    iget-object v1, p0, Lo3e;->d:Ln3e;
 
-    iget-object v0, p0, Lo3e;->e:Liu7;
+    if-nez v1, :cond_0
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    move-result-object v0
+    goto :goto_0
 
-    check-cast v0, Lwtd;
+    :cond_0
+    invoke-virtual {v1}, Ln3e;->hashCode()I
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    move-result v1
 
-    move-result-object v1
+    :goto_0
+    add-int/2addr v0, v1
 
-    iget-object v0, v0, Lw3;->h:Llu7;
+    return v0
+.end method
 
-    invoke-virtual {v0, v1, v2}, Llu7;->getBoolean(Ljava/lang/String;Z)Z
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    move-result v0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "Server: "
+    const-string v1, "ScrollState(unreadMessages="
 
-    invoke-static {v1, v0}, Lrv8;->f(Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object v0
+    iget v1, p0, Lo3e;->a:I
 
-    new-instance v5, Lsrf;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-direct {v5, v0}, Lsrf;-><init>(Ljava/lang/CharSequence;)V
+    const-string v1, ", isUnreadButtonVisible="
 
-    new-instance v0, Lre4;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lo3e;->f:J
+    iget-boolean v1, p0, Lo3e;->b:Z
 
-    iget-object v3, p0, Lo3e;->a:Lsrf;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const/4 v4, 0x0
+    const-string v1, ", isMentionButtonVisible="
 
-    invoke-direct/range {v0 .. v6}, Lre4;-><init>(JLtrf;ILtrf;Liyi;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    iget-boolean v1, p0, Lo3e;->c:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", lastReaction="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lo3e;->d:Ln3e;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

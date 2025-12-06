@@ -1,55 +1,90 @@
-.class public final synthetic Lnx1;
+.class public final Lnx1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lux1;
+.implements Lj48;
 
 
 # instance fields
-.field public final synthetic a:J
+.field public final synthetic a:I
 
-.field public final synthetic b:Lgu1;
+.field public final b:Ll48;
 
 
 # direct methods
-.method public synthetic constructor <init>(JLgu1;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
+    const/4 v0, 0x0
+
+    iput v0, p0, Lnx1;->a:I
+
+    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lnx1;->a:J
+    .line 6
+    new-instance v0, Ll48;
 
-    iput-object p3, p0, Lnx1;->b:Lgu1;
+    invoke-direct {v0, p0}, Ll48;-><init>(Lj48;)V
+
+    iput-object v0, p0, Lnx1;->b:Ll48;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lone/me/sdk/arch/Widget;)V
+    .locals 2
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lnx1;->a:I
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    new-instance v0, Ll48;
+
+    invoke-direct {v0, p0}, Ll48;-><init>(Lj48;)V
+
+    iput-object v0, p0, Lnx1;->b:Ll48;
+
+    .line 3
+    new-instance v0, Lm54;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1, p0}, Lm54;-><init>(ILjava/lang/Object;)V
+
+    .line 4
+    invoke-virtual {p1, v0}, Lc54;->addLifecycleListener(La54;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/hardware/camera2/TotalCaptureResult;)Z
-    .locals 2
+.method public final p()Ll48;
+    .locals 1
 
-    iget-wide v0, p0, Lnx1;->a:J
+    iget v0, p0, Lnx1;->a:I
 
-    invoke-static {p1, v0, v1}, Lvx1;->x(Landroid/hardware/camera2/TotalCaptureResult;J)Z
+    packed-switch v0, :pswitch_data_0
 
-    move-result p1
+    iget-object v0, p0, Lnx1;->b:Ll48;
 
-    if-eqz p1, :cond_0
+    return-object v0
 
-    const/4 p1, 0x0
+    :pswitch_0
+    iget-object v0, p0, Lnx1;->b:Ll48;
 
-    iget-object v0, p0, Lnx1;->b:Lgu1;
+    return-object v0
 
-    invoke-virtual {v0, p1}, Lgu1;->b(Ljava/lang/Object;)Z
+    nop
 
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

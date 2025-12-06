@@ -1,181 +1,99 @@
 .class public final Lcef;
-.super Lyoe;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:Lbef;
+.field public final a:Ltcf;
+
+.field public final b:Lhbd;
+
+.field public final c:Lk18;
 
 
 # direct methods
-.method public constructor <init>(Lbef;Ljava/util/concurrent/ExecutorService;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    invoke-direct {p0, p2}, Lyoe;-><init>(Ljava/util/concurrent/Executor;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcef;->X:Lbef;
+    sget-object v0, Lbef;->a:Lbef;
+
+    invoke-static {v0}, Lucf;->a(Ljava/lang/Object;)Ltcf;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcef;->a:Ltcf;
+
+    new-instance v1, Lhbd;
+
+    invoke-direct {v1, v0}, Lhbd;-><init>(Lf9a;)V
+
+    iput-object v1, p0, Lcef;->b:Lhbd;
+
+    sget-object v0, Ltdf;->a:Ltdf;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
+
+    move-result-object v0
+
+    const/16 v1, 0x9c
+
+    invoke-virtual {v0, v1}, Lw5;->d(I)Lbwf;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcef;->c:Lk18;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic H(Lvpe;I)V
-    .locals 0
+.method public final a(Ljava/lang/String;Z)V
+    .locals 10
 
-    check-cast p1, Lfef;
+    iget-object v0, p0, Lcef;->c:Lk18;
 
-    invoke-virtual {p0, p1, p2}, Lcef;->J(Lfef;I)V
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public final J(Lfef;I)V
-    .locals 5
+    move-object v1, v0
 
-    invoke-virtual {p0, p2}, Lr18;->C(I)Ljava/lang/Object;
+    check-cast v1, Lyx1;
 
-    move-result-object p2
+    if-eqz p2, :cond_0
 
-    check-cast p2, Ly18;
-
-    check-cast p2, Leef;
-
-    iget-object p1, p1, Lq7d;->a:Landroid/view/View;
-
-    check-cast p1, Lwra;
-
-    sget v0, Lm1b;->B:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setId(I)V
-
-    iget-object v0, p2, Leef;->b:Ljava/lang/CharSequence;
-
-    invoke-virtual {p1, v0}, Lwra;->setTitle(Ljava/lang/CharSequence;)V
-
-    iget-object v1, p2, Leef;->o:Ljava/lang/CharSequence;
-
-    invoke-virtual {p1, v1}, Lwra;->setSubtitle(Ljava/lang/CharSequence;)V
-
-    iget v1, p2, Leef;->Z:I
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_4
-
-    const/4 v3, 0x1
-
-    if-eq v1, v3, :cond_1
-
-    const/4 v3, 0x2
-
-    if-ne v1, v3, :cond_0
+    const-wide/16 v2, 0x1
 
     goto :goto_0
 
     :cond_0
-    iget-object v0, p1, Lwra;->b:Ljava/lang/Object;
+    const-wide/16 v2, 0x0
 
-    invoke-interface {v0}, Liu7;->e()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lyoa;
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    goto :goto_1
-
-    :cond_1
     :goto_0
-    iget-wide v3, p2, Leef;->a:J
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v1, p2, Leef;->c:Ljava/lang/String;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-virtual {p1, v3, v4, v0, v1}, Lwra;->f(JLjava/lang/CharSequence;Ljava/lang/String;)V
+    move-result-object v5
 
-    :cond_2
-    :goto_1
-    iget-object v0, p2, Leef;->Y:Ljava/util/List;
+    const/4 v8, 0x0
 
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+    const/16 v9, 0xf4
 
-    move-result v0
+    const-string v2, "PIP_ENABLED"
 
-    const/4 v1, 0x6
+    const/4 v4, 0x0
 
-    iget-object v3, p0, Lcef;->X:Lbef;
+    const/4 v6, 0x0
 
-    if-nez v0, :cond_3
+    const/4 v7, 0x0
 
-    sget v0, Ll1b;->a:I
+    move-object v3, p1
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    new-instance v2, Lzr;
-
-    const/16 v4, 0xe
-
-    invoke-direct {v2, v3, p1, p2, v4}, Lzr;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-static {p1, v0, v2, v1}, Lwra;->i(Lwra;Ljava/lang/Integer;Lji6;I)V
-
-    goto :goto_2
-
-    :cond_3
-    invoke-static {p1, v2, v2, v1}, Lwra;->i(Lwra;Ljava/lang/Integer;Lji6;I)V
-
-    :goto_2
-    new-instance v0, Lnbe;
-
-    const/16 v1, 0xe
-
-    invoke-direct {v0, v3, v1, p2}, Lnbe;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {p1, v0}, Leyi;->e(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    invoke-static/range {v1 .. v9}, Lyx1;->d(Lyx1;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;ZI)V
 
     return-void
-
-    :cond_4
-    throw v2
-.end method
-
-.method public final bridge synthetic r(Lq7d;I)V
-    .locals 0
-
-    check-cast p1, Lfef;
-
-    invoke-virtual {p0, p1, p2}, Lcef;->J(Lfef;I)V
-
-    return-void
-.end method
-
-.method public final t(Landroid/view/ViewGroup;I)Lq7d;
-    .locals 2
-
-    new-instance p2, Lfef;
-
-    new-instance v0, Lwra;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v1}, Lwra;-><init>(Landroid/content/Context;Z)V
-
-    invoke-direct {p2, v0}, Lq7d;-><init>(Landroid/view/View;)V
-
-    return-object p2
 .end method

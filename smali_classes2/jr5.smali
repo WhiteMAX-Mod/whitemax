@@ -1,528 +1,180 @@
-.class public final enum Ljr5;
-.super Ljava/lang/Enum;
+.class public final synthetic Ljr5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llr5;
-
-
-# static fields
-.field public static final synthetic b:[Ljr5;
-
-.field public static final synthetic c:Lzd5;
+.implements Lp6;
 
 
 # instance fields
-.field public final a:Ldr5;
+.field public final synthetic a:I
+
+.field public final synthetic b:J
+
+.field public final synthetic c:I
+
+.field public final synthetic d:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 42
-
-    new-instance v1, Ljr5;
-
-    sget-object v0, Ldr5;->Z:Ldr5;
-
-    const-string v2, "PDF"
-
-    const/4 v3, 0x0
-
-    invoke-direct {v1, v2, v3, v0}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v2, Ljr5;
-
-    const-string v3, "PPT"
-
-    const/4 v4, 0x1
-
-    invoke-direct {v2, v3, v4, v0}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v3, Ljr5;
-
-    const-string v4, "PPTX"
-
-    const/4 v5, 0x2
-
-    invoke-direct {v3, v4, v5, v0}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v4, Ljr5;
-
-    const-string v5, "KEY"
-
-    const/4 v6, 0x3
-
-    invoke-direct {v4, v5, v6, v0}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v5, Ljr5;
-
-    sget-object v0, Ldr5;->q0:Ldr5;
-
-    const-string v6, "XLS"
-
-    const/4 v7, 0x4
-
-    invoke-direct {v5, v6, v7, v0}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v6, Ljr5;
-
-    const-string v7, "XLSX"
-
-    const/4 v8, 0x5
-
-    invoke-direct {v6, v7, v8, v0}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v7, Ljr5;
-
-    const-string v8, "CSV"
-
-    const/4 v9, 0x6
-
-    invoke-direct {v7, v8, v9, v0}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v8, Ljr5;
-
-    sget-object v0, Ldr5;->r0:Ldr5;
-
-    const-string v9, "DOC"
-
-    const/4 v10, 0x7
-
-    invoke-direct {v8, v9, v10, v0}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v9, Ljr5;
-
-    const-string v10, "DOCX"
-
-    const/16 v11, 0x8
-
-    invoke-direct {v9, v10, v11, v0}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v10, Ljr5;
-
-    const-string v11, "TXT"
-
-    const/16 v12, 0x9
-
-    invoke-direct {v10, v11, v12, v0}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v11, Ljr5;
-
-    const-string v12, "RTF"
-
-    const/16 v13, 0xa
-
-    invoke-direct {v11, v12, v13, v0}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v12, Ljr5;
-
-    const-string v13, "ODT"
-
-    const/16 v14, 0xb
-
-    invoke-direct {v12, v13, v14, v0}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v13, Ljr5;
-
-    sget-object v0, Ldr5;->s0:Ldr5;
-
-    const-string v14, "JPG"
-
-    const/16 v15, 0xc
-
-    invoke-direct {v13, v14, v15, v0}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v14, Ljr5;
-
-    const-string v15, "PNG"
-
-    move-object/from16 v16, v1
-
-    const/16 v1, 0xd
-
-    invoke-direct {v14, v15, v1, v0}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v15, Ljr5;
-
-    const-string v1, "GIF"
-
-    move-object/from16 v17, v2
-
-    const/16 v2, 0xe
-
-    invoke-direct {v15, v1, v2, v0}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v1, Ljr5;
-
-    const-string v2, "BMP"
-
-    move-object/from16 v18, v3
-
-    const/16 v3, 0xf
-
-    invoke-direct {v1, v2, v3, v0}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v2, Ljr5;
-
-    const-string v3, "HEIC"
-
-    move-object/from16 v19, v1
-
-    const/16 v1, 0x10
-
-    invoke-direct {v2, v3, v1, v0}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v1, Ljr5;
-
-    const-string v3, "WEBP"
-
-    move-object/from16 v20, v2
-
-    const/16 v2, 0x11
-
-    invoke-direct {v1, v3, v2, v0}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v2, Ljr5;
-
-    const-string v3, "SVG"
-
-    move-object/from16 v21, v1
-
-    const/16 v1, 0x12
-
-    invoke-direct {v2, v3, v1, v0}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v0, Ljr5;
-
-    sget-object v1, Ldr5;->t0:Ldr5;
-
-    const-string v3, "MP4"
-
-    move-object/from16 v22, v2
-
-    const/16 v2, 0x13
-
-    invoke-direct {v0, v3, v2, v1}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v2, Ljr5;
-
-    const-string v3, "MOV"
-
-    move-object/from16 v23, v0
-
-    const/16 v0, 0x14
-
-    invoke-direct {v2, v3, v0, v1}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v0, Ljr5;
-
-    const-string v3, "AVI"
-
-    move-object/from16 v24, v2
-
-    const/16 v2, 0x15
-
-    invoke-direct {v0, v3, v2, v1}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v2, Ljr5;
-
-    const-string v3, "MKV"
-
-    move-object/from16 v25, v0
-
-    const/16 v0, 0x16
-
-    invoke-direct {v2, v3, v0, v1}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v0, Ljr5;
-
-    const-string v3, "WEBM"
-
-    move-object/from16 v26, v2
-
-    const/16 v2, 0x17
-
-    invoke-direct {v0, v3, v2, v1}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v1, Ljr5;
-
-    sget-object v2, Ldr5;->u0:Ldr5;
-
-    const-string v3, "ZIP"
-
-    move-object/from16 v27, v0
-
-    const/16 v0, 0x18
-
-    invoke-direct {v1, v3, v0, v2}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v0, Ljr5;
-
-    const-string v3, "RAR"
-
-    move-object/from16 v28, v1
-
-    const/16 v1, 0x19
-
-    invoke-direct {v0, v3, v1, v2}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v1, Ljr5;
-
-    const-string v3, "7Z"
-
-    move-object/from16 v29, v0
-
-    const/16 v0, 0x1a
-
-    invoke-direct {v1, v3, v0, v2}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v0, Ljr5;
-
-    const-string v3, "TAR"
-
-    move-object/from16 v30, v1
-
-    const/16 v1, 0x1b
-
-    invoke-direct {v0, v3, v1, v2}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v1, Ljr5;
-
-    const-string v3, "GZ"
-
-    move-object/from16 v31, v0
-
-    const/16 v0, 0x1c
-
-    invoke-direct {v1, v3, v0, v2}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v0, Ljr5;
-
-    sget-object v2, Ldr5;->v0:Ldr5;
-
-    const-string v3, "EXE"
-
-    move-object/from16 v32, v1
-
-    const/16 v1, 0x1d
-
-    invoke-direct {v0, v3, v1, v2}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v1, Ljr5;
-
-    const-string v3, "APK"
-
-    move-object/from16 v33, v0
-
-    const/16 v0, 0x1e
-
-    invoke-direct {v1, v3, v0, v2}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v0, Ljr5;
-
-    const-string v3, "DMG"
-
-    move-object/from16 v34, v1
-
-    const/16 v1, 0x1f
-
-    invoke-direct {v0, v3, v1, v2}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v1, Ljr5;
-
-    const-string v3, "BAT"
-
-    move-object/from16 v35, v0
-
-    const/16 v0, 0x20
-
-    invoke-direct {v1, v3, v0, v2}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v0, Ljr5;
-
-    const-string v3, "SH"
-
-    move-object/from16 v36, v1
-
-    const/16 v1, 0x21
-
-    invoke-direct {v0, v3, v1, v2}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v1, Ljr5;
-
-    sget-object v2, Ldr5;->w0:Ldr5;
-
-    const-string v3, "MP3"
-
-    move-object/from16 v37, v0
-
-    const/16 v0, 0x22
-
-    invoke-direct {v1, v3, v0, v2}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v0, Ljr5;
-
-    const-string v3, "WAV"
-
-    move-object/from16 v38, v1
-
-    const/16 v1, 0x23
-
-    invoke-direct {v0, v3, v1, v2}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v1, Ljr5;
-
-    const-string v3, "AAC"
-
-    move-object/from16 v39, v0
-
-    const/16 v0, 0x24
-
-    invoke-direct {v1, v3, v0, v2}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v0, Ljr5;
-
-    const-string v3, "OGG"
-
-    move-object/from16 v40, v1
-
-    const/16 v1, 0x25
-
-    invoke-direct {v0, v3, v1, v2}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    new-instance v1, Ljr5;
-
-    const-string v3, "FLAC"
-
-    move-object/from16 v41, v0
-
-    const/16 v0, 0x26
-
-    invoke-direct {v1, v3, v0, v2}, Ljr5;-><init>(Ljava/lang/String;ILdr5;)V
-
-    move-object/from16 v2, v17
-
-    move-object/from16 v3, v18
-
-    move-object/from16 v17, v20
-
-    move-object/from16 v18, v21
-
-    move-object/from16 v20, v23
-
-    move-object/from16 v21, v24
-
-    move-object/from16 v23, v26
-
-    move-object/from16 v24, v27
-
-    move-object/from16 v26, v29
-
-    move-object/from16 v27, v30
-
-    move-object/from16 v29, v32
-
-    move-object/from16 v30, v33
-
-    move-object/from16 v32, v35
-
-    move-object/from16 v33, v36
-
-    move-object/from16 v35, v38
-
-    move-object/from16 v36, v39
-
-    move-object/from16 v38, v41
-
-    move-object/from16 v39, v1
-
-    move-object/from16 v1, v16
-
-    move-object/from16 v16, v19
-
-    move-object/from16 v19, v22
-
-    move-object/from16 v22, v25
-
-    move-object/from16 v25, v28
-
-    move-object/from16 v28, v31
-
-    move-object/from16 v31, v34
-
-    move-object/from16 v34, v37
-
-    move-object/from16 v37, v40
-
-    filled-new-array/range {v1 .. v39}, [Ljr5;
-
-    move-result-object v0
-
-    sput-object v0, Ljr5;->b:[Ljr5;
-
-    new-instance v1, Lzd5;
-
-    invoke-direct {v1, v0}, Lzd5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Ljr5;->c:Lzd5;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILdr5;)V
+.method public synthetic constructor <init>(Ljava/lang/Object;JII)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput p5, p0, Ljr5;->a:I
 
-    iput-object p3, p0, Ljr5;->a:Ldr5;
+    iput-object p1, p0, Ljr5;->d:Ljava/lang/Object;
+
+    iput-wide p2, p0, Ljr5;->b:J
+
+    iput p4, p0, Ljr5;->c:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Ljr5;
-    .locals 1
-
-    const-class v0, Ljr5;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Ljr5;
-
-    return-object p0
-.end method
-
-.method public static values()[Ljr5;
-    .locals 1
-
-    sget-object v0, Ljr5;->b:[Ljr5;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ljr5;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 1
+.method public final run()V
+    .locals 6
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    iget v0, p0, Ljr5;->a:I
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    return-object v0
-.end method
+    iget-object v0, p0, Ljr5;->d:Ljava/lang/Object;
 
-.method public final c()Ldr5;
-    .locals 1
+    check-cast v0, Lhs5;
 
-    iget-object v0, p0, Ljr5;->a:Ldr5;
+    iget-wide v1, p0, Ljr5;->b:J
 
-    return-object v0
+    iget-object v3, v0, Lhs5;->a:Llrd;
+
+    invoke-virtual {v3}, Llrd;->c()V
+
+    :try_start_0
+    invoke-virtual {v0}, Lhs5;->c()Ljava/util/ArrayList;
+
+    move-result-object v4
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
+
+    move-result v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-ltz v1, :cond_0
+
+    iget v2, p0, Ljr5;->c:I
+
+    if-ltz v2, :cond_0
+
+    :try_start_1
+    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
+
+    move-result v5
+
+    if-ge v2, v5, :cond_0
+
+    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    invoke-virtual {v4, v2, v5}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v4}, Lhs5;->a(Ljava/util/List;)V
+
+    :cond_0
+    invoke-virtual {v3}, Llrd;->q()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    invoke-virtual {v3}, Llrd;->k()V
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {v3}, Llrd;->k()V
+
+    throw v0
+
+    :pswitch_0
+    iget-object v0, p0, Ljr5;->d:Ljava/lang/Object;
+
+    check-cast v0, Lqs5;
+
+    iget-wide v1, p0, Ljr5;->b:J
+
+    iget-object v3, v0, Lqs5;->a:Llrd;
+
+    invoke-virtual {v3}, Llrd;->c()V
+
+    :try_start_2
+    invoke-virtual {v0}, Lqs5;->c()Ljava/util/ArrayList;
+
+    move-result-object v4
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
+
+    move-result v1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    if-ltz v1, :cond_1
+
+    iget v2, p0, Ljr5;->c:I
+
+    if-ltz v2, :cond_1
+
+    :try_start_3
+    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
+
+    move-result v5
+
+    if-ge v2, v5, :cond_1
+
+    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    invoke-virtual {v4, v2, v5}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v4}, Lqs5;->a(Ljava/util/List;)V
+
+    :cond_1
+    invoke-virtual {v3}, Llrd;->q()V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    invoke-virtual {v3}, Llrd;->k()V
+
+    return-void
+
+    :catchall_1
+    move-exception v0
+
+    invoke-virtual {v3}, Llrd;->k()V
+
+    throw v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,143 +1,127 @@
-.class public final enum Lic5;
-.super Ljava/lang/Enum;
+.class public final Lic5;
+.super Lra5;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic X:[Lic5;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final enum a:Lic5;
-
-.field public static final enum b:Lic5;
-
-.field public static final enum c:Lic5;
-
-.field public static final enum o:Lic5;
+.field public final b:Ljava/lang/ref/WeakReference;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Landroid/widget/EditText;)V
+    .locals 1
 
-    new-instance v0, Lic5;
+    const/4 v0, 0x0
 
-    const-string v1, "Initial"
+    iput v0, p0, Lic5;->a:I
 
-    const/4 v2, 0x0
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    .line 2
+    new-instance v0, Ljava/lang/ref/WeakReference;
 
-    sput-object v0, Lic5;->a:Lic5;
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    new-instance v1, Lic5;
-
-    const-string v2, "ZeroRTT"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lic5;->b:Lic5;
-
-    new-instance v2, Lic5;
-
-    const-string v3, "Handshake"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lic5;->c:Lic5;
-
-    new-instance v3, Lic5;
-
-    const-string v4, "App"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lic5;->o:Lic5;
-
-    filled-new-array {v0, v1, v2, v3}, [Lic5;
-
-    move-result-object v0
-
-    sput-object v0, Lic5;->X:[Lic5;
+    iput-object v0, p0, Lic5;->b:Ljava/lang/ref/WeakReference;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lic5;
+.method public constructor <init>(Landroidx/appcompat/widget/SwitchCompat;)V
     .locals 1
 
-    const-class v0, Lic5;
+    const/4 v0, 0x1
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iput v0, p0, Lic5;->a:I
 
-    move-result-object p0
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p0, Lic5;
+    .line 4
+    new-instance v0, Ljava/lang/ref/WeakReference;
 
-    return-object p0
-.end method
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-.method public static values()[Lic5;
-    .locals 1
+    iput-object v0, p0, Lic5;->b:Ljava/lang/ref/WeakReference;
 
-    sget-object v0, Lic5;->X:[Lic5;
-
-    invoke-virtual {v0}, [Lic5;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lic5;
-
-    return-object v0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lhvb;
-    .locals 3
+.method public h(Ljava/lang/Throwable;)V
+    .locals 0
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+    iget p1, p0, Lic5;->a:I
 
-    move-result v0
+    packed-switch p1, :pswitch_data_0
 
-    if-eqz v0, :cond_3
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lic5;->b:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroidx/appcompat/widget/SwitchCompat;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Landroidx/appcompat/widget/SwitchCompat;->d()V
+
+    :cond_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final i()V
+    .locals 2
+
+    iget v0, p0, Lic5;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lic5;->b:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/appcompat/widget/SwitchCompat;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroidx/appcompat/widget/SwitchCompat;->d()V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lic5;->b:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/EditText;
 
     const/4 v1, 0x1
 
-    sget-object v2, Lhvb;->c:Lhvb;
+    invoke-static {v0, v1}, Lkc5;->a(Landroid/widget/EditText;I)V
 
-    if-eq v0, v1, :cond_2
+    return-void
 
-    const/4 v1, 0x2
-
-    if-eq v0, v1, :cond_1
-
-    const/4 v1, 0x3
-
-    if-eq v0, v1, :cond_0
-
-    const/4 v0, 0x0
-
-    return-object v0
-
-    :cond_0
-    return-object v2
-
-    :cond_1
-    sget-object v0, Lhvb;->b:Lhvb;
-
-    return-object v0
-
-    :cond_2
-    return-object v2
-
-    :cond_3
-    sget-object v0, Lhvb;->a:Lhvb;
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

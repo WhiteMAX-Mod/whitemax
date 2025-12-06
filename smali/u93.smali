@@ -1,58 +1,104 @@
 .class public final Lu93;
-.super Ljava/lang/Object;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
-
-# interfaces
-.implements Lv93;
 
 
 # instance fields
-.field public final a:Landroid/util/CloseGuard;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lv93;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(Lv93;I)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lu93;->a:I
 
-    new-instance v0, Landroid/util/CloseGuard;
+    iput-object p1, p0, Lu93;->b:Lv93;
 
-    invoke-direct {v0}, Landroid/util/CloseGuard;-><init>()V
-
-    iput-object v0, p0, Lu93;->a:Landroid/util/CloseGuard;
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    iget-object v0, p0, Lu93;->a:Landroid/util/CloseGuard;
+    iget v0, p0, Lu93;->a:I
 
-    invoke-virtual {v0}, Landroid/util/CloseGuard;->warnIfOpen()V
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
 
     return-void
+
+    :pswitch_0
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
+
+    iget-object p1, p0, Lu93;->b:Lv93;
+
+    invoke-virtual {p1}, Lv93;->B()V
+
+    iget-object v0, p1, Lv93;->u0:Lle;
+
+    if-eqz v0, :cond_0
+
+    iget-object p1, p1, Ln2;->b:Ljava/lang/Object;
+
+    check-cast p1, Lpj7;
+
+    invoke-virtual {v0, p1}, Lle;->a(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final b(Ljava/lang/String;)V
-    .locals 1
+.method public onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 2
 
-    iget-object v0, p0, Lu93;->a:Landroid/util/CloseGuard;
+    iget v0, p0, Lu93;->a:I
 
-    invoke-virtual {v0, p1}, Landroid/util/CloseGuard;->open(Ljava/lang/String;)V
+    packed-switch v0, :pswitch_data_0
 
-    return-void
-.end method
-
-.method public final close()V
-    .locals 1
-
-    iget-object v0, p0, Lu93;->a:Landroid/util/CloseGuard;
-
-    invoke-virtual {v0}, Landroid/util/CloseGuard;->close()V
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationRepeat(Landroid/animation/Animator;)V
 
     return-void
+
+    :pswitch_0
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationRepeat(Landroid/animation/Animator;)V
+
+    iget-object p1, p0, Lu93;->b:Lv93;
+
+    iget v0, p1, Lv93;->Z:I
+
+    add-int/lit8 v0, v0, 0x4
+
+    iget-object v1, p1, Lv93;->Y:Lz93;
+
+    iget-object v1, v1, Lrk0;->c:[I
+
+    array-length v1, v1
+
+    rem-int/2addr v0, v1
+
+    iput v0, p1, Lv93;->Z:I
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

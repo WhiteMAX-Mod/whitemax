@@ -1,88 +1,84 @@
-.class public abstract Lxzg;
-.super Ljava/lang/Object;
+.class public final Lxzg;
+.super Lone/me/sdk/richvector/EnhancedVectorDrawable;
 .source "SourceFile"
+
+# interfaces
+.implements Lu6g;
 
 
 # instance fields
-.field public final a:Lkotlinx/coroutines/internal/ContextScope;
+.field public final a:I
+
+.field public final b:Lwzg;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    invoke-static {}, Lrt;->a()Luef;
-
-    move-result-object v0
-
-    sget-object v1, Lmv4;->a:Lsm4;
-
-    sget-object v1, Lkotlinx/coroutines/internal/MainDispatcherLoader;->dispatcher:Lce8;
-
-    invoke-virtual {v1}, Lce8;->getImmediate()Lce8;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Li54;->plus(Li54;)Li54;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ldxi;->a(Li54;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lxzg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    return-void
-.end method
-
-.method public static m(Lxzg;Li54;Lzi6;I)Lcye;
+.method public constructor <init>(Landroid/content/Context;ILwzg;)V
     .locals 1
 
-    and-int/lit8 v0, p3, 0x1
+    const/4 v0, 0x1
 
-    if-eqz v0, :cond_0
+    if-ne p2, v0, :cond_0
 
-    sget-object p1, Lea5;->a:Lea5;
-
-    :cond_0
-    and-int/lit8 p3, p3, 0x2
-
-    if-eqz p3, :cond_1
-
-    sget-object p3, Lt54;->a:Lt54;
+    sget v0, Lyud;->b2:I
 
     goto :goto_0
 
-    :cond_1
-    sget-object p3, Lt54;->b:Lt54;
+    :cond_0
+    sget v0, Lyud;->c2:I
 
     :goto_0
-    iget-object p0, p0, Lxzg;->a:Lkotlinx/coroutines/internal/ContextScope;
+    invoke-direct {p0, p1, v0}, Lone/me/sdk/richvector/EnhancedVectorDrawable;-><init>(Landroid/content/Context;I)V
 
-    invoke-static {p0, p1, p3, p2}, Ltki;->c(Lq54;Li54;Lt54;Lzi6;)Lcye;
+    iput p2, p0, Lxzg;->a:I
 
-    move-result-object p0
+    iput-object p3, p0, Lxzg;->b:Lwzg;
 
-    return-object p0
-.end method
+    sget-object p2, La93;->s0:Lv1a;
 
-.method public static o(Lxe5;Ljava/lang/Object;)V
-    .locals 0
+    invoke-virtual {p2, p1}, Lv1a;->x(Landroid/content/Context;)La93;
 
-    iget-object p0, p0, Lxe5;->b:Lnje;
+    move-result-object p1
 
-    invoke-virtual {p0, p1}, Lnje;->h(Ljava/lang/Object;)Z
+    invoke-virtual {p1}, La93;->k()Lyeb;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lxzg;->onThemeChanged(Lyeb;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public q()V
-    .locals 0
+.method public final onThemeChanged(Lyeb;)V
+    .locals 4
+
+    iget-object v0, p0, Lxzg;->b:Lwzg;
+
+    invoke-interface {v0, p1}, Lwzg;->n(Lyeb;)J
+
+    move-result-wide v0
+
+    const/16 p1, 0x20
+
+    shr-long v2, v0, p1
+
+    long-to-int p1, v2
+
+    const-string v2, "mark_path"
+
+    invoke-static {p0, v2, p1}, Lz18;->e(Lmzg;Ljava/lang/String;I)V
+
+    const-wide v2, 0xffffffffL
+
+    and-long/2addr v0, v2
+
+    long-to-int p1, v0
+
+    const-string v0, "background_path"
+
+    invoke-static {p0, v0, p1}, Lz18;->e(Lmzg;Ljava/lang/String;I)V
 
     return-void
 .end method

@@ -1,34 +1,51 @@
 .class public final Lpka;
-.super Lqka;
+.super Lq44;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final a()V
-    .locals 1
+# instance fields
+.field public final synthetic X:Ltka;
 
-    iget-object v0, p0, Lqka;->a:Li3e;
+.field public Y:I
 
-    invoke-virtual {v0}, Li3e;->b()V
+.field public d:Ldf7;
+
+.field public synthetic o:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Ltka;Lq44;)V
+    .locals 0
+
+    iput-object p1, p0, Lpka;->X:Ltka;
+
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public final run()V
-    .locals 2
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lpka;->o:Ljava/lang/Object;
+
+    iget p1, p0, Lpka;->Y:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lpka;->Y:I
+
+    iget-object p1, p0, Lpka;->X:Ltka;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, v0, p0}, Ltka;->e(Ldf7;Lrf7;Lq44;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    if-eqz v0, :cond_0
-
-    iget-object v1, p0, Lqka;->a:Li3e;
-
-    invoke-virtual {v1, v0}, Li3e;->d(Ljava/lang/Object;)V
-
-    :cond_0
-    return-void
+    return-object p1
 .end method

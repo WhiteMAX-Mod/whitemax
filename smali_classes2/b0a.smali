@@ -1,153 +1,115 @@
 .class public final Lb0a;
-.super Lsgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic X:Lg0a;
+.field public final a:J
 
-.field public final synthetic Y:Ljava/lang/String;
+.field public final b:Ljava/lang/CharSequence;
 
-.field public final synthetic Z:Ljava/lang/String;
+.field public final c:Ljava/lang/CharSequence;
 
-.field public final synthetic q0:Lbt8;
+.field public final d:Ljava/lang/String;
 
-.field public final synthetic r0:Ljava/lang/String;
+.field public final e:[Ljava/lang/Object;
 
-.field public final synthetic s0:Ljava/lang/String;
+.field public final f:Ljava/lang/CharSequence;
 
-.field public final synthetic t0:Landroid/os/Bundle;
+.field public final g:Ljava/lang/String;
+
+.field public final h:J
+
+.field public final i:I
+
+.field public final j:I
+
+.field public final k:Z
+
+.field public final l:Z
+
+.field public final m:Z
+
+.field public final n:J
+
+.field public final o:Ljava/lang/Long;
+
+.field public final p:J
+
+.field public final q:Ljava/lang/CharSequence;
+
+.field public final r:Ljava/lang/String;
+
+.field public final s:[B
+
+.field public final t:Ljava/lang/CharSequence;
+
+.field public final u:Z
 
 
 # direct methods
-.method public constructor <init>(Lg0a;Ljava/lang/String;Ljava/lang/String;Lbt8;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JLjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/String;JIIZZZJLjava/lang/Long;JLjava/lang/CharSequence;Ljava/lang/String;[BLjava/lang/CharSequence;Z)V
     .locals 0
 
-    iput-object p1, p0, Lb0a;->X:Lg0a;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lb0a;->Y:Ljava/lang/String;
+    iput-wide p1, p0, Lb0a;->a:J
 
-    iput-object p3, p0, Lb0a;->Z:Ljava/lang/String;
+    iput-object p3, p0, Lb0a;->b:Ljava/lang/CharSequence;
 
-    iput-object p4, p0, Lb0a;->q0:Lbt8;
+    iput-object p4, p0, Lb0a;->c:Ljava/lang/CharSequence;
 
-    iput-object p5, p0, Lb0a;->r0:Ljava/lang/String;
+    iput-object p5, p0, Lb0a;->d:Ljava/lang/String;
 
-    iput-object p6, p0, Lb0a;->s0:Ljava/lang/String;
+    iput-object p6, p0, Lb0a;->e:[Ljava/lang/Object;
 
-    iput-object p7, p0, Lb0a;->t0:Landroid/os/Bundle;
+    iput-object p7, p0, Lb0a;->f:Ljava/lang/CharSequence;
 
-    const/4 p1, 0x2
+    iput-object p8, p0, Lb0a;->g:Ljava/lang/String;
 
-    invoke-direct {p0, p1, p8}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p9, p0, Lb0a;->h:J
+
+    iput p11, p0, Lb0a;->i:I
+
+    iput p12, p0, Lb0a;->j:I
+
+    iput-boolean p13, p0, Lb0a;->k:Z
+
+    iput-boolean p14, p0, Lb0a;->l:Z
+
+    iput-boolean p15, p0, Lb0a;->m:Z
+
+    move-wide/from16 p1, p16
+
+    iput-wide p1, p0, Lb0a;->n:J
+
+    move-object/from16 p1, p18
+
+    iput-object p1, p0, Lb0a;->o:Ljava/lang/Long;
+
+    move-wide/from16 p1, p19
+
+    iput-wide p1, p0, Lb0a;->p:J
+
+    move-object/from16 p1, p21
+
+    iput-object p1, p0, Lb0a;->q:Ljava/lang/CharSequence;
+
+    move-object/from16 p1, p22
+
+    iput-object p1, p0, Lb0a;->r:Ljava/lang/String;
+
+    move-object/from16 p1, p23
+
+    iput-object p1, p0, Lb0a;->s:[B
+
+    move-object/from16 p1, p24
+
+    iput-object p1, p0, Lb0a;->t:Ljava/lang/CharSequence;
+
+    move/from16 p1, p25
+
+    iput-boolean p1, p0, Lb0a;->u:Z
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lq54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lb0a;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lb0a;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lb0a;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 9
-
-    new-instance v0, Lb0a;
-
-    iget-object v6, p0, Lb0a;->s0:Ljava/lang/String;
-
-    iget-object v7, p0, Lb0a;->t0:Landroid/os/Bundle;
-
-    iget-object v1, p0, Lb0a;->X:Lg0a;
-
-    iget-object v2, p0, Lb0a;->Y:Ljava/lang/String;
-
-    iget-object v3, p0, Lb0a;->Z:Ljava/lang/String;
-
-    iget-object v4, p0, Lb0a;->q0:Lbt8;
-
-    iget-object v5, p0, Lb0a;->r0:Ljava/lang/String;
-
-    move-object v8, p2
-
-    invoke-direct/range {v0 .. v8}, Lb0a;-><init>(Lg0a;Ljava/lang/String;Ljava/lang/String;Lbt8;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    iget-object v4, p0, Lb0a;->s0:Ljava/lang/String;
-
-    iget-object v5, p0, Lb0a;->t0:Landroid/os/Bundle;
-
-    iget-object v0, p0, Lb0a;->Y:Ljava/lang/String;
-
-    iget-object v1, p0, Lb0a;->Z:Ljava/lang/String;
-
-    iget-object v2, p0, Lb0a;->q0:Lbt8;
-
-    iget-object v3, p0, Lb0a;->r0:Ljava/lang/String;
-
-    invoke-static/range {v0 .. v5}, Lg0a;->i(Ljava/lang/String;Ljava/lang/String;Lbt8;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Lat8;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lb0a;->X:Lg0a;
-
-    iget-object v1, v0, Lg0a;->m:Lhq8;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Lhq8;->D()V
-
-    iget-object v1, v1, Lhq8;->c:Lgq8;
-
-    invoke-interface {v1}, Lgq8;->isConnected()Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    const-string p1, "MediaController"
-
-    const-string v1, "The controller is not connected. Ignoring setMediaItem()."
-
-    invoke-static {p1, v1}, Luyh;->m(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-interface {v1, p1}, Lgq8;->O(Lat8;)V
-
-    :cond_1
-    :goto_0
-    invoke-virtual {v0}, Lg0a;->p()V
-
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
 .end method

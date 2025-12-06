@@ -1,25 +1,24 @@
-.class public final Lvo4;
+.class public abstract Lvo4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/Serializable;
 
-# instance fields
-.field public final a:Ljava/util/ArrayDeque;
 
-.field public b:Z
+# static fields
+.field public static final a:Lafe;
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lafe;
 
-    new-instance v0, Ljava/util/ArrayDeque;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
-
-    iput-object v0, p0, Lvo4;->a:Ljava/util/ArrayDeque;
+    sput-object v0, Lvo4;->a:Lafe;
 
     return-void
 .end method

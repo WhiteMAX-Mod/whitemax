@@ -1,67 +1,64 @@
 .class public final Lhr0;
-.super Lmm;
+.super Landroid/text/style/ClickableSpan;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Z
+.field public final a:Ljava/lang/String;
+
+.field public final b:I
+
+.field public c:Lc88;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Z)V
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lmm;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
 
-    iput-boolean p2, p0, Lhr0;->b:Z
+    iput-object p1, p0, Lhr0;->a:Ljava/lang/String;
+
+    iput p2, p0, Lhr0;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lcr7;)V
-    .locals 1
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
-    iget-object v0, p0, Lmm;->a:Ljava/lang/String;
+    iget-object v0, p0, Lhr0;->c:Lc88;
 
-    invoke-interface {p1, v0}, Lcr7;->b0(Ljava/lang/String;)Lcr7;
+    if-eqz v0, :cond_0
 
-    check-cast p1, Le2;
+    iget-object v1, v0, Lc88;->a:Lh88;
 
-    iget-boolean v0, p0, Lhr0;->b:Z
+    iget-object v0, v0, Lc88;->b:Ljava/lang/Object;
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
+    sget-object v2, Li88;->c:Li88;
 
-    move-result-object v0
+    check-cast v0, Landroid/text/style/ClickableSpan;
 
-    invoke-virtual {p1, v0}, Le2;->c(Ljava/lang/String;)V
+    iget-object v3, p0, Lhr0;->a:Ljava/lang/String;
 
+    invoke-virtual {v1, p1, v3, v2, v0}, Lh88;->b(Landroid/view/View;Ljava/lang/String;Li88;Landroid/text/style/ClickableSpan;)V
+
+    :cond_0
     return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final updateDrawState(Landroid/text/TextPaint;)V
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Lhr0;->b:I
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    iget-object v1, p0, Lmm;->a:Ljava/lang/String;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
 
-    const-string v1, " = "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lhr0;->b:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

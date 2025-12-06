@@ -1,117 +1,106 @@
 .class public final Lb07;
-.super Li63;
+.super Lh0e;
 .source "SourceFile"
 
 
 # instance fields
-.field public s0:[B
+.field public final a:Landroid/os/Handler;
 
-.field public volatile t0:Z
-
-.field public u0:[B
+.field public volatile b:Z
 
 
-# virtual methods
-.method public final a()V
-    .locals 1
+# direct methods
+.method public constructor <init>(Landroid/os/Handler;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean v0, p0, Lb07;->t0:Z
+    iput-object p1, p0, Lb07;->a:Landroid/os/Handler;
 
     return-void
 .end method
 
-.method public final load()V
-    .locals 6
 
-    :try_start_0
-    iget-object v0, p0, Li63;->r0:Le2f;
+# virtual methods
+.method public final c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lpy4;
+    .locals 3
 
-    iget-object v1, p0, Li63;->b:Lmc4;
+    sget-object v0, Lcd5;->a:Lcd5;
 
-    invoke-virtual {v0, v1}, Le2f;->H(Lmc4;)J
+    if-eqz p4, :cond_2
 
-    const/4 v0, 0x0
+    iget-boolean v1, p0, Lb07;->b:Z
 
-    move v1, v0
+    if-eqz v1, :cond_0
+
+    return-object v0
 
     :cond_0
-    :goto_0
-    const/4 v2, -0x1
+    new-instance v1, Lc07;
 
-    if-eq v0, v2, :cond_2
+    iget-object v2, p0, Lb07;->a:Landroid/os/Handler;
 
-    iget-boolean v0, p0, Lb07;->t0:Z
+    invoke-direct {v1, v2, p1}, Lc07;-><init>(Landroid/os/Handler;Ljava/lang/Runnable;)V
 
-    if-nez v0, :cond_2
+    invoke-static {v2, v1}, Landroid/os/Message;->obtain(Landroid/os/Handler;Ljava/lang/Runnable;)Landroid/os/Message;
 
-    iget-object v0, p0, Lb07;->s0:[B
+    move-result-object p1
 
-    array-length v3, v0
+    iput-object p0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    add-int/lit16 v4, v1, 0x4000
+    const/4 v2, 0x1
 
-    const/16 v5, 0x4000
+    invoke-virtual {p1, v2}, Landroid/os/Message;->setAsynchronous(Z)V
 
-    if-ge v3, v4, :cond_1
+    iget-object v2, p0, Lb07;->a:Landroid/os/Handler;
 
-    array-length v3, v0
+    invoke-virtual {p4, p2, p3}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
-    add-int/2addr v3, v5
+    move-result-wide p2
 
-    invoke-static {v0, v3}, Ljava/util/Arrays;->copyOf([BI)[B
+    invoke-virtual {v2, p1, p2, p3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    move-result-object v0
+    iget-boolean p1, p0, Lb07;->b:Z
 
-    iput-object v0, p0, Lb07;->s0:[B
+    if-eqz p1, :cond_1
+
+    iget-object p1, p0, Lb07;->a:Landroid/os/Handler;
+
+    invoke-virtual {p1, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    return-object v0
 
     :cond_1
-    iget-object v0, p0, Li63;->r0:Le2f;
-
-    iget-object v3, p0, Lb07;->s0:[B
-
-    invoke-virtual {v0, v3, v1, v5}, Le2f;->read([BII)I
-
-    move-result v0
-
-    if-eq v0, v2, :cond_0
-
-    add-int/2addr v1, v0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
+    return-object v1
 
     :cond_2
-    iget-boolean v0, p0, Lb07;->t0:Z
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    if-nez v0, :cond_3
+    const-string p2, "unit == null"
 
-    iget-object v0, p0, Lb07;->s0:[B
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([BI)[B
+    throw p1
+.end method
 
-    move-result-object v0
+.method public final dispose()V
+    .locals 1
 
-    iput-object v0, p0, Lb07;->u0:[B
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const/4 v0, 0x1
 
-    :cond_3
-    iget-object v0, p0, Li63;->r0:Le2f;
+    iput-boolean v0, p0, Lb07;->b:Z
 
-    invoke-static {v0}, Lzxi;->a(Lfc4;)V
+    iget-object v0, p0, Lb07;->a:Landroid/os/Handler;
+
+    invoke-virtual {v0, p0}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
     return-void
+.end method
 
-    :goto_1
-    iget-object v1, p0, Li63;->r0:Le2f;
+.method public final e()Z
+    .locals 1
 
-    invoke-static {v1}, Lzxi;->a(Lfc4;)V
+    iget-boolean v0, p0, Lb07;->b:Z
 
-    throw v0
+    return v0
 .end method

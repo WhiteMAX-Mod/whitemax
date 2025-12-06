@@ -1,251 +1,176 @@
-.class public final enum Ll5a;
-.super Ljava/lang/Enum;
+.class public final Ll5a;
+.super Lsm;
 .source "SourceFile"
 
+# interfaces
+.implements Lj1g;
 
-# static fields
-.field public static final enum X:Ll5a;
 
-.field public static final enum Y:Ll5a;
+# instance fields
+.field public final X:J
 
-.field public static final enum Z:Ll5a;
+.field public final Y:Ljava/lang/String;
 
-.field public static final enum a:Ll5a;
+.field public final d:J
 
-.field public static final enum b:Ll5a;
-
-.field public static final enum c:Ll5a;
-
-.field public static final enum o:Ll5a;
-
-.field public static final enum q0:Ll5a;
-
-.field public static final enum r0:Ll5a;
-
-.field public static final enum s0:Ll5a;
-
-.field public static final synthetic t0:[Ll5a;
+.field public final o:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 12
+.method public constructor <init>(Ljava/lang/String;JJJ)V
+    .locals 0
 
-    new-instance v0, Ll5a;
+    invoke-direct {p0, p2, p3}, Lsm;-><init>(J)V
 
-    const-string v1, "CREATE_OFFER"
+    iput-wide p4, p0, Ll5a;->d:J
 
-    const/4 v2, 0x0
+    iput-object p1, p0, Ll5a;->o:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-wide p6, p0, Ll5a;->X:J
 
-    sput-object v0, Ll5a;->a:Ll5a;
+    const-class p1, Ll5a;
 
-    new-instance v1, Ll5a;
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    const-string v2, "CREATE_ANSWER"
+    move-result-object p1
 
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Ll5a;->b:Ll5a;
-
-    new-instance v2, Ll5a;
-
-    const-string v3, "SET_LOCAL_OFFER"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Ll5a;->c:Ll5a;
-
-    new-instance v3, Ll5a;
-
-    const-string v4, "SET_REMOTE_OFFER"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Ll5a;->o:Ll5a;
-
-    new-instance v4, Ll5a;
-
-    const-string v5, "SET_LOCAL_ANSWER"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Ll5a;->X:Ll5a;
-
-    new-instance v5, Ll5a;
-
-    const-string v6, "SET_REMOTE_ANSWER"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v5, Ll5a;->Y:Ll5a;
-
-    new-instance v6, Ll5a;
-
-    const-string v7, "SET_LOCAL_PRANSWER"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v6, Ll5a;->Z:Ll5a;
-
-    new-instance v7, Ll5a;
-
-    const-string v8, "SET_REMOTE_PRANSWER"
-
-    const/4 v9, 0x7
-
-    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v7, Ll5a;->q0:Ll5a;
-
-    new-instance v8, Ll5a;
-
-    const-string v9, "SET_LOCAL_ROLLBACK"
-
-    const/16 v10, 0x8
-
-    invoke-direct {v8, v9, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v8, Ll5a;->r0:Ll5a;
-
-    new-instance v9, Ll5a;
-
-    const-string v10, "SET_REMOTE_ROLLBACK"
-
-    const/16 v11, 0x9
-
-    invoke-direct {v9, v10, v11}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v9, Ll5a;->s0:Ll5a;
-
-    filled-new-array/range {v0 .. v9}, [Ll5a;
-
-    move-result-object v0
-
-    sput-object v0, Ll5a;->t0:[Ll5a;
+    iput-object p1, p0, Ll5a;->Y:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static final a(Lorg/webrtc/SessionDescription$Type;Z)Ll5a;
-    .locals 1
 
-    sget-object v0, Lk5a;->$EnumSwitchMapping$0:[I
+# virtual methods
+.method public final d(Ll0g;)V
+    .locals 9
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+    check-cast p1, Lm5a;
 
-    move-result p0
-
-    aget p0, v0, p0
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_6
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_4
-
-    const/4 v0, 0x3
-
-    if-eq p0, v0, :cond_2
-
-    const/4 v0, 0x4
-
-    if-ne p0, v0, :cond_1
-
-    if-eqz p1, :cond_0
-
-    sget-object p0, Ll5a;->r0:Ll5a;
-
-    return-object p0
-
-    :cond_0
-    sget-object p0, Ll5a;->s0:Ll5a;
-
-    return-object p0
-
-    :cond_1
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-
-    :cond_2
-    if-eqz p1, :cond_3
-
-    sget-object p0, Ll5a;->X:Ll5a;
-
-    return-object p0
-
-    :cond_3
-    sget-object p0, Ll5a;->Y:Ll5a;
-
-    return-object p0
-
-    :cond_4
-    if-eqz p1, :cond_5
-
-    sget-object p0, Ll5a;->Z:Ll5a;
-
-    return-object p0
-
-    :cond_5
-    sget-object p0, Ll5a;->q0:Ll5a;
-
-    return-object p0
-
-    :cond_6
-    if-eqz p1, :cond_7
-
-    sget-object p0, Ll5a;->c:Ll5a;
-
-    return-object p0
-
-    :cond_7
-    sget-object p0, Ll5a;->o:Ll5a;
-
-    return-object p0
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Ll5a;
-    .locals 1
-
-    const-class v0, Ll5a;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Ll5a;
-
-    return-object p0
-.end method
-
-.method public static values()[Ll5a;
-    .locals 1
-
-    sget-object v0, Ll5a;->t0:[Ll5a;
-
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-virtual {p0}, Lsm;->k()Ltw0;
 
     move-result-object v0
 
-    check-cast v0, [Ll5a;
+    new-instance v1, Lds2;
 
+    iget-object v5, p1, Lm5a;->c:Ljava/util/List;
+
+    iget-wide v6, p1, Lm5a;->d:J
+
+    iget v8, p1, Lm5a;->o:I
+
+    iget-wide v2, p0, Lsm;->a:J
+
+    iget-object v4, p0, Ll5a;->o:Ljava/lang/String;
+
+    invoke-direct/range {v1 .. v8}, Lds2;-><init>(JLjava/lang/String;Ljava/util/List;JI)V
+
+    invoke-virtual {v0, v1}, Ltw0;->c(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final e(Lpzf;)V
+    .locals 4
+
+    invoke-virtual {p0}, Lsm;->k()Ltw0;
+
+    move-result-object v0
+
+    new-instance v1, Lrj0;
+
+    iget-wide v2, p0, Lsm;->a:J
+
+    invoke-direct {v1, v2, v3, p1}, Lrj0;-><init>(JLpzf;)V
+
+    invoke-virtual {v0, v1}, Ltw0;->c(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final i()Ln2;
+    .locals 7
+
+    invoke-virtual {p0}, Lsm;->l()Lve2;
+
+    move-result-object v0
+
+    iget-wide v1, p0, Ll5a;->d:J
+
+    invoke-virtual {v0, v1, v2}, Lve2;->M(J)Lpb2;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_2
+
+    iget-object v2, v0, Lpb2;->b:Lrf2;
+
+    iget-wide v3, v2, Lrf2;->a:J
+
+    const-wide/16 v5, 0x0
+
+    cmp-long v3, v3, v5
+
+    if-nez v3, :cond_0
+
+    invoke-virtual {p0}, Lsm;->l()Lve2;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v0}, Lve2;->Y(Lpb2;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lzf8;
+
+    iget-wide v2, v2, Lrf2;->a:J
+
+    const/16 v4, 0xa
+
+    invoke-direct {v0, v1, v4}, Lzf8;-><init>(Lxhb;I)V
+
+    const-string v1, "chatId"
+
+    invoke-virtual {v0, v2, v3, v1}, Ln2;->t(JLjava/lang/String;)V
+
+    const-string v1, "query"
+
+    iget-object v2, p0, Ll5a;->o:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Ln2;->x(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "count"
+
+    const/16 v2, 0x64
+
+    invoke-virtual {v0, v2, v1}, Ln2;->j(ILjava/lang/String;)V
+
+    iget-wide v1, p0, Ll5a;->X:J
+
+    cmp-long v3, v1, v5
+
+    if-eqz v3, :cond_1
+
+    const-string v3, "marker"
+
+    invoke-virtual {v0, v1, v2, v3}, Ln2;->t(JLjava/lang/String;)V
+
+    :cond_1
     return-object v0
+
+    :cond_2
+    :goto_0
+    iget-object v0, p0, Ll5a;->Y:Ljava/lang/String;
+
+    const-string v2, "createRequest: No chat or serverId == 0. return null"
+
+    invoke-static {v0, v2, v1}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-object v1
 .end method

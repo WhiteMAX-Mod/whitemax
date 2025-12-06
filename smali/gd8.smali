@@ -1,221 +1,209 @@
-.class public final Lgd8;
-.super Landroid/os/Handler;
+.class public abstract Lgd8;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lnac;
 
 
 # instance fields
-.field public final a:Lfwc;
+.field public final a:Ljava/util/concurrent/Executor;
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Lfx0;
-
-.field public d:D
-
-.field public e:D
-
-.field public f:D
-
-.field public g:J
-
-.field public h:J
-
-.field public i:D
+.field public final b:Lpy0;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Looper;Lfwc;Ljava/lang/String;Lfx0;)V
+.method public constructor <init>(Ljava/util/concurrent/Executor;Lpy0;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lgd8;->a:Lfwc;
+    iput-object p1, p0, Lgd8;->a:Ljava/util/concurrent/Executor;
 
-    iput-object p3, p0, Lgd8;->b:Ljava/lang/String;
-
-    iput-object p4, p0, Lgd8;->c:Lfx0;
+    iput-object p2, p0, Lgd8;->b:Lpy0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(J)V
+.method public final a(Lhj0;Loac;)V
     .locals 10
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    move-object v0, p2
 
-    move-result-wide v0
+    check-cast v0, Lmk0;
 
-    iget-wide v2, p0, Lgd8;->e:D
+    iget-object v4, v0, Lmk0;->c:Lrac;
 
-    const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
+    iget-object v7, v0, Lmk0;->a:Lrf7;
 
-    add-double/2addr v2, v4
+    const-string v1, "local"
 
-    iput-wide v2, p0, Lgd8;->e:D
+    const-string v2, "fetch"
 
-    sub-long p1, v0, p1
+    invoke-virtual {v0, v1, v2}, Lmk0;->h(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-wide v4, p0, Lgd8;->d:D
+    new-instance v1, Lfd8;
 
-    long-to-double p1, p1
+    invoke-virtual {p0}, Lgd8;->e()Ljava/lang/String;
 
-    add-double/2addr v4, p1
+    move-result-object v6
 
-    iput-wide v4, p0, Lgd8;->d:D
+    move-object v8, v4
 
-    div-double/2addr v4, v2
+    move-object v9, p2
 
-    iget-wide p1, p0, Lgd8;->i:D
+    move-object v2, p0
 
-    const-wide/16 v2, 0x0
+    move-object v3, p1
 
-    cmpl-double v6, p1, v2
+    move-object v5, p2
 
-    if-lez v6, :cond_0
+    invoke-direct/range {v1 .. v9}, Lfd8;-><init>(Lgd8;Lhj0;Lrac;Loac;Ljava/lang/String;Lrf7;Lrac;Loac;)V
 
-    iget-wide v6, p0, Lgd8;->f:D
+    new-instance p1, Lhh4;
 
-    div-double/2addr v6, p1
+    const/4 p2, 0x3
 
-    invoke-static {v6, v7}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+    invoke-direct {p1, p2, v1}, Lhh4;-><init>(ILjava/lang/Object;)V
 
-    move-result-object p1
+    invoke-virtual {v0, p1}, Lmk0;->a(Lnk0;)V
 
-    goto :goto_0
+    iget-object p1, v2, Lgd8;->a:Ljava/util/concurrent/Executor;
 
-    :cond_0
-    const/4 p1, 0x0
+    invoke-interface {p1, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    :goto_0
-    iget-wide v6, p0, Lgd8;->g:J
-
-    sub-long v6, v0, v6
-
-    const-wide/16 v8, 0x2710
-
-    cmp-long p2, v6, v8
-
-    if-lez p2, :cond_1
-
-    iget-wide v6, p0, Lgd8;->d:D
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    const-string v8, "Total calls: "
-
-    invoke-direct {p2, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p2, v6, v7}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v6, ", average call time: "
-
-    invoke-virtual {p2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v4, ", average idle time "
-
-    invoke-virtual {p2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    iget-object p2, p0, Lgd8;->a:Lfwc;
-
-    iget-object v4, p0, Lgd8;->b:Ljava/lang/String;
-
-    invoke-interface {p2, v4, p1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    iput-wide v0, p0, Lgd8;->g:J
-
-    iput-wide v2, p0, Lgd8;->e:D
-
-    iput-wide v2, p0, Lgd8;->d:D
-
-    iput-wide v2, p0, Lgd8;->i:D
-
-    iput-wide v2, p0, Lgd8;->f:D
-
-    const-wide/16 p1, 0x0
-
-    iput-wide p1, p0, Lgd8;->h:J
-
-    :cond_1
     return-void
 .end method
 
-.method public final dispatchMessage(Landroid/os/Message;)V
-    .locals 6
+.method public final c(Ljava/io/InputStream;I)Lce5;
+    .locals 4
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    iget-object v0, p0, Lgd8;->b:Lpy0;
 
-    move-result-wide v0
+    const/4 v1, 0x0
+
+    if-gtz p2, :cond_0
 
     :try_start_0
-    iget-wide v2, p0, Lgd8;->h:J
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const-wide/16 v4, 0x0
+    new-instance p2, Lof9;
 
-    cmp-long v4, v2, v4
+    iget-object v2, v0, Lpy0;->b:Ljava/lang/Object;
 
-    if-lez v4, :cond_0
+    check-cast v2, Lmf9;
 
-    sub-long v2, v0, v2
-
-    long-to-double v2, v2
-
-    iput-wide v2, p0, Lgd8;->f:D
-
-    iget-wide v2, p0, Lgd8;->i:D
-
-    const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
-
-    add-double/2addr v2, v4
-
-    iput-wide v2, p0, Lgd8;->i:D
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v2
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    invoke-super {p0, p1}, Landroid/os/Handler;->dispatchMessage(Landroid/os/Message;)V
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v2
-
-    iput-wide v2, p0, Lgd8;->h:J
-
-    invoke-virtual {p1}, Landroid/os/Message;->getCallback()Ljava/lang/Runnable;
-
-    invoke-virtual {p0, v0, v1}, Lgd8;->a(J)V
+    invoke-direct {p2, v2}, Lof9;-><init>(Lmf9;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-void
+    :try_start_1
+    iget-object v0, v0, Lpy0;->c:Ljava/lang/Object;
+
+    check-cast v0, Lbj;
+
+    invoke-virtual {v0, p1, p2}, Lbj;->a(Ljava/io/InputStream;Ljava/io/OutputStream;)V
+
+    invoke-virtual {p2}, Lof9;->w()Lnf9;
+
+    move-result-object v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :try_start_2
+    invoke-virtual {p2}, Lof9;->close()V
+
+    invoke-static {v0}, Lvc3;->j0(Ljava/io/Closeable;)Lqk4;
+
+    move-result-object p2
+
+    :goto_0
+    move-object v1, p2
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p2
+
+    goto :goto_2
+
+    :catchall_1
+    move-exception v0
+
+    invoke-virtual {p2}, Lof9;->close()V
+
+    throw v0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v2, Lof9;
+
+    iget-object v3, v0, Lpy0;->b:Ljava/lang/Object;
+
+    check-cast v3, Lmf9;
+
+    invoke-direct {v2, v3, p2}, Lof9;-><init>(Lmf9;I)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    :try_start_3
+    iget-object p2, v0, Lpy0;->c:Ljava/lang/Object;
+
+    check-cast p2, Lbj;
+
+    invoke-virtual {p2, p1, v2}, Lbj;->a(Ljava/io/InputStream;Ljava/io/OutputStream;)V
+
+    invoke-virtual {v2}, Lof9;->w()Lnf9;
+
+    move-result-object p2
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
+
+    :try_start_4
+    invoke-virtual {v2}, Lof9;->close()V
+
+    invoke-static {p2}, Lvc3;->j0(Ljava/io/Closeable;)Lqk4;
+
+    move-result-object p2
+
+    goto :goto_0
 
     :goto_1
-    invoke-virtual {p1}, Landroid/os/Message;->getCallback()Ljava/lang/Runnable;
+    new-instance p2, Lce5;
 
-    invoke-virtual {p0, v0, v1}, Lgd8;->a(J)V
+    invoke-direct {p2, v1}, Lce5;-><init>(Lvc3;)V
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    iget-object p1, p0, Lgd8;->c:Lfx0;
+    invoke-static {p1}, Lxc3;->b(Ljava/io/InputStream;)V
 
-    invoke-virtual {p1, v2}, Lfx0;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1}, Lvc3;->close()V
 
-    return-void
+    return-object p2
+
+    :catchall_2
+    move-exception p2
+
+    :try_start_5
+    invoke-virtual {v2}, Lof9;->close()V
+
+    throw p2
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
+    :goto_2
+    invoke-static {p1}, Lxc3;->b(Ljava/io/InputStream;)V
+
+    invoke-static {v1}, Lvc3;->P(Lvc3;)V
+
+    throw p2
+.end method
+
+.method public abstract d(Lrf7;)Lce5;
+.end method
+
+.method public abstract e()Ljava/lang/String;
 .end method

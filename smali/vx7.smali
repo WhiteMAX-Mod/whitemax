@@ -1,232 +1,262 @@
 .class public final Lvx7;
-.super Ljava/lang/Object;
+.super Lzx7;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Z
+.field public final c:Lvx7;
 
-.field public b:I
+.field public final d:Lzva;
 
-.field public c:I
+.field public e:Lvx7;
 
-.field public d:I
-
-.field public e:I
-
-.field public f:I
+.field public f:Ljava/lang/String;
 
 .field public g:I
 
 .field public h:I
 
-.field public i:I
 
-.field public j:I
+# direct methods
+.method public constructor <init>(Lvx7;Lzva;III)V
+    .locals 0
 
-.field public k:Ljava/util/List;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public l:Z
+    iput-object p1, p0, Lvx7;->c:Lvx7;
 
+    iput-object p2, p0, Lvx7;->d:Lzva;
 
-# virtual methods
-.method public final a(Landroid/view/View;)V
-    .locals 7
+    iput p3, p0, Lzx7;->a:I
 
-    iget-object v0, p0, Lvx7;->k:Ljava/util/List;
+    iput p4, p0, Lvx7;->g:I
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    const v2, 0x7fffffff
-
-    const/4 v3, 0x0
-
-    :goto_0
-    if-ge v3, v0, :cond_4
-
-    iget-object v4, p0, Lvx7;->k:Ljava/util/List;
-
-    invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lq7d;
-
-    iget-object v4, v4, Lq7d;->a:Landroid/view/View;
-
-    invoke-virtual {v4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v5
-
-    check-cast v5, Lb7d;
-
-    if-eq v4, p1, :cond_3
-
-    iget-object v6, v5, Lb7d;->a:Lq7d;
-
-    invoke-virtual {v6}, Lq7d;->q()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v5, v5, Lb7d;->a:Lq7d;
-
-    invoke-virtual {v5}, Lq7d;->i()I
-
-    move-result v5
-
-    iget v6, p0, Lvx7;->d:I
-
-    sub-int/2addr v5, v6
-
-    iget v6, p0, Lvx7;->e:I
-
-    mul-int/2addr v5, v6
-
-    if-gez v5, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    if-ge v5, v2, :cond_3
-
-    move-object v1, v4
-
-    if-nez v5, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    move v2, v5
-
-    :cond_3
-    :goto_1
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_4
-    :goto_2
-    if-nez v1, :cond_5
+    iput p5, p0, Lvx7;->h:I
 
     const/4 p1, -0x1
 
-    iput p1, p0, Lvx7;->d:I
-
-    return-void
-
-    :cond_5
-    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object p1
-
-    check-cast p1, Lb7d;
-
-    iget-object p1, p1, Lb7d;->a:Lq7d;
-
-    invoke-virtual {p1}, Lq7d;->i()I
-
-    move-result p1
-
-    iput p1, p0, Lvx7;->d:I
+    iput p1, p0, Lzx7;->b:I
 
     return-void
 .end method
 
-.method public final b(Lh7d;)Landroid/view/View;
-    .locals 4
 
-    iget-object v0, p0, Lvx7;->k:Ljava/util/List;
+# virtual methods
+.method public final a()Ljava/lang/String;
+    .locals 1
 
-    if-eqz v0, :cond_3
+    iget-object v0, p0, Lvx7;->f:Ljava/lang/String;
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    return-object v0
+.end method
 
-    move-result p1
+.method public final f(II)Lvx7;
+    .locals 8
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lvx7;->e:Lvx7;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_1
+
+    new-instance v2, Lvx7;
+
+    iget-object v0, p0, Lvx7;->d:Lzva;
+
+    if-nez v0, :cond_0
 
     :goto_0
-    if-ge v0, p1, :cond_2
-
-    iget-object v1, p0, Lvx7;->k:Ljava/util/List;
-
-    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lq7d;
-
-    iget-object v1, v1, Lq7d;->a:Landroid/view/View;
-
-    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v2
-
-    check-cast v2, Lb7d;
-
-    iget-object v3, v2, Lb7d;->a:Lq7d;
-
-    invoke-virtual {v3}, Lq7d;->q()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
+    move-object v4, v1
 
     goto :goto_1
 
     :cond_0
-    iget v3, p0, Lvx7;->d:I
+    new-instance v1, Lzva;
 
-    iget-object v2, v2, Lb7d;->a:Lq7d;
+    iget-object v0, v0, Lzva;->b:Ljava/lang/Object;
 
-    invoke-virtual {v2}, Lq7d;->i()I
+    check-cast v0, Ljava/io/Closeable;
 
-    move-result v2
-
-    if-ne v3, v2, :cond_1
-
-    invoke-virtual {p0, v1}, Lvx7;->a(Landroid/view/View;)V
-
-    return-object v1
-
-    :cond_1
-    :goto_1
-    add-int/lit8 v0, v0, 0x1
+    invoke-direct {v1, v0}, Lzva;-><init>(Ljava/io/Closeable;)V
 
     goto :goto_0
 
+    :goto_1
+    const/4 v5, 0x1
+
+    move-object v3, p0
+
+    move v6, p1
+
+    move v7, p2
+
+    invoke-direct/range {v2 .. v7}, Lvx7;-><init>(Lvx7;Lzva;III)V
+
+    iput-object v2, v3, Lvx7;->e:Lvx7;
+
+    return-object v2
+
+    :cond_1
+    move-object v3, p0
+
+    move v6, p1
+
+    move v7, p2
+
+    const/4 p1, 0x1
+
+    iput p1, v0, Lzx7;->a:I
+
+    const/4 p1, -0x1
+
+    iput p1, v0, Lzx7;->b:I
+
+    iput v6, v0, Lvx7;->g:I
+
+    iput v7, v0, Lvx7;->h:I
+
+    iput-object v1, v0, Lvx7;->f:Ljava/lang/String;
+
+    iget-object p1, v0, Lvx7;->d:Lzva;
+
+    if-eqz p1, :cond_2
+
+    iput-object v1, p1, Lzva;->o:Ljava/lang/Object;
+
+    iput-object v1, p1, Lzva;->c:Ljava/lang/Object;
+
+    iput-object v1, p1, Lzva;->d:Ljava/lang/Object;
+
     :cond_2
-    const/4 p1, 0x0
+    return-object v0
+.end method
 
-    return-object p1
+.method public final g(II)Lvx7;
+    .locals 8
 
-    :cond_3
-    iget v0, p0, Lvx7;->d:I
+    iget-object v0, p0, Lvx7;->e:Lvx7;
 
-    const-wide v1, 0x7fffffffffffffffL
+    const/4 v1, 0x0
 
-    invoke-virtual {p1, v0, v1, v2}, Lh7d;->j(IJ)Lq7d;
+    if-nez v0, :cond_1
+
+    new-instance v2, Lvx7;
+
+    iget-object v0, p0, Lvx7;->d:Lzva;
+
+    if-nez v0, :cond_0
+
+    :goto_0
+    move-object v4, v1
+
+    goto :goto_1
+
+    :cond_0
+    new-instance v1, Lzva;
+
+    iget-object v0, v0, Lzva;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/io/Closeable;
+
+    invoke-direct {v1, v0}, Lzva;-><init>(Ljava/io/Closeable;)V
+
+    goto :goto_0
+
+    :goto_1
+    const/4 v5, 0x2
+
+    move-object v3, p0
+
+    move v6, p1
+
+    move v7, p2
+
+    invoke-direct/range {v2 .. v7}, Lvx7;-><init>(Lvx7;Lzva;III)V
+
+    iput-object v2, v3, Lvx7;->e:Lvx7;
+
+    return-object v2
+
+    :cond_1
+    move-object v3, p0
+
+    move v6, p1
+
+    move v7, p2
+
+    const/4 p1, 0x2
+
+    iput p1, v0, Lzx7;->a:I
+
+    const/4 p1, -0x1
+
+    iput p1, v0, Lzx7;->b:I
+
+    iput v6, v0, Lvx7;->g:I
+
+    iput v7, v0, Lvx7;->h:I
+
+    iput-object v1, v0, Lvx7;->f:Ljava/lang/String;
+
+    iget-object p1, v0, Lvx7;->d:Lzva;
+
+    if-eqz p1, :cond_2
+
+    iput-object v1, p1, Lzva;->o:Ljava/lang/Object;
+
+    iput-object v1, p1, Lzva;->c:Ljava/lang/Object;
+
+    iput-object v1, p1, Lzva;->d:Ljava/lang/Object;
+
+    :cond_2
+    return-object v0
+.end method
+
+.method public final h(Ljava/lang/String;)V
+    .locals 4
+
+    iput-object p1, p0, Lvx7;->f:Ljava/lang/String;
+
+    iget-object v0, p0, Lvx7;->d:Lzva;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0, p1}, Lzva;->k(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iget-object v0, v0, Lzva;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/io/Closeable;
+
+    new-instance v1, Lcom/fasterxml/jackson/core/JsonParseException;
+
+    instance-of v2, v0, Lpx7;
+
+    if-eqz v2, :cond_0
+
+    check-cast v0, Lpx7;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    const-string v2, "Duplicate field \'"
+
+    const-string v3, "\'"
+
+    invoke-static {v2, p1, v3}, Lho7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    iget-object p1, p1, Lq7d;->a:Landroid/view/View;
+    invoke-direct {v1, v0, p1}, Lcom/fasterxml/jackson/core/exc/StreamReadException;-><init>(Lpx7;Ljava/lang/String;)V
 
-    iget v0, p0, Lvx7;->d:I
+    throw v1
 
-    iget v1, p0, Lvx7;->e:I
-
-    add-int/2addr v0, v1
-
-    iput v0, p0, Lvx7;->d:I
-
-    return-object p1
+    :cond_1
+    return-void
 .end method

@@ -1,26 +1,26 @@
 .class public final Lk86;
-.super Lsgf;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Lsm6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic X:Lp86;
 
-.field public final synthetic Y:Lone/me/folders/list/FoldersListScreen;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/folders/list/FoldersListScreen;)V
+.method public constructor <init>(Lp86;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Lk86;->Y:Lone/me/folders/list/FoldersListScreen;
+    iput-object p1, p0, Lk86;->X:Lp86;
 
-    const/4 p2, 0x2
+    const/4 p1, 0x2
 
-    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,56 +30,81 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    check-cast p1, Lqqg;
+
     check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p0, p1, p2}, Lk86;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1, p2}, Lk86;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
     check-cast p1, Lk86;
 
-    sget-object p2, Lccg;->a:Lccg;
+    sget-object p2, Lqqg;->a:Lqqg;
 
     invoke-virtual {p1, p2}, Lk86;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p2
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    new-instance v0, Lk86;
+    new-instance p1, Lk86;
 
-    iget-object v1, p0, Lk86;->Y:Lone/me/folders/list/FoldersListScreen;
+    iget-object v0, p0, Lk86;->X:Lp86;
 
-    invoke-direct {v0, p2, v1}, Lk86;-><init>(Lkotlin/coroutines/Continuation;Lone/me/folders/list/FoldersListScreen;)V
+    invoke-direct {p1, v0, p2}, Lk86;-><init>(Lp86;Lkotlin/coroutines/Continuation;)V
 
-    iput-object p1, v0, Lk86;->X:Ljava/lang/Object;
-
-    return-object v0
+    return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    .locals 2
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    iget v0, p0, Lk86;->o:I
 
-    iget-object p1, p0, Lk86;->X:Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    check-cast p1, Le5a;
+    if-eqz v0, :cond_1
 
-    instance-of v0, p1, Lwf4;
+    if-ne v0, v1, :cond_0
 
-    if-eqz v0, :cond_0
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    sget-object v0, Lt66;->c:Lt66;
-
-    check-cast p1, Lwf4;
-
-    invoke-virtual {v0, p1}, Lrdi;->t0(Lwf4;)V
+    goto :goto_0
 
     :cond_0
-    sget-object p1, Lccg;->a:Lccg;
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iput v1, p0, Lk86;->o:I
+
+    iget-object p1, p0, Lk86;->X:Lp86;
+
+    invoke-static {p1, p0}, Lp86;->b(Lp86;Lq44;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lg84;->a:Lg84;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lqqg;->a:Lqqg;
 
     return-object p1
 .end method

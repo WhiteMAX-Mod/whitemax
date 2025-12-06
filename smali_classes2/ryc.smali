@@ -1,54 +1,50 @@
-.class public final Lryc;
+.class public abstract Lryc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Ly18;
 
 
 # static fields
-.field public static final a:Lryc;
+.field public static oneme_folders_chats_picker_toolbar:I = 0x7f0a068e
 
-.field public static final b:I
+.field public static oneme_folders_delete_folder_bottom_sheet_cancel_button:I = 0x7f0a068f
 
-.field public static final c:J
+.field public static oneme_folders_delete_folder_bottom_sheet_delete_button:I = 0x7f0a0690
 
+.field public static oneme_folders_edit_bottom_sheet_cancel_button:I = 0x7f0a0691
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.field public static oneme_folders_edit_bottom_sheet_delete_button:I = 0x7f0a0692
 
-    new-instance v0, Lryc;
+.field public static oneme_folders_edit_create_button:I = 0x7f0a0693
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_folders_edit_delete_button:I = 0x7f0a0694
 
-    sput-object v0, Lryc;->a:Lryc;
+.field public static oneme_folders_edit_folder_name_field:I = 0x7f0a0695
 
-    sget v0, Ltjd;->a:I
+.field public static oneme_folders_edit_members_add_button:I = 0x7f0a0696
 
-    sput v0, Lryc;->b:I
+.field public static oneme_folders_edit_members_list:I = 0x7f0a0697
 
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+.field public static oneme_folders_edit_save_button:I = 0x7f0a0698
 
-    sput-wide v0, Lryc;->c:J
+.field public static oneme_folders_edit_screen:I = 0x7f0a0699
 
-    return-void
-.end method
+.field public static oneme_folders_edit_title_input:I = 0x7f0a069a
 
+.field public static oneme_folders_edit_toolbar:I = 0x7f0a069b
 
-# virtual methods
-.method public final getItemId()J
-    .locals 2
+.field public static oneme_folders_list_all_folder_view_type:I = 0x7f0a069c
 
-    sget-wide v0, Lryc;->c:J
+.field public static oneme_folders_list_create_folder_view_type:I = 0x7f0a069d
 
-    return-wide v0
-.end method
+.field public static oneme_folders_list_menu_action_change:I = 0x7f0a069e
 
-.method public final m()I
-    .locals 1
+.field public static oneme_folders_list_menu_action_delete_folder:I = 0x7f0a069f
 
-    sget v0, Lryc;->b:I
+.field public static oneme_folders_list_recommended_folder_view_type:I = 0x7f0a06a0
 
-    return v0
-.end method
+.field public static oneme_folders_list_recycler_view:I = 0x7f0a06a1
+
+.field public static oneme_folders_list_screen:I = 0x7f0a06a2
+
+.field public static oneme_folders_list_toolbar:I = 0x7f0a06a3
+
+.field public static oneme_folders_list_user_folder_view_type:I = 0x7f0a06a4

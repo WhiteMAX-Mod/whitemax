@@ -1,160 +1,82 @@
 .class public final Lw96;
-.super Lpmf;
+.super Ldtf;
 .source "SourceFile"
+
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public final X:Lb1a;
+.field public final synthetic X:J
 
-.field public final c:Lzf2;
-
-.field public final o:J
+.field public final synthetic o:Lca6;
 
 
 # direct methods
-.method public constructor <init>(Lzf2;JLb1a;)V
+.method public constructor <init>(Lca6;JLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lw96;->o:Lca6;
 
-    iput-object p1, p0, Lw96;->c:Lzf2;
+    iput-wide p2, p0, Lw96;->X:J
 
-    iput-wide p2, p0, Lw96;->o:J
+    const/4 p1, 0x2
 
-    iput-object p4, p0, Lw96;->X:Lb1a;
+    invoke-direct {p0, p1, p4}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lf84;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Lw96;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Lw96;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lw96;
 
-    iget-object v1, p0, Lw96;->c:Lzf2;
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    iget-object v3, p1, Lw96;->c:Lzf2;
+    invoke-virtual {p1, p2}, Lw96;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-wide v3, p0, Lw96;->o:J
-
-    iget-wide v5, p1, Lw96;->o:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lw96;->X:Lb1a;
-
-    iget-object p1, p1, Lw96;->X:Lb1a;
-
-    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 4
-
-    iget-object v0, p0, Lw96;->c:Lzf2;
-
-    invoke-virtual {v0}, Lzf2;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-wide v2, p0, Lw96;->o:J
-
-    invoke-static {v0, v1, v2, v3}, Lrtg;->c(IIJ)I
-
-    move-result v0
-
-    iget-object v1, p0, Lw96;->X:Lb1a;
-
-    invoke-virtual {v1}, Lb1a;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance p1, Lw96;
 
-    const-string v1, "Response(folder="
+    iget-object v0, p0, Lw96;->o:Lca6;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-wide v1, p0, Lw96;->X:J
 
-    iget-object v1, p0, Lw96;->c:Lzf2;
+    invoke-direct {p1, v0, v1, v2, p2}, Lw96;-><init>(Lca6;JLkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    return-object p1
+.end method
 
-    const-string v1, ", folderSync="
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    iget-wide v1, p0, Lw96;->o:J
+    sget-object p1, Lca6;->H0:[Lyy7;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iget-object p1, p0, Lw96;->o:Lca6;
 
-    const-string v1, ", foldersOrder="
+    iget-wide v0, p0, Lw96;->X:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0, v1}, Lca6;->v(J)V
 
-    iget-object v1, p0, Lw96;->X:Lb1a;
+    sget-object p1, Lqqg;->a:Lqqg;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

@@ -1,379 +1,232 @@
-.class public final Lzab;
+.class public final synthetic Lzab;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public X:Lrsf;
+.field public final synthetic a:I
 
-.field public a:Landroid/graphics/SurfaceTexture;
-
-.field public b:Landroid/view/Surface;
-
-.field public final c:Ljava/lang/Object;
-
-.field public o:Z
+.field public final synthetic b:Lfbb;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 8
+.method public synthetic constructor <init>(Lfbb;I)V
+    .locals 0
+
+    iput p2, p0, Lzab;->a:I
+
+    iput-object p1, p0, Lzab;->b:Lfbb;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lzab;->c:Ljava/lang/Object;
-
-    new-instance v0, Lrsf;
-
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, v2}, Lrsf;-><init>(FZ)V
-
-    iput-object v0, p0, Lzab;->X:Lrsf;
-
-    const v1, 0x8b31
-
-    const-string v3, "uniform mat4 uMVPMatrix;\nuniform mat4 uSTMatrix;\nattribute vec4 aPosition;\nattribute vec4 aTextureCoord;\nvarying vec2 vTextureCoord;\nvoid main() {\n  gl_Position = uMVPMatrix * aPosition;\n  vTextureCoord = (uSTMatrix * aTextureCoord).xy;\n}\n"
-
-    invoke-static {v1, v3}, Lrsf;->b(ILjava/lang/String;)I
-
-    move-result v1
-
-    const/4 v3, 0x0
-
-    if-nez v1, :cond_0
-
-    :goto_0
-    move v5, v3
-
-    goto :goto_1
-
-    :cond_0
-    const v4, 0x8b30
-
-    const-string v5, "#extension GL_OES_EGL_image_external : require\nprecision mediump float;\nvarying vec2 vTextureCoord;\nuniform samplerExternalOES sTexture;\nvoid main() {\n  gl_FragColor = texture2D(sTexture, vTextureCoord);\n}\n"
-
-    invoke-static {v4, v5}, Lrsf;->b(ILjava/lang/String;)I
-
-    move-result v4
-
-    if-nez v4, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-static {}, Landroid/opengl/GLES20;->glCreateProgram()I
-
-    move-result v5
-
-    const-string v6, "glCreateProgram"
-
-    invoke-static {v6}, Lrsf;->a(Ljava/lang/String;)V
-
-    const-string v6, "TextureRender"
-
-    if-nez v5, :cond_2
-
-    const-string v7, "Could not create program"
-
-    invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_2
-    invoke-static {v5, v1}, Landroid/opengl/GLES20;->glAttachShader(II)V
-
-    const-string v1, "glAttachShader"
-
-    invoke-static {v1}, Lrsf;->a(Ljava/lang/String;)V
-
-    invoke-static {v5, v4}, Landroid/opengl/GLES20;->glAttachShader(II)V
-
-    invoke-static {v1}, Lrsf;->a(Ljava/lang/String;)V
-
-    invoke-static {v5}, Landroid/opengl/GLES20;->glLinkProgram(I)V
-
-    new-array v1, v2, [I
-
-    const v4, 0x8b82
-
-    invoke-static {v5, v4, v1, v3}, Landroid/opengl/GLES20;->glGetProgramiv(II[II)V
-
-    aget v1, v1, v3
-
-    if-eq v1, v2, :cond_3
-
-    const-string v1, "Could not link program: "
-
-    invoke-static {v6, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    invoke-static {v5}, Landroid/opengl/GLES20;->glGetProgramInfoLog(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v6, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    invoke-static {v5}, Landroid/opengl/GLES20;->glDeleteProgram(I)V
-
-    goto :goto_0
-
-    :cond_3
-    :goto_1
-    iput v5, v0, Lrsf;->d:I
-
-    if-eqz v5, :cond_8
-
-    const-string v1, "aPosition"
-
-    invoke-static {v5, v1}, Landroid/opengl/GLES20;->glGetAttribLocation(ILjava/lang/String;)I
-
-    move-result v1
-
-    iput v1, v0, Lrsf;->h:I
-
-    const-string v1, "glGetAttribLocation aPosition"
-
-    invoke-static {v1}, Lrsf;->a(Ljava/lang/String;)V
-
-    iget v1, v0, Lrsf;->h:I
-
-    const/4 v4, -0x1
-
-    if-eq v1, v4, :cond_7
-
-    iget v1, v0, Lrsf;->d:I
-
-    const-string v5, "aTextureCoord"
-
-    invoke-static {v1, v5}, Landroid/opengl/GLES20;->glGetAttribLocation(ILjava/lang/String;)I
-
-    move-result v1
-
-    iput v1, v0, Lrsf;->i:I
-
-    const-string v1, "glGetAttribLocation aTextureCoord"
-
-    invoke-static {v1}, Lrsf;->a(Ljava/lang/String;)V
-
-    iget v1, v0, Lrsf;->i:I
-
-    if-eq v1, v4, :cond_6
-
-    iget v1, v0, Lrsf;->d:I
-
-    const-string v5, "uMVPMatrix"
-
-    invoke-static {v1, v5}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
-
-    move-result v1
-
-    iput v1, v0, Lrsf;->f:I
-
-    const-string v1, "glGetUniformLocation uMVPMatrix"
-
-    invoke-static {v1}, Lrsf;->a(Ljava/lang/String;)V
-
-    iget v1, v0, Lrsf;->f:I
-
-    if-eq v1, v4, :cond_5
-
-    iget v1, v0, Lrsf;->d:I
-
-    const-string v5, "uSTMatrix"
-
-    invoke-static {v1, v5}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
-
-    move-result v1
-
-    iput v1, v0, Lrsf;->g:I
-
-    const-string v1, "glGetUniformLocation uSTMatrix"
-
-    invoke-static {v1}, Lrsf;->a(Ljava/lang/String;)V
-
-    iget v1, v0, Lrsf;->g:I
-
-    if-eq v1, v4, :cond_4
-
-    new-array v1, v2, [I
-
-    invoke-static {v2, v1, v3}, Landroid/opengl/GLES20;->glGenTextures(I[II)V
-
-    aget v1, v1, v3
-
-    iput v1, v0, Lrsf;->e:I
-
-    const v0, 0x8d65
-
-    invoke-static {v0, v1}, Landroid/opengl/GLES20;->glBindTexture(II)V
-
-    const-string v1, "glBindTexture mTextureID"
-
-    invoke-static {v1}, Lrsf;->a(Ljava/lang/String;)V
-
-    const/16 v1, 0x2801
-
-    const/high16 v2, 0x46180000    # 9728.0f
-
-    invoke-static {v0, v1, v2}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
-
-    const/16 v1, 0x2800
-
-    const v2, 0x46180400    # 9729.0f
-
-    invoke-static {v0, v1, v2}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
-
-    const/16 v1, 0x2802
-
-    const v2, 0x812f
-
-    invoke-static {v0, v1, v2}, Landroid/opengl/GLES20;->glTexParameteri(III)V
-
-    const/16 v1, 0x2803
-
-    invoke-static {v0, v1, v2}, Landroid/opengl/GLES20;->glTexParameteri(III)V
-
-    const-string v0, "glTexParameter"
-
-    invoke-static {v0}, Lrsf;->a(Ljava/lang/String;)V
-
-    new-instance v0, Landroid/graphics/SurfaceTexture;
-
-    iget-object v1, p0, Lzab;->X:Lrsf;
-
-    iget v1, v1, Lrsf;->e:I
-
-    invoke-direct {v0, v1}, Landroid/graphics/SurfaceTexture;-><init>(I)V
-
-    iput-object v0, p0, Lzab;->a:Landroid/graphics/SurfaceTexture;
-
-    invoke-virtual {v0, p0}, Landroid/graphics/SurfaceTexture;->setOnFrameAvailableListener(Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;)V
-
-    new-instance v0, Landroid/view/Surface;
-
-    iget-object v1, p0, Lzab;->a:Landroid/graphics/SurfaceTexture;
-
-    invoke-direct {v0, v1}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
-
-    iput-object v0, p0, Lzab;->b:Landroid/view/Surface;
-
     return-void
-
-    :cond_4
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    const-string v1, "Could not get attrib location for uSTMatrix"
-
-    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_5
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    const-string v1, "Could not get attrib location for uMVPMatrix"
-
-    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_6
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    const-string v1, "Could not get attrib location for aTextureCoord"
-
-    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_7
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    const-string v1, "Could not get attrib location for aPosition"
-
-    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_8
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    const-string v1, "failed creating program"
-
-    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 5
 
-    iget-object v0, p0, Lzab;->b:Landroid/view/Surface;
+    iget v0, p0, Lzab;->a:I
 
-    invoke-virtual {v0}, Landroid/view/Surface;->release()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lzab;->X:Lrsf;
-
-    iput-object v0, p0, Lzab;->b:Landroid/view/Surface;
-
-    iput-object v0, p0, Lzab;->a:Landroid/graphics/SurfaceTexture;
-
-    return-void
-.end method
-
-.method public final onFrameAvailable(Landroid/graphics/SurfaceTexture;)V
-    .locals 2
-
-    iget-object p1, p0, Lzab;->c:Ljava/lang/Object;
-
-    monitor-enter p1
-
-    :try_start_0
-    iget-boolean v0, p0, Lzab;->o:Z
-
-    if-nez v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lzab;->o:Z
+    int-to-float v0, v0
 
-    iget-object v0, p0, Lzab;->c:Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
-    invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
+    move-result p1
 
-    monitor-exit p1
+    sub-float/2addr v0, p1
+
+    iget-object p1, p0, Lzab;->b:Lfbb;
+
+    iget-object v1, p1, Lfbb;->A0:Ljava/lang/Object;
+
+    invoke-interface {v1}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/appcompat/widget/AppCompatImageView;
+
+    invoke-virtual {v1}, Landroid/view/View;->getAlpha()F
+
+    move-result v2
+
+    mul-float/2addr v2, v0
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setAlpha(F)V
+
+    iget-object v1, p1, Lfbb;->E0:Ljava/lang/Object;
+
+    invoke-interface {v1}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/appcompat/widget/AppCompatImageView;
+
+    invoke-virtual {v1}, Landroid/view/View;->getAlpha()F
+
+    move-result v2
+
+    mul-float/2addr v2, v0
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setAlpha(F)V
+
+    iget-object p1, p1, Lfbb;->B0:Ljava/lang/Object;
+
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/View;
+
+    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lw3b;
+
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+
+    move-result p1
+
+    int-to-float p1, p1
+
+    mul-float/2addr p1, v0
+
+    float-to-int p1, p1
+
+    iput p1, v2, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
 
-    :catchall_0
-    move-exception v0
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string v0, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
+
+    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_0
+    iget-object v0, p0, Lzab;->b:Lfbb;
+
+    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
+
+    move-result v1
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
+
+    move-result p1
+
+    iget-object v2, v0, Lfbb;->A0:Ljava/lang/Object;
+
+    invoke-interface {v2}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroidx/appcompat/widget/AppCompatImageView;
+
+    invoke-virtual {v2, p1}, Landroid/view/View;->setAlpha(F)V
+
+    iget-object v2, v0, Lfbb;->E0:Ljava/lang/Object;
+
+    invoke-interface {v2}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroidx/appcompat/widget/AppCompatImageView;
+
+    invoke-virtual {v2, p1}, Landroid/view/View;->setAlpha(F)V
+
+    iget-object v0, v0, Lfbb;->B0:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/view/View;
+
+    invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_3
+
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/View;
+
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    instance-of v4, v0, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    if-eqz v4, :cond_1
+
+    check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
     goto :goto_0
 
-    :cond_0
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    const-string v1, "mFrameAvailable already set, frame could be dropped"
-
-    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    :cond_1
+    const/4 v0, 0x0
 
     :goto_0
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-eqz v0, :cond_2
 
-    throw v0
+    iget v0, v0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+
+    goto :goto_1
+
+    :cond_2
+    const/4 v0, 0x0
+
+    :goto_1
+    sub-int/2addr v1, v0
+
+    int-to-float v0, v1
+
+    mul-float/2addr v0, p1
+
+    float-to-int p1, v0
+
+    iput p1, v3, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    invoke-virtual {v2, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+
+    :cond_3
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string v0, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
+
+    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

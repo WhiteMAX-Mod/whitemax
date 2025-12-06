@@ -2,63 +2,136 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ly04;
 
+# instance fields
+.field public final a:Lk18;
 
-# static fields
-.field public static final a:Lw04;
+.field public final b:Lk18;
+
+.field public final c:Lk18;
+
+.field public final d:Lk18;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lk18;Lk18;Lk18;Lk18;)V
+    .locals 0
 
-    new-instance v0, Lw04;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lw04;->a:Lk18;
 
-    sput-object v0, Lw04;->a:Lw04;
+    iput-object p2, p0, Lw04;->b:Lk18;
+
+    iput-object p3, p0, Lw04;->c:Lk18;
+
+    iput-object p4, p0, Lw04;->d:Lk18;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a(J)V
+    .locals 11
 
-    const/4 v0, 0x1
+    const-class v0, Lw04;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    return v0
+    move-result-object v0
 
-    :cond_0
-    instance-of p1, p1, Lw04;
+    const-string v1, "unblock, id = "
 
-    if-nez p1, :cond_1
+    invoke-static {p1, p2, v1, v0}, Lwy1;->q(JLjava/lang/String;Ljava/lang/String;)V
 
-    const/4 p1, 0x0
+    iget-object v0, p0, Lw04;->a:Lk18;
 
-    return p1
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
-    :cond_1
-    return v0
-.end method
+    move-result-object v0
 
-.method public final hashCode()I
-    .locals 1
+    check-cast v0, Lqv3;
 
-    const v0, 0xd8b2a9e
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return v0
-.end method
+    new-instance v1, Li62;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    const/16 v2, 0xe
 
-    const-string v0, "PermissionsAccess"
+    const/4 v3, 0x0
 
-    return-object v0
+    invoke-direct {v1, v2, v3}, Li62;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, p1, p2, v1}, Lqv3;->c(JLgu3;)Lku3;
+
+    iget-object v0, p0, Lw04;->c:Lk18;
+
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lhwa;
+
+    new-instance v1, Ly04;
+
+    invoke-virtual {v0}, Lhwa;->t()Lz7c;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lz7c;->a:Lpe8;
+
+    invoke-virtual {v2}, Lw4e;->k()J
+
+    move-result-wide v3
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    const/4 v2, 0x2
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    move-wide v5, p1
+
+    invoke-direct/range {v1 .. v10}, Ly04;-><init>(IJJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {v0, v1}, Lhwa;->r(Lhwa;Lsm;)J
+
+    iget-object p1, p0, Lw04;->b:Lk18;
+
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljzf;
+
+    new-instance p2, Ljava/lang/Long;
+
+    invoke-direct {p2, v5, v6}, Ljava/lang/Long;-><init>(J)V
+
+    invoke-static {p2}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Ljzf;->f(Ljava/util/Collection;)V
+
+    iget-object p1, p0, Lw04;->d:Lk18;
+
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ltw0;
+
+    new-instance p2, Lt24;
+
+    invoke-direct {p2, v5, v6}, Lt24;-><init>(J)V
+
+    invoke-virtual {p1, p2}, Ltw0;->c(Ljava/lang/Object;)V
+
+    return-void
 .end method

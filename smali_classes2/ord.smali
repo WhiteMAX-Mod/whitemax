@@ -1,51 +1,60 @@
-.class public abstract synthetic Lord;
+.class public final synthetic Lord;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/concurrent/Callable;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final synthetic a:Lbsd;
+
+.field public final synthetic b:J
+
+.field public final synthetic c:Lfh9;
+
+.field public final synthetic d:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lbsd;JLfh9;J)V
+    .locals 0
 
-    invoke-static {}, Lnrd;->values()[Lnrd;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lord;->a:Lbsd;
+
+    iput-wide p2, p0, Lord;->b:J
+
+    iput-object p4, p0, Lord;->c:Lfh9;
+
+    iput-wide p5, p0, Lord;->d:J
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final call()Ljava/lang/Object;
+    .locals 7
+
+    iget-wide v3, p0, Lord;->d:J
+
+    const/4 v6, 0x0
+
+    iget-object v0, p0, Lord;->a:Lbsd;
+
+    iget-wide v1, p0, Lord;->b:J
+
+    iget-object v5, p0, Lord;->c:Lfh9;
+
+    invoke-virtual/range {v0 .. v6}, Lbsd;->f(JJLfh9;Z)J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    const/4 v2, 0x2
-
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    const/4 v1, 0x3
-
-    :try_start_2
-    aput v1, v0, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    sput-object v0, Lord;->$EnumSwitchMapping$0:[I
-
-    return-void
+    return-object v0
 .end method

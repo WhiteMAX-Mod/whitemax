@@ -1,28 +1,236 @@
-.class public abstract Lmpc;
-.super Ljava/lang/Object;
+.class public final Lmpc;
+.super Lfl9;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_stickers_preview_action_favorite:I = 0x7f0a086f
+# instance fields
+.field public a:F
 
-.field public static oneme_stickers_preview_action_forward:I = 0x7f0a0870
+.field public b:F
 
-.field public static oneme_stickers_preview_action_send:I = 0x7f0a0871
+.field public c:I
 
-.field public static oneme_stickers_preview_content_container:I = 0x7f0a0872
+.field public d:Z
 
-.field public static oneme_stickers_preview_lottie_cell:I = 0x7f0a0873
 
-.field public static oneme_stickers_preview_static_cell:I = 0x7f0a0874
+# virtual methods
+.method public final computeSerializedSize()I
+    .locals 3
 
-.field public static oneme_stickers_preview_sticker_container:I = 0x7f0a0875
+    iget v0, p0, Lmpc;->a:F
 
-.field public static oneme_stickers_preview_stickers_set_container:I = 0x7f0a0876
+    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
 
-.field public static oneme_stickers_preview_stickers_set_content:I = 0x7f0a0877
+    move-result v0
 
-.field public static oneme_stickers_preview_stickers_set_header:I = 0x7f0a0878
+    const/4 v1, 0x0
 
-.field public static oneme_stickers_preview_toolbar:I = 0x7f0a0879
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
 
-.field public static oneme_stickers_preview_webm_cell:I = 0x7f0a087a
+    move-result v2
+
+    if-eq v0, v2, :cond_0
+
+    const/4 v0, 0x1
+
+    invoke-static {v0}, Lhd3;->e(I)I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    iget v2, p0, Lmpc;->b:F
+
+    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v1
+
+    if-eq v2, v1, :cond_1
+
+    const/4 v1, 0x2
+
+    invoke-static {v1}, Lhd3;->e(I)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    :cond_1
+    iget v1, p0, Lmpc;->c:I
+
+    if-eqz v1, :cond_2
+
+    const/4 v2, 0x3
+
+    invoke-static {v2, v1}, Lhd3;->f(II)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    :cond_2
+    iget-boolean v1, p0, Lmpc;->d:Z
+
+    if-eqz v1, :cond_3
+
+    const/4 v1, 0x4
+
+    invoke-static {v1}, Lhd3;->a(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+
+    :cond_3
+    return v0
+.end method
+
+.method public final mergeFrom(Lgd3;)Lfl9;
+    .locals 2
+
+    :cond_0
+    :goto_0
+    invoke-virtual {p1}, Lgd3;->s()I
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    const/16 v1, 0xd
+
+    if-eq v0, v1, :cond_4
+
+    const/16 v1, 0x15
+
+    if-eq v0, v1, :cond_3
+
+    const/16 v1, 0x18
+
+    if-eq v0, v1, :cond_2
+
+    const/16 v1, 0x20
+
+    if-eq v0, v1, :cond_1
+
+    invoke-virtual {p1, v0}, Lgd3;->u(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p1}, Lgd3;->f()Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lmpc;->d:Z
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p1}, Lgd3;->p()I
+
+    move-result v0
+
+    iput v0, p0, Lmpc;->c:I
+
+    goto :goto_0
+
+    :cond_3
+    invoke-virtual {p1}, Lgd3;->i()F
+
+    move-result v0
+
+    iput v0, p0, Lmpc;->b:F
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {p1}, Lgd3;->i()F
+
+    move-result v0
+
+    iput v0, p0, Lmpc;->a:F
+
+    goto :goto_0
+
+    :cond_5
+    :goto_1
+    return-object p0
+.end method
+
+.method public final writeTo(Lhd3;)V
+    .locals 3
+
+    iget v0, p0, Lmpc;->a:F
+
+    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    if-eq v0, v2, :cond_0
+
+    const/4 v0, 0x1
+
+    iget v2, p0, Lmpc;->a:F
+
+    invoke-virtual {p1, v0, v2}, Lhd3;->v(IF)V
+
+    :cond_0
+    iget v0, p0, Lmpc;->b:F
+
+    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v0
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v1
+
+    if-eq v0, v1, :cond_1
+
+    const/4 v0, 0x2
+
+    iget v1, p0, Lmpc;->b:F
+
+    invoke-virtual {p1, v0, v1}, Lhd3;->v(IF)V
+
+    :cond_1
+    iget v0, p0, Lmpc;->c:I
+
+    if-eqz v0, :cond_2
+
+    const/4 v1, 0x3
+
+    invoke-virtual {p1, v1, v0}, Lhd3;->w(II)V
+
+    :cond_2
+    iget-boolean v0, p0, Lmpc;->d:Z
+
+    if-eqz v0, :cond_3
+
+    const/4 v1, 0x4
+
+    invoke-virtual {p1, v1, v0}, Lhd3;->r(IZ)V
+
+    :cond_3
+    return-void
+.end method

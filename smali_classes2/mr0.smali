@@ -1,110 +1,53 @@
-.class public final synthetic Lmr0;
-.super Ljava/lang/Object;
+.class public final Lmr0;
+.super Lq44;
 .source "SourceFile"
-
-# interfaces
-.implements Lr6;
 
 
 # instance fields
-.field public final synthetic a:Lnr0;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:J
+.field public final synthetic Y:Lrr0;
 
-.field public final synthetic c:Lor0;
+.field public Z:I
+
+.field public d:Lrr0;
+
+.field public o:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lnr0;JLor0;)V
+.method public constructor <init>(Lrr0;Lq44;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lmr0;->Y:Lrr0;
 
-    iput-object p1, p0, Lmr0;->a:Lnr0;
-
-    iput-wide p2, p0, Lmr0;->b:J
-
-    iput-object p4, p0, Lmr0;->c:Lor0;
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 6
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget-object v0, p0, Lmr0;->a:Lnr0;
+    iput-object p1, p0, Lmr0;->X:Ljava/lang/Object;
 
-    iget-object v0, v0, Lnr0;->a:Ltt5;
+    iget p1, p0, Lmr0;->Z:I
 
-    iget-object v1, p0, Lmr0;->c:Lor0;
+    const/high16 v0, -0x80000000
 
-    iget-object v2, v1, Lor0;->a:Ljava/util/List;
+    or-int/2addr p1, v0
 
-    invoke-static {v2}, Lwdi;->e(Ljava/util/Collection;)Z
+    iput p1, p0, Lmr0;->Z:I
 
-    move-result v2
+    iget-object p1, p0, Lmr0;->Y:Lrr0;
 
-    iget-wide v3, p0, Lmr0;->b:J
+    const-wide/16 v0, 0x0
 
-    const-string v5, "nr0"
+    invoke-virtual {p1, v0, v1, p0}, Lrr0;->d(JLq44;)Ljava/io/Serializable;
 
-    if-eqz v2, :cond_0
+    move-result-object p1
 
-    :try_start_0
-    check-cast v0, Liv5;
-
-    invoke-virtual {v0, v3, v4}, Liv5;->e(J)Ljava/io/File;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/io/File;->delete()Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    filled-new-array {v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    const-string v1, "deleteBotCommandsForChat: exception when delete botCommands for, chatId = %d"
-
-    invoke-static {v5, v1, v0}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_0
-    check-cast v0, Liv5;
-
-    invoke-virtual {v0, v3, v4}, Liv5;->e(J)Ljava/io/File;
-
-    move-result-object v0
-
-    invoke-static {v0, v1}, Lu1j;->f(Ljava/io/File;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    filled-new-array {v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    const-string v1, "Failed to store botCommands, chatId = %d"
-
-    invoke-static {v5, v1, v0}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    :cond_1
-    return-void
+    return-object p1
 .end method

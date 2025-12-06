@@ -3,27 +3,31 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:Lfce;
+# instance fields
+.field public final a:Lpd8;
 
-.field public static final b:Lece;
+.field public b:Lp2h;
+
+.field public c:Lzub;
+
+.field public d:Ljava/lang/String;
+
+.field public e:Z
+
+.field public f:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lpd8;)V
     .locals 1
 
-    new-instance v0, Lfce;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
 
-    sput-object v0, Lfce;->a:Lfce;
+    iput-boolean v0, p0, Lfce;->f:Z
 
-    new-instance v0, Lece;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lfce;->b:Lece;
+    iput-object p1, p0, Lfce;->a:Lpd8;
 
     return-void
 .end method

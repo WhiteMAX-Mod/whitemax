@@ -2,135 +2,179 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lgwg;
+
 
 # instance fields
-.field public final a:I
+.field public final a:Llwg;
 
-.field public final b:I
-
-.field public final c:I
+.field public final b:Lbwf;
 
 
 # direct methods
-.method public constructor <init>(III)V
-    .locals 0
+.method public constructor <init>(Lbwf;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Ljwg;->a:I
+    new-instance v0, Llwg;
 
-    iput p2, p0, Ljwg;->b:I
+    invoke-direct {v0}, Llwg;-><init>()V
 
-    iput p3, p0, Ljwg;->c:I
+    iput-object v0, p0, Ljwg;->a:Llwg;
+
+    new-instance v0, Lkvf;
+
+    const/16 v1, 0xc
+
+    invoke-direct {v0, v1, p1}, Lkvf;-><init>(ILjava/lang/Object;)V
+
+    new-instance p1, Lbwf;
+
+    invoke-direct {p1, v0}, Lbwf;-><init>(Lcm6;)V
+
+    iput-object p1, p0, Ljwg;->b:Lbwf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a(Lttg;)Lhk3;
+    .locals 2
 
-    const/4 v0, 0x1
+    new-instance v0, Lc5g;
 
-    if-ne p0, p1, :cond_0
+    const/16 v1, 0xa
 
-    return v0
+    invoke-direct {v0, p0, v1, p1}, Lc5g;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    :cond_0
-    instance-of v1, p1, Ljwg;
+    new-instance p1, Lkk3;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, v1, v0}, Lkk3;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+.end method
+
+.method public final b(J)Lhk3;
+    .locals 2
+
+    new-instance v0, Lny1;
+
+    const/16 v1, 0xc
+
+    invoke-direct {v0, p0, p1, p2, v1}, Lny1;-><init>(Ljava/lang/Object;JI)V
+
+    new-instance p1, Lkk3;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p2, v0}, Lkk3;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+.end method
+
+.method public final c(Lbug;)Lhk3;
+    .locals 2
+
+    new-instance v0, Liwg;
+
+    invoke-direct {v0, p0, p1}, Liwg;-><init>(Ljwg;Lbug;)V
+
+    new-instance p1, Lkk3;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, v1, v0}, Lkk3;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+.end method
+
+.method public final clear()Lhk3;
+    .locals 3
+
+    new-instance v0, Lhwg;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p0, v1}, Lhwg;-><init>(Ljwg;I)V
+
+    new-instance v1, Lkk3;
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    invoke-direct {v1, v2, v0}, Lkk3;-><init>(ILjava/lang/Object;)V
 
-    return v2
-
-    :cond_1
-    check-cast p1, Ljwg;
-
-    iget v1, p0, Ljwg;->a:I
-
-    iget v3, p1, Ljwg;->a:I
-
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget v1, p0, Ljwg;->b:I
-
-    iget v3, p1, Ljwg;->b:I
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget v1, p0, Ljwg;->c:I
-
-    iget p1, p1, Ljwg;->c:I
-
-    if-eq v1, p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
+    return-object v1
 .end method
 
-.method public final hashCode()I
+.method public final d(Lbug;)Lor8;
+    .locals 1
+
+    new-instance v0, Liwg;
+
+    invoke-direct {v0, p0, p1}, Liwg;-><init>(Ljwg;Lbug;)V
+
+    new-instance p1, Lsr8;
+
+    invoke-direct {p1, v0}, Lsr8;-><init>(Les8;)V
+
+    return-object p1
+.end method
+
+.method public final e(Ljava/lang/String;)Lhk3;
     .locals 2
 
-    iget v0, p0, Ljwg;->a:I
+    new-instance v0, Lc5g;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    const/16 v1, 0x9
 
-    move-result v0
+    invoke-direct {v0, p0, v1, p1}, Lc5g;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    mul-int/lit8 v0, v0, 0x1f
+    new-instance p1, Lkk3;
 
-    iget v1, p0, Ljwg;->b:I
+    const/4 v1, 0x0
 
-    invoke-static {v1, v0}, Lcgi;->a(II)I
+    invoke-direct {p1, v1, v0}, Lkk3;-><init>(ILjava/lang/Object;)V
 
-    move-result v0
-
-    iget v1, p0, Ljwg;->c:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final f(Ljava/lang/String;)Lor8;
+    .locals 1
 
-    const-string v0, ", maxDimension="
+    iget-object v0, p0, Ljwg;->b:Lbwf;
 
-    const-string v1, ", source="
-
-    const-string v2, "VideoQualityUpdate(maxBitrate="
-
-    iget v3, p0, Ljwg;->a:I
-
-    iget v4, p0, Ljwg;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Lbwf;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    const-string v1, ")"
+    check-cast v0, Lgwg;
 
-    iget v2, p0, Ljwg;->c:I
+    invoke-interface {v0, p1}, Lgwg;->f(Ljava/lang/String;)Lor8;
 
-    invoke-static {v0, v2, v1}, Li57;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object v0
+    return-object p1
+.end method
 
-    return-object v0
+.method public final g()Lor8;
+    .locals 2
+
+    sget-object v0, Lvvg;->b:Lvvg;
+
+    new-instance v0, Lhwg;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lhwg;-><init>(Ljwg;I)V
+
+    new-instance v1, Lsr8;
+
+    invoke-direct {v1, v0}, Lsr8;-><init>(Les8;)V
+
+    return-object v1
 .end method

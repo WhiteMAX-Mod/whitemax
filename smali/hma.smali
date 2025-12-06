@@ -3,95 +3,65 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Z
-
-.field public final b:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-.field public c:Loj6;
-
-
 # direct methods
-.method public constructor <init>(Z)V
+.method public static a(Landroid/app/Notification$Builder;Ljava/lang/String;)Landroid/app/Notification$Builder;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->addPerson(Ljava/lang/String;)Landroid/app/Notification$Builder;
 
-    iput-boolean p1, p0, Lhma;->a:Z
+    move-result-object p0
 
-    new-instance p1, Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-direct {p1}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
-
-    iput-object p1, p0, Lhma;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    return-void
+    return-object p0
 .end method
 
-
-# virtual methods
-.method public a()V
+.method public static b(Landroid/app/Notification$Builder;Ljava/lang/String;)Landroid/app/Notification$Builder;
     .locals 0
 
-    return-void
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setCategory(Ljava/lang/String;)Landroid/app/Notification$Builder;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method public abstract b()V
-.end method
-
-.method public c(Lye0;)V
+.method public static c(Landroid/app/Notification$Builder;I)Landroid/app/Notification$Builder;
     .locals 0
 
-    return-void
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setColor(I)Landroid/app/Notification$Builder;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method public d()V
+.method public static d(Landroid/app/Notification$Builder;Landroid/app/Notification;)Landroid/app/Notification$Builder;
     .locals 0
 
-    return-void
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setPublicVersion(Landroid/app/Notification;)Landroid/app/Notification$Builder;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method public final e()V
-    .locals 2
-
-    iget-object v0, p0, Lhma;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lm32;
-
-    invoke-interface {v1}, Lm32;->cancel()V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final f(Z)V
+.method public static e(Landroid/app/Notification$Builder;Landroid/net/Uri;Ljava/lang/Object;)Landroid/app/Notification$Builder;
     .locals 0
 
-    iput-boolean p1, p0, Lhma;->a:Z
+    check-cast p2, Landroid/media/AudioAttributes;
 
-    iget-object p1, p0, Lhma;->c:Loj6;
+    invoke-virtual {p0, p1, p2}, Landroid/app/Notification$Builder;->setSound(Landroid/net/Uri;Landroid/media/AudioAttributes;)Landroid/app/Notification$Builder;
 
-    if-eqz p1, :cond_0
+    move-result-object p0
 
-    invoke-interface {p1}, Lji6;->invoke()Ljava/lang/Object;
+    return-object p0
+.end method
 
-    :cond_0
-    return-void
+.method public static f(Landroid/app/Notification$Builder;I)Landroid/app/Notification$Builder;
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setVisibility(I)Landroid/app/Notification$Builder;
+
+    move-result-object p0
+
+    return-object p0
 .end method

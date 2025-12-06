@@ -1,165 +1,98 @@
-.class public final Lxaa;
-.super Lpmf;
+.class public final synthetic Lxaa;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lp6;
 
 
 # instance fields
-.field public X:J
+.field public final synthetic a:I
 
-.field public c:J
-
-.field public o:J
+.field public final synthetic b:Lyaa;
 
 
 # direct methods
-.method public constructor <init>(Lpf9;)V
+.method public synthetic constructor <init>(Lyaa;I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lpmf;-><init>(Lpf9;)V
+    iput p2, p0, Lxaa;->a:I
+
+    iput-object p1, p0, Lxaa;->b:Lyaa;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lpf9;Ljava/lang/String;)V
-    .locals 4
+.method public final run()V
+    .locals 2
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget v0, p0, Lxaa;->a:I
 
-    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    iget-object v0, p0, Lxaa;->b:Lyaa;
 
-    const/4 v1, -0x1
+    iget-object v0, v0, Lj3;->a:Ljava/lang/Object;
 
-    sparse-switch v0, :sswitch_data_0
+    check-cast v0, Ljava/util/Set;
 
-    goto :goto_0
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    :sswitch_0
-    const-string v0, "time"
+    move-result-object v0
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result p2
+    move-result v1
 
-    if-nez p2, :cond_0
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Liaa;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     goto :goto_0
 
     :cond_0
-    const/4 v1, 0x2
-
-    goto :goto_0
-
-    :sswitch_1
-    const-string v0, "userId"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x1
-
-    goto :goto_0
-
-    :sswitch_2
-    const-string v0, "chatId"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v1, 0x0
-
-    :goto_0
-    const-wide/16 v2, 0x0
-
-    packed-switch v1, :pswitch_data_0
-
-    invoke-virtual {p1}, Lpf9;->y()V
-
     return-void
 
     :pswitch_0
-    invoke-static {p1, v2, v3}, Lg0i;->m(Lpf9;J)J
+    new-instance v0, Ldk0;
 
-    move-result-wide p1
+    const/16 v1, 0x18
 
-    iput-wide p1, p0, Lxaa;->X:J
+    invoke-direct {v0, v1}, Ldk0;-><init>(I)V
+
+    iget-object v1, p0, Lxaa;->b:Lyaa;
+
+    invoke-virtual {v1, v0}, Lj3;->j(Lju3;)V
 
     return-void
 
     :pswitch_1
-    invoke-static {p1, v2, v3}, Lg0i;->m(Lpf9;J)J
+    new-instance v0, Ldk0;
 
-    move-result-wide p1
+    const/16 v1, 0x19
 
-    iput-wide p1, p0, Lxaa;->o:J
+    invoke-direct {v0, v1}, Ldk0;-><init>(I)V
 
-    return-void
+    iget-object v1, p0, Lxaa;->b:Lyaa;
 
-    :pswitch_2
-    invoke-static {p1, v2, v3}, Lg0i;->m(Lpf9;J)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lxaa;->c:J
+    invoke-virtual {v1, v0}, Lj3;->j(Lju3;)V
 
     return-void
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x5128d96d -> :sswitch_2
-        -0x31d4d1ba -> :sswitch_1
-        0x3652cd -> :sswitch_0
-    .end sparse-switch
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 8
-
-    iget-wide v0, p0, Lxaa;->c:J
-
-    iget-wide v2, p0, Lxaa;->o:J
-
-    iget-wide v4, p0, Lxaa;->X:J
-
-    const-string v6, "Response{chatId="
-
-    const-string v7, ", userId="
-
-    invoke-static {v0, v1, v6, v7}, Ldy1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", time="
-
-    const-string v2, "}"
-
-    invoke-static {v4, v5, v1, v2, v0}, Lu15;->j(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

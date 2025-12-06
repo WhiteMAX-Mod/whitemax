@@ -1,176 +1,48 @@
 .class public final Lztf;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lms4;
+.super Lq44;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic X:Lyjf;
 
-.field public final b:J
+.field public synthetic d:Ljava/lang/Object;
 
-.field public final c:J
-
-.field public final d:J
-
-.field public final e:Ljava/util/EnumMap;
-
-.field public final f:Lkotlinx/coroutines/internal/ContextScope;
-
-.field public g:Llo7;
-
-.field public final h:Lyrd;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Liu7;)V
-    .locals 3
+.method public constructor <init>(Lyjf;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lztf;->X:Lyjf;
 
-    sget-object v0, Las4;->b:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
-
-    move-result-wide v1
-
-    iput-wide v1, p0, Lztf;->a:J
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
-
-    move-result-wide v1
-
-    iput-wide v1, p0, Lztf;->b:J
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
-
-    move-result-wide v1
-
-    iput-wide v1, p0, Lztf;->c:J
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lztf;->d:J
-
-    new-instance v0, Ljava/util/EnumMap;
-
-    const-class v1, Ljava/lang/Thread$State;
-
-    invoke-direct {v0, v1}, Ljava/util/EnumMap;-><init>(Ljava/lang/Class;)V
-
-    iput-object v0, p0, Lztf;->e:Ljava/util/EnumMap;
-
-    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lulf;
-
-    check-cast p1, Lqta;
-
-    invoke-virtual {p1}, Lqta;->a()Lk54;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ldxi;->a(Li54;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lztf;->f:Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance p1, Lbh3;
-
-    invoke-direct {p1}, Lbh3;-><init>()V
-
-    sget-object v0, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, v0}, Llo7;->makeCompleting$kotlinx_coroutines_core(Ljava/lang/Object;)Z
-
-    iput-object p1, p0, Lztf;->g:Llo7;
-
-    new-instance p1, Lyrd;
-
-    invoke-direct {p1, p0}, Lyrd;-><init>(Lztf;)V
-
-    iput-object p1, p0, Lztf;->h:Lyrd;
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()Lq0f;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lztf;->h:Lyrd;
+    iput-object p1, p0, Lztf;->d:Ljava/lang/Object;
 
-    return-object v0
-.end method
+    iget p1, p0, Lztf;->o:I
 
-.method public final d(Lre4;)V
-    .locals 5
+    const/high16 v0, -0x80000000
 
-    iget-wide v0, p1, Lre4;->a:J
+    or-int/2addr p1, v0
 
-    iget-wide v2, p0, Lztf;->a:J
+    iput p1, p0, Lztf;->o:I
 
-    invoke-static {v0, v1, v2, v3}, Las4;->a(JJ)Z
+    iget-object p1, p0, Lztf;->X:Lyjf;
 
-    move-result p1
+    const/4 v0, 0x0
 
-    const/4 v2, 0x0
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Lztf;->g:Llo7;
-
-    invoke-interface {p1}, Ljn7;->isActive()Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    new-instance p1, Lytf;
-
-    const/4 v0, 0x2
-
-    invoke-direct {p1, v0, v2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    const/4 v0, 0x3
-
-    iget-object v1, p0, Lztf;->f:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v1, v2, v2, p1, v0}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
+    invoke-virtual {p1, v0, p0}, Lyjf;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    iput-object p1, p0, Lztf;->g:Llo7;
-
-    return-void
-
-    :cond_0
-    iget-wide v3, p0, Lztf;->d:J
-
-    invoke-static {v0, v1, v3, v4}, Las4;->a(JJ)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    sget-object p1, Lfs4;->c:Lfs4;
-
-    invoke-virtual {p1}, Lrdi;->q0()Lag4;
-
-    move-result-object p1
-
-    const-string v0, ":settings/dev/threadsviewer"
-
-    invoke-virtual {p1, v0, v2}, Lag4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    :cond_1
-    return-void
+    return-object p1
 .end method

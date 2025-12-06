@@ -1,192 +1,289 @@
-.class public final Lysb;
-.super Ljava/lang/Object;
+.class public Lysb;
+.super Lwsb;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lysb;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # instance fields
-.field public X:Landroid/media/session/PlaybackState$CustomAction;
+.field public X:Z
 
-.field public final a:Ljava/lang/String;
+.field public Y:I
 
-.field public final b:Ljava/lang/CharSequence;
+.field public final d:Lxsb;
 
-.field public final c:I
-
-.field public final o:Landroid/os/Bundle;
+.field public o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lx3b;
-
-    const/16 v1, 0xb
-
-    invoke-direct {v0, v1}, Lx3b;-><init>(I)V
-
-    sput-object v0, Lysb;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcel;)V
+.method public constructor <init>(Lxsb;[Lvig;)V
     .locals 1
 
-    .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p1, Lxsb;->c:Luig;
 
-    .line 7
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    invoke-direct {p0, v0, p2}, Lwsb;-><init>(Luig;[Lvig;)V
 
-    move-result-object v0
+    iput-object p1, p0, Lysb;->d:Lxsb;
 
-    .line 8
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget p1, p1, Lxsb;->o:I
 
-    .line 9
-    iput-object v0, p0, Lysb;->a:Ljava/lang/String;
-
-    .line 10
-    sget-object v0, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/CharSequence;
-
-    .line 11
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 12
-    check-cast v0, Ljava/lang/CharSequence;
-
-    iput-object v0, p0, Lysb;->b:Ljava/lang/CharSequence;
-
-    .line 13
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    iput v0, p0, Lysb;->c:I
-
-    .line 14
-    const-class v0, Ld09;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readBundle(Ljava/lang/ClassLoader;)Landroid/os/Bundle;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lysb;->o:Landroid/os/Bundle;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/CharSequence;ILandroid/os/Bundle;)V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-object p1, p0, Lysb;->a:Ljava/lang/String;
-
-    .line 3
-    iput-object p2, p0, Lysb;->b:Ljava/lang/CharSequence;
-
-    .line 4
-    iput p3, p0, Lysb;->c:I
-
-    .line 5
-    iput-object p4, p0, Lysb;->o:Landroid/os/Bundle;
+    iput p1, p0, Lysb;->Y:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final c(ILuig;Ljava/lang/Object;I)V
+    .locals 5
 
-    const/4 v0, 0x0
+    mul-int/lit8 v0, p4, 0x5
 
-    return v0
+    const/16 v1, 0x1e
+
+    iget-object v2, p0, Lwsb;->a:[Lvig;
+
+    if-le v0, v1, :cond_1
+
+    aget-object p1, v2, p4
+
+    iget-object p2, p2, Luig;->d:[Ljava/lang/Object;
+
+    array-length v0, p2
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, v1, p2}, Lvig;->a(II[Ljava/lang/Object;)V
+
+    :goto_0
+    aget-object p1, v2, p4
+
+    iget-object p2, p1, Lvig;->a:[Ljava/lang/Object;
+
+    iget p1, p1, Lvig;->c:I
+
+    aget-object p1, p2, p1
+
+    invoke-static {p1, p3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    aget-object p1, v2, p4
+
+    iget p2, p1, Lvig;->c:I
+
+    add-int/lit8 p2, p2, 0x2
+
+    iput p2, p1, Lvig;->c:I
+
+    goto :goto_0
+
+    :cond_0
+    iput p4, p0, Lwsb;->b:I
+
+    return-void
+
+    :cond_1
+    invoke-static {p1, v0}, Lagi;->c(II)I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    shl-int v0, v1, v0
+
+    invoke-virtual {p2, v0}, Luig;->i(I)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    invoke-virtual {p2, v0}, Luig;->f(I)I
+
+    move-result p1
+
+    aget-object p3, v2, p4
+
+    iget-object v0, p2, Luig;->d:[Ljava/lang/Object;
+
+    iget p2, p2, Luig;->a:I
+
+    invoke-static {p2}, Ljava/lang/Integer;->bitCount(I)I
+
+    move-result p2
+
+    mul-int/lit8 p2, p2, 0x2
+
+    invoke-virtual {p3, p2, p1, v0}, Lvig;->a(II[Ljava/lang/Object;)V
+
+    iput p4, p0, Lwsb;->b:I
+
+    return-void
+
+    :cond_2
+    invoke-virtual {p2, v0}, Luig;->u(I)I
+
+    move-result v0
+
+    invoke-virtual {p2, v0}, Luig;->t(I)Luig;
+
+    move-result-object v3
+
+    aget-object v2, v2, p4
+
+    iget-object v4, p2, Luig;->d:[Ljava/lang/Object;
+
+    iget p2, p2, Luig;->a:I
+
+    invoke-static {p2}, Ljava/lang/Integer;->bitCount(I)I
+
+    move-result p2
+
+    mul-int/lit8 p2, p2, 0x2
+
+    invoke-virtual {v2, p2, v0, v4}, Lvig;->a(II[Ljava/lang/Object;)V
+
+    add-int/2addr p4, v1
+
+    invoke-virtual {p0, p1, v3, p3, p4}, Lysb;->c(ILuig;Ljava/lang/Object;I)V
+
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final next()Ljava/lang/Object;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lysb;->d:Lxsb;
 
-    const-string v1, "Action:mName=\'"
+    iget v0, v0, Lxsb;->o:I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget v1, p0, Lysb;->Y:I
 
-    iget-object v1, p0, Lysb;->b:Ljava/lang/CharSequence;
+    if-ne v0, v1, :cond_1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-boolean v0, p0, Lwsb;->c:Z
 
-    const-string v1, ", mIcon="
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lwsb;->a:[Lvig;
 
-    iget v1, p0, Lysb;->c:I
+    iget v1, p0, Lwsb;->b:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    aget-object v0, v0, v1
 
-    const-string v1, ", mExtras="
+    iget-object v1, v0, Lvig;->a:[Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v0, v0, Lvig;->c:I
 
-    iget-object v1, p0, Lysb;->o:Landroid/os/Bundle;
+    aget-object v0, v1, v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iput-object v0, p0, Lysb;->o:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lysb;->X:Z
+
+    invoke-super {p0}, Lwsb;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+
+    :cond_1
+    new-instance v0, Ljava/util/ConcurrentModificationException;
+
+    invoke-direct {v0}, Ljava/util/ConcurrentModificationException;-><init>()V
+
+    throw v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 1
+.method public final remove()V
+    .locals 5
 
-    iget-object v0, p0, Lysb;->a:Ljava/lang/String;
+    iget-boolean v0, p0, Lysb;->X:Z
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lysb;->b:Ljava/lang/CharSequence;
+    iget-boolean v0, p0, Lwsb;->c:Z
 
-    invoke-static {v0, p1, p2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
+    const/4 v1, 0x0
 
-    iget p2, p0, Lysb;->c:I
+    iget-object v2, p0, Lysb;->d:Lxsb;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    if-eqz v0, :cond_2
 
-    iget-object p2, p0, Lysb;->o:Landroid/os/Bundle;
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
+    iget-object v0, p0, Lwsb;->a:[Lvig;
+
+    iget v3, p0, Lwsb;->b:I
+
+    aget-object v0, v0, v3
+
+    iget-object v3, v0, Lvig;->a:[Ljava/lang/Object;
+
+    iget v0, v0, Lvig;->c:I
+
+    aget-object v0, v3, v0
+
+    iget-object v3, p0, Lysb;->o:Ljava/lang/Object;
+
+    invoke-virtual {v2, v3}, Lxsb;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    if-nez v0, :cond_0
+
+    move v3, v1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v3
+
+    :goto_0
+    iget-object v4, v2, Lxsb;->c:Luig;
+
+    invoke-virtual {p0, v3, v4, v0, v1}, Lysb;->c(ILuig;Ljava/lang/Object;I)V
+
+    goto :goto_1
+
+    :cond_1
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+
+    :cond_2
+    iget-object v0, p0, Lysb;->o:Ljava/lang/Object;
+
+    invoke-virtual {v2, v0}, Lxsb;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :goto_1
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lysb;->o:Ljava/lang/Object;
+
+    iput-boolean v1, p0, Lysb;->X:Z
+
+    iget v0, v2, Lxsb;->o:I
+
+    iput v0, p0, Lysb;->Y:I
 
     return-void
+
+    :cond_3
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw v0
 .end method

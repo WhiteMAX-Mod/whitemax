@@ -3,200 +3,72 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lwl5;
+.implements Lzy7;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:Ler0;
 
-.field public final b:Lzqe;
+.field public static final b:Lj9c;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method static constructor <clinit>()V
     .locals 3
 
-    iput p1, p0, Ler0;->a:I
+    new-instance v0, Ler0;
 
-    packed-switch p1, :pswitch_data_0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Ler0;->a:Ler0;
 
-    new-instance p1, Lzqe;
+    new-instance v0, Lj9c;
 
-    const/4 v0, 0x2
+    const-string v1, "kotlin.Boolean"
 
-    const-string v1, "image/bmp"
+    sget-object v2, Lh9c;->b:Lh9c;
 
-    const/16 v2, 0x424d
+    invoke-direct {v0, v1, v2}, Lj9c;-><init>(Ljava/lang/String;Li9c;)V
 
-    invoke-direct {p1, v2, v0, v1}, Lzqe;-><init>(IILjava/lang/String;)V
-
-    iput-object p1, p0, Ler0;->b:Lzqe;
-
-    return-void
-
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance p1, Lzqe;
-
-    const/4 v0, 0x2
-
-    const-string v1, "image/png"
-
-    const v2, 0x8950
-
-    invoke-direct {p1, v2, v0, v1}, Lzqe;-><init>(IILjava/lang/String;)V
-
-    iput-object p1, p0, Ler0;->b:Lzqe;
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method private final a()V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final b()V
-    .locals 0
+    sput-object v0, Ler0;->b:Lj9c;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(JJ)V
-    .locals 1
+.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
+    .locals 0
 
-    iget v0, p0, Ler0;->a:I
+    check-cast p2, Ljava/lang/Boolean;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
-    iget-object v0, p0, Ler0;->b:Lzqe;
+    move-result p2
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Lzqe;->d(JJ)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Ler0;->b:Lzqe;
-
-    invoke-virtual {v0, p1, p2, p3, p4}, Lzqe;->d(JJ)V
+    invoke-virtual {p1, p2}, Lkotlinx/serialization/json/internal/b;->b(Z)V
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method
 
-.method public final i(Lyl5;)Z
-    .locals 1
+.method public final b(Llh4;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Ler0;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ler0;->b:Lzqe;
-
-    invoke-virtual {v0, p1}, Lzqe;->i(Lyl5;)Z
+    invoke-interface {p1}, Llh4;->b()Z
 
     move-result p1
 
-    return p1
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    :pswitch_0
-    iget-object v0, p0, Ler0;->b:Lzqe;
+    move-result-object p1
 
-    invoke-virtual {v0, p1}, Lzqe;->i(Lyl5;)Z
-
-    move-result p1
-
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method
 
-.method public final n(Lam5;)V
+.method public final d()Lree;
     .locals 1
 
-    iget v0, p0, Ler0;->a:I
+    sget-object v0, Ler0;->b:Lj9c;
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ler0;->b:Lzqe;
-
-    invoke-virtual {v0, p1}, Lzqe;->n(Lam5;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Ler0;->b:Lzqe;
-
-    invoke-virtual {v0, p1}, Lzqe;->n(Lam5;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final o(Lyl5;Lq7;)I
-    .locals 1
-
-    iget v0, p0, Ler0;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ler0;->b:Lzqe;
-
-    invoke-virtual {v0, p1, p2}, Lzqe;->o(Lyl5;Lq7;)I
-
-    move-result p1
-
-    return p1
-
-    :pswitch_0
-    iget-object v0, p0, Ler0;->b:Lzqe;
-
-    invoke-virtual {v0, p1, p2}, Lzqe;->o(Lyl5;Lq7;)I
-
-    move-result p1
-
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final release()V
-    .locals 1
-
-    iget v0, p0, Ler0;->a:I
-
-    return-void
+    return-object v0
 .end method

@@ -1,742 +1,3289 @@
-.class public final Li28;
+.class public abstract Li28;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnTouchListener;
-
 
 # static fields
-.field public static final A0:I
-
-
-# instance fields
-.field public final X:[F
-
-.field public final Y:[F
-
-.field public final Z:I
-
-.field public final a:Lh90;
-
-.field public final b:Landroid/view/animation/AccelerateInterpolator;
-
-.field public final c:Ls25;
-
-.field public o:Lxe;
-
-.field public final q0:I
-
-.field public final r0:[F
-
-.field public final s0:[F
-
-.field public final t0:[F
-
-.field public u0:Z
-
-.field public v0:Z
-
-.field public w0:Z
-
-.field public x0:Z
-
-.field public y0:Z
-
-.field public final z0:Ls25;
+.field public static final a:Lhh7;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 27
 
-    invoke-static {}, Landroid/view/ViewConfiguration;->getTapTimeout()I
+    const-string v25, "android.media.metadata.DOWNLOAD_STATUS"
 
-    move-result v0
+    const-string v26, "androidx.media3.session.EXTRAS_KEY_MEDIA_TYPE_COMPAT"
 
-    sput v0, Li28;->A0:I
+    const-string v1, "android.media.metadata.COMPOSER"
+
+    const-string v2, "android.media.metadata.COMPILATION"
+
+    const-string v3, "android.media.metadata.DATE"
+
+    const-string v4, "android.media.metadata.YEAR"
+
+    const-string v5, "android.media.metadata.GENRE"
+
+    const-string v6, "android.media.metadata.TRACK_NUMBER"
+
+    const-string v7, "android.media.metadata.NUM_TRACKS"
+
+    const-string v8, "android.media.metadata.DISC_NUMBER"
+
+    const-string v9, "android.media.metadata.ALBUM_ARTIST"
+
+    const-string v10, "android.media.metadata.ART"
+
+    const-string v11, "android.media.metadata.ART_URI"
+
+    const-string v12, "android.media.metadata.ALBUM_ART"
+
+    const-string v13, "android.media.metadata.ALBUM_ART_URI"
+
+    const-string v14, "android.media.metadata.USER_RATING"
+
+    const-string v15, "android.media.metadata.RATING"
+
+    const-string v16, "android.media.metadata.DISPLAY_TITLE"
+
+    const-string v17, "android.media.metadata.DISPLAY_SUBTITLE"
+
+    const-string v18, "android.media.metadata.DISPLAY_DESCRIPTION"
+
+    const-string v19, "android.media.metadata.DISPLAY_ICON"
+
+    const-string v20, "android.media.metadata.DISPLAY_ICON_URI"
+
+    const-string v21, "android.media.metadata.MEDIA_ID"
+
+    const-string v22, "android.media.metadata.MEDIA_URI"
+
+    const-string v23, "android.media.metadata.BT_FOLDER_TYPE"
+
+    const-string v24, "android.media.metadata.ADVERTISEMENT"
+
+    filled-new-array/range {v1 .. v26}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    sget v1, Lhh7;->c:I
+
+    const/16 v1, 0x20
+
+    new-array v2, v1, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    const-string v4, "android.media.metadata.TITLE"
+
+    aput-object v4, v2, v3
+
+    const/4 v4, 0x1
+
+    const-string v5, "android.media.metadata.ARTIST"
+
+    aput-object v5, v2, v4
+
+    const/4 v4, 0x2
+
+    const-string v5, "android.media.metadata.DURATION"
+
+    aput-object v5, v2, v4
+
+    const/4 v4, 0x3
+
+    const-string v5, "android.media.metadata.ALBUM"
+
+    aput-object v5, v2, v4
+
+    const/4 v4, 0x4
+
+    const-string v5, "android.media.metadata.AUTHOR"
+
+    aput-object v5, v2, v4
+
+    const/4 v4, 0x5
+
+    const-string v5, "android.media.metadata.WRITER"
+
+    aput-object v5, v2, v4
+
+    const/4 v4, 0x6
+
+    const/16 v5, 0x1a
+
+    invoke-static {v0, v3, v2, v4, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    invoke-static {v1, v2}, Lhh7;->i(I[Ljava/lang/Object;)Lhh7;
+
+    move-result-object v0
+
+    sput-object v0, Li28;->a:Lhh7;
 
     return-void
 .end method
 
-.method public constructor <init>(Ls25;)V
-    .locals 11
+.method public static a(Lf3c;Lx19;J)J
+    .locals 8
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    if-nez p0, :cond_0
 
-    new-instance v0, Lh90;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    const-wide/high16 v1, -0x8000000000000000L
-
-    iput-wide v1, v0, Lh90;->e:J
-
-    const-wide/16 v1, -0x1
-
-    iput-wide v1, v0, Lh90;->g:J
-
-    const-wide/16 v1, 0x0
-
-    iput-wide v1, v0, Lh90;->f:J
-
-    iput-object v0, p0, Li28;->a:Lh90;
-
-    new-instance v1, Landroid/view/animation/AccelerateInterpolator;
-
-    invoke-direct {v1}, Landroid/view/animation/AccelerateInterpolator;-><init>()V
-
-    iput-object v1, p0, Li28;->b:Landroid/view/animation/AccelerateInterpolator;
-
-    const/4 v1, 0x2
-
-    new-array v2, v1, [F
-
-    fill-array-data v2, :array_0
-
-    iput-object v2, p0, Li28;->X:[F
-
-    new-array v3, v1, [F
-
-    fill-array-data v3, :array_1
-
-    iput-object v3, p0, Li28;->Y:[F
-
-    new-array v4, v1, [F
-
-    fill-array-data v4, :array_2
-
-    iput-object v4, p0, Li28;->r0:[F
-
-    new-array v5, v1, [F
-
-    fill-array-data v5, :array_3
-
-    iput-object v5, p0, Li28;->s0:[F
-
-    new-array v1, v1, [F
-
-    fill-array-data v1, :array_4
-
-    iput-object v1, p0, Li28;->t0:[F
-
-    iput-object p1, p0, Li28;->c:Ls25;
-
-    invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v6
-
-    iget v6, v6, Landroid/util/DisplayMetrics;->density:F
-
-    const v7, 0x44c4e000    # 1575.0f
-
-    mul-float/2addr v7, v6
-
-    const/high16 v8, 0x3f000000    # 0.5f
-
-    add-float/2addr v7, v8
-
-    float-to-int v7, v7
-
-    const v9, 0x439d8000    # 315.0f
-
-    mul-float/2addr v6, v9
-
-    add-float/2addr v6, v8
-
-    float-to-int v6, v6
-
-    int-to-float v7, v7
-
-    const/high16 v8, 0x447a0000    # 1000.0f
-
-    div-float/2addr v7, v8
-
-    const/4 v9, 0x0
-
-    aput v7, v1, v9
-
-    const/4 v10, 0x1
-
-    aput v7, v1, v10
-
-    int-to-float v1, v6
-
-    div-float/2addr v1, v8
-
-    aput v1, v5, v9
-
-    aput v1, v5, v10
-
-    iput v10, p0, Li28;->Z:I
-
-    const v1, 0x7f7fffff    # Float.MAX_VALUE
-
-    aput v1, v3, v9
-
-    aput v1, v3, v10
-
-    const v1, 0x3e4ccccd    # 0.2f
-
-    aput v1, v2, v9
-
-    aput v1, v2, v10
-
-    const v1, 0x3a83126f    # 0.001f
-
-    aput v1, v4, v9
-
-    aput v1, v4, v10
-
-    sget v1, Li28;->A0:I
-
-    iput v1, p0, Li28;->q0:I
-
-    const/16 v1, 0x1f4
-
-    iput v1, v0, Lh90;->a:I
-
-    iput v1, v0, Lh90;->b:I
-
-    iput-object p1, p0, Li28;->z0:Ls25;
-
-    return-void
-
-    nop
-
-    :array_0
-    .array-data 4
-        0x0
-        0x0
-    .end array-data
-
-    :array_1
-    .array-data 4
-        0x7f7fffff    # Float.MAX_VALUE
-        0x7f7fffff    # Float.MAX_VALUE
-    .end array-data
-
-    :array_2
-    .array-data 4
-        0x0
-        0x0
-    .end array-data
-
-    :array_3
-    .array-data 4
-        0x0
-        0x0
-    .end array-data
-
-    :array_4
-    .array-data 4
-        0x7f7fffff    # Float.MAX_VALUE
-        0x7f7fffff    # Float.MAX_VALUE
-    .end array-data
-.end method
-
-.method public static b(FFF)F
-    .locals 1
-
-    cmpl-float v0, p0, p2
-
-    if-lez v0, :cond_0
-
-    return p2
-
-    :cond_0
-    cmpg-float p2, p0, p1
-
-    if-gez p2, :cond_1
-
-    return p1
-
-    :cond_1
-    return p0
-.end method
-
-
-# virtual methods
-.method public final a(IFFF)F
-    .locals 3
-
-    iget-object v0, p0, Li28;->X:[F
-
-    aget v0, v0, p1
-
-    iget-object v1, p0, Li28;->Y:[F
-
-    aget v1, v1, p1
-
-    mul-float/2addr v0, p3
-
-    const/4 v2, 0x0
-
-    invoke-static {v0, v2, v1}, Li28;->b(FFF)F
-
-    move-result v0
-
-    invoke-virtual {p0, p2, v0}, Li28;->c(FF)F
-
-    move-result v1
-
-    sub-float/2addr p3, p2
-
-    invoke-virtual {p0, p3, v0}, Li28;->c(FF)F
-
-    move-result p2
-
-    sub-float/2addr p2, v1
-
-    cmpg-float p3, p2, v2
-
-    iget-object v0, p0, Li28;->b:Landroid/view/animation/AccelerateInterpolator;
-
-    if-gez p3, :cond_0
-
-    neg-float p2, p2
-
-    invoke-virtual {v0, p2}, Landroid/view/animation/AccelerateInterpolator;->getInterpolation(F)F
-
-    move-result p2
-
-    neg-float p2, p2
-
-    goto :goto_0
-
-    :cond_0
-    cmpl-float p3, p2, v2
-
-    if-lez p3, :cond_1
-
-    invoke-virtual {v0, p2}, Landroid/view/animation/AccelerateInterpolator;->getInterpolation(F)F
-
-    move-result p2
+    const-wide/16 v0, 0x0
 
     :goto_0
-    const/high16 p3, -0x40800000    # -1.0f
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    invoke-static {p2, p3, v0}, Li28;->b(FFF)F
-
-    move-result p2
+    move-wide v2, v0
 
     goto :goto_1
 
-    :cond_1
-    move p2, v2
+    :cond_0
+    iget-wide v0, p0, Lf3c;->c:J
+
+    goto :goto_0
 
     :goto_1
-    cmpl-float p3, p2, v2
+    invoke-static {p0, p1, p2, p3}, Li28;->c(Lf3c;Lx19;J)J
 
-    if-nez p3, :cond_2
+    move-result-wide v4
 
-    return v2
+    invoke-static {p1}, Li28;->d(Lx19;)J
 
-    :cond_2
-    iget-object v0, p0, Li28;->r0:[F
+    move-result-wide v6
 
-    aget v0, v0, p1
+    const-wide p0, -0x7fffffffffffffffL    # -4.9E-324
 
-    iget-object v1, p0, Li28;->s0:[F
+    cmp-long p0, v6, p0
 
-    aget v1, v1, p1
+    if-nez p0, :cond_1
 
-    iget-object v2, p0, Li28;->t0:[F
+    invoke-static {v4, v5, v2, v3}, Ljava/lang/Math;->max(JJ)J
 
-    aget p1, v2, p1
+    move-result-wide p0
 
-    mul-float/2addr v0, p4
+    return-wide p0
 
-    if-lez p3, :cond_3
+    :cond_1
+    invoke-static/range {v2 .. v7}, Lzxg;->j(JJJ)J
 
-    mul-float/2addr p2, v0
+    move-result-wide p0
 
-    invoke-static {p2, v1, p1}, Li28;->b(FFF)F
-
-    move-result p1
-
-    return p1
-
-    :cond_3
-    neg-float p2, p2
-
-    mul-float/2addr p2, v0
-
-    invoke-static {p2, v1, p1}, Li28;->b(FFF)F
-
-    move-result p1
-
-    neg-float p1, p1
-
-    return p1
+    return-wide p0
 .end method
 
-.method public final c(FF)F
-    .locals 5
+.method public static b(Landroid/graphics/Bitmap;)[B
+    .locals 3
 
-    const/4 v0, 0x0
+    new-instance v0, Ljava/io/ByteArrayOutputStream;
 
-    cmpl-float v1, p2, v0
+    invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    if-nez v1, :cond_0
+    :try_start_0
+    sget-object v1, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p0, v1, v2, v0}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
+
+    invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+
+    move-result-object p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->close()V
+
+    return-object p0
+
+    :catchall_0
+    move-exception p0
+
+    :try_start_1
+    invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->close()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     goto :goto_0
 
+    :catchall_1
+    move-exception v0
+
+    invoke-virtual {p0, v0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+
+    :goto_0
+    throw p0
+.end method
+
+.method public static c(Lf3c;Lx19;J)J
+    .locals 14
+
+    const-wide/16 v0, 0x0
+
+    if-nez p0, :cond_0
+
+    return-wide v0
+
     :cond_0
-    const/4 v1, 0x1
+    iget-wide v2, p0, Lf3c;->b:J
 
-    iget v2, p0, Li28;->Z:I
+    iget v4, p0, Lf3c;->a:I
 
-    if-eqz v2, :cond_2
+    const/4 v5, 0x3
 
-    if-eq v2, v1, :cond_2
+    const-wide v6, -0x7fffffffffffffffL    # -4.9E-324
 
-    const/4 v1, 0x2
+    if-ne v4, v5, :cond_3
 
-    if-eq v2, v1, :cond_1
+    cmp-long v4, p2, v6
+
+    if-nez v4, :cond_1
+
+    const/4 v4, 0x0
 
     goto :goto_0
 
     :cond_1
-    cmpg-float v1, p1, v0
+    invoke-static/range {p2 .. p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    if-gez v1, :cond_4
+    move-result-object v4
 
-    neg-float p2, p2
+    :goto_0
+    iget v5, p0, Lf3c;->d:F
 
-    div-float/2addr p1, p2
+    if-eqz v4, :cond_2
 
-    return p1
+    invoke-virtual {v4}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v8
+
+    goto :goto_1
 
     :cond_2
-    cmpg-float v3, p1, p2
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    if-gez v3, :cond_4
+    move-result-wide v8
 
-    cmpl-float v3, p1, v0
+    iget-wide v10, p0, Lf3c;->Z:J
 
-    const/high16 v4, 0x3f800000    # 1.0f
+    sub-long/2addr v8, v10
 
-    if-ltz v3, :cond_3
+    :goto_1
+    long-to-float p0, v8
 
-    div-float/2addr p1, p2
+    mul-float/2addr v5, p0
 
-    sub-float/2addr v4, p1
+    float-to-long v4, v5
 
-    return v4
+    add-long/2addr v2, v4
 
-    :cond_3
-    iget-boolean p1, p0, Li28;->x0:Z
-
-    if-eqz p1, :cond_4
-
-    if-ne v2, v1, :cond_4
-
-    return v4
-
-    :cond_4
-    :goto_0
-    return v0
-.end method
-
-.method public final d()V
-    .locals 6
-
-    iget-boolean v0, p0, Li28;->v0:Z
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    iput-boolean v1, p0, Li28;->x0:Z
-
-    return-void
-
-    :cond_0
-    invoke-static {}, Landroid/view/animation/AnimationUtils;->currentAnimationTimeMillis()J
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide v2
 
-    iget-object v0, p0, Li28;->a:Lh90;
+    :cond_3
+    move-wide v8, v2
 
-    iget-wide v4, v0, Lh90;->e:J
+    invoke-static {p1}, Li28;->d(Lx19;)J
 
-    sub-long v4, v2, v4
+    move-result-wide v12
 
-    long-to-int v4, v4
+    cmp-long p0, v12, v6
 
-    iget v5, v0, Lh90;->b:I
+    if-nez p0, :cond_4
 
-    if-le v4, v5, :cond_1
+    invoke-static {v0, v1, v8, v9}, Ljava/lang/Math;->max(JJ)J
 
-    move v1, v5
+    move-result-wide v0
 
-    goto :goto_0
+    return-wide v0
 
-    :cond_1
-    if-gez v4, :cond_2
+    :cond_4
+    const-wide/16 v10, 0x0
 
-    goto :goto_0
+    invoke-static/range {v8 .. v13}, Lzxg;->j(JJJ)J
 
-    :cond_2
-    move v1, v4
+    move-result-wide v0
 
-    :goto_0
-    iput v1, v0, Lh90;->i:I
-
-    invoke-virtual {v0, v2, v3}, Lh90;->a(J)F
-
-    move-result v1
-
-    iput v1, v0, Lh90;->h:F
-
-    iput-wide v2, v0, Lh90;->g:J
-
-    return-void
+    return-wide v0
 .end method
 
-.method public final e()Z
-    .locals 8
+.method public static d(Lx19;)J
+    .locals 6
 
-    iget-object v0, p0, Li28;->a:Lh90;
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
-    iget v1, v0, Lh90;->d:F
+    if-eqz p0, :cond_2
 
-    invoke-static {v1}, Ljava/lang/Math;->abs(F)F
+    iget-object v2, p0, Lx19;->a:Landroid/os/Bundle;
+
+    const-string v3, "android.media.metadata.DURATION"
+
+    invoke-virtual {v2, v3}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v2
 
-    div-float/2addr v1, v2
-
-    float-to-int v1, v1
-
-    iget v0, v0, Lh90;->c:F
-
-    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
-
-    const/4 v0, 0x0
-
-    if-eqz v1, :cond_3
-
-    iget-object v2, p0, Li28;->z0:Ls25;
-
-    invoke-virtual {v2}, Landroid/widget/AdapterView;->getCount()I
-
-    move-result v3
-
-    if-nez v3, :cond_0
+    if-nez v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v2}, Landroid/view/ViewGroup;->getChildCount()I
+    invoke-virtual {p0, v3}, Lx19;->a(Ljava/lang/String;)J
 
-    move-result v4
+    move-result-wide v2
 
-    invoke-virtual {v2}, Landroid/widget/AdapterView;->getFirstVisiblePosition()I
+    const-wide/16 v4, 0x0
 
-    move-result v5
+    cmp-long p0, v2, v4
 
-    add-int v6, v5, v4
+    if-gtz p0, :cond_1
 
-    const/4 v7, 0x1
-
-    if-lez v1, :cond_1
-
-    if-lt v6, v3, :cond_2
-
-    sub-int/2addr v4, v7
-
-    invoke-virtual {v2, v4}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/view/View;->getBottom()I
-
-    move-result v1
-
-    invoke-virtual {v2}, Landroid/view/View;->getHeight()I
-
-    move-result v2
-
-    if-gt v1, v2, :cond_2
-
-    goto :goto_0
+    return-wide v0
 
     :cond_1
-    if-gez v1, :cond_3
-
-    if-gtz v5, :cond_2
-
-    invoke-virtual {v2, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/view/View;->getTop()I
-
-    move-result v1
-
-    if-ltz v1, :cond_2
-
-    goto :goto_0
+    return-wide v2
 
     :cond_2
-    return v7
-
-    :cond_3
     :goto_0
-    return v0
+    return-wide v0
 .end method
 
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 8
+.method public static e(I)J
+    .locals 2
 
-    iget-boolean v0, p0, Li28;->y0:Z
+    packed-switch p0, :pswitch_data_0
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Unrecognized FolderType: "
+
+    invoke-static {p0, v1}, Lho7;->f(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_0
+    const-wide/16 v0, 0x6
+
+    return-wide v0
+
+    :pswitch_1
+    const-wide/16 v0, 0x5
+
+    return-wide v0
+
+    :pswitch_2
+    const-wide/16 v0, 0x4
+
+    return-wide v0
+
+    :pswitch_3
+    const-wide/16 v0, 0x3
+
+    return-wide v0
+
+    :pswitch_4
+    const-wide/16 v0, 0x2
+
+    return-wide v0
+
+    :pswitch_5
+    const-wide/16 v0, 0x1
+
+    return-wide v0
+
+    :pswitch_6
+    const-wide/16 v0, 0x0
+
+    return-wide v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static f(J)I
+    .locals 4
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v0, p0, v0
 
     const/4 v1, 0x0
 
     if-nez v0, :cond_0
 
-    goto/16 :goto_1
+    return v1
 
     :cond_0
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getActionMasked()I
+    const-wide/16 v2, 0x1
 
-    move-result v0
+    cmp-long v0, p0, v2
 
-    const/4 v2, 0x3
+    if-nez v0, :cond_1
 
-    const/4 v3, 0x1
+    const/4 p0, 0x1
 
-    if-eqz v0, :cond_2
+    return p0
 
-    if-eq v0, v3, :cond_1
+    :cond_1
+    const-wide/16 v2, 0x2
 
-    const/4 v4, 0x2
+    cmp-long v0, p0, v2
 
-    if-eq v0, v4, :cond_3
+    if-nez v0, :cond_2
 
-    if-eq v0, v2, :cond_1
+    const/4 p0, 0x2
+
+    return p0
+
+    :cond_2
+    const-wide/16 v2, 0x3
+
+    cmp-long v0, p0, v2
+
+    if-nez v0, :cond_3
+
+    const/4 p0, 0x3
+
+    return p0
+
+    :cond_3
+    const-wide/16 v2, 0x4
+
+    cmp-long v0, p0, v2
+
+    if-nez v0, :cond_4
+
+    const/4 p0, 0x4
+
+    return p0
+
+    :cond_4
+    const-wide/16 v2, 0x5
+
+    cmp-long v0, p0, v2
+
+    if-nez v0, :cond_5
+
+    const/4 p0, 0x5
+
+    return p0
+
+    :cond_5
+    const-wide/16 v2, 0x6
+
+    cmp-long p0, p0, v2
+
+    if-nez p0, :cond_6
+
+    const/4 p0, 0x6
+
+    return p0
+
+    :cond_6
+    return v1
+.end method
+
+.method public static g(Lk09;Landroid/graphics/Bitmap;)Lwy8;
+    .locals 16
+
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lk09;->a:Ljava/lang/String;
+
+    const-string v2, ""
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v4, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v1, v0, Lk09;->a:Ljava/lang/String;
+
+    move-object v4, v1
+
+    :goto_0
+    iget-object v1, v0, Lk09;->d:Lw19;
+
+    if-eqz p1, :cond_1
+
+    move-object/from16 v8, p1
 
     goto :goto_1
 
     :cond_1
-    invoke-virtual {p0}, Li28;->d()V
+    const/4 v8, 0x0
 
-    return v1
+    :goto_1
+    iget-object v3, v1, Lw19;->I:Landroid/os/Bundle;
+
+    iget-object v5, v1, Lw19;->a:Ljava/lang/CharSequence;
+
+    iget-object v6, v1, Lw19;->f:Ljava/lang/CharSequence;
+
+    iget-object v7, v1, Lw19;->J:Lwg7;
+
+    iget-object v9, v1, Lw19;->H:Ljava/lang/Integer;
+
+    iget-object v10, v1, Lw19;->p:Ljava/lang/Integer;
+
+    if-eqz v3, :cond_2
+
+    new-instance v11, Landroid/os/Bundle;
+
+    invoke-direct {v11, v3}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
+
+    move-object v3, v11
 
     :cond_2
-    iput-boolean v3, p0, Li28;->w0:Z
+    const/4 v11, -0x1
 
-    iput-boolean v1, p0, Li28;->u0:Z
+    const/4 v13, 0x1
+
+    if-eqz v10, :cond_3
+
+    invoke-virtual {v10}, Ljava/lang/Integer;->intValue()I
+
+    move-result v14
+
+    if-eq v14, v11, :cond_3
+
+    move v14, v13
+
+    goto :goto_2
 
     :cond_3
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
+    const/4 v14, 0x0
 
-    move-result v0
+    :goto_2
+    if-eqz v9, :cond_4
 
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+    move v15, v13
 
-    move-result v4
+    goto :goto_3
 
-    int-to-float v4, v4
+    :cond_4
+    const/4 v15, 0x0
 
-    iget-object v5, p0, Li28;->c:Ls25;
+    :goto_3
+    if-nez v14, :cond_6
 
-    invoke-virtual {v5}, Landroid/view/View;->getWidth()I
+    if-eqz v15, :cond_5
 
-    move-result v6
+    goto :goto_4
 
-    int-to-float v6, v6
+    :cond_5
+    const/4 v14, 0x0
 
-    invoke-virtual {p0, v1, v0, v4, v6}, Li28;->a(IFFF)F
+    goto :goto_6
 
-    move-result v0
+    :cond_6
+    :goto_4
+    if-nez v3, :cond_7
 
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
+    new-instance v3, Landroid/os/Bundle;
 
-    move-result p2
+    invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
 
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+    :cond_7
+    if-eqz v14, :cond_8
+
+    invoke-virtual {v10}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v10}, Ljava/lang/Integer;->intValue()I
+
+    move-result v10
+
+    const/4 v14, 0x0
+
+    invoke-static {v10}, Li28;->e(I)J
+
+    move-result-wide v11
+
+    const-string v10, "android.media.extra.BT_FOLDER_TYPE"
+
+    invoke-virtual {v3, v10, v11, v12}, Landroid/os/BaseBundle;->putLong(Ljava/lang/String;J)V
+
+    goto :goto_5
+
+    :cond_8
+    const/4 v14, 0x0
+
+    :goto_5
+    if-eqz v15, :cond_9
+
+    invoke-virtual {v9}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v9}, Ljava/lang/Integer;->intValue()I
+
+    move-result v9
+
+    int-to-long v9, v9
+
+    const-string v11, "androidx.media3.session.EXTRAS_KEY_MEDIA_TYPE_COMPAT"
+
+    invoke-virtual {v3, v11, v9, v10}, Landroid/os/BaseBundle;->putLong(Ljava/lang/String;J)V
+
+    :cond_9
+    :goto_6
+    invoke-virtual {v7}, Ljava/util/AbstractCollection;->isEmpty()Z
+
+    move-result v9
+
+    if-nez v9, :cond_b
+
+    if-nez v3, :cond_a
+
+    new-instance v3, Landroid/os/Bundle;
+
+    invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
+
+    :cond_a
+    new-instance v9, Ljava/util/ArrayList;
+
+    invoke-direct {v9, v7}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    const-string v7, "androidx.media.utils.extras.CUSTOM_BROWSER_ACTION_ID_LIST"
+
+    invoke-virtual {v3, v7, v9}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
+
+    :cond_b
+    iget-object v7, v1, Lw19;->e:Ljava/lang/CharSequence;
+
+    if-eqz v7, :cond_d
+
+    iget-object v2, v1, Lw19;->g:Ljava/lang/CharSequence;
+
+    if-nez v3, :cond_c
+
+    new-instance v3, Landroid/os/Bundle;
+
+    invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
+
+    :cond_c
+    const-string v9, "androidx.media3.mediadescriptioncompat.title"
+
+    invoke-virtual {v3, v9, v5}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    :goto_7
+    move-object v10, v3
+
+    move-object v5, v7
+
+    move-object v7, v2
+
+    goto/16 :goto_c
+
+    :cond_d
+    const/4 v7, 0x3
+
+    new-array v9, v7, [Ljava/lang/CharSequence;
+
+    move v10, v14
+
+    move v11, v10
+
+    :goto_8
+    const/4 v12, 0x2
+
+    if-ge v10, v7, :cond_16
+
+    sget-object v15, Lx19;->d:[Ljava/lang/String;
+
+    array-length v2, v15
+
+    if-ge v11, v2, :cond_16
+
+    add-int/lit8 v2, v11, 0x1
+
+    aget-object v11, v15, v11
+
+    invoke-virtual {v11}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v11}, Ljava/lang/String;->hashCode()I
+
+    move-result v15
+
+    sparse-switch v15, :sswitch_data_0
+
+    :goto_9
+    const/4 v12, -0x1
+
+    goto :goto_a
+
+    :sswitch_0
+    const-string v12, "android.media.metadata.ALBUM_ARTIST"
+
+    invoke-virtual {v11, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v11
+
+    if-nez v11, :cond_e
+
+    goto :goto_9
+
+    :cond_e
+    const/4 v12, 0x6
+
+    goto :goto_a
+
+    :sswitch_1
+    const-string v12, "android.media.metadata.TITLE"
+
+    invoke-virtual {v11, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v11
+
+    if-nez v11, :cond_f
+
+    goto :goto_9
+
+    :cond_f
+    const/4 v12, 0x5
+
+    goto :goto_a
+
+    :sswitch_2
+    const-string v12, "android.media.metadata.ALBUM"
+
+    invoke-virtual {v11, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v11
+
+    if-nez v11, :cond_10
+
+    goto :goto_9
+
+    :cond_10
+    const/4 v12, 0x4
+
+    goto :goto_a
+
+    :sswitch_3
+    const-string v12, "android.media.metadata.COMPOSER"
+
+    invoke-virtual {v11, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v11
+
+    if-nez v11, :cond_11
+
+    goto :goto_9
+
+    :cond_11
+    move v12, v7
+
+    goto :goto_a
+
+    :sswitch_4
+    const-string v15, "android.media.metadata.DISPLAY_SUBTITLE"
+
+    invoke-virtual {v11, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v11
+
+    if-nez v11, :cond_14
+
+    goto :goto_9
+
+    :sswitch_5
+    const-string v12, "android.media.metadata.WRITER"
+
+    invoke-virtual {v11, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v11
+
+    if-nez v11, :cond_12
+
+    goto :goto_9
+
+    :cond_12
+    move v12, v13
+
+    goto :goto_a
+
+    :sswitch_6
+    const-string v12, "android.media.metadata.ARTIST"
+
+    invoke-virtual {v11, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v11
+
+    if-nez v11, :cond_13
+
+    goto :goto_9
+
+    :cond_13
+    move v12, v14
+
+    :cond_14
+    :goto_a
+    packed-switch v12, :pswitch_data_0
+
+    const/4 v11, 0x0
+
+    goto :goto_b
+
+    :pswitch_0
+    iget-object v11, v1, Lw19;->d:Ljava/lang/CharSequence;
+
+    goto :goto_b
+
+    :pswitch_1
+    move-object v11, v5
+
+    goto :goto_b
+
+    :pswitch_2
+    iget-object v11, v1, Lw19;->c:Ljava/lang/CharSequence;
+
+    goto :goto_b
+
+    :pswitch_3
+    iget-object v11, v1, Lw19;->A:Ljava/lang/CharSequence;
+
+    goto :goto_b
+
+    :pswitch_4
+    move-object v11, v6
+
+    goto :goto_b
+
+    :pswitch_5
+    iget-object v11, v1, Lw19;->z:Ljava/lang/CharSequence;
+
+    goto :goto_b
+
+    :pswitch_6
+    iget-object v11, v1, Lw19;->b:Ljava/lang/CharSequence;
+
+    :goto_b
+    invoke-static {v11}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v12
+
+    if-nez v12, :cond_15
+
+    add-int/lit8 v12, v10, 0x1
+
+    aput-object v11, v9, v10
+
+    move v10, v12
+
+    :cond_15
+    move v11, v2
+
+    goto/16 :goto_8
+
+    :cond_16
+    aget-object v7, v9, v14
+
+    aget-object v6, v9, v13
+
+    aget-object v2, v9, v12
+
+    goto/16 :goto_7
+
+    :goto_c
+    iget-object v9, v1, Lw19;->m:Landroid/net/Uri;
+
+    iget-object v0, v0, Lk09;->f:Ld09;
+
+    iget-object v11, v0, Ld09;->a:Landroid/net/Uri;
+
+    new-instance v3, Lwy8;
+
+    invoke-direct/range {v3 .. v11}, Lwy8;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/Bitmap;Landroid/net/Uri;Landroid/os/Bundle;Landroid/net/Uri;)V
+
+    return-object v3
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x6e7c6d63 -> :sswitch_6
+        -0x48f6a837 -> :sswitch_5
+        0xb9aeaeb -> :sswitch_4
+        0x6467f2f6 -> :sswitch_3
+        0x70098439 -> :sswitch_2
+        0x71142822 -> :sswitch_1
+        0x7522ca0d -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static h(Lwy8;)Lk09;
+    .locals 10
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, p0, Lwy8;->a:Ljava/lang/String;
+
+    new-instance v1, Loz8;
+
+    invoke-direct {v1}, Loz8;-><init>()V
+
+    sget-object v2, Lwg7;->b:Lt76;
+
+    sget-object v2, Lzjd;->o:Lzjd;
+
+    sget-object v2, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    new-instance v2, Lwz8;
+
+    invoke-direct {v2}, Lwz8;-><init>()V
+
+    sget-object v3, Ld09;->d:Ld09;
+
+    if-nez v0, :cond_0
+
+    const-string v0, ""
+
+    :cond_0
+    move-object v4, v0
+
+    new-instance v0, Lu5i;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iget-object v3, p0, Lwy8;->Z:Landroid/net/Uri;
+
+    iput-object v3, v0, Lu5i;->a:Ljava/lang/Object;
+
+    new-instance v9, Ld09;
+
+    invoke-direct {v9, v0}, Ld09;-><init>(Lu5i;)V
+
+    const/4 v0, 0x0
+
+    invoke-static {p0, v0}, Li28;->j(Lwy8;I)Lw19;
+
+    move-result-object p0
+
+    new-instance v3, Lk09;
+
+    new-instance v5, Lsz8;
+
+    invoke-direct {v5, v1}, Lqz8;-><init>(Loz8;)V
+
+    new-instance v7, Lyz8;
+
+    invoke-direct {v7, v2}, Lyz8;-><init>(Lwz8;)V
+
+    if-eqz p0, :cond_1
+
+    :goto_0
+    move-object v8, p0
+
+    goto :goto_1
+
+    :cond_1
+    sget-object p0, Lw19;->K:Lw19;
+
+    goto :goto_0
+
+    :goto_1
+    const/4 v6, 0x0
+
+    invoke-direct/range {v3 .. v9}, Lk09;-><init>(Ljava/lang/String;Lsz8;La09;Lyz8;Lw19;Ld09;)V
+
+    return-object v3
+.end method
+
+.method public static i(Ljava/lang/String;Lx19;I)Lk09;
+    .locals 11
+
+    new-instance v0, Loz8;
+
+    invoke-direct {v0}, Loz8;-><init>()V
+
+    sget-object v1, Lwg7;->b:Lt76;
+
+    sget-object v1, Lzjd;->o:Lzjd;
+
+    sget-object v1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    sget-object v1, Lzjd;->o:Lzjd;
+
+    new-instance v1, Lwz8;
+
+    invoke-direct {v1}, Lwz8;-><init>()V
+
+    sget-object v2, Ld09;->d:Ld09;
+
+    const/4 v3, 0x0
+
+    if-eqz p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move-object p0, v3
+
+    :goto_0
+    const-string v4, "android.media.metadata.MEDIA_URI"
+
+    iget-object v5, p1, Lx19;->a:Landroid/os/Bundle;
+
+    invoke-virtual {v5, v4}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_1
+
+    invoke-interface {v4}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    :cond_1
+    if-eqz v3, :cond_2
+
+    new-instance v2, Lu5i;
+
+    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {v3}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v3
+
+    iput-object v3, v2, Lu5i;->a:Ljava/lang/Object;
+
+    new-instance v3, Ld09;
+
+    invoke-direct {v3, v2}, Ld09;-><init>(Lu5i;)V
+
+    move-object v10, v3
+
+    goto :goto_1
+
+    :cond_2
+    move-object v10, v2
+
+    :goto_1
+    invoke-static {p1, p2}, Li28;->k(Lx19;I)Lw19;
+
+    move-result-object p1
+
+    new-instance v4, Lk09;
+
+    if-eqz p0, :cond_3
+
+    :goto_2
+    move-object v5, p0
+
+    goto :goto_3
+
+    :cond_3
+    const-string p0, ""
+
+    goto :goto_2
+
+    :goto_3
+    new-instance v6, Lsz8;
+
+    invoke-direct {v6, v0}, Lqz8;-><init>(Loz8;)V
+
+    new-instance v8, Lyz8;
+
+    invoke-direct {v8, v1}, Lyz8;-><init>(Lwz8;)V
+
+    if-eqz p1, :cond_4
+
+    :goto_4
+    move-object v9, p1
+
+    goto :goto_5
+
+    :cond_4
+    sget-object p1, Lw19;->K:Lw19;
+
+    goto :goto_4
+
+    :goto_5
+    const/4 v7, 0x0
+
+    invoke-direct/range {v4 .. v10}, Lk09;-><init>(Ljava/lang/String;Lsz8;La09;Lyz8;Lw19;Ld09;)V
+
+    return-object v4
+.end method
+
+.method public static j(Lwy8;I)Lw19;
+    .locals 5
+
+    if-nez p0, :cond_0
+
+    sget-object p0, Lw19;->K:Lw19;
+
+    return-object p0
+
+    :cond_0
+    iget-object v0, p0, Lwy8;->b:Ljava/lang/CharSequence;
+
+    new-instance v1, Lu19;
+
+    invoke-direct {v1}, Lu19;-><init>()V
+
+    iget-object v2, p0, Lwy8;->c:Ljava/lang/CharSequence;
+
+    iput-object v2, v1, Lu19;->f:Ljava/lang/CharSequence;
+
+    iget-object v2, p0, Lwy8;->d:Ljava/lang/CharSequence;
+
+    iput-object v2, v1, Lu19;->g:Ljava/lang/CharSequence;
+
+    iget-object v2, p0, Lwy8;->X:Landroid/net/Uri;
+
+    iput-object v2, v1, Lu19;->m:Landroid/net/Uri;
+
+    const/4 v2, 0x0
+
+    packed-switch p1, :pswitch_data_0
+
+    move-object v3, v2
+
+    goto :goto_0
+
+    :pswitch_0
+    new-instance v3, Lj8d;
+
+    const/high16 v4, -0x40800000    # -1.0f
+
+    invoke-direct {v3, p1, v4}, Lj8d;-><init>(IF)V
+
+    :goto_0
+    invoke-static {v3}, Li28;->o(Lj8d;)Lg8d;
+
+    move-result-object p1
+
+    iput-object p1, v1, Lu19;->i:Lg8d;
+
+    iget-object p1, p0, Lwy8;->o:Landroid/graphics/Bitmap;
+
+    if-eqz p1, :cond_1
+
+    :try_start_0
+    invoke-static {p1}, Li28;->b(Landroid/graphics/Bitmap;)[B
+
+    move-result-object p1
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception p1
+
+    const-string v3, "LegacyConversions"
+
+    const-string v4, "Failed to convert iconBitmap to artworkData"
+
+    invoke-static {v3, v4, p1}, La8i;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    move-object p1, v2
+
+    :goto_1
+    const/4 v3, 0x3
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v1, p1, v3}, Lu19;->b([BLjava/lang/Integer;)V
+
+    :cond_1
+    iget-object p0, p0, Lwy8;->Y:Landroid/os/Bundle;
+
+    if-nez p0, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    new-instance v2, Landroid/os/Bundle;
+
+    invoke-direct {v2, p0}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
+
+    :goto_2
+    if-eqz v2, :cond_3
+
+    const-string p0, "android.media.extra.BT_FOLDER_TYPE"
+
+    invoke-virtual {v2, p0}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
 
     move-result p1
 
-    int-to-float p1, p1
+    if-eqz p1, :cond_3
 
-    invoke-virtual {v5}, Landroid/view/View;->getHeight()I
+    invoke-virtual {v2, p0}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;)J
 
-    move-result v4
+    move-result-wide v3
 
-    int-to-float v4, v4
-
-    invoke-virtual {p0, v3, p2, p1, v4}, Li28;->a(IFFF)F
+    invoke-static {v3, v4}, Li28;->f(J)I
 
     move-result p1
 
-    iget-object p2, p0, Li28;->a:Lh90;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iput v0, p2, Lh90;->c:F
+    move-result-object p1
 
-    iput p1, p2, Lh90;->d:F
+    iput-object p1, v1, Lu19;->p:Ljava/lang/Integer;
 
-    iget-boolean p1, p0, Li28;->x0:Z
+    invoke-virtual {v2, p0}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
 
-    if-nez p1, :cond_6
+    :cond_3
+    sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    invoke-virtual {p0}, Li28;->e()Z
+    iput-object p0, v1, Lu19;->q:Ljava/lang/Boolean;
+
+    if-eqz v2, :cond_4
+
+    const-string p0, "androidx.media3.session.EXTRAS_KEY_MEDIA_TYPE_COMPAT"
+
+    invoke-virtual {v2, p0}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    invoke-virtual {v2, p0}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;)J
+
+    move-result-wide v3
+
+    long-to-int p1, v3
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    iput-object p1, v1, Lu19;->G:Ljava/lang/Integer;
+
+    invoke-virtual {v2, p0}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
+
+    :cond_4
+    if-eqz v2, :cond_5
+
+    const-string p0, "androidx.media.utils.extras.CUSTOM_BROWSER_ACTION_ID_LIST"
+
+    invoke-virtual {v2, p0}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    invoke-virtual {v2, p0}, Landroid/os/Bundle;->getStringArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p0}, Lwg7;->j(Ljava/util/Collection;)Lwg7;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lwg7;->j(Ljava/util/Collection;)Lwg7;
+
+    move-result-object p0
+
+    iput-object p0, v1, Lu19;->I:Lwg7;
+
+    :cond_5
+    if-eqz v2, :cond_6
+
+    const-string p0, "androidx.media3.mediadescriptioncompat.title"
+
+    invoke-virtual {v2, p0}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
 
     move-result p1
 
     if-eqz p1, :cond_6
 
-    iget-object p1, p0, Li28;->o:Lxe;
+    invoke-virtual {v2, p0}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
 
-    if-nez p1, :cond_4
+    move-result-object p1
 
-    new-instance p1, Lxe;
+    iput-object p1, v1, Lu19;->a:Ljava/lang/CharSequence;
 
-    invoke-direct {p1, v2, p0}, Lxe;-><init>(ILjava/lang/Object;)V
+    iput-object v0, v1, Lu19;->e:Ljava/lang/CharSequence;
 
-    iput-object p1, p0, Li28;->o:Lxe;
+    invoke-virtual {v2, p0}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
 
-    :cond_4
-    iput-boolean v3, p0, Li28;->x0:Z
+    goto :goto_3
 
-    iput-boolean v3, p0, Li28;->v0:Z
+    :cond_6
+    iput-object v0, v1, Lu19;->a:Ljava/lang/CharSequence;
 
-    iget-boolean p1, p0, Li28;->u0:Z
+    :goto_3
+    if-eqz v2, :cond_7
 
-    if-nez p1, :cond_5
+    invoke-virtual {v2}, Landroid/os/BaseBundle;->isEmpty()Z
 
-    iget p1, p0, Li28;->q0:I
+    move-result p0
 
-    if-lez p1, :cond_5
+    if-nez p0, :cond_7
 
-    iget-object p2, p0, Li28;->o:Lxe;
+    iput-object v2, v1, Lu19;->H:Landroid/os/Bundle;
 
-    int-to-long v6, p1
+    :cond_7
+    sget-object p0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    sget-object p1, Lhzg;->a:Ljava/util/WeakHashMap;
+    iput-object p0, v1, Lu19;->r:Ljava/lang/Boolean;
 
-    invoke-virtual {v5, p2, v6, v7}, Landroid/view/View;->postOnAnimationDelayed(Ljava/lang/Runnable;J)V
+    new-instance p0, Lw19;
+
+    invoke-direct {p0, v1}, Lw19;-><init>(Lu19;)V
+
+    return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static k(Lx19;I)Lw19;
+    .locals 13
+
+    const-string v0, "Failed to retrieve a key as Rating."
+
+    const-string v1, "MediaMetadata"
+
+    if-nez p0, :cond_0
+
+    sget-object p0, Lw19;->K:Lw19;
+
+    return-object p0
+
+    :cond_0
+    iget-object v2, p0, Lx19;->a:Landroid/os/Bundle;
+
+    new-instance v3, Lu19;
+
+    invoke-direct {v3}, Lu19;-><init>()V
+
+    const-string v4, "android.media.metadata.DISPLAY_TITLE"
+
+    invoke-virtual {v2, v4}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
+
+    move-result-object v4
+
+    const/4 v5, 0x3
+
+    const/4 v6, 0x0
+
+    if-eqz v4, :cond_1
+
+    const-string v7, "android.media.metadata.DISPLAY_SUBTITLE"
+
+    invoke-virtual {v2, v7}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
+
+    move-result-object v7
+
+    const-string v8, "android.media.metadata.DISPLAY_DESCRIPTION"
+
+    invoke-virtual {v2, v8}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
+
+    move-result-object v8
+
+    goto :goto_1
+
+    :cond_1
+    new-array v4, v5, [Ljava/lang/CharSequence;
+
+    move v7, v6
+
+    move v8, v7
+
+    :goto_0
+    if-ge v7, v5, :cond_3
+
+    sget-object v9, Lx19;->d:[Ljava/lang/String;
+
+    array-length v10, v9
+
+    if-ge v8, v10, :cond_3
+
+    add-int/lit8 v10, v8, 0x1
+
+    aget-object v8, v9, v8
+
+    invoke-virtual {v2, v8}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
+
+    move-result-object v8
+
+    invoke-static {v8}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_2
+
+    add-int/lit8 v9, v7, 0x1
+
+    aput-object v8, v4, v7
+
+    move v7, v9
+
+    :cond_2
+    move v8, v10
 
     goto :goto_0
 
+    :cond_3
+    aget-object v7, v4, v6
+
+    const/4 v8, 0x1
+
+    aget-object v8, v4, v8
+
+    const/4 v9, 0x2
+
+    aget-object v4, v4, v9
+
+    move-object v12, v8
+
+    move-object v8, v4
+
+    move-object v4, v7
+
+    move-object v7, v12
+
+    :goto_1
+    const-string v9, "android.media.metadata.TITLE"
+
+    invoke-virtual {v2, v9}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
+
+    move-result-object v9
+
+    if-eqz v9, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    move-object v9, v4
+
+    :goto_2
+    iput-object v9, v3, Lu19;->a:Ljava/lang/CharSequence;
+
+    iput-object v4, v3, Lu19;->e:Ljava/lang/CharSequence;
+
+    iput-object v7, v3, Lu19;->f:Ljava/lang/CharSequence;
+
+    iput-object v8, v3, Lu19;->g:Ljava/lang/CharSequence;
+
+    const-string v4, "android.media.metadata.ARTIST"
+
+    invoke-virtual {v2, v4}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
+
+    move-result-object v4
+
+    iput-object v4, v3, Lu19;->b:Ljava/lang/CharSequence;
+
+    const-string v4, "android.media.metadata.ALBUM"
+
+    invoke-virtual {v2, v4}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
+
+    move-result-object v4
+
+    iput-object v4, v3, Lu19;->c:Ljava/lang/CharSequence;
+
+    const-string v4, "android.media.metadata.ALBUM_ARTIST"
+
+    invoke-virtual {v2, v4}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
+
+    move-result-object v4
+
+    iput-object v4, v3, Lu19;->d:Ljava/lang/CharSequence;
+
+    const-string v4, "android.media.metadata.RATING"
+
+    const/4 v7, 0x0
+
+    :try_start_0
+    invoke-virtual {v2, v4}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+
+    move-result-object v4
+
+    invoke-static {v4}, Lj8d;->a(Landroid/os/Parcelable;)Lj8d;
+
+    move-result-object v4
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_3
+
+    :catch_0
+    move-exception v4
+
+    invoke-static {v1, v0, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    move-object v4, v7
+
+    :goto_3
+    invoke-static {v4}, Li28;->o(Lj8d;)Lg8d;
+
+    move-result-object v4
+
+    iput-object v4, v3, Lu19;->j:Lg8d;
+
+    const-string v4, "android.media.metadata.DURATION"
+
+    invoke-virtual {v2, v4}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_5
+
+    invoke-virtual {p0, v4}, Lx19;->a(Ljava/lang/String;)J
+
+    move-result-wide v8
+
+    const-wide/16 v10, 0x0
+
+    cmp-long v4, v8, v10
+
+    if-ltz v4, :cond_5
+
+    invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Lu19;->c(Ljava/lang/Long;)V
+
     :cond_5
-    iget-object p1, p0, Li28;->o:Lxe;
+    const-string v4, "android.media.metadata.USER_RATING"
 
-    invoke-virtual {p1}, Lxe;->run()V
+    :try_start_1
+    invoke-virtual {v2, v4}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
-    :goto_0
-    iput-boolean v3, p0, Li28;->u0:Z
+    move-result-object v4
+
+    invoke-static {v4}, Lj8d;->a(Landroid/os/Parcelable;)Lj8d;
+
+    move-result-object v0
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+
+    goto :goto_4
+
+    :catch_1
+    move-exception v4
+
+    invoke-static {v1, v0, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    move-object v0, v7
+
+    :goto_4
+    invoke-static {v0}, Li28;->o(Lj8d;)Lg8d;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_6
+
+    iput-object v0, v3, Lu19;->i:Lg8d;
+
+    goto :goto_6
 
     :cond_6
+    packed-switch p1, :pswitch_data_0
+
+    move-object v0, v7
+
+    goto :goto_5
+
+    :pswitch_0
+    new-instance v0, Lj8d;
+
+    const/high16 v4, -0x40800000    # -1.0f
+
+    invoke-direct {v0, p1, v4}, Lj8d;-><init>(IF)V
+
+    :goto_5
+    invoke-static {v0}, Li28;->o(Lj8d;)Lg8d;
+
+    move-result-object p1
+
+    iput-object p1, v3, Lu19;->i:Lg8d;
+
+    :goto_6
+    const-string p1, "android.media.metadata.YEAR"
+
+    invoke-virtual {v2, p1}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    invoke-virtual {p0, p1}, Lx19;->a(Ljava/lang/String;)J
+
+    move-result-wide v8
+
+    long-to-int p1, v8
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    iput-object p1, v3, Lu19;->s:Ljava/lang/Integer;
+
+    :cond_7
+    const-string p1, "android.media.metadata.ALBUM_ART_URI"
+
+    const-string v0, "android.media.metadata.ART_URI"
+
+    const-string v4, "android.media.metadata.DISPLAY_ICON_URI"
+
+    filled-new-array {v4, p1, v0}, [Ljava/lang/String;
+
+    move-result-object p1
+
+    move v0, v6
+
+    :goto_7
+    if-ge v0, v5, :cond_9
+
+    aget-object v4, p1, v0
+
+    invoke-virtual {v2, v4}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_8
+
+    invoke-virtual {v2, v4}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_9
+
+    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    goto :goto_8
+
+    :cond_8
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_7
+
+    :cond_9
+    move-object p1, v7
+
+    :goto_8
+    if-eqz p1, :cond_a
+
+    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p1
+
+    iput-object p1, v3, Lu19;->m:Landroid/net/Uri;
+
+    :cond_a
+    const-string p1, "android.media.metadata.ALBUM_ART"
+
+    const-string v0, "android.media.metadata.ART"
+
+    const-string v4, "android.media.metadata.DISPLAY_ICON"
+
+    filled-new-array {v4, p1, v0}, [Ljava/lang/String;
+
+    move-result-object p1
+
+    :goto_9
+    if-ge v6, v5, :cond_c
+
+    aget-object v0, p1, v6
+
+    invoke-virtual {v2, v0}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_b
+
+    :try_start_2
+    invoke-virtual {v2, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/graphics/Bitmap;
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
+
+    move-object v7, p1
+
+    goto :goto_a
+
+    :catch_2
+    move-exception p1
+
+    const-string v0, "Failed to retrieve a key as Bitmap."
+
+    invoke-static {v1, v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_a
+
+    :cond_b
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_9
+
+    :cond_c
+    :goto_a
+    if-eqz v7, :cond_d
+
+    :try_start_3
+    invoke-static {v7}, Li28;->b(Landroid/graphics/Bitmap;)[B
+
+    move-result-object p1
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-virtual {v3, p1, v0}, Lu19;->b([BLjava/lang/Integer;)V
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_3
+
+    goto :goto_b
+
+    :catch_3
+    move-exception p1
+
+    const-string v0, "LegacyConversions"
+
+    const-string v1, "Failed to convert artworkBitmap to artworkData"
+
+    invoke-static {v0, v1, p1}, La8i;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_d
+    :goto_b
+    const-string p1, "android.media.metadata.BT_FOLDER_TYPE"
+
+    invoke-virtual {v2, p1}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    iput-object v1, v3, Lu19;->q:Ljava/lang/Boolean;
+
+    if-eqz v0, :cond_e
+
+    invoke-virtual {p0, p1}, Lx19;->a(Ljava/lang/String;)J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Li28;->f(J)I
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    iput-object p1, v3, Lu19;->p:Ljava/lang/Integer;
+
+    :cond_e
+    const-string p1, "androidx.media3.session.EXTRAS_KEY_MEDIA_TYPE_COMPAT"
+
+    invoke-virtual {v2, p1}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_f
+
+    invoke-virtual {p0, p1}, Lx19;->a(Ljava/lang/String;)J
+
+    move-result-wide p0
+
+    long-to-int p0, p0
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    iput-object p0, v3, Lu19;->G:Ljava/lang/Integer;
+
+    :cond_f
+    sget-object p0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    iput-object p0, v3, Lu19;->r:Ljava/lang/Boolean;
+
+    new-instance p0, Landroid/os/Bundle;
+
+    invoke-direct {p0, v2}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
+
+    sget-object p1, Li28;->a:Lhh7;
+
+    invoke-virtual {p1}, Lng7;->g()Lrrg;
+
+    move-result-object p1
+
+    :goto_c
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_10
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-virtual {p0, v0}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
+
+    goto :goto_c
+
+    :cond_10
+    invoke-virtual {p0}, Landroid/os/BaseBundle;->isEmpty()Z
+
+    move-result p1
+
+    if-nez p1, :cond_11
+
+    iput-object p0, v3, Lu19;->H:Landroid/os/Bundle;
+
+    :cond_11
+    new-instance p0, Lw19;
+
+    invoke-direct {p0, v3}, Lw19;-><init>(Lu19;)V
+
+    return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static l(Lw19;Ljava/lang/String;Landroid/net/Uri;JLandroid/graphics/Bitmap;)Lx19;
+    .locals 6
+
+    new-instance v0, Lmc5;
+
+    const/16 v1, 0x15
+
+    invoke-direct {v0, v1}, Lmc5;-><init>(I)V
+
+    const-string v1, "android.media.metadata.MEDIA_ID"
+
+    invoke-virtual {v0, v1, p1}, Lmc5;->C(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, p0, Lw19;->a:Ljava/lang/CharSequence;
+
+    iget-object v1, p0, Lw19;->I:Landroid/os/Bundle;
+
+    iget-object v2, p0, Lw19;->p:Ljava/lang/Integer;
+
+    iget-object v3, p0, Lw19;->m:Landroid/net/Uri;
+
+    if-eqz p1, :cond_0
+
+    const-string v4, "android.media.metadata.TITLE"
+
+    invoke-virtual {v0, v4, p1}, Lmc5;->D(Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    :cond_0
+    iget-object p1, p0, Lw19;->e:Ljava/lang/CharSequence;
+
+    if-eqz p1, :cond_1
+
+    const-string v4, "android.media.metadata.DISPLAY_TITLE"
+
+    invoke-virtual {v0, v4, p1}, Lmc5;->D(Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    :cond_1
+    iget-object p1, p0, Lw19;->f:Ljava/lang/CharSequence;
+
+    if-eqz p1, :cond_2
+
+    const-string v4, "android.media.metadata.DISPLAY_SUBTITLE"
+
+    invoke-virtual {v0, v4, p1}, Lmc5;->D(Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    :cond_2
+    iget-object p1, p0, Lw19;->g:Ljava/lang/CharSequence;
+
+    if-eqz p1, :cond_3
+
+    const-string v4, "android.media.metadata.DISPLAY_DESCRIPTION"
+
+    invoke-virtual {v0, v4, p1}, Lmc5;->D(Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    :cond_3
+    iget-object p1, p0, Lw19;->b:Ljava/lang/CharSequence;
+
+    if-eqz p1, :cond_4
+
+    const-string v4, "android.media.metadata.ARTIST"
+
+    invoke-virtual {v0, v4, p1}, Lmc5;->D(Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    :cond_4
+    iget-object p1, p0, Lw19;->c:Ljava/lang/CharSequence;
+
+    if-eqz p1, :cond_5
+
+    const-string v4, "android.media.metadata.ALBUM"
+
+    invoke-virtual {v0, v4, p1}, Lmc5;->D(Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    :cond_5
+    iget-object p1, p0, Lw19;->d:Ljava/lang/CharSequence;
+
+    if-eqz p1, :cond_6
+
+    const-string v4, "android.media.metadata.ALBUM_ARTIST"
+
+    invoke-virtual {v0, v4, p1}, Lmc5;->D(Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    :cond_6
+    iget-object p1, p0, Lw19;->t:Ljava/lang/Integer;
+
+    if-eqz p1, :cond_7
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    int-to-long v4, p1
+
+    const-string p1, "android.media.metadata.YEAR"
+
+    invoke-virtual {v0, v4, v5, p1}, Lmc5;->A(JLjava/lang/String;)V
+
+    :cond_7
+    if-eqz p2, :cond_8
+
+    const-string p1, "android.media.metadata.MEDIA_URI"
+
+    invoke-virtual {p2}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {v0, p1, p2}, Lmc5;->C(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_8
+    if-eqz v3, :cond_9
+
+    const-string p1, "android.media.metadata.DISPLAY_ICON_URI"
+
+    invoke-virtual {v3}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {v0, p1, p2}, Lmc5;->C(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string p1, "android.media.metadata.ALBUM_ART_URI"
+
+    invoke-virtual {v3}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {v0, p1, p2}, Lmc5;->C(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string p1, "android.media.metadata.ART_URI"
+
+    invoke-virtual {v3}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {v0, p1, p2}, Lmc5;->C(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_9
+    if-eqz p5, :cond_a
+
+    const-string p1, "android.media.metadata.DISPLAY_ICON"
+
+    invoke-virtual {v0, p1, p5}, Lmc5;->z(Ljava/lang/String;Landroid/graphics/Bitmap;)V
+
+    const-string p1, "android.media.metadata.ALBUM_ART"
+
+    invoke-virtual {v0, p1, p5}, Lmc5;->z(Ljava/lang/String;Landroid/graphics/Bitmap;)V
+
+    :cond_a
+    if-eqz v2, :cond_b
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    const/4 p2, -0x1
+
+    if-eq p1, p2, :cond_b
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    invoke-static {p1}, Li28;->e(I)J
+
+    move-result-wide p1
+
+    const-string p5, "android.media.metadata.BT_FOLDER_TYPE"
+
+    invoke-virtual {v0, p1, p2, p5}, Lmc5;->A(JLjava/lang/String;)V
+
+    :cond_b
+    const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long p5, p3, p1
+
+    if-nez p5, :cond_c
+
+    iget-object p5, p0, Lw19;->h:Ljava/lang/Long;
+
+    if-eqz p5, :cond_c
+
+    invoke-virtual {p5}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide p3
+
+    :cond_c
+    cmp-long p1, p3, p1
+
+    if-eqz p1, :cond_d
+
+    goto :goto_0
+
+    :cond_d
+    const-wide/16 p3, -0x1
+
+    :goto_0
+    const-string p1, "android.media.metadata.DURATION"
+
+    invoke-virtual {v0, p3, p4, p1}, Lmc5;->A(JLjava/lang/String;)V
+
+    iget-object p1, p0, Lw19;->i:Lg8d;
+
+    invoke-static {p1}, Li28;->p(Lg8d;)Lj8d;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_e
+
+    const-string p2, "android.media.metadata.USER_RATING"
+
+    invoke-virtual {v0, p2, p1}, Lmc5;->B(Ljava/lang/String;Lj8d;)V
+
+    :cond_e
+    iget-object p1, p0, Lw19;->j:Lg8d;
+
+    invoke-static {p1}, Li28;->p(Lg8d;)Lj8d;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_f
+
+    const-string p2, "android.media.metadata.RATING"
+
+    invoke-virtual {v0, p2, p1}, Lmc5;->B(Ljava/lang/String;Lj8d;)V
+
+    :cond_f
+    iget-object p0, p0, Lw19;->H:Ljava/lang/Integer;
+
+    if-eqz p0, :cond_10
+
+    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
+
+    move-result p0
+
+    int-to-long p0, p0
+
+    const-string p2, "androidx.media3.session.EXTRAS_KEY_MEDIA_TYPE_COMPAT"
+
+    invoke-virtual {v0, p0, p1, p2}, Lmc5;->A(JLjava/lang/String;)V
+
+    :cond_10
+    if-eqz v1, :cond_15
+
+    invoke-virtual {v1}, Landroid/os/BaseBundle;->keySet()Ljava/util/Set;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :cond_11
     :goto_1
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_15
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/String;
+
+    invoke-virtual {v1, p1}, Landroid/os/BaseBundle;->get(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_14
+
+    instance-of p3, p2, Ljava/lang/CharSequence;
+
+    if-eqz p3, :cond_12
+
+    goto :goto_2
+
+    :cond_12
+    instance-of p3, p2, Ljava/lang/Byte;
+
+    if-nez p3, :cond_13
+
+    instance-of p3, p2, Ljava/lang/Short;
+
+    if-nez p3, :cond_13
+
+    instance-of p3, p2, Ljava/lang/Integer;
+
+    if-nez p3, :cond_13
+
+    instance-of p3, p2, Ljava/lang/Long;
+
+    if-eqz p3, :cond_11
+
+    :cond_13
+    check-cast p2, Ljava/lang/Number;
+
+    invoke-virtual {p2}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide p2
+
+    invoke-virtual {v0, p2, p3, p1}, Lmc5;->A(JLjava/lang/String;)V
+
+    goto :goto_1
+
+    :cond_14
+    :goto_2
+    check-cast p2, Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, p1, p2}, Lmc5;->D(Ljava/lang/String;Ljava/lang/CharSequence;)V
+
+    goto :goto_1
+
+    :cond_15
+    new-instance p0, Lx19;
+
+    iget-object p1, v0, Lmc5;->b:Ljava/lang/Object;
+
+    check-cast p1, Landroid/os/Bundle;
+
+    invoke-direct {p0, p1}, Lx19;-><init>(Landroid/os/Bundle;)V
+
+    return-object p0
+.end method
+
+.method public static m(Lf3c;Landroid/content/Context;)Landroidx/media3/common/PlaybackException;
+    .locals 10
+
+    const/4 v0, 0x0
+
+    if-eqz p0, :cond_6
+
+    iget v1, p0, Lf3c;->X:I
+
+    iget v2, p0, Lf3c;->a:I
+
+    const/4 v3, 0x7
+
+    if-eq v2, v3, :cond_0
+
+    goto :goto_4
+
+    :cond_0
+    iget-object v2, p0, Lf3c;->Y:Ljava/lang/CharSequence;
+
+    if-nez v2, :cond_1
+
+    invoke-static {v1}, Li28;->r(I)I
+
+    move-result v2
+
+    invoke-static {p1, v2}, Li28;->v(Landroid/content/Context;I)Ljava/lang/String;
+
+    move-result-object v2
+
+    :cond_1
+    iget-object p0, p0, Lf3c;->u0:Landroid/os/Bundle;
+
+    new-instance v3, Landroidx/media3/common/PlaybackException;
+
+    if-eqz v2, :cond_2
+
+    invoke-interface {v2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_2
+    move-object v4, v0
+
+    invoke-static {v1}, Li28;->r(I)I
+
+    move-result p1
+
+    const/4 v0, -0x5
+
+    if-eq p1, v0, :cond_4
+
+    const/4 v0, -0x1
+
+    if-eq p1, v0, :cond_3
+
+    :goto_0
+    move v6, p1
+
+    goto :goto_1
+
+    :cond_3
+    const/16 p1, 0x3e8
+
+    goto :goto_0
+
+    :cond_4
+    const/16 p1, 0x7d0
+
+    goto :goto_0
+
+    :goto_1
+    if-eqz p0, :cond_5
+
+    :goto_2
+    move-object v7, p0
+
+    goto :goto_3
+
+    :cond_5
+    sget-object p0, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
+
+    goto :goto_2
+
+    :goto_3
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v8
+
+    const/4 v5, 0x0
+
+    invoke-direct/range {v3 .. v9}, Landroidx/media3/common/PlaybackException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;ILandroid/os/Bundle;J)V
+
+    return-object v3
+
+    :cond_6
+    :goto_4
+    return-object v0
+.end method
+
+.method public static n(I)I
+    .locals 3
+
+    const/4 v0, 0x0
+
+    if-eqz p0, :cond_1
+
+    const/4 v1, 0x1
+
+    if-eq p0, v1, :cond_0
+
+    const/4 v1, 0x2
+
+    if-eq p0, v1, :cond_0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Unrecognized RepeatMode: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p0, " was converted to `PlaybackStateCompat.REPEAT_MODE_NONE`"
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v1, "LegacyConversions"
+
+    invoke-static {v1, p0}, La8i;->l(Ljava/lang/String;Ljava/lang/String;)V
+
+    return v0
+
+    :cond_0
     return v1
+
+    :cond_1
+    return v0
+.end method
+
+.method public static o(Lj8d;)Lg8d;
+    .locals 6
+
+    if-nez p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget v0, p0, Lj8d;->b:F
+
+    iget v1, p0, Lj8d;->a:I
+
+    const/4 v2, 0x1
+
+    const/high16 v3, 0x3f800000    # 1.0f
+
+    const/4 v4, 0x0
+
+    packed-switch v1, :pswitch_data_0
+
+    :goto_0
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :pswitch_0
+    invoke-virtual {p0}, Lj8d;->c()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    new-instance v2, Leqb;
+
+    const/4 v3, 0x6
+
+    if-ne v1, v3, :cond_1
+
+    invoke-virtual {p0}, Lj8d;->c()Z
+
+    move-result p0
+
+    if-nez p0, :cond_2
+
+    :cond_1
+    const/high16 v0, -0x40800000    # -1.0f
+
+    :cond_2
+    invoke-direct {v2, v0}, Leqb;-><init>(F)V
+
+    return-object v2
+
+    :cond_3
+    new-instance p0, Leqb;
+
+    invoke-direct {p0}, Leqb;-><init>()V
+
+    return-object p0
+
+    :pswitch_1
+    invoke-virtual {p0}, Lj8d;->c()Z
+
+    move-result v0
+
+    const/4 v1, 0x5
+
+    if-eqz v0, :cond_4
+
+    new-instance v0, Lcaf;
+
+    invoke-virtual {p0}, Lj8d;->b()F
+
+    move-result p0
+
+    invoke-direct {v0, v1, p0}, Lcaf;-><init>(IF)V
+
+    return-object v0
+
+    :cond_4
+    new-instance p0, Lcaf;
+
+    invoke-direct {p0, v1}, Lcaf;-><init>(I)V
+
+    return-object p0
+
+    :pswitch_2
+    invoke-virtual {p0}, Lj8d;->c()Z
+
+    move-result v0
+
+    const/4 v1, 0x4
+
+    if-eqz v0, :cond_5
+
+    new-instance v0, Lcaf;
+
+    invoke-virtual {p0}, Lj8d;->b()F
+
+    move-result p0
+
+    invoke-direct {v0, v1, p0}, Lcaf;-><init>(IF)V
+
+    return-object v0
+
+    :cond_5
+    new-instance p0, Lcaf;
+
+    invoke-direct {p0, v1}, Lcaf;-><init>(I)V
+
+    return-object p0
+
+    :pswitch_3
+    invoke-virtual {p0}, Lj8d;->c()Z
+
+    move-result v0
+
+    const/4 v1, 0x3
+
+    if-eqz v0, :cond_6
+
+    new-instance v0, Lcaf;
+
+    invoke-virtual {p0}, Lj8d;->b()F
+
+    move-result p0
+
+    invoke-direct {v0, v1, p0}, Lcaf;-><init>(IF)V
+
+    return-object v0
+
+    :cond_6
+    new-instance p0, Lcaf;
+
+    invoke-direct {p0, v1}, Lcaf;-><init>(I)V
+
+    return-object p0
+
+    :pswitch_4
+    invoke-virtual {p0}, Lj8d;->c()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_9
+
+    new-instance p0, Li8g;
+
+    const/4 v5, 0x2
+
+    if-eq v1, v5, :cond_8
+
+    :cond_7
+    move v2, v4
+
+    goto :goto_1
+
+    :cond_8
+    cmpl-float v0, v0, v3
+
+    if-nez v0, :cond_7
+
+    :goto_1
+    invoke-direct {p0, v2}, Li8g;-><init>(Z)V
+
+    return-object p0
+
+    :cond_9
+    new-instance p0, Li8g;
+
+    invoke-direct {p0}, Li8g;-><init>()V
+
+    return-object p0
+
+    :pswitch_5
+    invoke-virtual {p0}, Lj8d;->c()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_c
+
+    new-instance p0, La27;
+
+    if-eq v1, v2, :cond_b
+
+    :cond_a
+    move v2, v4
+
+    goto :goto_2
+
+    :cond_b
+    cmpl-float v0, v0, v3
+
+    if-nez v0, :cond_a
+
+    :goto_2
+    invoke-direct {p0, v2}, La27;-><init>(Z)V
+
+    return-object p0
+
+    :cond_c
+    new-instance p0, La27;
+
+    invoke-direct {p0}, La27;-><init>()V
+
+    return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static p(Lg8d;)Lj8d;
+    .locals 4
+
+    const/4 v0, 0x0
+
+    if-nez p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {p0}, Li28;->u(Lg8d;)I
+
+    move-result v1
+
+    invoke-virtual {p0}, Lg8d;->b()Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    packed-switch v1, :pswitch_data_0
+
+    return-object v0
+
+    :pswitch_0
+    new-instance p0, Lj8d;
+
+    const/high16 v0, -0x40800000    # -1.0f
+
+    invoke-direct {p0, v1, v0}, Lj8d;-><init>(IF)V
+
+    return-object p0
+
+    :cond_1
+    const/4 v2, 0x0
+
+    const/high16 v3, 0x3f800000    # 1.0f
+
+    packed-switch v1, :pswitch_data_1
+
+    :goto_0
+    return-object v0
+
+    :pswitch_1
+    check-cast p0, Leqb;
+
+    iget p0, p0, Leqb;->b:F
+
+    invoke-static {p0}, Lj8d;->d(F)Lj8d;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_2
+    check-cast p0, Lcaf;
+
+    iget p0, p0, Lcaf;->c:F
+
+    invoke-static {v1, p0}, Lj8d;->e(IF)Lj8d;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_3
+    check-cast p0, Li8g;
+
+    iget-boolean p0, p0, Li8g;->c:Z
+
+    new-instance v0, Lj8d;
+
+    if-eqz p0, :cond_2
+
+    move v2, v3
+
+    :cond_2
+    const/4 p0, 0x2
+
+    invoke-direct {v0, p0, v2}, Lj8d;-><init>(IF)V
+
+    return-object v0
+
+    :pswitch_4
+    check-cast p0, La27;
+
+    iget-boolean p0, p0, La27;->c:Z
+
+    new-instance v0, Lj8d;
+
+    if-eqz p0, :cond_3
+
+    move v2, v3
+
+    :cond_3
+    const/4 p0, 0x1
+
+    invoke-direct {v0, p0, v2}, Lj8d;-><init>(IF)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
+
+    :pswitch_data_1
+    .packed-switch 0x1
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_2
+        :pswitch_2
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public static q(I)I
+    .locals 3
+
+    const/4 v0, -0x1
+
+    const/4 v1, 0x0
+
+    if-eq p0, v0, :cond_1
+
+    if-eqz p0, :cond_1
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_0
+
+    const/4 v0, 0x2
+
+    if-eq p0, v0, :cond_0
+
+    const/4 v2, 0x3
+
+    if-eq p0, v2, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v2, "Unrecognized PlaybackStateCompat.RepeatMode: "
+
+    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p0, " was converted to `Player.REPEAT_MODE_OFF`"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "LegacyConversions"
+
+    invoke-static {v0, p0}, La8i;->l(Ljava/lang/String;Ljava/lang/String;)V
+
+    return v1
+
+    :cond_0
+    return v0
+
+    :cond_1
+    return v1
+.end method
+
+.method public static r(I)I
+    .locals 0
+
+    packed-switch p0, :pswitch_data_0
+
+    const/4 p0, -0x1
+
+    return p0
+
+    :pswitch_0
+    const/16 p0, -0x6d
+
+    return p0
+
+    :pswitch_1
+    const/4 p0, 0x1
+
+    return p0
+
+    :pswitch_2
+    const/16 p0, -0x6b
+
+    return p0
+
+    :pswitch_3
+    const/16 p0, -0x6e
+
+    return p0
+
+    :pswitch_4
+    const/16 p0, -0x6a
+
+    return p0
+
+    :pswitch_5
+    const/16 p0, -0x69
+
+    return p0
+
+    :pswitch_6
+    const/16 p0, -0x68
+
+    return p0
+
+    :pswitch_7
+    const/16 p0, -0x67
+
+    return p0
+
+    :pswitch_8
+    const/16 p0, -0x66
+
+    return p0
+
+    :pswitch_9
+    const/4 p0, -0x6
+
+    return p0
+
+    :pswitch_a
+    const/4 p0, -0x2
+
+    return p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static s(I)Z
+    .locals 2
+
+    const/4 v0, -0x1
+
+    if-eq p0, v0, :cond_2
+
+    if-eqz p0, :cond_2
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v1, 0x2
+
+    if-ne p0, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Unrecognized ShuffleMode: "
+
+    invoke-static {p0, v1}, Lho7;->f(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    :goto_0
+    return v0
+
+    :cond_2
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static t(Lk20;)I
+    .locals 4
+
+    new-instance v0, Landroid/media/AudioAttributes$Builder;
+
+    invoke-direct {v0}, Landroid/media/AudioAttributes$Builder;-><init>()V
+
+    iget v1, p0, Lk20;->a:I
+
+    invoke-virtual {v0, v1}, Landroid/media/AudioAttributes$Builder;->setContentType(I)Landroid/media/AudioAttributes$Builder;
+
+    iget v1, p0, Lk20;->b:I
+
+    invoke-virtual {v0, v1}, Landroid/media/AudioAttributes$Builder;->setFlags(I)Landroid/media/AudioAttributes$Builder;
+
+    iget p0, p0, Lk20;->c:I
+
+    invoke-virtual {v0, p0}, Landroid/media/AudioAttributes$Builder;->setUsage(I)Landroid/media/AudioAttributes$Builder;
+
+    new-instance p0, Lm20;
+
+    invoke-virtual {v0}, Landroid/media/AudioAttributes$Builder;->build()Landroid/media/AudioAttributes;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p0}, Landroid/media/AudioAttributes;->getFlags()I
+
+    move-result v0
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p0}, Landroid/media/AudioAttributes;->getUsage()I
+
+    move-result p0
+
+    and-int/lit8 v1, v0, 0x1
+
+    const/4 v2, 0x3
+
+    const/4 v3, 0x1
+
+    if-ne v1, v3, :cond_0
+
+    const/4 v3, 0x7
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x4
+
+    and-int/2addr v0, v1
+
+    if-ne v0, v1, :cond_1
+
+    const/4 v3, 0x6
+
+    goto :goto_0
+
+    :cond_1
+    packed-switch p0, :pswitch_data_0
+
+    :pswitch_0
+    move v3, v2
+
+    goto :goto_0
+
+    :pswitch_1
+    const/16 v3, 0xa
+
+    goto :goto_0
+
+    :pswitch_2
+    const/4 v3, 0x2
+
+    goto :goto_0
+
+    :pswitch_3
+    const/4 v3, 0x5
+
+    goto :goto_0
+
+    :pswitch_4
+    move v3, v1
+
+    goto :goto_0
+
+    :pswitch_5
+    const/16 v3, 0x8
+
+    goto :goto_0
+
+    :pswitch_6
+    const/4 v3, 0x0
+
+    :goto_0
+    :pswitch_7
+    const/high16 p0, -0x80000000
+
+    if-ne v3, p0, :cond_2
+
+    return v2
+
+    :cond_2
+    return v3
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_3
+        :pswitch_3
+        :pswitch_3
+        :pswitch_3
+        :pswitch_1
+        :pswitch_0
+        :pswitch_7
+    .end packed-switch
+.end method
+
+.method public static u(Lg8d;)I
+    .locals 1
+
+    instance-of v0, p0, La27;
+
+    if-eqz v0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    instance-of v0, p0, Li8g;
+
+    if-eqz v0, :cond_1
+
+    const/4 p0, 0x2
+
+    return p0
+
+    :cond_1
+    instance-of v0, p0, Lcaf;
+
+    if-eqz v0, :cond_3
+
+    check-cast p0, Lcaf;
+
+    iget p0, p0, Lcaf;->b:I
+
+    const/4 v0, 0x3
+
+    if-eq p0, v0, :cond_2
+
+    const/4 v0, 0x4
+
+    if-eq p0, v0, :cond_2
+
+    const/4 v0, 0x5
+
+    if-eq p0, v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    return v0
+
+    :cond_3
+    instance-of p0, p0, Leqb;
+
+    if-eqz p0, :cond_4
+
+    const/4 p0, 0x6
+
+    return p0
+
+    :cond_4
+    :goto_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static v(Landroid/content/Context;I)Ljava/lang/String;
+    .locals 1
+
+    const/16 v0, -0x64
+
+    if-eq p1, v0, :cond_6
+
+    const/4 v0, 0x1
+
+    if-eq p1, v0, :cond_5
+
+    const/4 v0, -0x6
+
+    if-eq p1, v0, :cond_4
+
+    const/4 v0, -0x5
+
+    if-eq p1, v0, :cond_3
+
+    const/4 v0, -0x4
+
+    if-eq p1, v0, :cond_2
+
+    const/4 v0, -0x3
+
+    if-eq p1, v0, :cond_1
+
+    const/4 v0, -0x2
+
+    if-eq p1, v0, :cond_0
+
+    packed-switch p1, :pswitch_data_0
+
+    sget p1, Ly3d;->error_message_fallback:I
+
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_0
+    sget p1, Ly3d;->error_message_authentication_expired:I
+
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_1
+    sget p1, Ly3d;->error_message_premium_account_required:I
+
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_2
+    sget p1, Ly3d;->error_message_concurrent_stream_limit:I
+
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_3
+    sget p1, Ly3d;->error_message_parental_control_restricted:I
+
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_4
+    sget p1, Ly3d;->error_message_not_available_in_region:I
+
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_5
+    sget p1, Ly3d;->error_message_skip_limit_reached:I
+
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_6
+    sget p1, Ly3d;->error_message_setup_required:I
+
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_7
+    sget p1, Ly3d;->error_message_end_of_playlist:I
+
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_8
+    sget p1, Ly3d;->error_message_content_already_playing:I
+
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    sget p1, Ly3d;->error_message_invalid_state:I
+
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_1
+    sget p1, Ly3d;->error_message_bad_value:I
+
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_2
+    sget p1, Ly3d;->error_message_permission_denied:I
+
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_3
+    sget p1, Ly3d;->error_message_io:I
+
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_4
+    sget p1, Ly3d;->error_message_not_supported:I
+
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_5
+    sget p1, Ly3d;->error_message_info_cancelled:I
+
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_6
+    sget p1, Ly3d;->error_message_disconnected:I
+
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_data_0
+    .packed-switch -0x6e
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static w(JJ)Z
+    .locals 0
+
+    and-long/2addr p0, p2
+
+    const-wide/16 p2, 0x0
+
+    cmp-long p0, p0, p2
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
 .end method

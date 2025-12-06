@@ -40,16 +40,16 @@
 
 
 # virtual methods
-.method public final a()Lp28;
+.method public final a()Lla8;
     .locals 2
 
-    invoke-virtual {p0}, Lq28;->getInputData()Lnb4;
+    invoke-virtual {p0}, Lma8;->getInputData()Lyd4;
 
     move-result-object v0
 
-    new-instance v1, Lo28;
+    new-instance v1, Lka8;
 
-    invoke-direct {v1, v0}, Lo28;-><init>(Lnb4;)V
+    invoke-direct {v1, v0}, Lka8;-><init>(Lyd4;)V
 
     return-object v1
 .end method

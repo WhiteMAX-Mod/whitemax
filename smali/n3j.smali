@@ -1,61 +1,60 @@
 .class public final Ln3j;
-.super Lmui;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpqa;
 
-# instance fields
-.field public final transient X:I
 
-.field public final transient c:[Ljava/lang/Object;
-
-.field public final transient o:I
+# static fields
+.field public static final a:Ln3j;
 
 
 # direct methods
-.method public constructor <init>(I[Ljava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+    new-instance v0, Ln3j;
 
-    iput-object p2, p0, Ln3j;->c:[Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Ln3j;->o:I
+    sput-object v0, Ln3j;->a:Ln3j;
 
-    const/4 p1, 0x1
+    new-instance v0, Lmli;
 
-    iput p1, p0, Ln3j;->X:I
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lmli;-><init>(I)V
+
+    const-class v1, Lemi;
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get(I)Ljava/lang/Object;
-    .locals 1
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    iget v0, p0, Ln3j;->X:I
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    invoke-static {p1, v0}, Lpji;->d(II)V
+    move-result-object p1
 
-    add-int/2addr p1, p1
-
-    iget v0, p0, Ln3j;->o:I
-
-    add-int/2addr p1, v0
-
-    iget-object v0, p0, Ln3j;->c:[Ljava/lang/Object;
-
-    aget-object p1, v0, p1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-object p1
-.end method
-
-.method public final size()I
-    .locals 1
-
-    iget v0, p0, Ln3j;->X:I
-
-    return v0
+    throw p1
 .end method

@@ -1,133 +1,144 @@
-.class public final enum Lle2;
-.super Ljava/lang/Enum;
+.class public final synthetic Lle2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Liu3;
 
-# static fields
-.field public static final enum X:Lle2;
 
-.field public static final enum Y:Lle2;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final enum Z:Lle2;
+.field public final synthetic b:I
 
-.field public static final enum a:Lle2;
-
-.field public static final enum b:Lle2;
-
-.field public static final enum c:Lle2;
-
-.field public static final enum o:Lle2;
-
-.field public static final synthetic q0:[Lle2;
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
+.method public synthetic constructor <init>(Lve2;I)V
+    .locals 1
 
-    new-instance v0, Lle2;
+    .line 1
+    const/4 v0, 0x1
 
-    const-string v1, "ACTIVE"
+    iput v0, p0, Lle2;->a:I
 
-    const/4 v2, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p1, p0, Lle2;->c:Ljava/lang/Object;
 
-    sput-object v0, Lle2;->a:Lle2;
-
-    new-instance v1, Lle2;
-
-    const-string v2, "LEFT"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lle2;->b:Lle2;
-
-    new-instance v2, Lle2;
-
-    const-string v3, "LEAVING"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lle2;->c:Lle2;
-
-    new-instance v3, Lle2;
-
-    const-string v4, "REMOVED"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lle2;->o:Lle2;
-
-    new-instance v4, Lle2;
-
-    const-string v5, "REMOVING"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lle2;->X:Lle2;
-
-    new-instance v5, Lle2;
-
-    const-string v6, "CLOSED"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v5, Lle2;->Y:Lle2;
-
-    new-instance v6, Lle2;
-
-    const-string v7, "HIDDEN"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v6, Lle2;->Z:Lle2;
-
-    filled-new-array/range {v0 .. v6}, [Lle2;
-
-    move-result-object v0
-
-    sput-object v0, Lle2;->q0:[Lle2;
+    iput p2, p0, Lle2;->b:I
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lle2;
-    .locals 1
+.method public synthetic constructor <init>(Lve2;Ljava/util/List;I)V
+    .locals 0
 
-    const-class v0, Lle2;
+    .line 2
+    const/4 p1, 0x0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iput p1, p0, Lle2;->a:I
 
-    move-result-object p0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p0, Lle2;
+    iput-object p2, p0, Lle2;->c:Ljava/lang/Object;
 
-    return-object p0
+    iput p3, p0, Lle2;->b:I
+
+    return-void
 .end method
 
-.method public static values()[Lle2;
-    .locals 1
 
-    sget-object v0, Lle2;->q0:[Lle2;
+# virtual methods
+.method public final accept(Ljava/lang/Object;)V
+    .locals 6
 
-    invoke-virtual {v0}, [Lle2;->clone()Ljava/lang/Object;
+    iget v0, p0, Lle2;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lle2;->c:Ljava/lang/Object;
+
+    check-cast v0, Lve2;
+
+    check-cast p1, Laf2;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lme2;
+
+    iget v1, p0, Lle2;->b:I
+
+    invoke-direct {v0, v1}, Lme2;-><init>(I)V
+
+    invoke-virtual {v0, p1}, Lme2;->accept(Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lle2;->c:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/List;
+
+    check-cast p1, Laf2;
+
+    new-instance v1, Lus;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v2}, Lz0f;-><init>(I)V
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    check-cast v0, [Lle2;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    return-object v0
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Long;
+
+    new-instance v3, Lye2;
+
+    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v4
+
+    iput-wide v4, v3, Lye2;->b:J
+
+    iget v4, p0, Lle2;->b:I
+
+    iput v4, v3, Lye2;->a:I
+
+    new-instance v4, Lze2;
+
+    invoke-direct {v4, v3}, Lze2;-><init>(Lye2;)V
+
+    invoke-virtual {v1, v2, v4}, Lz0f;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p1, p1, Laf2;->R:Lus;
+
+    invoke-virtual {p1, v1}, Lus;->putAll(Ljava/util/Map;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

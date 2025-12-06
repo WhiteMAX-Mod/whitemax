@@ -1,157 +1,203 @@
-.class public final enum Lz35;
-.super Ljava/lang/Enum;
+.class public abstract Lz35;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final enum X:Lz35;
+.field public static final a:Z
 
-.field public static final enum Y:Lz35;
+.field public static final b:Ljava/lang/reflect/Method;
 
-.field public static final enum Z:Lz35;
+.field public static final c:Ljava/lang/reflect/Field;
 
-.field public static final enum b:Lz35;
+.field public static final d:Ljava/lang/reflect/Field;
 
-.field public static final enum c:Lz35;
+.field public static final e:Ljava/lang/reflect/Field;
 
-.field public static final enum o:Lz35;
-
-.field public static final synthetic q0:[Lz35;
-
-
-# instance fields
-.field public final a:Ljava/util/concurrent/TimeUnit;
+.field public static final f:Ljava/lang/reflect/Field;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 10
+    .locals 9
 
-    new-instance v0, Lz35;
+    const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+    const/4 v2, 0x0
 
-    const-string v3, "NANOSECONDS"
+    :try_start_0
+    const-string v3, "android.graphics.Insets"
 
-    invoke-direct {v0, v3, v1, v2}, Lz35;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
+    invoke-static {v3}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
-    sput-object v0, Lz35;->b:Lz35;
+    move-result-object v3
 
-    new-instance v1, Lz35;
+    const-class v4, Landroid/graphics/drawable/Drawable;
 
-    const/4 v2, 0x1
+    const-string v5, "getOpticalInsets"
 
-    sget-object v3, Ljava/util/concurrent/TimeUnit;->MICROSECONDS:Ljava/util/concurrent/TimeUnit;
+    invoke-virtual {v4, v5, v1}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    const-string v4, "MICROSECONDS"
+    move-result-object v4
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_9
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_8
+    .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_7
 
-    invoke-direct {v1, v4, v2, v3}, Lz35;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
+    :try_start_1
+    const-string v5, "left"
 
-    new-instance v2, Lz35;
+    invoke-virtual {v3, v5}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
-    const/4 v3, 0x2
+    move-result-object v5
+    :try_end_1
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_1 .. :try_end_1} :catch_6
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_1 .. :try_end_1} :catch_5
+    .catch Ljava/lang/NoSuchFieldException; {:try_start_1 .. :try_end_1} :catch_4
 
-    sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    :try_start_2
+    const-string v6, "top"
 
-    const-string v5, "MILLISECONDS"
+    invoke-virtual {v3, v6}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
-    invoke-direct {v2, v5, v3, v4}, Lz35;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
+    move-result-object v6
+    :try_end_2
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_2 .. :try_end_2} :catch_3
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_2 .. :try_end_2} :catch_2
+    .catch Ljava/lang/NoSuchFieldException; {:try_start_2 .. :try_end_2} :catch_1
 
-    sput-object v2, Lz35;->c:Lz35;
+    :try_start_3
+    const-string v7, "right"
 
-    new-instance v3, Lz35;
+    invoke-virtual {v3, v7}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
-    const/4 v4, 0x3
+    move-result-object v7
+    :try_end_3
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_3 .. :try_end_3} :catch_0
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_3 .. :try_end_3} :catch_0
+    .catch Ljava/lang/NoSuchFieldException; {:try_start_3 .. :try_end_3} :catch_0
 
-    sget-object v5, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    :try_start_4
+    const-string v8, "bottom"
 
-    const-string v6, "SECONDS"
+    invoke-virtual {v3, v8}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
-    invoke-direct {v3, v6, v4, v5}, Lz35;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
+    move-result-object v3
+    :try_end_4
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_4 .. :try_end_4} :catch_a
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_4 .. :try_end_4} :catch_a
+    .catch Ljava/lang/NoSuchFieldException; {:try_start_4 .. :try_end_4} :catch_a
 
-    sput-object v3, Lz35;->o:Lz35;
+    move v8, v0
 
-    new-instance v4, Lz35;
+    goto :goto_5
 
-    const/4 v5, 0x4
+    :catch_0
+    move-object v7, v1
 
-    sget-object v6, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
+    goto :goto_4
 
-    const-string v7, "MINUTES"
+    :catch_1
+    move-object v6, v1
 
-    invoke-direct {v4, v7, v5, v6}, Lz35;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
+    :goto_0
+    move-object v7, v6
 
-    sput-object v4, Lz35;->X:Lz35;
+    goto :goto_4
 
-    new-instance v5, Lz35;
+    :catch_2
+    move-object v6, v1
 
-    const/4 v6, 0x5
+    goto :goto_0
 
-    sget-object v7, Ljava/util/concurrent/TimeUnit;->HOURS:Ljava/util/concurrent/TimeUnit;
+    :catch_3
+    move-object v6, v1
 
-    const-string v8, "HOURS"
+    goto :goto_0
 
-    invoke-direct {v5, v8, v6, v7}, Lz35;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
+    :catch_4
+    move-object v5, v1
 
-    sput-object v5, Lz35;->Y:Lz35;
+    :goto_1
+    move-object v6, v5
 
-    new-instance v6, Lz35;
+    goto :goto_0
 
-    const/4 v7, 0x6
+    :catch_5
+    move-object v5, v1
 
-    sget-object v8, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
+    :goto_2
+    move-object v6, v5
 
-    const-string v9, "DAYS"
+    goto :goto_0
 
-    invoke-direct {v6, v9, v7, v8}, Lz35;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
+    :catch_6
+    move-object v5, v1
 
-    sput-object v6, Lz35;->Z:Lz35;
+    :goto_3
+    move-object v6, v5
 
-    filled-new-array/range {v0 .. v6}, [Lz35;
+    goto :goto_0
 
-    move-result-object v0
+    :catch_7
+    move-object v4, v1
 
-    sput-object v0, Lz35;->q0:[Lz35;
+    move-object v5, v4
 
+    goto :goto_1
+
+    :catch_8
+    move-object v4, v1
+
+    move-object v5, v4
+
+    goto :goto_2
+
+    :catch_9
+    move-object v4, v1
+
+    move-object v5, v4
+
+    goto :goto_3
+
+    :catch_a
+    :goto_4
+    move-object v3, v1
+
+    move v8, v2
+
+    :goto_5
+    if-eqz v8, :cond_0
+
+    sput-object v4, Lz35;->b:Ljava/lang/reflect/Method;
+
+    sput-object v5, Lz35;->c:Ljava/lang/reflect/Field;
+
+    sput-object v6, Lz35;->d:Ljava/lang/reflect/Field;
+
+    sput-object v7, Lz35;->e:Ljava/lang/reflect/Field;
+
+    sput-object v3, Lz35;->f:Ljava/lang/reflect/Field;
+
+    sput-boolean v0, Lz35;->a:Z
+
+    goto :goto_6
+
+    :cond_0
+    sput-object v1, Lz35;->b:Ljava/lang/reflect/Method;
+
+    sput-object v1, Lz35;->c:Ljava/lang/reflect/Field;
+
+    sput-object v1, Lz35;->d:Ljava/lang/reflect/Field;
+
+    sput-object v1, Lz35;->e:Ljava/lang/reflect/Field;
+
+    sput-object v1, Lz35;->f:Ljava/lang/reflect/Field;
+
+    sput-boolean v2, Lz35;->a:Z
+
+    :goto_6
     return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput-object p3, p0, Lz35;->a:Ljava/util/concurrent/TimeUnit;
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lz35;
-    .locals 1
-
-    const-class v0, Lz35;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lz35;
-
-    return-object p0
-.end method
-
-.method public static values()[Lz35;
-    .locals 1
-
-    sget-object v0, Lz35;->q0:[Lz35;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lz35;
-
-    return-object v0
 .end method

@@ -4,6 +4,9 @@
         <item>Pixel 4</item>
         <item>Pixel 4 XL</item>
     </string-array>
+    <string-array name="country_data">
+        <item>KG|Кыргызстан</item>
+    </string-array>
     <array name="crypto_fingerprint_fallback_prefixes" />
     <string-array name="crypto_fingerprint_fallback_vendors">
         <item>samsung</item>

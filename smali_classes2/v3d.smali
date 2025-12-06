@@ -1,112 +1,26 @@
-.class public final Lv3d;
+.class public abstract Lv3d;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lx3d;
 
 
-# instance fields
-.field public final a:Z
+# static fields
+.field public static media_picker_default_toolbar_title:I = 0x7f13064f
 
-.field public final b:Z
+.field public static media_picker_default_toolbar_title_only_photo:I = 0x7f130650
 
+.field public static media_picker_empty_media_data:I = 0x7f130651
 
-# direct methods
-.method public constructor <init>(ZZ)V
-    .locals 0
+.field public static media_type_picker__permissions_dialog__button:I = 0x7f13068b
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static media_type_picker__permissions_dialog__camera_permission:I = 0x7f13068c
 
-    iput-boolean p1, p0, Lv3d;->a:Z
+.field public static media_type_picker__permissions_dialog__gallery_camera_subtitle:I = 0x7f13068d
 
-    iput-boolean p2, p0, Lv3d;->b:Z
+.field public static media_type_picker__permissions_dialog__gallery_camera_title:I = 0x7f13068e
 
-    return-void
-.end method
+.field public static media_type_picker__permissions_dialog__gallery_subtitle:I = 0x7f13068f
 
+.field public static media_type_picker__permissions_dialog__gallery_title:I = 0x7f130690
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.field public static media_type_picker__permissions_dialog__subtitle:I = 0x7f130691
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lv3d;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lv3d;
-
-    iget-boolean v1, p0, Lv3d;->a:Z
-
-    iget-boolean v3, p1, Lv3d;->a:Z
-
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean v1, p0, Lv3d;->b:Z
-
-    iget-boolean p1, p1, Lv3d;->b:Z
-
-    if-eq v1, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-boolean v0, p0, Lv3d;->a:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lv3d;->b:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", isLocked="
-
-    const-string v1, ")"
-
-    const-string v2, "Recording(afterPause="
-
-    iget-boolean v3, p0, Lv3d;->a:Z
-
-    iget-boolean v4, p0, Lv3d;->b:Z
-
-    invoke-static {v2, v3, v0, v4, v1}, Lfd0;->g(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
+.field public static media_type_picker__permissions_dialog__title:I = 0x7f130692

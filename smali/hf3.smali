@@ -1,94 +1,349 @@
-.class public abstract Lhf3;
+.class public abstract synthetic Lhf3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lu1f;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public static synthetic a(I)Ljava/lang/String;
+    .locals 1
 
-    new-instance v0, Lu1f;
+    const/4 v0, 0x1
 
-    const-string v1, "CommonUtils"
+    if-eq p0, v0, :cond_4
 
-    const-string v2, ""
+    const/4 v0, 0x2
 
-    invoke-direct {v0, v1, v2}, Lu1f;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    if-eq p0, v0, :cond_3
 
-    sput-object v0, Lhf3;->a:Lu1f;
+    const/4 v0, 0x3
+
+    if-eq p0, v0, :cond_2
+
+    const/4 v0, 0x4
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x5
+
+    if-ne p0, v0, :cond_0
+
+    const-string p0, "UPDATE"
+
+    return-object p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    throw p0
+
+    :cond_1
+    const-string p0, "ADD"
+
+    return-object p0
+
+    :cond_2
+    const-string p0, "REMOVE"
+
+    return-object p0
+
+    :cond_3
+    const-string p0, "UNBLOCK"
+
+    return-object p0
+
+    :cond_4
+    const-string p0, "BLOCK"
+
+    return-object p0
+.end method
+
+.method public static b(IFI)I
+    .locals 0
+
+    invoke-static {p1}, Ljava/lang/Float;->hashCode(F)I
+
+    move-result p1
+
+    add-int/2addr p1, p0
+
+    mul-int/2addr p1, p2
+
+    return p1
+.end method
+
+.method public static c(ILjava/util/HashMap;Ljava/util/ArrayList;ILjava/lang/String;)Ljava/util/ArrayList;
+    .locals 0
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance p0, Ljava/util/ArrayList;
+
+    invoke-direct {p0, p3}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-virtual {p0, p4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    return-object p0
+.end method
+
+.method public static d(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p2, p0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p4, p0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;)Ljava/lang/String;
-    .locals 3
+.method public static e(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    .locals 0
 
-    :try_start_0
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p4, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    invoke-virtual {p4, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    invoke-virtual {p4, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    return-void
+.end method
 
-    const/4 v1, 0x0
+.method public static f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+    .locals 0
 
-    invoke-virtual {v0, p0, v1}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    iget p0, p0, Landroid/content/pm/PackageInfo;->versionCode:I
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    invoke-virtual {p2, p4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    move-result-object p0
-    :try_end_0
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    return-void
+.end method
+
+.method public static g(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    return-void
+.end method
+
+.method public static h(Ljava/util/HashMap;Ljava/lang/String;Ljava/lang/Integer;ILjava/lang/String;)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p4, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public static synthetic i(I)Ljava/lang/String;
+    .locals 0
+
+    packed-switch p0, :pswitch_data_0
+
+    const/4 p0, 0x0
+
+    throw p0
+
+    :pswitch_0
+    const-string p0, "CENTER_Y"
 
     return-object p0
 
-    :catch_0
-    move-exception p0
+    :pswitch_1
+    const-string p0, "CENTER_X"
 
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    return-object p0
 
-    move-result-object p0
+    :pswitch_2
+    const-string p0, "CENTER"
 
-    const-string v0, "Exception thrown when trying to get app version "
+    return-object p0
 
-    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    :pswitch_3
+    const-string p0, "BASELINE"
 
-    move-result-object p0
+    return-object p0
 
-    sget-object v0, Lhf3;->a:Lu1f;
+    :pswitch_4
+    const-string p0, "BOTTOM"
 
-    iget-object v1, v0, Lu1f;->b:Ljava/lang/Object;
+    return-object p0
 
-    check-cast v1, Ljava/lang/String;
+    :pswitch_5
+    const-string p0, "RIGHT"
 
-    const/4 v2, 0x6
+    return-object p0
 
-    invoke-static {v1, v2}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+    :pswitch_6
+    const-string p0, "TOP"
 
-    move-result v1
+    return-object p0
 
-    if-eqz v1, :cond_0
+    :pswitch_7
+    const-string p0, "LEFT"
 
-    invoke-virtual {v0, p0}, Lu1f;->G(Ljava/lang/String;)Ljava/lang/String;
+    return-object p0
 
-    move-result-object p0
+    :pswitch_8
+    const-string p0, "NONE"
 
-    const-string v0, "CommonUtils"
+    return-object p0
 
-    invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static synthetic j(I)Ljava/lang/String;
+    .locals 0
+
+    packed-switch p0, :pswitch_data_0
+
+    const-string p0, "null"
+
+    return-object p0
+
+    :pswitch_0
+    const-string p0, "WAITING_FOR_CHUNK_STATUS"
+
+    return-object p0
+
+    :pswitch_1
+    const-string p0, "SENDING_DATA"
+
+    return-object p0
+
+    :pswitch_2
+    const-string p0, "SENDING_UPLOAD_REQUEST"
+
+    return-object p0
+
+    :pswitch_3
+    const-string p0, "WAITING_FOR_UPLOAD_STATUS"
+
+    return-object p0
+
+    :pswitch_4
+    const-string p0, "CONNECTED"
+
+    return-object p0
+
+    :pswitch_5
+    const-string p0, "WAITING_FOR_CONNECT"
+
+    return-object p0
+
+    :pswitch_6
+    const-string p0, "INIT"
+
+    return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static synthetic k(I)Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_2
+
+    const/4 v0, 0x2
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x3
+
+    if-eq p0, v0, :cond_0
+
+    const-string p0, "null"
+
+    return-object p0
 
     :cond_0
-    const-string p0, ""
+    const-string p0, "FEMALE"
+
+    return-object p0
+
+    :cond_1
+    const-string p0, "MALE"
+
+    return-object p0
+
+    :cond_2
+    const-string p0, "UNKNOWN"
+
+    return-object p0
+.end method
+
+.method public static synthetic l(I)Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x2
+
+    if-eq p0, v0, :cond_0
+
+    const-string p0, "null"
+
+    return-object p0
+
+    :cond_0
+    const-string p0, "REMOVED"
+
+    return-object p0
+
+    :cond_1
+    const-string p0, "BLOCKED"
 
     return-object p0
 .end method

@@ -1,19 +1,19 @@
-.class public final Lf3b;
+.class public abstract Lf3b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:Lq40;
+# static fields
+.field public static final a:I
 
 
 # direct methods
-.method public constructor <init>(Lq40;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lpyc;->oneme_complaint_action_cancel:I
 
-    iput-object p1, p0, Lf3b;->a:Lq40;
+    sput v0, Lf3b;->a:I
 
     return-void
 .end method

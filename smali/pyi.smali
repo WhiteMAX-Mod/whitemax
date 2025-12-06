@@ -2,97 +2,71 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lgnd;
-
 
 # direct methods
-.method public static b(Lyp4;JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public static a(I[Ljava/lang/Object;)V
     .locals 2
 
-    const-wide/16 v0, 0x0
+    const/4 v0, 0x0
 
-    cmp-long v0, p1, v0
+    :goto_0
+    if-ge v0, p0, :cond_1
 
-    if-gtz v0, :cond_0
+    aget-object v1, p1, v0
+
+    if-eqz v1, :cond_0
+
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Lo32;
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    invoke-static {p3}, Lj1i;->g(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const-string p1, "at index "
 
-    move-result-object p3
+    invoke-static {v0, p1}, Lho7;->f(ILjava/lang/String;)Ljava/lang/String;
 
-    const/4 v1, 0x1
+    move-result-object p1
 
-    invoke-direct {v0, v1, p3}, Lo32;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lo32;->o()V
+    throw p0
 
-    invoke-interface {p0, p1, p2, v0}, Lyp4;->scheduleResumeAfterDelay(JLn32;)V
+    :cond_1
+    return-void
+.end method
 
-    invoke-virtual {v0}, Lo32;->n()Ljava/lang/Object;
+.method public static b(Lsm6;Ljava/lang/Object;Lo0;)V
+    .locals 1
+
+    :try_start_0
+    invoke-static {p0, p1, p2}, Lhni;->d(Lsm6;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p0
 
-    sget-object p1, Lr54;->a:Lr54;
+    invoke-static {p0}, Lhni;->f(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-ne p0, p1, :cond_1
+    move-result-object p0
 
-    return-object p0
+    sget-object p1, Lqqg;->a:Lqqg;
 
-    :cond_1
-    :goto_0
-    sget-object p0, Lccg;->a:Lccg;
+    const/4 v0, 0x0
 
-    return-object p0
-.end method
+    invoke-static {p0, p1, v0}, Lkotlinx/coroutines/internal/DispatchedContinuationKt;->resumeCancellableWith(Lkotlin/coroutines/Continuation;Ljava/lang/Object;Lem6;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    return-void
 
-# virtual methods
-.method public a(Landroid/graphics/Matrix;Landroid/graphics/Rect;IIFF)Landroid/graphics/Matrix;
-    .locals 10
+    :catchall_0
+    move-exception p0
 
-    invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
+    new-instance p1, Lipd;
 
-    move-result v0
+    invoke-direct {p1, p0}, Lipd;-><init>(Ljava/lang/Throwable;)V
 
-    int-to-float v0, v0
+    invoke-interface {p2, p1}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
 
-    int-to-float v1, p3
-
-    div-float v8, v0, v1
-
-    invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    int-to-float v1, p4
-
-    div-float v9, v0, v1
-
-    move-object v1, p0
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move v4, p3
-
-    move v5, p4
-
-    move v6, p5
-
-    move/from16 v7, p6
-
-    invoke-virtual/range {v1 .. v9}, Lpyi;->c(Landroid/graphics/Matrix;Landroid/graphics/Rect;IIFFFF)V
-
-    return-object p1
-.end method
-
-.method public abstract c(Landroid/graphics/Matrix;Landroid/graphics/Rect;IIFFFF)V
+    throw p0
 .end method

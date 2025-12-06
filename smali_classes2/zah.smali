@@ -3,213 +3,452 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final Companion:Lyah;
-
-.field public static final d:[Lur7;
-
-
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Lwah;
 
-.field public final b:Lvc7;
-
-.field public final c:Z
+.field public volatile b:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Lyah;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lzah;->Companion:Lyah;
-
-    sget-object v0, Lvc7;->Companion:Luc7;
-
-    invoke-virtual {v0}, Luc7;->serializer()Lur7;
-
-    move-result-object v0
-
-    const/4 v1, 0x3
-
-    new-array v1, v1, [Lur7;
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    aput-object v3, v1, v2
-
-    const/4 v2, 0x1
-
-    aput-object v0, v1, v2
-
-    const/4 v0, 0x2
-
-    aput-object v3, v1, v0
-
-    sput-object v1, Lzah;->d:[Lur7;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(ILjava/lang/String;Lvc7;Z)V
+.method public constructor <init>(Lwah;)V
     .locals 2
-
-    and-int/lit8 v0, p1, 0x7
-
-    const/4 v1, 0x7
-
-    if-ne v1, v0, :cond_0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lzah;->a:Ljava/lang/String;
+    iput-object p1, p0, Lzah;->a:Lwah;
 
-    iput-object p3, p0, Lzah;->b:Lvc7;
+    const-wide/16 v0, -0x1
 
-    iput-boolean p4, p0, Lzah;->c:Z
+    iput-wide v0, p0, Lzah;->b:J
 
     return-void
-
-    :cond_0
-    sget-object p2, Lxah;->a:Lxah;
-
-    invoke-virtual {p2}, Lxah;->d()Lb3e;
-
-    move-result-object p2
-
-    invoke-static {p1, v1, p2}, Lwui;->c(IILb3e;)V
-
-    const/4 p1, 0x0
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final onEvent(Ly4a;)V
     .locals 4
+    .annotation runtime Lvnf;
+    .end annotation
 
-    const/4 v0, 0x1
+    .line 72
+    iget-wide v0, p1, Lsj0;->a:J
 
-    if-ne p0, p1, :cond_0
+    iget-wide v2, p0, Lzah;->b:J
 
-    return v0
+    cmp-long v0, v0, v2
 
+    if-eqz v0, :cond_0
+
+    return-void
+
+    .line 73
     :cond_0
-    instance-of v1, p1, Lzah;
+    iget-object v0, p0, Lzah;->a:Lwah;
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lzah;
-
-    iget-object v1, p0, Lzah;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lzah;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lzah;->b:Lvc7;
-
-    iget-object v3, p1, Lzah;->b:Lvc7;
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-boolean v1, p0, Lzah;->c:Z
-
-    iget-boolean p1, p1, Lzah;->c:Z
-
-    if-eq v1, p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lzah;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lzah;->b:Lvc7;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-boolean v0, p0, Lzah;->c:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "WebAppHapticFeedbackImpact(requestId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lzah;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", impactStyle="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lzah;->b:Lvc7;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", disableVibrationFallback="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Lzah;->c:Z
-
-    invoke-static {v0, v2, v1}, Ldy1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+    .line 74
+    invoke-virtual {v0}, Lsm;->k()Ltw0;
 
     move-result-object v0
 
-    return-object v0
+    .line 75
+    invoke-virtual {v0, p0}, Ltw0;->f(Ljava/lang/Object;)V
+
+    .line 76
+    iget-object v0, p0, Lzah;->a:Lwah;
+
+    .line 77
+    invoke-virtual {v0}, Lsm;->k()Ltw0;
+
+    move-result-object v0
+
+    .line 78
+    new-instance v1, Lrj0;
+
+    iget-object v2, p0, Lzah;->a:Lwah;
+
+    iget-wide v2, v2, Lsm;->a:J
+
+    iget-object p1, p1, Lrj0;->b:Lpzf;
+
+    invoke-direct {v1, v2, v3, p1}, Lrj0;-><init>(JLpzf;)V
+
+    invoke-virtual {v0, v1}, Ltw0;->c(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final onEvent(Lz4a;)V
+    .locals 21
+    .annotation runtime Lvnf;
+    .end annotation
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    .line 1
+    iget-wide v1, v1, Lsj0;->a:J
+
+    iget-wide v3, v0, Lzah;->b:J
+
+    cmp-long v1, v1, v3
+
+    if-eqz v1, :cond_0
+
+    return-void
+
+    .line 2
+    :cond_0
+    iget-object v1, v0, Lzah;->a:Lwah;
+
+    .line 3
+    invoke-virtual {v1}, Lsm;->k()Ltw0;
+
+    move-result-object v1
+
+    .line 4
+    invoke-virtual {v1, v0}, Ltw0;->f(Ljava/lang/Object;)V
+
+    .line 5
+    iget-object v1, v0, Lzah;->a:Lwah;
+
+    invoke-virtual {v1}, Lsm;->l()Lve2;
+
+    move-result-object v1
+
+    .line 6
+    iget-object v2, v0, Lzah;->a:Lwah;
+
+    iget-wide v2, v2, Lwah;->o:J
+
+    invoke-virtual {v1, v2, v3}, Lve2;->J(J)Lpb2;
+
+    move-result-object v1
+
+    .line 7
+    const-string v2, "attachment.token.expired"
+
+    const/4 v3, 0x0
+
+    if-nez v1, :cond_1
+
+    .line 8
+    iget-object v1, v0, Lzah;->a:Lwah;
+
+    .line 9
+    invoke-virtual {v1}, Lsm;->k()Ltw0;
+
+    move-result-object v1
+
+    .line 10
+    new-instance v4, Lrj0;
+
+    .line 11
+    iget-object v5, v0, Lzah;->a:Lwah;
+
+    iget-wide v5, v5, Lsm;->a:J
+
+    new-instance v7, Lpzf;
+
+    .line 12
+    const-string v8, "chat deleted"
+
+    .line 13
+    invoke-direct {v7, v2, v8, v3}, Lpzf;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 14
+    invoke-direct {v4, v5, v6, v7}, Lrj0;-><init>(JLpzf;)V
+
+    .line 15
+    invoke-virtual {v1, v4}, Ltw0;->c(Ljava/lang/Object;)V
+
+    return-void
+
+    .line 16
+    :cond_1
+    iget-object v4, v0, Lzah;->a:Lwah;
+
+    .line 17
+    invoke-virtual {v4}, Lsm;->n()Lqi9;
+
+    move-result-object v4
+
+    .line 18
+    iget-wide v5, v1, Lpb2;->a:J
+
+    .line 19
+    iget-object v1, v0, Lzah;->a:Lwah;
+
+    iget-wide v7, v1, Lwah;->X:J
+
+    .line 20
+    invoke-virtual {v4, v5, v6, v7, v8}, Lqi9;->i(JJ)Lsi9;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_9
+
+    .line 21
+    iget-object v4, v1, Lsi9;->t0:Ljm9;
+
+    sget-object v5, Ljm9;->c:Ljm9;
+
+    if-ne v4, v5, :cond_2
+
+    goto/16 :goto_3
+
+    .line 22
+    :cond_2
+    iget-object v4, v1, Lsi9;->x0:Ljdc;
+
+    if-nez v4, :cond_3
+
+    .line 23
+    iget-object v4, v0, Lzah;->a:Lwah;
+
+    .line 24
+    invoke-virtual {v4}, Lsm;->k()Ltw0;
+
+    move-result-object v4
+
+    .line 25
+    new-instance v5, Lrj0;
+
+    .line 26
+    iget-object v6, v0, Lzah;->a:Lwah;
+
+    iget-wide v6, v6, Lsm;->a:J
+
+    new-instance v8, Lpzf;
+
+    .line 27
+    const-string v9, "attaches not found"
+
+    .line 28
+    invoke-direct {v8, v2, v9, v3}, Lpzf;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 29
+    invoke-direct {v5, v6, v7, v8}, Lrj0;-><init>(JLpzf;)V
+
+    .line 30
+    invoke-virtual {v4, v5}, Ltw0;->c(Ljava/lang/Object;)V
+
+    .line 31
+    :cond_3
+    iget-object v4, v0, Lzah;->a:Lwah;
+
+    iget-wide v4, v4, Lwah;->d:J
+
+    .line 32
+    iget-object v6, v1, Lsi9;->x0:Ljdc;
+
+    if-nez v6, :cond_4
+
+    move-object v7, v3
+
+    goto :goto_1
+
+    .line 33
+    :cond_4
+    iget-object v6, v6, Ljdc;->b:Ljava/lang/Object;
+
+    check-cast v6, Ljava/util/List;
+
+    .line 34
+    invoke-interface {v6}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v6
+
+    :cond_5
+    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_6
+
+    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v7
+
+    move-object v8, v7
+
+    check-cast v8, Lw10;
+
+    .line 35
+    iget-object v8, v8, Lw10;->d:Lv10;
+
+    .line 36
+    iget-wide v8, v8, Lv10;->a:J
+
+    cmp-long v8, v8, v4
+
+    if-nez v8, :cond_5
+
+    goto :goto_0
+
+    :cond_6
+    move-object v7, v3
+
+    .line 37
+    :goto_0
+    check-cast v7, Lw10;
+
+    :goto_1
+    if-nez v7, :cond_7
+
+    .line 38
+    iget-object v1, v0, Lzah;->a:Lwah;
+
+    .line 39
+    invoke-virtual {v1}, Lsm;->k()Ltw0;
+
+    move-result-object v1
+
+    .line 40
+    new-instance v4, Lrj0;
+
+    .line 41
+    iget-object v5, v0, Lzah;->a:Lwah;
+
+    iget-wide v5, v5, Lsm;->a:J
+
+    new-instance v7, Lpzf;
+
+    .line 42
+    const-string v8, "video deleted"
+
+    .line 43
+    invoke-direct {v7, v2, v8, v3}, Lpzf;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 44
+    invoke-direct {v4, v5, v6, v7}, Lrj0;-><init>(JLpzf;)V
+
+    .line 45
+    invoke-virtual {v1, v4}, Ltw0;->c(Ljava/lang/Object;)V
+
+    return-void
+
+    .line 46
+    :cond_7
+    iget-object v2, v7, Lw10;->d:Lv10;
+
+    .line 47
+    iget-object v4, v0, Lzah;->a:Lwah;
+
+    iget-wide v14, v1, Lpj0;->a:J
+
+    .line 48
+    iget-object v1, v2, Lv10;->n:Ljava/lang/String;
+
+    .line 49
+    new-instance v5, Lwah;
+
+    .line 50
+    iget-wide v6, v4, Lsm;->a:J
+
+    .line 51
+    iget-wide v8, v4, Lwah;->d:J
+
+    .line 52
+    iget-wide v10, v4, Lwah;->o:J
+
+    .line 53
+    iget-wide v12, v4, Lwah;->X:J
+
+    .line 54
+    iget-object v2, v4, Lwah;->Z:Ljava/lang/String;
+
+    .line 55
+    iget-boolean v3, v4, Lwah;->s0:Z
+
+    .line 56
+    iget-boolean v4, v4, Lwah;->t0:Z
+
+    const/16 v20, 0x1
+
+    move-object/from16 v19, v1
+
+    move-object/from16 v16, v2
+
+    move/from16 v17, v3
+
+    move/from16 v18, v4
+
+    .line 57
+    invoke-direct/range {v5 .. v20}, Lwah;-><init>(JJJJJLjava/lang/String;ZZLjava/lang/String;Z)V
+
+    .line 58
+    iget-object v1, v0, Lzah;->a:Lwah;
+
+    .line 59
+    iget-object v1, v1, Lsm;->c:Ltm;
+
+    if-eqz v1, :cond_8
+
+    move-object v3, v1
+
+    goto :goto_2
+
+    :cond_8
+    const/4 v3, 0x0
+
+    .line 60
+    :goto_2
+    iget-object v1, v3, Ltm;->Q:Lk18;
+
+    .line 61
+    invoke-interface {v1}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lo0g;
+
+    .line 62
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v2, 0x0
+
+    .line 63
+    check-cast v1, Lu0g;
+
+    invoke-virtual {v1, v5, v5, v2}, Lu0g;->b(Lsm;Lj1g;Z)J
+
+    return-void
+
+    .line 64
+    :cond_9
+    :goto_3
+    iget-object v1, v0, Lzah;->a:Lwah;
+
+    .line 65
+    invoke-virtual {v1}, Lsm;->k()Ltw0;
+
+    move-result-object v1
+
+    .line 66
+    new-instance v3, Lrj0;
+
+    .line 67
+    iget-object v4, v0, Lzah;->a:Lwah;
+
+    iget-wide v4, v4, Lsm;->a:J
+
+    new-instance v6, Lpzf;
+
+    .line 68
+    const-string v7, "message deleted"
+
+    const/4 v8, 0x0
+
+    .line 69
+    invoke-direct {v6, v2, v7, v8}, Lpzf;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 70
+    invoke-direct {v3, v4, v5, v6}, Lrj0;-><init>(JLpzf;)V
+
+    .line 71
+    invoke-virtual {v1, v3}, Ltw0;->c(Ljava/lang/Object;)V
+
+    return-void
 .end method

@@ -13,6 +13,9 @@
     name = "AttributionListener"
 .end annotation
 
+.annotation runtime Ljava/lang/FunctionalInterface;
+.end annotation
+
 
 # virtual methods
 .method public abstract onReceiveAttribution(Lcom/my/tracker/MyTrackerAttribution;)V

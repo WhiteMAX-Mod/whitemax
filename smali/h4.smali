@@ -1,249 +1,141 @@
-.class public abstract Lh4;
-.super Ljava/lang/Object;
+.class public final Lh4;
+.super Lgpi;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:[Li4;
+.field public final a:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-.field public b:I
+.field public final b:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-.field public c:I
+.field public final c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-.field public o:Licf;
+.field public final d:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+.field public final e:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+
+# direct methods
+.method public constructor <init>(Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lh4;->a:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    iput-object p2, p0, Lh4;->b:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    iput-object p3, p0, Lh4;->c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    iput-object p4, p0, Lh4;->d:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    iput-object p5, p0, Lh4;->e:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final f()Li4;
-    .locals 4
+.method public final a(Lk4;Lg4;Lg4;)Z
+    .locals 2
 
-    monitor-enter p0
+    :cond_0
+    iget-object v0, p0, Lh4;->d:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    :try_start_0
-    iget-object v0, p0, Lh4;->a:[Li4;
+    invoke-virtual {v0, p1, p2, p3}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-nez v0, :cond_0
+    move-result v1
 
-    invoke-virtual {p0}, Lh4;->k()[Li4;
+    if-eqz v1, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    iput-object v0, p0, Lh4;->a:[Li4;
+    if-eq v0, p2, :cond_0
 
-    goto :goto_0
+    const/4 p1, 0x0
 
-    :catchall_0
-    move-exception v0
+    return p1
+.end method
 
-    goto :goto_1
+.method public final b(Lk4;Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 2
 
     :cond_0
-    iget v1, p0, Lh4;->b:I
+    iget-object v0, p0, Lh4;->e:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    array-length v2, v0
+    invoke-virtual {v0, p1, p2, p3}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-lt v1, v2, :cond_1
+    move-result v1
 
-    array-length v1, v0
+    if-eqz v1, :cond_1
 
-    mul-int/lit8 v1, v1, 0x2
+    const/4 p1, 0x1
 
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+    return p1
+
+    :cond_1
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    move-object v1, v0
+    if-eq v0, p2, :cond_0
 
-    check-cast v1, [Li4;
+    const/4 p1, 0x0
 
-    iput-object v1, p0, Lh4;->a:[Li4;
-
-    check-cast v0, [Li4;
-
-    :cond_1
-    :goto_0
-    iget v1, p0, Lh4;->c:I
-
-    :cond_2
-    aget-object v2, v0, v1
-
-    if-nez v2, :cond_3
-
-    invoke-virtual {p0}, Lh4;->j()Li4;
-
-    move-result-object v2
-
-    aput-object v2, v0, v1
-
-    :cond_3
-    add-int/lit8 v1, v1, 0x1
-
-    array-length v3, v0
-
-    if-lt v1, v3, :cond_4
-
-    const/4 v1, 0x0
-
-    :cond_4
-    invoke-virtual {v2, p0}, Li4;->a(Lh4;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    iput v1, p0, Lh4;->c:I
-
-    iget v0, p0, Lh4;->b:I
-
-    const/4 v1, 0x1
-
-    add-int/2addr v0, v1
-
-    iput v0, p0, Lh4;->b:I
-
-    iget-object v0, p0, Lh4;->o:Licf;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    if-eqz v0, :cond_5
-
-    invoke-virtual {v0, v1}, Licf;->z(I)V
-
-    :cond_5
-    return-object v2
-
-    :goto_1
-    monitor-exit p0
-
-    throw v0
+    return p1
 .end method
 
-.method public final i()Lq0f;
-    .locals 5
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lh4;->o:Licf;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Licf;
-
-    iget v1, p0, Lh4;->b:I
-
-    const v2, 0x7fffffff
-
-    const/4 v3, 0x2
-
-    const/4 v4, 0x1
-
-    invoke-direct {v0, v4, v2, v3}, Lnje;-><init>(III)V
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lnje;->h(Ljava/lang/Object;)Z
-
-    iput-object v0, p0, Lh4;->o:Licf;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
+.method public final c(Lk4;Lj4;Lj4;)Z
+    .locals 2
 
     :cond_0
-    :goto_0
-    monitor-exit p0
+    iget-object v0, p0, Lh4;->c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    return-object v0
+    invoke-virtual {v0, p1, p2, p3}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    :goto_1
-    monitor-exit p0
+    move-result v1
 
-    throw v0
-.end method
+    if-eqz v1, :cond_1
 
-.method public abstract j()Li4;
-.end method
+    const/4 p1, 0x1
 
-.method public abstract k()[Li4;
-.end method
-
-.method public final l(Li4;)V
-    .locals 6
-
-    monitor-enter p0
-
-    :try_start_0
-    iget v0, p0, Lh4;->b:I
-
-    const/4 v1, -0x1
-
-    add-int/2addr v0, v1
-
-    iput v0, p0, Lh4;->b:I
-
-    iget-object v2, p0, Lh4;->o:Licf;
-
-    const/4 v3, 0x0
-
-    if-nez v0, :cond_0
-
-    iput v3, p0, Lh4;->c:I
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_2
-
-    :cond_0
-    :goto_0
-    invoke-virtual {p1, p0}, Li4;->b(Lh4;)[Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    array-length v0, p1
-
-    :goto_1
-    if-ge v3, v0, :cond_2
-
-    aget-object v4, p1, v3
-
-    if-eqz v4, :cond_1
-
-    sget-object v5, Lccg;->a:Lccg;
-
-    invoke-interface {v4, v5}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
+    return p1
 
     :cond_1
-    add-int/lit8 v3, v3, 0x1
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    goto :goto_1
+    move-result-object v0
 
-    :cond_2
-    if-eqz v2, :cond_3
+    if-eq v0, p2, :cond_0
 
-    invoke-virtual {v2, v1}, Licf;->z(I)V
+    const/4 p1, 0x0
 
-    :cond_3
+    return p1
+.end method
+
+.method public final f(Lj4;Lj4;)V
+    .locals 1
+
+    iget-object v0, p0, Lh4;->b:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    invoke-virtual {v0, p1, p2}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->lazySet(Ljava/lang/Object;Ljava/lang/Object;)V
+
     return-void
+.end method
 
-    :goto_2
-    monitor-exit p0
+.method public final g(Lj4;Ljava/lang/Thread;)V
+    .locals 1
 
-    throw p1
+    iget-object v0, p0, Lh4;->a:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    invoke-virtual {v0, p1, p2}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->lazySet(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    return-void
 .end method

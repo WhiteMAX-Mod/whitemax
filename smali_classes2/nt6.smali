@@ -4,87 +4,54 @@
 
 
 # instance fields
-.field public final a:[I
+.field public final a:Lk18;
 
 
 # direct methods
-.method public constructor <init>([I)V
+.method public constructor <init>(Lk18;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lnt6;->a:[I
+    iput-object p1, p0, Lnt6;->a:Lk18;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final a(Ldtf;)Ljava/lang/Object;
+    .locals 2
 
-    const/4 v0, 0x1
+    new-instance v0, Ll42;
 
-    if-ne p0, p1, :cond_0
+    invoke-static {p1}, Lhni;->f(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return v0
+    move-result-object p1
 
-    :cond_0
-    instance-of v1, p1, Lnt6;
+    const/4 v1, 0x1
 
-    const/4 v2, 0x0
+    invoke-direct {v0, v1, p1}, Ll42;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    if-nez v1, :cond_1
+    invoke-virtual {v0}, Ll42;->o()V
 
-    return v2
+    iget-object p1, p0, Lnt6;->a:Lk18;
 
-    :cond_1
-    check-cast p1, Lnt6;
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
 
-    iget-object v1, p0, Lnt6;->a:[I
+    move-result-object p1
 
-    iget-object p1, p1, Lnt6;->a:[I
+    check-cast p1, Lof8;
 
-    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    new-instance v1, Lmt6;
 
-    move-result p1
+    invoke-direct {v1, v0}, Lmt6;-><init>(Ll42;)V
 
-    if-nez p1, :cond_2
+    invoke-virtual {p1, v1}, Lof8;->a(Lmf8;)V
 
-    return v2
+    invoke-virtual {v0}, Ll42;->n()Ljava/lang/Object;
 
-    :cond_2
-    return v0
-.end method
+    move-result-object p1
 
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lnt6;->a:[I
-
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    iget-object v0, p0, Lnt6;->a:[I
-
-    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "GradientsLocalColors(promoTextGradient="
-
-    const-string v2, ")"
-
-    invoke-static {v1, v0, v2}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

@@ -2,25 +2,22 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lij2;
-
 
 # instance fields
 .field public final a:J
 
-.field public final b:Ljava/lang/String;
+.field public final b:Lm8a;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;)V
+.method public constructor <init>(JLm8a;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-wide p1, p0, Lej2;->a:J
 
-    iput-object p3, p0, Lej2;->b:Ljava/lang/String;
+    iput-object p3, p0, Lej2;->b:Lm8a;
 
     return-void
 .end method
@@ -59,11 +56,11 @@
     return v2
 
     :cond_2
-    iget-object v1, p0, Lej2;->b:Ljava/lang/String;
+    iget-object v1, p0, Lej2;->b:Lm8a;
 
-    iget-object p1, p1, Lej2;->b:Ljava/lang/String;
+    iget-object p1, p1, Lej2;->b:Lm8a;
 
-    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -86,9 +83,9 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lej2;->b:Ljava/lang/String;
+    iget-object v1, p0, Lej2;->b:Lm8a;
 
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v1}, Lm8a;->hashCode()I
 
     move-result v1
 
@@ -98,19 +95,25 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 5
+    .locals 3
 
-    const-string v0, "DownloadComplete(messageId="
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, ", attachLocalId="
+    const-string v1, "TypingCacheKey(chatId="
 
-    iget-wide v2, p0, Lej2;->a:J
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v4, p0, Lej2;->b:Ljava/lang/String;
+    iget-wide v1, p0, Lej2;->a:J
 
-    invoke-static {v0, v2, v3, v1, v4}, Li57;->m(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    const-string v1, ", notifs="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lej2;->b:Lm8a;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 

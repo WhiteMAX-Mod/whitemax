@@ -1,255 +1,176 @@
 .class public final Lpc2;
-.super Lym;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lrnf;
-.implements Ltib;
 
 
 # instance fields
-.field public final X:Lgg3;
+.field public final a:Landroid/content/Context;
 
-.field public final Y:Ljava/lang/String;
-
-.field public final o:J
+.field public final b:Lt5g;
 
 
 # direct methods
-.method public constructor <init>(JJLgg3;)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lym;-><init>(J)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p3, p0, Lpc2;->o:J
+    iput-object p1, p0, Lpc2;->a:Landroid/content/Context;
 
-    iput-object p5, p0, Lpc2;->X:Lgg3;
+    sget-object p1, Ldpg;->a:Lt5g;
 
-    const-class p1, Lpc2;
+    sget-object p1, Ldpg;->Q:Lt5g;
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lpc2;->Y:Ljava/lang/String;
+    iput-object p1, p0, Lpc2;->b:Lt5g;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final c()I
+.method public static a(ILoc2;)I
     .locals 3
 
-    invoke-virtual {p0}, Lym;->m()Lsd2;
+    const/4 v0, 0x6
 
-    move-result-object v0
+    int-to-float v0, v0
 
-    iget-wide v1, p0, Lpc2;->o:J
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
 
-    invoke-virtual {v0, v1, v2}, Lsd2;->C(J)Lla2;
+    move-result-object v1
 
-    move-result-object v0
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    if-eqz v0, :cond_1
+    move-result-object v1
 
-    iget-object v0, v0, Lla2;->b:Lne2;
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
 
-    iget-object v0, v0, Lne2;->c:Lle2;
+    mul-float/2addr v0, v1
 
-    sget-object v1, Lle2;->o:Lle2;
-
-    if-eq v0, v1, :cond_1
-
-    sget-object v1, Lle2;->X:Lle2;
-
-    if-ne v0, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_1
-    :goto_0
-    const/4 v0, 0x3
-
-    return v0
-.end method
-
-.method public final d(Lpmf;)V
-    .locals 5
-
-    invoke-virtual {p0}, Lym;->l()Lpw0;
-
-    move-result-object p1
-
-    new-instance v0, Lqc2;
-
-    iget-wide v1, p0, Lym;->a:J
-
-    iget-wide v3, p0, Lpc2;->o:J
-
-    invoke-direct {v0, v1, v2, v3, v4}, Lqc2;-><init>(JJ)V
-
-    invoke-virtual {p1, v0}, Lpw0;->c(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final e(Lzlf;)V
-    .locals 2
-
-    iget-object v0, p1, Lzlf;->b:Ljava/lang/String;
-
-    invoke-static {v0}, Lp0j;->a(Ljava/lang/String;)Z
+    invoke-static {v0}, Lkti;->d(F)I
 
     move-result v0
 
-    if-nez v0, :cond_0
+    mul-int/lit8 v0, v0, 0x2
 
-    invoke-virtual {p0}, Lpc2;->f()V
+    const/16 v1, 0x42
 
-    invoke-virtual {p0}, Lym;->l()Lpw0;
+    int-to-float v1, v1
 
-    move-result-object v0
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
 
-    new-instance v1, Ltj0;
+    move-result-object v2
 
-    invoke-direct {v1, p1}, Ltj0;-><init>(Lzlf;)V
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    invoke-virtual {v0, v1}, Lpw0;->c(Ljava/lang/Object;)V
+    move-result-object v2
 
-    :cond_0
-    return-void
-.end method
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
 
-.method public final f()V
-    .locals 3
+    mul-float/2addr v1, v2
 
-    invoke-virtual {p0}, Lym;->s()Ljpf;
+    invoke-static {v1}, Lkti;->d(F)I
 
-    move-result-object v0
+    move-result v1
 
-    iget-wide v1, p0, Lym;->a:J
+    sub-int/2addr p0, v0
 
-    invoke-virtual {v0, v1, v2}, Ljpf;->d(J)V
+    sub-int/2addr p0, v1
 
-    return-void
-.end method
+    iget v0, p1, Loc2;->a:I
 
-.method public final g()[B
-    .locals 3
+    const/4 v1, 0x1
 
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$ChatComplain;
-
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ChatComplain;-><init>()V
-
-    iget-wide v1, p0, Lym;->a:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatComplain;->requestId:J
-
-    iget-wide v1, p0, Lpc2;->o:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatComplain;->chatId:J
-
-    iget-object v1, p0, Lpc2;->X:Lgg3;
-
-    if-nez v1, :cond_0
-
-    const-string v1, ""
+    if-lez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iget-object v1, v1, Lgg3;->a:Ljava/lang/String;
+    iget-boolean v2, p1, Loc2;->c:Z
+
+    if-ne v2, v1, :cond_3
 
     :goto_0
-    iput-object v1, v0, Lru/ok/tamtam/nano/Tasks$ChatComplain;->complaint:Ljava/lang/String;
+    const/16 v2, 0xa
 
-    invoke-static {v0}, Lee9;->toByteArray(Lee9;)[B
+    if-ltz v0, :cond_1
 
-    move-result-object v0
+    if-ge v0, v2, :cond_1
 
-    return-object v0
-.end method
+    const/16 v0, 0x20
 
-.method public final getId()J
-    .locals 2
-
-    iget-wide v0, p0, Lym;->a:J
-
-    return-wide v0
-.end method
-
-.method public final getType()Luib;
-    .locals 1
-
-    sget-object v0, Luib;->H0:Luib;
-
-    return-object v0
-.end method
-
-.method public final h()I
-    .locals 1
-
-    const v0, 0xf4240
-
-    return v0
-.end method
-
-.method public final i()Lmmf;
-    .locals 5
-
-    invoke-virtual {p0}, Lym;->m()Lsd2;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lpc2;->o:J
-
-    invoke-virtual {v0, v1, v2}, Lsd2;->C(J)Lla2;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lpc2;->Y:Ljava/lang/String;
-
-    const-string v2, "chat is null"
-
-    invoke-static {v0, v2}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v1
-
-    :cond_0
-    new-instance v2, Lmu;
-
-    iget-object v0, v0, Lla2;->b:Lne2;
-
-    iget-wide v3, v0, Lne2;->a:J
-
-    const/16 v0, 0x1b
-
-    invoke-direct {v2, v1, v0}, Lmu;-><init>(Lm8b;I)V
-
-    const-string v0, "chatId"
-
-    invoke-virtual {v2, v3, v4, v0}, Lmmf;->u(JLjava/lang/String;)V
-
-    iget-object v0, p0, Lpc2;->X:Lgg3;
-
-    if-eqz v0, :cond_1
-
-    const-string v1, "complaint"
-
-    iget-object v0, v0, Lgg3;->a:Ljava/lang/String;
-
-    invoke-virtual {v2, v1, v0}, Lmmf;->x(Ljava/lang/String;Ljava/lang/String;)V
+    goto :goto_1
 
     :cond_1
-    return-object v2
+    if-gt v2, v0, :cond_2
+
+    const/16 v2, 0x64
+
+    if-ge v0, v2, :cond_2
+
+    const/16 v0, 0x28
+
+    goto :goto_1
+
+    :cond_2
+    const/16 v0, 0x30
+
+    :goto_1
+    int-to-float v0, v0
+
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    invoke-static {v0, v2, p0}, Lu45;->q(FFI)I
+
+    move-result p0
+
+    :cond_3
+    iget-boolean p1, p1, Loc2;->b:Z
+
+    if-ne p1, v1, :cond_4
+
+    const/16 p1, 0x44
+
+    int-to-float p1, p1
+
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    invoke-static {p1, v0, p0}, Lu45;->q(FFI)I
+
+    move-result p0
+
+    :cond_4
+    const/16 p1, 0xc
+
+    int-to-float p1, p1
+
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    invoke-static {p1, v0, p0}, Lu45;->q(FFI)I
+
+    move-result p0
+
+    return p0
 .end method

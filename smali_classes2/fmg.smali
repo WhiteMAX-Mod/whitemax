@@ -1,176 +1,100 @@
-.class public final Lfmg;
-.super Lpmf;
+.class public final synthetic Lfmg;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lmi4;
 
 
 # instance fields
-.field public final X:Ljava/util/List;
+.field public final synthetic X:I
 
-.field public final c:Ljava/lang/String;
+.field public final synthetic Y:I
 
-.field public final o:Ljava/lang/String;
+.field public final synthetic a:Ljava/lang/String;
+
+.field public final synthetic b:Ljava/lang/String;
+
+.field public final synthetic c:Ljava/lang/String;
+
+.field public final synthetic d:Ljava/lang/String;
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;III)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lfmg;->c:Ljava/lang/String;
+    iput-object p1, p0, Lfmg;->a:Ljava/lang/String;
 
-    iput-object p2, p0, Lfmg;->o:Ljava/lang/String;
+    iput-object p2, p0, Lfmg;->b:Ljava/lang/String;
 
-    iput-object p3, p0, Lfmg;->X:Ljava/util/List;
+    iput-object p3, p0, Lfmg;->c:Ljava/lang/String;
+
+    iput-object p4, p0, Lfmg;->d:Ljava/lang/String;
+
+    iput p5, p0, Lfmg;->o:I
+
+    iput p6, p0, Lfmg;->X:I
+
+    iput p7, p0, Lfmg;->Y:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a()Ljava/lang/Object;
+    .locals 9
 
-    const/4 v0, 0x1
+    new-instance v0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;
 
-    if-ne p0, p1, :cond_0
+    new-instance v1, Lup7;
 
-    return v0
+    new-instance v2, Ltp7;
 
-    :cond_0
-    instance-of v1, p1, Lfmg;
+    const-wide/16 v5, 0x0
+
+    const/16 v4, 0xe
+
+    const/4 v3, 0x0
+
+    iget-object v7, p0, Lfmg;->c:Ljava/lang/String;
+
+    const/4 v8, 0x0
+
+    invoke-direct/range {v2 .. v8}, Ltp7;-><init>(IIJLjava/lang/String;Ljava/lang/String;)V
+
+    new-instance v6, Lzkg;
+
+    iget v3, p0, Lfmg;->o:I
+
+    iget v4, p0, Lfmg;->X:I
+
+    iget v5, p0, Lfmg;->Y:I
+
+    invoke-direct {v6, v3, v4, v5}, Lzkg;-><init>(III)V
+
+    const/4 v7, 0x1
+
+    move-object v4, v2
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    iget-object v3, p0, Lfmg;->b:Ljava/lang/String;
 
-    return v2
+    iget-object v5, p0, Lfmg;->d:Ljava/lang/String;
 
-    :cond_1
-    check-cast p1, Lfmg;
+    invoke-direct/range {v1 .. v7}, Lup7;-><init>(Ljava/lang/String;Ljava/lang/String;Ltp7;Ljava/lang/String;Lzkg;I)V
 
-    iget-object v1, p0, Lfmg;->c:Ljava/lang/String;
+    const-string v2, "AUTH"
 
-    iget-object v3, p1, Lfmg;->c:Ljava/lang/String;
+    iget-object v3, p0, Lfmg;->a:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lfmg;->o:Ljava/lang/String;
-
-    iget-object v3, p1, Lfmg;->o:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lfmg;->X:Ljava/util/List;
-
-    iget-object p1, p1, Lfmg;->X:Ljava/util/List;
-
-    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lfmg;->c:Ljava/lang/String;
-
-    if-nez v1, :cond_0
-
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Lfmg;->o:Ljava/lang/String;
-
-    if-nez v2, :cond_1
-
-    move v2, v0
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
-
-    :goto_1
-    add-int/2addr v1, v2
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Lfmg;->X:Ljava/util/List;
-
-    if-nez v2, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    :goto_2
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", internalCallerParams="
-
-    const-string v1, ", error="
-
-    const-string v2, "Response(conversationId="
-
-    iget-object v3, p0, Lfmg;->c:Ljava/lang/String;
-
-    iget-object v4, p0, Lfmg;->o:Ljava/lang/String;
-
-    invoke-static {v2, v3, v0, v4, v1}, Ley1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    iget-object v2, p0, Lfmg;->X:Ljava/util/List;
-
-    invoke-static {v0, v2, v1}, Ldy1;->j(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    invoke-direct {v0, v2, v3, v1}, Lone/me/settings/twofa/password/TwoFACheckPassScreen;-><init>(Ljava/lang/String;Ljava/lang/String;Lup7;)V
 
     return-object v0
 .end method

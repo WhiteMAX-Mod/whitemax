@@ -3,101 +3,69 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.implements Lcm6;
 
 
 # instance fields
-.field public final synthetic X:F
+.field public final synthetic a:I
 
-.field public final synthetic Y:F
+.field public final synthetic b:Lsj8;
 
-.field public final synthetic a:Landroid/animation/ValueAnimator;
-
-.field public final synthetic b:Landroid/view/View;
-
-.field public final synthetic c:F
-
-.field public final synthetic o:F
+.field public final synthetic c:Ljava/util/List;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/animation/ValueAnimator;Landroid/view/View;Lgj8;FFFF)V
+.method public synthetic constructor <init>(Lsj8;Ljava/util/List;I)V
     .locals 0
 
+    iput p3, p0, Ldj8;->a:I
+
+    iput-object p1, p0, Ldj8;->b:Lsj8;
+
+    iput-object p2, p0, Ldj8;->c:Ljava/util/List;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ldj8;->a:Landroid/animation/ValueAnimator;
-
-    iput-object p2, p0, Ldj8;->b:Landroid/view/View;
-
-    iput p4, p0, Ldj8;->c:F
-
-    iput p5, p0, Ldj8;->o:F
-
-    iput p6, p0, Ldj8;->X:F
-
-    iput p7, p0, Ldj8;->Y:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 5
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-    sget p1, Lgj8;->v0:I
+    iget v0, p0, Ldj8;->a:I
 
-    iget-object p1, p0, Ldj8;->a:Landroid/animation/ValueAnimator;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    iget-object v0, p0, Ldj8;->c:Ljava/util/List;
 
-    move-result-object p1
+    iget-object v1, p0, Ldj8;->b:Lsj8;
 
-    check-cast p1, Ljava/lang/Float;
+    iget-object v1, v1, Lsj8;->Y:Ljava/util/concurrent/LinkedBlockingQueue;
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    iget v0, p0, Ldj8;->X:F
-
-    cmpg-float v1, p1, v0
-
-    iget v2, p0, Ldj8;->c:F
-
-    if-gez v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget v1, p0, Ldj8;->Y:F
-
-    cmpl-float v3, p1, v1
-
-    iget v4, p0, Ldj8;->o:F
-
-    if-lez v3, :cond_1
-
-    move v2, v4
-
-    goto :goto_0
-
-    :cond_1
-    sub-float/2addr p1, v0
-
-    sub-float/2addr v1, v0
-
-    div-float/2addr p1, v1
-
-    invoke-static {v4, v2, p1, v2}, Laab;->h(FFFF)F
-
-    move-result v2
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/LinkedBlockingQueue;->put(Ljava/lang/Object;)V
 
     :goto_0
-    iget-object p1, p0, Ldj8;->b:Landroid/view/View;
+    sget-object v0, Lqqg;->a:Lqqg;
 
-    invoke-virtual {p1, v2}, Landroid/view/View;->setAlpha(F)V
+    return-object v0
 
-    return-void
+    :pswitch_0
+    iget-object v0, p0, Ldj8;->c:Ljava/util/List;
+
+    iget-object v1, p0, Ldj8;->b:Lsj8;
+
+    iget-object v1, v1, Lsj8;->o:Ljava/util/concurrent/LinkedBlockingQueue;
+
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/LinkedBlockingQueue;->put(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

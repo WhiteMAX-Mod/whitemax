@@ -1,89 +1,58 @@
-.class public final Lq4d;
-.super Lsgf;
-.source "SourceFile"
-
-# interfaces
-.implements Lzi6;
+.class public abstract Lq4d;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+# static fields
+.field public static oneme_settings_storage_action_one_month:I = 0x7f130a01
 
-.field public final synthetic Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static oneme_settings_storage_action_one_week:I = 0x7f130a02
 
+.field public static oneme_settings_storage_action_six_month:I = 0x7f130a03
 
-# direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
-    .locals 0
+.field public static oneme_settings_storage_action_unlimited:I = 0x7f130a04
 
-    iput-object p2, p0, Lq4d;->Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static oneme_settings_storage_audio_messages:I = 0x7f130a05
 
-    const/4 p2, 0x2
+.field public static oneme_settings_storage_clear_cache:I = 0x7f130a06
 
-    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+.field public static oneme_settings_storage_clear_cache_dialog_action_clear:I = 0x7f130a07
 
-    return-void
-.end method
+.field public static oneme_settings_storage_clear_cache_dialog_all_title:I = 0x7f130a08
 
+.field public static oneme_settings_storage_clear_cache_dialog_audio_title:I = 0x7f130a09
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.field public static oneme_settings_storage_clear_cache_dialog_desc:I = 0x7f130a0a
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+.field public static oneme_settings_storage_clear_cache_dialog_files_title:I = 0x7f130a0b
 
-    invoke-virtual {p0, p1, p2}, Lq4d;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.field public static oneme_settings_storage_clear_cache_dialog_gif_title:I = 0x7f130a0c
 
-    move-result-object p1
+.field public static oneme_settings_storage_clear_cache_dialog_images_title:I = 0x7f130a0d
 
-    check-cast p1, Lq4d;
+.field public static oneme_settings_storage_clear_cache_dialog_music_title:I = 0x7f130a0e
 
-    sget-object p2, Lccg;->a:Lccg;
+.field public static oneme_settings_storage_clear_cache_dialog_stickers_title:I = 0x7f130a0f
 
-    invoke-virtual {p1, p2}, Lq4d;->n(Ljava/lang/Object;)Ljava/lang/Object;
+.field public static oneme_settings_storage_clear_cache_dialog_video_title:I = 0x7f130a10
 
-    return-object p2
-.end method
+.field public static oneme_settings_storage_clear_cache_success_snackbar:I = 0x7f130a11
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.field public static oneme_settings_storage_files:I = 0x7f130a12
 
-    new-instance v0, Lq4d;
+.field public static oneme_settings_storage_gif:I = 0x7f130a13
 
-    iget-object v1, p0, Lq4d;->Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static oneme_settings_storage_images:I = 0x7f130a14
 
-    invoke-direct {v0, p2, v1}, Lq4d;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
+.field public static oneme_settings_storage_music:I = 0x7f130a15
 
-    iput-object p1, v0, Lq4d;->X:Ljava/lang/Object;
+.field public static oneme_settings_storage_screen_data_section:I = 0x7f130a16
 
-    return-object v0
-.end method
+.field public static oneme_settings_storage_screen_preserve_media_cache_desc:I = 0x7f130a17
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.field public static oneme_settings_storage_screen_preserve_media_cache_title:I = 0x7f130a18
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+.field public static oneme_settings_storage_screen_toolbar_title:I = 0x7f130a19
 
-    iget-object p1, p0, Lq4d;->X:Ljava/lang/Object;
+.field public static oneme_settings_storage_stickers:I = 0x7f130a1a
 
-    check-cast p1, Ljava/lang/String;
-
-    iget-object v0, p0, Lq4d;->Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
-
-    iget-object v1, v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->C0:Lo4h;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1, p1}, Lo4h;->setDurationText(Ljava/lang/String;)V
-
-    :cond_0
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->N0()Landroid/widget/TextView;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
-.end method
+.field public static oneme_settings_storage_video:I = 0x7f130a1b

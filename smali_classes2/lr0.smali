@@ -1,64 +1,187 @@
 .class public final Llr0;
-.super Landroid/text/style/ClickableSpan;
+.super Ldtf;
 .source "SourceFile"
+
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public X:J
 
-.field public final b:I
+.field public Y:I
 
-.field public c:Ll08;
+.field public final synthetic Z:Lrr0;
+
+.field public o:Lrr0;
+
+.field public final synthetic s0:J
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;I)V
+.method public constructor <init>(Lrr0;JLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
+    iput-object p1, p0, Llr0;->Z:Lrr0;
 
-    iput-object p1, p0, Llr0;->a:Ljava/lang/String;
+    iput-wide p2, p0, Llr0;->s0:J
 
-    iput p2, p0, Llr0;->b:I
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Llr0;->c:Ll08;
+    check-cast p1, Lf84;
 
-    if-eqz v0, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v1, v0, Ll08;->a:Lq08;
+    invoke-virtual {p0, p1, p2}, Llr0;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v0, v0, Ll08;->b:Ljava/lang/Object;
+    move-result-object p1
 
-    sget-object v2, Lr08;->c:Lr08;
+    check-cast p1, Llr0;
 
-    check-cast v0, Landroid/text/style/ClickableSpan;
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    iget-object v3, p0, Llr0;->a:Ljava/lang/String;
+    invoke-virtual {p1, p2}, Llr0;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v1, p1, v3, v2, v0}, Lq08;->b(Landroid/view/View;Ljava/lang/String;Lr08;Landroid/text/style/ClickableSpan;)V
+    move-result-object p1
 
-    :cond_0
-    return-void
+    return-object p1
 .end method
 
-.method public final updateDrawState(Landroid/text/TextPaint;)V
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    iget v0, p0, Llr0;->b:I
+    new-instance p1, Llr0;
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
+    iget-object v0, p0, Llr0;->Z:Lrr0;
 
-    const/4 v0, 0x1
+    iget-wide v1, p0, Llr0;->s0:J
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
+    invoke-direct {p1, v0, v1, v2, p2}, Llr0;-><init>(Lrr0;JLkotlin/coroutines/Continuation;)V
 
-    return-void
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    iget v0, p0, Llr0;->Y:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    iget-wide v0, p0, Llr0;->X:J
+
+    iget-object v2, p0, Llr0;->o:Lrr0;
+
+    :try_start_0
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object v2, p0, Llr0;->Z:Lrr0;
+
+    iget-wide v3, p0, Llr0;->s0:J
+
+    :try_start_1
+    new-instance p1, Lkr0;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, v2, v3, v4, v0}, Lkr0;-><init>(Lrr0;JI)V
+
+    iput-object v2, p0, Llr0;->o:Lrr0;
+
+    iput-wide v3, p0, Llr0;->X:J
+
+    iput v1, p0, Llr0;->Y:I
+
+    sget-object v0, Lbd5;->a:Lbd5;
+
+    invoke-static {v0, p1, p0}, Lvmi;->i(Lx74;Lcm6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_1
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    sget-object v0, Lg84;->a:Lg84;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    return-object p1
+
+    :goto_0
+    move-wide v0, v3
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception p1
+
+    goto :goto_0
+
+    :goto_1
+    iget-object v2, v2, Lrr0;->c:Ljava/lang/String;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "deleteBotCommandsForChat: exception when delete botCommands for, chatId = "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2, v0, p1}, Lwqi;->p(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
+
+    :goto_2
+    throw p1
 .end method

@@ -1,31 +1,25 @@
-.class public final Lrm4;
+.class public abstract Lrm4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:I
+# static fields
+.field public static final a:I
 
 
 # direct methods
-.method public constructor <init>(IIII)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
-    iput p1, p0, Lrm4;->a:I
+    move-result-object v0
 
-    iput p2, p0, Lrm4;->b:I
+    invoke-virtual {v0}, Ljava/lang/Runtime;->availableProcessors()I
 
-    iput p3, p0, Lrm4;->c:I
+    move-result v0
 
-    iput p4, p0, Lrm4;->d:I
+    sput v0, Lrm4;->a:I
 
     return-void
 .end method

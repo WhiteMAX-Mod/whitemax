@@ -1,95 +1,207 @@
-.class public final enum Lyw6;
-.super Ljava/lang/Enum;
+.class public final Lyw6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum b:Lyw6;
-
-.field public static final synthetic c:[Lyw6;
-
-
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:[I
+
+.field public final b:[I
+
+.field public final c:[I
+
+.field public final d:[I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>([I[I[I[I)V
+    .locals 0
 
-    new-instance v0, Lyw6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "MD5"
+    iput-object p1, p0, Lyw6;->a:[I
+
+    iput-object p2, p0, Lyw6;->b:[I
+
+    iput-object p3, p0, Lyw6;->c:[I
+
+    iput-object p4, p0, Lyw6;->d:[I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lyw6;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2, v1}, Lyw6;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    if-nez v1, :cond_1
 
-    sput-object v0, Lyw6;->b:Lyw6;
+    return v2
 
-    new-instance v1, Lyw6;
+    :cond_1
+    check-cast p1, Lyw6;
 
-    const/4 v2, 0x1
+    iget-object v1, p0, Lyw6;->a:[I
 
-    const-string v3, "SHA-1"
+    iget-object v3, p1, Lyw6;->a:[I
 
-    const-string v4, "SHA1"
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-direct {v1, v4, v2, v3}, Lyw6;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    move-result v1
 
-    new-instance v2, Lyw6;
+    if-nez v1, :cond_2
 
-    const/4 v3, 0x2
+    return v2
 
-    const-string v4, "SHA-256"
+    :cond_2
+    iget-object v1, p0, Lyw6;->b:[I
 
-    const-string v5, "SHA256"
+    iget-object v3, p1, Lyw6;->b:[I
 
-    invoke-direct {v2, v5, v3, v4}, Lyw6;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    filled-new-array {v0, v1, v2}, [Lyw6;
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lyw6;->c:[I
+
+    iget-object v3, p1, Lyw6;->c:[I
+
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lyw6;->d:[I
+
+    iget-object p1, p1, Lyw6;->d:[I
+
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    return v2
+
+    :cond_5
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lyw6;->a:[I
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lyw6;->b:[I
+
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, p0, Lyw6;->c:[I
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lyw6;->d:[I
+
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 7
+
+    iget-object v0, p0, Lyw6;->a:[I
+
+    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lyw6;->c:[Lyw6;
+    iget-object v1, p0, Lyw6;->b:[I
 
-    return-void
-.end method
+    invoke-static {v1}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
-    .locals 0
+    move-result-object v1
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iget-object v2, p0, Lyw6;->c:[I
 
-    iput-object p3, p0, Lyw6;->a:Ljava/lang/String;
+    invoke-static {v2}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
-    return-void
-.end method
+    move-result-object v2
 
-.method public static valueOf(Ljava/lang/String;)Lyw6;
-    .locals 1
+    iget-object v3, p0, Lyw6;->d:[I
 
-    const-class v0, Lyw6;
+    invoke-static {v3}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    move-result-object v3
 
-    move-result-object p0
+    const-string v4, ", iconContainerGradient="
 
-    check-cast p0, Lyw6;
+    const-string v5, ", paleBlueGradient="
 
-    return-object p0
-.end method
+    const-string v6, "GradientsBannerDKBackgroundColors(fantasyGradient="
 
-.method public static values()[Lyw6;
-    .locals 1
-
-    sget-object v0, Lyw6;->c:[Lyw6;
-
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-static {v6, v0, v4, v1, v5}, Lwy1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    check-cast v0, [Lyw6;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", vibrantGradient="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

@@ -1,179 +1,141 @@
-.class public final synthetic Lfah;
-.super Ljava/lang/Object;
+.class public final Lfah;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Lhn6;
+.implements Lsm6;
 
 
-# static fields
-.field public static final a:Lfah;
+# instance fields
+.field public final synthetic X:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-.field private static final descriptor:Lb3e;
+.field public final synthetic Y:Landroid/view/View;
+
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Landroid/view/View;Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
+    .locals 0
 
-    new-instance v0, Lfah;
+    iput-object p3, p0, Lfah;->X:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lfah;->Y:Landroid/view/View;
 
-    sput-object v0, Lfah;->a:Lfah;
+    const/4 p1, 0x2
 
-    new-instance v1, Levb;
-
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.download.WebAppDownloadFileResponse"
-
-    const/4 v3, 0x2
-
-    invoke-direct {v1, v2, v0, v3}, Levb;-><init>(Ljava/lang/String;Lhn6;I)V
-
-    const-string v0, "requestId"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Levb;->k(Ljava/lang/String;Z)V
-
-    const-string v0, "status"
-
-    invoke-virtual {v1, v0, v2}, Levb;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Lfah;->descriptor:Lb3e;
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ld9;)Ljava/lang/Object;
-    .locals 9
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    sget-object v0, Lfah;->descriptor:Lb3e;
+    check-cast p1, Lf84;
 
-    invoke-virtual {p1, v0}, Ld9;->k(Lb3e;)Ld9;
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lfah;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    const/4 v1, 0x1
+    check-cast p1, Lfah;
 
-    const/4 v2, 0x0
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    const/4 v3, 0x0
+    invoke-virtual {p1, p2}, Lfah;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move v5, v1
-
-    move v6, v2
-
-    move-object v4, v3
-
-    :goto_0
-    if-eqz v5, :cond_3
-
-    invoke-virtual {p1, v0}, Ld9;->q(Lb3e;)I
-
-    move-result v7
-
-    const/4 v8, -0x1
-
-    if-eq v7, v8, :cond_2
-
-    if-eqz v7, :cond_1
-
-    if-ne v7, v1, :cond_0
-
-    invoke-virtual {p1, v0, v1}, Ld9;->w(Lb3e;I)Ljava/lang/String;
-
-    move-result-object v4
-
-    or-int/lit8 v6, v6, 0x2
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
-
-    invoke-direct {p1, v7}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
-
-    throw p1
-
-    :cond_1
-    invoke-virtual {p1, v0, v2}, Ld9;->w(Lb3e;I)Ljava/lang/String;
-
-    move-result-object v3
-
-    or-int/lit8 v6, v6, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    move v5, v2
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {p1, v0}, Ld9;->z(Lb3e;)V
-
-    new-instance p1, Lhah;
-
-    invoke-direct {p1, v6, v3, v4}, Lhah;-><init>(ILjava/lang/String;Ljava/lang/String;)V
+    move-result-object p1
 
     return-object p1
 .end method
 
-.method public final b(Lo24;Ljava/lang/Object;)V
-    .locals 3
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    check-cast p2, Lhah;
+    new-instance p1, Lfah;
 
-    sget-object v0, Lfah;->descriptor:Lb3e;
+    iget-object v0, p0, Lfah;->X:Lone/me/chatscreen/videomsg/VideoMessageWidget;
 
-    invoke-virtual {p1, v0}, Lo24;->b(Lb3e;)Lo24;
+    iget-object v1, p0, Lfah;->Y:Landroid/view/View;
 
-    move-result-object p1
+    invoke-direct {p1, v1, p2, v0}, Lfah;-><init>(Landroid/view/View;Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
 
-    iget-object v1, p2, Lhah;->a:Ljava/lang/String;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p1, v0, v2, v1}, Lo24;->l(Lb3e;ILjava/lang/String;)V
-
-    const/4 v1, 0x1
-
-    iget-object p2, p2, Lhah;->b:Ljava/lang/String;
-
-    invoke-virtual {p1, v0, v1, p2}, Lo24;->l(Lb3e;ILjava/lang/String;)V
-
-    invoke-virtual {p1}, Lo24;->m()V
-
-    return-void
+    return-object p1
 .end method
 
-.method public final c()[Lur7;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    const/4 v0, 0x2
+    iget v0, p0, Lfah;->o:I
 
-    new-array v0, v0, [Lur7;
-
-    sget-object v1, Lvaf;->a:Lvaf;
-
-    const/4 v2, 0x0
-
-    aput-object v1, v0, v2
+    sget-object v1, Lqqg;->a:Lqqg;
 
     const/4 v2, 0x1
 
-    aput-object v1, v0, v2
+    if-eqz v0, :cond_1
+
+    if-ne v0, v2, :cond_0
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    return-object v1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lfah;->X:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+
+    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj48;
+
+    move-result-object v0
+
+    new-instance v3, Leah;
+
+    iget-object v4, p0, Lfah;->Y:Landroid/view/View;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v3, v4, v5, p1}, Leah;-><init>(Landroid/view/View;Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
+
+    iput v2, p0, Lfah;->o:I
+
+    invoke-interface {v0}, Lj48;->p()Ll48;
+
+    move-result-object p1
+
+    sget-object v0, Ll38;->o:Ll38;
+
+    invoke-static {p1, v0, v3, p0}, Lb8j;->b(Ll48;Ll38;Lsm6;Ldtf;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lg84;->a:Lg84;
+
+    if-ne p1, v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    move-object p1, v1
+
+    :goto_0
+    if-ne p1, v0, :cond_3
 
     return-object v0
-.end method
 
-.method public final d()Lb3e;
-    .locals 1
-
-    sget-object v0, Lfah;->descriptor:Lb3e;
-
-    return-object v0
+    :cond_3
+    return-object v1
 .end method

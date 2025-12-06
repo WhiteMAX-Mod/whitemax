@@ -2,57 +2,89 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lh8e;
+
 
 # instance fields
-.field public final a:Ldof;
+.field public final X:Z
+
+.field public final Y:J
+
+.field public final Z:I
+
+.field public final a:J
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
+
+.field public final o:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Leof;)V
-    .locals 1
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    instance-of v0, p1, Ldof;
+    iput-wide p1, p0, Lf8e;->a:J
 
-    if-eqz v0, :cond_0
+    iput-object p3, p0, Lf8e;->b:Ljava/lang/String;
 
-    move-object v0, p1
+    iput-object p4, p0, Lf8e;->c:Ljava/lang/String;
 
-    check-cast v0, Ldof;
+    iput-object p5, p0, Lf8e;->d:Ljava/lang/String;
+
+    iput-object p6, p0, Lf8e;->o:Ljava/lang/String;
+
+    iput-boolean p7, p0, Lf8e;->X:Z
+
+    const-wide/16 p3, 0x0
+
+    cmp-long p3, p1, p3
+
+    if-gez p3, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    neg-long p1, p1
 
     :goto_0
-    if-nez v0, :cond_1
+    iput-wide p1, p0, Lf8e;->Y:J
 
-    new-instance v0, Ldof;
+    sget p1, Ludb;->r:I
 
-    invoke-direct {v0, p1}, Ldof;-><init>(Leof;)V
-
-    :cond_1
-    iput-object v0, p0, Lf8e;->a:Ldof;
+    iput p1, p0, Lf8e;->Z:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;Ljava/lang/Runnable;)Ljava/lang/Thread;
+.method public final f()I
     .locals 1
 
-    iget-object v0, p0, Lf8e;->a:Ldof;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, p1}, Ldof;->a(Ljava/lang/String;)Ljava/util/concurrent/ThreadFactory;
+    return v0
+.end method
 
-    move-result-object p1
+.method public final getItemId()J
+    .locals 2
 
-    invoke-interface {p1, p2}, Ljava/util/concurrent/ThreadFactory;->newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
+    iget-wide v0, p0, Lf8e;->Y:J
 
-    move-result-object p1
+    return-wide v0
+.end method
 
-    return-object p1
+.method public final m()I
+    .locals 1
+
+    iget v0, p0, Lf8e;->Z:I
+
+    return v0
 .end method

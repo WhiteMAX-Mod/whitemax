@@ -1,23 +1,31 @@
-.class public abstract Lop;
-.super Ljava/lang/Object;
+.class public final Lop;
+.super Lnp;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic X:Landroidx/appcompat/widget/AppCompatTextView;
+
+
 # direct methods
-.method public static a(Ljava/lang/String;)Landroid/os/LocaleList;
+.method public constructor <init>(Landroidx/appcompat/widget/AppCompatTextView;)V
     .locals 0
 
-    invoke-static {p0}, Landroid/os/LocaleList;->forLanguageTags(Ljava/lang/String;)Landroid/os/LocaleList;
+    iput-object p1, p0, Lop;->X:Landroidx/appcompat/widget/AppCompatTextView;
 
-    move-result-object p0
+    invoke-direct {p0, p1}, Lnp;-><init>(Landroidx/appcompat/widget/AppCompatTextView;)V
 
-    return-object p0
+    return-void
 .end method
 
-.method public static b(Landroid/widget/TextView;Landroid/os/LocaleList;)V
-    .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextLocales(Landroid/os/LocaleList;)V
+# virtual methods
+.method public final H(IF)V
+    .locals 1
+
+    iget-object v0, p0, Lop;->X:Landroidx/appcompat/widget/AppCompatTextView;
+
+    invoke-static {v0, p1, p2}, Landroidx/appcompat/widget/AppCompatTextView;->h(Landroidx/appcompat/widget/AppCompatTextView;IF)V
 
     return-void
 .end method

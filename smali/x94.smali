@@ -1,59 +1,27 @@
 .class public final Lx94;
-.super Liwi;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final a(Lnhe;FF)V
-    .locals 5
+# instance fields
+.field public final a:Landroid/content/Context;
 
-    mul-float v0, p3, p2
+.field public final b:Lhc3;
 
-    const/high16 v1, 0x43340000    # 180.0f
+.field public final c:Lhc3;
 
-    const/4 v2, 0x0
 
-    const/high16 v3, 0x42b40000    # 90.0f
+# direct methods
+.method public constructor <init>(Landroid/content/Context;Lhc3;Lhc3;)V
+    .locals 0
 
-    invoke-virtual {p1, v2, v0, v1, v3}, Lnhe;->d(FFFF)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    float-to-double v0, v3
+    iput-object p1, p0, Lx94;->a:Landroid/content/Context;
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->toRadians(D)D
+    iput-object p2, p0, Lx94;->b:Lhc3;
 
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->sin(D)D
-
-    move-result-wide v0
-
-    float-to-double v3, p3
-
-    mul-double/2addr v0, v3
-
-    float-to-double p2, p2
-
-    mul-double/2addr v0, p2
-
-    double-to-float v0, v0
-
-    float-to-double v1, v2
-
-    invoke-static {v1, v2}, Ljava/lang/Math;->toRadians(D)D
-
-    move-result-wide v1
-
-    invoke-static {v1, v2}, Ljava/lang/Math;->sin(D)D
-
-    move-result-wide v1
-
-    mul-double/2addr v1, v3
-
-    mul-double/2addr v1, p2
-
-    double-to-float p2, v1
-
-    invoke-virtual {p1, v0, p2}, Lnhe;->c(FF)V
+    iput-object p3, p0, Lx94;->c:Lhc3;
 
     return-void
 .end method

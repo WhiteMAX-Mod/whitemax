@@ -3,70 +3,62 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lfg4;
+.implements Lz51;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:Ly51;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p1, p0, Ly51;->a:I
+    new-instance v0, Ly51;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Ly51;->a:Ly51;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Ly51;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    new-instance v0, Lone/me/calls/ui/ui/pip/PipScreen;
+    return v0
 
-    invoke-direct {v0}, Lone/me/calls/ui/ui/pip/PipScreen;-><init>()V
+    :cond_0
+    instance-of p1, p1, Ly51;
 
-    return-object v0
+    if-nez p1, :cond_1
 
-    :pswitch_0
-    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->M0:Llga;
+    const/4 p1, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return p1
 
-    new-instance v0, Lone/me/calls/ui/ui/call/CallScreen;
+    :cond_1
+    return v0
+.end method
 
-    new-instance v1, Ltcb;
+.method public final hashCode()I
+    .locals 1
 
-    const-string v2, "type"
+    const v0, -0x35b676d9
 
-    const-string v3, "ACTIVE"
+    return v0
+.end method
 
-    invoke-direct {v1, v2, v3}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    filled-new-array {v1}, [Ltcb;
-
-    move-result-object v1
-
-    invoke-static {v1}, Leli;->b([Ltcb;)Landroid/os/Bundle;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lone/me/calls/ui/ui/call/CallScreen;-><init>(Landroid/os/Bundle;)V
+    const-string v0, "Finished"
 
     return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

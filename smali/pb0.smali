@@ -4,169 +4,86 @@
 
 
 # instance fields
-.field public final a:Lq93;
+.field public final a:I
 
-.field public final b:Ljava/util/HashMap;
+.field public final b:I
+
+.field public final c:Z
+
+.field public final d:Z
 
 
 # direct methods
-.method public constructor <init>(Lq93;Ljava/util/HashMap;)V
+.method public constructor <init>(IIZZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lpb0;->a:Lq93;
+    iput p1, p0, Lpb0;->a:I
 
-    iput-object p2, p0, Lpb0;->b:Ljava/util/HashMap;
+    iput p2, p0, Lpb0;->b:I
+
+    iput-boolean p3, p0, Lpb0;->c:Z
+
+    iput-boolean p4, p0, Lpb0;->d:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lyyb;JI)J
-    .locals 8
-
-    iget-object v0, p0, Lpb0;->a:Lq93;
-
-    invoke-interface {v0}, Lq93;->l()J
-
-    move-result-wide v0
-
-    sub-long/2addr p2, v0
-
-    iget-object v0, p0, Lpb0;->b:Ljava/util/HashMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lqb0;
-
-    iget-wide v0, p1, Lqb0;->a:J
-
-    add-int/lit8 p4, p4, -0x1
-
-    const-wide/16 v2, 0x1
-
-    cmp-long v2, v0, v2
-
-    if-lez v2, :cond_0
-
-    move-wide v2, v0
-
-    goto :goto_0
-
-    :cond_0
-    const-wide/16 v2, 0x2
-
-    :goto_0
-    const-wide v4, 0x40c3880000000000L    # 10000.0
-
-    invoke-static {v4, v5}, Ljava/lang/Math;->log(D)D
-
-    move-result-wide v4
-
-    int-to-long v6, p4
-
-    mul-long/2addr v2, v6
-
-    long-to-double v2, v2
-
-    invoke-static {v2, v3}, Ljava/lang/Math;->log(D)D
-
-    move-result-wide v2
-
-    div-double/2addr v4, v2
-
-    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
-
-    invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->max(DD)D
-
-    move-result-wide v2
-
-    const-wide/high16 v4, 0x4008000000000000L    # 3.0
-
-    int-to-double v6, p4
-
-    invoke-static {v4, v5, v6, v7}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v4
-
-    long-to-double v0, v0
-
-    mul-double/2addr v4, v0
-
-    mul-double/2addr v4, v2
-
-    double-to-long v0, v4
-
-    invoke-static {v0, v1, p2, p3}, Ljava/lang/Math;->max(JJ)J
-
-    move-result-wide p2
-
-    iget-wide v0, p1, Lqb0;->b:J
-
-    invoke-static {p2, p3, v0, v1}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide p1
-
-    return-wide p1
-.end method
-
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    .locals 4
+
+    const/4 v0, 0x1
 
     if-ne p1, p0, :cond_0
 
-    goto :goto_0
+    return v0
 
     :cond_0
-    instance-of v0, p1, Lpb0;
+    instance-of v1, p1, Lpb0;
 
-    if-eqz v0, :cond_1
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_1
 
     check-cast p1, Lpb0;
 
-    iget-object v0, p0, Lpb0;->a:Lq93;
+    iget v1, p0, Lpb0;->a:I
 
-    iget-object v1, p1, Lpb0;->a:Lq93;
+    iget v3, p1, Lpb0;->a:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    if-ne v1, v3, :cond_1
 
-    move-result v0
+    iget v1, p0, Lpb0;->b:I
 
-    if-eqz v0, :cond_1
+    iget v3, p1, Lpb0;->b:I
 
-    iget-object v0, p0, Lpb0;->b:Ljava/util/HashMap;
+    if-ne v1, v3, :cond_1
 
-    iget-object p1, p1, Lpb0;->b:Ljava/util/HashMap;
+    iget-boolean v1, p0, Lpb0;->c:Z
 
-    invoke-interface {v0, p1}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
+    iget-boolean v3, p1, Lpb0;->c:Z
 
-    move-result p1
+    if-ne v1, v3, :cond_1
 
-    if-eqz p1, :cond_1
+    iget-boolean v1, p0, Lpb0;->d:Z
 
-    :goto_0
-    const/4 p1, 0x1
+    iget-boolean p1, p1, Lpb0;->d:Z
 
-    return p1
+    if-ne v1, p1, :cond_1
+
+    return v0
 
     :cond_1
-    const/4 p1, 0x0
-
-    return p1
+    return v2
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 5
 
-    iget-object v0, p0, Lpb0;->a:Lq93;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
+    iget v0, p0, Lpb0;->a:I
 
     const v1, 0xf4243
 
@@ -174,43 +91,82 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v1, p0, Lpb0;->b:Ljava/util/HashMap;
+    iget v2, p0, Lpb0;->b:I
 
-    invoke-interface {v1}, Ljava/util/Map;->hashCode()I
+    xor-int/2addr v0, v2
 
-    move-result v1
+    mul-int/2addr v0, v1
 
-    xor-int/2addr v0, v1
+    iget-boolean v2, p0, Lpb0;->c:Z
+
+    const/16 v3, 0x4d5
+
+    const/16 v4, 0x4cf
+
+    if-eqz v2, :cond_0
+
+    move v2, v4
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v3
+
+    :goto_0
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v1, p0, Lpb0;->d:Z
+
+    if-eqz v1, :cond_1
+
+    move v3, v4
+
+    :cond_1
+    xor-int/2addr v0, v3
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "SchedulerConfig{clock="
+    const-string v1, "FeatureSettings{cameraMode="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lpb0;->a:Lq93;
+    iget v1, p0, Lpb0;->a:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v1, ", values="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lpb0;->b:Ljava/util/HashMap;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "}"
+    const-string v1, ", requiredMaxBitDepth="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget v1, p0, Lpb0;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", previewStabilizationOn="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lpb0;->c:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", ultraHdrOn="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lpb0;->d:Z
+
+    const-string v2, "}"
+
+    invoke-static {v0, v1, v2}, Laz1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -12,19 +12,19 @@
         "Lru/ok/android/externcalls/sdk/stat/topology/ServerTopologyRequestedStat;",
         "",
         "Lkotlin/Function0;",
-        "Lx71;",
+        "Lm81;",
         "getEventualStatSender",
-        "Lavf;",
+        "Ly8g;",
         "timeProvider",
         "<init>",
-        "(Lji6;Lavf;)V",
-        "Luzf;",
+        "(Lcm6;Ly8g;)V",
+        "Lpdg;",
         "event",
-        "Lccg;",
+        "Lqqg;",
         "onServerTopologyRequested",
-        "(Luzf;)V",
-        "Lji6;",
-        "Lavf;",
+        "(Lpdg;)V",
+        "Lcm6;",
+        "Ly8g;",
         "calls-sdk_release"
     }
     k = 0x1
@@ -38,77 +38,77 @@
 
 
 # instance fields
-.field private final getEventualStatSender:Lji6;
+.field private final getEventualStatSender:Lcm6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lji6;"
+            "Lcm6;"
         }
     .end annotation
 .end field
 
-.field private final timeProvider:Lavf;
+.field private final timeProvider:Ly8g;
 
 
 # direct methods
-.method public constructor <init>(Lji6;Lavf;)V
+.method public constructor <init>(Lcm6;Ly8g;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lji6;",
-            "Lavf;",
+            "Lcm6;",
+            "Ly8g;",
             ")V"
         }
     .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/topology/ServerTopologyRequestedStat;->getEventualStatSender:Lji6;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/topology/ServerTopologyRequestedStat;->getEventualStatSender:Lcm6;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/stat/topology/ServerTopologyRequestedStat;->timeProvider:Lavf;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/stat/topology/ServerTopologyRequestedStat;->timeProvider:Ly8g;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onServerTopologyRequested(Luzf;)V
+.method public final onServerTopologyRequested(Lpdg;)V
     .locals 4
 
-    instance-of v0, p1, Ltzf;
+    instance-of v0, p1, Lodg;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/topology/ServerTopologyRequestedStat;->timeProvider:Lavf;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/topology/ServerTopologyRequestedStat;->timeProvider:Ly8g;
 
-    invoke-interface {v0}, Lavf;->getMsSinceBoot()J
+    invoke-interface {v0}, Ly8g;->getMsSinceBoot()J
 
     move-result-wide v0
 
     move-object v2, p1
 
-    check-cast v2, Ltzf;
+    check-cast v2, Lodg;
 
-    iget v3, v2, Ltzf;->b:I
+    iget v3, v2, Lodg;->b:I
 
     packed-switch v3, :pswitch_data_0
 
-    iget-wide v2, v2, Ltzf;->c:J
+    iget-wide v2, v2, Lodg;->c:J
 
     goto :goto_0
 
     :pswitch_0
-    iget-wide v2, v2, Ltzf;->c:J
+    iget-wide v2, v2, Lodg;->c:J
 
     goto :goto_0
 
     :pswitch_1
-    iget-wide v2, v2, Ltzf;->c:J
+    iget-wide v2, v2, Lodg;->c:J
 
     goto :goto_0
 
     :pswitch_2
-    iget-wide v2, v2, Ltzf;->c:J
+    iget-wide v2, v2, Lodg;->c:J
 
     :goto_0
     sub-long/2addr v0, v2
@@ -119,13 +119,13 @@
     const-wide/16 v0, 0x0
 
     :goto_1
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/stat/topology/ServerTopologyRequestedStat;->getEventualStatSender:Lji6;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/stat/topology/ServerTopologyRequestedStat;->getEventualStatSender:Lcm6;
 
-    invoke-interface {v2}, Lji6;->invoke()Ljava/lang/Object;
+    invoke-interface {v2}, Lcm6;->invoke()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lx71;
+    check-cast v2, Lm81;
 
     if-eqz v2, :cond_1
 
@@ -137,19 +137,19 @@
 
     invoke-direct {v1}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;-><init>()V
 
-    iget-object p1, p1, Luzf;->a:Lszf;
+    iget-object p1, p1, Lpdg;->a:Lndg;
 
-    iget-object p1, p1, Lszf;->a:Ljava/lang/String;
+    iget-object p1, p1, Lndg;->a:Ljava/lang/String;
 
     const-string v3, "string_value"
 
     invoke-virtual {v1, v3, p1}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->set(Ljava/lang/String;Ljava/lang/String;)Lru/ok/android/externcalls/analytics/events/EventItemsMap;
 
-    check-cast v2, Ly71;
+    check-cast v2, Ln81;
 
     const-string p1, "client_requested_server_topology"
 
-    invoke-virtual {v2, p1, v0, v1}, Ly71;->c(Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;)V
+    invoke-virtual {v2, p1, v0, v1}, Ln81;->c(Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;)V
 
     :cond_1
     return-void

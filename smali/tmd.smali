@@ -1,58 +1,193 @@
 .class public final Ltmd;
-.super Ljava/lang/Object;
+.super Lxmd;
 .source "SourceFile"
 
 # interfaces
-.implements Lxw7;
-.implements Ljava/io/Closeable;
+.implements Ltd4;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Lsmd;
-
-.field public c:Z
+.field public final X:Lx9e;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lsmd;)V
+.method public constructor <init>(Lgf6;Lwg7;Lx9e;Ljava/util/ArrayList;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2, p3, p4}, Lxmd;-><init>(Lgf6;Ljava/util/List;Lhae;Ljava/util/List;)V
 
-    iput-object p1, p0, Ltmd;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Ltmd;->b:Lsmd;
+    iput-object p3, p0, Ltmd;->X:Lx9e;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final close()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final d(Lfx7;Lgw7;)V
+.method public final A()Z
     .locals 1
 
-    sget-object v0, Lgw7;->ON_DESTROY:Lgw7;
+    iget-object v0, p0, Ltmd;->X:Lx9e;
 
-    if-ne p2, v0, :cond_0
+    invoke-virtual {v0}, Lx9e;->j()Z
 
-    const/4 p2, 0x0
+    move-result v0
 
-    iput-boolean p2, p0, Ltmd;->c:Z
+    return v0
+.end method
 
-    invoke-interface {p1}, Lfx7;->x()Lhx7;
+.method public final C()J
+    .locals 2
+
+    iget-object v0, p0, Ltmd;->X:Lx9e;
+
+    iget-wide v0, v0, Lx9e;->d:J
+
+    return-wide v0
+.end method
+
+.method public final D(J)J
+    .locals 1
+
+    iget-object v0, p0, Ltmd;->X:Lx9e;
+
+    invoke-virtual {v0, p1, p2}, Lx9e;->e(J)J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final E(JJ)J
+    .locals 1
+
+    iget-object v0, p0, Ltmd;->X:Lx9e;
+
+    invoke-virtual {v0, p1, p2, p3, p4}, Lx9e;->c(JJ)J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final a()Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final b(J)J
+    .locals 1
+
+    iget-object v0, p0, Ltmd;->X:Lx9e;
+
+    invoke-virtual {v0, p1, p2}, Lx9e;->h(J)J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final c()Ltd4;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final d()Lq7d;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final f(JJ)J
+    .locals 1
+
+    iget-object v0, p0, Ltmd;->X:Lx9e;
+
+    invoke-virtual {v0, p1, p2, p3, p4}, Lx9e;->f(JJ)J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final h(JJ)J
+    .locals 1
+
+    iget-object v0, p0, Ltmd;->X:Lx9e;
+
+    invoke-virtual {v0, p1, p2, p3, p4}, Lx9e;->d(JJ)J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final j(JJ)J
+    .locals 3
+
+    iget-object v0, p0, Ltmd;->X:Lx9e;
+
+    iget-object v1, v0, Lx9e;->f:Ljava/util/List;
+
+    if-eqz v1, :cond_0
+
+    const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
+
+    return-wide p1
+
+    :cond_0
+    invoke-virtual {v0, p1, p2, p3, p4}, Lx9e;->d(JJ)J
+
+    move-result-wide v1
+
+    invoke-virtual {v0, p1, p2, p3, p4}, Lx9e;->c(JJ)J
+
+    move-result-wide p3
+
+    add-long/2addr p3, v1
+
+    invoke-virtual {v0, p3, p4}, Lx9e;->h(J)J
+
+    move-result-wide v1
+
+    invoke-virtual {v0, p3, p4, p1, p2}, Lx9e;->f(JJ)J
+
+    move-result-wide p1
+
+    add-long/2addr p1, v1
+
+    iget-wide p3, v0, Lx9e;->i:J
+
+    sub-long/2addr p1, p3
+
+    return-wide p1
+.end method
+
+.method public final k(J)Lq7d;
+    .locals 1
+
+    iget-object v0, p0, Ltmd;->X:Lx9e;
+
+    invoke-virtual {v0, p0, p1, p2}, Lx9e;->i(Ltmd;J)Lq7d;
 
     move-result-object p1
 
-    invoke-virtual {p1, p0}, Lhx7;->f(Lbx7;)V
+    return-object p1
+.end method
 
-    :cond_0
-    return-void
+.method public final u(JJ)J
+    .locals 1
+
+    iget-object v0, p0, Ltmd;->X:Lx9e;
+
+    invoke-virtual {v0, p1, p2, p3, p4}, Lx9e;->g(JJ)J
+
+    move-result-wide p1
+
+    return-wide p1
 .end method

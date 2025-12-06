@@ -7,15 +7,15 @@
 
 
 # instance fields
-.field public final synthetic X:Lone/me/sdk/concurrent/LinkedTransferQueue34;
-
 .field public a:Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;
 
 .field public b:Ljava/lang/Object;
 
 .field public c:Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;
 
-.field public o:Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;
+.field public d:Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;
+
+.field public final synthetic o:Lone/me/sdk/concurrent/LinkedTransferQueue34;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lone/me/sdk/concurrent/b;->X:Lone/me/sdk/concurrent/LinkedTransferQueue34;
+    iput-object p1, p0, Lone/me/sdk/concurrent/b;->o:Lone/me/sdk/concurrent/LinkedTransferQueue34;
 
     const/4 p1, 0x0
 
@@ -40,7 +40,7 @@
 
     if-nez p1, :cond_0
 
-    iget-object v0, p0, Lone/me/sdk/concurrent/b;->X:Lone/me/sdk/concurrent/LinkedTransferQueue34;
+    iget-object v0, p0, Lone/me/sdk/concurrent/b;->o:Lone/me/sdk/concurrent/LinkedTransferQueue34;
 
     iget-object v0, v0, Lone/me/sdk/concurrent/LinkedTransferQueue34;->head:Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;
 
@@ -71,9 +71,9 @@
 
     if-eq v1, v0, :cond_1
 
-    iget-object v2, p0, Lone/me/sdk/concurrent/b;->X:Lone/me/sdk/concurrent/LinkedTransferQueue34;
+    iget-object v2, p0, Lone/me/sdk/concurrent/b;->o:Lone/me/sdk/concurrent/LinkedTransferQueue34;
 
-    invoke-static {v2, p1, v1, v0}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->e(Lone/me/sdk/concurrent/LinkedTransferQueue34;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;)Z
+    invoke-static {v2, p1, v1, v0}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->d(Lone/me/sdk/concurrent/LinkedTransferQueue34;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;)Z
 
     :cond_1
     return-void
@@ -90,9 +90,9 @@
     :cond_3
     if-eq v1, v0, :cond_5
 
-    iget-object v3, p0, Lone/me/sdk/concurrent/b;->X:Lone/me/sdk/concurrent/LinkedTransferQueue34;
+    iget-object v3, p0, Lone/me/sdk/concurrent/b;->o:Lone/me/sdk/concurrent/LinkedTransferQueue34;
 
-    invoke-static {v3, p1, v1, v0}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->e(Lone/me/sdk/concurrent/LinkedTransferQueue34;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;)Z
+    invoke-static {v3, p1, v1, v0}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->d(Lone/me/sdk/concurrent/LinkedTransferQueue34;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;)Z
 
     move-result v1
 
@@ -116,7 +116,7 @@
 
     if-ne v0, v3, :cond_6
 
-    iget-object p1, p0, Lone/me/sdk/concurrent/b;->X:Lone/me/sdk/concurrent/LinkedTransferQueue34;
+    iget-object p1, p0, Lone/me/sdk/concurrent/b;->o:Lone/me/sdk/concurrent/LinkedTransferQueue34;
 
     iget-object p1, p1, Lone/me/sdk/concurrent/LinkedTransferQueue34;->head:Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;
 
@@ -231,11 +231,11 @@
     goto/16 :goto_5
 
     :cond_0
-    iget-object v2, p0, Lone/me/sdk/concurrent/b;->o:Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;
+    iget-object v2, p0, Lone/me/sdk/concurrent/b;->d:Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;
 
     if-nez v2, :cond_1
 
-    iget-object v3, p0, Lone/me/sdk/concurrent/b;->X:Lone/me/sdk/concurrent/LinkedTransferQueue34;
+    iget-object v3, p0, Lone/me/sdk/concurrent/b;->o:Lone/me/sdk/concurrent/LinkedTransferQueue34;
 
     iget-object v3, v3, Lone/me/sdk/concurrent/LinkedTransferQueue34;->head:Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;
 
@@ -271,12 +271,12 @@
     :goto_2
     if-eq v4, v3, :cond_4
 
-    iget-object v0, p0, Lone/me/sdk/concurrent/b;->X:Lone/me/sdk/concurrent/LinkedTransferQueue34;
+    iget-object v0, p0, Lone/me/sdk/concurrent/b;->o:Lone/me/sdk/concurrent/LinkedTransferQueue34;
 
-    invoke-static {v0, v2, v4, v3}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->e(Lone/me/sdk/concurrent/LinkedTransferQueue34;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;)Z
+    invoke-static {v0, v2, v4, v3}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->d(Lone/me/sdk/concurrent/LinkedTransferQueue34;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;)Z
 
     :cond_4
-    iput-object v2, p0, Lone/me/sdk/concurrent/b;->o:Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;
+    iput-object v2, p0, Lone/me/sdk/concurrent/b;->d:Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;
 
     return-void
 
@@ -314,9 +314,9 @@
     :goto_4
     if-eq v4, v3, :cond_9
 
-    iget-object v5, p0, Lone/me/sdk/concurrent/b;->X:Lone/me/sdk/concurrent/LinkedTransferQueue34;
+    iget-object v5, p0, Lone/me/sdk/concurrent/b;->o:Lone/me/sdk/concurrent/LinkedTransferQueue34;
 
-    invoke-static {v5, v2, v4, v3}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->e(Lone/me/sdk/concurrent/LinkedTransferQueue34;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;)Z
+    invoke-static {v5, v2, v4, v3}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->d(Lone/me/sdk/concurrent/LinkedTransferQueue34;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;)Z
 
     move-result v4
 
@@ -343,7 +343,7 @@
 
     if-ne v3, v5, :cond_c
 
-    iget-object v2, p0, Lone/me/sdk/concurrent/b;->X:Lone/me/sdk/concurrent/LinkedTransferQueue34;
+    iget-object v2, p0, Lone/me/sdk/concurrent/b;->o:Lone/me/sdk/concurrent/LinkedTransferQueue34;
 
     iget-object v2, v2, Lone/me/sdk/concurrent/LinkedTransferQueue34;->head:Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;
 

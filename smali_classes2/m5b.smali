@@ -4,24 +4,22 @@
 
 
 # static fields
-.field public static final a:Lwif;
+.field public static final a:I
+
+.field public static final b:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    new-instance v0, Luna;
+    sget v0, Le2d;->oneme_in_app_review_rating_bar_accessibility:I
 
-    const/16 v1, 0x10
+    sput v0, Lm5b;->a:I
 
-    invoke-direct {v0, v1}, Luna;-><init>(I)V
+    sget v0, Le2d;->oneme_in_app_review_rating_star_accessibility:I
 
-    new-instance v1, Lwif;
-
-    invoke-direct {v1, v0}, Lwif;-><init>(Lji6;)V
-
-    sput-object v1, Lm5b;->a:Lwif;
+    sput v0, Lm5b;->b:I
 
     return-void
 .end method

@@ -1,110 +1,85 @@
 .class public final Lm50;
-.super Lsgf;
+.super Lvt3;
 .source "SourceFile"
-
-# interfaces
-.implements Lzi6;
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Ln50;
+.field public final f:Lorg/webrtc/PeerConnectionFactory;
 
 
 # direct methods
-.method public constructor <init>(Ln50;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lorg/webrtc/PeerConnectionFactory;Ljava/lang/String;Lorg/webrtc/MediaStream;Ly6d;)V
     .locals 0
 
-    iput-object p1, p0, Lm50;->Y:Ln50;
+    invoke-direct {p0, p2, p3, p4}, Lvt3;-><init>(Ljava/lang/String;Lorg/webrtc/MediaStream;Ly6d;)V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lm50;->f:Lorg/webrtc/PeerConnectionFactory;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final b(Lorg/webrtc/MediaStream;Lorg/webrtc/MediaStreamTrack;)V
     .locals 0
 
-    check-cast p1, Lq54;
+    check-cast p2, Lorg/webrtc/AudioTrack;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-eqz p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lm50;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lm50;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lm50;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lm50;
-
-    iget-object v0, p0, Lm50;->Y:Ln50;
-
-    invoke-direct {p1, v0, p2}, Lm50;-><init>(Ln50;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lm50;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
+    invoke-virtual {p1, p2}, Lorg/webrtc/MediaStream;->addTrack(Lorg/webrtc/AudioTrack;)Z
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    return-void
+.end method
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+.method public final c(Lorg/webrtc/MediaStream;Lorg/webrtc/MediaStreamTrack;)V
+    .locals 0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    check-cast p2, Lorg/webrtc/AudioTrack;
 
-    throw p1
+    if-eqz p1, :cond_0
 
-    :cond_1
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lorg/webrtc/MediaStream;->removeTrack(Lorg/webrtc/AudioTrack;)Z
 
-    iput v1, p0, Lm50;->X:I
+    :cond_0
+    return-void
+.end method
 
-    iget-object p1, p0, Lm50;->Y:Ln50;
+.method public final g()Lorg/webrtc/MediaSource;
+    .locals 2
 
-    invoke-static {p1, p0}, Ln50;->f(Ln50;Lsgf;)Ljava/lang/Object;
+    new-instance v0, Lorg/webrtc/MediaConstraints;
+
+    invoke-direct {v0}, Lorg/webrtc/MediaConstraints;-><init>()V
+
+    iget-object v1, p0, Lm50;->f:Lorg/webrtc/PeerConnectionFactory;
+
+    invoke-virtual {v1, v0}, Lorg/webrtc/PeerConnectionFactory;->createAudioSource(Lorg/webrtc/MediaConstraints;)Lorg/webrtc/AudioSource;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final h(Ljava/lang/String;Lorg/webrtc/MediaSource;)Lorg/webrtc/MediaStreamTrack;
+    .locals 1
+
+    check-cast p2, Lorg/webrtc/AudioSource;
+
+    iget-object v0, p0, Lm50;->f:Lorg/webrtc/PeerConnectionFactory;
+
+    invoke-virtual {v0, p1, p2}, Lorg/webrtc/PeerConnectionFactory;->createAudioTrack(Ljava/lang/String;Lorg/webrtc/AudioSource;)Lorg/webrtc/AudioTrack;
 
     move-result-object p1
 
-    sget-object v0, Lr54;->a:Lr54;
+    return-object p1
+.end method
 
-    if-ne p1, v0, :cond_2
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "OkSdkAudioRecord"
 
     return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
 .end method

@@ -1,27 +1,19 @@
 .class public final Lib3;
-.super Landroid/widget/FrameLayout$LayoutParams;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:I
-
-.field public b:F
+.field public final a:[B
 
 
 # direct methods
-.method public constructor <init>(II)V
+.method public constructor <init>([B)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x0
-
-    iput p1, p0, Lib3;->a:I
-
-    const/high16 p1, 0x3f000000    # 0.5f
-
-    iput p1, p0, Lib3;->b:F
+    iput-object p1, p0, Lib3;->a:[B
 
     return-void
 .end method

@@ -206,43 +206,47 @@
     throw v0
 .end method
 
-.method public static create(Lorg/webrtc/CameraSession$CreateSessionCallback;Lorg/webrtc/CameraSession$Events;ZLandroid/content/Context;Lorg/webrtc/SurfaceTextureHelper;Ljava/lang/String;III)V
-    .locals 10
+.method public static create(Lorg/webrtc/CameraSession$CreateSessionCallback;Lorg/webrtc/CameraSession$Events;Lorg/webrtc/CameraSession$ConfigurationProvider;ZLandroid/content/Context;Lorg/webrtc/SurfaceTextureHelper;Ljava/lang/String;III)V
+    .locals 11
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
     move-object v0, p0
 
     move-object v1, p1
 
-    move v2, p2
+    move-object v2, p2
 
-    move-object v3, p3
+    move v3, p3
 
     move-object v4, p4
 
-    move-object v5, p5
+    move-object/from16 v5, p5
 
-    move/from16 v7, p6
+    move-object/from16 v6, p6
 
     move/from16 v8, p7
 
     move/from16 v9, p8
 
+    move/from16 v10, p9
+
     .line 1
-    invoke-static/range {v0 .. v9}, Lorg/webrtc/Camera1Session;->create(Lorg/webrtc/CameraSession$CreateSessionCallback;Lorg/webrtc/CameraSession$Events;ZLandroid/content/Context;Lorg/webrtc/SurfaceTextureHelper;Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;III)V
+    invoke-static/range {v0 .. v10}, Lorg/webrtc/Camera1Session;->create(Lorg/webrtc/CameraSession$CreateSessionCallback;Lorg/webrtc/CameraSession$Events;Lorg/webrtc/CameraSession$ConfigurationProvider;ZLandroid/content/Context;Lorg/webrtc/SurfaceTextureHelper;Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;III)V
 
     return-void
 .end method
 
-.method public static create(Lorg/webrtc/CameraSession$CreateSessionCallback;Lorg/webrtc/CameraSession$Events;ZLandroid/content/Context;Lorg/webrtc/SurfaceTextureHelper;Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;III)V
+.method public static create(Lorg/webrtc/CameraSession$CreateSessionCallback;Lorg/webrtc/CameraSession$Events;Lorg/webrtc/CameraSession$ConfigurationProvider;ZLandroid/content/Context;Lorg/webrtc/SurfaceTextureHelper;Ljava/lang/String;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;III)V
     .locals 12
 
-    move/from16 v0, p7
+    move v3, p3
 
-    move/from16 v1, p8
+    move/from16 v0, p8
 
-    if-nez p6, :cond_0
+    move/from16 v1, p9
+
+    if-nez p7, :cond_0
 
     .line 2
     new-instance v2, Lorg/webrtc/Camera1Session$1;
@@ -252,7 +256,7 @@
     goto :goto_0
 
     :cond_0
-    move-object/from16 v2, p6
+    move-object/from16 v2, p7
 
     .line 3
     :goto_0
@@ -267,7 +271,7 @@
 
     invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-object/from16 v5, p5
+    move-object/from16 v5, p6
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -322,7 +326,7 @@
     .line 9
     :cond_1
     :try_start_2
-    invoke-virtual/range {p4 .. p4}, Lorg/webrtc/SurfaceTextureHelper;->getSurfaceTexture()Landroid/graphics/SurfaceTexture;
+    invoke-virtual/range {p5 .. p5}, Lorg/webrtc/SurfaceTextureHelper;->getSurfaceTexture()Landroid/graphics/SurfaceTexture;
 
     move-result-object v4
 
@@ -348,7 +352,7 @@
 
     move-result-object v4
 
-    move/from16 v5, p9
+    move/from16 v5, p10
 
     .line 13
     invoke-static {v4, v2, v0, v1, v5}, Lorg/webrtc/Camera1Session;->findClosestCaptureFormat(Landroid/hardware/Camera$Parameters;Lorg/webrtc/CameraVideoCapturer$CaptureFormatHelper;III)Lorg/webrtc/CameraEnumerationAndroid$CaptureFormat;
@@ -361,13 +365,13 @@
     move-result-object v0
 
     .line 15
-    invoke-static {v7, v4, v9, v0, p2}, Lorg/webrtc/Camera1Session;->updateCameraParameters(Landroid/hardware/Camera;Landroid/hardware/Camera$Parameters;Lorg/webrtc/CameraEnumerationAndroid$CaptureFormat;Lorg/webrtc/Size;Z)V
+    invoke-static {v7, v4, v9, v0, p3}, Lorg/webrtc/Camera1Session;->updateCameraParameters(Landroid/hardware/Camera;Landroid/hardware/Camera$Parameters;Lorg/webrtc/CameraEnumerationAndroid$CaptureFormat;Lorg/webrtc/Size;Z)V
     :try_end_4
     .catch Ljava/lang/RuntimeException; {:try_start_4 .. :try_end_4} :catch_1
 
     const/4 v0, 0x0
 
-    if-nez p2, :cond_2
+    if-nez v3, :cond_2
 
     .line 16
     invoke-virtual {v9}, Lorg/webrtc/CameraEnumerationAndroid$CaptureFormat;->frameSize()I
@@ -409,11 +413,9 @@
 
     move-object v2, p1
 
-    move v3, p2
+    move-object/from16 v4, p4
 
-    move-object v4, p3
-
-    move-object/from16 v5, p4
+    move-object/from16 v5, p5
 
     invoke-direct/range {v1 .. v11}, Lorg/webrtc/Camera1Session;-><init>(Lorg/webrtc/CameraSession$Events;ZLandroid/content/Context;Lorg/webrtc/SurfaceTextureHelper;ILandroid/hardware/Camera;Landroid/hardware/Camera$CameraInfo;Lorg/webrtc/CameraEnumerationAndroid$CaptureFormat;J)V
 
@@ -975,7 +977,7 @@
 
     const-string v3, "): "
 
-    invoke-static {v2, p1, v3, v0}, Lfd0;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, p1, v3, v0}, Lwy1;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

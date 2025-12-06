@@ -13,8 +13,8 @@
         "Landroid/app/Service;",
         "<init>",
         "()V",
-        "ko1",
-        "lo1",
+        "yo1",
+        "zo1",
         "calls-impl_release"
     }
     k = 0x1
@@ -28,68 +28,70 @@
 
 
 # static fields
-.field public static final s0:Llo1;
+.field public static final u0:Lzo1;
 
-.field public static t0:Landroid/os/Handler;
+.field public static v0:Landroid/os/Handler;
 
-.field public static final u0:Ljava/util/Set;
+.field public static final w0:Ljava/util/Set;
 
 
 # instance fields
-.field public final X:Liu7;
+.field public final X:Lk18;
 
-.field public final Y:Liu7;
+.field public final Y:Lk18;
 
-.field public final Z:Liu7;
+.field public Z:Landroid/media/session/MediaSession;
 
-.field public final a:Liu7;
+.field public final a:Lk18;
 
-.field public final b:Liu7;
+.field public final b:Lk18;
 
-.field public final c:Liu7;
+.field public final c:Lk18;
 
-.field public final o:Liu7;
+.field public final d:Lk18;
 
-.field public q0:Landroid/media/session/MediaSession;
+.field public final o:Lk18;
 
-.field public r0:Landroid/os/PowerManager$WakeLock;
+.field public s0:Landroid/os/PowerManager$WakeLock;
+
+.field public final t0:Lbwf;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 5
 
-    new-instance v0, Llo1;
+    new-instance v0, Lzo1;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lone/me/calls/impl/service/CallServiceImpl;->s0:Llo1;
+    sput-object v0, Lone/me/calls/impl/service/CallServiceImpl;->u0:Lzo1;
 
-    sget v0, Lp4e;->g:I
+    sget v0, Lfge;->f:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    sget v1, Lp4e;->b:I
+    sget v1, Lfge;->b:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    sget v2, Lp4e;->d:I
+    sget v2, Lfge;->c:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    sget v3, Lp4e;->f:I
+    sget v3, Lfge;->e:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
-    sget v4, Lp4e;->e:I
+    sget v4, Lfge;->d:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -99,11 +101,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lu8e;->f([Ljava/lang/Object;)Ljava/util/Set;
+    invoke-static {v0}, Lgke;->h([Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object v0
 
-    sput-object v0, Lone/me/calls/impl/service/CallServiceImpl;->u0:Ljava/util/Set;
+    sput-object v0, Lone/me/calls/impl/service/CallServiceImpl;->w0:Ljava/util/Set;
 
     return-void
 .end method
@@ -113,91 +115,103 @@
 
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    sget-object v0, Lm61;->a:Lm61;
+    sget-object v0, Lb71;->a:Lb71;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v1
-
-    const-class v2, Ltw1;
-
-    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/calls/impl/service/CallServiceImpl;->a:Liu7;
+    const/16 v2, 0x17
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v1
-
-    const-class v2, Lfv1;
-
-    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+    invoke-virtual {v1, v2}, Lw5;->d(I)Lbwf;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/calls/impl/service/CallServiceImpl;->b:Liu7;
+    iput-object v1, p0, Lone/me/calls/impl/service/CallServiceImpl;->a:Lk18;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v1
-
-    const-class v2, Ln41;
-
-    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/calls/impl/service/CallServiceImpl;->c:Liu7;
+    const/16 v2, 0xf
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v1
-
-    const-class v2, Lvpd;
-
-    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+    invoke-virtual {v1, v2}, Lw5;->d(I)Lbwf;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/calls/impl/service/CallServiceImpl;->o:Liu7;
+    iput-object v1, p0, Lone/me/calls/impl/service/CallServiceImpl;->b:Lk18;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v1
-
-    const-class v2, Lrib;
-
-    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/calls/impl/service/CallServiceImpl;->X:Liu7;
+    const/16 v2, 0x16
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v1
-
-    const-class v2, Le91;
-
-    invoke-virtual {v1, v2}, Lr5;->d(Ljava/lang/Class;)Lwif;
+    invoke-virtual {v1, v2}, Lw5;->d(I)Lbwf;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/calls/impl/service/CallServiceImpl;->Y:Liu7;
+    iput-object v1, p0, Lone/me/calls/impl/service/CallServiceImpl;->c:Lk18;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
+
+    move-result-object v1
+
+    const/16 v2, 0x1c
+
+    invoke-virtual {v1, v2}, Lw5;->d(I)Lbwf;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lone/me/calls/impl/service/CallServiceImpl;->d:Lk18;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
+
+    move-result-object v1
+
+    const/16 v2, 0xa
+
+    invoke-virtual {v1, v2}, Lw5;->d(I)Lbwf;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lone/me/calls/impl/service/CallServiceImpl;->o:Lk18;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
+
+    move-result-object v1
+
+    const/16 v2, 0x1d
+
+    invoke-virtual {v1, v2}, Lw5;->d(I)Lbwf;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lone/me/calls/impl/service/CallServiceImpl;->X:Lk18;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lw5;
 
     move-result-object v0
 
-    const-class v1, Ls2h;
+    const/16 v1, 0x4b
 
-    invoke-virtual {v0, v1}, Lr5;->d(Ljava/lang/Class;)Lwif;
+    invoke-virtual {v0, v1}, Lw5;->d(I)Lbwf;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/calls/impl/service/CallServiceImpl;->Z:Liu7;
+    iput-object v0, p0, Lone/me/calls/impl/service/CallServiceImpl;->Y:Lk18;
+
+    new-instance v0, Ljl1;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1}, Ljl1;-><init>(I)V
+
+    new-instance v1, Lbwf;
+
+    invoke-direct {v1, v0}, Lbwf;-><init>(Lcm6;)V
+
+    iput-object v1, p0, Lone/me/calls/impl/service/CallServiceImpl;->t0:Lbwf;
 
     return-void
 .end method
@@ -207,7 +221,7 @@
 .method public final a(ILandroid/app/Notification;Z)V
     .locals 4
 
-    invoke-virtual {p0}, Lone/me/calls/impl/service/CallServiceImpl;->c()Ltw1;
+    invoke-virtual {p0}, Lone/me/calls/impl/service/CallServiceImpl;->d()Lix1;
 
     move-result-object v0
 
@@ -227,7 +241,7 @@
 
     const-string v2, "CallsNotification"
 
-    invoke-static {v2, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/16 v1, 0xf0
 
@@ -240,12 +254,12 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0, v3}, Ltw1;->c(I)V
+    invoke-virtual {v0, v3}, Lix1;->e(I)V
 
     goto :goto_0
 
     :cond_1
-    invoke-virtual {v0, v1}, Ltw1;->c(I)V
+    invoke-virtual {v0, v1}, Lix1;->e(I)V
 
     :goto_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -259,11 +273,11 @@
     goto :goto_1
 
     :cond_2
-    invoke-static {p0}, Lw4;->d(Lone/me/calls/impl/service/CallServiceImpl;)I
+    invoke-static {p0}, Lc5;->d(Lone/me/calls/impl/service/CallServiceImpl;)I
 
     move-result p3
 
-    sget v0, Lp4e;->a:I
+    sget v0, Lfge;->a:I
 
     if-nez p3, :cond_3
 
@@ -271,9 +285,9 @@
 
     const-string v0, "CallService start with none flag, show push around service."
 
-    invoke-static {p3, v0}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lone/me/calls/impl/service/CallServiceImpl;->c()Ltw1;
+    invoke-virtual {p0}, Lone/me/calls/impl/service/CallServiceImpl;->d()Lix1;
 
     move-result-object p3
 
@@ -295,23 +309,23 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p3}, Ltw1;->g()Lmea;
+    invoke-virtual {p3}, Lix1;->j()Lbna;
 
     move-result-object p3
 
     const/4 v0, 0x0
 
-    invoke-virtual {p3, v0, p1, p2}, Lmea;->a(Ljava/lang/String;ILandroid/app/Notification;)V
+    invoke-virtual {p3, v0, p1, p2}, Lbna;->a(Ljava/lang/String;ILandroid/app/Notification;)V
 
     :cond_3
     :goto_1
     return-void
 .end method
 
-.method public final b(Z)I
-    .locals 4
+.method public final b(ZZ)I
+    .locals 3
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -323,89 +337,91 @@
 
     const-string p1, "Low API version, start with simple flag."
 
-    invoke-static {v2, p1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, p1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    sget p1, Lp4e;->g:I
+    sget p1, Lfge;->f:I
 
     return p1
 
     :cond_0
-    sget v0, Lp4e;->b:I
+    sget v0, Lfge;->b:I
 
-    iget-object v1, p0, Lone/me/calls/impl/service/CallServiceImpl;->Z:Liu7;
+    if-nez p2, :cond_1
 
-    invoke-interface {v1}, Liu7;->getValue()Ljava/lang/Object;
+    iget-object p2, p0, Lone/me/calls/impl/service/CallServiceImpl;->Y:Lk18;
 
-    move-result-object v1
+    invoke-interface {p2}, Lk18;->getValue()Ljava/lang/Object;
 
-    check-cast v1, Ls2h;
+    move-result-object p2
 
-    invoke-virtual {v1}, Ls2h;->d()Z
+    check-cast p2, Ltih;
 
-    move-result v1
+    invoke-virtual {p2}, Ltih;->d()Z
 
-    if-nez v1, :cond_1
+    move-result p2
+
+    if-nez p2, :cond_1
 
     const-string p1, "App in background, start with simple flag."
 
-    invoke-static {v2, p1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, p1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 
     :cond_1
-    iget-object v1, p0, Lone/me/calls/impl/service/CallServiceImpl;->X:Liu7;
+    iget-object p2, p0, Lone/me/calls/impl/service/CallServiceImpl;->o:Lk18;
 
-    invoke-interface {v1}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lrib;
-
-    sget-object v3, Lrib;->h:[Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Lrib;->c([Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    sget v2, Lp4e;->f:I
-
-    or-int/2addr v0, v2
-
-    :cond_2
-    invoke-interface {v1}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-interface {p2}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lrib;
+    check-cast v1, Lqsb;
 
-    sget-object v2, Lrib;->m:[Ljava/lang/String;
+    sget-object v2, Lqsb;->h:[Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lrib;->c([Ljava/lang/String;)Z
+    invoke-virtual {v1, v2}, Lqsb;->c([Ljava/lang/String;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_2
 
-    sget v1, Lp4e;->e:I
+    sget v1, Lfge;->e:I
 
     or-int/2addr v0, v1
 
+    :cond_2
+    invoke-interface {p2}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lqsb;
+
+    sget-object v1, Lqsb;->m:[Ljava/lang/String;
+
+    invoke-virtual {p2, v1}, Lqsb;->c([Ljava/lang/String;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_3
+
+    sget p2, Lfge;->d:I
+
+    or-int/2addr v0, p2
+
     :cond_3
-    iget-object v1, p0, Lone/me/calls/impl/service/CallServiceImpl;->o:Liu7;
+    iget-object p2, p0, Lone/me/calls/impl/service/CallServiceImpl;->d:Lk18;
 
-    invoke-interface {v1}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-interface {p2}, Lk18;->getValue()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object p2
 
-    check-cast v1, Lvpd;
+    check-cast p2, Lg1e;
 
-    invoke-virtual {v1}, Lvpd;->c()Z
+    invoke-virtual {p2}, Lg1e;->c()Z
 
-    move-result v1
+    move-result p2
 
-    if-nez v1, :cond_5
+    if-nez p2, :cond_5
 
     if-eqz p1, :cond_4
 
@@ -416,29 +432,43 @@
 
     :cond_5
     :goto_0
-    sget p1, Lp4e;->d:I
+    sget p1, Lfge;->c:I
 
     or-int/2addr p1, v0
 
     return p1
 .end method
 
-.method public final c()Ltw1;
+.method public final c()Ltv1;
     .locals 1
 
-    iget-object v0, p0, Lone/me/calls/impl/service/CallServiceImpl;->a:Liu7;
+    iget-object v0, p0, Lone/me/calls/impl/service/CallServiceImpl;->b:Lk18;
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ltw1;
+    check-cast v0, Ltv1;
 
     return-object v0
 .end method
 
-.method public final d(ILandroid/app/Notification;ZZ)V
-    .locals 8
+.method public final d()Lix1;
+    .locals 1
+
+    iget-object v0, p0, Lone/me/calls/impl/service/CallServiceImpl;->a:Lk18;
+
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lix1;
+
+    return-object v0
+.end method
+
+.method public final e(ILandroid/app/Notification;ZZZ)V
+    .locals 7
 
     const-string v0, "CallServiceTag"
 
@@ -453,38 +483,38 @@
     const/16 v5, 0x1d
 
     :try_start_0
-    invoke-virtual {p0, p4}, Lone/me/calls/impl/service/CallServiceImpl;->b(Z)I
+    invoke-virtual {p0, p4, p5}, Lone/me/calls/impl/service/CallServiceImpl;->b(ZZ)I
 
     move-result p4
 
-    invoke-static {p4}, Llo1;->a(I)Ljava/lang/String;
+    invoke-static {p4}, Lzo1;->a(I)Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object p5
 
-    new-instance v7, Ljava/lang/StringBuilder;
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    invoke-direct {v7, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v6, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object p5
 
-    invoke-static {v0, v3}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p5}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
+    sget p5, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    if-lt v3, v4, :cond_0
+    if-lt p5, v4, :cond_0
 
-    invoke-static {p0, p1, p2, p4}, Lo4e;->a(Landroid/app/Service;ILandroid/app/Notification;I)V
+    invoke-static {p0, p1, p2, p4}, Lege;->a(Landroid/app/Service;ILandroid/app/Notification;I)V
 
     goto :goto_0
 
     :cond_0
-    if-lt v3, v5, :cond_1
+    if-lt p5, v5, :cond_1
 
-    invoke-static {p0, p1, p2, p4}, Ln4e;->a(Landroid/app/Service;ILandroid/app/Notification;I)V
+    invoke-static {p0, p1, p2, p4}, Ldge;->a(Landroid/app/Service;ILandroid/app/Notification;I)V
 
     goto :goto_0
 
@@ -492,44 +522,44 @@
     invoke-virtual {p0, p1, p2}, Landroid/app/Service;->startForeground(ILandroid/app/Notification;)V
 
     :goto_0
-    if-lt v3, v5, :cond_3
+    if-lt p5, v5, :cond_3
 
-    sget-object p4, Ltei;->a:Lmxa;
+    sget-object p4, Lwqi;->a:Ll6b;
 
     if-nez p4, :cond_2
 
     goto :goto_1
 
     :cond_2
-    sget-object v3, Lc98;->o:Lc98;
+    sget-object p5, Llg8;->d:Llg8;
 
-    invoke-virtual {p4, v3}, Lmxa;->b(Lc98;)Z
+    invoke-virtual {p4, p5}, Ll6b;->b(Llg8;)Z
 
-    move-result v6
+    move-result v3
 
-    if-eqz v6, :cond_3
+    if-eqz v3, :cond_3
 
-    invoke-static {p0}, Lw4;->d(Lone/me/calls/impl/service/CallServiceImpl;)I
+    invoke-static {p0}, Lc5;->d(Lone/me/calls/impl/service/CallServiceImpl;)I
 
-    move-result v6
+    move-result v3
 
-    invoke-static {v6}, Llo1;->a(I)Ljava/lang/String;
+    invoke-static {v3}, Lzo1;->a(I)Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v3
 
-    new-instance v7, Ljava/lang/StringBuilder;
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    invoke-direct {v7, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v6, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    const/4 v6, 0x0
+    const/4 v3, 0x0
 
-    invoke-virtual {p4, v3, v0, v2, v6}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {p4, p5, v0, v2, v3}, Ll6b;->c(Llg8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_1
 
@@ -549,49 +579,49 @@
     :goto_2
     invoke-virtual {p4}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object p5
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string v6, "CallService can\'t start foreground service due to "
+    const-string v3, "CallService can\'t start foreground service due to "
 
-    invoke-direct {v3, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v2, ". Try to start with simple permissions."
+    const-string p5, ". Try to start with simple permissions."
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object p5
 
-    invoke-static {v0, v2, p4}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, p5, p4}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :try_start_1
-    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+    sget p5, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    if-ge v2, v4, :cond_4
+    if-ge p5, v4, :cond_4
 
-    sget v3, Lp4e;->g:I
+    sget v2, Lfge;->f:I
 
     goto :goto_3
 
     :cond_4
-    sget v3, Lp4e;->b:I
+    sget v2, Lfge;->b:I
 
     :goto_3
-    if-lt v2, v4, :cond_5
+    if-lt p5, v4, :cond_5
 
-    invoke-static {p0, p1, p2, v3}, Lo4e;->a(Landroid/app/Service;ILandroid/app/Notification;I)V
+    invoke-static {p0, p1, p2, v2}, Lege;->a(Landroid/app/Service;ILandroid/app/Notification;I)V
 
     goto :goto_4
 
     :cond_5
-    if-lt v2, v5, :cond_6
+    if-lt p5, v5, :cond_6
 
-    invoke-static {p0, p1, p2, v3}, Ln4e;->a(Landroid/app/Service;ILandroid/app/Notification;I)V
+    invoke-static {p0, p1, p2, v2}, Ldge;->a(Landroid/app/Service;ILandroid/app/Notification;I)V
 
     goto :goto_4
 
@@ -599,27 +629,27 @@
     invoke-virtual {p0, p1, p2}, Landroid/app/Service;->startForeground(ILandroid/app/Notification;)V
 
     :goto_4
-    if-lt v2, v5, :cond_7
+    if-lt p5, v5, :cond_7
 
-    invoke-static {p0}, Lw4;->d(Lone/me/calls/impl/service/CallServiceImpl;)I
+    invoke-static {p0}, Lc5;->d(Lone/me/calls/impl/service/CallServiceImpl;)I
 
-    move-result v2
+    move-result p5
 
-    invoke-static {v2}, Llo1;->a(I)Ljava/lang/String;
+    invoke-static {p5}, Lzo1;->a(I)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object p5
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p5
 
-    invoke-static {v0, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p5}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_7
     invoke-virtual {p0, p1, p2, p3}, Lone/me/calls/impl/service/CallServiceImpl;->a(ILandroid/app/Notification;Z)V
@@ -629,23 +659,23 @@
     goto :goto_5
 
     :catch_0
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance p5, Ljava/lang/StringBuilder;
 
-    const-string v2, "CallService can\'t start foreground service. Try show usual notification isIncoming="
+    const-string v1, "CallService can\'t start foreground service. Try show usual notification isIncoming="
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p5, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {p5, p3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v2, "."
+    const-string v1, "."
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p5
 
-    invoke-static {v0, v1, p4}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, p5, p4}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     invoke-virtual {p0, p1, p2, p3}, Lone/me/calls/impl/service/CallServiceImpl;->a(ILandroid/app/Notification;Z)V
 
@@ -653,83 +683,77 @@
     return-void
 .end method
 
-.method public final e(Le94;Li41;Z)V
-    .locals 22
+.method public final f(Lmb4;Ln41;ZZ)V
+    .locals 16
 
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
 
-    move-object/from16 v2, p2
+    move-object/from16 v5, p2
 
-    move/from16 v3, p3
+    sget-object v2, Lbd5;->a:Lbd5;
 
-    sget-object v4, Li41;->h:Li41;
+    sget-object v3, Ln41;->h:Ln41;
 
-    invoke-static {v2, v4}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v5, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v4
+    move-result v3
 
-    const-string v5, "ru.oneme.app.new.incomingCalls."
+    const-string v4, "CallServiceTag"
 
-    const/16 v6, 0xef
+    const-string v6, "CallsNotification"
 
-    const-string v7, "CallsNotification"
+    if-eqz v3, :cond_5
 
-    const-string v8, "CallServiceTag"
+    const-string v2, "CallService show default push due to chat info is empty."
 
-    const/4 v9, 0x1
+    invoke-static {v4, v2}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-eqz v4, :cond_5
+    invoke-virtual {v0}, Lone/me/calls/impl/service/CallServiceImpl;->d()Lix1;
 
-    const-string v4, "CallService show default push due to chat info is empty."
+    move-result-object v2
 
-    invoke-static {v8, v4}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v3, v1, Lmb4;->a:Lgxi;
 
-    invoke-virtual {v0}, Lone/me/calls/impl/service/CallServiceImpl;->c()Ltw1;
+    if-eqz v3, :cond_0
 
-    move-result-object v4
+    invoke-virtual {v3}, Lgxi;->a()Z
 
-    iget-object v8, v1, Le94;->a:Lmmi;
-
-    if-eqz v8, :cond_0
-
-    invoke-virtual {v8}, Lmmi;->a()Z
-
-    move-result v10
+    move-result v7
 
     goto :goto_0
 
     :cond_0
-    const/4 v10, 0x0
+    const/4 v7, 0x0
 
     :goto_0
-    iget-boolean v1, v1, Le94;->h:Z
+    iget-boolean v1, v1, Lmb4;->h:Z
 
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const-string v8, "createTempNotification"
+    const-string v3, "createTempNotification"
 
-    invoke-static {v7, v8}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v6, v3}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v2, v2, Li41;->c:Ljava/lang/CharSequence;
+    iget-object v3, v5, Ln41;->c:Ljava/lang/CharSequence;
 
-    if-nez v2, :cond_1
+    if-nez v3, :cond_1
 
-    iget-object v2, v4, Ltw1;->f:Ljava/lang/Object;
+    iget-object v3, v2, Lix1;->f:Ljava/lang/Object;
 
-    invoke-interface {v2}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-interface {v3}, Lk18;->getValue()Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v3
 
-    check-cast v2, Ljava/lang/String;
+    check-cast v3, Ljava/lang/String;
 
     :cond_1
     if-nez v1, :cond_2
 
-    iget-object v1, v4, Ltw1;->i:Ljava/lang/Object;
+    iget-object v1, v2, Lix1;->i:Ljava/lang/Object;
 
-    invoke-interface {v1}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -738,11 +762,11 @@
     goto :goto_1
 
     :cond_2
-    if-eqz v10, :cond_3
+    if-eqz v7, :cond_3
 
-    iget-object v1, v4, Ltw1;->h:Ljava/lang/Object;
+    iget-object v1, v2, Lix1;->h:Ljava/lang/Object;
 
-    invoke-interface {v1}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -751,674 +775,584 @@
     goto :goto_1
 
     :cond_3
-    iget-object v1, v4, Ltw1;->g:Ljava/lang/Object;
+    iget-object v1, v2, Lix1;->g:Ljava/lang/Object;
 
-    invoke-interface {v1}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
     :goto_1
-    if-eqz v10, :cond_4
+    if-eqz v7, :cond_4
 
-    iget-object v7, v4, Ltw1;->k:Ljava/lang/Object;
+    iget-object v4, v2, Lix1;->k:Ljava/lang/Object;
 
-    invoke-interface {v7}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-interface {v4}, Lk18;->getValue()Ljava/lang/Object;
 
-    move-result-object v7
+    move-result-object v4
 
-    check-cast v7, Ljava/lang/Number;
+    check-cast v4, Ljava/lang/Number;
 
-    invoke-virtual {v7}, Ljava/lang/Number;->intValue()I
+    invoke-virtual {v4}, Ljava/lang/Number;->intValue()I
 
-    move-result v7
+    move-result v4
 
     goto :goto_2
 
     :cond_4
-    iget-object v7, v4, Ltw1;->j:Ljava/lang/Object;
+    iget-object v4, v2, Lix1;->j:Ljava/lang/Object;
 
-    invoke-interface {v7}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-interface {v4}, Lk18;->getValue()Ljava/lang/Object;
 
-    move-result-object v7
+    move-result-object v4
 
-    check-cast v7, Ljava/lang/Number;
+    check-cast v4, Ljava/lang/Number;
 
-    invoke-virtual {v7}, Ljava/lang/Number;->intValue()I
+    invoke-virtual {v4}, Ljava/lang/Number;->intValue()I
 
-    move-result v7
+    move-result v4
 
     :goto_2
-    iget-object v4, v4, Ltw1;->c:Liu7;
+    iget-object v2, v2, Lix1;->c:Lk18;
 
-    invoke-interface {v4}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lbi4;
-
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v0, v5}, Ltw1;->e(Lone/me/calls/impl/service/CallServiceImpl;Ljava/lang/String;)Lyca;
-
-    move-result-object v4
-
-    iget-object v5, v4, Lyca;->F:Landroid/app/Notification;
-
-    iput v7, v5, Landroid/app/Notification;->icon:I
-
-    invoke-static {v2}, Lyca;->b(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-interface {v2}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
-    iput-object v2, v4, Lyca;->e:Ljava/lang/CharSequence;
+    check-cast v2, Llk4;
 
-    invoke-static {v1}, Lyca;->b(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v2, "ru.oneme.app.new.incomingCalls."
+
+    invoke-static {v0, v2}, Lix1;->h(Lone/me/calls/impl/service/CallServiceImpl;Ljava/lang/String;)Lnla;
+
+    move-result-object v2
+
+    iget-object v5, v2, Lnla;->F:Landroid/app/Notification;
+
+    iput v4, v5, Landroid/app/Notification;->icon:I
+
+    invoke-static {v3}, Lnla;->c(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object v3
+
+    iput-object v3, v2, Lnla;->e:Ljava/lang/CharSequence;
+
+    invoke-static {v1}, Lnla;->c(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    iput-object v1, v4, Lyca;->f:Ljava/lang/CharSequence;
+    iput-object v1, v2, Lnla;->f:Ljava/lang/CharSequence;
 
-    invoke-virtual {v4}, Lyca;->a()Landroid/app/Notification;
+    invoke-virtual {v2}, Lnla;->a()Landroid/app/Notification;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v0, v6, v1, v9, v3}, Lone/me/calls/impl/service/CallServiceImpl;->d(ILandroid/app/Notification;ZZ)V
+    const/4 v3, 0x1
+
+    const/16 v1, 0xef
+
+    move/from16 v4, p3
+
+    move/from16 v5, p4
+
+    invoke-virtual/range {v0 .. v5}, Lone/me/calls/impl/service/CallServiceImpl;->e(ILandroid/app/Notification;ZZZ)V
+
+    move-object v8, v0
 
     return-void
 
     :cond_5
-    iget-boolean v4, v1, Le94;->h:Z
+    move-object v8, v0
 
-    sget-object v12, Lea5;->a:Lea5;
+    iget-boolean v0, v1, Lmb4;->h:Z
 
-    const/4 v13, 0x2
+    const/4 v3, 0x0
 
-    const-class v6, Lone/me/android/calls/CallNotifierFixActivity;
+    if-eqz v0, :cond_8
 
-    const-class v11, Lone/me/android/calls/CallNotifierBroadcastReceiver;
+    iget-boolean v0, v1, Lmb4;->g:Z
 
-    const/4 v10, 0x0
+    if-nez v0, :cond_8
 
-    if-eqz v4, :cond_10
+    const-string v0, "CallService show incoming notification."
 
-    iget-boolean v4, v1, Le94;->g:Z
+    invoke-static {v4, v0}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-nez v4, :cond_10
+    invoke-virtual {v8}, Lone/me/calls/impl/service/CallServiceImpl;->d()Lix1;
 
-    const-string v4, "CallService show incoming notification."
+    move-result-object v0
 
-    invoke-static {v8, v4}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Lone/me/calls/impl/service/CallServiceImpl;->c()Ltw1;
-
-    move-result-object v4
-
-    iget-object v1, v1, Le94;->a:Lmmi;
+    iget-object v1, v1, Lmb4;->a:Lgxi;
 
     if-eqz v1, :cond_6
 
-    invoke-virtual {v1}, Lmmi;->a()Z
+    invoke-virtual {v1}, Lgxi;->a()Z
 
-    move-result v1
+    move-result v7
+
+    move v4, v7
 
     goto :goto_3
 
     :cond_6
-    const/4 v1, 0x0
+    const/4 v4, 0x0
 
     :goto_3
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v8, v4, Ltw1;->g:Ljava/lang/Object;
+    const-string v1, "showIncomingCallNotification"
 
-    iget-object v14, v4, Ltw1;->h:Ljava/lang/Object;
+    invoke-static {v6, v1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v15, "showIncomingCallNotification"
+    iget-object v1, v5, Ln41;->c:Ljava/lang/CharSequence;
 
-    invoke-static {v7, v15}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    if-nez v1, :cond_7
 
-    iget-object v7, v2, Li41;->c:Ljava/lang/CharSequence;
+    iget-object v1, v0, Lix1;->f:Ljava/lang/Object;
 
-    if-nez v7, :cond_7
+    invoke-interface {v1}, Lk18;->getValue()Ljava/lang/Object;
 
-    iget-object v7, v4, Ltw1;->f:Ljava/lang/Object;
+    move-result-object v1
 
-    invoke-interface {v7}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Ljava/lang/String;
+    check-cast v1, Ljava/lang/String;
 
     :cond_7
-    new-instance v15, Lsw1;
+    new-instance v6, Lhx1;
 
-    invoke-direct {v15, v4, v2, v10}, Lsw1;-><init>(Ltw1;Li41;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v6, v0, v5, v3}, Lhx1;-><init>(Lix1;Ln41;Lkotlin/coroutines/Continuation;)V
 
-    invoke-static {v12, v15}, Ltki;->f(Li54;Lzi6;)Ljava/lang/Object;
-
-    move-result-object v10
-
-    check-cast v10, Landroid/graphics/Bitmap;
-
-    iget-object v12, v4, Ltw1;->c:Liu7;
-
-    invoke-interface {v12}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v12
-
-    check-cast v12, Lbi4;
-
-    invoke-virtual {v12}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v0, v5}, Ltw1;->e(Lone/me/calls/impl/service/CallServiceImpl;Ljava/lang/String;)Lyca;
-
-    move-result-object v5
-
-    if-eqz v1, :cond_8
-
-    iget-object v12, v4, Ltw1;->k:Ljava/lang/Object;
-
-    invoke-interface {v12}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v12
-
-    check-cast v12, Ljava/lang/Number;
-
-    invoke-virtual {v12}, Ljava/lang/Number;->intValue()I
-
-    move-result v12
-
-    goto :goto_4
-
-    :cond_8
-    iget-object v12, v4, Ltw1;->j:Ljava/lang/Object;
-
-    invoke-interface {v12}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v12
-
-    check-cast v12, Ljava/lang/Number;
-
-    invoke-virtual {v12}, Ljava/lang/Number;->intValue()I
-
-    move-result v12
-
-    :goto_4
-    iget-object v15, v5, Lyca;->F:Landroid/app/Notification;
-
-    iput v12, v15, Landroid/app/Notification;->icon:I
-
-    invoke-static {v7}, Lyca;->b(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
-
-    move-result-object v12
-
-    iput-object v12, v5, Lyca;->e:Ljava/lang/CharSequence;
-
-    if-eqz v1, :cond_9
-
-    invoke-interface {v14}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v12
-
-    check-cast v12, Ljava/lang/String;
-
-    goto :goto_5
-
-    :cond_9
-    invoke-interface {v8}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v12
-
-    check-cast v12, Ljava/lang/String;
-
-    :goto_5
-    invoke-static {v12}, Lyca;->b(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
-
-    move-result-object v12
-
-    iput-object v12, v5, Lyca;->f:Ljava/lang/CharSequence;
-
-    iput v13, v5, Lyca;->k:I
-
-    invoke-virtual {v5, v13, v9}, Lyca;->e(IZ)V
-
-    const/16 v12, 0x10
-
-    invoke-virtual {v5, v12, v9}, Lyca;->e(IZ)V
-
-    invoke-virtual {v4}, Ltw1;->f()Lrc1;
-
-    move-result-object v12
-
-    invoke-virtual {v12}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget v12, Llkg;->a:I
-
-    const/16 v13, 0x1f
-
-    if-lt v12, v13, :cond_a
-
-    new-instance v13, Landroid/content/Intent;
-
-    invoke-direct {v13, v0, v6}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    invoke-static {v13, v2, v1}, Lrc1;->a(Landroid/content/Intent;Li41;Z)V
-
-    const/4 v9, 0x0
-
-    const/high16 v15, 0xc000000
-
-    invoke-static {v0, v9, v13, v15}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
-
-    move-result-object v13
-
-    goto :goto_6
-
-    :cond_a
-    const/4 v9, 0x0
-
-    const/high16 v15, 0xc000000
-
-    new-instance v13, Landroid/content/Intent;
-
-    invoke-direct {v13, v0, v11}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    invoke-static {v13, v2, v1}, Lrc1;->a(Landroid/content/Intent;Li41;Z)V
-
-    invoke-static {v0, v9, v13, v15}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
-
-    move-result-object v13
-
-    :goto_6
-    iput-object v13, v5, Lyca;->h:Landroid/app/PendingIntent;
-
-    const/16 v13, 0x80
-
-    const/4 v15, 0x1
-
-    invoke-virtual {v5, v13, v15}, Lyca;->e(IZ)V
-
-    iput-boolean v9, v5, Lyca;->l:Z
-
-    const-string v13, "call"
-
-    iput-object v13, v5, Lyca;->v:Ljava/lang/String;
-
-    invoke-virtual {v4}, Ltw1;->f()Lrc1;
-
-    move-result-object v13
-
-    invoke-virtual {v13}, Lrc1;->b()Landroid/app/Application;
-
-    move-result-object v15
-
-    new-instance v9, Lqc1;
-
-    invoke-direct {v9, v13, v2, v1}, Lqc1;-><init>(Lrc1;Li41;Z)V
-
-    const/16 v13, 0x1f
-
-    if-lt v12, v13, :cond_b
-
-    new-instance v2, Landroid/content/Intent;
-
-    invoke-direct {v2, v15, v6}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    invoke-virtual {v9, v2}, Lqc1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 v9, 0x0
-
-    const/high16 v13, 0xc000000
-
-    invoke-static {v15, v9, v2, v13}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+    invoke-static {v2, v6}, Lsvi;->g(Lx74;Lsm6;)Ljava/lang/Object;
 
     move-result-object v2
 
-    :goto_7
-    move-object/from16 v21, v2
+    move-object v3, v2
 
-    goto :goto_8
+    check-cast v3, Landroid/graphics/Bitmap;
 
-    :cond_b
-    const/high16 v13, 0xc000000
+    move-object v2, v1
 
-    new-instance v2, Landroid/content/Intent;
-
-    invoke-direct {v2, v15, v11}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    invoke-virtual {v9, v2}, Lqc1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 v9, 0x0
-
-    invoke-static {v15, v9, v2, v13}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
-
-    move-result-object v2
-
-    goto :goto_7
-
-    :goto_8
-    if-nez v21, :cond_c
-
-    goto :goto_c
-
-    :cond_c
-    invoke-virtual {v4}, Ltw1;->f()Lrc1;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lrc1;->b()Landroid/app/Application;
-
-    move-result-object v2
-
-    const-string v4, "action-decline-call"
-
-    const/16 v15, 0x1f
-
-    if-lt v12, v15, :cond_d
-
-    new-instance v11, Landroid/content/Intent;
-
-    invoke-direct {v11, v2, v6}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    invoke-virtual {v11, v4}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    invoke-static {v2, v9, v11, v13}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
-
-    move-result-object v2
-
-    :goto_9
-    move-object/from16 v20, v2
-
-    goto :goto_a
-
-    :cond_d
-    new-instance v6, Landroid/content/Intent;
-
-    invoke-direct {v6, v2, v11}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    invoke-virtual {v6, v4}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    invoke-static {v2, v9, v6, v13}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
-
-    move-result-object v2
-
-    goto :goto_9
-
-    :goto_a
-    if-nez v20, :cond_e
-
-    goto :goto_c
-
-    :cond_e
-    if-eqz v1, :cond_f
-
-    invoke-interface {v14}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0, v8, v2, v5, v4}, Lix1;->f(Lone/me/calls/impl/service/CallServiceImpl;Ljava/lang/CharSequence;Ln41;Z)Lnla;
 
     move-result-object v1
 
-    check-cast v1, Ljava/lang/String;
+    invoke-virtual/range {v0 .. v5}, Lix1;->b(Lnla;Ljava/lang/CharSequence;Landroid/graphics/Bitmap;ZLn41;)V
 
-    goto :goto_b
+    invoke-virtual {v1}, Lnla;->a()Landroid/app/Notification;
 
-    :cond_f
-    invoke-interface {v8}, Liu7;->getValue()Ljava/lang/Object;
+    move-result-object v2
 
-    move-result-object v1
+    const/16 v1, 0xf0
 
-    check-cast v1, Ljava/lang/String;
+    const/4 v3, 0x1
 
-    :goto_b
-    invoke-static {v7, v1, v10}, Ltw1;->d(Ljava/lang/CharSequence;Ljava/lang/String;Landroid/graphics/Bitmap;)Lljb;
+    move/from16 v4, p3
 
-    move-result-object v18
+    move/from16 v5, p4
 
-    new-instance v16, Ldda;
+    move-object v0, v8
 
-    const/16 v17, 0x1
-
-    const/16 v19, 0x0
-
-    invoke-direct/range {v16 .. v21}, Ldda;-><init>(ILljb;Landroid/app/PendingIntent;Landroid/app/PendingIntent;Landroid/app/PendingIntent;)V
-
-    move-object/from16 v1, v16
-
-    invoke-virtual {v5, v1}, Lyca;->h(Lmda;)V
-
-    :goto_c
-    invoke-virtual {v5}, Lyca;->a()Landroid/app/Notification;
-
-    move-result-object v1
-
-    const/16 v2, 0xf0
-
-    const/4 v15, 0x1
-
-    invoke-virtual {v0, v2, v1, v15, v3}, Lone/me/calls/impl/service/CallServiceImpl;->d(ILandroid/app/Notification;ZZ)V
+    invoke-virtual/range {v0 .. v5}, Lone/me/calls/impl/service/CallServiceImpl;->e(ILandroid/app/Notification;ZZZ)V
 
     return-void
 
-    :cond_10
-    const-string v1, "CallService show active notification."
+    :cond_8
+    move-object v0, v8
 
-    invoke-static {v8, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v1, v0, Lone/me/calls/impl/service/CallServiceImpl;->t0:Lbwf;
 
-    invoke-virtual {v0}, Lone/me/calls/impl/service/CallServiceImpl;->c()Ltw1;
+    invoke-virtual {v1}, Lbwf;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    iget-object v4, v2, Li41;->c:Ljava/lang/CharSequence;
+    check-cast v1, Lx65;
 
-    if-eqz v4, :cond_11
+    iget-object v1, v1, Lx65;->f:Ltcf;
+
+    invoke-virtual {v1}, Ltcf;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Long;
+
+    if-eqz v1, :cond_9
+
+    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v8
+
+    goto :goto_4
+
+    :cond_9
+    const-wide/16 v8, 0x0
+
+    :goto_4
+    sget v1, Ls65;->d:I
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v10
+
+    sget-object v1, Ly65;->c:Ly65;
+
+    invoke-static {v10, v11, v1}, Lv9j;->i(JLy65;)J
+
+    move-result-wide v10
+
+    sget-object v1, Ly65;->d:Ly65;
+
+    invoke-static {v8, v9, v1}, Lv9j;->i(JLy65;)J
+
+    move-result-wide v8
+
+    invoke-static {v10, v11, v8, v9}, Ls65;->k(JJ)J
+
+    move-result-wide v8
+
+    sget-object v1, Lwqi;->a:Ll6b;
+
+    if-nez v1, :cond_a
+
+    goto :goto_5
+
+    :cond_a
+    sget-object v10, Llg8;->d:Llg8;
+
+    invoke-virtual {v1, v10}, Ll6b;->b(Llg8;)Z
+
+    move-result v11
+
+    if-eqz v11, :cond_b
+
+    invoke-static {v8, v9}, Ls65;->n(J)Ljava/lang/String;
+
+    move-result-object v11
+
+    const-string v12, "CallService show active notification, startedAt="
+
+    invoke-virtual {v12, v11}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v11
+
+    invoke-virtual {v1, v10, v4, v11, v3}, Ll6b;->c(Llg8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_b
+    :goto_5
+    invoke-virtual {v0}, Lone/me/calls/impl/service/CallServiceImpl;->d()Lix1;
+
+    move-result-object v1
+
+    iget-object v4, v5, Ln41;->c:Ljava/lang/CharSequence;
+
+    if-eqz v4, :cond_c
 
     invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v4
 
-    goto :goto_d
+    goto :goto_6
 
-    :cond_11
-    move-object v4, v10
+    :cond_c
+    move-object v4, v3
 
-    :goto_d
-    iget-object v2, v2, Li41;->d:Ljava/lang/String;
+    :goto_6
+    iget-object v5, v5, Ln41;->d:Ljava/lang/String;
+
+    invoke-static {v8, v9}, Ls65;->g(J)J
+
+    move-result-wide v8
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v5, v1, Ltw1;->i:Ljava/lang/Object;
+    const-string v10, "showActiveCallNotification"
 
-    const-string v8, "showActiveCallNotification"
+    invoke-static {v6, v10}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v7, v8}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    if-nez v4, :cond_d
 
-    if-nez v4, :cond_12
+    iget-object v4, v1, Lix1;->f:Ljava/lang/Object;
 
-    iget-object v4, v1, Ltw1;->f:Ljava/lang/Object;
-
-    invoke-interface {v4}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-interface {v4}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Ljava/lang/String;
 
-    :cond_12
-    new-instance v7, Lrw1;
+    :cond_d
+    new-instance v6, Lfx1;
 
-    invoke-direct {v7, v1, v2, v10}, Lrw1;-><init>(Ltw1;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v6, v1, v5, v3}, Lfx1;-><init>(Lix1;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
 
-    invoke-static {v12, v7}, Ltki;->f(Li54;Lzi6;)Ljava/lang/Object;
+    invoke-static {v2, v6}, Lsvi;->g(Lx74;Lsm6;)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/graphics/Bitmap;
 
-    iget-object v7, v1, Ltw1;->c:Liu7;
+    iget-object v3, v1, Lix1;->c:Lk18;
 
-    invoke-interface {v7}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-interface {v3}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Llk4;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v3, "ru.oneme.app.new.activeCalls"
+
+    invoke-static {v0, v3}, Lix1;->h(Lone/me/calls/impl/service/CallServiceImpl;Ljava/lang/String;)Lnla;
+
+    move-result-object v3
+
+    iget-object v5, v1, Lix1;->j:Ljava/lang/Object;
+
+    invoke-interface {v5}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/lang/Number;
+
+    invoke-virtual {v5}, Ljava/lang/Number;->intValue()I
+
+    move-result v5
+
+    iget-object v6, v3, Lnla;->F:Landroid/app/Notification;
+
+    iput v5, v6, Landroid/app/Notification;->icon:I
+
+    iget-object v5, v1, Lix1;->i:Ljava/lang/Object;
+
+    invoke-interface {v5}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/lang/String;
+
+    invoke-static {v5}, Lnla;->c(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object v5
+
+    iput-object v5, v3, Lnla;->f:Ljava/lang/CharSequence;
+
+    invoke-static {v4}, Lnla;->c(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object v5
+
+    iput-object v5, v3, Lnla;->e:Ljava/lang/CharSequence;
+
+    invoke-virtual {v1}, Lix1;->i()Lid1;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Lid1;->b()Landroid/app/Application;
+
+    move-result-object v5
+
+    sget v10, La0h;->a:I
+
+    const-string v11, "action-open-call"
+
+    const/high16 v12, 0x10000000
+
+    const-class v13, Lone/me/android/calls/CallNotifierBroadcastReceiver;
+
+    const-class v14, Lone/me/android/calls/CallNotifierFixActivity;
+
+    const/16 v15, 0x1f
+
+    const/high16 v7, 0xc000000
+
+    if-lt v10, v15, :cond_e
+
+    new-instance v15, Landroid/content/Intent;
+
+    invoke-direct {v15, v5, v14}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-virtual {v15, v11}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    invoke-virtual {v15, v12}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+
+    const/4 v12, 0x0
+
+    invoke-static {v5, v12, v15, v7}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+
+    move-result-object v5
+
+    goto :goto_7
+
+    :cond_e
+    const/4 v12, 0x0
+
+    new-instance v15, Landroid/content/Intent;
+
+    invoke-direct {v15, v5, v13}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-virtual {v15, v11}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    const/high16 v0, 0x10000000
+
+    invoke-virtual {v15, v0}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+
+    invoke-static {v5, v12, v15, v7}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+
+    move-result-object v5
+
+    :goto_7
+    iput-object v5, v3, Lnla;->g:Landroid/app/PendingIntent;
+
+    const/4 v0, 0x2
+
+    const/4 v5, 0x1
+
+    invoke-virtual {v3, v0, v5}, Lnla;->f(IZ)V
+
+    iput-boolean v12, v3, Lnla;->l:Z
+
+    iput-wide v8, v6, Landroid/app/Notification;->when:J
+
+    invoke-virtual {v1}, Lix1;->i()Lid1;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lid1;->b()Landroid/app/Application;
+
+    move-result-object v0
+
+    const/16 v5, 0x1f
+
+    if-lt v10, v5, :cond_f
+
+    new-instance v5, Landroid/content/Intent;
+
+    invoke-direct {v5, v0, v14}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-virtual {v5, v11}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    const/high16 v6, 0x10000000
+
+    invoke-virtual {v5, v6}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+
+    invoke-static {v0, v12, v5, v7}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+
+    move-result-object v0
+
+    goto :goto_8
+
+    :cond_f
+    const/high16 v6, 0x10000000
+
+    new-instance v5, Landroid/content/Intent;
+
+    invoke-direct {v5, v0, v13}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-virtual {v5, v11}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    invoke-virtual {v5, v6}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+
+    invoke-static {v0, v12, v5, v7}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+
+    move-result-object v0
+
+    :goto_8
+    iput-object v0, v3, Lnla;->h:Landroid/app/PendingIntent;
+
+    const/16 v0, 0x80
+
+    invoke-virtual {v3, v0, v12}, Lnla;->f(IZ)V
+
+    invoke-virtual {v1}, Lix1;->i()Lid1;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lid1;->b()Landroid/app/Application;
+
+    move-result-object v0
+
+    sget v5, La0h;->a:I
+
+    const-string v6, "action-finished-call"
+
+    const/16 v8, 0x1f
+
+    if-lt v5, v8, :cond_10
+
+    new-instance v5, Landroid/content/Intent;
+
+    invoke-direct {v5, v0, v14}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-virtual {v5, v6}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    invoke-static {v0, v12, v5, v7}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+
+    move-result-object v0
+
+    :goto_9
+    move-object v8, v0
+
+    goto :goto_a
+
+    :cond_10
+    new-instance v5, Landroid/content/Intent;
+
+    invoke-direct {v5, v0, v13}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-virtual {v5, v6}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    invoke-static {v0, v12, v5, v7}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+
+    move-result-object v0
+
+    goto :goto_9
+
+    :goto_a
+    if-nez v8, :cond_11
+
+    goto :goto_b
+
+    :cond_11
+    iget-object v0, v1, Lix1;->i:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-static {v4, v0, v2}, Lix1;->g(Ljava/lang/CharSequence;Ljava/lang/String;Landroid/graphics/Bitmap;)Lltb;
 
     move-result-object v7
 
-    check-cast v7, Lbi4;
-
-    invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v7, "ru.oneme.app.new.activeCalls"
-
-    invoke-static {v0, v7}, Ltw1;->e(Lone/me/calls/impl/service/CallServiceImpl;Ljava/lang/String;)Lyca;
-
-    move-result-object v7
-
-    iget-object v8, v1, Ltw1;->j:Ljava/lang/Object;
-
-    invoke-interface {v8}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Ljava/lang/Number;
-
-    invoke-virtual {v8}, Ljava/lang/Number;->intValue()I
-
-    move-result v8
-
-    iget-object v9, v7, Lyca;->F:Landroid/app/Notification;
-
-    iput v8, v9, Landroid/app/Notification;->icon:I
-
-    invoke-interface {v5}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Ljava/lang/String;
-
-    invoke-static {v8}, Lyca;->b(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
-
-    move-result-object v8
-
-    iput-object v8, v7, Lyca;->f:Ljava/lang/CharSequence;
-
-    invoke-static {v4}, Lyca;->b(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
-
-    move-result-object v8
-
-    iput-object v8, v7, Lyca;->e:Ljava/lang/CharSequence;
-
-    invoke-virtual {v1}, Ltw1;->f()Lrc1;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Lrc1;->c()Landroid/app/PendingIntent;
-
-    move-result-object v8
-
-    iput-object v8, v7, Lyca;->g:Landroid/app/PendingIntent;
-
-    const/4 v15, 0x1
-
-    invoke-virtual {v7, v13, v15}, Lyca;->e(IZ)V
-
-    invoke-virtual {v1}, Ltw1;->f()Lrc1;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Lrc1;->c()Landroid/app/PendingIntent;
-
-    move-result-object v8
-
-    iput-object v8, v7, Lyca;->h:Landroid/app/PendingIntent;
+    new-instance v5, Lsla;
 
     const/4 v9, 0x0
 
-    const/16 v13, 0x80
+    const/4 v10, 0x0
 
-    invoke-virtual {v7, v13, v9}, Lyca;->e(IZ)V
+    const/4 v6, 0x2
 
-    invoke-virtual {v1}, Ltw1;->f()Lrc1;
+    invoke-direct/range {v5 .. v10}, Lsla;-><init>(ILltb;Landroid/app/PendingIntent;Landroid/app/PendingIntent;Landroid/app/PendingIntent;)V
 
-    move-result-object v1
+    invoke-virtual {v3, v5}, Lnla;->i(Lbma;)V
 
-    invoke-virtual {v1}, Lrc1;->b()Landroid/app/Application;
+    :goto_b
+    invoke-virtual {v3}, Lnla;->a()Landroid/app/Notification;
 
-    move-result-object v1
+    move-result-object v2
 
-    sget v8, Llkg;->a:I
+    const/16 v1, 0xef
 
-    const-string v10, "action-finished-call"
+    const/4 v3, 0x0
 
-    const/16 v13, 0x1f
+    move-object/from16 v0, p0
 
-    if-lt v8, v13, :cond_13
+    move/from16 v4, p3
 
-    new-instance v8, Landroid/content/Intent;
+    move/from16 v5, p4
 
-    invoke-direct {v8, v1, v6}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    invoke-virtual {v8, v10}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    const/high16 v13, 0xc000000
-
-    invoke-static {v1, v9, v8, v13}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
-
-    move-result-object v1
-
-    :goto_e
-    move-object v13, v1
-
-    goto :goto_f
-
-    :cond_13
-    const/high16 v13, 0xc000000
-
-    new-instance v6, Landroid/content/Intent;
-
-    invoke-direct {v6, v1, v11}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    invoke-virtual {v6, v10}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    invoke-static {v1, v9, v6, v13}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
-
-    move-result-object v1
-
-    goto :goto_e
-
-    :goto_f
-    if-nez v13, :cond_14
-
-    goto :goto_10
-
-    :cond_14
-    invoke-interface {v5}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    invoke-static {v4, v1, v2}, Ltw1;->d(Ljava/lang/CharSequence;Ljava/lang/String;Landroid/graphics/Bitmap;)Lljb;
-
-    move-result-object v12
-
-    new-instance v10, Ldda;
-
-    const/4 v14, 0x0
-
-    const/4 v15, 0x0
-
-    const/4 v11, 0x2
-
-    invoke-direct/range {v10 .. v15}, Ldda;-><init>(ILljb;Landroid/app/PendingIntent;Landroid/app/PendingIntent;Landroid/app/PendingIntent;)V
-
-    invoke-virtual {v7, v10}, Lyca;->h(Lmda;)V
-
-    :goto_10
-    invoke-virtual {v7}, Lyca;->a()Landroid/app/Notification;
-
-    move-result-object v1
-
-    const/16 v2, 0xef
-
-    const/4 v9, 0x0
-
-    invoke-virtual {v0, v2, v1, v9, v3}, Lone/me/calls/impl/service/CallServiceImpl;->d(ILandroid/app/Notification;ZZ)V
+    invoke-virtual/range {v0 .. v5}, Lone/me/calls/impl/service/CallServiceImpl;->e(ILandroid/app/Notification;ZZZ)V
 
     return-void
 .end method
@@ -1432,7 +1366,7 @@
 .end method
 
 .method public final onCreate()V
-    .locals 5
+    .locals 4
 
     invoke-super {p0}, Landroid/app/Service;->onCreate()V
 
@@ -1440,7 +1374,7 @@
 
     const-string v1, "CallServiceTag"
 
-    invoke-static {v1, v0}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "power"
 
@@ -1460,57 +1394,51 @@
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    iput-object v0, p0, Lone/me/calls/impl/service/CallServiceImpl;->r0:Landroid/os/PowerManager$WakeLock;
+    iput-object v0, p0, Lone/me/calls/impl/service/CallServiceImpl;->s0:Landroid/os/PowerManager$WakeLock;
 
-    iget-object v0, p0, Lone/me/calls/impl/service/CallServiceImpl;->b:Liu7;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lfv1;
-
-    check-cast v2, Luv1;
-
-    iget-object v2, v2, Luv1;->P:Lx0f;
-
-    invoke-virtual {v2}, Lx0f;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Le94;
-
-    iget-object v3, p0, Lone/me/calls/impl/service/CallServiceImpl;->c:Liu7;
-
-    invoke-interface {v3}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ln41;
-
-    check-cast v3, Lx41;
-
-    iget-object v3, v3, Lx41;->j:Lx0f;
-
-    invoke-virtual {v3}, Lx0f;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Li41;
-
-    const/4 v4, 0x0
-
-    invoke-virtual {p0, v2, v3, v4}, Lone/me/calls/impl/service/CallServiceImpl;->e(Le94;Li41;Z)V
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0}, Lone/me/calls/impl/service/CallServiceImpl;->c()Ltv1;
 
     move-result-object v0
 
-    check-cast v0, Lfv1;
+    check-cast v0, Lhw1;
 
-    check-cast v0, Luv1;
+    iget-object v0, v0, Lhw1;->b1:Ltcf;
 
-    invoke-virtual {v0}, Luv1;->s()Z
+    invoke-virtual {v0}, Ltcf;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lmb4;
+
+    iget-object v2, p0, Lone/me/calls/impl/service/CallServiceImpl;->c:Lk18;
+
+    invoke-interface {v2}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ls41;
+
+    check-cast v2, Lc51;
+
+    iget-object v2, v2, Lc51;->j:Ltcf;
+
+    invoke-virtual {v2}, Ltcf;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ln41;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {p0, v0, v2, v3, v3}, Lone/me/calls/impl/service/CallServiceImpl;->f(Lmb4;Ln41;ZZ)V
+
+    invoke-virtual {p0}, Lone/me/calls/impl/service/CallServiceImpl;->c()Ltv1;
+
+    move-result-object v0
+
+    check-cast v0, Lhw1;
+
+    invoke-virtual {v0}, Lhw1;->t()Z
 
     move-result v0
 
@@ -1518,19 +1446,19 @@
 
     const-string v0, "CallService don\'t have active call. Stop service."
 
-    invoke-static {v1, v0}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Llo1;->c()Landroid/os/Handler;
+    invoke-static {}, Lzo1;->c()Landroid/os/Handler;
 
     move-result-object v0
 
-    new-instance v1, Lt30;
+    new-instance v1, Ll30;
 
     const/4 v2, 0x3
 
     const/4 v3, -0x1
 
-    invoke-direct {v1, p0, v3, v2}, Lt30;-><init>(Ljava/lang/Object;II)V
+    invoke-direct {v1, p0, v3, v2}, Ll30;-><init>(Ljava/lang/Object;II)V
 
     const-wide/16 v2, 0x1f4
 
@@ -1547,15 +1475,15 @@
 
     const-string v1, "service call onDestroy"
 
-    invoke-static {v0, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lone/me/calls/impl/service/CallServiceImpl;->c()Ltw1;
+    invoke-virtual {p0}, Lone/me/calls/impl/service/CallServiceImpl;->d()Lix1;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Ltw1;->b()V
+    invoke-virtual {v1}, Lix1;->d()V
 
-    iget-object v1, p0, Lone/me/calls/impl/service/CallServiceImpl;->r0:Landroid/os/PowerManager$WakeLock;
+    iget-object v1, p0, Lone/me/calls/impl/service/CallServiceImpl;->s0:Landroid/os/PowerManager$WakeLock;
 
     if-eqz v1, :cond_1
 
@@ -1567,7 +1495,7 @@
 
     if-ne v1, v2, :cond_1
 
-    iget-object v1, p0, Lone/me/calls/impl/service/CallServiceImpl;->r0:Landroid/os/PowerManager$WakeLock;
+    iget-object v1, p0, Lone/me/calls/impl/service/CallServiceImpl;->s0:Landroid/os/PowerManager$WakeLock;
 
     if-eqz v1, :cond_0
 
@@ -1576,14 +1504,14 @@
     :cond_0
     const-string v1, "cpu wake lock stop"
 
-    invoke-static {v0, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lone/me/calls/impl/service/CallServiceImpl;->r0:Landroid/os/PowerManager$WakeLock;
+    iput-object v1, p0, Lone/me/calls/impl/service/CallServiceImpl;->s0:Landroid/os/PowerManager$WakeLock;
 
-    iget-object v2, p0, Lone/me/calls/impl/service/CallServiceImpl;->q0:Landroid/media/session/MediaSession;
+    iget-object v2, p0, Lone/me/calls/impl/service/CallServiceImpl;->Z:Landroid/media/session/MediaSession;
 
     if-eqz v2, :cond_2
 
@@ -1591,302 +1519,434 @@
 
     const-string v2, "media session stop"
 
-    invoke-static {v0, v2}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
-    iput-object v1, p0, Lone/me/calls/impl/service/CallServiceImpl;->q0:Landroid/media/session/MediaSession;
+    iput-object v1, p0, Lone/me/calls/impl/service/CallServiceImpl;->Z:Landroid/media/session/MediaSession;
 
     return-void
 .end method
 
 .method public final onStartCommand(Landroid/content/Intent;II)I
-    .locals 10
+    .locals 15
 
-    const-string p2, "CallService onStartCommand"
+    move-object/from16 v1, p1
 
-    const-string v0, "CallServiceTag"
+    const-string v2, "CallServiceTag"
 
-    invoke-static {v0, p2}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    const-string v3, "CallService onStartCommand"
 
-    iget-object p2, p0, Lone/me/calls/impl/service/CallServiceImpl;->b:Liu7;
+    invoke-static {v2, v3}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-interface {p2}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0}, Lone/me/calls/impl/service/CallServiceImpl;->c()Ltv1;
 
-    move-result-object v1
+    move-result-object v3
 
-    check-cast v1, Lfv1;
+    check-cast v3, Lhw1;
 
-    check-cast v1, Luv1;
+    iget-object v3, v3, Lhw1;->b1:Ltcf;
 
-    iget-object v1, v1, Luv1;->P:Lx0f;
+    invoke-virtual {v3}, Ltcf;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v1}, Lx0f;->getValue()Ljava/lang/Object;
+    move-result-object v3
 
-    move-result-object v1
+    check-cast v3, Lmb4;
 
-    check-cast v1, Le94;
+    iget-object v4, p0, Lone/me/calls/impl/service/CallServiceImpl;->c:Lk18;
 
-    iget-object v2, p0, Lone/me/calls/impl/service/CallServiceImpl;->c:Liu7;
+    invoke-interface {v4}, Lk18;->getValue()Ljava/lang/Object;
 
-    invoke-interface {v2}, Liu7;->getValue()Ljava/lang/Object;
+    move-result-object v4
 
-    move-result-object v2
+    check-cast v4, Ls41;
 
-    check-cast v2, Ln41;
+    check-cast v4, Lc51;
 
-    check-cast v2, Lx41;
+    iget-object v4, v4, Lc51;->j:Ltcf;
 
-    iget-object v2, v2, Lx41;->j:Lx0f;
+    invoke-virtual {v4}, Ltcf;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v2}, Lx0f;->getValue()Ljava/lang/Object;
+    move-result-object v4
 
-    move-result-object v2
+    move-object v10, v4
 
-    check-cast v2, Li41;
+    check-cast v10, Ln41;
 
-    iget-boolean v3, v1, Le94;->h:Z
+    iget-boolean v4, v3, Lmb4;->h:Z
 
-    const/4 v4, 0x1
+    const/4 v11, 0x1
 
-    if-eqz v3, :cond_1
+    const/4 v5, 0x0
 
-    invoke-interface {p2}, Liu7;->getValue()Ljava/lang/Object;
+    if-eqz v4, :cond_1
 
-    move-result-object p2
+    invoke-virtual {p0}, Lone/me/calls/impl/service/CallServiceImpl;->c()Ltv1;
 
-    check-cast p2, Lfv1;
+    move-result-object v4
 
-    check-cast p2, Luv1;
+    check-cast v4, Lhw1;
 
-    invoke-virtual {p2}, Luv1;->t()Z
+    invoke-virtual {v4}, Lhw1;->u()Z
 
-    move-result p2
+    move-result v4
 
-    if-nez p2, :cond_1
+    if-nez v4, :cond_1
 
-    iget-object p2, p0, Lone/me/calls/impl/service/CallServiceImpl;->q0:Landroid/media/session/MediaSession;
+    iget-object v4, p0, Lone/me/calls/impl/service/CallServiceImpl;->Z:Landroid/media/session/MediaSession;
 
-    if-eqz p2, :cond_0
+    if-eqz v4, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p2, Lno1;
+    new-instance v4, Lbp1;
 
-    invoke-direct {p2, p0}, Lno1;-><init>(Lone/me/calls/impl/service/CallServiceImpl;)V
+    invoke-direct {v4, p0}, Lbp1;-><init>(Lone/me/calls/impl/service/CallServiceImpl;)V
 
-    new-instance v3, Landroid/media/session/MediaSession;
+    new-instance v6, Landroid/media/session/MediaSession;
 
-    invoke-direct {v3, p0, v0}, Landroid/media/session/MediaSession;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {v6, p0, v2}, Landroid/media/session/MediaSession;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    const/4 v5, 0x3
+    const/4 v7, 0x3
 
-    invoke-virtual {v3, v5}, Landroid/media/session/MediaSession;->setFlags(I)V
+    invoke-virtual {v6, v7}, Landroid/media/session/MediaSession;->setFlags(I)V
 
-    new-instance v6, Landroid/media/session/PlaybackState$Builder;
+    new-instance v8, Landroid/media/session/PlaybackState$Builder;
 
-    invoke-direct {v6}, Landroid/media/session/PlaybackState$Builder;-><init>()V
+    invoke-direct {v8}, Landroid/media/session/PlaybackState$Builder;-><init>()V
 
-    const-wide/16 v7, 0x0
+    const-wide/16 v12, 0x0
 
     const/4 v9, 0x0
 
-    invoke-virtual {v6, v5, v7, v8, v9}, Landroid/media/session/PlaybackState$Builder;->setState(IJF)Landroid/media/session/PlaybackState$Builder;
+    invoke-virtual {v8, v7, v12, v13, v9}, Landroid/media/session/PlaybackState$Builder;->setState(IJF)Landroid/media/session/PlaybackState$Builder;
 
-    move-result-object v5
+    move-result-object v7
 
-    invoke-virtual {v5}, Landroid/media/session/PlaybackState$Builder;->build()Landroid/media/session/PlaybackState;
+    invoke-virtual {v7}, Landroid/media/session/PlaybackState$Builder;->build()Landroid/media/session/PlaybackState;
 
-    move-result-object v5
+    move-result-object v7
 
-    invoke-virtual {v3, v5}, Landroid/media/session/MediaSession;->setPlaybackState(Landroid/media/session/PlaybackState;)V
+    invoke-virtual {v6, v7}, Landroid/media/session/MediaSession;->setPlaybackState(Landroid/media/session/PlaybackState;)V
 
-    invoke-virtual {v3, p2}, Landroid/media/session/MediaSession;->setPlaybackToRemote(Landroid/media/VolumeProvider;)V
+    invoke-virtual {v6, v4}, Landroid/media/session/MediaSession;->setPlaybackToRemote(Landroid/media/VolumeProvider;)V
 
-    new-instance p2, Lmo1;
+    new-instance v4, Lap1;
 
-    invoke-direct {p2}, Landroid/media/session/MediaSession$Callback;-><init>()V
+    invoke-direct {v4}, Landroid/media/session/MediaSession$Callback;-><init>()V
 
-    invoke-virtual {v3, p2}, Landroid/media/session/MediaSession;->setCallback(Landroid/media/session/MediaSession$Callback;)V
+    invoke-virtual {v6, v4}, Landroid/media/session/MediaSession;->setCallback(Landroid/media/session/MediaSession$Callback;)V
 
-    invoke-virtual {v3, v4}, Landroid/media/session/MediaSession;->setActive(Z)V
+    invoke-virtual {v6, v11}, Landroid/media/session/MediaSession;->setActive(Z)V
 
-    iput-object v3, p0, Lone/me/calls/impl/service/CallServiceImpl;->q0:Landroid/media/session/MediaSession;
+    iput-object v6, p0, Lone/me/calls/impl/service/CallServiceImpl;->Z:Landroid/media/session/MediaSession;
 
-    const-string p2, "media session started"
+    const-string v4, "media session started"
 
-    invoke-static {v0, p2}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_1
-    iget-object p2, p0, Lone/me/calls/impl/service/CallServiceImpl;->q0:Landroid/media/session/MediaSession;
+    iget-object v4, p0, Lone/me/calls/impl/service/CallServiceImpl;->Z:Landroid/media/session/MediaSession;
 
-    if-eqz p2, :cond_2
+    if-eqz v4, :cond_2
 
-    invoke-virtual {p2}, Landroid/media/session/MediaSession;->release()V
+    invoke-virtual {v4}, Landroid/media/session/MediaSession;->release()V
 
-    const-string p2, "media session stop"
+    const-string v4, "media session stop"
 
-    invoke-static {v0, p2}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
-    const/4 p2, 0x0
-
-    iput-object p2, p0, Lone/me/calls/impl/service/CallServiceImpl;->q0:Landroid/media/session/MediaSession;
+    iput-object v5, p0, Lone/me/calls/impl/service/CallServiceImpl;->Z:Landroid/media/session/MediaSession;
 
     :goto_0
-    const-wide/16 v5, 0x1f4
+    const-wide/16 v6, 0x1f4
 
-    if-eqz p1, :cond_9
+    const/4 v12, 0x2
 
-    const-string p2, "ACTION"
+    if-eqz v1, :cond_d
 
-    const/4 v3, 0x0
+    const-string v4, "ACTION"
 
-    invoke-virtual {p1, p2, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    const/4 v13, 0x0
 
-    move-result v7
+    invoke-virtual {v1, v4, v13}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
-    sget-object v8, Lko1;->Y:Lzd5;
+    move-result v8
 
-    invoke-virtual {v8, v7}, Lzd5;->get(I)Ljava/lang/Object;
+    sget-object v9, Lyo1;->Y:Lzg5;
 
-    move-result-object v7
+    invoke-virtual {v9, v8}, Lzg5;->get(I)Ljava/lang/Object;
 
-    sget-object v9, Lko1;->b:Lko1;
+    move-result-object v8
 
-    if-ne v7, v9, :cond_3
+    sget-object v14, Lyo1;->b:Lyo1;
 
-    goto :goto_2
+    if-ne v8, v14, :cond_3
+
+    goto/16 :goto_3
 
     :cond_3
-    invoke-virtual {p1, p2, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    invoke-virtual {v1, v4, v13}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
-    move-result v7
+    move-result v8
 
-    invoke-virtual {v8, v7}, Lzd5;->get(I)Ljava/lang/Object;
+    invoke-virtual {v9, v8}, Lzg5;->get(I)Ljava/lang/Object;
 
-    move-result-object v7
+    move-result-object v8
 
-    sget-object v9, Lko1;->a:Lko1;
+    sget-object v14, Lyo1;->a:Lyo1;
 
-    if-ne v7, v9, :cond_4
+    if-ne v8, v14, :cond_4
 
-    const-string p1, "CallService start."
+    const-string v1, "CallService start."
 
-    invoke-static {v0, p1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_3
+    return v12
 
     :cond_4
-    iget-object v7, v1, Le94;->l:Luk5;
+    iget-object v8, v3, Lmb4;->l:Lco5;
 
-    instance-of v9, v7, Lok5;
+    instance-of v14, v8, Lwn5;
 
-    if-nez v9, :cond_8
+    if-nez v14, :cond_c
 
-    instance-of v9, v7, Lnk5;
+    instance-of v14, v8, Lvn5;
 
-    if-nez v9, :cond_8
+    if-nez v14, :cond_c
 
-    instance-of v7, v7, Lpk5;
+    instance-of v8, v8, Lxn5;
 
-    if-eqz v7, :cond_5
+    if-eqz v8, :cond_5
+
+    goto/16 :goto_2
+
+    :cond_5
+    invoke-virtual {v1, v4, v13}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+
+    move-result v6
+
+    invoke-virtual {v9, v6}, Lzg5;->get(I)Ljava/lang/Object;
+
+    move-result-object v6
+
+    sget-object v7, Lyo1;->c:Lyo1;
+
+    if-ne v6, v7, :cond_6
+
+    const-string v1, "CallService restart."
+
+    invoke-static {v2, v1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lone/me/calls/impl/service/CallServiceImpl;->c()Ltv1;
+
+    move-result-object v1
+
+    check-cast v1, Lhw1;
+
+    iget-object v1, v1, Lhw1;->b1:Ltcf;
+
+    invoke-virtual {v1}, Ltcf;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lmb4;
+
+    iget-boolean v1, v1, Lmb4;->g:Z
+
+    invoke-virtual {p0, v3, v10, v13, v1}, Lone/me/calls/impl/service/CallServiceImpl;->f(Lmb4;Ln41;ZZ)V
+
+    return v12
+
+    :cond_6
+    invoke-virtual {v1, v4, v13}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+
+    move-result v6
+
+    invoke-virtual {v9, v6}, Lzg5;->get(I)Ljava/lang/Object;
+
+    move-result-object v6
+
+    sget-object v7, Lyo1;->d:Lyo1;
+
+    if-ne v6, v7, :cond_7
+
+    const-string v1, "CallService restart for screen sharing."
+
+    invoke-static {v2, v1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p0, v3, v10, v11, v11}, Lone/me/calls/impl/service/CallServiceImpl;->f(Lmb4;Ln41;ZZ)V
+
+    return v12
+
+    :cond_7
+    invoke-virtual {v1, v4, v13}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+
+    move-result v1
+
+    invoke-virtual {v9, v1}, Lzg5;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    sget-object v4, Lyo1;->o:Lyo1;
+
+    if-ne v1, v4, :cond_b
+
+    const-string v1, "CallService hide incoming notification."
+
+    invoke-static {v2, v1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-boolean v1, v3, Lmb4;->h:Z
+
+    if-eqz v1, :cond_a
+
+    iget-boolean v1, v3, Lmb4;->g:Z
+
+    if-nez v1, :cond_a
+
+    const-string v1, "CallService show hidden incoming notification."
+
+    invoke-static {v2, v1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lone/me/calls/impl/service/CallServiceImpl;->d()Lix1;
+
+    move-result-object v1
+
+    iget-object v2, v3, Lmb4;->a:Lgxi;
+
+    if-eqz v2, :cond_8
+
+    invoke-virtual {v2}, Lgxi;->a()Z
+
+    move-result v2
+
+    move v9, v2
 
     goto :goto_1
 
-    :cond_5
-    invoke-virtual {p1, p2, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
-
-    move-result p3
-
-    invoke-virtual {v8, p3}, Lzd5;->get(I)Ljava/lang/Object;
-
-    move-result-object p3
-
-    sget-object v5, Lko1;->c:Lko1;
-
-    if-ne p3, v5, :cond_6
-
-    const-string p1, "CallService restart."
-
-    invoke-static {v0, p1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0, v1, v2, v3}, Lone/me/calls/impl/service/CallServiceImpl;->e(Le94;Li41;Z)V
-
-    goto :goto_3
-
-    :cond_6
-    invoke-virtual {p1, p2, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
-
-    move-result p1
-
-    invoke-virtual {v8, p1}, Lzd5;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lko1;->o:Lko1;
-
-    if-ne p1, p2, :cond_7
-
-    const-string p1, "CallService restart for screen sharing."
-
-    invoke-static {v0, p1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0, v1, v2, v4}, Lone/me/calls/impl/service/CallServiceImpl;->e(Le94;Li41;Z)V
-
-    goto :goto_3
-
-    :cond_7
-    const-string p1, "CallService simple start, no action."
-
-    invoke-static {v0, p1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_3
-
     :cond_8
+    move v9, v13
+
     :goto_1
-    const-string p1, "CallService finished due to call is failed or finished."
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v0, p1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    const-string v2, "CallsNotification"
 
-    invoke-static {}, Llo1;->c()Landroid/os/Handler;
+    const-string v3, "showHiddenIncomingCallNotification"
 
-    move-result-object p1
+    invoke-static {v2, v3}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance p2, Lt30;
+    iget-object v2, v10, Ln41;->c:Ljava/lang/CharSequence;
 
-    const/4 v0, 0x3
+    if-nez v2, :cond_9
 
-    invoke-direct {p2, p0, p3, v0}, Lt30;-><init>(Ljava/lang/Object;II)V
+    iget-object v2, v1, Lix1;->f:Ljava/lang/Object;
 
-    invoke-virtual {p1, p2, v5, v6}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-interface {v2}, Lk18;->getValue()Ljava/lang/Object;
 
-    goto :goto_3
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/String;
 
     :cond_9
+    move-object v7, v2
+
+    new-instance v2, Lgx1;
+
+    invoke-direct {v2, v1, v10, v5}, Lgx1;-><init>(Lix1;Ln41;Lkotlin/coroutines/Continuation;)V
+
+    sget-object v3, Lbd5;->a:Lbd5;
+
+    invoke-static {v3, v2}, Lsvi;->g(Lx74;Lsm6;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object v8, v2
+
+    check-cast v8, Landroid/graphics/Bitmap;
+
+    invoke-virtual {v1, p0, v7, v10, v9}, Lix1;->f(Lone/me/calls/impl/service/CallServiceImpl;Ljava/lang/CharSequence;Ln41;Z)Lnla;
+
+    move-result-object v6
+
+    move-object v5, v1
+
+    invoke-virtual/range {v5 .. v10}, Lix1;->b(Lnla;Ljava/lang/CharSequence;Landroid/graphics/Bitmap;ZLn41;)V
+
+    invoke-virtual {v6, v12, v13}, Lnla;->f(IZ)V
+
+    iput-boolean v11, v6, Lnla;->G:Z
+
+    invoke-virtual {v6}, Lnla;->a()Landroid/app/Notification;
+
+    move-result-object v2
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/16 v1, 0xf0
+
+    const/4 v3, 0x1
+
+    move-object v0, p0
+
+    invoke-virtual/range {v0 .. v5}, Lone/me/calls/impl/service/CallServiceImpl;->e(ILandroid/app/Notification;ZZZ)V
+
+    :cond_a
+    return v12
+
+    :cond_b
+    const-string v1, "CallService simple start, no action."
+
+    invoke-static {v2, v1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return v12
+
+    :cond_c
     :goto_2
-    const-string p1, "CallService finished."
+    const-string v1, "CallService finished due to call is failed or finished."
 
-    invoke-static {v0, p1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Llo1;->c()Landroid/os/Handler;
+    invoke-static {}, Lzo1;->c()Landroid/os/Handler;
 
-    move-result-object p1
+    move-result-object v1
 
-    new-instance p2, Lt30;
+    new-instance v2, Ll30;
 
-    const/4 p3, 0x3
+    const/4 v3, 0x3
 
-    const/4 v0, -0x1
+    move/from16 v4, p3
 
-    invoke-direct {p2, p0, v0, p3}, Lt30;-><init>(Ljava/lang/Object;II)V
+    invoke-direct {v2, p0, v4, v3}, Ll30;-><init>(Ljava/lang/Object;II)V
 
-    invoke-virtual {p1, p2, v5, v6}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v1, v2, v6, v7}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
+    return v12
+
+    :cond_d
     :goto_3
-    const/4 p1, 0x2
+    const-string v1, "CallService finished."
 
-    return p1
+    invoke-static {v2, v1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {}, Lzo1;->c()Landroid/os/Handler;
+
+    move-result-object v1
+
+    new-instance v2, Ll30;
+
+    const/4 v3, 0x3
+
+    const/4 v4, -0x1
+
+    invoke-direct {v2, p0, v4, v3}, Ll30;-><init>(Ljava/lang/Object;II)V
+
+    invoke-virtual {v1, v2, v6, v7}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    return v12
 .end method

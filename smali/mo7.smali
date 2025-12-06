@@ -1,116 +1,61 @@
-.class public abstract Lmo7;
-.super Ljava/lang/Object;
+.class public final Lmo7;
+.super Le9c;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lkotlinx/coroutines/internal/Symbol;
+# instance fields
+.field public a:[I
 
-.field public static final b:Lkotlinx/coroutines/internal/Symbol;
-
-.field public static final c:Lkotlinx/coroutines/internal/Symbol;
-
-.field public static final d:Lkotlinx/coroutines/internal/Symbol;
-
-.field public static final e:Lkotlinx/coroutines/internal/Symbol;
-
-.field public static final f:Lba5;
-
-.field public static final g:Lba5;
+.field public b:I
 
 
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public final a()Ljava/lang/Object;
     .locals 2
 
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+    iget-object v0, p0, Lmo7;->a:[I
 
-    const-string v1, "COMPLETING_ALREADY"
+    iget v1, p0, Lmo7;->b:I
 
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([II)[I
 
-    sput-object v0, Lmo7;->a:Lkotlinx/coroutines/internal/Symbol;
+    move-result-object v0
 
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+    return-object v0
+.end method
 
-    const-string v1, "COMPLETING_WAITING_CHILDREN"
+.method public final b(I)V
+    .locals 2
 
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Lmo7;->a:[I
 
-    sput-object v0, Lmo7;->b:Lkotlinx/coroutines/internal/Symbol;
+    array-length v1, v0
 
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+    if-ge v1, p1, :cond_1
 
-    const-string v1, "COMPLETING_RETRY"
+    array-length v1, v0
 
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
+    mul-int/lit8 v1, v1, 0x2
 
-    sput-object v0, Lmo7;->c:Lkotlinx/coroutines/internal/Symbol;
+    if-ge p1, v1, :cond_0
 
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+    move p1, v1
 
-    const-string v1, "TOO_LATE_TO_CANCEL"
+    :cond_0
+    invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([II)[I
 
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
+    move-result-object p1
 
-    sput-object v0, Lmo7;->d:Lkotlinx/coroutines/internal/Symbol;
+    iput-object p1, p0, Lmo7;->a:[I
 
-    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
-
-    const-string v1, "SEALED"
-
-    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lmo7;->e:Lkotlinx/coroutines/internal/Symbol;
-
-    new-instance v0, Lba5;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lba5;-><init>(Z)V
-
-    sput-object v0, Lmo7;->f:Lba5;
-
-    new-instance v0, Lba5;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lba5;-><init>(Z)V
-
-    sput-object v0, Lmo7;->g:Lba5;
-
+    :cond_1
     return-void
 .end method
 
-.method public static final a(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final d()I
     .locals 1
 
-    instance-of v0, p0, Lqe7;
+    iget v0, p0, Lmo7;->b:I
 
-    if-eqz v0, :cond_0
-
-    move-object v0, p0
-
-    check-cast v0, Lqe7;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_2
-
-    iget-object v0, v0, Lqe7;->a:Lpe7;
-
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    return-object v0
-
-    :cond_2
-    :goto_1
-    return-object p0
+    return v0
 .end method

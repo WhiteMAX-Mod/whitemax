@@ -20,7 +20,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/ConcurrentHashMap<",
-            "Ljava/lang/String;",
+            "Lru/ok/android/externcalls/analytics/internal/event/EventChannel;",
             "Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;",
             ">;"
         }
@@ -45,7 +45,7 @@
 
 
 # instance fields
-.field private final apiMethod:Ljava/lang/String;
+.field private final channel:Lru/ok/android/externcalls/analytics/internal/event/EventChannel;
 
 .field private final compressionEnabled:Ljava/util/concurrent/atomic/AtomicReference;
     .annotation system Ldalvik/annotation/Signature;
@@ -113,7 +113,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
+.method private constructor <init>(Landroid/content/Context;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -138,7 +138,7 @@
 
     iput-object p1, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->context:Landroid/content/Context;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->apiMethod:Ljava/lang/String;
+    iput-object p2, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->channel:Lru/ok/android/externcalls/analytics/internal/event/EventChannel;
 
     new-instance p1, Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -149,10 +149,10 @@
     return-void
 .end method
 
-.method public static bridge synthetic a(Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;)Ljava/lang/String;
+.method public static bridge synthetic a(Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;)Lru/ok/android/externcalls/analytics/internal/event/EventChannel;
     .locals 0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->apiMethod:Ljava/lang/String;
+    iget-object p0, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->channel:Lru/ok/android/externcalls/analytics/internal/event/EventChannel;
 
     return-object p0
 .end method
@@ -237,12 +237,12 @@
     return-void
 .end method
 
-.method public static getInstance(Ljava/lang/String;)Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;
+.method public static getInstance(Lru/ok/android/externcalls/analytics/internal/event/EventChannel;)Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;
     .locals 3
 
     sget-object v0, Lru/ok/android/commons/app/ApplicationProvider;->a:Landroid/app/Application;
 
-    invoke-static {}, Lxfi;->b()Landroid/app/Application;
+    invoke-static {}, Lmri;->a()Landroid/app/Application;
 
     move-result-object v0
 
@@ -250,9 +250,9 @@
 
     if-eqz v1, :cond_0
 
-    iget-object v2, v1, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->apiMethod:Ljava/lang/String;
+    iget-object v2, v1, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->channel:Lru/ok/android/externcalls/analytics/internal/event/EventChannel;
 
-    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v2, p0}, Lru/ok/android/externcalls/analytics/internal/event/EventChannel;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -278,7 +278,7 @@
     :cond_1
     new-instance v2, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;
 
-    invoke-direct {v2, v0, p0}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {v2, v0, p0}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;-><init>(Landroid/content/Context;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;)V
 
     invoke-virtual {v1, p0, v2}, Ljava/util/concurrent/ConcurrentHashMap;->putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -332,13 +332,13 @@
 
     iget-object v2, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->uploadLock:Ljava/util/concurrent/locks/Lock;
 
-    iget-object v3, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->apiMethod:Ljava/lang/String;
+    iget-object v3, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->channel:Lru/ok/android/externcalls/analytics/internal/event/EventChannel;
 
     invoke-direct {p0}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->isContentCompressionEnabled()Z
 
     move-result v4
 
-    invoke-static {v0, v1, v2, v3, v4}, Lru/ok/android/externcalls/analytics/internal/upload/Uploader;->create(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Ljava/lang/String;Z)Lru/ok/android/externcalls/analytics/internal/upload/Uploader;
+    invoke-static {v0, v1, v2, v3, v4}, Lru/ok/android/externcalls/analytics/internal/upload/Uploader;->create(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;Z)Lru/ok/android/externcalls/analytics/internal/upload/Uploader;
 
     move-result-object v0
 
@@ -403,13 +403,13 @@
 
     sget-object v2, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->looperProvider:Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector$LooperProvider;
 
-    iget-object v5, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->apiMethod:Ljava/lang/String;
+    iget-object v5, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->channel:Lru/ok/android/externcalls/analytics/internal/event/EventChannel;
 
     invoke-direct {p0}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->isContentCompressionEnabled()Z
 
     move-result v6
 
-    invoke-direct/range {v1 .. v6}, Lru/ok/android/externcalls/analytics/internal/upload/Worker;-><init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Ljava/lang/String;Z)V
+    invoke-direct/range {v1 .. v6}, Lru/ok/android/externcalls/analytics/internal/upload/Worker;-><init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;Z)V
 
     iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->worker:Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -537,11 +537,11 @@
     goto :goto_0
 
     :cond_0
-    new-instance v0, Le44;
+    new-instance v0, Lwo4;
 
-    const/16 v1, 0xe
+    const/16 v1, 0xa
 
-    invoke-direct {v0, v1, p0}, Le44;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Lwo4;-><init>(ILjava/lang/Object;)V
 
     move-object p0, v0
 
@@ -598,19 +598,15 @@
 
 # virtual methods
 .method public addEvent(Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V
-    .locals 2
+    .locals 3
 
-    invoke-virtual {p1}, Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;->getApiMethodName()Ljava/lang/String;
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->channel:Lru/ok/android/externcalls/analytics/internal/event/EventChannel;
 
-    move-result-object v0
+    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/analytics/internal/event/EventChannel;->matches(Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)Z
 
-    iget-object v1, p0, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->apiMethod:Ljava/lang/String;
+    move-result v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
+    if-eqz v0, :cond_0
 
     invoke-direct {p0}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->getWorker()Lru/ok/android/externcalls/analytics/internal/upload/Worker;
 
@@ -621,17 +617,37 @@
     return-void
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string v1, "Unexpected apiMethod "
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    const-string v2, "Unexpected event "
 
-    move-result-object v0
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1}, Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;->getApiMethodName()Ljava/lang/String;
 
-    throw p1
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, ", collector="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;->getCollector()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
 .method public drop()V
@@ -687,11 +703,11 @@
 
     invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v2, Le44;
+    new-instance v2, Lwo4;
 
-    const/16 v3, 0xf
+    const/16 v3, 0xb
 
-    invoke-direct {v2, v3, v1}, Le44;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v2, v3, v1}, Lwo4;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {v0, v2}, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->grab(Ljavax/inject/Provider;)V
     :try_end_0

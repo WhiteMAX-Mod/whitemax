@@ -1,29 +1,21 @@
 .class public final Lw2a;
-.super Ljava/lang/Object;
+.super Lgxi;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:I
-
-.field public b:Z
-
-.field public c:Z
+# static fields
+.field public static final a:Lw2a;
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lw2a;
 
-    const/4 v0, 0x0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, Lw2a;->a:I
-
-    iput-boolean v0, p0, Lw2a;->b:Z
-
-    iput-boolean v0, p0, Lw2a;->c:Z
+    sput-object v0, Lw2a;->a:Lw2a;
 
     return-void
 .end method

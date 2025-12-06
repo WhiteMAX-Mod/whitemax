@@ -1,54 +1,41 @@
-.class public final synthetic Lrf6;
-.super Ljava/lang/Object;
+.class public final Lrf6;
+.super Lki4;
 .source "SourceFile"
 
-# interfaces
-.implements Lnog;
 
+# static fields
+.field public static final b:Lrf6;
 
-# instance fields
-.field public final synthetic a:Lk2g;
-
-.field public final synthetic b:Lxq6;
-
-.field public final synthetic c:J
+.field public static final c:Lgi4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lk2g;Lxq6;J)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lrf6;->a:Lk2g;
-
-    iput-object p2, p0, Lrf6;->b:Lxq6;
-
-    iput-wide p3, p0, Lrf6;->c:J
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
+.method static constructor <clinit>()V
     .locals 5
 
-    iget-object v0, p0, Lrf6;->a:Lk2g;
+    new-instance v0, Lrf6;
 
-    iget-object v1, v0, Lk2g;->X:Ljava/lang/Object;
+    invoke-direct {v0}, Lki4;-><init>()V
 
-    check-cast v1, Lwq6;
+    sput-object v0, Lrf6;->b:Lrf6;
 
-    iget-object v0, v0, Lk2g;->o:Ljava/lang/Object;
+    const-string v1, "messages_ids"
 
-    check-cast v0, Lzgd;
+    filled-new-array {v1}, [Ljava/lang/String;
 
-    iget-object v2, p0, Lrf6;->b:Lxq6;
+    move-result-object v1
 
-    iget-wide v3, p0, Lrf6;->c:J
+    const/4 v2, 0x0
 
-    invoke-interface {v1, v0, v2, v3, v4}, Lwq6;->e(Lzgd;Lxq6;J)V
+    const/16 v3, 0xe
+
+    const-string v4, ":chats/forward"
+
+    invoke-static {v0, v4, v1, v2, v3}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
+
+    move-result-object v0
+
+    sput-object v0, Lrf6;->c:Lgi4;
 
     return-void
 .end method

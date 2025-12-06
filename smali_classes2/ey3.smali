@@ -1,31 +1,49 @@
 .class public final Ley3;
-.super Ljava/lang/Object;
+.super Lq44;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Liu7;
+.field public final synthetic X:Liy3;
 
-.field public final b:Liu7;
+.field public Y:I
 
-.field public final c:Liu7;
+.field public d:Liy3;
 
-.field public d:Lzt1;
-
-.field public e:Lzt1;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Liu7;Liu7;Liu7;)V
+.method public constructor <init>(Liy3;Lq44;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ley3;->X:Liy3;
 
-    iput-object p1, p0, Ley3;->a:Liu7;
-
-    iput-object p2, p0, Ley3;->b:Liu7;
-
-    iput-object p3, p0, Ley3;->c:Liu7;
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Ley3;->o:Ljava/lang/Object;
+
+    iget p1, p0, Ley3;->Y:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Ley3;->Y:I
+
+    iget-object p1, p0, Ley3;->X:Liy3;
+
+    invoke-static {p1, p0}, Liy3;->c(Liy3;Lq44;)Ljava/io/Serializable;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,48 +1,42 @@
-.class public final Loh1;
-.super Ly14;
+.class public final synthetic Loh1;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/util/function/ToLongFunction;
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Lo31;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic a:Lgf1;
 
 
 # direct methods
-.method public constructor <init>(Lo31;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lgf1;)V
     .locals 0
 
-    iput-object p1, p0, Loh1;->Y:Lo31;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Loh1;->a:Lgf1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final applyAsLong(Ljava/lang/Object;)J
+    .locals 2
 
-    iput-object p1, p0, Loh1;->o:Ljava/lang/Object;
+    iget-object v0, p0, Loh1;->a:Lgf1;
 
-    iget p1, p0, Loh1;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Loh1;->X:I
-
-    iget-object p1, p0, Loh1;->Y:Lo31;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lo31;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lgf1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    return-object p1
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v0
+
+    return-wide v0
 .end method

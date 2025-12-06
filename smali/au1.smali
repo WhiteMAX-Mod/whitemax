@@ -1,316 +1,95 @@
-.class public abstract Lau1;
+.class public final Lau1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ler7;
-.implements Ljava/io/Serializable;
-
-
-# static fields
-.field public static final NO_RECEIVER:Ljava/lang/Object;
+.implements Lcu1;
 
 
 # instance fields
-.field private final isTopLevel:Z
-
-.field private final name:Ljava/lang/String;
-
-.field private final owner:Ljava/lang/Class;
-
-.field protected final receiver:Ljava/lang/Object;
-
-.field private transient reflected:Ler7;
-
-.field private final signature:Ljava/lang/String;
+.field public final a:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    sget-object v0, Lzt1;->a:Lzt1;
-
-    sput-object v0, Lau1;->NO_RECEIVER:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Z)V
+.method public constructor <init>(J)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lau1;->receiver:Ljava/lang/Object;
-
-    iput-object p2, p0, Lau1;->owner:Ljava/lang/Class;
-
-    iput-object p3, p0, Lau1;->name:Ljava/lang/String;
-
-    iput-object p4, p0, Lau1;->signature:Ljava/lang/String;
-
-    iput-boolean p5, p0, Lau1;->isTopLevel:Z
+    iput-wide p1, p0, Lau1;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public varargs call([Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-virtual {p0}, Lau1;->getReflected()Ler7;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Ler7;->call([Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public callBy(Ljava/util/Map;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-virtual {p0}, Lau1;->getReflected()Ler7;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Ler7;->callBy(Ljava/util/Map;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public compute()Ler7;
-    .locals 1
-
-    iget-object v0, p0, Lau1;->reflected:Ler7;
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0}, Lau1;->computeReflected()Ler7;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lau1;->reflected:Ler7;
-
-    :cond_0
-    return-object v0
-.end method
-
-.method public abstract computeReflected()Ler7;
-.end method
-
-.method public getAnnotations()Ljava/util/List;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List<",
-            "Ljava/lang/annotation/Annotation;",
-            ">;"
-        }
-    .end annotation
-
-    invoke-virtual {p0}, Lau1;->getReflected()Ler7;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ldr7;->getAnnotations()Ljava/util/List;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public getBoundReceiver()Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lau1;->receiver:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public getName()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lau1;->name:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getOwner()Lgr7;
+.method public final a()J
     .locals 2
 
-    iget-object v0, p0, Lau1;->owner:Ljava/lang/Class;
+    iget-wide v0, p0, Lau1;->a:J
 
-    if-nez v0, :cond_0
+    return-wide v0
+.end method
 
-    const/4 v0, 0x0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    return-object v0
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
 
     :cond_0
-    iget-boolean v1, p0, Lau1;->isTopLevel:Z
+    instance-of v1, p1, Lau1;
 
-    if-eqz v1, :cond_1
+    const/4 v2, 0x0
 
-    sget-object v1, Lz7d;->a:La8d;
+    if-nez v1, :cond_1
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Lzbb;
-
-    invoke-direct {v1, v0}, Lzbb;-><init>(Ljava/lang/Class;)V
-
-    return-object v1
+    return v2
 
     :cond_1
-    invoke-static {v0}, Lz7d;->a(Ljava/lang/Class;)Lh73;
+    check-cast p1, Lau1;
 
-    move-result-object v0
+    iget-wide v3, p0, Lau1;->a:J
 
-    return-object v0
+    iget-wide v5, p1, Lau1;->a:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public getParameters()Ljava/util/List;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List<",
-            "Ljava/lang/Object;",
-            ">;"
-        }
-    .end annotation
+.method public final hashCode()I
+    .locals 2
 
-    invoke-virtual {p0}, Lau1;->getReflected()Ler7;
+    iget-wide v0, p0, Lau1;->a:J
 
-    move-result-object v0
-
-    invoke-interface {v0}, Ler7;->getParameters()Ljava/util/List;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public abstract getReflected()Ler7;
-.end method
-
-.method public getReturnType()Lwr7;
-    .locals 1
-
-    invoke-virtual {p0}, Lau1;->getReflected()Ler7;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ler7;->getReturnType()Lwr7;
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public getSignature()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lau1;->signature:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getTypeParameters()Ljava/util/List;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List<",
-            "Ljava/lang/Object;",
-            ">;"
-        }
-    .end annotation
-
-    invoke-virtual {p0}, Lau1;->getReflected()Ler7;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ler7;->getTypeParameters()Ljava/util/List;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public getVisibility()Lxr7;
-    .locals 1
-
-    invoke-virtual {p0}, Lau1;->getReflected()Ler7;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ler7;->getVisibility()Lxr7;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public isAbstract()Z
-    .locals 1
-
-    invoke-virtual {p0}, Lau1;->getReflected()Ler7;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ler7;->isAbstract()Z
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
     return v0
 .end method
 
-.method public isFinal()Z
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    invoke-virtual {p0}, Lau1;->getReflected()Ler7;
+    const-string v0, "None(lastUpdate="
 
-    move-result-object v0
+    const-string v1, ")"
 
-    invoke-interface {v0}, Ler7;->isFinal()Z
+    iget-wide v2, p0, Lau1;->a:J
 
-    move-result v0
-
-    return v0
-.end method
-
-.method public isOpen()Z
-    .locals 1
-
-    invoke-virtual {p0}, Lau1;->getReflected()Ler7;
+    invoke-static {v2, v3, v0, v1}, La9h;->d(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-interface {v0}, Ler7;->isOpen()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public isSuspend()Z
-    .locals 1
-
-    invoke-virtual {p0}, Lau1;->getReflected()Ler7;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ler7;->isSuspend()Z
-
-    move-result v0
-
-    return v0
+    return-object v0
 .end method

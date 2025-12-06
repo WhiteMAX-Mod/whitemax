@@ -1,115 +1,99 @@
-.class public final Lna1;
+.class public final synthetic Lna1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lfs1;
+.implements Lcm6;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/calls/ui/ui/incoming/CallIncomingScreen;
+.field public final synthetic a:I
+
+.field public final synthetic b:Z
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/calls/ui/ui/incoming/CallIncomingScreen;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;Z)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lna1;->a:I
 
-    iput-object p1, p0, Lna1;->a:Lone/me/calls/ui/ui/incoming/CallIncomingScreen;
+    iput-object p2, p0, Lna1;->c:Ljava/lang/Object;
+
+    iput-boolean p3, p0, Lna1;->b:Z
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final r()V
-    .locals 10
+.method public final invoke()Ljava/lang/Object;
+    .locals 6
 
-    iget-object v0, p0, Lna1;->a:Lone/me/calls/ui/ui/incoming/CallIncomingScreen;
+    iget v0, p0, Lna1;->a:I
 
-    iget-object v1, v0, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->b:Lfib;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v2, v0, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->Z:Ljava/lang/Object;
+    iget-object v0, p0, Lna1;->c:Ljava/lang/Object;
 
-    invoke-interface {v2}, Liu7;->getValue()Ljava/lang/Object;
+    check-cast v0, Lur1;
 
-    move-result-object v2
+    iget-boolean v1, p0, Lna1;->b:Z
 
-    move-object v4, v2
+    invoke-static {v0, v1}, Lur1;->w(Lur1;Z)V
 
-    check-cast v4, Ljmh;
+    :goto_0
+    sget-object v0, Lqqg;->a:Lqqg;
 
-    invoke-virtual {v1}, Lfib;->b()Lrib;
+    return-object v0
 
-    move-result-object v2
+    :pswitch_0
+    iget-object v0, p0, Lna1;->c:Ljava/lang/Object;
 
-    sget-object v5, Lrib;->m:[Ljava/lang/String;
+    check-cast v0, Lo37;
 
-    invoke-virtual {v2, v5}, Lrib;->c([Ljava/lang/String;)Z
+    sget-object v1, Lca1;->c:Lca1;
 
-    move-result v2
+    check-cast v0, Lm37;
 
-    if-nez v2, :cond_0
+    iget-wide v2, v0, Lm37;->a:J
 
-    invoke-virtual {v1}, Lfib;->b()Lrib;
+    invoke-virtual {v1}, Li3;->p0()Lii4;
 
-    move-result-object v3
+    move-result-object v0
 
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-string v1, ":call-user?opponent_id="
 
-    sget v8, Lptc;->permissions_video_message_request_only_camera_title:I
+    const-string v4, "&video_enabled="
 
-    sget v7, Lptc;->permissions_calls_video_preview_request:I
+    iget-boolean v5, p0, Lna1;->b:Z
 
-    const/16 v6, 0xb7
-
-    const/16 v9, 0x20
-
-    invoke-static/range {v3 .. v9}, Lrib;->l(Lrib;Ljmh;[Ljava/lang/String;IIII)V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->E0()Lva1;
+    invoke-static {v2, v3, v1, v4, v5}, Lxc0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->E0()Lva1;
+    const-string v2, "&microphone_enabled=true"
 
-    move-result-object v0
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, v0, Lva1;->s0:Lx0f;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v0}, Lx0f;->getValue()Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object v0
+    const/4 v2, 0x0
 
-    instance-of v2, v0, Lqa1;
-
-    if-eqz v2, :cond_1
-
-    check-cast v0, Lqa1;
+    invoke-virtual {v0, v1, v2}, Lii4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
     goto :goto_0
 
-    :cond_1
-    const/4 v0, 0x0
+    nop
 
-    :goto_0
-    if-nez v0, :cond_2
-
-    const/4 v0, 0x0
-
-    goto :goto_1
-
-    :cond_2
-    iget-boolean v0, v0, Lqa1;->b:Z
-
-    :goto_1
-    xor-int/lit8 v0, v0, 0x1
-
-    invoke-virtual {v1, v0}, Lva1;->s(Z)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,90 +1,64 @@
-.class public final synthetic Lwp1;
+.class public final Lwp1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lzp1;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lyp1;
+# static fields
+.field public static final a:Lwp1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lyp1;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lwp1;->a:I
+    new-instance v0, Lwp1;
 
-    iput-object p1, p0, Lwp1;->b:Lyp1;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lwp1;->a:Lwp1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget p1, p0, Lwp1;->a:I
+    const/4 v0, 0x1
 
-    iget-object v0, p0, Lwp1;->b:Lyp1;
+    if-ne p0, p1, :cond_0
 
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, v0, Lyp1;->J0:Lxp1;
-
-    if-eqz p1, :cond_0
-
-    check-cast p1, Lcl1;
-
-    iget-object p1, p1, Lcl1;->a:Lone/me/calls/ui/ui/call/CallScreen;
-
-    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->M0:Llga;
-
-    invoke-virtual {p1}, Lone/me/calls/ui/ui/call/CallScreen;->L0()Lio1;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lio1;->q0:Lwr1;
-
-    invoke-virtual {p1}, Lwr1;->h()V
+    return v0
 
     :cond_0
-    return-void
+    instance-of p1, p1, Lwp1;
 
-    :pswitch_0
-    iget-object p1, v0, Lyp1;->J0:Lxp1;
+    if-nez p1, :cond_1
 
-    if-eqz p1, :cond_1
+    const/4 p1, 0x0
 
-    iget-object v0, v0, Lyp1;->O0:Lmi1;
-
-    check-cast p1, Lcl1;
-
-    iget-object p1, p1, Lcl1;->a:Lone/me/calls/ui/ui/call/CallScreen;
-
-    sget-object v1, Lone/me/calls/ui/ui/call/CallScreen;->M0:Llga;
-
-    invoke-virtual {p1}, Lone/me/calls/ui/ui/call/CallScreen;->L0()Lio1;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lio1;->q0:Lwr1;
-
-    invoke-virtual {p1, v0}, Lwr1;->f(Lmi1;)V
+    return p1
 
     :cond_1
-    return-void
+    return v0
+.end method
 
-    nop
+.method public final hashCode()I
+    .locals 1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    const v0, -0x42bf222b
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Hide"
+
+    return-object v0
 .end method

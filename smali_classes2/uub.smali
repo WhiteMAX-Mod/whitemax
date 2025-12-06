@@ -1,395 +1,82 @@
 .class public final Luub;
-.super Ljava/lang/Object;
+.super Lxy;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final X:Ljava/lang/Integer;
 
-.field public final b:Ljava/lang/String;
+.field public final Y:Ljava/lang/Integer;
 
-.field public final c:Ljava/lang/String;
+.field public final Z:Z
 
 .field public final d:Ljava/lang/String;
 
-.field public final e:Lx04;
+.field public o:Ljava/lang/String;
 
-.field public final f:Ljava/lang/String;
+.field public final s0:[B
 
-.field public final g:Z
+.field public final t0:Ljava/lang/String;
 
-.field public final h:Z
+.field public final u0:Ljava/lang/String;
 
-.field public final i:Z
+.field public final v0:Ljava/lang/Long;
 
-.field public final j:Ljava/util/Map;
-
-.field public k:J
+.field public final w0:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lx04;Ljava/lang/String;ZZZLjava/util/Map;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Z[BLjava/lang/Long;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Ls00;->d:Ls00;
 
-    iput-object p1, p0, Luub;->a:Ljava/lang/String;
+    invoke-direct {p0, v0, p10, p11}, Lxy;-><init>(Ls00;ZZ)V
 
-    iput-object p2, p0, Luub;->b:Ljava/lang/String;
+    iput-object p1, p0, Luub;->d:Ljava/lang/String;
 
-    iput-object p3, p0, Luub;->c:Ljava/lang/String;
+    iput-object p2, p0, Luub;->o:Ljava/lang/String;
 
-    iput-object p4, p0, Luub;->d:Ljava/lang/String;
+    iput-object p3, p0, Luub;->X:Ljava/lang/Integer;
 
-    iput-object p5, p0, Luub;->e:Lx04;
+    iput-object p4, p0, Luub;->Y:Ljava/lang/Integer;
 
-    iput-object p6, p0, Luub;->f:Ljava/lang/String;
+    iput-boolean p5, p0, Luub;->Z:Z
 
-    iput-boolean p7, p0, Luub;->g:Z
+    iput-object p6, p0, Luub;->s0:[B
 
-    iput-boolean p8, p0, Luub;->h:Z
+    iput-object p7, p0, Luub;->v0:Ljava/lang/Long;
 
-    iput-boolean p9, p0, Luub;->i:Z
+    iput-object p8, p0, Luub;->u0:Ljava/lang/String;
 
-    iput-object p10, p0, Luub;->j:Ljava/util/Map;
+    iput-object p9, p0, Luub;->t0:Ljava/lang/String;
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Luub;->k:J
+    iput-object p12, p0, Luub;->w0:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a()Ljava/util/HashMap;
+    .locals 3
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Luub;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Luub;
-
-    iget-object v1, p0, Luub;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Luub;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Luub;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Luub;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Luub;->c:Ljava/lang/String;
-
-    iget-object v3, p1, Luub;->c:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Luub;->d:Ljava/lang/String;
-
-    iget-object v3, p1, Luub;->d:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object v1, p0, Luub;->e:Lx04;
-
-    iget-object v3, p1, Luub;->e:Lx04;
-
-    if-eq v1, v3, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-object v1, p0, Luub;->f:Ljava/lang/String;
-
-    iget-object v3, p1, Luub;->f:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_7
-
-    return v2
-
-    :cond_7
-    iget-boolean v1, p0, Luub;->g:Z
-
-    iget-boolean v3, p1, Luub;->g:Z
-
-    if-eq v1, v3, :cond_8
-
-    return v2
-
-    :cond_8
-    iget-boolean v1, p0, Luub;->h:Z
-
-    iget-boolean v3, p1, Luub;->h:Z
-
-    if-eq v1, v3, :cond_9
-
-    return v2
-
-    :cond_9
-    iget-boolean v1, p0, Luub;->i:Z
-
-    iget-boolean v3, p1, Luub;->i:Z
-
-    if-eq v1, v3, :cond_a
-
-    return v2
-
-    :cond_a
-    iget-object v1, p0, Luub;->j:Ljava/util/Map;
-
-    iget-object p1, p1, Luub;->j:Ljava/util/Map;
-
-    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_b
-
-    return v2
-
-    :cond_b
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Luub;->a:Ljava/lang/String;
-
-    if-nez v1, :cond_0
-
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    const/16 v2, 0x1f
-
-    mul-int/2addr v1, v2
-
-    iget-object v3, p0, Luub;->b:Ljava/lang/String;
-
-    invoke-static {v1, v2, v3}, Lu15;->d(IILjava/lang/String;)I
-
-    move-result v1
-
-    iget-object v3, p0, Luub;->c:Ljava/lang/String;
-
-    invoke-static {v1, v2, v3}, Lu15;->d(IILjava/lang/String;)I
-
-    move-result v1
-
-    iget-object v3, p0, Luub;->d:Ljava/lang/String;
-
-    if-nez v3, :cond_1
-
-    move v3, v0
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
-
-    move-result v3
-
-    :goto_1
-    add-int/2addr v1, v3
-
-    mul-int/2addr v1, v2
-
-    iget-object v3, p0, Luub;->e:Lx04;
-
-    if-nez v3, :cond_2
-
-    move v3, v0
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v3
-
-    :goto_2
-    add-int/2addr v1, v3
-
-    mul-int/2addr v1, v2
-
-    iget-object v3, p0, Luub;->f:Ljava/lang/String;
-
-    if-nez v3, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    :goto_3
-    add-int/2addr v1, v0
-
-    mul-int/2addr v1, v2
-
-    iget-boolean v0, p0, Luub;->g:Z
-
-    invoke-static {v1, v2, v0}, Lrtg;->d(IIZ)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Luub;->h:Z
-
-    invoke-static {v0, v2, v1}, Lrtg;->d(IIZ)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Luub;->i:Z
-
-    invoke-static {v0, v2, v1}, Lrtg;->d(IIZ)I
-
-    move-result v0
-
-    iget-object v1, p0, Luub;->j:Ljava/util/Map;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", sessionId="
-
-    const-string v1, ", interactiveSessionId="
-
-    const-string v2, "PlayerStatInfo(videoId="
-
-    iget-object v3, p0, Luub;->a:Ljava/lang/String;
-
-    iget-object v4, p0, Luub;->b:Ljava/lang/String;
-
-    invoke-static {v2, v3, v0, v4, v1}, Ley1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-super {p0}, Lxy;->a()Ljava/util/HashMap;
 
     move-result-object v0
 
-    const-string v1, ", cdnHost="
+    iget-object v1, p0, Luub;->t0:Ljava/lang/String;
 
-    const-string v2, ", contentType="
+    invoke-static {v1}, Ll8g;->c(Ljava/lang/CharSequence;)Z
 
-    iget-object v3, p0, Luub;->c:Ljava/lang/String;
+    move-result v2
 
-    iget-object v4, p0, Luub;->d:Ljava/lang/String;
+    if-nez v2, :cond_0
 
-    invoke-static {v0, v3, v1, v4, v2}, Li57;->q(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    const-string v2, "photoToken"
 
-    iget-object v1, p0, Luub;->e:Lx04;
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", place="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Luub;->f:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isAuto="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isLive="
-
-    const-string v2, ", inHistory="
-
-    iget-boolean v3, p0, Luub;->g:Z
-
-    iget-boolean v4, p0, Luub;->h:Z
-
-    invoke-static {v1, v2, v0, v3, v4}, Ldy1;->t(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
-
-    iget-boolean v1, p0, Luub;->i:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", params="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Luub;->j:Ljava/util/Map;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
+    :cond_0
     return-object v0
 .end method

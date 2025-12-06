@@ -1,132 +1,88 @@
-.class public final enum Lotg;
-.super Ljava/lang/Enum;
+.class public final Lotg;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lqtg;
-
-
-# static fields
-.field public static final enum X:Lotg;
-
-.field public static final synthetic Y:[Lotg;
-
-.field public static final enum b:Lotg;
-
-.field public static final enum c:Lotg;
-
-.field public static final enum o:Lotg;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Lk18;
+
+.field public final b:Lk18;
+
+.field public final c:Lk18;
+
+.field public final d:Lk18;
+
+.field public final e:Lk18;
+
+.field public final f:Lk18;
+
+.field public final g:Lk18;
+
+.field public final h:Lk18;
+
+.field public final i:Lk18;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
-
-    new-instance v0, Lotg;
-
-    const/4 v1, 0x0
-
-    const-string v2, "cancel_1s"
-
-    const-string v3, "CANCEL_1S"
-
-    invoke-direct {v0, v3, v1, v2}, Lotg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lotg;->b:Lotg;
-
-    new-instance v1, Lotg;
-
-    const/4 v2, 0x1
-
-    const-string v3, "swipe"
-
-    const-string v4, "SWIPE"
-
-    invoke-direct {v1, v4, v2, v3}, Lotg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lotg;->c:Lotg;
-
-    new-instance v2, Lotg;
-
-    const/4 v3, 0x2
-
-    const-string v4, "delete_on_preview"
-
-    const-string v5, "DELETE_ON_PREVIEW"
-
-    invoke-direct {v2, v5, v3, v4}, Lotg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v2, Lotg;->o:Lotg;
-
-    new-instance v3, Lotg;
-
-    const/4 v4, 0x3
-
-    const-string v5, "delete_on_record"
-
-    const-string v6, "DELETE_ON_RECORD"
-
-    invoke-direct {v3, v6, v4, v5}, Lotg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v3, Lotg;->X:Lotg;
-
-    filled-new-array {v0, v1, v2, v3}, [Lotg;
-
-    move-result-object v0
-
-    sput-object v0, Lotg;->Y:[Lotg;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+.method public constructor <init>(Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lotg;->a:Ljava/lang/String;
+    iput-object p1, p0, Lotg;->a:Lk18;
+
+    iput-object p2, p0, Lotg;->b:Lk18;
+
+    iput-object p3, p0, Lotg;->c:Lk18;
+
+    iput-object p4, p0, Lotg;->d:Lk18;
+
+    iput-object p5, p0, Lotg;->e:Lk18;
+
+    iput-object p6, p0, Lotg;->f:Lk18;
+
+    iput-object p7, p0, Lotg;->g:Lk18;
+
+    iput-object p8, p0, Lotg;->h:Lk18;
+
+    iput-object p9, p0, Lotg;->i:Lk18;
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lotg;
-    .locals 1
-
-    const-class v0, Lotg;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lotg;
-
-    return-object p0
-.end method
-
-.method public static values()[Lotg;
-    .locals 1
-
-    sget-object v0, Lotg;->Y:[Lotg;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lotg;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final getTitle()Ljava/lang/String;
-    .locals 1
+.method public final a(ZZLdtf;)Ljava/lang/Object;
+    .locals 3
 
-    iget-object v0, p0, Lotg;->a:Ljava/lang/String;
+    iget-object v0, p0, Lotg;->d:Lk18;
 
-    return-object v0
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lms7;
+
+    iget-object v0, v0, Lms7;->a:Lz74;
+
+    new-instance v1, Lntg;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p1, p2, p0, v2}, Lntg;-><init>(ZZLotg;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v0, v1, p3}, Lsvi;->i(Lx74;Lsm6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lg84;->a:Lg84;
+
+    if-ne p1, p2, :cond_0
+
+    return-object p1
+
+    :cond_0
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

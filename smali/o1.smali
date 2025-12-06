@@ -3,4 +3,4 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ll28;
+.implements Lha8;

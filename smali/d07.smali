@@ -1,95 +1,81 @@
 .class public final Ld07;
-.super Lbk0;
+.super Lj0e;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:Ljava/util/List;
-
-.field public final Y:J
+.field public final c:Landroid/os/Handler;
 
 
 # direct methods
-.method public constructor <init>(JLjava/util/List;)V
-    .locals 7
+.method public constructor <init>(Landroid/os/Handler;)V
+    .locals 0
 
-    invoke-interface {p3}, Ljava/util/List;->size()I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result v0
-
-    add-int/lit8 v0, v0, -0x1
-
-    int-to-long v5, v0
-
-    const/4 v2, 0x1
-
-    const-wide/16 v3, 0x0
-
-    move-object v1, p0
-
-    invoke-direct/range {v1 .. v6}, Lbk0;-><init>(IJJ)V
-
-    iput-wide p1, v1, Ld07;->Y:J
-
-    iput-object p3, v1, Ld07;->X:Ljava/util/List;
+    iput-object p1, p0, Ld07;->c:Landroid/os/Handler;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()J
-    .locals 4
+.method public final a()Lh0e;
+    .locals 2
 
-    invoke-virtual {p0}, Lbk0;->a()V
+    new-instance v0, Lb07;
 
-    iget-wide v0, p0, Lbk0;->o:J
+    iget-object v1, p0, Ld07;->c:Landroid/os/Handler;
 
-    long-to-int v0, v0
+    invoke-direct {v0, v1}, Lb07;-><init>(Landroid/os/Handler;)V
 
-    iget-object v1, p0, Ld07;->X:Ljava/util/List;
-
-    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lb17;
-
-    iget-wide v0, v0, Lb17;->X:J
-
-    iget-wide v2, p0, Ld07;->Y:J
-
-    add-long/2addr v2, v0
-
-    return-wide v2
+    return-object v0
 .end method
 
-.method public final c()J
-    .locals 5
+.method public final c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lpy4;
+    .locals 3
 
-    invoke-virtual {p0}, Lbk0;->a()V
+    if-eqz p1, :cond_1
 
-    iget-wide v0, p0, Lbk0;->o:J
+    if-eqz p4, :cond_0
 
-    long-to-int v0, v0
+    new-instance v0, Lc07;
 
-    iget-object v1, p0, Ld07;->X:Ljava/util/List;
+    iget-object v1, p0, Ld07;->c:Landroid/os/Handler;
 
-    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-direct {v0, v1, p1}, Lc07;-><init>(Landroid/os/Handler;Ljava/lang/Runnable;)V
 
-    move-result-object v0
+    invoke-static {v1, v0}, Landroid/os/Message;->obtain(Landroid/os/Handler;Ljava/lang/Runnable;)Landroid/os/Message;
 
-    check-cast v0, Lb17;
+    move-result-object p1
 
-    iget-wide v1, p0, Ld07;->Y:J
+    const/4 v2, 0x1
 
-    iget-wide v3, v0, Lb17;->X:J
+    invoke-virtual {p1, v2}, Landroid/os/Message;->setAsynchronous(Z)V
 
-    add-long/2addr v1, v3
+    invoke-virtual {p4, p2, p3}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
-    iget-wide v3, v0, Lb17;->c:J
+    move-result-wide p2
 
-    add-long/2addr v1, v3
+    invoke-virtual {v1, p1, p2, p3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    return-wide v1
+    return-object v0
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "unit == null"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "run == null"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

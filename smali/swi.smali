@@ -1,205 +1,296 @@
-.class public final Lswi;
+.class public abstract Lswi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
-
-.field public final b:Lvof;
-
-.field public final c:I
-
-.field public final d:Landroid/os/Bundle;
-
-.field public final synthetic e:I
-
-
 # direct methods
-.method public constructor <init>(IILandroid/os/Bundle;I)V
-    .locals 0
+.method public static final a(Ljava/io/InputStream;Ljava/io/OutputStream;)J
+    .locals 6
 
-    iput p4, p0, Lswi;->e:I
+    const/16 v0, 0x2000
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-array v0, v0, [B
 
-    new-instance p4, Lvof;
-
-    invoke-direct {p4}, Lvof;-><init>()V
-
-    iput-object p4, p0, Lswi;->b:Lvof;
-
-    iput p1, p0, Lswi;->a:I
-
-    iput p2, p0, Lswi;->c:I
-
-    iput-object p3, p0, Lswi;->d:Landroid/os/Bundle;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a()Z
-    .locals 1
-
-    iget v0, p0, Lswi;->e:I
-
-    packed-switch v0, :pswitch_data_0
-
-    const/4 v0, 0x0
-
-    return v0
-
-    :pswitch_0
-    const/4 v0, 0x1
-
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final b(Lcom/google/android/gms/cloudmessaging/zzt;)V
-    .locals 5
-
-    const/4 v0, 0x3
-
-    const-string v1, "MessengerIpcClient"
-
-    invoke-static {v1, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lswi;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "Failing "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, " with "
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    iget-object v0, p0, Lswi;->b:Lvof;
-
-    invoke-virtual {v0, p1}, Lvof;->a(Ljava/lang/Exception;)V
-
-    return-void
-.end method
-
-.method public final c(Landroid/os/Bundle;)V
-    .locals 5
-
-    const/4 v0, 0x3
-
-    const-string v1, "MessengerIpcClient"
-
-    invoke-static {v1, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lswi;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "Finishing "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, " with "
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    iget-object v0, p0, Lswi;->b:Lvof;
-
-    invoke-virtual {v0, p1}, Lvof;->b(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Request { what="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lswi;->c:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, " id="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lswi;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, " oneWay="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Lswi;->a()Z
+    invoke-virtual {p0, v0}, Ljava/io/InputStream;->read([B)I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    const-wide/16 v2, 0x0
 
-    const-string v1, "}"
+    :goto_0
+    if-ltz v1, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v4, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1, v0, v4, v1}, Ljava/io/OutputStream;->write([BII)V
 
-    move-result-object v0
+    int-to-long v4, v1
 
-    return-object v0
+    add-long/2addr v2, v4
+
+    invoke-virtual {p0, v0}, Ljava/io/InputStream;->read([B)I
+
+    move-result v1
+
+    goto :goto_0
+
+    :cond_0
+    return-wide v2
+.end method
+
+.method public static b(Lbz9;)Ldq0;
+    .locals 17
+
+    move-object/from16 v0, p0
+
+    const/4 v1, 0x4
+
+    invoke-interface {v0, v1}, Lbz9;->v(I)V
+
+    invoke-interface {v0}, Lbz9;->readUnsignedShort()I
+
+    move-result v2
+
+    const/16 v3, 0x64
+
+    const-string v4, "Cannot read metadata."
+
+    if-gt v2, v3, :cond_5
+
+    const/4 v3, 0x6
+
+    invoke-interface {v0, v3}, Lbz9;->v(I)V
+
+    const/4 v3, 0x0
+
+    move v5, v3
+
+    :goto_0
+    const-wide/16 v6, -0x1
+
+    if-ge v5, v2, :cond_1
+
+    invoke-interface {v0}, Lbz9;->c()I
+
+    move-result v8
+
+    invoke-interface {v0, v1}, Lbz9;->v(I)V
+
+    invoke-interface {v0}, Lbz9;->h()J
+
+    move-result-wide v9
+
+    invoke-interface {v0, v1}, Lbz9;->v(I)V
+
+    const v11, 0x6d657461
+
+    if-ne v11, v8, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    move-wide v9, v6
+
+    :goto_1
+    cmp-long v1, v9, v6
+
+    if-eqz v1, :cond_4
+
+    invoke-interface {v0}, Lbz9;->getPosition()J
+
+    move-result-wide v1
+
+    sub-long v1, v9, v1
+
+    long-to-int v1, v1
+
+    invoke-interface {v0, v1}, Lbz9;->v(I)V
+
+    const/16 v1, 0xc
+
+    invoke-interface {v0, v1}, Lbz9;->v(I)V
+
+    invoke-interface {v0}, Lbz9;->h()J
+
+    move-result-wide v1
+
+    :goto_2
+    int-to-long v5, v3
+
+    cmp-long v5, v5, v1
+
+    if-gez v5, :cond_4
+
+    invoke-interface {v0}, Lbz9;->c()I
+
+    move-result v5
+
+    invoke-interface {v0}, Lbz9;->h()J
+
+    move-result-wide v6
+
+    invoke-interface {v0}, Lbz9;->h()J
+
+    move-result-wide v15
+
+    const v8, 0x456d6a69
+
+    if-eq v8, v5, :cond_3
+
+    const v8, 0x656d6a69
+
+    if-ne v8, v5, :cond_2
+
+    goto :goto_3
+
+    :cond_2
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_2
+
+    :cond_3
+    :goto_3
+    new-instance v11, Ldq0;
+
+    add-long v13, v6, v9
+
+    const/4 v12, 0x5
+
+    invoke-direct/range {v11 .. v16}, Ldq0;-><init>(IJJ)V
+
+    return-object v11
+
+    :cond_4
+    new-instance v0, Ljava/io/IOException;
+
+    invoke-direct {v0, v4}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_5
+    new-instance v0, Ljava/io/IOException;
+
+    invoke-direct {v0, v4}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public static c(Ljava/io/FileInputStream;)Laz9;
+    .locals 6
+
+    new-instance v0, Lz95;
+
+    invoke-direct {v0, p0}, Lz95;-><init>(Ljava/io/FileInputStream;)V
+
+    invoke-static {v0}, Lswi;->b(Lbz9;)Ldq0;
+
+    move-result-object v1
+
+    iget-wide v2, v1, Ldq0;->b:J
+
+    iget-wide v4, v0, Lz95;->a:J
+
+    sub-long/2addr v2, v4
+
+    long-to-int v2, v2
+
+    invoke-virtual {v0, v2}, Lz95;->v(I)V
+
+    iget-wide v0, v1, Ldq0;->c:J
+
+    long-to-int v2, v0
+
+    invoke-static {v2}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->array()[B
+
+    move-result-object v3
+
+    invoke-virtual {p0, v3}, Ljava/io/InputStream;->read([B)I
+
+    move-result p0
+
+    int-to-long v3, p0
+
+    cmp-long v3, v3, v0
+
+    if-nez v3, :cond_0
+
+    new-instance p0, Laz9;
+
+    invoke-direct {p0}, Lmn8;-><init>()V
+
+    sget-object v0, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
+
+    invoke-virtual {v2, v0}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v2}, Ljava/nio/Buffer;->position()I
+
+    move-result v0
+
+    invoke-virtual {v2, v0}, Ljava/nio/ByteBuffer;->getInt(I)I
+
+    move-result v0
+
+    invoke-virtual {v2}, Ljava/nio/Buffer;->position()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    iput-object v2, p0, Lmn8;->d:Ljava/lang/Object;
+
+    iput v1, p0, Lmn8;->a:I
+
+    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->getInt(I)I
+
+    move-result v0
+
+    sub-int/2addr v1, v0
+
+    iput v1, p0, Lmn8;->b:I
+
+    iget-object v0, p0, Lmn8;->d:Ljava/lang/Object;
+
+    check-cast v0, Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->getShort(I)S
+
+    move-result v0
+
+    iput v0, p0, Lmn8;->c:I
+
+    return-object p0
+
+    :cond_0
+    new-instance v2, Ljava/io/IOException;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "Needed "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v0, " bytes, got "
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v2, p0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v2
 .end method

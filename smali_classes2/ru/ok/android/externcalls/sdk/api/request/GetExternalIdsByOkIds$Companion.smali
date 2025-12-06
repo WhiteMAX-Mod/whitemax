@@ -23,11 +23,11 @@
         "<init>",
         "()V",
         "",
-        "Lhi1;",
+        "Lti1;",
         "Lru/ok/android/externcalls/sdk/id/InternalId;",
-        "Lraf;",
+        "Lnmf;",
         "mapToStringApiParam",
-        "(Ljava/util/List;)Lraf;",
+        "(Ljava/util/List;)Lnmf;",
         "",
         "METHOD_NAME",
         "Ljava/lang/String;",
@@ -53,7 +53,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lki4;)V
+.method public synthetic constructor <init>(Ltk4;)V
     .locals 0
 
     .line 1
@@ -62,29 +62,29 @@
     return-void
 .end method
 
-.method public static final synthetic access$mapToStringApiParam(Lru/ok/android/externcalls/sdk/api/request/GetExternalIdsByOkIds$Companion;Ljava/util/List;)Lraf;
+.method public static final synthetic access$mapToStringApiParam(Lru/ok/android/externcalls/sdk/api/request/GetExternalIdsByOkIds$Companion;Ljava/util/List;)Lnmf;
     .locals 0
 
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/api/request/GetExternalIdsByOkIds$Companion;->mapToStringApiParam(Ljava/util/List;)Lraf;
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/api/request/GetExternalIdsByOkIds$Companion;->mapToStringApiParam(Ljava/util/List;)Lnmf;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final mapToStringApiParam(Ljava/util/List;)Lraf;
+.method private final mapToStringApiParam(Ljava/util/List;)Lnmf;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
-            "Lhi1;",
+            "Lti1;",
             ">;)",
-            "Lraf;"
+            "Lnmf;"
         }
     .end annotation
 
-    new-instance v0, Lraf;
+    new-instance v0, Lnmf;
 
     sget-object v5, Lru/ok/android/externcalls/sdk/api/request/GetExternalIdsByOkIds$Companion$mapToStringApiParam$1;->INSTANCE:Lru/ok/android/externcalls/sdk/api/request/GetExternalIdsByOkIds$Companion$mapToStringApiParam$1;
 
@@ -98,13 +98,13 @@
 
     move-object v1, p1
 
-    invoke-static/range {v1 .. v6}, Lnb3;->I(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lli6;I)Ljava/lang/String;
+    invoke-static/range {v1 .. v6}, Lue3;->N(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lem6;I)Ljava/lang/String;
 
     move-result-object p1
 
     const-string v1, "uids"
 
-    invoke-direct {v0, v1, p1}, Lxaf;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, p1}, Ltmf;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
 .end method

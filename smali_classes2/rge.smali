@@ -1,52 +1,39 @@
-.class public final synthetic Lrge;
-.super Lb9;
+.class public final Lrge;
+.super Lfhe;
 .source "SourceFile"
 
-# interfaces
-.implements Lbj6;
 
+# instance fields
+.field public final g:J
 
-# static fields
-.field public static final q0:Lrge;
+.field public final h:Ljava/lang/String;
+
+.field public final i:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(JLjava/lang/String;Ljava/util/List;J)V
+    .locals 0
 
-    new-instance v0, Lrge;
+    invoke-direct {p0, p5, p6}, Lfhe;-><init>(J)V
 
-    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
+    iput-wide p1, p0, Lrge;->g:J
 
-    const/4 v2, 0x4
+    iput-object p3, p0, Lrge;->h:Ljava/lang/String;
 
-    const/4 v3, 0x3
-
-    const-class v4, Ltcb;
-
-    invoke-direct {v0, v3, v4, v1, v2}, Lb9;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
-
-    sput-object v0, Lrge;->q0:Lrge;
+    iput-object p4, p0, Lrge;->i:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Lghe;
+    .locals 1
 
-    check-cast p1, Lvy0;
+    new-instance v0, Lsge;
 
-    check-cast p2, Ljava/util/List;
+    invoke-direct {v0, p0}, Lsge;-><init>(Lrge;)V
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    sget-object p3, Luge;->w0:[Ltr7;
-
-    new-instance p3, Ltcb;
-
-    invoke-direct {p3, p1, p2}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    return-object p3
+    return-object v0
 .end method

@@ -2,145 +2,52 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljavax/inject/Provider;
-
-
-# static fields
-.field public static final c:Ljava/lang/Object;
-
 
 # instance fields
-.field public volatile a:Lgm5;
+.field public final a:Landroid/content/Context;
 
-.field public volatile b:Ljava/lang/Object;
+.field public final b:Ly6i;
+
+.field public c:Landroid/view/VelocityTracker;
+
+.field public d:F
+
+.field public e:I
+
+.field public f:I
+
+.field public g:I
+
+.field public final h:[I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lqw4;->c:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public static a(Lgm5;)Ljavax/inject/Provider;
+.method public constructor <init>(Landroid/content/Context;Ly6i;)V
     .locals 2
 
-    instance-of v0, p0, Lqw4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz v0, :cond_0
+    const/4 v0, -0x1
 
-    return-object p0
+    iput v0, p0, Lqw4;->e:I
 
-    :cond_0
-    new-instance v0, Lqw4;
+    iput v0, p0, Lqw4;->f:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput v0, p0, Lqw4;->g:I
 
-    sget-object v1, Lqw4;->c:Ljava/lang/Object;
-
-    iput-object v1, v0, Lqw4;->b:Ljava/lang/Object;
-
-    iput-object p0, v0, Lqw4;->a:Lgm5;
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 5
-
-    iget-object v0, p0, Lqw4;->b:Ljava/lang/Object;
-
-    sget-object v1, Lqw4;->c:Ljava/lang/Object;
-
-    if-ne v0, v1, :cond_3
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lqw4;->b:Ljava/lang/Object;
-
-    if-ne v0, v1, :cond_2
-
-    iget-object v0, p0, Lqw4;->a:Lgm5;
-
-    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    iget-object v2, p0, Lqw4;->b:Ljava/lang/Object;
-
-    if-eq v2, v1, :cond_1
-
-    if-ne v2, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "Scoped provider was invoked recursively returning different results: "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, " & "
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ". This is likely due to a circular dependency."
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
-    :cond_1
-    :goto_0
-    iput-object v0, p0, Lqw4;->b:Ljava/lang/Object;
+    const v0, 0x7fffffff
 
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lqw4;->a:Lgm5;
+    filled-new-array {v0, v1}, [I
 
-    goto :goto_1
+    move-result-object v0
 
-    :catchall_0
-    move-exception v0
+    iput-object v0, p0, Lqw4;->h:[I
 
-    goto :goto_2
+    iput-object p1, p0, Lqw4;->a:Landroid/content/Context;
 
-    :cond_2
-    :goto_1
-    monitor-exit p0
+    iput-object p2, p0, Lqw4;->b:Ly6i;
 
-    return-object v0
-
-    :goto_2
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-
-    :cond_3
-    return-object v0
+    return-void
 .end method

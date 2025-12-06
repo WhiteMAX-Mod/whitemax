@@ -44,9 +44,9 @@
 
     const/4 p1, 0x1
 
-    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->n1(I)V
+    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->p1(I)V
 
-    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->o1(Z)V
+    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->q1(Z)V
 
     const/4 p1, 0x0
 
@@ -57,7 +57,7 @@
 
 
 # virtual methods
-.method public final J0()Z
+.method public final L0()Z
     .locals 1
 
     const/4 v0, 0x0
@@ -65,7 +65,7 @@
     return v0
 .end method
 
-.method public final S(Landroid/view/View;IIII)V
+.method public final T(Landroid/view/View;IIII)V
     .locals 8
 
     iget-object v0, p0, Landroidx/recyclerview/widget/MessagesLayoutManager;->E:Landroidx/recyclerview/widget/RecyclerView;
@@ -75,7 +75,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->T(Landroid/view/View;)Lq7d;
+    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->T(Landroid/view/View;)Lmid;
 
     move-result-object v1
 
@@ -85,7 +85,7 @@
     return-void
 
     :cond_1
-    instance-of v1, v1, Lc24;
+    instance-of v1, v1, Lt44;
 
     if-eqz v1, :cond_2
 
@@ -115,17 +115,17 @@
 
     move v7, p5
 
-    invoke-super/range {v2 .. v7}, Landroidx/recyclerview/widget/a;->S(Landroid/view/View;IIII)V
+    invoke-super/range {v2 .. v7}, Landroidx/recyclerview/widget/a;->T(Landroid/view/View;IIII)V
 
     return-void
 
     :cond_2
-    invoke-super/range {p0 .. p5}, Landroidx/recyclerview/widget/a;->S(Landroid/view/View;IIII)V
+    invoke-super/range {p0 .. p5}, Landroidx/recyclerview/widget/a;->T(Landroid/view/View;IIII)V
 
     return-void
 .end method
 
-.method public final W(Landroidx/recyclerview/widget/RecyclerView;)V
+.method public final Y(Landroidx/recyclerview/widget/RecyclerView;)V
     .locals 0
 
     iput-object p1, p0, Landroidx/recyclerview/widget/MessagesLayoutManager;->E:Landroidx/recyclerview/widget/RecyclerView;
@@ -133,7 +133,7 @@
     return-void
 .end method
 
-.method public final X(Landroidx/recyclerview/widget/RecyclerView;)V
+.method public final Z(Landroidx/recyclerview/widget/RecyclerView;)V
     .locals 0
 
     const/4 p1, 0x0

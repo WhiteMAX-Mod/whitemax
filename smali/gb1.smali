@@ -1,153 +1,201 @@
-.class public final Lgb1;
-.super Ljava/lang/Object;
+.class public final enum Lgb1;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final c:Lgb1;
+.field public static final enum X:Lgb1;
+
+.field public static final enum Y:Lgb1;
+
+.field public static final enum Z:Lgb1;
+
+.field public static final enum d:Lgb1;
+
+.field public static final enum o:Lgb1;
+
+.field public static final enum s0:Lgb1;
+
+.field public static final synthetic t0:[Lgb1;
 
 
 # instance fields
-.field public final a:Ljava/lang/CharSequence;
+.field public final a:I
 
-.field public final b:Lhb1;
+.field public final b:I
+
+.field public final c:Ls5g;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 20
+
+    sget v4, Livd;->Z0:I
+
+    sget v3, Ld3d;->call_incoming_accept_with_video_accessibility:I
 
     new-instance v0, Lgb1;
 
-    const/4 v1, 0x0
-
-    sget-object v2, Lhb1;->a:Lhb1;
-
-    invoke-direct {v0, v1, v2}, Lgb1;-><init>(Landroid/text/SpannableString;Lhb1;)V
-
-    sput-object v0, Lgb1;->c:Lgb1;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/text/SpannableString;Lhb1;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lgb1;->a:Ljava/lang/CharSequence;
-
-    iput-object p2, p0, Lgb1;->b:Lhb1;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lgb1;
-
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    const/4 v5, 0x0
 
-    return v2
+    const-string v1, "VIDEO_ACCEPT"
 
-    :cond_1
-    check-cast p1, Lgb1;
+    invoke-direct/range {v0 .. v5}, Lgb1;-><init>(Ljava/lang/String;IIILn5g;)V
 
-    iget-object v1, p0, Lgb1;->a:Ljava/lang/CharSequence;
+    move-object v6, v0
 
-    iget-object v3, p1, Lgb1;->a:Ljava/lang/CharSequence;
+    sput-object v6, Lgb1;->d:Lgb1;
 
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sget v11, Livd;->D:I
 
-    move-result v1
+    sget v10, Ld3d;->call_incoming_accept_with_audio_accessibility:I
 
-    if-nez v1, :cond_2
+    new-instance v7, Lgb1;
 
-    return v2
+    const/4 v9, 0x1
 
-    :cond_2
-    iget-object v1, p0, Lgb1;->b:Lhb1;
+    const/4 v12, 0x0
 
-    iget-object p1, p1, Lgb1;->b:Lhb1;
+    const-string v8, "AUDIO_ACCEPT"
 
-    if-eq v1, p1, :cond_3
+    invoke-direct/range {v7 .. v12}, Lgb1;-><init>(Ljava/lang/String;IIILn5g;)V
 
-    return v2
+    move-object v13, v6
 
-    :cond_3
-    return v0
-.end method
+    move-object v6, v7
 
-.method public final hashCode()I
-    .locals 2
+    sput-object v6, Lgb1;->o:Lgb1;
 
-    iget-object v0, p0, Lgb1;->a:Ljava/lang/CharSequence;
+    sget v3, Lm0b;->b0:I
 
-    if-nez v0, :cond_0
+    sget v0, Lm0b;->d0:I
 
-    const/4 v0, 0x0
+    new-instance v5, Ln5g;
 
-    goto :goto_0
+    invoke-direct {v5, v0}, Ln5g;-><init>(I)V
 
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    new-instance v0, Lgb1;
 
-    move-result v0
+    const-string v1, "VIDEO_ACCEPT_WITH_TITLE"
 
-    :goto_0
-    mul-int/lit8 v0, v0, 0x1f
+    const/4 v2, 0x2
 
-    iget-object v1, p0, Lgb1;->b:Lhb1;
+    invoke-direct/range {v0 .. v5}, Lgb1;-><init>(Ljava/lang/String;IIILn5g;)V
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    sput-object v0, Lgb1;->X:Lgb1;
 
-    move-result v1
+    sget v10, Lm0b;->a0:I
 
-    add-int/2addr v1, v0
+    sget v1, Lm0b;->c0:I
 
-    return v1
-.end method
+    new-instance v12, Ln5g;
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    invoke-direct {v12, v1}, Ln5g;-><init>(I)V
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v7, Lgb1;
 
-    const-string v1, "CallIndicatorState(title="
+    const-string v8, "AUDIO_ACCEPT_WITH_TITLE"
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 v9, 0x3
 
-    iget-object v1, p0, Lgb1;->a:Ljava/lang/CharSequence;
+    invoke-direct/range {v7 .. v12}, Lgb1;-><init>(Ljava/lang/String;IIILn5g;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    sput-object v7, Lgb1;->Y:Lgb1;
 
-    const-string v1, ", indicatorState="
+    sget v18, Livd;->u0:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget v17, Lm0b;->h0:I
 
-    iget-object v1, p0, Lgb1;->b:Lhb1;
+    new-instance v9, Lgb1;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const/16 v16, 0x4
 
-    const-string v1, ")"
+    const/16 v19, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v15, "DECLINE"
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-object v14, v9
+
+    invoke-direct/range {v14 .. v19}, Lgb1;-><init>(Ljava/lang/String;IIILn5g;)V
+
+    sput-object v9, Lgb1;->Z:Lgb1;
+
+    sget v1, Lm0b;->g0:I
+
+    new-instance v2, Ln5g;
+
+    invoke-direct {v2, v1}, Ln5g;-><init>(I)V
+
+    new-instance v10, Lgb1;
+
+    const-string v15, "DECLINE_WITH_TITLE"
+
+    const/16 v16, 0x5
+
+    move-object/from16 v19, v2
+
+    move-object v14, v10
+
+    invoke-direct/range {v14 .. v19}, Lgb1;-><init>(Ljava/lang/String;IIILn5g;)V
+
+    sput-object v10, Lgb1;->s0:Lgb1;
+
+    move-object v8, v7
+
+    move-object v5, v13
+
+    move-object v7, v0
+
+    filled-new-array/range {v5 .. v10}, [Lgb1;
 
     move-result-object v0
+
+    sput-object v0, Lgb1;->t0:[Lgb1;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;IIILn5g;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput p3, p0, Lgb1;->a:I
+
+    iput p4, p0, Lgb1;->b:I
+
+    iput-object p5, p0, Lgb1;->c:Ls5g;
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lgb1;
+    .locals 1
+
+    const-class v0, Lgb1;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lgb1;
+
+    return-object p0
+.end method
+
+.method public static values()[Lgb1;
+    .locals 1
+
+    sget-object v0, Lgb1;->t0:[Lgb1;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lgb1;
 
     return-object v0
 .end method

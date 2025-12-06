@@ -1,29 +1,21 @@
-.class public Llpe;
-.super La3;
+.class public final Llpe;
+.super Lxp;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:Ljava/lang/String;
+# static fields
+.field public static final a:Llpe;
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, La3;-><init>(I)V
-
-    iput-object p2, p0, Llpe;->b:Ljava/lang/String;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a()Ljava/lang/String;
+.method static constructor <clinit>()V
     .locals 1
 
-    iget-object v0, p0, Llpe;->b:Ljava/lang/String;
+    new-instance v0, Llpe;
 
-    return-object v0
+    invoke-direct {v0}, Lxp;-><init>()V
+
+    sput-object v0, Llpe;->a:Llpe;
+
+    return-void
 .end method

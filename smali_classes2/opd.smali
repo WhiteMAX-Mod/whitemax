@@ -1,50 +1,53 @@
-.class public final Lopd;
-.super Lst7;
+.class public abstract synthetic Lopd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lji6;
 
-
-# instance fields
-.field public final synthetic a:Lppd;
-
-.field public final synthetic b:Ljava/lang/Class;
-
-.field public final synthetic c:Z
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(Lppd;Ljava/lang/Class;Z)V
-    .locals 0
-
-    iput-object p1, p0, Lopd;->a:Lppd;
-
-    iput-object p2, p0, Lopd;->b:Ljava/lang/Class;
-
-    iput-boolean p3, p0, Lopd;->c:Z
-
-    const/4 p1, 0x0
-
-    invoke-direct {p0, p1}, Lst7;-><init>(I)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 3
 
-    iget-object v0, p0, Lopd;->b:Ljava/lang/Class;
-
-    iget-boolean v1, p0, Lopd;->c:Z
-
-    iget-object v2, p0, Lopd;->a:Lppd;
-
-    invoke-virtual {v2, v0, v1}, Lppd;->c(Ljava/lang/Class;Z)Ljava/lang/Object;
+    invoke-static {}, Lk38;->values()[Lk38;
 
     move-result-object v0
 
-    return-object v0
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    :try_start_0
+    sget-object v1, Lk38;->ON_STOP:Lk38;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :try_start_1
+    sget-object v1, Lk38;->ON_START:Lk38;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    sput-object v0, Lopd;->$EnumSwitchMapping$0:[I
+
+    return-void
 .end method

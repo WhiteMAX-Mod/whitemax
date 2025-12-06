@@ -1,42 +1,109 @@
-.class public final synthetic Lobb;
+.class public abstract Lobb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:Lrbb;
+.field public static final b:I
 
-.field public final synthetic b:D
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrbb;D)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lyzc;->oneme_settings_change_avatar_cancel:I
 
-    iput-object p1, p0, Lobb;->a:Lrbb;
+    sput v0, Lobb;->a:I
 
-    iput-wide p2, p0, Lobb;->b:D
+    sget v0, Lyzc;->oneme_settings_change_avatar_upload_from_camera:I
 
-    return-void
-.end method
+    sput v0, Lobb;->b:I
 
+    sget v0, Lyzc;->oneme_settings_change_avatar_upload_from_gallery:I
 
-# virtual methods
-.method public final run()V
-    .locals 3
+    sput v0, Lobb;->c:I
 
-    iget-wide v0, p0, Lobb;->b:D
+    sget v0, Lyzc;->oneme_settings_change_avatar_upload_from_neuroavatars:I
 
-    iget-object v2, p0, Lobb;->a:Lrbb;
+    sput v0, Lobb;->d:I
 
-    iget-object v2, v2, Lrbb;->b:Lqbb;
+    sget v0, Lyzc;->oneme_settings_collapsingstoolbar:I
 
-    invoke-interface {v2, v0, v1}, Lqbb;->b(D)V
+    sput v0, Lobb;->e:I
+
+    sget v0, Lyzc;->oneme_settings_container:I
+
+    sput v0, Lobb;->f:I
+
+    sget v0, Lyzc;->oneme_settings_list_screen_appbar:I
+
+    sput v0, Lobb;->g:I
+
+    sget v0, Lyzc;->oneme_settings_list_screen_pinned_toolbar:I
+
+    sput v0, Lobb;->h:I
+
+    sget v0, Lyzc;->oneme_settings_toolbar:I
+
+    sput v0, Lobb;->i:I
+
+    sget v0, Lyzc;->oneme_settings_topbar:I
+
+    sput v0, Lobb;->j:I
+
+    sget v0, Lyzc;->oneme_settings_topbar_avatar:I
+
+    sput v0, Lobb;->k:I
+
+    sget v0, Lyzc;->oneme_settings_topbar_container:I
+
+    sput v0, Lobb;->l:I
+
+    sget v0, Lyzc;->oneme_settings_topbar_dotdivider:I
+
+    sput v0, Lobb;->m:I
+
+    sget v0, Lyzc;->oneme_settings_topbar_name:I
+
+    sput v0, Lobb;->n:I
+
+    sget v0, Lyzc;->oneme_settings_topbar_nick:I
+
+    sput v0, Lobb;->o:I
+
+    sget v0, Lyzc;->oneme_settings_topbar_phone:I
+
+    sput v0, Lobb;->p:I
 
     return-void
 .end method

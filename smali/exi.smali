@@ -4,209 +4,317 @@
 
 
 # direct methods
-.method public static final a(Lfgd;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 3
+.method public static a(I[Ljava/lang/String;)F
+    .locals 2
 
-    invoke-virtual {p0}, Lfgd;->m()Z
+    aget-object p0, p1, p0
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lfgd;->j()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p2}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    invoke-interface {p3}, Lkotlin/coroutines/Continuation;->getContext()Li54;
-
-    move-result-object v0
-
-    sget-object v1, Lw2g;->c:Lftd;
-
-    invoke-interface {v0, v1}, Li54;->get(Lh54;)Lg54;
-
-    move-result-object v0
-
-    check-cast v0, Lw2g;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, v0, Lw2g;->a:Lz14;
-
-    if-nez v0, :cond_2
-
-    :cond_1
-    invoke-static {p0}, Lfxi;->b(Lfgd;)Lk54;
-
-    move-result-object v0
-
-    :cond_2
-    new-instance p0, Lo32;
-
-    invoke-static {p3}, Lj1i;->g(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p3
-
-    const/4 v1, 0x1
-
-    invoke-direct {p0, v1, p3}, Lo32;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    invoke-virtual {p0}, Lo32;->o()V
-
-    new-instance p3, Ld64;
-
-    const/4 v1, 0x0
-
-    invoke-direct {p3, p2, p0, v1}, Ld64;-><init>(Ljava/util/concurrent/Callable;Lo32;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p2, 0x2
-
-    sget-object v2, Ltr6;->a:Ltr6;
-
-    invoke-static {v2, v0, v1, p3, p2}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
-
-    move-result-object p2
-
-    new-instance p3, Lc64;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p3, p1, v0, p2}, Lc64;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {p0, p3}, Lo32;->e(Lli6;)V
-
-    invoke-virtual {p0}, Lo32;->n()Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static final b(Lfgd;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 3
-
-    invoke-virtual {p0}, Lfgd;->m()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lfgd;->j()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p1}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    invoke-interface {p2}, Lkotlin/coroutines/Continuation;->getContext()Li54;
-
-    move-result-object v0
-
-    sget-object v1, Lw2g;->c:Lftd;
-
-    invoke-interface {v0, v1}, Li54;->get(Lh54;)Lg54;
-
-    move-result-object v0
-
-    check-cast v0, Lw2g;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, v0, Lw2g;->a:Lz14;
-
-    if-nez v0, :cond_4
-
-    :cond_1
-    iget-object v0, p0, Lfgd;->k:Ljava/util/Map;
-
-    const-string v1, "TransactionDispatcher"
-
-    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-nez v2, :cond_3
-
-    iget-object p0, p0, Lfgd;->c:Le3e;
-
-    if-nez p0, :cond_2
-
-    const/4 p0, 0x0
-
-    :cond_2
-    invoke-static {p0}, Ls0j;->b(Ljava/util/concurrent/Executor;)Lk54;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_3
-    move-object v0, v2
-
-    check-cast v0, Lk54;
-
-    :cond_4
-    new-instance p0, Lb64;
-
-    const/4 v1, 0x0
-
-    invoke-direct {p0, p1, v1}, Lb64;-><init>(Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v0, p0, p2}, Ltki;->h(Li54;Lzi6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static c(Ljava/lang/Integer;)Lm2d;
-    .locals 5
-
-    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
+    invoke-static {p0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
     move-result p0
 
-    invoke-static {}, Lm2d;->values()[Lm2d;
+    const/4 p1, 0x0
 
-    move-result-object v0
+    cmpg-float p1, p0, p1
 
-    array-length v1, v0
+    if-ltz p1, :cond_0
 
-    const/4 v2, 0x0
+    const/high16 p1, 0x3f800000    # 1.0f
 
-    :goto_0
-    if-ge v2, v1, :cond_1
+    cmpl-float p1, p0, p1
 
-    aget-object v3, v0, v2
+    if-gtz p1, :cond_0
 
-    iget v4, v3, Lm2d;->a:I
-
-    if-ne v4, p0, :cond_0
-
-    return-object v3
+    return p0
 
     :cond_0
-    add-int/lit8 v2, v2, 0x1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Motion easing control point value must be between 0 and 1; instead got: "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public static b(Ljava/lang/String;Ljava/lang/String;)Z
+    .locals 1
+
+    const-string v0, "("
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const-string p1, ")"
+
+    invoke-virtual {p0, p1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static c(IILandroid/content/Context;)I
+    .locals 1
+
+    invoke-static {p2, p0}, Lwsi;->e(Landroid/content/Context;I)Landroid/util/TypedValue;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    iget p2, p0, Landroid/util/TypedValue;->type:I
+
+    const/16 v0, 0x10
+
+    if-ne p2, v0, :cond_0
+
+    iget p0, p0, Landroid/util/TypedValue;->data:I
+
+    return p0
+
+    :cond_0
+    return p1
+.end method
+
+.method public static d(Landroid/content/Context;ILandroid/animation/TimeInterpolator;)Landroid/animation/TimeInterpolator;
+    .locals 5
+
+    new-instance v0, Landroid/util/TypedValue;
+
+    invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
+
+    invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, p1, v0, v2}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    return-object p2
+
+    :cond_0
+    iget p1, v0, Landroid/util/TypedValue;->type:I
+
+    const/4 p2, 0x3
+
+    if-ne p1, p2, :cond_6
+
+    iget-object p1, v0, Landroid/util/TypedValue;->string:Ljava/lang/CharSequence;
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v1, "cubic-bezier"
+
+    invoke-static {p1, v1}, Lexi;->b(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v3
+
+    const-string v4, "path"
+
+    if-nez v3, :cond_2
+
+    invoke-static {p1, v4}, Lexi;->b(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
 
     goto :goto_0
 
     :cond_1
-    sget-object p0, Lm2d;->b:Lm2d;
+    iget p1, v0, Landroid/util/TypedValue;->resourceId:I
+
+    invoke-static {p0, p1}, Landroid/view/animation/AnimationUtils;->loadInterpolator(Landroid/content/Context;I)Landroid/view/animation/Interpolator;
+
+    move-result-object p0
 
     return-object p0
+
+    :cond_2
+    :goto_0
+    invoke-static {p1, v1}, Lexi;->b(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_4
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result p0
+
+    sub-int/2addr p0, v2
+
+    const/16 v0, 0xd
+
+    invoke-virtual {p1, v0, p0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string p1, ","
+
+    invoke-virtual {p0, p1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object p0
+
+    array-length p1, p0
+
+    const/4 v0, 0x4
+
+    if-ne p1, v0, :cond_3
+
+    const/4 p1, 0x0
+
+    invoke-static {p1, p0}, Lexi;->a(I[Ljava/lang/String;)F
+
+    move-result p1
+
+    invoke-static {v2, p0}, Lexi;->a(I[Ljava/lang/String;)F
+
+    move-result v0
+
+    const/4 v1, 0x2
+
+    invoke-static {v1, p0}, Lexi;->a(I[Ljava/lang/String;)F
+
+    move-result v1
+
+    invoke-static {p2, p0}, Lexi;->a(I[Ljava/lang/String;)F
+
+    move-result p0
+
+    invoke-static {p1, v0, v1, p0}, Lwob;->b(FFFF)Landroid/view/animation/Interpolator;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_3
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    const-string v0, "Motion easing theme attribute must have 4 control points if using bezier curve format; instead got: "
+
+    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    array-length p0, p0
+
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_4
+    invoke-static {p1, v4}, Lexi;->b(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_5
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result p0
+
+    sub-int/2addr p0, v2
+
+    const/4 p2, 0x5
+
+    invoke-virtual {p1, p2, p0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lve3;->f(Ljava/lang/String;)Landroid/graphics/Path;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lwob;->c(Landroid/graphics/Path;)Landroid/view/animation/Interpolator;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_5
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "Invalid motion easing type: "
+
+    invoke-virtual {p2, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_6
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string p1, "Motion easing theme attribute must be an @interpolator resource for ?attr/motionEasing*Interpolator attributes or a string for ?attr/motionEasing* attributes."
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static final e(Lcp1;)Lzie;
+    .locals 8
+
+    new-instance v0, Lzie;
+
+    iget-object v3, p0, Lcp1;->a:Leje;
+
+    iget-object v5, p0, Lcp1;->b:Ljava/lang/String;
+
+    iget-boolean v7, p0, Lcp1;->c:Z
+
+    iget v1, p0, Lcp1;->e:I
+
+    iget-object v6, p0, Lcp1;->d:Ljava/util/List;
+
+    iget-object v2, p0, Lcp1;->f:Lti1;
+
+    iget-object v4, p0, Lcp1;->g:Ljava/lang/Long;
+
+    invoke-direct/range {v0 .. v7}, Lzie;-><init>(ILti1;Leje;Ljava/lang/Long;Ljava/lang/String;Ljava/util/List;Z)V
+
+    return-object v0
 .end method

@@ -11,14 +11,14 @@
     d2 = {
         "Lone/me/sdk/lists/widgets/EndlessRecyclerView2;",
         "Lone/me/sdk/lists/widgets/EmptyRecyclerView;",
-        "Lb8d;",
+        "Lxid;",
         "delegate",
-        "Lccg;",
+        "Lqqg;",
         "setRefreshingNextDelegate",
-        "(Lb8d;)V",
-        "Lvc5;",
+        "(Lxid;)V",
+        "Luf5;",
         "setDelegate",
-        "(Lvc5;)V",
+        "(Luf5;)V",
         "Landroidx/recyclerview/widget/a;",
         "layout",
         "setLayoutManager",
@@ -28,28 +28,28 @@
         "setRefreshingNext",
         "(Z)V",
         "setRefreshingPrev",
-        "Ltc5;",
+        "Lsf5;",
         "pager",
         "setPager",
-        "(Ltc5;)V",
+        "(Lsf5;)V",
         "",
         "threshold",
         "setThreshold",
         "(I)V",
-        "b2",
+        "c2",
         "Z",
         "getIgnoreRefreshingFlagsForScrollEvent",
         "()Z",
         "setIgnoreRefreshingFlagsForScrollEvent",
         "ignoreRefreshingFlagsForScrollEvent",
         "",
-        "e2",
-        "Liu7;",
+        "f2",
+        "Lk18;",
         "getFrameIntervalNanos",
         "()J",
         "frameIntervalNanos",
         "",
-        "f2",
+        "g2",
         "getTag",
         "()Ljava/lang/String;",
         "tag",
@@ -57,7 +57,7 @@
         "getLinearLayoutManager",
         "()Landroidx/recyclerview/widget/LinearLayoutManager;",
         "linearLayoutManager",
-        "xc5",
+        "wf5",
         "lists_release"
     }
     k = 0x1
@@ -71,27 +71,27 @@
 
 
 # static fields
-.field public static final synthetic g2:I
+.field public static final synthetic h2:I
 
 
 # instance fields
-.field public X1:Lxc5;
+.field public Y1:Lwf5;
 
-.field public Y1:I
-
-.field public Z1:Z
+.field public Z1:I
 
 .field public a2:Z
 
 .field public b2:Z
 
-.field public c2:Lvc5;
+.field public c2:Z
 
-.field public final d2:Lyc5;
+.field public d2:Luf5;
 
-.field public final e2:Ljava/lang/Object;
+.field public final e2:Lxf5;
 
 .field public final f2:Ljava/lang/Object;
+
+.field public final g2:Ljava/lang/Object;
 
 
 # direct methods
@@ -124,42 +124,42 @@
     const/4 p2, 0x1
 
     .line 3
-    iput p2, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->Y1:I
+    iput p2, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->Z1:I
 
     .line 4
-    new-instance p2, Lyc5;
+    new-instance p2, Lxf5;
 
-    invoke-direct {p2, p0}, Lyc5;-><init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;)V
+    invoke-direct {p2, p0}, Lxf5;-><init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;)V
 
-    iput-object p2, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->d2:Lyc5;
+    iput-object p2, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->e2:Lxf5;
 
     .line 5
-    new-instance p2, La52;
+    new-instance p2, Lns2;
 
-    const/4 p3, 0x6
+    const/4 p3, 0x5
 
-    invoke-direct {p2, p1, p3}, La52;-><init>(Landroid/content/Context;I)V
+    invoke-direct {p2, p1, p3}, Lns2;-><init>(Landroid/content/Context;I)V
 
     const/4 p1, 0x3
 
-    invoke-static {p1, p2}, Lrci;->b(ILji6;)Liu7;
+    invoke-static {p1, p2}, Lipi;->b(ILcm6;)Lk18;
 
     move-result-object p2
 
-    iput-object p2, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->e2:Ljava/lang/Object;
+    iput-object p2, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->f2:Ljava/lang/Object;
 
     .line 6
-    new-instance p2, Luc5;
+    new-instance p2, Ltf5;
 
     const/4 p3, 0x0
 
-    invoke-direct {p2, p0, p3}, Luc5;-><init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;I)V
+    invoke-direct {p2, p0, p3}, Ltf5;-><init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;I)V
 
-    invoke-static {p1, p2}, Lrci;->b(ILji6;)Liu7;
+    invoke-static {p1, p2}, Lipi;->b(ILcm6;)Lk18;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->f2:Ljava/lang/Object;
+    iput-object p1, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->g2:Ljava/lang/Object;
 
     return-void
 .end method
@@ -167,9 +167,9 @@
 .method private final getFrameIntervalNanos()J
     .locals 2
 
-    iget-object v0, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->e2:Ljava/lang/Object;
+    iget-object v0, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->f2:Ljava/lang/Object;
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -185,9 +185,9 @@
 .method private final getTag()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->f2:Ljava/lang/Object;
+    iget-object v0, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->g2:Ljava/lang/Object;
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -198,14 +198,14 @@
 
 
 # virtual methods
-.method public final G0(Lt6d;)V
+.method public final G0(Lphd;)V
     .locals 1
 
     if-eqz p1, :cond_0
 
-    iget-object v0, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->d2:Lyc5;
+    iget-object v0, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->e2:Lxf5;
 
-    invoke-static {p1, v0}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->I0(Lt6d;Lv6d;)V
+    invoke-static {p1, v0}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->I0(Lphd;Lrhd;)V
 
     :cond_0
     return-void
@@ -214,15 +214,15 @@
 .method public final H0()V
     .locals 2
 
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lt6d;
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lphd;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->d2:Lyc5;
+    iget-object v1, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->e2:Lxf5;
 
-    invoke-static {v0, v1}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->J0(Lt6d;Lv6d;)V
+    invoke-static {v0, v1}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->J0(Lphd;Lrhd;)V
 
     :cond_0
     return-void
@@ -287,7 +287,7 @@
 .method public final getIgnoreRefreshingFlagsForScrollEvent()Z
     .locals 1
 
-    iget-boolean v0, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->b2:Z
+    iget-boolean v0, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->c2:Z
 
     return v0
 .end method
@@ -327,25 +327,25 @@
 
     const-string p4, "onLayout"
 
-    invoke-static {p3, p4, p2}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {p3, p4, p2}, Lwqi;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
-    iget-object p2, p1, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->X1:Lxc5;
+    iget-object p2, p1, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->Y1:Lwf5;
 
     if-eqz p2, :cond_0
 
     const/4 p3, 0x0
 
-    invoke-virtual {p2, p0, p3, p3}, Lxc5;->b(Landroidx/recyclerview/widget/RecyclerView;II)V
+    invoke-virtual {p2, p0, p3, p3}, Lwf5;->b(Landroidx/recyclerview/widget/RecyclerView;II)V
 
     :cond_0
     return-void
 .end method
 
-.method public final setDelegate(Lvc5;)V
+.method public final setDelegate(Luf5;)V
     .locals 0
 
-    iput-object p1, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->c2:Lvc5;
+    iput-object p1, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->d2:Luf5;
 
     return-void
 .end method
@@ -353,7 +353,7 @@
 .method public final setIgnoreRefreshingFlagsForScrollEvent(Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->b2:Z
+    iput-boolean p1, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->c2:Z
 
     return-void
 .end method
@@ -379,84 +379,44 @@
     throw p1
 .end method
 
-.method public final setPager(Ltc5;)V
+.method public final setPager(Lsf5;)V
     .locals 1
 
     if-eqz p1, :cond_1
 
-    new-instance v0, Lxc5;
+    new-instance v0, Lwf5;
 
-    invoke-direct {v0, p0, p1}, Lxc5;-><init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;Ltc5;)V
+    invoke-direct {v0, p0, p1}, Lwf5;-><init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;Lsf5;)V
 
-    iget p1, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->Y1:I
+    iget p1, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->Z1:I
 
     if-lez p1, :cond_0
 
-    iput p1, v0, Lxc5;->b:I
+    iput p1, v0, Lwf5;->b:I
 
     :cond_0
-    invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/RecyclerView;->m(Lf7d;)V
+    invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/RecyclerView;->m(Lbid;)V
 
-    iput-object v0, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->X1:Lxc5;
+    iput-object v0, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->Y1:Lwf5;
 
     return-void
 
     :cond_1
-    iget-object p1, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->X1:Lxc5;
+    iget-object p1, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->Y1:Lwf5;
 
     if-eqz p1, :cond_2
 
-    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->s0(Lf7d;)V
+    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->s0(Lbid;)V
 
     const/4 p1, 0x0
 
-    iput-object p1, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->X1:Lxc5;
+    iput-object p1, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->Y1:Lwf5;
 
     :cond_2
     return-void
 .end method
 
 .method public final setRefreshingNext(Z)V
-    .locals 1
-
-    iget-boolean v0, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->Z1:Z
-
-    if-ne v0, p1, :cond_0
-
-    return-void
-
-    :cond_0
-    if-eqz p1, :cond_1
-
-    iget-object v0, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->c2:Lvc5;
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v0}, Lvc5;->d()V
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v0, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->c2:Lvc5;
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v0}, Lvc5;->f()V
-
-    :cond_2
-    :goto_0
-    iput-boolean p1, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->Z1:Z
-
-    return-void
-.end method
-
-.method public final setRefreshingNextDelegate(Lb8d;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final setRefreshingPrev(Z)V
     .locals 1
 
     iget-boolean v0, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->a2:Z
@@ -466,7 +426,47 @@
     return-void
 
     :cond_0
+    if-eqz p1, :cond_1
+
+    iget-object v0, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->d2:Luf5;
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0}, Luf5;->d()V
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->d2:Luf5;
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0}, Luf5;->g()V
+
+    :cond_2
+    :goto_0
     iput-boolean p1, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->a2:Z
+
+    return-void
+.end method
+
+.method public final setRefreshingNextDelegate(Lxid;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final setRefreshingPrev(Z)V
+    .locals 1
+
+    iget-boolean v0, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->b2:Z
+
+    if-ne v0, p1, :cond_0
+
+    return-void
+
+    :cond_0
+    iput-boolean p1, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->b2:Z
 
     return-void
 .end method
@@ -474,15 +474,15 @@
 .method public final setThreshold(I)V
     .locals 1
 
-    iput p1, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->Y1:I
+    iput p1, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->Z1:I
 
-    iget-object v0, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->X1:Lxc5;
+    iget-object v0, p0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->Y1:Lwf5;
 
     if-eqz v0, :cond_0
 
     if-lez p1, :cond_0
 
-    iput p1, v0, Lxc5;->b:I
+    iput p1, v0, Lwf5;->b:I
 
     :cond_0
     return-void

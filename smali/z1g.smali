@@ -3,90 +3,225 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:[Ltj5;
+# static fields
+.field public static final d:Lz1g;
 
-.field public b:I
+.field public static final e:Lz1g;
+
+.field public static final f:Lz1g;
+
+.field public static final g:Lz1g;
+
+.field public static final h:Lz1g;
+
+.field public static final i:Lz1g;
+
+
+# instance fields
+.field public final a:[F
+
+.field public final b:[F
+
+.field public final c:[F
 
 
 # direct methods
-.method public varargs constructor <init>([Ltj5;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 14
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lz1g;
 
-    iput-object p1, p0, Lz1g;->a:[Ltj5;
+    invoke-direct {v0}, Lz1g;-><init>()V
 
-    array-length p1, p1
+    sput-object v0, Lz1g;->d:Lz1g;
+
+    iget-object v1, v0, Lz1g;->b:[F
+
+    const/4 v2, 0x0
+
+    const v3, 0x3f0ccccd    # 0.55f
+
+    aput v3, v1, v2
+
+    const/4 v4, 0x1
+
+    const v5, 0x3f3d70a4    # 0.74f
+
+    aput v5, v1, v4
+
+    iget-object v0, v0, Lz1g;->a:[F
+
+    const v1, 0x3eb33333    # 0.35f
+
+    aput v1, v0, v2
+
+    const/high16 v6, 0x3f800000    # 1.0f
+
+    aput v6, v0, v4
+
+    new-instance v0, Lz1g;
+
+    invoke-direct {v0}, Lz1g;-><init>()V
+
+    sput-object v0, Lz1g;->e:Lz1g;
+
+    iget-object v7, v0, Lz1g;->b:[F
+
+    const v8, 0x3e99999a    # 0.3f
+
+    aput v8, v7, v2
+
+    const/high16 v9, 0x3f000000    # 0.5f
+
+    aput v9, v7, v4
+
+    const/4 v10, 0x2
+
+    const v11, 0x3f333333    # 0.7f
+
+    aput v11, v7, v10
+
+    iget-object v0, v0, Lz1g;->a:[F
+
+    aput v1, v0, v2
+
+    aput v6, v0, v4
+
+    new-instance v0, Lz1g;
+
+    invoke-direct {v0}, Lz1g;-><init>()V
+
+    sput-object v0, Lz1g;->f:Lz1g;
+
+    iget-object v7, v0, Lz1g;->b:[F
+
+    const v12, 0x3e851eb8    # 0.26f
+
+    aput v12, v7, v4
+
+    const v13, 0x3ee66666    # 0.45f
+
+    aput v13, v7, v10
+
+    iget-object v0, v0, Lz1g;->a:[F
+
+    aput v1, v0, v2
+
+    aput v6, v0, v4
+
+    new-instance v0, Lz1g;
+
+    invoke-direct {v0}, Lz1g;-><init>()V
+
+    sput-object v0, Lz1g;->g:Lz1g;
+
+    iget-object v1, v0, Lz1g;->b:[F
+
+    aput v3, v1, v2
+
+    aput v5, v1, v4
+
+    iget-object v0, v0, Lz1g;->a:[F
+
+    aput v8, v0, v4
+
+    const v1, 0x3ecccccd    # 0.4f
+
+    aput v1, v0, v10
+
+    new-instance v0, Lz1g;
+
+    invoke-direct {v0}, Lz1g;-><init>()V
+
+    sput-object v0, Lz1g;->h:Lz1g;
+
+    iget-object v3, v0, Lz1g;->b:[F
+
+    aput v8, v3, v2
+
+    aput v9, v3, v4
+
+    aput v11, v3, v10
+
+    iget-object v0, v0, Lz1g;->a:[F
+
+    aput v8, v0, v4
+
+    aput v1, v0, v10
+
+    new-instance v0, Lz1g;
+
+    invoke-direct {v0}, Lz1g;-><init>()V
+
+    sput-object v0, Lz1g;->i:Lz1g;
+
+    iget-object v2, v0, Lz1g;->b:[F
+
+    aput v12, v2, v4
+
+    aput v13, v2, v10
+
+    iget-object v0, v0, Lz1g;->a:[F
+
+    aput v8, v0, v4
+
+    aput v1, v0, v10
 
     return-void
 .end method
 
+.method public constructor <init>()V
+    .locals 9
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-ne p0, p1, :cond_0
+    const/4 v0, 0x3
 
-    const/4 p1, 0x1
+    new-array v1, v0, [F
 
-    return p1
+    iput-object v1, p0, Lz1g;->a:[F
 
-    :cond_0
-    if-eqz p1, :cond_2
+    new-array v2, v0, [F
 
-    const-class v0, Lz1g;
+    iput-object v2, p0, Lz1g;->b:[F
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-array v0, v0, [F
 
-    move-result-object v1
+    iput-object v0, p0, Lz1g;->c:[F
 
-    if-eq v0, v1, :cond_1
+    const/4 v3, 0x0
 
-    goto :goto_0
+    const/4 v4, 0x0
 
-    :cond_1
-    check-cast p1, Lz1g;
+    aput v4, v1, v3
 
-    iget-object v0, p0, Lz1g;->a:[Ltj5;
+    const/4 v5, 0x1
 
-    iget-object p1, p1, Lz1g;->a:[Ltj5;
+    const/high16 v6, 0x3f000000    # 0.5f
 
-    invoke-static {v0, p1}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
+    aput v6, v1, v5
 
-    move-result p1
+    const/4 v7, 0x2
 
-    return p1
+    const/high16 v8, 0x3f800000    # 1.0f
 
-    :cond_2
-    :goto_0
-    const/4 p1, 0x0
+    aput v8, v1, v7
 
-    return p1
-.end method
+    aput v4, v2, v3
 
-.method public final hashCode()I
-    .locals 2
+    aput v6, v2, v5
 
-    iget v0, p0, Lz1g;->b:I
+    aput v8, v2, v7
 
-    if-nez v0, :cond_0
+    const v1, 0x3e75c28f    # 0.24f
 
-    iget-object v0, p0, Lz1g;->a:[Ltj5;
+    aput v1, v0, v3
 
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+    const v2, 0x3f051eb8    # 0.52f
 
-    move-result v0
+    aput v2, v0, v5
 
-    const/16 v1, 0x20f
+    aput v1, v0, v7
 
-    add-int/2addr v1, v0
-
-    iput v1, p0, Lz1g;->b:I
-
-    :cond_0
-    iget v0, p0, Lz1g;->b:I
-
-    return v0
+    return-void
 .end method

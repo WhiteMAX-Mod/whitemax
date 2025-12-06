@@ -1,88 +1,63 @@
-.class public final Ly3g;
+.class public abstract Ly3g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lw3g;
 
+# static fields
+.field public static final a:Lw3g;
 
-# instance fields
-.field public final synthetic a:Landroid/view/ViewGroup;
+.field public static final b:Lw3g;
 
-.field public final synthetic b:Lyxf;
+.field public static final c:Lw3g;
 
-.field public final synthetic c:Lz3g;
+.field public static final d:Lw3g;
+
+.field public static final e:Lw3g;
 
 
 # direct methods
-.method public constructor <init>(Lz3g;Landroid/view/ViewGroup;Lyxf;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lw3g;
 
-    iput-object p1, p0, Ly3g;->c:Lz3g;
+    const/4 v1, 0x0
 
-    iput-object p2, p0, Ly3g;->a:Landroid/view/ViewGroup;
+    const/4 v2, 0x0
 
-    iput-object p3, p0, Ly3g;->b:Lyxf;
+    invoke-direct {v0, v1, v2}, Lw3g;-><init>(Lv3g;Z)V
 
-    return-void
-.end method
+    sput-object v0, Ly3g;->a:Lw3g;
 
+    new-instance v0, Lw3g;
 
-# virtual methods
-.method public final a(Lx3g;)V
-    .locals 1
+    const/4 v3, 0x1
 
-    iget-object p1, p0, Ly3g;->a:Landroid/view/ViewGroup;
+    invoke-direct {v0, v1, v3}, Lw3g;-><init>(Lv3g;Z)V
 
-    iget-object v0, p0, Ly3g;->b:Lyxf;
+    sput-object v0, Ly3g;->b:Lw3g;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+    new-instance v0, Lw3g;
 
-    return-void
-.end method
+    sget-object v1, Lkk4;->C0:Lkk4;
 
-.method public final b()V
-    .locals 0
+    invoke-direct {v0, v1, v2}, Lw3g;-><init>(Lv3g;Z)V
 
-    return-void
-.end method
+    sput-object v0, Ly3g;->c:Lw3g;
 
-.method public final c(Lx3g;)V
-    .locals 1
+    new-instance v0, Lw3g;
 
-    iget-object p1, p0, Ly3g;->c:Lz3g;
+    invoke-direct {v0, v1, v3}, Lw3g;-><init>(Lv3g;Z)V
 
-    iget-object v0, p1, Lz3g;->Y:Lo24;
+    sput-object v0, Ly3g;->d:Lw3g;
 
-    invoke-virtual {v0}, Lo24;->n()V
+    new-instance v0, Lw3g;
 
-    const/4 v0, 0x0
+    sget-object v1, Lkc3;->B0:Lkc3;
 
-    iput-object v0, p1, Lz3g;->Y:Lo24;
+    invoke-direct {v0, v1, v2}, Lw3g;-><init>(Lv3g;Z)V
 
-    return-void
-.end method
-
-.method public final f()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final h(Lx3g;)V
-    .locals 1
-
-    iget-object p1, p0, Ly3g;->c:Lz3g;
-
-    iget-object v0, p1, Lz3g;->Y:Lo24;
-
-    invoke-virtual {v0}, Lo24;->n()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p1, Lz3g;->Y:Lo24;
+    sput-object v0, Ly3g;->e:Lw3g;
 
     return-void
 .end method

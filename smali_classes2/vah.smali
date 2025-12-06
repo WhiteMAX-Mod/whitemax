@@ -1,65 +1,31 @@
 .class public final Lvah;
-.super Lwah;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lvah;
+# instance fields
+.field public final a:Ljava/lang/String;
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(JLjava/lang/String;II)V
+    .locals 0
 
-    new-instance v0, Lvah;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "not_supported"
+    iput-object p3, p0, Lvah;->a:Ljava/lang/String;
 
-    const/4 v2, 0x1
+    iput p4, p0, Lvah;->b:I
 
-    invoke-direct {v0, v1, v2}, Lwah;-><init>(Ljava/lang/String;I)V
+    iput p5, p0, Lvah;->c:I
 
-    sput-object v0, Lvah;->c:Lvah;
+    iput-wide p1, p0, Lvah;->d:J
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lvah;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x59d65997
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "NotSupported"
-
-    return-object v0
 .end method

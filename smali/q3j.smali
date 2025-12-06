@@ -1,211 +1,212 @@
 .class public final Lq3j;
-.super Lf4;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lpqa;
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lq3j;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final a:Lq3j;
 
+.field public static final b:Lwu5;
 
-# instance fields
-.field public final X:[Landroid/graphics/Point;
+.field public static final c:Lwu5;
 
-.field public final Y:I
+.field public static final d:Lwu5;
 
-.field public final Z:Lh3j;
+.field public static final e:Lwu5;
 
-.field public final a:I
+.field public static final f:Lwu5;
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
-
-.field public final o:[B
-
-.field public final q0:Lk3j;
-
-.field public final r0:Ll3j;
-
-.field public final s0:Lp3j;
-
-.field public final t0:Lm3j;
-
-.field public final u0:Li3j;
-
-.field public final v0:Le3j;
-
-.field public final w0:Lf3j;
-
-.field public final x0:Lg3j;
+.field public static final g:Lwu5;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 4
 
-    new-instance v0, Lgti;
+    new-instance v0, Lq3j;
 
-    const/16 v1, 0xb
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Lgti;-><init>(I)V
+    sput-object v0, Lq3j;->a:Lq3j;
 
-    sput-object v0, Lq3j;->CREATOR:Landroid/os/Parcelable$Creator;
+    new-instance v0, Lmli;
 
-    return-void
-.end method
+    const/4 v1, 0x1
 
-.method public constructor <init>(ILjava/lang/String;Ljava/lang/String;[B[Landroid/graphics/Point;ILh3j;Lk3j;Ll3j;Lp3j;Lm3j;Li3j;Le3j;Lf3j;Lg3j;)V
-    .locals 0
+    invoke-direct {v0, v1}, Lmli;-><init>(I)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-class v1, Lemi;
 
-    iput p1, p0, Lq3j;->a:I
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    iput-object p2, p0, Lq3j;->b:Ljava/lang/String;
+    move-result-object v0
 
-    iput-object p3, p0, Lq3j;->c:Ljava/lang/String;
+    new-instance v2, Lwu5;
 
-    iput-object p4, p0, Lq3j;->o:[B
+    invoke-static {v0}, Laz1;->p(Ljava/util/HashMap;)Ljava/util/Map;
 
-    iput-object p5, p0, Lq3j;->X:[Landroid/graphics/Point;
+    move-result-object v0
 
-    iput p6, p0, Lq3j;->Y:I
+    const-string v3, "appName"
 
-    iput-object p7, p0, Lq3j;->Z:Lh3j;
+    invoke-direct {v2, v3, v0}, Lwu5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    iput-object p8, p0, Lq3j;->q0:Lk3j;
+    sput-object v2, Lq3j;->b:Lwu5;
 
-    iput-object p9, p0, Lq3j;->r0:Ll3j;
+    new-instance v0, Lmli;
 
-    iput-object p10, p0, Lq3j;->s0:Lp3j;
+    const/4 v2, 0x2
 
-    iput-object p11, p0, Lq3j;->t0:Lm3j;
+    invoke-direct {v0, v2}, Lmli;-><init>(I)V
 
-    iput-object p12, p0, Lq3j;->u0:Li3j;
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    iput-object p13, p0, Lq3j;->v0:Le3j;
+    move-result-object v0
 
-    iput-object p14, p0, Lq3j;->w0:Lf3j;
+    new-instance v2, Lwu5;
 
-    iput-object p15, p0, Lq3j;->x0:Lg3j;
+    invoke-static {v0}, Laz1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "sessionId"
+
+    invoke-direct {v2, v3, v0}, Lwu5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lq3j;->c:Lwu5;
+
+    new-instance v0, Lmli;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v2}, Lmli;-><init>(I)V
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lwu5;
+
+    invoke-static {v0}, Laz1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "startZoomLevel"
+
+    invoke-direct {v2, v3, v0}, Lwu5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lq3j;->d:Lwu5;
+
+    new-instance v0, Lmli;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v0, v2}, Lmli;-><init>(I)V
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lwu5;
+
+    invoke-static {v0}, Laz1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "endZoomLevel"
+
+    invoke-direct {v2, v3, v0}, Lwu5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lq3j;->e:Lwu5;
+
+    new-instance v0, Lmli;
+
+    const/4 v2, 0x5
+
+    invoke-direct {v0, v2}, Lmli;-><init>(I)V
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lwu5;
+
+    invoke-static {v0}, Laz1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "durationMs"
+
+    invoke-direct {v2, v3, v0}, Lwu5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lq3j;->f:Lwu5;
+
+    new-instance v0, Lmli;
+
+    const/4 v2, 0x6
+
+    invoke-direct {v0, v2}, Lmli;-><init>(I)V
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v1, Lwu5;
+
+    invoke-static {v0}, Laz1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v2, "predictedArea"
+
+    invoke-direct {v1, v2, v0}, Lwu5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v1, Lq3j;->g:Lwu5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 4
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
 
-    const/16 v0, 0x4f45
+    check-cast p1, Loaj;
 
-    invoke-static {p1, v0}, Llyi;->t(Landroid/os/Parcel;I)I
+    check-cast p2, Lqqa;
 
-    move-result v0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v1, 0x1
+    const/4 p1, 0x0
 
-    const/4 v2, 0x4
+    sget-object v0, Lq3j;->b:Lwu5;
 
-    invoke-static {p1, v1, v2}, Llyi;->v(Landroid/os/Parcel;II)V
+    invoke-interface {p2, v0, p1}, Lqqa;->a(Lwu5;Ljava/lang/Object;)Lqqa;
 
-    iget v1, p0, Lq3j;->a:I
+    sget-object p1, Lq3j;->c:Lwu5;
 
-    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
+    const/4 v0, 0x0
 
-    const/4 v1, 0x2
+    invoke-interface {p2, p1, v0}, Lqqa;->a(Lwu5;Ljava/lang/Object;)Lqqa;
 
-    iget-object v3, p0, Lq3j;->b:Ljava/lang/String;
+    sget-object p1, Lq3j;->d:Lwu5;
 
-    invoke-static {p1, v1, v3}, Llyi;->p(Landroid/os/Parcel;ILjava/lang/String;)V
+    invoke-interface {p2, p1, v0}, Lqqa;->a(Lwu5;Ljava/lang/Object;)Lqqa;
 
-    const/4 v1, 0x3
+    sget-object p1, Lq3j;->e:Lwu5;
 
-    iget-object v3, p0, Lq3j;->c:Ljava/lang/String;
+    invoke-interface {p2, p1, v0}, Lqqa;->a(Lwu5;Ljava/lang/Object;)Lqqa;
 
-    invoke-static {p1, v1, v3}, Llyi;->p(Landroid/os/Parcel;ILjava/lang/String;)V
+    sget-object p1, Lq3j;->f:Lwu5;
 
-    iget-object v1, p0, Lq3j;->o:[B
+    invoke-interface {p2, p1, v0}, Lqqa;->a(Lwu5;Ljava/lang/Object;)Lqqa;
 
-    invoke-static {p1, v2, v1}, Llyi;->l(Landroid/os/Parcel;I[B)V
+    sget-object p1, Lq3j;->g:Lwu5;
 
-    const/4 v1, 0x5
-
-    iget-object v3, p0, Lq3j;->X:[Landroid/graphics/Point;
-
-    invoke-static {p1, v1, v3, p2}, Llyi;->r(Landroid/os/Parcel;I[Landroid/os/Parcelable;I)V
-
-    const/4 v1, 0x6
-
-    invoke-static {p1, v1, v2}, Llyi;->v(Landroid/os/Parcel;II)V
-
-    iget v1, p0, Lq3j;->Y:I
-
-    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/4 v1, 0x7
-
-    iget-object v2, p0, Lq3j;->Z:Lh3j;
-
-    invoke-static {p1, v1, v2, p2}, Llyi;->o(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
-
-    const/16 v1, 0x8
-
-    iget-object v2, p0, Lq3j;->q0:Lk3j;
-
-    invoke-static {p1, v1, v2, p2}, Llyi;->o(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
-
-    const/16 v1, 0x9
-
-    iget-object v2, p0, Lq3j;->r0:Ll3j;
-
-    invoke-static {p1, v1, v2, p2}, Llyi;->o(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
-
-    const/16 v1, 0xa
-
-    iget-object v2, p0, Lq3j;->s0:Lp3j;
-
-    invoke-static {p1, v1, v2, p2}, Llyi;->o(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
-
-    const/16 v1, 0xb
-
-    iget-object v2, p0, Lq3j;->t0:Lm3j;
-
-    invoke-static {p1, v1, v2, p2}, Llyi;->o(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
-
-    const/16 v1, 0xc
-
-    iget-object v2, p0, Lq3j;->u0:Li3j;
-
-    invoke-static {p1, v1, v2, p2}, Llyi;->o(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
-
-    const/16 v1, 0xd
-
-    iget-object v2, p0, Lq3j;->v0:Le3j;
-
-    invoke-static {p1, v1, v2, p2}, Llyi;->o(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
-
-    const/16 v1, 0xe
-
-    iget-object v2, p0, Lq3j;->w0:Lf3j;
-
-    invoke-static {p1, v1, v2, p2}, Llyi;->o(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
-
-    const/16 v1, 0xf
-
-    iget-object v2, p0, Lq3j;->x0:Lg3j;
-
-    invoke-static {p1, v1, v2, p2}, Llyi;->o(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
-
-    invoke-static {p1, v0}, Llyi;->u(Landroid/os/Parcel;I)V
+    invoke-interface {p2, p1, v0}, Lqqa;->a(Lwu5;Ljava/lang/Object;)Lqqa;
 
     return-void
 .end method

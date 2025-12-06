@@ -3,91 +3,99 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lw00;
-
-
 # instance fields
-.field public final a:Ly84;
-
-.field public final b:I
+.field public final a:Lh52;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>()V
+    .locals 13
 
-    new-instance v0, Lw00;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x7
+    new-instance v0, Ljava/util/HashSet;
 
-    invoke-direct {v0, v1}, Lw00;-><init>(I)V
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    sput-object v0, Lq52;->c:Lw00;
+    invoke-static {}, Lx8a;->b()Lx8a;
 
-    return-void
-.end method
+    move-result-object v1
 
-.method public constructor <init>(Landroid/text/SpannableStringBuilder;Landroid/text/Layout$Alignment;FIFIZII)V
-    .locals 20
+    new-instance v2, Ljava/util/ArrayList;
 
-    move-object/from16 v0, p0
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Lg9a;->a()Lg9a;
 
-    if-eqz p7, :cond_0
+    move-result-object v3
 
-    move/from16 v17, p8
+    new-instance v4, Lh52;
+
+    new-instance v5, Ljava/util/ArrayList;
+
+    invoke-direct {v5, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    invoke-static {v1}, Lfjb;->a(Lao3;)Lfjb;
+
+    move-result-object v6
+
+    new-instance v9, Ljava/util/ArrayList;
+
+    invoke-direct {v9, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    sget-object v0, Lryf;->b:Lryf;
+
+    new-instance v0, Landroid/util/ArrayMap;
+
+    invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
+
+    iget-object v1, v3, Lryf;->a:Landroid/util/ArrayMap;
+
+    invoke-virtual {v1}, Landroid/util/ArrayMap;->keySet()Ljava/util/Set;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/String;
+
+    invoke-virtual {v1, v3}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v7
+
+    invoke-virtual {v0, v3, v7}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
     :cond_0
-    const/high16 v1, -0x1000000
+    new-instance v11, Lryf;
 
-    move/from16 v17, v1
+    invoke-direct {v11, v0}, Lryf;-><init>(Landroid/util/ArrayMap;)V
 
-    :goto_0
-    new-instance v2, Ly84;
-
-    const/4 v5, 0x0
+    const/4 v7, -0x1
 
     const/4 v8, 0x0
 
-    const/high16 v12, -0x80000000
+    const/4 v12, 0x0
 
-    const v13, -0x800001
+    move v10, v8
 
-    const v14, -0x800001
+    invoke-direct/range {v4 .. v12}, Lh52;-><init>(Ljava/util/ArrayList;Lfjb;IZLjava/util/ArrayList;ZLryf;Lr02;)V
 
-    const/16 v19, 0x0
-
-    move-object v6, v5
-
-    move v15, v13
-
-    move/from16 v18, v12
-
-    move-object/from16 v3, p1
-
-    move-object/from16 v4, p2
-
-    move/from16 v7, p3
-
-    move/from16 v9, p4
-
-    move/from16 v10, p5
-
-    move/from16 v11, p6
-
-    move/from16 v16, p7
-
-    invoke-direct/range {v2 .. v19}, Ly84;-><init>(Ljava/lang/CharSequence;Landroid/text/Layout$Alignment;Landroid/text/Layout$Alignment;Landroid/graphics/Bitmap;FIIFIIFFFZIIF)V
-
-    iput-object v2, v0, Lq52;->a:Ly84;
-
-    move/from16 v1, p9
-
-    iput v1, v0, Lq52;->b:I
+    iput-object v4, p0, Lq52;->a:Lh52;
 
     return-void
 .end method

@@ -1,129 +1,124 @@
 .class public final Lhji;
-.super Lj7i;
+.super Ldii;
 .source "SourceFile"
-
-# interfaces
-.implements Lbai;
-
-
-# static fields
-.field private static final zzb:Lhji;
 
 
 # instance fields
-.field private zzd:I
+.field public final transient c:Lnji;
 
-.field private zze:Ljava/lang/String;
+.field public final transient d:[Ljava/lang/Object;
 
-.field private zzf:Lvji;
+.field public final transient o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lnji;[Ljava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Lhji;
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
-    invoke-direct {v0}, Lhji;-><init>()V
+    iput-object p1, p0, Lhji;->c:Lnji;
 
-    sput-object v0, Lhji;->zzb:Lhji;
+    iput-object p2, p0, Lhji;->d:[Ljava/lang/Object;
 
-    const-class v1, Lhji;
+    const/4 p1, 0x1
 
-    invoke-static {v1, v0}, Lj7i;->h(Ljava/lang/Class;Lj7i;)V
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Lj7i;-><init>()V
-
-    const-string v0, ""
-
-    iput-object v0, p0, Lhji;->zze:Ljava/lang/String;
+    iput p1, p0, Lhji;->o:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final m(ILj7i;)Ljava/lang/Object;
-    .locals 2
+.method public final a(I[Ljava/lang/Object;)I
+    .locals 1
 
-    add-int/lit8 p1, p1, -0x1
+    iget-object v0, p0, Ldii;->b:Lzhi;
 
-    if-eqz p1, :cond_4
+    if-nez v0, :cond_0
 
-    const/4 p2, 0x2
+    new-instance v0, Lfji;
 
-    if-eq p1, p2, :cond_3
+    invoke-direct {v0, p0}, Lfji;-><init>(Lhji;)V
 
-    const/4 p2, 0x3
-
-    if-eq p1, p2, :cond_2
-
-    const/4 p2, 0x4
-
-    if-eq p1, p2, :cond_1
-
-    const/4 p2, 0x5
-
-    if-eq p1, p2, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
+    iput-object v0, p0, Ldii;->b:Lzhi;
 
     :cond_0
-    sget-object p1, Lhji;->zzb:Lhji;
+    invoke-virtual {v0, p1, p2}, Lzhi;->a(I[Ljava/lang/Object;)I
 
-    return-object p1
+    move-result p1
 
-    :cond_1
-    new-instance p1, Leji;
+    return p1
+.end method
 
-    sget-object p2, Lhji;->zzb:Lhji;
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 3
 
-    invoke-direct {p1, p2}, Ly6i;-><init>(Lj7i;)V
+    instance-of v0, p1, Ljava/util/Map$Entry;
 
-    return-object p1
+    const/4 v1, 0x0
 
-    :cond_2
-    new-instance p1, Lhji;
+    if-eqz v0, :cond_0
 
-    invoke-direct {p1}, Lhji;-><init>()V
+    check-cast p1, Ljava/util/Map$Entry;
 
-    return-object p1
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
-    :cond_3
-    const-string p1, "zze"
+    move-result-object v0
 
-    const-string p2, "zzf"
-
-    const-string v0, "zzd"
-
-    filled-new-array {v0, p1, p2}, [Ljava/lang/Object;
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    sget-object p2, Lhji;->zzb:Lhji;
+    if-eqz p1, :cond_0
 
-    new-instance v0, Lwai;
+    iget-object v2, p0, Lhji;->c:Lnji;
 
-    const-string v1, "\u0001\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u1008\u0000\u0002\u1009\u0001"
+    invoke-virtual {v2, v0}, Lnji;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {v0, p2, v1, p1}, Lwai;-><init>(Lo3i;Ljava/lang/String;[Ljava/lang/Object;)V
+    move-result-object v0
 
-    return-object v0
+    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    :cond_4
+    move-result p1
+
+    if-eqz p1, :cond_0
+
     const/4 p1, 0x1
 
-    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+    return p1
 
-    move-result-object p1
+    :cond_0
+    return v1
+.end method
 
-    return-object p1
+.method public final iterator()Ljava/util/Iterator;
+    .locals 2
+
+    iget-object v0, p0, Ldii;->b:Lzhi;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lfji;
+
+    invoke-direct {v0, p0}, Lfji;-><init>(Lhji;)V
+
+    iput-object v0, p0, Ldii;->b:Lzhi;
+
+    :cond_0
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lzhi;->f(I)Lvhi;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget v0, p0, Lhji;->o:I
+
+    return v0
 .end method

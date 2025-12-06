@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/webrtc/CameraCapturer;->switchCameraInternal(Lorg/webrtc/CameraVideoCapturer$CameraSwitchHandler;Ljava/lang/String;)V
+    value = Lorg/webrtc/CameraCapturer;->switchCamera(Lorg/webrtc/CameraVideoCapturer$CameraSwitchHandler;Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,11 +20,13 @@
 # instance fields
 .field final synthetic this$0:Lorg/webrtc/CameraCapturer;
 
-.field final synthetic val$oldSession:Lorg/webrtc/CameraSession;
+.field final synthetic val$cameraName:Ljava/lang/String;
+
+.field final synthetic val$switchEventsHandler:Lorg/webrtc/CameraVideoCapturer$CameraSwitchHandler;
 
 
 # direct methods
-.method public constructor <init>(Lorg/webrtc/CameraCapturer;Lorg/webrtc/CameraSession;)V
+.method public constructor <init>(Lorg/webrtc/CameraCapturer;Lorg/webrtc/CameraVideoCapturer$CameraSwitchHandler;Ljava/lang/String;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -34,7 +36,9 @@
 
     iput-object p1, p0, Lorg/webrtc/CameraCapturer$10;->this$0:Lorg/webrtc/CameraCapturer;
 
-    iput-object p2, p0, Lorg/webrtc/CameraCapturer$10;->val$oldSession:Lorg/webrtc/CameraSession;
+    iput-object p2, p0, Lorg/webrtc/CameraCapturer$10;->val$switchEventsHandler:Lorg/webrtc/CameraVideoCapturer$CameraSwitchHandler;
+
+    iput-object p3, p0, Lorg/webrtc/CameraCapturer$10;->val$cameraName:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,11 +48,15 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 3
 
-    iget-object v0, p0, Lorg/webrtc/CameraCapturer$10;->val$oldSession:Lorg/webrtc/CameraSession;
+    iget-object v0, p0, Lorg/webrtc/CameraCapturer$10;->this$0:Lorg/webrtc/CameraCapturer;
 
-    invoke-interface {v0}, Lorg/webrtc/CameraSession;->stop()V
+    iget-object v1, p0, Lorg/webrtc/CameraCapturer$10;->val$switchEventsHandler:Lorg/webrtc/CameraVideoCapturer$CameraSwitchHandler;
+
+    iget-object v2, p0, Lorg/webrtc/CameraCapturer$10;->val$cameraName:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lorg/webrtc/CameraCapturer;->I(Lorg/webrtc/CameraCapturer;Lorg/webrtc/CameraVideoCapturer$CameraSwitchHandler;Ljava/lang/String;)V
 
     return-void
 .end method

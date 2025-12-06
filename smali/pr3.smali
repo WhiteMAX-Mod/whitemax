@@ -1,51 +1,66 @@
-.class public final Lpr3;
+.class public final synthetic Lpr3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final c:Ljava/lang/String;
+# interfaces
+.implements Ljava/util/function/Predicate;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
 
-.field public final b:Lt2c;
+.field public final synthetic b:[B
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(I[B)V
+    .locals 0
 
-    const-string v0, "ConstraintsCmdHandler"
+    iput p1, p0, Lpr3;->a:I
 
-    invoke-static {v0}, Lxyh;->l(Ljava/lang/String;)Ljava/lang/String;
+    iput-object p2, p0, Lpr3;->b:[B
 
-    move-result-object v0
-
-    sput-object v0, Lpr3;->c:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;ILzif;)V
-    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final test(Ljava/lang/Object;)Z
+    .locals 1
 
-    iput p2, p0, Lpr3;->a:I
+    iget v0, p0, Lpr3;->a:I
 
-    iget-object p1, p3, Lzif;->X:Lsoh;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object p1, p1, Lsoh;->j:Lmjf;
+    check-cast p1, Lor3;
 
-    new-instance p2, Lt2c;
+    iget-object p1, p1, Lor3;->d:[B
 
-    const/4 p3, 0x0
+    iget-object v0, p0, Lpr3;->b:[B
 
-    invoke-direct {p2, p1, p3}, Lt2c;-><init>(Lmjf;Leoh;)V
+    invoke-static {p1, v0}, Ljava/util/Arrays;->equals([B[B)Z
 
-    iput-object p2, p0, Lpr3;->b:Lt2c;
+    move-result p1
 
-    return-void
+    return p1
+
+    :pswitch_0
+    iget-object v0, p0, Lpr3;->b:[B
+
+    check-cast p1, [B
+
+    invoke-static {p1, v0}, Ljava/util/Arrays;->equals([B[B)Z
+
+    move-result p1
+
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

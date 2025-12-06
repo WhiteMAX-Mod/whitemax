@@ -1,67 +1,122 @@
 .class public final Lvi7;
-.super Lmm;
+.super Ldtf;
 .source "SourceFile"
+
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public final b:J
+.field public final synthetic X:Lbj7;
+
+.field public final synthetic Y:I
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;J)V
+.method public constructor <init>(Lbj7;ILkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lmm;-><init>(Ljava/lang/String;)V
+    iput-object p1, p0, Lvi7;->X:Lbj7;
 
-    iput-wide p2, p0, Lvi7;->b:J
+    iput p2, p0, Lvi7;->Y:I
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lcr7;)V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lmm;->a:Ljava/lang/String;
+    check-cast p1, Lf84;
 
-    invoke-interface {p1, v0}, Lcr7;->b0(Ljava/lang/String;)Lcr7;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast p1, Le2;
+    invoke-virtual {p0, p1, p2}, Lvi7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-wide v0, p0, Lvi7;->b:J
+    move-result-object p1
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
+    check-cast p1, Lvi7;
 
-    move-result-object v0
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    invoke-virtual {p1, v0}, Le2;->c(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Lvi7;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-void
+    return-object p2
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v0, Lvi7;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    iget-object v1, p0, Lvi7;->X:Lbj7;
 
-    iget-object v1, p0, Lmm;->a:Ljava/lang/String;
+    iget v2, p0, Lvi7;->Y:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1, v2, p2}, Lvi7;-><init>(Lbj7;ILkotlin/coroutines/Continuation;)V
 
-    const-string v1, " = "
+    iput-object p1, v0, Lvi7;->o:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-object v0
+.end method
 
-    iget-wide v1, p0, Lvi7;->b:J
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object p1, p0, Lvi7;->o:Ljava/lang/Object;
+
+    check-cast p1, Lf84;
+
+    new-instance v0, Lti7;
+
+    iget-object v1, p0, Lvi7;->X:Lbj7;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lti7;-><init>(Lbj7;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v3, 0x3
+
+    invoke-static {p1, v2, v2, v0, v3}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
 
     move-result-object v0
 
-    return-object v0
+    new-instance v4, Los1;
+
+    const/4 v5, 0x1
+
+    iget v6, p0, Lvi7;->Y:I
+
+    invoke-direct {v4, v6, v5}, Los1;-><init>(II)V
+
+    invoke-virtual {v0, v4}, Lsu7;->invokeOnCompletion(Lem6;)Lsy4;
+
+    new-instance v0, Lui7;
+
+    invoke-direct {v0, v1, v2}, Lui7;-><init>(Lbj7;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {p1, v2, v2, v0, v3}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
+
+    move-result-object p1
+
+    new-instance v0, Los1;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v6, v1}, Los1;-><init>(II)V
+
+    invoke-virtual {p1, v0}, Lsu7;->invokeOnCompletion(Lem6;)Lsy4;
+
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

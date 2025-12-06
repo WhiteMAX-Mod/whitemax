@@ -1,47 +1,45 @@
-.class public abstract Lvv0;
+.class public interface abstract Lvv0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lb4f;
+.implements Ljava/nio/channels/WritableByteChannel;
 
-# static fields
-.field public static final synthetic a:I
 
+# virtual methods
+.method public abstract E(I[B)Lvv0;
+.end method
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public abstract I(Ljava/lang/String;)Lvv0;
+.end method
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+.method public abstract K(Lxx0;)Lvv0;
+.end method
 
-    sget-object v1, Luv0;->a:Luv0;
+.method public abstract N(J)Lvv0;
+.end method
 
-    const/16 v2, 0x1e
+.method public abstract e0(J)Lvv0;
+.end method
 
-    if-lt v0, v2, :cond_0
+.method public abstract flush()V
+.end method
 
-    invoke-virtual {v1, v2}, Luv0;->a(I)I
+.method public abstract getBuffer()Lqu0;
+.end method
 
-    :cond_0
-    if-lt v0, v2, :cond_1
+.method public abstract u()Lvv0;
+.end method
 
-    const/16 v3, 0x1f
+.method public abstract write([B)Lvv0;
+.end method
 
-    invoke-virtual {v1, v3}, Luv0;->a(I)I
+.method public abstract writeByte(I)Lvv0;
+.end method
 
-    :cond_1
-    if-lt v0, v2, :cond_2
+.method public abstract writeInt(I)Lvv0;
+.end method
 
-    const/16 v3, 0x21
-
-    invoke-virtual {v1, v3}, Luv0;->a(I)I
-
-    :cond_2
-    if-lt v0, v2, :cond_3
-
-    const v0, 0xf4240
-
-    invoke-virtual {v1, v0}, Luv0;->a(I)I
-
-    :cond_3
-    return-void
+.method public abstract writeShort(I)Lvv0;
 .end method

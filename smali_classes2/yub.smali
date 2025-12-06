@@ -1,202 +1,82 @@
-.class public Lyub;
+.class public final Lyub;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field public final a:Lcvb;
+
+.field public final b:Ln95;
+
+.field public final c:Lru/ok/messages/photoeditor/ActPhotoEditor;
+
+.field public final d:Lxa6;
+
+.field public e:Lbvb;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Iterable;)V
-    .locals 1
+.method public constructor <init>(Lcvb;Ln95;Lru/ok/messages/photoeditor/ActPhotoEditor;Lxa6;Ll95;ZZZ)V
+    .locals 8
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/ArrayList;
+    iput-object p1, p0, Lyub;->a:Lcvb;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    iput-object p2, p0, Lyub;->b:Ln95;
 
-    invoke-static {v0, p1}, Ltb3;->q(Ljava/util/Collection;Ljava/lang/Iterable;)V
+    iput-object p0, p2, Ln95;->b:Lyub;
 
-    iput-object v0, p0, Lyub;->a:Ljava/util/ArrayList;
+    iput-object p3, p0, Lyub;->c:Lru/ok/messages/photoeditor/ActPhotoEditor;
 
-    return-void
-.end method
+    iget-object p3, p1, Lcvb;->a:Ljava/util/HashSet;
 
+    invoke-virtual {p3, p0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-# virtual methods
-.method public final a(I)Llxg;
-    .locals 2
+    iput-object p4, p0, Lyub;->d:Lxa6;
 
-    iget-object v0, p0, Lyub;->a:Ljava/util/ArrayList;
+    new-instance v0, Lbvb;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    const/4 v1, 0x0
 
-    move-result v1
+    const/4 v2, 0x0
 
-    if-ge p1, v1, :cond_0
+    const/4 v3, 0x0
 
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    const/4 v6, 0x0
+
+    move v4, p6
+
+    move v5, p7
+
+    move/from16 v7, p8
+
+    invoke-direct/range {v0 .. v7}, Lbvb;-><init>(ZZZZZZZ)V
+
+    iput-object v0, p0, Lyub;->e:Lbvb;
+
+    invoke-virtual {p1, v0}, Lcvb;->a(Lbvb;)V
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p4, p2, p5, p1}, Lxa6;->a(Ln95;Ll95;Z)V
+
+    if-eqz p6, :cond_0
+
+    if-eqz p7, :cond_0
+
+    iget-object p3, p2, Ln95;->a:Lr95;
+
+    invoke-virtual {p3, p1}, Lr95;->setDrawStickerEnabled(Z)V
+
+    invoke-virtual {p2}, Ln95;->a()Ll95;
 
     move-result-object p1
 
-    check-cast p1, Llxg;
+    const/4 p3, 0x0
 
-    return-object p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return-object p1
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_2
+    invoke-virtual {p4, p2, p1, p3}, Lxa6;->a(Ln95;Ll95;Z)V
 
     :cond_0
-    instance-of v0, p1, Lyub;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    iget-object v0, p0, Lyub;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    check-cast p1, Lyub;
-
-    iget-object v3, p1, Lyub;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
-
-    move-result v3
-
-    if-eq v2, v3, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    move v3, v1
-
-    :goto_0
-    if-ge v3, v2, :cond_4
-
-    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    iget-object v5, p1, Lyub;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v5, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    invoke-static {v4, v5}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_3
-
-    :goto_1
-    return v1
-
-    :cond_3
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_4
-    :goto_2
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lyub;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Llxg;
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    invoke-virtual {v2}, Llxg;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v1, v2
-
-    goto :goto_0
-
-    :cond_0
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 7
-
-    iget-object v0, p0, Lyub;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v6
-
-    new-instance v4, Ld8a;
-
-    const/16 v1, 0x16
-
-    invoke-direct {v4, v1}, Ld8a;-><init>(I)V
-
-    const/16 v5, 0x18
-
-    const-string v1, ", "
-
-    const-string v2, " ["
-
-    const-string v3, "]"
-
-    invoke-static/range {v0 .. v5}, Lnb3;->I(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lli6;I)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "Playlist size: "
-
-    invoke-static {v6, v1, v0}, Ley1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

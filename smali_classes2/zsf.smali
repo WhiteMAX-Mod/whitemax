@@ -4,55 +4,46 @@
 
 
 # static fields
-.field public static final a:Landroid/util/LruCache;
+.field public static final e:Ljava/lang/String;
+
+
+# instance fields
+.field public final a:Lk18;
+
+.field public final b:Lk18;
+
+.field public final c:Lk18;
+
+.field public final d:Lk18;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    new-instance v0, Landroid/util/LruCache;
+    const-class v0, Lwsf;
 
-    const/4 v1, 0x2
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Landroid/util/LruCache;-><init>(I)V
+    move-result-object v0
 
-    sput-object v0, Lzsf;->a:Landroid/util/LruCache;
+    sput-object v0, Lzsf;->e:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static a(Lsf0;Letf;)V
-    .locals 2
+.method public constructor <init>(Lk18;Lk18;Lk18;Lk18;)V
+    .locals 0
 
-    if-nez p0, :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
+    iput-object p1, p0, Lzsf;->a:Lk18;
 
-    :cond_0
-    new-instance v0, Ljava/lang/StringBuilder;
+    iput-object p4, p0, Lzsf;->b:Lk18;
 
-    const-string v1, "Save theme "
+    iput-object p2, p0, Lzsf;->c:Lk18;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, " to cache."
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "ThemeBackgroundCache"
-
-    invoke-static {v1, v0}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v0, Lzsf;->a:Landroid/util/LruCache;
-
-    invoke-virtual {v0, p0, p1}, Landroid/util/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iput-object p3, p0, Lzsf;->d:Lk18;
 
     return-void
 .end method

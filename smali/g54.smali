@@ -2,10 +2,10 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Li54;
-
 
 # virtual methods
-.method public abstract getKey()Lh54;
+.method public abstract a(Lc54;Lc54;Z)V
+.end method
+
+.method public abstract b(Lc54;Lc54;Z)V
 .end method

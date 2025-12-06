@@ -1,17 +1,15 @@
-.class public interface abstract Lela;
+.class public abstract Lela;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract b()V
-.end method
+# direct methods
+.method public static a(Landroid/app/Notification$Action;)I
+    .locals 0
 
-.method public abstract c(Lvv4;)V
-.end method
+    invoke-virtual {p0}, Landroid/app/Notification$Action;->getSemanticAction()I
 
-.method public abstract d(Ljava/lang/Object;)V
-.end method
+    move-result p0
 
-.method public abstract onError(Ljava/lang/Throwable;)V
+    return p0
 .end method

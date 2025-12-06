@@ -1,58 +1,78 @@
-.class public abstract Lwtc;
-.super Ljava/lang/Object;
+.class public final Lwtc;
+.super Ldtf;
+.source "SourceFile"
+
+# interfaces
+.implements Lsm6;
 
 
-# static fields
-.field public static oneme_settings_storage_action_one_month:I = 0x7f1309ea
+# instance fields
+.field public final synthetic X:Lytc;
 
-.field public static oneme_settings_storage_action_one_week:I = 0x7f1309eb
+.field public synthetic o:Ljava/lang/Object;
 
-.field public static oneme_settings_storage_action_six_month:I = 0x7f1309ec
 
-.field public static oneme_settings_storage_action_unlimited:I = 0x7f1309ed
+# direct methods
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lytc;)V
+    .locals 0
 
-.field public static oneme_settings_storage_audio_messages:I = 0x7f1309ee
+    iput-object p2, p0, Lwtc;->X:Lytc;
 
-.field public static oneme_settings_storage_clear_cache:I = 0x7f1309ef
+    const/4 p2, 0x2
 
-.field public static oneme_settings_storage_clear_cache_dialog_action_clear:I = 0x7f1309f0
+    invoke-direct {p0, p2, p1}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static oneme_settings_storage_clear_cache_dialog_all_title:I = 0x7f1309f1
+    return-void
+.end method
 
-.field public static oneme_settings_storage_clear_cache_dialog_audio_title:I = 0x7f1309f2
 
-.field public static oneme_settings_storage_clear_cache_dialog_desc:I = 0x7f1309f3
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static oneme_settings_storage_clear_cache_dialog_files_title:I = 0x7f1309f4
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static oneme_settings_storage_clear_cache_dialog_gif_title:I = 0x7f1309f5
+    invoke-virtual {p0, p1, p2}, Lwtc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static oneme_settings_storage_clear_cache_dialog_images_title:I = 0x7f1309f6
+    move-result-object p1
 
-.field public static oneme_settings_storage_clear_cache_dialog_music_title:I = 0x7f1309f7
+    check-cast p1, Lwtc;
 
-.field public static oneme_settings_storage_clear_cache_dialog_stickers_title:I = 0x7f1309f8
+    sget-object p2, Lqqg;->a:Lqqg;
 
-.field public static oneme_settings_storage_clear_cache_dialog_video_title:I = 0x7f1309f9
+    invoke-virtual {p1, p2}, Lwtc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static oneme_settings_storage_clear_cache_success_snackbar:I = 0x7f1309fa
+    return-object p2
+.end method
 
-.field public static oneme_settings_storage_files:I = 0x7f1309fb
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-.field public static oneme_settings_storage_gif:I = 0x7f1309fc
+    new-instance v0, Lwtc;
 
-.field public static oneme_settings_storage_images:I = 0x7f1309fd
+    iget-object v1, p0, Lwtc;->X:Lytc;
 
-.field public static oneme_settings_storage_music:I = 0x7f1309fe
+    invoke-direct {v0, p2, v1}, Lwtc;-><init>(Lkotlin/coroutines/Continuation;Lytc;)V
 
-.field public static oneme_settings_storage_screen_data_section:I = 0x7f1309ff
+    iput-object p1, v0, Lwtc;->o:Ljava/lang/Object;
 
-.field public static oneme_settings_storage_screen_preserve_media_cache_desc:I = 0x7f130a00
+    return-object v0
+.end method
 
-.field public static oneme_settings_storage_screen_preserve_media_cache_title:I = 0x7f130a01
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-.field public static oneme_settings_storage_screen_toolbar_title:I = 0x7f130a02
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-.field public static oneme_settings_storage_stickers:I = 0x7f130a03
+    iget-object p1, p0, Lwtc;->o:Ljava/lang/Object;
 
-.field public static oneme_settings_storage_video:I = 0x7f130a04
+    check-cast p1, Li02;
+
+    iget-object v0, p0, Lwtc;->X:Lytc;
+
+    invoke-static {v0, p1}, Lytc;->b(Lytc;Li02;)V
+
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
+.end method

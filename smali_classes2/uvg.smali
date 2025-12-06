@@ -1,59 +1,56 @@
-.class public interface abstract Luvg;
+.class public final synthetic Luvg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lru/ok/android/externcalls/analytics/internal/event/EventChannel;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/analytics/internal/event/EventChannel;I)V
+    .locals 0
+
+    iput p2, p0, Luvg;->a:I
+
+    iput-object p1, p0, Luvg;->b:Lru/ok/android/externcalls/analytics/internal/event/EventChannel;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public A(Ljava/lang/Throwable;)V
-    .locals 0
+.method public final run()V
+    .locals 1
+
+    iget v0, p0, Luvg;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Luvg;->b:Lru/ok/android/externcalls/analytics/internal/event/EventChannel;
+
+    invoke-static {v0}, Lru/ok/android/externcalls/analytics/internal/upload/UploadStarter;->a(Lru/ok/android/externcalls/analytics/internal/event/EventChannel;)V
 
     return-void
-.end method
 
-.method public a(F)V
-    .locals 0
+    :pswitch_0
+    iget-object v0, p0, Luvg;->b:Lru/ok/android/externcalls/analytics/internal/event/EventChannel;
 
-    return-void
-.end method
-
-.method public b()V
-    .locals 0
+    invoke-static {v0}, Lru/ok/android/externcalls/analytics/internal/upload/UploadStarter;->b(Lru/ok/android/externcalls/analytics/internal/event/EventChannel;)V
 
     return-void
-.end method
 
-.method public c()V
-    .locals 0
+    nop
 
-    return-void
-.end method
-
-.method public d()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public e(Z)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public p()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public s()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public x()V
-    .locals 0
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

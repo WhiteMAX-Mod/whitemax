@@ -1,125 +1,93 @@
-.class public final Lj3b;
-.super Ljava/lang/Object;
+.class public final enum Lj3b;
+.super Ljava/lang/Enum;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/os/Parcelable;
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lj3b;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final enum a:Lj3b;
 
+.field public static final enum b:Lj3b;
 
-# instance fields
-.field public final a:I
+.field public static final enum c:Lj3b;
+
+.field public static final synthetic d:[Lj3b;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 6
 
-    new-instance v0, Lvk8;
+    new-instance v0, Lj3b;
 
-    const/16 v1, 0x11
+    const-string v1, "Themed"
 
-    invoke-direct {v0, v1}, Lvk8;-><init>(I)V
+    const/4 v2, 0x0
 
-    sput-object v0, Lj3b;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    return-void
-.end method
+    sput-object v0, Lj3b;->a:Lj3b;
 
-.method public synthetic constructor <init>(I)V
-    .locals 0
+    new-instance v1, Lj3b;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v2, "ContrastPinned"
 
-    iput p1, p0, Lj3b;->a:I
+    const/4 v3, 0x1
 
-    return-void
-.end method
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
+    new-instance v2, Lj3b;
 
-# virtual methods
-.method public final describeContents()I
-    .locals 1
+    const-string v3, "NeutralFade"
 
-    const/4 v0, 0x0
+    const/4 v4, 0x2
 
-    return v0
-.end method
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    sput-object v2, Lj3b;->b:Lj3b;
 
-    instance-of v0, p1, Lj3b;
+    new-instance v3, Lj3b;
 
-    if-nez v0, :cond_0
+    const-string v4, "AccentRed"
 
-    goto :goto_0
+    const/4 v5, 0x3
 
-    :cond_0
-    check-cast p1, Lj3b;
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget p1, p1, Lj3b;->a:I
+    sput-object v3, Lj3b;->c:Lj3b;
 
-    iget v0, p0, Lj3b;->a:I
-
-    if-eq v0, p1, :cond_1
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Lj3b;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "ContainerGravity(value="
-
-    const-string v1, ")"
-
-    iget v2, p0, Lj3b;->a:I
-
-    invoke-static {v2, v0, v1}, Ley1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    filled-new-array {v0, v1, v2, v3}, [Lj3b;
 
     move-result-object v0
 
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    iget p2, p0, Lj3b;->a:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    sput-object v0, Lj3b;->d:[Lj3b;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lj3b;
+    .locals 1
+
+    const-class v0, Lj3b;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lj3b;
+
+    return-object p0
+.end method
+
+.method public static values()[Lj3b;
+    .locals 1
+
+    sget-object v0, Lj3b;->d:[Lj3b;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lj3b;
+
+    return-object v0
 .end method

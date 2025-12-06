@@ -1,23 +1,43 @@
 .class public final Lm5e;
-.super Lq5e;
+.super Landroid/widget/FrameLayout;
 .source "SourceFile"
 
-
-# instance fields
-.field public g:Lq78;
-
-.field public h:F
-
-.field public i:J
+# interfaces
+.implements Lu6g;
 
 
 # virtual methods
-.method public final a()Lr5e;
-    .locals 1
+.method public final onThemeChanged(Lyeb;)V
+    .locals 2
 
-    new-instance v0, Ln5e;
+    const/4 v0, 0x0
 
-    invoke-direct {v0, p0}, Ln5e;-><init>(Lm5e;)V
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
-    return-object v0
+    move-result-object v0
+
+    instance-of v1, v0, Landroid/widget/ProgressBar;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Landroid/widget/ProgressBar;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    invoke-interface {p1}, Lyeb;->getIcon()Lnb7;
+
+    move-result-object p1
+
+    iget p1, p1, Lnb7;->i:I
+
+    invoke-static {v0, p1}, Lcei;->l(Landroid/widget/ProgressBar;I)V
+
+    :cond_1
+    return-void
 .end method

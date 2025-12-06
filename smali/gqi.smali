@@ -1,133 +1,70 @@
 .class public final Lgqi;
-.super Lj7i;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbai;
+.implements Lpqa;
 
 
 # static fields
-.field private static final zzb:Lgqi;
-
-
-# instance fields
-.field private zzd:I
-
-.field private zze:Lx7i;
-
-.field private zzf:Ljava/lang/String;
+.field public static final a:Lgqi;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 3
 
     new-instance v0, Lgqi;
 
-    invoke-direct {v0}, Lgqi;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lgqi;->zzb:Lgqi;
+    sput-object v0, Lgqi;->a:Lgqi;
 
-    const-class v1, Lgqi;
+    new-instance v0, Lmli;
 
-    invoke-static {v1, v0}, Lj7i;->h(Ljava/lang/Class;Lj7i;)V
+    const/4 v1, 0x1
 
-    return-void
-.end method
+    invoke-direct {v0, v1}, Lmli;-><init>(I)V
 
-.method public constructor <init>()V
-    .locals 1
+    const-class v1, Lemi;
 
-    invoke-direct {p0}, Lj7i;-><init>()V
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    sget-object v0, Ltai;->o:Ltai;
+    move-result-object v0
 
-    iput-object v0, p0, Lgqi;->zze:Lx7i;
+    const/4 v2, 0x2
 
-    const-string v0, ""
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    iput-object v0, p0, Lgqi;->zzf:Ljava/lang/String;
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final m(ILj7i;)Ljava/lang/Object;
-    .locals 2
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    add-int/lit8 p1, p1, -0x1
-
-    if-eqz p1, :cond_4
-
-    const/4 p2, 0x2
-
-    if-eq p1, p2, :cond_3
-
-    const/4 p2, 0x3
-
-    if-eq p1, p2, :cond_2
-
-    const/4 p2, 0x4
-
-    if-eq p1, p2, :cond_1
-
-    const/4 p2, 0x5
-
-    if-eq p1, p2, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :cond_0
-    sget-object p1, Lgqi;->zzb:Lgqi;
-
-    return-object p1
-
-    :cond_1
-    new-instance p1, Leji;
-
-    sget-object p2, Lgqi;->zzb:Lgqi;
-
-    invoke-direct {p1, p2}, Ly6i;-><init>(Lj7i;)V
-
-    return-object p1
-
-    :cond_2
-    new-instance p1, Lgqi;
-
-    invoke-direct {p1}, Lgqi;-><init>()V
-
-    return-object p1
-
-    :cond_3
-    const-string p1, "zze"
-
-    const-string p2, "zzf"
-
-    const-string v0, "zzd"
-
-    filled-new-array {v0, p1, p2}, [Ljava/lang/Object;
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
     move-result-object p1
 
-    sget-object p2, Lgqi;->zzb:Lgqi;
-
-    new-instance v0, Lwai;
-
-    const-string v1, "\u0001\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0001\u0000\u0001\u001a\u0002\u1008\u0000"
-
-    invoke-direct {v0, p2, v1, p1}, Lwai;-><init>(Lo3i;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-object v0
-
-    :cond_4
-    const/4 p1, 0x1
-
-    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
-
-    move-result-object p1
-
-    return-object p1
+    throw p1
 .end method

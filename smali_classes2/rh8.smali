@@ -1,253 +1,89 @@
 .class public final Lrh8;
-.super Ljava/lang/Object;
+.super Ljava/lang/Error;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lq78;
-
-.field public final b:J
-
-.field public final c:J
-
-.field public final d:Luh8;
-
-.field public final e:Ljava/lang/String;
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:F
-
-.field public final h:Z
-
-.field public final i:Z
-
-.field public final j:J
-
-.field public final k:Z
-
-.field public final l:Ljava/lang/String;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lqh8;)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 2
+    const-string v0, "SmsAttemptExceed (Phone: "
 
-    iget-object v0, p1, Lqh8;->a:Lq78;
+    const-string v1, ")"
 
-    iput-object v0, p0, Lrh8;->a:Lq78;
+    .line 3
+    invoke-static {v0, p1, v1}, Lho7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    iget-wide v0, p1, Lqh8;->b:J
+    move-result-object p1
 
-    iput-wide v0, p0, Lrh8;->b:J
+    const/4 v0, 0x0
 
-    iget-wide v0, p1, Lqh8;->c:J
+    .line 4
+    invoke-direct {p0, p1, v0}, Lrh8;-><init>(Ljava/lang/String;Z)V
 
-    iput-wide v0, p0, Lrh8;->c:J
+    return-void
+.end method
 
-    iget-object v0, p1, Lqh8;->d:Luh8;
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 1
 
-    iput-object v0, p0, Lrh8;->d:Luh8;
+    if-nez p1, :cond_0
 
-    iget-object v0, p1, Lqh8;->e:Ljava/lang/String;
+    .line 10
+    const-string p1, "Unspecified"
 
-    iput-object v0, p0, Lrh8;->e:Ljava/lang/String;
+    :cond_0
+    if-eqz p2, :cond_1
 
-    iget-object v0, p1, Lqh8;->f:Ljava/lang/String;
+    invoke-virtual {p2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    iput-object v0, p0, Lrh8;->f:Ljava/lang/String;
+    move-result-object p2
 
-    iget v0, p1, Lqh8;->g:F
+    goto :goto_0
 
-    iput v0, p0, Lrh8;->g:F
+    :cond_1
+    const/4 p2, 0x0
 
-    iget-boolean v0, p1, Lqh8;->h:Z
+    :goto_0
+    const-string v0, " | "
 
-    iput-boolean v0, p0, Lrh8;->h:Z
+    .line 11
+    invoke-static {p1, v0, p2}, Lu45;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    iget-boolean v0, p1, Lqh8;->i:Z
+    move-result-object p1
 
-    iput-boolean v0, p0, Lrh8;->i:Z
+    const/4 p2, 0x0
 
-    iget-wide v0, p1, Lqh8;->j:J
+    .line 12
+    invoke-direct {p0, p1, p2}, Lrh8;-><init>(Ljava/lang/String;Z)V
 
-    iput-wide v0, p0, Lrh8;->j:J
+    return-void
+.end method
 
-    iget-boolean v0, p1, Lqh8;->k:Z
+.method public constructor <init>(Ljava/lang/String;Z)V
+    .locals 0
 
-    iput-boolean v0, p0, Lrh8;->k:Z
+    const/4 p2, 0x0
 
-    iget-object p1, p1, Lqh8;->l:Ljava/lang/String;
+    .line 1
+    invoke-direct {p0, p1, p2}, Ljava/lang/Error;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iput-object p1, p0, Lrh8;->l:Ljava/lang/String;
+    iput-object p1, p0, Lrh8;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lqh8;
-    .locals 3
+.method public final getMessage()Ljava/lang/String;
+    .locals 1
 
-    new-instance v0, Lqh8;
-
-    iget-object v1, p0, Lrh8;->a:Lq78;
-
-    invoke-direct {v0, v1}, Lqh8;-><init>(Lq78;)V
-
-    iget-wide v1, p0, Lrh8;->b:J
-
-    iput-wide v1, v0, Lqh8;->b:J
-
-    iget-wide v1, p0, Lrh8;->c:J
-
-    iput-wide v1, v0, Lqh8;->c:J
-
-    iget-object v1, p0, Lrh8;->d:Luh8;
-
-    iput-object v1, v0, Lqh8;->d:Luh8;
-
-    iget-object v1, p0, Lrh8;->e:Ljava/lang/String;
-
-    iput-object v1, v0, Lqh8;->e:Ljava/lang/String;
-
-    iget-object v1, p0, Lrh8;->f:Ljava/lang/String;
-
-    iput-object v1, v0, Lqh8;->f:Ljava/lang/String;
-
-    iget v1, p0, Lrh8;->g:F
-
-    iput v1, v0, Lqh8;->g:F
-
-    iget-boolean v1, p0, Lrh8;->h:Z
-
-    iput-boolean v1, v0, Lqh8;->h:Z
-
-    iget-boolean v1, p0, Lrh8;->i:Z
-
-    iput-boolean v1, v0, Lqh8;->i:Z
-
-    iget-wide v1, p0, Lrh8;->j:J
-
-    iput-wide v1, v0, Lqh8;->j:J
-
-    iget-boolean v1, p0, Lrh8;->k:Z
-
-    iput-boolean v1, v0, Lqh8;->k:Z
-
-    iget-object v1, p0, Lrh8;->l:Ljava/lang/String;
-
-    iput-object v1, v0, Lqh8;->l:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "MarkerData{location="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lrh8;->a:Lq78;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", contactId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lrh8;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", messageId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lrh8;->c:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", markerWeight="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lrh8;->d:Luh8;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", title=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lrh8;->e:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', address=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lrh8;->f:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', distance="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lrh8;->g:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ", live="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lrh8;->h:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", decoding="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lrh8;->i:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", date="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lrh8;->j:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", active="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lrh8;->k:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", deviceId=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lrh8;->l:Ljava/lang/String;
-
-    const-string v2, "\'}"
-
-    invoke-static {v0, v1, v2}, Li57;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    iget-object v0, p0, Lrh8;->a:Ljava/lang/String;
 
     return-object v0
 .end method

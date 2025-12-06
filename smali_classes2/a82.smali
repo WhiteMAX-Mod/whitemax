@@ -1,73 +1,57 @@
 .class public final La82;
-.super Lf4;
+.super Lq44;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "La82;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # instance fields
-.field public final a:Ld68;
+.field public X:J
 
-.field public final b:Landroid/net/Uri;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lc82;
+
+.field public d:Lc82;
+
+.field public o:Ljava/lang/String;
+
+.field public s0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lh8;
-
-    const/16 v1, 0xd
-
-    invoke-direct {v0, v1}, Lh8;-><init>(I)V
-
-    sput-object v0, La82;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ld68;Landroid/net/Uri;)V
+.method public constructor <init>(Lc82;Lq44;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, La82;->Z:Lc82;
 
-    iput-object p1, p0, La82;->a:Ld68;
-
-    iput-object p2, p0, La82;->b:Landroid/net/Uri;
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    const/4 v0, 0x0
+    iput-object p1, p0, La82;->Y:Ljava/lang/Object;
 
-    return v0
-.end method
+    iget p1, p0, La82;->s0:I
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 1
+    const/high16 v0, -0x80000000
 
-    iget-object v0, p0, La82;->a:Ld68;
+    or-int/2addr p1, v0
 
-    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+    iput p1, p0, La82;->s0:I
 
-    iget-object v0, p0, La82;->b:Landroid/net/Uri;
+    const-wide/16 v0, 0x0
 
-    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+    const/4 p1, 0x0
 
-    return-void
+    iget-object v2, p0, La82;->Z:Lc82;
+
+    invoke-virtual {v2, v0, v1, p1, p0}, Lc82;->a(JLjava/lang/String;Lq44;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

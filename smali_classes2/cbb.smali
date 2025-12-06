@@ -1,20 +1,35 @@
-.class public final Lcbb;
+.class public interface abstract Lcbb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lbbb;
-
-
-# instance fields
-.field public a:Z
-
 
 # virtual methods
-.method public final setDependOnOutsideView(Z)V
+.method public J(Ljava/lang/CharSequence;)V
     .locals 0
 
-    iput-boolean p1, p0, Lcbb;->a:Z
+    return-void
+.end method
+
+.method public a0()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public e()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public m()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public o()V
+    .locals 0
 
     return-void
 .end method

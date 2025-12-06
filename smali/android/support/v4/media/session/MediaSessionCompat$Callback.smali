@@ -264,7 +264,7 @@
     goto :goto_2
 
     :cond_2
-    invoke-interface {v1}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImpl;->getCurrentControllerInfo()Lx09;
+    invoke-interface {v1}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImpl;->getCurrentControllerInfo()Lc89;
 
     move-result-object v0
 

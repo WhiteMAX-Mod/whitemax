@@ -1,193 +1,126 @@
 .class public final Li53;
-.super Ld2;
+.super Ldtf;
 .source "SourceFile"
+
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public final a:Lvq7;
+.field public final synthetic X:Lk53;
+
+.field public final synthetic Y:J
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lvq7;)V
-    .locals 1
+.method public constructor <init>(Lk53;JLkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Ljava/util/HashMap;
+    iput-object p1, p0, Li53;->X:Lk53;
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    iput-wide p2, p0, Li53;->Y:J
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
 
-    iput-object p1, p0, Li53;->a:Lvq7;
+    invoke-direct {p0, p1, p4}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final B()Ljava/lang/String;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Li53;->a:Lvq7;
+    check-cast p1, Lf84;
 
-    invoke-interface {v0}, Lvq7;->B()Ljava/lang/String;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object v0
+    invoke-virtual {p0, p1, p2}, Li53;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-object v0
+    move-result-object p1
+
+    check-cast p1, Li53;
+
+    sget-object p2, Lqqg;->a:Lqqg;
+
+    invoke-virtual {p1, p2}, Li53;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final R()Ljava/lang/String;
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    iget-object v0, p0, Li53;->a:Lvq7;
+    new-instance p1, Li53;
 
-    invoke-interface {v0}, Lvq7;->R()Ljava/lang/String;
+    iget-object v0, p0, Li53;->X:Lk53;
 
-    move-result-object v0
+    iget-wide v1, p0, Li53;->Y:J
 
-    return-object v0
+    invoke-direct {p1, v0, v1, v2, p2}, Li53;-><init>(Lk53;JLkotlin/coroutines/Continuation;)V
+
+    return-object p1
 .end method
 
-.method public final W()Z
-    .locals 1
-
-    iget-object v0, p0, Li53;->a:Lvq7;
-
-    invoke-interface {v0}, Lvq7;->W()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final a0()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Li53;->a:Lvq7;
-
-    invoke-interface {v0}, Lvq7;->a0()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final close()V
-    .locals 1
-
-    iget-object v0, p0, Li53;->a:Lvq7;
-
-    invoke-interface {v0}, Ljava/io/Closeable;->close()V
-
-    return-void
-.end method
-
-.method public final hasNext()Z
-    .locals 1
-
-    iget-object v0, p0, Li53;->a:Lvq7;
-
-    invoke-interface {v0}, Lvq7;->hasNext()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final name()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Li53;->a:Lvq7;
-
-    invoke-interface {v0}, Lvq7;->name()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final peek()I
-    .locals 1
-
-    iget-object v0, p0, Li53;->a:Lvq7;
-
-    invoke-interface {v0}, Lvq7;->peek()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final q()V
-    .locals 1
-
-    iget-object v0, p0, Li53;->a:Lvq7;
-
-    invoke-interface {v0}, Lvq7;->q()V
-
-    return-void
-.end method
-
-.method public final s()V
-    .locals 1
-
-    iget-object v0, p0, Li53;->a:Lvq7;
-
-    invoke-interface {v0}, Lvq7;->s()V
-
-    return-void
-.end method
-
-.method public final t()V
-    .locals 1
-
-    iget-object v0, p0, Li53;->a:Lvq7;
-
-    invoke-interface {v0}, Lvq7;->t()V
-
-    return-void
-.end method
-
-.method public final u()V
-    .locals 1
-
-    iget-object v0, p0, Li53;->a:Lvq7;
-
-    invoke-interface {v0}, Lvq7;->u()V
-
-    return-void
-.end method
-
-.method public final w()J
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    iget-object v0, p0, Li53;->a:Lvq7;
+    iget v0, p0, Li53;->o:I
 
-    invoke-interface {v0}, Lvq7;->w()J
+    const/4 v1, 0x1
 
-    move-result-wide v0
+    if-eqz v0, :cond_1
 
-    return-wide v0
-.end method
+    if-ne v0, v1, :cond_0
 
-.method public final y()V
-    .locals 1
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    iget-object v0, p0, Li53;->a:Lvq7;
+    goto :goto_0
 
-    invoke-interface {v0}, Lvq7;->y()V
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    return-void
-.end method
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-.method public final z()I
-    .locals 1
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, p0, Li53;->a:Lvq7;
+    throw p1
 
-    invoke-interface {v0}, Lvq7;->z()I
+    :cond_1
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    move-result v0
+    iget-object p1, p0, Li53;->X:Lk53;
 
-    return v0
+    iget-object p1, p1, Lk53;->E0:Lk18;
+
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lvsf;
+
+    iput v1, p0, Li53;->o:I
+
+    iget-wide v0, p0, Li53;->Y:J
+
+    invoke-virtual {p1, v0, v1, p0}, Lvsf;->a(JLq44;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lg84;->a:Lg84;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

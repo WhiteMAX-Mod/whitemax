@@ -1,53 +1,70 @@
-.class public abstract Lmki;
+.class public final Lmki;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpqa;
+
+
+# static fields
+.field public static final a:Lmki;
+
 
 # direct methods
-.method public static a(Landroid/content/Context;IFZ)Landroid/graphics/drawable/Drawable;
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    if-eqz p3, :cond_0
+    new-instance v0, Lmki;
 
-    new-instance p3, Lcr0;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x1
+    sput-object v0, Lmki;->a:Lmki;
 
-    invoke-direct {p3, p0, p1, p2, v0}, Lcr0;-><init>(Landroid/content/Context;IFZ)V
+    new-instance v0, Ltci;
 
-    return-object p3
+    const/4 v1, 0x1
 
-    :cond_0
-    new-instance p0, Landroid/graphics/drawable/ColorDrawable;
+    invoke-direct {v0, v1}, Ltci;-><init>(I)V
 
-    invoke-direct {p0, p1}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
+    const-class v1, Lhdi;
 
-    return-object p0
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
+
+    return-void
 .end method
 
-.method public static final b(B)Z
-    .locals 1
 
-    and-int/lit16 p0, p0, 0xff
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    const/16 v0, 0x7f
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    if-le p0, v0, :cond_1
+    move-result-object p1
 
-    const/16 v0, 0xe0
-
-    if-lt p0, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
+    throw p1
 .end method

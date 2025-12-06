@@ -1,229 +1,134 @@
-.class public Ljw9;
-.super Lpl0;
+.class public final synthetic Ljw9;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lcm6;
 
 
 # instance fields
-.field public final j:Ljava/util/List;
+.field public final synthetic X:Lk18;
+
+.field public final synthetic Y:Lk18;
+
+.field public final synthetic Z:Lk18;
+
+.field public final synthetic a:Landroid/content/Context;
+
+.field public final synthetic b:Lk18;
+
+.field public final synthetic c:Lk18;
+
+.field public final synthetic d:Lk18;
+
+.field public final synthetic o:Lk18;
+
+.field public final synthetic s0:Lkw9;
+
+.field public final synthetic t0:Ll4e;
+
+.field public final synthetic u0:Lk18;
+
+.field public final synthetic v0:Lk18;
+
+.field public final synthetic w0:Lk18;
 
 
 # direct methods
-.method public constructor <init>(JJLjava/util/List;Z)V
-    .locals 13
+.method public synthetic constructor <init>(Landroid/content/Context;Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;Lkw9;Ll4e;Lk18;Lk18;Lk18;)V
+    .locals 0
 
-    const/4 v11, -0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v12, -0x1
+    iput-object p1, p0, Ljw9;->a:Landroid/content/Context;
 
-    const/4 v1, 0x0
+    iput-object p2, p0, Ljw9;->b:Lk18;
 
-    const-wide/16 v7, 0x0
+    iput-object p3, p0, Ljw9;->c:Lk18;
 
-    const/4 v9, 0x0
+    iput-object p4, p0, Ljw9;->d:Lk18;
 
-    move-object v0, p0
+    iput-object p5, p0, Ljw9;->o:Lk18;
 
-    move-wide v3, p1
+    iput-object p6, p0, Ljw9;->X:Lk18;
 
-    move-wide/from16 v5, p3
+    iput-object p7, p0, Ljw9;->Y:Lk18;
 
-    move-object/from16 v2, p5
+    iput-object p8, p0, Ljw9;->Z:Lk18;
 
-    move/from16 v10, p6
+    iput-object p9, p0, Ljw9;->s0:Lkw9;
 
-    .line 3
-    invoke-direct/range {v0 .. v12}, Ljw9;-><init>(Ljava/lang/String;Ljava/util/List;JJJLyy;ZII)V
+    iput-object p10, p0, Ljw9;->t0:Ll4e;
 
-    return-void
-.end method
+    iput-object p11, p0, Ljw9;->u0:Lk18;
 
-.method public constructor <init>(Ljava/lang/String;Ljava/util/List;JJJLyy;ZII)V
-    .locals 13
+    iput-object p12, p0, Ljw9;->v0:Lk18;
 
-    const/4 v11, 0x0
-
-    move-object v0, p0
-
-    move-object v10, p1
-
-    move-wide/from16 v5, p3
-
-    move-wide/from16 v3, p5
-
-    move-wide/from16 v7, p7
-
-    move-object/from16 v9, p9
-
-    move/from16 v12, p10
-
-    move/from16 v1, p11
-
-    move/from16 v2, p12
-
-    .line 1
-    invoke-direct/range {v0 .. v12}, Lpl0;-><init>(IIJJJLyy;Ljava/lang/String;ZZ)V
-
-    .line 2
-    iput-object p2, p0, Ljw9;->j:Ljava/util/List;
+    iput-object p13, p0, Ljw9;->w0:Lk18;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e()I
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 14
 
-    const/4 v0, 0x2
+    new-instance v0, Lyw9;
 
-    return v0
-.end method
+    iget-object v1, p0, Ljw9;->s0:Lkw9;
 
-.method public equals(Ljava/lang/Object;)Z
-    .locals 3
+    iget-object v9, v1, Lkw9;->b:Lk18;
 
-    if-ne p0, p1, :cond_0
+    iget-object v1, p0, Ljw9;->u0:Lk18;
 
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 v0, 0x0
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-interface {v1}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-object v11, v1
 
-    move-result-object v2
+    check-cast v11, Llzf;
 
-    if-eq v1, v2, :cond_1
+    iget-object v1, p0, Ljw9;->v0:Lk18;
 
-    goto :goto_0
+    invoke-interface {v1}, Lk18;->getValue()Ljava/lang/Object;
 
-    :cond_1
-    invoke-super {p0, p1}, Lpl0;->equals(Ljava/lang/Object;)Z
+    move-result-object v1
 
-    move-result v1
+    move-object v12, v1
 
-    if-nez v1, :cond_2
+    check-cast v12, Lnxg;
 
-    return v0
+    iget-object v1, p0, Ljw9;->w0:Lk18;
 
-    :cond_2
-    check-cast p1, Ljw9;
+    invoke-interface {v1}, Lk18;->getValue()Ljava/lang/Object;
 
-    iget-object v0, p0, Ljw9;->j:Ljava/util/List;
+    move-result-object v1
 
-    iget-object p1, p1, Ljw9;->j:Ljava/util/List;
+    move-object v13, v1
 
-    invoke-interface {v0, p1}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+    check-cast v13, Lqi8;
 
-    move-result p1
+    iget-object v1, p0, Ljw9;->a:Landroid/content/Context;
 
-    return p1
+    iget-object v2, p0, Ljw9;->b:Lk18;
 
-    :cond_3
-    :goto_0
-    return v0
-.end method
+    iget-object v3, p0, Ljw9;->c:Lk18;
 
-.method public final f()Landroid/net/Uri;
-    .locals 2
+    iget-object v4, p0, Ljw9;->d:Lk18;
 
-    iget-object v0, p0, Ljw9;->j:Ljava/util/List;
+    iget-object v5, p0, Ljw9;->o:Lk18;
 
-    const/4 v1, 0x0
+    iget-object v6, p0, Ljw9;->X:Lk18;
 
-    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    iget-object v7, p0, Ljw9;->Y:Lk18;
 
-    move-result-object v0
+    iget-object v8, p0, Ljw9;->Z:Lk18;
 
-    check-cast v0, Lhw9;
+    iget-object v10, p0, Ljw9;->t0:Ll4e;
 
-    iget-object v0, v0, Lhw9;->a:Ljava/lang/String;
-
-    invoke-static {v0}, Ldei;->n(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v0
+    invoke-direct/range {v0 .. v13}, Lyw9;-><init>(Landroid/content/Context;Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;Ll4e;Llzf;Lnxg;Lqi8;)V
 
     return-object v0
-.end method
-
-.method public final getHeight()I
-    .locals 3
-
-    iget-object v0, p0, Ljw9;->j:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_0
-
-    return v2
-
-    :cond_0
-    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lhw9;
-
-    iget v0, v0, Lhw9;->c:I
-
-    return v0
-.end method
-
-.method public final getWidth()I
-    .locals 3
-
-    iget-object v0, p0, Ljw9;->j:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_0
-
-    return v2
-
-    :cond_0
-    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lhw9;
-
-    iget v0, v0, Lhw9;->b:I
-
-    return v0
-.end method
-
-.method public hashCode()I
-    .locals 2
-
-    invoke-super {p0}, Lpl0;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Ljw9;->j:Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
 .end method

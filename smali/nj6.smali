@@ -1,401 +1,54 @@
-.class public abstract Lnj6;
-.super Lau1;
+.class public final synthetic Lnj6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lmj6;
-.implements Lhr7;
+.implements La4h;
 
 
 # instance fields
-.field private final arity:I
+.field public final synthetic a:Lggg;
 
-.field private final flags:I
+.field public final synthetic b:Ltu6;
+
+.field public final synthetic c:J
 
 
 # direct methods
-.method public constructor <init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 8
+.method public synthetic constructor <init>(Lggg;Ltu6;J)V
+    .locals 0
 
-    const/4 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    and-int/2addr p2, v0
+    iput-object p1, p0, Lnj6;->a:Lggg;
 
-    const/4 v1, 0x0
+    iput-object p2, p0, Lnj6;->b:Ltu6;
 
-    if-ne p2, v0, :cond_0
-
-    move v7, v0
-
-    :goto_0
-    move-object v2, p0
-
-    move-object v4, p3
-
-    move-object v3, p4
-
-    move-object v5, p5
-
-    move-object v6, p6
-
-    goto :goto_1
-
-    :cond_0
-    move v7, v1
-
-    goto :goto_0
-
-    :goto_1
-    invoke-direct/range {v2 .. v7}, Lau1;-><init>(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;Z)V
-
-    iput p1, v2, Lnj6;->arity:I
-
-    iput v1, v2, Lnj6;->flags:I
+    iput-wide p3, p0, Lnj6;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public computeReflected()Ler7;
-    .locals 1
+.method public final run()V
+    .locals 5
 
-    sget-object v0, Lz7d;->a:La8d;
+    iget-object v0, p0, Lnj6;->a:Lggg;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v1, v0, Lggg;->o:Ljava/lang/Object;
 
-    return-object p0
-.end method
+    check-cast v1, Lsu6;
 
-.method public equals(Ljava/lang/Object;)Z
-    .locals 4
+    iget-object v0, v0, Lggg;->d:Ljava/lang/Object;
 
-    const/4 v0, 0x1
+    check-cast v0, Lxo8;
 
-    if-ne p1, p0, :cond_0
+    iget-object v2, p0, Lnj6;->b:Ltu6;
 
-    return v0
+    iget-wide v3, p0, Lnj6;->c:J
 
-    :cond_0
-    instance-of v1, p1, Lnj6;
+    invoke-interface {v1, v0, v2, v3, v4}, Lsu6;->d(Lxo8;Ltu6;J)V
 
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_2
-
-    check-cast p1, Lnj6;
-
-    invoke-virtual {p0}, Lau1;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Lau1;->getName()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {p0}, Lau1;->getSignature()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Lau1;->getSignature()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget v1, p0, Lnj6;->flags:I
-
-    iget v3, p1, Lnj6;->flags:I
-
-    if-ne v1, v3, :cond_1
-
-    iget v1, p0, Lnj6;->arity:I
-
-    iget v3, p1, Lnj6;->arity:I
-
-    if-ne v1, v3, :cond_1
-
-    invoke-virtual {p0}, Lau1;->getBoundReceiver()Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Lau1;->getBoundReceiver()Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {p0}, Lau1;->getOwner()Lgr7;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Lau1;->getOwner()Lgr7;
-
-    move-result-object p1
-
-    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    return v0
-
-    :cond_1
-    return v2
-
-    :cond_2
-    instance-of v0, p1, Lhr7;
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {p0}, Lau1;->compute()Ler7;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_3
-    return v2
-.end method
-
-.method public getArity()I
-    .locals 1
-
-    iget v0, p0, Lnj6;->arity:I
-
-    return v0
-.end method
-
-.method public bridge synthetic getReflected()Ler7;
-    .locals 1
-
-    .line 1
-    invoke-virtual {p0}, Lnj6;->getReflected()Lhr7;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public getReflected()Lhr7;
-    .locals 2
-
-    .line 2
-    invoke-virtual {p0}, Lau1;->compute()Ler7;
-
-    move-result-object v0
-
-    if-eq v0, p0, :cond_0
-
-    .line 3
-    check-cast v0, Lhr7;
-
-    return-object v0
-
-    .line 4
-    :cond_0
-    new-instance v0, Lw54;
-
-    .line 5
-    const-string v1, "Kotlin reflection implementation is not found at runtime. Make sure you have kotlin-reflect.jar in the classpath"
-
-    invoke-direct {v0, v1}, Ljava/lang/Error;-><init>(Ljava/lang/String;)V
-
-    .line 6
-    throw v0
-.end method
-
-.method public hashCode()I
-    .locals 2
-
-    invoke-virtual {p0}, Lau1;->getOwner()Lgr7;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Lau1;->getOwner()Lgr7;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    :goto_0
-    invoke-virtual {p0}, Lau1;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    invoke-virtual {p0}, Lau1;->getSignature()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public isExternal()Z
-    .locals 1
-
-    invoke-virtual {p0}, Lnj6;->getReflected()Lhr7;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lhr7;->isExternal()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public isInfix()Z
-    .locals 1
-
-    invoke-virtual {p0}, Lnj6;->getReflected()Lhr7;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lhr7;->isInfix()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public isInline()Z
-    .locals 1
-
-    invoke-virtual {p0}, Lnj6;->getReflected()Lhr7;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lhr7;->isInline()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public isOperator()Z
-    .locals 1
-
-    invoke-virtual {p0}, Lnj6;->getReflected()Lhr7;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lhr7;->isOperator()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public isSuspend()Z
-    .locals 1
-
-    invoke-virtual {p0}, Lnj6;->getReflected()Lhr7;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lhr7;->isSuspend()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public toString()Ljava/lang/String;
-    .locals 2
-
-    invoke-virtual {p0}, Lau1;->compute()Ler7;
-
-    move-result-object v0
-
-    if-eq v0, p0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    const-string v0, "<init>"
-
-    invoke-virtual {p0}, Lau1;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const-string v0, "constructor (Kotlin reflection is not available)"
-
-    return-object v0
-
-    :cond_1
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "function "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lau1;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, " (Kotlin reflection is not available)"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

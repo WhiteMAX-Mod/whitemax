@@ -1,55 +1,136 @@
 .class public final Lsbh;
-.super Ly14;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lrah;
+.field public final a:I
 
-.field public Y:Llbh;
+.field public final b:I
 
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Lvbh;
-
-.field public final synthetic q0:Lvbh;
-
-.field public r0:I
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Lvbh;Ly14;)V
+.method public constructor <init>(III)V
     .locals 0
 
-    iput-object p1, p0, Lsbh;->q0:Lvbh;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput p1, p0, Lsbh;->a:I
+
+    iput p2, p0, Lsbh;->b:I
+
+    iput p3, p0, Lsbh;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iput-object p1, p0, Lsbh;->Z:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Lsbh;->r0:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of v1, p1, Lsbh;
 
-    iput p1, p0, Lsbh;->r0:I
+    const/4 v2, 0x0
 
-    iget-object p1, p0, Lsbh;->q0:Lvbh;
+    if-nez v1, :cond_1
 
-    const/4 v0, 0x0
+    return v2
 
-    invoke-virtual {p1, v0, p0}, Lvbh;->i(Ljava/lang/String;Ly14;)Ljava/lang/Object;
+    :cond_1
+    check-cast p1, Lsbh;
 
-    move-result-object p1
+    iget v1, p0, Lsbh;->a:I
 
-    return-object p1
+    iget v3, p1, Lsbh;->a:I
+
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    iget v1, p0, Lsbh;->b:I
+
+    iget v3, p1, Lsbh;->b:I
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget v1, p0, Lsbh;->c:I
+
+    iget p1, p1, Lsbh;->c:I
+
+    if-eq v1, p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget v0, p0, Lsbh;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lsbh;->b:I
+
+    invoke-static {v1, v0}, Liti;->a(II)I
+
+    move-result v0
+
+    iget v1, p0, Lsbh;->c:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", maxDimension="
+
+    const-string v1, ", source="
+
+    const-string v2, "VideoQualityUpdate(maxBitrate="
+
+    iget v3, p0, Lsbh;->a:I
+
+    iget v4, p0, Lsbh;->b:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Lwy1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ")"
+
+    iget v2, p0, Lsbh;->c:I
+
+    invoke-static {v0, v2, v1}, Lho7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

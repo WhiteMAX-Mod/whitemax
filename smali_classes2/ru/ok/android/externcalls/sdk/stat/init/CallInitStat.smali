@@ -16,14 +16,14 @@
         "",
         "isAnon",
         "Lkotlin/Function0;",
-        "Lx71;",
+        "Lm81;",
         "getEventualStatSender",
         "<init>",
-        "(Lru/ok/android/externcalls/sdk/Conversation$CallType;ZLji6;)V",
+        "(Lru/ok/android/externcalls/sdk/Conversation$CallType;ZLcm6;)V",
         "callEventualStatSender",
-        "Lccg;",
+        "Lqqg;",
         "report",
-        "(Lx71;)V",
+        "(Lm81;)V",
         "onCallInitialized",
         "()V",
         "Lru/ok/android/externcalls/sdk/Conversation$CallType;",
@@ -47,19 +47,19 @@
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/Conversation$CallType;ZLji6;)V
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/Conversation$CallType;ZLcm6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/Conversation$CallType;",
             "Z",
-            "Lji6;",
+            "Lcm6;",
             ")V"
         }
     .end annotation
 
-    invoke-direct {p0, p3}, Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;-><init>(Lji6;)V
+    invoke-direct {p0, p3}, Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;-><init>(Lcm6;)V
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/init/CallInitStat;->callType:Lru/ok/android/externcalls/sdk/Conversation$CallType;
 
@@ -68,15 +68,15 @@
     return-void
 .end method
 
-.method public static final synthetic access$report(Lru/ok/android/externcalls/sdk/stat/init/CallInitStat;Lx71;)V
+.method public static final synthetic access$report(Lru/ok/android/externcalls/sdk/stat/init/CallInitStat;Lm81;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/stat/init/CallInitStat;->report(Lx71;)V
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/stat/init/CallInitStat;->report(Lm81;)V
 
     return-void
 .end method
 
-.method private final report(Lx71;)V
+.method private final report(Lm81;)V
     .locals 4
 
     const-string v0, ""
@@ -101,11 +101,11 @@
 
     invoke-virtual {v1, v3, v2}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->set(Ljava/lang/String;Ljava/lang/String;)Lru/ok/android/externcalls/analytics/events/EventItemsMap;
 
-    check-cast p1, Ly71;
+    check-cast p1, Ln81;
 
     const-string v2, "call_init"
 
-    invoke-virtual {p1, v2, v0, v1}, Ly71;->c(Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;)V
+    invoke-virtual {p1, v2, v0, v1}, Ln81;->c(Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;)V
 
     return-void
 .end method
@@ -119,7 +119,7 @@
 
     invoke-direct {v0, p0}, Lru/ok/android/externcalls/sdk/stat/init/CallInitStat$onCallInitialized$1;-><init>(Ljava/lang/Object;)V
 
-    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;->reportOnce(Lli6;)V
+    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;->reportOnce(Lem6;)V
 
     return-void
 .end method

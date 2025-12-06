@@ -1,160 +1,193 @@
-.class public final enum Lptg;
-.super Ljava/lang/Enum;
+.class public final Lptg;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lqtg;
-
-
-# static fields
-.field public static final enum X:Lptg;
-
-.field public static final enum Y:Lptg;
-
-.field public static final enum Z:Lptg;
-
-.field public static final enum b:Lptg;
-
-.field public static final enum c:Lptg;
-
-.field public static final enum o:Lptg;
-
-.field public static final synthetic q0:[Lptg;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:J
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/util/List;
+
+.field public final d:Ljm9;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
-
-    new-instance v0, Lptg;
-
-    const/4 v1, 0x0
-
-    const-string v2, "out_of_memory"
-
-    const-string v3, "OUT_OF_MEMORY"
-
-    invoke-direct {v0, v3, v1, v2}, Lptg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lptg;->b:Lptg;
-
-    new-instance v1, Lptg;
-
-    const/4 v2, 0x1
-
-    const-string v3, "camera_permission"
-
-    const-string v4, "CAMERA_PERMISSION"
-
-    invoke-direct {v1, v4, v2, v3}, Lptg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lptg;->c:Lptg;
-
-    new-instance v2, Lptg;
-
-    const/4 v3, 0x2
-
-    const-string v4, "mic_permission"
-
-    const-string v5, "MIC_PERMISSION"
-
-    invoke-direct {v2, v5, v3, v4}, Lptg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v2, Lptg;->o:Lptg;
-
-    new-instance v3, Lptg;
-
-    const/4 v4, 0x3
-
-    const-string v5, "camera_not_found"
-
-    const-string v6, "CAMERA_NOT_FOUND"
-
-    invoke-direct {v3, v6, v4, v5}, Lptg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v3, Lptg;->X:Lptg;
-
-    new-instance v4, Lptg;
-
-    const/4 v5, 0x4
-
-    const-string v6, "camera_error_on_record"
-
-    const-string v7, "CAMERA_ERROR_ON_RECORD"
-
-    invoke-direct {v4, v7, v5, v6}, Lptg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v4, Lptg;->Y:Lptg;
-
-    new-instance v5, Lptg;
-
-    const/4 v6, 0x5
-
-    const-string v7, "upload_error"
-
-    const-string v8, "UPLOAD_ERROR"
-
-    invoke-direct {v5, v8, v6, v7}, Lptg;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v5, Lptg;->Z:Lptg;
-
-    filled-new-array/range {v0 .. v5}, [Lptg;
-
-    move-result-object v0
-
-    sput-object v0, Lptg;->q0:[Lptg;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+.method public constructor <init>(JLjava/lang/String;Ljava/util/List;Ljm9;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lptg;->a:Ljava/lang/String;
+    iput-wide p1, p0, Lptg;->a:J
+
+    iput-object p3, p0, Lptg;->b:Ljava/lang/String;
+
+    iput-object p4, p0, Lptg;->c:Ljava/util/List;
+
+    iput-object p5, p0, Lptg;->d:Ljm9;
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lptg;
-    .locals 1
-
-    const-class v0, Lptg;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lptg;
-
-    return-object p0
-.end method
-
-.method public static values()[Lptg;
-    .locals 1
-
-    sget-object v0, Lptg;->q0:[Lptg;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lptg;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final getTitle()Ljava/lang/String;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget-object v0, p0, Lptg;->a:Ljava/lang/String;
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lptg;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lptg;
+
+    iget-wide v3, p0, Lptg;->a:J
+
+    iget-wide v5, p1, Lptg;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lptg;->b:Ljava/lang/String;
+
+    iget-object v3, p1, Lptg;->b:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lptg;->c:Ljava/util/List;
+
+    iget-object v3, p1, Lptg;->c:Ljava/util/List;
+
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lptg;->d:Ljm9;
+
+    iget-object p1, p1, Lptg;->d:Ljm9;
+
+    if-eq v1, p1, :cond_5
+
+    return v2
+
+    :cond_5
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-wide v0, p0, Lptg;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lptg;->b:Ljava/lang/String;
+
+    if-nez v2, :cond_0
+
+    const/4 v2, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    :goto_0
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lptg;->c:Ljava/util/List;
+
+    invoke-static {v2, v0, v1}, Lxrf;->l(Ljava/util/List;II)I
+
+    move-result v0
+
+    iget-object v1, p0, Lptg;->d:Ljm9;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "UpdateTextEntity(id="
+
+    const-string v1, ", text="
+
+    iget-wide v2, p0, Lptg;->a:J
+
+    iget-object v4, p0, Lptg;->b:Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v1, v4}, Lho7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", elements="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lptg;->c:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", status="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lptg;->d:Ljm9;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

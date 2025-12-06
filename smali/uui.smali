@@ -1,241 +1,80 @@
-.class public abstract Luui;
+.class public final Luui;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpqa;
+
 
 # static fields
-.field public static a:I
+.field public static final a:Luui;
 
 
 # direct methods
-.method public static a(I)Ljava/lang/Object;
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    const/4 v0, 0x2
+    new-instance v0, Luui;
 
-    if-lt p0, v0, :cond_2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/high16 v0, 0x40000000    # 2.0f
+    sput-object v0, Luui;->a:Luui;
 
-    if-gt p0, v0, :cond_2
+    new-instance v0, Lmli;
 
-    invoke-static {p0}, Ljava/lang/Integer;->highestOneBit(I)I
+    const/4 v1, 0x1
 
-    move-result v0
+    invoke-direct {v0, v1}, Lmli;-><init>(I)V
 
-    if-ne v0, p0, :cond_2
+    const-class v1, Lemi;
 
-    const/16 v0, 0x100
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    if-gt p0, v0, :cond_0
+    move-result-object v0
 
-    new-array p0, p0, [B
+    const/4 v2, 0x2
 
-    return-object p0
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    :cond_0
-    const/high16 v0, 0x10000
+    move-result-object v0
 
-    if-gt p0, v0, :cond_1
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    new-array p0, p0, [S
+    move-result-object v0
 
-    return-object p0
+    const/4 v2, 0x3
 
-    :cond_1
-    new-array p0, p0, [I
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    return-object p0
+    move-result-object v0
 
-    :cond_2
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    const-string v1, "must be power of 2 between 2^1 and 2^30: "
+    move-result-object v0
 
-    invoke-static {p0, v1}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
+    const/4 v2, 0x4
 
-    move-result-object p0
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    throw v0
-.end method
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-.method public static b(III)I
-    .locals 1
+    move-result-object v0
 
-    not-int v0, p2
-
-    and-int/2addr p0, v0
-
-    and-int/2addr p1, p2
-
-    or-int/2addr p0, p1
-
-    return p0
-.end method
-
-.method public static c(Ljava/lang/Object;Ljava/lang/Object;ILjava/lang/Object;[I[Ljava/lang/Object;[Ljava/lang/Object;)I
-    .locals 9
-
-    invoke-static {p0}, Louf;->d(Ljava/lang/Object;)I
-
-    move-result v0
-
-    and-int v1, v0, p2
-
-    invoke-static {v1, p3}, Luui;->d(ILjava/lang/Object;)I
-
-    move-result v2
-
-    const/4 v3, -0x1
-
-    if-nez v2, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    not-int v4, p2
-
-    and-int/2addr v0, v4
-
-    move v5, v3
-
-    :goto_0
-    add-int/lit8 v2, v2, -0x1
-
-    aget v6, p4, v2
-
-    and-int v7, v6, v4
-
-    if-ne v7, v0, :cond_3
-
-    aget-object v7, p5, v2
-
-    invoke-static {p0, v7}, Ldni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_3
-
-    if-eqz p6, :cond_1
-
-    aget-object v7, p6, v2
-
-    invoke-static {p1, v7}, Ldni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_3
-
-    :cond_1
-    and-int p0, v6, p2
-
-    if-ne v5, v3, :cond_2
-
-    invoke-static {v1, p0, p3}, Luui;->e(IILjava/lang/Object;)V
-
-    return v2
-
-    :cond_2
-    aget p1, p4, v5
-
-    invoke-static {p1, p0, p2}, Luui;->b(III)I
-
-    move-result p0
-
-    aput p0, p4, v5
-
-    return v2
-
-    :cond_3
-    and-int v5, v6, p2
-
-    if-nez v5, :cond_4
-
-    :goto_1
-    return v3
-
-    :cond_4
-    move v8, v5
-
-    move v5, v2
-
-    move v2, v8
-
-    goto :goto_0
-.end method
-
-.method public static d(ILjava/lang/Object;)I
-    .locals 1
-
-    instance-of v0, p1, [B
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, [B
-
-    aget-byte p0, p1, p0
-
-    and-int/lit16 p0, p0, 0xff
-
-    return p0
-
-    :cond_0
-    instance-of v0, p1, [S
-
-    if-eqz v0, :cond_1
-
-    check-cast p1, [S
-
-    aget-short p0, p1, p0
-
-    const p1, 0xffff
-
-    and-int/2addr p0, p1
-
-    return p0
-
-    :cond_1
-    check-cast p1, [I
-
-    aget p0, p1, p0
-
-    return p0
-.end method
-
-.method public static e(IILjava/lang/Object;)V
-    .locals 1
-
-    instance-of v0, p2, [B
-
-    if-eqz v0, :cond_0
-
-    check-cast p2, [B
-
-    int-to-byte p1, p1
-
-    aput-byte p1, p2, p0
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
 
     return-void
+.end method
 
-    :cond_0
-    instance-of v0, p2, [S
 
-    if-eqz v0, :cond_1
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    check-cast p2, [S
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    int-to-short p1, p1
+    move-result-object p1
 
-    aput-short p1, p2, p0
-
-    return-void
-
-    :cond_1
-    check-cast p2, [I
-
-    aput p1, p2, p0
-
-    return-void
+    throw p1
 .end method

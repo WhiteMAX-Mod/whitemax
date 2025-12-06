@@ -1,78 +1,104 @@
 .class public final Lajc;
-.super Lsgf;
+.super Lcjc;
 .source "SourceFile"
-
-# interfaces
-.implements Lzi6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lcjc;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lcjc;)V
+.method public constructor <init>(I)V
     .locals 0
 
-    iput-object p2, p0, Lajc;->Y:Lcjc;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p1, p0, Lajc;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lajc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p1
+    return v0
 
+    :cond_0
+    instance-of v1, p1, Lajc;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
     check-cast p1, Lajc;
 
-    sget-object p2, Lccg;->a:Lccg;
+    iget v1, p0, Lajc;->a:I
 
-    invoke-virtual {p1, p2}, Lajc;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget p1, p1, Lajc;->a:I
 
-    return-object p2
+    if-ne v1, p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v2
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final getItemId()J
     .locals 2
 
-    new-instance v0, Lajc;
+    const/16 v0, 0x400
 
-    iget-object v1, p0, Lajc;->Y:Lcjc;
+    int-to-long v0, v0
 
-    invoke-direct {v0, p2, v1}, Lajc;-><init>(Lkotlin/coroutines/Continuation;Lcjc;)V
-
-    iput-object p1, v0, Lajc;->X:Ljava/lang/Object;
-
-    return-object v0
+    return-wide v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final hashCode()I
     .locals 1
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    iget v0, p0, Lajc;->a:I
 
-    iget-object p1, p0, Lajc;->X:Ljava/lang/Object;
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    check-cast p1, Lnz1;
+    move-result v0
 
-    iget-object v0, p0, Lajc;->Y:Lcjc;
+    return v0
+.end method
 
-    invoke-static {v0, p1}, Lcjc;->b(Lcjc;Lnz1;)V
+.method public final m()I
+    .locals 1
 
-    sget-object p1, Lccg;->a:Lccg;
+    iget v0, p0, Lajc;->a:I
 
-    return-object p1
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget v0, p0, Lajc;->a:I
+
+    invoke-static {v0}, Lj6j;->c(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "Loading(itemViewType="
+
+    const-string v2, ")"
+
+    invoke-static {v1, v0, v2}, Lho7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

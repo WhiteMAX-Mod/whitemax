@@ -1,538 +1,215 @@
-.class public final synthetic Leh2;
-.super Ljava/lang/Object;
+.class public final Leh2;
+.super Lsm;
 .source "SourceFile"
 
 # interfaces
-.implements Lji6;
+.implements Lj1g;
+.implements Ltsb;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:Ljava/lang/String;
 
-.field public final synthetic b:Llh2;
+.field public final d:J
+
+.field public final o:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Llh2;I)V
+.method public constructor <init>(JJJ)V
     .locals 0
 
-    iput p2, p0, Leh2;->a:I
+    invoke-direct {p0, p1, p2}, Lsm;-><init>(J)V
 
-    iput-object p1, p0, Leh2;->b:Llh2;
+    iput-wide p3, p0, Leh2;->d:J
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-wide p5, p0, Leh2;->o:J
+
+    const-class p1, Leh2;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Leh2;->X:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 11
+.method public final c()I
+    .locals 3
 
-    iget v0, p0, Leh2;->a:I
+    invoke-virtual {p0}, Lsm;->l()Lve2;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v0
 
-    sget v0, Lpjd;->z:I
+    iget-wide v1, p0, Leh2;->d:J
 
-    iget-object v1, p0, Leh2;->b:Llh2;
-
-    iget-object v1, v1, Llh2;->a:Landroid/content/Context;
-
-    invoke-static {v1, v0}, Lofi;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0, v1, v2}, Lve2;->M(J)Lpb2;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    sget-object v2, Ll05;->s0:Lk82;
+    const/4 v0, 0x1
 
-    invoke-static {v2, v1}, Labd;->i(Lk82;Landroid/content/Context;)Ld77;
-
-    move-result-object v1
-
-    iget v1, v1, Ld77;->j:I
-
-    invoke-static {v0, v1}, Lbdb;->k(Landroid/graphics/drawable/Drawable;I)V
-
-    return-object v0
+    return v0
 
     :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    const/4 v0, 0x3
 
-    const-string v1, "Required value was null."
+    return v0
+.end method
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+.method public final d(Ll0g;)V
+    .locals 7
 
-    throw v0
+    invoke-virtual {p0}, Lsm;->k()Ltw0;
 
-    :pswitch_0
-    sget v0, Lpjd;->q:I
+    move-result-object p1
 
-    iget-object v1, p0, Leh2;->b:Llh2;
+    new-instance v0, Ln73;
 
-    iget-object v1, v1, Llh2;->a:Landroid/content/Context;
+    iget-wide v1, p0, Leh2;->d:J
 
-    invoke-static {v1, v0}, Lofi;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    sget-object v2, Ll05;->s0:Lk82;
-
-    invoke-static {v2, v1}, Labd;->i(Lk82;Landroid/content/Context;)Ld77;
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
 
-    iget v1, v1, Ld77;->j:I
+    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    invoke-static {v0, v1}, Lbdb;->k(Landroid/graphics/drawable/Drawable;I)V
-
-    return-object v0
-
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Required value was null."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :pswitch_1
-    new-instance v2, Lone/me/sdk/uikit/common/span/FitFontImageSpan;
-
-    new-instance v3, Lhu5;
-
-    iget-object v0, p0, Leh2;->b:Llh2;
-
-    iget-object v0, v0, Llh2;->a:Landroid/content/Context;
-
-    invoke-direct {v3, v0}, Lhu5;-><init>(Landroid/content/Context;)V
-
-    const/16 v7, 0xc
-
-    const/4 v8, 0x0
-
-    sget-object v4, Lzw5;->a:Lzw5;
+    move-result-object v1
 
     const/4 v5, 0x0
 
-    const/4 v6, 0x0
+    const/16 v6, 0x7c
 
-    invoke-direct/range {v2 .. v8}, Lone/me/sdk/uikit/common/span/FitFontImageSpan;-><init>(Landroid/graphics/drawable/Drawable;Lzw5;ZZILki4;)V
+    const/4 v2, 0x1
 
-    return-object v2
+    const/4 v3, 0x0
 
-    :pswitch_2
-    new-instance v3, Lone/me/sdk/uikit/common/span/FitFontImageSpan;
+    const/4 v4, 0x0
 
-    new-instance v4, Lv4f;
+    invoke-direct/range {v0 .. v6}, Ln73;-><init>(Ljava/util/Collection;ZZLrs4;Ls9c;I)V
 
-    iget-object v0, p0, Leh2;->b:Llh2;
+    invoke-virtual {p1, v0}, Ltw0;->c(Ljava/lang/Object;)V
 
-    iget-object v0, v0, Llh2;->a:Landroid/content/Context;
+    return-void
+.end method
 
-    invoke-direct {v4, v0}, Lv4f;-><init>(Landroid/content/Context;)V
+.method public final e(Lpzf;)V
+    .locals 0
 
-    const/16 v8, 0xc
+    iget-object p1, p1, Lpzf;->b:Ljava/lang/String;
 
-    const/4 v9, 0x0
+    invoke-static {p1}, Lqaj;->c(Ljava/lang/String;)Z
 
-    sget-object v5, Lzw5;->a:Lzw5;
+    move-result p1
 
-    const/4 v6, 0x0
+    if-nez p1, :cond_0
 
-    const/4 v7, 0x0
+    invoke-virtual {p0}, Leh2;->f()V
 
-    invoke-direct/range {v3 .. v9}, Lone/me/sdk/uikit/common/span/FitFontImageSpan;-><init>(Landroid/graphics/drawable/Drawable;Lzw5;ZZILki4;)V
+    :cond_0
+    return-void
+.end method
 
-    return-object v3
+.method public final f()V
+    .locals 5
 
-    :pswitch_3
-    new-instance v4, Lone/me/sdk/uikit/common/span/FitFontImageSpan;
+    iget-wide v0, p0, Lsm;->a:J
 
-    new-instance v5, Lwrf;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iget-object v0, p0, Leh2;->b:Llh2;
+    move-result-object v2
 
-    iget-object v0, v0, Llh2;->a:Landroid/content/Context;
+    filled-new-array {v2}, [Ljava/lang/Object;
 
-    invoke-direct {v5, v0}, Lwrf;-><init>(Landroid/content/Context;)V
+    move-result-object v2
 
-    const/16 v9, 0xc
+    iget-object v3, p0, Leh2;->X:Ljava/lang/String;
 
-    const/4 v10, 0x0
+    const-string v4, "onMaxFailCount: remove task, requestId = %d"
 
-    sget-object v6, Lzw5;->a:Lzw5;
+    invoke-static {v3, v4, v2}, Lwqi;->f(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    const/4 v7, 0x0
+    invoke-virtual {p0}, Lsm;->r()La3g;
 
-    const/4 v8, 0x0
+    move-result-object v2
 
-    invoke-direct/range {v4 .. v10}, Lone/me/sdk/uikit/common/span/FitFontImageSpan;-><init>(Landroid/graphics/drawable/Drawable;Lzw5;ZZILki4;)V
+    invoke-virtual {v2, v0, v1}, La3g;->d(J)V
 
-    return-object v4
+    return-void
+.end method
 
-    :pswitch_4
-    sget v0, Lpjd;->F1:I
+.method public final g()[B
+    .locals 3
 
-    iget-object v1, p0, Leh2;->b:Llh2;
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$ChatHide;
 
-    iget-object v1, v1, Llh2;->a:Landroid/content/Context;
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ChatHide;-><init>()V
 
-    invoke-static {v1, v0}, Lofi;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    iget-wide v1, p0, Lsm;->a:J
 
-    move-result-object v0
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatHide;->requestId:J
 
-    if-eqz v0, :cond_2
+    iget-wide v1, p0, Leh2;->d:J
 
-    sget-object v2, Ll05;->s0:Lk82;
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatHide;->chatId:J
 
-    invoke-static {v2, v1}, Labd;->i(Lk82;Landroid/content/Context;)Ld77;
+    iget-wide v1, p0, Leh2;->o:J
 
-    move-result-object v1
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatHide;->chatServerId:J
 
-    iget v1, v1, Ld77;->b:I
-
-    invoke-static {v0, v1}, Lbdb;->k(Landroid/graphics/drawable/Drawable;I)V
-
-    return-object v0
-
-    :cond_2
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Required value was null."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :pswitch_5
-    sget v0, Lpjd;->h2:I
-
-    iget-object v1, p0, Leh2;->b:Llh2;
-
-    iget-object v1, v1, Llh2;->a:Landroid/content/Context;
-
-    invoke-static {v1, v0}, Lofi;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0}, Lfl9;->toByteArray(Lfl9;)[B
 
     move-result-object v0
 
-    if-eqz v0, :cond_3
+    return-object v0
+.end method
 
-    sget-object v2, Ll05;->s0:Lk82;
+.method public final getId()J
+    .locals 2
 
-    invoke-static {v2, v1}, Labd;->i(Lk82;Landroid/content/Context;)Ld77;
+    iget-wide v0, p0, Lsm;->a:J
 
-    move-result-object v1
+    return-wide v0
+.end method
 
-    iget v1, v1, Ld77;->c:I
+.method public final getType()Lusb;
+    .locals 1
 
-    invoke-static {v0, v1}, Lbdb;->k(Landroid/graphics/drawable/Drawable;I)V
+    sget-object v0, Lusb;->U0:Lusb;
 
     return-object v0
+.end method
 
-    :cond_3
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+.method public final h()I
+    .locals 1
 
-    const-string v1, "Required value was null."
+    const v0, 0xf4240
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    return v0
+.end method
 
-    throw v0
+.method public final i()Ln2;
+    .locals 4
 
-    :pswitch_6
-    sget v0, Lpjd;->w1:I
+    new-instance v0, Lfh2;
 
-    iget-object v1, p0, Leh2;->b:Llh2;
+    const/4 v1, 0x0
 
-    iget-object v1, v1, Llh2;->a:Landroid/content/Context;
+    const/4 v2, 0x0
 
-    invoke-static {v1, v0}, Lofi;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-direct {v0, v1, v2}, Lfh2;-><init>(Lxhb;I)V
 
-    move-result-object v0
+    const-string v1, "chatId"
 
-    if-eqz v0, :cond_4
+    iget-wide v2, p0, Leh2;->o:J
 
-    sget-object v2, Ll05;->s0:Lk82;
-
-    invoke-static {v2, v1}, Labd;->i(Lk82;Landroid/content/Context;)Ld77;
-
-    move-result-object v1
-
-    iget v1, v1, Ld77;->c:I
-
-    invoke-static {v0, v1}, Lbdb;->k(Landroid/graphics/drawable/Drawable;I)V
+    invoke-virtual {v0, v2, v3, v1}, Ln2;->t(JLjava/lang/String;)V
 
     return-object v0
-
-    :cond_4
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Required value was null."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :pswitch_7
-    sget v0, Lpjd;->D0:I
-
-    iget-object v1, p0, Leh2;->b:Llh2;
-
-    iget-object v1, v1, Llh2;->a:Landroid/content/Context;
-
-    invoke-static {v1, v0}, Lofi;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_5
-
-    sget-object v2, Ll05;->s0:Lk82;
-
-    invoke-static {v2, v1}, Labd;->i(Lk82;Landroid/content/Context;)Ld77;
-
-    move-result-object v1
-
-    iget v1, v1, Ld77;->j:I
-
-    invoke-static {v0, v1}, Lbdb;->k(Landroid/graphics/drawable/Drawable;I)V
-
-    return-object v0
-
-    :cond_5
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Required value was null."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :pswitch_8
-    sget v0, Lpjd;->C0:I
-
-    iget-object v1, p0, Leh2;->b:Llh2;
-
-    iget-object v1, v1, Llh2;->a:Landroid/content/Context;
-
-    invoke-static {v1, v0}, Lofi;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_6
-
-    sget-object v2, Ll05;->s0:Lk82;
-
-    invoke-static {v2, v1}, Labd;->i(Lk82;Landroid/content/Context;)Ld77;
-
-    move-result-object v1
-
-    iget v1, v1, Ld77;->j:I
-
-    invoke-static {v0, v1}, Lbdb;->k(Landroid/graphics/drawable/Drawable;I)V
-
-    return-object v0
-
-    :cond_6
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Required value was null."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :pswitch_9
-    sget v0, Lpjd;->j2:I
-
-    iget-object v1, p0, Leh2;->b:Llh2;
-
-    iget-object v1, v1, Llh2;->a:Landroid/content/Context;
-
-    invoke-static {v1, v0}, Lofi;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_7
-
-    sget-object v2, Ll05;->s0:Lk82;
-
-    invoke-static {v2, v1}, Labd;->i(Lk82;Landroid/content/Context;)Ld77;
-
-    move-result-object v1
-
-    iget v1, v1, Ld77;->j:I
-
-    invoke-static {v0, v1}, Lbdb;->k(Landroid/graphics/drawable/Drawable;I)V
-
-    return-object v0
-
-    :cond_7
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Required value was null."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :pswitch_a
-    sget v0, Lpjd;->x1:I
-
-    iget-object v1, p0, Leh2;->b:Llh2;
-
-    iget-object v1, v1, Llh2;->a:Landroid/content/Context;
-
-    invoke-static {v1, v0}, Lofi;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_8
-
-    sget-object v2, Ll05;->s0:Lk82;
-
-    invoke-static {v2, v1}, Labd;->i(Lk82;Landroid/content/Context;)Ld77;
-
-    move-result-object v1
-
-    iget v1, v1, Ld77;->j:I
-
-    invoke-static {v0, v1}, Lbdb;->k(Landroid/graphics/drawable/Drawable;I)V
-
-    return-object v0
-
-    :cond_8
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Required value was null."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :pswitch_b
-    sget v0, Lpjd;->Q:I
-
-    iget-object v1, p0, Leh2;->b:Llh2;
-
-    iget-object v1, v1, Llh2;->a:Landroid/content/Context;
-
-    invoke-static {v1, v0}, Lofi;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_9
-
-    sget-object v2, Ll05;->s0:Lk82;
-
-    invoke-static {v2, v1}, Labd;->i(Lk82;Landroid/content/Context;)Ld77;
-
-    move-result-object v1
-
-    iget v1, v1, Ld77;->j:I
-
-    invoke-static {v0, v1}, Lbdb;->k(Landroid/graphics/drawable/Drawable;I)V
-
-    return-object v0
-
-    :cond_9
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Required value was null."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :pswitch_c
-    sget v0, Lpjd;->n1:I
-
-    iget-object v1, p0, Leh2;->b:Llh2;
-
-    iget-object v1, v1, Llh2;->a:Landroid/content/Context;
-
-    invoke-static {v1, v0}, Lofi;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_a
-
-    sget-object v2, Ll05;->s0:Lk82;
-
-    invoke-static {v2, v1}, Labd;->i(Lk82;Landroid/content/Context;)Ld77;
-
-    move-result-object v1
-
-    iget v1, v1, Ld77;->j:I
-
-    invoke-static {v0, v1}, Lbdb;->k(Landroid/graphics/drawable/Drawable;I)V
-
-    return-object v0
-
-    :cond_a
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Required value was null."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :pswitch_d
-    sget v0, Lpjd;->V1:I
-
-    iget-object v1, p0, Leh2;->b:Llh2;
-
-    iget-object v1, v1, Llh2;->a:Landroid/content/Context;
-
-    invoke-static {v1, v0}, Lofi;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_b
-
-    sget-object v2, Ll05;->s0:Lk82;
-
-    invoke-static {v2, v1}, Labd;->i(Lk82;Landroid/content/Context;)Ld77;
-
-    move-result-object v1
-
-    iget v1, v1, Ld77;->j:I
-
-    invoke-static {v0, v1}, Lbdb;->k(Landroid/graphics/drawable/Drawable;I)V
-
-    return-object v0
-
-    :cond_b
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Required value was null."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

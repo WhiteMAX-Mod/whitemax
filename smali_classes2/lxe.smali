@@ -1,53 +1,233 @@
-.class public abstract Llxe;
-.super Loxe;
+.class public final Llxe;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lpr9;
 
 
 # instance fields
-.field public final h:Ljava/math/BigInteger;
+.field public final a:Ljava/util/List;
 
-.field public final i:Ljava/math/BigInteger;
+.field public final b:Ls5g;
 
-.field public final j:Ljava/math/BigInteger;
+.field public final c:Ls5g;
 
-.field public final k:Ljava/lang/Long;
+.field public final d:Ljava/util/List;
 
-.field public final l:Ljava/lang/Boolean;
+.field public final e:Z
 
 
 # direct methods
-.method public constructor <init>(IJLjava/lang/String;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/lang/Long;Ljava/lang/String;Lo39;Ljava/lang/Boolean;)V
-    .locals 8
+.method public constructor <init>(Ljava/util/List;Ls5g;Ls5g;Ljava/util/List;Z)V
+    .locals 0
 
-    const/4 v2, 0x2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-object v0, p0
+    iput-object p1, p0, Llxe;->a:Ljava/util/List;
 
-    move v1, p1
+    iput-object p2, p0, Llxe;->b:Ls5g;
 
-    move-wide v3, p2
+    iput-object p3, p0, Llxe;->c:Ls5g;
 
-    move-object v5, p4
+    iput-object p4, p0, Llxe;->d:Ljava/util/List;
 
-    move-object/from16 v6, p9
-
-    move-object/from16 v7, p10
-
-    invoke-direct/range {v0 .. v7}, Loxe;-><init>(IIJLjava/lang/String;Ljava/lang/String;Lo39;)V
-
-    iput-object p5, p0, Llxe;->h:Ljava/math/BigInteger;
-
-    iput-object p6, p0, Llxe;->i:Ljava/math/BigInteger;
-
-    iput-object p7, p0, Llxe;->j:Ljava/math/BigInteger;
-
-    move-object/from16 p1, p11
-
-    iput-object p1, p0, Llxe;->l:Ljava/lang/Boolean;
-
-    move-object/from16 p1, p8
-
-    iput-object p1, p0, Llxe;->k:Ljava/lang/Long;
+    iput-boolean p5, p0, Llxe;->e:Z
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Llxe;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Llxe;
+
+    iget-object v0, p0, Llxe;->a:Ljava/util/List;
+
+    iget-object v1, p1, Llxe;->a:Ljava/util/List;
+
+    invoke-static {v0, v1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Llxe;->b:Ls5g;
+
+    iget-object v1, p1, Llxe;->b:Ls5g;
+
+    invoke-static {v0, v1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Llxe;->c:Ls5g;
+
+    iget-object v1, p1, Llxe;->c:Ls5g;
+
+    invoke-static {v0, v1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget-object v0, p0, Llxe;->d:Ljava/util/List;
+
+    iget-object v1, p1, Llxe;->d:Ljava/util/List;
+
+    invoke-static {v0, v1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    iget-boolean v0, p0, Llxe;->e:Z
+
+    iget-boolean p1, p1, Llxe;->e:Z
+
+    if-eq v0, p1, :cond_6
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_6
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Llxe;->a:Ljava/util/List;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Llxe;->b:Ls5g;
+
+    invoke-static {v0, v1, v2}, Lxc0;->d(IILs5g;)I
+
+    move-result v0
+
+    iget-object v2, p0, Llxe;->c:Ls5g;
+
+    if-nez v2, :cond_0
+
+    const/4 v2, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    :goto_0
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Llxe;->d:Ljava/util/List;
+
+    invoke-static {v2, v0, v1}, Lxrf;->l(Ljava/util/List;II)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Llxe;->e:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShowConfirmation(messageIds="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Llxe;->a:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", title="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Llxe;->b:Ls5g;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", description="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Llxe;->c:Ls5g;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", buttons="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Llxe;->d:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", memorizeKeybord="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Llxe;->e:Z
+
+    invoke-static {v0, v2, v1}, Laz1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,66 +1,51 @@
-.class public final Ltyf;
-.super Lpm7;
+.class public abstract synthetic Ltyf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
+
+
 # direct methods
-.method public static final d(Ltyf;Landroidx/recyclerview/widget/RecyclerView;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+    const/4 v0, 0x3
 
-    move-result-object p0
+    invoke-static {v0}, Laz1;->y(I)[I
 
-    instance-of v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager;
+    move-result-object v1
 
-    if-eqz v0, :cond_0
+    array-length v1, v1
 
-    check-cast p0, Landroidx/recyclerview/widget/LinearLayoutManager;
+    new-array v1, v1, [I
 
-    goto :goto_0
+    const/4 v2, 0x1
 
-    :cond_0
-    const/4 p0, 0x0
+    :try_start_0
+    aput v2, v1, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    :goto_0
-    if-nez p0, :cond_1
+    :catch_0
+    const/4 v2, 0x2
 
-    const/4 p0, -0x1
+    :try_start_1
+    aput v2, v1, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->canScrollVertically(I)Z
+    :catch_1
+    const/4 v2, 0x0
 
-    move-result p0
+    :try_start_2
+    aput v0, v1, v2
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    if-nez p0, :cond_2
+    :catch_2
+    sput-object v1, Ltyf;->$EnumSwitchMapping$0:[I
 
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/LinearLayoutManager;->V0()I
-
-    move-result p0
-
-    if-gtz p0, :cond_2
-
-    :goto_1
-    const/4 p0, 0x0
-
-    invoke-virtual {p1, p0}, Landroidx/recyclerview/widget/RecyclerView;->x0(I)V
-
-    :cond_2
     return-void
-.end method
-
-
-# virtual methods
-.method public final c(Landroidx/recyclerview/widget/RecyclerView;Lt6d;)Lv6d;
-    .locals 1
-
-    new-instance p2, Ls8f;
-
-    const/4 v0, 0x2
-
-    invoke-direct {p2, p0, v0, p1}, Ls8f;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    return-object p2
 .end method

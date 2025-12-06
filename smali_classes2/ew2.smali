@@ -1,86 +1,50 @@
 .class public final Lew2;
-.super Lpd0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lkw2;
+
+
+# static fields
+.field public static final d:Lv17;
 
 
 # instance fields
-.field public final b:J
+.field public final a:I
+
+.field public final b:Lsf6;
+
+.field public final c:Z
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    const/4 v0, 0x4
+    new-instance v0, Lv17;
 
-    invoke-direct {p0, v0}, Lpd0;-><init>(I)V
+    const/16 v1, 0x10
 
-    iput-wide p1, p0, Lew2;->b:J
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lv17;-><init>(IB)V
+
+    sput-object v0, Lew2;->d:Lv17;
 
     return-void
 .end method
 
+.method public constructor <init>(ILsf6;Z)V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x1
+    iput p1, p0, Lew2;->a:I
 
-    if-ne p0, p1, :cond_0
+    iput-object p2, p0, Lew2;->b:Lsf6;
 
-    return v0
+    iput-boolean p3, p0, Lew2;->c:Z
 
-    :cond_0
-    instance-of v1, p1, Lew2;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lew2;
-
-    iget-wide v3, p0, Lew2;->b:J
-
-    iget-wide v5, p1, Lew2;->b:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lew2;->b:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "OpenChatAndUpdateBackstack(chatId="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lew2;->b:J
-
-    invoke-static {v2, v3, v0, v1}, Lrtg;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

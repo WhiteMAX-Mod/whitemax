@@ -67,7 +67,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/asr_online/AsrOnlineChunk$Companion;-><init>(Lki4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/asr_online/AsrOnlineChunk$Companion;-><init>(Ltk4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/asr_online/AsrOnlineChunk;->Companion:Lru/ok/android/externcalls/sdk/asr_online/AsrOnlineChunk$Companion;
 
@@ -163,7 +163,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/asr_online/AsrOnlineChunk;->participantId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -176,7 +176,7 @@
 
     iget-object p1, p1, Lru/ok/android/externcalls/sdk/asr_online/AsrOnlineChunk;->text:Ljava/lang/String;
 
-    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

@@ -1,144 +1,77 @@
 .class public final Lba2;
-.super Lz92;
+.super Laa2;
 .source "SourceFile"
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(IIILx74;Lx26;)V
+    .locals 1
 
-    new-instance v0, Lba2;
+    and-int/lit8 v0, p3, 0x2
 
-    const/4 v1, 0x1
+    if-eqz v0, :cond_0
 
-    const/4 v2, 0x0
+    sget-object p4, Lbd5;->a:Lbd5;
 
-    invoke-direct {v0, v1, v2}, Lz92;-><init>(CC)V
+    :cond_0
+    and-int/lit8 v0, p3, 0x4
+
+    if-eqz v0, :cond_1
+
+    const/4 p1, -0x3
+
+    :cond_1
+    and-int/lit8 p3, p3, 0x8
+
+    if-eqz p3, :cond_2
+
+    const/4 p2, 0x1
+
+    :cond_2
+    invoke-direct {p0, p1, p2, p4, p5}, Laa2;-><init>(IILx74;Lx26;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final k(Lx74;II)Lt92;
     .locals 2
 
-    instance-of v0, p1, Lba2;
+    new-instance v0, Lba2;
 
-    if-eqz v0, :cond_2
+    iget-object v1, p0, Laa2;->d:Lx26;
 
-    invoke-virtual {p0}, Lba2;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    move-object v0, p1
-
-    check-cast v0, Lba2;
-
-    invoke-virtual {v0}, Lba2;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    :cond_0
-    check-cast p1, Lba2;
-
-    iget-char v0, p1, Lz92;->a:C
-
-    iget-char v1, p0, Lz92;->a:C
-
-    if-ne v1, v0, :cond_2
-
-    iget-char v0, p0, Lz92;->b:C
-
-    iget-char p1, p1, Lz92;->b:C
-
-    if-ne v0, p1, :cond_2
-
-    :cond_1
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    invoke-virtual {p0}, Lba2;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, -0x1
-
-    return v0
-
-    :cond_0
-    iget-char v0, p0, Lz92;->a:C
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-char v1, p0, Lz92;->b:C
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final isEmpty()Z
-    .locals 2
-
-    iget-char v0, p0, Lz92;->a:C
-
-    iget-char v1, p0, Lz92;->b:C
-
-    invoke-static {v0, v1}, Lh1i;->b(II)I
-
-    move-result v0
-
-    if-lez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-char v1, p0, Lz92;->a:C
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    const-string v1, ".."
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-char v1, p0, Lz92;->b:C
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    invoke-direct {v0, p2, p3, p1, v1}, Laa2;-><init>(IILx74;Lx26;)V
 
     return-object v0
+.end method
+
+.method public final l()Lx26;
+    .locals 1
+
+    iget-object v0, p0, Laa2;->d:Lx26;
+
+    return-object v0
+.end method
+
+.method public final n(Lz26;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Laa2;->d:Lx26;
+
+    invoke-interface {v0, p1, p2}, Lx26;->d(Lz26;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lg84;->a:Lg84;
+
+    if-ne p1, p2, :cond_0
+
+    return-object p1
+
+    :cond_0
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

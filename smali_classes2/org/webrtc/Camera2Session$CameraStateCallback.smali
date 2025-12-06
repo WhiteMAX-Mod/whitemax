@@ -64,7 +64,7 @@
 
     const-string v0, "Unknown camera error: "
 
-    invoke-static {p1, v0}, Li57;->f(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Lho7;->f(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -103,7 +103,7 @@
 
     iget-object p1, p0, Lorg/webrtc/Camera2Session$CameraStateCallback;->this$0:Lorg/webrtc/Camera2Session;
 
-    invoke-static {p1}, Lorg/webrtc/Camera2Session;->u(Lorg/webrtc/Camera2Session;)V
+    invoke-static {p1}, Lorg/webrtc/Camera2Session;->w(Lorg/webrtc/Camera2Session;)V
 
     const-string p1, "Camera2Session"
 
@@ -129,7 +129,7 @@
 
     iget-object p1, p0, Lorg/webrtc/Camera2Session$CameraStateCallback;->this$0:Lorg/webrtc/Camera2Session;
 
-    invoke-static {p1}, Lorg/webrtc/Camera2Session;->u(Lorg/webrtc/Camera2Session;)V
+    invoke-static {p1}, Lorg/webrtc/Camera2Session;->w(Lorg/webrtc/Camera2Session;)V
 
     iget-object p1, p0, Lorg/webrtc/Camera2Session$CameraStateCallback;->this$0:Lorg/webrtc/Camera2Session;
 
@@ -141,7 +141,7 @@
 
     iget-object p1, p0, Lorg/webrtc/Camera2Session$CameraStateCallback;->this$0:Lorg/webrtc/Camera2Session;
 
-    invoke-static {p1}, Lorg/webrtc/Camera2Session;->m(Lorg/webrtc/Camera2Session;)Lorg/webrtc/Camera2Session$SessionState;
+    invoke-static {p1}, Lorg/webrtc/Camera2Session;->n(Lorg/webrtc/Camera2Session;)Lorg/webrtc/Camera2Session$SessionState;
 
     move-result-object p1
 
@@ -161,11 +161,11 @@
 
     sget-object v1, Lorg/webrtc/Camera2Session$SessionState;->STOPPED:Lorg/webrtc/Camera2Session$SessionState;
 
-    invoke-static {v0, v1}, Lorg/webrtc/Camera2Session;->s(Lorg/webrtc/Camera2Session;Lorg/webrtc/Camera2Session$SessionState;)V
+    invoke-static {v0, v1}, Lorg/webrtc/Camera2Session;->u(Lorg/webrtc/Camera2Session;Lorg/webrtc/Camera2Session$SessionState;)V
 
     iget-object v0, p0, Lorg/webrtc/Camera2Session$CameraStateCallback;->this$0:Lorg/webrtc/Camera2Session;
 
-    invoke-static {v0}, Lorg/webrtc/Camera2Session;->x(Lorg/webrtc/Camera2Session;)V
+    invoke-static {v0}, Lorg/webrtc/Camera2Session;->z(Lorg/webrtc/Camera2Session;)V
 
     if-eqz p1, :cond_1
 
@@ -202,7 +202,7 @@
 
     iget-object p1, p0, Lorg/webrtc/Camera2Session$CameraStateCallback;->this$0:Lorg/webrtc/Camera2Session;
 
-    invoke-static {p1}, Lorg/webrtc/Camera2Session;->u(Lorg/webrtc/Camera2Session;)V
+    invoke-static {p1}, Lorg/webrtc/Camera2Session;->w(Lorg/webrtc/Camera2Session;)V
 
     iget-object p1, p0, Lorg/webrtc/Camera2Session$CameraStateCallback;->this$0:Lorg/webrtc/Camera2Session;
 
@@ -210,7 +210,7 @@
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lorg/webrtc/Camera2Session;->w(Lorg/webrtc/Camera2Session;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lorg/webrtc/Camera2Session;->y(Lorg/webrtc/Camera2Session;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -220,7 +220,7 @@
 
     iget-object v0, p0, Lorg/webrtc/Camera2Session$CameraStateCallback;->this$0:Lorg/webrtc/Camera2Session;
 
-    invoke-static {v0}, Lorg/webrtc/Camera2Session;->u(Lorg/webrtc/Camera2Session;)V
+    invoke-static {v0}, Lorg/webrtc/Camera2Session;->w(Lorg/webrtc/Camera2Session;)V
 
     const-string v0, "Camera2Session"
 
@@ -230,11 +230,11 @@
 
     iget-object v0, p0, Lorg/webrtc/Camera2Session$CameraStateCallback;->this$0:Lorg/webrtc/Camera2Session;
 
-    invoke-static {v0, p1}, Lorg/webrtc/Camera2Session;->p(Lorg/webrtc/Camera2Session;Landroid/hardware/camera2/CameraDevice;)V
+    invoke-static {v0, p1}, Lorg/webrtc/Camera2Session;->q(Lorg/webrtc/Camera2Session;Landroid/hardware/camera2/CameraDevice;)V
 
     iget-object v0, p0, Lorg/webrtc/Camera2Session$CameraStateCallback;->this$0:Lorg/webrtc/Camera2Session;
 
-    invoke-static {v0}, Lorg/webrtc/Camera2Session;->o(Lorg/webrtc/Camera2Session;)Lorg/webrtc/SurfaceTextureHelper;
+    invoke-static {v0}, Lorg/webrtc/Camera2Session;->p(Lorg/webrtc/Camera2Session;)Lorg/webrtc/SurfaceTextureHelper;
 
     move-result-object v0
 
@@ -262,7 +262,7 @@
 
     iget-object v2, p0, Lorg/webrtc/Camera2Session$CameraStateCallback;->this$0:Lorg/webrtc/Camera2Session;
 
-    invoke-static {v2}, Lorg/webrtc/Camera2Session;->o(Lorg/webrtc/Camera2Session;)Lorg/webrtc/SurfaceTextureHelper;
+    invoke-static {v2}, Lorg/webrtc/Camera2Session;->p(Lorg/webrtc/Camera2Session;)Lorg/webrtc/SurfaceTextureHelper;
 
     move-result-object v2
 
@@ -272,12 +272,12 @@
 
     invoke-direct {v1, v2}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
 
-    invoke-static {v0, v1}, Lorg/webrtc/Camera2Session;->t(Lorg/webrtc/Camera2Session;Landroid/view/Surface;)V
+    invoke-static {v0, v1}, Lorg/webrtc/Camera2Session;->v(Lorg/webrtc/Camera2Session;Landroid/view/Surface;)V
 
     :try_start_0
     iget-object v0, p0, Lorg/webrtc/Camera2Session$CameraStateCallback;->this$0:Lorg/webrtc/Camera2Session;
 
-    invoke-static {v0}, Lorg/webrtc/Camera2Session;->n(Lorg/webrtc/Camera2Session;)Landroid/view/Surface;
+    invoke-static {v0}, Lorg/webrtc/Camera2Session;->o(Lorg/webrtc/Camera2Session;)Landroid/view/Surface;
 
     move-result-object v0
 
@@ -326,7 +326,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lorg/webrtc/Camera2Session;->w(Lorg/webrtc/Camera2Session;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lorg/webrtc/Camera2Session;->y(Lorg/webrtc/Camera2Session;Ljava/lang/String;)V
 
     return-void
 .end method

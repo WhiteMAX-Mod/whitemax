@@ -11,24 +11,24 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/net/NetworkConnectionManager;",
         "",
-        "Lkg0;",
+        "Ljg0;",
         "callback",
-        "Lccg;",
+        "Lqqg;",
         "registerBadConnectionCallback",
-        "(Lkg0;)V",
+        "(Ljg0;)V",
         "unregisterBadConnectionCallback",
-        "Lc6a;",
+        "Ldea;",
         "listener",
         "addNetworkConnectivityListener",
-        "(Lc6a;)V",
+        "(Ldea;)V",
         "removeNetworkConnectivityListener",
-        "Lvzf;",
+        "Lqdg;",
         "plusAssign",
-        "(Lvzf;)V",
+        "(Lqdg;)V",
         "minusAssign",
-        "Lrzf;",
+        "Lmdg;",
         "getTopology",
-        "()Lrzf;",
+        "()Lmdg;",
         "topology",
         "calls-sdk_release"
     }
@@ -43,23 +43,23 @@
 
 
 # virtual methods
-.method public abstract addNetworkConnectivityListener(Lc6a;)V
+.method public abstract addNetworkConnectivityListener(Ldea;)V
 .end method
 
-.method public abstract getTopology()Lrzf;
+.method public abstract getTopology()Lmdg;
 .end method
 
-.method public abstract minusAssign(Lvzf;)V
+.method public abstract minusAssign(Lqdg;)V
 .end method
 
-.method public abstract plusAssign(Lvzf;)V
+.method public abstract plusAssign(Lqdg;)V
 .end method
 
-.method public abstract registerBadConnectionCallback(Lkg0;)V
+.method public abstract registerBadConnectionCallback(Ljg0;)V
 .end method
 
-.method public abstract removeNetworkConnectivityListener(Lc6a;)V
+.method public abstract removeNetworkConnectivityListener(Ldea;)V
 .end method
 
-.method public abstract unregisterBadConnectionCallback(Lkg0;)V
+.method public abstract unregisterBadConnectionCallback(Ljg0;)V
 .end method

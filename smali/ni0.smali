@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lo9b;
+.implements Lbjb;
 .implements Ljava/io/Closeable;
-.implements Lbx7;
+.implements Lf48;
 
 
 # virtual methods
 .method public abstract close()V
-    .annotation runtime Luma;
-        value = .enum Lgw7;->ON_DESTROY:Lgw7;
+    .annotation runtime Lova;
+        value = .enum Lk38;->ON_DESTROY:Lk38;
     .end annotation
 .end method

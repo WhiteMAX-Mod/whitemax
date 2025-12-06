@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Leh6;
 
 
 # instance fields
@@ -13,12 +13,12 @@
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljf7;I)V
+.method public synthetic constructor <init>(Ljf7;Ljf7;I)V
     .locals 0
 
-    iput p2, p0, Lif7;->a:I
+    iput p3, p0, Lif7;->a:I
 
-    iput-object p1, p0, Lif7;->b:Ljf7;
+    iput-object p2, p0, Lif7;->b:Ljf7;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,32 +27,29 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final a(Lfh6;)V
     .locals 1
 
     iget p1, p0, Lif7;->a:I
 
+    iget-object v0, p0, Lif7;->b:Ljf7;
+
     packed-switch p1, :pswitch_data_0
 
-    iget-object p1, p0, Lif7;->b:Ljf7;
+    sget p1, Landroidx/camera/core/ImageProcessingUtil;->a:I
 
-    iget-object p1, p1, Ljf7;->z0:Lnje;
-
-    sget-object v0, Lb34;->a:Lb34;
-
-    invoke-virtual {p1, v0}, Lnje;->h(Ljava/lang/Object;)Z
+    invoke-interface {v0}, Ljava/lang/AutoCloseable;->close()V
 
     return-void
 
     :pswitch_0
-    iget-object p1, p0, Lif7;->b:Ljf7;
+    sget p1, Landroidx/camera/core/ImageProcessingUtil;->a:I
 
-    iget-object p1, p1, Ljf7;->z0:Lnje;
+    if-eqz v0, :cond_0
 
-    sget-object v0, La34;->a:La34;
+    invoke-interface {v0}, Ljava/lang/AutoCloseable;->close()V
 
-    invoke-virtual {p1, v0}, Lnje;->h(Ljava/lang/Object;)Z
-
+    :cond_0
     return-void
 
     nop

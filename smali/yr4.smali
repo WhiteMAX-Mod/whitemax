@@ -1,39 +1,126 @@
-.class public final Lyr4;
-.super Ln2j;
+.class public final synthetic Lyr4;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Luu1;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lzr4;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lzr4;I)V
+    .locals 0
+
+    iput p2, p0, Lyr4;->a:I
+
+    iput-object p1, p0, Lyr4;->b:Lzr4;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final b(Ljava/lang/Object;)F
-    .locals 1
+.method public final m(Ltu1;)Ljava/lang/String;
+    .locals 2
 
-    check-cast p1, Lzr4;
+    iget v0, p0, Lyr4;->a:I
 
-    iget-object p1, p1, Lzr4;->x0:Lr15;
+    packed-switch v0, :pswitch_data_0
 
-    iget p1, p1, Lr15;->b:F
+    iget-object v0, p0, Lyr4;->b:Lzr4;
 
-    const v0, 0x461c4000    # 10000.0f
+    iget-object v1, v0, Lzr4;->a:Ljava/lang/Object;
 
-    mul-float/2addr p1, v0
+    monitor-enter v1
 
-    return p1
-.end method
+    :try_start_0
+    iput-object p1, v0, Lzr4;->f:Ltu1;
 
-.method public final c(Ljava/lang/Object;F)V
-    .locals 1
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    check-cast p1, Lzr4;
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    const v0, 0x461c4000    # 10000.0f
+    const-string v1, "DeferrableSurface-close("
 
-    div-float/2addr p2, v0
+    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, p1, Lzr4;->x0:Lr15;
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iput p2, v0, Lr15;->b:F
+    const-string v0, ")"
 
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+
+    :pswitch_0
+    iget-object v0, p0, Lyr4;->b:Lzr4;
+
+    iget-object v1, v0, Lzr4;->a:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_2
+    iput-object p1, v0, Lzr4;->d:Ltu1;
+
+    monitor-exit v1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v1, "DeferrableSurface-termination("
+
+    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    :catchall_1
+    move-exception p1
+
+    :try_start_3
+    monitor-exit v1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    throw p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

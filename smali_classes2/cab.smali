@@ -1,350 +1,163 @@
-.class public final Lcab;
-.super Landroid/view/OrientationEventListener;
+.class public abstract Lcab;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic d:I
+.field public static final a:I
 
+.field public static final b:I
 
-# instance fields
-.field public final a:Landroid/content/Context;
+.field public static final c:I
 
-.field public final b:Lor6;
+.field public static final d:I
 
-.field public c:I
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
+
+.field public static final y:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lor6;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    const/4 v0, 0x3
+    sget v0, Lvwc;->emoji_sprite_0:I
 
-    invoke-direct {p0, p1, v0}, Landroid/view/OrientationEventListener;-><init>(Landroid/content/Context;I)V
+    sput v0, Lcab;->a:I
 
-    iput-object p1, p0, Lcab;->a:Landroid/content/Context;
+    sget v0, Lvwc;->emoji_sprite_1:I
 
-    iput-object p2, p0, Lcab;->b:Lor6;
+    sput v0, Lcab;->b:I
 
-    return-void
-.end method
+    sget v0, Lvwc;->emoji_sprite_10:I
 
+    sput v0, Lcab;->c:I
 
-# virtual methods
-.method public final a()Z
-    .locals 3
+    sget v0, Lvwc;->emoji_sprite_11:I
 
-    iget-object v0, p0, Lcab;->a:Landroid/content/Context;
+    sput v0, Lcab;->d:I
 
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    sget v0, Lvwc;->emoji_sprite_12:I
 
-    move-result-object v0
+    sput v0, Lcab;->e:I
 
-    const-string v1, "accelerometer_rotation"
+    sget v0, Lvwc;->emoji_sprite_13:I
 
-    const/4 v2, 0x0
+    sput v0, Lcab;->f:I
 
-    invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    sget v0, Lvwc;->emoji_sprite_14:I
 
-    move-result v0
+    sput v0, Lcab;->g:I
 
-    const/4 v1, 0x1
+    sget v0, Lvwc;->emoji_sprite_15:I
 
-    if-ne v0, v1, :cond_0
+    sput v0, Lcab;->h:I
 
-    move v2, v1
+    sget v0, Lvwc;->emoji_sprite_16:I
 
-    :cond_0
-    xor-int/lit8 v0, v2, 0x1
+    sput v0, Lcab;->i:I
 
-    return v0
-.end method
+    sget v0, Lvwc;->emoji_sprite_17:I
 
-.method public final onOrientationChanged(I)V
-    .locals 10
+    sput v0, Lcab;->j:I
 
-    const/4 v0, -0x1
+    sget v0, Lvwc;->emoji_sprite_18:I
 
-    if-ne p1, v0, :cond_0
+    sput v0, Lcab;->k:I
 
-    goto/16 :goto_8
+    sget v0, Lvwc;->emoji_sprite_19:I
 
-    :cond_0
-    iget-object v0, p0, Lcab;->a:Landroid/content/Context;
+    sput v0, Lcab;->l:I
 
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    sget v0, Lvwc;->emoji_sprite_2:I
 
-    move-result-object v1
+    sput v0, Lcab;->m:I
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    sget v0, Lvwc;->emoji_sprite_20:I
 
-    move-result-object v1
+    sput v0, Lcab;->n:I
 
-    iget v1, v1, Landroid/content/res/Configuration;->orientation:I
+    sget v0, Lvwc;->emoji_sprite_21:I
 
-    const-string v2, "window"
+    sput v0, Lcab;->o:I
 
-    invoke-virtual {v0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    sget v0, Lvwc;->emoji_sprite_22:I
 
-    move-result-object v2
+    sput v0, Lcab;->p:I
 
-    check-cast v2, Landroid/view/WindowManager;
+    sget v0, Lvwc;->emoji_sprite_23:I
 
-    invoke-interface {v2}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
+    sput v0, Lcab;->q:I
 
-    move-result-object v2
+    sget v0, Lvwc;->emoji_sprite_24:I
 
-    invoke-virtual {v2}, Landroid/view/Display;->getRotation()I
+    sput v0, Lcab;->r:I
 
-    move-result v2
+    sget v0, Lvwc;->emoji_sprite_3:I
 
-    const/4 v3, 0x3
+    sput v0, Lcab;->s:I
 
-    const/4 v4, 0x2
+    sget v0, Lvwc;->emoji_sprite_4:I
 
-    const/4 v5, 0x1
+    sput v0, Lcab;->t:I
 
-    if-eqz v2, :cond_1
+    sget v0, Lvwc;->emoji_sprite_5:I
 
-    if-ne v2, v4, :cond_2
+    sput v0, Lcab;->u:I
 
-    :cond_1
-    if-eq v1, v4, :cond_5
+    sget v0, Lvwc;->emoji_sprite_6:I
 
-    :cond_2
-    if-eq v2, v5, :cond_3
+    sput v0, Lcab;->v:I
 
-    if-ne v2, v3, :cond_4
+    sget v0, Lvwc;->emoji_sprite_7:I
 
-    :cond_3
-    if-ne v1, v5, :cond_4
+    sput v0, Lcab;->w:I
 
-    goto :goto_0
+    sget v0, Lvwc;->emoji_sprite_8:I
 
-    :cond_4
-    move v1, v5
+    sput v0, Lcab;->x:I
 
-    goto :goto_1
+    sget v0, Lvwc;->emoji_sprite_9:I
 
-    :cond_5
-    :goto_0
-    move v1, v4
+    sput v0, Lcab;->y:I
 
-    :goto_1
-    const/16 v2, 0x12c
-
-    const/4 v6, 0x4
-
-    const/16 v7, 0x3c
-
-    const/16 v8, 0xdc
-
-    const/16 v9, 0x8c
-
-    if-ne v1, v5, :cond_a
-
-    if-lt p1, v7, :cond_6
-
-    if-gt p1, v9, :cond_6
-
-    :goto_2
-    move p1, v5
-
-    goto :goto_5
-
-    :cond_6
-    if-lt p1, v9, :cond_7
-
-    if-gt p1, v8, :cond_7
-
-    :goto_3
-    move p1, v6
-
-    goto :goto_5
-
-    :cond_7
-    if-lt p1, v8, :cond_9
-
-    if-gt p1, v2, :cond_9
-
-    :cond_8
-    move p1, v4
-
-    goto :goto_5
-
-    :cond_9
-    :goto_4
-    move p1, v3
-
-    goto :goto_5
-
-    :cond_a
-    if-lt p1, v7, :cond_b
-
-    if-gt p1, v9, :cond_b
-
-    goto :goto_4
-
-    :cond_b
-    if-lt p1, v9, :cond_c
-
-    if-gt p1, v8, :cond_c
-
-    goto :goto_2
-
-    :cond_c
-    if-lt p1, v8, :cond_8
-
-    if-gt p1, v2, :cond_8
-
-    goto :goto_3
-
-    :goto_5
-    invoke-virtual {p0}, Lcab;->a()Z
-
-    move-result v1
-
-    iget-object v2, p0, Lcab;->b:Lor6;
-
-    if-eqz v1, :cond_13
-
-    iget v1, p0, Lcab;->c:I
-
-    if-eqz v1, :cond_d
-
-    if-eq p1, v1, :cond_d
-
-    goto/16 :goto_8
-
-    :cond_d
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/content/res/Configuration;->orientation:I
-
-    if-eqz v0, :cond_11
-
-    if-eq v0, v5, :cond_10
-
-    if-eq v0, v4, :cond_e
-
-    const/4 v3, 0x0
-
-    goto :goto_6
-
-    :cond_e
-    sget-object v0, Lbab;->$EnumSwitchMapping$0:[I
-
-    invoke-static {p1}, Ldy1;->v(I)I
-
-    move-result p1
-
-    aget p1, v0, p1
-
-    if-ne p1, v5, :cond_f
-
-    move v3, v5
-
-    goto :goto_6
-
-    :cond_f
-    move v3, v4
-
-    goto :goto_6
-
-    :cond_10
-    sget-object v0, Lbab;->$EnumSwitchMapping$0:[I
-
-    invoke-static {p1}, Ldy1;->v(I)I
-
-    move-result p1
-
-    aget p1, v0, p1
-
-    if-ne p1, v4, :cond_12
-
-    move v3, v6
-
-    goto :goto_6
-
-    :cond_11
-    move v3, p1
-
-    :cond_12
-    :goto_6
-    iput v3, p0, Lcab;->c:I
-
-    if-eqz v2, :cond_18
-
-    invoke-virtual {p0}, Lcab;->a()Z
-
-    move-result p1
-
-    invoke-virtual {v2, v3, p1}, Lor6;->P(IZ)V
-
-    return-void
-
-    :cond_13
-    iget v1, p0, Lcab;->c:I
-
-    if-eqz v1, :cond_17
-
-    if-eq p1, v1, :cond_14
-
-    goto :goto_7
-
-    :cond_14
-    if-ne p1, v1, :cond_15
-
-    goto :goto_8
-
-    :cond_15
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/content/res/Configuration;->orientation:I
-
-    if-ne v0, v4, :cond_16
-
-    if-eq p1, v3, :cond_18
-
-    if-ne p1, v6, :cond_16
-
-    goto :goto_8
-
-    :cond_16
-    if-ne v0, v5, :cond_17
-
-    if-eq p1, v4, :cond_18
-
-    if-ne p1, v5, :cond_17
-
-    goto :goto_8
-
-    :cond_17
-    :goto_7
-    iput p1, p0, Lcab;->c:I
-
-    if-eqz v2, :cond_18
-
-    invoke-virtual {p0}, Lcab;->a()Z
-
-    move-result v0
-
-    invoke-virtual {v2, p1, v0}, Lor6;->P(IZ)V
-
-    :cond_18
-    :goto_8
     return-void
 .end method

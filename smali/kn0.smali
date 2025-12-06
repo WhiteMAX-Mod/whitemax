@@ -1,163 +1,219 @@
 .class public final Lkn0;
-.super Le87;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lkn0;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # instance fields
-.field public final b:[B
+.field public final a:J
+
+.field public final b:J
+
+.field public final c:J
+
+.field public d:J
+
+.field public e:J
+
+.field public f:J
+
+.field public g:J
+
+.field public h:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(JJJJJJI)V
+    .locals 12
 
-    new-instance v0, Lh8;
+    move-wide v0, p3
 
-    const/16 v1, 0x9
+    move-wide/from16 v4, p5
 
-    invoke-direct {v0, v1}, Lh8;-><init>(I)V
+    move-wide/from16 v6, p7
 
-    sput-object v0, Lkn0;->CREATOR:Landroid/os/Parcelable$Creator;
+    move-wide/from16 v8, p9
 
-    return-void
-.end method
+    move-wide/from16 v10, p11
 
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 2
+    packed-switch p13, :pswitch_data_0
 
-    .line 3
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    iput-wide p1, p0, Lkn0;->a:J
 
-    sget v1, Llig;->a:I
+    iput-wide v0, p0, Lkn0;->b:J
 
-    invoke-direct {p0, v0}, Le87;-><init>(Ljava/lang/String;)V
+    const-wide/16 v2, 0x0
 
-    .line 4
-    invoke-virtual {p1}, Landroid/os/Parcel;->createByteArray()[B
+    iput-wide v2, p0, Lkn0;->d:J
 
-    move-result-object p1
+    iput-wide v4, p0, Lkn0;->e:J
 
-    iput-object p1, p0, Lkn0;->b:[B
+    iput-wide v6, p0, Lkn0;->f:J
 
-    return-void
-.end method
+    iput-wide v8, p0, Lkn0;->g:J
 
-.method public constructor <init>(Ljava/lang/String;[B)V
-    .locals 0
+    iput-wide v10, p0, Lkn0;->c:J
 
-    .line 1
-    invoke-direct {p0, p1}, Le87;-><init>(Ljava/lang/String;)V
+    invoke-static/range {v0 .. v11}, Lkn0;->a(JJJJJJ)J
 
-    .line 2
-    iput-object p2, p0, Lkn0;->b:[B
+    move-result-wide p1
+
+    iput-wide p1, p0, Lkn0;->h:J
 
     return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lkn0;->a:J
+
+    iput-wide v0, p0, Lkn0;->b:J
+
+    const-wide/16 v2, 0x0
+
+    iput-wide v2, p0, Lkn0;->d:J
+
+    iput-wide v4, p0, Lkn0;->e:J
+
+    iput-wide v6, p0, Lkn0;->f:J
+
+    iput-wide v8, p0, Lkn0;->g:J
+
+    iput-wide v10, p0, Lkn0;->c:J
+
+    invoke-static/range {v0 .. v11}, Lkn0;->b(JJJJJJ)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lkn0;->h:J
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public static a(JJJJJJ)J
     .locals 4
 
-    const/4 v0, 0x1
+    const-wide/16 v0, 0x1
 
-    if-ne p0, p1, :cond_0
+    add-long v2, p6, v0
 
-    return v0
+    cmp-long v2, v2, p8
 
-    :cond_0
-    const/4 v1, 0x0
+    if-gez v2, :cond_1
 
-    if-eqz p1, :cond_2
+    add-long v2, p2, v0
 
-    const-class v2, Lkn0;
+    cmp-long v2, v2, p4
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
+    if-ltz v2, :cond_0
 
     goto :goto_0
 
+    :cond_0
+    sub-long/2addr p0, p2
+
+    sub-long v2, p8, p6
+
+    long-to-float v2, v2
+
+    sub-long/2addr p4, p2
+
+    long-to-float p2, p4
+
+    div-float/2addr v2, p2
+
+    long-to-float p0, p0
+
+    mul-float/2addr p0, v2
+
+    float-to-long p0, p0
+
+    const-wide/16 p2, 0x14
+
+    div-long p2, p0, p2
+
+    add-long/2addr p0, p6
+
+    sub-long/2addr p0, p10
+
+    sub-long p4, p0, p2
+
+    sub-long/2addr p8, v0
+
+    invoke-static/range {p4 .. p9}, Lxxg;->j(JJJ)J
+
+    move-result-wide p0
+
+    return-wide p0
+
     :cond_1
-    check-cast p1, Lkn0;
-
-    iget-object v2, p0, Le87;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Le87;->a:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lkn0;->b:[B
-
-    iget-object p1, p1, Lkn0;->b:[B
-
-    invoke-static {v2, p1}, Ljava/util/Arrays;->equals([B[B)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
     :goto_0
-    return v1
+    return-wide p6
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public static b(JJJJJJ)J
+    .locals 4
 
-    iget-object v0, p0, Le87;->a:Ljava/lang/String;
+    const-wide/16 v0, 0x1
 
-    const/16 v1, 0x1f
+    add-long v2, p6, v0
 
-    const/16 v2, 0x20f
+    cmp-long v2, v2, p8
 
-    invoke-static {v2, v1, v0}, Lu15;->d(IILjava/lang/String;)I
+    if-gez v2, :cond_1
 
-    move-result v0
+    add-long v2, p2, v0
 
-    iget-object v1, p0, Lkn0;->b:[B
+    cmp-long v2, v2, p4
 
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
+    if-ltz v2, :cond_0
 
-    move-result v1
+    goto :goto_0
 
-    add-int/2addr v1, v0
+    :cond_0
+    sub-long/2addr p0, p2
 
-    return v1
-.end method
+    sub-long v2, p8, p6
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    long-to-float v2, v2
 
-    iget-object p2, p0, Le87;->a:Ljava/lang/String;
+    sub-long/2addr p4, p2
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    long-to-float p2, p4
 
-    iget-object p2, p0, Lkn0;->b:[B
+    div-float/2addr v2, p2
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByteArray([B)V
+    long-to-float p0, p0
 
-    return-void
+    mul-float/2addr p0, v2
+
+    float-to-long p0, p0
+
+    const-wide/16 p2, 0x14
+
+    div-long p2, p0, p2
+
+    add-long/2addr p0, p6
+
+    sub-long/2addr p0, p10
+
+    sub-long p4, p0, p2
+
+    sub-long/2addr p8, v0
+
+    invoke-static/range {p4 .. p9}, Lzxg;->j(JJJ)J
+
+    move-result-wide p0
+
+    return-wide p0
+
+    :cond_1
+    :goto_0
+    return-wide p6
 .end method

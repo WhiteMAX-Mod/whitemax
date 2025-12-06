@@ -1,73 +1,51 @@
-.class public final synthetic Lote;
-.super Ljava/lang/Object;
+.class public final Lote;
+.super Lki4;
 .source "SourceFile"
 
-# interfaces
-.implements Lli6;
 
+# static fields
+.field public static final b:Lote;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final c:Lgi4;
 
-.field public final synthetic b:Lvte;
-
-.field public final synthetic c:I
+.field public static final d:Lgi4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lvte;II)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput p3, p0, Lote;->a:I
+    new-instance v0, Lote;
 
-    iput-object p1, p0, Lote;->b:Lvte;
+    invoke-direct {v0}, Lki4;-><init>()V
 
-    iput p2, p0, Lote;->c:I
+    sput-object v0, Lote;->b:Lote;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x0
+
+    new-array v2, v1, [Ljava/lang/String;
+
+    const-string v3, ":chats/share"
+
+    const/4 v4, 0x0
+
+    const/16 v5, 0xe
+
+    invoke-static {v0, v3, v2, v4, v5}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
+
+    move-result-object v2
+
+    sput-object v2, Lote;->c:Lgi4;
+
+    const-string v2, ":share"
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    invoke-static {v0, v2, v1, v4, v5}, Lki4;->b(Lki4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lgi4;
+
+    move-result-object v0
+
+    sput-object v0, Lote;->d:Lgi4;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iget v0, p0, Lote;->a:I
-
-    check-cast p1, Ltg7;
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lote;->b:Lvte;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget v0, p0, Lote;->c:I
-
-    invoke-static {p1, v0}, Lvte;->a(Ltg7;I)V
-
-    :goto_0
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
-
-    :pswitch_0
-    iget-object v0, p0, Lote;->b:Lvte;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget v0, p0, Lote;->c:I
-
-    invoke-static {p1, v0}, Lvte;->a(Ltg7;I)V
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

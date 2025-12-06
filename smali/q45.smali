@@ -1,41 +1,39 @@
-.class public final Lq45;
-.super Ln2j;
+.class public abstract Lq45;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:Lny5;
+.field public final a:Lrk0;
 
 
 # direct methods
-.method public constructor <init>(Lny5;)V
+.method public constructor <init>(Lrk0;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lq45;->a:Lny5;
+    iput-object p1, p0, Lq45;->a:Lrk0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Ljava/lang/Object;)F
-    .locals 0
-
-    iget-object p1, p0, Lq45;->a:Lny5;
-
-    iget p1, p1, Lny5;->a:F
-
-    return p1
+.method public abstract a(Landroid/graphics/Canvas;Landroid/graphics/Rect;FZZ)V
 .end method
 
-.method public final c(Ljava/lang/Object;F)V
-    .locals 0
+.method public abstract b(Landroid/graphics/Canvas;Landroid/graphics/Paint;II)V
+.end method
 
-    iget-object p1, p0, Lq45;->a:Lny5;
+.method public abstract c(Landroid/graphics/Canvas;Landroid/graphics/Paint;Lp45;I)V
+.end method
 
-    iput p2, p1, Lny5;->a:F
+.method public abstract d(Landroid/graphics/Canvas;Landroid/graphics/Paint;FFIII)V
+.end method
 
-    return-void
+.method public abstract e()I
+.end method
+
+.method public abstract f()I
 .end method

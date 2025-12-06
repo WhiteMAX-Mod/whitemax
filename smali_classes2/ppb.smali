@@ -1,27 +1,42 @@
-.class public final Lppb;
-.super Lxzg;
+.class public final synthetic Lppb;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lorg/webrtc/RtpReceiver$Observer;
 
 
 # instance fields
-.field public final b:Lq0f;
-
-.field public final c:Ljava/lang/Long;
-
-.field public final o:I
+.field public final synthetic a:Lwpb;
 
 
 # direct methods
-.method public constructor <init>(Lq0f;Ljava/lang/Long;I)V
+.method public synthetic constructor <init>(Lwpb;)V
     .locals 0
 
-    invoke-direct {p0}, Lxzg;-><init>()V
+    iput-object p1, p0, Lppb;->a:Lwpb;
 
-    iput-object p1, p0, Lppb;->b:Lq0f;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lppb;->c:Ljava/lang/Long;
+    return-void
+.end method
 
-    iput p3, p0, Lppb;->o:I
+
+# virtual methods
+.method public onFirstPacketReceived(Lorg/webrtc/MediaStreamTrack$MediaType;)V
+    .locals 3
+
+    iget-object p1, p0, Lppb;->a:Lwpb;
+
+    iget-object v0, p1, Lwpb;->v:Landroid/os/Handler;
+
+    new-instance v1, Lgpb;
+
+    const/4 v2, 0x6
+
+    invoke-direct {v1, p1, v2}, Lgpb;-><init>(Lwpb;I)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method

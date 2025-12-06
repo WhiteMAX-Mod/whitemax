@@ -1,121 +1,88 @@
 .class public final Lc49;
-.super Lxzg;
+.super Ldtf;
 .source "SourceFile"
+
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public final X:Lx0f;
+.field public final synthetic X:Lh49;
 
-.field public final Y:Lxe5;
-
-.field public final Z:Liu7;
-
-.field public final b:La49;
-
-.field public final c:J
-
-.field public final o:Landroid/content/Context;
-
-.field public final q0:Liu7;
-
-.field public final r0:Liu7;
-
-.field public final s0:Liu7;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(La49;J)V
-    .locals 6
+.method public constructor <init>(Lh49;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    sget-object v0, Ldt2;->a:Ldt2;
+    iput-object p1, p0, Lc49;->X:Lh49;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+    const/4 p1, 0x2
 
-    move-result-object v1
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    const-class v2, Landroid/content/Context;
+    return-void
+.end method
 
-    invoke-virtual {v1, v2}, Lr5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    move-result-object v1
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    check-cast v1, Landroid/content/Context;
+    check-cast p1, Lq19;
 
-    sget-object v2, Lct2;->a:Liu7;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v2
-
-    const-class v3, Lj4e;
-
-    invoke-virtual {v2, v3}, Lr5;->d(Ljava/lang/Class;)Lwif;
-
-    move-result-object v2
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v3
-
-    const-class v4, Ld33;
-
-    invoke-virtual {v3, v4}, Lr5;->d(Ljava/lang/Class;)Lwif;
-
-    move-result-object v3
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v4
-
-    const-class v5, Lulf;
-
-    invoke-virtual {v4, v5}, Lr5;->d(Ljava/lang/Class;)Lwif;
-
-    move-result-object v4
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
-
-    move-result-object v0
-
-    const-class v5, Ldq5;
-
-    invoke-virtual {v0, v5}, Lr5;->d(Ljava/lang/Class;)Lwif;
-
-    move-result-object v0
-
-    invoke-direct {p0}, Lxzg;-><init>()V
-
-    iput-object p1, p0, Lc49;->b:La49;
-
-    iput-wide p2, p0, Lc49;->c:J
-
-    iput-object v1, p0, Lc49;->o:Landroid/content/Context;
-
-    new-instance p1, Lj49;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    invoke-static {p1}, Ly0f;->a(Ljava/lang/Object;)Lx0f;
+    invoke-virtual {p0, p1, p2}, Lc49;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    iput-object p1, p0, Lc49;->X:Lx0f;
+    check-cast p1, Lc49;
 
-    new-instance p1, Lxe5;
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    const/4 p2, 0x0
+    invoke-virtual {p1, p2}, Lc49;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {p1, p2}, Lxe5;-><init>(I)V
+    return-object p2
+.end method
 
-    iput-object p1, p0, Lc49;->Y:Lxe5;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iput-object v2, p0, Lc49;->Z:Liu7;
+    new-instance v0, Lc49;
 
-    iput-object v3, p0, Lc49;->q0:Liu7;
+    iget-object v1, p0, Lc49;->X:Lh49;
 
-    iput-object v4, p0, Lc49;->r0:Liu7;
+    invoke-direct {v0, v1, p2}, Lc49;-><init>(Lh49;Lkotlin/coroutines/Continuation;)V
 
-    iput-object v0, p0, Lc49;->s0:Liu7;
+    iput-object p1, v0, Lc49;->o:Ljava/lang/Object;
 
-    return-void
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lc49;->o:Ljava/lang/Object;
+
+    check-cast p1, Lq19;
+
+    iget-object v0, p0, Lc49;->X:Lh49;
+
+    iget-object v0, v0, Lh49;->r:Ljava/util/concurrent/atomic/AtomicReference;
+
+    new-instance v1, Lk11;
+
+    const/4 v2, 0x5
+
+    invoke-direct {v1, v2, p1}, Lk11;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->updateAndGet(Ljava/util/function/UnaryOperator;)Ljava/lang/Object;
+
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

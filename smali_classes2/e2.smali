@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcr7;
+.implements Lgy7;
 
 
 # virtual methods
@@ -25,7 +25,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p0, p1}, Lcr7;->h(Ljava/lang/String;)V
+    invoke-interface {p0, p1}, Lgy7;->h(Ljava/lang/String;)V
 
     return-void
 
@@ -78,7 +78,7 @@
     throw v0
 .end method
 
-.method public final m(I)V
+.method public final l(I)V
     .locals 0
 
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;

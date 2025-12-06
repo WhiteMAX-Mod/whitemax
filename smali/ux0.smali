@@ -1,84 +1,45 @@
 .class public final Lux0;
-.super Ljava/lang/Object;
+.super Ljava/io/OutputStream;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Z
-
-.field public b:J
-
-.field public c:J
-
-
 # virtual methods
-.method public declared-synchronized a()J
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    monitor-enter p0
+    const-string v0, "ByteStreams.nullOutputStream()"
 
-    :try_start_0
-    iget-wide v0, p0, Lux0;->b:J
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-wide v0
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
+    return-object v0
 .end method
 
-.method public declared-synchronized b(JJ)V
-    .locals 2
+.method public final write(I)V
+    .locals 0
 
-    monitor-enter p0
+    .line 1
+    return-void
+.end method
 
-    :try_start_0
-    iget-boolean v0, p0, Lux0;->a:Z
+.method public final write([B)V
+    .locals 0
 
-    if-eqz v0, :cond_0
-
-    iget-wide v0, p0, Lux0;->b:J
-
-    add-long/2addr v0, p1
-
-    iput-wide v0, p0, Lux0;->b:J
-
-    iget-wide p1, p0, Lux0;->c:J
-
-    add-long/2addr p1, p3
-
-    iput-wide p1, p0, Lux0;->c:J
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit p0
+    .line 2
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     return-void
+.end method
 
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+.method public final write([BII)V
+    .locals 0
 
-    throw p1
+    .line 3
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    add-int/2addr p3, p2
+
+    .line 4
+    array-length p1, p1
+
+    invoke-static {p2, p3, p1}, Lu5j;->g(III)V
+
+    return-void
 .end method

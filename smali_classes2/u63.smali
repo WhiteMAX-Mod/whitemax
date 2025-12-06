@@ -1,74 +1,63 @@
-.class public final synthetic Lu63;
-.super Ljava/lang/Object;
+.class public final Lu63;
+.super Lq44;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/function/ToLongFunction;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:J
+
+.field public Y:I
+
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public d:Lw63;
+
+.field public o:Ljava/util/Set;
+
+.field public final synthetic s0:Lw63;
+
+.field public t0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Lw63;Lq44;)V
     .locals 0
 
-    iput p1, p0, Lu63;->a:I
+    iput-object p1, p0, Lu63;->s0:Lw63;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final applyAsLong(Ljava/lang/Object;)J
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    iget v0, p0, Lu63;->a:I
+    iput-object p1, p0, Lu63;->Z:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lu63;->t0:I
 
-    sget-object v0, Lhoa;->a:Lhoa;
+    const/high16 v0, -0x80000000
 
-    sget-object v1, Lone/me/android/OneMeApplication;->r0:Lwna;
+    or-int/2addr p1, v0
 
-    invoke-virtual {v0, p1}, Lhoa;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iput p1, p0, Lu63;->t0:I
 
-    move-result-object p1
+    const/4 v3, 0x0
 
-    check-cast p1, Ljava/lang/Number;
+    const/4 v4, 0x0
 
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+    iget-object v0, p0, Lu63;->s0:Lw63;
 
-    move-result-wide v0
+    const-wide/16 v1, 0x0
 
-    return-wide v0
+    move-object v5, p0
 
-    :pswitch_0
-    check-cast p1, Ljava/util/Map$Entry;
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    invoke-virtual/range {v0 .. v5}, Lw63;->s(JLjava/util/Set;ILq44;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Liaa;
-
-    iget-wide v0, p1, Liaa;->a:J
-
-    return-wide v0
-
-    :pswitch_1
-    check-cast p1, Lge2;
-
-    iget-wide v0, p1, Lge2;->a:J
-
-    return-wide v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

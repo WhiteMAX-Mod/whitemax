@@ -1,48 +1,74 @@
 .class public final Lbv7;
-.super Ljava/lang/Object;
+.super Li3;
 .source "SourceFile"
 
 
+# static fields
+.field public static final c:Lbv7;
+
+
 # direct methods
-.method public static a(Ljava/util/Date;)Ljava/lang/String;
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 2
 
-    sget-object v0, Loh6;->u:Ljava/lang/Object;
+    new-instance v0, Lbv7;
 
-    monitor-enter v0
+    const/16 v1, 0xb
 
-    :try_start_0
-    sget-object v1, Loh6;->t:Ljava/text/SimpleDateFormat;
+    invoke-direct {v0, v1}, Li3;-><init>(I)V
 
-    if-nez v1, :cond_0
+    sput-object v0, Lbv7;->c:Lbv7;
 
-    new-instance v1, Ljava/text/SimpleDateFormat;
+    return-void
+.end method
 
-    const-string v2, "yyyyMMdd_HHmmss_SSS"
+.method public static L0(JLjava/lang/String;Ljava/lang/String;Z)Landroid/net/Uri;
+    .locals 2
 
-    sget-object v3, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+    new-instance v0, Lhi4;
 
-    invoke-direct {v1, v2, v3}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
+    invoke-direct {v0}, Lhi4;-><init>()V
 
-    sput-object v1, Loh6;->t:Ljava/text/SimpleDateFormat;
+    const-string v1, ":join"
 
-    :cond_0
-    sget-object v1, Loh6;->t:Ljava/text/SimpleDateFormat;
+    iput-object v1, v0, Lhi4;->a:Ljava/lang/String;
 
-    invoke-virtual {v1, p0}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+    const-string v1, "id"
+
+    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p0
 
-    monitor-exit v0
+    invoke-virtual {v0, p0, v1}, Lhi4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string p0, "link"
+
+    invoke-virtual {v0, p3, p0}, Lhi4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string p0, "channel"
+
+    invoke-static {p4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1, p0}, Lhi4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string p0, "no_anim"
+
+    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-virtual {v0, p1, p0}, Lhi4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    if-eqz p2, :cond_0
+
+    const-string p0, "title"
+
+    invoke-virtual {v0, p2, p0}, Lhi4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    :cond_0
+    invoke-virtual {v0}, Lhi4;->a()Landroid/net/Uri;
+
+    move-result-object p0
 
     return-object p0
-
-    :catchall_0
-    move-exception p0
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
 .end method

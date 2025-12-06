@@ -1,98 +1,256 @@
-.class public final synthetic Lbz1;
+.class public final Lbz1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:J
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public b:J
+
+.field public c:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
-
-    iput p1, p0, Lbz1;->a:I
-
-    iput-object p2, p0, Lbz1;->b:Ljava/lang/Object;
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+
+    iput-wide v0, p0, Lbz1;->a:J
+
+    iput-wide v0, p0, Lbz1;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 4
+.method public a()I
+    .locals 6
 
-    iget v0, p0, Lbz1;->a:I
+    iget-object v0, p0, Lbz1;->c:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast v0, Ldz1;
 
-    iget-object v0, p0, Lbz1;->b:Ljava/lang/Object;
+    invoke-virtual {v0}, Ldz1;->c()Z
 
-    check-cast v0, Leqd;
+    move-result v0
 
-    iget-object v1, v0, Leqd;->b:Ljava/lang/Object;
+    if-nez v0, :cond_0
 
-    monitor-enter v1
+    const/16 v0, 0x2bc
 
-    :try_start_0
-    iget-object v2, v0, Leqd;->d:Lbz1;
+    return v0
+
+    :cond_0
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v0
+
+    iget-wide v2, p0, Lbz1;->b:J
+
+    const-wide/16 v4, -0x1
+
+    cmp-long v2, v2, v4
+
+    if-nez v2, :cond_1
+
+    iput-wide v0, p0, Lbz1;->b:J
+
+    :cond_1
+    iget-wide v2, p0, Lbz1;->b:J
+
+    sub-long/2addr v0, v2
+
+    const-wide/32 v2, 0x1d4c0
+
+    cmp-long v2, v0, v2
+
+    if-gtz v2, :cond_2
+
+    const/16 v0, 0x3e8
+
+    return v0
+
+    :cond_2
+    const-wide/32 v2, 0x493e0
+
+    cmp-long v0, v0, v2
+
+    if-gtz v0, :cond_3
+
+    const/16 v0, 0x7d0
+
+    return v0
+
+    :cond_3
+    const/16 v0, 0xfa0
+
+    return v0
+.end method
+
+.method public b()I
+    .locals 5
+
+    iget-wide v0, p0, Lbz1;->a:J
+
+    iget-object v2, p0, Lbz1;->c:Ljava/lang/Object;
+
+    check-cast v2, Ldz1;
+
+    invoke-virtual {v2}, Ldz1;->c()Z
+
+    move-result v2
+
+    const-wide/16 v3, 0x0
+
+    if-nez v2, :cond_1
+
+    cmp-long v2, v0, v3
+
+    const/16 v3, 0x2710
+
+    if-lez v2, :cond_0
+
+    long-to-int v0, v0
+
+    invoke-static {v0, v3}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    return v3
+
+    :cond_1
+    cmp-long v2, v0, v3
+
+    const v3, 0x1b7740
+
+    if-lez v2, :cond_2
+
+    long-to-int v0, v0
+
+    invoke-static {v0, v3}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
+
+    return v0
+
+    :cond_2
+    return v3
+.end method
+
+.method public c(Ljava/lang/Exception;)V
+    .locals 7
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v0
+
+    iget-object v2, p0, Lbz1;->c:Ljava/lang/Object;
+
+    check-cast v2, Ljava/lang/Exception;
 
     if-nez v2, :cond_0
 
-    const-string v2, "ScreenFlashWrapper"
+    iput-object p1, p0, Lbz1;->c:Ljava/lang/Object;
 
-    const-string v3, "apply: pendingListener is null!"
+    :cond_0
+    iget-wide v2, p0, Lbz1;->a:J
 
-    invoke-static {v2, v3}, Lgfi;->g(Ljava/lang/String;Ljava/lang/String;)V
+    const-wide v4, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long v2, v2, v4
+
+    if-nez v2, :cond_2
+
+    sget-object v2, Lak4;->l0:Ljava/lang/Object;
+
+    monitor-enter v2
+
+    :try_start_0
+    sget v3, Lak4;->n0:I
+
+    if-lez v3, :cond_1
+
+    const/4 v3, 0x1
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
+    :cond_1
+    const/4 v3, 0x0
 
-    goto :goto_1
-
-    :cond_0
     :goto_0
-    invoke-virtual {v0}, Leqd;->c()V
+    monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    monitor-exit v1
+    if-nez v3, :cond_2
 
-    return-void
+    const-wide/16 v2, 0xc8
 
+    add-long/2addr v2, v0
+
+    iput-wide v2, p0, Lbz1;->a:J
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+
+    :cond_2
     :goto_1
-    monitor-exit v1
+    iget-wide v2, p0, Lbz1;->a:J
 
-    throw v0
+    cmp-long v6, v2, v4
 
-    :pswitch_0
-    iget-object v0, p0, Lbz1;->b:Ljava/lang/Object;
+    if-eqz v6, :cond_4
 
-    check-cast v0, Lgu1;
+    cmp-long v2, v0, v2
 
-    const-string v1, "Camera2CapturePipeline"
+    if-ltz v2, :cond_4
 
-    const-string v2, "ScreenFlashTask#preCapture: UI change applied"
+    iget-object v0, p0, Lbz1;->c:Ljava/lang/Object;
 
-    invoke-static {v1, v2}, Lgfi;->a(Ljava/lang/String;Ljava/lang/String;)V
+    check-cast v0, Ljava/lang/Exception;
 
-    const/4 v1, 0x0
+    if-eq v0, p1, :cond_3
 
-    invoke-virtual {v0, v1}, Lgu1;->b(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+
+    :cond_3
+    iget-object p1, p0, Lbz1;->c:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/Exception;
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lbz1;->c:Ljava/lang/Object;
+
+    iput-wide v4, p0, Lbz1;->a:J
+
+    iput-wide v4, p0, Lbz1;->b:J
+
+    throw p1
+
+    :cond_4
+    const-wide/16 v2, 0x32
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lbz1;->b:J
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

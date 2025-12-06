@@ -1,270 +1,122 @@
-.class public final Lnv4;
-.super Ljava/lang/Object;
+.class public final enum Lnv4;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lc2h;
+
+# static fields
+.field public static final synthetic X:[Lnv4;
+
+.field public static volatile b:Lnv4;
+
+.field public static final enum c:Lnv4;
+
+.field public static final enum d:Lnv4;
+
+.field public static final enum o:Lnv4;
 
 
 # instance fields
-.field public final synthetic a:Landroid/graphics/Rect;
-
-.field public final synthetic b:Landroid/view/View;
-
-.field public final synthetic c:Landroid/view/View;
-
-.field public final synthetic d:Landroid/graphics/Rect;
-
-.field public final synthetic e:I
-
-.field public final synthetic f:I
+.field public final a:B
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/Rect;Landroid/view/View;Landroid/view/View;Landroid/graphics/Rect;II)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lnv4;
 
-    iput-object p1, p0, Lnv4;->a:Landroid/graphics/Rect;
+    const-string v1, "LOW"
 
-    iput-object p2, p0, Lnv4;->b:Landroid/view/View;
+    const/4 v2, 0x0
 
-    iput-object p3, p0, Lnv4;->c:Landroid/view/View;
+    const/4 v3, 0x1
 
-    iput-object p4, p0, Lnv4;->d:Landroid/graphics/Rect;
+    invoke-direct {v0, v1, v2, v3}, Lnv4;-><init>(Ljava/lang/String;IB)V
 
-    iput p5, p0, Lnv4;->e:I
+    sput-object v0, Lnv4;->c:Lnv4;
 
-    iput p6, p0, Lnv4;->f:I
+    new-instance v1, Lnv4;
+
+    const-string v2, "AVERAGE"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v1, v2, v3, v4}, Lnv4;-><init>(Ljava/lang/String;IB)V
+
+    sput-object v1, Lnv4;->d:Lnv4;
+
+    new-instance v2, Lnv4;
+
+    const-string v3, "HIGH"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v2, v3, v4, v5}, Lnv4;-><init>(Ljava/lang/String;IB)V
+
+    sput-object v2, Lnv4;->o:Lnv4;
+
+    filled-new-array {v0, v1, v2}, [Lnv4;
+
+    move-result-object v0
+
+    sput-object v0, Lnv4;->X:[Lnv4;
 
     return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;IB)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput-byte p3, p0, Lnv4;->a:B
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lnv4;
+    .locals 1
+
+    const-class v0, Lnv4;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lnv4;
+
+    return-object p0
+.end method
+
+.method public static values()[Lnv4;
+    .locals 1
+
+    sget-object v0, Lnv4;->X:[Lnv4;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lnv4;
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 0
+.method public final a()Z
+    .locals 1
 
-    return-void
-.end method
+    sget-object v0, Lnv4;->c:Lnv4;
 
-.method public final c(Landroid/graphics/Rect;Landroid/view/View;)V
-    .locals 9
+    if-ne p0, v0, :cond_0
 
-    iget-object p2, p0, Lnv4;->b:Landroid/view/View;
+    const/4 v0, 0x1
 
-    invoke-virtual {p2}, Landroid/view/View;->getWidth()I
-
-    move-result v0
-
-    invoke-virtual {p2}, Landroid/view/View;->getHeight()I
-
-    move-result v1
-
-    iget-object v2, p0, Lnv4;->a:Landroid/graphics/Rect;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v2, v3, v3, v0, v1}, Landroid/graphics/Rect;->set(IIII)V
-
-    iget-object v0, p0, Lnv4;->d:Landroid/graphics/Rect;
-
-    iget-object v1, p0, Lnv4;->c:Landroid/view/View;
-
-    invoke-static {v0, v1}, Lr1h;->d(Landroid/graphics/Rect;Landroid/view/View;)V
-
-    iget v1, p0, Lnv4;->e:I
-
-    invoke-virtual {v0, v1, v1}, Landroid/graphics/Rect;->inset(II)V
-
-    invoke-virtual {v0}, Landroid/graphics/Rect;->centerX()I
-
-    move-result v1
-
-    invoke-virtual {p1}, Landroid/graphics/Rect;->centerX()I
-
-    move-result v3
-
-    const/4 v4, 0x3
-
-    const/4 v5, 0x5
-
-    if-ge v1, v3, :cond_0
-
-    move v1, v5
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    move v1, v4
+    const/4 v0, 0x0
 
-    :goto_0
-    invoke-virtual {v0}, Landroid/graphics/Rect;->centerY()I
-
-    move-result v3
-
-    invoke-virtual {p1}, Landroid/graphics/Rect;->centerY()I
-
-    move-result v6
-
-    const/16 v7, 0x30
-
-    const/16 v8, 0x50
-
-    if-ge v3, v6, :cond_1
-
-    move v3, v8
-
-    goto :goto_1
-
-    :cond_1
-    move v3, v7
-
-    :goto_1
-    or-int/2addr v1, v3
-
-    and-int/lit8 v3, v1, 0x5
-
-    if-ne v3, v5, :cond_2
-
-    iget v3, p1, Landroid/graphics/Rect;->right:I
-
-    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
-
-    move-result v4
-
-    sub-int/2addr v3, v4
-
-    iget v4, v2, Landroid/graphics/Rect;->top:I
-
-    invoke-virtual {v2, v3, v4}, Landroid/graphics/Rect;->offsetTo(II)V
-
-    goto :goto_2
-
-    :cond_2
-    and-int/lit8 v3, v1, 0x3
-
-    if-ne v3, v4, :cond_3
-
-    iget v3, p1, Landroid/graphics/Rect;->left:I
-
-    iget v4, v2, Landroid/graphics/Rect;->top:I
-
-    invoke-virtual {v2, v3, v4}, Landroid/graphics/Rect;->offsetTo(II)V
-
-    :cond_3
-    :goto_2
-    and-int/lit8 v3, v1, 0x50
-
-    iget v4, p0, Lnv4;->f:I
-
-    if-ne v3, v8, :cond_4
-
-    iget v1, v2, Landroid/graphics/Rect;->left:I
-
-    iget p1, p1, Landroid/graphics/Rect;->top:I
-
-    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
-
-    move-result v3
-
-    sub-int/2addr p1, v3
-
-    sub-int/2addr p1, v4
-
-    invoke-virtual {v2, v1, p1}, Landroid/graphics/Rect;->offsetTo(II)V
-
-    goto :goto_3
-
-    :cond_4
-    and-int/2addr v1, v7
-
-    if-ne v1, v7, :cond_5
-
-    iget v1, v2, Landroid/graphics/Rect;->left:I
-
-    iget p1, p1, Landroid/graphics/Rect;->bottom:I
-
-    add-int/2addr p1, v4
-
-    invoke-virtual {v2, v1, p1}, Landroid/graphics/Rect;->offsetTo(II)V
-
-    :cond_5
-    :goto_3
-    invoke-virtual {v0, v2}, Landroid/graphics/Rect;->contains(Landroid/graphics/Rect;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_9
-
-    iget p1, v2, Landroid/graphics/Rect;->left:I
-
-    iget v1, v0, Landroid/graphics/Rect;->left:I
-
-    if-ge p1, v1, :cond_6
-
-    iget p1, v2, Landroid/graphics/Rect;->top:I
-
-    invoke-virtual {v2, v1, p1}, Landroid/graphics/Rect;->offsetTo(II)V
-
-    :cond_6
-    iget p1, v2, Landroid/graphics/Rect;->top:I
-
-    iget v1, v0, Landroid/graphics/Rect;->top:I
-
-    if-ge p1, v1, :cond_7
-
-    iget p1, v2, Landroid/graphics/Rect;->left:I
-
-    invoke-virtual {v2, p1, v1}, Landroid/graphics/Rect;->offsetTo(II)V
-
-    :cond_7
-    iget p1, v2, Landroid/graphics/Rect;->bottom:I
-
-    iget v1, v0, Landroid/graphics/Rect;->bottom:I
-
-    if-le p1, v1, :cond_8
-
-    iget p1, v2, Landroid/graphics/Rect;->left:I
-
-    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
-
-    move-result v3
-
-    sub-int/2addr v1, v3
-
-    invoke-virtual {v2, p1, v1}, Landroid/graphics/Rect;->offsetTo(II)V
-
-    :cond_8
-    iget p1, v2, Landroid/graphics/Rect;->right:I
-
-    iget v0, v0, Landroid/graphics/Rect;->right:I
-
-    if-le p1, v0, :cond_9
-
-    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
-
-    move-result p1
-
-    sub-int/2addr v0, p1
-
-    iget p1, v2, Landroid/graphics/Rect;->top:I
-
-    invoke-virtual {v2, v0, p1}, Landroid/graphics/Rect;->offsetTo(II)V
-
-    :cond_9
-    iget p1, v2, Landroid/graphics/Rect;->left:I
-
-    int-to-float p1, p1
-
-    invoke-virtual {p2, p1}, Landroid/view/View;->setX(F)V
-
-    iget p1, v2, Landroid/graphics/Rect;->top:I
-
-    int-to-float p1, p1
-
-    invoke-virtual {p2, p1}, Landroid/view/View;->setY(F)V
-
-    return-void
+    return v0
 .end method

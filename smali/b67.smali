@@ -1,33 +1,58 @@
-.class public abstract Lb67;
+.class public final synthetic Lb67;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final a:Ljava/util/regex/Pattern;
 
-.field public static final b:Ljava/util/regex/Pattern;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lh67;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lh67;I)V
+    .locals 0
 
-    const-string v0, "bytes (\\d+)-(\\d+)/(?:\\d+|\\*)"
+    iput p2, p0, Lb67;->a:I
 
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    iput-object p1, p0, Lb67;->b:Lh67;
 
-    move-result-object v0
-
-    sput-object v0, Lb67;->a:Ljava/util/regex/Pattern;
-
-    const-string v0, "bytes (?:(?:\\d+-\\d+)|\\*)/(\\d+)"
-
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Lb67;->b:Ljava/util/regex/Pattern;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 2
+
+    iget v0, p0, Lb67;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const/4 v0, 0x1
+
+    iget-object v1, p0, Lb67;->b:Lh67;
+
+    iput-boolean v0, v1, Lh67;->M0:Z
+
+    invoke-virtual {v1}, Lh67;->t()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lb67;->b:Lh67;
+
+    invoke-virtual {v0}, Lh67;->t()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

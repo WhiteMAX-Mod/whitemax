@@ -2,22 +2,21 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lnmg;
+
 
 # instance fields
-.field public a:Lru3;
+.field public final a:Z
 
-.field public b:Ljava/lang/String;
 
-.field public c:Ljava/lang/String;
+# direct methods
+.method public constructor <init>(Z)V
+    .locals 0
 
-.field public d:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public e:I
+    iput-boolean p1, p0, Lmmg;->a:Z
 
-.field public f:J
-
-.field public g:Ljava/util/List;
-
-.field public h:B
-
-.field public i:J
+    return-void
+.end method

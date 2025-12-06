@@ -1,17 +1,88 @@
-.class public Lo55;
-.super Ln55;
+.class public final Lo55;
+.super Lh45;
 .source "SourceFile"
 
 
+# instance fields
+.field public b:Z
+
+
 # virtual methods
-.method public a(Landroid/view/Window;)V
-    .locals 0
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 1
 
-    invoke-virtual {p1}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
+    iget-boolean v0, p0, Lo55;->b:Z
 
-    move-result-object p1
+    if-eqz v0, :cond_0
 
-    invoke-static {p1}, Lv4;->t(Landroid/view/WindowManager$LayoutParams;)V
+    invoke-super {p0, p1}, Lh45;->draw(Landroid/graphics/Canvas;)V
 
+    :cond_0
     return-void
+.end method
+
+.method public final setHotspot(FF)V
+    .locals 1
+
+    iget-boolean v0, p0, Lo55;->b:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-super {p0, p1, p2}, Lh45;->setHotspot(FF)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final setHotspotBounds(IIII)V
+    .locals 1
+
+    iget-boolean v0, p0, Lo55;->b:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-super {p0, p1, p2, p3, p4}, Lh45;->setHotspotBounds(IIII)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final setState([I)Z
+    .locals 1
+
+    iget-boolean v0, p0, Lo55;->b:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lh45;->a:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final setVisible(ZZ)Z
+    .locals 1
+
+    iget-boolean v0, p0, Lo55;->b:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-super {p0, p1, p2}, Lh45;->setVisible(ZZ)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
 .end method

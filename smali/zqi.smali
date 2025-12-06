@@ -1,128 +1,70 @@
-.class public final synthetic Lzqi;
+.class public final Lzqi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcfc;
+.implements Lpqa;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ln4g;
+# static fields
+.field public static final a:Lzqi;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ln4g;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p2, p0, Lzqi;->a:I
+    new-instance v0, Lzqi;
 
-    iput-object p1, p0, Lzqi;->b:Ln4g;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lzqi;->a:Lzqi;
+
+    new-instance v0, Lmli;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lmli;-><init>(I)V
+
+    const-class v1, Lemi;
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 4
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    iget v0, p0, Lzqi;->a:I
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p1
 
-    new-instance v0, Lhc5;
-
-    const-string v1, "proto"
-
-    invoke-direct {v0, v1}, Lhc5;-><init>(Ljava/lang/String;)V
-
-    new-instance v1, Lxea;
-
-    const/16 v2, 0x10
-
-    invoke-direct {v1, v2}, Lxea;-><init>(I)V
-
-    iget-object v2, p0, Lzqi;->b:Ln4g;
-
-    const-string v3, "FIREBASE_ML_SDK"
-
-    invoke-virtual {v2, v3, v0, v1}, Ln4g;->a(Ljava/lang/String;Lhc5;Ll3g;)Lo4g;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Lhc5;
-
-    const-string v1, "json"
-
-    invoke-direct {v0, v1}, Lhc5;-><init>(Ljava/lang/String;)V
-
-    new-instance v1, Llga;
-
-    const/16 v2, 0x10
-
-    invoke-direct {v1, v2}, Llga;-><init>(I)V
-
-    iget-object v2, p0, Lzqi;->b:Ln4g;
-
-    const-string v3, "FIREBASE_ML_SDK"
-
-    invoke-virtual {v2, v3, v0, v1}, Ln4g;->a(Ljava/lang/String;Lhc5;Ll3g;)Lo4g;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1
-    new-instance v0, Lhc5;
-
-    const-string v1, "proto"
-
-    invoke-direct {v0, v1}, Lhc5;-><init>(Ljava/lang/String;)V
-
-    sget-object v1, Lev7;->q0:Lev7;
-
-    iget-object v2, p0, Lzqi;->b:Ln4g;
-
-    const-string v3, "FIREBASE_ML_SDK"
-
-    invoke-virtual {v2, v3, v0, v1}, Ln4g;->a(Ljava/lang/String;Lhc5;Ll3g;)Lo4g;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_2
-    new-instance v0, Lhc5;
-
-    const-string v1, "json"
-
-    invoke-direct {v0, v1}, Lhc5;-><init>(Ljava/lang/String;)V
-
-    sget-object v1, Lye8;->Z:Lye8;
-
-    iget-object v2, p0, Lzqi;->b:Ln4g;
-
-    const-string v3, "FIREBASE_ML_SDK"
-
-    invoke-virtual {v2, v3, v0, v1}, Ln4g;->a(Ljava/lang/String;Lhc5;Ll3g;)Lo4g;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

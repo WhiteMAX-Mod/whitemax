@@ -1,104 +1,97 @@
-.class public final synthetic Lt7a;
-.super Ljava/lang/Object;
+.class public final Lt7a;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Lh7a;
-.implements Llj6;
+.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic a:Ln8a;
+.field public final synthetic o:Lb8a;
 
 
 # direct methods
-.method public constructor <init>(Ln8a;)V
+.method public constructor <init>(Lb8a;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lt7a;->o:Lb8a;
 
-    iput-object p1, p0, Lt7a;->a:Ln8a;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lz6a;)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lt7a;->a:Ln8a;
+    check-cast p1, Lf84;
 
-    invoke-virtual {v0, p1}, Ln8a;->x(Lz6a;)V
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return-void
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    instance-of v0, p1, Lh7a;
-
-    if-eqz v0, :cond_0
-
-    instance-of v0, p1, Llj6;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lt7a;->getFunctionDelegate()Lej6;
-
-    move-result-object v0
-
-    check-cast p1, Llj6;
-
-    invoke-interface {p1}, Llj6;->getFunctionDelegate()Lej6;
+    invoke-virtual {p0, p1, p2}, Lt7a;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    check-cast p1, Lt7a;
 
-    move-result p1
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    return p1
+    invoke-virtual {p1, p2}, Lt7a;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
+    return-object p2
 .end method
 
-.method public final getFunctionDelegate()Lej6;
-    .locals 7
-
-    new-instance v0, Loj6;
-
-    const-string v6, "selectAvatar(Lone/me/login/common/avatars/NeuroAvatarModel;)V"
-
-    const/4 v2, 0x0
-
-    const/4 v1, 0x1
-
-    const-class v3, Ln8a;
-
-    iget-object v4, p0, Lt7a;->a:Ln8a;
-
-    const-string v5, "selectAvatar"
-
-    invoke-direct/range {v0 .. v6}, Lnj6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public final hashCode()I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    invoke-virtual {p0}, Lt7a;->getFunctionDelegate()Lej6;
+    new-instance p1, Lt7a;
 
-    move-result-object v0
+    iget-object v0, p0, Lt7a;->o:Lb8a;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-direct {p1, v0, p2}, Lt7a;-><init>(Lb8a;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lt7a;->o:Lb8a;
+
+    iget-object p1, p1, Lb8a;->w0:Lpx8;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Lpx8;->D()V
+
+    iget-object p1, p1, Lpx8;->c:Lox8;
+
+    invoke-interface {p1}, Lox8;->isConnected()Z
 
     move-result v0
 
-    return v0
+    if-nez v0, :cond_0
+
+    const-string p1, "MediaController"
+
+    const-string v0, "The controller is not connected. Ignoring pause()."
+
+    invoke-static {p1, v0}, La8i;->l(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-interface {p1}, Lox8;->pause()V
+
+    :cond_1
+    :goto_0
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

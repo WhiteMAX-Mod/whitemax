@@ -1,106 +1,63 @@
-.class public final synthetic Leq1;
-.super Ljava/lang/Object;
+.class public final Leq1;
+.super Lid0;
 .source "SourceFile"
 
-# interfaces
-.implements Lji6;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Landroid/content/Context;
-
-.field public final synthetic c:Lhq1;
+# static fields
+.field public static final b:Leq1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;Lhq1;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p3, p0, Leq1;->a:I
+    new-instance v0, Leq1;
 
-    iput-object p1, p0, Leq1;->b:Landroid/content/Context;
+    sget-object v1, Lqqg;->a:Lqqg;
 
-    iput-object p2, p0, Leq1;->c:Lhq1;
+    invoke-direct {v0, v1}, Lcda;-><init>(Ljava/lang/Object;)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Leq1;->b:Leq1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Leq1;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    new-instance v0, Lcj1;
+    return v0
 
-    iget-object v1, p0, Leq1;->b:Landroid/content/Context;
+    :cond_0
+    instance-of p1, p1, Leq1;
 
-    invoke-direct {v0, v1}, Lcj1;-><init>(Landroid/content/Context;)V
+    if-nez p1, :cond_1
 
-    sget-object v1, Ll05;->s0:Lk82;
+    const/4 p1, 0x0
 
-    invoke-virtual {v1, v0}, Lk82;->q(Landroid/view/View;)Lewa;
+    return p1
 
-    move-result-object v1
+    :cond_1
+    return v0
+.end method
 
-    iget-object v1, v1, Lewa;->c:Lv5b;
+.method public final hashCode()I
+    .locals 1
 
-    invoke-virtual {v0, v1}, Lcj1;->setPipTheme(Lv5b;)V
+    const v0, -0x34cc058a    # -1.1795062E7f
 
-    sget-object v1, Lzi1;->b:Lzi1;
+    return v0
+.end method
 
-    invoke-virtual {v0, v1}, Lcj1;->setPipMode(Lzi1;)V
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-static {}, Landroid/view/View;->generateViewId()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
-
-    new-instance v1, Li5;
-
-    const/4 v2, 0x5
-
-    iget-object v3, p0, Leq1;->c:Lhq1;
-
-    invoke-direct {v1, v2, v3}, Li5;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v1}, Lcj1;->setListener(Lrs1;)V
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    new-instance v1, Ldq1;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, v3, v2}, Ldq1;-><init>(Lhq1;I)V
-
-    invoke-virtual {v0, v1}, Lcj1;->setVideoLayoutUpdatesControllerProvider(Lji6;)V
+    const-string v0, "ShowCreateP2PLinkCallErrorBanner"
 
     return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Leq1;->b:Landroid/content/Context;
-
-    iget-object v1, p0, Leq1;->c:Lhq1;
-
-    invoke-static {v0, v1}, Lhq1;->w(Landroid/content/Context;Lhq1;)Landroidx/recyclerview/widget/RecyclerView;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -3,191 +3,248 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final i:Ljava/util/concurrent/ConcurrentHashMap;
+
+
 # instance fields
-.field public final a:J
+.field public final a:Lqeg;
 
-.field public final b:Ljava/lang/String;
+.field public final b:Losf;
 
-.field public final c:Ljava/util/List;
+.field public final c:Lukd;
 
-.field public final d:Lef9;
+.field public final d:Lvd;
+
+.field public final e:Lu5i;
+
+.field public volatile f:Z
+
+.field public final g:Ljava/lang/Object;
+
+.field public final h:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/util/List;Lef9;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    sput-object v0, Lkeg;->i:Ljava/util/concurrent/ConcurrentHashMap;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lqeg;)V
+    .locals 5
+
+    new-instance v0, Losf;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lkeg;->a:J
+    iput-object p1, p0, Lkeg;->a:Lqeg;
 
-    iput-object p3, p0, Lkeg;->b:Ljava/lang/String;
+    iput-object v0, p0, Lkeg;->b:Losf;
 
-    iput-object p4, p0, Lkeg;->c:Ljava/util/List;
+    new-instance v0, Lukd;
 
-    iput-object p5, p0, Lkeg;->d:Lef9;
+    const/16 v1, 0x16
+
+    invoke-direct {v0, v1}, Lukd;-><init>(I)V
+
+    iput-object v0, p0, Lkeg;->c:Lukd;
+
+    iget-object v0, p1, Lqeg;->k:Lvd;
+
+    iput-object v0, p0, Lkeg;->d:Lvd;
+
+    new-instance v1, Lu5i;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, v1, Lu5i;->a:Ljava/lang/Object;
+
+    iget-object v2, p1, Lqeg;->i:Lhc8;
+
+    iput-object v2, v1, Lu5i;->b:Ljava/lang/Object;
+
+    new-instance v2, Lmc5;
+
+    const/16 v3, 0xa
+
+    const/4 v4, 0x0
+
+    invoke-direct {v2, v3, v4}, Lmc5;-><init>(IZ)V
+
+    iput-object v0, v2, Lmc5;->b:Ljava/lang/Object;
+
+    new-instance v0, Liv6;
+
+    invoke-direct {v0, v2}, Liv6;-><init>(Lmc5;)V
+
+    iput-object v0, v1, Lu5i;->c:Ljava/lang/Object;
+
+    iput-object v1, p0, Lkeg;->e:Lu5i;
+
+    new-instance v0, Lm2;
+
+    const/16 v1, 0xd
+
+    invoke-direct {v0, v1, p0}, Lm2;-><init>(ILjava/lang/Object;)V
+
+    const/4 v1, 0x2
+
+    invoke-static {v1, v0}, Lipi;->b(ILcm6;)Lk18;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lkeg;->g:Ljava/lang/Object;
+
+    iget-object p1, p1, Lqeg;->a:Ljava/lang/String;
+
+    sget-object v0, Lkeg;->i:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-nez v1, :cond_1
+
+    new-instance v1, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-direct {v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+
+    invoke-virtual {v0, p1, v1}, Ljava/util/concurrent/ConcurrentHashMap;->putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move-object v1, p1
+
+    :cond_1
+    :goto_0
+    check-cast v1, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    iput-object v1, p0, Lkeg;->h:Ljava/util/concurrent/atomic/AtomicInteger;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lkeg;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lkeg;
-
-    iget-wide v3, p0, Lkeg;->a:J
-
-    iget-wide v5, p1, Lkeg;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lkeg;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lkeg;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lkeg;->c:Ljava/util/List;
-
-    iget-object v3, p1, Lkeg;->c:Ljava/util/List;
-
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lkeg;->d:Lef9;
-
-    iget-object p1, p1, Lkeg;->d:Lef9;
-
-    if-eq v1, p1, :cond_5
-
-    return v2
-
-    :cond_5
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final a(Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 3
 
-    iget-wide v0, p0, Lkeg;->a:J
+    iget-boolean v0, p0, Lkeg;->f:Z
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    const-string v1, "Tracer"
+
+    if-eqz v0, :cond_0
+
+    const-string p1, "Tracer is disabled"
+
+    invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lkeg;->g:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lkeg;->b:Ljava/lang/String;
-
-    if-nez v2, :cond_0
-
-    const/4 v2, 0x0
+    if-nez v0, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+    :cond_1
+    iget-object v0, p0, Lkeg;->d:Lvd;
 
-    move-result v2
-
-    :goto_0
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lkeg;->c:Ljava/util/List;
-
-    invoke-static {v2, v0, v1}, Lzdf;->n(Ljava/util/List;II)I
+    invoke-virtual {v0}, Lvd;->o()Z
 
     move-result v0
 
-    iget-object v1, p0, Lkeg;->d:Lef9;
+    if-eqz v0, :cond_2
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    const-string p1, "Feature CRASH_REPORT limited"
 
-    move-result v1
+    invoke-static {v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    add-int/2addr v1, v0
+    return-void
 
-    return v1
-.end method
+    :cond_2
+    iget-object v0, p0, Lkeg;->h:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
 
-    const-string v0, "UpdateTextEntity(id="
+    move-result v0
 
-    const-string v1, ", text="
+    const/16 v2, 0x8
 
-    iget-wide v2, p0, Lkeg;->a:J
+    if-le v0, v2, :cond_4
 
-    iget-object v4, p0, Lkeg;->b:Ljava/lang/String;
+    const-string p1, "Can\'t handle non fatal exception. Max non fatal count is reached for this session."
 
-    invoke-static {v0, v2, v3, v1, v4}, Li57;->m(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    move-result-object v0
+    sub-int/2addr v0, v2
 
-    const-string v1, ", elements="
+    const/4 p1, 0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-ne v0, p1, :cond_3
 
-    iget-object v1, p0, Lkeg;->c:Ljava/util/List;
+    iget-object p1, p0, Lkeg;->a:Lqeg;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object p1, p1, Lqeg;->j:Lkme;
 
-    const-string v1, ", status="
+    iget-object p1, p1, Lkme;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast p1, Ljava/util/concurrent/Executor;
 
-    iget-object v1, p0, Lkeg;->d:Lef9;
+    new-instance p2, Lbee;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const/16 v0, 0x17
 
-    const-string v1, ")"
+    invoke-direct {p2, v0, p0}, Lbee;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {p1, p2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_3
+    :goto_0
+    return-void
 
-    move-result-object v0
+    :cond_4
+    iget-object v0, p0, Lkeg;->a:Lqeg;
 
-    return-object v0
+    iget-object v0, v0, Lqeg;->j:Lkme;
+
+    iget-object v0, v0, Lkme;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/Executor;
+
+    new-instance v1, Lzcd;
+
+    const/16 v2, 0xc
+
+    invoke-direct {v1, p0, p2, p1, v2}, Lzcd;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
 .end method

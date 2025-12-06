@@ -1,124 +1,146 @@
 .class public final Lto7;
-.super Ljava/lang/Object;
+.super Lro7;
 .source "SourceFile"
-
-# interfaces
-.implements Lvf4;
 
 
 # static fields
-.field public static final a:Lto7;
-
-.field public static final b:Luo7;
+.field public static final d:Lto7;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 3
 
     new-instance v0, Lto7;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x1
 
-    sput-object v0, Lto7;->a:Lto7;
+    const/4 v2, 0x0
 
-    sget-object v0, Luo7;->b:Luo7;
+    invoke-direct {v0, v1, v2, v1}, Lro7;-><init>(III)V
 
-    sput-object v0, Lto7;->b:Luo7;
+    sput-object v0, Lto7;->d:Lto7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ldg4;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    sget-object v0, Lto7;->b:Luo7;
+    instance-of v0, p1, Lto7;
 
-    return-object v0
-.end method
+    if-eqz v0, :cond_2
 
-.method public final b(Ljava/lang/String;Lyf4;Landroid/os/Bundle;)Lgg4;
-    .locals 8
-
-    sget-object v0, Lto7;->b:Luo7;
-
-    iget-object v0, v0, Ldg4;->a:Ljava/util/LinkedHashSet;
-
-    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+    invoke-virtual {p0}, Lto7;->isEmpty()Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    const/4 p1, 0x0
+    move-object v0, p1
 
-    return-object p1
+    check-cast v0, Lto7;
+
+    invoke-virtual {v0}, Lto7;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
 
     :cond_0
-    new-instance v5, Leg4;
+    check-cast p1, Lto7;
 
-    new-instance v0, Lrk7;
+    iget v0, p1, Lro7;->a:I
 
-    const/16 v1, 0x8
+    iget v1, p0, Lro7;->a:I
 
-    invoke-direct {v0, v1}, Lrk7;-><init>(I)V
+    if-ne v1, v0, :cond_2
 
-    new-instance v1, Lrk7;
+    iget v0, p0, Lro7;->b:I
 
-    const/16 v2, 0x9
+    iget p1, p1, Lro7;->b:I
 
-    invoke-direct {v1, v2}, Lrk7;-><init>(I)V
+    if-ne v0, p1, :cond_2
 
-    invoke-direct {v5, v0, v1}, Leg4;-><init>(Lji6;Lji6;)V
+    :cond_1
+    const/4 p1, 0x1
 
-    sget-object v0, Luo7;->b:Luo7;
+    return p1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :cond_2
+    const/4 p1, 0x0
 
-    sget-object v0, Luo7;->c:Lyf4;
+    return p1
+.end method
 
-    invoke-virtual {p2, v0}, Lyf4;->equals(Ljava/lang/Object;)Z
+.method public final hashCode()I
+    .locals 2
+
+    invoke-virtual {p0}, Lto7;->isEmpty()Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
-    new-instance v6, Lzo1;
+    const/4 v0, -0x1
 
-    const/4 v0, 0x7
+    return v0
 
-    invoke-direct {v6, p3, v0}, Lzo1;-><init>(Landroid/os/Bundle;I)V
+    :cond_0
+    iget v0, p0, Lro7;->a:I
 
-    new-instance v0, Lgg4;
+    mul-int/lit8 v0, v0, 0x1f
 
-    const/16 v7, 0x8
+    iget v1, p0, Lro7;->b:I
 
-    const/4 v4, 0x0
+    add-int/2addr v0, v1
 
-    move-object v1, p1
+    return v0
+.end method
 
-    move-object v2, p2
+.method public final isEmpty()Z
+    .locals 2
 
-    move-object v3, p3
+    iget v0, p0, Lro7;->a:I
 
-    invoke-direct/range {v0 .. v7}, Lgg4;-><init>(Ljava/lang/String;Lyf4;Landroid/os/Bundle;ILeg4;Lfg4;I)V
+    iget v1, p0, Lro7;->b:I
+
+    if-le v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget v1, p0, Lro7;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ".."
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lro7;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-
-    :cond_1
-    move-object v2, p2
-
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "unknown screen "
-
-    invoke-static {p2, v2}, Ldy1;->h(Ljava/lang/String;Lyf4;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method

@@ -1,240 +1,242 @@
-.class public final enum Lhih;
-.super Ljava/lang/Enum;
+.class public final Lhih;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lkch;
-
-
-# static fields
-.field public static final enum X:Lhih;
-
-.field public static final enum Y:Lhih;
-
-.field public static final enum Z:Lhih;
-
-.field public static final enum o:Lhih;
-
-.field public static final enum q0:Lhih;
-
-.field public static final enum r0:Lhih;
-
-.field public static final synthetic s0:[Lhih;
-
-.field public static final synthetic t0:Lzd5;
+.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:Ldy;
 
-.field public final b:Ljava/lang/String;
+.field public final synthetic b:Landroid/view/View;
 
-.field public final c:Ljava/lang/Integer;
+.field public final synthetic c:Landroid/view/View;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 11
-
-    new-instance v0, Lhih;
-
-    const/4 v1, 0x1
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    const-string v1, "SECURE_SAVE_KEY"
-
-    const/4 v2, 0x0
-
-    const-string v3, "WebAppSecureStorageSaveKey"
-
-    const-string v4, "secure_storage_save_key"
-
-    invoke-direct/range {v0 .. v5}, Lhih;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
-
-    sput-object v0, Lhih;->o:Lhih;
-
-    new-instance v1, Lhih;
-
-    const/4 v2, 0x2
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    const-string v2, "SECURE_GET_KEY"
-
-    const/4 v3, 0x1
-
-    const-string v4, "WebAppSecureStorageGetKey"
-
-    const-string v5, "secure_storage_get_key"
-
-    invoke-direct/range {v1 .. v6}, Lhih;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
-
-    sput-object v1, Lhih;->X:Lhih;
-
-    new-instance v2, Lhih;
-
-    const/4 v3, 0x4
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v7
-
-    const-string v3, "SECURE_CLEAR_KEYS"
-
-    const/4 v4, 0x2
-
-    const-string v5, "WebAppSecureStorageClear"
-
-    const-string v6, "secure_storage_clear"
-
-    invoke-direct/range {v2 .. v7}, Lhih;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
-
-    sput-object v2, Lhih;->Y:Lhih;
-
-    new-instance v3, Lhih;
-
-    const/4 v4, 0x5
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v8
-
-    const-string v4, "SAVE_KEY"
-
-    const/4 v5, 0x3
-
-    const-string v6, "WebAppDeviceStorageSaveKey"
-
-    const-string v7, "device_storage_save_key"
-
-    invoke-direct/range {v3 .. v8}, Lhih;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
-
-    sput-object v3, Lhih;->Z:Lhih;
-
-    new-instance v4, Lhih;
-
-    const/4 v5, 0x6
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v9
-
-    const-string v5, "GET_KEY"
-
-    const/4 v6, 0x4
-
-    const-string v7, "WebAppDeviceStorageGetKey"
-
-    const-string v8, "device_storage_get_key"
-
-    invoke-direct/range {v4 .. v9}, Lhih;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
-
-    sput-object v4, Lhih;->q0:Lhih;
-
-    new-instance v5, Lhih;
-
-    const/4 v6, 0x7
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v10
-
-    const-string v6, "CLEAR_KEYS"
-
-    const/4 v7, 0x5
-
-    const-string v8, "WebAppDeviceStorageClear"
-
-    const-string v9, "device_storage_clear"
-
-    invoke-direct/range {v5 .. v10}, Lhih;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
-
-    sput-object v5, Lhih;->r0:Lhih;
-
-    filled-new-array/range {v0 .. v5}, [Lhih;
-
-    move-result-object v0
-
-    sput-object v0, Lhih;->s0:[Lhih;
-
-    new-instance v1, Lzd5;
-
-    invoke-direct {v1, v0}, Lzd5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lhih;->t0:Lzd5;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)V
+.method public constructor <init>(Ldy;Landroid/view/View;Landroid/view/View;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lhih;->a:Ljava/lang/String;
+    iput-object p1, p0, Lhih;->a:Ldy;
 
-    iput-object p4, p0, Lhih;->b:Ljava/lang/String;
+    iput-object p2, p0, Lhih;->b:Landroid/view/View;
 
-    iput-object p5, p0, Lhih;->c:Ljava/lang/Integer;
+    iput-object p3, p0, Lhih;->c:Landroid/view/View;
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lhih;
-    .locals 1
-
-    const-class v0, Lhih;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lhih;
-
-    return-object p0
-.end method
-
-.method public static values()[Lhih;
-    .locals 1
-
-    sget-object v0, Lhih;->s0:[Lhih;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lhih;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Integer;
-    .locals 1
+.method public final onPreDraw()Z
+    .locals 9
 
-    iget-object v0, p0, Lhih;->c:Ljava/lang/Integer;
+    iget-object v0, p0, Lhih;->a:Ldy;
 
-    return-object v0
-.end method
+    iget-object v1, v0, Ldy;->X:Ljava/lang/Object;
 
-.method public final c()Ljava/lang/String;
-    .locals 1
+    check-cast v1, Ljava/util/ArrayList;
 
-    iget-object v0, p0, Lhih;->a:Ljava/lang/String;
+    iget v2, v0, Ldy;->b:I
 
-    return-object v0
-.end method
+    iget-object v3, v0, Ldy;->Y:Ljava/lang/Object;
 
-.method public final d()Ljava/lang/String;
-    .locals 1
+    check-cast v3, Ljava/lang/ref/WeakReference;
 
-    iget-object v0, p0, Lhih;->b:Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    return-object v0
+    move-result-object v3
+
+    check-cast v3, Landroid/view/View;
+
+    const/4 v4, 0x1
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    if-eqz v3, :cond_2
+
+    invoke-virtual {v3}, Landroid/view/View;->getId()I
+
+    move-result v7
+
+    if-ne v7, v2, :cond_0
+
+    invoke-virtual {v3}, Landroid/view/View;->isAttachedToWindow()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_0
+
+    invoke-virtual {v3}, Landroid/view/View;->getVisibility()I
+
+    move-result v7
+
+    if-nez v7, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move-object v3, v5
+
+    :goto_0
+    if-nez v3, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    move v7, v6
+
+    goto :goto_2
+
+    :cond_2
+    :goto_1
+    iget-object v3, v0, Ldy;->Y:Ljava/lang/Object;
+
+    check-cast v3, Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v3}, Ljava/lang/ref/Reference;->clear()V
+
+    move v7, v4
+
+    move-object v3, v5
+
+    :goto_2
+    if-nez v3, :cond_5
+
+    iget-object v3, p0, Lhih;->b:Landroid/view/View;
+
+    if-eqz v3, :cond_3
+
+    invoke-virtual {v3, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v3
+
+    if-nez v3, :cond_4
+
+    :cond_3
+    iget-object v3, p0, Lhih;->c:Landroid/view/View;
+
+    invoke-virtual {v3}, Landroid/view/View;->getRootView()Landroid/view/View;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v3
+
+    :cond_4
+    if-eqz v3, :cond_6
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v2
+
+    iget-object v8, v0, Ldy;->d:Ljava/lang/Object;
+
+    check-cast v8, Ljava/lang/Class;
+
+    invoke-virtual {v2, v8}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_6
+
+    :cond_5
+    move-object v5, v3
+
+    :cond_6
+    if-eqz v5, :cond_9
+
+    if-eqz v7, :cond_7
+
+    new-instance v2, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v2, v5}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v2, v0, Ldy;->Y:Ljava/lang/Object;
+
+    invoke-virtual {v2}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/view/View;
+
+    if-eqz v2, :cond_7
+
+    invoke-virtual {v2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_7
+
+    invoke-interface {v2, v4}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
+
+    :cond_7
+    iput-boolean v4, v0, Ldy;->c:Z
+
+    iget-object v0, v0, Ldy;->o:Ljava/lang/Object;
+
+    check-cast v0, Landroid/graphics/Rect;
+
+    invoke-static {v0, v5}, Lshh;->d(Landroid/graphics/Rect;Landroid/view/View;)V
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_3
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_8
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Leih;
+
+    invoke-interface {v2, v0, v5}, Leih;->c(Landroid/graphics/Rect;Landroid/view/View;)V
+
+    goto :goto_3
+
+    :cond_8
+    return v4
+
+    :cond_9
+    iget-boolean v2, v0, Ldy;->c:Z
+
+    if-eqz v2, :cond_a
+
+    iput-boolean v6, v0, Ldy;->c:Z
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_4
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_a
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Leih;
+
+    invoke-interface {v1}, Leih;->a()V
+
+    goto :goto_4
+
+    :cond_a
+    return v4
 .end method

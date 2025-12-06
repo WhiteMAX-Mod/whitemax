@@ -1,184 +1,131 @@
 .class public final Lpng;
-.super Ljava/lang/Object;
+.super Ldtf;
 .source "SourceFile"
+
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic X:Ljava/lang/Object;
 
-.field public final b:I
+.field public final synthetic Y:Lsng;
 
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(IIIII)V
+.method public constructor <init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lsng;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lpng;->X:Ljava/lang/Object;
 
-    iput p1, p0, Lpng;->a:I
+    iput-object p3, p0, Lpng;->Y:Lsng;
 
-    iput p2, p0, Lpng;->b:I
+    const/4 p1, 0x2
 
-    iput p3, p0, Lpng;->c:I
-
-    iput p4, p0, Lpng;->d:I
-
-    iput p5, p0, Lpng;->e:I
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lf84;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Lpng;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Lpng;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lpng;
 
-    iget v1, p0, Lpng;->a:I
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    iget v3, p1, Lpng;->a:I
+    invoke-virtual {p1, p2}, Lpng;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eq v1, v3, :cond_2
+    move-result-object p1
 
-    return v2
-
-    :cond_2
-    iget v1, p0, Lpng;->b:I
-
-    iget v3, p1, Lpng;->b:I
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget v1, p0, Lpng;->c:I
-
-    iget v3, p1, Lpng;->c:I
-
-    if-eq v1, v3, :cond_4
-
-    return v2
-
-    :cond_4
-    iget v1, p0, Lpng;->d:I
-
-    iget v3, p1, Lpng;->d:I
-
-    if-eq v1, v3, :cond_5
-
-    return v2
-
-    :cond_5
-    iget v1, p0, Lpng;->e:I
-
-    iget p1, p1, Lpng;->e:I
-
-    if-eq v1, p1, :cond_6
-
-    return v2
-
-    :cond_6
-    return v0
+    return-object p1
 .end method
 
-.method public final hashCode()I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget v0, p0, Lpng;->a:I
+    new-instance p1, Lpng;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    iget-object v0, p0, Lpng;->X:Ljava/lang/Object;
 
-    move-result v0
+    iget-object v1, p0, Lpng;->Y:Lsng;
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-direct {p1, v0, p2, v1}, Lpng;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lsng;)V
 
-    iget v1, p0, Lpng;->b:I
-
-    invoke-static {v1, v0}, Lcgi;->a(II)I
-
-    move-result v0
-
-    iget v1, p0, Lpng;->c:I
-
-    invoke-static {v1, v0}, Lcgi;->a(II)I
-
-    move-result v0
-
-    iget v1, p0, Lpng;->d:I
-
-    invoke-static {v1, v0}, Lcgi;->a(II)I
-
-    move-result v0
-
-    iget v1, p0, Lpng;->e:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    const-string v0, ", landscapeHeight="
+    iget v0, p0, Lpng;->o:I
 
-    const-string v1, ", portraitWidth="
+    const/4 v1, 0x1
 
-    const-string v2, "VideoDimension(landscapeWidth="
+    if-eqz v0, :cond_1
 
-    iget v3, p0, Lpng;->a:I
+    if-ne v0, v1, :cond_0
 
-    iget v4, p0, Lpng;->b:I
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    invoke-static {v2, v3, v0, v4, v1}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    return-object p1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lpng;->X:Ljava/lang/Object;
+
+    check-cast p1, Lf84;
+
+    iget-object p1, p0, Lpng;->Y:Lsng;
+
+    iget-object v0, p1, Lsng;->d:Lk18;
+
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    const-string v1, ", portraitHeight="
+    check-cast v0, Lhwa;
 
-    const-string v2, ", fps="
+    new-instance v2, Lwua;
 
-    iget v3, p0, Lpng;->c:I
+    iget-object p1, p1, Lsng;->b:Ljava/lang/String;
 
-    iget v4, p0, Lpng;->d:I
+    invoke-direct {v2, p1}, Lwua;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0, v3, v1, v4, v2}, Lzb3;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    iput v1, p0, Lpng;->o:I
 
-    const-string v1, ")"
+    invoke-virtual {v0, v2, p0}, Lhwa;->F(Ln2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    iget v2, p0, Lpng;->e:I
+    move-result-object p1
 
-    invoke-static {v0, v2, v1}, Li57;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    sget-object v0, Lg84;->a:Lg84;
 
-    move-result-object v0
+    if-ne p1, v0, :cond_2
 
     return-object v0
+
+    :cond_2
+    return-object p1
 .end method

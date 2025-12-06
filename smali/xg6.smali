@@ -1,144 +1,55 @@
 .class public final Lxg6;
-.super Ljava/lang/Object;
+.super Lq44;
 .source "SourceFile"
-
-# interfaces
-.implements Ljff;
 
 
 # instance fields
-.field public final X:Z
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final Y:Lwif;
+.field public final synthetic Y:Lyg6;
 
-.field public Z:Z
+.field public Z:I
 
-.field public final a:Landroid/content/Context;
+.field public d:Lyg6;
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Lk2g;
-
-.field public final o:Z
+.field public o:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lk2g;ZZ)V
+.method public constructor <init>(Lyg6;Lq44;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lxg6;->Y:Lyg6;
 
-    iput-object p1, p0, Lxg6;->a:Landroid/content/Context;
-
-    iput-object p2, p0, Lxg6;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Lxg6;->c:Lk2g;
-
-    iput-boolean p4, p0, Lxg6;->o:Z
-
-    iput-boolean p5, p0, Lxg6;->X:Z
-
-    new-instance p1, Loe;
-
-    const/4 p2, 0x3
-
-    invoke-direct {p1, p2, p0}, Loe;-><init>(ILjava/lang/Object;)V
-
-    new-instance p2, Lwif;
-
-    invoke-direct {p2, p1}, Lwif;-><init>(Lji6;)V
-
-    iput-object p2, p0, Lxg6;->Y:Lwif;
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final close()V
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    iget-object v0, p0, Lxg6;->Y:Lwif;
+    iput-object p1, p0, Lxg6;->X:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lwif;->e()Z
+    iget p1, p0, Lxg6;->Z:I
 
-    move-result v1
+    const/high16 v0, -0x80000000
 
-    if-eqz v1, :cond_0
+    or-int/2addr p1, v0
 
-    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
+    iput p1, p0, Lxg6;->Z:I
 
-    move-result-object v0
+    const/4 p1, 0x0
 
-    check-cast v0, Lwg6;
+    const-wide/16 v0, 0x0
 
-    invoke-virtual {v0}, Lwg6;->close()V
+    iget-object v2, p0, Lxg6;->Y:Lyg6;
 
-    :cond_0
-    return-void
-.end method
+    invoke-virtual {v2, v0, v1, p0, p1}, Lyg6;->b(JLq44;Ljava/util/List;)Ljava/lang/Object;
 
-.method public final getReadableDatabase()Ltg6;
-    .locals 2
+    move-result-object p1
 
-    iget-object v0, p0, Lxg6;->Y:Lwif;
-
-    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lwg6;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lwg6;->c(Z)Ltg6;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getWritableDatabase()Ltg6;
-    .locals 2
-
-    iget-object v0, p0, Lxg6;->Y:Lwif;
-
-    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lwg6;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lwg6;->c(Z)Ltg6;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final setWriteAheadLoggingEnabled(Z)V
-    .locals 2
-
-    iget-object v0, p0, Lxg6;->Y:Lwif;
-
-    invoke-virtual {v0}, Lwif;->e()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0}, Lwif;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lwg6;
-
-    invoke-virtual {v0, p1}, Landroid/database/sqlite/SQLiteOpenHelper;->setWriteAheadLoggingEnabled(Z)V
-
-    :cond_0
-    iput-boolean p1, p0, Lxg6;->Z:Z
-
-    return-void
+    return-object p1
 .end method

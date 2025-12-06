@@ -1,130 +1,79 @@
-.class public abstract Ljig;
+.class public final Ljig;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Liig;
 
-# static fields
-.field public static final a:Ljava/util/concurrent/atomic/AtomicReference;
+
+# instance fields
+.field public final a:Ljava/util/Set;
+
+.field public final b:Lac0;
+
+.field public final c:Lmig;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/util/Set;Lac0;Lmig;)V
+    .locals 0
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    iput-object p1, p0, Ljig;->a:Ljava/util/Set;
 
-    sput-object v0, Ljig;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    iput-object p2, p0, Ljig;->b:Lac0;
+
+    iput-object p3, p0, Ljig;->c:Lmig;
 
     return-void
 .end method
 
-.method public static a(Ljava/util/Calendar;)Ljava/util/Calendar;
-    .locals 4
 
-    invoke-static {p0}, Ljig;->c(Ljava/util/Calendar;)Ljava/util/Calendar;
+# virtual methods
+.method public final a(Ljava/lang/String;Lgf5;Lghg;)Lkig;
+    .locals 8
 
-    move-result-object p0
+    iget-object v0, p0, Ljig;->a:Ljava/util/Set;
 
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Ljig;->c(Ljava/util/Calendar;)Ljava/util/Calendar;
-
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p0, v1}, Ljava/util/Calendar;->get(I)I
+    invoke-interface {v0, p2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result v1
 
-    const/4 v2, 0x2
+    if-eqz v1, :cond_0
 
-    invoke-virtual {p0, v2}, Ljava/util/Calendar;->get(I)I
+    new-instance v2, Lkig;
 
-    move-result v2
+    iget-object v3, p0, Ljig;->b:Lac0;
 
-    const/4 v3, 0x5
+    iget-object v7, p0, Ljig;->c:Lmig;
 
-    invoke-virtual {p0, v3}, Ljava/util/Calendar;->get(I)I
+    move-object v4, p1
 
-    move-result p0
+    move-object v5, p2
 
-    invoke-virtual {v0, v1, v2, p0}, Ljava/util/Calendar;->set(III)V
+    move-object v6, p3
 
-    return-object v0
-.end method
+    invoke-direct/range {v2 .. v7}, Lkig;-><init>(Lac0;Ljava/lang/String;Lgf5;Lghg;Lmig;)V
 
-.method public static b()Ljava/util/Calendar;
-    .locals 3
-
-    sget-object v0, Ljig;->a:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lfvf;
-
-    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
-
-    move-result-object v0
-
-    const/16 v1, 0xb
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->set(II)V
-
-    const/16 v1, 0xc
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->set(II)V
-
-    const/16 v1, 0xd
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->set(II)V
-
-    const/16 v1, 0xe
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->set(II)V
-
-    const-string v1, "UTC"
-
-    invoke-static {v1}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/Calendar;->setTimeZone(Ljava/util/TimeZone;)V
-
-    return-object v0
-.end method
-
-.method public static c(Ljava/util/Calendar;)Ljava/util/Calendar;
-    .locals 3
-
-    const-string v0, "UTC"
-
-    invoke-static {v0}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Calendar;->getInstance(Ljava/util/TimeZone;)Ljava/util/Calendar;
-
-    move-result-object v0
-
-    if-nez p0, :cond_0
-
-    invoke-virtual {v0}, Ljava/util/Calendar;->clear()V
-
-    return-object v0
+    return-object v2
 
     :cond_0
-    invoke-virtual {p0}, Ljava/util/Calendar;->getTimeInMillis()J
+    move-object v5, p2
 
-    move-result-wide v1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->setTimeInMillis(J)V
+    const-string p2, "%s is not supported byt this factory. Supported encodings are: %s."
 
-    return-object v0
+    filled-new-array {v5, v0}, [Ljava/lang/Object;
+
+    move-result-object p3
+
+    invoke-static {p2, p3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

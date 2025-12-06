@@ -1,66 +1,99 @@
-.class public abstract Ls84;
-.super Ljava/lang/Object;
+.class public final Ls84;
+.super Ldtf;
 .source "SourceFile"
+
+# interfaces
+.implements Lsm6;
+
+
+# instance fields
+.field public final synthetic X:Ll42;
+
+.field public final synthetic o:Ljava/util/concurrent/Callable;
 
 
 # direct methods
-.method public static a(Landroid/security/keystore/KeyGenParameterSpec$Builder;)Landroid/security/keystore/KeyGenParameterSpec;
+.method public constructor <init>(Ljava/util/concurrent/Callable;Ll42;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/security/keystore/KeyGenParameterSpec$Builder;->build()Landroid/security/keystore/KeyGenParameterSpec;
+    iput-object p1, p0, Ls84;->o:Ljava/util/concurrent/Callable;
 
-    move-result-object p0
+    iput-object p2, p0, Ls84;->X:Ll42;
 
-    return-object p0
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
 .end method
 
-.method public static b(Ljava/lang/String;I)Landroid/security/keystore/KeyGenParameterSpec$Builder;
-    .locals 1
 
-    new-instance v0, Landroid/security/keystore/KeyGenParameterSpec$Builder;
-
-    invoke-direct {v0, p0, p1}, Landroid/security/keystore/KeyGenParameterSpec$Builder;-><init>(Ljava/lang/String;I)V
-
-    return-object v0
-.end method
-
-.method public static c(Ljavax/crypto/KeyGenerator;Landroid/security/keystore/KeyGenParameterSpec;)V
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/security/InvalidAlgorithmParameterException;
-        }
-    .end annotation
 
-    invoke-virtual {p0, p1}, Ljavax/crypto/KeyGenerator;->init(Ljava/security/spec/AlgorithmParameterSpec;)V
+    check-cast p1, Lf84;
 
-    return-void
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Ls84;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Ls84;
+
+    sget-object p2, Lqqg;->a:Lqqg;
+
+    invoke-virtual {p1, p2}, Ls84;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public static d(Landroid/security/keystore/KeyGenParameterSpec$Builder;)V
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const-string v0, "CBC"
+    new-instance p1, Ls84;
 
-    filled-new-array {v0}, [Ljava/lang/String;
+    iget-object v0, p0, Ls84;->o:Ljava/util/concurrent/Callable;
 
-    move-result-object v0
+    iget-object v1, p0, Ls84;->X:Ll42;
 
-    invoke-virtual {p0, v0}, Landroid/security/keystore/KeyGenParameterSpec$Builder;->setBlockModes([Ljava/lang/String;)Landroid/security/keystore/KeyGenParameterSpec$Builder;
+    invoke-direct {p1, v0, v1, p2}, Ls84;-><init>(Ljava/util/concurrent/Callable;Ll42;Lkotlin/coroutines/Continuation;)V
 
-    return-void
+    return-object p1
 .end method
 
-.method public static e(Landroid/security/keystore/KeyGenParameterSpec$Builder;)V
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    const-string v0, "PKCS7Padding"
+    iget-object v0, p0, Ls84;->X:Ll42;
 
-    filled-new-array {v0}, [Ljava/lang/String;
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    move-result-object v0
+    :try_start_0
+    iget-object p1, p0, Ls84;->o:Ljava/util/concurrent/Callable;
 
-    invoke-virtual {p0, v0}, Landroid/security/keystore/KeyGenParameterSpec$Builder;->setEncryptionPaddings([Ljava/lang/String;)Landroid/security/keystore/KeyGenParameterSpec$Builder;
+    invoke-interface {p1}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
 
-    return-void
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ll42;->resumeWith(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    new-instance v1, Lipd;
+
+    invoke-direct {v1, p1}, Lipd;-><init>(Ljava/lang/Throwable;)V
+
+    invoke-virtual {v0, v1}, Ll42;->resumeWith(Ljava/lang/Object;)V
+
+    :goto_0
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

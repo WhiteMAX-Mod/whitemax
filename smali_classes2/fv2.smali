@@ -1,174 +1,82 @@
 .class public final Lfv2;
-.super Lpmf;
+.super Ldtf;
 .source "SourceFile"
+
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public X:Ljava/lang/String;
+.field public final synthetic X:Lone/me/chatscreen/ChatScreen;
 
-.field public c:Ljava/util/List;
-
-.field public o:I
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lpf9;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/ChatScreen;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lpmf;-><init>(Lpf9;)V
+    iput-object p2, p0, Lfv2;->X:Lone/me/chatscreen/ChatScreen;
 
-    iget-object p1, p0, Lfv2;->c:Ljava/util/List;
+    const/4 p2, 0x2
 
-    if-nez p1, :cond_0
+    invoke-direct {p0, p2, p1}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    iput-object p1, p0, Lfv2;->c:Ljava/util/List;
-
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lpf9;Ljava/lang/String;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lfv2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lfv2;
+
+    sget-object p2, Lqqg;->a:Lqqg;
+
+    invoke-virtual {p1, p2}, Lfv2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-instance v0, Lfv2;
 
-    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
+    iget-object v1, p0, Lfv2;->X:Lone/me/chatscreen/ChatScreen;
 
-    move-result v0
+    invoke-direct {v0, p2, v1}, Lfv2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/ChatScreen;)V
 
-    const/4 v1, -0x1
+    iput-object p1, v0, Lfv2;->o:Ljava/lang/Object;
 
-    sparse-switch v0, :sswitch_data_0
+    return-object v0
+.end method
 
-    goto :goto_0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    :sswitch_0
-    const-string v0, "total"
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget-object p1, p0, Lfv2;->o:Ljava/lang/Object;
 
-    move-result p2
+    check-cast p1, Ljava/lang/Boolean;
 
-    if-nez p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x2
-
-    goto :goto_0
-
-    :sswitch_1
-    const-string v0, "result"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x1
-
-    goto :goto_0
-
-    :sswitch_2
-    const-string v0, "marker"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v1, 0x0
-
-    :goto_0
-    packed-switch v1, :pswitch_data_0
-
-    invoke-virtual {p1}, Lpf9;->y()V
-
-    return-void
-
-    :pswitch_0
-    invoke-virtual {p1}, Lpf9;->q0()I
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p1
 
-    iput p1, p0, Lfv2;->o:I
+    iget-object v0, p0, Lfv2;->X:Lone/me/chatscreen/ChatScreen;
 
-    return-void
+    iput-boolean p1, v0, Lone/me/chatscreen/ChatScreen;->B0:Z
 
-    :pswitch_1
-    invoke-static {p1}, Lzz;->g(Lpf9;)Lzz;
+    sget-object p1, Lqqg;->a:Lqqg;
 
-    move-result-object p1
-
-    iput-object p1, p0, Lfv2;->c:Ljava/util/List;
-
-    return-void
-
-    :pswitch_2
-    invoke-static {p1}, Lg0i;->p(Lpf9;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lfv2;->X:Ljava/lang/String;
-
-    return-void
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x40736bc6 -> :sswitch_2
-        -0x37b237e3 -> :sswitch_1
-        0x696db44 -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 6
-
-    iget-object v0, p0, Lfv2;->c:Ljava/util/List;
-
-    invoke-static {v0}, Lhuh;->c(Ljava/util/Collection;)I
-
-    move-result v0
-
-    iget v1, p0, Lfv2;->o:I
-
-    iget-object v2, p0, Lfv2;->X:Ljava/lang/String;
-
-    const-string v3, ", total="
-
-    const-string v4, ", marker=\'"
-
-    const-string v5, "{result="
-
-    invoke-static {v5, v0, v3, v1, v4}, Ley1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "\'}"
-
-    invoke-static {v0, v2, v1}, Li57;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

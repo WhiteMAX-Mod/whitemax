@@ -1,125 +1,175 @@
-.class public final Lubb;
-.super Lvbb;
+.class public abstract Lubb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final d:Ljava/nio/ByteBuffer;
+# static fields
+.field public static final A:I
+
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
+
+.field public static final y:I
+
+.field public static final z:I
 
 
 # direct methods
-.method public constructor <init>([BII)V
+.method static constructor <clinit>()V
     .locals 1
 
-    shr-int/lit8 v0, p3, 0x2
+    sget v0, Lq4d;->oneme_settings_storage_action_one_month:I
 
-    invoke-direct {p0, p1, v0, p2}, Lvbb;-><init>([BII)V
+    sput v0, Lubb;->a:I
 
-    invoke-static {p1, p2, p3}, Ljava/nio/ByteBuffer;->wrap([BII)Ljava/nio/ByteBuffer;
+    sget v0, Lq4d;->oneme_settings_storage_action_one_week:I
 
-    move-result-object p1
+    sput v0, Lubb;->b:I
 
-    sget-object p2, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
+    sget v0, Lq4d;->oneme_settings_storage_action_six_month:I
 
-    invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+    sput v0, Lubb;->c:I
 
-    move-result-object p1
+    sget v0, Lq4d;->oneme_settings_storage_action_unlimited:I
 
-    iput-object p1, p0, Lubb;->d:Ljava/nio/ByteBuffer;
+    sput v0, Lubb;->d:I
+
+    sget v0, Lq4d;->oneme_settings_storage_audio_messages:I
+
+    sput v0, Lubb;->e:I
+
+    sget v0, Lq4d;->oneme_settings_storage_clear_cache:I
+
+    sput v0, Lubb;->f:I
+
+    sget v0, Lq4d;->oneme_settings_storage_clear_cache_dialog_action_clear:I
+
+    sput v0, Lubb;->g:I
+
+    sget v0, Lq4d;->oneme_settings_storage_clear_cache_dialog_all_title:I
+
+    sput v0, Lubb;->h:I
+
+    sget v0, Lq4d;->oneme_settings_storage_clear_cache_dialog_audio_title:I
+
+    sput v0, Lubb;->i:I
+
+    sget v0, Lq4d;->oneme_settings_storage_clear_cache_dialog_desc:I
+
+    sput v0, Lubb;->j:I
+
+    sget v0, Lq4d;->oneme_settings_storage_clear_cache_dialog_files_title:I
+
+    sput v0, Lubb;->k:I
+
+    sget v0, Lq4d;->oneme_settings_storage_clear_cache_dialog_gif_title:I
+
+    sput v0, Lubb;->l:I
+
+    sget v0, Lq4d;->oneme_settings_storage_clear_cache_dialog_images_title:I
+
+    sput v0, Lubb;->m:I
+
+    sget v0, Lq4d;->oneme_settings_storage_clear_cache_dialog_music_title:I
+
+    sput v0, Lubb;->n:I
+
+    sget v0, Lq4d;->oneme_settings_storage_clear_cache_dialog_stickers_title:I
+
+    sput v0, Lubb;->o:I
+
+    sget v0, Lq4d;->oneme_settings_storage_clear_cache_dialog_video_title:I
+
+    sput v0, Lubb;->p:I
+
+    sget v0, Lq4d;->oneme_settings_storage_clear_cache_success_snackbar:I
+
+    sput v0, Lubb;->q:I
+
+    sget v0, Lq4d;->oneme_settings_storage_files:I
+
+    sput v0, Lubb;->r:I
+
+    sget v0, Lq4d;->oneme_settings_storage_gif:I
+
+    sput v0, Lubb;->s:I
+
+    sget v0, Lq4d;->oneme_settings_storage_images:I
+
+    sput v0, Lubb;->t:I
+
+    sget v0, Lq4d;->oneme_settings_storage_music:I
+
+    sput v0, Lubb;->u:I
+
+    sget v0, Lq4d;->oneme_settings_storage_screen_data_section:I
+
+    sput v0, Lubb;->v:I
+
+    sget v0, Lq4d;->oneme_settings_storage_screen_preserve_media_cache_desc:I
+
+    sput v0, Lubb;->w:I
+
+    sget v0, Lq4d;->oneme_settings_storage_screen_preserve_media_cache_title:I
+
+    sput v0, Lubb;->x:I
+
+    sget v0, Lq4d;->oneme_settings_storage_screen_toolbar_title:I
+
+    sput v0, Lubb;->y:I
+
+    sget v0, Lq4d;->oneme_settings_storage_stickers:I
+
+    sput v0, Lubb;->z:I
+
+    sget v0, Lq4d;->oneme_settings_storage_video:I
+
+    sput v0, Lubb;->A:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a(I)S
-    .locals 4
-
-    shl-int/lit8 p1, p1, 0x2
-
-    iget-object v0, p0, Lubb;->d:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->getFloat(I)F
-
-    move-result p1
-
-    float-to-double v0, p1
-
-    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
-
-    add-double/2addr v0, v2
-
-    const-wide v2, 0x40dfffe000000000L    # 32767.5
-
-    mul-double/2addr v0, v2
-
-    double-to-int p1, v0
-
-    add-int/lit16 p1, p1, -0x8000
-
-    int-to-short p1, p1
-
-    return p1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "PCM float ("
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lvbb;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v2, ") {"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    if-lez v1, :cond_0
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Lubb;->d:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v3, v2}, Ljava/nio/ByteBuffer;->getFloat(I)F
-
-    move-result v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const/4 v2, 0x1
-
-    :goto_0
-    if-ge v2, v1, :cond_0
-
-    const-string v4, ", "
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    shl-int/lit8 v4, v2, 0x2
-
-    invoke-virtual {v3, v4}, Ljava/nio/ByteBuffer;->getFloat(I)F
-
-    move-result v4
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

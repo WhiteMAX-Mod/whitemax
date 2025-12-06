@@ -1,133 +1,170 @@
 .class public final Ljle;
-.super Lhy2;
+.super Ldtf;
 .source "SourceFile"
+
+# interfaces
+.implements Lsm6;
 
 
 # instance fields
-.field public final a:Lorf;
+.field public final synthetic X:Lsle;
 
-.field public final b:Lli6;
+.field public final synthetic Y:Z
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lorf;Lli6;)V
+.method public constructor <init>(Lsle;ZLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ljle;->X:Lsle;
 
-    iput-object p1, p0, Ljle;->a:Lorf;
+    iput-boolean p2, p0, Ljle;->Y:Z
 
-    iput-object p2, p0, Ljle;->b:Lli6;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Lf84;
 
-    goto :goto_1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v0, p1, Ljle;
+    invoke-virtual {p0, p1, p2}, Ljle;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-nez v0, :cond_1
+    move-result-object p1
 
-    goto :goto_0
-
-    :cond_1
     check-cast p1, Ljle;
 
-    iget-object v0, p0, Ljle;->a:Lorf;
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    iget-object v1, p1, Ljle;->a:Lorf;
+    invoke-virtual {p1, p2}, Ljle;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Lorf;->equals(Ljava/lang/Object;)Z
+    move-result-object p1
 
-    move-result v0
+    return-object p1
+.end method
 
-    if-nez v0, :cond_2
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Ljle;
+
+    iget-object v0, p0, Ljle;->X:Lsle;
+
+    iget-boolean v1, p0, Ljle;->Y:Z
+
+    invoke-direct {p1, v0, v1, p2}, Ljle;-><init>(Lsle;ZLkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    iget v0, p0, Ljle;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    :cond_2
-    iget-object v0, p0, Ljle;->b:Lli6;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    iget-object p1, p1, Ljle;->b:Lli6;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    move-result p1
+    throw p1
 
-    if-nez p1, :cond_3
+    :cond_1
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    :goto_0
-    const/4 p1, 0x0
+    sget-object p1, Lsle;->A0:[Lyy7;
 
-    return p1
+    iget-object p1, p0, Ljle;->X:Lsle;
 
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
+    iget-object v0, p1, Lsle;->d:Lk18;
 
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Ljle;->a:Lorf;
-
-    iget v0, v0, Lorf;->c:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Ljle;->b:Lli6;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShowCancelableSnackbar(text="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ljle;->a:Lorf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", cancelAction="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ljle;->b:Lli6;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
+    check-cast v0, Lgk;
+
+    iget-object v2, v0, Lgk;->a:Lk18;
+
+    invoke-interface {v2}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lsxg;
+
+    const-string v3, "app.media.animoji.enabled"
+
+    iget-boolean v4, p0, Ljle;->Y:Z
+
+    invoke-virtual {v2, v3, v4}, Lc4;->f(Ljava/lang/String;Z)V
+
+    iget-object v2, v0, Lgk;->g:Lkotlinx/coroutines/internal/ContextScope;
+
+    new-instance v3, Lc84;
+
+    const-string v5, "invalidate chats and messages cache"
+
+    invoke-direct {v3, v5}, Lc84;-><init>(Ljava/lang/String;)V
+
+    new-instance v5, Lfk;
+
+    const/4 v6, 0x0
+
+    invoke-direct {v5, v0, v4, v6}, Lfk;-><init>(Lgk;ZLkotlin/coroutines/Continuation;)V
+
+    sget-object v4, Li84;->b:Li84;
+
+    invoke-static {v2, v3, v4, v5}, Lsvi;->d(Lf84;Lx74;Li84;Lsm6;)Lx9f;
+
+    move-result-object v2
+
+    iget-object v3, v0, Lgk;->h:Lt9f;
+
+    sget-object v4, Lgk;->j:[Lyy7;
+
+    const/4 v5, 0x0
+
+    aget-object v4, v4, v5
+
+    invoke-virtual {v3, v0, v4, v2}, Lt9f;->O(Ljava/lang/Object;Lyy7;Ljava/lang/Object;)V
+
+    iput v1, p0, Ljle;->o:I
+
+    invoke-static {p1, p0}, Lsle;->t(Lsle;Ldtf;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lg84;->a:Lg84;
+
+    if-ne p1, v0, :cond_2
+
     return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

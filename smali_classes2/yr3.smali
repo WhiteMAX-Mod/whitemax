@@ -1,33 +1,49 @@
-.class public abstract Lyr3;
-.super Ljava/lang/Object;
+.class public final Lyr3;
+.super Ln2;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lfo3;
+# instance fields
+.field public final synthetic d:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public synthetic constructor <init>(ILy65;)V
+    .locals 0
 
-    new-instance v0, Lfo3;
+    iput p1, p0, Lyr3;->d:I
 
-    sget v1, Ltsa;->k:I
-
-    sget v2, Ldkd;->q:I
-
-    new-instance v3, Lorf;
-
-    invoke-direct {v3, v2}, Lorf;-><init>(I)V
-
-    const/4 v2, 0x2
-
-    const/16 v4, 0x38
-
-    invoke-direct {v0, v1, v3, v2, v4}, Lfo3;-><init>(ILtrf;II)V
-
-    sput-object v0, Lyr3;->a:Lfo3;
+    invoke-direct {p0, p2}, Ln2;-><init>(Ly65;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final d0()J
+    .locals 2
+
+    iget v0, p0, Lyr3;->d:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    :pswitch_0
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

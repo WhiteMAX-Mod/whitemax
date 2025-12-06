@@ -1,94 +1,165 @@
 .class public final Lcu;
-.super Ljava/lang/Object;
+.super Lvi0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ls7e;
+.field public final o:J
 
 
 # direct methods
-.method public constructor <init>(Ls7e;)V
+.method public constructor <init>(IJJ)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p3, p1}, Lvi0;-><init>(JI)V
 
-    iput-object p1, p0, Lcu;->a:Ls7e;
+    iput-wide p4, p0, Lcu;->o:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final g()[B
     .locals 3
 
-    const/4 v0, 0x1
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$AssetsAdd;
 
-    if-ne p0, p1, :cond_0
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$AssetsAdd;-><init>()V
 
-    return v0
+    iget v1, p0, Lvi0;->d:I
 
-    :cond_0
-    instance-of v1, p1, Lcu;
+    invoke-static {v1}, Lru/ok/tamtam/nano/a;->p(I)I
 
-    const/4 v2, 0x0
+    move-result v1
 
-    if-nez v1, :cond_1
+    iput v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsAdd;->assetType:I
 
-    return v2
+    iget-wide v1, p0, Lcu;->o:J
 
-    :cond_1
-    check-cast p1, Lcu;
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsAdd;->id:J
 
-    iget-object v1, p0, Lcu;->a:Ls7e;
+    iget-wide v1, p0, Lsm;->a:J
 
-    iget-object p1, p1, Lcu;->a:Ls7e;
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsAdd;->requestId:J
 
-    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lcu;->a:Ls7e;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "StopAsrRecord(sessionRoomId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcu;->a:Ls7e;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0}, Lfl9;->toByteArray(Lfl9;)[B
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public final getType()Lusb;
+    .locals 1
+
+    sget-object v0, Lusb;->Q0:Lusb;
+
+    return-object v0
+.end method
+
+.method public final i()Ln2;
+    .locals 6
+
+    new-instance v0, Lwua;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, v2}, Lwua;-><init>(Lxhb;I)V
+
+    iget v1, p0, Lvi0;->d:I
+
+    if-eqz v1, :cond_1
+
+    const-wide/16 v2, 0x0
+
+    iget-wide v4, p0, Lcu;->o:J
+
+    cmp-long v2, v4, v2
+
+    if-eqz v2, :cond_0
+
+    const-string v2, "type"
+
+    invoke-static {v1}, Laz1;->d(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v2, v1}, Ln2;->x(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "id"
+
+    invoke-virtual {v0, v4, v5, v1}, Ln2;->t(JLjava/lang/String;)V
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "id must not be null or empty"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "type must not be null"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final s(Ll0g;)V
+    .locals 4
+
+    check-cast p1, Ldu;
+
+    iget-boolean v0, p1, Ldu;->c:Z
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    iget-wide v2, p1, Ldu;->d:J
+
+    invoke-virtual {p0, v2, v3}, Lvi0;->t(J)V
+
+    iget-object p1, p0, Lsm;->c:Ltm;
+
+    if-eqz p1, :cond_0
+
+    move-object v1, p1
+
+    :cond_0
+    invoke-virtual {v1}, Ltm;->b()Ltw0;
+
+    move-result-object p1
+
+    new-instance v0, Leu;
+
+    iget-wide v1, p0, Lsm;->a:J
+
+    invoke-direct {v0, v1, v2}, Lsj0;-><init>(J)V
+
+    invoke-virtual {p1, v0}, Ltw0;->c(Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_1
+    new-instance p1, Lpzf;
+
+    const-string v0, "asset.task.failed"
+
+    const-string v2, "failed to add asset"
+
+    invoke-direct {p1, v0, v2, v1}, Lpzf;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p0, p1}, Lvi0;->e(Lpzf;)V
+
+    return-void
 .end method

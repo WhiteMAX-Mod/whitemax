@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqm;
+.implements Ljm;
 
 
 # annotations
@@ -15,44 +15,55 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000R\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u0008\u0000\u0018\u0000 &2\u00020\u0001:\u0001&B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u00a2\u0006\u0004\u0008\u0004\u0010\u0005J\u0017\u0010\t\u001a\u00020\u00082\u0006\u0010\u0007\u001a\u00020\u0006H\u0002\u00a2\u0006\u0004\u0008\t\u0010\nJ\u0017\u0010\u000c\u001a\u00020\u00082\u0006\u0010\u000b\u001a\u00020\u0008H\u0002\u00a2\u0006\u0004\u0008\u000c\u0010\rJ\u0017\u0010\u000e\u001a\u00020\u00082\u0006\u0010\u0007\u001a\u00020\u0006H\u0002\u00a2\u0006\u0004\u0008\u000e\u0010\nJ\'\u0010\u0014\u001a\u00020\u00132\u0006\u0010\u0010\u001a\u00020\u000f2\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0012\u001a\u00020\u0011H\u0016\u00a2\u0006\u0004\u0008\u0014\u0010\u0015J\'\u0010\u0018\u001a\u00020\u00162\u0006\u0010\u0010\u001a\u00020\u000f2\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0017\u001a\u00020\u0016H\u0016\u00a2\u0006\u0004\u0008\u0018\u0010\u0019J\'\u0010\u001a\u001a\u00020\u00162\u0006\u0010\u0010\u001a\u00020\u000f2\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0017\u001a\u00020\u0016H\u0016\u00a2\u0006\u0004\u0008\u001a\u0010\u0019J\'\u0010\u001d\u001a\u00020\u00132\u0006\u0010\u0010\u001a\u00020\u000f2\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u001c\u001a\u00020\u001bH\u0016\u00a2\u0006\u0004\u0008\u001d\u0010\u001eJ\'\u0010 \u001a\u00020\u00132\u0006\u0010\u0010\u001a\u00020\u000f2\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u001c\u001a\u00020\u001fH\u0016\u00a2\u0006\u0004\u0008 \u0010!R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0003\u0010\"R\u0014\u0010$\u001a\u00020#8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008$\u0010%\u00a8\u0006\'"
+        "\u0000h\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u0008\u0000\u0018\u0000 12\u00020\u0001:\u00011B\u0019\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0008\u0010\u0005\u001a\u0004\u0018\u00010\u0004\u00a2\u0006\u0004\u0008\u0006\u0010\u0007J\u0017\u0010\u000b\u001a\u00020\n2\u0006\u0010\t\u001a\u00020\u0008H\u0002\u00a2\u0006\u0004\u0008\u000b\u0010\u000cJ)\u0010\u000f\u001a\u0012\u0012\u0006\u0012\u0004\u0018\u00010\n\u0012\u0006\u0012\u0004\u0018\u00010\n0\u000e2\u0008\u0010\r\u001a\u0004\u0018\u00010\nH\u0002\u00a2\u0006\u0004\u0008\u000f\u0010\u0010J\u0017\u0010\u0013\u001a\u00020\n2\u0006\u0010\u0012\u001a\u00020\u0011H\u0002\u00a2\u0006\u0004\u0008\u0013\u0010\u0014J\u0017\u0010\u0016\u001a\u00020\n2\u0006\u0010\u0015\u001a\u00020\nH\u0002\u00a2\u0006\u0004\u0008\u0016\u0010\u0017J\u0017\u0010\u0018\u001a\u00020\n2\u0006\u0010\u0012\u001a\u00020\u0011H\u0002\u00a2\u0006\u0004\u0008\u0018\u0010\u0014J\'\u0010\u001e\u001a\u00020\u001d2\u0006\u0010\u001a\u001a\u00020\u00192\u0006\u0010\u0012\u001a\u00020\u00112\u0006\u0010\u001c\u001a\u00020\u001bH\u0016\u00a2\u0006\u0004\u0008\u001e\u0010\u001fJ\'\u0010\"\u001a\u00020 2\u0006\u0010\u001a\u001a\u00020\u00192\u0006\u0010\u0012\u001a\u00020\u00112\u0006\u0010!\u001a\u00020 H\u0016\u00a2\u0006\u0004\u0008\"\u0010#J\'\u0010$\u001a\u00020 2\u0006\u0010\u001a\u001a\u00020\u00192\u0006\u0010\u0012\u001a\u00020\u00112\u0006\u0010!\u001a\u00020 H\u0016\u00a2\u0006\u0004\u0008$\u0010#J\'\u0010\'\u001a\u00020\u001d2\u0006\u0010\u001a\u001a\u00020\u00192\u0006\u0010\u0012\u001a\u00020\u00112\u0006\u0010&\u001a\u00020%H\u0016\u00a2\u0006\u0004\u0008\'\u0010(J\'\u0010*\u001a\u00020\u001d2\u0006\u0010\u001a\u001a\u00020\u00192\u0006\u0010\u0012\u001a\u00020\u00112\u0006\u0010&\u001a\u00020)H\u0016\u00a2\u0006\u0004\u0008*\u0010+R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0003\u0010,R\u0016\u0010\u0005\u001a\u0004\u0018\u00010\u00048\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0005\u0010-R\u0014\u0010/\u001a\u00020.8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008/\u00100\u00a8\u00062"
     }
     d2 = {
         "Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger;",
-        "Lqm;",
-        "Lfwc;",
+        "Ljm;",
+        "Ly6d;",
         "log",
+        "Lrm;",
+        "sessionStore",
         "<init>",
-        "(Lfwc;)V",
-        "Lom;",
-        "request",
+        "(Ly6d;Lrm;)V",
+        "Landroid/net/Uri;",
+        "requestUri",
         "",
+        "transformUriForLog",
+        "(Landroid/net/Uri;)Ljava/lang/String;",
+        "uriString",
+        "Limb;",
+        "extractHostAndScheme",
+        "(Ljava/lang/String;)Limb;",
+        "Lhm;",
+        "request",
         "getParams",
-        "(Lom;)Ljava/lang/String;",
+        "(Lhm;)Ljava/lang/String;",
         "jsonString",
         "eraseSecrets",
         "(Ljava/lang/String;)Ljava/lang/String;",
         "getRawParams",
-        "Lyl;",
+        "Lsl;",
         "engine",
-        "Lzl;",
+        "Ltl;",
         "config",
-        "Lccg;",
+        "Lqqg;",
         "debugApiRequest",
-        "(Lyl;Lom;Lzl;)V",
-        "Lvq7;",
+        "(Lsl;Lhm;Ltl;)V",
+        "Lxx7;",
         "reader",
         "debugApiResponseOk",
-        "(Lyl;Lom;Lvq7;)Lvq7;",
+        "(Lsl;Lhm;Lxx7;)Lxx7;",
         "debugApiResponseFail",
         "Lru/ok/android/api/core/ApiException;",
         "exception",
         "debugApiException",
-        "(Lyl;Lom;Lru/ok/android/api/core/ApiException;)V",
+        "(Lsl;Lhm;Lru/ok/android/api/core/ApiException;)V",
         "Ljava/io/IOException;",
         "debugIoException",
-        "(Lyl;Lom;Ljava/io/IOException;)V",
-        "Lfwc;",
+        "(Lsl;Lhm;Ljava/io/IOException;)V",
+        "Ly6d;",
+        "Lrm;",
         "Lru/ok/android/externcalls/sdk/api/log/RequestSecretEraser;",
         "secretEraser",
         "Lru/ok/android/externcalls/sdk/api/log/RequestSecretEraser;",
@@ -78,9 +89,11 @@
 
 
 # instance fields
-.field private final log:Lfwc;
+.field private final log:Ly6d;
 
 .field private final secretEraser:Lru/ok/android/externcalls/sdk/api/log/RequestSecretEraser;
+
+.field private final sessionStore:Lrm;
 
 
 # direct methods
@@ -91,43 +104,45 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger$Companion;-><init>(Lki4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger$Companion;-><init>(Ltk4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger;->Companion:Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lfwc;)V
-    .locals 5
+.method public constructor <init>(Ly6d;Lrm;)V
+    .locals 4
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger;->log:Lfwc;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger;->log:Ly6d;
+
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger;->sessionStore:Lrm;
 
     new-instance p1, Lru/ok/android/externcalls/sdk/api/log/RequestSecretEraser;
 
-    const-string v0, "auth_token"
+    const-string p2, "auth_token"
 
-    const-string v1, "session_data"
+    const-string v0, "session_data"
 
-    const-string v2, "token"
+    const-string v1, "token"
 
-    const-string v3, "auth_data"
+    const-string v2, "auth_data"
 
-    const-string v4, "credential"
+    const-string v3, "credential"
 
-    filled-new-array {v2, v3, v4, v0, v1}, [Ljava/lang/String;
+    filled-new-array {v1, v2, v3, p2, v0}, [Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p2
 
-    invoke-static {v0}, Lu8e;->f([Ljava/lang/Object;)Ljava/util/Set;
+    invoke-static {p2}, Lgke;->h([Ljava/lang/Object;)Ljava/util/Set;
 
-    move-result-object v0
+    move-result-object p2
 
-    const-string v1, "<ERASED_SECRET>"
+    const-string v0, "<ERASED_SECRET>"
 
-    invoke-direct {p1, v0, v1}, Lru/ok/android/externcalls/sdk/api/log/RequestSecretEraser;-><init>(Ljava/util/Set;Ljava/lang/String;)V
+    invoke-direct {p1, p2, v0}, Lru/ok/android/externcalls/sdk/api/log/RequestSecretEraser;-><init>(Ljava/util/Set;Ljava/lang/String;)V
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger;->secretEraser:Lru/ok/android/externcalls/sdk/api/log/RequestSecretEraser;
 
@@ -151,23 +166,53 @@
     :catch_0
     move-exception p1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger;->log:Lfwc;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger;->log:Ly6d;
 
     const-string v1, "CallsApiDebug"
 
     const-string v2, "can\'t erase secrets from json"
 
-    invoke-interface {v0, v1, v2, p1}, Lfwc;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, v1, v2, p1}, Ly6d;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     const-string p1, "<ERASED_SECRET>"
 
     return-object p1
 .end method
 
-.method private final getParams(Lom;)Ljava/lang/String;
+.method private final extractHostAndScheme(Ljava/lang/String;)Limb;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")",
+            "Limb;"
+        }
+    .end annotation
+
+    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Landroid/net/Uri;->getHost()Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance v1, Limb;
+
+    invoke-direct {v1, v0, p1}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    return-object v1
+.end method
+
+.method private final getParams(Lhm;)Ljava/lang/String;
     .locals 0
 
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger;->getRawParams(Lom;)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger;->getRawParams(Lhm;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -178,38 +223,38 @@
     return-object p1
 .end method
 
-.method private final getRawParams(Lom;)Ljava/lang/String;
+.method private final getRawParams(Lhm;)Ljava/lang/String;
     .locals 3
 
     new-instance v0, Ljava/io/StringWriter;
 
     invoke-direct {v0}, Ljava/io/StringWriter;-><init>()V
 
-    new-instance v1, Ljsb;
+    new-instance v1, Lo2c;
 
-    invoke-direct {v1, v0}, Ljsb;-><init>(Ljava/io/Writer;)V
+    invoke-direct {v1, v0}, Lo2c;-><init>(Ljava/io/Writer;)V
 
     :try_start_0
-    invoke-virtual {v1}, Ljsb;->s()V
+    invoke-virtual {v1}, Lo2c;->p()V
 
-    invoke-interface {p1, v1}, Lom;->writeParams(Lcr7;)V
+    invoke-interface {p1, v1}, Lhm;->writeParams(Lgy7;)V
 
-    invoke-virtual {v1}, Ljsb;->q()V
+    invoke-virtual {v1}, Lo2c;->n()V
 
-    invoke-virtual {v1}, Ljsb;->flush()V
+    invoke-virtual {v1}, Lo2c;->flush()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
     :catch_0
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger;->log:Lfwc;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger;->log:Ly6d;
 
     const-string v1, "CallsApiDebug"
 
     const-string v2, "failed to log request params"
 
-    invoke-interface {p1, v1, v2}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v1, v2}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     invoke-virtual {v0}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
@@ -219,9 +264,85 @@
     return-object p1
 .end method
 
+.method private final transformUriForLog(Landroid/net/Uri;)Ljava/lang/String;
+    .locals 2
+
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger;->sessionStore:Lrm;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lrm;->getSessionInfo()Lqm;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, v0, Lqm;->c:Ljava/lang/String;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-nez v0, :cond_1
+
+    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_1
+    invoke-direct {p0, v0}, Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger;->extractHostAndScheme(Ljava/lang/String;)Limb;
+
+    move-result-object v0
+
+    iget-object v1, v0, Limb;->a:Ljava/lang/Object;
+
+    check-cast v1, Ljava/lang/String;
+
+    iget-object v0, v0, Limb;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/String;
+
+    if-eqz v1, :cond_2
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {p1}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v1}, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v0}, Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_2
+    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
 
 # virtual methods
-.method public debugApiException(Lyl;Lom;Lru/ok/android/api/core/ApiException;)V
+.method public debugApiException(Lsl;Lhm;Lru/ok/android/api/core/ApiException;)V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -229,36 +350,32 @@
         }
     .end annotation
 
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger;->log:Lfwc;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger;->log:Ly6d;
 
-    invoke-interface {p2}, Lom;->getUri()Landroid/net/Uri;
+    invoke-interface {p2}, Lhm;->getUri()Landroid/net/Uri;
 
     move-result-object p2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-direct {p0, p2}, Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger;->transformUriForLog(Landroid/net/Uri;)Ljava/lang/String;
 
-    const-string v1, "API request "
+    move-result-object p2
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v0, "API request "
 
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v1, " failed with API Exception"
 
-    const-string p2, " failed with API Exception"
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, p2, v1}, Lho7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
     const-string v0, "CallsApiDebug"
 
-    invoke-interface {p1, v0, p2, p3}, Lfwc;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {p1, v0, p2, p3}, Ly6d;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
-.method public debugApiRequest(Lyl;Lom;Lzl;)V
+.method public debugApiRequest(Lsl;Lhm;Ltl;)V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -266,42 +383,52 @@
         }
     .end annotation
 
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger;->log:Lfwc;
+    instance-of p1, p2, Lkm;
 
-    invoke-interface {p2}, Lom;->getUri()Landroid/net/Uri;
+    if-eqz p1, :cond_0
 
-    move-result-object p3
+    invoke-direct {p0, p2}, Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger;->getParams(Lhm;)Ljava/lang/String;
 
-    invoke-direct {p0, p2}, Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger;->getParams(Lom;)Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object p2
+    const-string p3, "start with params "
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {p3, p1}, Lwy1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    const-string v1, "API request "
+    move-result-object p1
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    goto :goto_0
 
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :cond_0
+    const-string p1, ""
 
-    const-string p3, " start with params "
+    :goto_0
+    iget-object p3, p0, Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger;->log:Ly6d;
 
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {p2}, Lhm;->getUri()Landroid/net/Uri;
 
     move-result-object p2
 
-    const-string p3, "CallsApiDebug"
+    invoke-direct {p0, p2}, Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger;->transformUriForLog(Landroid/net/Uri;)Ljava/lang/String;
 
-    invoke-interface {p1, p3, p2}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object p2
+
+    const-string v0, "API request "
+
+    const-string v1, " "
+
+    invoke-static {v0, p2, v1, p1}, Lwy1;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, "CallsApiDebug"
+
+    invoke-interface {p3, p2, p1}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public debugApiResponseFail(Lyl;Lom;Lvq7;)Lvq7;
+.method public debugApiResponseFail(Lsl;Lhm;Lxx7;)Lxx7;
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -309,7 +436,7 @@
         }
     .end annotation
 
-    invoke-interface {p3}, Lvq7;->R()Ljava/lang/String;
+    invoke-interface {p3}, Lxx7;->R()Ljava/lang/String;
 
     move-result-object p1
 
@@ -317,42 +444,36 @@
 
     move-result-object p3
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger;->log:Lfwc;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger;->log:Ly6d;
 
-    invoke-interface {p2}, Lom;->getUri()Landroid/net/Uri;
+    invoke-interface {p2}, Lhm;->getUri()Landroid/net/Uri;
 
     move-result-object p2
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-direct {p0, p2}, Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger;->transformUriForLog(Landroid/net/Uri;)Ljava/lang/String;
 
-    const-string v2, "API request "
+    move-result-object p2
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v1, "API request "
 
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v2, " failed with response "
 
-    const-string p2, " failed with response "
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v1, p2, v2, p3}, Lwy1;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
     const-string p3, "CallsApiDebug"
 
-    invoke-interface {v0, p3, p2}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, p3, p2}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {p1}, Lwq7;->d(Ljava/lang/String;)Lwq7;
+    invoke-static {p1}, Lyx7;->d(Ljava/lang/String;)Lyx7;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public debugApiResponseOk(Lyl;Lom;Lvq7;)Lvq7;
+.method public debugApiResponseOk(Lsl;Lhm;Lxx7;)Lxx7;
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -360,50 +481,60 @@
         }
     .end annotation
 
-    invoke-interface {p3}, Lvq7;->R()Ljava/lang/String;
+    invoke-interface {p3}, Lxx7;->R()Ljava/lang/String;
 
     move-result-object p1
+
+    instance-of p3, p2, Lkm;
+
+    if-eqz p3, :cond_0
 
     invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger;->eraseSecrets(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p3
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger;->log:Lfwc;
+    const-string v0, "with response "
 
-    invoke-interface {p2}, Lom;->getUri()Landroid/net/Uri;
+    invoke-static {v0, p3}, Lwy1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p3
+
+    goto :goto_0
+
+    :cond_0
+    const-string p3, ""
+
+    :goto_0
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger;->log:Ly6d;
+
+    invoke-interface {p2}, Lhm;->getUri()Landroid/net/Uri;
 
     move-result-object p2
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-direct {p0, p2}, Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger;->transformUriForLog(Landroid/net/Uri;)Ljava/lang/String;
 
-    const-string v2, "API request "
+    move-result-object p2
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v1, "API request "
 
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v2, " success "
 
-    const-string p2, " success with response "
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v1, p2, v2, p3}, Lwy1;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
     const-string p3, "CallsApiDebug"
 
-    invoke-interface {v0, p3, p2}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, p3, p2}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {p1}, Lwq7;->d(Ljava/lang/String;)Lwq7;
+    invoke-static {p1}, Lyx7;->d(Ljava/lang/String;)Lyx7;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public debugIoException(Lyl;Lom;Ljava/io/IOException;)V
+.method public debugIoException(Lsl;Lhm;Ljava/io/IOException;)V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -411,31 +542,27 @@
         }
     .end annotation
 
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger;->log:Lfwc;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger;->log:Ly6d;
 
-    invoke-interface {p2}, Lom;->getUri()Landroid/net/Uri;
+    invoke-interface {p2}, Lhm;->getUri()Landroid/net/Uri;
 
     move-result-object p2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-direct {p0, p2}, Lru/ok/android/externcalls/sdk/api/log/LoggingApiRequestDebugger;->transformUriForLog(Landroid/net/Uri;)Ljava/lang/String;
 
-    const-string v1, "API request "
+    move-result-object p2
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v0, "API request "
 
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v1, " failed with IO Exception"
 
-    const-string p2, " failed with IO Exception"
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, p2, v1}, Lho7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
     const-string v0, "CallsApiDebug"
 
-    invoke-interface {p1, v0, p2, p3}, Lfwc;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {p1, v0, p2, p3}, Ly6d;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method

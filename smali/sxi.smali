@@ -3,45 +3,114 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static a:Lpca;
+
+
 # direct methods
-.method public static final a(Lji6;)Lpw4;
-    .locals 2
+.method public static a(IIZ)I
+    .locals 5
 
-    new-instance v0, Lj7;
+    if-eqz p2, :cond_0
 
-    invoke-direct {v0, p0}, Lj7;-><init>(Ljava/lang/Object;)V
+    sub-int v0, p1, p0
 
-    new-instance p0, Li5;
+    add-int/lit16 v0, v0, 0x168
 
-    const/16 v1, 0x18
+    rem-int/lit16 v0, v0, 0x168
 
-    invoke-direct {p0, v1, v0}, Li5;-><init>(ILjava/lang/Object;)V
+    goto :goto_0
 
-    new-instance v0, Lpw4;
+    :cond_0
+    add-int v0, p1, p0
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    rem-int/lit16 v0, v0, 0x168
 
-    sget-object v1, Lpw4;->c:Ljava/lang/Object;
+    :goto_0
+    const/4 v1, 0x2
 
-    iput-object v1, v0, Lpw4;->b:Ljava/lang/Object;
+    const-string v2, "CameraOrientationUtil"
 
-    iput-object p0, v0, Lpw4;->a:Li5;
+    invoke-static {v1, v2}, Lgri;->d(ILjava/lang/String;)Z
 
-    return-object v0
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const-string v1, ", sourceRotationDegrees="
+
+    const-string v3, ", isOppositeFacing="
+
+    const-string v4, "getRelativeImageRotation: destRotationDegrees="
+
+    invoke-static {v4, p0, v1, p1, v3}, Lwy1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string p1, ", result="
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v2, p0}, Lgri;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_1
+    return v0
 .end method
 
-.method public static final b(Lji6;)Lrcd;
-    .locals 1
+.method public static b(I)I
+    .locals 2
 
-    new-instance v0, Lrcd;
+    if-eqz p0, :cond_3
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
 
-    iput-object p0, v0, Lrcd;->a:Lji6;
+    if-eq p0, v0, :cond_2
 
-    sget-object p0, Lai4;->t0:Lai4;
+    const/4 v0, 0x2
 
-    iput-object p0, v0, Lrcd;->b:Ljava/lang/Object;
+    if-eq p0, v0, :cond_1
 
-    return-object v0
+    const/4 v0, 0x3
+
+    if-ne p0, v0, :cond_0
+
+    const/16 p0, 0x10e
+
+    return p0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Unsupported surface rotation: "
+
+    invoke-static {p0, v1}, Lho7;->f(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    const/16 p0, 0xb4
+
+    return p0
+
+    :cond_2
+    const/16 p0, 0x5a
+
+    return p0
+
+    :cond_3
+    const/4 p0, 0x0
+
+    return p0
 .end method

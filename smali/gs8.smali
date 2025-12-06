@@ -1,181 +1,241 @@
-.class public abstract Lgs8;
-.super Ljava/lang/Object;
+.class public final Lgs8;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
 
 # interfaces
-.implements Lhw0;
-
-
-# static fields
-.field public static final Y:Llp8;
+.implements Lbs8;
+.implements Lpy4;
+.implements Lrk3;
 
 
 # instance fields
-.field public final X:Z
+.field public final synthetic a:I
 
-.field public final a:J
+.field public final b:Lv2f;
 
-.field public final b:J
-
-.field public final c:Z
-
-.field public final o:Z
+.field public final c:Le2f;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lv2f;Le2f;I)V
+    .locals 0
 
-    new-instance v0, Les8;
+    iput p3, p0, Lgs8;->a:I
 
-    invoke-direct {v0}, Les8;-><init>()V
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    invoke-virtual {v0}, Les8;->a()Lis8;
+    iput-object p1, p0, Lgs8;->b:Lv2f;
 
-    new-instance v0, Llp8;
-
-    const/16 v1, 0x9
-
-    invoke-direct {v0, v1}, Llp8;-><init>(I)V
-
-    sput-object v0, Lgs8;->Y:Llp8;
-
-    return-void
-.end method
-
-.method public constructor <init>(Les8;)V
-    .locals 2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iget-wide v0, p1, Les8;->a:J
-
-    iput-wide v0, p0, Lgs8;->a:J
-
-    iget-wide v0, p1, Les8;->b:J
-
-    iput-wide v0, p0, Lgs8;->b:J
-
-    iget-boolean v0, p1, Les8;->c:Z
-
-    iput-boolean v0, p0, Lgs8;->c:Z
-
-    iget-boolean v0, p1, Les8;->d:Z
-
-    iput-boolean v0, p0, Lgs8;->o:Z
-
-    iget-boolean p1, p1, Les8;->e:Z
-
-    iput-boolean p1, p0, Lgs8;->X:Z
+    iput-object p2, p0, Lgs8;->c:Le2f;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public a(Ljava/lang/Object;)V
+    .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lgs8;->b:Lv2f;
 
-    if-ne p0, p1, :cond_0
+    invoke-interface {v0, p1}, Lv2f;->a(Ljava/lang/Object;)V
 
-    return v0
+    return-void
+.end method
 
-    :cond_0
-    instance-of v1, p1, Lgs8;
+.method public final b()V
+    .locals 4
+
+    iget v0, p0, Lgs8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Laqc;
+
+    const/4 v1, 0x2
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    iget-object v3, p0, Lgs8;->b:Lv2f;
 
-    return v2
+    invoke-direct {v0, p0, v3, v2, v1}, Laqc;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
 
-    :cond_1
-    check-cast p1, Lgs8;
+    iget-object v1, p0, Lgs8;->c:Le2f;
 
-    iget-wide v3, p0, Lgs8;->a:J
+    invoke-virtual {v1, v0}, Le2f;->k(Lv2f;)V
 
-    iget-wide v5, p1, Lgs8;->a:J
+    return-void
 
-    cmp-long v1, v3, v5
+    :pswitch_0
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    if-nez v1, :cond_2
+    move-result-object v0
 
-    iget-wide v3, p0, Lgs8;->b:J
+    check-cast v0, Lpy4;
 
-    iget-wide v5, p1, Lgs8;->b:J
+    sget-object v1, Lty4;->a:Lty4;
 
-    cmp-long v1, v3, v5
+    if-eq v0, v1, :cond_0
 
-    if-nez v1, :cond_2
+    const/4 v1, 0x0
 
-    iget-boolean v1, p0, Lgs8;->c:Z
+    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-boolean v3, p1, Lgs8;->c:Z
+    move-result v0
 
-    if-ne v1, v3, :cond_2
+    if-eqz v0, :cond_0
 
-    iget-boolean v1, p0, Lgs8;->o:Z
+    new-instance v0, Lh79;
 
-    iget-boolean v3, p1, Lgs8;->o:Z
+    iget-object v1, p0, Lgs8;->b:Lv2f;
 
-    if-ne v1, v3, :cond_2
+    const/16 v2, 0x18
 
-    iget-boolean v1, p0, Lgs8;->X:Z
+    invoke-direct {v0, v1, v2, p0}, Lh79;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    iget-boolean p1, p1, Lgs8;->X:Z
+    iget-object v1, p0, Lgs8;->c:Le2f;
 
-    if-ne v1, p1, :cond_2
+    invoke-virtual {v1, v0}, Le2f;->k(Lv2f;)V
 
-    return v0
+    :cond_0
+    return-void
 
-    :cond_2
-    return v2
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final hashCode()I
-    .locals 5
+.method public final c(Lpy4;)V
+    .locals 1
 
-    iget-wide v0, p0, Lgs8;->a:J
+    iget v0, p0, Lgs8;->a:I
 
-    const/16 v2, 0x20
+    packed-switch v0, :pswitch_data_0
 
-    ushr-long v3, v0, v2
+    invoke-static {p0, p1}, Lty4;->h(Ljava/util/concurrent/atomic/AtomicReference;Lpy4;)Z
 
-    xor-long/2addr v0, v3
+    move-result p1
 
-    long-to-int v0, v0
+    if-eqz p1, :cond_0
 
-    mul-int/lit8 v0, v0, 0x1f
+    iget-object p1, p0, Lgs8;->b:Lv2f;
 
-    iget-wide v3, p0, Lgs8;->b:J
+    invoke-interface {p1, p0}, Lv2f;->c(Lpy4;)V
 
-    ushr-long v1, v3, v2
+    :cond_0
+    return-void
 
-    xor-long/2addr v1, v3
+    :pswitch_0
+    invoke-static {p0, p1}, Lty4;->h(Ljava/util/concurrent/atomic/AtomicReference;Lpy4;)Z
 
-    long-to-int v1, v1
+    move-result p1
 
-    add-int/2addr v0, v1
+    if-eqz p1, :cond_1
 
-    mul-int/lit8 v0, v0, 0x1f
+    iget-object p1, p0, Lgs8;->b:Lv2f;
 
-    iget-boolean v1, p0, Lgs8;->c:Z
+    invoke-interface {p1, p0}, Lv2f;->c(Lpy4;)V
 
-    add-int/2addr v0, v1
+    :cond_1
+    return-void
 
-    mul-int/lit8 v0, v0, 0x1f
+    nop
 
-    iget-boolean v1, p0, Lgs8;->o:Z
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    add-int/2addr v0, v1
+.method public final dispose()V
+    .locals 1
 
-    mul-int/lit8 v0, v0, 0x1f
+    iget v0, p0, Lgs8;->a:I
 
-    iget-boolean v1, p0, Lgs8;->X:Z
+    packed-switch v0, :pswitch_data_0
 
-    add-int/2addr v0, v1
+    invoke-static {p0}, Lty4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p0}, Lty4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final e()Z
+    .locals 1
+
+    iget v0, p0, Lgs8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lpy4;
+
+    invoke-static {v0}, Lty4;->c(Lpy4;)Z
+
+    move-result v0
 
     return v0
+
+    :pswitch_0
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lpy4;
+
+    invoke-static {v0}, Lty4;->c(Lpy4;)Z
+
+    move-result v0
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget v0, p0, Lgs8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lgs8;->b:Lv2f;
+
+    invoke-interface {v0, p1}, Lv2f;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lgs8;->b:Lv2f;
+
+    invoke-interface {v0, p1}, Lv2f;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

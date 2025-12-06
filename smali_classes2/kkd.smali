@@ -1,53 +1,81 @@
 .class public final Lkkd;
-.super Ljava/lang/Object;
+.super Lyi0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lsl;
-
-.field public final b:Lxod;
+.field public final synthetic a:Lrr8;
 
 
 # direct methods
-.method public constructor <init>(Lsl;)V
+.method public constructor <init>(Lrr8;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lkkd;->a:Lsl;
-
-    invoke-static {}, Lkpd;->b()Lxod;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lkkd;->b:Lxod;
+    iput-object p1, p0, Lkkd;->a:Lrr8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lem;)Lrqe;
+.method public final e(Lpe4;)V
     .locals 2
 
-    new-instance v0, Lf44;
+    iget-object v0, p0, Lkkd;->a:Lrr8;
 
-    const/16 v1, 0x8
+    invoke-virtual {v0}, Lrr8;->e()Z
 
-    invoke-direct {v0, p0, v1, p1}, Lf44;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    move-result v1
 
-    new-instance p1, Ltka;
+    if-nez v1, :cond_0
 
-    const/4 v1, 0x4
+    check-cast p1, Lr0;
 
-    invoke-direct {p1, v1, v0}, Ltka;-><init>(ILjava/lang/Object;)V
-
-    iget-object v0, p0, Lkkd;->b:Lxod;
-
-    invoke-virtual {p1, v0}, Lwpe;->m(Lxod;)Lrqe;
+    invoke-virtual {p1}, Lr0;->b()Ljava/lang/Throwable;
 
     move-result-object p1
 
-    return-object p1
+    invoke-virtual {v0, p1}, Lrr8;->d(Ljava/lang/Throwable;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-static {p1}, Lt8j;->a(Ljava/lang/Throwable;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final g(Landroid/graphics/Bitmap;)V
+    .locals 2
+
+    iget-object v0, p0, Lkkd;->a:Lrr8;
+
+    invoke-virtual {v0}, Lrr8;->e()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
+
+    :cond_0
+    return-void
+
+    :cond_1
+    if-nez p1, :cond_2
+
+    invoke-virtual {v0}, Lrr8;->b()V
+
+    return-void
+
+    :cond_2
+    invoke-virtual {v0, p1}, Lrr8;->a(Ljava/lang/Object;)V
+
+    return-void
 .end method

@@ -1,313 +1,336 @@
 .class public final Ljkg;
-.super Landroid/text/style/ImageSpan;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Lwsf;
+.implements Lsm6;
 
 
 # instance fields
-.field public final X:Lhkg;
+.field public final synthetic X:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
 
-.field public final Y:Landroid/content/res/Resources;
-
-.field public Z:Likg;
-
-.field public final a:Landroid/content/Context;
-
-.field public final b:I
-
-.field public final c:Z
-
-.field public final o:Z
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;IZLhkg;)V
-    .locals 2
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/password/TwoFACheckPassScreen;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    iput-object p2, p0, Ljkg;->X:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
 
-    if-ne p2, v0, :cond_0
+    const/4 p2, 0x2
 
-    sget v1, Lpjd;->e2:I
-
-    goto :goto_0
-
-    :cond_0
-    sget v1, Lpjd;->f2:I
-
-    :goto_0
-    invoke-direct {p0, p1, v1}, Landroid/text/style/ImageSpan;-><init>(Landroid/content/Context;I)V
-
-    iput-object p1, p0, Ljkg;->a:Landroid/content/Context;
-
-    iput p2, p0, Ljkg;->b:I
-
-    iput-boolean v0, p0, Ljkg;->c:Z
-
-    iput-boolean p3, p0, Ljkg;->o:Z
-
-    iput-object p4, p0, Ljkg;->X:Lhkg;
-
-    invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
-
-    move-result-object p3
-
-    iput-object p3, p0, Ljkg;->Y:Landroid/content/res/Resources;
-
-    new-instance p3, Likg;
-
-    invoke-direct {p3, p1, p2, p4}, Likg;-><init>(Landroid/content/Context;ILhkg;)V
-
-    iput-object p3, p0, Ljkg;->Z:Likg;
-
-    sget-object p2, Ll05;->s0:Lk82;
-
-    invoke-virtual {p2, p1}, Lk82;->e(Landroid/content/Context;)Ll05;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ll05;->l()Lv5b;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Ljkg;->onThemeChanged(Lv5b;)V
+    invoke-direct {p0, p2, p1}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final draw(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result p2
+    invoke-virtual {p0, p1, p2}, Ljkg;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :try_start_0
-    invoke-virtual {p9}, Landroid/graphics/Paint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
+    move-result-object p1
 
-    move-result-object p3
+    check-cast p1, Ljkg;
 
-    iget p4, p3, Landroid/graphics/Paint$FontMetricsInt;->descent:I
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    iget p3, p3, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
+    invoke-virtual {p1, p2}, Ljkg;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    sub-int p3, p4, p3
-
-    add-int/2addr p7, p4
-
-    int-to-float p4, p7
-
-    int-to-float p3, p3
-
-    const/4 p6, 0x2
-
-    int-to-float p6, p6
-
-    div-float/2addr p3, p6
-
-    sub-float/2addr p4, p3
-
-    iget-object p3, p0, Ljkg;->Z:Likg;
-
-    invoke-virtual {p3}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object p3
-
-    iget p3, p3, Landroid/graphics/Rect;->bottom:I
-
-    iget-object p7, p0, Ljkg;->Z:Likg;
-
-    invoke-virtual {p7}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object p7
-
-    iget p7, p7, Landroid/graphics/Rect;->top:I
-
-    sub-int/2addr p3, p7
-
-    int-to-float p3, p3
-
-    div-float/2addr p3, p6
-
-    sub-float/2addr p4, p3
-
-    invoke-virtual {p1, p5, p4}, Landroid/graphics/Canvas;->translate(FF)V
-
-    iget-object p3, p0, Ljkg;->Z:Likg;
-
-    invoke-virtual {p3, p1}, Lone/me/sdk/richvector/EnhancedVectorDrawable;->draw(Landroid/graphics/Canvas;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {p1, p2}, Landroid/graphics/Canvas;->restoreToCount(I)V
-
-    return-void
-
-    :catchall_0
-    move-exception p3
-
-    invoke-virtual {p1, p2}, Landroid/graphics/Canvas;->restoreToCount(I)V
-
-    throw p3
+    return-object p2
 .end method
 
-.method public final getDrawable()Landroid/graphics/drawable/Drawable;
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object v0, p0, Ljkg;->Z:Likg;
+    new-instance v0, Ljkg;
+
+    iget-object v1, p0, Ljkg;->X:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+
+    invoke-direct {v0, p2, v1}, Ljkg;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/password/TwoFACheckPassScreen;)V
+
+    iput-object p1, v0, Ljkg;->o:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final getSize(Landroid/graphics/Paint;Ljava/lang/CharSequence;IILandroid/graphics/Paint$FontMetricsInt;)I
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 19
 
-    invoke-virtual {p1}, Landroid/graphics/Paint;->getTextSize()F
+    move-object/from16 v0, p0
 
-    move-result p1
+    invoke-static/range {p1 .. p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    iget-object p2, p0, Ljkg;->Y:Landroid/content/res/Resources;
+    iget-object v1, v0, Ljkg;->o:Ljava/lang/Object;
 
-    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    check-cast v1, Lnmg;
 
-    move-result-object p2
+    iget-object v2, v0, Ljkg;->X:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
 
-    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
+    iget-object v3, v2, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->Z:Lbbd;
 
-    div-float/2addr p1, p2
+    iget-object v4, v2, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->s0:Lbbd;
 
-    invoke-static {p1}, Lcci;->e(F)I
+    sget-object v5, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->t0:[Lyy7;
 
-    move-result p1
+    instance-of v5, v1, Lkmg;
 
-    invoke-static {p1}, Lzdf;->i(I)I
+    const/4 v6, 0x2
 
-    move-result p2
+    const/4 v7, 0x0
 
-    iget p3, p0, Ljkg;->b:I
+    const/4 v8, 0x0
 
-    if-eq p1, p3, :cond_0
+    if-eqz v5, :cond_3
 
-    new-instance p3, Likg;
+    sget-object v3, Lone/me/sdk/bottomsheet/BottomSheetWidget;->B0:[Lyy7;
 
-    iget-object p4, p0, Ljkg;->a:Landroid/content/Context;
+    check-cast v1, Lkmg;
 
-    iget-object p5, p0, Ljkg;->X:Lhkg;
+    iget-object v3, v1, Lkmg;->a:Ln5g;
 
-    invoke-direct {p3, p4, p1, p5}, Likg;-><init>(Landroid/content/Context;ILhkg;)V
+    iget-object v4, v1, Lkmg;->d:Lf1e;
 
-    iput-object p3, p0, Ljkg;->Z:Likg;
+    invoke-static {v3, v8, v4, v6}, Lj5j;->a(Ls5g;Landroid/os/Bundle;Lf1e;I)Loq3;
 
-    :cond_0
-    invoke-static {p1}, Lzdf;->f(I)I
+    move-result-object v11
 
-    move-result p1
+    iget-object v3, v1, Lkmg;->b:Ln5g;
 
-    int-to-float p1, p1
+    invoke-virtual {v11, v3}, Loq3;->f(Ls5g;)V
 
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+    iget-object v1, v1, Lkmg;->c:Ljava/util/List;
 
-    move-result-object p3
+    new-instance v9, Lfr2;
 
-    invoke-virtual {p3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    const/16 v15, 0x8
 
-    move-result-object p3
+    const/16 v16, 0xf
 
-    iget p3, p3, Landroid/util/DisplayMetrics;->density:F
+    const/4 v10, 0x1
 
-    mul-float/2addr p1, p3
+    const-class v12, Loq3;
 
-    invoke-static {p1}, Lfhi;->b(F)I
+    const-string v13, "addButton"
 
-    move-result p1
+    const-string v14, "addButton([Lone/me/sdk/bottomsheet/ConfirmationBottomSheet$Button;)Lone/me/sdk/bottomsheet/ConfirmationBottomSheet$Builder;"
 
-    iget-boolean p3, p0, Ljkg;->c:Z
+    invoke-direct/range {v9 .. v16}, Lfr2;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    const/4 p4, 0x0
+    new-instance v3, Lm4;
 
-    if-eqz p3, :cond_1
+    const/16 v4, 0x18
 
-    move p3, p1
+    invoke-direct {v3, v4, v9}, Lm4;-><init>(ILjava/lang/Object;)V
+
+    invoke-interface {v1, v3}, Ljava/lang/Iterable;->forEach(Ljava/util/function/Consumer;)V
+
+    invoke-virtual {v11}, Loq3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
+
+    move-result-object v13
+
+    invoke-virtual {v13, v2}, Lone/me/sdk/arch/Widget;->setTargetController(Lc54;)V
+
+    move-object v1, v2
+
+    :goto_0
+    invoke-virtual {v1}, Lc54;->getParentController()Lc54;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    invoke-virtual {v1}, Lc54;->getParentController()Lc54;
+
+    move-result-object v1
 
     goto :goto_0
 
-    :cond_1
-    move p3, p4
+    :cond_0
+    instance-of v3, v1, Leud;
 
-    :goto_0
-    iget-boolean p5, p0, Ljkg;->o:Z
+    if-eqz v3, :cond_1
 
-    if-eqz p5, :cond_2
+    check-cast v1, Leud;
 
     goto :goto_1
 
-    :cond_2
-    move p1, p4
+    :cond_1
+    move-object v1, v8
 
     :goto_1
-    iget-object p5, p0, Ljkg;->Z:Likg;
+    if-eqz v1, :cond_2
 
-    int-to-float p2, p2
+    check-cast v1, Lone/me/android/root/RootController;
 
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+    invoke-virtual {v1}, Lone/me/android/root/RootController;->E0()Lytd;
 
-    move-result-object v0
+    move-result-object v8
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    :cond_2
+    invoke-virtual {v13, v2}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->N0(Lone/me/sdk/arch/Widget;)V
 
-    move-result-object v0
+    if-eqz v8, :cond_8
 
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+    new-instance v12, Lbud;
 
-    invoke-static {p2, v0, p3}, Lu15;->c(FFI)I
+    const/16 v17, 0x0
 
-    move-result v0
+    const/16 v18, -0x1
 
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+    const/4 v14, 0x0
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0x0
+
+    invoke-direct/range {v12 .. v18}, Lbud;-><init>(Lc54;Ljava/lang/String;Lh54;Lh54;ZI)V
+
+    const/4 v1, 0x1
+
+    const-string v2, "BottomSheetWidget"
+
+    invoke-static {v7, v12, v1, v2}, Laz1;->u(ZLbud;ZLjava/lang/String;)V
+
+    invoke-virtual {v8, v12}, Lytd;->H(Lbud;)V
+
+    goto/16 :goto_3
+
+    :cond_3
+    instance-of v5, v1, Llmg;
+
+    if-eqz v5, :cond_6
+
+    new-instance v5, Lccb;
+
+    invoke-direct {v5, v2}, Lccb;-><init>(Lone/me/sdk/arch/Widget;)V
+
+    new-instance v9, Lqcb;
+
+    check-cast v1, Llmg;
+
+    iget v10, v1, Llmg;->b:I
+
+    invoke-direct {v9, v10}, Lqcb;-><init>(I)V
+
+    invoke-virtual {v5, v9}, Lccb;->e(Lucb;)V
+
+    iget-object v1, v1, Llmg;->a:Ls5g;
+
+    invoke-virtual {v5, v1}, Lccb;->g(Ls5g;)V
+
+    new-instance v1, Lkcb;
+
+    sget-object v9, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->t0:[Lyy7;
+
+    const/4 v10, 0x3
+
+    aget-object v11, v9, v10
+
+    invoke-interface {v4, v2, v11}, Lbbd;->D(Ljava/lang/Object;Lyy7;)Ljava/lang/Object;
+
+    move-result-object v11
+
+    check-cast v11, Landroid/view/View;
+
+    invoke-virtual {v11}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v11
+
+    instance-of v12, v11, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    if-eqz v12, :cond_4
+
+    move-object v8, v11
+
+    check-cast v8, Landroid/view/ViewGroup$MarginLayoutParams;
+
+    :cond_4
+    if-eqz v8, :cond_5
+
+    iget v8, v8, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+
+    goto :goto_2
+
+    :cond_5
+    move v8, v7
+
+    :goto_2
+    aget-object v11, v9, v10
+
+    invoke-interface {v4, v2, v11}, Lbbd;->D(Ljava/lang/Object;Lyy7;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroid/view/View;
+
+    invoke-virtual {v4}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v4
+
+    add-int/2addr v4, v8
+
+    invoke-direct {v1, v7, v7, v4, v10}, Lkcb;-><init>(IIII)V
+
+    invoke-virtual {v5, v1}, Lccb;->c(Lkcb;)V
+
+    invoke-virtual {v5}, Lccb;->i()Lbcb;
+
+    aget-object v1, v9, v6
+
+    invoke-interface {v3, v2, v1}, Lbbd;->D(Ljava/lang/Object;Lyy7;)Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    check-cast v1, Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    move-result-object v1
+    invoke-virtual {v1, v7}, Lone/me/sdk/uikit/common/button/OneMeButton;->setProgressEnabled(Z)V
 
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+    goto :goto_3
 
-    mul-float/2addr v1, p2
+    :cond_6
+    instance-of v4, v1, Lmmg;
 
-    invoke-static {v1}, Lfhi;->b(F)I
+    if-eqz v4, :cond_7
 
-    move-result v1
+    sget-object v4, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->t0:[Lyy7;
 
-    invoke-virtual {p5, p3, p4, v0, v1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+    aget-object v4, v4, v6
 
-    invoke-static {}, Lau4;->d()Landroid/content/res/Resources;
+    invoke-interface {v3, v2, v4}, Lbbd;->D(Ljava/lang/Object;Lyy7;)Ljava/lang/Object;
 
-    move-result-object p4
+    move-result-object v2
 
-    invoke-virtual {p4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    check-cast v2, Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    move-result-object p4
+    check-cast v1, Lmmg;
 
-    iget p4, p4, Landroid/util/DisplayMetrics;->density:F
+    iget-boolean v1, v1, Lmmg;->a:Z
 
-    invoke-static {p2, p4, p3, p1}, Laab;->i(FFII)I
+    invoke-virtual {v2, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setProgressEnabled(Z)V
 
-    move-result p1
+    goto :goto_3
 
-    return p1
-.end method
+    :cond_7
+    instance-of v1, v1, Ljmg;
 
-.method public final onThemeChanged(Lv5b;)V
-    .locals 1
+    if-eqz v1, :cond_9
 
-    iget-object v0, p0, Ljkg;->Z:Likg;
+    :cond_8
+    :goto_3
+    sget-object v1, Lqqg;->a:Lqqg;
 
-    invoke-virtual {v0, p1}, Likg;->onThemeChanged(Lv5b;)V
+    return-object v1
 
-    return-void
+    :cond_9
+    new-instance v1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {v1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw v1
 .end method

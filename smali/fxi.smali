@@ -1,193 +1,110 @@
-.class public abstract Lfxi;
+.class public final Lfxi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpqa;
+
+
+# static fields
+.field public static final a:Lfxi;
+
 
 # direct methods
-.method public static a(Landroid/graphics/RectF;)[F
-    .locals 5
-
-    iget v0, p0, Landroid/graphics/RectF;->left:F
-
-    iget v1, p0, Landroid/graphics/RectF;->top:F
-
-    iget v2, p0, Landroid/graphics/RectF;->right:F
-
-    iget p0, p0, Landroid/graphics/RectF;->bottom:F
-
-    const/16 v3, 0x8
-
-    new-array v3, v3, [F
-
-    const/4 v4, 0x0
-
-    aput v0, v3, v4
-
-    const/4 v4, 0x1
-
-    aput v1, v3, v4
-
-    const/4 v4, 0x2
-
-    aput v2, v3, v4
-
-    const/4 v4, 0x3
-
-    aput v1, v3, v4
-
-    const/4 v1, 0x4
-
-    aput v2, v3, v1
-
-    const/4 v1, 0x5
-
-    aput p0, v3, v1
-
-    const/4 v1, 0x6
-
-    aput v0, v3, v1
-
-    const/4 v0, 0x7
-
-    aput p0, v3, v0
-
-    return-object v3
-.end method
-
-.method public static final b(Lfgd;)Lk54;
+.method static constructor <clinit>()V
     .locals 3
 
-    iget-object v0, p0, Lfgd;->k:Ljava/util/Map;
+    new-instance v0, Lfxi;
 
-    const-string v1, "QueryDispatcher"
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    sput-object v0, Lfxi;->a:Lfxi;
 
-    move-result-object v2
-
-    if-nez v2, :cond_1
-
-    iget-object p0, p0, Lfgd;->b:Ljava/util/concurrent/Executor;
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    :cond_0
-    invoke-static {p0}, Ls0j;->b(Ljava/util/concurrent/Executor;)Lk54;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_1
-    check-cast v2, Lk54;
-
-    return-object v2
-.end method
-
-.method public static c([F)Landroid/graphics/RectF;
-    .locals 6
-
-    new-instance v0, Landroid/graphics/RectF;
-
-    const/high16 v1, 0x7f800000    # Float.POSITIVE_INFINITY
-
-    const/high16 v2, -0x800000    # Float.NEGATIVE_INFINITY
-
-    invoke-direct {v0, v1, v1, v2, v2}, Landroid/graphics/RectF;-><init>(FFFF)V
+    new-instance v0, Lmli;
 
     const/4 v1, 0x1
 
-    :goto_0
-    array-length v2, p0
+    invoke-direct {v0, v1}, Lmli;-><init>(I)V
 
-    if-ge v1, v2, :cond_4
+    const-class v1, Lemi;
 
-    add-int/lit8 v2, v1, -0x1
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    aget v2, p0, v2
+    move-result-object v0
 
-    const/high16 v3, 0x41200000    # 10.0f
+    const/4 v2, 0x2
 
-    mul-float/2addr v2, v3
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    invoke-static {v2}, Ljava/lang/Math;->round(F)I
+    move-result-object v0
 
-    move-result v2
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    int-to-float v2, v2
+    move-result-object v0
 
-    div-float/2addr v2, v3
+    const/4 v2, 0x3
 
-    aget v4, p0, v1
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    mul-float/2addr v4, v3
+    move-result-object v0
 
-    invoke-static {v4}, Ljava/lang/Math;->round(F)I
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    move-result v4
+    move-result-object v0
 
-    int-to-float v4, v4
+    const/4 v2, 0x4
 
-    div-float/2addr v4, v3
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    iget v3, v0, Landroid/graphics/RectF;->left:F
+    move-result-object v0
 
-    cmpg-float v5, v2, v3
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    if-gez v5, :cond_0
+    move-result-object v0
 
-    move v3, v2
+    const/4 v2, 0x5
 
-    :cond_0
-    iput v3, v0, Landroid/graphics/RectF;->left:F
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    iget v3, v0, Landroid/graphics/RectF;->top:F
+    move-result-object v0
 
-    cmpg-float v5, v4, v3
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    if-gez v5, :cond_1
+    move-result-object v0
 
-    move v3, v4
+    const/4 v2, 0x6
 
-    :cond_1
-    iput v3, v0, Landroid/graphics/RectF;->top:F
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    iget v3, v0, Landroid/graphics/RectF;->right:F
+    move-result-object v0
 
-    cmpl-float v5, v2, v3
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    if-lez v5, :cond_2
+    move-result-object v0
 
-    goto :goto_1
+    const/4 v2, 0x7
 
-    :cond_2
-    move v2, v3
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    :goto_1
-    iput v2, v0, Landroid/graphics/RectF;->right:F
+    move-result-object v0
 
-    iget v2, v0, Landroid/graphics/RectF;->bottom:F
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    cmpl-float v3, v4, v2
+    move-result-object v0
 
-    if-lez v3, :cond_3
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
 
-    goto :goto_2
+    return-void
+.end method
 
-    :cond_3
-    move v4, v2
 
-    :goto_2
-    iput v4, v0, Landroid/graphics/RectF;->bottom:F
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    add-int/lit8 v1, v1, 0x2
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    goto :goto_0
+    move-result-object p1
 
-    :cond_4
-    invoke-virtual {v0}, Landroid/graphics/RectF;->sort()V
-
-    return-object v0
+    throw p1
 .end method

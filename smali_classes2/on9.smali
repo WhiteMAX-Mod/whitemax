@@ -1,367 +1,281 @@
 .class public final Lon9;
-.super Lsgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lzi6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Ljava/util/Set;
 
-.field public final synthetic Y:Lone/me/messages/list/ui/MessagesListWidget;
+.field public final b:Ljava/lang/Long;
+
+.field public final c:Z
+
+.field public final d:Lqn9;
+
+.field public final e:Lsn9;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+.method public constructor <init>(Ljava/util/Set;Ljava/lang/Long;ZLqn9;Lsn9;)V
     .locals 0
 
-    iput-object p2, p0, Lon9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lon9;->a:Ljava/util/Set;
 
-    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lon9;->b:Ljava/lang/Long;
+
+    iput-boolean p3, p0, Lon9;->c:Z
+
+    iput-object p4, p0, Lon9;->d:Lqn9;
+
+    iput-object p5, p0, Lon9;->e:Lsn9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Lvf6;
+    .locals 6
 
-    check-cast p1, Ljava/util/List;
+    new-instance v0, Lvf6;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Lon9;->d:Lqn9;
 
-    invoke-virtual {p0, p1, p2}, Lon9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-eqz v1, :cond_0
 
-    move-result-object p1
+    iget-object v1, v1, Lqn9;->a:Ljava/lang/CharSequence;
 
-    check-cast p1, Lon9;
+    :goto_0
+    move-object v4, v1
 
-    sget-object p2, Lccg;->a:Lccg;
+    goto :goto_1
 
-    invoke-virtual {p1, p2}, Lon9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_0
+    const/4 v1, 0x0
 
-    return-object p2
-.end method
+    goto :goto_0
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    :goto_1
+    iget-object v1, p0, Lon9;->e:Lsn9;
 
-    new-instance v0, Lon9;
+    iget-boolean v5, v1, Lsn9;->e:Z
 
-    iget-object v1, p0, Lon9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+    iget-object v1, p0, Lon9;->a:Ljava/util/Set;
 
-    invoke-direct {v0, p2, v1}, Lon9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+    iget-object v2, p0, Lon9;->b:Ljava/lang/Long;
 
-    iput-object p1, v0, Lon9;->X:Ljava/lang/Object;
+    iget-boolean v3, p0, Lon9;->c:Z
+
+    invoke-direct/range {v0 .. v5}, Lvf6;-><init>(Ljava/util/Set;Ljava/lang/Long;ZLjava/lang/CharSequence;Z)V
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    sget-object v0, Lc98;->o:Lc98;
+    const/4 v0, 0x1
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    if-ne p0, p1, :cond_0
 
-    iget-object p1, p0, Lon9;->X:Ljava/lang/Object;
+    return v0
 
-    check-cast p1, Ljava/util/List;
+    :cond_0
+    instance-of v1, p1, Lon9;
 
-    iget-object v1, p0, Lon9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+    const/4 v2, 0x0
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lfx7;
+    if-nez v1, :cond_1
 
-    move-result-object v1
+    return v2
 
-    invoke-interface {v1}, Lfx7;->x()Lhx7;
+    :cond_1
+    check-cast p1, Lon9;
 
-    move-result-object v1
+    iget-object v1, p0, Lon9;->a:Ljava/util/Set;
 
-    iget-object v1, v1, Lhx7;->d:Lhw7;
+    iget-object v3, p1, Lon9;->a:Ljava/util/Set;
 
-    sget-object v2, Lhw7;->o:Lhw7;
-
-    invoke-virtual {v1, v2}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
-    const-string v2, ", last="
+    if-nez v1, :cond_2
 
-    const-string v3, ", first="
+    return v2
 
-    const/4 v4, 0x0
+    :cond_2
+    iget-object v1, p0, Lon9;->b:Ljava/lang/Long;
 
-    if-ltz v1, :cond_7
+    iget-object v3, p1, Lon9;->b:Ljava/lang/Long;
 
-    iget-object v1, p0, Lon9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object v1, v1, Lone/me/messages/list/ui/MessagesListWidget;->a:Ljava/lang/String;
+    move-result v1
 
-    sget-object v5, Ltei;->a:Lmxa;
+    if-nez v1, :cond_3
 
-    if-nez v5, :cond_0
+    return v2
 
-    goto :goto_4
+    :cond_3
+    iget-boolean v1, p0, Lon9;->c:Z
 
-    :cond_0
-    invoke-virtual {v5, v0}, Lmxa;->b(Lc98;)Z
+    iget-boolean v3, p1, Lon9;->c:Z
 
-    move-result v6
+    if-eq v1, v3, :cond_4
 
-    if-eqz v6, :cond_5
+    return v2
 
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    :cond_4
+    iget-object v1, p0, Lon9;->d:Lqn9;
 
-    move-result v6
+    iget-object v3, p1, Lon9;->d:Lqn9;
 
-    invoke-static {p1}, Lnb3;->D(Ljava/util/List;)Ljava/lang/Object;
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object v7
+    move-result v1
 
-    instance-of v8, v7, Lone/me/messages/list/loader/MessageModel;
+    if-nez v1, :cond_5
 
-    if-eqz v8, :cond_1
+    return v2
 
-    check-cast v7, Lone/me/messages/list/loader/MessageModel;
+    :cond_5
+    iget-object v1, p0, Lon9;->e:Lsn9;
+
+    iget-object p1, p1, Lon9;->e:Lsn9;
+
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_6
+
+    return v2
+
+    :cond_6
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-object v0, p0, Lon9;->a:Ljava/util/Set;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Lon9;->b:Ljava/lang/Long;
+
+    if-nez v3, :cond_0
+
+    move v3, v2
 
     goto :goto_0
 
-    :cond_1
-    move-object v7, v4
+    :cond_0
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+
+    move-result v3
 
     :goto_0
-    if-eqz v7, :cond_2
+    add-int/2addr v0, v3
 
-    invoke-virtual {v7}, Lone/me/messages/list/loader/MessageModel;->o()Ljava/lang/String;
+    mul-int/2addr v0, v1
 
-    move-result-object v7
+    iget-boolean v3, p0, Lon9;->c:Z
+
+    invoke-static {v0, v1, v3}, La9h;->b(IIZ)I
+
+    move-result v0
+
+    iget-object v3, p0, Lon9;->d:Lqn9;
+
+    if-nez v3, :cond_1
 
     goto :goto_1
 
-    :cond_2
-    move-object v7, v4
+    :cond_1
+    invoke-virtual {v3}, Lqn9;->hashCode()I
+
+    move-result v2
 
     :goto_1
-    invoke-static {p1}, Lnb3;->L(Ljava/util/List;)Ljava/lang/Object;
+    add-int/2addr v0, v2
 
-    move-result-object v8
+    mul-int/2addr v0, v1
 
-    instance-of v9, v8, Lone/me/messages/list/loader/MessageModel;
+    iget-object v1, p0, Lon9;->e:Lsn9;
 
-    if-eqz v9, :cond_3
+    invoke-virtual {v1}, Lsn9;->hashCode()I
 
-    check-cast v8, Lone/me/messages/list/loader/MessageModel;
+    move-result v1
 
-    goto :goto_2
+    add-int/2addr v1, v0
 
-    :cond_3
-    move-object v8, v4
+    return v1
+.end method
 
-    :goto_2
-    if-eqz v8, :cond_4
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    invoke-virtual {v8}, Lone/me/messages/list/loader/MessageModel;->o()Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object v8
+    const-string v1, "ForwardMessagesData(messageIds="
 
-    goto :goto_3
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :cond_4
-    move-object v8, v4
+    iget-object v1, p0, Lon9;->a:Ljava/util/Set;
 
-    :goto_3
-    new-instance v9, Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v10, "Got new messages on UI, size="
+    const-string v1, ", fwdAttachId="
 
-    invoke-direct {v9, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v9, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lon9;->b:Ljava/lang/Long;
 
-    invoke-virtual {v9, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v9, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, ", isForwardAttach="
 
-    invoke-virtual {v9, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v9, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-boolean v1, p0, Lon9;->c:Z
 
-    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    const-string v1, ", inputData="
 
-    invoke-virtual {v5, v0, v1, v2, v4}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_5
-    :goto_4
-    iget-object v0, p0, Lon9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+    iget-object v1, p0, Lon9;->d:Lqn9;
 
-    sget v1, Lgoc;->messages_list_recycler_view:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Lone/me/sdk/arch/Widget;->findViewById(I)Landroid/view/View;
+    const-string v1, ", quoteData="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lon9;->e:Lsn9;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Landroidx/recyclerview/widget/RecyclerView;
-
-    if-nez v0, :cond_6
-
-    iget-object v0, p0, Lon9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
-
-    iget-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->B0:Lfk9;
-
-    new-instance v2, Lnn9;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, v0, p1, v3}, Lnn9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;Ljava/util/List;I)V
-
-    invoke-virtual {v1, p1, v2}, Lfk9;->F(Ljava/util/List;Ljava/lang/Runnable;)V
-
-    goto/16 :goto_a
-
-    :cond_6
-    iget-object v1, p0, Lon9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
-
-    new-instance v2, Lnn9;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, v1, p1, v3}, Lnn9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;Ljava/util/List;I)V
-
-    new-instance v3, Lnn9;
-
-    const/4 v4, 0x2
-
-    invoke-direct {v3, v1, p1, v4}, Lnn9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;Ljava/util/List;I)V
-
-    const/4 p1, 0x1
-
-    invoke-static {p1, v0, v2, v3}, Lhxi;->c(ILandroidx/recyclerview/widget/RecyclerView;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
-
-    goto/16 :goto_a
-
-    :cond_7
-    iget-object v1, p0, Lon9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
-
-    iget-object v1, v1, Lone/me/messages/list/ui/MessagesListWidget;->a:Ljava/lang/String;
-
-    sget-object v5, Ltei;->a:Lmxa;
-
-    if-nez v5, :cond_8
-
-    goto :goto_9
-
-    :cond_8
-    invoke-virtual {v5, v0}, Lmxa;->b(Lc98;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_d
-
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v6
-
-    invoke-static {p1}, Lnb3;->D(Ljava/util/List;)Ljava/lang/Object;
-
-    move-result-object v7
-
-    instance-of v8, v7, Lone/me/messages/list/loader/MessageModel;
-
-    if-eqz v8, :cond_9
-
-    check-cast v7, Lone/me/messages/list/loader/MessageModel;
-
-    goto :goto_5
-
-    :cond_9
-    move-object v7, v4
-
-    :goto_5
-    if-eqz v7, :cond_a
-
-    invoke-virtual {v7}, Lone/me/messages/list/loader/MessageModel;->o()Ljava/lang/String;
-
-    move-result-object v7
-
-    goto :goto_6
-
-    :cond_a
-    move-object v7, v4
-
-    :goto_6
-    invoke-static {p1}, Lnb3;->L(Ljava/util/List;)Ljava/lang/Object;
-
-    move-result-object v8
-
-    instance-of v9, v8, Lone/me/messages/list/loader/MessageModel;
-
-    if-eqz v9, :cond_b
-
-    check-cast v8, Lone/me/messages/list/loader/MessageModel;
-
-    goto :goto_7
-
-    :cond_b
-    move-object v8, v4
-
-    :goto_7
-    if-eqz v8, :cond_c
-
-    invoke-virtual {v8}, Lone/me/messages/list/loader/MessageModel;->o()Ljava/lang/String;
-
-    move-result-object v8
-
-    goto :goto_8
-
-    :cond_c
-    move-object v8, v4
-
-    :goto_8
-    new-instance v9, Ljava/lang/StringBuilder;
-
-    const-string v10, "Got new messages (lifecycle scope), size="
-
-    invoke-direct {v9, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v9, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v9, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v9, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v9, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v9, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v5, v0, v1, v2, v4}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_d
-    :goto_9
-    iget-object v0, p0, Lon9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
-
-    iget-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->B0:Lfk9;
-
-    new-instance v2, Lnn9;
-
-    const/4 v3, 0x3
-
-    invoke-direct {v2, v0, p1, v3}, Lnn9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;Ljava/util/List;I)V
-
-    invoke-virtual {v1, p1, v2}, Lfk9;->F(Ljava/util/List;Ljava/lang/Runnable;)V
-
-    :goto_a
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
+    return-object v0
 .end method

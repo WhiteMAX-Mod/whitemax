@@ -1,159 +1,361 @@
 .class public final Lhg7;
-.super Lez;
+.super La2;
 .source "SourceFile"
+
+# interfaces
+.implements Lsg7;
+
+
+# static fields
+.field public static final b:Ljava/math/BigInteger;
+
+.field public static final c:Ljava/math/BigInteger;
+
+.field public static final d:Ljava/math/BigInteger;
+
+.field public static final o:Ljava/math/BigInteger;
 
 
 # instance fields
-.field public final X:Ljava/lang/String;
-
-.field public final o:Lhs7;
+.field public final a:Ljava/math/BigInteger;
 
 
 # direct methods
-.method public constructor <init>(Lhs7;Ljava/lang/String;ZZ)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    sget-object v0, La10;->w0:La10;
+    const-wide/16 v0, -0x80
 
-    invoke-direct {p0, v0, p3, p4}, Lez;-><init>(La10;ZZ)V
+    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
-    iput-object p1, p0, Lhg7;->o:Lhs7;
+    const-wide/16 v0, 0x7f
 
-    iput-object p2, p0, Lhg7;->X:Ljava/lang/String;
+    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    const-wide/16 v0, -0x8000
+
+    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    const-wide/16 v0, 0x7fff
+
+    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    const-wide/32 v0, -0x80000000
+
+    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    move-result-object v0
+
+    sput-object v0, Lhg7;->b:Ljava/math/BigInteger;
+
+    const-wide/32 v0, 0x7fffffff
+
+    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    move-result-object v0
+
+    sput-object v0, Lhg7;->c:Ljava/math/BigInteger;
+
+    const-wide/high16 v0, -0x8000000000000000L
+
+    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    move-result-object v0
+
+    sput-object v0, Lhg7;->d:Ljava/math/BigInteger;
+
+    const-wide v0, 0x7fffffffffffffffL
+
+    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    move-result-object v0
+
+    sput-object v0, Lhg7;->o:Ljava/math/BigInteger;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/math/BigInteger;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lhg7;->a:Ljava/math/BigInteger;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/util/HashMap;
-    .locals 9
+.method public final a()Ljava/lang/String;
+    .locals 1
 
-    invoke-super {p0}, Lez;->a()Ljava/util/HashMap;
+    iget-object v0, p0, Lhg7;->a:Ljava/math/BigInteger;
+
+    invoke-virtual {v0}, Ljava/math/BigInteger;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v1, Ljava/util/ArrayList;
+    return-object v0
+.end method
 
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+.method public final b()J
+    .locals 2
 
-    iget-object v2, p0, Lhg7;->o:Lhs7;
+    iget-object v0, p0, Lhg7;->a:Ljava/math/BigInteger;
 
-    iget-object v2, v2, Lhs7;->a:Ljava/io/Serializable;
+    invoke-virtual {v0}, Ljava/math/BigInteger;->longValue()J
 
-    check-cast v2, Ljava/util/ArrayList;
+    move-result-wide v0
 
-    invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    return-wide v0
+.end method
 
-    move-result-object v2
+.method public final d()I
+    .locals 1
+
+    const/4 v0, 0x3
+
+    return v0
+.end method
+
+.method public final e()I
+    .locals 2
+
+    sget-object v0, Lhg7;->b:Ljava/math/BigInteger;
+
+    iget-object v1, p0, Lhg7;->a:Ljava/math/BigInteger;
+
+    invoke-virtual {v1, v0}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
+
+    move-result v0
+
+    if-ltz v0, :cond_0
+
+    sget-object v0, Lhg7;->c:Ljava/math/BigInteger;
+
+    invoke-virtual {v1, v0}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
+
+    move-result v0
+
+    if-gtz v0, :cond_0
+
+    invoke-virtual {v1}, Ljava/math/BigInteger;->intValue()I
+
+    move-result v0
+
+    return v0
 
     :cond_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    new-instance v0, Lorg/msgpack/core/MessageIntegerOverflowException;
 
-    move-result v3
+    invoke-direct {v0, v1}, Lorg/msgpack/core/MessageIntegerOverflowException;-><init>(Ljava/math/BigInteger;)V
 
-    if-eqz v3, :cond_2
+    throw v0
+.end method
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    move-result-object v3
+    if-ne p1, p0, :cond_0
 
-    check-cast v3, Ljava/util/List;
+    const/4 p1, 0x1
 
-    new-instance v4, Ljava/util/ArrayList;
+    return p1
 
-    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
+    :cond_0
+    instance-of v0, p1, Llyg;
 
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    const/4 v1, 0x0
 
-    invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    if-nez v0, :cond_1
 
-    move-result-object v3
-
-    :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_0
-
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lvw0;
-
-    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v6, Ljava/util/HashMap;
-
-    invoke-direct {v6}, Ljava/util/HashMap;-><init>()V
-
-    iget-object v7, v5, Lvw0;->o:Ljava/lang/String;
-
-    if-eqz v7, :cond_1
-
-    const-string v8, "url"
-
-    invoke-virtual {v6, v8, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    return v1
 
     :cond_1
-    iget-object v7, v5, Lvw0;->a:Ltw0;
+    check-cast p1, Llyg;
 
-    iget-object v7, v7, Ltw0;->a:Ljava/lang/String;
+    check-cast p1, La2;
 
-    const-string v8, "type"
+    invoke-interface {p1}, Llyg;->d()I
 
-    invoke-virtual {v6, v8, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result v0
 
-    const-string v7, "text"
+    const/4 v2, 0x3
 
-    iget-object v8, v5, Lvw0;->b:Ljava/lang/String;
+    if-ne v0, v2, :cond_2
 
-    invoke-virtual {v6, v7, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1}, Llyg;->f()Lsg7;
 
-    iget-object v7, v5, Lvw0;->c:Lsw0;
+    move-result-object p1
 
-    iget-object v7, v7, Lsw0;->a:Ljava/lang/String;
+    iget-object v0, p0, Lhg7;->a:Ljava/math/BigInteger;
 
-    const-string v8, "intent"
+    invoke-interface {p1}, Lgqa;->h()Ljava/math/BigInteger;
 
-    invoke-virtual {v6, v8, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object p1
 
-    const-string v7, "payload"
+    invoke-virtual {v0, p1}, Ljava/math/BigInteger;->equals(Ljava/lang/Object;)Z
 
-    iget-object v8, v5, Lvw0;->X:Ljava/lang/String;
+    move-result p1
 
-    invoke-virtual {v6, v7, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    return p1
 
-    iget-boolean v7, v5, Lvw0;->Y:Z
+    :cond_2
+    return v1
+.end method
 
-    invoke-static {v7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+.method public final f()Lsg7;
+    .locals 0
 
-    move-result-object v7
+    return-object p0
+.end method
 
-    const-string v8, "isQuick"
+.method public final h()Ljava/math/BigInteger;
+    .locals 1
 
-    invoke-virtual {v6, v8, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, p0, Lhg7;->a:Ljava/math/BigInteger;
 
-    iget-wide v7, v5, Lvw0;->Z:J
+    return-object v0
+.end method
 
-    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+.method public final hashCode()I
+    .locals 4
 
-    move-result-object v5
+    sget-object v0, Lhg7;->b:Ljava/math/BigInteger;
 
-    const-string v7, "contactId"
+    iget-object v1, p0, Lhg7;->a:Ljava/math/BigInteger;
 
-    invoke-virtual {v6, v7, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
 
-    invoke-virtual {v4, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move-result v0
+
+    if-gtz v0, :cond_0
+
+    sget-object v0, Lhg7;->c:Ljava/math/BigInteger;
+
+    invoke-virtual {v1, v0}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
+
+    move-result v0
+
+    if-gtz v0, :cond_0
+
+    invoke-virtual {v1}, Ljava/math/BigInteger;->longValue()J
+
+    move-result-wide v0
+
+    :goto_0
+    long-to-int v0, v0
+
+    return v0
+
+    :cond_0
+    sget-object v0, Lhg7;->d:Ljava/math/BigInteger;
+
+    invoke-virtual {v0, v1}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
+
+    move-result v0
+
+    if-gtz v0, :cond_1
+
+    sget-object v0, Lhg7;->o:Ljava/math/BigInteger;
+
+    invoke-virtual {v1, v0}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
+
+    move-result v0
+
+    if-gtz v0, :cond_1
+
+    invoke-virtual {v1}, Ljava/math/BigInteger;->longValue()J
+
+    move-result-wide v0
+
+    const/16 v2, 0x20
+
+    ushr-long v2, v0, v2
+
+    xor-long/2addr v0, v2
 
     goto :goto_0
 
-    :cond_2
-    const-string v2, "buttons"
+    :cond_1
+    invoke-virtual {v1}, Ljava/math/BigInteger;->hashCode()I
 
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result v0
+
+    return v0
+.end method
+
+.method public final i()J
+    .locals 2
+
+    invoke-virtual {p0}, Lhg7;->j()Z
+
+    move-result v0
+
+    iget-object v1, p0, Lhg7;->a:Ljava/math/BigInteger;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v1}, Ljava/math/BigInteger;->longValue()J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    :cond_0
+    new-instance v0, Lorg/msgpack/core/MessageIntegerOverflowException;
+
+    invoke-direct {v0, v1}, Lorg/msgpack/core/MessageIntegerOverflowException;-><init>(Ljava/math/BigInteger;)V
+
+    throw v0
+.end method
+
+.method public final j()Z
+    .locals 2
+
+    sget-object v0, Lhg7;->d:Ljava/math/BigInteger;
+
+    iget-object v1, p0, Lhg7;->a:Ljava/math/BigInteger;
+
+    invoke-virtual {v1, v0}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
+
+    move-result v0
+
+    if-ltz v0, :cond_0
+
+    sget-object v0, Lhg7;->o:Ljava/math/BigInteger;
+
+    invoke-virtual {v1, v0}, Ljava/math/BigInteger;->compareTo(Ljava/math/BigInteger;)I
+
+    move-result v0
+
+    if-gtz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final k()Lsg7;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lhg7;->a:Ljava/math/BigInteger;
+
+    invoke-virtual {v0}, Ljava/math/BigInteger;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

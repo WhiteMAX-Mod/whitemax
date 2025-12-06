@@ -1,5 +1,5 @@
 .class public final Lbi0;
-.super Ldq;
+.super Lxp;
 .source "SourceFile"
 
 
@@ -13,7 +13,7 @@
 
     new-instance v0, Lbi0;
 
-    invoke-direct {v0}, Ldq;-><init>()V
+    invoke-direct {v0}, Lxp;-><init>()V
 
     sput-object v0, Lbi0;->a:Lbi0;
 

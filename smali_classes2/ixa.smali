@@ -1,113 +1,186 @@
-.class public final Lixa;
-.super Lsgf;
+.class public final synthetic Lixa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Lcm6;
 
 
 # instance fields
-.field public synthetic X:Z
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lmxa;
+.field public final synthetic b:Landroid/content/Context;
+
+.field public final synthetic c:Luxa;
 
 
 # direct methods
-.method public constructor <init>(Lmxa;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Luxa;I)V
     .locals 0
 
-    iput-object p1, p0, Lixa;->Y:Lmxa;
+    iput p3, p0, Lixa;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lixa;->b:Landroid/content/Context;
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lixa;->c:Luxa;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
 
-    check-cast p1, Ljava/lang/Boolean;
+    iget v0, p0, Lixa;->a:I
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    new-instance v0, Lone/me/sdk/richvector/EnhancedVectorDrawable;
 
-    invoke-virtual {p0, p1, p2}, Lixa;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    sget v1, Luwc;->ic_delete_filled_apart_24:I
 
-    move-result-object p1
+    iget-object v2, p0, Lixa;->b:Landroid/content/Context;
 
-    check-cast p1, Lixa;
+    invoke-direct {v0, v2, v1}, Lone/me/sdk/richvector/EnhancedVectorDrawable;-><init>(Landroid/content/Context;I)V
 
-    sget-object p2, Lccg;->a:Lccg;
+    sget-object v1, La93;->s0:Lv1a;
 
-    invoke-virtual {p1, p2}, Lixa;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Lv1a;->x(Landroid/content/Context;)La93;
 
-    return-object p2
-.end method
+    move-result-object v3
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    invoke-virtual {v3}, La93;->k()Lyeb;
 
-    new-instance v0, Lixa;
+    move-result-object v3
 
-    iget-object v1, p0, Lixa;->Y:Lmxa;
+    invoke-interface {v3}, Lyeb;->getIcon()Lnb7;
 
-    invoke-direct {v0, v1, p2}, Lixa;-><init>(Lmxa;Lkotlin/coroutines/Continuation;)V
+    const/4 v3, -0x1
 
-    check-cast p1, Ljava/lang/Boolean;
+    const-string v4, "cross"
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-static {v0, v4, v3}, Lz18;->e(Lmzg;Ljava/lang/String;I)V
 
-    move-result p1
+    invoke-static {v1, v2}, Lctd;->f(Lv1a;Landroid/content/Context;)Lnb7;
 
-    iput-boolean p1, v0, Lixa;->X:Z
+    move-result-object v1
+
+    iget v1, v1, Lnb7;->j:I
+
+    const-string v2, "circle_background"
+
+    invoke-static {v0, v2, v1}, Lz18;->e(Lmzg;Ljava/lang/String;I)V
+
+    iget-object v1, p0, Lixa;->c:Luxa;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
     return-object v0
-.end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    :pswitch_0
+    new-instance v0, Lone/me/sdk/richvector/EnhancedVectorDrawable;
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    sget v1, Luwc;->ic_online_24:I
 
-    iget-boolean p1, p0, Lixa;->X:Z
+    iget-object v2, p0, Lixa;->b:Landroid/content/Context;
 
-    iget-object v0, p0, Lixa;->Y:Lmxa;
+    invoke-direct {v0, v2, v1}, Lone/me/sdk/richvector/EnhancedVectorDrawable;-><init>(Landroid/content/Context;I)V
 
-    iget-object v0, v0, Lmxa;->b:Ljava/lang/String;
+    sget-object v1, La93;->s0:Lv1a;
 
-    sget-object v1, Ltei;->a:Lmxa;
+    invoke-static {v1, v2}, Lctd;->f(Lv1a;Landroid/content/Context;)Lnb7;
 
-    if-nez v1, :cond_0
+    move-result-object v3
 
-    goto :goto_0
+    iget v3, v3, Lnb7;->e:I
 
-    :cond_0
-    sget-object v2, Lc98;->X:Lc98;
+    const-string v4, "online"
 
-    invoke-virtual {v1, v2}, Lmxa;->b(Lc98;)Z
+    invoke-static {v0, v4, v3}, Lz18;->e(Lmzg;Ljava/lang/String;I)V
 
-    move-result v3
+    invoke-virtual {v1, v2}, Lv1a;->x(Landroid/content/Context;)La93;
 
-    if-eqz v3, :cond_1
+    move-result-object v1
 
-    const-string v3, "allowSensitive="
+    invoke-virtual {v1}, La93;->k()Lyeb;
 
-    invoke-static {v3, p1}, Lrv8;->f(Ljava/lang/String;Z)Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object p1
+    invoke-interface {v1}, Lyeb;->b()Lbf0;
 
-    const/4 v3, 0x0
+    move-result-object v1
 
-    invoke-virtual {v1, v2, v0, p1, v3}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    iget v1, v1, Lbf0;->l:I
 
-    :cond_1
-    :goto_0
-    sget-object p1, Lccg;->a:Lccg;
+    invoke-static {v0, v4, v1}, Lz18;->f(Lmzg;Ljava/lang/String;I)V
 
-    return-object p1
+    iget-object v1, p0, Lixa;->c:Luxa;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+
+    return-object v0
+
+    :pswitch_1
+    new-instance v0, Lone/me/sdk/richvector/EnhancedVectorDrawable;
+
+    sget v1, Lcxc;->ic_add_photo_28:I
+
+    iget-object v2, p0, Lixa;->b:Landroid/content/Context;
+
+    invoke-direct {v0, v2, v1}, Lone/me/sdk/richvector/EnhancedVectorDrawable;-><init>(Landroid/content/Context;I)V
+
+    sget-object v1, La93;->s0:Lv1a;
+
+    invoke-virtual {v1, v2}, Lv1a;->x(Landroid/content/Context;)La93;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, La93;->k()Lyeb;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Lyeb;->b()Lbf0;
+
+    move-result-object v3
+
+    iget-object v3, v3, Lbf0;->a:Laf0;
+
+    iget v3, v3, Laf0;->g:I
+
+    const-string v4, "background"
+
+    invoke-static {v0, v4, v3}, Lz18;->e(Lmzg;Ljava/lang/String;I)V
+
+    invoke-virtual {v1, v2}, Lv1a;->x(Landroid/content/Context;)La93;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, La93;->k()Lyeb;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lyeb;->getIcon()Lnb7;
+
+    move-result-object v1
+
+    iget v1, v1, Lnb7;->b:I
+
+    const-string v2, "photo"
+
+    invoke-static {v0, v2, v1}, Lz18;->e(Lmzg;Ljava/lang/String;I)V
+
+    iget-object v1, p0, Lixa;->c:Luxa;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

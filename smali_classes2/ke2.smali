@@ -1,63 +1,80 @@
-.class public final Lke2;
+.class public final synthetic Lke2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Liu3;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/util/List;
-
-.field public final d:J
-
-.field public final e:Z
+.field public final synthetic b:Z
 
 
 # direct methods
-.method public constructor <init>(Lw7;)V
-    .locals 2
+.method public synthetic constructor <init>(ZI)V
+    .locals 0
+
+    iput p2, p0, Lke2;->a:I
+
+    iput-boolean p1, p0, Lke2;->b:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p1, Lw7;->c:Ljava/lang/Object;
+    return-void
+.end method
 
-    check-cast v0, Ljava/lang/String;
 
-    iput-object v0, p0, Lke2;->a:Ljava/lang/String;
+# virtual methods
+.method public final accept(Ljava/lang/Object;)V
+    .locals 3
 
-    iget-object v0, p1, Lw7;->d:Ljava/io/Serializable;
+    iget v0, p0, Lke2;->a:I
 
-    check-cast v0, Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    iput-object v0, p0, Lke2;->b:Ljava/lang/String;
+    check-cast p1, Lpb2;
 
-    iget-object v0, p1, Lw7;->e:Ljava/lang/Object;
+    iget-object p1, p1, Lpb2;->b:Lrf2;
 
-    check-cast v0, Ljava/util/ArrayList;
+    iget-boolean v0, p0, Lke2;->b:Z
 
-    if-eqz v0, :cond_0
-
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    :goto_0
-    iput-object v0, p0, Lke2;->c:Ljava/util/List;
-
-    iget-wide v0, p1, Lw7;->a:J
-
-    iput-wide v0, p0, Lke2;->d:J
-
-    iget-boolean p1, p1, Lw7;->b:Z
-
-    iput-boolean p1, p0, Lke2;->e:Z
+    iput-boolean v0, p1, Lrf2;->f0:Z
 
     return-void
+
+    :pswitch_0
+    check-cast p1, Laf2;
+
+    iget-object v0, p1, Laf2;->a0:Lcs0;
+
+    new-instance v1, Lcs0;
+
+    iget-boolean v0, v0, Lcs0;->a:Z
+
+    iget-boolean v2, p0, Lke2;->b:Z
+
+    invoke-direct {v1, v0, v2}, Lcs0;-><init>(ZZ)V
+
+    iput-object v1, p1, Laf2;->a0:Lcs0;
+
+    return-void
+
+    :pswitch_1
+    iget-boolean v0, p0, Lke2;->b:Z
+
+    check-cast p1, Laf2;
+
+    iput-boolean v0, p1, Laf2;->i0:Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

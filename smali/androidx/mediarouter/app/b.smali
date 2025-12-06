@@ -40,7 +40,7 @@
 
     iget-object p1, p0, Landroidx/mediarouter/app/b;->a:Landroidx/mediarouter/app/d;
 
-    iget-object v0, p1, Landroidx/mediarouter/app/d;->M0:Landroidx/mediarouter/app/OverlayListView;
+    iget-object v0, p1, Landroidx/mediarouter/app/d;->N0:Landroidx/mediarouter/app/OverlayListView;
 
     iget-object v1, v0, Landroidx/mediarouter/app/OverlayListView;->a:Ljava/util/ArrayList;
 
@@ -60,9 +60,9 @@
 
     move-result-object v2
 
-    check-cast v2, Ldbb;
+    check-cast v2, Lpkb;
 
-    iget-boolean v3, v2, Ldbb;->j:Z
+    iget-boolean v3, v2, Lpkb;->j:Z
 
     if-nez v3, :cond_0
 
@@ -70,20 +70,20 @@
 
     move-result-wide v3
 
-    iput-wide v3, v2, Ldbb;->i:J
+    iput-wide v3, v2, Lpkb;->i:J
 
     const/4 v3, 0x1
 
-    iput-boolean v3, v2, Ldbb;->j:Z
+    iput-boolean v3, v2, Lpkb;->j:Z
 
     goto :goto_0
 
     :cond_1
-    iget-object v0, p1, Landroidx/mediarouter/app/d;->M0:Landroidx/mediarouter/app/OverlayListView;
+    iget-object v0, p1, Landroidx/mediarouter/app/d;->N0:Landroidx/mediarouter/app/OverlayListView;
 
-    iget-object v1, p1, Landroidx/mediarouter/app/d;->w1:Ldt7;
+    iget-object v1, p1, Landroidx/mediarouter/app/d;->x1:Lr98;
 
-    iget p1, p1, Landroidx/mediarouter/app/d;->p1:I
+    iget p1, p1, Landroidx/mediarouter/app/d;->q1:I
 
     int-to-long v2, p1
 

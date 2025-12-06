@@ -4,146 +4,121 @@
 
 
 # direct methods
-.method public static final a(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+.method public static a(I)V
+    .locals 5
+
+    const/4 v0, 0x2
+
+    if-gt v0, p0, :cond_0
+
+    const/16 v1, 0x25
+
+    if-ge p0, v1, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v1, Ljava/lang/IllegalArgumentException;
+
+    const-string v2, "radix "
+
+    const-string v3, " was not in valid range "
+
+    invoke-static {p0, v2, v3}, Lho7;->m(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p0
+
+    new-instance v2, Lto7;
+
+    const/16 v3, 0x24
+
+    const/4 v4, 0x1
+
+    invoke-direct {v2, v0, v3, v4}, Lro7;-><init>(III)V
+
+    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+.end method
+
+.method public static final b(CCZ)Z
     .locals 2
 
-    if-eqz p1, :cond_1
-
-    if-eqz p0, :cond_1
+    const/4 v0, 0x1
 
     if-ne p0, p1, :cond_0
 
-    goto :goto_0
+    return v0
 
     :cond_0
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getChangingConfigurations()I
-
-    move-result v0
-
-    invoke-virtual {p0, v0}, Landroid/graphics/drawable/Drawable;->setChangingConfigurations(I)V
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getLevel()I
-
-    move-result v0
-
-    invoke-virtual {p0, v0}, Landroid/graphics/drawable/Drawable;->setLevel(I)Z
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->isVisible()Z
-
-    move-result v0
-
     const/4 v1, 0x0
 
-    invoke-virtual {p0, v0, v1}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
+    if-nez p2, :cond_1
 
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getState()[I
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
+    return v1
 
     :cond_1
-    :goto_0
-    return-void
-.end method
+    invoke-static {p0}, Ljava/lang/Character;->toUpperCase(C)C
 
-.method public static final b(II)I
-    .locals 2
+    move-result p0
 
-    const/16 v0, 0xff
+    invoke-static {p1}, Ljava/lang/Character;->toUpperCase(C)C
 
-    if-ne p1, v0, :cond_0
+    move-result p1
 
-    return p0
+    if-eq p0, p1, :cond_3
 
-    :cond_0
-    const v0, 0xffffff
+    invoke-static {p0}, Ljava/lang/Character;->toLowerCase(C)C
 
-    if-nez p1, :cond_1
+    move-result p0
 
-    and-int/2addr p0, v0
+    invoke-static {p1}, Ljava/lang/Character;->toLowerCase(C)C
 
-    return p0
+    move-result p1
 
-    :cond_1
-    shr-int/lit8 v1, p1, 0x7
-
-    add-int/2addr p1, v1
-
-    ushr-int/lit8 v1, p0, 0x18
-
-    mul-int/2addr v1, p1
-
-    shr-int/lit8 p1, v1, 0x8
-
-    shl-int/lit8 p1, p1, 0x18
-
-    and-int/2addr p0, v0
-
-    or-int/2addr p0, p1
-
-    return p0
-.end method
-
-.method public static final c(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable$Callback;Le3g;)V
-    .locals 0
-
-    if-nez p0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
-
-    instance-of p1, p0, Ld3g;
-
-    if-eqz p1, :cond_1
-
-    check-cast p0, Ld3g;
+    if-ne p0, p1, :cond_2
 
     goto :goto_0
 
-    :cond_1
-    const/4 p0, 0x0
-
-    :goto_0
-    if-eqz p0, :cond_2
-
-    invoke-interface {p0, p2}, Ld3g;->l(Le3g;)V
-
     :cond_2
-    :goto_1
-    return-void
+    return v1
+
+    :cond_3
+    :goto_0
+    return v0
 .end method
 
-.method public static final d(Lzcg;)V
-    .locals 2
+.method public static c(C)Z
+    .locals 1
 
-    new-instance v0, Lrsd;
+    invoke-static {p0}, Ljava/lang/Character;->isWhitespace(C)Z
 
-    const/16 v1, 0x9
+    move-result v0
 
-    invoke-direct {v0, v1}, Lrsd;-><init>(I)V
+    if-nez v0, :cond_1
 
-    const-class v1, Lvo6;
+    invoke-static {p0}, Ljava/lang/Character;->isSpaceChar(C)Z
 
-    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+    move-result p0
 
-    new-instance v0, Lrsd;
+    if-eqz p0, :cond_0
 
-    const/16 v1, 0xa
+    goto :goto_0
 
-    invoke-direct {v0, v1}, Lrsd;-><init>(I)V
+    :cond_0
+    const/4 p0, 0x0
 
-    const-class v1, Lg7c;
+    return p0
 
-    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+    :cond_1
+    :goto_0
+    const/4 p0, 0x1
 
-    return-void
+    return p0
 .end method

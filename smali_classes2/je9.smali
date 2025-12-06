@@ -1,73 +1,175 @@
-.class public abstract Lje9;
-.super Ljava/lang/Object;
+.class public final Lje9;
+.super Ldtf;
 .source "SourceFile"
 
+# interfaces
+.implements Lsm6;
 
-# static fields
-.field public static final a:Ljava/nio/charset/Charset;
 
-.field public static final b:Lhe9;
+# instance fields
+.field public final synthetic X:J
 
-.field public static final c:Lie9;
+.field public final synthetic Y:Landroid/view/View;
+
+.field public final synthetic o:Lone/me/members/list/MembersListWidget;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lone/me/members/list/MembersListWidget;JLandroid/view/View;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const-string v0, "UTF-8"
+    iput-object p1, p0, Lje9;->o:Lone/me/members/list/MembersListWidget;
 
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+    iput-wide p2, p0, Lje9;->X:J
 
-    move-result-object v0
+    iput-object p4, p0, Lje9;->Y:Landroid/view/View;
 
-    sput-object v0, Lje9;->a:Ljava/nio/charset/Charset;
+    const/4 p1, 0x2
 
-    new-instance v0, Lhe9;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lje9;->b:Lhe9;
-
-    new-instance v0, Lie9;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sget-object v1, Ljava/nio/charset/CodingErrorAction;->REPLACE:Ljava/nio/charset/CodingErrorAction;
-
-    iput-object v1, v0, Lie9;->a:Ljava/nio/charset/CodingErrorAction;
-
-    iput-object v1, v0, Lie9;->b:Ljava/nio/charset/CodingErrorAction;
-
-    const v1, 0x7fffffff
-
-    iput v1, v0, Lie9;->c:I
-
-    const/16 v1, 0x2000
-
-    iput v1, v0, Lie9;->o:I
-
-    iput v1, v0, Lie9;->X:I
-
-    sput-object v0, Lje9;->c:Lie9;
+    invoke-direct {p0, p1, p5}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static a([B)Lpf9;
-    .locals 2
 
-    sget-object v0, Lje9;->c:Lie9;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast p1, Lf84;
 
-    new-instance v1, Lorg/msgpack/core/buffer/ArrayBufferInput;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-direct {v1, p0}, Lorg/msgpack/core/buffer/ArrayBufferInput;-><init>([B)V
+    invoke-virtual {p0, p1, p2}, Lje9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    new-instance p0, Lpf9;
+    move-result-object p1
 
-    invoke-direct {p0, v1, v0}, Lpf9;-><init>(Lorg/msgpack/core/buffer/ArrayBufferInput;Lie9;)V
+    check-cast p1, Lje9;
 
-    return-object p0
+    sget-object p2, Lqqg;->a:Lqqg;
+
+    invoke-virtual {p1, p2}, Lje9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 6
+
+    new-instance v0, Lje9;
+
+    iget-wide v2, p0, Lje9;->X:J
+
+    iget-object v4, p0, Lje9;->Y:Landroid/view/View;
+
+    iget-object v1, p0, Lje9;->o:Lone/me/members/list/MembersListWidget;
+
+    move-object v5, p2
+
+    invoke-direct/range {v0 .. v5}, Lje9;-><init>(Lone/me/members/list/MembersListWidget;JLandroid/view/View;Lkotlin/coroutines/Continuation;)V
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    sget-object p1, Lone/me/members/list/MembersListWidget;->C0:[Lyy7;
+
+    iget-object p1, p0, Lje9;->o:Lone/me/members/list/MembersListWidget;
+
+    invoke-virtual {p1}, Lone/me/members/list/MembersListWidget;->A0()Ltd9;
+
+    move-result-object v0
+
+    iget-object v0, v0, Ltd9;->b:Lem6;
+
+    iget-wide v1, p0, Lje9;->X:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    invoke-interface {v0, v3}, Lem6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/List;
+
+    invoke-virtual {p1}, Lone/me/members/list/MembersListWidget;->y0()Lhd9;
+
+    move-result-object v3
+
+    iget-boolean v3, v3, Lhd9;->c:Z
+
+    sget-object v4, Lqqg;->a:Lqqg;
+
+    if-eqz v3, :cond_1
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v3, Ljava/lang/Long;
+
+    invoke-direct {v3, v1, v2}, Ljava/lang/Long;-><init>(J)V
+
+    iget-object v1, p1, Lone/me/members/list/MembersListWidget;->Y:Lhs;
+
+    sget-object v2, Lone/me/members/list/MembersListWidget;->C0:[Lyy7;
+
+    const/4 v5, 0x2
+
+    aget-object v2, v2, v5
+
+    invoke-virtual {v1, p1, v3}, Lhs;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
+
+    invoke-static {v5}, Lh6j;->a(I)Ly34;
+
+    move-result-object v1
+
+    invoke-interface {v1, v0}, Ly34;->o(Ljava/util/Collection;)Ly34;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lje9;->Y:Landroid/view/View;
+
+    invoke-interface {v0, v1}, Ly34;->B(Landroid/view/View;)Ly34;
+
+    move-result-object v0
+
+    invoke-static {}, Lvw4;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    const/high16 v2, 0x41400000    # 12.0f
+
+    mul-float/2addr v1, v2
+
+    invoke-interface {v0, v1}, Ly34;->v(F)Ly34;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ly34;->build()Lz34;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Lz34;->u(Lone/me/sdk/arch/Widget;)V
+
+    :cond_1
+    :goto_0
+    return-object v4
 .end method

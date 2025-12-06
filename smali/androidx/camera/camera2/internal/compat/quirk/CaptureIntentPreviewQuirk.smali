@@ -3,11 +3,11 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgjc;
+.implements Lcuc;
 
 
 # virtual methods
-.method public d()Z
+.method public c()Z
     .locals 1
 
     const/4 v0, 0x1

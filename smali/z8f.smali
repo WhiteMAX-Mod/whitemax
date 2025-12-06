@@ -2,303 +2,322 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final o:Ljava/lang/String;
-
 
 # instance fields
-.field public final a:Lsoh;
+.field public final a:Ljava/lang/String;
 
-.field public final b:Lf0f;
+.field public final b:I
 
-.field public final c:Z
+.field public final c:Ljava/lang/Integer;
+
+.field public final d:F
+
+.field public final e:Z
+
+.field public final f:Z
+
+.field public final g:Z
+
+.field public final h:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const-string v0, "StopWorkRunnable"
-
-    invoke-static {v0}, Lxyh;->l(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lz8f;->o:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lsoh;Lf0f;Z)V
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/Integer;FZZZZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lz8f;->a:Lsoh;
+    iput-object p1, p0, Lz8f;->a:Ljava/lang/String;
 
-    iput-object p2, p0, Lz8f;->b:Lf0f;
+    iput p2, p0, Lz8f;->b:I
 
-    iput-boolean p3, p0, Lz8f;->c:Z
+    iput-object p3, p0, Lz8f;->c:Ljava/lang/Integer;
+
+    iput p4, p0, Lz8f;->d:F
+
+    iput-boolean p5, p0, Lz8f;->e:Z
+
+    iput-boolean p6, p0, Lz8f;->f:Z
+
+    iput-boolean p7, p0, Lz8f;->g:Z
+
+    iput-boolean p8, p0, Lz8f;->h:Z
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final run()V
-    .locals 8
-
-    iget-boolean v0, p0, Lz8f;->c:Z
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lz8f;->a:Lsoh;
-
-    iget-object v0, v0, Lsoh;->f:Lvzb;
-
-    iget-object v1, p0, Lz8f;->b:Lf0f;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v2, "Processor stopping foreground work "
-
-    iget-object v1, v1, Lf0f;->a:Lloh;
-
-    iget-object v1, v1, Lloh;->a:Ljava/lang/String;
-
-    iget-object v3, v0, Lvzb;->u0:Ljava/lang/Object;
-
-    monitor-enter v3
+.method public static a(Ljava/lang/String;)I
+    .locals 2
 
     :try_start_0
-    invoke-static {}, Lxyh;->e()Lxyh;
+    invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v0
 
-    sget-object v5, Lvzb;->v0:Ljava/lang/String;
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    move-result v0
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-direct {v6, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v4, v5, v2}, Lxyh;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v2, v0, Lvzb;->Y:Ljava/util/HashMap;
-
-    invoke-virtual {v2, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lvph;
-
-    if-eqz v2, :cond_0
-
-    iget-object v0, v0, Lvzb;->q0:Ljava/util/HashMap;
-
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v1, 0x0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
+    :pswitch_0
+    const/4 v1, 0x1
+
+    :goto_0
+    if-eqz v1, :cond_0
+
+    return v0
+
+    :catch_0
+    :cond_0
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    const-string v1, "Ignoring unknown alignment: "
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
 
     goto :goto_1
 
-    :cond_0
-    :goto_0
-    monitor-exit v3
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :cond_1
+    new-instance p0, Ljava/lang/String;
 
-    invoke-static {v1, v2}, Lvzb;->c(Ljava/lang/String;Lvph;)Z
-
-    move-result v0
-
-    goto/16 :goto_4
+    invoke-direct {p0, v1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
     :goto_1
-    :try_start_1
-    monitor-exit v3
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    const-string v0, "SsaStyle"
 
-    throw v0
+    invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 p0, -0x1
+
+    return p0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static b(Ljava/lang/String;)Z
+    .locals 4
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result p0
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    const/4 v1, 0x1
+
+    if-eq p0, v1, :cond_1
+
+    const/4 v2, -0x1
+
+    if-ne p0, v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    return v0
 
     :cond_1
-    iget-object v0, p0, Lz8f;->a:Lsoh;
+    :goto_0
+    return v1
 
-    iget-object v0, v0, Lsoh;->f:Lvzb;
+    :catch_0
+    move-exception v1
 
-    iget-object v1, p0, Lz8f;->b:Lf0f;
+    const/16 v2, 0x21
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {v2, p0}, Lu45;->f(ILjava/lang/String;)I
 
-    const-string v2, "Processor stopping background work "
-
-    const-string v3, "WorkerWrapper could not be found for "
-
-    iget-object v4, v1, Lf0f;->a:Lloh;
-
-    iget-object v4, v4, Lloh;->a:Ljava/lang/String;
-
-    iget-object v5, v0, Lvzb;->u0:Ljava/lang/Object;
-
-    monitor-enter v5
-
-    :try_start_2
-    iget-object v6, v0, Lvzb;->Z:Ljava/util/HashMap;
-
-    invoke-virtual {v6, v4}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Lvph;
-
-    const/4 v7, 0x0
-
-    if-nez v6, :cond_2
-
-    invoke-static {}, Lxyh;->e()Lxyh;
-
-    move-result-object v0
-
-    sget-object v1, Lvzb;->v0:Ljava/lang/String;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lxyh;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    monitor-exit v5
-
-    :goto_2
-    move v0, v7
-
-    goto :goto_4
-
-    :catchall_1
-    move-exception v0
-
-    goto :goto_5
-
-    :cond_2
-    iget-object v3, v0, Lvzb;->q0:Ljava/util/HashMap;
-
-    invoke-virtual {v3, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/util/Set;
-
-    if-eqz v3, :cond_4
-
-    invoke-interface {v3, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    invoke-static {}, Lxyh;->e()Lxyh;
-
-    move-result-object v1
-
-    sget-object v3, Lvzb;->v0:Ljava/lang/String;
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v3, v2}, Lxyh;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, v0, Lvzb;->q0:Ljava/util/HashMap;
-
-    invoke-virtual {v0, v4}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    monitor-exit v5
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    invoke-static {v4, v6}, Lvzb;->c(Ljava/lang/String;Lvph;)Z
-
-    move-result v0
-
-    goto :goto_4
-
-    :cond_4
-    :goto_3
-    :try_start_3
-    monitor-exit v5
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    goto :goto_2
-
-    :goto_4
-    invoke-static {}, Lxyh;->e()Lxyh;
-
-    move-result-object v1
-
-    sget-object v2, Lz8f;->o:Ljava/lang/String;
+    move-result v2
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    const-string v4, "StopWorkRunnable for "
+    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v2, "Failed to parse boolean value: \'"
 
-    iget-object v4, p0, Lz8f;->b:Lf0f;
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v4, v4, Lf0f;->a:Lloh;
+    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v4, v4, Lloh;->a:Ljava/lang/String;
+    const-string p0, "\'"
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v4, "; Processor.stopWork = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
+    move-result-object p0
+
+    const-string v2, "SsaStyle"
+
+    invoke-static {v2, p0, v1}, Lpai;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)V
+
+    return v0
+.end method
+
+.method public static c(Ljava/lang/String;)Ljava/lang/Integer;
+    .locals 8
+
+    :try_start_0
+    const-string v0, "&H"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    const/16 v1, 0x10
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x2
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
     move-result-object v0
 
-    invoke-virtual {v1, v2, v0}, Lxyh;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;I)J
 
-    return-void
+    move-result-wide v2
 
-    :goto_5
-    :try_start_4
-    monitor-exit v5
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+    goto :goto_0
 
-    throw v0
+    :catch_0
+    move-exception v0
+
+    goto :goto_2
+
+    :cond_0
+    invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide v2
+
+    :goto_0
+    const-wide v4, 0xffffffffL
+
+    cmp-long v0, v2, v4
+
+    if-gtz v0, :cond_1
+
+    const/4 v0, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v0, 0x0
+
+    :goto_1
+    invoke-static {v0}, Lfsi;->b(Z)V
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+
+    const/16 p0, 0x18
+
+    shr-long v4, v2, p0
+
+    const-wide/16 v6, 0xff
+
+    and-long/2addr v4, v6
+
+    xor-long/2addr v4, v6
+
+    invoke-static {v4, v5}, Ljni;->b(J)I
+
+    move-result p0
+
+    shr-long v0, v2, v1
+
+    and-long/2addr v0, v6
+
+    invoke-static {v0, v1}, Ljni;->b(J)I
+
+    move-result v0
+
+    const/16 v1, 0x8
+
+    shr-long v4, v2, v1
+
+    and-long/2addr v4, v6
+
+    invoke-static {v4, v5}, Ljni;->b(J)I
+
+    move-result v1
+
+    and-long/2addr v2, v6
+
+    invoke-static {v2, v3}, Ljni;->b(J)I
+
+    move-result v2
+
+    invoke-static {p0, v2, v1, v0}, Landroid/graphics/Color;->argb(IIII)I
+
+    move-result p0
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    return-object p0
+
+    :goto_2
+    const/16 v1, 0x24
+
+    invoke-static {v1, p0}, Lu45;->f(ILjava/lang/String;)I
+
+    move-result v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v1, "Failed to parse color expression: \'"
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, "\'"
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v1, "SsaStyle"
+
+    invoke-static {v1, p0, v0}, Lpai;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)V
+
+    const/4 p0, 0x0
+
+    return-object p0
 .end method

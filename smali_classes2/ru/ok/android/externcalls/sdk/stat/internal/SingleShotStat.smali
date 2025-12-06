@@ -12,16 +12,16 @@
         "Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;",
         "",
         "Lkotlin/Function0;",
-        "Lx71;",
+        "Lm81;",
         "getEventualStatSender",
         "<init>",
-        "(Lji6;)V",
+        "(Lcm6;)V",
         "Lkotlin/Function1;",
-        "Lccg;",
+        "Lqqg;",
         "block",
         "reportOnce",
-        "(Lli6;)V",
-        "Lji6;",
+        "(Lem6;)V",
+        "Lcm6;",
         "Ljava/util/concurrent/atomic/AtomicBoolean;",
         "isReported",
         "Ljava/util/concurrent/atomic/AtomicBoolean;",
@@ -38,10 +38,10 @@
 
 
 # instance fields
-.field private final getEventualStatSender:Lji6;
+.field private final getEventualStatSender:Lcm6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lji6;"
+            "Lcm6;"
         }
     .end annotation
 .end field
@@ -50,19 +50,19 @@
 
 
 # direct methods
-.method public constructor <init>(Lji6;)V
+.method public constructor <init>(Lcm6;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lji6;",
+            "Lcm6;",
             ")V"
         }
     .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;->getEventualStatSender:Lji6;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;->getEventualStatSender:Lcm6;
 
     new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -77,12 +77,12 @@
 
 
 # virtual methods
-.method public final reportOnce(Lli6;)V
+.method public final reportOnce(Lem6;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lli6;",
+            "Lem6;",
             ")V"
         }
     .end annotation
@@ -99,17 +99,17 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;->getEventualStatSender:Lji6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/internal/SingleShotStat;->getEventualStatSender:Lcm6;
 
-    invoke-interface {v0}, Lji6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lcm6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lx71;
+    check-cast v0, Lm81;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {p1, v0}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lem6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-void

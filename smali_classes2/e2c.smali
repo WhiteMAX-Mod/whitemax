@@ -1,89 +1,130 @@
 .class public final Le2c;
-.super Lsgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Li2c;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Ljava/lang/CharSequence;
 
-.field public final synthetic Y:Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;)V
+.method public constructor <init>(Ljava/lang/CharSequence;J)V
     .locals 0
 
-    iput-object p2, p0, Le2c;->Y:Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Le2c;->a:Ljava/lang/CharSequence;
 
-    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p2, p0, Le2c;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, p2}, Le2c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p1
+    return v0
 
+    :cond_0
+    instance-of v1, p1, Le2c;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
     check-cast p1, Le2c;
 
-    sget-object p2, Lccg;->a:Lccg;
+    iget-object v1, p0, Le2c;->a:Ljava/lang/CharSequence;
 
-    invoke-virtual {p1, p2}, Le2c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v3, p1, Le2c;->a:Ljava/lang/CharSequence;
 
-    return-object p2
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Le2c;->b:J
+
+    iget-wide v5, p1, Le2c;->b:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final hashCode()I
+    .locals 3
 
-    new-instance v0, Le2c;
+    iget-object v0, p0, Le2c;->a:Ljava/lang/CharSequence;
 
-    iget-object v1, p0, Le2c;->Y:Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    invoke-direct {v0, p2, v1}, Le2c;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;)V
+    move-result v0
 
-    iput-object p1, v0, Le2c;->X:Ljava/lang/Object;
+    mul-int/lit8 v0, v0, 0x1f
 
-    return-object v0
+    iget-wide v1, p0, Le2c;->b:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Le2c;->X:Ljava/lang/Object;
+    const-string v1, "Abbreviation(abbreviation="
 
-    check-cast p1, Le5a;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    instance-of p1, p1, Ls93;
+    iget-object v1, p0, Le2c;->a:Ljava/lang/CharSequence;
 
-    if-eqz p1, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Le2c;->Y:Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
+    const-string v1, ", avatarSourceId="
 
-    invoke-static {p1}, Lici;->b(Ll24;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ll24;->getRouter()Lqid;
+    iget-wide v1, p0, Le2c;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lqid;->B(Ll24;)Z
-
-    :cond_0
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
+    return-object v0
 .end method

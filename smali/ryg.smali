@@ -1,274 +1,137 @@
 .class public final Lryg;
-.super Lsf8;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lp9e;
 
 
 # instance fields
-.field public final synthetic X:I
+.field public final a:[J
+
+.field public final b:[J
+
+.field public final c:J
+
+.field public final d:J
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/Class;III)V
+.method public constructor <init>([J[JJJ)V
     .locals 0
-
-    iput p5, p0, Lryg;->X:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lsf8;->a:I
+    iput-object p1, p0, Lryg;->a:[J
 
-    iput-object p2, p0, Lsf8;->o:Ljava/lang/Object;
+    iput-object p2, p0, Lryg;->b:[J
 
-    iput p3, p0, Lsf8;->c:I
+    iput-wide p3, p0, Lryg;->c:J
 
-    iput p4, p0, Lsf8;->b:I
+    iput-wide p5, p0, Lryg;->d:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Landroid/view/View;)Ljava/lang/Object;
-    .locals 1
-
-    iget v0, p0, Lryg;->X:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {p1}, Lazg;->c(Landroid/view/View;)Z
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_0
-    invoke-static {p1}, Lczg;->b(Landroid/view/View;)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_1
-    invoke-static {p1}, Lazg;->b(Landroid/view/View;)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_2
-    invoke-static {p1}, Lazg;->d(Landroid/view/View;)Z
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final d(Landroid/view/View;Ljava/lang/Object;)V
-    .locals 1
-
-    iget v0, p0, Lryg;->X:I
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p2, Ljava/lang/Boolean;
-
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p2
-
-    invoke-static {p1, p2}, Lazg;->g(Landroid/view/View;Z)V
-
-    return-void
-
-    :pswitch_0
-    check-cast p2, Ljava/lang/CharSequence;
-
-    invoke-static {p1, p2}, Lczg;->e(Landroid/view/View;Ljava/lang/CharSequence;)V
-
-    return-void
-
-    :pswitch_1
-    check-cast p2, Ljava/lang/CharSequence;
-
-    invoke-static {p1, p2}, Lazg;->h(Landroid/view/View;Ljava/lang/CharSequence;)V
-
-    return-void
-
-    :pswitch_2
-    check-cast p2, Ljava/lang/Boolean;
-
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p2
-
-    invoke-static {p1, p2}, Lazg;->j(Landroid/view/View;Z)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final g(Ljava/lang/Object;Ljava/lang/Object;)Z
+.method public final a()J
     .locals 2
 
-    iget v0, p0, Lryg;->X:I
+    iget-wide v0, p0, Lryg;->d:J
 
-    packed-switch v0, :pswitch_data_0
+    return-wide v0
+.end method
 
-    check-cast p1, Ljava/lang/Boolean;
+.method public final b(J)J
+    .locals 2
 
-    check-cast p2, Ljava/lang/Boolean;
-
-    const/4 v0, 0x0
+    iget-object v0, p0, Lryg;->b:[J
 
     const/4 v1, 0x1
 
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-static {v0, p1, p2, v1}, Lxxg;->e([JJZ)I
 
     move-result p1
 
-    if-eqz p1, :cond_0
+    iget-object p2, p0, Lryg;->a:[J
 
-    move p1, v1
+    aget-wide p1, p2, p1
+
+    return-wide p1
+.end method
+
+.method public final c()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final e(J)Lf9e;
+    .locals 9
+
+    iget-object v0, p0, Lryg;->a:[J
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, p1, p2, v1}, Lxxg;->e([JJZ)I
+
+    move-result v2
+
+    new-instance v3, Ll9e;
+
+    aget-wide v4, v0, v2
+
+    iget-object v6, p0, Lryg;->b:[J
+
+    aget-wide v7, v6, v2
+
+    invoke-direct {v3, v4, v5, v7, v8}, Ll9e;-><init>(JJ)V
+
+    cmp-long p1, v4, p1
+
+    if-gez p1, :cond_1
+
+    array-length p1, v0
+
+    sub-int/2addr p1, v1
+
+    if-ne v2, p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    move p1, v0
+    new-instance p1, Ll9e;
 
-    :goto_0
-    if-eqz p2, :cond_1
+    add-int/2addr v2, v1
 
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+    aget-wide v4, v0, v2
 
-    move-result p2
+    aget-wide v0, v6, v2
 
-    if-eqz p2, :cond_1
+    invoke-direct {p1, v4, v5, v0, v1}, Ll9e;-><init>(JJ)V
 
-    move p2, v1
+    new-instance p2, Lf9e;
 
-    goto :goto_1
+    invoke-direct {p2, v3, p1}, Lf9e;-><init>(Ll9e;Ll9e;)V
+
+    return-object p2
 
     :cond_1
-    move p2, v0
+    :goto_0
+    new-instance p1, Lf9e;
 
-    :goto_1
-    if-ne p1, p2, :cond_2
+    invoke-direct {p1, v3, v3}, Lf9e;-><init>(Ll9e;Ll9e;)V
 
-    move v0, v1
+    return-object p1
+.end method
 
-    :cond_2
-    xor-int/lit8 p1, v0, 0x1
+.method public final f()J
+    .locals 2
 
-    return p1
+    iget-wide v0, p0, Lryg;->c:J
 
-    :pswitch_0
-    check-cast p1, Ljava/lang/CharSequence;
-
-    check-cast p2, Ljava/lang/CharSequence;
-
-    invoke-static {p1, p2}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result p1
-
-    :goto_2
-    xor-int/lit8 p1, p1, 0x1
-
-    return p1
-
-    :pswitch_1
-    check-cast p1, Ljava/lang/CharSequence;
-
-    check-cast p2, Ljava/lang/CharSequence;
-
-    invoke-static {p1, p2}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result p1
-
-    goto :goto_2
-
-    :pswitch_2
-    check-cast p1, Ljava/lang/Boolean;
-
-    check-cast p2, Ljava/lang/Boolean;
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x1
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    move p1, v1
-
-    goto :goto_3
-
-    :cond_3
-    move p1, v0
-
-    :goto_3
-    if-eqz p2, :cond_4
-
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_4
-
-    move p2, v1
-
-    goto :goto_4
-
-    :cond_4
-    move p2, v0
-
-    :goto_4
-    if-ne p1, p2, :cond_5
-
-    move v0, v1
-
-    :cond_5
-    xor-int/lit8 p1, v0, 0x1
-
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-wide v0
 .end method

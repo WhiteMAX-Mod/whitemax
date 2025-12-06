@@ -1,57 +1,64 @@
 .class public final Lbe3;
-.super Ly14;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:Ls0a;
+.field public final synthetic a:I
 
-.field public Y:Ljava/util/LinkedHashSet;
+.field public final synthetic b:Lfe3;
 
-.field public Z:Ljava/util/Iterator;
-
-.field public o:Lce3;
-
-.field public synthetic q0:Ljava/lang/Object;
-
-.field public final synthetic r0:Lce3;
-
-.field public s0:I
+.field public final synthetic c:Landroid/graphics/drawable/Drawable;
 
 
 # direct methods
-.method public constructor <init>(Lce3;Ly14;)V
+.method public synthetic constructor <init>(Lfe3;Landroid/graphics/drawable/Drawable;I)V
     .locals 0
 
-    iput-object p1, p0, Lbe3;->r0:Lce3;
+    iput p3, p0, Lbe3;->a:I
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lbe3;->b:Lfe3;
+
+    iput-object p2, p0, Lbe3;->c:Landroid/graphics/drawable/Drawable;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final run()V
+    .locals 2
 
-    iput-object p1, p0, Lbe3;->q0:Ljava/lang/Object;
+    iget v0, p0, Lbe3;->a:I
 
-    iget p1, p0, Lbe3;->s0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lbe3;->b:Lfe3;
 
-    or-int/2addr p1, v0
+    iget-object v1, p0, Lbe3;->c:Landroid/graphics/drawable/Drawable;
 
-    iput p1, p0, Lbe3;->s0:I
+    invoke-static {v0, v1}, Lfe3;->A(Lfe3;Landroid/graphics/drawable/Drawable;)V
 
-    iget-object p1, p0, Lbe3;->r0:Lce3;
+    return-void
 
-    const/4 v0, 0x0
+    :pswitch_0
+    iget-object v0, p0, Lbe3;->b:Lfe3;
 
-    invoke-virtual {p1, v0, p0}, Lce3;->c(Ljava/util/List;Ly14;)Ljava/io/Serializable;
+    iget-object v1, p0, Lbe3;->c:Landroid/graphics/drawable/Drawable;
 
-    move-result-object p1
+    invoke-static {v0, v1}, Lfe3;->y(Lfe3;Landroid/graphics/drawable/Drawable;)V
 
-    return-object p1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

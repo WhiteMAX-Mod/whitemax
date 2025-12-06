@@ -7,20 +7,20 @@
 
 
 # instance fields
-.field public final a:Lv8e;
+.field public final a:Lhke;
 
-.field public final b:Ll28;
+.field public final b:Lha8;
 
 
 # direct methods
-.method public constructor <init>(Lv8e;Ll28;)V
+.method public constructor <init>(Lhke;Lha8;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lk1;->a:Lv8e;
+    iput-object p1, p0, Lk1;->a:Lhke;
 
-    iput-object p2, p0, Lk1;->b:Ll28;
+    iput-object p2, p0, Lk1;->b:Lha8;
 
     return-void
 .end method
@@ -30,7 +30,7 @@
 .method public final run()V
     .locals 3
 
-    iget-object v0, p0, Lk1;->a:Lv8e;
+    iget-object v0, p0, Lk1;->a:Lhke;
 
     iget-object v0, v0, Lx1;->a:Ljava/lang/Object;
 
@@ -39,23 +39,23 @@
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lk1;->b:Ll28;
+    iget-object v0, p0, Lk1;->b:Lha8;
 
-    invoke-static {v0}, Lx1;->h(Ll28;)Ljava/lang/Object;
+    invoke-static {v0}, Lx1;->h(Lha8;)Ljava/lang/Object;
 
     move-result-object v0
 
-    sget-object v1, Lx1;->Y:Lxci;
+    sget-object v1, Lx1;->X:Lwoi;
 
-    iget-object v2, p0, Lk1;->a:Lv8e;
+    iget-object v2, p0, Lk1;->a:Lhke;
 
-    invoke-virtual {v1, v2, p0, v0}, Lxci;->e(Lx1;Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2, p0, v0}, Lwoi;->b(Lx1;Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lk1;->a:Lv8e;
+    iget-object v0, p0, Lk1;->a:Lhke;
 
     const/4 v1, 0x0
 

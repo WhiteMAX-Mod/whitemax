@@ -14,7 +14,7 @@
 
 
 # instance fields
-.field public final h:Lnx3;
+.field public final h:Lb6a;
 
 
 # direct methods
@@ -23,9 +23,11 @@
 
     invoke-direct {p0}, Lcom/google/android/material/behavior/SwipeDismissBehavior;-><init>()V
 
-    new-instance v0, Lnx3;
+    new-instance v0, Lb6a;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v1, 0xe
+
+    invoke-direct {v0, v1}, Lb6a;-><init>(I)V
 
     const/4 v1, 0x0
 
@@ -59,7 +61,7 @@
 
     iput v1, p0, Lcom/google/android/material/behavior/SwipeDismissBehavior;->d:I
 
-    iput-object v0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$Behavior;->h:Lnx3;
+    iput-object v0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$Behavior;->h:Lb6a;
 
     return-void
 .end method
@@ -69,7 +71,7 @@
 .method public final k(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 2
 
-    iget-object v0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$Behavior;->h:Lnx3;
+    iget-object v0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$Behavior;->h:Lb6a;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -90,22 +92,22 @@
     goto :goto_0
 
     :cond_0
-    sget-object v0, Laue;->b:Laue;
+    sget-object v0, Lai3;->b:Lai3;
 
     if-nez v0, :cond_1
 
-    new-instance v0, Laue;
+    new-instance v0, Lai3;
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Laue;-><init>(I)V
+    invoke-direct {v0, v1}, Lai3;-><init>(I)V
 
-    sput-object v0, Laue;->b:Laue;
+    sput-object v0, Lai3;->b:Lai3;
 
     :cond_1
-    sget-object v0, Laue;->b:Laue;
+    sget-object v0, Lai3;->b:Lai3;
 
-    iget-object v0, v0, Laue;->a:Ljava/lang/Object;
+    iget-object v0, v0, Lai3;->a:Ljava/lang/Object;
 
     monitor-enter v0
 
@@ -142,22 +144,22 @@
 
     if-eqz v0, :cond_4
 
-    sget-object v0, Laue;->b:Laue;
+    sget-object v0, Lai3;->b:Lai3;
 
     if-nez v0, :cond_3
 
-    new-instance v0, Laue;
+    new-instance v0, Lai3;
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Laue;-><init>(I)V
+    invoke-direct {v0, v1}, Lai3;-><init>(I)V
 
-    sput-object v0, Laue;->b:Laue;
+    sput-object v0, Lai3;->b:Lai3;
 
     :cond_3
-    sget-object v0, Laue;->b:Laue;
+    sget-object v0, Lai3;->b:Lai3;
 
-    iget-object v0, v0, Laue;->a:Ljava/lang/Object;
+    iget-object v0, v0, Lai3;->a:Ljava/lang/Object;
 
     monitor-enter v0
 
@@ -187,11 +189,11 @@
 .method public final x(Landroid/view/View;)Z
     .locals 1
 
-    iget-object v0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$Behavior;->h:Lnx3;
+    iget-object v0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$Behavior;->h:Lb6a;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    instance-of p1, p1, Lil0;
+    instance-of p1, p1, Lfl0;
 
     return p1
 .end method

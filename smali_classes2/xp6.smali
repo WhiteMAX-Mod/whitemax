@@ -1,59 +1,51 @@
-.class public final Lxp6;
-.super Ly14;
+.class public final synthetic Lxp6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lyp6;
-
-.field public Z:I
-
-.field public o:Lyp6;
+.field public final synthetic a:Ltq6;
 
 
 # direct methods
-.method public constructor <init>(Lyp6;Ly14;)V
+.method public synthetic constructor <init>(Ltq6;)V
     .locals 0
 
-    iput-object p1, p0, Lxp6;->Y:Lyp6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lxp6;->a:Ltq6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+.method public final a(Lcce;)V
+    .locals 2
 
-    iput-object p1, p0, Lxp6;->X:Ljava/lang/Object;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget p1, p0, Lxp6;->Z:I
+    const-string v1, "got toggle state "
 
-    const/high16 v0, -0x80000000
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    or-int/2addr p1, v0
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iput p1, p0, Lxp6;->Z:I
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const-wide/16 v4, 0x0
+    move-result-object v0
 
-    const/4 v6, 0x0
+    const-string v1, "tq6"
 
-    iget-object v0, p0, Lxp6;->Y:Lyp6;
+    invoke-static {v1, v0}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-wide/16 v1, 0x0
+    iget-object v0, p0, Lxp6;->a:Ltq6;
 
-    const/4 v3, 0x0
+    iget-object v0, v0, Ltq6;->N0:Ltcf;
 
-    move-object v7, p0
+    const/4 v1, 0x0
 
-    invoke-virtual/range {v0 .. v7}, Lyp6;->a(JLro2;JLjava/lang/String;Ly14;)Ljava/lang/Object;
+    invoke-virtual {v0, v1, p1}, Ltcf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

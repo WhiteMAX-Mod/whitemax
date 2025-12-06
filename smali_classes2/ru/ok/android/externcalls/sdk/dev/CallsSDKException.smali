@@ -39,7 +39,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;ILki4;)V
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;ILtk4;)V
     .locals 0
 
     and-int/lit8 p3, p3, 0x2

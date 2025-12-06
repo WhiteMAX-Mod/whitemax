@@ -2,87 +2,141 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lfwc;
+
+# static fields
+.field public static final synthetic b:I
 
 
 # instance fields
-.field public final a:Lw0g;
-
-.field public final b:Lfwc;
+.field public final a:Lk18;
 
 
 # direct methods
-.method public constructor <init>(Lw0g;Lfwc;)V
+.method public constructor <init>(Lk18;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ld1g;->a:Lw0g;
-
-    iput-object p2, p0, Ld1g;->b:Lfwc;
+    iput-object p1, p0, Ld1g;->a:Lk18;
 
     return-void
+.end method
+
+.method public static a(I)Z
+    .locals 1
+
+    const/4 v0, 0x2
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x3
+
+    if-ne p0, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_1
+    :goto_0
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public static c(Ljava/lang/Throwable;)Z
+    .locals 1
+
+    instance-of v0, p0, Lru/ok/tamtam/errors/TamErrorException;
+
+    if-eqz v0, :cond_0
+
+    check-cast p0, Lru/ok/tamtam/errors/TamErrorException;
+
+    iget-object p0, p0, Lru/ok/tamtam/errors/TamErrorException;->a:Lpzf;
+
+    iget-object p0, p0, Lpzf;->b:Ljava/lang/String;
+
+    invoke-static {p0}, Lqaj;->c(Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static d(Ljava/lang/Throwable;)Z
+    .locals 1
+
+    instance-of v0, p0, Lru/ok/tamtam/errors/TamErrorException;
+
+    if-eqz v0, :cond_0
+
+    check-cast p0, Lru/ok/tamtam/errors/TamErrorException;
+
+    iget-object p0, p0, Lru/ok/tamtam/errors/TamErrorException;->a:Lpzf;
+
+    iget-object p0, p0, Lpzf;->b:Ljava/lang/String;
+
+    const-string v0, "io.exception"
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
 .end method
 
 
 # virtual methods
-.method public final log(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
+.method public final b()Lmta;
+    .locals 3
 
-    iget-object v0, p0, Ld1g;->b:Lfwc;
+    iget-object v0, p0, Ld1g;->a:Lk18;
 
-    invoke-interface {v0, p1, p2}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public final logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 1
+    check-cast v0, Loje;
 
-    iget-object v0, p0, Ld1g;->b:Lfwc;
+    iget-object v0, v0, Loje;->g:Lnm0;
 
-    invoke-interface {v0, p1, p2, p3}, Lfwc;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    new-instance v1, Lvef;
 
-    return-void
-.end method
+    const/16 v2, 0x10
 
-.method public final reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 1
+    invoke-direct {v1, v2}, Lvef;-><init>(I)V
 
-    iget-object v0, p0, Ld1g;->b:Lfwc;
+    invoke-virtual {v0, v1}, Lvqa;->g(Lm7c;)Lyqa;
 
-    invoke-interface {v0, p1, p2, p3}, Lfwc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-result-object v0
 
-    iget-object p1, p0, Ld1g;->a:Lw0g;
+    const-wide/16 v1, 0x1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0, v1, v2}, Lvqa;->q(J)Lmta;
 
-    :try_start_0
-    iget-object p1, p1, Lw0g;->b:Lwif;
+    move-result-object v0
 
-    invoke-virtual {p1}, Lwif;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lp0g;
-
-    const/4 p2, 0x0
-
-    invoke-virtual {p1, p2, p3}, Lp0g;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    const-string p2, "TracerLiteFacade"
-
-    const-string p3, "Crash report failed"
-
-    invoke-static {p2, p3, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    return-void
+    return-object v0
 .end method

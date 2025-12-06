@@ -54,13 +54,18 @@
 
 
 # static fields
-.field private static final synthetic $ENTRIES:Lyd5;
+.field private static final synthetic $ENTRIES:Lyg5;
 
 .field private static final synthetic $VALUES:[Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;
 
 .field public static final enum BLUETOOTH:Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;
 
 .field public static final enum BLUETOOTH_INTENT:Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;
+    .annotation runtime Ljava/lang/Deprecated;
+        forRemoval = true
+        since = "125.1.0.71"
+    .end annotation
+.end field
 
 .field public static final enum EARPIECE:Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;
 
@@ -163,11 +168,11 @@
 
     sput-object v0, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;->$VALUES:[Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;
 
-    new-instance v1, Lzd5;
+    new-instance v1, Lzg5;
 
-    invoke-direct {v1, v0}, Lzd5;-><init>([Ljava/lang/Enum;)V
+    invoke-direct {v1, v0}, Lzg5;-><init>([Ljava/lang/Enum;)V
 
-    sput-object v1, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;->$ENTRIES:Lyd5;
+    sput-object v1, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;->$ENTRIES:Lyg5;
 
     return-void
 .end method
@@ -185,16 +190,16 @@
     return-void
 .end method
 
-.method public static getEntries()Lyd5;
+.method public static getEntries()Lyg5;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lyd5;"
+            "Lyg5;"
         }
     .end annotation
 
-    sget-object v0, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;->$ENTRIES:Lyd5;
+    sget-object v0, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;->$ENTRIES:Lyg5;
 
     return-object v0
 .end method
@@ -250,7 +255,7 @@
 .method public final varargs oneOf([Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;)Z
     .locals 0
 
-    invoke-static {p1, p0}, Ljt;->l([Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, p0}, Lys;->i([Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

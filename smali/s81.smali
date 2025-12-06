@@ -1,70 +1,50 @@
-.class public final synthetic Ls81;
+.class public final Ls81;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lji6;
+.implements Low1;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lkua;
 
-.field public final synthetic b:Lu81;
+.field public final b:Lbwf;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lu81;I)V
-    .locals 0
-
-    iput p2, p0, Ls81;->a:I
-
-    iput-object p1, p0, Ls81;->b:Lu81;
+.method public constructor <init>(Lk18;Lk18;Lk18;Lkua;Lk18;Lk18;Lk18;Lk18;)V
+    .locals 9
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    iput-object p4, p0, Ls81;->a:Lkua;
+
+    new-instance v0, Lp81;
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move-object v8, p2
+
+    move-object v3, p3
+
+    move-object v4, p5
+
+    move-object v5, p6
+
+    move-object/from16 v6, p7
+
+    move-object/from16 v7, p8
+
+    invoke-direct/range {v0 .. v8}, Lp81;-><init>(Ls81;Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;Lk18;)V
+
+    new-instance p1, Lbwf;
+
+    invoke-direct {p1, v0}, Lbwf;-><init>(Lcm6;)V
+
+    iput-object p1, p0, Ls81;->b:Lbwf;
+
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 3
-
-    iget v0, p0, Ls81;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ls81;->b:Lu81;
-
-    iget-object v0, v0, Lu81;->L0:Landroidx/recyclerview/widget/b;
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Ls81;->b:Lu81;
-
-    iget-object v0, v0, Lu81;->N0:Llpg;
-
-    return-object v0
-
-    :pswitch_1
-    new-instance v0, Lnu6;
-
-    iget-object v1, p0, Ls81;->b:Lu81;
-
-    iget-object v2, v1, Lu81;->H0:Landroidx/viewpager2/widget/ViewPager2;
-
-    iget-object v1, v1, Lu81;->I0:Lru6;
-
-    invoke-direct {v0, v2, v1}, Lnu6;-><init>(Landroidx/viewpager2/widget/ViewPager2;Lru6;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

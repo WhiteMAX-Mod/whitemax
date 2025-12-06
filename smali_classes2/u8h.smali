@@ -4,71 +4,52 @@
 
 
 # static fields
-.field public static final Companion:Lt8h;
+.field public static final e:Lu8h;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:J
 
-.field public final b:Z
+.field public final b:Ljava/lang/String;
+
+.field public final c:I
+
+.field public final d:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 6
 
-    new-instance v0, Lt8h;
+    new-instance v0, Lu8h;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v4, 0x1e
 
-    sput-object v0, Lu8h;->Companion:Lt8h;
+    const/16 v5, 0x1e
+
+    const-wide/16 v1, 0x3c
+
+    const-string v3, "480"
+
+    invoke-direct/range {v0 .. v5}, Lu8h;-><init>(JLjava/lang/String;II)V
+
+    sput-object v0, Lu8h;->e:Lu8h;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;IZ)V
-    .locals 2
-
-    and-int/lit8 v0, p2, 0x3
-
-    const/4 v1, 0x3
-
-    if-ne v1, v0, :cond_0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lu8h;->a:Ljava/lang/String;
-
-    iput-boolean p3, p0, Lu8h;->b:Z
-
-    return-void
-
-    :cond_0
-    sget-object p1, Ls8h;->a:Ls8h;
-
-    invoke-virtual {p1}, Ls8h;->d()Lb3e;
-
-    move-result-object p1
-
-    invoke-static {p2, v1, p1}, Lwui;->c(IILb3e;)V
-
-    const/4 p1, 0x0
-
-    throw p1
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Z)V
+.method public constructor <init>(JLjava/lang/String;II)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    iput-object p1, p0, Lu8h;->a:Ljava/lang/String;
+    iput-wide p1, p0, Lu8h;->a:J
 
-    .line 4
-    iput-boolean p2, p0, Lu8h;->b:Z
+    iput-object p3, p0, Lu8h;->b:Ljava/lang/String;
+
+    iput p4, p0, Lu8h;->c:I
+
+    iput p5, p0, Lu8h;->d:I
 
     return-void
 .end method
@@ -76,7 +57,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 7
 
     const/4 v0, 0x1
 
@@ -96,45 +77,79 @@
     :cond_1
     check-cast p1, Lu8h;
 
-    iget-object v1, p0, Lu8h;->a:Ljava/lang/String;
+    iget-wide v3, p0, Lu8h;->a:J
 
-    iget-object v3, p1, Lu8h;->a:Ljava/lang/String;
+    iget-wide v5, p1, Lu8h;->a:J
 
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    cmp-long v1, v3, v5
 
-    move-result v1
-
-    if-nez v1, :cond_2
+    if-eqz v1, :cond_2
 
     return v2
 
     :cond_2
-    iget-boolean v1, p0, Lu8h;->b:Z
+    iget-object v1, p0, Lu8h;->b:Ljava/lang/String;
 
-    iget-boolean p1, p1, Lu8h;->b:Z
+    iget-object v3, p1, Lu8h;->b:Ljava/lang/String;
 
-    if-eq v1, p1, :cond_3
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
 
     return v2
 
     :cond_3
+    iget v1, p0, Lu8h;->c:I
+
+    iget v3, p1, Lu8h;->c:I
+
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget v1, p0, Lu8h;->d:I
+
+    iget p1, p1, Lu8h;->d:I
+
+    if-eq v1, p1, :cond_5
+
+    return v2
+
+    :cond_5
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 3
 
-    iget-object v0, p0, Lu8h;->a:Ljava/lang/String;
+    iget-wide v0, p0, Lu8h;->a:J
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    const/16 v1, 0x1f
 
-    iget-boolean v1, p0, Lu8h;->b:Z
+    mul-int/2addr v0, v1
 
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    iget-object v2, p0, Lu8h;->b:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lu45;->e(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget v2, p0, Lu8h;->c:I
+
+    invoke-static {v2, v0, v1}, Lxrf;->k(III)I
+
+    move-result v0
+
+    iget v1, p0, Lu8h;->d:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v1
 
@@ -144,25 +159,35 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 5
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "VideoMessageServerConfig(maxDuration="
 
-    const-string v1, "WebAppChangeScreenBrightness(requestId="
+    const-string v1, ", quality="
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-wide v2, p0, Lu8h;->a:J
 
-    iget-object v1, p0, Lu8h;->a:Ljava/lang/String;
+    iget-object v4, p0, Lu8h;->b:Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v1, v4}, Lho7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", minFrameRate="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", maxBrightness="
+    iget v1, p0, Lu8h;->c:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", maxFrameRate="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lu8h;->b:Z
+    iget v1, p0, Lu8h;->d:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 

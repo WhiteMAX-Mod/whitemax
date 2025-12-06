@@ -1,77 +1,76 @@
-.class public abstract Lzrf;
+.class public final synthetic Lzrf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lcsf;
+
 
 # direct methods
-.method public static a(Landroid/widget/TextView;)I
+.method public synthetic constructor <init>(Lcsf;I)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/widget/TextView;->getBreakStrategy()I
+    iput p2, p0, Lzrf;->a:I
 
-    move-result p0
+    iput-object p1, p0, Lzrf;->b:Lcsf;
 
-    return p0
-.end method
-
-.method public static b(Landroid/widget/TextView;)Landroid/content/res/ColorStateList;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/widget/TextView;->getCompoundDrawableTintList()Landroid/content/res/ColorStateList;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static c(Landroid/widget/TextView;)Landroid/graphics/PorterDuff$Mode;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/widget/TextView;->getCompoundDrawableTintMode()Landroid/graphics/PorterDuff$Mode;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static d(Landroid/widget/TextView;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/widget/TextView;->getHyphenationFrequency()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static e(Landroid/widget/TextView;I)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setBreakStrategy(I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static f(Landroid/widget/TextView;Landroid/content/res/ColorStateList;)V
-    .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setCompoundDrawableTintList(Landroid/content/res/ColorStateList;)V
+# virtual methods
+.method public final run()V
+    .locals 2
+
+    iget v0, p0, Lzrf;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lzrf;->b:Lcsf;
+
+    iget-object v1, v0, Lcsf;->r:Lfsf;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Lfsf;->l()V
+
+    :cond_0
+    iget-object v1, v0, Lcsf;->q:Lzr4;
+
+    if-nez v1, :cond_1
+
+    iget-object v0, v0, Lcsf;->p:Ltu1;
+
+    invoke-virtual {v0}, Ltu1;->c()V
+
+    :cond_1
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lzrf;->b:Lcsf;
+
+    invoke-virtual {v0}, Lzr4;->b()V
 
     return-void
-.end method
 
-.method public static g(Landroid/widget/TextView;Landroid/graphics/PorterDuff$Mode;)V
-    .locals 0
+    :pswitch_1
+    iget-object v0, p0, Lzrf;->b:Lcsf;
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setCompoundDrawableTintMode(Landroid/graphics/PorterDuff$Mode;)V
-
-    return-void
-.end method
-
-.method public static h(Landroid/widget/TextView;I)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setHyphenationFrequency(I)V
+    invoke-virtual {v0}, Lcsf;->a()V
 
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

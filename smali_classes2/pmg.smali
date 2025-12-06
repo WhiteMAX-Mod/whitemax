@@ -1,20 +1,26 @@
-.class public interface abstract Lpmg;
+.class public final Lpmg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltmg;
 
-# virtual methods
-.method public abstract e()I
-.end method
 
-.method public abstract f()Landroid/net/Uri;
-.end method
+# instance fields
+.field public final a:Ljava/lang/String;
 
-.method public abstract g()J
-.end method
+.field public final b:Lup7;
 
-.method public abstract getHeight()I
-.end method
 
-.method public abstract getWidth()I
+# direct methods
+.method public constructor <init>(Ljava/lang/String;Lup7;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lpmg;->a:Ljava/lang/String;
+
+    iput-object p2, p0, Lpmg;->b:Lup7;
+
+    return-void
 .end method

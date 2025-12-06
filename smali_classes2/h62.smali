@@ -1,166 +1,68 @@
 .class public final Lh62;
-.super Lhw6;
+.super Lbid;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:[B
+.field public final a:Ly0f;
 
-.field public b:Ljava/security/cert/X509Certificate;
+.field public final b:Lhn6;
 
-.field public c:Ljava/util/List;
 
-.field public d:[B
+# direct methods
+.method public constructor <init>(Ly0f;Lem6;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lh62;->a:Ly0f;
+
+    check-cast p2, Lhn6;
+
+    iput-object p2, p0, Lh62;->b:Lhn6;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a()[B
-    .locals 1
+.method public final b(Landroidx/recyclerview/widget/RecyclerView;II)V
+    .locals 0
 
-    iget-object v0, p0, Lh62;->d:[B
+    invoke-static {p1}, Lx7j;->d(Landroidx/recyclerview/widget/RecyclerView;)Landroidx/recyclerview/widget/GridLayoutManager;
 
-    return-object v0
-.end method
+    move-result-object p1
 
-.method public final b()Lmxf;
-    .locals 1
+    if-eqz p1, :cond_1
 
-    sget-object v0, Lmxf;->Y:Lmxf;
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->U0()I
 
-    return-object v0
-.end method
+    move-result p1
 
-.method public final e(Ljava/nio/ByteBuffer;)V
-    .locals 6
+    const/4 p2, -0x1
 
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
-
-    move-result v0
-
-    and-int/lit16 v0, v0, 0xff
-
-    shl-int/lit8 v0, v0, 0x10
-
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
-
-    move-result v1
-
-    and-int/lit16 v1, v1, 0xff
-
-    shl-int/lit8 v1, v1, 0x8
-
-    or-int/2addr v0, v1
-
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
-
-    move-result v1
-
-    and-int/lit16 v1, v1, 0xff
-
-    or-int/2addr v0, v1
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-lez v0, :cond_2
-
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
-
-    move-result v2
-
-    and-int/lit16 v2, v2, 0xff
-
-    shl-int/lit8 v2, v2, 0x10
-
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
-
-    move-result v3
-
-    and-int/lit16 v3, v3, 0xff
-
-    shl-int/lit8 v3, v3, 0x8
-
-    or-int/2addr v2, v3
-
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
-
-    move-result v3
-
-    and-int/lit16 v3, v3, 0xff
-
-    or-int/2addr v2, v3
-
-    new-array v3, v2, [B
-
-    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
-
-    if-lez v2, :cond_1
-
-    :try_start_0
-    const-string v4, "X.509"
-
-    invoke-static {v4}, Ljava/security/cert/CertificateFactory;->getInstance(Ljava/lang/String;)Ljava/security/cert/CertificateFactory;
-
-    move-result-object v4
-
-    new-instance v5, Ljava/io/ByteArrayInputStream;
-
-    invoke-direct {v5, v3}, Ljava/io/ByteArrayInputStream;-><init>([B)V
-
-    invoke-virtual {v4, v5}, Ljava/security/cert/CertificateFactory;->generateCertificate(Ljava/io/InputStream;)Ljava/security/cert/Certificate;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/security/cert/X509Certificate;
-
-    if-nez v1, :cond_0
-
-    iput-object v3, p0, Lh62;->b:Ljava/security/cert/X509Certificate;
-
-    :cond_0
-    iget-object v4, p0, Lh62;->c:Ljava/util/List;
-
-    invoke-interface {v4, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catch Ljava/security/cert/CertificateException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    new-instance p1, Ltech/kwik/agent15/alert/BadCertificateAlert;
-
-    const-string v0, "could not parse certificate"
-
-    invoke-direct {p1, v0}, Ltech/kwik/agent15/alert/BadCertificateAlert;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    :goto_1
-    add-int/lit8 v2, v2, 0x3
-
-    sub-int/2addr v0, v2
-
-    add-int/lit8 v1, v1, 0x1
-
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
-
-    move-result v2
-
-    const v3, 0xffff
-
-    and-int/2addr v2, v3
-
-    new-array v3, v2, [B
-
-    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
-
-    add-int/lit8 v2, v2, 0x2
-
-    sub-int/2addr v0, v2
+    if-ne p1, p2, :cond_0
 
     goto :goto_0
 
-    :cond_2
+    :cond_0
+    iget-object p2, p0, Lh62;->a:Ly0f;
+
+    iget-object p2, p2, Ll98;->d:Liv;
+
+    iget-object p2, p2, Liv;->f:Ljava/util/List;
+
+    invoke-static {p1, p2}, Lue3;->J(ILjava/util/List;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lt98;
+
+    iget-object p2, p0, Lh62;->b:Lhn6;
+
+    invoke-interface {p2, p1}, Lem6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_1
+    :goto_0
     return-void
 .end method

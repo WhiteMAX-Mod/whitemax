@@ -1,165 +1,155 @@
 .class public final Lga1;
-.super Lsgf;
+.super Ld2f;
 .source "SourceFile"
-
-# interfaces
-.implements Lzi6;
 
 
 # instance fields
-.field public synthetic X:Z
+.field public final E0:Lusd;
 
-.field public final synthetic Y:Lja1;
+.field public final F0:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lja1;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lvu3;Lusd;)V
     .locals 0
 
-    iput-object p1, p0, Lga1;->Y:Lja1;
+    invoke-direct {p0, p1}, Lmid;-><init>(Landroid/view/View;)V
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Lga1;->E0:Lusd;
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-instance p1, Li6;
+
+    const/16 p2, 0x17
+
+    invoke-direct {p1, p2, p0}, Li6;-><init>(ILjava/lang/Object;)V
+
+    const/4 p2, 0x3
+
+    invoke-static {p2, p1}, Lipi;->b(ILcm6;)Lk18;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lga1;->F0:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final F(Lw37;)V
+    .locals 6
 
-    check-cast p1, Ljava/lang/Boolean;
+    iget v0, p1, Lw37;->t0:I
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    iget-wide v1, p1, Lw37;->b:J
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v3, p0, Lmid;->a:Landroid/view/View;
 
-    invoke-virtual {p0, p1, p2}, Lga1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast v3, Lvu3;
 
-    move-result-object p1
+    iget-wide v4, p1, Lw37;->v0:J
 
-    check-cast p1, Lga1;
+    invoke-static {v4, v5}, Ljava/lang/Long;->hashCode(J)I
 
-    sget-object p2, Lccg;->a:Lccg;
+    move-result v4
 
-    invoke-virtual {p1, p2}, Lga1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3, v4}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
 
-    return-object p2
-.end method
+    iget-object v4, p1, Lw37;->X:Ljava/lang/String;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    invoke-virtual {v3, v4}, Lvu3;->setTitle(Ljava/lang/CharSequence;)V
 
-    new-instance v0, Lga1;
+    iget-object v4, p1, Lw37;->u0:Lo37;
 
-    iget-object v1, p0, Lga1;->Y:Lja1;
+    instance-of v4, v4, Ll37;
 
-    invoke-direct {v0, v1, p2}, Lga1;-><init>(Lja1;Lkotlin/coroutines/Continuation;)V
+    const/4 v5, 0x0
 
-    check-cast p1, Ljava/lang/Boolean;
+    if-eqz v4, :cond_0
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {v3, v1, v2, v5, v5}, Lvu3;->C(JLjava/lang/CharSequence;Ljava/lang/String;)V
 
-    move-result p1
+    iget-object v1, p0, Lga1;->F0:Ljava/lang/Object;
 
-    iput-boolean p1, v0, Lga1;->X:Z
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    iget-boolean p1, p0, Lga1;->X:Z
-
-    if-eqz p1, :cond_0
-
-    sget-object p1, Lka5;->a:Lka5;
-
-    goto :goto_1
-
-    :cond_0
-    sget-object p1, Lka1;->X:Lzd5;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    const/16 v1, 0xa
-
-    invoke-static {p1, v1}, Lpb3;->l(Ljava/lang/Iterable;I)I
-
-    move-result v1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    new-instance v1, Lf2;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v2, p1}, Lf2;-><init>(ILjava/lang/Object;)V
-
-    :goto_0
-    invoke-virtual {v1}, Lf2;->hasNext()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {v1}, Lf2;->next()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lka1;
-
-    new-instance v2, Lla1;
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v3
-
-    iget v4, p1, Lka1;->a:I
-
-    invoke-direct {v2, v3, v4, p1}, Lla1;-><init>(IILka1;)V
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_1
-    move-object p1, v0
-
-    :goto_1
-    iget-object v0, p0, Lga1;->Y:Lja1;
-
-    iget-object v0, v0, Lja1;->Z:Lx0f;
-
-    :cond_2
-    invoke-virtual {v0}, Lx0f;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    move-object v2, v1
+    check-cast v1, Lyd0;
 
-    check-cast v2, Ljw1;
+    invoke-virtual {v3, v1}, Lvu3;->setAvatarOverlay(Lyd0;)V
 
-    iget-boolean v3, v2, Ljw1;->b:Z
+    goto :goto_0
 
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :cond_0
+    invoke-virtual {v3, v5}, Lvu3;->setAvatarOverlay(Lyd0;)V
 
-    new-instance v2, Ljw1;
+    iget-object v4, p1, Lw37;->c:Ljava/lang/CharSequence;
 
-    invoke-direct {v2, p1, v3}, Ljw1;-><init>(Ljava/util/List;Z)V
+    iget-object v5, p1, Lw37;->d:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2}, Lx0f;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-nez v5, :cond_1
 
-    move-result v1
+    const-string v5, ""
 
-    if-eqz v1, :cond_2
+    :cond_1
+    invoke-virtual {v3, v1, v2, v4, v5}, Lvu3;->C(JLjava/lang/CharSequence;Ljava/lang/String;)V
 
-    sget-object p1, Lccg;->a:Lccg;
+    :goto_0
+    iget-object v1, p1, Lw37;->s0:Ljava/lang/CharSequence;
 
-    return-object p1
+    invoke-virtual {v3, v1}, Lvu3;->setDescription(Ljava/lang/CharSequence;)V
+
+    iget-object v1, p1, Lw37;->Y:Ljava/lang/String;
+
+    invoke-virtual {v3, v1}, Lvu3;->setTime(Ljava/lang/CharSequence;)V
+
+    iget-boolean v1, p1, Lw37;->Z:Z
+
+    invoke-virtual {v3, v1}, Lvu3;->B(Z)V
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    if-ne v0, v2, :cond_2
+
+    move v4, v2
+
+    goto :goto_1
+
+    :cond_2
+    move v4, v1
+
+    :goto_1
+    invoke-virtual {v3, v4}, Lvu3;->z(Z)V
+
+    const/4 v4, 0x2
+
+    if-ne v0, v4, :cond_3
+
+    move v1, v2
+
+    :cond_3
+    invoke-virtual {v3, v1}, Lvu3;->A(Z)V
+
+    iget-wide v0, p1, Lw37;->a:J
+
+    iput-wide v0, v3, Lvu3;->Q0:J
+
+    iget-object p1, p0, Lga1;->E0:Lusd;
+
+    iput-object p1, v3, Lvu3;->O0:Lusd;
+
+    return-void
+.end method
+
+.method public final bridge synthetic z(Lt98;)V
+    .locals 0
+
+    check-cast p1, Lw37;
+
+    invoke-virtual {p0, p1}, Lga1;->F(Lw37;)V
+
+    return-void
 .end method

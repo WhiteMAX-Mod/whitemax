@@ -1,257 +1,245 @@
-.class public final Lzhg;
+.class public abstract Lzhg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lsr1;
 
+# static fields
+.field public static final a:Lb90;
 
-# instance fields
-.field public final a:J
+.field public static final b:Ljava/lang/ThreadLocal;
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/CharSequence;
-
-.field public final d:Z
-
-.field public final e:Ljava/lang/String;
+.field public static final c:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/CharSequence;ZLjava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lb90;
 
-    iput-wide p1, p0, Lzhg;->a:J
+    invoke-direct {v0}, Lb90;-><init>()V
 
-    iput-object p3, p0, Lzhg;->b:Ljava/lang/String;
+    sput-object v0, Lzhg;->a:Lb90;
 
-    iput-object p4, p0, Lzhg;->c:Ljava/lang/CharSequence;
+    new-instance v0, Ljava/lang/ThreadLocal;
 
-    iput-boolean p5, p0, Lzhg;->d:Z
+    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
 
-    iput-object p6, p0, Lzhg;->e:Ljava/lang/String;
+    sput-object v0, Lzhg;->b:Ljava/lang/ThreadLocal;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    sput-object v0, Lzhg;->c:Ljava/util/ArrayList;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final c()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lzhg;->d:Z
-
-    return v0
-.end method
-
-.method public final d()J
+.method public static a(Landroid/view/ViewGroup;Lshg;)V
     .locals 2
 
-    iget-wide v0, p0, Lzhg;->a:J
+    sget-object v0, Lzhg;->c:Ljava/util/ArrayList;
 
-    return-wide v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lzhg;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lzhg;
-
-    iget-wide v3, p0, Lzhg;->a:J
-
-    iget-wide v5, p1, Lzhg;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lzhg;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lzhg;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_3
 
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lzhg;->c:Ljava/lang/CharSequence;
-
-    iget-object v3, p1, Lzhg;->c:Ljava/lang/CharSequence;
-
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p0}, Landroid/view/View;->isLaidOut()Z
 
     move-result v1
 
-    if-nez v1, :cond_4
+    if-eqz v1, :cond_3
 
-    return v2
+    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_4
-    iget-boolean v1, p0, Lzhg;->d:Z
+    if-nez p1, :cond_0
 
-    iget-boolean v3, p1, Lzhg;->d:Z
+    sget-object p1, Lzhg;->a:Lb90;
 
-    if-eq v1, v3, :cond_5
+    :cond_0
+    invoke-virtual {p1}, Lshg;->k()Lshg;
 
-    return v2
+    move-result-object p1
 
-    :cond_5
-    iget-object v1, p0, Lzhg;->e:Ljava/lang/String;
+    invoke-static {}, Lzhg;->c()Lus;
 
-    iget-object p1, p1, Lzhg;->e:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0, p0}, Lz0f;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result p1
+    move-result-object v0
 
-    if-nez p1, :cond_6
+    check-cast v0, Ljava/util/ArrayList;
 
-    return v2
+    if-eqz v0, :cond_1
 
-    :cond_6
-    return v0
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    if-lez v1, :cond_1
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lshg;
+
+    invoke-virtual {v1, p0}, Lshg;->B(Landroid/view/View;)V
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, p0, v0}, Lshg;->i(Landroid/view/ViewGroup;Z)V
+
+    sget v0, Lsxc;->transition_current_scene:I
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-nez v0, :cond_2
+
+    const/4 v0, 0x0
+
+    sget v1, Lsxc;->transition_current_scene:I
+
+    invoke-virtual {p0, v1, v0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    new-instance v0, Lyhg;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, v0, Lyhg;->a:Lshg;
+
+    iput-object p0, v0, Lyhg;->b:Landroid/view/ViewGroup;
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    invoke-virtual {p0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object p0
+
+    invoke-virtual {p0, v0}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
+
+    return-void
+
+    :cond_2
+    new-instance p0, Ljava/lang/ClassCastException;
+
+    invoke-direct {p0}, Ljava/lang/ClassCastException;-><init>()V
+
+    throw p0
+
+    :cond_3
+    return-void
 .end method
 
-.method public final getName()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lzhg;->b:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final hashCode()I
+.method public static b(Landroid/view/ViewGroup;)V
     .locals 3
 
-    iget-wide v0, p0, Lzhg;->a:J
+    sget-object v0, Lzhg;->c:Ljava/util/ArrayList;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    move-result v0
+    invoke-static {}, Lzhg;->c()Lus;
 
-    const/16 v1, 0x1f
+    move-result-object v0
 
-    mul-int/2addr v0, v1
+    invoke-virtual {v0, p0}, Lz0f;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v2, p0, Lzhg;->b:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-static {v0, v1, v2}, Lu15;->d(IILjava/lang/String;)I
+    check-cast v0, Ljava/util/ArrayList;
 
-    move-result v0
+    if-eqz v0, :cond_0
 
-    iget-object v2, p0, Lzhg;->c:Ljava/lang/CharSequence;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
-    invoke-static {v2, v0, v1}, Lu15;->f(Ljava/lang/CharSequence;II)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lzhg;->d:Z
-
-    invoke-static {v0, v1, v2}, Lrtg;->d(IIZ)I
-
-    move-result v0
-
-    iget-object v1, p0, Lzhg;->e:Ljava/lang/String;
+    move-result v1
 
     if-nez v1, :cond_0
 
-    const/4 v1, 0x0
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x1
+
+    :goto_0
+    if-ltz v0, :cond_0
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lshg;
+
+    invoke-virtual {v2, p0}, Lshg;->q(Landroid/view/ViewGroup;)V
+
+    add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    add-int/2addr v0, v1
-
-    return v0
+    return-void
 .end method
 
-.method public final j()Ljava/lang/CharSequence;
-    .locals 1
+.method public static c()Lus;
+    .locals 3
 
-    iget-object v0, p0, Lzhg;->c:Ljava/lang/CharSequence;
+    sget-object v0, Lzhg;->b:Ljava/lang/ThreadLocal;
 
-    return-object v0
-.end method
+    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
-.method public final q()Ljava/lang/String;
-    .locals 1
+    move-result-object v1
 
-    iget-object v0, p0, Lzhg;->e:Ljava/lang/String;
+    check-cast v1, Ljava/lang/ref/WeakReference;
 
-    return-object v0
-.end method
+    if-eqz v1, :cond_0
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    const-string v0, "UserInfo(serverId="
+    move-result-object v1
 
-    const-string v1, ", name="
+    check-cast v1, Lus;
 
-    iget-wide v2, p0, Lzhg;->a:J
+    if-eqz v1, :cond_0
 
-    iget-object v4, p0, Lzhg;->b:Ljava/lang/String;
+    return-object v1
 
-    invoke-static {v0, v2, v3, v1, v4}, Li57;->m(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    new-instance v1, Lus;
 
-    move-result-object v0
+    const/4 v2, 0x0
 
-    const-string v1, ", abbreviation="
+    invoke-direct {v1, v2}, Lz0f;-><init>(I)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/ref/WeakReference;
 
-    iget-object v1, p0, Lzhg;->c:Ljava/lang/CharSequence;
+    invoke-direct {v2, v1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
 
-    const-string v1, ", isUnknown="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lzhg;->d:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", avatar="
-
-    const-string v2, ")"
-
-    iget-object v3, p0, Lzhg;->e:Ljava/lang/String;
-
-    invoke-static {v0, v1, v3, v2}, Lzdf;->t(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object v1
 .end method

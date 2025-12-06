@@ -1,68 +1,26 @@
 .class public final Lb61;
-.super Ljava/lang/Object;
+.super Ld2f;
 .source "SourceFile"
-
-# interfaces
-.implements Lji6;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:I
-
-
-# direct methods
-.method public synthetic constructor <init>(II)V
-    .locals 0
-
-    iput p2, p0, Lb61;->a:I
-
-    iput p1, p0, Lb61;->b:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
+.method public final z(Lt98;)V
+    .locals 1
 
-    iget v0, p0, Lb61;->a:I
+    instance-of v0, p1, Lg61;
 
-    packed-switch v0, :pswitch_data_0
+    if-nez v0, :cond_0
 
-    new-instance v0, Lh41;
+    return-void
 
-    const/4 v1, 0x1
+    :cond_0
+    iget-object v0, p0, Lmid;->a:Landroid/view/View;
 
-    const/4 v2, 0x4
+    check-cast v0, Lroe;
 
-    iget v3, p0, Lb61;->b:I
+    check-cast p1, Lioe;
 
-    invoke-direct {v0, v3, v2, v1}, Lh41;-><init>(IIZ)V
+    invoke-virtual {v0, p1}, Lroe;->setModelItem(Lioe;)V
 
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Lh41;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x4
-
-    iget v3, p0, Lb61;->b:I
-
-    invoke-direct {v0, v3, v2, v1}, Lh41;-><init>(IIZ)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

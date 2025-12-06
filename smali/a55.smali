@@ -1,177 +1,86 @@
-.class public final La55;
+.class public final synthetic La55;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lz45;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Landroid/hardware/camera2/params/DynamicRangeProfiles;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ld55;
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
+.method public synthetic constructor <init>(Ld55;Lf55;I)V
     .locals 0
 
+    iput p3, p0, La55;->a:I
+
+    iput-object p1, p0, La55;->b:Ld55;
+
+    iput-object p2, p0, La55;->c:Ljava/lang/Object;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    check-cast p1, Landroid/hardware/camera2/params/DynamicRangeProfiles;
-
-    iput-object p1, p0, La55;->a:Landroid/hardware/camera2/params/DynamicRangeProfiles;
 
     return-void
 .end method
 
-.method public static d(Ljava/util/Set;)Ljava/util/Set;
-    .locals 6
-
-    invoke-interface {p0}, Ljava/util/Set;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object p0, Ljava/util/Collections;->EMPTY_SET:Ljava/util/Set;
-
-    return-object p0
-
-    :cond_0
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-interface {p0}, Ljava/util/Set;->size()I
-
-    move-result v1
-
-    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(I)V
-
-    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Long;
-
-    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    sget-object v4, Lw45;->a:Ljava/util/HashMap;
-
-    invoke-virtual {v4, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lv45;
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "Dynamic range profile cannot be converted to a DynamicRange object: "
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Ldvi;->e(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_1
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 
 # virtual methods
-.method public final a()Ljava/util/Set;
-    .locals 1
+.method public final run()V
+    .locals 3
 
-    iget-object v0, p0, La55;->a:Landroid/hardware/camera2/params/DynamicRangeProfiles;
+    iget v0, p0, La55;->a:I
 
-    invoke-virtual {v0}, Landroid/hardware/camera2/params/DynamicRangeProfiles;->getSupportedProfiles()Ljava/util/Set;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    iget-object v0, p0, La55;->b:Ld55;
 
-    invoke-static {v0}, La55;->d(Ljava/util/Set;)Ljava/util/Set;
+    iget v1, v0, Ld55;->a:I
 
-    move-result-object v0
+    iget-object v0, v0, Ld55;->b:Ld99;
 
-    return-object v0
-.end method
+    iget-object v2, p0, La55;->c:Ljava/lang/Object;
 
-.method public final b()Landroid/hardware/camera2/params/DynamicRangeProfiles;
-    .locals 1
+    invoke-interface {v2, v1, v0}, Lf55;->z(ILd99;)V
 
-    iget-object v0, p0, La55;->a:Landroid/hardware/camera2/params/DynamicRangeProfiles;
+    return-void
 
-    return-object v0
-.end method
+    :pswitch_0
+    iget-object v0, p0, La55;->b:Ld55;
 
-.method public final c(Lv45;)Ljava/util/Set;
-    .locals 4
+    iget v1, v0, Ld55;->a:I
 
-    iget-object v0, p0, La55;->a:Landroid/hardware/camera2/params/DynamicRangeProfiles;
+    iget-object v0, v0, Ld55;->b:Ld99;
 
-    invoke-static {p1, v0}, Lw45;->a(Lv45;Landroid/hardware/camera2/params/DynamicRangeProfiles;)Ljava/lang/Long;
+    iget-object v2, p0, La55;->c:Ljava/lang/Object;
 
-    move-result-object v0
+    invoke-interface {v2, v1, v0}, Lf55;->w(ILd99;)V
 
-    if-eqz v0, :cond_0
+    return-void
 
-    const/4 v1, 0x1
+    :pswitch_1
+    iget-object v0, p0, La55;->b:Ld55;
 
-    goto :goto_0
+    iget v1, v0, Ld55;->a:I
 
-    :cond_0
-    const/4 v1, 0x0
+    iget-object v0, v0, Ld55;->b:Ld99;
 
-    :goto_0
-    new-instance v2, Ljava/lang/StringBuilder;
+    iget-object v2, p0, La55;->c:Ljava/lang/Object;
 
-    const-string v3, "DynamicRange is not supported: "
+    invoke-interface {v2, v1, v0}, Lf55;->B(ILd99;)V
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    return-void
 
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    nop
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1, v1}, Ldvi;->a(Ljava/lang/String;Z)V
-
-    iget-object p1, p0, La55;->a:Landroid/hardware/camera2/params/DynamicRangeProfiles;
-
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    invoke-virtual {p1, v0, v1}, Landroid/hardware/camera2/params/DynamicRangeProfiles;->getProfileCaptureRequestConstraints(J)Ljava/util/Set;
-
-    move-result-object p1
-
-    invoke-static {p1}, La55;->d(Ljava/util/Set;)Ljava/util/Set;
-
-    move-result-object p1
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

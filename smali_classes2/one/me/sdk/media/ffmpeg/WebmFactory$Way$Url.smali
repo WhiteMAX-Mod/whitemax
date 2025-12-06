@@ -66,7 +66,7 @@
     const/4 v0, 0x0
 
     .line 6
-    invoke-direct {p0, p3, p4, p5, v0}, Lone/me/sdk/media/ffmpeg/WebmFactory$Way;-><init>(IIZLki4;)V
+    invoke-direct {p0, p3, p4, p5, v0}, Lone/me/sdk/media/ffmpeg/WebmFactory$Way;-><init>(IIZLtk4;)V
 
     .line 7
     iput-object p1, p0, Lone/me/sdk/media/ffmpeg/WebmFactory$Way$Url;->url:Ljava/lang/String;
@@ -77,7 +77,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;ZIIZILki4;)V
+.method public synthetic constructor <init>(Ljava/lang/String;ZIIZILtk4;)V
     .locals 6
 
     and-int/lit8 p7, p6, 0x2

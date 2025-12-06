@@ -11,11 +11,11 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/video/CameraManager;",
         "",
-        "Lg22;",
+        "Lb32;",
         "cameraParams",
-        "Lccg;",
+        "Lqqg;",
         "switchCamera",
-        "(Lg22;)V",
+        "(Lb32;)V",
         "",
         "isCapturingFromFrontCamera",
         "()Z",
@@ -51,5 +51,5 @@
 .method public abstract setCameraEnabled(Z)V
 .end method
 
-.method public abstract switchCamera(Lg22;)V
+.method public abstract switchCamera(Lb32;)V
 .end method

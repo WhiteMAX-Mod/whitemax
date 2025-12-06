@@ -18,9 +18,9 @@
         "Lru/ok/android/externcalls/analytics/events/EventItemValue;",
         "items",
         "(Ljava/util/Map;)V",
-        "Ltcb;",
+        "Limb;",
         "item",
-        "(Ltcb;)V",
+        "(Limb;)V",
         "key",
         "value",
         "set",
@@ -84,6 +84,36 @@
     return-void
 .end method
 
+.method public constructor <init>(Limb;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Limb;",
+            ")V"
+        }
+    .end annotation
+
+    .line 5
+    invoke-direct {p0}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;-><init>()V
+
+    .line 6
+    iget-object v0, p1, Limb;->a:Ljava/lang/Object;
+
+    .line 7
+    check-cast v0, Ljava/lang/String;
+
+    .line 8
+    iget-object p1, p1, Limb;->b:Ljava/lang/Object;
+
+    .line 9
+    check-cast p1, Lru/ok/android/externcalls/analytics/events/EventItemValue;
+
+    invoke-virtual {p0, v0, p1}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->set(Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;)Lru/ok/android/externcalls/analytics/events/EventItemsMap;
+
+    return-void
+.end method
+
 .method public constructor <init>(Ljava/util/Map;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
@@ -102,36 +132,6 @@
 
     .line 4
     invoke-virtual {p0, p1}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->addAll(Ljava/util/Map;)Lru/ok/android/externcalls/analytics/events/EventItemsMap;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ltcb;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ltcb;",
-            ")V"
-        }
-    .end annotation
-
-    .line 5
-    invoke-direct {p0}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;-><init>()V
-
-    .line 6
-    iget-object v0, p1, Ltcb;->a:Ljava/lang/Object;
-
-    .line 7
-    check-cast v0, Ljava/lang/String;
-
-    .line 8
-    iget-object p1, p1, Ltcb;->b:Ljava/lang/Object;
-
-    .line 9
-    check-cast p1, Lru/ok/android/externcalls/analytics/events/EventItemValue;
-
-    invoke-virtual {p0, v0, p1}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->set(Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;)Lru/ok/android/externcalls/analytics/events/EventItemsMap;
 
     return-void
 .end method

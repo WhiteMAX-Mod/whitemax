@@ -1,85 +1,232 @@
-.class public final Lmyd;
-.super Lkyd;
+.class public abstract Lmyd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final j:Ljava/util/List;
+# static fields
+.field public static final a:Ljava/util/List;
+
+.field public static final b:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lwwc;JJJJLjava/util/List;JLjava/util/List;JJ)V
-    .locals 17
+.method static constructor <clinit>()V
+    .locals 2
 
-    move-object/from16 v0, p0
+    const-class v0, Landroid/app/Application;
 
-    move-object/from16 v1, p1
+    const-class v1, Leyd;
 
-    move-wide/from16 v2, p2
+    filled-new-array {v0, v1}, [Ljava/lang/Class;
 
-    move-wide/from16 v4, p4
+    move-result-object v0
 
-    move-wide/from16 v6, p6
+    invoke-static {v0}, Lve3;->j([Ljava/lang/Object;)Ljava/util/List;
 
-    move-wide/from16 v8, p8
+    move-result-object v0
 
-    move-object/from16 v10, p10
+    sput-object v0, Lmyd;->a:Ljava/util/List;
 
-    move-wide/from16 v11, p11
+    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    move-wide/from16 v13, p14
+    move-result-object v0
 
-    move-wide/from16 v15, p16
-
-    invoke-direct/range {v0 .. v16}, Lkyd;-><init>(Lwwc;JJJJLjava/util/List;JJJ)V
-
-    move-object/from16 v1, p13
-
-    iput-object v1, v0, Lmyd;->j:Ljava/util/List;
+    sput-object v0, Lmyd;->b:Ljava/util/List;
 
     return-void
 .end method
 
+.method public static final a(Ljava/lang/Class;Ljava/util/List;)Ljava/lang/reflect/Constructor;
+    .locals 6
 
-# virtual methods
-.method public final e(J)J
-    .locals 0
+    invoke-virtual {p0}, Ljava/lang/Class;->getConstructors()[Ljava/lang/reflect/Constructor;
 
-    iget-object p1, p0, Lmyd;->j:Ljava/util/List;
+    move-result-object v0
 
+    array-length v1, v0
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_3
+
+    aget-object v3, v0, v2
+
+    invoke-virtual {v3}, Ljava/lang/reflect/Constructor;->getParameterTypes()[Ljava/lang/Class;
+
+    move-result-object v4
+
+    invoke-static {v4}, Lys;->D([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v4
+
+    invoke-virtual {p1, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_0
+
+    return-object v3
+
+    :cond_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
-    move-result p1
+    move-result v3
 
-    int-to-long p1, p1
+    invoke-interface {v4}, Ljava/util/List;->size()I
 
-    return-wide p1
+    move-result v5
+
+    if-ne v3, v5, :cond_2
+
+    invoke-interface {v4, p1}, Ljava/util/List;->containsAll(Ljava/util/Collection;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Class "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, " must have parameters in the proper order: "
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_2
+    :goto_1
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    const/4 p0, 0x0
+
+    return-object p0
 .end method
 
-.method public final i(Lqbd;J)Lwwc;
+.method public static final varargs b(Ljava/lang/Class;Ljava/lang/reflect/Constructor;[Ljava/lang/Object;)Lyfh;
     .locals 2
 
-    iget-wide v0, p0, Lkyd;->d:J
+    :try_start_0
+    array-length v0, p2
 
-    sub-long/2addr p2, v0
+    invoke-static {p2, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
-    long-to-int p1, p2
+    move-result-object p2
 
-    iget-object p2, p0, Lmyd;->j:Ljava/util/List;
-
-    invoke-interface {p2, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lwwc;
+    check-cast p1, Lyfh;
+    :try_end_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-object p1
-.end method
 
-.method public final j()Z
-    .locals 1
+    :catch_0
+    move-exception p1
 
-    const/4 v0, 0x1
+    goto :goto_0
 
-    return v0
+    :catch_1
+    move-exception p1
+
+    goto :goto_1
+
+    :catch_2
+    move-exception p1
+
+    goto :goto_2
+
+    :goto_0
+    new-instance p2, Ljava/lang/RuntimeException;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "An exception happened in constructor of "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
+
+    move-result-object p1
+
+    invoke-direct {p2, p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
+
+    :goto_1
+    new-instance p2, Ljava/lang/RuntimeException;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "A "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, " cannot be instantiated."
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p2, p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
+
+    :goto_2
+    new-instance p2, Ljava/lang/RuntimeException;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Failed to access "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p2, p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
 .end method

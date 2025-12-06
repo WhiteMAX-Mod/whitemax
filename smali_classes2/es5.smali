@@ -1,137 +1,150 @@
-.class public final Les5;
-.super Lpmf;
+.class public final synthetic Les5;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ldrf;
 
 
 # instance fields
-.field public final c:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final o:Ljava/lang/Boolean;
+.field public final synthetic b:Ljava/io/Serializable;
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/Boolean;)V
+.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/io/Serializable;I)V
     .locals 0
 
+    iput p3, p0, Les5;->a:I
+
+    iput-object p1, p0, Les5;->c:Ljava/lang/Object;
+
+    iput-object p2, p0, Les5;->b:Ljava/io/Serializable;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Les5;->c:Ljava/lang/String;
-
-    iput-object p2, p0, Les5;->o:Ljava/lang/Boolean;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final get()Ljava/lang/Object;
+    .locals 5
 
-    const/4 v0, 0x1
+    iget v0, p0, Les5;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Les5;->c:Ljava/lang/Object;
 
-    :cond_0
-    instance-of v1, p1, Les5;
+    check-cast v0, Lozf;
 
-    const/4 v2, 0x0
+    iget-object v1, p0, Les5;->b:Ljava/io/Serializable;
 
-    if-nez v1, :cond_1
+    check-cast v1, Ljava/io/File;
 
-    return v2
+    iget-object v2, v0, Lozf;->b:Lk18;
 
-    :cond_1
-    check-cast p1, Les5;
+    invoke-interface {v2}, Lk18;->getValue()Ljava/lang/Object;
 
-    iget-object v1, p0, Les5;->c:Ljava/lang/String;
+    move-result-object v2
 
-    iget-object v3, p1, Les5;->c:Ljava/lang/String;
+    check-cast v2, Ly0g;
 
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object v3, v0, Lozf;->c:Lk18;
 
-    move-result v1
+    invoke-interface {v3}, Lk18;->getValue()Ljava/lang/Object;
 
-    if-nez v1, :cond_2
+    move-result-object v3
 
-    return v2
+    check-cast v3, Lz7c;
 
-    :cond_2
-    iget-object v1, p0, Les5;->o:Ljava/lang/Boolean;
+    iget-object v3, v3, Lz7c;->b:Ll5c;
 
-    iget-object p1, p1, Les5;->o:Ljava/lang/Boolean;
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object v0, v0, Lozf;->o:Lk18;
 
-    move-result p1
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
-    if-nez p1, :cond_3
+    move-result-object v0
 
-    return v2
+    check-cast v0, Lm0g;
 
-    :cond_3
-    return v0
-.end method
+    check-cast v0, Ln0g;
 
-.method public final hashCode()I
-    .locals 2
+    invoke-virtual {v0}, Ln0g;->b()Lj0e;
 
-    iget-object v0, p0, Les5;->c:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result v0
+    new-instance v3, Ln97;
 
-    mul-int/lit8 v0, v0, 0x1f
+    iget-object v2, v2, Ly0g;->a:Lbwf;
 
-    iget-object v1, p0, Les5;->o:Ljava/lang/Boolean;
+    invoke-direct {v3, v2, v1, v0}, Ln97;-><init>(Lbwf;Ljava/io/File;Lj0e;)V
 
-    if-nez v1, :cond_0
+    return-object v3
 
-    const/4 v1, 0x0
+    :pswitch_0
+    iget-object v0, p0, Les5;->c:Ljava/lang/Object;
 
-    goto :goto_0
+    check-cast v0, Ljs5;
 
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    iget-object v1, p0, Les5;->b:Ljava/io/Serializable;
 
-    move-result v1
+    check-cast v1, [J
 
-    :goto_0
-    add-int/2addr v0, v1
+    new-instance v2, Lo3f;
 
-    return v0
-.end method
+    invoke-direct {v2}, Lo3f;-><init>()V
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    iget-object v3, v0, Ljs5;->f:Ljava/util/concurrent/ConcurrentHashMap;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, v0, Ljs5;->a:Lhwa;
 
-    const-string v1, "Response(url="
+    const/4 v4, 0x4
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v4, v1}, Lhwa;->c(I[J)J
 
-    iget-object v1, p0, Les5;->c:Ljava/lang/String;
+    move-result-wide v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    const-string v1, ", unsafe="
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0, v2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v1, p0, Les5;->o:Ljava/lang/Boolean;
+    return-object v2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :pswitch_1
+    iget-object v0, p0, Les5;->c:Ljava/lang/Object;
 
-    const-string v1, ")"
+    check-cast v0, Lgs5;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v1, p0, Les5;->b:Ljava/io/Serializable;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    check-cast v1, [J
+
+    new-instance v2, Lu64;
+
+    const/4 v3, 0x5
+
+    invoke-direct {v2, v0, v3, v1}, Lu64;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v2}, Lgs5;->a(Ljava/util/concurrent/Callable;)Lo3f;
 
     move-result-object v0
 
     return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,50 +1,41 @@
 .class public final Lndi;
-.super Ljava/lang/Object;
+.super Loai;
 .source "SourceFile"
-
-# interfaces
-.implements Ltha;
-
-
-# static fields
-.field public static final a:Lndi;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lndi;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lndi;->a:Lndi;
-
-    new-instance v0, Ltwh;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ltwh;-><init>(I)V
-
-    const-class v1, Lmxh;
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final W(Ltqa;Lvdi;)[Lz9j;
+    .locals 2
 
-    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    invoke-virtual {p0}, Loai;->T()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    sget v1, Lngi;->a:I
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+
+    const/4 p1, 0x1
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p2, v0, v1}, Lvdi;->writeToParcel(Landroid/os/Parcel;I)V
+
+    invoke-virtual {p0, v0, p1}, Loai;->U(Landroid/os/Parcel;I)Landroid/os/Parcel;
 
     move-result-object p1
 
-    throw p1
+    sget-object p2, Lz9j;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->createTypedArray(Landroid/os/Parcelable$Creator;)[Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, [Lz9j;
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+
+    return-object p2
 .end method

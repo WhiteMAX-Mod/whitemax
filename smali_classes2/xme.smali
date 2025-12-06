@@ -2,50 +2,106 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final c:Lxme;
+# interfaces
+.implements Lioe;
 
 
 # instance fields
-.field public final a:Lwme;
+.field public final a:J
 
-.field public final b:Ljava/util/List;
+.field public final b:I
+
+.field public final c:Lwme;
+
+.field public final d:Ls5g;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, Lxme;
-
-    sget-object v1, Lwme;->a:Lwme;
-
-    sget-object v2, Lka5;->a:Lka5;
-
-    invoke-direct {v0, v1, v2}, Lxme;-><init>(Lwme;Ljava/util/List;)V
-
-    sput-object v0, Lxme;->c:Lxme;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lwme;Ljava/util/List;)V
+.method public constructor <init>(JILwme;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxme;->a:Lwme;
+    iput-wide p1, p0, Lxme;->a:J
 
-    iput-object p2, p0, Lxme;->b:Ljava/util/List;
+    iput p3, p0, Lxme;->b:I
+
+    iput-object p4, p0, Lxme;->c:Lwme;
+
+    instance-of p1, p4, Lvme;
+
+    if-eqz p1, :cond_0
+
+    check-cast p4, Lvme;
+
+    iget-object p1, p4, Lvme;->a:Lr5g;
+
+    goto :goto_0
+
+    :cond_0
+    instance-of p1, p4, Lume;
+
+    if-eqz p1, :cond_1
+
+    sget-object p1, Ls5g;->b:Lr5g;
+
+    :goto_0
+    iput-object p1, p0, Lxme;->d:Ls5g;
 
     return-void
+
+    :cond_1
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 .end method
 
 
 # virtual methods
+.method public final a()Ls5g;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final b()Lxne;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final c()Ls5g;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final d()Lfoe;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final e()Lu18;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 7
 
     const/4 v0, 0x1
 
@@ -65,43 +121,86 @@
     :cond_1
     check-cast p1, Lxme;
 
-    iget-object v1, p0, Lxme;->a:Lwme;
+    iget-wide v3, p0, Lxme;->a:J
 
-    iget-object v3, p1, Lxme;->a:Lwme;
+    iget-wide v5, p1, Lxme;->a:J
 
-    if-eq v1, v3, :cond_2
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
 
     return v2
 
     :cond_2
-    iget-object v1, p0, Lxme;->b:Ljava/util/List;
+    iget v1, p0, Lxme;->b:I
 
-    iget-object p1, p1, Lxme;->b:Ljava/util/List;
+    iget v3, p1, Lxme;->b:I
 
-    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
+    if-eq v1, v3, :cond_3
 
     return v2
 
     :cond_3
+    iget-object v1, p0, Lxme;->c:Lwme;
+
+    iget-object p1, p1, Lxme;->c:Lwme;
+
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
     return v0
 .end method
 
-.method public final hashCode()I
+.method public final getItemId()J
     .locals 2
 
-    iget-object v0, p0, Lxme;->a:Lwme;
+    iget-wide v0, p0, Lxme;->a:J
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    return-wide v0
+.end method
+
+.method public final getTitle()Ls5g;
+    .locals 1
+
+    iget-object v0, p0, Lxme;->d:Ls5g;
+
+    return-object v0
+.end method
+
+.method public final getType()Lhoe;
+    .locals 1
+
+    sget-object v0, Lhoe;->b:Lhoe;
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-wide v0, p0, Lxme;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    const/16 v1, 0x1f
 
-    iget-object v1, p0, Lxme;->b:Ljava/util/List;
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lxme;->b:I
+
+    invoke-static {v2, v0, v1}, Lxrf;->k(III)I
+
+    move-result v0
+
+    iget-object v1, p0, Lxme;->c:Lwme;
 
     invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
@@ -112,24 +211,48 @@
     return v1
 .end method
 
+.method public final m()I
+    .locals 1
+
+    sget v0, Lqab;->g:I
+
+    return v0
+.end method
+
+.method public final t()I
+    .locals 1
+
+    iget v0, p0, Lxme;->b:I
+
+    return v0
+.end method
+
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "ShowcaseState(state="
+    const-string v1, "SettingSectionNameItem(itemId="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lxme;->a:Lwme;
+    iget-wide v1, p0, Lxme;->a:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string v1, ", content="
+    const-string v1, ", sectionId="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lxme;->b:Ljava/util/List;
+    iget v1, p0, Lxme;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", titleElement="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lxme;->c:Lwme;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

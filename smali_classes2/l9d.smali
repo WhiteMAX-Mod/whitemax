@@ -1,23 +1,54 @@
 .class public final Ll9d;
-.super Lxf6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lt98;
 
-# instance fields
-.field public final f:Lma7;
 
-.field public g:Lr0;
+# static fields
+.field public static final a:Ll9d;
 
-.field public h:Lr0;
+.field public static final b:I
+
+.field public static final c:J
 
 
 # direct methods
-.method public constructor <init>(Lqmf;Lsf5;Lma7;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0, p1, p2}, Lxf6;-><init>(Lqmf;Lsf5;)V
+    new-instance v0, Ll9d;
 
-    iput-object p3, p0, Ll9d;->f:Lma7;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Ll9d;->a:Ll9d;
+
+    sget v0, Lcvd;->a:I
+
+    sput v0, Ll9d;->b:I
+
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+
+    sput-wide v0, Ll9d;->c:J
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final getItemId()J
+    .locals 2
+
+    sget-wide v0, Ll9d;->c:J
+
+    return-wide v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    sget v0, Ll9d;->b:I
+
+    return v0
 .end method

@@ -1,37 +1,51 @@
 .class public abstract Lws4;
-.super Ljava/lang/Object;
+.super Lhj0;
 .source "SourceFile"
 
 
-# static fields
-.field public static volatile a:Lp95;
+# instance fields
+.field public final b:Lhj0;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lhj0;)V
+    .locals 0
 
-    sget-object v0, Ljjc;->c:Ljjc;
+    invoke-direct {p0}, Lhj0;-><init>()V
 
-    invoke-static {}, Lfni;->a()Lju4;
+    iput-object p1, p0, Lws4;->b:Lhj0;
 
-    move-result-object v1
+    return-void
+.end method
 
-    new-instance v2, Lgk0;
 
-    const/16 v3, 0xd
+# virtual methods
+.method public d()V
+    .locals 1
 
-    invoke-direct {v2, v3}, Lgk0;-><init>(I)V
+    iget-object v0, p0, Lws4;->b:Lhj0;
 
-    iget-object v0, v0, Ljjc;->a:Lky;
+    invoke-virtual {v0}, Lhj0;->c()V
 
-    new-instance v3, Lijc;
+    return-void
+.end method
 
-    const/4 v4, 0x0
+.method public f(Ljava/lang/Throwable;)V
+    .locals 1
 
-    invoke-direct {v3, v4, v2}, Lijc;-><init>(ILjava/lang/Object;)V
+    iget-object v0, p0, Lws4;->b:Lhj0;
 
-    invoke-virtual {v0, v1, v3}, Lky;->g(Ljava/util/concurrent/Executor;Lxha;)V
+    invoke-virtual {v0, p1}, Lhj0;->e(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public j(F)V
+    .locals 1
+
+    iget-object v0, p0, Lws4;->b:Lhj0;
+
+    invoke-virtual {v0, p1}, Lhj0;->i(F)V
 
     return-void
 .end method

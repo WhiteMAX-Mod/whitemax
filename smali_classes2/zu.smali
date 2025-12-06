@@ -1,165 +1,110 @@
-.class public final Lzu;
-.super Lxi0;
+.class public final synthetic Lzu;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final X:[J
+.field public final synthetic a:I
+
+.field public final synthetic b:Lul2;
+
+.field public final synthetic c:Leh9;
 
 
 # direct methods
-.method public constructor <init>(IJ[J)V
+.method public synthetic constructor <init>(Lul2;Leh9;I)V
     .locals 0
 
-    invoke-direct {p0, p2, p3, p1}, Lxi0;-><init>(JI)V
+    iput p3, p0, Lzu;->a:I
 
-    iput-object p4, p0, Lzu;->X:[J
+    iput-object p1, p0, Lzu;->b:Lul2;
+
+    iput-object p2, p0, Lzu;->c:Leh9;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final g()[B
-    .locals 3
-
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$AssetsRemove;
-
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$AssetsRemove;-><init>()V
-
-    iget v1, p0, Lxi0;->o:I
-
-    invoke-static {v1}, Lru/ok/tamtam/nano/b;->p(I)I
-
-    move-result v1
-
-    iput v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsRemove;->assetType:I
-
-    iget-object v1, p0, Lzu;->X:[J
-
-    iput-object v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsRemove;->ids:[J
-
-    iget-wide v1, p0, Lym;->a:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsRemove;->requestId:J
-
-    invoke-static {v0}, Lee9;->toByteArray(Lee9;)[B
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getType()Luib;
-    .locals 1
-
-    sget-object v0, Luib;->R0:Luib;
-
-    return-object v0
-.end method
-
-.method public final i()Lmmf;
+.method public final run()V
     .locals 4
 
-    new-instance v0, Lmu;
+    iget v0, p0, Lzu;->a:I
 
-    const/4 v1, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v2, 0x5
+    iget-object v0, p0, Lzu;->b:Lul2;
 
-    invoke-direct {v0, v1, v2}, Lmu;-><init>(Lm8b;I)V
+    iget-object v1, p0, Lzu;->c:Leh9;
 
-    iget v1, p0, Lxi0;->o:I
+    :try_start_0
+    iget-object v2, v0, Lul2;->b:Lb47;
 
-    if-eqz v1, :cond_1
+    invoke-virtual {v2, v1}, Lb47;->r(Lj37;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object v2, p0, Lzu;->X:[J
+    goto :goto_0
 
-    if-eqz v2, :cond_0
+    :catchall_0
+    move-exception v1
 
-    array-length v3, v2
+    iget-object v0, v0, Lul2;->X:Lyi5;
 
-    if-eqz v3, :cond_0
+    new-instance v2, Lru/ok/tamtam/loader/AsyncHistoryLoader$AsyncHistoryLoaderException;
 
-    const-string v3, "type"
+    const-string v3, "updateHistoryItemSync: exception"
 
-    invoke-static {v1}, Ldy1;->d(I)Ljava/lang/String;
+    invoke-direct {v2, v3, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-result-object v1
+    check-cast v0, Ly3b;
 
-    invoke-virtual {v0, v3, v1}, Lmmf;->x(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Ly3b;->a(Ljava/lang/Throwable;)V
 
-    const-string v1, "ids"
-
-    invoke-virtual {v0, v1, v2}, Lmmf;->q(Ljava/lang/String;[J)V
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "ids must not be null or empty"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "type must not be null"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final t(Lpmf;)V
-    .locals 4
-
-    check-cast p1, Lav;
-
-    iget-boolean v0, p1, Lav;->c:Z
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_1
-
-    iget-wide v2, p1, Lav;->o:J
-
-    invoke-virtual {p0, v2, v3}, Lxi0;->u(J)V
-
-    iget-object p1, p0, Lym;->c:Lzm;
-
-    if-eqz p1, :cond_0
-
-    move-object v1, p1
-
-    :cond_0
-    invoke-virtual {v1}, Lzm;->b()Lpw0;
-
-    move-result-object p1
-
-    new-instance v0, Lbv;
-
-    iget-wide v1, p0, Lym;->a:J
-
-    invoke-direct {v0, v1, v2}, Luj0;-><init>(J)V
-
-    invoke-virtual {p1, v0}, Lpw0;->c(Ljava/lang/Object;)V
-
+    :goto_0
     return-void
 
-    :cond_1
-    new-instance p1, Lzlf;
+    :pswitch_0
+    iget-object v0, p0, Lzu;->b:Lul2;
 
-    const-string v0, "asset.task.failed"
+    iget-object v1, p0, Lzu;->c:Leh9;
 
-    const-string v2, "failed to remove asset"
+    :try_start_1
+    iget-object v2, v0, Lul2;->b:Lb47;
 
-    invoke-direct {p1, v0, v2, v1}, Lzlf;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v2, v1}, Lb47;->b(Lj37;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    invoke-virtual {p0, p1}, Lxi0;->e(Lzlf;)V
+    goto :goto_1
 
+    :catchall_1
+    move-exception v1
+
+    iget-object v0, v0, Lul2;->X:Lyi5;
+
+    new-instance v2, Lru/ok/tamtam/loader/AsyncHistoryLoader$AsyncHistoryLoaderException;
+
+    const-string v3, "addHistoryItem: exception"
+
+    invoke-direct {v2, v3, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    check-cast v0, Ly3b;
+
+    invoke-virtual {v0, v2}, Ly3b;->a(Ljava/lang/Throwable;)V
+
+    :goto_1
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

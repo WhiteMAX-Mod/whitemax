@@ -1,60 +1,79 @@
-.class public final synthetic Lgz9;
+.class public final Lgz9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lyq6;
-
 
 # instance fields
-.field public final synthetic a:Lkz9;
+.field public final a:Landroid/util/SparseArray;
+
+.field public b:Lzog;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lkz9;)V
-    .locals 0
-
-    iput-object p1, p0, Lgz9;->a:Lkz9;
+.method public constructor <init>(I)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Landroid/util/SparseArray;
+
+    invoke-direct {v0, p1}, Landroid/util/SparseArray;-><init>(I)V
+
+    iput-object v0, p0, Lgz9;->a:Landroid/util/SparseArray;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lzq6;Lxq6;J)V
-    .locals 3
+.method public final a(Lzog;II)V
+    .locals 4
 
-    iget-object v0, p0, Lgz9;->a:Lkz9;
+    invoke-virtual {p1, p2}, Lzog;->a(I)I
 
-    iget-boolean v1, v0, Lkz9;->r:Z
+    move-result v0
 
-    xor-int/lit8 v1, v1, 0x1
+    iget-object v1, p0, Lgz9;->a:Landroid/util/SparseArray;
 
-    invoke-static {v1}, Lsgi;->i(Z)V
+    if-nez v1, :cond_0
 
-    invoke-static {}, Lte4;->a()V
+    const/4 v0, 0x0
 
-    iget-object v1, v0, Lkz9;->j:Ljava/util/ArrayDeque;
+    goto :goto_0
 
-    new-instance v2, Ljvf;
+    :cond_0
+    invoke-virtual {v1, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
-    invoke-direct {v2, p2, p3, p4}, Ljvf;-><init>(Lxq6;J)V
+    move-result-object v0
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
+    check-cast v0, Lgz9;
 
-    iget-object v1, v0, Lkz9;->k:Landroid/util/SparseArray;
+    :goto_0
+    const/4 v2, 0x1
 
-    iget p2, p2, Lxq6;->a:I
+    if-nez v0, :cond_1
 
-    new-instance v2, Liz9;
+    new-instance v0, Lgz9;
 
-    invoke-direct {v2, p1, p3, p4}, Liz9;-><init>(Lzq6;J)V
+    invoke-direct {v0, v2}, Lgz9;-><init>(I)V
 
-    invoke-virtual {v1, p2, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lzog;->a(I)I
 
-    invoke-virtual {v0}, Lkz9;->b()V
+    move-result v3
+
+    invoke-virtual {v1, v3, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    :cond_1
+    if-le p3, p2, :cond_2
+
+    add-int/2addr p2, v2
+
+    invoke-virtual {v0, p1, p2, p3}, Lgz9;->a(Lzog;II)V
+
+    return-void
+
+    :cond_2
+    iput-object p1, v0, Lgz9;->b:Lzog;
 
     return-void
 .end method

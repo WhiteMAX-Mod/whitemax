@@ -1,218 +1,150 @@
-.class public abstract Ljvi;
+.class public final Ljvi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpqa;
+
+
+# static fields
+.field public static final a:Ljvi;
+
 
 # direct methods
-.method public static final a(Lqjb;)Ljava/util/List;
-    .locals 9
+.method static constructor <clinit>()V
+    .locals 3
 
-    iget-object v0, p0, Lqjb;->f:Ljava/util/List;
+    new-instance v0, Ljvi;
 
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v1
+    sput-object v0, Ljvi;->a:Ljvi;
 
-    :cond_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    new-instance v0, Lmli;
 
-    move-result v2
+    const/4 v1, 0x1
 
-    const-wide/16 v3, 0x0
+    invoke-direct {v0, v1}, Lmli;-><init>(I)V
 
-    if-eqz v2, :cond_1
+    const-class v1, Lemi;
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    move-result-object v2
+    move-result-object v0
 
-    move-object v5, v2
+    const/4 v2, 0x2
 
-    check-cast v5, Ljava/lang/Long;
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    invoke-virtual {v5}, Ljava/lang/Long;->longValue()J
+    move-result-object v0
 
-    move-result-wide v5
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    cmp-long v5, v5, v3
+    move-result-object v0
 
-    if-lez v5, :cond_0
+    const/4 v2, 0x3
 
-    goto :goto_0
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    :cond_1
-    const/4 v2, 0x0
+    move-result-object v0
 
-    :goto_0
-    if-eqz v2, :cond_2
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    return-object v0
+    move-result-object v0
 
-    :cond_2
-    iget-object p0, p0, Lqjb;->e:Ljava/util/List;
+    const/4 v2, 0x4
 
-    new-instance v0, Ljava/util/ArrayList;
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    const/16 v1, 0xa
+    move-result-object v0
 
-    invoke-static {p0, v1}, Lpb3;->l(Ljava/lang/Iterable;I)I
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    move-result v1
+    move-result-object v0
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+    const/4 v2, 0x5
 
-    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    move-result-object p0
+    move-result-object v0
 
-    :goto_1
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    move-result v1
+    move-result-object v0
 
-    if-eqz v1, :cond_6
+    const/4 v2, 0x6
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    move-result-object v1
+    move-result-object v0
 
-    check-cast v1, Ljava/lang/String;
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    const/4 v2, 0x7
 
-    invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    move-result v5
+    move-result-object v0
 
-    const/4 v6, 0x0
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    :goto_2
-    if-ge v6, v5, :cond_4
+    move-result-object v0
 
-    invoke-interface {v1, v6}, Ljava/lang/CharSequence;->charAt(I)C
+    const/16 v2, 0x8
 
-    move-result v7
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    invoke-static {v7}, Ljava/lang/Character;->isDigit(C)Z
+    move-result-object v0
 
-    move-result v8
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    if-eqz v8, :cond_3
+    move-result-object v0
 
-    invoke-interface {v2, v7}, Ljava/lang/Appendable;->append(C)Ljava/lang/Appendable;
+    const/16 v2, 0x9
 
-    :cond_3
-    add-int/lit8 v6, v6, 0x1
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    goto :goto_2
+    move-result-object v0
 
-    :cond_4
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-static {v1}, Lgbf;->n(Ljava/lang/String;)Ljava/lang/Long;
+    const/16 v2, 0xa
 
-    move-result-object v1
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    if-eqz v1, :cond_5
+    move-result-object v0
 
-    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    move-result-wide v1
+    move-result-object v0
 
-    goto :goto_3
+    const/16 v2, 0xb
 
-    :cond_5
-    move-wide v1, v3
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    :goto_3
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    move-result-object v0
 
-    move-result-object v1
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    invoke-interface {v0, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+    move-result-object v0
 
-    goto :goto_1
-
-    :cond_6
-    return-object v0
-.end method
-
-.method public static final b(Lzcg;)V
-    .locals 2
-
-    new-instance v0, Lfpa;
-
-    const/16 v1, 0x14
-
-    invoke-direct {v0, v1}, Lfpa;-><init>(I)V
-
-    const-class v1, Lvf4;
-
-    invoke-virtual {p0, v1, v0}, Lzcg;->c(Ljava/lang/Class;Lji7;)V
-
-    new-instance v0, Lgpa;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1}, Lgpa;-><init>(I)V
-
-    const-class v1, Ltd3;
-
-    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
-
-    new-instance v0, Lfpa;
-
-    const/16 v1, 0x15
-
-    invoke-direct {v0, v1}, Lfpa;-><init>(I)V
-
-    const-class v1, Lms4;
-
-    invoke-virtual {p0, v1, v0}, Lzcg;->c(Ljava/lang/Class;Lji7;)V
-
-    new-instance v0, Lgpa;
-
-    const/16 v1, 0x9
-
-    invoke-direct {v0, v1}, Lgpa;-><init>(I)V
-
-    const-class v1, Ld7c;
-
-    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
-
-    new-instance v0, Lgpa;
-
-    const/16 v1, 0xa
-
-    invoke-direct {v0, v1}, Lgpa;-><init>(I)V
-
-    const-class v1, Lw1c;
-
-    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
-
-    new-instance v0, Lgpa;
-
-    const/16 v1, 0xb
-
-    invoke-direct {v0, v1}, Lgpa;-><init>(I)V
-
-    const-class v1, Ltb;
-
-    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
-
-    new-instance v0, Lgpa;
-
-    const/16 v1, 0xc
-
-    invoke-direct {v0, v1}, Lgpa;-><init>(I)V
-
-    const-class v1, Lx1c;
-
-    invoke-virtual {p0, v1, v0}, Lzcg;->e(Ljava/lang/Class;Lji7;)V
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

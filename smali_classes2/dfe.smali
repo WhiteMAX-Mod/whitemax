@@ -1,146 +1,300 @@
 .class public final Ldfe;
-.super Lsgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Liv4;
+.implements Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
 
 
 # instance fields
-.field public X:I
+.field public final a:Lpb3;
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final b:Lk18;
 
-.field public final synthetic Z:Lqfe;
+.field public final c:J
+
+.field public final d:J
+
+.field public final e:Ltcf;
+
+.field public final f:Lhbd;
 
 
 # direct methods
-.method public constructor <init>(Lqfe;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Lk18;Lpb3;)V
+    .locals 2
 
-    iput-object p1, p0, Ldfe;->Z:Lqfe;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Ldfe;->a:Lpb3;
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ldfe;->b:Lk18;
 
+    sget-object p1, Lpu4;->b:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Ldfe;->c:J
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Ldfe;->d:J
+
+    invoke-virtual {p0}, Ldfe;->e()Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lucf;->a(Ljava/lang/Object;)Ltcf;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ldfe;->e:Ltcf;
+
+    new-instance v0, Lhbd;
+
+    invoke-direct {v0, p1}, Lhbd;-><init>(Lf9a;)V
+
+    iput-object v0, p0, Ldfe;->f:Lhbd;
+
+    instance-of p1, p2, Lc4;
+
+    if-eqz p1, :cond_0
+
+    check-cast p2, Lc4;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p2, 0x0
+
+    :goto_0
+    if-eqz p2, :cond_1
+
+    iget-object p1, p2, Lc4;->g:Ln18;
+
+    invoke-virtual {p1, p0}, Ln18;->registerOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
+
+    :cond_1
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lq54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ldfe;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ldfe;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Ldfe;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final a()V
     .locals 2
 
-    new-instance v0, Ldfe;
+    iget-object v0, p0, Ldfe;->a:Lpb3;
 
-    iget-object v1, p0, Ldfe;->Z:Lqfe;
+    instance-of v1, v0, Lc4;
 
-    invoke-direct {v0, v1, p2}, Ldfe;-><init>(Lqfe;Lkotlin/coroutines/Continuation;)V
+    if-eqz v1, :cond_0
 
-    iput-object p1, v0, Ldfe;->Y:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Ldfe;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    :try_start_0
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p1
+    check-cast v0, Lc4;
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ldfe;->Y:Ljava/lang/Object;
-
-    check-cast p1, Lq54;
-
-    iget-object v0, p0, Ldfe;->Z:Lqfe;
-
-    :try_start_1
-    new-instance v2, Lcfe;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, p1, v3, v0}, Lcfe;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lqfe;)V
-
-    iput v1, p0, Ldfe;->X:I
-
-    const-wide/16 v0, 0x1f4
-
-    invoke-static {v0, v1, v2, p0}, Lmzg;->F(JLzi6;Ly14;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    sget-object v0, Lr54;->a:Lr54;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
+    const/4 v0, 0x0
 
     :goto_0
-    new-instance v0, Lbed;
+    if-eqz v0, :cond_1
 
-    invoke-direct {v0, p1}, Lbed;-><init>(Ljava/lang/Throwable;)V
+    iget-object v0, v0, Lc4;->g:Ln18;
 
-    move-object p1, v0
+    invoke-virtual {v0, p0}, Ln18;->unregisterOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
 
-    :cond_2
-    :goto_1
-    new-instance v0, Lded;
+    :cond_1
+    return-void
+.end method
 
-    invoke-direct {v0, p1}, Lded;-><init>(Ljava/lang/Object;)V
+.method public final b()Lmcf;
+    .locals 1
+
+    iget-object v0, p0, Ldfe;->f:Lhbd;
 
     return-object v0
+.end method
+
+.method public final d(Lyg4;)V
+    .locals 6
+
+    iget-wide v0, p1, Lyg4;->a:J
+
+    iget-wide v2, p0, Ldfe;->c:J
+
+    invoke-static {v0, v1, v2, v3}, Lpu4;->a(JJ)Z
+
+    move-result p1
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Ldfe;->b:Lk18;
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {v3}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lii4;
+
+    sget-object v0, Ltu4;->b:Ltu4;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v0, Ltu4;->h:Lgi4;
+
+    iget-object v0, v0, Lgi4;->a:Landroid/net/Uri;
+
+    invoke-static {v0}, Loi4;->a(Landroid/net/Uri;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0, v2}, Lii4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    return-void
+
+    :cond_0
+    iget-wide v4, p0, Ldfe;->d:J
+
+    invoke-static {v0, v1, v4, v5}, Lpu4;->a(JJ)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    invoke-interface {v3}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lii4;
+
+    sget-object v0, Ltu4;->b:Ltu4;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v0, Ltu4;->i:Lgi4;
+
+    iget-object v0, v0, Lgi4;->a:Landroid/net/Uri;
+
+    invoke-static {v0}, Loi4;->a(Landroid/net/Uri;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0, v2}, Lii4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    :cond_1
+    return-void
+.end method
+
+.method public final e()Ljava/util/List;
+    .locals 19
+
+    move-object/from16 v0, p0
+
+    new-instance v1, Lyg4;
+
+    iget-object v2, v0, Ldfe;->a:Lpb3;
+
+    move-object v9, v2
+
+    check-cast v9, Lpe8;
+
+    invoke-virtual {v9}, Lpe8;->I()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v10, ""
+
+    if-nez v2, :cond_0
+
+    move-object v2, v10
+
+    :cond_0
+    new-instance v4, Lr5g;
+
+    invoke-direct {v4, v2}, Lr5g;-><init>(Ljava/lang/CharSequence;)V
+
+    new-instance v6, Lr5g;
+
+    const-string v2, "\u0410\u0434\u0440\u0435\u0441 \u0441\u0435\u0440\u0432\u0435\u0440\u0430"
+
+    invoke-direct {v6, v2}, Lr5g;-><init>(Ljava/lang/CharSequence;)V
+
+    const/4 v7, 0x0
+
+    const/16 v8, 0x14
+
+    iget-wide v2, v0, Ldfe;->c:J
+
+    const/4 v5, 0x0
+
+    invoke-direct/range {v1 .. v8}, Lyg4;-><init>(JLs5g;ILs5g;Li8j;I)V
+
+    new-instance v11, Lyg4;
+
+    invoke-virtual {v9}, Lpe8;->J()Ljava/lang/String;
+
+    move-result-object v2
+
+    if-nez v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    move-object v10, v2
+
+    :goto_0
+    new-instance v14, Lr5g;
+
+    invoke-direct {v14, v10}, Lr5g;-><init>(Ljava/lang/CharSequence;)V
+
+    new-instance v2, Lr5g;
+
+    const-string v3, "\u041f\u043e\u0440\u0442 \u0441\u0435\u0440\u0432\u0435\u0440\u0430"
+
+    invoke-direct {v2, v3}, Lr5g;-><init>(Ljava/lang/CharSequence;)V
+
+    const/16 v17, 0x0
+
+    const/16 v18, 0x14
+
+    iget-wide v12, v0, Ldfe;->d:J
+
+    const/4 v15, 0x0
+
+    move-object/from16 v16, v2
+
+    invoke-direct/range {v11 .. v18}, Lyg4;-><init>(JLs5g;ILs5g;Li8j;I)V
+
+    filled-new-array {v1, v11}, [Lyg4;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lve3;->j([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    return-object v1
+.end method
+
+.method public final onSharedPreferenceChanged(Landroid/content/SharedPreferences;Ljava/lang/String;)V
+    .locals 1
+
+    invoke-virtual {p0}, Ldfe;->e()Ljava/util/List;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    iget-object v0, p0, Ldfe;->e:Ltcf;
+
+    invoke-virtual {v0, p2, p1}, Ltcf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    return-void
 .end method

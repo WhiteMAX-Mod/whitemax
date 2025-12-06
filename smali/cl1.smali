@@ -1,22 +1,16 @@
-.class public final Lcl1;
+.class public final synthetic Lcl1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzm1;
+.implements Landroid/media/MediaPlayer$OnPreparedListener;
 
 
-# instance fields
-.field public final synthetic a:Lone/me/calls/ui/ui/call/CallScreen;
-
-
-# direct methods
-.method public constructor <init>(Lone/me/calls/ui/ui/call/CallScreen;)V
+# virtual methods
+.method public final onPrepared(Landroid/media/MediaPlayer;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcl1;->a:Lone/me/calls/ui/ui/call/CallScreen;
+    invoke-virtual {p1}, Landroid/media/MediaPlayer;->start()V
 
     return-void
 .end method

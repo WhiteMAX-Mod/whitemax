@@ -1,132 +1,62 @@
-.class public final Lhaa;
-.super Ljava/io/Writer;
+.class public final synthetic Lhaa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lju3;
 
-# static fields
-.field public static final a:Lhaa;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(ZI)V
+    .locals 0
 
-    new-instance v0, Lhaa;
+    iput p2, p0, Lhaa;->a:I
 
-    invoke-direct {v0}, Ljava/io/Writer;-><init>()V
+    iput-boolean p1, p0, Lhaa;->b:Z
 
-    sput-object v0, Lhaa;->a:Lhaa;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final append(C)Ljava/io/Writer;
-    .locals 0
-
-    .line 4
-    return-object p0
-.end method
-
-.method public final append(Ljava/lang/CharSequence;)Ljava/io/Writer;
-    .locals 0
-
-    .line 5
-    return-object p0
-.end method
-
-.method public final append(Ljava/lang/CharSequence;II)Ljava/io/Writer;
-    .locals 0
-
-    .line 6
-    return-object p0
-.end method
-
-.method public final append(C)Ljava/lang/Appendable;
-    .locals 0
-
-    .line 1
-    return-object p0
-.end method
-
-.method public final append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
-    .locals 0
-
-    .line 2
-    return-object p0
-.end method
-
-.method public final append(Ljava/lang/CharSequence;II)Ljava/lang/Appendable;
-    .locals 0
-
-    .line 3
-    return-object p0
-.end method
-
-.method public final close()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final flush()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final hashCode()I
+.method public final accept(Ljava/lang/Object;)V
     .locals 1
+
+    iget v0, p0, Lhaa;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Lhbh;
+
+    iget-boolean v0, p0, Lhaa;->b:Z
+
+    iput-boolean v0, p1, Lhbh;->b:Z
 
     const/4 v0, 0x0
 
-    return v0
-.end method
+    iput-boolean v0, p1, Lhbh;->c:Z
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-class v0, Lhaa;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final write(I)V
-    .locals 0
-
-    .line 1
     return-void
-.end method
 
-.method public final write(Ljava/lang/String;)V
-    .locals 0
+    :pswitch_0
+    iget-boolean v0, p0, Lhaa;->b:Z
 
-    .line 4
+    check-cast p1, Lhbh;
+
+    iput-boolean v0, p1, Lhbh;->a:Z
+
     return-void
-.end method
 
-.method public final write(Ljava/lang/String;II)V
-    .locals 0
-
-    .line 5
-    return-void
-.end method
-
-.method public final write([C)V
-    .locals 0
-
-    .line 2
-    return-void
-.end method
-
-.method public final write([CII)V
-    .locals 0
-
-    .line 3
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

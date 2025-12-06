@@ -1,181 +1,99 @@
 .class public final Ll27;
-.super Lmh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final c:Ll27;
+
+
+# instance fields
+.field public final a:Lj27;
+
+.field public final b:Lk27;
+
+
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    const/4 v0, 0x0
+    new-instance v0, Ll27;
 
-    .line 1
-    invoke-direct {p0, v0}, Lmh;-><init>(I)V
+    sget-object v1, Lj27;->c:Lj27;
+
+    sget-object v2, Lk27;->a:Lk27;
+
+    invoke-direct {v0, v1, v2}, Ll27;-><init>(Lj27;Lk27;)V
+
+    sput-object v0, Ll27;->c:Ll27;
 
     return-void
 .end method
 
-.method public constructor <init>(I)V
-    .locals 2
+.method public constructor <init>(Lj27;Lk27;)V
+    .locals 0
 
-    const-wide/16 v0, 0xc8
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Ll27;->a:Lj27;
 
-    .line 2
-    invoke-direct {p0, v0, v1, p1}, Lmh;-><init>(JI)V
+    iput-object p2, p0, Ll27;->b:Lk27;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Lq24;
+.method public final toString()Ljava/lang/String;
     .locals 4
 
-    new-instance v0, Ll27;
+    const-string v0, "HexFormat(\n    upperCase = false,\n    bytes = BytesHexFormat(\n"
 
-    iget-wide v1, p0, Lmh;->o:J
+    invoke-static {v0}, Laz1;->m(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v3, p0, Lmh;->s0:Z
+    move-result-object v0
 
-    invoke-direct {v0, v1, v2, v3}, Lmh;-><init>(JZ)V
+    iget-object v1, p0, Ll27;->a:Lj27;
+
+    const-string v2, "        "
+
+    invoke-virtual {v1, v0, v2}, Lj27;->a(Ljava/lang/StringBuilder;Ljava/lang/String;)V
+
+    const/16 v1, 0xa
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    const-string v3, "    ),"
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    const-string v3, "    number = NumberHexFormat("
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Ll27;->b:Lk27;
+
+    invoke-virtual {v3, v0, v2}, Lk27;->a(Ljava/lang/StringBuilder;Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    const-string v2, "    )"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-.end method
-
-.method public final l(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZZ)Landroid/animation/AnimatorSet;
-    .locals 5
-
-    new-instance p1, Landroid/animation/AnimatorSet;
-
-    invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
-
-    const/4 p5, 0x2
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    if-eqz p4, :cond_1
-
-    if-eqz p2, :cond_0
-
-    sget-object p4, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
-
-    invoke-virtual {p2}, Landroid/view/View;->getWidth()I
-
-    move-result v3
-
-    int-to-float v3, v3
-
-    neg-float v3, v3
-
-    new-array v4, v1, [F
-
-    aput v3, v4, v0
-
-    invoke-static {p2, p4, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
-
-    :cond_0
-    if-eqz p3, :cond_4
-
-    sget-object p2, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
-
-    invoke-virtual {p3}, Landroid/view/View;->getWidth()I
-
-    move-result p4
-
-    int-to-float p4, p4
-
-    new-array p5, p5, [F
-
-    aput p4, p5, v0
-
-    aput v2, p5, v1
-
-    invoke-static {p3, p2, p5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
-
-    return-object p1
-
-    :cond_1
-    if-eqz p2, :cond_2
-
-    sget-object p4, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
-
-    invoke-virtual {p2}, Landroid/view/View;->getWidth()I
-
-    move-result v3
-
-    int-to-float v3, v3
-
-    new-array v4, v1, [F
-
-    aput v3, v4, v0
-
-    invoke-static {p2, p4, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object p4
-
-    invoke-virtual {p1, p4}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
-
-    :cond_2
-    if-eqz p3, :cond_4
-
-    if-eqz p2, :cond_3
-
-    invoke-virtual {p2}, Landroid/view/View;->getTranslationX()F
-
-    move-result p2
-
-    goto :goto_0
-
-    :cond_3
-    move p2, v2
-
-    :goto_0
-    sget-object p4, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
-
-    invoke-virtual {p3}, Landroid/view/View;->getWidth()I
-
-    move-result v3
-
-    int-to-float v3, v3
-
-    sub-float/2addr p2, v3
-
-    new-array p5, p5, [F
-
-    aput p2, p5, v0
-
-    aput v2, p5, v1
-
-    invoke-static {p3, p4, p5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
-
-    :cond_4
-    return-object p1
-.end method
-
-.method public final n(Landroid/view/View;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationX(F)V
-
-    return-void
 .end method

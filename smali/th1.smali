@@ -1,262 +1,120 @@
-.class public final synthetic Lth1;
-.super Ljava/lang/Object;
+.class public final Lth1;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnTouchListener;
+.implements Lsm6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lci1;
 
-.field public final synthetic b:Ljava/lang/Object;
-
-.field public final synthetic c:Ljava/lang/Object;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
+.method public constructor <init>(Lci1;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lth1;->a:I
+    iput-object p1, p0, Lth1;->X:Lci1;
 
-    iput-object p1, p0, Lth1;->b:Ljava/lang/Object;
+    const/4 p1, 0x2
 
-    iput-object p3, p0, Lth1;->c:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 6
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lth1;->a:I
+    check-cast p1, Ln41;
 
-    const/4 v1, 0x1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Lth1;->c:Ljava/lang/Object;
-
-    iget-object v4, p0, Lth1;->b:Ljava/lang/Object;
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast v4, Ld4f;
-
-    check-cast v3, Lli6;
-
-    iget-object p1, v4, Ld4f;->H0:Luwd;
-
-    instance-of v0, p1, Lswd;
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Lswd;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result p2
-
-    if-nez p2, :cond_1
-
-    if-eqz p1, :cond_1
-
-    iget-boolean p1, p1, Lswd;->Y:Z
-
-    if-ne p1, v1, :cond_1
-
-    if-eqz v3, :cond_1
-
-    invoke-interface {v3, v4}, Lli6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_1
-    return v2
-
-    :pswitch_0
-    check-cast v4, Lcom/google/android/material/chip/Chip;
-
-    check-cast v3, Lqd6;
-
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result p1
-
-    if-ne p1, v1, :cond_3
-
-    invoke-virtual {v4}, Lcom/google/android/material/chip/Chip;->getChipIcon()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0, p1, p2}, Lth1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    if-eqz p1, :cond_2
+    check-cast p1, Lth1;
 
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    move-result p1
+    invoke-virtual {p1, p2}, Lth1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    goto :goto_1
+    return-object p2
+.end method
 
-    :cond_2
-    move p1, v2
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    :goto_1
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
+    new-instance v0, Lth1;
 
-    move-result p2
+    iget-object v1, p0, Lth1;->X:Lci1;
 
-    int-to-float p1, p1
+    invoke-direct {v0, v1, p2}, Lth1;-><init>(Lci1;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v4}, Lcom/google/android/material/chip/Chip;->getChipStartPadding()F
+    iput-object p1, v0, Lth1;->o:Ljava/lang/Object;
 
-    move-result v0
+    return-object v0
+.end method
 
-    add-float/2addr v0, p1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
 
-    cmpg-float p1, p2, v0
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    if-gtz p1, :cond_3
+    iget-object p1, p0, Lth1;->o:Ljava/lang/Object;
 
-    invoke-virtual {v3}, Lqd6;->invoke()Ljava/lang/Object;
+    check-cast p1, Ln41;
 
-    goto :goto_2
+    iget-object v0, p0, Lth1;->X:Lci1;
 
-    :cond_3
-    move v1, v2
+    iget-object v0, v0, Lci1;->y0:Ltcf;
 
-    :goto_2
-    return v1
+    :cond_0
+    invoke-virtual {v0}, Ltcf;->getValue()Ljava/lang/Object;
 
-    :pswitch_1
-    check-cast v4, Loh9;
+    move-result-object v1
 
-    check-cast v3, Landroid/view/GestureDetector;
+    move-object v2, v1
 
-    sget-object p1, Lone/me/sdk/messagewrite/MessageWriteWidget;->J0:[Ltr7;
+    check-cast v2, Lmi1;
 
-    invoke-virtual {v4, p2}, Loh9;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v3, p1, Ln41;->c:Ljava/lang/CharSequence;
 
-    invoke-virtual {v3, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    if-nez v3, :cond_1
 
-    move-result p1
+    const-string v3, ""
 
-    return p1
+    :cond_1
+    move-object v7, v3
 
-    :pswitch_2
-    check-cast v4, Lyj5;
+    const/4 v8, 0x0
 
-    check-cast v3, Lwx3;
+    const/16 v9, 0x2f
 
-    invoke-virtual {v4}, Lyj5;->getText()Landroid/text/SpannableString;
+    const/4 v3, 0x0
 
-    move-result-object v0
+    const/4 v4, 0x0
 
-    if-eqz v0, :cond_5
+    const/4 v5, 0x0
 
-    iget-object v1, v3, Lwx3;->b:Lj83;
+    const/4 v6, 0x0
 
-    invoke-virtual {v4}, Lyj5;->getTextLayout()Landroid/text/Layout;
+    invoke-static/range {v2 .. v9}, Lmi1;->a(Lmi1;Ljava/util/List;Lo98;Ljava/util/List;ZLjava/lang/CharSequence;ZI)Lmi1;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0, v1, v2}, Ltcf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+    move-result v1
 
-    move-result v4
+    if-eqz v1, :cond_0
 
-    if-nez v4, :cond_4
+    sget-object p1, Lqqg;->a:Lqqg;
 
-    new-instance v4, Lcs8;
-
-    new-instance v5, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {v5, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    const/16 p1, 0x9
-
-    invoke-direct {v4, v5, v3, v2, p1}, Lcs8;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
-
-    iput-object v4, v1, Lj83;->d:Lcs8;
-
-    iput-object v0, v1, Lj83;->e:Landroid/text/Spannable;
-
-    :cond_4
-    iget-object p1, v1, Lj83;->l:Landroid/view/GestureDetector;
-
-    invoke-virtual {p1, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
-
-    move-result v2
-
-    :cond_5
-    return v2
-
-    :pswitch_3
-    check-cast v4, Lre1;
-
-    check-cast v3, Landroid/widget/EditText;
-
-    sget-object v0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->G0:[Ltr7;
-
-    instance-of v0, p1, Landroid/widget/EditText;
-
-    if-eqz v0, :cond_6
-
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
-
-    move-result v0
-
-    check-cast p1, Landroid/widget/EditText;
-
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
-
-    move-result v5
-
-    invoke-virtual {p1}, Landroid/widget/TextView;->getTotalPaddingRight()I
-
-    move-result p1
-
-    sub-int/2addr v5, p1
-
-    int-to-float p1, v5
-
-    cmpl-float p1, v0, p1
-
-    if-ltz p1, :cond_6
-
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result p1
-
-    if-ne p1, v1, :cond_7
-
-    invoke-virtual {v4, v3}, Lre1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_3
-
-    :cond_6
-    move v1, v2
-
-    :cond_7
-    :goto_3
-    return v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

@@ -1,181 +1,248 @@
-.class public final synthetic Ls8h;
-.super Ljava/lang/Object;
+.class public final Ls8h;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Lhn6;
+.implements Lsm6;
 
 
-# static fields
-.field public static final a:Ls8h;
+# instance fields
+.field public X:Lehe;
 
-.field private static final descriptor:Lb3e;
+.field public Y:I
+
+.field public final synthetic Z:Lt8h;
+
+.field public o:Ljava/util/LinkedList;
+
+.field public final synthetic s0:J
+
+.field public final synthetic t0:Ljava/lang/Long;
+
+.field public final synthetic u0:Lx6h;
+
+.field public final synthetic v0:Lvf6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lt8h;JLjava/lang/Long;Lx6h;Lvf6;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Ls8h;
+    iput-object p1, p0, Ls8h;->Z:Lt8h;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-wide p2, p0, Ls8h;->s0:J
 
-    sput-object v0, Ls8h;->a:Ls8h;
+    iput-object p4, p0, Ls8h;->t0:Ljava/lang/Long;
 
-    new-instance v1, Levb;
+    iput-object p5, p0, Ls8h;->u0:Lx6h;
 
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.brightness.WebAppChangeScreenBrightness"
+    iput-object p6, p0, Ls8h;->v0:Lvf6;
 
-    const/4 v3, 0x2
+    const/4 p1, 0x2
 
-    invoke-direct {v1, v2, v0, v3}, Levb;-><init>(Ljava/lang/String;Lhn6;I)V
-
-    const-string v0, "requestId"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Levb;->k(Ljava/lang/String;Z)V
-
-    const-string v0, "maxBrightness"
-
-    invoke-virtual {v1, v0, v2}, Levb;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Ls8h;->descriptor:Lb3e;
+    invoke-direct {p0, p1, p7}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ld9;)Ljava/lang/Object;
-    .locals 9
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    sget-object v0, Ls8h;->descriptor:Lb3e;
+    check-cast p1, Lf84;
 
-    invoke-virtual {p1, v0}, Ld9;->k(Lb3e;)Ld9;
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Ls8h;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    const/4 v1, 0x1
+    check-cast p1, Ls8h;
 
-    const/4 v2, 0x0
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    const/4 v3, 0x0
+    invoke-virtual {p1, p2}, Ls8h;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move v4, v1
-
-    move v5, v2
-
-    move v6, v5
-
-    :goto_0
-    if-eqz v4, :cond_3
-
-    invoke-virtual {p1, v0}, Ld9;->q(Lb3e;)I
-
-    move-result v7
-
-    const/4 v8, -0x1
-
-    if-eq v7, v8, :cond_2
-
-    if-eqz v7, :cond_1
-
-    if-ne v7, v1, :cond_0
-
-    invoke-virtual {p1, v0, v1}, Ld9;->p(Lb3e;I)Z
-
-    move-result v6
-
-    or-int/lit8 v5, v5, 0x2
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
-
-    invoke-direct {p1, v7}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
-
-    throw p1
-
-    :cond_1
-    invoke-virtual {p1, v0, v2}, Ld9;->w(Lb3e;I)Ljava/lang/String;
-
-    move-result-object v3
-
-    or-int/lit8 v5, v5, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    move v4, v2
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {p1, v0}, Ld9;->z(Lb3e;)V
-
-    new-instance p1, Lu8h;
-
-    invoke-direct {p1, v3, v5, v6}, Lu8h;-><init>(Ljava/lang/String;IZ)V
+    move-result-object p1
 
     return-object p1
 .end method
 
-.method public final b(Lo24;Ljava/lang/Object;)V
-    .locals 3
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 8
 
-    check-cast p2, Lu8h;
+    new-instance v0, Ls8h;
 
-    sget-object v0, Ls8h;->descriptor:Lb3e;
+    iget-object v5, p0, Ls8h;->u0:Lx6h;
 
-    invoke-virtual {p1, v0}, Lo24;->b(Lb3e;)Lo24;
+    iget-object v6, p0, Ls8h;->v0:Lvf6;
 
-    move-result-object p1
+    iget-object v1, p0, Ls8h;->Z:Lt8h;
 
-    iget-object v1, p2, Lu8h;->a:Ljava/lang/String;
+    iget-wide v2, p0, Ls8h;->s0:J
 
-    const/4 v2, 0x0
+    iget-object v4, p0, Ls8h;->t0:Ljava/lang/Long;
 
-    invoke-virtual {p1, v0, v2, v1}, Lo24;->l(Lb3e;ILjava/lang/String;)V
+    move-object v7, p2
 
-    const/4 v1, 0x1
+    invoke-direct/range {v0 .. v7}, Ls8h;-><init>(Lt8h;JLjava/lang/Long;Lx6h;Lvf6;Lkotlin/coroutines/Continuation;)V
 
-    iget-boolean p2, p2, Lu8h;->b:Z
-
-    invoke-virtual {p1, v0, v1, p2}, Lo24;->e(Lb3e;IZ)V
-
-    invoke-virtual {p1}, Lo24;->m()V
-
-    return-void
+    return-object v0
 .end method
 
-.method public final c()[Lur7;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
 
-    const/4 v0, 0x2
+    iget v0, p0, Ls8h;->Y:I
 
-    new-array v0, v0, [Lur7;
-
-    sget-object v1, Lvaf;->a:Lvaf;
-
-    const/4 v2, 0x0
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Lir0;->a:Lir0;
+    const/4 v1, 0x2
 
     const/4 v2, 0x1
 
-    aput-object v1, v0, v2
+    iget-wide v3, p0, Ls8h;->s0:J
 
-    return-object v0
-.end method
+    iget-object v5, p0, Ls8h;->Z:Lt8h;
 
-.method public final d()Lb3e;
-    .locals 1
+    sget-object v6, Lg84;->a:Lg84;
 
-    sget-object v0, Ls8h;->descriptor:Lb3e;
+    if-eqz v0, :cond_2
 
-    return-object v0
+    if-eq v0, v2, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    iget-object v0, p0, Ls8h;->X:Lehe;
+
+    iget-object v1, p0, Ls8h;->o:Ljava/util/LinkedList;
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    goto :goto_2
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_2
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, v5, Lt8h;->c:Lk18;
+
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Luq9;
+
+    iput v2, p0, Ls8h;->Y:I
+
+    iget-object v0, p0, Ls8h;->t0:Ljava/lang/Long;
+
+    invoke-virtual {p1, v3, v4, v0, p0}, Luq9;->a(JLjava/lang/Long;Ldtf;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v6, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    :goto_0
+    check-cast p1, Lsk9;
+
+    new-instance v0, Ljava/util/LinkedList;
+
+    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+
+    new-instance v2, Lmhe;
+
+    iget-object v7, p0, Ls8h;->u0:Lx6h;
+
+    invoke-direct {v2, v3, v4, v7}, Lmhe;-><init>(JLd3;)V
+
+    iget-object v7, v7, Lx6h;->Y:Lxt4;
+
+    iput-object v7, v2, Lmhe;->k:Lxt4;
+
+    iput-object p1, v2, Lfhe;->b:Lsk9;
+
+    invoke-virtual {v2}, Lmhe;->b()Lehe;
+
+    move-result-object p1
+
+    iget-object v2, v5, Lt8h;->d:Lk18;
+
+    invoke-interface {v2}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lzs6;
+
+    iput-object v0, p0, Ls8h;->o:Ljava/util/LinkedList;
+
+    iput-object p1, p0, Ls8h;->X:Lehe;
+
+    iput v1, p0, Ls8h;->Y:I
+
+    iget-object v1, p0, Ls8h;->v0:Lvf6;
+
+    invoke-virtual {v2, v1, p0}, Lzs6;->b(Lvf6;Ldtf;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-ne v1, v6, :cond_4
+
+    :goto_1
+    return-object v6
+
+    :cond_4
+    move-object v8, v0
+
+    move-object v0, p1
+
+    move-object p1, v1
+
+    move-object v1, v8
+
+    :goto_2
+    check-cast p1, Ljava/util/List;
+
+    invoke-interface {v1, v0}, Ljava/util/Queue;->add(Ljava/lang/Object;)Z
+
+    invoke-interface {v1, p1}, Ljava/util/Collection;->addAll(Ljava/util/Collection;)Z
+
+    new-instance p1, Llge;
+
+    const/4 v0, 0x2
+
+    invoke-direct {p1, v3, v4, v1, v0}, Llge;-><init>(JLjava/lang/Object;I)V
+
+    new-instance v0, Lihe;
+
+    invoke-direct {v0, p1}, Lihe;-><init>(Llge;)V
+
+    iget-object p1, v5, Lt8h;->b:Lk18;
+
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lc6i;
+
+    invoke-virtual {p1, v0}, Lc6i;->b(Lhge;)V
+
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
 .end method

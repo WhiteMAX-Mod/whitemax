@@ -1,53 +1,122 @@
-.class public final Ljba;
-.super Ly14;
+.class public final synthetic Ljba;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lp6;
 
 
 # instance fields
-.field public X:J
+.field public final synthetic a:I
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lnba;
-
-.field public o:Lnba;
-
-.field public q0:I
+.field public final synthetic b:Lkba;
 
 
 # direct methods
-.method public constructor <init>(Lnba;Ly14;)V
+.method public synthetic constructor <init>(Lkba;I)V
     .locals 0
 
-    iput-object p1, p0, Ljba;->Z:Lnba;
+    iput p2, p0, Ljba;->a:I
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ljba;->b:Lkba;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final run()V
     .locals 2
 
-    iput-object p1, p0, Ljba;->Y:Ljava/lang/Object;
+    iget v0, p0, Ljba;->a:I
 
-    iget p1, p0, Ljba;->q0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    new-instance v0, Lbba;
 
-    or-int/2addr p1, v0
+    const/16 v1, 0x8
 
-    iput p1, p0, Ljba;->q0:I
+    invoke-direct {v0, v1}, Lbba;-><init>(I)V
 
-    iget-object p1, p0, Ljba;->Z:Lnba;
+    iget-object v1, p0, Ljba;->b:Lkba;
 
-    const-wide/16 v0, 0x0
+    invoke-virtual {v1, v0}, Lj3;->j(Lju3;)V
 
-    invoke-virtual {p1, v0, v1, p0}, Lnba;->b(JLy14;)Ljava/lang/Object;
+    return-void
 
-    move-result-object p1
+    :pswitch_0
+    new-instance v0, Lbba;
 
-    return-object p1
+    const/4 v1, 0x3
+
+    invoke-direct {v0, v1}, Lbba;-><init>(I)V
+
+    iget-object v1, p0, Ljba;->b:Lkba;
+
+    invoke-virtual {v1, v0}, Lj3;->j(Lju3;)V
+
+    return-void
+
+    :pswitch_1
+    new-instance v0, Lbba;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, v1}, Lbba;-><init>(I)V
+
+    iget-object v1, p0, Ljba;->b:Lkba;
+
+    invoke-virtual {v1, v0}, Lj3;->j(Lju3;)V
+
+    return-void
+
+    :pswitch_2
+    new-instance v0, Lbba;
+
+    const/4 v1, 0x6
+
+    invoke-direct {v0, v1}, Lbba;-><init>(I)V
+
+    iget-object v1, p0, Ljba;->b:Lkba;
+
+    invoke-virtual {v1, v0}, Lj3;->j(Lju3;)V
+
+    return-void
+
+    :pswitch_3
+    new-instance v0, Lbba;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, v1}, Lbba;-><init>(I)V
+
+    iget-object v1, p0, Ljba;->b:Lkba;
+
+    invoke-virtual {v1, v0}, Lj3;->j(Lju3;)V
+
+    return-void
+
+    :pswitch_4
+    new-instance v0, Lbba;
+
+    const/4 v1, 0x7
+
+    invoke-direct {v0, v1}, Lbba;-><init>(I)V
+
+    iget-object v1, p0, Ljba;->b:Lkba;
+
+    invoke-virtual {v1, v0}, Lj3;->j(Lju3;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

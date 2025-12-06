@@ -1,90 +1,57 @@
 .class public final Lxm9;
-.super Lsgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lzi6;
 
 
 # instance fields
-.field public final synthetic X:Ljn9;
+.field public final a:Lttg;
 
-.field public final synthetic Y:Lpb9;
+.field public final b:Ljef;
 
 
 # direct methods
-.method public constructor <init>(Ljn9;Lpb9;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lttg;Ljef;)V
     .locals 0
 
-    iput-object p1, p0, Lxm9;->X:Ljn9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lxm9;->Y:Lpb9;
+    iput-object p1, p0, Lxm9;->a:Lttg;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lxm9;->b:Ljef;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lq54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lxm9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lxm9;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lxm9;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    new-instance p1, Lxm9;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lxm9;->X:Ljn9;
+    const-string v1, "MessageUploadState{upload="
 
-    iget-object v1, p0, Lxm9;->Y:Lpb9;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {p1, v0, v1, p2}, Lxm9;-><init>(Ljn9;Lpb9;Lkotlin/coroutines/Continuation;)V
+    iget-object v1, p0, Lxm9;->a:Lttg;
 
-    return-object p1
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    const-string v1, ", sticker="
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lxm9;->Y:Lpb9;
+    iget-object v1, p0, Lxm9;->b:Ljef;
 
-    iget-wide v1, p1, Lrj0;->a:J
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    sget-object p1, Ljn9;->P1:[Ltr7;
+    const/16 v1, 0x7d
 
-    const/4 v5, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lxm9;->X:Ljn9;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const/4 v3, 0x0
+    move-result-object v0
 
-    const/4 v4, 0x0
-
-    invoke-virtual/range {v0 .. v5}, Ljn9;->K(JZZZ)V
-
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
+    return-object v0
 .end method

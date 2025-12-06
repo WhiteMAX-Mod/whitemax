@@ -1,131 +1,51 @@
 .class public final Lm2c;
-.super Lo2c;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:J
+.field public a:Landroid/util/Size;
 
-.field public final c:I
+.field public b:Landroid/util/Size;
+
+.field public final c:[F
+
+.field public final d:[F
+
+.field public final e:Lao6;
+
+.field public f:Lk1f;
 
 
 # direct methods
-.method public constructor <init>(JI)V
-    .locals 0
-
-    invoke-direct {p0}, Lo2c;-><init>()V
-
-    iput-wide p1, p0, Lm2c;->b:J
-
-    iput p3, p0, Lm2c;->c:I
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lm2c;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lm2c;
-
-    iget-wide v0, p0, Lm2c;->b:J
-
-    iget-wide v2, p1, Lm2c;->b:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p0, Lm2c;->c:I
-
-    iget p1, p1, Lm2c;->c:I
-
-    if-eq v0, p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lm2c;->b:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    const v1, 0x2e9358
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lm2c;->c:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public constructor <init>()V
     .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "ShowQrCode(id="
+    const/16 v0, 0x10
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    new-array v1, v0, [F
 
-    iget-wide v1, p0, Lm2c;->b:J
+    iput-object v1, p0, Lm2c;->c:[F
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    new-array v0, v0, [F
 
-    const-string v1, ", type=chat, qrCodeHeight="
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v1}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
-    iget v1, p0, Lm2c;->c:I
+    iput-object v0, p0, Lm2c;->d:[F
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    new-instance v0, Lao6;
 
-    const-string v1, ")"
+    sget-object v1, Lao6;->c:[F
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget-object v2, Lao6;->d:[F
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {v0, v1, v2}, Lao6;-><init>([F[F)V
 
-    move-result-object v0
+    iput-object v0, p0, Lm2c;->e:Lao6;
 
-    return-object v0
+    return-void
 .end method

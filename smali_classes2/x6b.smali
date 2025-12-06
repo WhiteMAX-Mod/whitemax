@@ -1,57 +1,91 @@
-.class public final Lx6b;
-.super Landroid/webkit/WebViewClient;
+.class public abstract Lx6b;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:Ly6b;
+# static fields
+.field public static final a:I
 
-.field public final synthetic b:Lz6b;
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
 
 
 # direct methods
-.method public constructor <init>(Ly6b;Lz6b;)V
-    .locals 0
-
-    iput-object p1, p0, Lx6b;->a:Ly6b;
-
-    iput-object p2, p0, Lx6b;->b:Lz6b;
-
-    invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final shouldOverrideUrlLoading(Landroid/webkit/WebView;Landroid/webkit/WebResourceRequest;)Z
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-interface {p2}, Landroid/webkit/WebResourceRequest;->getUrl()Landroid/net/Uri;
+    sget v0, Lzyc;->media_editor_bottom_background_id:I
 
-    move-result-object p1
+    sput v0, Lx6b;->a:I
 
-    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+    sget v0, Lzyc;->media_editor_close_id:I
 
-    move-result-object p1
+    sput v0, Lx6b;->b:I
 
-    iget-object p2, p0, Lx6b;->a:Ly6b;
+    sget v0, Lzyc;->media_editor_content_id:I
 
-    iget-object p2, p2, Ly6b;->a:Lmfh;
+    sput v0, Lx6b;->c:I
 
-    iget-object p2, p2, Lmfh;->W0:Lxe5;
+    sget v0, Lzyc;->media_editor_crop_id:I
 
-    new-instance v0, Ldeh;
+    sput v0, Lx6b;->d:I
 
-    invoke-direct {v0, p1}, Ldeh;-><init>(Ljava/lang/String;)V
+    sget v0, Lzyc;->media_editor_done_id:I
 
-    invoke-static {p2, v0}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
+    sput v0, Lx6b;->e:I
 
-    iget-object p1, p0, Lx6b;->b:Lz6b;
+    sget v0, Lzyc;->media_editor_flip_horizontally_id:I
 
-    invoke-virtual {p1}, Landroid/webkit/WebView;->destroy()V
+    sput v0, Lx6b;->f:I
 
-    const/4 p1, 0x1
+    sget v0, Lzyc;->media_editor_reset_id:I
 
-    return p1
+    sput v0, Lx6b;->g:I
+
+    sget v0, Lzyc;->media_editor_rotate_id:I
+
+    sput v0, Lx6b;->h:I
+
+    sget v0, Lzyc;->media_picker_album_container_id:I
+
+    sput v0, Lx6b;->i:I
+
+    sget v0, Lzyc;->media_picker_container_id:I
+
+    sput v0, Lx6b;->j:I
+
+    sget v0, Lzyc;->media_picker_content_id:I
+
+    sput v0, Lx6b;->k:I
+
+    sget v0, Lzyc;->media_picker_divider_id:I
+
+    sput v0, Lx6b;->l:I
+
+    sget v0, Lzyc;->media_picker_toolbar_id:I
+
+    sput v0, Lx6b;->m:I
+
+    return-void
 .end method

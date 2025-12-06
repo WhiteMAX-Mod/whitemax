@@ -1,70 +1,78 @@
-.class public final Ltw7;
-.super Lrw7;
+.class public abstract Ltw7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lxw7;
 
-
-# instance fields
-.field public final a:Lhx7;
-
-.field public final b:Li54;
+# static fields
+.field public static final a:Lvl7;
 
 
 # direct methods
-.method public constructor <init>(Lhx7;Li54;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "kotlinx.serialization.json.JsonUnquotedLiteral"
 
-    iput-object p1, p0, Ltw7;->a:Lhx7;
+    sget-object v1, Lrmf;->a:Lrmf;
 
-    iput-object p2, p0, Ltw7;->b:Li54;
+    invoke-static {v1, v0}, Lyfi;->a(Lzy7;Ljava/lang/String;)Lvl7;
 
-    iget-object p1, p1, Lhx7;->d:Lhw7;
+    move-result-object v0
 
-    sget-object v0, Lhw7;->a:Lhw7;
+    sput-object v0, Ltw7;->a:Lvl7;
 
-    if-ne p1, v0, :cond_0
-
-    invoke-static {p2}, Ldbi;->b(Li54;)V
-
-    :cond_0
     return-void
 .end method
 
+.method public static final a(Lsw7;)Ltx7;
+    .locals 3
 
-# virtual methods
-.method public final d(Lfx7;Lgw7;)V
-    .locals 1
+    instance-of v0, p0, Ltx7;
 
-    iget-object p1, p0, Ltw7;->a:Lhx7;
+    if-eqz v0, :cond_0
 
-    iget-object p2, p1, Lhx7;->d:Lhw7;
+    move-object v0, p0
 
-    sget-object v0, Lhw7;->a:Lhw7;
+    check-cast v0, Ltx7;
 
-    invoke-virtual {p2, v0}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
-
-    move-result p2
-
-    if-gtz p2, :cond_0
-
-    invoke-virtual {p1, p0}, Lhx7;->f(Lbx7;)V
-
-    iget-object p1, p0, Ltw7;->b:Li54;
-
-    invoke-static {p1}, Ldbi;->b(Li54;)V
+    goto :goto_0
 
     :cond_0
-    return-void
-.end method
+    const/4 v0, 0x0
 
-.method public final getCoroutineContext()Li54;
-    .locals 1
-
-    iget-object v0, p0, Ltw7;->b:Li54;
+    :goto_0
+    if-eqz v0, :cond_1
 
     return-object v0
+
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Element "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lvid;->a(Ljava/lang/Class;)Lca3;
+
+    move-result-object p0
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, " is not a JsonPrimitive"
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

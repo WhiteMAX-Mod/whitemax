@@ -24,7 +24,7 @@
         "manager",
         "Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$StateChangedEvent;",
         "event",
-        "Lccg;",
+        "Lqqg;",
         "onParticipantStateChanged",
         "(Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager;Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$StateChangedEvent;)V",
         "calls-sdk_release"

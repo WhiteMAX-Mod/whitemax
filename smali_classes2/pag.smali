@@ -1,23 +1,49 @@
-.class public interface abstract Lpag;
-.super Ljava/lang/Object;
+.class public final Lpag;
+.super Lq44;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic X:Lyag;
+
+.field public Y:I
+
+.field public d:Lyag;
+
+.field public synthetic o:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Lyag;Lq44;)V
+    .locals 0
+
+    iput-object p1, p0, Lpag;->X:Lyag;
+
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public a(Ljava/lang/String;)V
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    return-void
-.end method
+    iput-object p1, p0, Lpag;->o:Ljava/lang/Object;
 
-.method public r()V
-    .locals 0
+    iget p1, p0, Lpag;->Y:I
 
-    return-void
-.end method
+    const/high16 v0, -0x80000000
 
-.method public x()V
-    .locals 0
+    or-int/2addr p1, v0
 
-    return-void
+    iput p1, p0, Lpag;->Y:I
+
+    iget-object p1, p0, Lpag;->X:Lyag;
+
+    invoke-virtual {p1, p0}, Lyag;->g(Lq44;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

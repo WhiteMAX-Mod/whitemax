@@ -1,233 +1,80 @@
-.class public final Lre7;
+.class public interface abstract Lre7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lnc4;
+.implements Lebd;
 
 
-# instance fields
-.field public final a:I
+# static fields
+.field public static final x:Ls90;
 
-.field public final synthetic b:Lse7;
+.field public static final y:Ls90;
 
 
 # direct methods
-.method public constructor <init>(Lse7;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ls90;
 
-    iput-object p1, p0, Lre7;->b:Lse7;
+    const-string v1, "camerax.core.imageInput.inputFormat"
 
-    iput p2, p0, Lre7;->a:I
+    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lre7;->x:Ls90;
+
+    new-instance v0, Ls90;
+
+    const-string v1, "camerax.core.imageInput.inputDynamicRange"
+
+    const-class v2, Lu75;
+
+    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lre7;->y:Ls90;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lr0;)V
-    .locals 5
-
-    invoke-virtual {p1}, Lr0;->f()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_8
-
-    iget-object v0, p0, Lre7;->b:Lse7;
-
-    iget v1, p0, Lre7;->a:I
-
-    invoke-virtual {p1}, Lr0;->h()Z
-
-    move-result v2
-
-    monitor-enter v0
-
-    :try_start_0
-    iget v3, v0, Lse7;->i:I
-
-    invoke-virtual {v0, v1}, Lse7;->r(I)Lr0;
-
-    move-result-object v4
-
-    if-ne p1, v4, :cond_4
-
-    iget v4, v0, Lse7;->i:I
-
-    if-ne v1, v4, :cond_0
-
-    goto :goto_3
-
-    :cond_0
-    invoke-virtual {v0}, Lse7;->s()Lr0;
-
-    move-result-object v4
-
-    if-eqz v4, :cond_2
-
-    if-eqz v2, :cond_1
-
-    iget v2, v0, Lse7;->i:I
-
-    if-ge v1, v2, :cond_1
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_5
-
-    :cond_1
-    move v2, v3
-
-    goto :goto_1
-
-    :cond_2
-    :goto_0
-    iput v1, v0, Lse7;->i:I
-
-    move v2, v1
-
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :goto_2
-    if-le v3, v2, :cond_5
-
-    invoke-virtual {v0, v3}, Lse7;->q(I)Lr0;
-
-    move-result-object v4
-
-    if-eqz v4, :cond_3
-
-    invoke-virtual {v4}, Lr0;->a()Z
-
-    :cond_3
-    add-int/lit8 v3, v3, -0x1
-
-    goto :goto_2
-
-    :cond_4
-    :goto_3
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :cond_5
-    invoke-virtual {v0}, Lse7;->s()Lr0;
-
-    move-result-object v2
-
-    if-ne p1, v2, :cond_7
-
-    if-nez v1, :cond_6
-
-    invoke-virtual {p1}, Lr0;->h()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_6
-
-    const/4 v1, 0x1
-
-    goto :goto_4
-
-    :cond_6
-    const/4 v1, 0x0
-
-    :goto_4
-    iget-object p1, p1, Lr0;->a:Ljava/util/Map;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v2, v1, p1}, Lr0;->l(Ljava/lang/Object;ZLjava/util/Map;)Z
-
-    :cond_7
-    iget-object p1, v0, Lse7;->k:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
-
-    move-result p1
-
-    iget v1, v0, Lse7;->j:I
-
-    if-ne p1, v1, :cond_9
-
-    iget-object p1, v0, Lse7;->l:Ljava/lang/Throwable;
-
-    if-eqz p1, :cond_9
-
-    iget-object v1, v0, Lse7;->m:Ljava/util/Map;
-
-    invoke-virtual {v0, p1, v1}, Lr0;->j(Ljava/lang/Throwable;Ljava/util/Map;)Z
-
-    return-void
-
-    :goto_5
-    :try_start_2
-    monitor-exit v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    throw p1
-
-    :cond_8
-    invoke-virtual {p1}, Lr0;->h()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_9
-
-    iget-object v0, p0, Lre7;->b:Lse7;
-
-    iget v1, p0, Lre7;->a:I
-
-    invoke-static {v0, v1, p1}, Lse7;->o(Lse7;ILr0;)V
-
-    :cond_9
-    return-void
-.end method
-
-.method public final b(Lr0;)V
+.method public getInputFormat()I
     .locals 1
 
-    iget v0, p0, Lre7;->a:I
+    sget-object v0, Lre7;->x:Ls90;
 
-    if-nez v0, :cond_0
+    invoke-interface {p0, v0}, Lebd;->f(Ls90;)Ljava/lang/Object;
 
-    iget-object v0, p0, Lre7;->b:Lse7;
+    move-result-object v0
 
-    invoke-virtual {p1}, Lr0;->d()F
+    check-cast v0, Ljava/lang/Integer;
 
-    move-result p1
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    invoke-virtual {v0, p1}, Lr0;->k(F)Z
+    move-result v0
 
-    :cond_0
-    return-void
+    return v0
 .end method
 
-.method public final c(Lr0;)V
+.method public l()Lu75;
     .locals 2
 
-    iget-object v0, p0, Lre7;->b:Lse7;
+    sget-object v0, Lre7;->y:Ls90;
 
-    iget v1, p0, Lre7;->a:I
+    sget-object v1, Lu75;->c:Lu75;
 
-    invoke-static {v0, v1, p1}, Lse7;->o(Lse7;ILr0;)V
+    invoke-interface {p0, v0, v1}, Lebd;->d(Ls90;Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public final d()V
-    .locals 0
+    check-cast v0, Lu75;
 
-    return-void
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-object v0
 .end method

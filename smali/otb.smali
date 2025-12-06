@@ -3,214 +3,260 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lhw0;
+.implements Lp4h;
 
 
 # instance fields
-.field public final X:I
-
-.field public final Y:J
-
-.field public final Z:J
-
 .field public final a:Ljava/lang/Object;
 
-.field public final b:I
+.field public b:Z
 
-.field public final c:Lys8;
+.field public c:I
 
-.field public final o:Ljava/lang/Object;
+.field public d:I
 
-.field public final q0:I
+.field public e:I
 
-.field public final r0:I
+.field public f:I
+
+.field public g:I
+
+.field public h:I
+
+.field public i:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;ILys8;Ljava/lang/Object;IJJII)V
-    .locals 0
+.method public constructor <init>(I)V
+    .locals 2
 
+    packed-switch p1, :pswitch_data_0
+
+    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 11
+    new-instance p1, Lqyg;
+
+    const/4 v0, 0x2
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, v0, v1}, Lqyg;-><init>(IZ)V
+
+    iput-object p1, p0, Lotb;->i:Ljava/lang/Object;
+
+    const/16 p1, 0x100
+
+    .line 12
+    new-array p1, p1, [I
 
     iput-object p1, p0, Lotb;->a:Ljava/lang/Object;
 
-    iput p2, p0, Lotb;->b:I
+    return-void
 
-    iput-object p3, p0, Lotb;->c:Lys8;
+    .line 13
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p4, p0, Lotb;->o:Ljava/lang/Object;
+    .line 14
+    new-instance p1, Lumb;
 
-    iput p5, p0, Lotb;->X:I
+    invoke-direct {p1}, Lumb;-><init>()V
 
-    iput-wide p6, p0, Lotb;->Y:J
+    iput-object p1, p0, Lotb;->i:Ljava/lang/Object;
 
-    iput-wide p8, p0, Lotb;->Z:J
+    const/16 p1, 0x100
 
-    iput p10, p0, Lotb;->q0:I
+    .line 15
+    new-array p1, p1, [I
 
-    iput p11, p0, Lotb;->r0:I
+    iput-object p1, p0, Lotb;->a:Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public constructor <init>(IIIIIIZ)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput p1, p0, Lotb;->c:I
+
+    .line 3
+    iput p2, p0, Lotb;->d:I
+
+    .line 4
+    iput p3, p0, Lotb;->e:I
+
+    .line 5
+    iput p4, p0, Lotb;->f:I
+
+    .line 6
+    iput p5, p0, Lotb;->g:I
+
+    .line 7
+    iput p6, p0, Lotb;->h:I
+
+    .line 8
+    iput-boolean p7, p0, Lotb;->b:Z
+
+    .line 9
+    new-instance p1, Landroid/graphics/Matrix;
+
+    invoke-direct {p1}, Landroid/graphics/Matrix;-><init>()V
+
+    iput-object p1, p0, Lotb;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
+.method public a(Landroid/graphics/Matrix;II)Lorg/webrtc/SurfaceTextureHelper$FrameGeometry;
+    .locals 12
 
-    const/4 v0, 0x1
+    iget v0, p0, Lotb;->e:I
 
-    if-ne p0, p1, :cond_0
+    iget v1, p0, Lotb;->c:I
 
-    return v0
+    iget v2, p0, Lotb;->d:I
+
+    iget v3, p0, Lotb;->f:I
+
+    iget-object v4, p0, Lotb;->i:Ljava/lang/Object;
+
+    check-cast v4, Lorg/webrtc/SurfaceTextureHelper$FrameGeometry;
+
+    iget-object v5, p0, Lotb;->a:Ljava/lang/Object;
+
+    check-cast v5, Landroid/graphics/Matrix;
+
+    if-eqz v4, :cond_0
+
+    iget v6, v4, Lorg/webrtc/SurfaceTextureHelper$FrameGeometry;->width:I
+
+    if-ne v6, p2, :cond_0
+
+    iget v6, v4, Lorg/webrtc/SurfaceTextureHelper$FrameGeometry;->height:I
+
+    if-ne v6, p3, :cond_0
+
+    invoke-static {v5, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_0
+
+    return-object v4
 
     :cond_0
-    const/4 v1, 0x0
+    iget-boolean v4, p0, Lotb;->b:Z
 
-    if-eqz p1, :cond_2
+    if-eqz v4, :cond_1
 
-    const-class v2, Lotb;
+    new-instance v4, Landroid/graphics/Matrix;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {v4, p1}, Landroid/graphics/Matrix;-><init>(Landroid/graphics/Matrix;)V
 
-    move-result-object v3
+    add-int/2addr v2, v3
 
-    if-eq v2, v3, :cond_1
+    sub-int v2, p3, v2
+
+    int-to-float v1, v1
+
+    int-to-float v6, p2
+
+    div-float/2addr v1, v6
+
+    int-to-float v2, v2
+
+    int-to-float v7, p3
+
+    div-float/2addr v2, v7
+
+    invoke-virtual {v4, v1, v2}, Landroid/graphics/Matrix;->postTranslate(FF)Z
+
+    int-to-float v0, v0
+
+    div-float/2addr v0, v6
+
+    int-to-float v1, v3
+
+    div-float/2addr v1, v7
+
+    invoke-virtual {v4, v0, v1}, Landroid/graphics/Matrix;->postScale(FF)Z
+
+    move-object v11, v4
 
     goto :goto_0
 
     :cond_1
-    check-cast p1, Lotb;
+    new-instance v4, Landroid/graphics/Matrix;
 
-    iget v2, p0, Lotb;->b:I
+    invoke-direct {v4}, Landroid/graphics/Matrix;-><init>()V
 
-    iget v3, p1, Lotb;->b:I
+    add-int/2addr v2, v3
 
-    if-ne v2, v3, :cond_2
+    sub-int v2, p3, v2
 
-    iget v2, p0, Lotb;->X:I
+    int-to-float v1, v1
 
-    iget v3, p1, Lotb;->X:I
+    int-to-float v6, p2
 
-    if-ne v2, v3, :cond_2
+    div-float/2addr v1, v6
 
-    iget-wide v2, p0, Lotb;->Y:J
+    int-to-float v2, v2
 
-    iget-wide v4, p1, Lotb;->Y:J
+    int-to-float v7, p3
 
-    cmp-long v2, v2, v4
+    div-float/2addr v2, v7
 
-    if-nez v2, :cond_2
+    invoke-virtual {v4, v1, v2}, Landroid/graphics/Matrix;->preTranslate(FF)Z
 
-    iget-wide v2, p0, Lotb;->Z:J
+    int-to-float v0, v0
 
-    iget-wide v4, p1, Lotb;->Z:J
+    div-float/2addr v0, v6
 
-    cmp-long v2, v2, v4
+    int-to-float v1, v3
 
-    if-nez v2, :cond_2
+    div-float/2addr v1, v7
 
-    iget v2, p0, Lotb;->q0:I
+    invoke-virtual {v4, v0, v1}, Landroid/graphics/Matrix;->preScale(FF)Z
 
-    iget v3, p1, Lotb;->q0:I
+    new-instance v0, Landroid/graphics/Matrix;
 
-    if-ne v2, v3, :cond_2
+    invoke-direct {v0, p1}, Landroid/graphics/Matrix;-><init>(Landroid/graphics/Matrix;)V
 
-    iget v2, p0, Lotb;->r0:I
+    invoke-virtual {v0, v4}, Landroid/graphics/Matrix;->preConcat(Landroid/graphics/Matrix;)Z
 
-    iget v3, p1, Lotb;->r0:I
+    move-object v11, v0
 
-    if-ne v2, v3, :cond_2
-
-    iget-object v2, p0, Lotb;->a:Ljava/lang/Object;
-
-    iget-object v3, p1, Lotb;->a:Ljava/lang/Object;
-
-    invoke-static {v2, v3}, Ldni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lotb;->o:Ljava/lang/Object;
-
-    iget-object v3, p1, Lotb;->o:Ljava/lang/Object;
-
-    invoke-static {v2, v3}, Ldni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lotb;->c:Lys8;
-
-    iget-object p1, p1, Lotb;->c:Lys8;
-
-    invoke-static {v2, p1}, Ldni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
     :goto_0
-    return v1
-.end method
+    new-instance v6, Lorg/webrtc/SurfaceTextureHelper$FrameGeometry;
 
-.method public final hashCode()I
-    .locals 10
+    iget v9, p0, Lotb;->g:I
 
-    iget v0, p0, Lotb;->b:I
+    iget v10, p0, Lotb;->h:I
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move v7, p2
 
-    move-result-object v2
+    move v8, p3
 
-    iget v0, p0, Lotb;->X:I
+    invoke-direct/range {v6 .. v11}, Lorg/webrtc/SurfaceTextureHelper$FrameGeometry;-><init>(IIIILandroid/graphics/Matrix;)V
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v5, p1}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
 
-    move-result-object v5
+    iput-object v6, p0, Lotb;->i:Ljava/lang/Object;
 
-    iget-wide v0, p0, Lotb;->Y:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v6
-
-    iget-wide v0, p0, Lotb;->Z:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v7
-
-    iget v0, p0, Lotb;->q0:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v8
-
-    iget v0, p0, Lotb;->r0:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v9
-
-    iget-object v1, p0, Lotb;->a:Ljava/lang/Object;
-
-    iget-object v3, p0, Lotb;->c:Lys8;
-
-    iget-object v4, p0, Lotb;->o:Ljava/lang/Object;
-
-    filled-new-array/range {v1 .. v9}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
+    return-object v6
 .end method

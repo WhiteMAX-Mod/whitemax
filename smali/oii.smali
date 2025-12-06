@@ -1,137 +1,77 @@
 .class public final Loii;
-.super Lj7i;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbai;
-
-
-# static fields
-.field private static final zzb:Loii;
+.implements Ltli;
+.implements Landroid/os/IInterface;
 
 
 # instance fields
-.field private zzd:I
-
-.field private zze:I
-
-.field private zzf:I
-
-.field private zzg:I
+.field public final c:Landroid/os/IBinder;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Landroid/os/IBinder;)V
+    .locals 0
 
-    new-instance v0, Loii;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Loii;-><init>()V
-
-    sput-object v0, Loii;->zzb:Loii;
-
-    const-class v1, Loii;
-
-    invoke-static {v1, v0}, Lj7i;->h(Ljava/lang/Class;Lj7i;)V
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Lj7i;-><init>()V
-
-    const/16 v0, 0x64
-
-    iput v0, p0, Loii;->zzf:I
+    iput-object p1, p0, Loii;->c:Landroid/os/IBinder;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final m(ILj7i;)Ljava/lang/Object;
+.method public final asBinder()Landroid/os/IBinder;
+    .locals 1
+
+    iget-object v0, p0, Loii;->c:Landroid/os/IBinder;
+
+    return-object v0
+.end method
+
+.method public final i(Landroid/os/Parcel;I)Landroid/os/Parcel;
     .locals 3
 
-    add-int/lit8 p1, p1, -0x1
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
-    if-eqz p1, :cond_4
+    move-result-object v0
 
-    const/4 p2, 0x2
+    :try_start_0
+    iget-object v1, p0, Loii;->c:Landroid/os/IBinder;
 
-    if-eq p1, p2, :cond_3
+    const/4 v2, 0x0
 
-    const/4 p2, 0x3
+    invoke-interface {v1, p2, p1, v0, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    if-eq p1, p2, :cond_2
+    invoke-virtual {v0}, Landroid/os/Parcel;->readException()V
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const/4 p2, 0x4
-
-    if-eq p1, p2, :cond_1
-
-    const/4 p2, 0x5
-
-    if-eq p1, p2, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :cond_0
-    sget-object p1, Loii;->zzb:Loii;
-
-    return-object p1
-
-    :cond_1
-    new-instance p1, Lali;
-
-    sget-object p2, Loii;->zzb:Loii;
-
-    const/16 v0, 0x1c
-
-    invoke-direct {p1, v0, p2}, Lali;-><init>(ILj7i;)V
-
-    return-object p1
-
-    :cond_2
-    new-instance p1, Loii;
-
-    invoke-direct {p1}, Loii;-><init>()V
-
-    return-object p1
-
-    :cond_3
-    sget-object p1, Lcxh;->x:Lcxh;
-
-    const-string p2, "zzf"
-
-    const-string v0, "zzg"
-
-    const-string v1, "zzd"
-
-    const-string v2, "zze"
-
-    filled-new-array {v1, v2, p1, p2, v0}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Loii;->zzb:Loii;
-
-    new-instance v0, Lwai;
-
-    const-string v1, "\u0001\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u180c\u0000\u0002\u1004\u0001\u0003\u1004\u0002"
-
-    invoke-direct {v0, p2, v1, p1}, Lwai;-><init>(Lo3i;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
 
     return-object v0
 
-    :cond_4
-    const/4 p1, 0x1
+    :catchall_0
+    move-exception p2
 
-    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+    goto :goto_0
 
-    move-result-object p1
+    :catch_0
+    move-exception p2
 
-    return-object p1
+    :try_start_1
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :goto_0
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+
+    throw p2
 .end method

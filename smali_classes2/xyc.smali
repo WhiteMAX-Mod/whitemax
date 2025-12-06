@@ -1,64 +1,112 @@
-.class public final Lxyc;
+.class public abstract Lxyc;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Landroid/transition/Transition$TransitionListener;
 
 
-# instance fields
-.field public final synthetic a:Landroid/view/View;
+# static fields
+.field public static oneme_login_conductor:I = 0x7f0a06cb
 
-.field public final synthetic b:F
+.field public static oneme_login_confirm_description:I = 0x7f0a06cc
 
+.field public static oneme_login_confirm_resend_code:I = 0x7f0a06cd
 
-# direct methods
-.method public constructor <init>(Landroid/view/View;F)V
-    .locals 0
+.field public static oneme_login_confirm_sms_input:I = 0x7f0a06ce
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_login_confirm_timer:I = 0x7f0a06cf
 
-    iput-object p1, p0, Lxyc;->a:Landroid/view/View;
+.field public static oneme_login_confirm_title:I = 0x7f0a06d0
 
-    iput p2, p0, Lxyc;->b:F
+.field public static oneme_login_input_constraint_layout:I = 0x7f0a06d2
 
-    return-void
-.end method
+.field public static oneme_login_input_continue_button:I = 0x7f0a06d3
 
+.field public static oneme_login_input_description:I = 0x7f0a06d4
 
-# virtual methods
-.method public final onTransitionCancel(Landroid/transition/Transition;)V
-    .locals 0
+.field public static oneme_login_input_gradient_bg:I = 0x7f0a06d7
 
-    return-void
-.end method
+.field public static oneme_login_input_help_button:I = 0x7f0a06d8
 
-.method public final onTransitionEnd(Landroid/transition/Transition;)V
-    .locals 0
+.field public static oneme_login_input_input_description:I = 0x7f0a06d9
 
-    return-void
-.end method
+.field public static oneme_login_input_logo:I = 0x7f0a06da
 
-.method public final onTransitionPause(Landroid/transition/Transition;)V
-    .locals 0
+.field public static oneme_login_input_name:I = 0x7f0a06db
 
-    return-void
-.end method
+.field public static oneme_login_input_name_btn_container:I = 0x7f0a06dc
 
-.method public final onTransitionResume(Landroid/transition/Transition;)V
-    .locals 0
+.field public static oneme_login_input_name_confirmation_cancel:I = 0x7f0a06dd
 
-    return-void
-.end method
+.field public static oneme_login_input_name_confirmation_return:I = 0x7f0a06de
 
-.method public final onTransitionStart(Landroid/transition/Transition;)V
-    .locals 1
+.field public static oneme_login_input_name_continue_btn:I = 0x7f0a06df
 
-    iget-object p1, p0, Lxyc;->a:Landroid/view/View;
+.field public static oneme_login_input_name_description:I = 0x7f0a06e0
 
-    iget v0, p0, Lxyc;->b:F
+.field public static oneme_login_input_name_title:I = 0x7f0a06e1
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+.field public static oneme_login_input_name_toolbar:I = 0x7f0a06e2
 
-    return-void
-.end method
+.field public static oneme_login_input_phone_number_input:I = 0x7f0a06e3
+
+.field public static oneme_login_input_surname:I = 0x7f0a06e4
+
+.field public static oneme_login_input_title:I = 0x7f0a06e5
+
+.field public static oneme_login_input_toolbar:I = 0x7f0a06e6
+
+.field public static oneme_login_neuro_avatars_appbar:I = 0x7f0a06e7
+
+.field public static oneme_login_neuro_avatars_avatar:I = 0x7f0a06e8
+
+.field public static oneme_login_neuro_avatars_button_background:I = 0x7f0a06e9
+
+.field public static oneme_login_neuro_avatars_cancel_action:I = 0x7f0a06ea
+
+.field public static oneme_login_neuro_avatars_collapsible:I = 0x7f0a06eb
+
+.field public static oneme_login_neuro_avatars_continue_btn:I = 0x7f0a06ec
+
+.field public static oneme_login_neuro_avatars_continue_disabled_btn:I = 0x7f0a06ed
+
+.field public static oneme_login_neuro_avatars_continue_enabled_btn:I = 0x7f0a06ee
+
+.field public static oneme_login_neuro_avatars_description:I = 0x7f0a06ef
+
+.field public static oneme_login_neuro_avatars_load_from_gallery_action:I = 0x7f0a06f0
+
+.field public static oneme_login_neuro_avatars_pick_image_text:I = 0x7f0a06f1
+
+.field public static oneme_login_neuro_avatars_pick_neuroavatar_button:I = 0x7f0a06f2
+
+.field public static oneme_login_neuro_avatars_pick_neuroavatar_icon:I = 0x7f0a06f3
+
+.field public static oneme_login_neuro_avatars_recycler_view:I = 0x7f0a06f4
+
+.field public static oneme_login_neuro_avatars_remove_photo_action:I = 0x7f0a06f5
+
+.field public static oneme_login_neuro_avatars_root_container:I = 0x7f0a06f6
+
+.field public static oneme_login_neuro_avatars_tabs:I = 0x7f0a06f7
+
+.field public static oneme_login_neuro_avatars_tabs_shimmer:I = 0x7f0a06f8
+
+.field public static oneme_login_neuro_avatars_take_photo_action:I = 0x7f0a06f9
+
+.field public static oneme_login_neuro_avatars_title:I = 0x7f0a06fa
+
+.field public static oneme_login_neuro_avatars_toolbar:I = 0x7f0a06fb
+
+.field public static oneme_login_sms_code_exceeded_ok_btn:I = 0x7f0a06fd
+
+.field public static oneme_login_welcome_continue_btn:I = 0x7f0a06fe
+
+.field public static oneme_login_welcome_description:I = 0x7f0a06ff
+
+.field public static oneme_login_welcome_placeholder:I = 0x7f0a0700
+
+.field public static oneme_login_welcome_switch_language_btn:I = 0x7f0a0701
+
+.field public static oneme_login_welcome_terms:I = 0x7f0a0702
+
+.field public static oneme_login_welcome_title:I = 0x7f0a0703
+
+.field public static oneme_login_welcome_toolbar:I = 0x7f0a0704

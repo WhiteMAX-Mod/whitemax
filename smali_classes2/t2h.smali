@@ -1,617 +1,353 @@
-.class public final Lt2h;
+.class public final synthetic Lt2h;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lup1;
+.implements Ltm6;
+.implements Lgu3;
 
 
 # instance fields
-.field public final X:Liu7;
+.field public final synthetic a:I
 
-.field public final Y:Liu7;
-
-.field public final Z:Liu7;
-
-.field public final a:Liu7;
-
-.field public final b:Liu7;
-
-.field public final c:Liu7;
-
-.field public final o:Liu7;
-
-.field public final q0:Liu7;
-
-.field public final r0:Liu7;
-
-.field public final s0:Liu7;
-
-.field public t0:Z
+.field public final synthetic b:Lu2h;
 
 
 # direct methods
-.method public constructor <init>(Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;Liu7;)V
+.method public synthetic constructor <init>(Lu2h;I)V
     .locals 0
 
+    iput p2, p0, Lt2h;->a:I
+
+    iput-object p1, p0, Lt2h;->b:Lu2h;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p10, p0, Lt2h;->a:Liu7;
-
-    iput-object p1, p0, Lt2h;->b:Liu7;
-
-    iput-object p2, p0, Lt2h;->c:Liu7;
-
-    iput-object p3, p0, Lt2h;->o:Liu7;
-
-    iput-object p4, p0, Lt2h;->X:Liu7;
-
-    iput-object p5, p0, Lt2h;->Y:Liu7;
-
-    iput-object p6, p0, Lt2h;->Z:Liu7;
-
-    iput-object p7, p0, Lt2h;->q0:Liu7;
-
-    iput-object p8, p0, Lt2h;->r0:Liu7;
-
-    iput-object p9, p0, Lt2h;->s0:Liu7;
-
-    invoke-interface {p9}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lfv1;
-
-    check-cast p1, Luv1;
-
-    invoke-virtual {p1, p0}, Luv1;->f(Lup1;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public accept(Ljava/lang/Object;)V
     .locals 5
 
-    const-string v0, "t2h"
+    iget v0, p0, Lt2h;->a:I
 
-    const-string v1, "onAppGoesBackground"
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {v0, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v0, p0, Lt2h;->b:Lu2h;
 
-    const/4 v1, 0x0
+    check-cast p1, Lk2h;
 
-    iput-boolean v1, p0, Lt2h;->t0:Z
+    iget-object v0, v0, Lu2h;->b:Lw2h;
 
-    iget-object v2, p0, Lt2h;->b:Liu7;
-
-    invoke-interface {v2}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljoa;
-
-    invoke-virtual {v2}, Ljoa;->d()Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object v2, p0, Lt2h;->s0:Liu7;
-
-    invoke-interface {v2}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lfv1;
-
-    check-cast v2, Luv1;
-
-    invoke-virtual {v2}, Luv1;->t()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    const-string v1, "ignore onAppGoesBackground due to active call"
-
-    invoke-static {v0, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_1
-    iget-object v0, p0, Lt2h;->c:Liu7;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lw2h;->a()Lm2f;
 
     move-result-object v0
 
-    check-cast v0, Lnqb;
+    new-instance v1, Ls2h;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v2, 0x2
 
-    const-string v2, "nqb"
+    invoke-direct {v1, p1, v2}, Ls2h;-><init>(Lk2h;I)V
 
-    const-string v3, "stopInteractivePings"
+    new-instance v2, Lik3;
 
-    invoke-static {v2, v3}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v3, 0x2
 
-    iget-object v2, v0, Lnqb;->a:Liu7;
+    invoke-direct {v2, v0, v3, v1}, Lik3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-interface {v2}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lll;
-
-    check-cast v2, Lmna;
-
-    invoke-virtual {v2, v1}, Lmna;->F(Z)J
-
-    iget-object v2, v0, Lnqb;->f:Lvv4;
-
-    if-eqz v2, :cond_2
-
-    invoke-interface {v2}, Lvv4;->h()Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    iget-object v0, v0, Lnqb;->f:Lvv4;
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v0}, Lvv4;->g()V
-
-    :cond_2
-    iget-object v0, p0, Lt2h;->o:Liu7;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v2}, Lhk3;->i()Lvqa;
 
     move-result-object v0
 
-    check-cast v0, Lzxb;
+    sget-object v1, Lpdf;->e:Lr8j;
 
-    iget-object v2, v0, Lzxb;->t0:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    invoke-virtual {v0}, Lzxb;->f()V
-
-    invoke-virtual {v2, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    :cond_3
-    iget-object v2, v0, Lzxb;->s0:Lw0e;
-
-    sget-object v3, Lzxb;->u0:[Ltr7;
-
-    aget-object v3, v3, v1
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v2, v0, v3, v4}, Lw0e;->P(Ljava/lang/Object;Ltr7;Ljava/lang/Object;)V
-
-    iget-object v0, p0, Lt2h;->Y:Liu7;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lrab;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Lrab;->b:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->entrySet()Ljava/util/Set;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :cond_4
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_6
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/util/Map$Entry;
-
-    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lpab;
-
-    iget-object v3, v2, Lpab;->a:Ljava/util/concurrent/LinkedBlockingDeque;
-
-    invoke-interface {v3}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_4
-
-    iget-object v2, v2, Lpab;->b:Ltt7;
-
-    if-eqz v2, :cond_5
-
-    invoke-virtual {v2}, Ltt7;->h()Z
-
-    move-result v3
-
-    if-nez v3, :cond_5
-
-    invoke-static {v2}, Lzv4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    :cond_5
-    invoke-interface {v0}, Ljava/util/Iterator;->remove()V
-
-    goto :goto_0
-
-    :cond_6
-    sget-object v0, Lrab;->c:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
-
-    iget-object v0, p0, Lt2h;->Z:Liu7;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ltmf;
-
-    check-cast v0, Lzmf;
-
-    invoke-virtual {v0, v1}, Lzmf;->e(Z)V
-
-    iget-object v0, p0, Lt2h;->q0:Liu7;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lur5;
-
-    iget-object v0, v0, Lur5;->b:Llq5;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-void
-.end method
-
-.method public final b(Z)V
-    .locals 10
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    filled-new-array {v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    const-string v1, "t2h"
-
-    const-string v2, "onAppGoesForeground forceContactSync = %b"
-
-    invoke-static {v1, v2, v0}, Ltei;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v0, p0, Lt2h;->a:Liu7;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcnf;
-
-    check-cast v2, Lenf;
+    new-instance v2, Ls2h;
 
     const/4 v3, 0x0
 
-    invoke-virtual {v2, v3}, Lenf;->e(Z)V
+    invoke-direct {v2, p1, v3}, Ls2h;-><init>(Lk2h;I)V
 
-    iget-object v2, p0, Lt2h;->r0:Liu7;
+    new-instance v3, Lgk0;
 
-    invoke-interface {v2}, Liu7;->getValue()Ljava/lang/Object;
+    const/16 v4, 0xe
 
-    move-result-object v4
+    invoke-direct {v3, v4, p1}, Lgk0;-><init>(ILjava/lang/Object;)V
 
-    check-cast v4, Lip3;
-
-    invoke-interface {v4}, Lip3;->invalidate()V
-
-    iget-boolean v4, p0, Lt2h;->t0:Z
-
-    if-nez v4, :cond_0
-
-    iget-object v4, p0, Lt2h;->s0:Liu7;
-
-    invoke-interface {v4}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lfv1;
-
-    check-cast v4, Luv1;
-
-    invoke-virtual {v4}, Luv1;->u()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    const-string p1, "ignore onAppGoesForeground due to incoming call."
-
-    invoke-static {v1, p1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lazi;->b(Lvqa;Lgu3;Lgu3;Lp6;)V
 
     return-void
 
-    :cond_0
-    const/4 v1, 0x1
+    :pswitch_0
+    iget-object v0, p0, Lt2h;->b:Lu2h;
 
-    iput-boolean v1, p0, Lt2h;->t0:Z
+    check-cast p1, Lpy4;
 
-    iget-object v4, p0, Lt2h;->Z:Liu7;
+    monitor-enter v0
 
-    invoke-interface {v4}, Liu7;->getValue()Ljava/lang/Object;
+    :try_start_0
+    iget-object v1, v0, Lu2h;->h:Lskh;
 
-    move-result-object v4
+    invoke-virtual {v1, p1}, Lskh;->a(Lpy4;)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    check-cast v4, Ltmf;
+    monitor-exit v0
 
-    check-cast v4, Lzmf;
+    return-void
 
-    invoke-virtual {v4, v1}, Lzmf;->e(Z)V
+    :catchall_0
+    move-exception p1
 
-    invoke-interface {v2}, Liu7;->getValue()Ljava/lang/Object;
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    move-result-object v2
+    throw p1
 
-    check-cast v2, Lip3;
+    nop
 
-    invoke-interface {v2}, Lip3;->a()Z
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    move-result v2
+.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
 
-    if-nez v2, :cond_1
+    iget v0, p0, Lt2h;->a:I
 
-    invoke-interface {v0}, Liu7;->e()Z
+    iget-object v1, p0, Lt2h;->b:Lu2h;
 
-    move-result v2
+    const/4 v2, 0x2
 
-    if-eqz v2, :cond_1
+    check-cast p1, Lk2h;
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    new-instance v0, Lc5g;
 
-    check-cast v0, Lcnf;
+    const/16 v3, 0xe
 
-    check-cast v0, Lenf;
+    invoke-direct {v0, v1, v3, p1}, Lc5g;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {v0}, Lenf;->h()V
+    new-instance p1, Lwk3;
 
-    :cond_1
-    iget-object v0, p0, Lt2h;->c:Liu7;
+    invoke-direct {p1, v2, v0}, Lwk3;-><init>(ILjava/lang/Object;)V
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    iget-object v0, v1, Lu2h;->e:Lo0e;
 
-    move-result-object v0
+    iget-object v0, v0, Lo0e;->a:Lj0e;
 
-    check-cast v0, Lnqb;
+    invoke-virtual {p1, v0}, Le2f;->m(Lj0e;)Lu2f;
 
-    invoke-virtual {v0}, Lnqb;->b()V
+    move-result-object p1
 
-    iget-object v0, p0, Lt2h;->b:Liu7;
+    iget-object v0, v1, Lu2h;->f:Lj0e;
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Le2f;->i(Lj0e;)Lu2f;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, Ljoa;
+    return-object p1
 
-    invoke-virtual {v0}, Ljoa;->d()Z
+    :pswitch_0
+    iget-boolean v0, p1, Lk2h;->b:Z
+
+    const-string v3, "u2h"
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p1, Lk2h;->d:Ljava/lang/String;
+
+    invoke-static {v0}, Lb6a;->Q(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lt2h;->o:Liu7;
+    const-string v0, "convertVideo: exists result = %s"
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    filled-new-array {p1}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {v3, v0, v1}, Lwqi;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    invoke-static {p1}, Le2f;->g(Ljava/lang/Object;)Lwk3;
+
+    move-result-object p1
+
+    goto/16 :goto_1
+
+    :cond_0
+    const-string v0, "convertVideo: start convert = %s"
+
+    filled-new-array {p1}, [Ljava/lang/Object;
+
+    move-result-object v4
+
+    invoke-static {v3, v0, v4}, Lwqi;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object v0, p1, Lk2h;->c:Ljava/lang/String;
+
+    invoke-static {v0}, Ll8g;->c(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    const/4 v3, 0x0
+
+    if-nez v0, :cond_1
+
+    invoke-static {p1}, Le2f;->g(Ljava/lang/Object;)Lwk3;
 
     move-result-object v0
 
-    check-cast v0, Lzxb;
+    goto :goto_0
 
-    iget-object v2, v0, Lzxb;->t0:Ljava/util/concurrent/atomic/AtomicBoolean;
+    :cond_1
+    iget-object v0, v1, Lu2h;->a:Lu6b;
 
-    invoke-virtual {v2, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    iget-object v4, p1, Lk2h;->a:Ll2h;
 
-    iget-object v2, v0, Lzxb;->Y:Liu7;
+    iget-object v4, v4, Ll2h;->a:Ljava/lang/String;
 
-    invoke-interface {v2}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljoa;
-
-    invoke-virtual {v2}, Ljoa;->d()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_6
-
-    iget-object v2, v0, Lzxb;->Z:Liu7;
-
-    invoke-interface {v2}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lll;
-
-    invoke-virtual {v0}, Lzxb;->d()Ly83;
+    invoke-virtual {v0, v4}, Lu6b;->f(Ljava/lang/String;)Lq34;
 
     move-result-object v0
 
-    check-cast v0, Lntd;
+    if-nez v0, :cond_2
 
-    invoke-virtual {v0}, Lntd;->w()J
+    new-instance v0, Lru/ok/tamtam/media/converter/VideoConverterException;
 
-    move-result-wide v8
+    const-string v4, "failed to prepare videoConversion files"
 
-    check-cast v2, Lmna;
+    invoke-direct {v0, v4}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {v0}, Le2f;->f(Ljava/lang/RuntimeException;)Lwk3;
 
-    const-wide/16 v4, 0x0
+    move-result-object v0
 
-    cmp-long v0, v8, v4
-
-    if-ltz v0, :cond_2
-
-    move v3, v1
+    goto :goto_0
 
     :cond_2
-    if-eqz v3, :cond_3
+    iget-object v4, v0, Lq34;->e:Ljava/lang/String;
+
+    iget-wide v5, v0, Lq34;->b:J
+
+    const-wide/16 v7, 0x0
+
+    cmp-long v5, v5, v7
+
+    if-nez v5, :cond_3
+
+    new-instance v0, Lru/ok/tamtam/media/converter/VideoConverterException;
+
+    const-string v4, "content is zero length"
+
+    invoke-direct {v0, v4}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v0}, Le2f;->f(Ljava/lang/RuntimeException;)Lwk3;
+
+    move-result-object v0
 
     goto :goto_0
 
     :cond_3
-    invoke-virtual {v2}, Lmna;->w()Llna;
+    invoke-static {v4}, Ll8g;->c(Ljava/lang/CharSequence;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_4
+
+    new-instance v4, Lr2h;
+
+    invoke-direct {v4, v1, p1, v0, v3}, Lr2h;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    new-instance v0, Lwk3;
+
+    invoke-direct {v0, v2, v4}, Lwk3;-><init>(ILjava/lang/Object;)V
+
+    iget-object v4, v1, Lu2h;->g:Ln0e;
+
+    iget-object v4, v4, Ln0e;->a:Lj0e;
+
+    invoke-virtual {v0, v4}, Le2f;->m(Lj0e;)Lu2f;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+    iget-object v4, v1, Lu2h;->f:Lj0e;
 
-    move-result v0
+    invoke-virtual {v0, v4}, Le2f;->i(Lj0e;)Lu2f;
 
-    if-eqz v0, :cond_6
+    move-result-object v0
 
-    const-string v3, "invalid last sync time"
-
-    if-eq v0, v1, :cond_5
-
-    const/4 p1, 0x2
-
-    if-eq v0, p1, :cond_4
-
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
+    goto :goto_0
 
     :cond_4
-    new-instance p1, Lru/ok/tamtam/exception/ApiArgumentValidateException;
-
-    invoke-direct {p1, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_5
-    iget-object v0, v2, Lmna;->a:Ljava/lang/String;
-
-    new-instance v1, Lru/ok/tamtam/exception/ApiArgumentValidateException;
-
-    invoke-direct {v1, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v0, v3, v1}, Ltei;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    new-instance v4, Lqr0;
-
-    invoke-virtual {v2}, Lmna;->x()Lpxb;
+    invoke-virtual {p1}, Lk2h;->a()Ldl6;
 
     move-result-object v0
 
-    check-cast v0, Lrxb;
+    iput-object v4, v0, Ldl6;->c:Ljava/lang/Object;
 
-    iget-object v0, v0, Lrxb;->a:Ld78;
+    new-instance v4, Lk2h;
 
-    invoke-virtual {v0}, Lntd;->k()J
+    invoke-direct {v4, v0}, Lk2h;-><init>(Ldl6;)V
 
-    move-result-wide v5
+    invoke-static {v4}, Le2f;->g(Ljava/lang/Object;)Lwk3;
 
-    const/4 v7, 0x0
+    move-result-object v0
 
-    invoke-direct/range {v4 .. v9}, Lqr0;-><init>(J[JJ)V
-
-    invoke-static {v2, v4}, Lmna;->u(Lmna;Lym;)J
-
-    :cond_6
     :goto_0
-    if-eqz p1, :cond_7
+    new-instance v4, Lt2h;
 
-    iget-object p1, p0, Lt2h;->X:Liu7;
+    invoke-direct {v4, v1, v2}, Lt2h;-><init>(Lu2h;I)V
 
-    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+    new-instance v5, Lk2f;
 
-    move-result-object p1
+    const/4 v6, 0x1
 
-    check-cast p1, Lckb;
+    invoke-direct {v5, v0, v4, v6}, Lk2f;-><init>(Le2f;Lgu3;I)V
 
-    check-cast p1, Lkkb;
+    new-instance v0, Lt2h;
 
-    invoke-virtual {p1}, Lkkb;->x()V
+    const/4 v4, 0x3
 
-    :cond_7
-    return-void
-.end method
+    invoke-direct {v0, v1, v4}, Lt2h;-><init>(Lu2h;I)V
 
-.method public final k()V
-    .locals 2
+    new-instance v4, Lm2f;
 
-    iget-boolean v0, p0, Lt2h;->t0:Z
+    invoke-direct {v4, v5, v0, v3}, Lm2f;-><init>(Le2f;Ltm6;I)V
 
-    if-nez v0, :cond_0
+    new-instance v0, Ls2h;
 
-    invoke-virtual {p0}, Lt2h;->a()V
+    invoke-direct {v0, p1, v6}, Ls2h;-><init>(Lk2h;I)V
 
-    const-string v0, "t2h"
+    new-instance p1, Lk2f;
 
-    const-string v1, "Call was ended. Stop ping activity state."
+    invoke-direct {p1, v4, v0, v3}, Lk2f;-><init>(Le2f;Lgu3;I)V
 
-    invoke-static {v0, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    new-instance v0, Lt2h;
 
-    :cond_0
-    return-void
-.end method
+    invoke-direct {v0, v1, v2}, Lt2h;-><init>(Lu2h;I)V
 
-.method public final onCallAccepted()V
-    .locals 2
+    new-instance v1, Lk2f;
 
-    iget-boolean v0, p0, Lt2h;->t0:Z
+    invoke-direct {v1, p1, v0, v6}, Lk2f;-><init>(Le2f;Lgu3;I)V
 
-    if-nez v0, :cond_0
+    move-object p1, v1
 
-    const/4 v0, 0x0
+    :goto_1
+    return-object p1
 
-    invoke-virtual {p0, v0}, Lt2h;->b(Z)V
+    nop
 
-    const-string v0, "t2h"
-
-    const-string v1, "Call was accepted. Start ping activity state."
-
-    invoke-static {v0, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

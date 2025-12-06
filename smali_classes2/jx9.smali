@@ -1,161 +1,130 @@
-.class public final Ljx9;
-.super Lym;
+.class public final synthetic Ljx9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lrnf;
+.implements Ljava/util/function/UnaryOperator;
 
 
 # instance fields
-.field public final X:J
+.field public final synthetic a:I
 
-.field public final Y:Ljava/util/List;
-
-.field public final o:J
+.field public final synthetic b:J
 
 
 # direct methods
-.method public constructor <init>(JJJLjava/util/List;)V
+.method public synthetic constructor <init>(JI)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lym;-><init>(J)V
+    iput p3, p0, Ljx9;->a:I
 
-    iput-wide p3, p0, Ljx9;->o:J
+    iput-wide p1, p0, Ljx9;->b:J
 
-    iput-wide p5, p0, Ljx9;->X:J
-
-    iput-object p7, p0, Ljx9;->Y:Ljava/util/List;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lpmf;)V
-    .locals 8
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
 
-    check-cast p1, Lkx9;
+    iget v0, p0, Ljx9;->a:I
 
-    invoke-virtual {p0}, Lym;->o()Lnb9;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    check-cast p1, Ljava/util/Set;
 
-    iget-object v1, p1, Lkx9;->c:Ljava/util/Map;
+    new-instance v0, Ljava/util/LinkedHashSet;
 
-    iget-object v0, v0, Lnb9;->a:Lpc4;
+    invoke-direct {v0, p1}, Ljava/util/LinkedHashSet;-><init>(Ljava/util/Collection;)V
 
-    check-cast v0, Lwb4;
+    new-instance p1, Lc46;
 
-    iget-object v0, v0, Lwb4;->c:Ltgd;
+    const/4 v1, 0x3
 
-    iget-object v2, v0, Ltgd;->a:Lggd;
+    iget-wide v2, p0, Ljx9;->b:J
 
-    invoke-virtual {v2}, Lggd;->m()Lfgd;
+    invoke-direct {p1, v2, v3, v1}, Lc46;-><init>(JI)V
 
-    move-result-object v2
+    new-instance v1, La6;
 
-    check-cast v2, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
+    const/16 v2, 0xb
 
-    new-instance v3, Ljgd;
+    invoke-direct {v1, v2, p1}, La6;-><init>(ILjava/lang/Object;)V
 
-    const/4 v4, 0x0
+    invoke-interface {v0, v1}, Ljava/util/Collection;->removeIf(Ljava/util/function/Predicate;)Z
 
-    invoke-direct {v3, v1, v0, v4}, Ljgd;-><init>(Ljava/util/Map;Ltgd;I)V
+    return-object v0
 
-    invoke-virtual {v2, v3}, Lfgd;->p(Ljava/lang/Runnable;)V
+    :pswitch_0
+    check-cast p1, Lmx9;
 
-    iget-object p1, p1, Lkx9;->c:Ljava/util/Map;
+    new-instance v0, Lmx9;
 
-    invoke-interface {p1}, Ljava/util/Map;->keySet()Ljava/util/Set;
+    const-wide/16 v4, 0x0
 
-    move-result-object p1
+    const/16 v8, 0x1a
 
-    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    const/4 v1, 0x2
 
-    move-result-object p1
-
-    :cond_0
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Long;
-
-    invoke-virtual {p0}, Lym;->o()Lnb9;
-
-    move-result-object v1
-
-    iget-wide v2, p0, Ljx9;->o:J
-
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v4
-
-    invoke-virtual {v1, v2, v3, v4, v5}, Lnb9;->j(JJ)Lpb9;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lym;->l()Lpw0;
-
-    move-result-object v1
-
-    new-instance v2, Ldeg;
-
-    iget-wide v6, v0, Lrj0;->a:J
+    const/4 v2, 0x0
 
     const/4 v3, 0x0
 
-    iget-wide v4, p0, Ljx9;->o:J
+    iget-wide v6, p0, Ljx9;->b:J
 
-    invoke-direct/range {v2 .. v7}, Ldeg;-><init>(IJJ)V
-
-    invoke-virtual {v1, v2}, Lpw0;->c(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_1
-    return-void
-.end method
-
-.method public final e(Lzlf;)V
-    .locals 4
-
-    invoke-virtual {p0}, Lym;->l()Lpw0;
-
-    move-result-object v0
-
-    new-instance v1, Ltj0;
-
-    iget-wide v2, p0, Lym;->a:J
-
-    invoke-direct {v1, v2, v3, p1}, Ltj0;-><init>(JLzlf;)V
-
-    invoke-virtual {v0, v1}, Lpw0;->c(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final i()Lmmf;
-    .locals 5
-
-    new-instance v0, Lrw9;
-
-    iget-object v1, p0, Ljx9;->Y:Ljava/util/List;
-
-    const/4 v2, 0x7
-
-    iget-wide v3, p0, Ljx9;->X:J
-
-    invoke-direct {v0, v2, v3, v4, v1}, Lrw9;-><init>(IJLjava/util/List;)V
+    invoke-direct/range {v0 .. v8}, Lmx9;-><init>(IZZJJI)V
 
     return-object v0
+
+    :pswitch_1
+    check-cast p1, Lmx9;
+
+    new-instance v0, Lmx9;
+
+    const-wide/16 v6, 0x0
+
+    const/16 v8, 0x26
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    iget-wide v4, p0, Ljx9;->b:J
+
+    invoke-direct/range {v0 .. v8}, Lmx9;-><init>(IZZJJI)V
+
+    return-object v0
+
+    :pswitch_2
+    check-cast p1, Lmx9;
+
+    new-instance v0, Lmx9;
+
+    const-wide/16 v6, 0x0
+
+    const/16 v8, 0x2e
+
+    const/4 v1, 0x4
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    iget-wide v4, p0, Ljx9;->b:J
+
+    invoke-direct/range {v0 .. v8}, Lmx9;-><init>(IZZJJI)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

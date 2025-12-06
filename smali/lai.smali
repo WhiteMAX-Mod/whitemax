@@ -1,9 +1,6 @@
-.class public final Llai;
-.super Ljava/lang/Object;
+.class public final synthetic Llai;
+.super Ltoc;
 .source "SourceFile"
-
-# interfaces
-.implements Ltha;
 
 
 # static fields
@@ -12,49 +9,37 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 5
 
     new-instance v0, Llai;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "getNacksSent()J"
+
+    const/4 v2, 0x0
+
+    const-class v3, Lj9f;
+
+    const-string v4, "nacksSent"
+
+    invoke-direct {v0, v3, v4, v1, v2}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     sput-object v0, Llai;->a:Llai;
-
-    new-instance v0, Ltwh;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ltwh;-><init>(I)V
-
-    const-class v1, Lmxh;
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lrtg;->l(Ljava/util/HashMap;I)Ltwh;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lrtg;->i(Ljava/lang/Class;Ltwh;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    check-cast p1, Lj9f;
+
+    iget-wide v0, p1, Lj9f;->l:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
 
-    throw p1
+    return-object p1
 .end method

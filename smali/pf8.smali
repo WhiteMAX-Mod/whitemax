@@ -1,8 +1,17 @@
-.class public interface abstract Lpf8;
+.class public abstract Lpf8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract b(Lpkb;)Ljava/lang/Object;
+# static fields
+.field public static final synthetic a:I
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    sget-object v0, Lbci;->m:Lxo8;
+
+    return-void
 .end method

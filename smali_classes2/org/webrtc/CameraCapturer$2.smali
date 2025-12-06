@@ -39,11 +39,11 @@
 
     iget-object v0, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
 
-    invoke-static {v0}, Lorg/webrtc/CameraCapturer;->D(Lorg/webrtc/CameraCapturer;)V
+    invoke-static {v0}, Lorg/webrtc/CameraCapturer;->F(Lorg/webrtc/CameraCapturer;)V
 
     iget-object v0, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
 
-    invoke-static {v0}, Lorg/webrtc/CameraCapturer;->p(Lorg/webrtc/CameraCapturer;)Ljava/lang/Object;
+    invoke-static {v0}, Lorg/webrtc/CameraCapturer;->r(Lorg/webrtc/CameraCapturer;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -52,7 +52,7 @@
     :try_start_0
     iget-object v1, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
 
-    invoke-static {v1}, Lorg/webrtc/CameraCapturer;->h(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraSession;
+    invoke-static {v1}, Lorg/webrtc/CameraCapturer;->j(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraSession;
 
     move-result-object v1
 
@@ -60,7 +60,7 @@
 
     iget-object p1, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
 
-    invoke-static {p1}, Lorg/webrtc/CameraCapturer;->h(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraSession;
+    invoke-static {p1}, Lorg/webrtc/CameraCapturer;->j(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraSession;
 
     move-result-object p1
 
@@ -84,7 +84,7 @@
     :cond_0
     iget-object p1, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
 
-    invoke-static {p1}, Lorg/webrtc/CameraCapturer;->i(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;
+    invoke-static {p1}, Lorg/webrtc/CameraCapturer;->k(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;
 
     move-result-object p1
 
@@ -107,11 +107,11 @@
 
     iget-object v0, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
 
-    invoke-static {v0}, Lorg/webrtc/CameraCapturer;->D(Lorg/webrtc/CameraCapturer;)V
+    invoke-static {v0}, Lorg/webrtc/CameraCapturer;->F(Lorg/webrtc/CameraCapturer;)V
 
     iget-object v0, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
 
-    invoke-static {v0}, Lorg/webrtc/CameraCapturer;->p(Lorg/webrtc/CameraCapturer;)Ljava/lang/Object;
+    invoke-static {v0}, Lorg/webrtc/CameraCapturer;->r(Lorg/webrtc/CameraCapturer;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -120,7 +120,7 @@
     :try_start_0
     iget-object v1, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
 
-    invoke-static {v1}, Lorg/webrtc/CameraCapturer;->h(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraSession;
+    invoke-static {v1}, Lorg/webrtc/CameraCapturer;->j(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraSession;
 
     move-result-object v1
 
@@ -144,7 +144,7 @@
     :cond_0
     iget-object p1, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
 
-    invoke-static {p1}, Lorg/webrtc/CameraCapturer;->i(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;
+    invoke-static {p1}, Lorg/webrtc/CameraCapturer;->k(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;
 
     move-result-object p1
 
@@ -173,11 +173,11 @@
 
     iget-object v1, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
 
-    invoke-static {v1}, Lorg/webrtc/CameraCapturer;->D(Lorg/webrtc/CameraCapturer;)V
+    invoke-static {v1}, Lorg/webrtc/CameraCapturer;->F(Lorg/webrtc/CameraCapturer;)V
 
     iget-object v1, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
 
-    invoke-static {v1}, Lorg/webrtc/CameraCapturer;->p(Lorg/webrtc/CameraCapturer;)Ljava/lang/Object;
+    invoke-static {v1}, Lorg/webrtc/CameraCapturer;->r(Lorg/webrtc/CameraCapturer;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -186,7 +186,7 @@
     :try_start_0
     iget-object v2, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
 
-    invoke-static {v2}, Lorg/webrtc/CameraCapturer;->h(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraSession;
+    invoke-static {v2}, Lorg/webrtc/CameraCapturer;->j(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraSession;
 
     move-result-object v2
 
@@ -218,7 +218,7 @@
     :cond_0
     iget-object p1, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
 
-    invoke-static {p1}, Lorg/webrtc/CameraCapturer;->i(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;
+    invoke-static {p1}, Lorg/webrtc/CameraCapturer;->k(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;
 
     move-result-object p1
 
@@ -245,11 +245,11 @@
 
     iget-object v0, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
 
-    invoke-static {v0}, Lorg/webrtc/CameraCapturer;->D(Lorg/webrtc/CameraCapturer;)V
+    invoke-static {v0}, Lorg/webrtc/CameraCapturer;->F(Lorg/webrtc/CameraCapturer;)V
 
     iget-object v0, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
 
-    invoke-static {v0}, Lorg/webrtc/CameraCapturer;->p(Lorg/webrtc/CameraCapturer;)Ljava/lang/Object;
+    invoke-static {v0}, Lorg/webrtc/CameraCapturer;->r(Lorg/webrtc/CameraCapturer;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -258,7 +258,7 @@
     :try_start_0
     iget-object v1, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
 
-    invoke-static {v1}, Lorg/webrtc/CameraCapturer;->h(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraSession;
+    invoke-static {v1}, Lorg/webrtc/CameraCapturer;->j(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraSession;
 
     move-result-object v1
 
@@ -282,7 +282,7 @@
     :cond_0
     iget-object v1, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
 
-    invoke-static {v1}, Lorg/webrtc/CameraCapturer;->i(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;
+    invoke-static {v1}, Lorg/webrtc/CameraCapturer;->k(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;
 
     move-result-object v1
 
@@ -311,11 +311,11 @@
 
     iget-object v0, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
 
-    invoke-static {v0}, Lorg/webrtc/CameraCapturer;->D(Lorg/webrtc/CameraCapturer;)V
+    invoke-static {v0}, Lorg/webrtc/CameraCapturer;->F(Lorg/webrtc/CameraCapturer;)V
 
     iget-object v0, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
 
-    invoke-static {v0}, Lorg/webrtc/CameraCapturer;->p(Lorg/webrtc/CameraCapturer;)Ljava/lang/Object;
+    invoke-static {v0}, Lorg/webrtc/CameraCapturer;->r(Lorg/webrtc/CameraCapturer;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -324,7 +324,7 @@
     :try_start_0
     iget-object v1, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
 
-    invoke-static {v1}, Lorg/webrtc/CameraCapturer;->h(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraSession;
+    invoke-static {v1}, Lorg/webrtc/CameraCapturer;->j(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraSession;
 
     move-result-object v1
 
@@ -348,7 +348,7 @@
     :cond_0
     iget-object p1, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
 
-    invoke-static {p1}, Lorg/webrtc/CameraCapturer;->j(Lorg/webrtc/CameraCapturer;)Z
+    invoke-static {p1}, Lorg/webrtc/CameraCapturer;->l(Lorg/webrtc/CameraCapturer;)Z
 
     move-result p1
 
@@ -356,7 +356,7 @@
 
     iget-object p1, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
 
-    invoke-static {p1}, Lorg/webrtc/CameraCapturer;->i(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;
+    invoke-static {p1}, Lorg/webrtc/CameraCapturer;->k(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;
 
     move-result-object p1
 
@@ -366,12 +366,12 @@
 
     const/4 v1, 0x1
 
-    invoke-static {p1, v1}, Lorg/webrtc/CameraCapturer;->x(Lorg/webrtc/CameraCapturer;Z)V
+    invoke-static {p1, v1}, Lorg/webrtc/CameraCapturer;->z(Lorg/webrtc/CameraCapturer;Z)V
 
     :cond_1
     iget-object p1, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
 
-    invoke-static {p1}, Lorg/webrtc/CameraCapturer;->e(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraVideoCapturer$CameraStatistics;
+    invoke-static {p1}, Lorg/webrtc/CameraCapturer;->f(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraVideoCapturer$CameraStatistics;
 
     move-result-object p1
 
@@ -379,7 +379,7 @@
 
     iget-object p1, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
 
-    invoke-static {p1}, Lorg/webrtc/CameraCapturer;->f(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CapturerObserver;
+    invoke-static {p1}, Lorg/webrtc/CameraCapturer;->g(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CapturerObserver;
 
     move-result-object p1
 
@@ -391,6 +391,75 @@
 
     :goto_0
     monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+.end method
+
+.method public onNonFatal(Lorg/webrtc/CameraSession;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 3
+
+    const-string v0, "onNonFatal from another session: "
+
+    iget-object v1, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
+
+    invoke-static {v1}, Lorg/webrtc/CameraCapturer;->F(Lorg/webrtc/CameraCapturer;)V
+
+    iget-object v1, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
+
+    invoke-static {v1}, Lorg/webrtc/CameraCapturer;->r(Lorg/webrtc/CameraCapturer;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    monitor-enter v1
+
+    :try_start_0
+    iget-object v2, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
+
+    invoke-static {v2}, Lorg/webrtc/CameraCapturer;->j(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraSession;
+
+    move-result-object v2
+
+    if-eq p1, v2, :cond_0
+
+    const-string p1, "CameraCapturer"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Lorg/webrtc/Logging;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    iget-object p1, p0, Lorg/webrtc/CameraCapturer$2;->this$0:Lorg/webrtc/CameraCapturer;
+
+    invoke-static {p1}, Lorg/webrtc/CameraCapturer;->k(Lorg/webrtc/CameraCapturer;)Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;
+
+    move-result-object p1
+
+    invoke-interface {p1, p2, p3}, Lorg/webrtc/CameraVideoCapturer$CameraEventsHandler;->onCameraError(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    monitor-exit v1
+
+    return-void
+
+    :goto_1
+    monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

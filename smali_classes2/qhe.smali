@@ -1,77 +1,63 @@
-.class public final Lqhe;
-.super Lez;
+.class public abstract Lqhe;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final X:Ljava/lang/String;
-
-.field public final Y:Ljava/lang/String;
-
-.field public final Z:Ljava/lang/String;
-
-.field public final o:J
-
-.field public final q0:Ljava/lang/String;
-
-.field public final r0:Lukb;
-
-.field public final s0:Lez;
-
-.field public final t0:Z
-
-
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lukb;Lez;ZZZ)V
-    .locals 1
+.method public static a([B)Lrhe;
+    .locals 7
 
-    sget-object v0, La10;->q0:La10;
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;
 
-    invoke-direct {p0, v0, p9, p10}, Lez;-><init>(La10;ZZ)V
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;-><init>()V
 
-    iput-wide p1, p0, Lqhe;->o:J
+    :try_start_0
+    invoke-static {v0, p0}, Lfl9;->mergeFrom(Lfl9;[B)Lfl9;
 
-    iput-object p3, p0, Lqhe;->X:Ljava/lang/String;
+    move-result-object p0
 
-    iput-object p4, p0, Lqhe;->Y:Ljava/lang/String;
+    check-cast p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;
+    :try_end_0
+    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
 
-    iput-object p5, p0, Lqhe;->Z:Ljava/lang/String;
+    new-instance v0, Lrhe;
 
-    iput-object p6, p0, Lqhe;->q0:Ljava/lang/String;
+    iget-wide v1, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->taskId:J
 
-    iput-object p7, p0, Lqhe;->r0:Lukb;
+    iget-wide v3, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->chatId:J
 
-    iput-object p8, p0, Lqhe;->s0:Lez;
+    iget v5, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->count:I
 
-    iput-boolean p11, p0, Lqhe;->t0:Z
+    sget-object v6, Lrs4;->d:Lr8j;
 
-    return-void
-.end method
+    iget p0, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->itemTypeId:I
 
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-# virtual methods
-.method public final a()Ljava/util/HashMap;
-    .locals 3
+    move-result-object p0
 
-    invoke-super {p0}, Lez;->a()Ljava/util/HashMap;
+    invoke-static {v6, p0}, Lr8j;->j(Lr8j;Ljava/lang/Integer;)Lrs4;
 
-    move-result-object v0
+    move-result-object v6
 
-    iget-wide v1, p0, Lqhe;->o:J
+    invoke-direct/range {v0 .. v6}, Lrhe;-><init>(JJILrs4;)V
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iget-object p0, v0, Lrhe;->X:Ljava/lang/String;
 
-    move-result-object v1
+    const-string v1, "parseFrom"
 
-    const-string v2, "shareId"
-
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v1, "url"
-
-    iget-object v2, p0, Lqhe;->X:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0, v1}, Lwqi;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
+
+    :catch_0
+    move-exception v0
+
+    move-object p0, v0
+
+    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
+
+    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
 .end method

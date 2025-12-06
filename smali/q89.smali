@@ -1,277 +1,115 @@
-.class public final Lq89;
-.super Landroid/widget/BaseAdapter;
+.class public final synthetic Lq89;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final X:Landroid/view/LayoutInflater;
+.field public final synthetic X:I
 
-.field public final Y:I
+.field public final synthetic Y:Ly89;
 
-.field public final a:Lt89;
+.field public final synthetic a:Lz89;
 
-.field public b:I
+.field public final synthetic b:Lu69;
 
-.field public c:Z
+.field public final synthetic c:Laie;
 
-.field public final o:Z
+.field public final synthetic d:Lo79;
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>(Lt89;Landroid/view/LayoutInflater;ZI)V
-    .locals 1
+.method public synthetic constructor <init>(Lz89;Lu69;Laie;Lo79;IILy89;)V
+    .locals 0
 
-    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, -0x1
+    iput-object p1, p0, Lq89;->a:Lz89;
 
-    iput v0, p0, Lq89;->b:I
+    iput-object p2, p0, Lq89;->b:Lu69;
 
-    iput-boolean p3, p0, Lq89;->o:Z
+    iput-object p3, p0, Lq89;->c:Laie;
 
-    iput-object p2, p0, Lq89;->X:Landroid/view/LayoutInflater;
+    iput-object p4, p0, Lq89;->d:Lo79;
 
-    iput-object p1, p0, Lq89;->a:Lt89;
+    iput p5, p0, Lq89;->o:I
 
-    iput p4, p0, Lq89;->Y:I
+    iput p6, p0, Lq89;->X:I
 
-    invoke-virtual {p0}, Lq89;->a()V
+    iput-object p7, p0, Lq89;->Y:Ly89;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 5
+.method public final run()V
+    .locals 6
 
-    iget-object v0, p0, Lq89;->a:Lt89;
+    iget-object v0, p0, Lq89;->a:Lz89;
 
-    iget-object v1, v0, Lt89;->E0:Lx89;
+    iget-object v0, v0, Lz89;->d:Lfde;
 
-    if-eqz v1, :cond_1
+    iget-object v1, p0, Lq89;->b:Lu69;
 
-    invoke-virtual {v0}, Lt89;->i()V
-
-    iget-object v0, v0, Lt89;->s0:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v0, v1}, Lfde;->y(Lu69;)Z
 
     move-result v2
 
-    const/4 v3, 0x0
-
-    :goto_0
-    if-ge v3, v2, :cond_1
-
-    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lx89;
-
-    if-ne v4, v1, :cond_0
-
-    iput v3, p0, Lq89;->b:I
+    if-nez v2, :cond_0
 
     return-void
 
     :cond_0
-    add-int/lit8 v3, v3, 0x1
+    iget-object v2, p0, Lq89;->c:Laie;
 
-    goto :goto_0
+    iget-object v3, p0, Lq89;->d:Lo79;
 
-    :cond_1
-    const/4 v0, -0x1
+    iget v4, p0, Lq89;->o:I
 
-    iput v0, p0, Lq89;->b:I
+    const/4 v5, -0x4
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v0, v1, v2}, Lfde;->B(Lu69;Laie;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    new-instance v0, Lyie;
+
+    invoke-direct {v0, v5}, Lyie;-><init>(I)V
+
+    invoke-static {v3, v1, v4, v0}, Lz89;->X(Lo79;Lu69;ILyie;)V
 
     return-void
-.end method
-
-.method public final b(I)Lx89;
-    .locals 2
-
-    iget-boolean v0, p0, Lq89;->o:Z
-
-    iget-object v1, p0, Lq89;->a:Lt89;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v1}, Lt89;->i()V
-
-    iget-object v0, v1, Lt89;->s0:Ljava/util/ArrayList;
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Lt89;->l()Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    :goto_0
-    iget v1, p0, Lq89;->b:I
-
-    if-ltz v1, :cond_1
-
-    if-lt p1, v1, :cond_1
-
-    add-int/lit8 p1, p1, 0x1
 
     :cond_1
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    iget v2, p0, Lq89;->X:I
 
-    move-result-object p1
-
-    check-cast p1, Lx89;
-
-    return-object p1
-.end method
-
-.method public final getCount()I
-    .locals 2
-
-    iget-boolean v0, p0, Lq89;->o:Z
-
-    iget-object v1, p0, Lq89;->a:Lt89;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v1}, Lt89;->i()V
-
-    iget-object v0, v1, Lt89;->s0:Ljava/util/ArrayList;
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Lt89;->l()Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    :goto_0
-    iget v1, p0, Lq89;->b:I
-
-    if-gez v1, :cond_1
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v0, v1, v2}, Lfde;->A(Lu69;I)Z
 
     move-result v0
 
-    return v0
+    if-nez v0, :cond_2
 
-    :cond_1
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    new-instance v0, Lyie;
 
-    move-result v0
+    invoke-direct {v0, v5}, Lyie;-><init>(I)V
 
-    add-int/lit8 v0, v0, -0x1
+    invoke-static {v3, v1, v4, v0}, Lz89;->X(Lo79;Lu69;ILyie;)V
 
-    return v0
-.end method
-
-.method public final bridge synthetic getItem(I)Ljava/lang/Object;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Lq89;->b(I)Lx89;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final getItemId(I)J
-    .locals 2
-
-    int-to-long v0, p1
-
-    return-wide v0
-.end method
-
-.method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 5
-
-    const/4 v0, 0x0
-
-    if-nez p2, :cond_0
-
-    iget-object p2, p0, Lq89;->X:Landroid/view/LayoutInflater;
-
-    iget v1, p0, Lq89;->Y:I
-
-    invoke-virtual {p2, v1, p3, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object p2
-
-    :cond_0
-    invoke-virtual {p0, p1}, Lq89;->b(I)Lx89;
-
-    move-result-object p3
-
-    iget p3, p3, Lx89;->b:I
-
-    add-int/lit8 v1, p1, -0x1
-
-    if-ltz v1, :cond_1
-
-    invoke-virtual {p0, v1}, Lq89;->b(I)Lx89;
-
-    move-result-object v1
-
-    iget v1, v1, Lx89;->b:I
-
-    goto :goto_0
-
-    :cond_1
-    move v1, p3
-
-    :goto_0
-    move-object v2, p2
-
-    check-cast v2, Landroidx/appcompat/view/menu/ListMenuItemView;
-
-    iget-object v3, p0, Lq89;->a:Lt89;
-
-    invoke-virtual {v3}, Lt89;->m()Z
-
-    move-result v3
-
-    const/4 v4, 0x1
-
-    if-eqz v3, :cond_2
-
-    if-eq p3, v1, :cond_2
-
-    move v0, v4
+    return-void
 
     :cond_2
-    invoke-virtual {v2, v0}, Landroidx/appcompat/view/menu/ListMenuItemView;->setGroupDividerEnabled(Z)V
+    iget-object v0, p0, Lq89;->Y:Ly89;
 
-    move-object p3, p2
-
-    check-cast p3, Ll99;
-
-    iget-boolean v0, p0, Lq89;->c:Z
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {v2, v4}, Landroidx/appcompat/view/menu/ListMenuItemView;->setForceShowIcon(Z)V
-
-    :cond_3
-    invoke-virtual {p0, p1}, Lq89;->b(I)Lx89;
-
-    move-result-object p1
-
-    invoke-interface {p3, p1}, Ll99;->d(Lx89;)V
-
-    return-object p2
-.end method
-
-.method public final notifyDataSetChanged()V
-    .locals 0
-
-    invoke-virtual {p0}, Lq89;->a()V
-
-    invoke-super {p0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
+    invoke-interface {v0, v3, v1, v4}, Ly89;->n(Lo79;Lu69;I)Ljava/lang/Object;
 
     return-void
 .end method

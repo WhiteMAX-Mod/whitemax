@@ -1,114 +1,53 @@
 .class public final Lxy6;
-.super Ljava/lang/Object;
+.super Lq44;
 .source "SourceFile"
-
-# interfaces
-.implements Lwy6;
 
 
 # instance fields
-.field public final a:Liu7;
+.field public final synthetic X:Lzy6;
 
-.field public final b:Ljava/util/LinkedHashSet;
+.field public Y:I
 
-.field public c:Z
+.field public d:I
 
-.field public d:Luy6;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Liu7;)V
+.method public constructor <init>(Lzy6;Lq44;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lxy6;->X:Lzy6;
 
-    iput-object p1, p0, Lxy6;->a:Liu7;
-
-    new-instance p1, Ljava/util/LinkedHashSet;
-
-    invoke-direct {p1}, Ljava/util/LinkedHashSet;-><init>()V
-
-    iput-object p1, p0, Lxy6;->b:Ljava/util/LinkedHashSet;
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Luy6;)V
-    .locals 12
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iput-object p1, p0, Lxy6;->d:Luy6;
+    iput-object p1, p0, Lxy6;->o:Ljava/lang/Object;
 
-    iget-object v0, p0, Lxy6;->b:Ljava/util/LinkedHashSet;
+    iget p1, p0, Lxy6;->Y:I
 
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    const/high16 v0, -0x80000000
 
-    move-result-object v0
+    or-int/2addr p1, v0
 
-    const/4 v1, 0x0
+    iput p1, p0, Lxy6;->Y:I
 
-    move v2, v1
+    const/4 p1, 0x0
 
-    :cond_0
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    const/4 v0, 0x0
 
-    move-result v3
+    iget-object v1, p0, Lxy6;->X:Lzy6;
 
-    if-eqz v3, :cond_1
+    invoke-virtual {v1, p1, v0, p0}, Lzy6;->b(Ljava/util/List;ILq44;)Ljava/io/Serializable;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object v3
-
-    check-cast v3, Lvy6;
-
-    new-instance v4, Lzw;
-
-    const/4 v10, 0x0
-
-    const/16 v11, 0x17
-
-    const/4 v5, 0x2
-
-    const-class v7, Lxy6;
-
-    const-string v8, "processText"
-
-    const-string v9, "processText(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;"
-
-    move-object v6, p0
-
-    invoke-direct/range {v4 .. v11}, Lzw;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    check-cast v3, Lza9;
-
-    invoke-virtual {v3, p1, v4}, Lza9;->P(Luy6;Lzi6;)Z
-
-    move-result v3
-
-    if-nez v2, :cond_0
-
-    move v2, v3
-
-    goto :goto_0
-
-    :cond_1
-    move-object v6, p0
-
-    if-nez p1, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    if-nez v2, :cond_3
-
-    const/4 v1, 0x1
-
-    :cond_3
-    :goto_1
-    iput-boolean v1, v6, Lxy6;->c:Z
-
-    return-void
+    return-object p1
 .end method

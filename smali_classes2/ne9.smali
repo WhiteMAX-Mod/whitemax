@@ -1,64 +1,122 @@
 .class public final Lne9;
-.super Ljava/lang/Object;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Llk9;
+.implements Lsm6;
 
 
-# static fields
-.field public static final a:Lne9;
+# instance fields
+.field public final synthetic X:Ls5i;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ls5i;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lne9;
+    iput-object p1, p0, Lne9;->X:Ls5i;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
 
-    sput-object v0, Lne9;->a:Lne9;
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Ldc9;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Lne9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of p1, p1, Lne9;
+    move-result-object p1
 
-    if-nez p1, :cond_1
+    check-cast p1, Lne9;
 
-    const/4 p1, 0x0
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    return p1
+    invoke-virtual {p1, p2}, Lne9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_1
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const v0, 0x43f6b71e
+    new-instance v0, Lne9;
 
-    return v0
-.end method
+    iget-object v1, p0, Lne9;->X:Ls5i;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    invoke-direct {v0, v1, p2}, Lne9;-><init>(Ls5i;Lkotlin/coroutines/Continuation;)V
 
-    const-string v0, "MessagePinned"
+    iput-object p1, v0, Lne9;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lne9;->o:Ljava/lang/Object;
+
+    check-cast p1, Ldc9;
+
+    sget-object v0, Ldc9;->a:Ldc9;
+
+    invoke-static {p1, v0}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    iget-object p1, p0, Lne9;->X:Ls5i;
+
+    iget-object v0, p1, Ls5i;->g:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p1, Ls5i;->f:Ljava/lang/Object;
+
+    check-cast v0, Lkotlinx/coroutines/internal/ContextScope;
+
+    new-instance v1, Lve9;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p1, v2}, Lve9;-><init>(Ls5i;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x3
+
+    invoke-static {v0, v2, v2, v1, p1}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
+
+    :cond_0
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
+
+    :cond_1
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 .end method

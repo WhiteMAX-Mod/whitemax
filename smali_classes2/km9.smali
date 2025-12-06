@@ -1,126 +1,125 @@
-.class public final Lkm9;
-.super Lsgf;
+.class public final enum Lkm9;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lzi6;
 
+# static fields
+.field public static final a:Ljava/util/HashMap;
 
-# instance fields
-.field public X:I
+.field public static final enum b:Lkm9;
 
-.field public final synthetic Y:Ljn9;
+.field public static final enum c:Lkm9;
 
-.field public final synthetic Z:Ljava/util/List;
+.field public static final enum d:Lkm9;
+
+.field public static final synthetic o:[Lkm9;
 
 
 # direct methods
-.method public constructor <init>(Ljn9;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    iput-object p1, p0, Lkm9;->Y:Ljn9;
+    new-instance v0, Lkm9;
 
-    iput-object p2, p0, Lkm9;->Z:Ljava/util/List;
+    const-string v1, "UNKNOWN"
 
-    const/4 p1, 0x2
+    const/4 v2, 0x0
 
-    invoke-direct {p0, p1, p3}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    return-void
-.end method
+    sput-object v0, Lkm9;->b:Lkm9;
 
+    new-instance v1, Lkm9;
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    const-string v3, "EDITED"
 
-    check-cast p1, Lq54;
+    const/4 v4, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-direct {v1, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {p0, p1, p2}, Lkm9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    new-instance v3, Lkm9;
 
-    move-result-object p1
+    const-string v4, "REMOVED"
 
-    check-cast p1, Lkm9;
+    const/4 v5, 0x2
 
-    sget-object p2, Lccg;->a:Lccg;
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {p1, p2}, Lkm9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    sput-object v3, Lkm9;->c:Lkm9;
 
-    move-result-object p1
+    new-instance v4, Lkm9;
 
-    return-object p1
-.end method
+    const-string v5, "DELAYED_FIRE_ERROR"
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    const/4 v6, 0x3
 
-    new-instance p1, Lkm9;
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget-object v0, p0, Lkm9;->Y:Ljn9;
+    sput-object v4, Lkm9;->d:Lkm9;
 
-    iget-object v1, p0, Lkm9;->Z:Ljava/util/List;
+    filled-new-array {v0, v1, v3, v4}, [Lkm9;
 
-    invoke-direct {p1, v0, v1, p2}, Lkm9;-><init>(Ljn9;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
+    move-result-object v0
 
-    return-object p1
-.end method
+    sput-object v0, Lkm9;->o:[Lkm9;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    new-instance v0, Ljava/util/HashMap;
 
-    iget v0, p0, Lkm9;->X:I
+    const/4 v1, 0x4
 
-    const/4 v1, 0x1
+    invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(I)V
 
-    if-eqz v0, :cond_1
+    invoke-static {}, Lkm9;->values()[Lkm9;
 
-    if-ne v0, v1, :cond_0
+    move-result-object v1
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    array-length v3, v1
+
+    :goto_0
+    if-ge v2, v3, :cond_0
+
+    aget-object v4, v1, v2
+
+    invoke-virtual {v4}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v5, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    sput-object v0, Lkm9;->a:Ljava/util/HashMap;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    return-void
+.end method
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+.method public static valueOf(Ljava/lang/String;)Lkm9;
+    .locals 1
 
-    throw p1
+    const-class v0, Lkm9;
 
-    :cond_1
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iget-object p1, p0, Lkm9;->Y:Ljn9;
+    move-result-object p0
 
-    iget-object p1, p1, Ljn9;->L0:Liu7;
+    check-cast p0, Lkm9;
 
-    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+    return-object p0
+.end method
 
-    move-result-object p1
+.method public static values()[Lkm9;
+    .locals 1
 
-    check-cast p1, Ltb9;
+    sget-object v0, Lkm9;->o:[Lkm9;
 
-    iput v1, p0, Lkm9;->X:I
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    iget-object v0, p0, Lkm9;->Z:Ljava/util/List;
+    move-result-object v0
 
-    invoke-virtual {p1, p0, v0, v1}, Ltb9;->a(Ly14;Ljava/util/List;Z)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lr54;->a:Lr54;
-
-    if-ne p1, v0, :cond_2
+    check-cast v0, [Lkm9;
 
     return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
 .end method

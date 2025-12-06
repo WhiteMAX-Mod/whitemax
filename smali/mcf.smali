@@ -3,9 +3,9 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ldf4;
+.implements Lfve;
 
 
 # virtual methods
-.method public abstract a(J)V
+.method public abstract getValue()Ljava/lang/Object;
 .end method

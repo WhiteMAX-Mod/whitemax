@@ -1,27 +1,45 @@
-.class public abstract Lwkb;
-.super Ljava/lang/Object;
+.class public final Lwkb;
+.super Lthd;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:J
+# instance fields
+.field public final a:I
+
+.field public final b:F
+
+.field public final c:F
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(I)V
+    .locals 0
 
-    sget v0, Lu35;->o:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const v0, 0xea60
+    iput p1, p0, Lwkb;->a:I
 
-    sget-object v1, Lz35;->c:Lz35;
+    const/high16 p1, 0x3f000000    # 0.5f
 
-    invoke-static {v0, v1}, Ltzi;->d(ILz35;)J
+    iput p1, p0, Lwkb;->b:F
 
-    move-result-wide v0
-
-    sput-wide v0, Lwkb;->a:J
+    iput p1, p0, Lwkb;->c:F
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a(Landroidx/recyclerview/widget/RecyclerView;I)Landroid/widget/EdgeEffect;
+    .locals 2
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    new-instance v1, Lvkb;
+
+    invoke-direct {v1, p2, p0, p1, v0}, Lvkb;-><init>(ILwkb;Landroidx/recyclerview/widget/RecyclerView;Landroid/content/Context;)V
+
+    return-object v1
 .end method

@@ -3,16 +3,18 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ltha;
+.implements Lpqa;
 
 
 # static fields
 .field public static final a:Loti;
 
+.field public static final b:Lwu5;
+
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 3
 
     new-instance v0, Loti;
 
@@ -20,31 +22,47 @@
 
     sput-object v0, Loti;->a:Loti;
 
-    new-instance v0, Lr8i;
+    new-instance v0, Lmli;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Lr8i;-><init>(I)V
+    invoke-direct {v0, v1}, Lmli;-><init>(I)V
 
-    const-class v1, Lm9i;
+    const-class v1, Lemi;
 
-    invoke-static {v1, v0}, Lrtg;->j(Ljava/lang/Class;Lr8i;)Ljava/util/HashMap;
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    invoke-static {v0}, Lrtg;->q(Ljava/util/HashMap;)V
+    new-instance v1, Lwu5;
+
+    invoke-static {v0}, Laz1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v2, "format"
+
+    invoke-direct {v1, v2, v0}, Lwu5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v1, Loti;->b:Lwu5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
 
-    invoke-static {p1}, Ldy1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    check-cast p1, Lsbj;
 
-    move-result-object p1
+    check-cast p2, Lqqa;
 
-    throw p1
+    sget-object v0, Loti;->b:Lwu5;
+
+    iget-object p1, p1, Lsbj;->a:Lcji;
+
+    invoke-interface {p2, v0, p1}, Lqqa;->a(Lwu5;Ljava/lang/Object;)Lqqa;
+
+    return-void
 .end method

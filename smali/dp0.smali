@@ -1,210 +1,166 @@
 .class public final Ldp0;
-.super Lipe;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final n:Landroid/content/Context;
+# static fields
+.field public static final c:Lhl4;
 
-.field public final o:I
+
+# instance fields
+.field public final a:Ljava/util/LinkedList;
+
+.field public b:J
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
+.method static constructor <clinit>()V
+    .locals 4
+
+    new-instance v0, Lhl4;
+
+    const-string v1, ""
+
+    const/4 v2, 0x1
+
+    const-string v3, "StreamingFormatChecker"
+
+    invoke-direct {v0, v3, v1, v2}, Lhl4;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
+
+    sput-object v0, Ldp0;->c:Lhl4;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
     .locals 2
 
-    const/4 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-array v1, v0, [Lhf4;
+    new-instance v0, Ljava/util/LinkedList;
 
-    new-array v0, v0, [Lcp0;
+    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    invoke-direct {p0, v1, v0}, Lipe;-><init>([Lhf4;[Lif4;)V
+    iput-object v0, p0, Ldp0;->a:Ljava/util/LinkedList;
 
-    iput-object p1, p0, Ldp0;->n:Landroid/content/Context;
+    const-wide/16 v0, -0x1
 
-    const/4 p1, -0x1
-
-    iput p1, p0, Ldp0;->o:I
+    iput-wide v0, p0, Ldp0;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f()Lhf4;
-    .locals 2
+.method public final a(Lnm7;)V
+    .locals 8
 
-    new-instance v0, Lhf4;
+    iget p1, p1, Lnm7;->f:I
 
-    const/4 v1, 0x1
+    const/4 v0, -0x1
 
-    invoke-direct {v0, v1}, Lhf4;-><init>(I)V
-
-    return-object v0
-.end method
-
-.method public final g()Lif4;
-    .locals 1
-
-    new-instance v0, Lcp0;
-
-    invoke-direct {v0, p0}, Lcp0;-><init>(Ldp0;)V
-
-    return-object v0
-.end method
-
-.method public final h(Ljava/lang/Throwable;)Landroidx/media3/decoder/DecoderException;
-    .locals 2
-
-    new-instance v0, Landroidx/media3/exoplayer/image/ImageDecoderException;
-
-    const-string v1, "Unexpected decode error"
-
-    invoke-direct {v0, v1, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-object v0
-.end method
-
-.method public final i(Lhf4;Lif4;Z)Landroidx/media3/decoder/DecoderException;
-    .locals 6
-
-    check-cast p2, Lcp0;
-
-    iget-object p3, p1, Lhf4;->X:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p3}, Ljava/nio/ByteBuffer;->hasArray()Z
-
-    move-result v0
-
-    invoke-static {v0}, Lsgi;->i(Z)V
-
-    invoke-virtual {p3}, Ljava/nio/ByteBuffer;->arrayOffset()I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-nez v0, :cond_0
-
-    move v0, v1
+    if-eq p1, v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    :goto_0
-    invoke-static {v0}, Lsgi;->d(Z)V
+    move-result-wide v0
 
-    :try_start_0
-    iget v0, p0, Ldp0;->o:I
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    const/4 v2, -0x1
+    move-result-object p1
 
-    if-eq v0, v2, :cond_1
+    iget-object v2, p0, Ldp0;->a:Ljava/util/LinkedList;
 
-    goto :goto_2
+    invoke-virtual {v2, p1}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v2}, Ljava/util/LinkedList;->size()I
+
+    move-result p1
+
+    const/4 v3, 0x5
+
+    if-le p1, v3, :cond_1
+
+    invoke-virtual {v2}, Ljava/util/LinkedList;->removeFirst()Ljava/lang/Object;
 
     :cond_1
-    iget-object v0, p0, Ldp0;->n:Landroid/content/Context;
+    invoke-virtual {v2}, Ljava/util/LinkedList;->size()I
 
-    if-eqz v0, :cond_4
+    move-result p1
 
-    invoke-static {v0}, Lnig;->y(Landroid/content/Context;)Landroid/graphics/Point;
+    if-ne p1, v3, :cond_3
 
-    move-result-object v0
+    invoke-virtual {v2}, Ljava/util/LinkedList;->peekFirst()Ljava/lang/Object;
 
-    iget v3, v0, Landroid/graphics/Point;->x:I
+    move-result-object p1
 
-    iget v0, v0, Landroid/graphics/Point;->y:I
+    check-cast p1, Ljava/lang/Long;
 
-    iget-object v4, p1, Lhf4;->c:Lmb6;
+    invoke-static {p1}, Ls5j;->g(Ljava/lang/Object;)V
 
-    if-eqz v4, :cond_3
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
-    iget v5, v4, Lmb6;->M:I
+    move-result-wide v4
 
-    if-eq v5, v2, :cond_2
+    sub-long v4, v0, v4
 
-    mul-int/2addr v3, v5
+    const-wide/16 v6, 0x1388
+
+    cmp-long p1, v4, v6
+
+    if-gez p1, :cond_3
+
+    iget-wide v4, p0, Ldp0;->b:J
+
+    const-wide/16 v6, -0x1
+
+    cmp-long p1, v4, v6
+
+    if-eqz p1, :cond_2
+
+    sub-long v4, v0, v4
+
+    sget-object p1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v6, 0x5
+
+    invoke-virtual {p1, v6, v7}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v6
+
+    cmp-long p1, v4, v6
+
+    if-gez p1, :cond_2
+
+    goto :goto_0
 
     :cond_2
-    iget v4, v4, Lmb6;->N:I
+    iput-wide v0, p0, Ldp0;->b:J
 
-    if-eq v4, v2, :cond_3
+    sget-object p1, Ldp0;->c:Lhl4;
 
-    mul-int/2addr v0, v4
+    iget-object v0, p1, Lhl4;->b:Ljava/lang/String;
 
-    goto :goto_1
-
-    :catch_0
-    move-exception p1
-
-    goto :goto_3
-
-    :catch_1
-    move-exception p1
-
-    goto :goto_4
-
-    :cond_3
-    :goto_1
-    invoke-static {v3, v0}, Ljava/lang/Math;->max(II)I
+    invoke-static {v0, v3}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x2
+    if-eqz v0, :cond_3
 
-    sub-int/2addr v0, v1
+    const-string v0, "ML Kit has detected that you seem to pass camera frames to the detector as a Bitmap object. This is inefficient. Please use YUV_420_888 format for camera2 API or NV21 format for (legacy) camera API and directly pass down the byte array to ML Kit."
 
-    goto :goto_2
+    invoke-virtual {p1, v0}, Lhl4;->b(Ljava/lang/String;)Ljava/lang/String;
 
-    :cond_4
-    const/16 v0, 0x1000
+    move-result-object p1
 
-    :goto_2
-    invoke-virtual {p3}, Ljava/nio/ByteBuffer;->array()[B
+    const-string v0, "StreamingFormatChecker"
 
-    move-result-object v1
+    invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {p3}, Ljava/nio/Buffer;->remaining()I
-
-    move-result p3
-
-    const/4 v2, 0x0
-
-    invoke-static {v1, p3, v0, v2}, Lkki;->b([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
-
-    move-result-object p3
-
-    iput-object p3, p2, Lcp0;->X:Landroid/graphics/Bitmap;
-    :try_end_0
-    .catch Landroidx/media3/common/ParserException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    iget-wide v0, p1, Lhf4;->Z:J
-
-    iput-wide v0, p2, Lif4;->c:J
-
-    return-object v2
-
-    :goto_3
-    new-instance p2, Landroidx/media3/exoplayer/image/ImageDecoderException;
-
-    invoke-direct {p2, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
-
-    goto :goto_5
-
-    :goto_4
-    new-instance p2, Landroidx/media3/exoplayer/image/ImageDecoderException;
-
-    const-string p3, "Could not decode image data with BitmapFactory."
-
-    invoke-direct {p2, p3, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_5
-    return-object p2
+    :cond_3
+    :goto_0
+    return-void
 .end method

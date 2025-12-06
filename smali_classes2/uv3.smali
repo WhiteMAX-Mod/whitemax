@@ -1,68 +1,85 @@
 .class public final Luv3;
-.super Lvpe;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final bridge synthetic A(Ly18;)V
+# instance fields
+.field public final a:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    check-cast p1, Liv3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0, p1}, Luv3;->G(Liv3;)V
+    iput-object p1, p0, Luv3;->a:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public final G(Liv3;)V
-    .locals 5
 
-    iget-object v0, p0, Lq7d;->a:Landroid/view/View;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    check-cast v0, Lwra;
+    if-ne p0, p1, :cond_0
 
-    iget-wide v1, p1, Liv3;->a:J
+    const/4 p1, 0x1
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v3
-
-    invoke-virtual {v0, v3}, Landroid/view/View;->setId(I)V
-
-    iget-object v3, p1, Liv3;->b:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v3}, Lwra;->setTitle(Ljava/lang/CharSequence;)V
-
-    iget-object v3, p1, Liv3;->X:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v3}, Lwra;->setSubtitle(Ljava/lang/CharSequence;)V
-
-    iget-boolean v3, p1, Liv3;->r0:Z
-
-    invoke-virtual {v0, v3}, Lwra;->setVerified(Z)V
-
-    invoke-virtual {v0}, Lwra;->e()V
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v3}, Lwra;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v4, p1, Liv3;->s0:Ljava/lang/CharSequence;
-
-    iget-object p1, p1, Liv3;->Z:Landroid/net/Uri;
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object v3
+    return p1
 
     :cond_0
-    invoke-virtual {v0, v1, v2, v4, v3}, Lwra;->f(JLjava/lang/CharSequence;Ljava/lang/String;)V
+    instance-of v0, p1, Luv3;
 
+    if-eqz v0, :cond_1
+
+    check-cast p1, Luv3;
+
+    iget-object v0, p0, Luv3;->a:Ljava/lang/String;
+
+    iget-object p1, p1, Luv3;->a:Ljava/lang/String;
+
+    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_1
     const/4 p1, 0x0
 
-    invoke-virtual {v0, p1}, Lwra;->setSelectionEnabled(Z)V
+    return p1
+.end method
 
-    return-void
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Luv3;->a:Ljava/lang/String;
+
+    invoke-static {v0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "MenuButton{text=\'"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Luv3;->a:Ljava/lang/String;
+
+    const-string v2, "\'}"
+
+    invoke-static {v0, v1, v2}, Lho7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -22,25 +22,25 @@
         "",
         "<init>",
         "()V",
-        "Lvq7;",
+        "Lxx7;",
         "reader",
         "Lru/ok/android/externcalls/sdk/api/CallInfo;",
         "parse",
-        "(Lvq7;)Lru/ok/android/externcalls/sdk/api/CallInfo;",
+        "(Lxx7;)Lru/ok/android/externcalls/sdk/api/CallInfo;",
         "",
         "conversationId",
         "startConversationDelegateResultParse",
-        "(Lvq7;Ljava/lang/String;)Lru/ok/android/externcalls/sdk/api/CallInfo;",
-        "Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result;",
+        "(Lxx7;Ljava/lang/String;)Lru/ok/android/externcalls/sdk/api/CallInfo;",
+        "Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result$Success;",
         "result",
         "createFromStartConversationDelegateResult$calls_sdk_release",
-        "(Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result;)Lru/ok/android/externcalls/sdk/api/CallInfo;",
+        "(Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result$Success;)Lru/ok/android/externcalls/sdk/api/CallInfo;",
         "createFromStartConversationDelegateResult",
-        "Lpq7;",
+        "Lox7;",
         "PARSER",
-        "Lpq7;",
+        "Lox7;",
         "getPARSER",
-        "()Lpq7;",
+        "()Lox7;",
         "calls-sdk_release"
     }
     k = 0x1
@@ -63,7 +63,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lki4;)V
+.method public synthetic constructor <init>(Ltk4;)V
     .locals 0
 
     .line 1
@@ -72,17 +72,17 @@
     return-void
 .end method
 
-.method public static final synthetic access$parse(Lru/ok/android/externcalls/sdk/api/CallInfo$Companion;Lvq7;)Lru/ok/android/externcalls/sdk/api/CallInfo;
+.method public static final synthetic access$parse(Lru/ok/android/externcalls/sdk/api/CallInfo$Companion;Lxx7;)Lru/ok/android/externcalls/sdk/api/CallInfo;
     .locals 0
 
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/api/CallInfo$Companion;->parse(Lvq7;)Lru/ok/android/externcalls/sdk/api/CallInfo;
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/api/CallInfo$Companion;->parse(Lxx7;)Lru/ok/android/externcalls/sdk/api/CallInfo;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final parse(Lvq7;)Lru/ok/android/externcalls/sdk/api/CallInfo;
+.method private final parse(Lxx7;)Lru/ok/android/externcalls/sdk/api/CallInfo;
     .locals 15
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -91,13 +91,13 @@
         }
     .end annotation
 
-    invoke-interface/range {p1 .. p1}, Lvq7;->s()V
+    invoke-interface/range {p1 .. p1}, Lxx7;->p()V
 
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
-    sget-object v2, Lka5;->a:Lka5;
+    sget-object v2, Lhd5;->a:Lhd5;
 
     move-object v4, v0
 
@@ -122,13 +122,13 @@
     move-object v12, v11
 
     :goto_0
-    invoke-interface/range {p1 .. p1}, Lvq7;->hasNext()Z
+    invoke-interface/range {p1 .. p1}, Lxx7;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_b
 
-    invoke-interface/range {p1 .. p1}, Lvq7;->name()Ljava/lang/String;
+    invoke-interface/range {p1 .. p1}, Lxx7;->name()Ljava/lang/String;
 
     move-result-object v0
 
@@ -152,7 +152,7 @@
     goto/16 :goto_1
 
     :cond_0
-    invoke-interface/range {p1 .. p1}, Lvq7;->B()Ljava/lang/String;
+    invoke-interface/range {p1 .. p1}, Lxx7;->B()Ljava/lang/String;
 
     move-result-object v4
 
@@ -170,7 +170,7 @@
     goto/16 :goto_1
 
     :cond_1
-    invoke-static/range {p1 .. p1}, Lru/ok/android/externcalls/sdk/api/TurnStunParser;->parseStun(Lvq7;)Ljava/util/List;
+    invoke-static/range {p1 .. p1}, Lru/ok/android/externcalls/sdk/api/TurnStunParser;->parseStun(Lxx7;)Ljava/util/List;
 
     move-result-object v12
 
@@ -188,7 +188,7 @@
     goto/16 :goto_1
 
     :cond_2
-    invoke-interface/range {p1 .. p1}, Lvq7;->B()Ljava/lang/String;
+    invoke-interface/range {p1 .. p1}, Lxx7;->B()Ljava/lang/String;
 
     move-result-object v5
 
@@ -206,7 +206,7 @@
     goto/16 :goto_1
 
     :cond_3
-    invoke-static/range {p1 .. p1}, Lru/ok/android/externcalls/sdk/api/TurnStunParser;->parseTurn(Lvq7;)Ljava/util/List;
+    invoke-static/range {p1 .. p1}, Lru/ok/android/externcalls/sdk/api/TurnStunParser;->parseTurn(Lxx7;)Ljava/util/List;
 
     move-result-object v11
 
@@ -224,7 +224,7 @@
     goto :goto_1
 
     :cond_4
-    invoke-interface/range {p1 .. p1}, Lvq7;->W()Z
+    invoke-interface/range {p1 .. p1}, Lxx7;->W()Z
 
     move-result v10
 
@@ -242,7 +242,7 @@
     goto :goto_1
 
     :cond_5
-    invoke-interface/range {p1 .. p1}, Lvq7;->z()I
+    invoke-interface/range {p1 .. p1}, Lxx7;->x()I
 
     move-result v14
 
@@ -260,7 +260,7 @@
     goto :goto_1
 
     :cond_6
-    invoke-interface/range {p1 .. p1}, Lvq7;->B()Ljava/lang/String;
+    invoke-interface/range {p1 .. p1}, Lxx7;->B()Ljava/lang/String;
 
     move-result-object v7
 
@@ -278,7 +278,7 @@
     goto :goto_1
 
     :cond_7
-    invoke-interface/range {p1 .. p1}, Lvq7;->B()Ljava/lang/String;
+    invoke-interface/range {p1 .. p1}, Lxx7;->B()Ljava/lang/String;
 
     move-result-object v6
 
@@ -296,7 +296,7 @@
     goto :goto_1
 
     :cond_8
-    invoke-interface/range {p1 .. p1}, Lvq7;->W()Z
+    invoke-interface/range {p1 .. p1}, Lxx7;->W()Z
 
     move-result v13
 
@@ -314,7 +314,7 @@
     goto :goto_1
 
     :cond_9
-    invoke-interface/range {p1 .. p1}, Lvq7;->B()Ljava/lang/String;
+    invoke-interface/range {p1 .. p1}, Lxx7;->B()Ljava/lang/String;
 
     move-result-object v8
 
@@ -330,19 +330,19 @@
     if-nez v0, :cond_a
 
     :goto_1
-    invoke-interface/range {p1 .. p1}, Lvq7;->y()V
+    invoke-interface/range {p1 .. p1}, Lxx7;->v()V
 
     goto/16 :goto_0
 
     :cond_a
-    invoke-interface/range {p1 .. p1}, Lvq7;->B()Ljava/lang/String;
+    invoke-interface/range {p1 .. p1}, Lxx7;->B()Ljava/lang/String;
 
     move-result-object v9
 
     goto/16 :goto_0
 
     :cond_b
-    invoke-interface/range {p1 .. p1}, Lvq7;->q()V
+    invoke-interface/range {p1 .. p1}, Lxx7;->n()V
 
     new-instance v3, Lru/ok/android/externcalls/sdk/api/CallInfo;
 
@@ -366,20 +366,22 @@
     .end sparse-switch
 .end method
 
-.method private final startConversationDelegateResultParse(Lvq7;Ljava/lang/String;)Lru/ok/android/externcalls/sdk/api/CallInfo;
-    .locals 17
+.method private final startConversationDelegateResultParse(Lxx7;Ljava/lang/String;)Lru/ok/android/externcalls/sdk/api/CallInfo;
+    .locals 15
 
-    invoke-interface/range {p1 .. p1}, Lvq7;->s()V
+    invoke-interface/range {p1 .. p1}, Lxx7;->p()V
 
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
-    sget-object v2, Lka5;->a:Lka5;
+    sget-object v2, Lhd5;->a:Lhd5;
 
     move-object v4, v0
 
-    move-object v8, v4
+    move-object v5, v4
+
+    move-object v8, v5
 
     move v10, v1
 
@@ -390,13 +392,13 @@
     move-object v12, v11
 
     :goto_0
-    invoke-interface/range {p1 .. p1}, Lvq7;->hasNext()Z
+    invoke-interface/range {p1 .. p1}, Lxx7;->hasNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
-    invoke-interface/range {p1 .. p1}, Lvq7;->name()Ljava/lang/String;
+    invoke-interface/range {p1 .. p1}, Lxx7;->name()Ljava/lang/String;
 
     move-result-object v0
 
@@ -420,7 +422,7 @@
     goto :goto_1
 
     :cond_0
-    invoke-interface/range {p1 .. p1}, Lvq7;->B()Ljava/lang/String;
+    invoke-interface/range {p1 .. p1}, Lxx7;->B()Ljava/lang/String;
 
     move-result-object v4
 
@@ -438,7 +440,7 @@
     goto :goto_1
 
     :cond_1
-    invoke-interface/range {p1 .. p1}, Lvq7;->B()Ljava/lang/String;
+    invoke-interface/range {p1 .. p1}, Lxx7;->B()Ljava/lang/String;
 
     move-result-object v8
 
@@ -456,14 +458,14 @@
     goto :goto_1
 
     :cond_2
-    invoke-interface/range {p1 .. p1}, Lvq7;->W()Z
+    invoke-interface/range {p1 .. p1}, Lxx7;->W()Z
 
     move-result v10
 
     goto :goto_0
 
     :sswitch_3
-    const-string v1, "deviceIdx"
+    const-string v1, "wtEndpoint"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -474,14 +476,14 @@
     goto :goto_1
 
     :cond_3
-    invoke-interface/range {p1 .. p1}, Lvq7;->z()I
+    invoke-interface/range {p1 .. p1}, Lxx7;->B()Ljava/lang/String;
 
-    move-result v14
+    move-result-object v5
 
     goto :goto_0
 
     :sswitch_4
-    const-string v1, "turn"
+    const-string v1, "deviceIdx"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -492,14 +494,14 @@
     goto :goto_1
 
     :cond_4
-    invoke-static/range {p1 .. p1}, Lru/ok/android/externcalls/sdk/api/TurnStunParser;->parseTurn(Lvq7;)Ljava/util/List;
+    invoke-interface/range {p1 .. p1}, Lxx7;->x()I
 
-    move-result-object v11
+    move-result v14
 
     goto :goto_0
 
     :sswitch_5
-    const-string v1, "stun"
+    const-string v1, "turn"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -507,46 +509,61 @@
 
     if-nez v0, :cond_5
 
-    :goto_1
-    invoke-interface/range {p1 .. p1}, Lvq7;->y()V
+    goto :goto_1
+
+    :cond_5
+    invoke-static/range {p1 .. p1}, Lru/ok/android/externcalls/sdk/api/TurnStunParser;->parseTurn(Lxx7;)Ljava/util/List;
+
+    move-result-object v11
 
     goto :goto_0
 
-    :cond_5
-    invoke-static/range {p1 .. p1}, Lru/ok/android/externcalls/sdk/api/TurnStunParser;->parseStun(Lvq7;)Ljava/util/List;
+    :sswitch_6
+    const-string v1, "stun"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_6
+
+    :goto_1
+    invoke-interface/range {p1 .. p1}, Lxx7;->v()V
+
+    goto :goto_0
+
+    :cond_6
+    invoke-static/range {p1 .. p1}, Lru/ok/android/externcalls/sdk/api/TurnStunParser;->parseStun(Lxx7;)Ljava/util/List;
 
     move-result-object v12
 
     goto :goto_0
 
-    :cond_6
-    invoke-interface/range {p1 .. p1}, Lvq7;->q()V
+    :cond_7
+    invoke-interface/range {p1 .. p1}, Lxx7;->n()V
 
     new-instance v3, Lru/ok/android/externcalls/sdk/api/CallInfo;
-
-    const/4 v15, 0x2
-
-    const/16 v16, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v7, 0x0
 
     const/4 v9, 0x0
 
     const/4 v13, 0x0
 
+    const/4 v7, 0x0
+
     move-object/from16 v6, p2
 
-    invoke-direct/range {v3 .. v16}, Lru/ok/android/externcalls/sdk/api/CallInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;ZIILki4;)V
+    invoke-direct/range {v3 .. v14}, Lru/ok/android/externcalls/sdk/api/CallInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/util/List;Ljava/util/List;ZI)V
 
     return-object v3
 
+    nop
+
     :sswitch_data_0
     .sparse-switch
-        0x3608ba -> :sswitch_5
-        0x36807d -> :sswitch_4
-        0x1805887 -> :sswitch_3
+        0x3608ba -> :sswitch_6
+        0x36807d -> :sswitch_5
+        0x1805887 -> :sswitch_4
+        0x28c76392 -> :sswitch_3
         0x296ae281 -> :sswitch_2
         0x41b619a5 -> :sswitch_1
         0x67c71d95 -> :sswitch_0
@@ -555,38 +572,38 @@
 
 
 # virtual methods
-.method public final createFromStartConversationDelegateResult$calls_sdk_release(Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result;)Lru/ok/android/externcalls/sdk/api/CallInfo;
+.method public final createFromStartConversationDelegateResult$calls_sdk_release(Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result$Success;)Lru/ok/android/externcalls/sdk/api/CallInfo;
     .locals 2
 
-    new-instance v0, Lisb;
+    new-instance v0, Ln2c;
 
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result;->getInternalCallerParams()Ljava/lang/String;
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result$Success;->getInternalCallerParams()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lisb;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ln2c;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result;->getConversationId()Ljava/lang/String;
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result$Success;->getConversationId()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {p0, v0, p1}, Lru/ok/android/externcalls/sdk/api/CallInfo$Companion;->startConversationDelegateResultParse(Lvq7;Ljava/lang/String;)Lru/ok/android/externcalls/sdk/api/CallInfo;
+    invoke-direct {p0, v0, p1}, Lru/ok/android/externcalls/sdk/api/CallInfo$Companion;->startConversationDelegateResultParse(Lxx7;Ljava/lang/String;)Lru/ok/android/externcalls/sdk/api/CallInfo;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final getPARSER()Lpq7;
+.method public final getPARSER()Lox7;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lpq7;"
+            "Lox7;"
         }
     .end annotation
 
-    invoke-static {}, Lru/ok/android/externcalls/sdk/api/CallInfo;->access$getPARSER$cp()Lpq7;
+    invoke-static {}, Lru/ok/android/externcalls/sdk/api/CallInfo;->access$getPARSER$cp()Lox7;
 
     move-result-object v0
 

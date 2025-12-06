@@ -1,77 +1,123 @@
-.class public abstract synthetic Ljz;
+.class public final Ljz;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static final synthetic h:[Lyy7;
+
+
+# instance fields
+.field public final a:Lkz4;
+
+.field public final b:Lkz4;
+
+.field public final c:Lkz4;
+
+.field public final d:Lkz4;
+
+.field public final e:Lkz4;
+
+.field public final f:Lkz4;
+
+.field public final g:Lkz4;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 9
 
-    invoke-static {}, La20;->values()[La20;
+    new-instance v0, Ltoc;
 
-    move-result-object v0
+    const-class v1, Ljz;
 
-    array-length v0, v0
+    const-string v2, "api"
 
-    new-array v0, v0, [I
+    const-string v3, "getApi()Lru/ok/tamtam/api/Api;"
 
-    const/4 v1, 0x1
+    const/4 v4, 0x0
 
-    const/4 v2, 0x2
+    invoke-direct {v0, v1, v2, v3, v4}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    sget-object v2, Lvid;->a:Lwid;
 
-    :catch_0
-    const/4 v1, 0x3
+    const-string v3, "clientPrefs"
 
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    const-string v5, "getClientPrefs()Lru/ok/tamtam/prefs/ClientPrefs;"
 
-    :catch_1
-    const/4 v2, 0x6
+    invoke-static {v2, v1, v3, v5, v4}, Lho7;->d(Lwid;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Ltoc;
 
-    :try_start_2
-    aput v1, v0, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    move-result-object v2
 
-    :catch_2
-    const/16 v1, 0x9
+    new-instance v3, Ltoc;
 
-    const/4 v3, 0x4
+    const-string v5, "fileAttachDownloader"
 
-    :try_start_3
-    aput v3, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    const-string v6, "getFileAttachDownloader()Lru/ok/tamtam/FileAttachDownloader;"
 
-    :catch_3
+    invoke-direct {v3, v1, v5, v6, v4}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    new-instance v5, Ltoc;
+
+    const-string v6, "uiBus"
+
+    const-string v7, "getUiBus()Lcom/squareup/otto/Bus;"
+
+    invoke-direct {v5, v1, v6, v7, v4}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    new-instance v6, Ltoc;
+
+    const-string v7, "fileSystem"
+
+    const-string v8, "getFileSystem()Lru/ok/tamtam/FileSystem;"
+
+    invoke-direct {v6, v1, v7, v8, v4}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
     const/4 v1, 0x5
 
-    :try_start_4
-    aput v1, v0, v3
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    new-array v1, v1, [Lyy7;
 
-    :catch_4
-    const/4 v1, 0x0
+    aput-object v0, v1, v4
 
-    :try_start_5
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+    const/4 v0, 0x1
 
-    :catch_5
-    sput-object v0, Ljz;->$EnumSwitchMapping$0:[I
+    aput-object v2, v1, v0
+
+    const/4 v0, 0x2
+
+    aput-object v3, v1, v0
+
+    const/4 v0, 0x3
+
+    aput-object v5, v1, v0
+
+    const/4 v0, 0x4
+
+    aput-object v6, v1, v0
+
+    sput-object v1, Ljz;->h:[Lyy7;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lkz4;Lkz4;Lkz4;Lkz4;Lkz4;Lkz4;Lkz4;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p6, p0, Ljz;->a:Lkz4;
+
+    iput-object p7, p0, Ljz;->b:Lkz4;
+
+    iput-object p1, p0, Ljz;->c:Lkz4;
+
+    iput-object p2, p0, Ljz;->d:Lkz4;
+
+    iput-object p3, p0, Ljz;->e:Lkz4;
+
+    iput-object p4, p0, Ljz;->f:Lkz4;
+
+    iput-object p5, p0, Ljz;->g:Lkz4;
 
     return-void
 .end method

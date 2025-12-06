@@ -3,98 +3,200 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/content/ServiceConnection;
+.implements Lgp5;
 
 
 # instance fields
-.field public a:Z
+.field public final synthetic a:I
 
-.field public final b:Ljava/util/concurrent/LinkedBlockingQueue;
+.field public final b:La3f;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(I)V
+    .locals 3
+
+    iput p1, p0, Lyq0;->a:I
+
+    packed-switch p1, :pswitch_data_0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    new-instance p1, La3f;
 
-    iput-boolean v0, p0, Lyq0;->a:Z
+    const/4 v0, 0x2
 
-    new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
+    const-string v1, "image/bmp"
 
-    invoke-direct {v0}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
+    const/16 v2, 0x424d
 
-    iput-object v0, p0, Lyq0;->b:Ljava/util/concurrent/LinkedBlockingQueue;
+    invoke-direct {p1, v2, v0, v1}, La3f;-><init>(IILjava/lang/String;)V
+
+    iput-object p1, p0, Lyq0;->b:La3f;
+
+    return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance p1, La3f;
+
+    const/4 v0, 0x2
+
+    const-string v1, "image/png"
+
+    const v2, 0x8950
+
+    invoke-direct {p1, v2, v0, v1}, La3f;-><init>(IILjava/lang/String;)V
+
+    iput-object p1, p0, Lyq0;->b:La3f;
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method private final a()V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final b()V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Landroid/os/IBinder;
-    .locals 4
+.method public final d(JJ)V
+    .locals 1
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    iget v0, p0, Lyq0;->a:I
 
-    const-string v1, "BlockingServiceConnection.getServiceWithTimeout() called on main thread"
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {v1}, Lzui;->h(Ljava/lang/String;)V
+    iget-object v0, p0, Lyq0;->b:La3f;
 
-    iget-boolean v1, p0, Lyq0;->a:Z
+    invoke-virtual {v0, p1, p2, p3, p4}, La3f;->d(JJ)V
 
-    if-nez v1, :cond_1
+    return-void
 
-    const/4 v1, 0x1
+    :pswitch_0
+    iget-object v0, p0, Lyq0;->b:La3f;
 
-    iput-boolean v1, p0, Lyq0;->a:Z
+    invoke-virtual {v0, p1, p2, p3, p4}, La3f;->d(JJ)V
 
-    iget-object v1, p0, Lyq0;->b:Ljava/util/concurrent/LinkedBlockingQueue;
+    return-void
 
-    const-wide/16 v2, 0x2710
+    nop
 
-    invoke-virtual {v1, v2, v3, v0}, Ljava/util/concurrent/LinkedBlockingQueue;->poll(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/os/IBinder;
-
-    if-eqz v0, :cond_0
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/util/concurrent/TimeoutException;
-
-    const-string v1, "Timed out waiting for the service connection"
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/TimeoutException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "Cannot call get on this connection more than once"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
-    .locals 0
+.method public final i(Lip5;)Z
+    .locals 1
 
-    iget-object p1, p0, Lyq0;->b:Ljava/util/concurrent/LinkedBlockingQueue;
+    iget v0, p0, Lyq0;->a:I
 
-    invoke-interface {p1, p2}, Ljava/util/concurrent/BlockingQueue;->add(Ljava/lang/Object;)Z
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lyq0;->b:La3f;
+
+    invoke-virtual {v0, p1}, La3f;->i(Lip5;)Z
+
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    iget-object v0, p0, Lyq0;->b:La3f;
+
+    invoke-virtual {v0, p1}, La3f;->i(Lip5;)Z
+
+    move-result p1
+
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final release()V
+    .locals 1
+
+    iget v0, p0, Lyq0;->a:I
 
     return-void
 .end method
 
-.method public final onServiceDisconnected(Landroid/content/ComponentName;)V
-    .locals 0
+.method public final w(Lkp5;)V
+    .locals 1
+
+    iget v0, p0, Lyq0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lyq0;->b:La3f;
+
+    invoke-virtual {v0, p1}, La3f;->w(Lkp5;)V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lyq0;->b:La3f;
+
+    invoke-virtual {v0, p1}, La3f;->w(Lkp5;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final y(Lip5;Ln7;)I
+    .locals 1
+
+    iget v0, p0, Lyq0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lyq0;->b:La3f;
+
+    invoke-virtual {v0, p1, p2}, La3f;->y(Lip5;Ln7;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    iget-object v0, p0, Lyq0;->b:La3f;
+
+    invoke-virtual {v0, p1, p2}, La3f;->y(Lip5;Ln7;)I
+
+    move-result p1
+
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

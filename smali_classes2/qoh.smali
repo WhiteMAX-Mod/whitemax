@@ -1,37 +1,98 @@
-.class public final Lqoh;
-.super Ljava/lang/Object;
+.class public final enum Lqoh;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
+# interfaces
+.implements Lpsh;
 
-# instance fields
-.field public final a:Lru/ok/messages/a;
 
-.field public final b:Lwoh;
+# static fields
+.field public static final enum a:Lqoh;
 
-.field public final c:Liu7;
+.field public static final synthetic b:[Lqoh;
+
+.field public static final synthetic c:Lzg5;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/messages/a;Lwoh;Liu7;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lqoh;
 
-    iput-object p1, p0, Lqoh;->a:Lru/ok/messages/a;
+    const-string v1, "CHANGE_SCREEN_BRIGHTNESS"
 
-    iput-object p2, p0, Lqoh;->b:Lwoh;
+    const/4 v2, 0x0
 
-    iput-object p3, p0, Lqoh;->c:Liu7;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    new-instance p1, Lduf;
+    sput-object v0, Lqoh;->a:Lqoh;
 
-    const/16 p2, 0x11
+    filled-new-array {v0}, [Lqoh;
 
-    invoke-direct {p1, p2, p0}, Lduf;-><init>(ILjava/lang/Object;)V
+    move-result-object v0
 
-    const/4 p2, 0x3
+    sput-object v0, Lqoh;->b:[Lqoh;
 
-    invoke-static {p2, p1}, Lrci;->b(ILji6;)Liu7;
+    new-instance v1, Lzg5;
+
+    invoke-direct {v1, v0}, Lzg5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lqoh;->c:Lzg5;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lqoh;
+    .locals 1
+
+    const-class v0, Lqoh;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lqoh;
+
+    return-object p0
+.end method
+
+.method public static values()[Lqoh;
+    .locals 1
+
+    sget-object v0, Lqoh;->b:[Lqoh;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lqoh;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final a()Ljava/lang/Integer;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final c()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "WebAppChangeScreenBrightness"
+
+    return-object v0
+.end method
+
+.method public final d()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "change_screen_brightness"
+
+    return-object v0
 .end method

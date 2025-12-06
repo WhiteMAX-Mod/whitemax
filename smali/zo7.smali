@@ -1,126 +1,142 @@
 .class public final Lzo7;
-.super Lsgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lzo7;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic X:Lbp7;
+.field public final a:Landroid/content/IntentSender;
+
+.field public final b:Landroid/content/Intent;
+
+.field public final c:I
+
+.field public final d:I
 
 
 # direct methods
-.method public constructor <init>(Lbp7;Lkotlin/coroutines/Continuation;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lwf4;
+
+    const/16 v1, 0x1a
+
+    invoke-direct {v0, v1}, Lwf4;-><init>(I)V
+
+    sput-object v0, Lzo7;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/IntentSender;Landroid/content/Intent;II)V
     .locals 0
 
-    iput-object p1, p0, Lzo7;->X:Lbp7;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    .line 2
+    iput-object p1, p0, Lzo7;->a:Landroid/content/IntentSender;
 
-    invoke-direct {p0, p1, p2}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    .line 3
+    iput-object p2, p0, Lzo7;->b:Landroid/content/Intent;
+
+    .line 4
+    iput p3, p0, Lzo7;->c:I
+
+    .line 5
+    iput p4, p0, Lzo7;->d:I
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 3
+
+    .line 6
+    const-class v0, Landroid/content/IntentSender;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/content/IntentSender;
+
+    .line 7
+    const-class v1, Landroid/content/Intent;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/content/Intent;
+
+    .line 8
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v2
+
+    .line 9
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result p1
+
+    .line 10
+    invoke-direct {p0, v0, v1, v2, p1}, Lzo7;-><init>(Landroid/content/IntentSender;Landroid/content/Intent;II)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lq54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lzo7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lzo7;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lzo7;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final describeContents()I
     .locals 1
 
-    new-instance p1, Lzo7;
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Lzo7;->X:Lbp7;
-
-    invoke-direct {p1, v0, p2}, Lzo7;-><init>(Lbp7;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
+    return v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    iget-object v0, p0, Lzo7;->a:Landroid/content/IntentSender;
 
-    iget-object p1, p0, Lzo7;->X:Lbp7;
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    iget-object v0, p1, Lbp7;->c:Liu7;
+    iget-object v0, p0, Lzo7;->b:Landroid/content/Intent;
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    move-result-object v0
+    iget p2, p0, Lzo7;->c:I
 
-    check-cast v0, Lll;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget-object v1, p1, Lbp7;->b:Ljava/lang/String;
+    iget p2, p0, Lzo7;->d:I
 
-    check-cast v0, Lmna;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    if-eqz v1, :cond_1
-
-    invoke-static {v1}, Lzaf;->L(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v2, Lkq1;
-
-    invoke-virtual {v0}, Lmna;->x()Lpxb;
-
-    move-result-object v3
-
-    check-cast v3, Lrxb;
-
-    iget-object v3, v3, Lrxb;->a:Ld78;
-
-    invoke-virtual {v3}, Lntd;->k()J
-
-    move-result-wide v3
-
-    const/4 v5, 0x1
-
-    invoke-direct {v2, v3, v4, v1, v5}, Lkq1;-><init>(JLjava/lang/String;I)V
-
-    invoke-static {v0, v2}, Lmna;->u(Lmna;Lym;)J
-
-    move-result-wide v0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const-wide/16 v0, 0x0
-
-    :goto_1
-    iput-wide v0, p1, Lbp7;->o:J
-
-    sget-object p1, Lccg;->a:Lccg;
-
-    return-object p1
+    return-void
 .end method

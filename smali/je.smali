@@ -1,294 +1,292 @@
-.class public Lje;
-.super Ljava/lang/Object;
+.class public final Lje;
+.super Lu08;
 .source "SourceFile"
 
 # interfaces
-.implements Ljue;
-
-
-# static fields
-.field public static final f:Lk9a;
+.implements Lcm6;
 
 
 # instance fields
-.field public final a:Ljava/lang/reflect/Method;
+.field public final synthetic X:I
 
-.field public final b:Ljava/lang/reflect/Method;
+.field public final synthetic Y:I
 
-.field public final c:Ljava/lang/reflect/Method;
+.field public final synthetic Z:Landroid/os/Bundle;
 
-.field public final d:Ljava/lang/reflect/Method;
+.field public final synthetic a:Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
 
-.field public final e:Ljava/lang/Class;
+.field public final synthetic b:Landroid/content/IntentSender;
+
+.field public final synthetic c:I
+
+.field public final synthetic d:Landroid/content/Intent;
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Landroid/content/IntentSender;ILandroid/content/Intent;IIILandroid/os/Bundle;)V
+    .locals 0
 
-    new-instance v0, Lk9a;
+    iput-object p1, p0, Lje;->a:Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lje;->b:Landroid/content/IntentSender;
 
-    sput-object v0, Lje;->f:Lk9a;
+    iput p3, p0, Lje;->c:I
 
-    return-void
-.end method
+    iput-object p4, p0, Lje;->d:Landroid/content/Intent;
 
-.method public constructor <init>(Ljava/lang/Class;)V
-    .locals 2
+    iput p5, p0, Lje;->o:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p6, p0, Lje;->X:I
 
-    iput-object p1, p0, Lje;->e:Ljava/lang/Class;
+    iput p7, p0, Lje;->Y:I
 
-    sget-object v0, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+    iput-object p8, p0, Lje;->Z:Landroid/os/Bundle;
 
-    filled-new-array {v0}, [Ljava/lang/Class;
+    const/4 p1, 0x0
 
-    move-result-object v0
-
-    const-string v1, "setUseSessionTickets"
-
-    invoke-virtual {p1, v1, v0}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lje;->a:Ljava/lang/reflect/Method;
-
-    const-class v0, Ljava/lang/String;
-
-    filled-new-array {v0}, [Ljava/lang/Class;
-
-    move-result-object v0
-
-    const-string v1, "setHostname"
-
-    invoke-virtual {p1, v1, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lje;->b:Ljava/lang/reflect/Method;
-
-    const-string v0, "getAlpnSelectedProtocol"
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, v1}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lje;->c:Ljava/lang/reflect/Method;
-
-    const-class v0, [B
-
-    filled-new-array {v0}, [Ljava/lang/Class;
-
-    move-result-object v0
-
-    const-string v1, "setAlpnProtocols"
-
-    invoke-virtual {p1, v1, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lje;->d:Ljava/lang/reflect/Method;
+    invoke-direct {p0, p1}, Lu08;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljavax/net/ssl/SSLSocket;)Z
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 13
 
-    iget-object v0, p0, Lje;->e:Ljava/lang/Class;
+    iget-object v0, p0, Lje;->a:Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
 
-    invoke-virtual {v0, p1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
+    iget-object v1, v0, Landroidx/fragment/app/a;->E0:Lei6;
 
-    move-result p1
+    const-string v2, "Fragment "
 
-    return p1
-.end method
+    if-eqz v1, :cond_8
 
-.method public final b()Z
-    .locals 1
+    const/4 v1, 0x2
 
-    sget-boolean v0, Lee;->e:Z
+    invoke-static {v1}, Landroidx/fragment/app/c;->K(I)Z
 
-    sget-boolean v0, Lee;->e:Z
+    move-result v3
 
-    return v0
-.end method
+    iget-object v5, p0, Lje;->b:Landroid/content/IntentSender;
 
-.method public final c(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
-    .locals 3
+    iget v6, p0, Lje;->c:I
 
-    iget-object v0, p0, Lje;->e:Ljava/lang/Class;
+    iget-object v7, p0, Lje;->d:Landroid/content/Intent;
 
-    invoke-virtual {v0, p1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
+    iget-object v11, p0, Lje;->Z:Landroid/os/Bundle;
 
-    move-result v0
+    const-string v4, "FragmentManager"
 
-    const/4 v1, 0x0
+    if-eqz v3, :cond_0
 
-    if-nez v0, :cond_0
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    goto :goto_3
+    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v8, " received the following in startIntentSenderForResult() requestCode: "
+
+    invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v8, " IntentSender: "
+
+    invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v8, " fillInIntent: "
+
+    invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v8, " options: "
+
+    invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v4, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    :try_start_0
-    iget-object v0, p0, Lje;->c:Ljava/lang/reflect/Method;
+    invoke-virtual {v0}, Landroidx/fragment/app/a;->x()Landroidx/fragment/app/c;
 
-    invoke-virtual {v0, p1, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v3
 
-    move-result-object p1
+    iget-object v8, v3, Landroidx/fragment/app/c;->D:Lu5i;
 
-    check-cast p1, [B
+    move-object v9, v8
 
-    if-eqz p1, :cond_1
+    iget v8, p0, Lje;->o:I
 
-    sget-object v0, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
+    move-object v10, v9
 
-    new-instance v2, Ljava/lang/String;
+    iget v9, p0, Lje;->X:I
 
-    invoke-direct {v2, p1, v0}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
-    :try_end_0
-    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
+    if-eqz v10, :cond_5
 
-    return-object v2
+    if-eqz v11, :cond_3
 
-    :catch_0
-    move-exception p1
+    if-nez v7, :cond_1
 
-    goto :goto_0
+    new-instance v7, Landroid/content/Intent;
 
-    :catch_1
-    move-exception p1
+    invoke-direct {v7}, Landroid/content/Intent;-><init>()V
 
-    goto :goto_1
+    const-string v10, "androidx.fragment.extra.ACTIVITY_OPTIONS_BUNDLE"
 
-    :catch_2
-    move-exception p1
+    const/4 v12, 0x1
 
-    goto :goto_2
+    invoke-virtual {v7, v10, v12}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    :goto_0
-    new-instance v0, Ljava/lang/AssertionError;
+    :cond_1
+    invoke-static {v1}, Landroidx/fragment/app/c;->K(I)Z
 
-    invoke-direct {v0, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+    move-result v10
 
-    throw v0
+    if-eqz v10, :cond_2
 
-    :goto_1
-    new-instance v0, Ljava/lang/AssertionError;
+    new-instance v10, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+    const-string v12, "ActivityOptions "
 
-    throw v0
+    invoke-direct {v10, v12}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :goto_2
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v12, " were added to fillInIntent "
+
+    invoke-virtual {v10, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v12, " for fragment "
+
+    invoke-virtual {v10, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-static {v4, v10}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_2
+    const-string v10, "androidx.activity.result.contract.extra.ACTIVITY_OPTIONS_BUNDLE"
+
+    invoke-virtual {v7, v10, v11}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
+
+    :cond_3
+    new-instance v10, Lzo7;
+
+    invoke-direct {v10, v5, v7, v8, v9}, Lzo7;-><init>(Landroid/content/IntentSender;Landroid/content/Intent;II)V
+
+    new-instance v5, Loi6;
+
+    iget-object v7, v0, Landroidx/fragment/app/a;->o:Ljava/lang/String;
+
+    invoke-direct {v5, v7, v6}, Loi6;-><init>(Ljava/lang/String;I)V
+
+    iget-object v6, v3, Landroidx/fragment/app/c;->F:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v6, v5}, Ljava/util/ArrayDeque;->addLast(Ljava/lang/Object;)V
+
+    invoke-static {v1}, Landroidx/fragment/app/c;->K(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, "is launching an IntentSender for result "
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v2, "ssl == null"
+    invoke-static {v4, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {v0, v2}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :cond_4
+    iget-object v0, v3, Landroidx/fragment/app/c;->D:Lu5i;
 
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    :cond_1
-    :goto_3
-    return-object v1
-
-    :cond_2
-    throw p1
-.end method
-
-.method public final d(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
-    .locals 2
-
-    iget-object v0, p0, Lje;->e:Ljava/lang/Class;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    :try_start_0
-    iget-object v0, p0, Lje;->a:Ljava/lang/reflect/Method;
-
-    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    filled-new-array {v1}, [Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-virtual {v0, p1, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    if-eqz p2, :cond_0
-
-    iget-object v0, p0, Lje;->b:Ljava/lang/reflect/Method;
-
-    filled-new-array {p2}, [Ljava/lang/Object;
-
-    move-result-object p2
-
-    invoke-virtual {v0, p1, p2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v10}, Lu5i;->n(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    :catch_0
-    move-exception p1
+    :cond_5
+    iget-object v0, v3, Landroidx/fragment/app/c;->w:Lei6;
 
-    goto :goto_1
+    const/4 v1, -0x1
 
-    :catch_1
-    move-exception p1
+    const-string v2, "Starting intent sender with a requestCode requires a FragmentActivity host"
 
-    goto :goto_2
+    if-ne v6, v1, :cond_7
 
-    :cond_0
+    iget-object v4, v0, Lei6;->c:Landroidx/fragment/app/b;
+
+    if-eqz v4, :cond_6
+
+    iget v10, p0, Lje;->Y:I
+
+    invoke-virtual/range {v4 .. v11}, Landroid/app/Activity;->startIntentSenderForResult(Landroid/content/IntentSender;ILandroid/content/Intent;IIILandroid/os/Bundle;)V
+
     :goto_0
-    iget-object p2, p0, Lje;->d:Ljava/lang/reflect/Method;
+    sget-object v0, Lqqg;->a:Lqqg;
 
-    sget-object v0, Lksb;->a:Lksb;
+    return-object v0
 
-    invoke-static {p3}, Lnri;->e(Ljava/util/List;)[B
+    :cond_6
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    move-result-object p3
+    invoke-direct {v0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    filled-new-array {p3}, [Ljava/lang/Object;
+    throw v0
 
-    move-result-object p3
+    :cond_7
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p2, p1, p3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    return-void
+    invoke-direct {v0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    :goto_1
-    new-instance p2, Ljava/lang/AssertionError;
+    throw v0
 
-    invoke-direct {p2, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+    :cond_8
+    new-instance v1, Ljava/lang/IllegalStateException;
 
-    throw p2
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    :goto_2
-    new-instance p2, Ljava/lang/AssertionError;
+    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {p2, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    throw p2
+    const-string v0, " not attached to Activity"
 
-    :cond_1
-    return-void
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
 .end method

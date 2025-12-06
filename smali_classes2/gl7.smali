@@ -1,51 +1,160 @@
 .class public final Lgl7;
-.super Ly14;
+.super Lfl9;
 .source "SourceFile"
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public a:I
 
-.field public final synthetic Y:Lpl7;
-
-.field public Z:I
-
-.field public o:Ljava/lang/Object;
+.field public b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lpl7;Ly14;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Lgl7;->Y:Lpl7;
+    invoke-direct {p0}, Lfl9;-><init>()V
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/4 v0, 0x0
+
+    iput v0, p0, Lgl7;->a:I
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lgl7;->b:Ljava/lang/String;
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lfl9;->cachedSize:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final computeSerializedSize()I
+    .locals 3
 
-    iput-object p1, p0, Lgl7;->X:Ljava/lang/Object;
+    iget v0, p0, Lgl7;->a:I
 
-    iget p1, p0, Lgl7;->Z:I
+    if-eqz v0, :cond_0
 
-    const/high16 v0, -0x80000000
+    const/4 v1, 0x1
 
-    or-int/2addr p1, v0
+    invoke-static {v1, v0}, Lhd3;->n(II)I
 
-    iput p1, p0, Lgl7;->Z:I
+    move-result v0
 
-    iget-object p1, p0, Lgl7;->Y:Lpl7;
+    goto :goto_0
 
+    :cond_0
     const/4 v0, 0x0
 
-    invoke-static {p1, v0, v0, p0}, Lpl7;->r(Lpl7;Ljava/lang/String;Ljava/lang/String;Ly14;)Ljava/lang/Object;
+    :goto_0
+    iget-object v1, p0, Lgl7;->b:Ljava/lang/String;
 
-    move-result-object p1
+    const-string v2, ""
 
-    return-object p1
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    const/4 v1, 0x2
+
+    iget-object v2, p0, Lgl7;->b:Ljava/lang/String;
+
+    invoke-static {v1, v2}, Lhd3;->l(ILjava/lang/String;)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final mergeFrom(Lgd3;)Lfl9;
+    .locals 2
+
+    :cond_0
+    :goto_0
+    invoke-virtual {p1}, Lgd3;->s()I
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    const/16 v1, 0x8
+
+    if-eq v0, v1, :cond_2
+
+    const/16 v1, 0x12
+
+    if-eq v0, v1, :cond_1
+
+    invoke-virtual {p1, v0}, Lgd3;->u(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p1}, Lgd3;->r()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lgl7;->b:Ljava/lang/String;
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p1}, Lgd3;->p()I
+
+    move-result v0
+
+    iput v0, p0, Lgl7;->a:I
+
+    goto :goto_0
+
+    :cond_3
+    :goto_1
+    return-object p0
+.end method
+
+.method public final writeTo(Lhd3;)V
+    .locals 2
+
+    iget v0, p0, Lgl7;->a:I
+
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p1, v1, v0}, Lhd3;->G(II)V
+
+    :cond_0
+    iget-object v0, p0, Lgl7;->b:Ljava/lang/String;
+
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x2
+
+    iget-object v1, p0, Lgl7;->b:Ljava/lang/String;
+
+    invoke-virtual {p1, v0, v1}, Lhd3;->E(ILjava/lang/String;)V
+
+    :cond_1
+    return-void
 .end method

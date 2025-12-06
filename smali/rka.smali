@@ -1,76 +1,53 @@
 .class public final Lrka;
-.super Lg3;
+.super Lq44;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:Z
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:J
+.field public final synthetic Y:Ltka;
 
-.field public final c:Ljava/util/concurrent/TimeUnit;
+.field public Z:I
 
-.field public final o:Lxod;
+.field public d:Ltka;
+
+.field public o:Lku3;
 
 
 # direct methods
-.method public constructor <init>(Luka;JLjava/util/concurrent/TimeUnit;Lxod;Z)V
+.method public constructor <init>(Ltka;Lq44;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lg3;-><init>(Luka;)V
+    iput-object p1, p0, Lrka;->Y:Ltka;
 
-    iput-wide p2, p0, Lrka;->b:J
-
-    iput-object p4, p0, Lrka;->c:Ljava/util/concurrent/TimeUnit;
-
-    iput-object p5, p0, Lrka;->o:Lxod;
-
-    iput-boolean p6, p0, Lrka;->X:Z
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Lela;)V
-    .locals 7
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v1, Li3e;
+    iput-object p1, p0, Lrka;->X:Ljava/lang/Object;
 
-    invoke-direct {v1, p1}, Li3e;-><init>(Lela;)V
+    iget p1, p0, Lrka;->Z:I
 
-    iget-boolean p1, p0, Lrka;->X:Z
+    const/high16 v0, -0x80000000
 
-    iget-object v6, p0, Lg3;->a:Luka;
+    or-int/2addr p1, v0
 
-    if-eqz p1, :cond_0
+    iput p1, p0, Lrka;->Z:I
 
-    new-instance v0, Loka;
+    iget-object p1, p0, Lrka;->Y:Ltka;
 
-    iget-object v4, p0, Lrka;->c:Ljava/util/concurrent/TimeUnit;
+    const/4 v0, 0x0
 
-    iget-object v5, p0, Lrka;->o:Lxod;
+    invoke-virtual {p1, v0, p0}, Ltka;->g(Lku3;Lq44;)Ljava/lang/Object;
 
-    iget-wide v2, p0, Lrka;->b:J
+    move-result-object p1
 
-    invoke-direct/range {v0 .. v5}, Loka;-><init>(Li3e;JLjava/util/concurrent/TimeUnit;Lxod;)V
-
-    invoke-interface {v6, v0}, Luka;->a(Lela;)V
-
-    return-void
-
-    :cond_0
-    new-instance v0, Lpka;
-
-    iget-object v4, p0, Lrka;->c:Ljava/util/concurrent/TimeUnit;
-
-    iget-object v5, p0, Lrka;->o:Lxod;
-
-    iget-wide v2, p0, Lrka;->b:J
-
-    invoke-direct/range {v0 .. v5}, Lqka;-><init>(Li3e;JLjava/util/concurrent/TimeUnit;Lxod;)V
-
-    invoke-interface {v6, v0}, Luka;->a(Lela;)V
-
-    return-void
+    return-object p1
 .end method

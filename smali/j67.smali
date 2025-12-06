@@ -3,115 +3,333 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ll67;
-.implements Landroid/os/IInterface;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lj67;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final c:Landroid/os/IBinder;
+.field public final X:Ljava/lang/String;
+
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
+
+.field public final o:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/IBinder;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
+    new-instance v0, Lwf4;
+
+    const/16 v1, 0x17
+
+    invoke-direct {v0, v1}, Lwf4;-><init>(I)V
+
+    sput-object v0, Lj67;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 1
+
+    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lj67;->c:Landroid/os/IBinder;
+    .line 9
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Lj67;->a:I
+
+    .line 10
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Lj67;->b:I
+
+    .line 11
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lj67;->c:Ljava/lang/String;
+
+    .line 12
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lj67;->d:Ljava/lang/String;
+
+    .line 13
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lj67;->o:Ljava/lang/String;
+
+    .line 14
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lj67;->X:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput p2, p0, Lj67;->a:I
+
+    .line 3
+    iput p3, p0, Lj67;->b:I
+
+    .line 4
+    iput-object p1, p0, Lj67;->c:Ljava/lang/String;
+
+    .line 5
+    iput-object p4, p0, Lj67;->d:Ljava/lang/String;
+
+    .line 6
+    iput-object p5, p0, Lj67;->o:Ljava/lang/String;
+
+    .line 7
+    iput-object p6, p0, Lj67;->X:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final asBinder()Landroid/os/IBinder;
+.method public final describeContents()I
     .locals 1
 
-    iget-object v0, p0, Lj67;->c:Landroid/os/IBinder;
+    const/4 v0, 0x0
 
-    return-object v0
+    return v0
 .end method
 
-.method public final k(Landroid/os/Bundle;)Landroid/os/Bundle;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+    const/4 v0, 0x1
 
-    move-result-object v0
+    if-ne p0, p1, :cond_0
 
-    const-string v1, "com.google.android.finsky.externalreferrer.IGetInstallReferrerService"
+    return v0
 
-    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+    :cond_0
+    const/4 v1, 0x0
 
-    sget v1, Lqsh;->a:I
+    if-eqz p1, :cond_2
 
-    const/4 v1, 0x1
+    const-class v2, Lj67;
 
-    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v2, 0x0
+    move-result-object v3
 
-    invoke-virtual {p1, v0, v2}, Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V
+    if-eq v2, v3, :cond_1
 
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+    goto :goto_0
 
-    move-result-object p1
+    :cond_1
+    check-cast p1, Lj67;
 
-    :try_start_0
-    iget-object v3, p0, Lj67;->c:Landroid/os/IBinder;
+    iget v2, p0, Lj67;->a:I
 
-    invoke-interface {v3, v1, v0, p1, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    iget v3, p1, Lj67;->a:I
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readException()V
-    :try_end_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-ne v2, v3, :cond_2
 
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+    iget v2, p0, Lj67;->b:I
 
-    sget-object v0, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
+    iget v3, p1, Lj67;->b:I
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    if-ne v2, v3, :cond_2
 
-    move-result v1
+    iget-object v2, p0, Lj67;->c:Ljava/lang/String;
 
-    if-nez v1, :cond_0
+    iget-object v3, p1, Lj67;->c:Ljava/lang/String;
 
-    const/4 v0, 0x0
+    invoke-static {v2, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lj67;->d:Ljava/lang/String;
+
+    iget-object v3, p1, Lj67;->d:Ljava/lang/String;
+
+    invoke-static {v2, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lj67;->o:Ljava/lang/String;
+
+    iget-object v3, p1, Lj67;->o:Ljava/lang/String;
+
+    invoke-static {v2, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lj67;->X:Ljava/lang/String;
+
+    iget-object p1, p1, Lj67;->X:Ljava/lang/String;
+
+    invoke-static {v2, p1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget v0, p0, Lj67;->a:I
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lj67;->b:I
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Lj67;->c:Ljava/lang/String;
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
 
     goto :goto_0
 
     :cond_0
-    invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/os/Parcelable;
+    move v2, v1
 
     :goto_0
-    check-cast v0, Landroid/os/Bundle;
+    add-int/2addr v0, v2
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+    mul-int/lit8 v0, v0, 0x1f
 
-    return-object v0
+    iget-object v2, p0, Lj67;->d:Ljava/lang/String;
 
-    :catchall_0
-    move-exception p1
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
 
     goto :goto_1
 
-    :catch_0
-    move-exception v1
-
-    :try_start_1
-    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
-
-    throw v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    :cond_1
+    move v2, v1
 
     :goto_1
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+    add-int/2addr v0, v2
 
-    throw p1
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v2, p0, Lj67;->o:Ljava/lang/String;
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    goto :goto_2
+
+    :cond_2
+    move v2, v1
+
+    :goto_2
+    add-int/2addr v0, v2
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v2, p0, Lj67;->X:Ljava/lang/String;
+
+    if-eqz v2, :cond_3
+
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    :cond_3
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    iget p2, p0, Lj67;->a:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget p2, p0, Lj67;->b:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object p2, p0, Lj67;->c:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget-object p2, p0, Lj67;->d:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget-object p2, p0, Lj67;->o:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget-object p2, p0, Lj67;->X:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    return-void
 .end method

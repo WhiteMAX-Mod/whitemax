@@ -1,233 +1,118 @@
-.class public final Lfm5;
+.class public final synthetic Lfm5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lr98;
-
-
-# static fields
-.field public static final b:Lfm5;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public a:I
+.field public final synthetic a:I
+
+.field public final synthetic b:Z
+
+.field public final synthetic c:I
+
+.field public final synthetic d:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lsm5;IZ)V
+    .locals 1
 
-    new-instance v0, Lfm5;
+    .line 1
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput v0, p0, Lfm5;->a:I
 
-    const/4 v1, 0x5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v1, v0, Lfm5;->a:I
+    iput-object p1, p0, Lfm5;->d:Ljava/lang/Object;
 
-    sput-object v0, Lfm5;->b:Lfm5;
+    iput p2, p0, Lfm5;->c:I
+
+    iput-boolean p3, p0, Lfm5;->b:Z
 
     return-void
 .end method
 
-.method public static b(Ljava/lang/String;Ljava/lang/Throwable;ILjava/lang/String;)V
+.method public synthetic constructor <init>(Lw9a;ZI)V
     .locals 1
 
-    const-string v0, "unknown:"
+    .line 2
+    const/4 v0, 0x1
 
-    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    iput v0, p0, Lfm5;->a:I
 
-    move-result-object p0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iput-object p1, p0, Lfm5;->d:Ljava/lang/Object;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    iput-boolean p2, p0, Lfm5;->b:Z
 
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 p3, 0xa
-
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    if-nez p1, :cond_0
-
-    const-string p1, ""
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {p1}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p2, p0, p1}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
+    iput p3, p0, Lfm5;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/io/IOException;)V
-    .locals 3
-
-    const-string v0, "Failed reading Heif Exif orientation -> ignoring"
-
-    const/4 v1, 0x3
-
-    const-string v2, "HeifExifUtil"
-
-    invoke-static {v2, p1, v1, v0}, Lfm5;->b(Ljava/lang/String;Ljava/lang/Throwable;ILjava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final c(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
-
-    const-string v0, "unknown:"
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const/4 v0, 0x6
-
-    invoke-static {v0, p1, p2}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
-
-    return-void
-.end method
-
-.method public final d(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
-
-    const-string v0, "unknown:"
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const/4 v0, 0x3
-
-    invoke-static {v0, p1, p2}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
-
-    return-void
-.end method
-
-.method public final e(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
-
-    .line 2
-    const-string v0, "unknown:"
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const/4 v0, 0x6
-
-    .line 3
-    invoke-static {v0, p1, p2}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
-
-    return-void
-.end method
-
-.method public final e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 1
-
-    const/4 v0, 0x6
-
-    .line 1
-    invoke-static {p1, p3, v0, p2}, Lfm5;->b(Ljava/lang/String;Ljava/lang/Throwable;ILjava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final f(Ljava/lang/Exception;Ljava/lang/String;)V
-    .locals 2
-
-    const-string v0, "unhandled exception"
-
-    const/4 v1, 0x6
-
-    invoke-static {p2, p1, v1, v0}, Lfm5;->b(Ljava/lang/String;Ljava/lang/Throwable;ILjava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final h(I)Z
-    .locals 1
+.method public final run()V
+    .locals 6
 
     iget v0, p0, Lfm5;->a:I
 
-    if-gt v0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    const/4 p1, 0x1
+    iget-object v0, p0, Lfm5;->d:Ljava/lang/Object;
 
-    return p1
+    check-cast v0, Lw9a;
 
-    :cond_0
-    const/4 p1, 0x0
+    iget-boolean v1, p0, Lfm5;->b:Z
 
-    return p1
-.end method
+    iget v2, p0, Lfm5;->c:I
 
-.method public final i(I)V
-    .locals 0
-
-    iput p1, p0, Lfm5;->a:I
+    invoke-virtual {v0, v2, v1}, Lw9a;->N0(IZ)V
 
     return-void
-.end method
 
-.method public final v(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
+    :pswitch_0
+    iget-object v0, p0, Lfm5;->d:Ljava/lang/Object;
 
-    const-string v0, "unknown:"
+    check-cast v0, Lsm5;
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    iget-object v1, v0, Lsm5;->H0:Lnj4;
 
-    move-result-object p1
+    iget-object v0, v0, Lsm5;->a:[Lpld;
 
-    const/4 v0, 0x2
+    iget v2, p0, Lfm5;->c:I
 
-    invoke-static {v0, p1, p2}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
+    aget-object v0, v0, v2
 
-    return-void
-.end method
+    iget-object v0, v0, Lpld;->e:Ljava/lang/Object;
 
-.method public final w(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
+    check-cast v0, Ltk0;
 
-    .line 2
-    const-string v0, "unknown:"
+    iget v0, v0, Ltk0;->b:I
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1}, Lnj4;->H()Lid;
 
-    move-result-object p1
+    move-result-object v3
 
-    const/4 v0, 0x5
+    new-instance v4, Lxi4;
 
-    .line 3
-    invoke-static {v0, p1, p2}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
+    iget-boolean v5, p0, Lfm5;->b:Z
 
-    return-void
-.end method
+    invoke-direct {v4, v3, v2, v0, v5}, Lxi4;-><init>(Lid;IIZ)V
 
-.method public final w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 1
+    const/16 v0, 0x409
 
-    const/4 v0, 0x5
-
-    .line 1
-    invoke-static {p1, p3, v0, p2}, Lfm5;->b(Ljava/lang/String;Ljava/lang/Throwable;ILjava/lang/String;)V
+    invoke-virtual {v1, v3, v0, v4}, Lnj4;->I(Lid;ILpa8;)V
 
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

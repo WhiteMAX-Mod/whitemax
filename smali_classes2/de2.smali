@@ -1,42 +1,58 @@
-.class public final Lde2;
+.class public final synthetic Lde2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Liu3;
+
 
 # instance fields
-.field public a:J
+.field public final synthetic a:I
 
-.field public b:Ljava/util/List;
 
-.field public c:J
+# direct methods
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-.field public d:J
+    iput p1, p0, Lde2;->a:I
 
-.field public e:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public f:J
-
-.field public g:J
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(Lbe2;)V
-    .locals 1
+.method public final accept(Ljava/lang/Object;)V
+    .locals 2
 
-    iget-object v0, p0, Lde2;->b:Ljava/util/List;
+    iget v0, p0, Lde2;->a:I
 
-    if-nez v0, :cond_0
+    check-cast p1, Laf2;
 
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lde2;->b:Ljava/util/List;
-
-    :cond_0
-    iget-object v0, p0, Lde2;->b:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    packed-switch v0, :pswitch_data_0
 
     return-void
+
+    :pswitch_0
+    const/4 v0, 0x0
+
+    iput-object v0, p1, Laf2;->j0:Lmf2;
+
+    return-void
+
+    :pswitch_1
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p1, Laf2;->L:J
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

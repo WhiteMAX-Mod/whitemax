@@ -4,16 +4,16 @@
 
 
 # instance fields
-.field public final a:Lnp4;
+.field public final a:Lzr4;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lnp4;)V
+.method public constructor <init>(Ljava/lang/String;Lzr4;)V
     .locals 0
 
     invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    iput-object p2, p0, Landroidx/camera/core/impl/DeferrableSurface$SurfaceClosedException;->a:Lnp4;
+    iput-object p2, p0, Landroidx/camera/core/impl/DeferrableSurface$SurfaceClosedException;->a:Lzr4;
 
     return-void
 .end method

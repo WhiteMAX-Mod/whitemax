@@ -1,48 +1,145 @@
 .class public final Loz7;
-.super Ly14;
+.super Lky6;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final synthetic c:I
 
-.field public final synthetic Y:Li00;
+.field public final d:Ljava/lang/Object;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final e:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Li00;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroidx/recyclerview/widget/GridLayoutManager;Lphd;)V
+    .locals 1
 
-    iput-object p1, p0, Loz7;->Y:Li00;
+    const/4 v0, 0x1
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput v0, p0, Loz7;->c:I
+
+    .line 1
+    invoke-direct {p0}, Lky6;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Loz7;->d:Ljava/lang/Object;
+
+    .line 3
+    iput-object p2, p0, Loz7;->e:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;Landroidx/recyclerview/widget/RecyclerView;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Loz7;->c:I
+
+    iput-object p1, p0, Loz7;->d:Ljava/lang/Object;
+
+    iput-object p2, p0, Loz7;->e:Ljava/lang/Object;
+
+    .line 4
+    invoke-direct {p0}, Lky6;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final c(I)I
+    .locals 3
 
-    iput-object p1, p0, Loz7;->o:Ljava/lang/Object;
+    iget v0, p0, Loz7;->c:I
 
-    iget p1, p0, Loz7;->X:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Loz7;->e:Ljava/lang/Object;
 
-    or-int/2addr p1, v0
+    check-cast v0, Lphd;
 
-    iput p1, p0, Loz7;->X:I
+    invoke-virtual {v0}, Lphd;->j()I
 
-    iget-object p1, p0, Loz7;->Y:Li00;
+    move-result v1
 
-    const/4 v0, 0x0
+    if-ge p1, v1, :cond_1
 
-    invoke-virtual {p1, v0, p0}, Li00;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lphd;->l(I)I
+
+    move-result p1
+
+    sget v0, Luab;->k:I
+
+    if-eq p1, v0, :cond_0
+
+    sget v0, Luab;->l:I
+
+    if-eq p1, v0, :cond_0
+
+    sget v0, Lw5b;->r:I
+
+    if-ne p1, v0, :cond_1
+
+    :cond_0
+    iget-object p1, p0, Loz7;->d:Ljava/lang/Object;
+
+    check-cast p1, Landroidx/recyclerview/widget/GridLayoutManager;
+
+    iget p1, p1, Landroidx/recyclerview/widget/GridLayoutManager;->F:I
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p1, 0x1
+
+    :goto_0
+    return p1
+
+    :pswitch_0
+    iget-object v0, p0, Loz7;->d:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;
+
+    iget-object v1, v0, Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;->o:Lb0i;
+
+    invoke-virtual {v1}, Ll98;->j()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-ge p1, v1, :cond_2
+
+    iget-object v0, v0, Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;->o:Lb0i;
+
+    invoke-virtual {v0, p1}, Lb0i;->l(I)I
+
+    move-result p1
+
+    sget v0, Lw5b;->q:I
+
+    if-ne p1, v0, :cond_2
+
+    iget-object p1, p0, Loz7;->e:Ljava/lang/Object;
+
+    check-cast p1, Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-static {p1}, Lx7j;->d(Landroidx/recyclerview/widget/RecyclerView;)Landroidx/recyclerview/widget/GridLayoutManager;
 
     move-result-object p1
 
-    return-object p1
+    if-eqz p1, :cond_2
+
+    iget v2, p1, Landroidx/recyclerview/widget/GridLayoutManager;->F:I
+
+    :cond_2
+    return v2
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

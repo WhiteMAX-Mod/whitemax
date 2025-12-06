@@ -4,19 +4,7 @@
 
 
 # static fields
-.field public static final h:Ls20;
-
-.field public static final i:Ljava/lang/String;
-
-.field public static final j:Ljava/lang/String;
-
-.field public static final k:Ljava/lang/String;
-
-.field public static final l:Ljava/lang/String;
-
-.field public static final m:Ljava/lang/String;
-
-.field public static final n:Ljava/lang/String;
+.field public static final d:Ls20;
 
 
 # instance fields
@@ -24,305 +12,150 @@
 
 .field public final b:I
 
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:Z
-
-.field public g:Lyxe;
+.field public final c:Lhh7;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 7
+    .locals 6
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x21
+
+    const/16 v2, 0xa
+
+    const/4 v3, 0x2
+
+    if-lt v0, v1, :cond_1
 
     new-instance v0, Ls20;
 
-    const/4 v1, 0x0
+    new-instance v1, Lgh7;
 
-    const/4 v3, 0x1
+    const/4 v4, 0x4
 
-    move v2, v1
+    invoke-direct {v1, v4}, Lmg7;-><init>(I)V
 
-    move v4, v3
+    const/4 v4, 0x1
 
-    move v5, v1
+    :goto_0
+    if-gt v4, v2, :cond_0
 
-    move v6, v1
+    invoke-static {v4}, Lzxg;->s(I)I
 
-    invoke-direct/range {v0 .. v6}, Ls20;-><init>(IIIIIZ)V
+    move-result v5
 
-    sput-object v0, Ls20;->h:Ls20;
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    sget-object v0, Lnig;->a:Ljava/lang/String;
+    move-result-object v5
 
-    const/4 v0, 0x0
+    invoke-virtual {v1, v5}, Lmg7;->a(Ljava/lang/Object;)V
 
-    const/16 v1, 0x24
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Ls20;->i:Ljava/lang/String;
-
-    const/4 v0, 0x1
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Ls20;->j:Ljava/lang/String;
-
-    const/4 v0, 0x2
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Ls20;->k:Ljava/lang/String;
-
-    const/4 v0, 0x3
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Ls20;->l:Ljava/lang/String;
-
-    const/4 v0, 0x4
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Ls20;->m:Ljava/lang/String;
-
-    const/4 v0, 0x5
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Ls20;->n:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(IIIIIZ)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Ls20;->a:I
-
-    iput p2, p0, Ls20;->b:I
-
-    iput p3, p0, Ls20;->c:I
-
-    iput p4, p0, Ls20;->d:I
-
-    iput p5, p0, Ls20;->e:I
-
-    iput-boolean p6, p0, Ls20;->f:Z
-
-    return-void
-.end method
-
-.method public static a(Landroid/os/Bundle;)Ls20;
-    .locals 10
-
-    sget-object v0, Ls20;->i:Ljava/lang/String;
-
-    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    move v4, v0
+    add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
     :cond_0
-    move v4, v2
+    invoke-virtual {v1}, Lgh7;->j()Lhh7;
 
-    :goto_0
-    sget-object v0, Ls20;->j:Ljava/lang/String;
+    move-result-object v1
 
-    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    move v5, v0
+    invoke-direct {v0, v3, v1}, Ls20;-><init>(ILjava/util/Set;)V
 
     goto :goto_1
 
     :cond_1
-    move v5, v2
+    new-instance v0, Ls20;
+
+    invoke-direct {v0, v3, v2}, Ls20;-><init>(II)V
 
     :goto_1
-    sget-object v0, Ls20;->k:Ljava/lang/String;
+    sput-object v0, Ls20;->d:Ls20;
 
-    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
+    return-void
+.end method
 
-    move-result v1
+.method public constructor <init>(II)V
+    .locals 0
 
-    const/4 v3, 0x1
+    .line 7
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz v1, :cond_2
+    .line 8
+    iput p1, p0, Ls20;->a:I
 
-    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;)I
+    .line 9
+    iput p2, p0, Ls20;->b:I
+
+    const/4 p1, 0x0
+
+    .line 10
+    iput-object p1, p0, Ls20;->c:Lhh7;
+
+    return-void
+.end method
+
+.method public constructor <init>(ILjava/util/Set;)V
+    .locals 1
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput p1, p0, Ls20;->a:I
+
+    .line 3
+    invoke-static {p2}, Lhh7;->j(Ljava/util/Collection;)Lhh7;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ls20;->c:Lhh7;
+
+    .line 4
+    invoke-virtual {p1}, Lng7;->g()Lrrg;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    move v6, v0
+    if-eqz v0, :cond_0
 
-    goto :goto_2
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    :cond_2
-    move v6, v3
+    move-result-object v0
 
-    :goto_2
-    sget-object v0, Ls20;->l:Ljava/lang/String;
+    check-cast v0, Ljava/lang/Integer;
 
-    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;)I
-
-    move-result v3
-
-    :cond_3
-    move v7, v3
-
-    sget-object v0, Ls20;->m:Ljava/lang/String;
-
-    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;)I
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
-    move v8, v0
+    .line 5
+    invoke-static {v0}, Ljava/lang/Integer;->bitCount(I)I
 
-    goto :goto_3
+    move-result v0
 
-    :cond_4
-    move v8, v2
+    invoke-static {p2, v0}, Ljava/lang/Math;->max(II)I
 
-    :goto_3
-    sget-object v0, Ls20;->n:Ljava/lang/String;
+    move-result p2
 
-    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
+    goto :goto_0
 
-    move-result v1
+    .line 6
+    :cond_0
+    iput p2, p0, Ls20;->b:I
 
-    if-eqz v1, :cond_5
-
-    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
-
-    move-result v2
-
-    :cond_5
-    move v9, v2
-
-    new-instance v3, Ls20;
-
-    invoke-direct/range {v3 .. v9}, Ls20;-><init>(IIIIIZ)V
-
-    return-object v3
+    return-void
 .end method
 
 
 # virtual methods
-.method public final b()Lyxe;
-    .locals 1
-
-    iget-object v0, p0, Ls20;->g:Lyxe;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Lyxe;
-
-    invoke-direct {v0, p0}, Lyxe;-><init>(Ls20;)V
-
-    iput-object v0, p0, Ls20;->g:Lyxe;
-
-    :cond_0
-    iget-object v0, p0, Ls20;->g:Lyxe;
-
-    return-object v0
-.end method
-
-.method public final c()Landroid/os/Bundle;
-    .locals 3
-
-    new-instance v0, Landroid/os/Bundle;
-
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
-
-    sget-object v1, Ls20;->i:Ljava/lang/String;
-
-    iget v2, p0, Ls20;->a:I
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    sget-object v1, Ls20;->j:Ljava/lang/String;
-
-    iget v2, p0, Ls20;->b:I
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    sget-object v1, Ls20;->k:Ljava/lang/String;
-
-    iget v2, p0, Ls20;->c:I
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    sget-object v1, Ls20;->l:Ljava/lang/String;
-
-    iget v2, p0, Ls20;->d:I
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    sget-object v1, Ls20;->m:Ljava/lang/String;
-
-    iget v2, p0, Ls20;->e:I
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    sget-object v1, Ls20;->n:Ljava/lang/String;
-
-    iget-boolean v2, p0, Ls20;->f:Z
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
-
-    return-object v0
-.end method
-
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
@@ -333,74 +166,49 @@
     return v0
 
     :cond_0
-    const/4 v1, 0x0
+    instance-of v1, p1, Ls20;
 
-    if-eqz p1, :cond_2
+    const/4 v2, 0x0
 
-    const-class v2, Ls20;
+    if-nez v1, :cond_1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
-
-    goto :goto_0
+    return v2
 
     :cond_1
     check-cast p1, Ls20;
 
-    iget v2, p0, Ls20;->a:I
+    iget v1, p0, Ls20;->a:I
 
     iget v3, p1, Ls20;->a:I
 
-    if-ne v2, v3, :cond_2
+    if-ne v1, v3, :cond_2
 
-    iget v2, p0, Ls20;->b:I
+    iget v1, p0, Ls20;->b:I
 
     iget v3, p1, Ls20;->b:I
 
-    if-ne v2, v3, :cond_2
+    if-ne v1, v3, :cond_2
 
-    iget v2, p0, Ls20;->c:I
+    iget-object v1, p0, Ls20;->c:Lhh7;
 
-    iget v3, p1, Ls20;->c:I
+    iget-object p1, p1, Ls20;->c:Lhh7;
 
-    if-ne v2, v3, :cond_2
+    invoke-static {v1, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget v2, p0, Ls20;->d:I
+    move-result p1
 
-    iget v3, p1, Ls20;->d:I
-
-    if-ne v2, v3, :cond_2
-
-    iget v2, p0, Ls20;->e:I
-
-    iget v3, p1, Ls20;->e:I
-
-    if-ne v2, v3, :cond_2
-
-    iget-boolean v2, p0, Ls20;->f:Z
-
-    iget-boolean p1, p1, Ls20;->f:Z
-
-    if-ne v2, p1, :cond_2
+    if-eqz p1, :cond_2
 
     return v0
 
     :cond_2
-    :goto_0
-    return v1
+    return v2
 .end method
 
 .method public final hashCode()I
     .locals 2
 
-    const/16 v0, 0x20f
-
-    iget v1, p0, Ls20;->a:I
-
-    add-int/2addr v0, v1
+    iget v0, p0, Ls20;->a:I
 
     mul-int/lit8 v0, v0, 0x1f
 
@@ -410,27 +218,61 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget v1, p0, Ls20;->c:I
+    iget-object v1, p0, Ls20;->c:Lhh7;
 
-    add-int/2addr v0, v1
+    if-nez v1, :cond_0
 
-    mul-int/lit8 v0, v0, 0x1f
+    const/4 v1, 0x0
 
-    iget v1, p0, Ls20;->d:I
+    goto :goto_0
 
-    add-int/2addr v0, v1
+    :cond_0
+    invoke-virtual {v1}, Lhh7;->hashCode()I
 
-    mul-int/lit8 v0, v0, 0x1f
+    move-result v1
 
-    iget v1, p0, Ls20;->e:I
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Ls20;->f:Z
-
+    :goto_0
     add-int/2addr v0, v1
 
     return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "AudioProfile[format="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Ls20;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", maxChannelCount="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Ls20;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", channelMasks="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ls20;->c:Lhh7;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "]"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

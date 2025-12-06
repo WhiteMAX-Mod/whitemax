@@ -1,30 +1,87 @@
-.class public abstract Lypc;
-.super Ljava/lang/Object;
+.class public final Lypc;
+.super Lfj0;
+.source "SourceFile"
 
 
-# static fields
-.field public static bottom_line:I = 0x7f0a00f9
+# instance fields
+.field public final j:I
 
-.field public static date_picker_divider:I = 0x7f0a02e8
 
-.field public static date_time_picker:I = 0x7f0a02e9
+# direct methods
+.method public constructor <init>(Luda;Lnr3;Lc9f;Lqs3;I)V
+    .locals 0
 
-.field public static days_recycler_view:I = 0x7f0a02ea
+    invoke-direct {p0, p1, p2, p3, p4}, Lfj0;-><init>(Luda;Lnr3;Lc9f;Lqs3;)V
 
-.field public static hours_recycler_view:I = 0x7f0a03f6
+    iput p5, p0, Lypc;->j:I
 
-.field public static middle_parent_guideline:I = 0x7f0a0577
+    return-void
+.end method
 
-.field public static minutes_recycler_view:I = 0x7f0a0579
 
-.field public static send_button:I = 0x7f0a0b31
+# virtual methods
+.method public final close()V
+    .locals 0
 
-.field public static send_with_notification_checkbox:I = 0x7f0a0b33
+    return-void
+.end method
 
-.field public static set_correct_time:I = 0x7f0a0b3d
+.method public final d()I
+    .locals 1
 
-.field public static time_divider:I = 0x7f0a0c14
+    iget-object v0, p0, Lfj0;->f:Lnr3;
 
-.field public static toolbar:I = 0x7f0a0c19
+    invoke-virtual {v0}, Lnr3;->b()I
 
-.field public static top_line:I = 0x7f0a0c2d
+    move-result v0
+
+    return v0
+.end method
+
+.method public final g(Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final i()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lfj0;->f:Lnr3;
+
+    iget-object v0, v0, Lnr3;->a:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final j()I
+    .locals 1
+
+    iget v0, p0, Lypc;->j:I
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ProxyClient{connectionHost="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lfj0;->f:Lnr3;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

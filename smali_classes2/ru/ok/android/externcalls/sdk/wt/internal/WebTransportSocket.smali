@@ -21,23 +21,23 @@
         "",
         "",
         "endpoint",
-        "Lfwc;",
+        "Ly6d;",
         "log",
-        "Lj47;",
+        "Lv87;",
         "client",
         "Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$CompressorDecompressor;",
         "compressorDecompressor",
         "Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;",
         "listener",
         "<init>",
-        "(Ljava/lang/String;Lfwc;Lj47;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$CompressorDecompressor;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V",
-        "Lccg;",
+        "(Ljava/lang/String;Ly6d;Lv87;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$CompressorDecompressor;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V",
+        "Lqqg;",
         "connect",
         "(Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V",
-        "Li6e;",
+        "Lyhe;",
         "session",
         "configureSession",
-        "(Li6e;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V",
+        "(Lyhe;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V",
         "openSession",
         "T",
         "action",
@@ -45,13 +45,13 @@
         "Lkotlin/Function2;",
         "handler",
         "handleAsync",
-        "(Ljava/lang/String;Ljava/lang/Object;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;Lzi6;)V",
-        "Lhkh;",
+        "(Ljava/lang/String;Ljava/lang/Object;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;Lsm6;)V",
+        "Lr0i;",
         "stream",
         "sendStreamData",
-        "(Lhkh;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V",
+        "(Lr0i;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V",
         "readStreamData",
-        "(Li6e;Lhkh;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V",
+        "(Lyhe;Lr0i;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V",
         "message",
         "send",
         "(Ljava/lang/String;)V",
@@ -63,10 +63,10 @@
         "Ljava/lang/String;",
         "getEndpoint$wtsignaling_release",
         "()Ljava/lang/String;",
-        "Lfwc;",
-        "Lj47;",
+        "Ly6d;",
+        "Lv87;",
         "Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$CompressorDecompressor;",
-        "Li6e;",
+        "Lyhe;",
         "Ljava/util/LinkedList;",
         "messageQueue",
         "Ljava/util/LinkedList;",
@@ -112,13 +112,13 @@
 
 
 # instance fields
-.field private final client:Lj47;
+.field private final client:Lv87;
 
 .field private final compressorDecompressor:Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$CompressorDecompressor;
 
 .field private final endpoint:Ljava/lang/String;
 
-.field private final log:Lfwc;
+.field private final log:Ly6d;
 
 .field private final messageQueue:Ljava/util/LinkedList;
     .annotation system Ldalvik/annotation/Signature;
@@ -136,7 +136,7 @@
 
 .field private volatile released:Z
 
-.field private session:Li6e;
+.field private session:Lyhe;
 
 
 # direct methods
@@ -147,7 +147,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Companion;-><init>(Lki4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Companion;-><init>(Ltk4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->Companion:Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Companion;
 
@@ -162,16 +162,16 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Lfwc;Lj47;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$CompressorDecompressor;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
+.method public constructor <init>(Ljava/lang/String;Ly6d;Lv87;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$CompressorDecompressor;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->endpoint:Ljava/lang/String;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Lfwc;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Ly6d;
 
-    iput-object p3, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->client:Lj47;
+    iput-object p3, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->client:Lv87;
 
     iput-object p4, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->compressorDecompressor:Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$CompressorDecompressor;
 
@@ -199,17 +199,17 @@
 
     const-string p2, "connect-and-read"
 
-    sget-object p3, Lccg;->a:Lccg;
+    sget-object p3, Lqqg;->a:Lqqg;
 
-    invoke-direct {p0, p2, p3, p5, p1}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->handleAsync(Ljava/lang/String;Ljava/lang/Object;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;Lzi6;)V
+    invoke-direct {p0, p2, p3, p5, p1}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->handleAsync(Ljava/lang/String;Ljava/lang/Object;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;Lsm6;)V
 
     return-void
 .end method
 
-.method public static synthetic a(Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;Lhkh;)V
+.method public static synthetic a(Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;Lr0i;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->configureSession$lambda$5(Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;Lhkh;)V
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->configureSession$lambda$5(Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;Lr0i;)V
 
     return-void
 .end method
@@ -230,10 +230,10 @@
     return-object v0
 .end method
 
-.method public static final synthetic access$sendStreamData(Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;Lhkh;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
+.method public static final synthetic access$sendStreamData(Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;Lr0i;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->sendStreamData(Lhkh;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
+    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->sendStreamData(Lr0i;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
 
     return-void
 .end method
@@ -246,44 +246,44 @@
     return-void
 .end method
 
-.method public static synthetic c(Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;Ljava/lang/String;Lzi6;Ljava/lang/Object;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
+.method public static synthetic c(Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;Ljava/lang/String;Lsm6;Ljava/lang/Object;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
     .locals 0
 
-    invoke-static {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->handleAsync$lambda$7(Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;Ljava/lang/String;Lzi6;Ljava/lang/Object;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
+    invoke-static {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->handleAsync$lambda$7(Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;Ljava/lang/String;Lsm6;Ljava/lang/Object;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
 
     return-void
 .end method
 
-.method private final configureSession(Li6e;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
+.method private final configureSession(Lyhe;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
     .locals 1
 
-    new-instance p2, Lzs3;
+    new-instance p2, Lov3;
 
     const/4 v0, 0x6
 
-    invoke-direct {p2, v0, p0}, Lzs3;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p2, v0, p0}, Lov3;-><init>(ILjava/lang/Object;)V
 
-    check-cast p1, Ld7e;
+    check-cast p1, Lrie;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput-object p2, p1, Ld7e;->j:Ljava/util/function/BiConsumer;
+    iput-object p2, p1, Lrie;->j:Ljava/util/function/BiConsumer;
 
-    new-instance p2, Lgkh;
+    new-instance p2, Lq0i;
 
     const/4 v0, 0x0
 
-    invoke-direct {p2, p0, v0}, Lgkh;-><init>(Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;I)V
+    invoke-direct {p2, p0, v0}, Lq0i;-><init>(Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;I)V
 
-    iput-object p2, p1, Ld7e;->i:Ljava/util/function/Consumer;
+    iput-object p2, p1, Lrie;->i:Ljava/util/function/Consumer;
 
-    new-instance p2, Lgkh;
+    new-instance p2, Lq0i;
 
     const/4 v0, 0x1
 
-    invoke-direct {p2, p0, v0}, Lgkh;-><init>(Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;I)V
+    invoke-direct {p2, p0, v0}, Lq0i;-><init>(Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;I)V
 
-    iput-object p2, p1, Ld7e;->h:Ljava/util/function/Consumer;
+    iput-object p2, p1, Lrie;->h:Ljava/util/function/Consumer;
 
     return-void
 .end method
@@ -291,7 +291,7 @@
 .method private static final configureSession$lambda$3(Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;Ljava/lang/Long;Ljava/lang/String;)V
     .locals 3
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Lfwc;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Ly6d;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -313,7 +313,7 @@
 
     const-string v2, "WebTransportSocket"
 
-    invoke-interface {v0, v2, v1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p1, :cond_0
 
@@ -339,30 +339,30 @@
     return-void
 .end method
 
-.method private static final configureSession$lambda$4(Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;Lhkh;)V
+.method private static final configureSession$lambda$4(Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;Lr0i;)V
     .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Lfwc;
+    iget-object p0, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Ly6d;
 
     const-string p1, "WebTransportSocket"
 
     const-string v0, "Got new BIDI stream"
 
-    invoke-interface {p0, p1, v0}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p0, p1, v0}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method private static final configureSession$lambda$5(Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;Lhkh;)V
+.method private static final configureSession$lambda$5(Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;Lr0i;)V
     .locals 1
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Lfwc;
+    iget-object p0, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Ly6d;
 
     const-string p1, "WebTransportSocket"
 
     const-string v0, "Got new UNI stream"
 
-    invoke-interface {p0, p1, v0}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p0, p1, v0}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -377,21 +377,21 @@
 
     move-result-object v0
 
-    new-instance v1, Lc93;
+    new-instance v1, Ltb3;
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->client:Lj47;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->client:Lv87;
 
-    invoke-direct {v1, v0, v2}, Lc93;-><init>(Ljava/net/URI;Lj47;)V
+    invoke-direct {v1, v0, v2}, Ltb3;-><init>(Ljava/net/URI;Lv87;)V
 
-    invoke-virtual {v1, v0}, Lc93;->b(Ljava/net/URI;)Ld7e;
+    invoke-virtual {v1, v0}, Ltb3;->b(Ljava/net/URI;)Lrie;
 
     move-result-object v0
 
-    iput-object v0, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->session:Li6e;
+    iput-object v0, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->session:Lyhe;
 
-    invoke-direct {p0, v0, p1}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->configureSession(Li6e;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
+    invoke-direct {p0, v0, p1}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->configureSession(Lyhe;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
 
-    invoke-direct {p0, v0, p1}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->openSession(Li6e;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
+    invoke-direct {p0, v0, p1}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->openSession(Lyhe;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -405,15 +405,15 @@
     return-void
 .end method
 
-.method public static synthetic d(Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;Lhkh;)V
+.method public static synthetic d(Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;Lr0i;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->configureSession$lambda$4(Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;Lhkh;)V
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->configureSession$lambda$4(Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;Lr0i;)V
 
     return-void
 .end method
 
-.method private final handleAsync(Ljava/lang/String;Ljava/lang/Object;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;Lzi6;)V
+.method private final handleAsync(Ljava/lang/String;Ljava/lang/Object;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;Lsm6;)V
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -423,16 +423,16 @@
             "Ljava/lang/String;",
             "TT;",
             "Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;",
-            "Lzi6;",
+            "Lsm6;",
             ")V"
         }
     .end annotation
 
     new-instance v0, Ljava/lang/Thread;
 
-    new-instance v1, Lpu1;
+    new-instance v1, Lev1;
 
-    const/4 v7, 0x7
+    const/4 v7, 0x6
 
     move-object v2, p0
 
@@ -444,7 +444,7 @@
 
     move-object v4, p4
 
-    invoke-direct/range {v1 .. v7}, Lpu1;-><init>(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct/range {v1 .. v7}, Lev1;-><init>(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
@@ -471,14 +471,14 @@
     return-void
 .end method
 
-.method private static final handleAsync$lambda$7(Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;Ljava/lang/String;Lzi6;Ljava/lang/Object;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
+.method private static final handleAsync$lambda$7(Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;Ljava/lang/String;Lsm6;Ljava/lang/Object;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
     .locals 5
 
     const-string v0, " thread has finished"
 
     const-string v1, " thread raised an exception"
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Lfwc;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Ly6d;
 
     const-string v3, " thread is about to start"
 
@@ -488,21 +488,21 @@
 
     const-string v4, "WebTransportSocket"
 
-    invoke-interface {v2, v4, v3}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v2, v4, v3}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     :try_start_0
-    invoke-interface {p2, p3, p4}, Lzi6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, p3, p4}, Lsm6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     :goto_0
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Lfwc;
+    iget-object p0, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Ly6d;
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-interface {p0, v4, p1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p0, v4, p1}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -510,13 +510,13 @@
     move-exception p2
 
     :try_start_1
-    iget-object p3, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Lfwc;
+    iget-object p3, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Ly6d;
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-interface {p3, v4, v1, p2}, Lfwc;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {p3, v4, v1, p2}, Ly6d;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     invoke-interface {p4, p2}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;->onFailure(Ljava/lang/Throwable;)V
     :try_end_1
@@ -527,50 +527,50 @@
     :catchall_1
     move-exception p2
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Lfwc;
+    iget-object p0, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Ly6d;
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-interface {p0, v4, p1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p0, v4, p1}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     throw p2
 .end method
 
-.method private final openSession(Li6e;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
+.method private final openSession(Lyhe;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
     .locals 9
 
     move-object v0, p1
 
-    check-cast v0, Ld7e;
+    check-cast v0, Lrie;
 
-    sget-object v1, Lc7e;->b:Lc7e;
+    sget-object v1, Lqie;->b:Lqie;
 
-    new-instance v2, Lpc8;
+    new-instance v2, Lkk8;
 
     const/16 v3, 0x1b
 
-    invoke-direct {v2, v3}, Lpc8;-><init>(I)V
+    invoke-direct {v2, v3}, Lkk8;-><init>(I)V
 
-    new-instance v3, Lz6e;
+    new-instance v3, Lnie;
 
     const/4 v4, 0x0
 
-    invoke-direct {v3, v4}, Lz6e;-><init>(I)V
+    invoke-direct {v3, v4}, Lnie;-><init>(I)V
 
-    invoke-virtual {v0, v1, v2, v3}, Ld7e;->a(Lc7e;Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Z
+    invoke-virtual {v0, v1, v2, v3}, Lrie;->a(Lqie;Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Z
 
-    iget-object v2, v0, Ld7e;->d:Lc93;
+    iget-object v2, v0, Lrie;->d:Ltb3;
 
-    iget-object v3, v2, Lc93;->b:Ljava/util/concurrent/locks/ReentrantLock;
+    iget-object v3, v2, Ltb3;->b:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v3}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
     :try_start_0
-    iget-object v3, v2, Lc93;->c:Ljava/util/concurrent/ConcurrentHashMap;
+    iget-object v3, v2, Ltb3;->c:Ljava/util/concurrent/ConcurrentHashMap;
 
-    iget-wide v4, v0, Ld7e;->c:J
+    iget-wide v4, v0, Lrie;->c:J
 
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -584,15 +584,15 @@
 
     if-eqz v3, :cond_0
 
-    new-instance v4, Lg4;
+    new-instance v4, Lm4;
 
     const/4 v5, 0x0
 
-    invoke-direct {v4, v5, v0}, Lg4;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v4, v5, v0}, Lm4;-><init>(ILjava/lang/Object;)V
 
     invoke-interface {v3, v4}, Ljava/lang/Iterable;->forEach(Ljava/util/function/Consumer;)V
 
-    iget v4, v2, Lc93;->d:I
+    iget v4, v2, Ltb3;->d:I
 
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -600,7 +600,7 @@
 
     sub-int/2addr v4, v3
 
-    iput v4, v2, Lc93;->d:I
+    iput v4, v2, Ltb3;->d:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -613,43 +613,43 @@
 
     :cond_0
     :goto_0
-    iget-object v2, v2, Lc93;->b:Ljava/util/concurrent/locks/ReentrantLock;
+    iget-object v2, v2, Ltb3;->b:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
     invoke-interface {p2}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;->onOpen()V
 
-    iget-object v2, v0, Ld7e;->e:Lc7e;
+    iget-object v2, v0, Lrie;->e:Lqie;
 
-    sget-object v3, Lc7e;->a:Lc7e;
+    sget-object v3, Lqie;->a:Lqie;
 
     if-eq v2, v3, :cond_4
 
-    iget-object v2, v0, Ld7e;->e:Lc7e;
+    iget-object v2, v0, Lrie;->e:Lqie;
 
     if-ne v2, v1, :cond_3
 
-    iget-object v1, v0, Ld7e;->a:Ln47;
+    iget-object v1, v0, Lrie;->a:Lz87;
 
-    check-cast v1, Lm47;
+    check-cast v1, Ly87;
 
-    iget-object v1, v1, Lm47;->f:Ljava/lang/Object;
+    iget-object v1, v1, Ly87;->f:Ljava/lang/Object;
 
-    check-cast v1, Lcic;
+    check-cast v1, Lysc;
 
     const/4 v2, 0x1
 
-    invoke-virtual {v1, v2}, Lcic;->c(Z)Lgic;
+    invoke-virtual {v1, v2}, Lysc;->c(Z)Lctc;
 
     move-result-object v1
 
-    iget-object v2, v1, Lgic;->e:Lo9f;
+    iget-object v2, v1, Lctc;->e:Lelf;
 
-    new-instance v3, Lp47;
+    new-instance v3, Lb97;
 
-    invoke-direct {v3, v1, v2}, Lp47;-><init>(Lgic;Lo9f;)V
+    invoke-direct {v3, v1, v2}, Lb97;-><init>(Lctc;Lelf;)V
 
-    invoke-virtual {v3}, Lp47;->a()Ljava/io/OutputStream;
+    invoke-virtual {v3}, Lb97;->a()Ljava/io/OutputStream;
 
     move-result-object v1
 
@@ -661,7 +661,7 @@
 
     const-wide/16 v5, 0x41
 
-    invoke-static {v5, v6, v4}, Lubi;->g(JLjava/nio/ByteBuffer;)I
+    invoke-static {v5, v6, v4}, Lepi;->c(JLjava/nio/ByteBuffer;)I
 
     move-result v5
 
@@ -689,9 +689,9 @@
     goto :goto_1
 
     :cond_1
-    iget-wide v4, v0, Ld7e;->c:J
+    iget-wide v4, v0, Lrie;->c:J
 
-    invoke-virtual {v3}, Lp47;->a()Ljava/io/OutputStream;
+    invoke-virtual {v3}, Lb97;->a()Ljava/io/OutputStream;
 
     move-result-object v1
 
@@ -699,7 +699,7 @@
 
     move-result-object v2
 
-    invoke-static {v4, v5, v2}, Lubi;->g(JLjava/nio/ByteBuffer;)I
+    invoke-static {v4, v5, v2}, Lepi;->c(JLjava/nio/ByteBuffer;)I
 
     move-result v4
 
@@ -723,19 +723,19 @@
     goto :goto_2
 
     :cond_2
-    iget-object v1, v0, Ld7e;->k:Ljava/util/concurrent/ConcurrentLinkedQueue;
+    iget-object v1, v0, Lrie;->k:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-virtual {v1, v3}, Ljava/util/concurrent/ConcurrentLinkedQueue;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, v0, Ld7e;->l:Ljava/util/concurrent/ConcurrentLinkedQueue;
+    iget-object v0, v0, Lrie;->l:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-virtual {v0, v3}, Ljava/util/concurrent/ConcurrentLinkedQueue;->add(Ljava/lang/Object;)Z
 
-    new-instance v0, Lb7e;
+    new-instance v0, Lpie;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v3, v1}, Lb7e;-><init>(Lr57;I)V
+    invoke-direct {v0, v3, v1}, Lpie;-><init>(Lca7;I)V
 
     new-instance v1, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$openSession$1$1;
 
@@ -743,9 +743,9 @@
 
     const-string v2, "send"
 
-    invoke-direct {p0, v2, v0, p2, v1}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->handleAsync(Ljava/lang/String;Ljava/lang/Object;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;Lzi6;)V
+    invoke-direct {p0, v2, v0, p2, v1}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->handleAsync(Ljava/lang/String;Ljava/lang/Object;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;Lsm6;)V
 
-    invoke-direct {p0, p1, v0, p2}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->readStreamData(Li6e;Lhkh;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
+    invoke-direct {p0, p1, v0, p2}, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->readStreamData(Lyhe;Lr0i;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
 
     return-void
 
@@ -768,14 +768,14 @@
     throw p1
 
     :goto_3
-    iget-object p2, v2, Lc93;->b:Ljava/util/concurrent/locks/ReentrantLock;
+    iget-object p2, v2, Ltb3;->b:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {p2}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
     throw p1
 .end method
 
-.method private final readStreamData(Li6e;Lhkh;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
+.method private final readStreamData(Lyhe;Lr0i;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
     .locals 7
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -788,7 +788,7 @@
     const-string v0, "WebTransportSocket"
 
     :try_start_0
-    invoke-interface {p2}, Lhkh;->b()Ljava/io/InputStream;
+    invoke-interface {p2}, Lr0i;->b()Ljava/io/InputStream;
 
     move-result-object p2
 
@@ -803,7 +803,7 @@
 
     :goto_0
     :try_start_1
-    invoke-static {p2}, Lubi;->l(Ljava/io/InputStream;)I
+    invoke-static {p2}, Lepi;->e(Ljava/io/InputStream;)I
 
     move-result v2
     :try_end_1
@@ -847,19 +847,19 @@
 
     if-gez v5, :cond_1
 
-    iget-object p2, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Lfwc;
+    iget-object p2, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Ly6d;
 
     const-string p3, "stream closed, leave recv loop"
 
-    invoke-interface {p2, v0, p3}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p2, v0, p3}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     :goto_3
-    iget-object p2, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Lfwc;
+    iget-object p2, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Ly6d;
 
-    invoke-interface {p2, v0, p1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p2, v0, p1}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -880,7 +880,7 @@
 
     array-length v5, v2
 
-    sget-object v6, Lha2;->a:Ljava/nio/charset/Charset;
+    sget-object v6, Llb2;->a:Ljava/nio/charset/Charset;
 
     invoke-direct {v4, v2, v3, v5, v6}, Ljava/lang/String;-><init>([BIILjava/nio/charset/Charset;)V
 
@@ -889,11 +889,11 @@
     goto :goto_0
 
     :catch_1
-    iget-object p2, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Lfwc;
+    iget-object p2, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Ly6d;
 
     const-string p3, "Got EOF while trying to parse next packet length. Guess the stream is closed, exit silently"
 
-    invoke-interface {p2, v0, p3}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p2, v0, p3}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_3
 
@@ -918,25 +918,25 @@
     goto :goto_3
 
     :cond_4
-    iget-object p3, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Lfwc;
+    iget-object p3, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Ly6d;
 
     const-string v1, "Error on read from wt stream"
 
-    invoke-interface {p3, v0, v1, p2}, Lfwc;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {p3, v0, v1, p2}, Ly6d;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     throw p2
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     :goto_5
-    iget-object p3, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Lfwc;
+    iget-object p3, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Ly6d;
 
-    invoke-interface {p3, v0, p1}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p3, v0, p1}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     throw p2
 .end method
 
-.method private final sendStreamData(Lhkh;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
+.method private final sendStreamData(Lr0i;Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket$Listener;)V
     .locals 9
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -985,9 +985,9 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     :goto_1
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Lfwc;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Ly6d;
 
-    invoke-interface {p1, v0, p2}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1, v0, p2}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -998,7 +998,7 @@
 
     :cond_0
     :try_start_4
-    invoke-interface {p1}, Lhkh;->a()Ljava/io/OutputStream;
+    invoke-interface {p1}, Lr0i;->a()Ljava/io/OutputStream;
 
     move-result-object v4
 
@@ -1023,7 +1023,7 @@
 
     check-cast v5, Ljava/lang/String;
 
-    sget-object v7, Lha2;->a:Ljava/nio/charset/Charset;
+    sget-object v7, Llb2;->a:Ljava/nio/charset/Charset;
 
     invoke-virtual {v5, v7}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
@@ -1044,7 +1044,7 @@
 
     array-length v7, v5
 
-    invoke-static {v7, v2}, Lubi;->f(ILjava/nio/ByteBuffer;)I
+    invoke-static {v7, v2}, Lepi;->b(ILjava/nio/ByteBuffer;)I
 
     invoke-virtual {v2}, Ljava/nio/Buffer;->position()I
 
@@ -1070,11 +1070,11 @@
     move-exception p1
 
     :try_start_6
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Lfwc;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Ly6d;
 
     const-string v2, "Error on write to wt stream"
 
-    invoke-interface {v1, v0, v2, p1}, Lfwc;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v1, v0, v2, p1}, Ly6d;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     throw p1
     :try_end_6
@@ -1101,11 +1101,11 @@
     :catch_1
     move-exception p1
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Lfwc;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Ly6d;
 
     const-string v2, "Send stream interrputed"
 
-    invoke-interface {v1, v0, v2, p1}, Lfwc;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v1, v0, v2, p1}, Ly6d;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
@@ -1122,9 +1122,9 @@
     .catchall {:try_start_9 .. :try_end_9} :catchall_0
 
     :goto_4
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Lfwc;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Ly6d;
 
-    invoke-interface {v1, v0, p2}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v1, v0, p2}, Ly6d;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     throw p1
 .end method
@@ -1171,15 +1171,15 @@
     :try_start_3
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->session:Li6e;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->session:Lyhe;
 
     if-eqz v0, :cond_0
 
     int-to-long v1, p1
 
-    check-cast v0, Ld7e;
+    check-cast v0, Lrie;
 
-    invoke-virtual {v0, v1, v2, p2}, Ld7e;->b(JLjava/lang/String;)V
+    invoke-virtual {v0, v1, v2, p2}, Lrie;->b(JLjava/lang/String;)V
 
     goto :goto_0
 
@@ -1199,13 +1199,13 @@
 
     :goto_1
     :try_start_4
-    iget-object p2, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Lfwc;
+    iget-object p2, p0, Lru/ok/android/externcalls/sdk/wt/internal/WebTransportSocket;->log:Ly6d;
 
     const-string v0, "WebTransportSocket"
 
     const-string v1, "Error on close wt session"
 
-    invoke-interface {p2, v0, v1, p1}, Lfwc;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {p2, v0, v1, p1}, Ly6d;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 

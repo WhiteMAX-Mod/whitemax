@@ -1,243 +1,91 @@
 .class public abstract Lt3i;
-.super Ljava/util/AbstractList;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lx7i;
 
+# static fields
+.field public static final a:Ljava/lang/reflect/Field;
 
-# instance fields
-.field public a:Z
+.field public static final b:Ljava/lang/reflect/Field;
+
+.field public static final c:Ljava/lang/reflect/Field;
+
+.field public static final d:Z
 
 
 # direct methods
-.method public constructor <init>(Z)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
+    :try_start_0
+    const-class v0, Landroid/view/View;
 
-    iput-boolean p1, p0, Lt3i;->a:Z
+    const-string v1, "mAttachInfo"
 
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
+    move-result-object v0
 
-# virtual methods
-.method public final a()V
-    .locals 1
+    sput-object v0, Lt3i;->a:Ljava/lang/reflect/Field;
 
-    iget-boolean v0, p0, Lt3i;->a:Z
+    const/4 v1, 0x1
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
 
-    return-void
+    const-string v0, "android.view.View$AttachInfo"
 
-    :cond_0
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    move-result-object v0
 
-    throw v0
-.end method
+    const-string v2, "mStableInsets"
 
-.method public final addAll(ILjava/util/Collection;)Z
-    .locals 0
+    invoke-virtual {v0, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
-    .line 1
-    invoke-virtual {p0}, Lt3i;->a()V
+    move-result-object v2
 
-    .line 2
-    invoke-super {p0, p1, p2}, Ljava/util/AbstractList;->addAll(ILjava/util/Collection;)Z
+    sput-object v2, Lt3i;->b:Ljava/lang/reflect/Field;
 
-    move-result p1
+    invoke-virtual {v2, v1}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
 
-    return p1
-.end method
+    const-string v2, "mContentInsets"
 
-.method public addAll(Ljava/util/Collection;)Z
-    .locals 0
+    invoke-virtual {v0, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
-    .line 3
-    invoke-virtual {p0}, Lt3i;->a()V
+    move-result-object v0
 
-    .line 4
-    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
+    sput-object v0, Lt3i;->c:Ljava/lang/reflect/Field;
 
-    move-result p1
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
 
-    return p1
-.end method
-
-.method public final clear()V
-    .locals 0
-
-    invoke-virtual {p0}, Lt3i;->a()V
-
-    invoke-super {p0}, Ljava/util/AbstractList;->clear()V
+    sput-boolean v1, Lt3i;->d:Z
+    :try_end_0
+    .catch Ljava/lang/ReflectiveOperationException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
-.end method
 
-.method public equals(Ljava/lang/Object;)Z
-    .locals 6
+    :catch_0
+    move-exception v0
 
-    const/4 v0, 0x1
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    if-ne p1, p0, :cond_0
+    const-string v2, "Failed to get visible insets from AttachInfo "
 
-    return v0
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :cond_0
-    instance-of v1, p1, Ljava/util/List;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    const/4 v2, 0x0
+    move-result-object v2
 
-    if-nez v1, :cond_1
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return v2
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :cond_1
-    instance-of v1, p1, Ljava/util/RandomAccess;
+    move-result-object v1
 
-    if-nez v1, :cond_2
+    const-string v2, "WindowInsetsCompat"
 
-    invoke-super {p0, p1}, Ljava/util/AbstractList;->equals(Ljava/lang/Object;)Z
+    invoke-static {v2, v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    move-result p1
-
-    return p1
-
-    :cond_2
-    check-cast p1, Ljava/util/List;
-
-    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
-
-    move-result v1
-
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v3
-
-    if-ne v1, v3, :cond_5
-
-    move v3, v2
-
-    :goto_0
-    if-ge v3, v1, :cond_4
-
-    invoke-virtual {p0, v3}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    invoke-interface {p1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_3
-
-    return v2
-
-    :cond_3
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_4
-    return v0
-
-    :cond_5
-    return v2
-.end method
-
-.method public hashCode()I
-    .locals 4
-
-    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    :goto_0
-    if-ge v1, v0, :cond_0
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    invoke-virtual {p0, v1}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v3
-
-    add-int/2addr v2, v3
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return v2
-.end method
-
-.method public abstract remove(I)Ljava/lang/Object;
-.end method
-
-.method public final remove(Ljava/lang/Object;)Z
-    .locals 1
-
-    .line 1
-    invoke-virtual {p0}, Lt3i;->a()V
-
-    .line 2
-    invoke-virtual {p0, p1}, Ljava/util/AbstractList;->indexOf(Ljava/lang/Object;)I
-
-    move-result p1
-
-    const/4 v0, -0x1
-
-    if-ne p1, v0, :cond_0
-
-    const/4 p1, 0x0
-
-    return p1
-
-    .line 3
-    :cond_0
-    invoke-virtual {p0, p1}, Lt3i;->remove(I)Ljava/lang/Object;
-
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final removeAll(Ljava/util/Collection;)Z
-    .locals 0
-
-    invoke-virtual {p0}, Lt3i;->a()V
-
-    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->removeAll(Ljava/util/Collection;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final retainAll(Ljava/util/Collection;)Z
-    .locals 0
-
-    invoke-virtual {p0}, Lt3i;->a()V
-
-    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->retainAll(Ljava/util/Collection;)Z
-
-    move-result p1
-
-    return p1
+    return-void
 .end method

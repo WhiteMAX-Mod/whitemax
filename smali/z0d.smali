@@ -1,23 +1,14 @@
-.class public final Lz0d;
+.class public abstract Lz0d;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# static fields
+.field public static mr_cast_volume_slider_layout_animation_duration_ms:I = 0x7f0b0038
 
-.field public final b:Lqx0;
+.field public static mr_controller_volume_group_list_animation_duration_ms:I = 0x7f0b0039
 
+.field public static mr_controller_volume_group_list_fade_in_duration_ms:I = 0x7f0b003a
 
-# direct methods
-.method public constructor <init>(ILqx0;)V
-    .locals 0
+.field public static mr_controller_volume_group_list_fade_out_duration_ms:I = 0x7f0b003b
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lz0d;->a:I
-
-    iput-object p2, p0, Lz0d;->b:Lqx0;
-
-    return-void
-.end method
+.field public static mr_update_routes_delay_ms:I = 0x7f0b003c

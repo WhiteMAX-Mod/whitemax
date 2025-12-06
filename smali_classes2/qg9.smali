@@ -2,103 +2,120 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lvg9;
-
 
 # instance fields
-.field public final a:Ljava/lang/CharSequence;
+.field public final synthetic a:I
+
+.field public final b:Ltze;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/CharSequence;)V
+.method public synthetic constructor <init>(Ltze;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lqg9;->a:I
 
-    iput-object p1, p0, Lqg9;->a:Ljava/lang/CharSequence;
+    iput-object p1, p0, Lqg9;->b:Ltze;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method public static final a(Ljava/lang/String;[Ljava/lang/Enum;[Ljava/lang/String;[[Ljava/lang/annotation/Annotation;)Lah5;
+    .locals 12
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    new-instance v0, Lxg5;
 
-    const/4 v0, 0x1
+    array-length v1, p1
 
-    if-ne p0, p1, :cond_0
+    invoke-direct {v0, p0, v1}, Lxg5;-><init>(Ljava/lang/String;I)V
 
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lqg9;
+    array-length v1, p1
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    move v3, v2
 
-    return v2
+    move v4, v3
 
-    :cond_1
-    check-cast p1, Lqg9;
+    :goto_0
+    if-ge v3, v1, :cond_3
 
-    iget-object v1, p0, Lqg9;->a:Ljava/lang/CharSequence;
+    aget-object v5, p1, v3
 
-    iget-object p1, p1, Lqg9;->a:Ljava/lang/CharSequence;
+    add-int/lit8 v6, v4, 0x1
 
-    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v4, p2}, Lys;->x(I[Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result p1
+    move-result-object v7
 
-    if-nez p1, :cond_2
+    check-cast v7, Ljava/lang/String;
 
-    return v2
+    if-nez v7, :cond_0
 
-    :cond_2
-    return v0
-.end method
+    invoke-virtual {v5}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lqg9;->a:Ljava/lang/CharSequence;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    return v0
+    move-result-object v7
 
     :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v0, v7, v2}, Lj5c;->k(Ljava/lang/String;Z)V
 
-    move-result v0
+    invoke-static {v4, p3}, Lys;->x(I[Ljava/lang/Object;)Ljava/lang/Object;
 
-    return v0
-.end method
+    move-result-object v4
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    check-cast v4, [Ljava/lang/annotation/Annotation;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    if-eqz v4, :cond_2
 
-    const-string v1, "FinishEditMessage(text="
+    array-length v5, v4
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move v7, v2
 
-    iget-object v1, p0, Lqg9;->a:Ljava/lang/CharSequence;
+    :goto_1
+    if-ge v7, v5, :cond_2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    aget-object v8, v4, v7
 
-    const-string v1, ")"
+    iget v9, v0, Lj5c;->d:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v10, v0, Lj5c;->f:[Ljava/util/List;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    aget-object v9, v10, v9
 
-    move-result-object v0
+    if-nez v9, :cond_1
 
-    return-object v0
+    new-instance v9, Ljava/util/ArrayList;
+
+    const/4 v11, 0x1
+
+    invoke-direct {v9, v11}, Ljava/util/ArrayList;-><init>(I)V
+
+    iget v11, v0, Lj5c;->d:I
+
+    aput-object v9, v10, v11
+
+    :cond_1
+    invoke-interface {v9, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v7, v7, 0x1
+
+    goto :goto_1
+
+    :cond_2
+    add-int/lit8 v3, v3, 0x1
+
+    move v4, v6
+
+    goto :goto_0
+
+    :cond_3
+    new-instance p2, Lah5;
+
+    invoke-direct {p2, p0, p1}, Lah5;-><init>(Ljava/lang/String;[Ljava/lang/Enum;)V
+
+    iput-object v0, p2, Lah5;->b:Lxg5;
+
+    return-object p2
 .end method

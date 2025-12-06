@@ -1,137 +1,104 @@
-.class public final Ln12;
-.super Lo12;
+.class public final synthetic Ln12;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic X:F
 
-.field public final b:Ljava/util/List;
+.field public final synthetic Y:F
+
+.field public final synthetic Z:I
+
+.field public final synthetic a:Lp12;
+
+.field public final synthetic b:I
+
+.field public final synthetic c:I
+
+.field public final synthetic d:I
+
+.field public final synthetic o:I
+
+.field public final synthetic s0:I
+
+.field public final synthetic t0:I
+
+.field public final synthetic u0:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/util/List;)V
+.method public synthetic constructor <init>(Lp12;IIIIFFIIII)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ln12;->a:Ljava/lang/String;
+    iput-object p1, p0, Ln12;->a:Lp12;
 
-    iput-object p2, p0, Ln12;->b:Ljava/util/List;
+    iput p2, p0, Ln12;->b:I
+
+    iput p3, p0, Ln12;->c:I
+
+    iput p4, p0, Ln12;->d:I
+
+    iput p5, p0, Ln12;->o:I
+
+    iput p6, p0, Ln12;->X:F
+
+    iput p7, p0, Ln12;->Y:F
+
+    iput p8, p0, Ln12;->Z:I
+
+    iput p9, p0, Ln12;->s0:I
+
+    iput p10, p0, Ln12;->t0:I
+
+    iput p11, p0, Ln12;->u0:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 1
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 12
 
-    iget-object v0, p0, Ln12;->a:Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    return-object v0
-.end method
+    move-result-object p1
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    check-cast p1, Ljava/lang/Float;
 
-    const/4 v0, 0x1
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    if-ne p0, p1, :cond_0
+    move-result v11
 
-    return v0
+    iget-object v0, p0, Ln12;->a:Lp12;
 
-    :cond_0
-    instance-of v1, p1, Ln12;
+    iget v1, p0, Ln12;->b:I
 
-    const/4 v2, 0x0
+    iget v2, p0, Ln12;->c:I
 
-    if-nez v1, :cond_1
+    iget v3, p0, Ln12;->d:I
 
-    return v2
+    iget v4, p0, Ln12;->o:I
 
-    :cond_1
-    check-cast p1, Ln12;
+    iget v5, p0, Ln12;->X:F
 
-    iget-object v1, p0, Ln12;->a:Ljava/lang/String;
+    iget v6, p0, Ln12;->Y:F
 
-    iget-object v3, p1, Ln12;->a:Ljava/lang/String;
+    iget v7, p0, Ln12;->Z:I
 
-    invoke-static {v1, v3}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget v8, p0, Ln12;->s0:I
 
-    move-result v1
+    iget v9, p0, Ln12;->t0:I
 
-    if-nez v1, :cond_2
+    iget v10, p0, Ln12;->u0:I
 
-    return v2
+    invoke-static/range {v0 .. v11}, Lp12;->b(Lp12;IIIIFFIIIIF)V
 
-    :cond_2
-    iget-object v1, p0, Ln12;->b:Ljava/util/List;
-
-    iget-object p1, p1, Ln12;->b:Ljava/util/List;
-
-    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Ln12;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Ln12;->b:Ljava/util/List;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Unknown(cameraId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ln12;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", cameraParameterList="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ln12;->b:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

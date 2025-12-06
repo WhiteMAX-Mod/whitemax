@@ -1,132 +1,128 @@
-.class public abstract Lutc;
+.class public final synthetic Lutc;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
-# static fields
-.field public static oneme_settings_privace_screen_dialog_content_level_access_title:I = 0x7f13099d
 
-.field public static oneme_settings_privacy_black_list_dialog_title:I = 0x7f13099e
+# instance fields
+.field public final synthetic X:Landroid/view/View;
 
-.field public static oneme_settings_privacy_black_list_dialog_unblock:I = 0x7f13099f
+.field public final synthetic a:I
 
-.field public static oneme_settings_privacy_black_list_empty_state_desc:I = 0x7f1309a0
+.field public final synthetic b:F
 
-.field public static oneme_settings_privacy_black_list_toolbar_title:I = 0x7f1309a1
+.field public final synthetic c:F
 
-.field public static oneme_settings_privacy_black_list_unblocked_success:I = 0x7f1309a2
+.field public final synthetic d:F
 
-.field public static oneme_settings_privacy_change_disabled_description:I = 0x7f1309a3
+.field public final synthetic o:F
 
-.field public static oneme_settings_privacy_change_disabled_title:I = 0x7f1309a4
 
-.field public static oneme_settings_privacy_content_level_access:I = 0x7f1309a5
+# direct methods
+.method public synthetic constructor <init>(Landroid/view/View;FFFFI)V
+    .locals 0
 
-.field public static oneme_settings_privacy_content_level_access_all:I = 0x7f1309a6
+    iput p6, p0, Lutc;->a:I
 
-.field public static oneme_settings_privacy_content_level_access_message_success:I = 0x7f1309a7
+    iput-object p1, p0, Lutc;->X:Landroid/view/View;
 
-.field public static oneme_settings_privacy_content_level_access_safe:I = 0x7f1309a8
+    iput p2, p0, Lutc;->b:F
 
-.field public static oneme_settings_privacy_enter_pin_code_description:I = 0x7f1309a9
+    iput p3, p0, Lutc;->c:F
 
-.field public static oneme_settings_privacy_enter_pin_code_title:I = 0x7f1309aa
+    iput p4, p0, Lutc;->d:F
 
-.field public static oneme_settings_privacy_forgot_pin_code:I = 0x7f1309ab
+    iput p5, p0, Lutc;->o:F
 
-.field public static oneme_settings_privacy_forgot_pin_code_write_support:I = 0x7f1309ac
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_settings_privacy_info_header:I = 0x7f1309ad
+    return-void
+.end method
 
-.field public static oneme_settings_privacy_onboarding_come_up_pin_code:I = 0x7f1309ae
 
-.field public static oneme_settings_privacy_onboarding_content_subtitle:I = 0x7f1309af
+# virtual methods
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 7
 
-.field public static oneme_settings_privacy_onboarding_error_pin_code_equals:I = 0x7f1309b0
+    iget v0, p0, Lutc;->a:I
 
-.field public static oneme_settings_privacy_onboarding_item_1_subtitle:I = 0x7f1309b1
+    packed-switch v0, :pswitch_data_0
 
-.field public static oneme_settings_privacy_onboarding_item_1_title:I = 0x7f1309b2
+    iget-object v0, p0, Lutc;->X:Landroid/view/View;
 
-.field public static oneme_settings_privacy_onboarding_item_2_subtitle:I = 0x7f1309b3
+    check-cast v0, Lb6h;
 
-.field public static oneme_settings_privacy_onboarding_item_2_title:I = 0x7f1309b4
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
-.field public static oneme_settings_privacy_onboarding_item_3_subtitle:I = 0x7f1309b5
+    move-result p1
 
-.field public static oneme_settings_privacy_onboarding_item_3_title:I = 0x7f1309b6
+    iget v1, p0, Lutc;->c:F
 
-.field public static oneme_settings_privacy_onboarding_item_4_subtitle:I = 0x7f1309b7
+    iget v2, p0, Lutc;->b:F
 
-.field public static oneme_settings_privacy_onboarding_item_4_title:I = 0x7f1309b8
+    invoke-static {v1, v2, p1, v2}, Lutb;->i(FFFF)F
 
-.field public static oneme_settings_privacy_onboarding_re_enter_pin_code:I = 0x7f1309b9
+    move-result v1
 
-.field public static oneme_settings_privacy_onboarding_set_pin_code:I = 0x7f1309ba
+    iput v1, v0, Lb6h;->G0:F
 
-.field public static oneme_settings_privacy_safe_files:I = 0x7f1309bb
+    iget v1, p0, Lutc;->o:F
 
-.field public static oneme_settings_privacy_screen_add_me_to_chat:I = 0x7f1309bc
+    iget v2, p0, Lutc;->d:F
 
-.field public static oneme_settings_privacy_screen_black_list:I = 0x7f1309bd
+    invoke-static {v1, v2, p1, v2}, Lutb;->i(FFFF)F
 
-.field public static oneme_settings_privacy_screen_black_list_description:I = 0x7f1309be
+    move-result p1
 
-.field public static oneme_settings_privacy_screen_call_me:I = 0x7f1309bf
+    iput p1, v0, Lb6h;->F0:F
 
-.field public static oneme_settings_privacy_screen_current_session_online:I = 0x7f1309c0
+    iget-object v1, v0, Lb6h;->u0:Landroid/graphics/Paint;
 
-.field public static oneme_settings_privacy_screen_current_sessions:I = 0x7f1309c1
+    invoke-virtual {v1, p1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-.field public static oneme_settings_privacy_screen_dialog_add_chat_title:I = 0x7f1309c2
+    iget-object p1, v0, Lb6h;->d:Landroid/graphics/Paint;
 
-.field public static oneme_settings_privacy_screen_dialog_call_title:I = 0x7f1309c3
+    iget v1, v0, Lb6h;->F0:F
 
-.field public static oneme_settings_privacy_screen_dialog_finished_session_finish_btn:I = 0x7f1309c4
+    invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-.field public static oneme_settings_privacy_screen_dialog_finished_session_title:I = 0x7f1309c5
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-.field public static oneme_settings_privacy_screen_dialog_online_never_accept_btn:I = 0x7f1309c6
+    return-void
 
-.field public static oneme_settings_privacy_screen_dialog_online_never_title:I = 0x7f1309c7
+    :pswitch_0
+    iget-object v0, p0, Lutc;->X:Landroid/view/View;
 
-.field public static oneme_settings_privacy_screen_dialog_online_title:I = 0x7f1309c8
+    move-object v1, v0
 
-.field public static oneme_settings_privacy_screen_dialog_safe_file_no_btn:I = 0x7f1309c9
+    check-cast v1, Lytc;
 
-.field public static oneme_settings_privacy_screen_dialog_safe_file_yes_btn:I = 0x7f1309ca
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-.field public static oneme_settings_privacy_screen_dialog_safe_files_title:I = 0x7f1309cb
+    move-result-object p1
 
-.field public static oneme_settings_privacy_screen_dialog_seach_by_phone_title:I = 0x7f1309cc
+    check-cast p1, Ljava/lang/Float;
 
-.field public static oneme_settings_privacy_screen_failed_close_sessions:I = 0x7f1309cd
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-.field public static oneme_settings_privacy_screen_finished_all:I = 0x7f1309ce
+    move-result v6
 
-.field public static oneme_settings_privacy_screen_how_can_section:I = 0x7f1309cf
+    iget v2, p0, Lutc;->b:F
 
-.field public static oneme_settings_privacy_screen_how_session:I = 0x7f1309d0
+    iget v3, p0, Lutc;->c:F
 
-.field public static oneme_settings_privacy_screen_safe_mode:I = 0x7f1309d1
+    iget v4, p0, Lutc;->d:F
 
-.field public static oneme_settings_privacy_screen_safe_mode_change_disabled_snackbar_title:I = 0x7f1309d2
+    iget v5, p0, Lutc;->o:F
 
-.field public static oneme_settings_privacy_screen_safe_mode_disabled_snackbar_title:I = 0x7f1309d3
+    invoke-static/range {v1 .. v6}, Lytc;->c(Lytc;FFFFF)V
 
-.field public static oneme_settings_privacy_screen_safe_mode_enabled_snackbar_title:I = 0x7f1309d4
+    return-void
 
-.field public static oneme_settings_privacy_screen_search_by_phone:I = 0x7f1309d5
-
-.field public static oneme_settings_privacy_screen_see_online_state:I = 0x7f1309d6
-
-.field public static oneme_settings_privacy_screen_toolbar_title:I = 0x7f1309d7
-
-.field public static oneme_settings_privacy_screen_twofa_disabled:I = 0x7f1309d8
-
-.field public static oneme_settings_privacy_screen_twofa_email_warning:I = 0x7f1309d9
-
-.field public static oneme_settings_privacy_screen_twofa_enabled:I = 0x7f1309da
-
-.field public static oneme_settings_privacy_screen_twofa_title:I = 0x7f1309db
-
-.field public static oneme_settings_privacy_screen_web_apps:I = 0x7f1309dc
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

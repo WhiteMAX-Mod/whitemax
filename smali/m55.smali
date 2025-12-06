@@ -4,164 +4,86 @@
 
 
 # static fields
-.field public static final a:I
+.field public static final a:Ljava/lang/reflect/Method;
 
-.field public static final b:I
+.field public static final b:Ljava/lang/reflect/Method;
+
+.field public static final c:Ljava/lang/reflect/Method;
+
+.field public static final d:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 7
 
-    const/16 v0, 0xe6
+    const-class v0, Landroid/widget/AdapterView;
 
-    const/16 v1, 0xff
+    :try_start_0
+    const-class v1, Landroid/widget/AbsListView;
 
-    invoke-static {v0, v1, v1, v1}, Landroid/graphics/Color;->argb(IIII)I
+    const-string v2, "positionSelector"
 
-    move-result v0
+    sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    sput v0, Lm55;->a:I
+    const-class v4, Landroid/view/View;
 
-    const/16 v0, 0x80
+    sget-object v5, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
-    const/16 v1, 0x1b
+    sget-object v6, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
-    invoke-static {v0, v1, v1, v1}, Landroid/graphics/Color;->argb(IIII)I
-
-    move-result v0
-
-    sput v0, Lm55;->b:I
-
-    return-void
-.end method
-
-.method public static a(Lh6;)V
-    .locals 8
-
-    new-instance v1, Lajf;
-
-    const/4 v0, 0x0
-
-    invoke-direct {v1, v0, v0}, Lajf;-><init>(II)V
-
-    new-instance v2, Lajf;
-
-    sget v3, Lm55;->a:I
-
-    sget v4, Lm55;->b:I
-
-    invoke-direct {v2, v3, v4}, Lajf;-><init>(II)V
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+    filled-new-array {v3, v4, v5, v6, v6}, [Ljava/lang/Class;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v1, v2, v4}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v1
+
+    sput-object v1, Lm55;->a:Ljava/lang/reflect/Method;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v2}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+
+    const-string v1, "setSelectedPositionInt"
+
+    filled-new-array {v3}, [Ljava/lang/Class;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v1, v4}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v1
+
+    sput-object v1, Lm55;->b:Ljava/lang/reflect/Method;
+
+    invoke-virtual {v1, v2}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+
+    const-string v1, "setNextSelectedPositionInt"
+
+    filled-new-array {v3}, [Ljava/lang/Class;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v0, v1, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    move-result-object v3
+    move-result-object v0
 
-    iget v3, v3, Landroid/content/res/Configuration;->uiMode:I
+    sput-object v0, Lm55;->c:Ljava/lang/reflect/Method;
 
-    and-int/lit8 v3, v3, 0x30
+    invoke-virtual {v0, v2}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
 
-    const/4 v5, 0x1
+    sput-boolean v2, Lm55;->d:Z
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
-    const/16 v6, 0x20
+    return-void
 
-    if-ne v3, v6, :cond_0
+    :catch_0
+    move-exception v0
 
-    move v3, v5
-
-    goto :goto_0
-
-    :cond_0
-    move v3, v5
-
-    move v5, v0
-
-    :goto_0
-    invoke-virtual {v4}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v7
-
-    iget v7, v7, Landroid/content/res/Configuration;->uiMode:I
-
-    and-int/lit8 v7, v7, 0x30
-
-    if-ne v7, v6, :cond_1
-
-    move v6, v3
-
-    goto :goto_1
-
-    :cond_1
-    move v6, v0
-
-    :goto_1
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v3, 0x1e
-
-    if-lt v0, v3, :cond_2
-
-    new-instance v0, Lq55;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    goto :goto_2
-
-    :cond_2
-    const/16 v3, 0x1d
-
-    if-lt v0, v3, :cond_3
-
-    new-instance v0, Lp55;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    goto :goto_2
-
-    :cond_3
-    const/16 v3, 0x1c
-
-    if-lt v0, v3, :cond_4
-
-    new-instance v0, Lo55;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    goto :goto_2
-
-    :cond_4
-    new-instance v0, Ln55;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    :goto_2
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object v3
-
-    invoke-virtual/range {v0 .. v6}, Ln55;->b(Lajf;Lajf;Landroid/view/Window;Landroid/view/View;ZZ)V
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ln55;->a(Landroid/view/Window;)V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     return-void
 .end method

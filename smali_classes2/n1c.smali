@@ -3,62 +3,74 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lt1c;
+.implements Landroid/content/ComponentCallbacks;
+.implements Lv26;
 
 
-# static fields
-.field public static final a:Ln1c;
+# instance fields
+.field public final a:Lw1c;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;Lf28;Llv4;Lzg;Lqi9;Li5i;Lw1c;Ltw0;Lve2;)V
+    .locals 0
 
-    new-instance v0, Ln1c;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    new-instance p2, Ljava/util/HashSet;
 
-    sput-object v0, Ln1c;->a:Ln1c;
+    invoke-direct {p2}, Ljava/util/HashSet;-><init>()V
+
+    iput-object p7, p0, Ln1c;->a:Lw1c;
+
+    new-instance p2, Lk1c;
+
+    invoke-direct {p2, p1, p0}, Lk1c;-><init>(Landroid/content/Context;Ln1c;)V
+
+    invoke-static {}, Lrw4;->a()Lrw4;
+
+    invoke-virtual {p1, p0}, Landroid/content/Context;->registerComponentCallbacks(Landroid/content/ComponentCallbacks;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final onConfigurationChanged(Landroid/content/res/Configuration;)V
+    .locals 0
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Ln1c;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public onEvent(Ln73;)V
+    .locals 0
+    .annotation runtime Lvnf;
+    .end annotation
 
-    const v0, -0x7ce09cf0
-
-    return v0
+    .line 3
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.method public onEvent(Lq4a;)V
+    .locals 0
+    .annotation runtime Lvnf;
+    .end annotation
 
-    const-string v0, "Finish"
+    .line 1
+    return-void
+.end method
 
-    return-object v0
+.method public onEvent(Lvi2;)V
+    .locals 0
+    .annotation runtime Lvnf;
+    .end annotation
+
+    .line 2
+    return-void
+.end method
+
+.method public final onLowMemory()V
+    .locals 0
+
+    return-void
 .end method

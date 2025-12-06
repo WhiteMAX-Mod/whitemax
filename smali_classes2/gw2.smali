@@ -1,63 +1,30 @@
 .class public final Lgw2;
-.super Lpd0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lkw2;
 
-# static fields
-.field public static final b:Lgw2;
+
+# instance fields
+.field public final a:Ljava/lang/CharSequence;
+
+.field public final b:Ljava/lang/Long;
+
+.field public final c:Ljava/lang/Long;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ljava/lang/CharSequence;Ljava/lang/Long;Ljava/lang/Long;)V
+    .locals 0
 
-    new-instance v0, Lgw2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x4
+    iput-object p1, p0, Lgw2;->a:Ljava/lang/CharSequence;
 
-    invoke-direct {v0, v1}, Lpd0;-><init>(I)V
+    iput-object p2, p0, Lgw2;->b:Ljava/lang/Long;
 
-    sput-object v0, Lgw2;->b:Lgw2;
+    iput-object p3, p0, Lgw2;->c:Ljava/lang/Long;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lgw2;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x74a363af
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "RequestCameraPermission"
-
-    return-object v0
 .end method

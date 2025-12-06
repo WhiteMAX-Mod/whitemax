@@ -4,11 +4,5 @@
 
 
 # virtual methods
-.method public abstract a(J)V
-.end method
-
-.method public abstract b(IJ)V
-.end method
-
-.method public abstract c(Lyl5;J)Z
+.method public abstract a(Landroid/content/Context;Luy0;Lgf3;ZLv32;)Le4h;
 .end method

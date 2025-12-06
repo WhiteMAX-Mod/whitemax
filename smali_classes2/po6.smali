@@ -1,318 +1,236 @@
 .class public final Lpo6;
-.super Ljava/lang/Object;
+.super Luo6;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic f:I
-
-
 # instance fields
-.field public final a:Lll;
+.field public final a:Ljava/lang/String;
 
-.field public final b:Lpw0;
+.field public final b:Ljava/util/List;
 
-.field public final c:Lsd2;
-
-.field public final d:Lbh3;
-
-.field public final e:Loo6;
+.field public final c:Lko6;
 
 
 # direct methods
-.method public constructor <init>(Lll;Lpw0;Lsd2;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
+    .locals 1
+
+    new-instance v0, Lko6;
+
+    invoke-direct {v0, p2}, Lko6;-><init>(Ljava/lang/String;)V
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lpo6;->a:Lll;
+    iput-object p1, p0, Lpo6;->a:Ljava/lang/String;
 
-    iput-object p2, p0, Lpo6;->b:Lpw0;
+    iput-object p3, p0, Lpo6;->b:Ljava/util/List;
 
-    iput-object p3, p0, Lpo6;->c:Lsd2;
-
-    new-instance p1, Lbh3;
-
-    invoke-direct {p1}, Lbh3;-><init>()V
-
-    iput-object p1, p0, Lpo6;->d:Lbh3;
-
-    new-instance p1, Loo6;
-
-    invoke-direct {p1, p0}, Loo6;-><init>(Lpo6;)V
-
-    iput-object p1, p0, Lpo6;->e:Loo6;
+    iput-object v0, p0, Lpo6;->c:Lko6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(JZLy14;)Ljava/lang/Comparable;
-    .locals 8
+.method public final a(Loo6;)[Ljava/lang/String;
+    .locals 0
 
-    instance-of v0, p4, Lno6;
+    iget-object p1, p0, Lpo6;->a:Ljava/lang/String;
 
-    if-eqz v0, :cond_0
+    filled-new-array {p1}, [Ljava/lang/String;
 
-    move-object v0, p4
+    move-result-object p1
 
-    check-cast v0, Lno6;
+    return-object p1
+.end method
 
-    iget v1, v0, Lno6;->q0:I
+.method public final b()Ljava/lang/String;
+    .locals 1
 
-    const/high16 v2, -0x80000000
+    iget-object v0, p0, Lpo6;->a:Ljava/lang/String;
 
-    and-int v3, v1, v2
+    return-object v0
+.end method
 
-    if-eqz v3, :cond_0
+.method public final c()Ll4;
+    .locals 1
 
-    sub-int/2addr v1, v2
+    iget-object v0, p0, Lpo6;->c:Lko6;
 
-    iput v1, v0, Lno6;->q0:I
+    return-object v0
+.end method
 
-    goto :goto_0
+.method public final d()Ljava/util/List;
+    .locals 1
+
+    iget-object v0, p0, Lpo6;->b:Ljava/util/List;
+
+    return-object v0
+.end method
+
+.method public final e(Loo6;)Ljava/lang/String;
+    .locals 2
+
+    iget-object v0, p1, Loo6;->a:Ljava/lang/String;
+
+    invoke-virtual {p1}, Loo6;->b()Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, " AND "
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, " = ?"
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
 
     :cond_0
-    new-instance v0, Lno6;
+    instance-of v1, p1, Lpo6;
 
-    invoke-direct {v0, p0, p4}, Lno6;-><init>(Lpo6;Ly14;)V
+    const/4 v2, 0x0
 
-    :goto_0
-    iget-object p4, v0, Lno6;->Y:Ljava/lang/Object;
+    if-nez v1, :cond_1
 
-    sget-object v1, Lr54;->a:Lr54;
-
-    iget v2, v0, Lno6;->q0:I
-
-    const/4 v3, 0x1
-
-    const-string v4, "po6"
-
-    const/4 v5, 0x0
-
-    if-eqz v2, :cond_2
-
-    if-ne v2, v3, :cond_1
-
-    iget-wide p1, v0, Lno6;->X:J
-
-    iget-object p3, v0, Lno6;->o:Lpo6;
-
-    :try_start_0
-    invoke-static {p4}, Lxxi;->b(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto/16 :goto_2
-
-    :catchall_0
-    move-exception p1
-
-    goto/16 :goto_3
+    return v2
 
     :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
+    check-cast p1, Lpo6;
 
-    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
+    iget-object v1, p0, Lpo6;->a:Ljava/lang/String;
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget-object v3, p1, Lpo6;->a:Ljava/lang/String;
 
-    throw p1
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
 
     :cond_2
-    invoke-static {p4}, Lxxi;->b(Ljava/lang/Object;)V
+    iget-object v1, p0, Lpo6;->b:Ljava/util/List;
 
-    const-wide/16 v6, 0x0
+    iget-object v3, p1, Lpo6;->b:Ljava/util/List;
 
-    cmp-long p4, p1, v6
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-nez p4, :cond_5
+    move-result v1
 
-    const-class p1, Lpo6;
+    if-nez v1, :cond_3
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object p2, Ltei;->a:Lmxa;
-
-    if-nez p2, :cond_3
-
-    goto :goto_1
+    return v2
 
     :cond_3
-    sget-object p3, Lc98;->Y:Lc98;
+    iget-object v1, p0, Lpo6;->c:Lko6;
 
-    invoke-virtual {p2, p3}, Lmxa;->b(Lc98;)Z
+    iget-object p1, p1, Lpo6;->c:Lko6;
 
-    move-result p4
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz p4, :cond_4
+    move-result p1
 
-    const-string p4, "invalid server chat id #0!"
+    if-nez p1, :cond_4
 
-    invoke-virtual {p2, p3, p1, p4, v5}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    return v2
 
     :cond_4
-    :goto_1
-    return-object v5
+    return v0
+.end method
 
-    :cond_5
-    new-instance p4, Ljava/lang/StringBuilder;
+.method public final hashCode()I
+    .locals 3
 
-    const-string v2, "execute: "
+    iget-object v0, p0, Lpo6;->a:Ljava/lang/String;
 
-    invoke-direct {p4, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    invoke-virtual {p4, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    move-result v0
 
-    const-string v2, ", force: "
+    const/16 v1, 0x1f
 
-    invoke-virtual {p4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    mul-int/2addr v0, v1
 
-    invoke-virtual {p4, p3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    iget-object v2, p0, Lpo6;->b:Ljava/util/List;
 
-    invoke-virtual {p4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v2, v0, v1}, Lxrf;->l(Ljava/util/List;II)I
 
-    move-result-object p4
+    move-result v0
 
-    invoke-static {v4, p4}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v1, p0, Lpo6;->c:Lko6;
 
-    iget-object p4, p0, Lpo6;->c:Lsd2;
+    iget-object v1, v1, Lko6;->a:Ljava/lang/String;
 
-    invoke-virtual {p4, p1, p2}, Lsd2;->z(J)Lla2;
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    move-result-object p4
+    move-result v1
 
-    if-eqz p4, :cond_7
+    add-int/2addr v1, v0
 
-    invoke-virtual {p4}, Lla2;->O()Z
+    return v1
+.end method
 
-    move-result v2
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    if-eqz v2, :cond_6
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p4}, Lla2;->n()Lwr3;
+    const-string v1, "Real(id="
 
-    move-result-object v2
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-eqz v2, :cond_6
+    iget-object v1, p0, Lpo6;->a:Ljava/lang/String;
 
-    invoke-virtual {v2}, Lwr3;->d()Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v2
+    const-string v1, ", queryParams="
 
-    if-ne v2, v3, :cond_6
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string p1, "execute: chat is dialog && chat contains! Ignore force!"
+    iget-object v1, p0, Lpo6;->b:Ljava/util/List;
 
-    invoke-static {v4, p1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-object p4
+    const-string v1, ", name="
 
-    :cond_6
-    if-nez p3, :cond_7
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string p1, "execute: chat contains!"
+    iget-object v1, p0, Lpo6;->c:Lko6;
 
-    invoke-static {v4, p1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-object p4
+    const-string v1, ")"
 
-    :cond_7
-    iget-object p3, p0, Lpo6;->e:Loo6;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput-wide p1, p3, Loo6;->a:J
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget-object p3, p0, Lpo6;->b:Lpw0;
+    move-result-object v0
 
-    iget-object p4, p0, Lpo6;->e:Loo6;
-
-    invoke-virtual {p3, p4}, Lpw0;->d(Ljava/lang/Object;)V
-
-    iget-object p3, p0, Lpo6;->e:Loo6;
-
-    iget-object p4, p0, Lpo6;->a:Lll;
-
-    check-cast p4, Lmna;
-
-    invoke-virtual {p4, p1, p2}, Lmna;->i(J)J
-
-    move-result-wide v6
-
-    iput-wide v6, p3, Loo6;->b:J
-
-    :try_start_1
-    iget-object p3, p0, Lpo6;->d:Lbh3;
-
-    iput-object p0, v0, Lno6;->o:Lpo6;
-
-    iput-wide p1, v0, Lno6;->X:J
-
-    iput v3, v0, Lno6;->q0:I
-
-    invoke-virtual {p3, v0}, Llo7;->awaitInternal(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p4
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    if-ne p4, v1, :cond_8
-
-    return-object v1
-
-    :cond_8
-    move-object p3, p0
-
-    :goto_2
-    :try_start_2
-    check-cast p4, Lla2;
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    iget-object v0, p3, Lpo6;->b:Lpw0;
-
-    iget-object p3, p3, Lpo6;->e:Loo6;
-
-    invoke-virtual {v0, p3}, Lpw0;->f(Ljava/lang/Object;)V
-
-    const-string p3, "get chat info"
-
-    invoke-static {v4, p3}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    if-nez p4, :cond_9
-
-    new-instance p3, Ljava/lang/Long;
-
-    invoke-direct {p3, p1, p2}, Ljava/lang/Long;-><init>(J)V
-
-    filled-new-array {p3}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-static {p1, v3}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    const-string p2, "chat info is null %d"
-
-    invoke-static {v4, v5, p2, p1}, Ltei;->o(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    :cond_9
-    return-object p4
-
-    :catchall_1
-    move-exception p1
-
-    move-object p3, p0
-
-    :goto_3
-    iget-object p2, p3, Lpo6;->b:Lpw0;
-
-    iget-object p3, p3, Lpo6;->e:Loo6;
-
-    invoke-virtual {p2, p3}, Lpw0;->f(Ljava/lang/Object;)V
-
-    throw p1
+    return-object v0
 .end method

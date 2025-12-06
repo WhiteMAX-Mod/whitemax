@@ -1,86 +1,63 @@
 .class public final Ldw2;
-.super Lpd0;
+.super Lq44;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:J
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lv17;
+
+.field public Z:I
+
+.field public d:Z
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 1
+.method public constructor <init>(Lv17;Lq44;)V
+    .locals 0
 
-    const/4 v0, 0x4
+    iput-object p1, p0, Ldw2;->Y:Lv17;
 
-    invoke-direct {p0, v0}, Lpd0;-><init>(I)V
-
-    iput-wide p1, p0, Ldw2;->b:J
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Ldw2;->X:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Ldw2;->Z:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of v1, p1, Ldw2;
+    or-int/2addr p1, v0
 
-    const/4 v2, 0x0
+    iput p1, p0, Ldw2;->Z:I
 
-    if-nez v1, :cond_1
+    const/4 v5, 0x0
 
-    return v2
+    const/4 v6, 0x0
 
-    :cond_1
-    check-cast p1, Ldw2;
+    iget-object v0, p0, Ldw2;->Y:Lv17;
 
-    iget-wide v3, p0, Ldw2;->b:J
+    const-wide/16 v1, 0x0
 
-    iget-wide v5, p1, Ldw2;->b:J
+    const/4 v3, 0x0
 
-    cmp-long p1, v3, v5
+    const/4 v4, 0x0
 
-    if-eqz p1, :cond_2
+    move-object v7, p0
 
-    return v2
+    invoke-virtual/range {v0 .. v7}, Lv17;->d(JILew0;Lvf6;ZLq44;)Ljava/lang/Object;
 
-    :cond_2
-    return v0
-.end method
+    move-result-object p1
 
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Ldw2;->b:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "OpenChangeChannelTypeAndUpdateBackstack(chatId="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Ldw2;->b:J
-
-    invoke-static {v2, v3, v0, v1}, Lrtg;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

@@ -1,44 +1,44 @@
-.class public final Luyc;
+.class public abstract Luyc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/content/Context;
+# static fields
+.field public static oneme_media_keyboard:I = 0x7f0a0710
 
+.field public static oneme_media_keyboard_bottom_panel:I = 0x7f0a0711
 
-# direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 0
+.field public static oneme_media_keyboard_emoji_container:I = 0x7f0a0712
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_media_keyboard_emoji_list:I = 0x7f0a0713
 
-    iput-object p1, p0, Luyc;->a:Landroid/content/Context;
+.field public static oneme_media_keyboard_emoji_tabs:I = 0x7f0a0714
 
-    return-void
-.end method
+.field public static oneme_media_keyboard_fake_search_view:I = 0x7f0a0715
 
+.field public static oneme_media_keyboard_pager:I = 0x7f0a0716
 
-# virtual methods
-.method public final a()I
-    .locals 2
+.field public static oneme_media_keyboard_recent_clear_confirmation_action:I = 0x7f0a0717
 
-    iget-object v0, p0, Luyc;->a:Landroid/content/Context;
+.field public static oneme_media_keyboard_recent_clear_confirmation_cancel:I = 0x7f0a0718
 
-    invoke-static {v0}, Ltyi;->b(Landroid/content/Context;)I
+.field public static oneme_media_keyboard_remove_action:I = 0x7f0a0719
 
-    move-result v0
+.field public static oneme_media_keyboard_settings_action:I = 0x7f0a071a
 
-    const/16 v1, 0x168
+.field public static oneme_media_keyboard_showcase_action:I = 0x7f0a071b
 
-    if-lt v0, v1, :cond_0
+.field public static oneme_media_keyboard_stickers_container:I = 0x7f0a071c
 
-    const/16 v0, 0x20
+.field public static oneme_media_keyboard_stickers_header_title:I = 0x7f0a071d
 
-    return v0
+.field public static oneme_media_keyboard_stickers_list:I = 0x7f0a071e
 
-    :cond_0
-    const/16 v0, 0x1c
+.field public static oneme_media_keyboard_stickers_tabs:I = 0x7f0a071f
 
-    return v0
-.end method
+.field public static oneme_media_keyboard_tabs:I = 0x7f0a0720
+
+.field public static oneme_media_keyboard_top_panel:I = 0x7f0a0721
+
+.field public static oneme_media_keyboard_view_type_category_emoji:I = 0x7f0a0722
+
+.field public static oneme_media_keyboard_view_type_fake_search:I = 0x7f0a0723

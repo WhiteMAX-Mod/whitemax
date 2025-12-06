@@ -1,60 +1,104 @@
-.class public final Ltm4;
+.class public final synthetic Ltm4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lwod;
-
-
-# static fields
-.field public static final f:Ljava/util/logging/Logger;
+.implements Lrl3;
 
 
 # instance fields
-.field public final a:Lln7;
+.field public final synthetic a:I
 
-.field public final b:Ljava/util/concurrent/Executor;
-
-.field public final c:Lcr9;
-
-.field public final d:Lmf5;
-
-.field public final e:Lrif;
+.field public final synthetic b:Lfsc;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lfsc;I)V
+    .locals 0
 
-    const-class v0, Lq4g;
+    iput p2, p0, Ltm4;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    iput-object p1, p0, Ltm4;->b:Lfsc;
 
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/logging/Logger;->getLogger(Ljava/lang/String;)Ljava/util/logging/Logger;
-
-    move-result-object v0
-
-    sput-object v0, Ltm4;->f:Ljava/util/logging/Logger;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/util/concurrent/Executor;Lcr9;Lln7;Lmf5;Lrif;)V
-    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final j(Lv6d;)Ljava/lang/Object;
+    .locals 6
 
-    iput-object p1, p0, Ltm4;->b:Ljava/util/concurrent/Executor;
+    iget v0, p0, Ltm4;->a:I
 
-    iput-object p2, p0, Ltm4;->c:Lcr9;
+    packed-switch v0, :pswitch_data_0
 
-    iput-object p3, p0, Ltm4;->a:Lln7;
+    iget-object v0, p0, Ltm4;->b:Lfsc;
 
-    iput-object p4, p0, Ltm4;->d:Lmf5;
+    invoke-static {v0, p1}, Lcom/google/firebase/messaging/FirebaseMessagingRegistrar;->a(Lfsc;Lv6d;)Lcom/google/firebase/messaging/FirebaseMessaging;
 
-    iput-object p5, p0, Ltm4;->e:Lrif;
+    move-result-object p1
 
-    return-void
+    return-object p1
+
+    :pswitch_0
+    new-instance v0, Lvm4;
+
+    const-class v1, Landroid/content/Context;
+
+    invoke-virtual {p1, v1}, Lv6d;->a(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/content/Context;
+
+    const-class v2, Lh06;
+
+    invoke-virtual {p1, v2}, Lv6d;->a(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lh06;
+
+    invoke-virtual {v2}, Lh06;->c()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-class v3, Lv17;
+
+    invoke-static {v3}, Lfsc;->a(Ljava/lang/Class;)Lfsc;
+
+    move-result-object v3
+
+    invoke-virtual {p1, v3}, Lv6d;->b(Lfsc;)Ljava/util/Set;
+
+    move-result-object v3
+
+    const-class v4, Lcr4;
+
+    invoke-virtual {p1, v4}, Lv6d;->c(Ljava/lang/Class;)Lrpc;
+
+    move-result-object v4
+
+    iget-object v5, p0, Ltm4;->b:Lfsc;
+
+    invoke-virtual {p1, v5}, Lv6d;->f(Lfsc;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    move-object v5, p1
+
+    check-cast v5, Ljava/util/concurrent/Executor;
+
+    invoke-direct/range {v0 .. v5}, Lvm4;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/util/Set;Lrpc;Ljava/util/concurrent/Executor;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

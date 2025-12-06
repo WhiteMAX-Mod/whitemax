@@ -2,154 +2,106 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/security/Signature;
 
-.field public final b:Ljava/lang/ref/WeakReference;
+.field public final b:Ljavax/crypto/Cipher;
+
+.field public final c:Ljavax/crypto/Mac;
+
+.field public final d:Landroid/security/identity/IdentityCredential;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/biometric/BiometricFragment;)V
+.method public constructor <init>(Landroid/security/identity/IdentityCredential;)V
     .locals 1
+
+    .line 16
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lgo0;->a:I
+    .line 17
+    iput-object v0, p0, Lgo0;->a:Ljava/security/Signature;
+
+    .line 18
+    iput-object v0, p0, Lgo0;->b:Ljavax/crypto/Cipher;
+
+    .line 19
+    iput-object v0, p0, Lgo0;->c:Ljavax/crypto/Mac;
+
+    .line 20
+    iput-object p1, p0, Lgo0;->d:Landroid/security/identity/IdentityCredential;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/security/Signature;)V
+    .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    new-instance v0, Ljava/lang/ref/WeakReference;
+    iput-object p1, p0, Lgo0;->a:Ljava/security/Signature;
 
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lgo0;->b:Ljava/lang/ref/WeakReference;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroidx/biometric/BiometricViewModel;I)V
-    .locals 0
-
-    iput p2, p0, Lgo0;->a:I
-
-    packed-switch p2, :pswitch_data_0
+    const/4 p1, 0x0
 
     .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lgo0;->b:Ljavax/crypto/Cipher;
 
     .line 4
-    new-instance p2, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object p2, p0, Lgo0;->b:Ljava/lang/ref/WeakReference;
-
-    return-void
+    iput-object p1, p0, Lgo0;->c:Ljavax/crypto/Mac;
 
     .line 5
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 6
-    new-instance p2, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object p2, p0, Lgo0;->b:Ljava/lang/ref/WeakReference;
+    iput-object p1, p0, Lgo0;->d:Landroid/security/identity/IdentityCredential;
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
 .end method
 
+.method public constructor <init>(Ljavax/crypto/Cipher;)V
+    .locals 1
 
-# virtual methods
-.method public final run()V
-    .locals 2
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget v0, p0, Lgo0;->a:I
+    const/4 v0, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    .line 7
+    iput-object v0, p0, Lgo0;->a:Ljava/security/Signature;
 
-    iget-object v0, p0, Lgo0;->b:Ljava/lang/ref/WeakReference;
+    .line 8
+    iput-object p1, p0, Lgo0;->b:Ljavax/crypto/Cipher;
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    .line 9
+    iput-object v0, p0, Lgo0;->c:Ljavax/crypto/Mac;
 
-    move-result-object v1
+    .line 10
+    iput-object v0, p0, Lgo0;->d:Landroid/security/identity/IdentityCredential;
 
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/biometric/BiometricViewModel;
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, v0, Landroidx/biometric/BiometricViewModel;->n:Z
-
-    :cond_0
     return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lgo0;->b:Ljava/lang/ref/WeakReference;
+.method public constructor <init>(Ljavax/crypto/Mac;)V
+    .locals 1
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    .line 11
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v1
+    const/4 v0, 0x0
 
-    if-eqz v1, :cond_1
+    .line 12
+    iput-object v0, p0, Lgo0;->a:Ljava/security/Signature;
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    .line 13
+    iput-object v0, p0, Lgo0;->b:Ljavax/crypto/Cipher;
 
-    move-result-object v0
+    .line 14
+    iput-object p1, p0, Lgo0;->c:Ljavax/crypto/Mac;
 
-    check-cast v0, Landroidx/biometric/BiometricViewModel;
+    .line 15
+    iput-object v0, p0, Lgo0;->d:Landroid/security/identity/IdentityCredential;
 
-    const/4 v1, 0x0
-
-    iput-boolean v1, v0, Landroidx/biometric/BiometricViewModel;->m:Z
-
-    :cond_1
     return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lgo0;->b:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/biometric/BiometricFragment;
-
-    invoke-virtual {v0}, Landroidx/biometric/BiometricFragment;->L0()V
-
-    :cond_2
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -3,8 +3,8 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lc2b;
-.implements Lgo3;
+.implements Lcbb;
+.implements Lqq3;
 
 
 # annotations
@@ -21,8 +21,8 @@
     d2 = {
         "Lone/me/profile/screens/changeowner/ChangeOwnerScreen;",
         "Lone/me/sdk/arch/Widget;",
-        "Lc2b;",
-        "Lgo3;",
+        "Lcbb;",
+        "Lqq3;",
         "Landroid/os/Bundle;",
         "args",
         "<init>",
@@ -45,34 +45,34 @@
 
 
 # static fields
-.field public static final synthetic s0:[Ltr7;
+.field public static final synthetic t0:[Lyy7;
 
 
 # instance fields
-.field public final X:Ljava/lang/String;
+.field public final X:Lk18;
 
-.field public final Y:Liu7;
+.field public final Y:Lk18;
 
-.field public final Z:Liu7;
+.field public final Z:Lbbd;
 
-.field public final a:Lw9c;
+.field public final a:Lka5;
 
-.field public final b:Lgi7;
+.field public final b:Leo7;
 
-.field public final c:Lqs;
+.field public final c:Lhs;
 
-.field public final o:Lqs;
+.field public final d:Lhs;
 
-.field public final q0:Lh0d;
+.field public final o:Ljava/lang/String;
 
-.field public final r0:Lh0d;
+.field public final s0:Lbbd;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 8
 
-    new-instance v0, Leec;
+    new-instance v0, Ltoc;
 
     const-class v1, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;
 
@@ -82,37 +82,37 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Lz7d;->a:La8d;
+    sget-object v2, Lvid;->a:Lwid;
 
     const-string v3, "leaveFromChat"
 
     const-string v5, "getLeaveFromChat()Z"
 
-    invoke-static {v2, v1, v3, v5, v4}, Li57;->d(La8d;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Leec;
+    invoke-static {v2, v1, v3, v5, v4}, Lho7;->d(Lwid;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Ltoc;
 
     move-result-object v2
 
-    new-instance v3, Leec;
+    new-instance v3, Ltoc;
 
     const-string v5, "toolbar"
 
     const-string v6, "getToolbar()Lone/me/sdk/uikit/common/toolbar/OneMeToolbar;"
 
-    invoke-direct {v3, v1, v5, v6, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v3, v1, v5, v6, v4}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v5, Leec;
+    new-instance v5, Ltoc;
 
     const-string v6, "membersListRouter"
 
     const-string v7, "getMembersListRouter()Lone/me/sdk/arch/navigation/ChildSlotRouter;"
 
-    invoke-direct {v5, v1, v6, v7, v4}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v5, v1, v6, v7, v4}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     const/4 v1, 0x4
 
-    new-array v1, v1, [Ltr7;
+    new-array v1, v1, [Lyy7;
 
     aput-object v0, v1, v4
 
@@ -128,7 +128,7 @@
 
     aput-object v5, v1, v0
 
-    sput-object v1, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->s0:[Ltr7;
+    sput-object v1, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->t0:[Lyy7;
 
     return-void
 .end method
@@ -142,11 +142,11 @@
     move-result-object p1
 
     .line 25
-    new-instance p2, Ltcb;
+    new-instance p2, Limb;
 
     const-string v0, "chat_id"
 
-    invoke-direct {p2, v0, p1}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p2, v0, p1}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 26
     invoke-static {p3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -154,19 +154,19 @@
     move-result-object p1
 
     .line 27
-    new-instance p3, Ltcb;
+    new-instance p3, Limb;
 
     const-string v0, "leave_chat"
 
-    invoke-direct {p3, v0, p1}, Ltcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p3, v0, p1}, Limb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 28
-    filled-new-array {p2, p3}, [Ltcb;
+    filled-new-array {p2, p3}, [Limb;
 
     move-result-object p1
 
     .line 29
-    invoke-static {p1}, Leli;->b([Ltcb;)Landroid/os/Bundle;
+    invoke-static {p1}, Lgwi;->b([Limb;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -186,54 +186,54 @@
     const/4 v2, 0x0
 
     .line 1
-    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILki4;)V
+    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILtk4;)V
 
     .line 2
-    new-instance p1, Lw9c;
+    new-instance p1, Lka5;
 
-    new-instance v0, Lvk1;
+    new-instance v0, Ljl1;
 
-    const/16 v1, 0x18
+    const/16 v1, 0x19
 
-    invoke-direct {v0, v1}, Lvk1;-><init>(I)V
+    invoke-direct {v0, v1}, Ljl1;-><init>(I)V
 
     const/4 v1, 0x6
 
-    invoke-direct {p1, v0, v2, v1}, Lw9c;-><init>(Lji6;Lji6;I)V
+    invoke-direct {p1, v0, v2, v1}, Lka5;-><init>(Lcm6;Lcm6;I)V
 
-    iput-object p1, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->a:Lw9c;
+    iput-object p1, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->a:Lka5;
 
     .line 3
-    sget-object p1, Lgi7;->f:Lgi7;
+    sget-object p1, Leo7;->f:Leo7;
 
-    iput-object p1, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->b:Lgi7;
+    iput-object p1, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->b:Leo7;
 
     .line 4
-    new-instance p1, Lqs;
+    new-instance p1, Lhs;
 
     const-class v0, Ljava/lang/Long;
 
     const-string v1, "chat_id"
 
-    invoke-direct {p1, v0, v1}, Lqs;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {p1, v0, v1}, Lhs;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 5
-    iput-object p1, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->c:Lqs;
+    iput-object p1, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->c:Lhs;
 
     .line 6
-    new-instance p1, Lqs;
+    new-instance p1, Lhs;
 
     const-class v0, Ljava/lang/Boolean;
 
     const-string v1, "leave_chat"
 
-    invoke-direct {p1, v0, v1}, Lqs;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {p1, v0, v1}, Lhs;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 7
-    iput-object p1, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->o:Lqs;
+    iput-object p1, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->d:Lhs;
 
     .line 8
-    invoke-virtual {p0}, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->C0()J
+    invoke-virtual {p0}, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->y0()J
 
     move-result-wide v0
 
@@ -242,154 +242,124 @@
     const-string v2, "}"
 
     .line 9
-    invoke-static {v0, v1, p1, v2}, Lrtg;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, p1, v2}, La9h;->d(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     .line 10
-    iput-object p1, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->X:Ljava/lang/String;
+    iput-object p1, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->o:Ljava/lang/String;
 
     .line 11
-    new-instance p1, Ljj1;
+    new-instance p1, Lhk1;
 
     const/4 v0, 0x7
 
-    invoke-direct {p1, v0, p0}, Ljj1;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, v0, p0}, Lhk1;-><init>(ILjava/lang/Object;)V
 
     .line 12
-    new-instance v0, Lr;
+    new-instance v0, Lq;
 
-    const/16 v1, 0x18
+    const/16 v1, 0x19
 
-    invoke-direct {v0, v1, p1}, Lr;-><init>(ILji6;)V
+    invoke-direct {v0, v1, p1}, Lq;-><init>(ILcm6;)V
 
-    const-class p1, Li82;
+    const-class p1, Lk92;
 
-    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lji6;)Liu7;
+    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lcm6;)Lk18;
 
     move-result-object p1
 
     .line 13
-    iput-object p1, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->Y:Liu7;
+    iput-object p1, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->X:Lk18;
 
     .line 14
-    new-instance p1, Lvk1;
+    new-instance p1, Ljl1;
 
-    const/16 v0, 0x19
+    const/16 v0, 0x1a
 
-    invoke-direct {p1, v0}, Lvk1;-><init>(I)V
+    invoke-direct {p1, v0}, Ljl1;-><init>(I)V
 
     .line 15
-    new-instance v0, Lr;
+    new-instance v0, Lq;
 
-    const/16 v1, 0x19
+    const/16 v1, 0x1a
 
-    invoke-direct {v0, v1, p1}, Lr;-><init>(ILji6;)V
+    invoke-direct {v0, v1, p1}, Lq;-><init>(ILcm6;)V
 
-    const-class p1, Lp69;
+    const-class p1, Ltd9;
 
-    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lji6;)Liu7;
+    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lcm6;)Lk18;
 
     move-result-object p1
 
     .line 16
-    iput-object p1, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->Z:Liu7;
+    iput-object p1, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->Y:Lk18;
 
     .line 17
-    sget p1, Lvza;->s:I
+    sget p1, Lv8b;->s:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lh0d;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lbbd;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->q0:Lh0d;
+    iput-object p1, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->Z:Lbbd;
 
     .line 18
-    sget p1, Lvza;->r:I
+    sget p1, Lv8b;->r:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->childSlotRouter(I)Lh0d;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->childSlotRouter(I)Lbbd;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->r0:Lh0d;
+    iput-object p1, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->s0:Lbbd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final C0()J
-    .locals 2
-
-    sget-object v0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->s0:[Ltr7;
-
-    const/4 v1, 0x0
-
-    aget-object v0, v0, v1
-
-    iget-object v0, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->c:Lqs;
-
-    invoke-virtual {v0, p0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final D0()Z
-    .locals 2
-
-    sget-object v0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->s0:[Ltr7;
-
-    const/4 v1, 0x1
-
-    aget-object v0, v0, v1
-
-    iget-object v0, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->o:Lqs;
-
-    invoke-virtual {v0, p0}, Lqs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final O(Ljava/lang/CharSequence;)V
+.method public final J(Ljava/lang/CharSequence;)V
     .locals 1
 
-    iget-object v0, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->Z:Liu7;
+    iget-object v0, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->Y:Lk18;
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lp69;
+    check-cast v0, Ltd9;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lp69;->v(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Ltd9;->x(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final a0()V
+    .locals 2
+
+    iget-object v0, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->Y:Lk18;
+
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ltd9;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Ltd9;->x(Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method public final g(ILandroid/os/Bundle;)V
-    .locals 12
+    .locals 10
 
-    sget v0, Lvza;->p:I
+    sget v0, Lv8b;->p:I
 
     if-ne p1, v0, :cond_1
 
@@ -401,171 +371,147 @@
 
     move-result-wide v5
 
-    iget-object p1, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->Y:Liu7;
+    iget-object p1, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->X:Lk18;
 
-    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Li82;
+    check-cast p1, Lk92;
 
-    invoke-virtual {p0}, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->D0()Z
+    invoke-virtual {p0}, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->z0()Z
 
     move-result p2
 
-    iget-object v7, p1, Li82;->q0:Lxe5;
+    iget-object v7, p1, Lk92;->Z:Lci5;
 
-    iget-wide v8, p1, Li82;->b:J
+    iget-wide v8, p1, Lk92;->b:J
 
-    iget-object v0, p1, Li82;->o:Liu7;
+    iget-object v0, p1, Lk92;->d:Lk18;
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ld33;
-
-    check-cast v0, Ld43;
-
-    invoke-virtual {v0, v8, v9}, Ld43;->N(J)Ln0d;
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v0, v0, Ln0d;->a:Lq0f;
+    check-cast v0, Lw63;
 
-    invoke-interface {v0}, Lq0f;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0, v8, v9}, Lw63;->j(J)Lhbd;
 
     move-result-object v0
 
-    check-cast v0, Lla2;
+    iget-object v0, v0, Lhbd;->a:Lmcf;
+
+    invoke-interface {v0}, Lmcf;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lpb2;
 
     if-eqz v0, :cond_1
 
-    iget-object v1, p1, Li82;->c:Liu7;
+    iget-object v1, p1, Lk92;->c:Lk18;
 
-    invoke-interface {v1}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lll;
+    check-cast v1, Lhwa;
 
-    move-object v3, v1
+    move-object v3, v0
 
-    iget-wide v1, p1, Li82;->b:J
+    move-object v0, v1
 
-    iget-object v0, v0, Lla2;->b:Lne2;
+    iget-wide v1, p1, Lk92;->b:J
 
-    iget-wide v10, v0, Lne2;->a:J
+    iget-object v3, v3, Lpb2;->b:Lrf2;
 
-    move-object v0, v3
+    iget-wide v3, v3, Lrf2;->a:J
 
-    check-cast v0, Lmna;
-
-    move-wide v3, v10
-
-    invoke-virtual/range {v0 .. v6}, Lmna;->g(JJJ)J
+    invoke-virtual/range {v0 .. v6}, Lhwa;->e(JJJ)J
 
     if-eqz p2, :cond_0
 
-    iget-object p2, p1, Li82;->Y:Liu7;
+    iget-object p2, p1, Lk92;->X:Lk18;
 
-    invoke-interface {p2}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lulf;
-
-    check-cast p2, Lqta;
-
-    invoke-virtual {p2}, Lqta;->b()Lk54;
+    invoke-interface {p2}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object p2
 
-    new-instance v0, Lh82;
+    check-cast p2, Llzf;
+
+    check-cast p2, Lq2b;
+
+    invoke-virtual {p2}, Lq2b;->b()Lz74;
+
+    move-result-object p2
+
+    new-instance v0, Lj92;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p1, v1}, Lh82;-><init>(Li82;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p1, v1}, Lj92;-><init>(Lk92;Lkotlin/coroutines/Continuation;)V
 
     const/4 v1, 0x2
 
-    invoke-static {p1, p2, v0, v1}, Lxzg;->m(Lxzg;Li54;Lzi6;I)Lcye;
+    invoke-static {p1, p2, v0, v1}, Lxfh;->o(Lxfh;Lx74;Lsm6;I)Lx9f;
 
-    new-instance p1, Lf82;
+    new-instance p1, Lh92;
 
-    sget p2, Lxza;->d0:I
+    sget p2, Lx8b;->g0:I
 
-    new-instance v0, Lorf;
+    new-instance v0, Ln5g;
 
-    invoke-direct {v0, p2}, Lorf;-><init>(I)V
+    invoke-direct {v0, p2}, Ln5g;-><init>(I)V
 
-    sget p2, Lpjd;->A:I
+    sget p2, Lyud;->A:I
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p2
 
-    invoke-direct {p1, v0, p2}, Lf82;-><init>(Lorf;Ljava/lang/Integer;)V
+    invoke-direct {p1, v0, p2}, Lh92;-><init>(Ln5g;Ljava/lang/Integer;)V
 
-    invoke-static {v7, p1}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
+    invoke-static {v7, p1}, Lxfh;->r(Lci5;Ljava/lang/Object;)V
 
     return-void
 
     :cond_0
-    new-instance p2, Lf82;
+    new-instance p2, Lh92;
 
-    sget v0, Lxza;->j0:I
+    sget v0, Lx8b;->m0:I
 
-    new-instance v1, Lorf;
+    new-instance v1, Ln5g;
 
-    invoke-direct {v1, v0}, Lorf;-><init>(I)V
+    invoke-direct {v1, v0}, Ln5g;-><init>(I)V
 
-    sget v0, Lpjd;->A:I
+    sget v0, Lyud;->A:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    invoke-direct {p2, v1, v0}, Lf82;-><init>(Lorf;Ljava/lang/Integer;)V
+    invoke-direct {p2, v1, v0}, Lh92;-><init>(Ln5g;Ljava/lang/Integer;)V
 
-    invoke-static {v7, p2}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
+    invoke-static {v7, p2}, Lxfh;->r(Lci5;Ljava/lang/Object;)V
 
-    iget-object p1, p1, Li82;->Z:Lxe5;
+    iget-object p1, p1, Lk92;->Y:Lci5;
 
-    new-instance p2, Ljac;
+    new-instance p2, Lvkc;
 
-    sget-object v0, Lz2c;->b:Lz2c;
+    sget-object v0, Lpdc;->b:Lpdc;
 
-    invoke-direct {p2, v8, v9, v0}, Ljac;-><init>(JLz2c;)V
+    invoke-direct {p2, v8, v9, v0}, Lvkc;-><init>(JLpdc;)V
 
-    invoke-static {p1, p2}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
+    invoke-static {p1, p2}, Lxfh;->r(Lci5;Ljava/lang/Object;)V
 
     :cond_1
     return-void
 .end method
 
-.method public final g0()V
-    .locals 2
-
-    iget-object v0, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->Z:Liu7;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lp69;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lp69;->v(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final getInsetsConfig()Lgi7;
+.method public final getInsetsConfig()Leo7;
     .locals 1
 
-    iget-object v0, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->b:Lgi7;
+    iget-object v0, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->b:Leo7;
 
     return-object v0
 .end method
@@ -573,15 +519,15 @@
 .method public final getScopeId-IluPPks()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->X:Ljava/lang/String;
+    iget-object v0, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->o:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final getScreenDelegate()Lzpd;
+.method public final getScreenDelegate()Lk1e;
     .locals 1
 
-    iget-object v0, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->a:Lw9c;
+    iget-object v0, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->a:Lka5;
 
     return-object v0
 .end method
@@ -589,17 +535,17 @@
 .method public final o()V
     .locals 2
 
-    iget-object v0, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->Z:Liu7;
+    iget-object v0, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->Y:Lk18;
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lp69;
+    check-cast v0, Ltd9;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lp69;->v(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ltd9;->x(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -619,7 +565,7 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    new-instance p2, Lu6b;
+    new-instance p2, Lyfb;
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -627,43 +573,43 @@
 
     const/4 v0, 0x6
 
-    invoke-direct {p2, p3, v0}, Lu6b;-><init>(Landroid/content/Context;I)V
+    invoke-direct {p2, p3, v0}, Lyfb;-><init>(Landroid/content/Context;I)V
 
-    sget p3, Lvza;->s:I
+    sget p3, Lv8b;->s:I
 
     invoke-virtual {p2, p3}, Landroid/view/View;->setId(I)V
 
-    sget p3, Lxza;->l0:I
+    sget p3, Lx8b;->o0:I
 
-    invoke-virtual {p2, p3}, Lu6b;->setTitle(I)V
+    invoke-virtual {p2, p3}, Lyfb;->setTitle(I)V
 
-    new-instance p3, Lc6b;
+    new-instance p3, Lgfb;
 
-    new-instance v0, Ll;
-
-    const/16 v1, 0x1d
-
-    invoke-direct {v0, v1, p0}, Ll;-><init>(ILjava/lang/Object;)V
-
-    invoke-direct {p3, v0}, Lc6b;-><init>(Lli6;)V
-
-    invoke-virtual {p2, p3}, Lu6b;->setLeftActions(Li6b;)V
-
-    new-instance p3, Lh6b;
-
-    new-instance v0, Lp6b;
-
-    invoke-direct {v0, p0}, Lp6b;-><init>(Lc2b;)V
+    new-instance v0, Ld92;
 
     const/4 v1, 0x0
 
-    invoke-direct {p3, v1, v0, v1}, Lh6b;-><init>(Lq6b;Lq6b;Ln6b;)V
+    invoke-direct {v0, v1, p0}, Ld92;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {p2, p3}, Lu6b;->setRightActions(Lk6b;)V
+    invoke-direct {p3, v0}, Lgfb;-><init>(Lem6;)V
+
+    invoke-virtual {p2, p3}, Lyfb;->setLeftActions(Lmfb;)V
+
+    new-instance p3, Llfb;
+
+    new-instance v0, Ltfb;
+
+    invoke-direct {v0, p0}, Ltfb;-><init>(Lcbb;)V
+
+    const/4 v1, 0x0
+
+    invoke-direct {p3, v1, v0, v1}, Llfb;-><init>(Lufb;Lufb;Lrfb;)V
+
+    invoke-virtual {p2, p3}, Lyfb;->setRightActions(Lofb;)V
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    new-instance p2, Le72;
+    new-instance p2, Lf82;
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -671,7 +617,7 @@
 
     invoke-direct {p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    sget p3, Lvza;->r:I
+    sget p3, Lv8b;->r:I
 
     invoke-virtual {p2, p3}, Landroid/view/View;->setId(I)V
 
@@ -691,53 +637,53 @@
 .method public final onDestroyView(Landroid/view/View;)V
     .locals 2
 
-    sget-object v0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->s0:[Ltr7;
+    sget-object v0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->t0:[Lyy7;
 
     const/4 v1, 0x2
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->q0:Lh0d;
+    iget-object v1, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->Z:Lbbd;
 
-    invoke-interface {v1, p0, v0}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
+    invoke-interface {v1, p0, v0}, Lbbd;->D(Ljava/lang/Object;Lyy7;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lu6b;
+    check-cast v0, Lyfb;
 
-    invoke-static {v0}, Lici;->d(Landroid/view/View;)V
+    invoke-static {v0}, Lapi;->e(Landroid/view/View;)V
 
-    invoke-super {p0, p1}, Ll24;->onDestroyView(Landroid/view/View;)V
+    invoke-super {p0, p1}, Lc54;->onDestroyView(Landroid/view/View;)V
 
     return-void
 .end method
 
 .method public final onViewCreated(Landroid/view/View;)V
-    .locals 10
+    .locals 8
 
-    sget-object p1, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->s0:[Ltr7;
+    sget-object p1, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->t0:[Lyy7;
 
     const/4 v0, 0x3
 
     aget-object p1, p1, v0
 
-    iget-object v0, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->r0:Lh0d;
+    iget-object v0, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->s0:Lbbd;
 
-    invoke-interface {v0, p0, p1}, Lh0d;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
+    invoke-interface {v0, p0, p1}, Lbbd;->D(Ljava/lang/Object;Lyy7;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lj53;
+    check-cast p1, Lc83;
 
-    iget-object v0, p1, Lj53;->a:Lqid;
+    iget-object v0, p1, Lc83;->a:Lytd;
 
-    invoke-virtual {p1}, Lj53;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lc83;->b()Ljava/lang/String;
 
     move-result-object p1
 
     const-string v1, "change_owner_widget"
 
-    invoke-static {p1, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -747,158 +693,196 @@
 
     const/4 p1, 0x0
 
-    invoke-virtual {v0, p1}, Lqid;->Q(Z)V
+    invoke-virtual {v0, p1}, Lytd;->R(Z)V
 
-    new-instance v4, Lone/me/members/list/MembersListWidget;
+    new-instance p1, Lone/me/members/list/MembersListWidget;
 
-    new-instance p1, Ld69;
+    new-instance v3, Lhd9;
 
-    invoke-virtual {p0}, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->C0()J
+    invoke-virtual {p0}, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->y0()J
 
-    move-result-wide v5
+    move-result-wide v4
 
-    sget-object v3, Lro2;->b:Lro2;
+    sget-object v6, Lbr2;->b:Lbr2;
 
     const/16 v7, 0xc
 
-    invoke-direct {p1, v5, v6, v3, v7}, Ld69;-><init>(JLro2;I)V
+    invoke-direct {v3, v4, v5, v6, v7}, Lhd9;-><init>(JLbr2;I)V
 
-    iget-object v3, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->X:Ljava/lang/String;
+    iget-object v4, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->o:Ljava/lang/String;
 
-    invoke-direct {v4, v3, p1, v2}, Lone/me/members/list/MembersListWidget;-><init>(Ljava/lang/String;Ld69;Lki4;)V
+    invoke-direct {p1, v4, v3, v2}, Lone/me/members/list/MembersListWidget;-><init>(Ljava/lang/String;Lhd9;Ltk4;)V
 
-    new-instance v3, Ltid;
+    invoke-static {p1, v2, v2}, Ll8j;->a(Lc54;Lih;Lih;)Lbud;
 
-    const/4 v8, 0x0
+    move-result-object p1
 
-    const/4 v9, -0x1
+    invoke-virtual {p1, v1}, Lbud;->d(Ljava/lang/String;)V
 
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    invoke-direct/range {v3 .. v9}, Ltid;-><init>(Ll24;Ljava/lang/String;Lq24;Lq24;ZI)V
-
-    invoke-virtual {v3, v1}, Ltid;->d(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v3}, Lqid;->R(Ltid;)V
+    invoke-virtual {v0, p1}, Lytd;->S(Lbud;)V
 
     :cond_0
-    iget-object p1, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->Z:Liu7;
+    iget-object p1, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->Y:Lk18;
 
-    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lp69;
-
-    iget-object p1, p1, Lp69;->X:Lxe5;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lfx7;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lfx7;->x()Lhx7;
-
-    move-result-object v0
-
-    sget-object v1, Lhw7;->o:Lhw7;
-
-    invoke-static {p1, v0, v1}, Lc8;->c(Lty5;Lhx7;Lhw7;)Lfu1;
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    new-instance v0, Lc82;
+    check-cast p1, Ltd9;
 
-    invoke-direct {v0, v2, p0}, Lc82;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/changeowner/ChangeOwnerScreen;)V
+    iget-object p1, p1, Ltd9;->o:Lci5;
 
-    new-instance v3, Lb16;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj48;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lj48;->p()Ll48;
+
+    move-result-object v0
+
+    sget-object v1, Ll38;->d:Ll38;
+
+    invoke-static {p1, v0, v1}, Law0;->a(Lx26;Ll48;Ll38;)Lsu1;
+
+    move-result-object p1
+
+    new-instance v0, Le92;
+
+    invoke-direct {v0, v2, p0}, Le92;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/changeowner/ChangeOwnerScreen;)V
+
+    new-instance v3, Lg56;
 
     const/4 v4, 0x1
 
-    invoke-direct {v3, p1, v0, v4}, Lb16;-><init>(Lty5;Lzi6;I)V
+    invoke-direct {v3, p1, v0, v4}, Lg56;-><init>(Lx26;Lsm6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lv38;
 
     move-result-object p1
 
-    invoke-static {v3, p1}, Ltq;->v(Lty5;Lq54;)Lcye;
+    invoke-static {v3, p1}, Lgw0;->w(Lx26;Lf84;)Lx9f;
 
-    iget-object p1, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->Y:Liu7;
+    iget-object p1, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->X:Lk18;
 
-    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Li82;
-
-    iget-object v0, v0, Li82;->Z:Lxe5;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lfx7;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Lfx7;->x()Lhx7;
-
-    move-result-object v3
-
-    invoke-static {v0, v3, v1}, Lc8;->c(Lty5;Lhx7;Lhw7;)Lfu1;
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    new-instance v3, Ld82;
+    check-cast v0, Lk92;
 
-    invoke-direct {v3, v2, p0}, Ld82;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/changeowner/ChangeOwnerScreen;)V
+    iget-object v0, v0, Lk92;->Y:Lci5;
 
-    new-instance v4, Lb16;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj48;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Lj48;->p()Ll48;
+
+    move-result-object v3
+
+    invoke-static {v0, v3, v1}, Law0;->a(Lx26;Ll48;Ll38;)Lsu1;
+
+    move-result-object v0
+
+    new-instance v3, Lf92;
+
+    invoke-direct {v3, v2, p0}, Lf92;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/changeowner/ChangeOwnerScreen;)V
+
+    new-instance v4, Lg56;
 
     const/4 v5, 0x1
 
-    invoke-direct {v4, v0, v3, v5}, Lb16;-><init>(Lty5;Lzi6;I)V
+    invoke-direct {v4, v0, v3, v5}, Lg56;-><init>(Lx26;Lsm6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lv38;
 
     move-result-object v0
 
-    invoke-static {v4, v0}, Ltq;->v(Lty5;Lq54;)Lcye;
+    invoke-static {v4, v0}, Lgw0;->w(Lx26;Lf84;)Lx9f;
 
-    invoke-interface {p1}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Li82;
+    check-cast p1, Lk92;
 
-    iget-object p1, p1, Li82;->q0:Lxe5;
+    iget-object p1, p1, Lk92;->Z:Lci5;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lfx7;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lfx7;->x()Lhx7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj48;
 
     move-result-object v0
 
-    invoke-static {p1, v0, v1}, Lc8;->c(Lty5;Lhx7;Lhw7;)Lfu1;
+    invoke-interface {v0}, Lj48;->p()Ll48;
+
+    move-result-object v0
+
+    invoke-static {p1, v0, v1}, Law0;->a(Lx26;Ll48;Ll38;)Lsu1;
 
     move-result-object p1
 
-    new-instance v0, Le82;
+    new-instance v0, Lg92;
 
-    invoke-direct {v0, v2, p0}, Le82;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/changeowner/ChangeOwnerScreen;)V
+    invoke-direct {v0, v2, p0}, Lg92;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/changeowner/ChangeOwnerScreen;)V
 
-    new-instance v1, Lb16;
+    new-instance v1, Lg56;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Lb16;-><init>(Lty5;Lzi6;I)V
+    invoke-direct {v1, p1, v0, v2}, Lg56;-><init>(Lx26;Lsm6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lv38;
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Ltq;->v(Lty5;Lq54;)Lcye;
+    invoke-static {v1, p1}, Lgw0;->w(Lx26;Lf84;)Lx9f;
 
     return-void
+.end method
+
+.method public final y0()J
+    .locals 2
+
+    sget-object v0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->t0:[Lyy7;
+
+    const/4 v1, 0x0
+
+    aget-object v0, v0, v1
+
+    iget-object v0, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->c:Lhs;
+
+    invoke-virtual {v0, p0}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final z0()Z
+    .locals 2
+
+    sget-object v0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->t0:[Lyy7;
+
+    const/4 v1, 0x1
+
+    aget-object v0, v0, v1
+
+    iget-object v0, p0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;->d:Lhs;
+
+    invoke-virtual {v0, p0}, Lhs;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    return v0
 .end method

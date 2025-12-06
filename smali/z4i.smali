@@ -1,129 +1,49 @@
-.class public final Lz4i;
-.super Lmuh;
+.class public abstract Lz4i;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic d:I
-
-.field public final synthetic e:Lvof;
-
-
-# direct methods
-.method public constructor <init>(ILvof;)V
-    .locals 0
-
-    iput p1, p0, Lz4i;->d:I
-
-    packed-switch p1, :pswitch_data_0
-
-    iput-object p2, p0, Lz4i;->e:Lvof;
-
-    const-string p1, "com.google.android.gms.location.internal.ISettingsCallbacks"
-
-    const/4 p2, 0x6
-
-    invoke-direct {p0, p1, p2}, Lmuh;-><init>(Ljava/lang/String;I)V
-
-    return-void
-
-    :pswitch_0
-    iput-object p2, p0, Lz4i;->e:Lvof;
-
-    const-string p1, "com.google.android.gms.location.internal.ILocationStatusCallback"
-
-    const/4 p2, 0x6
-
-    invoke-direct {p0, p1, p2}, Lmuh;-><init>(Ljava/lang/String;I)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-
 # virtual methods
-.method public final X(Landroid/os/Parcel;I)Z
-    .locals 2
+.method public final a(Landroidx/work/WorkRequest;)V
+    .locals 6
 
-    iget v0, p0, Lz4i;->d:I
+    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v4
 
-    const/4 v0, 0x1
+    move-object v1, p0
 
-    if-ne p2, v0, :cond_0
+    check-cast v1, Lc5i;
 
-    sget-object p2, Lcom/google/android/gms/common/api/Status;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-interface {v4}, Ljava/util/List;->isEmpty()Z
 
-    invoke-static {p1, p2}, Ly1i;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+    move-result p1
 
-    move-result-object p2
+    if-nez p1, :cond_0
 
-    check-cast p2, Lcom/google/android/gms/common/api/Status;
+    new-instance v0, Lp4i;
 
-    sget-object v1, Landroid/location/Location;->CREATOR:Landroid/os/Parcelable$Creator;
+    sget-object v3, Luk5;->b:Luk5;
 
-    invoke-static {p1, v1}, Ly1i;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+    const/4 v5, 0x0
 
-    move-result-object v1
+    const/4 v2, 0x0
 
-    check-cast v1, Landroid/location/Location;
+    invoke-direct/range {v0 .. v5}, Lp4i;-><init>(Lc5i;Ljava/lang/String;Luk5;Ljava/util/List;I)V
 
-    invoke-static {p1}, Ly1i;->c(Landroid/os/Parcel;)V
+    invoke-virtual {v0}, Lp4i;->c()Lvib;
 
-    iget-object p1, p0, Lz4i;->e:Lvof;
-
-    invoke-static {p2, v1, p1}, Lki7;->d(Lcom/google/android/gms/common/api/Status;Ljava/lang/Object;Lvof;)V
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    const/4 v0, 0x0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    :goto_0
-    return v0
+    const-string v0, "enqueue needs at least one WorkRequest."
 
-    :pswitch_0
-    const/4 v0, 0x1
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    if-ne p2, v0, :cond_1
+    throw p1
+.end method
 
-    sget-object p2, Lj88;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-static {p1, p2}, Ly1i;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
-
-    move-result-object p2
-
-    check-cast p2, Lj88;
-
-    invoke-static {p1}, Ly1i;->c(Landroid/os/Parcel;)V
-
-    iget-object p1, p2, Lj88;->a:Lcom/google/android/gms/common/api/Status;
-
-    new-instance p2, Lr55;
-
-    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
-
-    iget-object v1, p0, Lz4i;->e:Lvof;
-
-    invoke-static {p1, p2, v1}, Lki7;->d(Lcom/google/android/gms/common/api/Status;Ljava/lang/Object;Lvof;)V
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v0, 0x0
-
-    :goto_1
-    return v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public abstract b(Ljava/lang/String;ILnrb;)Lvib;
 .end method

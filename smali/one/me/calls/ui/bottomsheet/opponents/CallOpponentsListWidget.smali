@@ -3,10 +3,10 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lo14;
-.implements Lar1;
-.implements Lg9a;
-.implements Lzqd;
+.implements Lg44;
+.implements Lor1;
+.implements Lnha;
+.implements Lj2e;
 
 
 # annotations
@@ -17,10 +17,10 @@
     d2 = {
         "Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;",
         "Lone/me/sdk/arch/Widget;",
-        "Lo14;",
-        "Lar1;",
-        "Lg9a;",
-        "Lzqd;",
+        "Lg44;",
+        "Lor1;",
+        "Lnha;",
+        "Lj2e;",
         "<init>",
         "()V",
         "calls-ui_release"
@@ -36,62 +36,62 @@
 
 
 # static fields
-.field public static final synthetic G0:[Ltr7;
+.field public static final synthetic H0:[Lyy7;
 
 
 # instance fields
-.field public final A0:Lwn0;
+.field public final A0:Lsn0;
 
-.field public final B0:Lwn0;
+.field public final B0:Lsn0;
 
-.field public final C0:Lwif;
+.field public final C0:Lsn0;
 
-.field public final D0:Ljava/lang/Object;
+.field public final D0:Lbwf;
 
-.field public final E0:Lwn0;
+.field public final E0:Ljava/lang/Object;
 
-.field public final F0:Lw9c;
+.field public final F0:Lsn0;
 
-.field public final X:Lw0e;
+.field public final G0:Lka5;
 
-.field public final Y:Ljava/lang/Object;
+.field public final X:Ljava/lang/Object;
 
-.field public final Z:Liu7;
+.field public final Y:Lk18;
+
+.field public final Z:Lsn0;
 
 .field public final a:Ljava/lang/Object;
 
-.field public final b:Liu7;
+.field public final b:Lk18;
 
 .field public final c:Ljava/lang/Object;
 
-.field public final o:Ljava/lang/Object;
+.field public final d:Ljava/lang/Object;
 
-.field public final q0:Lwn0;
+.field public final o:Lt9f;
 
-.field public final r0:Ljava/lang/Object;
+.field public final s0:Ljava/lang/Object;
 
-.field public final s0:Lwn0;
+.field public final t0:Lsn0;
 
-.field public final t0:Lwn0;
+.field public final u0:Lsn0;
 
-.field public final u0:Lwn0;
+.field public final v0:Lsn0;
 
-.field public final v0:Lwn0;
+.field public final w0:Lsn0;
 
-.field public final w0:Lwn0;
+.field public final x0:Lsn0;
 
-.field public final x0:Lwn0;
+.field public final y0:Lsn0;
 
-.field public final y0:Lh0d;
-
-.field public final z0:Lwn0;
+.field public final z0:Lbbd;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 17
 
-    new-instance v0, Le1a;
+    new-instance v0, Lz8a;
 
     const-class v1, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
 
@@ -99,9 +99,9 @@
 
     const-string v3, "getActionHandlerJob()Lkotlinx/coroutines/Job;"
 
-    invoke-direct {v0, v1, v2, v3}, Le1a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2, v3}, Lz8a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object v2, Lz7d;->a:La8d;
+    sget-object v2, Lvid;->a:Lwid;
 
     const-string v3, "collapsibleHeaderContainer"
 
@@ -109,91 +109,91 @@
 
     const/4 v5, 0x0
 
-    invoke-static {v2, v1, v3, v4, v5}, Li57;->d(La8d;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Leec;
+    invoke-static {v2, v1, v3, v4, v5}, Lho7;->d(Lwid;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Ltoc;
 
     move-result-object v2
 
-    new-instance v3, Leec;
+    new-instance v3, Ltoc;
 
     const-string v4, "toolbar"
 
     const-string v6, "getToolbar()Lone/me/sdk/uikit/common/toolbar/OneMeToolbar;"
 
-    invoke-direct {v3, v1, v4, v6, v5}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v3, v1, v4, v6, v5}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v4, Leec;
+    new-instance v4, Ltoc;
 
     const-string v6, "oneMeButtonToolStack"
 
     const-string v7, "getOneMeButtonToolStack()Lone/me/sdk/uikit/common/buttonstack/OneMeButtonToolStack;"
 
-    invoke-direct {v4, v1, v6, v7, v5}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v4, v1, v6, v7, v5}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v6, Leec;
+    new-instance v6, Ltoc;
 
     const-string v7, "opponentsListView"
 
     const-string v8, "getOpponentsListView()Landroidx/recyclerview/widget/RecyclerView;"
 
-    invoke-direct {v6, v1, v7, v8, v5}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v6, v1, v7, v8, v5}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v7, Leec;
+    new-instance v7, Ltoc;
 
     const-string v8, "titleView"
 
     const-string v9, "getTitleView()Landroid/widget/TextView;"
 
-    invoke-direct {v7, v1, v8, v9, v5}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v7, v1, v8, v9, v5}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v8, Leec;
+    new-instance v8, Ltoc;
 
     const-string v9, "subtitleView"
 
     const-string v10, "getSubtitleView()Landroid/widget/TextView;"
 
-    invoke-direct {v8, v1, v9, v10, v5}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v8, v1, v9, v10, v5}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v9, Leec;
+    new-instance v9, Ltoc;
 
     const-string v10, "titleOpponentListView"
 
     const-string v11, "getTitleOpponentListView()Landroid/widget/TextView;"
 
-    invoke-direct {v9, v1, v10, v11, v5}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v9, v1, v10, v11, v5}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v10, Leec;
+    new-instance v10, Ltoc;
 
     const-string v11, "titleWaitingListView"
 
     const-string v12, "getTitleWaitingListView()Landroid/widget/TextView;"
 
-    invoke-direct {v10, v1, v11, v12, v5}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v10, v1, v11, v12, v5}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v11, Leec;
+    new-instance v11, Ltoc;
 
     const-string v12, "searchView"
 
-    const-string v13, "getSearchView()Landroid/widget/EditText;"
+    const-string v13, "getSearchView()Lone/me/sdk/uikit/common/views/OneMeEditText;"
 
-    invoke-direct {v11, v1, v12, v13, v5}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v11, v1, v12, v13, v5}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v12, Leec;
+    new-instance v12, Ltoc;
 
     const-string v13, "emptyStateViewStub"
 
     const-string v14, "getEmptyStateViewStub()Landroid/view/ViewStub;"
 
-    invoke-direct {v12, v1, v13, v14, v5}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v12, v1, v13, v14, v5}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v13, Leec;
+    new-instance v13, Ltoc;
 
     const-string v14, "emptyStateView"
 
     const-string v15, "getEmptyStateView()Lone/me/sdk/uikit/common/emptyview/OneMeEmptyView;"
 
-    invoke-direct {v13, v1, v14, v15, v5}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v13, v1, v14, v15, v5}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v14, Leec;
+    new-instance v14, Ltoc;
 
     const-string v15, "appBarLayoutView"
 
@@ -201,11 +201,11 @@
 
     const-string v0, "getAppBarLayoutView()Lcom/google/android/material/appbar/AppBarLayout;"
 
-    invoke-direct {v14, v1, v15, v0, v5}, Leec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v14, v1, v15, v0, v5}, Ltoc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     const/16 v0, 0xd
 
-    new-array v0, v0, [Ltr7;
+    new-array v0, v0, [Lyy7;
 
     aput-object v16, v0, v5
 
@@ -257,7 +257,7 @@
 
     aput-object v14, v0, v1
 
-    sput-object v0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->G0:[Ltr7;
+    sput-object v0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->H0:[Lyy7;
 
     return-void
 .end method
@@ -271,335 +271,315 @@
 
     const/4 v2, 0x3
 
-    invoke-direct {p0, v0, v1, v2, v0}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILki4;)V
+    invoke-direct {p0, v0, v1, v2, v0}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILtk4;)V
 
-    new-instance v1, La41;
+    new-instance v1, Lg31;
 
     const/16 v3, 0x17
 
-    invoke-direct {v1, v3}, La41;-><init>(I)V
+    invoke-direct {v1, v3}, Lg31;-><init>(I)V
 
-    invoke-static {v2, v1}, Lrci;->b(ILji6;)Liu7;
+    invoke-static {v2, v1}, Lipi;->b(ILcm6;)Lk18;
 
     move-result-object v1
 
     iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->a:Ljava/lang/Object;
 
-    invoke-static {}, Lrl1;->b()Liu7;
+    invoke-static {}, Lfm1;->b()Lk18;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->b:Liu7;
+    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->b:Lk18;
 
-    new-instance v1, Lrh1;
+    new-instance v1, Ldi1;
 
     const/4 v3, 0x1
 
-    invoke-direct {v1, p0, v3}, Lrh1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;I)V
+    invoke-direct {v1, p0, v3}, Ldi1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;I)V
 
-    invoke-static {v2, v1}, Lrci;->b(ILji6;)Liu7;
+    invoke-static {v2, v1}, Lipi;->b(ILcm6;)Lk18;
 
     move-result-object v1
 
     iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->c:Ljava/lang/Object;
 
-    new-instance v1, La41;
+    new-instance v1, Lg31;
 
     const/16 v3, 0x15
 
-    invoke-direct {v1, v3}, La41;-><init>(I)V
+    invoke-direct {v1, v3}, Lg31;-><init>(I)V
 
-    invoke-static {v2, v1}, Lrci;->b(ILji6;)Liu7;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->o:Ljava/lang/Object;
-
-    invoke-static {}, Lcxi;->b()Lw0e;
+    invoke-static {v2, v1}, Lipi;->b(ILcm6;)Lk18;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->X:Lw0e;
+    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->d:Ljava/lang/Object;
 
-    new-instance v1, Lrh1;
+    invoke-static {}, Lc7j;->c()Lt9f;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->o:Lt9f;
+
+    new-instance v1, Ldi1;
 
     const/4 v3, 0x2
 
-    invoke-direct {v1, p0, v3}, Lrh1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;I)V
+    invoke-direct {v1, p0, v3}, Ldi1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;I)V
 
-    invoke-static {v2, v1}, Lrci;->b(ILji6;)Liu7;
+    invoke-static {v2, v1}, Lipi;->b(ILcm6;)Lk18;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->Y:Ljava/lang/Object;
+    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->X:Ljava/lang/Object;
 
-    new-instance v1, La41;
+    new-instance v1, Lg31;
 
     const/16 v3, 0x16
 
-    invoke-direct {v1, v3}, La41;-><init>(I)V
+    invoke-direct {v1, v3}, Lg31;-><init>(I)V
 
-    new-instance v3, Lr;
+    new-instance v3, Lq;
 
-    const/16 v4, 0x12
+    const/16 v4, 0x13
 
-    invoke-direct {v3, v4, v1}, Lr;-><init>(ILji6;)V
+    invoke-direct {v3, v4, v1}, Lq;-><init>(ILcm6;)V
 
-    const-class v1, Lqh1;
+    const-class v1, Lci1;
 
-    invoke-virtual {p0, v1, v3}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lji6;)Liu7;
+    invoke-virtual {p0, v1, v3}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lcm6;)Lk18;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->Z:Liu7;
+    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->Y:Lk18;
 
-    new-instance v1, Lrh1;
+    new-instance v1, Ldi1;
 
     const/4 v3, 0x3
 
-    invoke-direct {v1, p0, v3}, Lrh1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;I)V
+    invoke-direct {v1, p0, v3}, Ldi1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;I)V
 
-    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->binding(Lji6;)Lwn0;
+    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->binding(Lcm6;)Lsn0;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->q0:Lwn0;
+    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->Z:Lsn0;
 
-    new-instance v1, Lrh1;
+    new-instance v1, Ldi1;
 
     const/4 v3, 0x4
 
-    invoke-direct {v1, p0, v3}, Lrh1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;I)V
+    invoke-direct {v1, p0, v3}, Ldi1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;I)V
 
-    invoke-static {v2, v1}, Lrci;->b(ILji6;)Liu7;
+    invoke-static {v2, v1}, Lipi;->b(ILcm6;)Lk18;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->r0:Ljava/lang/Object;
+    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->s0:Ljava/lang/Object;
 
-    new-instance v1, Lrh1;
+    new-instance v1, Ldi1;
 
     const/4 v3, 0x5
 
-    invoke-direct {v1, p0, v3}, Lrh1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;I)V
+    invoke-direct {v1, p0, v3}, Ldi1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;I)V
 
-    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->binding(Lji6;)Lwn0;
+    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->binding(Lcm6;)Lsn0;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->s0:Lwn0;
+    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->t0:Lsn0;
 
-    new-instance v1, Lrh1;
+    new-instance v1, Ldi1;
 
     const/4 v3, 0x6
 
-    invoke-direct {v1, p0, v3}, Lrh1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;I)V
+    invoke-direct {v1, p0, v3}, Ldi1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;I)V
 
-    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->binding(Lji6;)Lwn0;
+    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->binding(Lcm6;)Lsn0;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->t0:Lwn0;
+    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->u0:Lsn0;
 
-    new-instance v1, Lrh1;
+    new-instance v1, Ldi1;
 
     const/4 v3, 0x7
 
-    invoke-direct {v1, p0, v3}, Lrh1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;I)V
+    invoke-direct {v1, p0, v3}, Ldi1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;I)V
 
-    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->binding(Lji6;)Lwn0;
+    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->binding(Lcm6;)Lsn0;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->u0:Lwn0;
+    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->v0:Lsn0;
 
-    new-instance v1, Lrh1;
+    new-instance v1, Ldi1;
 
     const/16 v3, 0x8
 
-    invoke-direct {v1, p0, v3}, Lrh1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;I)V
+    invoke-direct {v1, p0, v3}, Ldi1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;I)V
 
-    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->binding(Lji6;)Lwn0;
+    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->binding(Lcm6;)Lsn0;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->v0:Lwn0;
+    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->w0:Lsn0;
 
-    new-instance v1, Lrh1;
+    new-instance v1, Ldi1;
 
     const/16 v3, 0x9
 
-    invoke-direct {v1, p0, v3}, Lrh1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;I)V
+    invoke-direct {v1, p0, v3}, Ldi1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;I)V
 
-    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->binding(Lji6;)Lwn0;
+    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->binding(Lcm6;)Lsn0;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->w0:Lwn0;
+    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->x0:Lsn0;
 
-    new-instance v1, Lrh1;
+    new-instance v1, Ldi1;
 
     const/16 v3, 0xa
 
-    invoke-direct {v1, p0, v3}, Lrh1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;I)V
+    invoke-direct {v1, p0, v3}, Ldi1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;I)V
 
-    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->binding(Lji6;)Lwn0;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->x0:Lwn0;
-
-    sget v1, Lkra;->R0:I
-
-    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lh0d;
+    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->binding(Lcm6;)Lsn0;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->y0:Lh0d;
+    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->y0:Lsn0;
 
-    new-instance v1, Lrh1;
+    sget v1, Lj0b;->W0:I
+
+    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lbbd;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->z0:Lbbd;
+
+    new-instance v1, Ldi1;
 
     const/16 v3, 0xb
 
-    invoke-direct {v1, p0, v3}, Lrh1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;I)V
+    invoke-direct {v1, p0, v3}, Ldi1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;I)V
 
-    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->binding(Lji6;)Lwn0;
+    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->binding(Lcm6;)Lsn0;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->z0:Lwn0;
+    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->A0:Lsn0;
 
-    new-instance v1, Lrh1;
+    new-instance v1, Ldi1;
 
     const/16 v3, 0xc
 
-    invoke-direct {v1, p0, v3}, Lrh1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;I)V
+    invoke-direct {v1, p0, v3}, Ldi1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;I)V
 
-    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->binding(Lji6;)Lwn0;
+    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->binding(Lcm6;)Lsn0;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->A0:Lwn0;
+    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->B0:Lsn0;
 
-    new-instance v1, Lrh1;
+    new-instance v1, Ldi1;
 
     const/16 v3, 0xd
 
-    invoke-direct {v1, p0, v3}, Lrh1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;I)V
+    invoke-direct {v1, p0, v3}, Ldi1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;I)V
 
-    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->binding(Lji6;)Lwn0;
+    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->binding(Lcm6;)Lsn0;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->B0:Lwn0;
+    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->C0:Lsn0;
 
-    new-instance v1, Lrh1;
+    new-instance v1, Ldi1;
 
     const/16 v3, 0xe
 
-    invoke-direct {v1, p0, v3}, Lrh1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;I)V
+    invoke-direct {v1, p0, v3}, Ldi1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;I)V
 
-    new-instance v3, Lwif;
+    new-instance v3, Lbwf;
 
-    invoke-direct {v3, v1}, Lwif;-><init>(Lji6;)V
+    invoke-direct {v3, v1}, Lbwf;-><init>(Lcm6;)V
 
-    iput-object v3, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->C0:Lwif;
+    iput-object v3, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->D0:Lbwf;
 
-    new-instance v1, Lrh1;
+    new-instance v1, Ldi1;
 
     const/16 v3, 0xf
 
-    invoke-direct {v1, p0, v3}, Lrh1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;I)V
+    invoke-direct {v1, p0, v3}, Ldi1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;I)V
 
-    invoke-static {v2, v1}, Lrci;->b(ILji6;)Liu7;
+    invoke-static {v2, v1}, Lipi;->b(ILcm6;)Lk18;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->D0:Ljava/lang/Object;
+    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->E0:Ljava/lang/Object;
 
-    new-instance v1, Lrh1;
+    new-instance v1, Ldi1;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p0, v2}, Lrh1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;I)V
+    invoke-direct {v1, p0, v2}, Ldi1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;I)V
 
-    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->binding(Lji6;)Lwn0;
+    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->binding(Lcm6;)Lsn0;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->E0:Lwn0;
+    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->F0:Lsn0;
 
-    new-instance v1, Lw9c;
+    new-instance v1, Lka5;
 
-    new-instance v2, La41;
+    new-instance v2, Lg31;
 
     const/16 v3, 0x14
 
-    invoke-direct {v2, v3}, La41;-><init>(I)V
+    invoke-direct {v2, v3}, Lg31;-><init>(I)V
 
     const/4 v3, 0x6
 
-    invoke-direct {v1, v2, v0, v3}, Lw9c;-><init>(Lji6;Lji6;I)V
+    invoke-direct {v1, v2, v0, v3}, Lka5;-><init>(Lcm6;Lcm6;I)V
 
-    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->F0:Lw9c;
+    iput-object v1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->G0:Lka5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final C0()Lon;
+.method public final A0()Landroid/view/ViewStub;
     .locals 2
 
-    sget-object v0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->G0:[Ltr7;
+    sget-object v0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->H0:[Lyy7;
 
-    const/16 v1, 0xc
+    const/16 v1, 0xa
 
     aget-object v0, v0, v1
 
-    iget-object v0, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->E0:Lwn0;
+    iget-object v0, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->B0:Lsn0;
 
-    invoke-virtual {v0}, Lwn0;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lsn0;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lon;
+    check-cast v0, Landroid/view/ViewStub;
 
     return-object v0
 .end method
 
-.method public final D0()Landroid/widget/LinearLayout;
+.method public final B(Lnr1;)V
     .locals 2
 
-    sget-object v0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->G0:[Ltr7;
-
-    const/4 v1, 0x1
-
-    aget-object v0, v0, v1
-
-    iget-object v0, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->q0:Lwn0;
-
-    invoke-virtual {v0}, Lwn0;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/LinearLayout;
-
-    return-object v0
-.end method
-
-.method public final E(Lzq1;)V
-    .locals 2
-
-    sget-object v0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->G0:[Ltr7;
+    sget-object v0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->H0:[Lyy7;
 
     const/4 v1, 0x6
 
     aget-object v0, v0, v1
 
-    iget-object v0, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->w0:Lwn0;
+    iget-object v0, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->x0:Lsn0;
 
-    invoke-virtual {v0}, Lwn0;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lsn0;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -607,7 +587,7 @@
 
     if-eqz p1, :cond_0
 
-    iget-object p1, p1, Lzq1;->c:Ljava/lang/CharSequence;
+    iget-object p1, p1, Lnr1;->c:Ljava/lang/CharSequence;
 
     goto :goto_0
 
@@ -620,128 +600,128 @@
     return-void
 .end method
 
-.method public final E0()Landroid/view/ViewStub;
+.method public final B0()Lvza;
     .locals 2
 
-    sget-object v0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->G0:[Ltr7;
+    sget-object v0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->H0:[Lyy7;
 
-    const/16 v1, 0xa
+    const/4 v1, 0x3
 
     aget-object v0, v0, v1
 
-    iget-object v0, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->A0:Lwn0;
+    iget-object v0, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->u0:Lsn0;
 
-    invoke-virtual {v0}, Lwn0;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lsn0;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Landroid/view/ViewStub;
+    check-cast v0, Lvza;
 
     return-object v0
 .end method
 
-.method public final F(ILandroid/os/Bundle;)V
+.method public final C(ILandroid/os/Bundle;)V
     .locals 3
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lv38;
 
     move-result-object v0
 
-    new-instance v1, Luh1;
+    new-instance v1, Lgi1;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p0, p1, p2, v2}, Luh1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;ILandroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v1, p0, p1, p2, v2}, Lgi1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;ILandroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
 
     const/4 p1, 0x1
 
-    sget-object p2, Lt54;->b:Lt54;
+    sget-object p2, Li84;->b:Li84;
 
-    invoke-static {v0, v2, p2, v1, p1}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
+    invoke-static {v0, v2, p2, v1, p1}, Lsvi;->e(Lf84;Lx74;Li84;Lsm6;I)Lx9f;
 
     move-result-object p1
 
-    sget-object p2, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->G0:[Ltr7;
+    sget-object p2, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->H0:[Lyy7;
 
     const/4 v0, 0x0
 
     aget-object p2, p2, v0
 
-    iget-object v0, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->X:Lw0e;
+    iget-object v0, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->o:Lt9f;
 
-    invoke-virtual {v0, p0, p2, p1}, Lw0e;->P(Ljava/lang/Object;Ltr7;Ljava/lang/Object;)V
+    invoke-virtual {v0, p0, p2, p1}, Lt9f;->O(Ljava/lang/Object;Lyy7;Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final F0()Landroid/widget/EditText;
+.method public final C0()Lw3b;
     .locals 2
 
-    sget-object v0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->G0:[Ltr7;
+    sget-object v0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->H0:[Lyy7;
 
     const/16 v1, 0x9
 
     aget-object v0, v0, v1
 
-    iget-object v0, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->z0:Lwn0;
+    iget-object v0, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->A0:Lsn0;
 
-    invoke-virtual {v0}, Lwn0;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lsn0;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/EditText;
+    check-cast v0, Lw3b;
 
     return-object v0
 .end method
 
-.method public final G0()Lu6b;
+.method public final D0()Lyfb;
     .locals 2
 
-    sget-object v0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->G0:[Ltr7;
+    sget-object v0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->H0:[Lyy7;
 
     const/4 v1, 0x2
 
     aget-object v0, v0, v1
 
-    iget-object v0, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->s0:Lwn0;
+    iget-object v0, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->t0:Lsn0;
 
-    invoke-virtual {v0}, Lwn0;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lu6b;
-
-    return-object v0
-.end method
-
-.method public final H0()Lqh1;
-    .locals 1
-
-    iget-object v0, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->Z:Liu7;
-
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lsn0;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lqh1;
+    check-cast v0, Lyfb;
 
     return-object v0
 .end method
 
-.method public final getInsetsConfig()Lgi7;
+.method public final E0()Lci1;
     .locals 1
 
-    sget-object v0, Lgi7;->e:Lgi7;
+    iget-object v0, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->Y:Lk18;
 
-    sget-object v0, Lgi7;->f:Lgi7;
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lci1;
 
     return-object v0
 .end method
 
-.method public final getScreenDelegate()Lzpd;
+.method public final getInsetsConfig()Leo7;
     .locals 1
 
-    iget-object v0, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->F0:Lw9c;
+    sget-object v0, Leo7;->e:Leo7;
+
+    sget-object v0, Leo7;->f:Leo7;
+
+    return-object v0
+.end method
+
+.method public final getScreenDelegate()Lk1e;
+    .locals 1
+
+    iget-object v0, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->G0:Lka5;
 
     return-object v0
 .end method
@@ -767,33 +747,33 @@
 
     invoke-virtual {p2, p3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    sget-object p3, Ll05;->s0:Lk82;
+    sget-object p3, La93;->s0:Lv1a;
 
-    invoke-virtual {p3, p2}, Lk82;->q(Landroid/view/View;)Lewa;
-
-    move-result-object p3
-
-    iget-object p3, p3, Lewa;->c:Lv5b;
-
-    invoke-interface {p3}, Lv5b;->b()Lff0;
+    invoke-virtual {p3, p2}, Lv1a;->B(Landroid/view/View;)Lh5b;
 
     move-result-object p3
 
-    iget p3, p3, Lff0;->l:I
+    iget-object p3, p3, Lh5b;->c:Lyeb;
+
+    invoke-interface {p3}, Lyeb;->b()Lbf0;
+
+    move-result-object p3
+
+    iget p3, p3, Lbf0;->l:I
 
     invoke-virtual {p2, p3}, Landroid/view/View;->setBackgroundColor(I)V
 
-    new-instance p3, Lsh1;
+    new-instance p3, Lei1;
 
     const/4 v1, 0x0
 
-    invoke-direct {p3, p0, v1}, Lsh1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;I)V
+    invoke-direct {p3, p0, v1}, Lei1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;I)V
 
-    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->C0()Lon;
+    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->y0()Lin;
 
     move-result-object v1
 
-    invoke-virtual {p3, v1}, Lsh1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p3, v1}, Lei1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     invoke-virtual {p2, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -805,15 +785,15 @@
 
     invoke-direct {p3, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    sget-object p1, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->G0:[Ltr7;
+    sget-object p1, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->H0:[Lyy7;
 
     const/4 v1, 0x4
 
     aget-object p1, p1, v1
 
-    iget-object p1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->u0:Lwn0;
+    iget-object p1, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->v0:Lsn0;
 
-    invoke-virtual {p1}, Lwn0;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Lsn0;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -821,21 +801,21 @@
 
     invoke-virtual {p3, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->E0()Landroid/view/ViewStub;
+    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->A0()Landroid/view/ViewStub;
 
     move-result-object p1
 
     invoke-virtual {p3, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    new-instance p1, Lo44;
+    new-instance p1, Ld74;
 
-    invoke-direct {p1, v0, v0}, Lo44;-><init>(II)V
+    invoke-direct {p1, v0, v0}, Ld74;-><init>(II)V
 
     new-instance v0, Lcom/google/android/material/appbar/AppBarLayout$ScrollingViewBehavior;
 
     invoke-direct {v0}, Lcom/google/android/material/appbar/AppBarLayout$ScrollingViewBehavior;-><init>()V
 
-    invoke-virtual {p1, v0}, Lo44;->b(Ll44;)V
+    invoke-virtual {p1, v0}, Ld74;->b(La74;)V
 
     invoke-virtual {p3, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -847,67 +827,90 @@
 .method public final onDestroyView(Landroid/view/View;)V
     .locals 1
 
-    invoke-super {p0, p1}, Ll24;->onDestroyView(Landroid/view/View;)V
+    invoke-super {p0, p1}, Lc54;->onDestroyView(Landroid/view/View;)V
 
-    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->F0()Landroid/widget/EditText;
+    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->C0()Lw3b;
 
     move-result-object p1
 
-    invoke-static {p1}, Lici;->d(Landroid/view/View;)V
+    invoke-static {p1}, Lapi;->e(Landroid/view/View;)V
 
-    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->F0()Landroid/widget/EditText;
+    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->C0()Lw3b;
 
     move-result-object p1
 
     invoke-virtual {p1}, Landroid/view/View;->clearFocus()V
 
-    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->H0()Lqh1;
+    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->E0()Lci1;
 
     move-result-object p1
 
-    iget-object p1, p1, Lqh1;->z0:Lbr1;
+    iget-object p1, p1, Lci1;->A0:Lpr1;
 
-    iget-object p1, p1, Lbr1;->a:Ljava/util/LinkedHashSet;
+    iget-object p1, p1, Lpr1;->a:Ljava/util/LinkedHashSet;
 
     invoke-interface {p1, p0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->H0()Lqh1;
+    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->E0()Lci1;
 
     move-result-object p1
 
-    iget-object v0, p1, Lqh1;->s0:Liu7;
+    iget-object v0, p1, Lci1;->t0:Lk18;
 
-    invoke-interface {v0}, Liu7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lfv1;
+    check-cast v0, Ltv1;
 
-    check-cast v0, Luv1;
+    check-cast v0, Lhw1;
 
-    iget-object v0, v0, Luv1;->N:Ljava/util/LinkedHashSet;
+    iget-object v0, v0, Lhw1;->Z0:Ljava/util/LinkedHashSet;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    sget-object p1, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->G0:[Ltr7;
+    sget-object p1, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->H0:[Lyy7;
 
     const/4 v0, 0x0
 
     aget-object p1, p1, v0
 
-    iget-object v0, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->X:Lw0e;
+    iget-object v0, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->o:Lt9f;
 
-    invoke-virtual {v0, p0, p1}, Lw0e;->D(Ljava/lang/Object;Ltr7;)Ljava/lang/Object;
+    invoke-virtual {v0, p0, p1}, Lt9f;->D(Ljava/lang/Object;Lyy7;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Ljn7;
+    check-cast p1, Lqt7;
 
     if-eqz p1, :cond_0
 
     const/4 v0, 0x0
 
-    invoke-interface {p1, v0}, Ljn7;->cancel(Ljava/util/concurrent/CancellationException;)V
+    invoke-interface {p1, v0}, Lqt7;->cancel(Ljava/util/concurrent/CancellationException;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onRestoreViewState(Landroid/view/View;Landroid/os/Bundle;)V
+    .locals 0
+
+    invoke-super {p0, p1, p2}, Lc54;->onRestoreViewState(Landroid/view/View;Landroid/os/Bundle;)V
+
+    invoke-virtual {p0}, Lc54;->getActivity()Landroid/app/Activity;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {p0, p1}, Lj2e;->c(Landroid/view/Window;)V
 
     :cond_0
     return-void
@@ -918,163 +921,203 @@
 
     invoke-super {p0, p1}, Lone/me/sdk/arch/Widget;->onViewCreated(Landroid/view/View;)V
 
-    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->F0()Landroid/widget/EditText;
+    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->C0()Lw3b;
 
     move-result-object p1
 
     invoke-virtual {p1}, Landroid/view/View;->clearFocus()V
 
-    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->C0()Lon;
+    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->y0()Lin;
 
     move-result-object p1
 
     invoke-virtual {p1}, Landroid/view/View;->requestFocus()Z
 
-    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->H0()Lqh1;
+    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->E0()Lci1;
 
     move-result-object p1
 
-    iget-object p1, p1, Lqh1;->z0:Lbr1;
+    iget-object p1, p1, Lci1;->A0:Lpr1;
 
-    iget-object v0, p1, Lbr1;->a:Ljava/util/LinkedHashSet;
+    iget-object v0, p1, Lpr1;->a:Ljava/util/LinkedHashSet;
 
     invoke-interface {v0, p0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    iget-object p1, p1, Lbr1;->b:Lzq1;
+    iget-object p1, p1, Lpr1;->b:Lnr1;
 
-    invoke-virtual {p0, p1}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->E(Lzq1;)V
+    invoke-virtual {p0, p1}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->B(Lnr1;)V
 
-    new-instance p1, Lln5;
+    new-instance p1, Lyq5;
 
-    invoke-direct {p1}, Lln5;-><init>()V
+    invoke-direct {p1}, Lyq5;-><init>()V
 
-    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->C0()Lon;
+    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->y0()Lin;
 
     move-result-object v0
 
-    new-instance v1, Lqe1;
+    new-instance v1, Lff1;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, p0, v2}, Lqe1;-><init>(Lln5;Lone/me/sdk/arch/Widget;I)V
+    invoke-direct {v1, p1, p0, v2}, Lff1;-><init>(Lyq5;Lone/me/sdk/arch/Widget;I)V
 
-    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->C0()Lon;
+    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->y0()Lin;
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lfx7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj48;
 
     move-result-object v2
 
-    invoke-static {v1, p1, v2}, Lgdi;->g(Lnn;Lon;Lfx7;)Lex7;
+    invoke-static {v1, p1, v2}, Lbqi;->b(Lhn;Lin;Lj48;)Li48;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lon;->a(Lln;)V
+    invoke-virtual {v0, p1}, Lin;->a(Lfn;)V
 
-    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->H0()Lqh1;
+    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->E0()Lci1;
 
     move-result-object p1
 
-    iget-object p1, p1, Lqh1;->B0:Ln0d;
+    iget-object p1, p1, Lci1;->C0:Lhbd;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lfx7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj48;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lfx7;->x()Lhx7;
+    invoke-interface {v0}, Lj48;->p()Ll48;
 
     move-result-object v0
 
-    sget-object v1, Lhw7;->o:Lhw7;
+    sget-object v1, Ll38;->d:Ll38;
 
-    invoke-static {p1, v0, v1}, Lc8;->c(Lty5;Lhx7;Lhw7;)Lfu1;
+    invoke-static {p1, v0, v1}, Law0;->a(Lx26;Ll48;Ll38;)Lsu1;
 
     move-result-object p1
 
-    new-instance v0, Lvh1;
+    new-instance v0, Lhi1;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v2, p0}, Lvh1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;)V
+    invoke-direct {v0, v2, p0}, Lhi1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;)V
 
-    new-instance v3, Lb16;
+    new-instance v3, Lg56;
 
     const/4 v4, 0x1
 
-    invoke-direct {v3, p1, v0, v4}, Lb16;-><init>(Lty5;Lzi6;I)V
+    invoke-direct {v3, p1, v0, v4}, Lg56;-><init>(Lx26;Lsm6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
-
-    move-result-object p1
-
-    invoke-static {v3, p1}, Ltq;->v(Lty5;Lq54;)Lcye;
-
-    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->H0()Lqh1;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lv38;
 
     move-result-object p1
 
-    iget-object p1, p1, Lqh1;->y0:Lx0f;
+    invoke-static {v3, p1}, Lgw0;->w(Lx26;Lf84;)Lx9f;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lfx7;
+    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->E0()Lci1;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lci1;->z0:Ltcf;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj48;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lfx7;->x()Lhx7;
+    invoke-interface {v0}, Lj48;->p()Ll48;
 
     move-result-object v0
 
-    invoke-static {p1, v0, v1}, Lc8;->c(Lty5;Lhx7;Lhw7;)Lfu1;
+    invoke-static {p1, v0, v1}, Law0;->a(Lx26;Ll48;Ll38;)Lsu1;
 
     move-result-object p1
 
-    new-instance v0, Lwh1;
+    new-instance v0, Lii1;
 
-    invoke-direct {v0, v2, p0}, Lwh1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;)V
+    invoke-direct {v0, v2, p0}, Lii1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;)V
 
-    new-instance v3, Lb16;
+    new-instance v3, Lg56;
 
-    invoke-direct {v3, p1, v0, v4}, Lb16;-><init>(Lty5;Lzi6;I)V
+    invoke-direct {v3, p1, v0, v4}, Lg56;-><init>(Lx26;Lsm6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
-
-    move-result-object p1
-
-    invoke-static {v3, p1}, Ltq;->v(Lty5;Lq54;)Lcye;
-
-    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->H0()Lqh1;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lv38;
 
     move-result-object p1
 
-    iget-object p1, p1, Lqh1;->C0:Lxe5;
+    invoke-static {v3, p1}, Lgw0;->w(Lx26;Lf84;)Lx9f;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lfx7;
+    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->E0()Lci1;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lci1;->D0:Lci5;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj48;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lfx7;->x()Lhx7;
+    invoke-interface {v0}, Lj48;->p()Ll48;
 
     move-result-object v0
 
-    invoke-static {p1, v0, v1}, Lc8;->c(Lty5;Lhx7;Lhw7;)Lfu1;
+    invoke-static {p1, v0, v1}, Law0;->a(Lx26;Ll48;Ll38;)Lsu1;
 
     move-result-object p1
 
-    new-instance v0, Lxh1;
+    new-instance v0, Lji1;
 
-    invoke-direct {v0, v2, p0}, Lxh1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;)V
+    invoke-direct {v0, v2, p0}, Lji1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;)V
 
-    new-instance v1, Lb16;
+    new-instance v1, Lg56;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Lb16;-><init>(Lty5;Lzi6;I)V
+    invoke-direct {v1, p1, v0, v2}, Lg56;-><init>(Lx26;Lsm6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lrw7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lv38;
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Ltq;->v(Lty5;Lq54;)Lcye;
+    invoke-static {v1, p1}, Lgw0;->w(Lx26;Lf84;)Lx9f;
 
     return-void
+.end method
+
+.method public final y0()Lin;
+    .locals 2
+
+    sget-object v0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->H0:[Lyy7;
+
+    const/16 v1, 0xc
+
+    aget-object v0, v0, v1
+
+    iget-object v0, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->F0:Lsn0;
+
+    invoke-virtual {v0}, Lsn0;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lin;
+
+    return-object v0
+.end method
+
+.method public final z0()Landroid/widget/LinearLayout;
+    .locals 2
+
+    sget-object v0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->H0:[Lyy7;
+
+    const/4 v1, 0x1
+
+    aget-object v0, v0, v1
+
+    iget-object v0, p0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->Z:Lsn0;
+
+    invoke-virtual {v0}, Lsn0;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/LinearLayout;
+
+    return-object v0
 .end method

@@ -4,17 +4,32 @@
 
 
 # virtual methods
-.method public abstract A(ILz19;)V
+.method public a(Lj25;)V
+    .locals 0
+
+    return-void
 .end method
 
-.method public abstract B(ILz19;)V
+.method public b()V
+    .locals 0
+
+    return-void
 .end method
 
-.method public abstract f(ILz19;Ljava/lang/Exception;)V
+.method public c()V
+    .locals 0
+
+    return-void
 .end method
 
-.method public abstract v(ILz19;I)V
+.method public d(Lj25;Z)V
+    .locals 0
+
+    return-void
 .end method
 
-.method public abstract w(ILz19;)V
+.method public abstract e(Lxz4;Ljava/lang/Exception;)V
+.end method
+
+.method public abstract f(Lj25;Lxz4;)V
 .end method

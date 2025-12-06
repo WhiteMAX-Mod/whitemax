@@ -1,58 +1,50 @@
-.class public abstract Lrvi;
-.super Lmuh;
+.class public final Lrvi;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Luwi;
+.implements Lpqa;
+
+
+# static fields
+.field public static final a:Lrvi;
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
     .locals 2
 
-    const-string v0, "com.google.android.gms.location.internal.IFusedLocationProviderCallback"
+    new-instance v0, Lrvi;
 
-    const/4 v1, 0x6
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0, v1}, Lmuh;-><init>(Ljava/lang/String;I)V
+    sput-object v0, Lrvi;->a:Lrvi;
+
+    new-instance v0, Lmli;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lmli;-><init>(I)V
+
+    const-class v1, Lemi;
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final X(Landroid/os/Parcel;I)Z
-    .locals 1
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    if-eq p2, v0, :cond_1
+    move-result-object p1
 
-    const/4 p1, 0x2
-
-    if-eq p2, p1, :cond_0
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_0
-    invoke-interface {p0}, Luwi;->a()V
-
-    return v0
-
-    :cond_1
-    sget-object p2, Laoi;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-static {p1, p2}, Ly1i;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
-
-    move-result-object p2
-
-    check-cast p2, Laoi;
-
-    invoke-static {p1}, Ly1i;->c(Landroid/os/Parcel;)V
-
-    invoke-interface {p0, p2}, Luwi;->i(Laoi;)V
-
-    return v0
+    throw p1
 .end method

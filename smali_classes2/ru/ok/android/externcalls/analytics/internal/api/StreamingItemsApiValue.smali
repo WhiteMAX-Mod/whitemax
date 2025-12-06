@@ -1,5 +1,5 @@
 .class public Lru/ok/android/externcalls/analytics/internal/api/StreamingItemsApiValue;
-.super Lft0;
+.super Ljt0;
 .source "SourceFile"
 
 
@@ -24,7 +24,7 @@
 
 
 # virtual methods
-.method public write(Lcr7;)V
+.method public write(Lgy7;)V
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -33,7 +33,7 @@
         }
     .end annotation
 
-    invoke-interface {p1}, Lcr7;->u()V
+    invoke-interface {p1}, Lgy7;->r()V
 
     :try_start_0
     new-instance v0, Ljava/io/FileInputStream;
@@ -85,7 +85,7 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     :try_start_3
-    invoke-interface {p1, v1}, Lcr7;->G(Ljava/io/InputStreamReader;)V
+    invoke-interface {p1, v1}, Lgy7;->G(Ljava/io/InputStreamReader;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
@@ -101,7 +101,7 @@
     .catch Ljava/util/zip/ZipException; {:try_start_5 .. :try_end_5} :catch_0
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    invoke-interface {p1}, Lcr7;->t()V
+    invoke-interface {p1}, Lgy7;->q()V
 
     return-void
 
@@ -178,7 +178,7 @@
     .catchall {:try_start_b .. :try_end_b} :catchall_0
 
     :goto_6
-    invoke-interface {p1}, Lcr7;->t()V
+    invoke-interface {p1}, Lgy7;->q()V
 
     throw v0
 .end method

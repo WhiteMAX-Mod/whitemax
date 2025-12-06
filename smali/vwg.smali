@@ -1,116 +1,107 @@
-.class public final synthetic Lvwg;
+.class public final Lvwg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lhie;
 
-.field public final synthetic b:Lfqf;
+.field public final b:Lxwg;
 
-.field public final synthetic c:Lff4;
+.field public final c:Lob0;
+
+.field public final d:Ljava/util/List;
+
+.field public e:Z
+
+.field public f:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lfqf;Lff4;I)V
-    .locals 0
-
-    iput p3, p0, Lvwg;->a:I
-
-    iput-object p1, p0, Lvwg;->b:Lfqf;
-
-    iput-object p2, p0, Lvwg;->c:Lff4;
+.method public constructor <init>(Lhie;Lxwg;Lob0;Ljava/util/List;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lvwg;->e:Z
+
+    iput-boolean v0, p0, Lvwg;->f:Z
+
+    iput-object p1, p0, Lvwg;->a:Lhie;
+
+    iput-object p2, p0, Lvwg;->b:Lxwg;
+
+    iput-object p3, p0, Lvwg;->c:Lob0;
+
+    iput-object p4, p0, Lvwg;->d:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget v0, p0, Lvwg;->a:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "UseCaseAttachInfo{mSessionConfig="
 
-    iget-object v0, p0, Lvwg;->b:Lfqf;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lvwg;->c:Lff4;
+    iget-object v1, p0, Lvwg;->a:Lhie;
 
-    monitor-enter v1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    monitor-exit v1
+    const-string v1, ", mUseCaseConfig="
 
-    iget-object v0, v0, Lfqf;->b:Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast v0, Lri5;
+    iget-object v1, p0, Lvwg;->b:Lxwg;
 
-    sget-object v2, Lnig;->a:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object v0, v0, Lri5;->a:Lxi5;
+    const-string v1, ", mStreamSpec="
 
-    iget-object v0, v0, Lxi5;->C0:Leh4;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Leh4;->o:Lf76;
+    iget-object v1, p0, Lvwg;->c:Lob0;
 
-    iget-object v2, v2, Lf76;->e:Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    check-cast v2, Lz19;
+    const-string v1, ", mCaptureTypes="
 
-    invoke-virtual {v0, v2}, Leh4;->E(Lz19;)Lnd;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    iget-object v1, p0, Lvwg;->d:Ljava/util/List;
 
-    new-instance v3, Lp00;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/16 v4, 0x17
+    const-string v1, ", mAttached="
 
-    invoke-direct {v3, v2, v4, v1}, Lp00;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/16 v1, 0x3fc
+    iget-boolean v1, p0, Lvwg;->e:Z
 
-    invoke-virtual {v0, v2, v1, v3}, Leh4;->I(Lnd;ILu28;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    return-void
+    const-string v1, ", mActive="
 
-    :pswitch_0
-    iget-object v0, p0, Lvwg;->b:Lfqf;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lvwg;->c:Lff4;
+    iget-boolean v1, p0, Lvwg;->f:Z
 
-    iget-object v0, v0, Lfqf;->b:Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    check-cast v0, Lri5;
+    const/16 v1, 0x7d
 
-    sget-object v2, Lnig;->a:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    iget-object v0, v0, Lri5;->a:Lxi5;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget-object v0, v0, Lxi5;->C0:Leh4;
+    move-result-object v0
 
-    invoke-virtual {v0}, Leh4;->H()Lnd;
-
-    move-result-object v2
-
-    new-instance v3, Lsg4;
-
-    const/4 v4, 0x2
-
-    invoke-direct {v3, v2, v1, v4}, Lsg4;-><init>(Lnd;Lff4;I)V
-
-    const/16 v1, 0x3f7
-
-    invoke-virtual {v0, v2, v1, v3}, Leh4;->I(Lnd;ILu28;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

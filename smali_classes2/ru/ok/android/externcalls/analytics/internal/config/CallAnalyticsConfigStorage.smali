@@ -111,7 +111,7 @@
 .end method
 
 .method public final getUpload()Lru/ok/android/externcalls/analytics/config/UploadConfig;
-    .locals 16
+    .locals 17
 
     sget-object v0, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->config:Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;
 
@@ -132,9 +132,9 @@
     :goto_0
     new-instance v1, Lru/ok/android/externcalls/analytics/config/UploadConfig;
 
-    const/16 v14, 0x3ff
+    const/16 v15, 0x7ff
 
-    const/4 v15, 0x0
+    const/16 v16, 0x0
 
     const/4 v2, 0x0
 
@@ -156,7 +156,9 @@
 
     const/4 v13, 0x0
 
-    invoke-direct/range {v1 .. v15}, Lru/ok/android/externcalls/analytics/config/UploadConfig;-><init>(ILjava/util/concurrent/Executor;JJLji6;Lji6;Lji6;Lji6;Lji6;Lji6;ILki4;)V
+    const/4 v14, 0x0
+
+    invoke-direct/range {v1 .. v16}, Lru/ok/android/externcalls/analytics/config/UploadConfig;-><init>(ILjava/util/concurrent/Executor;JJLcm6;Lcm6;Lcm6;Lcm6;Lcm6;Lcm6;Lcm6;ILtk4;)V
 
     return-object v1
 .end method

@@ -44,7 +44,7 @@
 
     const-string v2, ": GLES20 error: "
 
-    invoke-static {v0, p0, v2}, Lfd0;->d(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p0, v2}, Lxc0;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

@@ -1,82 +1,49 @@
 .class public final Llf;
-.super Ljava/lang/Object;
+.super Lmdf;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnAttachStateChangeListener;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Landroid/view/View;
+.field public final j:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/view/View;I)V
+.method public constructor <init>(Landroid/view/View;Leo7;Lem6;)V
     .locals 0
 
-    iput p2, p0, Llf;->a:I
+    invoke-direct {p0, p1, p2, p3}, Lmdf;-><init>(Landroid/view/View;Leo7;Lem6;)V
 
-    iput-object p1, p0, Llf;->b:Landroid/view/View;
+    const/16 p1, 0x8
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method private final a(Landroid/view/View;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final b(Landroid/view/View;)V
-    .locals 0
+    iput p1, p0, Llf;->j:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onViewAttachedToWindow(Landroid/view/View;)V
+.method public final b(Lg4i;Lms0;)V
     .locals 2
 
-    iget v0, p0, Llf;->a:I
+    iget-object p1, p1, Lg4i;->a:Le4i;
 
-    iget-object v1, p0, Llf;->b:Landroid/view/View;
+    iget v0, p0, Lmdf;->d:I
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p1, v0}, Le4i;->f(I)Lco7;
 
-    invoke-virtual {v1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+    move-result-object v0
 
-    sget-object p1, Lhzg;->a:Ljava/util/WeakHashMap;
+    iget v1, p0, Llf;->j:I
 
-    invoke-static {v1}, Ltyg;->c(Landroid/view/View;)V
+    invoke-virtual {p1, v1}, Le4i;->f(I)Lco7;
 
-    return-void
+    move-result-object p1
 
-    :pswitch_0
-    invoke-virtual {v1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+    invoke-static {v0, p1}, Lco7;->a(Lco7;Lco7;)Lco7;
 
-    sget-object v0, Lhzg;->a:Ljava/util/WeakHashMap;
+    move-result-object p1
 
-    invoke-static {p1}, Ltyg;->c(Landroid/view/View;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onViewDetachedFromWindow(Landroid/view/View;)V
-    .locals 0
-
-    iget p1, p0, Llf;->a:I
+    invoke-virtual {p0, p1, p2}, Lmdf;->a(Lco7;Lms0;)V
 
     return-void
 .end method

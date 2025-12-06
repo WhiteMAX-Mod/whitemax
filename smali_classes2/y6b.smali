@@ -1,111 +1,73 @@
-.class public final Ly6b;
-.super Landroid/webkit/WebChromeClient;
+.class public abstract Ly6b;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lmfh;
+# static fields
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
 
 
 # direct methods
-.method public constructor <init>(Lmfh;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Landroid/webkit/WebChromeClient;-><init>()V
+    sget v0, Lv3d;->media_picker_default_toolbar_title:I
 
-    iput-object p1, p0, Ly6b;->a:Lmfh;
+    sput v0, Ly6b;->a:I
+
+    sget v0, Lv3d;->media_picker_default_toolbar_title_only_photo:I
+
+    sput v0, Ly6b;->b:I
+
+    sget v0, Lv3d;->media_picker_empty_media_data:I
+
+    sput v0, Ly6b;->c:I
+
+    sget v0, Lv3d;->media_type_picker__permissions_dialog__button:I
+
+    sput v0, Ly6b;->d:I
+
+    sget v0, Lv3d;->media_type_picker__permissions_dialog__gallery_camera_subtitle:I
+
+    sput v0, Ly6b;->e:I
+
+    sget v0, Lv3d;->media_type_picker__permissions_dialog__gallery_camera_title:I
+
+    sput v0, Ly6b;->f:I
+
+    sget v0, Lv3d;->media_type_picker__permissions_dialog__gallery_subtitle:I
+
+    sput v0, Ly6b;->g:I
+
+    sget v0, Lv3d;->media_type_picker__permissions_dialog__gallery_title:I
+
+    sput v0, Ly6b;->h:I
+
+    sget v0, Lv3d;->media_type_picker__permissions_dialog__subtitle:I
+
+    sput v0, Ly6b;->i:I
+
+    sget v0, Lv3d;->media_type_picker__permissions_dialog__title:I
+
+    sput v0, Ly6b;->j:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final onCreateWindow(Landroid/webkit/WebView;ZZLandroid/os/Message;)Z
-    .locals 0
-
-    new-instance p2, Lz6b;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    const/16 p3, 0xe
-
-    invoke-direct {p2, p1, p3}, Lz6b;-><init>(Landroid/content/Context;I)V
-
-    new-instance p1, Lx6b;
-
-    invoke-direct {p1, p0, p2}, Lx6b;-><init>(Ly6b;Lz6b;)V
-
-    invoke-virtual {p2, p1}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
-
-    if-eqz p4, :cond_0
-
-    iget-object p1, p4, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    check-cast p1, Landroid/webkit/WebView$WebViewTransport;
-
-    invoke-virtual {p1, p2}, Landroid/webkit/WebView$WebViewTransport;->setWebView(Landroid/webkit/WebView;)V
-
-    invoke-virtual {p4}, Landroid/os/Message;->sendToTarget()V
-
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final onShowFileChooser(Landroid/webkit/WebView;Landroid/webkit/ValueCallback;Landroid/webkit/WebChromeClient$FileChooserParams;)Z
-    .locals 2
-
-    instance-of v0, p1, Lz6b;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Lz6b;
-
-    goto :goto_0
-
-    :cond_0
-    move-object p1, v1
-
-    :goto_0
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    invoke-virtual {p1}, Lz6b;->getFilePathCallback()Landroid/webkit/ValueCallback;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v0, v1}, Landroid/webkit/ValueCallback;->onReceiveValue(Ljava/lang/Object;)V
-
-    :cond_2
-    invoke-virtual {p1, p2}, Lz6b;->setFilePathCallback(Landroid/webkit/ValueCallback;)V
-
-    iget-object p1, p0, Ly6b;->a:Lmfh;
-
-    iget-object p1, p1, Lmfh;->W0:Lxe5;
-
-    new-instance p2, Lleh;
-
-    invoke-direct {p2, p3}, Lleh;-><init>(Landroid/webkit/WebChromeClient$FileChooserParams;)V
-
-    invoke-static {p1, p2}, Lxzg;->o(Lxe5;Ljava/lang/Object;)V
-
-    const/4 p1, 0x1
-
-    return p1
 .end method

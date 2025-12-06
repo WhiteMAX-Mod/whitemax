@@ -6,10 +6,10 @@
 # static fields
 .field private static final LOG_TAG:Ljava/lang/String; = "ConversationParams"
 
-.field public static final PARSER:Lpq7;
+.field public static final PARSER:Lox7;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lpq7;"
+            "Lox7;"
         }
     .end annotation
 .end field
@@ -55,13 +55,13 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Laz1;
+    new-instance v0, Ldf3;
 
-    const/16 v1, 0x1a
+    const/16 v1, 0xe
 
-    invoke-direct {v0, v1}, Laz1;-><init>(I)V
+    invoke-direct {v0, v1}, Ldf3;-><init>(I)V
 
-    sput-object v0, Lru/ok/android/externcalls/sdk/api/ConversationParams;->PARSER:Lpq7;
+    sput-object v0, Lru/ok/android/externcalls/sdk/api/ConversationParams;->PARSER:Lox7;
 
     return-void
 .end method
@@ -80,10 +80,10 @@
     return-void
 .end method
 
-.method public static synthetic a(Lvq7;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
+.method public static synthetic a(Lxx7;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
     .locals 0
 
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/ConversationParams;->parseCallParams(Lvq7;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/ConversationParams;->parseCallParams(Lxx7;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
 
     move-result-object p0
 
@@ -400,13 +400,22 @@
     iput-object v1, v5, Lru/ok/android/externcalls/sdk/api/ConversationParams;->endpoint:Ljava/lang/String;
 
     .line 30
+    const-string v1, "wt_endpoint"
+
+    invoke-virtual {p0, v1, v4}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, v5, Lru/ok/android/externcalls/sdk/api/ConversationParams;->wtEndpoint:Ljava/lang/String;
+
+    .line 31
     invoke-virtual {p0, v0}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
-    .line 31
+    .line 32
     invoke-virtual {p0, v0}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
 
     move-result v0
@@ -417,7 +426,7 @@
 
     iput-object v0, v5, Lru/ok/android/externcalls/sdk/api/ConversationParams;->ispAsNo:Ljava/lang/Integer;
 
-    .line 32
+    .line 33
     :cond_4
     const-string v0, "isp_as_org"
 
@@ -427,7 +436,7 @@
 
     iput-object v0, v5, Lru/ok/android/externcalls/sdk/api/ConversationParams;->ispAsOrg:Ljava/lang/String;
 
-    .line 33
+    .line 34
     const-string v0, "loc_cc"
 
     invoke-virtual {p0, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
@@ -436,7 +445,7 @@
 
     iput-object v0, v5, Lru/ok/android/externcalls/sdk/api/ConversationParams;->locCc:Ljava/lang/String;
 
-    .line 34
+    .line 35
     const-string v0, "loc_reg"
 
     invoke-virtual {p0, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
@@ -449,7 +458,7 @@
 
     return-object v5
 
-    .line 35
+    .line 36
     :goto_4
     const-string v0, "json exception"
 
@@ -458,7 +467,7 @@
     return-object v4
 .end method
 
-.method private static parseCallParams(Lvq7;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
+.method private static parseCallParams(Lxx7;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -467,8 +476,8 @@
         }
     .end annotation
 
-    .line 36
-    invoke-static {p0}, Lhpi;->b(Lvq7;)Lorg/json/JSONObject;
+    .line 37
+    invoke-static {p0}, Lq4j;->b(Lxx7;)Lorg/json/JSONObject;
 
     move-result-object p0
 
@@ -599,41 +608,41 @@
 
     invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
 
-    move-result v2
+    move-result v3
 
-    if-nez v2, :cond_3
+    if-nez v3, :cond_3
 
     invoke-virtual {v1, v6}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    array-length v2, v1
+    array-length v3, v1
 
     :goto_2
-    if-ge v5, v2, :cond_3
+    if-ge v5, v3, :cond_3
 
-    aget-object v3, v1, v5
+    aget-object v4, v1, v5
 
-    invoke-virtual {v3}, Ljava/lang/String;->isEmpty()Z
+    invoke-virtual {v4}, Ljava/lang/String;->isEmpty()Z
 
-    move-result v4
+    move-result v6
 
-    if-eqz v4, :cond_2
+    if-eqz v6, :cond_2
 
     goto :goto_3
 
     :cond_2
-    iget-object v4, v0, Lru/ok/android/externcalls/sdk/api/ConversationParams;->stunTurnServers:Ljava/util/List;
+    iget-object v6, v0, Lru/ok/android/externcalls/sdk/api/ConversationParams;->stunTurnServers:Ljava/util/List;
 
-    invoke-static {v3}, Lorg/webrtc/PeerConnection$IceServer;->builder(Ljava/lang/String;)Lorg/webrtc/PeerConnection$IceServer$Builder;
+    invoke-static {v4}, Lorg/webrtc/PeerConnection$IceServer;->builder(Ljava/lang/String;)Lorg/webrtc/PeerConnection$IceServer$Builder;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-virtual {v3}, Lorg/webrtc/PeerConnection$IceServer$Builder;->createIceServer()Lorg/webrtc/PeerConnection$IceServer;
+    invoke-virtual {v4}, Lorg/webrtc/PeerConnection$IceServer$Builder;->createIceServer()Lorg/webrtc/PeerConnection$IceServer;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-interface {v4, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v6, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :goto_3
     add-int/lit8 v5, v5, 0x1
@@ -651,7 +660,7 @@
 
     const-string v1, "wte"
 
-    invoke-virtual {p0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v1, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -826,7 +835,7 @@
 
     const-string v2, "\'}"
 
-    invoke-static {v0, v1, v2}, Li57;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lho7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

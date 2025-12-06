@@ -1,85 +1,152 @@
-.class public final Lssg;
+.class public final synthetic Lssg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ltsg;
+.implements Lar6;
 
 
-# instance fields
-.field public final a:Ltsg;
+# static fields
+.field public static final a:Lssg;
 
-.field public final b:Landroid/os/Handler;
+.field private static final descriptor:Lree;
 
 
 # direct methods
-.method public constructor <init>(Lhtg;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lssg;
 
-    iput-object p1, p0, Lssg;->a:Ltsg;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    new-instance p1, Landroid/os/Handler;
+    sput-object v0, Lssg;->a:Lssg;
 
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+    new-instance v1, Lj5c;
 
-    move-result-object v0
+    const-string v2, "one.me.webapp.domain.jsbridge.delegates.unsupported.UnsupportedRequest"
 
-    if-nez v0, :cond_0
+    const/4 v3, 0x1
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    invoke-direct {v1, v2, v0, v3}, Lj5c;-><init>(Ljava/lang/String;Lar6;I)V
 
-    move-result-object v0
+    const-string v0, "requestId"
 
-    :cond_0
-    invoke-direct {p1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    const/4 v2, 0x0
 
-    iput-object p1, p0, Lssg;->b:Landroid/os/Handler;
+    invoke-virtual {v1, v0, v2}, Lj5c;->k(Ljava/lang/String;Z)V
+
+    sput-object v1, Lssg;->descriptor:Lree;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()V
-    .locals 3
+.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
+    .locals 2
 
-    new-instance v0, Lrsg;
+    check-cast p2, Lusg;
+
+    sget-object v0, Lssg;->descriptor:Lree;
+
+    invoke-virtual {p1, v0}, Lkotlinx/serialization/json/internal/b;->a(Lree;)Lkotlinx/serialization/json/internal/b;
+
+    move-result-object p1
+
+    iget-object p2, p2, Lusg;->a:Ljava/lang/String;
 
     const/4 v1, 0x0
 
-    iget-object v2, p0, Lssg;->a:Ltsg;
+    invoke-virtual {p1, v0, v1, p2}, Lkotlinx/serialization/json/internal/b;->s(Lree;ILjava/lang/String;)V
 
-    invoke-direct {v0, v1, v2}, Lrsg;-><init>(ILjava/lang/Object;)V
-
-    iget-object v1, p0, Lssg;->b:Landroid/os/Handler;
-
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {p1}, Lkotlinx/serialization/json/internal/b;->t()V
 
     return-void
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final b(Llh4;)Ljava/lang/Object;
+    .locals 8
 
-    iget-object v0, p0, Lssg;->a:Ltsg;
+    sget-object v0, Lssg;->descriptor:Lree;
 
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-interface {p1, v0}, Llh4;->r(Lree;)Lyl3;
 
-    move-result p1
+    move-result-object p1
 
-    return p1
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    move v4, v1
+
+    move v5, v2
+
+    :goto_0
+    if-eqz v4, :cond_2
+
+    invoke-interface {p1, v0}, Lyl3;->e(Lree;)I
+
+    move-result v6
+
+    const/4 v7, -0x1
+
+    if-eq v6, v7, :cond_1
+
+    if-nez v6, :cond_0
+
+    invoke-interface {p1, v0, v2}, Lyl3;->j(Lree;I)Ljava/lang/String;
+
+    move-result-object v3
+
+    move v5, v1
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
+
+    invoke-direct {p1, v6}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+
+    throw p1
+
+    :cond_1
+    move v4, v2
+
+    goto :goto_0
+
+    :cond_2
+    invoke-interface {p1, v0}, Lyl3;->m(Lree;)V
+
+    new-instance p1, Lusg;
+
+    invoke-direct {p1, v5, v3}, Lusg;-><init>(ILjava/lang/String;)V
+
+    return-object p1
 .end method
 
-.method public final hashCode()I
+.method public final c()[Lzy7;
+    .locals 3
+
+    const/4 v0, 0x1
+
+    new-array v0, v0, [Lzy7;
+
+    sget-object v1, Lrmf;->a:Lrmf;
+
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    return-object v0
+.end method
+
+.method public final d()Lree;
     .locals 1
 
-    iget-object v0, p0, Lssg;->a:Ltsg;
+    sget-object v0, Lssg;->descriptor:Lree;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
+    return-object v0
 .end method

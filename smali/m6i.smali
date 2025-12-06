@@ -1,207 +1,299 @@
-.class public final Lm6i;
-.super Lcom/google/android/gms/common/internal/a;
+.class public abstract Lm6i;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final H0:Lzoe;
-
-.field public final I0:Lzoe;
-
-.field public final J0:Lzoe;
+# static fields
+.field public static final a:Landroid/graphics/drawable/ColorDrawable;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;Lcq3;Louh;Louh;)V
-    .locals 8
+.method static constructor <clinit>()V
+    .locals 2
 
-    const/16 v3, 0x17
+    new-instance v0, Landroid/graphics/drawable/ColorDrawable;
 
-    const/4 v7, 0x0
+    const/4 v1, 0x0
 
-    move-object v0, p0
+    invoke-direct {v0, v1}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v4, p3
-
-    move-object v5, p4
-
-    move-object v6, p5
-
-    invoke-direct/range {v0 .. v7}, Lcom/google/android/gms/common/internal/a;-><init>(Landroid/content/Context;Landroid/os/Looper;ILcq3;Lbs6;Lcs6;I)V
-
-    new-instance p1, Lzoe;
-
-    const/4 p2, 0x0
-
-    invoke-direct {p1, p2}, Lzoe;-><init>(I)V
-
-    iput-object p1, v0, Lm6i;->H0:Lzoe;
-
-    new-instance p1, Lzoe;
-
-    invoke-direct {p1, p2}, Lzoe;-><init>(I)V
-
-    iput-object p1, v0, Lm6i;->I0:Lzoe;
-
-    new-instance p1, Lzoe;
-
-    invoke-direct {p1, p2}, Lzoe;-><init>(I)V
-
-    iput-object p1, v0, Lm6i;->J0:Lzoe;
+    sput-object v0, Lm6i;->a:Landroid/graphics/drawable/ColorDrawable;
 
     return-void
 .end method
 
+.method public static a(Landroid/graphics/drawable/Drawable;Lvtd;Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
+    .locals 2
 
-# virtual methods
-.method public final g()I
-    .locals 1
+    instance-of v0, p0, Landroid/graphics/drawable/BitmapDrawable;
 
-    const v0, 0xb2c988
+    if-eqz v0, :cond_0
 
-    return v0
-.end method
+    check-cast p0, Landroid/graphics/drawable/BitmapDrawable;
 
-.method public final l(Landroid/os/IBinder;)Landroid/os/IInterface;
-    .locals 3
+    new-instance v0, Lntd;
 
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :cond_0
-    const-string v0, "com.google.android.gms.location.internal.IGoogleLocationManagerService"
-
-    invoke-interface {p1, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+    invoke-virtual {p0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    instance-of v2, v1, Ld0j;
+    invoke-virtual {p0}, Landroid/graphics/drawable/BitmapDrawable;->getPaint()Landroid/graphics/Paint;
 
-    if-eqz v2, :cond_1
+    move-result-object p0
 
-    check-cast v1, Ld0j;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-object v1
+    invoke-direct {v0, p2, v1, p0}, Lntd;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;Landroid/graphics/Paint;)V
+
+    invoke-static {v0, p1}, Lm6i;->b(Lmtd;Lvtd;)V
+
+    return-object v0
+
+    :cond_0
+    instance-of p2, p0, Landroid/graphics/drawable/NinePatchDrawable;
+
+    if-eqz p2, :cond_1
+
+    check-cast p0, Landroid/graphics/drawable/NinePatchDrawable;
+
+    new-instance p2, Lttd;
+
+    invoke-direct {p2, p0}, Lstd;-><init>(Landroid/graphics/drawable/Drawable;)V
+
+    invoke-static {p2, p1}, Lm6i;->b(Lmtd;Lvtd;)V
+
+    return-object p2
 
     :cond_1
-    new-instance v1, Ld0j;
+    instance-of p2, p0, Landroid/graphics/drawable/ColorDrawable;
 
-    const/4 v2, 0x3
+    if-eqz p2, :cond_2
 
-    invoke-direct {v1, p1, v0, v2}, Lguh;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+    check-cast p0, Landroid/graphics/drawable/ColorDrawable;
 
-    return-object v1
+    new-instance p2, Lptd;
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/ColorDrawable;->getColor()I
+
+    move-result p0
+
+    invoke-direct {p2, p0}, Lptd;-><init>(I)V
+
+    invoke-static {p2, p1}, Lm6i;->b(Lmtd;Lvtd;)V
+
+    return-object p2
+
+    :cond_2
+    const-string p1, "Don\'t know how to round that drawable: %s"
+
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    move-result-object p2
+
+    const-string v0, "WrappingUtils"
+
+    invoke-static {v0, p1, p2}, Lop5;->m(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-object p0
 .end method
 
-.method public final m()[Lcq5;
-    .locals 1
-
-    sget-object v0, Lrci;->a:[Lcq5;
-
-    return-object v0
-.end method
-
-.method public final p()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "com.google.android.gms.location.internal.IGoogleLocationManagerService"
-
-    return-object v0
-.end method
-
-.method public final q()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "com.google.android.location.internal.GoogleLocationManagerService.START"
-
-    return-object v0
-.end method
-
-.method public final s()V
+.method public static b(Lmtd;Lvtd;)V
     .locals 2
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    iget-boolean v0, p1, Lvtd;->b:Z
 
-    iget-object v0, p0, Lm6i;->H0:Lzoe;
+    invoke-interface {p0, v0}, Lmtd;->b(Z)V
 
-    monitor-enter v0
+    iget-object v0, p1, Lvtd;->c:[F
 
-    :try_start_0
-    iget-object v1, p0, Lm6i;->H0:Lzoe;
+    invoke-interface {p0, v0}, Lmtd;->m([F)V
 
-    invoke-virtual {v1}, Lzoe;->clear()V
+    iget v0, p1, Lvtd;->f:I
 
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_2
+    iget v1, p1, Lvtd;->e:F
 
-    iget-object v1, p0, Lm6i;->I0:Lzoe;
+    invoke-interface {p0, v0, v1}, Lmtd;->a(IF)V
 
-    monitor-enter v1
+    iget p1, p1, Lvtd;->g:F
 
-    :try_start_1
-    iget-object v0, p0, Lm6i;->I0:Lzoe;
+    invoke-interface {p0, p1}, Lmtd;->h(F)V
 
-    invoke-virtual {v0}, Lzoe;->clear()V
+    invoke-interface {p0}, Lmtd;->k()V
 
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    invoke-interface {p0}, Lmtd;->i()V
 
-    iget-object v0, p0, Lm6i;->J0:Lzoe;
-
-    monitor-enter v0
-
-    :try_start_2
-    iget-object v1, p0, Lm6i;->J0:Lzoe;
-
-    invoke-virtual {v1}, Lzoe;->clear()V
-
-    monitor-exit v0
+    invoke-interface {p0}, Lmtd;->f()V
 
     return-void
-
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    throw v1
-
-    :catchall_1
-    move-exception v0
-
-    :try_start_3
-    monitor-exit v1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    throw v0
-
-    :catchall_2
-    move-exception v1
-
-    :try_start_4
-    monitor-exit v0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_2
-
-    throw v1
 .end method
 
-.method public final t()Z
+.method public static c(Landroid/graphics/drawable/Drawable;Lvtd;Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
+    .locals 3
+
+    :try_start_0
+    invoke-static {}, Lml6;->i()Lll6;
+
+    if-eqz p0, :cond_4
+
+    if-eqz p1, :cond_4
+
+    iget v0, p1, Lvtd;->a:I
+
+    const/4 v1, 0x2
+
+    if-eq v0, v1, :cond_0
+
+    goto :goto_2
+
+    :cond_0
+    instance-of v0, p0, Lch6;
+
+    if-eqz v0, :cond_3
+
+    move-object v0, p0
+
+    check-cast v0, Lch6;
+
+    :goto_0
+    invoke-interface {v0}, Lw35;->j()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    if-eq v1, v0, :cond_2
+
+    instance-of v2, v1, Lw35;
+
+    if-nez v2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    move-object v0, v1
+
+    check-cast v0, Lw35;
+
+    goto :goto_0
+
+    :cond_2
+    :goto_1
+    sget-object v1, Lm6i;->a:Landroid/graphics/drawable/ColorDrawable;
+
+    invoke-interface {v0, v1}, Lw35;->e(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    invoke-static {v1, p1, p2}, Lm6i;->a(Landroid/graphics/drawable/Drawable;Lvtd;Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    invoke-interface {v0, p1}, Lw35;->e(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-static {}, Lml6;->i()Lll6;
+
+    return-object p0
+
+    :cond_3
+    :try_start_1
+    invoke-static {p0, p1, p2}, Lm6i;->a(Landroid/graphics/drawable/Drawable;Lvtd;Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    invoke-static {}, Lml6;->i()Lll6;
+
+    return-object p0
+
+    :cond_4
+    :goto_2
+    invoke-static {}, Lml6;->i()Lll6;
+
+    return-object p0
+
+    :catchall_0
+    move-exception p0
+
+    invoke-static {}, Lml6;->i()Lll6;
+
+    throw p0
+.end method
+
+.method public static d(Landroid/graphics/drawable/Drawable;Lvtd;)Landroid/graphics/drawable/Drawable;
+    .locals 2
+
+    :try_start_0
+    invoke-static {}, Lml6;->i()Lll6;
+
+    if-eqz p0, :cond_1
+
+    if-eqz p1, :cond_1
+
+    iget v0, p1, Lvtd;->a:I
+
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lrtd;
+
+    invoke-direct {v0, p0}, Lrtd;-><init>(Landroid/graphics/drawable/Drawable;)V
+
+    invoke-static {v0, p1}, Lm6i;->b(Lmtd;Lvtd;)V
+
+    iget p0, p1, Lvtd;->d:I
+
+    iput p0, v0, Lrtd;->w0:I
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-static {}, Lml6;->i()Lll6;
+
+    return-object v0
+
+    :cond_1
+    :goto_0
+    invoke-static {}, Lml6;->i()Lll6;
+
+    return-object p0
+
+    :catchall_0
+    move-exception p0
+
+    invoke-static {}, Lml6;->i()Lll6;
+
+    throw p0
+.end method
+
+.method public static e(Landroid/graphics/drawable/Drawable;Lsyd;)Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    const/4 v0, 0x1
+    invoke-static {}, Lml6;->i()Lll6;
 
-    return v0
+    if-eqz p0, :cond_1
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lqyd;
+
+    invoke-direct {v0, p0, p1}, Lqyd;-><init>(Landroid/graphics/drawable/Drawable;Lsyd;)V
+
+    invoke-static {}, Lml6;->i()Lll6;
+
+    return-object v0
+
+    :cond_1
+    :goto_0
+    invoke-static {}, Lml6;->i()Lll6;
+
+    return-object p0
 .end method

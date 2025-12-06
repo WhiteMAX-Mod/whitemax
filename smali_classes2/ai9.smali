@@ -1,154 +1,144 @@
 .class public final Lai9;
-.super Lsgf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzi6;
+.implements Le88;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+.field public final synthetic b:Ljava/lang/Object;
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
     .locals 0
 
-    iput-object p2, p0, Lai9;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    iput p2, p0, Lai9;->a:I
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lai9;->b:Ljava/lang/Object;
 
-    invoke-direct {p0, p2, p1}, Lsgf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Lai9;->c:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lai9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lai9;
-
-    sget-object p2, Lccg;->a:Lccg;
-
-    invoke-virtual {p1, p2}, Lai9;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lai9;
-
-    iget-object v1, p0, Lai9;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    invoke-direct {v0, p2, v1}, Lai9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
-
-    iput-object p1, v0, Lai9;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a(Lcj9;)V
     .locals 4
 
-    invoke-static {p1}, Lxxi;->b(Ljava/lang/Object;)V
+    iget v0, p0, Lai9;->a:I
 
-    iget-object p1, p0, Lai9;->X:Ljava/lang/Object;
+    iget-object v1, p0, Lai9;->c:Ljava/lang/Object;
 
-    check-cast p1, Lue5;
+    iget-object v2, p0, Lai9;->b:Ljava/lang/Object;
 
-    const/4 v0, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz p1, :cond_0
+    check-cast v2, Ljr9;
 
-    iget-object p1, p1, Lue5;->a:Ljava/lang/Object;
+    iget-object v0, v2, Ljr9;->o:Lkv9;
 
-    check-cast p1, Lfg9;
+    check-cast v1, Lone/me/messages/list/loader/MessageModel;
 
-    goto :goto_0
+    iget-wide v1, v1, Lone/me/messages/list/loader/MessageModel;->a:J
 
-    :cond_0
-    move-object p1, v0
+    iget-object v0, v0, Lkv9;->a:Lone/me/messages/list/ui/MessagesListWidget;
 
-    :goto_0
-    iget-object v1, p0, Lai9;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    sget-object v3, Lone/me/messages/list/ui/MessagesListWidget;->b1:[Lyy7;
 
-    iget-object v2, v1, Lone/me/sdk/messagewrite/MessageWriteWidget;->D0:Lx0f;
+    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->K0()Lvu9;
 
-    if-eqz p1, :cond_1
+    move-result-object v0
 
-    iget p1, p1, Lfg9;->a:I
+    invoke-virtual {v0, p1, v1, v2}, Lvu9;->H(Lcj9;J)V
 
-    goto :goto_1
+    return-void
 
-    :cond_1
-    const/4 p1, 0x0
+    :pswitch_0
+    check-cast v2, Lsh9;
 
-    :goto_1
-    const/4 v3, 0x2
+    check-cast v1, Lbi9;
 
-    if-ne p1, v3, :cond_2
+    iget-wide v0, v1, Lbi9;->J0:J
 
-    invoke-virtual {v1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->G0()Lgd9;
+    check-cast v2, Lkv9;
 
-    move-result-object p1
+    iget-object v2, v2, Lkv9;->a:Lone/me/messages/list/ui/MessagesListWidget;
 
-    sget v1, Lpjd;->a1:I
+    sget-object v3, Lone/me/messages/list/ui/MessagesListWidget;->b1:[Lyy7;
 
-    invoke-virtual {p1, v1}, Lgd9;->setLeftIcon(I)V
+    invoke-virtual {v2}, Lone/me/messages/list/ui/MessagesListWidget;->K0()Lvu9;
 
-    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    move-result-object v2
 
-    invoke-virtual {v2, v0, p1}, Lx0f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v2, p1, v0, v1}, Lvu9;->H(Lcj9;J)V
 
-    goto :goto_2
+    return-void
 
-    :cond_2
-    invoke-virtual {v1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->G0()Lgd9;
+    nop
 
-    move-result-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    sget-object v3, Luc9;->a:Luc9;
+.method public final b(Ljava/lang/String;Li88;Landroid/text/style/ClickableSpan;)V
+    .locals 2
 
-    invoke-virtual {p1, v3}, Lgd9;->setEmojiExpandableState(Luc9;)V
+    iget p3, p0, Lai9;->a:I
 
-    invoke-virtual {v1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->G0()Lgd9;
+    packed-switch p3, :pswitch_data_0
 
-    move-result-object p1
+    iget-object p3, p0, Lai9;->b:Ljava/lang/Object;
 
-    iget-object p1, p1, Lgd9;->o:Ldd9;
+    check-cast p3, Ljr9;
 
-    const/4 v3, 0x1
+    iget-object p3, p3, Ljr9;->o:Lkv9;
 
-    invoke-virtual {p1, v3}, Landroid/widget/TextView;->setShowSoftInputOnFocus(Z)V
+    iget-object v0, p0, Lai9;->c:Ljava/lang/Object;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
+    check-cast v0, Lone/me/messages/list/loader/MessageModel;
 
-    invoke-virtual {v1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->G0()Lgd9;
+    iget-wide v0, v0, Lone/me/messages/list/loader/MessageModel;->a:J
 
-    move-result-object p1
+    iget-object p3, p3, Lkv9;->a:Lone/me/messages/list/ui/MessagesListWidget;
 
-    sget v1, Lpjd;->W0:I
+    invoke-static {p3, p1, p2, v0, v1}, Lone/me/messages/list/ui/MessagesListWidget;->y0(Lone/me/messages/list/ui/MessagesListWidget;Ljava/lang/String;Li88;J)V
 
-    invoke-virtual {p1, v1}, Lgd9;->setLeftIcon(I)V
+    return-void
 
-    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    :pswitch_0
+    iget-object p3, p0, Lai9;->b:Ljava/lang/Object;
 
-    invoke-virtual {v2, v0, p1}, Lx0f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    check-cast p3, Lsh9;
 
-    :goto_2
-    sget-object p1, Lccg;->a:Lccg;
+    iget-object v0, p0, Lai9;->c:Ljava/lang/Object;
 
-    return-object p1
+    check-cast v0, Lbi9;
+
+    iget-wide v0, v0, Lbi9;->J0:J
+
+    check-cast p3, Lkv9;
+
+    iget-object p3, p3, Lkv9;->a:Lone/me/messages/list/ui/MessagesListWidget;
+
+    invoke-static {p3, p1, p2, v0, v1}, Lone/me/messages/list/ui/MessagesListWidget;->y0(Lone/me/messages/list/ui/MessagesListWidget;Ljava/lang/String;Li88;J)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

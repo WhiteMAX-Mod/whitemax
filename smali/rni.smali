@@ -2,26 +2,79 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpqa;
 
-# instance fields
-.field public a:Ljava/lang/String;
 
-.field public b:Ljava/lang/String;
+# static fields
+.field public static final a:Lrni;
 
-.field public c:Ljava/lang/String;
 
-.field public d:Ljava/lang/String;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
 
-.field public e:Ljava/lang/String;
+    new-instance v0, Lrni;
 
-.field public f:Ljava/lang/Boolean;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-.field public g:Ljava/lang/Boolean;
+    sput-object v0, Lrni;->a:Lrni;
 
-.field public h:Ljava/lang/Boolean;
+    new-instance v0, Ltci;
 
-.field public i:Ljava/lang/Integer;
+    const/4 v1, 0x1
 
-.field public j:Ljava/lang/Integer;
+    invoke-direct {v0, v1}, Ltci;-><init>(I)V
 
-.field public k:Ljava/util/AbstractCollection;
+    const-class v1, Lhdi;
+
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x4
+
+    invoke-static {v0, v2}, La9h;->j(Ljava/util/HashMap;I)Ltci;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->g(Ljava/lang/Class;Ltci;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
+.end method

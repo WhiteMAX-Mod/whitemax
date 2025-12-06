@@ -1,152 +1,98 @@
-.class public interface abstract Lwz1;
+.class public final synthetic Lwz1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public b(Lah5;)V
-    .locals 5
+# instance fields
+.field public final synthetic a:I
 
-    iget-object v0, p1, Lah5;->a:Ljava/util/ArrayList;
+.field public final synthetic b:Ljava/lang/Object;
 
-    invoke-interface {p0}, Lwz1;->i()I
 
-    move-result v1
+# direct methods
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    const/4 v2, 0x1
+    iput p1, p0, Lwz1;->a:I
 
-    if-ne v1, v2, :cond_0
+    iput-object p2, p0, Lwz1;->b:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a()V
+    .locals 4
+
+    iget v0, p0, Lwz1;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lwz1;->b:Ljava/lang/Object;
+
+    check-cast v0, Lp1e;
+
+    iget-object v1, v0, Lp1e;->b:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_0
+    iget-object v2, v0, Lp1e;->d:Lwz1;
+
+    if-nez v2, :cond_0
+
+    const-string v2, "ScreenFlashWrapper"
+
+    const-string v3, "apply: pendingListener is null!"
+
+    invoke-static {v2, v3}, Lgri;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
 
     :cond_0
-    invoke-static {v1}, Ldy1;->v(I)I
-
-    move-result v3
-
-    if-eq v3, v2, :cond_7
-
-    const/4 v4, 0x2
-
-    if-eq v3, v4, :cond_6
-
-    const/4 v4, 0x3
-
-    if-eq v3, v4, :cond_5
-
-    const/4 p1, 0x1
-
-    if-eq v1, p1, :cond_4
-
-    const/4 p1, 0x2
-
-    if-eq v1, p1, :cond_3
-
-    const/4 p1, 0x3
-
-    if-eq v1, p1, :cond_2
-
-    const/4 p1, 0x4
-
-    if-eq v1, p1, :cond_1
-
-    const-string p1, "null"
-
-    goto :goto_0
-
-    :cond_1
-    const-string p1, "FIRED"
-
-    goto :goto_0
-
-    :cond_2
-    const-string p1, "READY"
-
-    goto :goto_0
-
-    :cond_3
-    const-string p1, "NONE"
-
-    goto :goto_0
-
-    :cond_4
-    const-string p1, "UNKNOWN"
-
     :goto_0
-    const-string v0, "Unknown flash state: "
+    invoke-virtual {v0}, Lp1e;->c()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "ExifData"
-
-    invoke-static {v0, p1}, Lgfi;->g(Ljava/lang/String;Ljava/lang/String;)V
+    monitor-exit v1
 
     return-void
-
-    :cond_5
-    move v1, v2
-
-    goto :goto_1
-
-    :cond_6
-    const/4 v1, 0x0
-
-    goto :goto_1
-
-    :cond_7
-    const/16 v1, 0x20
 
     :goto_1
-    and-int/lit8 v3, v1, 0x1
+    monitor-exit v1
 
-    if-ne v3, v2, :cond_8
+    throw v0
 
-    const/4 v2, 0x4
+    :pswitch_0
+    iget-object v0, p0, Lwz1;->b:Ljava/lang/Object;
 
-    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    check-cast v0, Ltu1;
 
-    move-result-object v2
+    const-string v1, "Camera2CapturePipeline"
 
-    const-string v3, "LightSource"
+    const-string v2, "ScreenFlashTask#preCapture: UI change applied"
 
-    invoke-virtual {p1, v3, v2, v0}, Lah5;->c(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
+    invoke-static {v1, v2}, Lgri;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_8
-    const-string v2, "Flash"
+    const/4 v1, 0x0
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v2, v1, v0}, Lah5;->c(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Ltu1;->b(Ljava/lang/Object;)Z
 
     return-void
-.end method
 
-.method public abstract d()Lalf;
-.end method
+    nop
 
-.method public abstract g()Luz1;
-.end method
-
-.method public abstract getTimestamp()J
-.end method
-
-.method public abstract i()I
-.end method
-
-.method public abstract k()Lsz1;
-.end method
-
-.method public n()Landroid/hardware/camera2/CaptureResult;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public abstract p()Ltz1;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

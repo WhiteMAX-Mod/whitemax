@@ -1,319 +1,301 @@
 .class public final Lpbg;
-.super Loj0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ltn0;
+
+
+# static fields
+.field public static final u:Ljava/nio/charset/Charset;
+
+.field public static final v:Ljava/lang/String;
 
 
 # instance fields
-.field public final X:I
+.field public final a:Ljava/security/MessageDigest;
 
-.field public final Y:[B
+.field public final b:Lr5j;
 
-.field public final Z:Ljava/net/DatagramPacket;
+.field public final c:[B
 
-.field public q0:Landroid/net/Uri;
+.field public final d:S
 
-.field public r0:Ljava/net/DatagramSocket;
+.field public final e:S
 
-.field public s0:Ljava/net/MulticastSocket;
+.field public f:Z
 
-.field public t0:Ljava/net/InetAddress;
+.field public g:Ljava/security/PublicKey;
 
-.field public u0:Z
+.field public h:Ljava/security/PrivateKey;
 
-.field public v0:I
+.field public final i:[B
+
+.field public j:[B
+
+.field public k:[B
+
+.field public l:[B
+
+.field public m:[B
+
+.field public n:[B
+
+.field public o:[B
+
+.field public p:[B
+
+.field public q:[B
+
+.field public final r:Ljdc;
+
+.field public s:[B
+
+.field public t:[B
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 1
 
-    const/4 v0, 0x1
+    const-string v0, "ISO-8859-1"
 
-    invoke-direct {p0, v0}, Loj0;-><init>(Z)V
+    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 
-    const/16 v0, 0x1f40
+    move-result-object v0
 
-    iput v0, p0, Lpbg;->X:I
+    sput-object v0, Lpbg;->u:Ljava/nio/charset/Charset;
 
-    const/16 v0, 0x7d0
+    const-string v0, "tls13 "
 
-    new-array v1, v0, [B
-
-    iput-object v1, p0, Lpbg;->Y:[B
-
-    new-instance v2, Ljava/net/DatagramPacket;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, v1, v3, v0}, Ljava/net/DatagramPacket;-><init>([BII)V
-
-    iput-object v2, p0, Lpbg;->Z:Ljava/net/DatagramPacket;
+    sput-object v0, Lpbg;->v:Ljava/lang/String;
 
     return-void
+.end method
+
+.method public constructor <init>(Ljdc;[BII)V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lpbg;->i:[B
+
+    iput-object p1, p0, Lpbg;->r:Ljdc;
+
+    int-to-short p1, p3
+
+    iput-short p1, p0, Lpbg;->d:S
+
+    int-to-short p1, p4
+
+    iput-short p1, p0, Lpbg;->e:S
+
+    mul-int/lit8 p3, p1, 0x8
+
+    const-string p4, "SHA-"
+
+    invoke-static {p3, p4}, Lho7;->f(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p4
+
+    :try_start_0
+    invoke-static {p4}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lpbg;->a:Ljava/security/MessageDigest;
+    :try_end_0
+    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_0
+
+    const-string p4, "HmacSHA"
+
+    invoke-static {p3, p4}, Lho7;->f(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p3
+
+    new-instance p4, Ld47;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p4, p3, v1}, Ld47;-><init>(Ljava/lang/String;I)V
+
+    new-instance p3, Lr5j;
+
+    const/16 v1, 0x15
+
+    invoke-direct {p3, v1, p4}, Lr5j;-><init>(ILjava/lang/Object;)V
+
+    iput-object p3, p0, Lpbg;->b:Lr5j;
+
+    const/4 p3, 0x0
+
+    new-array p3, p3, [B
+
+    invoke-virtual {v0, p3}, Ljava/security/MessageDigest;->digest([B)[B
+
+    move-result-object p3
+
+    iput-object p3, p0, Lpbg;->c:[B
+
+    invoke-static {p3}, Lyx0;->a([B)Ljava/lang/String;
+
+    move-result-object p3
+
+    const-string p4, "Empty hash: "
+
+    invoke-static {p4, p3}, Lxrf;->u(Ljava/lang/String;Ljava/lang/String;)V
+
+    if-nez p2, :cond_0
+
+    new-array p2, p1, [B
+
+    :cond_0
+    invoke-virtual {p0, p2}, Lpbg;->a([B)V
+
+    return-void
+
+    :catch_0
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    const-string p2, "Missing "
+
+    const-string p3, " support"
+
+    invoke-static {p2, p4, p3}, Lho7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public final H(Lmc4;)J
+.method public final a([B)V
     .locals 3
 
-    iget-object v0, p1, Lmc4;->a:Landroid/net/Uri;
+    iget-short v0, p0, Lpbg;->e:S
 
-    iput-object v0, p0, Lpbg;->q0:Landroid/net/Uri;
+    new-array v1, v0, [B
 
-    invoke-virtual {v0}, Landroid/net/Uri;->getHost()Ljava/lang/String;
+    iget-object v2, p0, Lpbg;->b:Lr5j;
 
-    move-result-object v0
+    invoke-virtual {v2, v1, p1}, Lr5j;->w([B[B)[B
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object p1
 
-    iget-object v1, p0, Lpbg;->q0:Landroid/net/Uri;
+    iput-object p1, p0, Lpbg;->j:[B
 
-    invoke-virtual {v1}, Landroid/net/Uri;->getPort()I
+    invoke-static {p1}, Lyx0;->a([B)Ljava/lang/String;
 
-    move-result v1
+    move-result-object p1
 
-    invoke-virtual {p0, p1}, Loj0;->e(Lmc4;)V
+    const-string v1, "Early secret: "
 
-    :try_start_0
-    invoke-static {v0}, Ljava/net/InetAddress;->getByName(Ljava/lang/String;)Ljava/net/InetAddress;
+    invoke-static {v1, p1}, Lxrf;->u(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v0
+    iget-object p1, p0, Lpbg;->j:[B
 
-    iput-object v0, p0, Lpbg;->t0:Ljava/net/InetAddress;
+    const-string v1, "res binder"
 
-    new-instance v0, Ljava/net/InetSocketAddress;
+    iget-object v2, p0, Lpbg;->c:[B
 
-    iget-object v2, p0, Lpbg;->t0:Ljava/net/InetAddress;
+    invoke-virtual {p0, p1, v1, v2, v0}, Lpbg;->b([BLjava/lang/String;[BS)[B
 
-    invoke-direct {v0, v2, v1}, Ljava/net/InetSocketAddress;-><init>(Ljava/net/InetAddress;I)V
+    move-result-object p1
 
-    iget-object v1, p0, Lpbg;->t0:Ljava/net/InetAddress;
+    iput-object p1, p0, Lpbg;->k:[B
 
-    invoke-virtual {v1}, Ljava/net/InetAddress;->isMulticastAddress()Z
+    invoke-static {p1}, Lyx0;->a([B)Ljava/lang/String;
 
-    move-result v1
+    move-result-object p1
 
-    if-eqz v1, :cond_0
+    const-string v0, "Binder key: "
 
-    new-instance v1, Ljava/net/MulticastSocket;
+    invoke-static {v0, p1}, Lxrf;->u(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {v1, v0}, Ljava/net/MulticastSocket;-><init>(Ljava/net/SocketAddress;)V
-
-    iput-object v1, p0, Lpbg;->s0:Ljava/net/MulticastSocket;
-
-    iget-object v0, p0, Lpbg;->t0:Ljava/net/InetAddress;
-
-    invoke-virtual {v1, v0}, Ljava/net/MulticastSocket;->joinGroup(Ljava/net/InetAddress;)V
-
-    iget-object v0, p0, Lpbg;->s0:Ljava/net/MulticastSocket;
-
-    iput-object v0, p0, Lpbg;->r0:Ljava/net/DatagramSocket;
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p1
-
-    goto :goto_1
-
-    :catch_1
-    move-exception p1
-
-    goto :goto_2
-
-    :cond_0
-    new-instance v1, Ljava/net/DatagramSocket;
-
-    invoke-direct {v1, v0}, Ljava/net/DatagramSocket;-><init>(Ljava/net/SocketAddress;)V
-
-    iput-object v1, p0, Lpbg;->r0:Ljava/net/DatagramSocket;
-
-    :goto_0
-    iget-object v0, p0, Lpbg;->r0:Ljava/net/DatagramSocket;
-
-    iget v1, p0, Lpbg;->X:I
-
-    invoke-virtual {v0, v1}, Ljava/net/DatagramSocket;->setSoTimeout(I)V
-    :try_end_0
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lpbg;->u0:Z
-
-    invoke-virtual {p0, p1}, Loj0;->f(Lmc4;)V
-
-    const-wide/16 v0, -0x1
-
-    return-wide v0
-
-    :goto_1
-    new-instance v0, Landroidx/media3/datasource/UdpDataSource$UdpDataSourceException;
-
-    const/16 v1, 0x7d1
-
-    invoke-direct {v0, p1, v1}, Landroidx/media3/datasource/DataSourceException;-><init>(Ljava/lang/Exception;I)V
-
-    throw v0
-
-    :goto_2
-    new-instance v0, Landroidx/media3/datasource/UdpDataSource$UdpDataSourceException;
-
-    const/16 v1, 0x7d6
-
-    invoke-direct {v0, p1, v1}, Landroidx/media3/datasource/DataSourceException;-><init>(Ljava/lang/Exception;I)V
-
-    throw v0
-.end method
-
-.method public final close()V
-    .locals 3
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lpbg;->q0:Landroid/net/Uri;
-
-    iget-object v1, p0, Lpbg;->s0:Ljava/net/MulticastSocket;
-
-    if-eqz v1, :cond_0
-
-    :try_start_0
-    iget-object v2, p0, Lpbg;->t0:Ljava/net/InetAddress;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v1, v2}, Ljava/net/MulticastSocket;->leaveGroup(Ljava/net/InetAddress;)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    iput-object v0, p0, Lpbg;->s0:Ljava/net/MulticastSocket;
-
-    :cond_0
-    iget-object v1, p0, Lpbg;->r0:Ljava/net/DatagramSocket;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Ljava/net/DatagramSocket;->close()V
-
-    iput-object v0, p0, Lpbg;->r0:Ljava/net/DatagramSocket;
-
-    :cond_1
-    iput-object v0, p0, Lpbg;->t0:Ljava/net/InetAddress;
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lpbg;->v0:I
-
-    iget-boolean v1, p0, Lpbg;->u0:Z
-
-    if-eqz v1, :cond_2
-
-    iput-boolean v0, p0, Lpbg;->u0:Z
-
-    invoke-virtual {p0}, Loj0;->c()V
-
-    :cond_2
     return-void
 .end method
 
-.method public final getUri()Landroid/net/Uri;
-    .locals 1
+.method public final b([BLjava/lang/String;[BS)[B
+    .locals 5
 
-    iget-object v0, p0, Lpbg;->q0:Landroid/net/Uri;
+    sget-object v0, Lpbg;->v:Ljava/lang/String;
 
-    return-object v0
-.end method
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
-.method public final read([BII)I
-    .locals 2
+    move-result v1
 
-    if-nez p3, :cond_0
+    add-int/lit8 v1, v1, 0x3
 
-    const/4 p1, 0x0
+    sget-object v2, Lpbg;->u:Ljava/nio/charset/Charset;
 
-    return p1
+    invoke-virtual {p2, v2}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
-    :cond_0
-    iget v0, p0, Lpbg;->v0:I
+    move-result-object v3
 
-    iget-object v1, p0, Lpbg;->Z:Ljava/net/DatagramPacket;
+    array-length v3, v3
 
-    if-nez v0, :cond_1
+    add-int/2addr v1, v3
 
-    :try_start_0
-    iget-object v0, p0, Lpbg;->r0:Ljava/net/DatagramSocket;
+    add-int/lit8 v1, v1, 0x1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    array-length v3, p3
 
-    invoke-virtual {v0, v1}, Ljava/net/DatagramSocket;->receive(Ljava/net/DatagramPacket;)V
-    :try_end_0
-    .catch Ljava/net/SocketTimeoutException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    add-int/2addr v1, v3
 
-    invoke-virtual {v1}, Ljava/net/DatagramPacket;->getLength()I
+    invoke-static {v1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
-    move-result v0
+    move-result-object v1
 
-    iput v0, p0, Lpbg;->v0:I
+    invoke-virtual {v1, p4}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    invoke-virtual {p0, v0}, Loj0;->b(I)V
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
-    goto :goto_2
+    move-result v3
 
-    :catch_0
-    move-exception p1
+    invoke-virtual {p2}, Ljava/lang/String;->getBytes()[B
 
-    goto :goto_0
+    move-result-object v4
 
-    :catch_1
-    move-exception p1
+    array-length v4, v4
 
-    goto :goto_1
+    add-int/2addr v3, v4
 
-    :goto_0
-    new-instance p2, Landroidx/media3/datasource/UdpDataSource$UdpDataSourceException;
+    int-to-byte v3, v3
 
-    const/16 p3, 0x7d1
+    invoke-virtual {v1, v3}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    invoke-direct {p2, p1, p3}, Landroidx/media3/datasource/DataSourceException;-><init>(Ljava/lang/Exception;I)V
+    invoke-virtual {v0, v2}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
-    throw p2
+    move-result-object v0
 
-    :goto_1
-    new-instance p2, Landroidx/media3/datasource/UdpDataSource$UdpDataSourceException;
+    invoke-virtual {v1, v0}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    const/16 p3, 0x7d2
+    invoke-virtual {p2, v2}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
-    invoke-direct {p2, p1, p3}, Landroidx/media3/datasource/DataSourceException;-><init>(Ljava/lang/Exception;I)V
+    move-result-object p2
 
-    throw p2
+    invoke-virtual {v1, p2}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    :cond_1
-    :goto_2
-    invoke-virtual {v1}, Ljava/net/DatagramPacket;->getLength()I
+    array-length p2, p3
 
-    move-result v0
+    int-to-byte p2, p2
 
-    iget v1, p0, Lpbg;->v0:I
+    invoke-virtual {v1, p2}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    sub-int/2addr v0, v1
+    invoke-virtual {v1, p3}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    invoke-static {v1, p3}, Ljava/lang/Math;->min(II)I
+    iget-object p2, p0, Lpbg;->b:Lr5j;
 
-    move-result p3
+    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->array()[B
 
-    iget-object v1, p0, Lpbg;->Y:[B
+    move-result-object p3
 
-    invoke-static {v1, v0, p1, p2, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-virtual {p2, p1, p3, p4}, Lr5j;->v([B[BI)[B
 
-    iget p1, p0, Lpbg;->v0:I
+    move-result-object p1
 
-    sub-int/2addr p1, p3
-
-    iput p1, p0, Lpbg;->v0:I
-
-    return p3
+    return-object p1
 .end method

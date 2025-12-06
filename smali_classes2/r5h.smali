@@ -1,136 +1,69 @@
 .class public final Lr5h;
-.super Ljava/lang/Object;
+.super Lq44;
 .source "SourceFile"
-
-# interfaces
-.implements Ls5h;
 
 
 # instance fields
-.field public final a:Lorf;
+.field public X:Lbbh;
 
-.field public final b:Ljava/util/List;
+.field public Y:J
+
+.field public Z:J
+
+.field public d:Lt5h;
+
+.field public o:Ljava/lang/String;
+
+.field public synthetic s0:Ljava/lang/Object;
+
+.field public final synthetic t0:Lt5h;
+
+.field public u0:I
 
 
 # direct methods
-.method public constructor <init>(Lorf;Ljava/util/List;)V
+.method public constructor <init>(Lt5h;Lq44;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lr5h;->t0:Lt5h;
 
-    iput-object p1, p0, Lr5h;->a:Lorf;
-
-    iput-object p2, p0, Lr5h;->b:Ljava/util/List;
+    invoke-direct {p0, p2}, Lq44;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
 
-    if-ne p0, p1, :cond_0
+    iput-object p1, p0, Lr5h;->s0:Ljava/lang/Object;
 
-    goto :goto_1
+    iget p1, p0, Lr5h;->u0:I
 
-    :cond_0
-    instance-of v0, p1, Lr5h;
+    const/high16 v0, -0x80000000
 
-    if-nez v0, :cond_1
+    or-int/2addr p1, v0
 
-    goto :goto_0
+    iput p1, p0, Lr5h;->u0:I
 
-    :cond_1
-    check-cast p1, Lr5h;
+    const/4 v6, 0x0
 
-    iget-object v0, p0, Lr5h;->a:Lorf;
+    const/4 v7, 0x0
 
-    iget-object v1, p1, Lr5h;->a:Lorf;
+    iget-object v0, p0, Lr5h;->t0:Lt5h;
 
-    invoke-virtual {v0, v1}, Lorf;->equals(Ljava/lang/Object;)Z
+    const-wide/16 v1, 0x0
 
-    move-result v0
+    const-wide/16 v3, 0x0
 
-    if-nez v0, :cond_2
+    const/4 v5, 0x0
 
-    goto :goto_0
+    move-object v8, p0
 
-    :cond_2
-    iget-object v0, p0, Lr5h;->b:Ljava/util/List;
+    invoke-virtual/range {v0 .. v8}, Lt5h;->b(JJLjava/lang/String;Lw8h;Lbbh;Lq44;)Ljava/lang/Object;
 
-    iget-object p1, p1, Lr5h;->b:Ljava/util/List;
+    move-result-object p1
 
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lr5h;->a:Lorf;
-
-    iget v0, v0, Lorf;->c:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lr5h;->b:Ljava/util/List;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "RequestOpenSettings(title="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lr5h;->a:Lorf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", buttons="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lr5h;->b:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

@@ -1,11 +1,25 @@
-.class public interface abstract Lpi;
+.class public final Lpi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()Ljava/lang/String;
-.end method
+# instance fields
+.field public final a:Ljava/util/concurrent/ConcurrentHashMap;
 
-.method public abstract b(Lji6;)V
+
+# direct methods
+.method public constructor <init>()V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
+
+    const/16 v1, 0x20
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>(I)V
+
+    iput-object v0, p0, Lpi;->a:Ljava/util/concurrent/ConcurrentHashMap;
+
+    return-void
 .end method

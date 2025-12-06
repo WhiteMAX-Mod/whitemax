@@ -1,61 +1,32 @@
-.class public final Lfj5;
+.class public interface abstract Lfj5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Z
-
-.field public b:Ltsb;
-
-.field public c:I
-
-.field public d:Z
-
-.field public e:I
-
-.field public f:Z
-
-.field public g:I
-
-
-# direct methods
-.method public constructor <init>(Ltsb;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lfj5;->b:Ltsb;
-
-    return-void
+# virtual methods
+.method public abstract a(Lood;)Lx6f;
 .end method
 
+.method public abstract b()V
+.end method
 
-# virtual methods
-.method public final a(I)V
-    .locals 2
+.method public abstract c(Lzmd;J)Lb4f;
+.end method
 
-    iget-boolean v0, p0, Lfj5;->a:Z
+.method public abstract cancel()V
+.end method
 
-    if-lez p1, :cond_0
+.method public abstract d(Lood;)J
+.end method
 
-    const/4 v1, 0x1
+.method public abstract e(Z)Lnod;
+.end method
 
-    goto :goto_0
+.method public abstract f()Lqbd;
+.end method
 
-    :cond_0
-    const/4 v1, 0x0
+.method public abstract g(Lzmd;)V
+.end method
 
-    :goto_0
-    or-int/2addr v0, v1
-
-    iput-boolean v0, p0, Lfj5;->a:Z
-
-    iget v0, p0, Lfj5;->c:I
-
-    add-int/2addr v0, p1
-
-    iput v0, p0, Lfj5;->c:I
-
-    return-void
+.method public abstract h()V
 .end method

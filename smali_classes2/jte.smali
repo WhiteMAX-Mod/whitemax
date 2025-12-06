@@ -1,81 +1,77 @@
 .class public final Ljte;
-.super Lq7d;
+.super Lxy;
 .source "SourceFile"
-
-# interfaces
-.implements Ltg7;
 
 
 # instance fields
-.field public final D0:I
+.field public final X:Ljava/lang/String;
 
-.field public final E0:Lng7;
+.field public final Y:Ljava/lang/String;
 
-.field public final F0:Lxn3;
+.field public final Z:Ljava/lang/String;
 
-.field public final synthetic G0:Lkte;
+.field public final d:J
+
+.field public final o:Ljava/lang/String;
+
+.field public final s0:Luub;
+
+.field public final t0:Lxy;
+
+.field public final u0:Z
 
 
 # direct methods
-.method public constructor <init>(Lkte;ILng7;Lxn3;)V
-    .locals 0
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Luub;Lxy;ZZZ)V
+    .locals 1
 
-    iput-object p1, p0, Ljte;->G0:Lkte;
+    sget-object v0, Ls00;->Z:Ls00;
 
-    invoke-direct {p0, p4}, Lq7d;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, v0, p9, p10}, Lxy;-><init>(Ls00;ZZ)V
 
-    iput p2, p0, Ljte;->D0:I
+    iput-wide p1, p0, Ljte;->d:J
 
-    iput-object p3, p0, Ljte;->E0:Lng7;
+    iput-object p3, p0, Ljte;->o:Ljava/lang/String;
 
-    iput-object p4, p0, Ljte;->F0:Lxn3;
+    iput-object p4, p0, Ljte;->X:Ljava/lang/String;
+
+    iput-object p5, p0, Ljte;->Y:Ljava/lang/String;
+
+    iput-object p6, p0, Ljte;->Z:Ljava/lang/String;
+
+    iput-object p7, p0, Ljte;->s0:Luub;
+
+    iput-object p8, p0, Ljte;->t0:Lxy;
+
+    iput-boolean p11, p0, Ljte;->u0:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final A()Ljava/lang/String;
-    .locals 1
+.method public final a()Ljava/util/HashMap;
+    .locals 3
 
-    iget-object v0, p0, Ljte;->F0:Lxn3;
-
-    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+    invoke-super {p0}, Lxy;->a()Ljava/util/HashMap;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    iget-wide v1, p0, Ljte;->d:J
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v0
+    move-result-object v1
 
-    goto :goto_0
+    const-string v2, "shareId"
 
-    :cond_0
-    const/4 v0, 0x0
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    :goto_0
-    if-nez v0, :cond_1
+    const-string v1, "url"
 
-    const-string v0, ""
+    iget-object v2, p0, Ljte;->o:Ljava/lang/String;
 
-    :cond_1
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
     return-object v0
-.end method
-
-.method public final B(Ljava/lang/String;)V
-    .locals 1
-
-    iget-object v0, p0, Ljte;->F0:Lxn3;
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {v0}, Landroid/widget/TextView;->length()I
-
-    move-result p1
-
-    invoke-virtual {v0, p1}, Landroid/widget/EditText;->setSelection(I)V
-
-    return-void
 .end method

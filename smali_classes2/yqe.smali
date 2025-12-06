@@ -1,135 +1,158 @@
 .class public final Lyqe;
-.super Ljava/lang/Object;
+.super Ldtf;
 .source "SourceFile"
 
 # interfaces
-.implements Lgub;
+.implements Lsm6;
 
 
 # instance fields
-.field public final a:Landroid/app/Application;
+.field public final synthetic X:Lere;
 
-.field public final b:Lsf5;
-
-.field public final c:Luh5;
-
-.field public final d:Liu7;
-
-.field public final e:Lnub;
-
-.field public final f:Liu7;
-
-.field public final g:Ljava/lang/String;
-
-.field public final h:Lqcd;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Application;Lsf5;Luh5;Liu7;Lnub;Liu7;)V
+.method public constructor <init>(Lere;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lyqe;->X:Lere;
 
-    iput-object p1, p0, Lyqe;->a:Landroid/app/Application;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lyqe;->b:Lsf5;
-
-    iput-object p3, p0, Lyqe;->c:Luh5;
-
-    iput-object p4, p0, Lyqe;->d:Liu7;
-
-    iput-object p5, p0, Lyqe;->e:Lnub;
-
-    iput-object p6, p0, Lyqe;->f:Liu7;
-
-    const-class p1, Lyqe;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lyqe;->g:Ljava/lang/String;
-
-    new-instance p1, Lxgd;
-
-    const/16 p2, 0xf
-
-    invoke-direct {p1, p2, p0}, Lxgd;-><init>(ILjava/lang/Object;)V
-
-    new-instance p2, Lqcd;
-
-    invoke-direct {p2, p1}, Lqcd;-><init>(Lji6;)V
-
-    iput-object p2, p0, Lyqe;->h:Lqcd;
+    invoke-direct {p0, p1, p2}, Ldtf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lvvg;)V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lyqe;->g:Ljava/lang/String;
+    check-cast p1, Lf84;
 
-    const-string v1, "Single player handler. Free player"
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-static {v0, v1}, Ltei;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, p2}, Lyqe;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-interface {p1}, Lvvg;->stop()V
+    move-result-object p1
 
-    const/4 v0, 0x0
+    check-cast p1, Lyqe;
 
-    invoke-interface {p1, v0}, Lvvg;->a0(Landroid/view/Surface;)V
+    sget-object p2, Lqqg;->a:Lqqg;
 
-    return-void
+    invoke-virtual {p1, p2}, Lyqe;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final get()Lvvg;
-    .locals 5
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    iget-object v0, p0, Lyqe;->g:Ljava/lang/String;
+    new-instance p1, Lyqe;
 
-    sget-object v1, Ltei;->a:Lmxa;
+    iget-object v0, p0, Lyqe;->X:Lere;
 
-    if-nez v1, :cond_0
+    invoke-direct {p1, v0, p2}, Lyqe;-><init>(Lere;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    iget v0, p0, Lyqe;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    sget-object v2, Lc98;->o:Lc98;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {v1, v2}, Lmxa;->b(Lc98;)Z
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    move-result v3
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    if-eqz v3, :cond_1
-
-    iget-object v3, p0, Lyqe;->h:Lqcd;
-
-    invoke-virtual {v3}, Lqcd;->e()Z
-
-    move-result v3
-
-    const-string v4, "Single player handler. Player exist: "
-
-    invoke-static {v4, v3}, Lrv8;->f(Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v3
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v1, v2, v0, v3, v4}, Lmxa;->c(Lc98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    throw p1
 
     :cond_1
-    :goto_0
-    iget-object v0, p0, Lyqe;->h:Lqcd;
+    invoke-static {p1}, Lg8j;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Lqcd;->getValue()Ljava/lang/Object;
+    iget-object p1, p0, Lyqe;->X:Lere;
+
+    iget-object v0, p1, Lere;->x0:Lk18;
+
+    invoke-interface {v0}, Lk18;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lvvg;
+    check-cast v0, Lqlh;
+
+    invoke-virtual {p1}, Lere;->y()Lpb3;
+
+    move-result-object p1
+
+    check-cast p1, Lw4e;
+
+    invoke-virtual {p1}, Lw4e;->s()J
+
+    move-result-wide v2
+
+    iput v1, p0, Lyqe;->o:I
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string p1, "SELECT * FROM webapp_biometry WHERE user_id = ?"
+
+    invoke-static {v1, p1}, Ldsd;->c(ILjava/lang/String;)Ldsd;
+
+    move-result-object p1
+
+    invoke-static {p1, v1, v2, v3}, Lxrf;->m(Ldsd;IJ)Landroid/os/CancellationSignal;
+
+    move-result-object v2
+
+    iget-object v3, v0, Lqlh;->a:Llrd;
+
+    new-instance v4, Lnlh;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v4, v0, p1, v5}, Lnlh;-><init>(Lqlh;Ldsd;I)V
+
+    invoke-static {v3, v2, v4, p0}, Lk7j;->a(Llrd;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lg84;->a:Lg84;
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
+
+    :cond_2
+    :goto_0
+    check-cast p1, Ljava/util/Collection;
+
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result p1
+
+    xor-int/2addr p1, v1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
 .end method

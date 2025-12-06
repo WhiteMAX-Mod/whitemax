@@ -81,12 +81,9 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16.0dip</dimen>
     <dimen name="abc_text_size_title_material">20.0sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20.0dip</dimen>
-    <dimen name="activity_horizontal_margin">16.0dip</dimen>
-    <dimen name="activity_vertical_margin">16.0dip</dimen>
     <dimen name="appcompat_dialog_background_inset">16.0dip</dimen>
     <dimen name="attach_bar_thumbnail_size">120.0dip</dimen>
     <dimen name="attach_drawable">56.0dip</dimen>
-    <dimen name="avatar_large">52.0dip</dimen>
     <dimen name="bottom_sheet_corner_radius">20.0dip</dimen>
     <dimen name="browser_actions_context_menu_max_width">500.0dip</dimen>
     <dimen name="browser_actions_context_menu_min_padding">20.0dip</dimen>
@@ -171,7 +168,6 @@
     <dimen name="fastscroll_minimum_range">50.0dip</dimen>
     <dimen name="fingerprint_icon_size">64.0dip</dimen>
     <dimen name="font_large">18.0dip</dimen>
-    <dimen name="font_medium">17.0dip</dimen>
     <dimen name="font_normal">16.0dip</dimen>
     <dimen name="font_normal_subtitle">15.0dip</dimen>
     <dimen name="font_only_emoji">48.0dip</dimen>
@@ -867,9 +863,7 @@
     <dimen name="preference_seekbar_value_minWidth">36.0dip</dimen>
     <dimen name="progress_bar_medium">28.0dip</dimen>
     <dimen name="progress_bar_small">16.0dip</dimen>
-    <dimen name="row_profile_with_icon__start_padding">24.0dip</dimen>
     <dimen name="size_border_radius_new_banner">20.0dip</dimen>
-    <dimen name="small_vertical_margin">8.0dip</dimen>
     <dimen name="spacing_size_2xl">16.0dip</dimen>
     <dimen name="spacing_size_2xs">2.0dip</dimen>
     <dimen name="spacing_size_l">10.0dip</dimen>
@@ -877,7 +871,6 @@
     <dimen name="spacing_size_s">6.0dip</dimen>
     <dimen name="spacing_size_xl">12.0dip</dimen>
     <dimen name="spacing_size_xs">4.0dip</dimen>
-    <dimen name="spacing_small">10.0dip</dimen>
     <dimen name="tooltip_corner_radius">2.0dip</dimen>
     <dimen name="tooltip_horizontal_padding">16.0dip</dimen>
     <dimen name="tooltip_margin">8.0dip</dimen>

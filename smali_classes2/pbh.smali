@@ -1,55 +1,59 @@
 .class public final Lpbh;
-.super Ly14;
+.super Lrbh;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Llbh;
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lpbh;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public Y:Lqah;
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Lvbh;
-
-.field public final synthetic q0:Lvbh;
-
-.field public r0:I
+.field public static final a:Lpbh;
 
 
 # direct methods
-.method public constructor <init>(Lvbh;Ly14;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lpbh;->q0:Lvbh;
+    new-instance v0, Lpbh;
 
-    invoke-direct {p0, p2}, Ly14;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lpbh;->a:Lpbh;
+
+    new-instance v0, Lobh;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lobh;-><init>(I)V
+
+    sput-object v0, Lpbh;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final describeContents()I
     .locals 1
-
-    iput-object p1, p0, Lpbh;->Z:Ljava/lang/Object;
-
-    iget p1, p0, Lpbh;->r0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lpbh;->r0:I
-
-    iget-object p1, p0, Lpbh;->q0:Lvbh;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lvbh;->h(Ljava/lang/String;Ly14;)Ljava/lang/Object;
+    return v0
+.end method
 
-    move-result-object p1
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    return-object p1
+    const/4 p2, 0x1
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    return-void
 .end method

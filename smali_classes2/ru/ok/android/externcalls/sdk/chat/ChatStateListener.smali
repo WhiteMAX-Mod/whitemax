@@ -19,7 +19,7 @@
         "",
         "",
         "chatId",
-        "Lccg;",
+        "Lqqg;",
         "onChatCreated",
         "(J)V",
         "onChatUpdated",

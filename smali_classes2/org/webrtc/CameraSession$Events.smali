@@ -29,3 +29,6 @@
 
 .method public abstract onFrameCaptured(Lorg/webrtc/CameraSession;Lorg/webrtc/VideoFrame;)V
 .end method
+
+.method public abstract onNonFatal(Lorg/webrtc/CameraSession;Ljava/lang/String;Ljava/lang/Throwable;)V
+.end method

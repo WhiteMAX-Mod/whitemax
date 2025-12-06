@@ -2,6 +2,9 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpe4;
+
 
 # instance fields
 .field public a:Ljava/util/Map;
@@ -54,7 +57,63 @@
 
 
 # virtual methods
-.method public a()Z
+.method public a(Ljava/lang/Object;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final declared-synchronized b()Ljava/lang/Throwable;
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Lr0;->e:Ljava/lang/Throwable;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public final declared-synchronized c()F
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget v0, p0, Lr0;->f:F
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return v0
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public close()Z
     .locals 3
 
     monitor-enter p0
@@ -92,16 +151,16 @@
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {p0, v1}, Lr0;->b(Ljava/lang/Object;)V
+    invoke-virtual {p0, v1}, Lr0;->a(Ljava/lang/Object;)V
 
     :cond_1
-    invoke-virtual {p0}, Lr0;->h()Z
+    invoke-virtual {p0}, Lr0;->g()Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    invoke-virtual {p0}, Lr0;->i()V
+    invoke-virtual {p0}, Lr0;->h()V
 
     :cond_2
     monitor-enter p0
@@ -133,63 +192,7 @@
     throw v0
 .end method
 
-.method public b(Ljava/lang/Object;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final declared-synchronized c()Ljava/lang/Throwable;
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lr0;->e:Ljava/lang/Throwable;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-object v0
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public final declared-synchronized d()F
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget v0, p0, Lr0;->f:F
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return v0
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public declared-synchronized e()Ljava/lang/Object;
+.method public declared-synchronized d()Ljava/lang/Object;
     .locals 1
 
     monitor-enter p0
@@ -214,7 +217,7 @@
     throw v0
 .end method
 
-.method public declared-synchronized f()Z
+.method public declared-synchronized e()Z
     .locals 1
 
     monitor-enter p0
@@ -249,7 +252,7 @@
     throw v0
 .end method
 
-.method public final declared-synchronized g()Z
+.method public final declared-synchronized f()Z
     .locals 1
 
     monitor-enter p0
@@ -274,7 +277,7 @@
     throw v0
 .end method
 
-.method public final declared-synchronized h()Z
+.method public final declared-synchronized g()Z
     .locals 2
 
     monitor-enter p0
@@ -309,7 +312,7 @@
     throw v0
 .end method
 
-.method public final i()V
+.method public final h()V
     .locals 6
 
     monitor-enter p0
@@ -333,7 +336,7 @@
     :goto_0
     monitor-exit p0
 
-    invoke-virtual {p0}, Lr0;->n()Z
+    invoke-virtual {p0}, Lr0;->m()Z
 
     move-result v1
 
@@ -358,7 +361,7 @@
 
     iget-object v4, v3, Landroid/util/Pair;->first:Ljava/lang/Object;
 
-    check-cast v4, Lnc4;
+    check-cast v4, Laf4;
 
     iget-object v3, v3, Landroid/util/Pair;->second:Ljava/lang/Object;
 
@@ -366,7 +369,7 @@
 
     new-instance v5, Lq0;
 
-    invoke-direct {v5, p0, v0, v4, v1}, Lq0;-><init>(Lr0;ZLnc4;Z)V
+    invoke-direct {v5, p0, v0, v4, v1}, Lq0;-><init>(Lr0;ZLaf4;Z)V
 
     invoke-interface {v3, v5}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
@@ -386,7 +389,7 @@
     throw v0
 .end method
 
-.method public final j(Ljava/lang/Throwable;Ljava/util/Map;)Z
+.method public final i(Ljava/lang/Throwable;Ljava/util/Map;)Z
     .locals 2
 
     monitor-enter p0
@@ -433,7 +436,7 @@
     :goto_1
     if-eqz v1, :cond_2
 
-    invoke-virtual {p0}, Lr0;->i()V
+    invoke-virtual {p0}, Lr0;->h()V
 
     :cond_2
     return v1
@@ -447,7 +450,7 @@
     throw p1
 .end method
 
-.method public final k(F)Z
+.method public final j(F)Z
     .locals 6
 
     monitor-enter p0
@@ -525,19 +528,19 @@
 
     iget-object v2, v0, Landroid/util/Pair;->first:Ljava/lang/Object;
 
-    check-cast v2, Lnc4;
+    check-cast v2, Laf4;
 
     iget-object v0, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v0, Ljava/util/concurrent/Executor;
 
-    new-instance v3, Lgk6;
+    new-instance v3, Lyn6;
 
     const/4 v4, 0x1
 
     const/4 v5, 0x0
 
-    invoke-direct {v3, p0, v2, v5, v4}, Lgk6;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+    invoke-direct {v3, p0, v2, v5, v4}, Lyn6;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
 
     invoke-interface {v0, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
@@ -555,7 +558,7 @@
     throw p1
 .end method
 
-.method public l(Ljava/lang/Object;ZLjava/util/Map;)Z
+.method public k(Ljava/lang/Object;ZLjava/util/Map;)Z
     .locals 2
 
     iput-object p3, p0, Lr0;->a:Ljava/util/Map;
@@ -634,7 +637,7 @@
     if-eqz p1, :cond_4
 
     :goto_2
-    invoke-virtual {p0, p1}, Lr0;->b(Ljava/lang/Object;)V
+    invoke-virtual {p0, p1}, Lr0;->a(Ljava/lang/Object;)V
 
     goto :goto_4
 
@@ -664,7 +667,7 @@
     :goto_4
     if-eqz v1, :cond_5
 
-    invoke-virtual {p0}, Lr0;->i()V
+    invoke-virtual {p0}, Lr0;->h()V
 
     :cond_5
     return v1
@@ -685,13 +688,13 @@
 
     if-eqz p3, :cond_6
 
-    invoke-virtual {p0, p3}, Lr0;->b(Ljava/lang/Object;)V
+    invoke-virtual {p0, p3}, Lr0;->a(Ljava/lang/Object;)V
 
     :cond_6
     throw p1
 .end method
 
-.method public final m(Lnc4;Ljava/util/concurrent/Executor;)V
+.method public final l(Laf4;Ljava/util/concurrent/Executor;)V
     .locals 4
 
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -728,7 +731,7 @@
     invoke-virtual {v0, v2}, Ljava/util/concurrent/ConcurrentLinkedQueue;->add(Ljava/lang/Object;)Z
 
     :cond_1
-    invoke-virtual {p0}, Lr0;->f()Z
+    invoke-virtual {p0}, Lr0;->e()Z
 
     move-result v0
 
@@ -736,13 +739,13 @@
 
     if-nez v0, :cond_3
 
-    invoke-virtual {p0}, Lr0;->h()Z
+    invoke-virtual {p0}, Lr0;->g()Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    invoke-virtual {p0}, Lr0;->n()Z
+    invoke-virtual {p0}, Lr0;->m()Z
 
     move-result v0
 
@@ -785,13 +788,13 @@
     :goto_2
     monitor-exit p0
 
-    invoke-virtual {p0}, Lr0;->n()Z
+    invoke-virtual {p0}, Lr0;->m()Z
 
     move-result v0
 
     new-instance v2, Lq0;
 
-    invoke-direct {v2, p0, v1, p1, v0}, Lq0;-><init>(Lr0;ZLnc4;Z)V
+    invoke-direct {v2, p0, v1, p1, v0}, Lq0;-><init>(Lr0;ZLaf4;Z)V
 
     invoke-interface {p2, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
@@ -819,19 +822,19 @@
     throw p1
 .end method
 
-.method public final declared-synchronized n()Z
+.method public final declared-synchronized m()Z
     .locals 1
 
     monitor-enter p0
 
     :try_start_0
-    invoke-virtual {p0}, Lr0;->g()Z
+    invoke-virtual {p0}, Lr0;->f()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lr0;->h()Z
+    invoke-virtual {p0}, Lr0;->g()Z
 
     move-result v0
     :try_end_0

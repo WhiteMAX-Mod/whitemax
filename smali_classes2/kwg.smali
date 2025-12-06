@@ -1,97 +1,89 @@
-.class public final Lkwg;
+.class public final synthetic Lkwg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lfjd;
+.implements Lsk3;
+.implements Les8;
 
 
 # instance fields
-.field public final a:Ljwg;
+.field public final synthetic a:Llwg;
+
+.field public final synthetic b:Lbug;
 
 
 # direct methods
-.method public constructor <init>(Ljwg;)V
+.method public synthetic constructor <init>(Llwg;Lbug;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lkwg;->a:Llwg;
 
-    iput-object p1, p0, Lkwg;->a:Ljwg;
+    iput-object p2, p0, Lkwg;->b:Lbug;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lkwg;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lkwg;
-
-    iget-object v1, p0, Lkwg;->a:Ljwg;
-
-    iget-object p1, p1, Lkwg;->a:Ljwg;
-
-    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lkwg;->a:Ljwg;
-
-    invoke-virtual {v0}, Ljwg;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public b(Lrr8;)V
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lkwg;->a:Llwg;
 
-    const-string v1, "VideoQualityUpdateNotification(videoQuality="
+    iget-object v0, v0, Llwg;->b:Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    check-cast v0, Ljava/util/Map;
 
-    iget-object v1, p0, Lkwg;->a:Ljwg;
+    iget-object v1, p0, Lkwg;->b:Lbug;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Lttg;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Lrr8;->e()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    invoke-virtual {p1, v0}, Lrr8;->a(Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p1}, Lrr8;->e()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {p1}, Lrr8;->b()V
+
+    :cond_1
+    return-void
+.end method
+
+.method public c(Ljk3;)V
+    .locals 2
+
+    iget-object v0, p0, Lkwg;->a:Llwg;
+
+    iget-object v0, v0, Llwg;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/Map;
+
+    iget-object v1, p0, Lkwg;->b:Lbug;
+
+    invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {p1}, Ljk3;->b()V
+
+    return-void
 .end method

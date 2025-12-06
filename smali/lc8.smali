@@ -1,102 +1,70 @@
-.class public abstract Llc8;
+.class public final Llc8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/animation/Interpolator;
+.implements Lwta;
 
 
 # instance fields
-.field public final a:[F
+.field public final a:Lvgd;
 
-.field public final b:F
+.field public b:Z
 
 
 # direct methods
-.method public constructor <init>([F)V
-    .locals 1
+.method public constructor <init>(Llii;Lvgd;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Llc8;->a:[F
+    const/4 p1, 0x0
 
-    array-length p1, p1
+    iput-boolean p1, p0, Llc8;->b:Z
 
-    add-int/lit8 p1, p1, -0x1
-
-    int-to-float p1, p1
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    div-float/2addr v0, p1
-
-    iput v0, p0, Llc8;->b:F
+    iput-object p2, p0, Llc8;->a:Lvgd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getInterpolation(F)F
-    .locals 4
+.method public final a(Ljava/lang/Object;)V
+    .locals 2
 
-    const/high16 v0, 0x3f800000    # 1.0f
+    iget-object v0, p0, Llc8;->a:Lvgd;
 
-    cmpl-float v1, p1, v0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-ltz v1, :cond_0
+    check-cast p1, Ljava/lang/Void;
 
-    return v0
+    iget-object p1, v0, Lvgd;->b:Ljava/lang/Object;
 
-    :cond_0
-    const/4 v0, 0x0
+    check-cast p1, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;
 
-    cmpg-float v1, p1, v0
+    iget v0, p1, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->L0:I
 
-    if-gtz v1, :cond_1
+    iget-object v1, p1, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->M0:Landroid/content/Intent;
 
-    return v0
+    invoke-virtual {p1, v0, v1}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
 
-    :cond_1
-    iget-object v0, p0, Llc8;->a:[F
+    invoke-virtual {p1}, Landroid/app/Activity;->finish()V
 
-    array-length v1, v0
+    const/4 p1, 0x1
 
-    add-int/lit8 v1, v1, -0x1
+    iput-boolean p1, p0, Llc8;->b:Z
 
-    int-to-float v1, v1
+    return-void
+.end method
 
-    mul-float/2addr v1, p1
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    float-to-int v1, v1
+    iget-object v0, p0, Llc8;->a:Lvgd;
 
-    array-length v2, v0
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    add-int/lit8 v2, v2, -0x2
+    move-result-object v0
 
-    invoke-static {v1, v2}, Ljava/lang/Math;->min(II)I
-
-    move-result v1
-
-    int-to-float v2, v1
-
-    iget v3, p0, Llc8;->b:F
-
-    mul-float/2addr v2, v3
-
-    sub-float/2addr p1, v2
-
-    div-float/2addr p1, v3
-
-    aget v2, v0, v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    aget v0, v0, v1
-
-    invoke-static {v0, v2, p1, v2}, Laab;->h(FFFF)F
-
-    move-result p1
-
-    return p1
+    return-object v0
 .end method

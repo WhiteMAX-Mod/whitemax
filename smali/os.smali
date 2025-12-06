@@ -1,155 +1,113 @@
 .class public final Los;
-.super Lbh6;
+.super Lse3;
 .source "SourceFile"
 
 
-# static fields
-.field public static volatile f:Los;
-
-.field public static final g:Lns;
-
-
 # instance fields
-.field public final e:Lpn4;
+.field public final b:Lms;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lns;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lns;-><init>(I)V
-
-    sput-object v0, Los;->g:Lns;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
+.method public constructor <init>(Lzy7;)V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lse3;-><init>(Lzy7;)V
 
-    new-instance v0, Lpn4;
+    new-instance v0, Lms;
 
-    invoke-direct {v0}, Lpn4;-><init>()V
+    invoke-interface {p1}, Lzy7;->d()Lree;
 
-    iput-object v0, p0, Los;->e:Lpn4;
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Lu98;-><init>(Lree;)V
+
+    iput-object v0, p0, Los;->b:Lms;
 
     return-void
-.end method
-
-.method public static c()Los;
-    .locals 2
-
-    sget-object v0, Los;->f:Los;
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Los;->f:Los;
-
-    return-object v0
-
-    :cond_0
-    const-class v0, Los;
-
-    monitor-enter v0
-
-    :try_start_0
-    sget-object v1, Los;->f:Los;
-
-    if-nez v1, :cond_1
-
-    new-instance v1, Los;
-
-    invoke-direct {v1}, Los;-><init>()V
-
-    sput-object v1, Los;->f:Los;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    sget-object v0, Los;->f:Los;
-
-    return-object v0
-
-    :goto_1
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
 .end method
 
 
 # virtual methods
-.method public final d(Ljava/lang/Runnable;)V
-    .locals 3
+.method public final d()Lree;
+    .locals 1
 
-    iget-object v0, p0, Los;->e:Lpn4;
+    iget-object v0, p0, Los;->b:Lms;
 
-    iget-object v1, v0, Lpn4;->g:Landroid/os/Handler;
+    return-object v0
+.end method
 
-    if-nez v1, :cond_1
+.method public final e()Ljava/lang/Object;
+    .locals 1
 
-    iget-object v1, v0, Lpn4;->e:Ljava/lang/Object;
+    new-instance v0, Ljava/util/ArrayList;
 
-    monitor-enter v1
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    :try_start_0
-    iget-object v2, v0, Lpn4;->g:Landroid/os/Handler;
+    return-object v0
+.end method
 
-    if-nez v2, :cond_0
+.method public final f(Ljava/lang/Object;)I
+    .locals 0
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    check-cast p1, Ljava/util/ArrayList;
 
-    move-result-object v2
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
-    invoke-static {v2}, Lpn4;->c(Landroid/os/Looper;)Landroid/os/Handler;
+    move-result p1
 
-    move-result-object v2
+    return p1
+.end method
 
-    iput-object v2, v0, Lpn4;->g:Landroid/os/Handler;
+.method public final g(Ljava/lang/Object;)Ljava/util/Iterator;
+    .locals 0
 
-    goto :goto_0
+    check-cast p1, Ljava/util/Collection;
 
-    :catchall_0
-    move-exception p1
+    invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
-    goto :goto_1
+    move-result-object p1
 
-    :cond_0
-    :goto_0
-    monitor-exit v1
+    return-object p1
+.end method
 
-    goto :goto_2
+.method public final h(Ljava/lang/Object;)I
+    .locals 0
 
-    :goto_1
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    check-cast p1, Ljava/util/Collection;
 
-    throw p1
+    invoke-interface {p1}, Ljava/util/Collection;->size()I
 
-    :cond_1
-    :goto_2
-    iget-object v0, v0, Lpn4;->g:Landroid/os/Handler;
+    move-result p1
 
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    return p1
+.end method
+
+.method public final k(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    new-instance p1, Ljava/util/ArrayList;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Ljava/util/ArrayList;
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;ILjava/lang/Object;)V
+    .locals 0
+
+    check-cast p1, Ljava/util/ArrayList;
+
+    invoke-virtual {p1, p2, p3}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
     return-void
 .end method

@@ -1,5 +1,5 @@
 .class public Lru/ok/android/externcalls/sdk/api/ChatHistoryEntry;
-.super Lune;
+.super Lsze;
 .source "SourceFile"
 
 
@@ -11,7 +11,7 @@
 .method public constructor <init>(Ljava/lang/String;ZLru/ok/android/externcalls/sdk/ConversationParticipant;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lune;-><init>(Ljava/lang/String;Z)V
+    invoke-direct {p0, p1, p2}, Lsze;-><init>(Ljava/lang/String;Z)V
 
     iput-object p3, p0, Lru/ok/android/externcalls/sdk/api/ChatHistoryEntry;->sender:Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
@@ -47,7 +47,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-super {p0, p1}, Lune;->equals(Ljava/lang/Object;)Z
+    invoke-super {p0, p1}, Lsze;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -76,7 +76,7 @@
 .method public hashCode()I
     .locals 2
 
-    invoke-super {p0}, Lune;->hashCode()I
+    invoke-super {p0}, Lsze;->hashCode()I
 
     move-result v0
 
@@ -110,7 +110,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lune;->message:Ljava/lang/String;
+    iget-object v1, p0, Lsze;->message:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -118,11 +118,11 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lune;->direct:Z
+    iget-boolean v1, p0, Lsze;->direct:Z
 
     const-string v2, "}"
 
-    invoke-static {v0, v1, v2}, Ldy1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Laz1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

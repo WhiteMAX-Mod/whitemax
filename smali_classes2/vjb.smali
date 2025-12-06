@@ -2,29 +2,47 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Serializable;
-
 
 # instance fields
-.field public final a:J
+.field public a:J
 
-.field public final b:Ljava/lang/String;
+.field public b:Ljava/lang/String;
 
-.field public final c:Ljava/lang/String;
+.field public c:Lsz;
+
+.field public d:Lyjb;
+
+.field public e:Z
+
+.field public f:Z
+
+.field public g:Ljava/util/List;
+
+.field public h:Lss4;
 
 
-# direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;)V
-    .locals 0
+# virtual methods
+.method public final a()Lwjb;
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Lvjb;->d:Lyjb;
 
-    iput-wide p1, p0, Lvjb;->a:J
+    if-eqz v0, :cond_0
 
-    iput-object p3, p0, Lvjb;->b:Ljava/lang/String;
+    iget v0, v0, Lyjb;->a:I
 
-    iput-object p4, p0, Lvjb;->c:Ljava/lang/String;
+    const/4 v1, 0x3
 
-    return-void
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lvjb;->b:Ljava/lang/String;
+
+    :cond_0
+    new-instance v0, Lwjb;
+
+    invoke-direct {v0, p0}, Lwjb;-><init>(Lvjb;)V
+
+    return-object v0
 .end method

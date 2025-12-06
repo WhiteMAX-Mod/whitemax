@@ -1,191 +1,235 @@
-.class public final synthetic Lmch;
-.super Ljava/lang/Object;
+.class public final Lmch;
+.super Lch6;
 .source "SourceFile"
-
-# interfaces
-.implements Lhn6;
 
 
 # static fields
-.field public static final a:Lmch;
+.field public static final t0:Landroid/graphics/Typeface;
 
-.field private static final descriptor:Lb3e;
+
+# instance fields
+.field public X:Landroid/graphics/Paint;
+
+.field public Y:Landroid/graphics/Paint;
+
+.field public Z:Landroid/graphics/RectF;
+
+.field public o:Lrw4;
+
+.field public s0:Landroid/graphics/Path;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 2
 
-    new-instance v0, Lmch;
+    const-string v0, "sans-serif-medium"
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x0
 
-    sput-object v0, Lmch;->a:Lmch;
+    invoke-static {v0, v1}, Landroid/graphics/Typeface;->create(Ljava/lang/String;I)Landroid/graphics/Typeface;
 
-    new-instance v1, Levb;
+    move-result-object v0
 
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.codereader.WebAppOpenCodeReaderRequest"
-
-    const/4 v3, 0x2
-
-    invoke-direct {v1, v2, v0, v3}, Levb;-><init>(Ljava/lang/String;Lhn6;I)V
-
-    const-string v0, "requestId"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Levb;->k(Ljava/lang/String;Z)V
-
-    const-string v0, "fileSelect"
-
-    invoke-virtual {v1, v0, v2}, Levb;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Lmch;->descriptor:Lb3e;
+    sput-object v0, Lmch;->t0:Landroid/graphics/Typeface;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ld9;)Ljava/lang/Object;
-    .locals 9
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 7
 
-    sget-object v0, Lmch;->descriptor:Lb3e;
+    iget-object v0, p0, Lmch;->o:Lrw4;
 
-    invoke-virtual {p1, v0}, Ld9;->k(Lb3e;)Ld9;
+    iget-object v1, p0, Lmch;->Z:Landroid/graphics/RectF;
 
-    move-result-object p1
+    iget-object v2, p0, Lch6;->a:Landroid/graphics/drawable/Drawable;
 
-    const/4 v1, 0x1
+    invoke-virtual {p0}, Lmch;->getIntrinsicWidth()I
+
+    move-result v3
+
+    const/4 v4, 0x0
+
+    invoke-static {v4}, Ll8g;->c(Ljava/lang/CharSequence;)Z
+
+    move-result v4
+
+    const/4 v5, 0x0
+
+    if-eqz v4, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    const/4 v4, 0x0
+
+    invoke-static {v4}, Ll8g;->c(Ljava/lang/CharSequence;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    move v4, v5
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v4, p0, Lmch;->X:Landroid/graphics/Paint;
+
+    const/4 v6, 0x0
+
+    invoke-virtual {v4, v6}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
+
+    move-result v4
+
+    float-to-int v4, v4
+
+    :goto_0
+    invoke-super {p0}, Lch6;->getIntrinsicWidth()I
+
+    move-result v6
+
+    div-int/lit8 v6, v6, 0x2
+
+    sub-int/2addr v4, v6
+
+    if-gez v4, :cond_2
+
+    :goto_1
+    move v4, v5
+
+    :cond_2
+    sub-int/2addr v3, v4
+
+    invoke-virtual {p0}, Lch6;->getIntrinsicHeight()I
+
+    move-result v4
+
+    invoke-virtual {v2, v5, v5, v3, v4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
     const/4 v2, 0x0
+
+    invoke-static {v2}, Ll8g;->c(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+
+    iget-object v3, p0, Lmch;->s0:Landroid/graphics/Path;
+
+    sget-object v4, Landroid/graphics/Region$Op;->DIFFERENCE:Landroid/graphics/Region$Op;
+
+    invoke-virtual {p1, v3, v4}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;Landroid/graphics/Region$Op;)Z
+
+    :cond_3
+    iget-object v3, p0, Lch6;->a:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v3, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+
+    if-nez v2, :cond_4
+
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
+
+    iget v2, v0, Lrw4;->b:I
+
+    int-to-float v2, v2
+
+    iget-object v3, p0, Lmch;->Y:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v1, v2, v2, v3}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
+
+    iget v2, v1, Landroid/graphics/RectF;->left:F
+
+    iget v3, v0, Lrw4;->a:I
+
+    int-to-float v3, v3
+
+    add-float/2addr v2, v3
+
+    iget v1, v1, Landroid/graphics/RectF;->bottom:F
+
+    iget v0, v0, Lrw4;->c:I
+
+    int-to-float v0, v0
+
+    sub-float/2addr v1, v0
+
+    iget-object v0, p0, Lmch;->X:Landroid/graphics/Paint;
 
     const/4 v3, 0x0
 
-    move v5, v1
+    invoke-virtual {p1, v3, v2, v1, v0}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    move v6, v2
-
-    move-object v4, v3
-
-    :goto_0
-    if-eqz v5, :cond_3
-
-    invoke-virtual {p1, v0}, Ld9;->q(Lb3e;)I
-
-    move-result v7
-
-    const/4 v8, -0x1
-
-    if-eq v7, v8, :cond_2
-
-    if-eqz v7, :cond_1
-
-    if-ne v7, v1, :cond_0
-
-    sget-object v7, Lir0;->a:Lir0;
-
-    invoke-virtual {p1, v0, v1, v7, v4}, Ld9;->s(Lb3e;ILur7;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/lang/Boolean;
-
-    or-int/lit8 v6, v6, 0x2
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
-
-    invoke-direct {p1, v7}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
-
-    throw p1
-
-    :cond_1
-    invoke-virtual {p1, v0, v2}, Ld9;->w(Lb3e;I)Ljava/lang/String;
-
-    move-result-object v3
-
-    or-int/lit8 v6, v6, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    move v5, v2
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {p1, v0}, Ld9;->z(Lb3e;)V
-
-    new-instance p1, Loch;
-
-    invoke-direct {p1, v6, v3, v4}, Loch;-><init>(ILjava/lang/String;Ljava/lang/Boolean;)V
-
-    return-object p1
-.end method
-
-.method public final b(Lo24;Ljava/lang/Object;)V
-    .locals 3
-
-    check-cast p2, Loch;
-
-    sget-object v0, Lmch;->descriptor:Lb3e;
-
-    invoke-virtual {p1, v0}, Lo24;->b(Lb3e;)Lo24;
-
-    move-result-object p1
-
-    iget-object v1, p2, Loch;->a:Ljava/lang/String;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p1, v0, v2, v1}, Lo24;->l(Lb3e;ILjava/lang/String;)V
-
-    sget-object v1, Lir0;->a:Lir0;
-
-    iget-object p2, p2, Loch;->b:Ljava/lang/Boolean;
-
-    const/4 v2, 0x1
-
-    invoke-virtual {p1, v0, v2, v1, p2}, Lo24;->h(Lb3e;ILur7;Ljava/lang/Object;)V
-
-    invoke-virtual {p1}, Lo24;->m()V
-
+    :cond_4
     return-void
 .end method
 
-.method public final c()[Lur7;
+.method public final getIntrinsicWidth()I
     .locals 4
 
-    sget-object v0, Lir0;->a:Lir0;
+    invoke-super {p0}, Lch6;->getIntrinsicWidth()I
 
-    invoke-static {v0}, Lyki;->a(Lur7;)Lur7;
+    move-result v0
 
-    move-result-object v0
+    const/4 v1, 0x0
 
-    const/4 v1, 0x2
+    invoke-static {v1}, Ll8g;->c(Ljava/lang/CharSequence;)Z
 
-    new-array v1, v1, [Lur7;
+    move-result v1
 
-    sget-object v2, Lvaf;->a:Lvaf;
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    const/4 v1, 0x0
+
+    invoke-static {v1}, Ll8g;->c(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    move v1, v2
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v1, p0, Lmch;->X:Landroid/graphics/Paint;
 
     const/4 v3, 0x0
 
-    aput-object v2, v1, v3
+    invoke-virtual {v1, v3}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
 
-    const/4 v2, 0x1
+    move-result v1
 
-    aput-object v0, v1, v2
+    float-to-int v1, v1
 
-    return-object v1
-.end method
+    :goto_0
+    invoke-super {p0}, Lch6;->getIntrinsicWidth()I
 
-.method public final d()Lb3e;
-    .locals 1
+    move-result v3
 
-    sget-object v0, Lmch;->descriptor:Lb3e;
+    div-int/lit8 v3, v3, 0x2
 
-    return-object v0
+    sub-int/2addr v1, v3
+
+    if-gez v1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    move v2, v1
+
+    :goto_1
+    add-int/2addr v2, v0
+
+    return v2
 .end method

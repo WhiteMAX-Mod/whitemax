@@ -3,78 +3,60 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lx0g;
+.implements Lj1g;
 
 
-# annotations
-.annotation runtime Lkotlin/Metadata;
-    d1 = {
-        "\u0000\u000c\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0018\u00002\u00020\u0001B\u0007\u00a2\u0006\u0004\u0008\u0002\u0010\u0003\u00a8\u0006\u0004"
-    }
-    d2 = {
-        "Ls0g;",
-        "Lx0g;",
-        "<init>",
-        "()V",
-        "tracer-commons_release"
-    }
-    k = 0x1
-    mv = {
-        0x1,
-        0x7,
-        0x1
-    }
-    xi = 0x30
-.end annotation
+# instance fields
+.field public final synthetic a:Li2f;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Li2f;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ls0g;->a:Li2f;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final appToken()Ljava/lang/String;
-    .locals 1
+.method public final d(Ll0g;)V
+    .locals 2
 
-    const-string v0, "uhiEuhaOmhldPqWb01EFotBM4JlJMdJd5OaPN9Fcsqw"
+    iget-object v0, p0, Ls0g;->a:Li2f;
 
-    return-object v0
+    invoke-virtual {v0}, Li2f;->e()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {v0, p1}, Li2f;->a(Ljava/lang/Object;)V
+
+    :cond_0
+    return-void
 .end method
 
-.method public final buildUuid()Ljava/lang/String;
-    .locals 1
+.method public final e(Lpzf;)V
+    .locals 2
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Ls0g;->a:Li2f;
 
-    return-object v0
-.end method
+    invoke-virtual {v0}, Li2f;->e()Z
 
-.method public final environment()Ljava/lang/String;
-    .locals 1
+    move-result v1
 
-    const-string v0, "release"
+    if-nez v1, :cond_0
 
-    return-object v0
-.end method
+    new-instance v1, Lru/ok/tamtam/errors/TamErrorException;
 
-.method public final namespace()Ljava/lang/String;
-    .locals 1
+    invoke-direct {v1, p1}, Lru/ok/tamtam/errors/TamErrorException;-><init>(Lpzf;)V
 
-    const-string v0, "ru.ok.tracer"
+    invoke-virtual {v0, v1}, Li2f;->onError(Ljava/lang/Throwable;)V
 
-    return-object v0
-.end method
-
-.method public final versionName()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "1.1.1"
-
-    return-object v0
+    :cond_0
+    return-void
 .end method

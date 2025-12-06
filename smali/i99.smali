@@ -1,97 +1,86 @@
-.class public final Li99;
-.super Lg28;
+.class public final synthetic Li99;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lw89;
-
-
-# static fields
-.field public static final M0:Ljava/lang/reflect/Method;
+.implements Lfu3;
 
 
 # instance fields
-.field public L0:Litb;
+.field public final synthetic a:I
+
+.field public final synthetic b:Llk6;
+
+.field public final synthetic c:Lub8;
+
+.field public final synthetic d:Lg19;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Llk6;Lub8;Lg19;I)V
+    .locals 0
 
-    :try_start_0
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    iput p4, p0, Li99;->a:I
 
-    const/16 v1, 0x1c
+    iput-object p1, p0, Li99;->b:Llk6;
 
-    if-gt v0, v1, :cond_0
+    iput-object p2, p0, Li99;->c:Lub8;
 
-    const-class v0, Landroid/widget/PopupWindow;
+    iput-object p3, p0, Li99;->d:Lg19;
 
-    const-string v1, "setTouchModal"
-
-    sget-object v2, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
-
-    filled-new-array {v2}, [Ljava/lang/Class;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v0
-
-    sput-object v0, Li99;->M0:Ljava/lang/reflect/Method;
-    :try_end_0
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :cond_0
-    return-void
-
-    :catch_0
-    const-string v0, "MenuPopupWindow"
-
-    const-string v1, "Could not find method setTouchModal() on PopupWindow. Oh well."
-
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final g(Lt89;Landroid/view/MenuItem;)V
-    .locals 1
+.method public final accept(Ljava/lang/Object;)V
+    .locals 4
 
-    iget-object v0, p0, Li99;->L0:Litb;
+    iget v0, p0, Li99;->a:I
 
-    if-eqz v0, :cond_0
+    check-cast p1, Ln99;
 
-    invoke-virtual {v0, p1, p2}, Litb;->g(Lt89;Landroid/view/MenuItem;)V
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
+    iget-object v0, p0, Li99;->b:Llk6;
+
+    iget v1, v0, Llk6;->b:I
+
+    iget-object v0, v0, Llk6;->c:Ljava/lang/Object;
+
+    check-cast v0, Ld99;
+
+    iget-object v2, p0, Li99;->c:Lub8;
+
+    iget-object v3, p0, Li99;->d:Lg19;
+
+    invoke-interface {p1, v1, v0, v2, v3}, Ln99;->d(ILd99;Lub8;Lg19;)V
+
     return-void
-.end method
 
-.method public final p(Landroid/content/Context;Z)Ls25;
-    .locals 1
+    :pswitch_0
+    iget-object v0, p0, Li99;->b:Llk6;
 
-    new-instance v0, Lh99;
+    iget v1, v0, Llk6;->b:I
 
-    invoke-direct {v0, p1, p2}, Lh99;-><init>(Landroid/content/Context;Z)V
+    iget-object v0, v0, Llk6;->c:Ljava/lang/Object;
 
-    invoke-virtual {v0, p0}, Lh99;->setHoverListener(Lw89;)V
+    check-cast v0, Ld99;
 
-    return-object v0
-.end method
+    iget-object v2, p0, Li99;->c:Lub8;
 
-.method public final q(Lt89;Lx89;)V
-    .locals 1
+    iget-object v3, p0, Li99;->d:Lg19;
 
-    iget-object v0, p0, Li99;->L0:Litb;
+    invoke-interface {p1, v1, v0, v2, v3}, Ln99;->u(ILd99;Lub8;Lg19;)V
 
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1, p2}, Litb;->q(Lt89;Lx89;)V
-
-    :cond_0
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

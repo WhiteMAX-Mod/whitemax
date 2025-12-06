@@ -1,68 +1,54 @@
-.class public final Lxi4;
+.class public final synthetic Lxi4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpa8;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:Lid;
 
-.field public final b:Lrr5;
+.field public final synthetic b:I
 
-.field public c:J
+.field public final synthetic c:I
 
-.field public d:J
+.field public final synthetic d:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/File;Ljava/lang/String;)V
+.method public synthetic constructor <init>(Lid;IIZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-object p1, p0, Lxi4;->a:Lid;
 
-    iput-object p2, p0, Lxi4;->a:Ljava/lang/String;
+    iput p2, p0, Lxi4;->b:I
 
-    new-instance p2, Lrr5;
+    iput p3, p0, Lxi4;->c:I
 
-    invoke-direct {p2, p1}, Lrr5;-><init>(Ljava/io/File;)V
-
-    iput-object p2, p0, Lxi4;->b:Lrr5;
-
-    const-wide/16 p1, -0x1
-
-    iput-wide p1, p0, Lxi4;->c:J
-
-    iput-wide p1, p0, Lxi4;->d:J
+    iput-boolean p4, p0, Lxi4;->d:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
+.method public final invoke(Ljava/lang/Object;)V
     .locals 4
 
-    iget-wide v0, p0, Lxi4;->d:J
+    iget-boolean v0, p0, Lxi4;->d:Z
 
-    const-wide/16 v2, 0x0
+    check-cast p1, Ljd;
 
-    cmp-long v0, v0, v2
+    iget-object v1, p0, Lxi4;->a:Lid;
 
-    if-gez v0, :cond_0
+    iget v2, p0, Lxi4;->b:I
 
-    iget-object v0, p0, Lxi4;->b:Lrr5;
+    iget v3, p0, Lxi4;->c:I
 
-    iget-object v0, v0, Lrr5;->a:Ljava/io/File;
+    invoke-interface {p1, v1, v2, v3, v0}, Ljd;->q0(Lid;IIZ)V
 
-    invoke-virtual {v0}, Ljava/io/File;->lastModified()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lxi4;->d:J
-
-    :cond_0
-    iget-wide v0, p0, Lxi4;->d:J
-
-    return-wide v0
+    return-void
 .end method

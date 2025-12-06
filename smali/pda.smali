@@ -1,15 +1,11 @@
-.class public abstract Lpda;
+.class public interface abstract Lpda;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lqda;
 
-# direct methods
-.method public static a(Landroid/app/Notification$Action$Builder;Z)Landroid/app/Notification$Action$Builder;
-    .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Action$Builder;->setAllowGeneratedReplies(Z)Landroid/app/Notification$Action$Builder;
-
-    move-result-object p0
-
-    return-object p0
+# virtual methods
+.method public abstract a(I)V
 .end method

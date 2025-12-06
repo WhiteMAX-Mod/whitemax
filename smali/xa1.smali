@@ -2,183 +2,141 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lup1;
-
 
 # instance fields
-.field public final synthetic a:Ldb1;
+.field public final a:Z
+
+.field public final b:Ljava/util/Map;
 
 
 # direct methods
-.method public constructor <init>(Ldb1;)V
+.method public synthetic constructor <init>()V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    .line 4
+    sget-object v1, Lid5;->a:Lid5;
+
+    .line 5
+    invoke-direct {p0, v0, v1}, Lxa1;-><init>(ZLjava/util/Map;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(ZLjava/util/Map;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxa1;->a:Ldb1;
+    .line 2
+    iput-boolean p1, p0, Lxa1;->a:Z
+
+    .line 3
+    iput-object p2, p0, Lxa1;->b:Ljava/util/Map;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d()V
-    .locals 8
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v0, p0, Lxa1;->a:Ldb1;
+    const/4 v0, 0x1
 
-    iget-object v1, v0, Ldb1;->a:Lfv1;
+    if-ne p0, p1, :cond_0
 
-    check-cast v1, Luv1;
-
-    iget-object v1, v1, Luv1;->P:Lx0f;
-
-    invoke-virtual {v1}, Lx0f;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Le94;
-
-    iget-object v2, v1, Le94;->l:Luk5;
-
-    instance-of v3, v2, Lnk5;
-
-    const/4 v4, 0x0
-
-    if-eqz v3, :cond_0
-
-    move-object v3, v2
-
-    check-cast v3, Lnk5;
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    move-object v3, v4
+    instance-of v1, p1, Lxa1;
 
-    :goto_0
-    const/4 v5, 0x0
+    const/4 v2, 0x0
 
-    if-eqz v3, :cond_1
+    if-nez v1, :cond_1
 
-    iget v3, v3, Lnk5;->a:I
-
-    goto :goto_1
+    return v2
 
     :cond_1
-    move v3, v5
+    check-cast p1, Lxa1;
 
-    :goto_1
-    const/16 v6, 0xa
+    iget-boolean v1, p0, Lxa1;->a:Z
 
-    const/4 v7, 0x1
+    iget-boolean v3, p1, Lxa1;->a:Z
 
-    if-eq v3, v6, :cond_5
+    if-eq v1, v3, :cond_2
 
-    instance-of v3, v2, Lnk5;
-
-    if-eqz v3, :cond_2
-
-    move-object v3, v2
-
-    check-cast v3, Lnk5;
-
-    goto :goto_2
+    return v2
 
     :cond_2
-    move-object v3, v4
+    iget-object v1, p0, Lxa1;->b:Ljava/util/Map;
 
-    :goto_2
-    if-eqz v3, :cond_3
+    iget-object p1, p1, Lxa1;->b:Ljava/util/Map;
 
-    iget v3, v3, Lnk5;->a:I
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    goto :goto_3
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
 
     :cond_3
-    move v3, v5
+    return v0
+.end method
 
-    :goto_3
-    if-ne v3, v7, :cond_4
+.method public final hashCode()I
+    .locals 2
 
-    goto :goto_4
+    iget-boolean v0, p0, Lxa1;->a:Z
 
-    :cond_4
-    move v3, v5
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    goto :goto_5
+    move-result v0
 
-    :cond_5
-    :goto_4
-    move v3, v7
+    mul-int/lit8 v0, v0, 0x1f
 
-    :goto_5
-    instance-of v2, v2, Lnk5;
+    iget-object v1, p0, Lxa1;->b:Ljava/util/Map;
 
-    if-eqz v2, :cond_7
-
-    iget-boolean v1, v1, Le94;->h:Z
-
-    if-nez v1, :cond_7
-
-    if-eqz v3, :cond_7
-
-    iget-object v1, v0, Ldb1;->w0:Lcye;
-
-    if-eqz v1, :cond_6
-
-    invoke-virtual {v1}, Lo0;->isActive()Z
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
-    if-ne v1, v7, :cond_6
+    add-int/2addr v1, v0
 
-    return-void
-
-    :cond_6
-    iget-object v1, v0, Ldb1;->v0:Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance v2, Lza1;
-
-    invoke-direct {v2, v0, v4}, Lza1;-><init>(Ldb1;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v3, 0x3
-
-    invoke-static {v1, v4, v4, v2, v3}, Ltki;->d(Lq54;Li54;Lt54;Lzi6;I)Lcye;
-
-    move-result-object v1
-
-    iput-object v1, v0, Ldb1;->w0:Lcye;
-
-    return-void
-
-    :cond_7
-    invoke-virtual {v0, v5}, Ldb1;->h(Z)V
-
-    return-void
+    return v1
 .end method
 
-.method public final i()V
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    iget-object v0, p0, Lxa1;->a:Ldb1;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x0
+    const-string v1, "SelectedMode(isEnabled="
 
-    invoke-virtual {v0, v1}, Ldb1;->j(Z)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return-void
-.end method
+    iget-boolean v1, p0, Lxa1;->a:Z
 
-.method public final k()V
-    .locals 2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lxa1;->a:Ldb1;
+    const-string v1, ", selectedIds="
 
-    const/4 v1, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput-boolean v1, v0, Ldb1;->u0:Z
+    iget-object v1, p0, Lxa1;->b:Ljava/util/Map;
 
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

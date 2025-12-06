@@ -1,68 +1,37 @@
 .class public final Lb90;
-.super Ljava/lang/Object;
+.super Lbig;
 .source "SourceFile"
-
-# interfaces
-.implements Ltha;
-
-
-# static fields
-.field public static final a:Lb90;
-
-.field public static final b:Lbr5;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>()V
     .locals 3
 
-    new-instance v0, Lb90;
+    invoke-direct {p0}, Lbig;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
 
-    sput-object v0, Lb90;->a:Lb90;
+    invoke-virtual {p0, v0}, Lbig;->U(I)V
 
-    new-instance v0, Lsy;
+    new-instance v1, Lsp5;
 
-    const/4 v1, 0x1
+    const/4 v2, 0x2
 
-    invoke-direct {v0, v1}, Lsy;-><init>(I)V
+    invoke-direct {v1, v2}, Lsp5;-><init>(I)V
 
-    const-class v1, Lmec;
+    invoke-virtual {p0, v1}, Lbig;->R(Lshg;)V
 
-    invoke-static {v1, v0}, Ldy1;->o(Ljava/lang/Class;Lsy;)Ljava/util/HashMap;
+    new-instance v1, Lv72;
 
-    move-result-object v0
+    invoke-direct {v1}, Lshg;-><init>()V
 
-    new-instance v1, Lbr5;
+    invoke-virtual {p0, v1}, Lbig;->R(Lshg;)V
 
-    invoke-static {v0}, Ldy1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+    new-instance v1, Lsp5;
 
-    move-result-object v0
+    invoke-direct {v1, v0}, Lsp5;-><init>(I)V
 
-    const-string v2, "messagingClientEvent"
-
-    invoke-direct {v1, v2, v0}, Lbr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v1, Lb90;->b:Lbr5;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 1
-
-    check-cast p1, Lwq9;
-
-    check-cast p2, Luha;
-
-    sget-object v0, Lb90;->b:Lbr5;
-
-    iget-object p1, p1, Lwq9;->a:Lvq9;
-
-    invoke-interface {p2, v0, p1}, Luha;->a(Lbr5;Ljava/lang/Object;)Luha;
+    invoke-virtual {p0, v1}, Lbig;->R(Lshg;)V
 
     return-void
 .end method

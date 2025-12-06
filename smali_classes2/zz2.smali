@@ -1,104 +1,70 @@
 .class public final Lzz2;
-.super Ljava/lang/Object;
+.super Ll0g;
 .source "SourceFile"
-
-# interfaces
-.implements Lw3g;
 
 
 # instance fields
-.field public final synthetic a:Landroid/view/View;
-
-.field public final synthetic b:La03;
-
-.field public final synthetic c:Z
+.field public c:Lqb2;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;La03;Z)V
+.method public constructor <init>(Ltm9;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lzz2;->a:Landroid/view/View;
-
-    iput-object p2, p0, Lzz2;->b:La03;
-
-    iput-boolean p3, p0, Lzz2;->c:Z
+    invoke-direct {p0, p1}, Ll0g;-><init>(Ltm9;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lx3g;)V
+.method public final d(Ltm9;Ljava/lang/String;)V
     .locals 1
 
-    iget-object p1, p0, Lzz2;->a:Landroid/view/View;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-nez p1, :cond_0
+    const-string v0, "chat"
 
-    goto :goto_0
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_0
+
+    invoke-virtual {p1}, Ltm9;->v()V
+
+    return-void
 
     :cond_0
-    iget-object v0, p0, Lzz2;->b:La03;
-
-    iget-object v0, v0, La03;->v0:Ljava/lang/String;
-
-    invoke-static {p1, v0}, Lc0i;->b(Landroid/view/View;Ljava/lang/String;)Landroid/view/View;
+    invoke-static {p1}, Lqb2;->a(Ltm9;)Lqb2;
 
     move-result-object p1
 
-    check-cast p1, Lu6b;
-
-    iget-boolean v0, p0, Lzz2;->c:Z
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p1}, Lu6b;->getSearchView()Lf2b;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Lf2b;->d()V
-
-    return-void
-
-    :cond_1
-    invoke-virtual {p1}, Lu6b;->getSearchView()Lf2b;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Lf2b;->b()V
-
-    :cond_2
-    :goto_0
-    return-void
-.end method
-
-.method public final b()V
-    .locals 0
+    iput-object p1, p0, Lzz2;->c:Lqb2;
 
     return-void
 .end method
 
-.method public final c(Lx3g;)V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    return-void
-.end method
+    iget-object v0, p0, Lzz2;->c:Lqb2;
 
-.method public final f()V
-    .locals 0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    const-string v2, "{chat="
 
-.method public final h(Lx3g;)V
-    .locals 0
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return-void
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, "}"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

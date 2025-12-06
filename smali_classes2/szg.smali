@@ -1,40 +1,71 @@
-.class public final synthetic Lszg;
+.class public final Lszg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lxw7;
+.implements Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
 
 
-# virtual methods
-.method public final d(Lfx7;Lgw7;)V
-    .locals 2
+# instance fields
+.field public final a:Lk18;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+.field public final b:Lk18;
 
-    const-string v1, "shared.ViewLifecycle/"
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+# direct methods
+.method public constructor <init>(Lw5;)V
+    .locals 1
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/16 v0, 0x1f
+
+    invoke-virtual {p1, v0}, Lw5;->d(I)Lbwf;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lszg;->a:Lk18;
+
+    const/16 v0, 0x4f
+
+    invoke-virtual {p1, v0}, Lw5;->d(I)Lbwf;
 
     move-result-object p1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iput-object p1, p0, Lszg;->b:Lk18;
 
-    const-string v1, "onStateChanged "
+    return-void
+.end method
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+# virtual methods
+.method public final onPushTokenGenerated(Ljava/lang/String;)V
+    .locals 0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object p1, p0, Lszg;->a:Lk18;
 
-    move-result-object p2
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
 
-    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    move-result-object p1
 
+    check-cast p1, Lfxa;
+
+    invoke-virtual {p1}, Lfxa;->b()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lszg;->b:Lk18;
+
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lhwa;
+
+    invoke-virtual {p1}, Lhwa;->n()J
+
+    :cond_0
     return-void
 .end method

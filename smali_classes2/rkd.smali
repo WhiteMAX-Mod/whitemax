@@ -1,99 +1,125 @@
-.class public abstract Lrkd;
+.class public final Lrkd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lp95;
+# instance fields
+.field public final a:Ljava/util/Map;
+
+.field public final b:Lqkd;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lus;Lqkd;)V
+    .locals 0
 
-    new-instance v0, Lp95;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {}, Lkpd;->b()Lxod;
+    iput-object p1, p0, Lrkd;->a:Ljava/util/Map;
 
-    move-result-object v1
-
-    const/16 v2, 0x1c
-
-    invoke-direct {v0, v2, v1}, Lp95;-><init>(ILjava/lang/Object;)V
-
-    sput-object v0, Lrkd;->a:Lp95;
+    iput-object p2, p0, Lrkd;->b:Lqkd;
 
     return-void
 .end method
 
-.method public static a(Lr6;Lsr3;Lxod;)Ldu1;
-    .locals 2
 
-    new-instance v0, Lqkd;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    invoke-direct {v0, p0}, Lqkd;-><init>(Lr6;)V
+    const/4 v0, 0x1
 
-    new-instance p0, Lzg3;
+    if-ne p0, p1, :cond_0
 
-    const/4 v1, 0x0
+    return v0
 
-    invoke-direct {p0, v1, v0}, Lzg3;-><init>(ILjava/lang/Object;)V
+    :cond_0
+    instance-of v1, p1, Lrkd;
 
-    invoke-virtual {p0, p2}, Lwg3;->j(Lxod;)Lfh3;
+    const/4 v2, 0x0
 
-    move-result-object p0
+    if-nez v1, :cond_1
 
-    new-instance p2, Lpj4;
+    return v2
 
-    const/16 v0, 0x9
+    :cond_1
+    check-cast p1, Lrkd;
 
-    invoke-direct {p2, v0}, Lpj4;-><init>(I)V
+    iget-object v1, p0, Lrkd;->a:Ljava/util/Map;
 
-    new-instance v0, Ldu1;
+    iget-object v3, p1, Lrkd;->a:Ljava/util/Map;
 
-    invoke-direct {v0, p1, v1, p2}, Ldu1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-static {v1, v3}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {p0, v0}, Lwg3;->h(Lgh3;)V
+    move-result v1
 
-    return-object v0
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lrkd;->b:Lqkd;
+
+    iget-object p1, p1, Lrkd;->b:Lqkd;
+
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public static b(Lvv4;)V
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
-    invoke-static {p0}, Lrkd;->c(Lvv4;)Z
+    iget-object v0, p0, Lrkd;->a:Ljava/util/Map;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    if-nez v0, :cond_0
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-interface {p0}, Lvv4;->g()V
+    iget-object v1, p0, Lrkd;->b:Lqkd;
 
-    :cond_0
-    return-void
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public static c(Lvv4;)Z
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    if-eqz p0, :cond_1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-interface {p0}, Lvv4;->h()Z
+    const-string v1, "RemoteMessage(data="
 
-    move-result p0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-eqz p0, :cond_0
+    iget-object v1, p0, Lrkd;->a:Ljava/util/Map;
 
-    goto :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :cond_0
-    const/4 p0, 0x0
+    const-string v1, ", priority="
 
-    return p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_1
-    :goto_0
-    const/4 p0, 0x1
+    iget-object v1, p0, Lrkd;->b:Lqkd;
 
-    return p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

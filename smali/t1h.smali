@@ -1,45 +1,98 @@
-.class public abstract Lt1h;
+.class public final Lt1h;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxwg;
+.implements Lbf7;
+.implements Ln7g;
+
+
+# static fields
+.field public static final b:Ls90;
+
+.field public static final c:Ls90;
+
+.field public static final d:Ls90;
+
+
+# instance fields
+.field public final a:Lfjb;
+
 
 # direct methods
-.method public static a(Landroid/view/View;Landroid/graphics/Rect;Landroid/graphics/Rect;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 4
 
-    new-instance v0, Landroid/view/WindowInsets$Builder;
+    new-instance v0, Ls90;
 
-    invoke-direct {v0}, Landroid/view/WindowInsets$Builder;-><init>()V
+    const-string v1, "camerax.video.VideoCapture.videoOutput"
 
-    invoke-static {p1}, Landroid/graphics/Insets;->of(Landroid/graphics/Rect;)Landroid/graphics/Insets;
+    const-class v2, Luah;
 
-    move-result-object v1
+    const/4 v3, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/view/WindowInsets$Builder;->setSystemWindowInsets(Landroid/graphics/Insets;)Landroid/view/WindowInsets$Builder;
+    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
 
-    move-result-object v0
+    sput-object v0, Lt1h;->b:Ls90;
 
-    invoke-virtual {v0}, Landroid/view/WindowInsets$Builder;->build()Landroid/view/WindowInsets;
+    new-instance v0, Ls90;
 
-    move-result-object v0
+    const-string v1, "camerax.video.VideoCapture.videoEncoderInfoFinder"
 
-    invoke-virtual {p0, v0, p2}, Landroid/view/View;->computeSystemWindowInsets(Landroid/view/WindowInsets;Landroid/graphics/Rect;)Landroid/view/WindowInsets;
+    const-class v2, Ldn6;
 
-    move-result-object p0
+    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
 
-    invoke-virtual {p0}, Landroid/view/WindowInsets;->getSystemWindowInsets()Landroid/graphics/Insets;
+    sput-object v0, Lt1h;->c:Ls90;
 
-    move-result-object p0
+    new-instance v0, Ls90;
 
-    iget p2, p0, Landroid/graphics/Insets;->left:I
+    const-string v1, "camerax.video.VideoCapture.forceEnableSurfaceProcessing"
 
-    iget v0, p0, Landroid/graphics/Insets;->top:I
+    const-class v2, Ljava/lang/Boolean;
 
-    iget v1, p0, Landroid/graphics/Insets;->right:I
+    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
 
-    iget p0, p0, Landroid/graphics/Insets;->bottom:I
-
-    invoke-virtual {p1, p2, v0, v1, p0}, Landroid/graphics/Rect;->set(IIII)V
+    sput-object v0, Lt1h;->d:Ls90;
 
     return-void
+.end method
+
+.method public constructor <init>(Lfjb;)V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    sget-object v0, Lt1h;->b:Ls90;
+
+    iget-object v1, p1, Lfjb;->a:Ljava/util/TreeMap;
+
+    invoke-virtual {v1, v0}, Ljava/util/TreeMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    invoke-static {v0}, Lz5j;->b(Z)V
+
+    iput-object p1, p0, Lt1h;->a:Lfjb;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final getConfig()Lao3;
+    .locals 1
+
+    iget-object v0, p0, Lt1h;->a:Lfjb;
+
+    return-object v0
+.end method
+
+.method public final getInputFormat()I
+    .locals 1
+
+    const/16 v0, 0x22
+
+    return v0
 .end method

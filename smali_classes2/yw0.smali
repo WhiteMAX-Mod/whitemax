@@ -1,163 +1,158 @@
-.class public abstract synthetic Lyw0;
+.class public final Lyw0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/Serializable;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
 
-.field public static final synthetic $EnumSwitchMapping$1:[I
+# instance fields
+.field public final X:Z
 
-.field public static final synthetic $EnumSwitchMapping$2:[I
+.field public final Y:J
 
-.field public static final synthetic $EnumSwitchMapping$3:[I
+.field public final Z:Z
+
+.field public final a:Ljava/lang/String;
+
+.field public final b:Lgx0;
+
+.field public final c:I
+
+.field public final d:Ljava/lang/String;
+
+.field public final o:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lvw0;)V
+    .locals 2
 
-    invoke-static {}, Lkqa;->values()[Lkqa;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    iget-object v0, p1, Lvw0;->a:Ljava/lang/String;
 
-    array-length v0, v0
+    iput-object v0, p0, Lyw0;->a:Ljava/lang/String;
 
-    new-array v0, v0, [I
+    iget-object v0, p1, Lvw0;->b:Lgx0;
 
-    const/4 v1, 0x1
+    iput-object v0, p0, Lyw0;->b:Lgx0;
 
-    const/4 v2, 0x0
+    iget v0, p1, Lvw0;->c:I
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    iput v0, p0, Lyw0;->c:I
 
-    :catch_0
-    const/4 v3, 0x2
+    iget-object v0, p1, Lvw0;->d:Ljava/lang/String;
 
-    :try_start_1
-    aput v3, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    iput-object v0, p0, Lyw0;->d:Ljava/lang/String;
 
-    :catch_1
-    const/4 v4, 0x3
+    iget-object v0, p1, Lvw0;->e:Ljava/lang/String;
 
-    :try_start_2
-    aput v4, v0, v3
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    iput-object v0, p0, Lyw0;->o:Ljava/lang/String;
 
-    :catch_2
-    sput-object v0, Lyw0;->$EnumSwitchMapping$0:[I
+    iget-boolean v0, p1, Lvw0;->f:Z
 
-    invoke-static {}, Liqa;->values()[Liqa;
+    iput-boolean v0, p0, Lyw0;->X:Z
 
-    move-result-object v0
+    iget-boolean v0, p1, Lvw0;->g:Z
 
-    array-length v0, v0
+    iput-boolean v0, p0, Lyw0;->Z:Z
 
-    new-array v0, v0, [I
+    iget-wide v0, p1, Lvw0;->h:J
 
-    :try_start_3
-    aput v1, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    :try_start_4
-    aput v3, v0, v3
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    :try_start_5
-    aput v4, v0, v2
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :catch_5
-    sput-object v0, Lyw0;->$EnumSwitchMapping$1:[I
-
-    invoke-static {}, Lhqa;->values()[Lhqa;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    :try_start_6
-    aput v1, v0, v2
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
-
-    :catch_6
-    :try_start_7
-    aput v3, v0, v1
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
-
-    :catch_7
-    :try_start_8
-    aput v4, v0, v3
-    :try_end_8
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
-
-    :catch_8
-    const/4 v5, 0x4
-
-    :try_start_9
-    aput v5, v0, v4
-    :try_end_9
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_9
-
-    :catch_9
-    const/4 v6, 0x5
-
-    :try_start_a
-    aput v6, v0, v5
-    :try_end_a
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_a
-
-    :catch_a
-    sput-object v0, Lyw0;->$EnumSwitchMapping$2:[I
-
-    invoke-static {}, Ljqa;->values()[Ljqa;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    :try_start_b
-    aput v1, v0, v2
-    :try_end_b
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_b .. :try_end_b} :catch_b
-
-    :catch_b
-    :try_start_c
-    aput v3, v0, v1
-    :try_end_c
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_c .. :try_end_c} :catch_c
-
-    :catch_c
-    :try_start_d
-    aput v4, v0, v3
-    :try_end_d
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_d .. :try_end_d} :catch_d
-
-    :catch_d
-    :try_start_e
-    aput v5, v0, v4
-    :try_end_e
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_e .. :try_end_e} :catch_e
-
-    :catch_e
-    sput-object v0, Lyw0;->$EnumSwitchMapping$3:[I
+    iput-wide v0, p0, Lyw0;->Y:J
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    instance-of v0, p1, Lyw0;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    check-cast p1, Lyw0;
+
+    iget-object v0, p0, Lyw0;->a:Ljava/lang/String;
+
+    iget-object v1, p1, Lyw0;->a:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Ll8g;->a(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Lyw0;->o:Ljava/lang/String;
+
+    iget-object v1, p1, Lyw0;->o:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Ll8g;->a(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lyw0;->b:Lgx0;
+
+    iget-object v1, p1, Lyw0;->b:Lgx0;
+
+    if-eq v0, v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-boolean v0, p0, Lyw0;->X:Z
+
+    iget-boolean v1, p1, Lyw0;->X:Z
+
+    if-eq v0, v1, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget v0, p0, Lyw0;->c:I
+
+    iget v1, p1, Lyw0;->c:I
+
+    if-eq v0, v1, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    iget-wide v0, p0, Lyw0;->Y:J
+
+    iget-wide v2, p1, Lyw0;->Y:J
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_6
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_6
+    iget-object v0, p0, Lyw0;->d:Ljava/lang/String;
+
+    iget-object p1, p1, Lyw0;->d:Ljava/lang/String;
+
+    invoke-static {v0, p1}, Ll8g;->a(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result p1
+
+    return p1
 .end method

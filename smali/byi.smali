@@ -1,88 +1,130 @@
-.class public abstract Lbyi;
+.class public final Lbyi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpqa;
+
+
+# static fields
+.field public static final a:Lbyi;
+
 
 # direct methods
-.method public static final a(Lqid;Ljava/lang/String;Lone/me/sdk/arch/Widget;)Lone/me/sdk/arch/Widget;
+.method static constructor <clinit>()V
     .locals 3
 
-    iget-object p0, p0, Lqid;->a:Lhg0;
+    new-instance v0, Lbyi;
 
-    invoke-virtual {p0}, Lhg0;->iterator()Ljava/util/Iterator;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    sput-object v0, Lbyi;->a:Lbyi;
 
-    :cond_0
-    move-object v0, p0
+    new-instance v0, Lmli;
 
-    check-cast v0, Lf2;
+    const/4 v1, 0x1
 
-    invoke-virtual {v0}, Lf2;->hasNext()Z
+    invoke-direct {v0, v1}, Lmli;-><init>(I)V
 
-    move-result v1
+    const-class v1, Lemi;
 
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_3
-
-    invoke-virtual {v0}, Lf2;->next()Ljava/lang/Object;
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    check-cast v0, Ltid;
+    const/4 v2, 0x2
 
-    iget-object v0, v0, Ltid;->a:Ll24;
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    instance-of v1, v0, Lone/me/sdk/arch/Widget;
+    move-result-object v0
 
-    if-eqz v1, :cond_1
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    check-cast v0, Lone/me/sdk/arch/Widget;
+    move-result-object v0
 
-    goto :goto_0
+    const/4 v2, 0x3
 
-    :cond_1
-    move-object v0, v2
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    :goto_0
-    if-eqz v0, :cond_2
+    move-result-object v0
 
-    invoke-virtual {v0, p1, p2}, Lone/me/sdk/arch/Widget;->findWidget-qk3jasM$arch_release(Ljava/lang/String;Lone/me/sdk/arch/Widget;)Lone/me/sdk/arch/Widget;
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
 
-    move-result-object v2
+    move-result-object v0
 
-    :cond_2
-    if-eqz v2, :cond_0
+    const/4 v2, 0x4
 
-    if-eq v2, p2, :cond_0
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
 
-    :cond_3
-    return-object v2
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x5
+
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x6
+
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x7
+
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/16 v2, 0x8
+
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/16 v2, 0x9
+
+    invoke-static {v0, v2}, La9h;->k(Ljava/util/HashMap;I)Lmli;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, La9h;->h(Ljava/lang/Class;Lmli;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, La9h;->p(Ljava/util/HashMap;)V
+
+    return-void
 .end method
 
-.method public static final b(Lmc4;)Lm7b;
-    .locals 9
 
-    new-instance v0, Lm7b;
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    iget-object v1, p0, Lmc4;->a:Landroid/net/Uri;
+    invoke-static {p1}, Laz1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    iget v2, p0, Lmc4;->c:I
+    move-result-object p1
 
-    invoke-static {v2}, Lmc4;->b(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lmc4;->e:Ljava/util/Map;
-
-    iget-wide v4, p0, Lmc4;->f:J
-
-    iget-wide v6, p0, Lmc4;->g:J
-
-    iget v8, p0, Lmc4;->i:I
-
-    invoke-direct/range {v0 .. v8}, Lm7b;-><init>(Landroid/net/Uri;Ljava/lang/String;Ljava/util/Map;JJI)V
-
-    return-object v0
+    throw p1
 .end method

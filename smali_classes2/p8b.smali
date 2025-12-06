@@ -1,17 +1,19 @@
 .class public final Lp8b;
-.super Lpd0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Lk18;
+
+
 # direct methods
-.method public constructor <init>(J)V
+.method public constructor <init>(Lk18;)V
     .locals 0
 
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Le5a;-><init>(Ljava/lang/Object;)V
+    iput-object p1, p0, Lp8b;->a:Lk18;
 
     return-void
 .end method

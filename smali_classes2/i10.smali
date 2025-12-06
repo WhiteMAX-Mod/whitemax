@@ -4,60 +4,20 @@
 
 
 # instance fields
-.field public a:Ljava/lang/String;
+.field public final a:Lcf8;
 
-.field public b:J
-
-.field public c:Ljava/lang/String;
-
-.field public d:Ljava/lang/String;
-
-.field public e:Ljava/lang/String;
-
-.field public f:Ljava/lang/String;
-
-.field public g:Ljava/lang/String;
-
-.field public h:Ljava/lang/String;
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Li10;)V
-    .locals 2
+.method public constructor <init>(Lcf8;J)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p1, Li10;->a:Ljava/lang/String;
+    iput-object p1, p0, Li10;->a:Lcf8;
 
-    iput-object v0, p0, Li10;->a:Ljava/lang/String;
-
-    iget-wide v0, p1, Li10;->b:J
-
-    iput-wide v0, p0, Li10;->b:J
-
-    iget-object v0, p1, Li10;->c:Ljava/lang/String;
-
-    iput-object v0, p0, Li10;->c:Ljava/lang/String;
-
-    iget-object v0, p1, Li10;->f:Ljava/lang/String;
-
-    iput-object v0, p0, Li10;->f:Ljava/lang/String;
-
-    iget-object v0, p1, Li10;->g:Ljava/lang/String;
-
-    iput-object v0, p0, Li10;->g:Ljava/lang/String;
-
-    iget-object v0, p1, Li10;->h:Ljava/lang/String;
-
-    iput-object v0, p0, Li10;->h:Ljava/lang/String;
-
-    iget-object v0, p1, Li10;->d:Ljava/lang/String;
-
-    iput-object v0, p0, Li10;->d:Ljava/lang/String;
-
-    iget-object p1, p1, Li10;->e:Ljava/lang/String;
-
-    iput-object p1, p0, Li10;->e:Ljava/lang/String;
+    iput-wide p2, p0, Li10;->b:J
 
     return-void
 .end method

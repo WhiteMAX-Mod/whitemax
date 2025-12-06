@@ -1,316 +1,137 @@
 .class public final Lfyb;
-.super Ljava/lang/Object;
+.super Lxfh;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lfyb;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # instance fields
-.field public final a:Ljava/util/LinkedHashMap;
-
-.field public final b:Ljava/util/ArrayList;
-
-.field public final c:Lz6a;
+.field public final b:Lhbd;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lk18;Lc5b;Llzf;Lg5b;)V
+    .locals 8
 
-    new-instance v0, Lx3b;
+    invoke-direct {p0}, Lxfh;-><init>()V
 
-    const/16 v1, 0xc
+    new-instance v0, Lpa6;
 
-    invoke-direct {v0, v1}, Lx3b;-><init>(I)V
+    iget-object p4, p4, Lg5b;->a:Landroid/content/Context;
 
-    sput-object v0, Lfyb;->CREATOR:Landroid/os/Parcelable$Creator;
+    sget v1, Lmvd;->Y:I
 
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/util/LinkedHashMap;Ljava/util/ArrayList;Lz6a;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lfyb;->a:Ljava/util/LinkedHashMap;
-
-    iput-object p2, p0, Lfyb;->b:Ljava/util/ArrayList;
-
-    iput-object p3, p0, Lfyb;->c:Lz6a;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lfyb;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lfyb;
-
-    iget-object v0, p0, Lfyb;->a:Ljava/util/LinkedHashMap;
-
-    iget-object v1, p1, Lfyb;->a:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lfyb;->b:Ljava/util/ArrayList;
-
-    iget-object v1, p1, Lfyb;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Lfyb;->c:Lz6a;
-
-    iget-object p1, p1, Lfyb;->c:Lz6a;
-
-    invoke-static {v0, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_4
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lfyb;->a:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lfyb;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Lfyb;->c:Lz6a;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Lz6a;->hashCode()I
-
-    move-result v0
-
-    :goto_0
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "PresetAvatarsModel(categories="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lfyb;->a:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", avatars="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lfyb;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", selectedAvatar="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lfyb;->c:Lz6a;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 3
-
-    iget-object v0, p0, Lfyb;->a:Ljava/util/LinkedHashMap;
-
-    invoke-interface {v0}, Ljava/util/Map;->size()I
-
-    move-result v1
-
-    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/Map$Entry;
-
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    invoke-virtual {p4, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    check-cast v2, Ljava/lang/Number;
+    const-class p4, Lra6;
 
-    invoke-virtual {v2}, Ljava/lang/Number;->intValue()I
+    invoke-static {p4}, Ljava/util/EnumSet;->allOf(Ljava/lang/Class;)Ljava/util/EnumSet;
 
-    move-result v2
+    move-result-object v5
 
-    invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
+    const-string v1, "all.chat.folder"
 
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    const/4 v3, 0x0
 
-    move-result-object v1
+    sget-object v4, Lu84;->b:Lu84;
 
-    check-cast v1, Ljava/lang/String;
+    invoke-direct/range {v0 .. v5}, Lpa6;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/String;Lu84;Ljava/util/Set;)V
 
-    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    goto :goto_0
+    move-result-object p4
 
-    :cond_0
-    iget-object v0, p0, Lfyb;->b:Ljava/util/ArrayList;
+    invoke-static {p4}, Lucf;->a(Ljava/lang/Object;)Ltcf;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    move-result-object v2
 
-    move-result v1
+    new-instance p4, Lhbd;
 
-    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-direct {p4, v2}, Lhbd;-><init>(Lf9a;)V
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    iput-object p4, p0, Lfyb;->b:Lhbd;
 
-    move-result-object v0
+    invoke-interface {p1}, Lk18;->getValue()Ljava/lang/Object;
 
-    :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    move-result-object p1
 
-    move-result v1
+    check-cast p1, Lva4;
 
-    if-eqz v1, :cond_1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object p1, p1, Lva4;->v0:Lhbd;
 
-    move-result-object v1
+    new-instance p4, Ld53;
 
-    check-cast v1, Lz6a;
+    const/16 v0, 0xd
 
-    invoke-virtual {v1, p1, p2}, Lz6a;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-direct {p4, p1, v0}, Ld53;-><init>(Lx26;I)V
 
-    goto :goto_1
+    iget-object p1, p2, Lc5b;->g:Lhbd;
 
-    :cond_1
-    iget-object v0, p0, Lfyb;->c:Lz6a;
+    new-instance p2, Lxnb;
 
-    if-nez v0, :cond_2
+    const/4 v0, 0x2
 
-    const/4 p2, 0x0
+    invoke-direct {p2, p1, v0}, Lxnb;-><init>(Lx26;I)V
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    new-instance p1, Ls3;
 
-    return-void
+    const/4 v0, 0x0
 
-    :cond_2
-    const/4 v1, 0x1
+    const/16 v1, 0x16
 
-    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-direct {p1, p0, v0, v1}, Ls3;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
 
-    invoke-virtual {v0, p1, p2}, Lz6a;->writeToParcel(Landroid/os/Parcel;I)V
+    new-instance v0, Lz41;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, p4, p2, p1, v1}, Lz41;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    check-cast p3, Lq2b;
+
+    invoke-virtual {p3}, Lq2b;->a()Lz74;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Lgw0;->u(Lx26;Lx74;)Lx26;
+
+    move-result-object p1
+
+    new-instance v0, Lir9;
+
+    const/4 v6, 0x0
+
+    const/16 v7, 0xa
+
+    const/4 v1, 0x2
+
+    const-class v3, Lf9a;
+
+    const-string v4, "emit"
+
+    const-string v5, "emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;"
+
+    invoke-direct/range {v0 .. v7}, Lir9;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+
+    new-instance p2, Lg56;
+
+    const/4 p4, 0x1
+
+    invoke-direct {p2, p1, v0, p4}, Lg56;-><init>(Lx26;Lsm6;I)V
+
+    invoke-virtual {p3}, Lq2b;->c()Lwl8;
+
+    move-result-object p1
+
+    invoke-static {p2, p1}, Lgw0;->u(Lx26;Lx74;)Lx26;
+
+    move-result-object p1
+
+    iget-object p2, p0, Lxfh;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {p1, p2}, Lgw0;->w(Lx26;Lf84;)Lx9f;
 
     return-void
 .end method

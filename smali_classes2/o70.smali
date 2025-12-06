@@ -1,5 +1,5 @@
 .class public final Lo70;
-.super Lpmf;
+.super Ll0g;
 .source "SourceFile"
 
 
@@ -45,7 +45,7 @@
 
     iget-object p1, p1, Lo70;->c:Ljava/lang/String;
 
-    invoke-static {v1, p1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lfni;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -78,7 +78,7 @@
 
     iget-object v2, p0, Lo70;->c:Ljava/lang/String;
 
-    invoke-static {v0, v2, v1}, Li57;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Lho7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

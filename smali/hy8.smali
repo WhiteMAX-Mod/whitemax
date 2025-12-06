@@ -1,53 +1,53 @@
-.class public final Lhy8;
+.class public final synthetic Lhy8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpa8;
+.implements Lfu3;
+
 
 # instance fields
-.field public final a:Ljava/lang/Object;
-
-.field public final b:I
+.field public final synthetic a:Lc3c;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
-    .locals 1
+.method public synthetic constructor <init>(Lc3c;)V
+    .locals 0
+
+    iput-object p1, p0, Lhy8;->a:Lc3c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lhy8;->a:Ljava/lang/Object;
+    return-void
+.end method
 
-    instance-of v0, p1, Ljava/lang/String;
 
-    if-eqz v0, :cond_0
+# virtual methods
+.method public accept(Ljava/lang/Object;)V
+    .locals 1
 
-    const/4 p1, 0x1
+    check-cast p1, La5c;
 
-    iput p1, p0, Lhy8;->b:I
+    invoke-virtual {p1}, La5c;->m0()V
+
+    iget-object p1, p1, La5c;->a:Lem5;
+
+    iget-object v0, p0, Lhy8;->a:Lc3c;
+
+    invoke-virtual {p1, v0}, Lem5;->p1(Lc3c;)V
 
     return-void
+.end method
 
-    :cond_0
-    instance-of p1, p1, Lgz8;
+.method public invoke(Ljava/lang/Object;)V
+    .locals 1
 
-    if-eqz p1, :cond_1
+    iget-object v0, p0, Lhy8;->a:Lc3c;
 
-    const/4 p1, 0x2
+    check-cast p1, Lr3c;
 
-    iput p1, p0, Lhy8;->b:I
-
-    return-void
-
-    :cond_1
-    const/4 p1, 0x0
-
-    iput p1, p0, Lhy8;->b:I
-
-    const-string p1, "RecyclerAdapter"
-
-    const-string v0, "Wrong type of data passed to Item constructor"
-
-    invoke-static {p1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-interface {p1, v0}, Lr3c;->A0(Lc3c;)V
 
     return-void
 .end method

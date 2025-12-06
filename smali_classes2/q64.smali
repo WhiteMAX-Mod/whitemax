@@ -1,48 +1,57 @@
-.class public final Lq64;
+.class public final synthetic Lq64;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lm0g;
+.implements Lgu3;
 
 
 # instance fields
-.field public final a:Z
+.field public final synthetic a:I
+
+.field public final synthetic b:Lhu3;
 
 
 # direct methods
-.method public constructor <init>(Lcqe;)V
+.method public synthetic constructor <init>(Lhu3;I)V
     .locals 0
 
+    iput p2, p0, Lq64;->a:I
+
+    iput-object p1, p0, Lq64;->b:Lhu3;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iget-object p1, p1, Lcqe;->b:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x1
-
-    :goto_0
-    iput-boolean p1, p0, Lq64;->a:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lnw4;
+.method public final accept(Ljava/lang/Object;)V
     .locals 1
 
-    sget-object v0, Lina;->b:Lnw4;
+    iget v0, p0, Lq64;->a:I
 
-    return-object v0
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lq64;->b:Lhu3;
+
+    check-cast p1, Ljava/lang/String;
+
+    :goto_0
+    invoke-interface {v0, p1}, Lhu3;->accept(Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lq64;->b:Lhu3;
+
+    check-cast p1, Ljava/lang/Throwable;
+
+    goto :goto_0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

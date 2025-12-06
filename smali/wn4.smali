@@ -1,74 +1,123 @@
-.class public final Lwn4;
-.super Lko4;
+.class public abstract synthetic Lwn4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Comparable;
 
-
-# instance fields
-.field public final X:I
-
-.field public final Y:I
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(ILp1g;ILbo4;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0, p1, p2, p3}, Lko4;-><init>(ILp1g;I)V
+    invoke-static {}, Lk38;->values()[Lk38;
 
-    iget-boolean p1, p4, Lbo4;->t0:Z
+    move-result-object v0
 
-    invoke-static {p5, p1}, Lxk0;->k(IZ)Z
+    array-length v0, v0
 
-    move-result p1
+    new-array v0, v0, [I
 
-    iput p1, p0, Lwn4;->X:I
+    :try_start_0
+    sget-object v1, Lk38;->ON_CREATE:Lk38;
 
-    iget-object p1, p0, Lko4;->o:Lmb6;
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    invoke-virtual {p1}, Lmb6;->b()I
+    move-result v1
 
-    move-result p1
+    const/4 v2, 0x1
 
-    iput p1, p0, Lwn4;->Y:I
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :try_start_1
+    sget-object v1, Lk38;->ON_START:Lk38;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    :try_start_2
+    sget-object v1, Lk38;->ON_RESUME:Lk38;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    :try_start_3
+    sget-object v1, Lk38;->ON_PAUSE:Lk38;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    :try_start_4
+    sget-object v1, Lk38;->ON_STOP:Lk38;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    :try_start_5
+    sget-object v1, Lk38;->ON_DESTROY:Lk38;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x6
+
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+
+    :catch_5
+    :try_start_6
+    sget-object v1, Lk38;->ON_ANY:Lk38;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x7
+
+    aput v2, v0, v1
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+
+    :catch_6
+    sput-object v0, Lwn4;->$EnumSwitchMapping$0:[I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()I
-    .locals 1
-
-    iget v0, p0, Lwn4;->X:I
-
-    return v0
-.end method
-
-.method public final bridge synthetic c(Lko4;)Z
-    .locals 0
-
-    check-cast p1, Lwn4;
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 1
-
-    check-cast p1, Lwn4;
-
-    iget v0, p0, Lwn4;->Y:I
-
-    iget p1, p1, Lwn4;->Y:I
-
-    invoke-static {v0, p1}, Ljava/lang/Integer;->compare(II)I
-
-    move-result p1
-
-    return p1
 .end method

@@ -3,22 +3,18 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lorg/webrtc/SurfaceTextureHelper;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/webrtc/SurfaceTextureHelper;I)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    iput p2, p0, Lhgf;->a:I
-
-    iput-object p1, p0, Lhgf;->b:Lorg/webrtc/SurfaceTextureHelper;
+    iput p1, p0, Lhgf;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,46 +23,28 @@
 
 
 # virtual methods
-.method public final run()V
+.method public final call()Ljava/lang/Object;
     .locals 1
 
     iget v0, p0, Lhgf;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lhgf;->b:Lorg/webrtc/SurfaceTextureHelper;
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    invoke-static {v0}, Lorg/webrtc/SurfaceTextureHelper;->g(Lorg/webrtc/SurfaceTextureHelper;)V
+    move-result-object v0
 
-    return-void
+    return-object v0
 
     :pswitch_0
-    iget-object v0, p0, Lhgf;->b:Lorg/webrtc/SurfaceTextureHelper;
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    invoke-static {v0}, Lorg/webrtc/SurfaceTextureHelper;->a(Lorg/webrtc/SurfaceTextureHelper;)V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lhgf;->b:Lorg/webrtc/SurfaceTextureHelper;
-
-    invoke-static {v0}, Lorg/webrtc/SurfaceTextureHelper;->b(Lorg/webrtc/SurfaceTextureHelper;)V
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lhgf;->b:Lorg/webrtc/SurfaceTextureHelper;
-
-    invoke-static {v0}, Lorg/webrtc/SurfaceTextureHelper;->c(Lorg/webrtc/SurfaceTextureHelper;)V
-
-    return-void
+    return-object v0
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

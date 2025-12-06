@@ -1,169 +1,300 @@
-.class public final Lom8;
+.class public final synthetic Lom8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpm8;
+.implements Lum6;
 
 
 # instance fields
-.field public final a:Ljava/lang/CharSequence;
-
-.field public final b:Ljava/util/ArrayList;
-
-.field public final c:Z
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/CharSequence;Ljava/util/ArrayList;Z)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
+    iput p1, p0, Lom8;->a:I
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lom8;->a:Ljava/lang/CharSequence;
-
-    iput-object p2, p0, Lom8;->b:Ljava/util/ArrayList;
-
-    iput-boolean p3, p0, Lom8;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Lom8;->a:I
 
-    goto :goto_1
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Llg8;
+
+    check-cast p2, Ljava/lang/String;
+
+    check-cast p3, Ljava/lang/String;
+
+    iget p1, p1, Llg8;->a:I
+
+    invoke-static {p1, p2, p3}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
+
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Landroid/widget/ImageView;
+
+    check-cast p2, Ljava/lang/Boolean;
+
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p2
+
+    check-cast p3, Lyeb;
+
+    invoke-virtual {p1}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    instance-of v0, p1, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+
+    goto :goto_0
 
     :cond_0
-    instance-of v0, p1, Lom8;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lom8;
-
-    iget-object v0, p0, Lom8;->a:Ljava/lang/CharSequence;
-
-    iget-object v1, p1, Lom8;->a:Ljava/lang/CharSequence;
-
-    invoke-static {v0, v1}, Lh1i;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lom8;->b:Ljava/util/ArrayList;
-
-    iget-object v1, p1, Lom8;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-boolean v0, p0, Lom8;->c:Z
-
-    iget-boolean p1, p1, Lom8;->c:Z
-
-    if-eq v0, p1, :cond_4
-
-    :goto_0
     const/4 p1, 0x0
 
-    return p1
-
-    :cond_4
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lom8;->a:Ljava/lang/CharSequence;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
     :goto_0
-    mul-int/lit8 v0, v0, 0x1f
+    if-eqz p1, :cond_3
 
-    iget-object v1, p0, Lom8;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-boolean v0, p0, Lom8;->c:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SendMedia(caption="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lom8;->a:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", media="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lom8;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", sendAsFile="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Lom8;->c:Z
-
-    invoke-static {v0, v2, v1}, Ldy1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-interface {p3}, Lyeb;->b()Lbf0;
 
     move-result-object v0
 
-    return-object v0
+    iget-object v0, v0, Lbf0;->b:Lkf0;
+
+    iget-object v0, v0, Lkf0;->c:Lmf0;
+
+    iget v0, v0, Lmf0;->a:I
+
+    const-string v1, "second_body"
+
+    invoke-static {p1, v1, v0}, Lz18;->e(Lmzg;Ljava/lang/String;I)V
+
+    invoke-interface {p3}, Lyeb;->b()Lbf0;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lbf0;->b:Lkf0;
+
+    iget-object v0, v0, Lkf0;->c:Lmf0;
+
+    iget v0, v0, Lmf0;->a:I
+
+    const-string v1, "second_head"
+
+    invoke-static {p1, v1, v0}, Lz18;->e(Lmzg;Ljava/lang/String;I)V
+
+    invoke-interface {p3}, Lyeb;->b()Lbf0;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lbf0;->b:Lkf0;
+
+    iget-object v0, v0, Lkf0;->c:Lmf0;
+
+    iget v0, v0, Lmf0;->a:I
+
+    const-string v1, "first_body"
+
+    invoke-static {p1, v1, v0}, Lz18;->e(Lmzg;Ljava/lang/String;I)V
+
+    invoke-interface {p3}, Lyeb;->b()Lbf0;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lbf0;->b:Lkf0;
+
+    iget-object v0, v0, Lkf0;->c:Lmf0;
+
+    iget v0, v0, Lmf0;->a:I
+
+    const-string v1, "first_head"
+
+    invoke-static {p1, v1, v0}, Lz18;->e(Lmzg;Ljava/lang/String;I)V
+
+    invoke-interface {p3}, Lyeb;->getIcon()Lnb7;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lnb7;->a:Ltb7;
+
+    iget-object v0, v0, Ltb7;->c:Lvb7;
+
+    if-eqz p2, :cond_1
+
+    iget v0, v0, Lvb7;->a:I
+
+    goto :goto_1
+
+    :cond_1
+    iget v0, v0, Lvb7;->b:I
+
+    :goto_1
+    const-string v1, "border"
+
+    invoke-static {p1, v1, v0}, Lz18;->f(Lmzg;Ljava/lang/String;I)V
+
+    if-eqz p2, :cond_2
+
+    invoke-interface {p3}, Lyeb;->getIcon()Lnb7;
+
+    move-result-object p2
+
+    iget-object p2, p2, Lnb7;->a:Ltb7;
+
+    iget-object p2, p2, Ltb7;->c:Lvb7;
+
+    iget p2, p2, Lvb7;->a:I
+
+    goto :goto_2
+
+    :cond_2
+    invoke-interface {p3}, Lyeb;->getIcon()Lnb7;
+
+    move-result-object p2
+
+    iget-object p2, p2, Lnb7;->a:Ltb7;
+
+    iget-object p2, p2, Ltb7;->c:Lvb7;
+
+    iget p2, p2, Lvb7;->b:I
+
+    :goto_2
+    const-string p3, "background"
+
+    invoke-static {p1, p3, p2}, Lz18;->e(Lmzg;Ljava/lang/String;I)V
+
+    :cond_3
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
+
+    :pswitch_1
+    check-cast p1, Landroid/widget/ImageView;
+
+    check-cast p2, Ljava/lang/Boolean;
+
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p2
+
+    check-cast p3, Lyeb;
+
+    invoke-virtual {p1}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    instance-of v0, p1, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+
+    if-eqz v0, :cond_4
+
+    check-cast p1, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+
+    goto :goto_3
+
+    :cond_4
+    const/4 p1, 0x0
+
+    :goto_3
+    if-eqz p1, :cond_6
+
+    invoke-interface {p3}, Lyeb;->b()Lbf0;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lbf0;->b:Lkf0;
+
+    iget-object v0, v0, Lkf0;->c:Lmf0;
+
+    iget v0, v0, Lmf0;->a:I
+
+    const-string v1, "left_dot"
+
+    invoke-static {p1, v1, v0}, Lz18;->e(Lmzg;Ljava/lang/String;I)V
+
+    invoke-interface {p3}, Lyeb;->b()Lbf0;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lbf0;->b:Lkf0;
+
+    iget-object v0, v0, Lkf0;->c:Lmf0;
+
+    iget v0, v0, Lmf0;->a:I
+
+    const-string v1, "middle_dot"
+
+    invoke-static {p1, v1, v0}, Lz18;->e(Lmzg;Ljava/lang/String;I)V
+
+    invoke-interface {p3}, Lyeb;->b()Lbf0;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lbf0;->b:Lkf0;
+
+    iget-object v0, v0, Lkf0;->c:Lmf0;
+
+    iget v0, v0, Lmf0;->a:I
+
+    const-string v1, "right_dot"
+
+    invoke-static {p1, v1, v0}, Lz18;->e(Lmzg;Ljava/lang/String;I)V
+
+    if-eqz p2, :cond_5
+
+    invoke-interface {p3}, Lyeb;->getIcon()Lnb7;
+
+    move-result-object p2
+
+    iget-object p2, p2, Lnb7;->a:Ltb7;
+
+    iget-object p2, p2, Ltb7;->c:Lvb7;
+
+    iget p2, p2, Lvb7;->a:I
+
+    goto :goto_4
+
+    :cond_5
+    invoke-interface {p3}, Lyeb;->getIcon()Lnb7;
+
+    move-result-object p2
+
+    iget-object p2, p2, Lnb7;->a:Ltb7;
+
+    iget-object p2, p2, Ltb7;->c:Lvb7;
+
+    iget p2, p2, Lvb7;->b:I
+
+    :goto_4
+    const-string p3, "shape"
+
+    invoke-static {p1, p3, p2}, Lz18;->e(Lmzg;Ljava/lang/String;I)V
+
+    :cond_6
+    sget-object p1, Lqqg;->a:Lqqg;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
