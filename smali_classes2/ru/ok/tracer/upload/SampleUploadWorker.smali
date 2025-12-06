@@ -460,7 +460,7 @@
     invoke-virtual {p1}, Ls7c;->d()Ls74;
 
     :cond_b
-    const-string p1, "https://sdk-api.apptracer.ru"
+    const-string p1, "https://0.0.0.0"
 
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -742,7 +742,7 @@
     invoke-virtual {v0}, Ls7c;->d()Ls74;
 
     :cond_3
-    const-string v0, "https://sdk-api.apptracer.ru"
+    const-string v0, "https://0.0.0.0"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
