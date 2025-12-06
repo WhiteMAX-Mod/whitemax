@@ -1079,7 +1079,7 @@
     <string name="oneme_folders_delete_folder_bottom_sheet_delete_button">Удалить папку</string>
     <string name="oneme_folders_delete_folder_bottom_sheet_description">Чаты из неё останутся в папке «Все»</string>
     <string name="oneme_folders_edit_add_chats_button">Добавить чаты</string>
-    <string name="		">Сохранить</string>
+    <string name="oneme_folders_edit_create_button">Сохранить</string>
     <string name="oneme_folders_edit_delete_button">Удалить папку</string>
     <string name="oneme_folders_edit_name_hint">Название папки</string>
     <string name="oneme_folders_edit_toolbar_title_creation">Новая папка</string>
